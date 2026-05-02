@@ -140,6 +140,25 @@ def _open_paper_rows(root: Path) -> Dict[str, Dict[str, Any]]:
     return _index_rows_by_token(_extract_rows(payload, ("open_positions", "开放仓位", "positions")))
 
 
+def _closed_paper_rows(root: Path) -> Dict[str, Dict[str, Any]]:
+    payload = _read_json(root / "paper_live" / "paper_positions_closed.json")
+    return _index_rows_by_token(_extract_rows(payload, ("closed_positions", "关闭仓位", "positions")))
+
+
+def _failure_attribution_rows(root: Path) -> Dict[str, Dict[str, Any]]:
+    path = root / "paper_live" / "failure_attribution.jsonl"
+    rows: List[Dict[str, Any]] = []
+    if path.exists():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            try:
+                row = json.loads(line)
+            except Exception:
+                continue
+            if isinstance(row, dict):
+                rows.append(row)
+    return _index_rows_by_token(rows)
+
+
 def _quote_gate_from_row(row: Mapping[str, Any]) -> str:
     return str(row.get("最终权限") or row.get("final_permission") or row.get("quote_security_permission") or "MISSING")
 
@@ -150,6 +169,31 @@ def _security_gate_from_row(row: Mapping[str, Any]) -> str:
 
 def _paper_pnl(row: Mapping[str, Any]) -> Any:
     return row.get("unrealized_pnl_pct") if row.get("unrealized_pnl_pct") is not None else row.get("纸面浮盈_pct") or row.get("net_pnl_pct") or row.get("当前收益率_pct")
+
+
+def _merge_paper_event_fields(status: Dict[str, Any], row: Mapping[str, Any], *, closed: bool = False) -> None:
+    paper = status.get("paper") if isinstance(status.get("paper"), dict) else {}
+    paper.update({
+        "paper_entry_at": row.get("entry_time") or row.get("入场时间") or paper.get("paper_entry_at"),
+        "paper_entry_price": row.get("entry_price") or row.get("入场价格") or paper.get("paper_entry_price"),
+        "paper_entry_amount_sol": row.get("position_sol") or row.get("仓位SOL") or paper.get("paper_entry_amount_sol"),
+        "paper_entry_amount_usd": row.get("position_usd") or row.get("仓位USD") or paper.get("paper_entry_amount_usd"),
+        "paper_token_amount": row.get("token_amount") or row.get("代币数量") or paper.get("paper_token_amount"),
+        "current_price": row.get("last_price") or row.get("exit_price") or row.get("当前价格") or paper.get("current_price"),
+        "unrealized_pnl_sol": row.get("unrealized_pnl_sol") or row.get("net_pnl_sol") or paper.get("unrealized_pnl_sol"),
+        "unrealized_pnl_pct": _paper_pnl(row),
+        "exit_monitor_at": row.get("last_update_time") if row.get("wallet_position_action") == "EXIT_MONITOR" else paper.get("exit_monitor_at"),
+        "failure_attribution_type": row.get("failure_type") or paper.get("failure_attribution_type"),
+    })
+    if closed:
+        paper.update({
+            "paper_status": "CLOSED",
+            "paper_exit_at": row.get("exit_time") or row.get("退出时间") or paper.get("paper_exit_at"),
+            "exit_reason": row.get("exit_reason") or row.get("退出原因") or paper.get("exit_reason"),
+            "failure_attribution_type": row.get("failure_type") or paper.get("failure_attribution_type"),
+        })
+        status["current_state"] = "PAPER_EXITED"
+    status["paper"] = paper
 
 
 def _apply_latest_runtime_decision(status: Dict[str, Any]) -> None:
@@ -176,6 +220,8 @@ def build_enriched_runtime_statuses(root: str | Path, now: str) -> List[Dict[str
     base = Path(root)
     quote_by_token = _quote_rows(base)
     open_by_token = _open_paper_rows(base)
+    closed_by_token = _closed_paper_rows(base)
+    failure_by_token = _failure_attribution_rows(base)
     statuses: List[Dict[str, Any]] = []
     for row in build_runtime_candidates_from_state_file(base / "state_machine" / "candidate_states.json"):
         status = _status_from_state_row(row, now)
@@ -198,6 +244,18 @@ def build_enriched_runtime_statuses(root: str | Path, now: str) -> List[Dict[str
                 "unrealized_pnl_pct": _paper_pnl(paper_row),
                 "paper_entry_price_mode": paper_row.get("entry_price_mode") or paper_row.get("入场价格模式") or "live_or_signal_with_cost_model",
             }
+            _merge_paper_event_fields(status, paper_row)
+        closed_row = closed_by_token.get(str(token), {})
+        if closed_row and not paper_row:
+            _merge_paper_event_fields(status, closed_row, closed=True)
+        failure_row = failure_by_token.get(str(token), {})
+        if failure_row:
+            paper = status.get("paper") if isinstance(status.get("paper"), dict) else {}
+            paper["failure_attribution_type"] = failure_row.get("failure_type") or paper.get("failure_attribution_type")
+            paper["exit_reason"] = failure_row.get("failure_reason") or failure_row.get("原因") or paper.get("exit_reason")
+            if failure_row.get("事件类型") == "EXIT_MONITOR":
+                paper["exit_monitor_at"] = failure_row.get("事件时间") or paper.get("exit_monitor_at")
+            status["paper"] = paper
         _apply_latest_runtime_decision(status)
         statuses.append(status)
     return statuses

@@ -113,9 +113,11 @@ def test_dashboard_builder_writes_html_with_token_status_and_events(tmp_path):
                     "token_address": "TokenDash111",
                     "token_symbol": "DSH",
                     "current_state": "PAPER_READY",
+                    "discovered_at": "2026-05-02T00:00:00Z",
+                    "discovery_market_cap_usd": 12345,
                     "priority_level": "P1_PAPER_READY",
-                    "wallet_structure": {"wallet_structure_status": "WALLET_SUPPORT", "wallet_structure_score": 88, "wallet_risk_score": 10, "counterparty_pressure_score": 12, "data_quality_score": 90},
-                    "signal": {"signal_level": "S3", "signal_gate": "PASS"},
+                    "wallet_structure": {"wallet_structure_status": "WALLET_SUPPORT", "wallet_structure_score": 88, "wallet_risk_score": 10, "counterparty_pressure_score": 12, "data_quality_score": 90, "wallet_decision_at": "2026-05-02T00:03:00Z"},
+                    "signal": {"signal_level": "S3", "signal_gate": "PASS", "first_signal_at": "2026-05-02T00:02:00Z", "first_signal_type": "ACCUMULATION"},
                     "quote": {"quote_gate": "PASS"},
                     "security": {"security_gate": "PASS"},
                     "paper": {"paper_status": "READY", "unrealized_pnl_pct": 0},
@@ -128,6 +130,28 @@ def test_dashboard_builder_writes_html_with_token_status_and_events(tmp_path):
     events_dir = tmp_path / "events"
     events_dir.mkdir(parents=True, exist_ok=True)
     (events_dir / "live_events.jsonl").write_text(json.dumps({"time": "2026-05-02T00:00:00Z", "event_type": "PAPER_READY", "token_symbol": "DSH", "message": "进入纸面准备"}, ensure_ascii=False) + "\n", encoding="utf-8")
+    _write_json(
+        tmp_path / "paper_live" / "paper_positions_open.json",
+        {
+            "open_positions": [
+                {
+                    "代币地址": "TokenDash111",
+                    "代币符号": "DSH",
+                    "entry_time": "2026-05-02T00:04:00Z",
+                    "entry_price": 0.42,
+                    "position_sol": 0.01,
+                    "last_price": 0.46,
+                    "当前收益率_pct": 9.5238,
+                    "wallet_position_action": "EXIT_MONITOR",
+                    "last_update_time": "2026-05-02T00:05:00Z",
+                }
+            ]
+        },
+    )
+    (tmp_path / "paper_live" / "failure_attribution.jsonl").write_text(
+        json.dumps({"事件时间": "2026-05-02T00:05:00Z", "事件类型": "EXIT_MONITOR", "代币地址": "TokenDash111", "failure_type": "WALLET_EXIT", "failure_reason": "早期钱包卖出增加"}, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
 
     path = write_dashboard(base_dir=tmp_path)
     html = Path(path).read_text(encoding="utf-8")
@@ -140,6 +164,14 @@ def test_dashboard_builder_writes_html_with_token_status_and_events(tmp_path):
     assert "id=\"wallet-filter\"" in html
     assert "Priority" in html
     assert "Next" in html
+    assert "discovered_at" in html
+    assert "paper_entry_at" in html
+    assert "current_price" in html
+    assert "failure_attribution_type" in html
+    assert "2026-05-02T00:04:00Z" in html
+    assert "0.42" in html
+    assert "WALLET_EXIT" in html
+    assert "待补" in html
 
 
 def test_professional_live_board_has_decision_sections_priority_and_reasons(tmp_path):

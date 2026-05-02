@@ -17,7 +17,7 @@ from __future__ import annotations
 import csv
 import json
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
@@ -93,6 +93,16 @@ class WalletStructureDecision:
     counterparty_pressure_score: int
     data_quality_score: int
     chip_control_state: str
+    data_quality_status: str = "UNKNOWN"
+    decision_at: str = ""
+    action_code: str = ""
+    wallet_gate_result: str = ""
+    paper_gate_effect: str = ""
+    risk_level: str = ""
+    reason_codes: List[str] = field(default_factory=list)
+    missing_fields: List[str] = field(default_factory=list)
+    source_files: List[str] = field(default_factory=list)
+    valid_until: str = ""
     reasons: List[str] = field(default_factory=list)
     role_counts: Dict[str, int] = field(default_factory=dict)
     game_side_counts: Dict[str, int] = field(default_factory=dict)
@@ -127,6 +137,23 @@ class WalletStructureDecision:
         return {
             "代币地址": self.token,
             "代币符号": self.symbol,
+            "wallet_structure_status": self.wallet_structure_status,
+            "wallet_structure_score": self.wallet_structure_score,
+            "wallet_risk_score": self.wallet_risk_score,
+            "counterparty_pressure_score": self.counterparty_pressure_score,
+            "data_quality_score": self.data_quality_score,
+            "data_quality_status": self.data_quality_status,
+            "decision_at": self.decision_at,
+            "action_code": self.action_code,
+            "wallet_gate_result": self.wallet_gate_result,
+            "paper_gate_effect": self.paper_gate_effect,
+            "risk_level": self.risk_level,
+            "reason_codes": self.reason_codes,
+            "missing_fields": self.missing_fields,
+            "source_files": self.source_files,
+            "token_address": self.token,
+            "symbol": self.symbol,
+            "wallet_gate_result_cn": STATUS_TO_STATE[self.wallet_structure_status],
             "钱包结构结论": self.wallet_structure_status,
             "钱包结构系数": self.wallet_structure_factor,
             "钱包结构评分": self.wallet_structure_score,
@@ -153,6 +180,16 @@ class WalletStructureDecision:
             "wallet_risk_score": self.wallet_risk_score,
             "counterparty_pressure_score": self.counterparty_pressure_score,
             "data_quality_score": self.data_quality_score,
+            "data_quality_status": self.data_quality_status,
+            "decision_at": self.decision_at,
+            "action_code": self.action_code,
+            "wallet_gate_result": self.wallet_gate_result,
+            "paper_gate_effect": self.paper_gate_effect,
+            "risk_level": self.risk_level,
+            "reason_codes": self.reason_codes,
+            "missing_fields": self.missing_fields,
+            "source_files": self.source_files,
+            "valid_until": self.valid_until,
             "wallet_structure_factor": self.wallet_structure_factor,
             "wallet_structure_reason": "；".join(self.reasons),
             "wallet_evidence_level": self.wallet_evidence_level,
@@ -222,8 +259,65 @@ def _highest_evidence(evidence_counts: Dict[str, int]) -> str:
     return "E0"
 
 
+def _risk_level(status: str, risk_score: int, counterparty_score: int) -> str:
+    if status == "WALLET_BLOCK" or risk_score >= 70 or counterparty_score >= 70:
+        return "HIGH"
+    if status == "WALLET_PAUSE" or risk_score >= 35 or counterparty_score >= 35:
+        return "MEDIUM"
+    if status == "WALLET_SUPPORT":
+        return "LOW"
+    return "INFO"
+
+
+def _paper_gate_effect(status: str) -> str:
+    if status == "WALLET_BLOCK":
+        return "BLOCK_OR_PAUSE"
+    if status == "WALLET_PAUSE":
+        return "PAUSE_OR_REVIEW"
+    if status == "WALLET_SUPPORT":
+        return "REQUIRES_SIGNAL_QUOTE_SECURITY"
+    return "OBSERVE_ONLY"
+
+
+def _reason_codes(
+    status: str,
+    has_concentrated_clearout: bool,
+    has_same_source_sync_sell: bool,
+    data_quality_status: str,
+    has_distribution: bool,
+) -> List[str]:
+    """Return stable machine-readable reason codes for wallet gate decisions."""
+    codes: List[str] = []
+    if status:
+        codes.append(status)
+    if has_concentrated_clearout:
+        codes.append("CONCENTRATED_CLEAROUT")
+    if has_same_source_sync_sell:
+        codes.append("SAME_SOURCE_SYNC_SELL")
+    if has_distribution:
+        codes.append("DISTRIBUTION_ACTIVE")
+    if data_quality_status in {"MISSING", "DEGRADED"}:
+        codes.append(f"DATA_QUALITY_{data_quality_status}")
+    if status == "WALLET_SUPPORT":
+        codes.append("PAPER_ONLY_REQUIRES_OTHER_GATES")
+    # Preserve order while avoiding duplicates.
+    return list(dict.fromkeys(codes))
+
+
+def _detect_missing_fields(rows: List[Dict[str, Any]]) -> List[str]:
+    if not rows:
+        return ["wallet_rows"]
+    required = ["wallet_address", "role", "game_side", "evidence_level"]
+    missing: List[str] = []
+    for key in required:
+        if not any(row.get(key) not in (None, "", [], {}) for row in rows):
+            missing.append(key)
+    return missing
+
+
 def evaluate_wallet_structure_gate(*, token: str, symbol: str = "", wallet_rows: Iterable[Dict[str, Any]], candidate_groups: Iterable[Dict[str, Any]] | None = None) -> WalletStructureDecision:
     rows = list(wallet_rows)
+    missing_fields = _detect_missing_fields(rows)
     role_counts: Dict[str, int] = {}
     side_counts: Dict[str, int] = {}
     evidence_counts: Dict[str, int] = {}
@@ -311,6 +405,13 @@ def evaluate_wallet_structure_gate(*, token: str, symbol: str = "", wallet_rows:
     if unknown_side_count:
         data_quality_score = max(0, data_quality_score - int((unknown_side_count / max(row_count, 1)) * 30))
 
+    if row_count == 0:
+        data_quality_status = "MISSING"
+    elif missing_fields or data_quality_score < 50:
+        data_quality_status = "DEGRADED"
+    else:
+        data_quality_status = "OK"
+
     has_concentrated_clearout = row_count >= 3 and clearout_count / row_count >= 0.6
     has_same_source_sync_sell = (max_sync_sell_score >= 70) or any(len(values) >= 2 and sum(1 for v in values if v >= 0.7) / len(values) >= 0.6 for values in group_sells.values())
     has_distribution = distribution_count > 0
@@ -338,6 +439,8 @@ def evaluate_wallet_structure_gate(*, token: str, symbol: str = "", wallet_rows:
         reasons.append("数据不足，钱包结构证据无法支撑放行")
     if structure_score >= 60 and risk_score < 30 and counterparty_score < 35:
         reasons.append("早期钱包仍持有，高结果钱包未退出，结构侧筹码仍有保留证据")
+    if missing_fields:
+        reasons.append(f"缺失字段：{', '.join(missing_fields)}")
 
     if has_concentrated_clearout or has_same_source_sync_sell or risk_score >= 70:
         status = "WALLET_BLOCK"
@@ -379,6 +482,16 @@ def evaluate_wallet_structure_gate(*, token: str, symbol: str = "", wallet_rows:
         counterparty_pressure_score=counterparty_score,
         data_quality_score=data_quality_score,
         chip_control_state=chip_state,
+        data_quality_status=data_quality_status,
+        decision_at=_utc_now_text(),
+        action_code=status,
+        wallet_gate_result=STATUS_TO_STATE[status],
+        paper_gate_effect=_paper_gate_effect(status),
+        risk_level=_risk_level(status, risk_score, counterparty_score),
+        reason_codes=_reason_codes(status, has_concentrated_clearout, has_same_source_sync_sell, data_quality_status, has_distribution),
+        missing_fields=missing_fields,
+        source_files=["wallet_structure_decision.json"],
+        valid_until=(datetime.now(timezone.utc) + timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ"),
         reasons=reasons,
         role_counts=role_counts,
         game_side_counts=side_counts,

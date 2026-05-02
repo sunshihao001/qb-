@@ -1,0 +1,146 @@
+# SIKK-SOL 代码库初始审计报告
+
+生成时间: 2026-05-02T23:21:01+00:00
+分支: sikk-paper-audit-20260502
+基线提交: 428536b
+
+## 一、代码规模
+pygount 未安装；使用文件统计替代。
+86
+
+## 二、顶层 Python 模块
+sikk_accumulation_window_detector.py
+sikk_auto_exit_planner.py
+sikk_auto_position_sizer.py
+sikk_auto_readiness_runner.py
+sikk_auto_risk_gate.py
+sikk_auto_signal_engine.py
+sikk_auto_trade_types.py
+sikk_candidate_kline_pipeline.py
+sikk_candidate_quote_security_pipeline.py
+sikk_candidate_signal_pipeline.py
+sikk_candidate_state_machine.py
+sikk_candidate_wallet_structure_pipeline.py
+sikk_control_chip_window_detector.py
+sikk_dashboard_builder.py
+sikk_dominant_lifecycle_classifier.py
+sikk_execution_adapter_base.py
+sikk_execution_state_machine.py
+sikk_gmgn_new_token_filter.py
+sikk_gmgn_quote_adapter.py
+sikk_gmgn_token_report.py
+sikk_live_orchestrator.py
+sikk_live_quote_security_collector.py
+sikk_live_run.py
+sikk_module_runner.py
+sikk_notifier.py
+sikk_okx_quote_adapter.py
+sikk_paper_live_runner.py
+sikk_paper_trading_engine.py
+sikk_pre_trade_security_checker.py
+sikk_quote_security_review.py
+sikk_real_trade_guard.py
+sikk_same_source_grouping.py
+sikk_token_skip_policy.py
+sikk_trace_logger.py
+sikk_trade_confirmation_ticket.py
+sikk_trade_journal.py
+sikk_transaction_broadcast_guard.py
+sikk_wallet_structure_daily_report.py
+sikk_wallet_structure_gate.py
+sikk_wallet_structure_snapshot.py
+sikk_wallet_trade_adapter.py
+
+## 三、测试文件
+test_run_sikk_gmgn_pipeline.py
+test_sikk_auto_framework.py
+test_sikk_candidate_kline_pipeline.py
+test_sikk_candidate_quote_security_pipeline.py
+test_sikk_candidate_signal_pipeline.py
+test_sikk_candidate_state_machine.py
+test_sikk_candidate_wallet_structure_pipeline.py
+test_sikk_dominant_lifecycle_classifier.py
+test_sikk_execution_adapters.py
+test_sikk_execution_state_machine.py
+test_sikk_gmgn_new_token_filter.py
+test_sikk_live_collectors.py
+test_sikk_live_run.py
+test_sikk_orchestrator_wallet_structure_integration.py
+test_sikk_paper_live_runner.py
+test_sikk_paper_wallet_structure_integration.py
+test_sikk_pipeline_wallet_structure_mode.py
+test_sikk_quote_security_outputs.py
+test_sikk_runtime_v02.py
+test_sikk_same_source_grouping.py
+test_sikk_state_wallet_structure_integration.py
+test_sikk_trade_confirmation_ticket.py
+test_sikk_transaction_broadcast_guard.py
+test_sikk_wallet_structure_daily_report.py
+test_sikk_wallet_structure_gate.py
+test_sikk_wallet_structure_snapshot.py
+test_sikk_wallet_trade_adapter.py
+
+## 四、疑似入口/运行脚本
+run_sikk_gmgn_pipeline.py
+单轮检查交易系统.sh
+启动交易系统.sh
+查看交易系统状态.sh
+查看交易系统进程.sh
+查看交易证据面板.sh
+查询代币明细.sh
+
+## 五、关键关键词命中（文件级）
+### wallet_structure_decision
+audits/initial_codebase_audit.md
+docs/plans/2026-05-02-dominant-side-lifecycle-intent-v12.md
+docs/plans/2026-05-02-wallet-trade-adapter-observe-soft-hard.md
+sikk_candidate_wallet_structure_pipeline.py
+sikk_dominant_lifecycle_classifier.py
+sikk_module_runner.py
+sikk_paper_live_runner.py
+sikk_wallet_structure_gate.py
+sikk_wallet_trade_adapter.py
+tests/test_sikk_dominant_lifecycle_classifier.py
+tests/test_sikk_paper_live_runner.py
+tests/test_sikk_runtime_v02.py
+tests/test_sikk_wallet_structure_gate.py
+tests/test_sikk_wallet_trade_adapter.py
+查看交易证据面板.sh
+### sikk_system_audit
+audits/initial_codebase_audit.md
+### sikk_explainability_engine
+audits/initial_codebase_audit.md
+### live_dashboard
+audits/initial_codebase_audit.md
+sikk_dashboard_builder.py
+sikk_live_orchestrator.py
+sikk_live_run.py
+SIKK_交易系统固定命令.md
+tests/test_sikk_live_run.py
+tests/test_sikk_runtime_v02.py
+查看交易系统状态.sh
+### paper_entry_market_cap
+audits/initial_codebase_audit.md
+### failure_attribution
+audits/initial_codebase_audit.md
+docs/hindsight_sikk_integration_plan.md
+docs/plans/2026-05-02-dominant-side-lifecycle-intent-v12.md
+sikk_live_run.py
+sikk_paper_live_runner.py
+sikk_wallet_structure_daily_report.py
+tests/test_sikk_live_run.py
+tests/test_sikk_paper_live_runner.py
+tests/test_sikk_wallet_structure_daily_report.py
+### process_trace
+audits/initial_codebase_audit.md
+sikk_live_orchestrator.py
+sikk_live_run.py
+sikk_trace_logger.py
+tests/test_sikk_runtime_v02.py
+### gmgn_swap
+audits/initial_codebase_audit.md
+### real_trade
+audits/initial_codebase_audit.md
+docs/plans/2026-05-01-sikk-paper-live-runner.md
+.pytest_cache/v/cache/nodeids
+tests/test_sikk_execution_adapters.py

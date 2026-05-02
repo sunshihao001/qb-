@@ -20,7 +20,23 @@ def _fake_pipeline_runner(**kwargs):
 def _fake_paper_runner(**kwargs):
     out = Path(kwargs["output_dir"])
     out.mkdir(parents=True, exist_ok=True)
-    _write_json(out / "paper_positions_open.json", {"open_positions": [{"代币地址": "T1", "代币符号": "AAA", "status": "OPEN"}]})
+    _write_json(
+        out / "paper_positions_open.json",
+        {
+            "open_positions": [
+                {
+                    "代币地址": "T1",
+                    "代币符号": "AAA",
+                    "status": "OPEN",
+                    "entry_time": "2026-05-02T00:00:00Z",
+                    "entry_price": 1.23,
+                    "position_sol": 0.01,
+                    "last_price": 1.35,
+                    "当前收益率_pct": 9.7561,
+                }
+            ]
+        },
+    )
     _write_json(out / "paper_positions_closed.json", {"closed_positions": []})
     (out / "paper_positions_closed.csv").write_text("代币地址,代币符号,status,wallet_structure_status,signal_level,最终收益率_pct,net_pnl_sol,最大浮盈_pct,最大浮亏_pct,failure_type\n", encoding="utf-8-sig")
     (out / "failure_attribution.jsonl").write_text("", encoding="utf-8")
@@ -86,8 +102,16 @@ def test_sikk_live_run_once_unifies_pipeline_paper_reports_and_runtime_outputs(t
     assert token["security"]["security_gate"] == "READY_FOR_CONFIRMATION"
     assert token["paper"]["paper_status"] == "OPEN"
     assert token["paper"]["paper_entry_price_mode"] == "live_or_signal_with_cost_model"
+    assert token["paper"]["paper_entry_at"] == "2026-05-02T00:00:00Z"
+    assert token["paper"]["paper_entry_price"] == 1.23
+    assert token["paper"]["current_price"] == 1.35
     assert token["priority_level"] == "P0_ACTIVE_POSITION"
     assert token["latest_action"] == "HOLD"
+
+    dashboard_html = Path(result["live_dashboard_html"]).read_text(encoding="utf-8")
+    assert "paper_entry_price" in dashboard_html
+    assert "1.23" in dashboard_html
+    assert "current_price" in dashboard_html
 
 
 def test_live_run_manifest_exposes_phased_improvement_flow(tmp_path):
@@ -126,7 +150,9 @@ def test_runtime_status_merges_quote_security_and_paper_position_evidence(tmp_pa
     root = tmp_path / "run"
     _write_json(root / "state_machine" / "candidate_states.json", {"候选状态": [{"代币地址": "T1", "代币符号": "AAA", "当前状态": "PAPER_READY"}]})
     _write_json(root / "quote_security" / "candidate_quote_security_summary.json", {"处理结果": [{"代币地址": "T1", "最终权限": "PAUSE_NEED_CONFIRM", "交易前状态": "PAUSE", "说明": "报价缺失"}]})
-    _write_json(root / "paper_live" / "paper_positions_open.json", {"open_positions": [{"代币地址": "T1", "代币符号": "AAA", "entry_price_mode": "live", "unrealized_pnl_pct": 12.5}]})
+    _write_json(root / "paper_live" / "paper_positions_open.json", {"open_positions": [{"代币地址": "T1", "代币符号": "AAA", "entry_price_mode": "live", "entry_time": "2026-05-02T00:01:00Z", "entry_price": 2.0, "position_sol": 0.02, "last_price": 2.25, "unrealized_pnl_pct": 12.5}]})
+    (root / "paper_live" / "failure_attribution.jsonl").parent.mkdir(parents=True, exist_ok=True)
+    (root / "paper_live" / "failure_attribution.jsonl").write_text(json.dumps({"事件时间": "2026-05-02T00:02:00Z", "事件类型": "EXIT_MONITOR", "代币地址": "T1", "failure_type": "DATA_QUALITY_FAIL", "failure_reason": "数据质量不足"}, ensure_ascii=False) + "\n", encoding="utf-8")
 
     statuses = build_enriched_runtime_statuses(root, "2026-05-02T00:00:00Z")
 
@@ -136,6 +162,12 @@ def test_runtime_status_merges_quote_security_and_paper_position_evidence(tmp_pa
     assert status["security"]["security_gate"] == "PAUSE"
     assert status["paper"]["paper_status"] == "OPEN"
     assert status["paper"]["unrealized_pnl_pct"] == 12.5
+    assert status["paper"]["paper_entry_at"] == "2026-05-02T00:01:00Z"
+    assert status["paper"]["paper_entry_price"] == 2.0
+    assert status["paper"]["paper_entry_amount_sol"] == 0.02
+    assert status["paper"]["current_price"] == 2.25
+    assert status["paper"]["exit_monitor_at"] == "2026-05-02T00:02:00Z"
+    assert status["paper"]["failure_attribution_type"] == "DATA_QUALITY_FAIL"
     assert status["latest_action"] == "EXIT_MONITOR"
     assert "报价缺失" in status["latest_reason"]
 

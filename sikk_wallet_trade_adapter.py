@@ -60,9 +60,15 @@ def missing_wallet_decision(token_address: str = "", reason: str = "wallet_struc
         "wallet_risk_score": 0,
         "counterparty_pressure_score": 0,
         "data_quality_score": 0,
+        "data_quality_status": "MISSING",
         "wallet_structure_factor": 1.0,
         "reason": reason,
         "is_stale": True,
+        "reason_codes": ["DATA_MISSING"],
+        "missing_fields": ["wallet_structure_decision_json"],
+        "source_files": [],
+        "paper_gate_effect": "OBSERVE_ONLY",
+        "wallet_gate_result": "MISSING",
     }
 
 
