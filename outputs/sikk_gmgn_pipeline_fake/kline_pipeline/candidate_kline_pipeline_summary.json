@@ -1,0 +1,38 @@
+{
+  "模块": "SIKK 候选币 K线接入管道",
+  "扫描时间": "2026-04-30T11:47:46Z",
+  "候选来源": "outputs/sikk_gmgn_pipeline_fake/gmgn_new_token_filter/token_candidates.json",
+  "处理等级": [
+    "S3_进入SIKK结构分析"
+  ],
+  "处理统计": {
+    "读取候选数": 1,
+    "处理候选数": 1,
+    "成功数量": 1,
+    "失败数量": 0
+  },
+  "处理结果": [
+    {
+      "代币地址": "Pipe111111111111111111111111111111111111111",
+      "代币符号": "PIPE",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1770000000,
+      "输出目录": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111",
+      "K线文件": {
+        "1m": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111/kline_1m.csv",
+        "5m": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 80,
+        "5m": 80
+      },
+      "吸筹窗口输出": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-02-02 02:43:00 UTC",
+      "T_end": "2026-02-02 03:04:00 UTC"
+    }
+  ],
+  "说明": "本管道只读取 GMGN K线并运行吸筹窗口识别，不执行交易。"
+}

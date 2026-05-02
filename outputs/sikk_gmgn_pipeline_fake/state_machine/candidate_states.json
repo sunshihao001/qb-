@@ -1,0 +1,38 @@
+{
+  "模块": "SIKK Candidate State Machine v0.9",
+  "更新时间": "2026-04-30T11:47:46Z",
+  "输入文件": {
+    "候选池": "outputs/sikk_gmgn_pipeline_fake/gmgn_new_token_filter/token_candidates.json",
+    "K线管道": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/candidate_kline_pipeline_summary.json",
+    "信号管道": "outputs/sikk_gmgn_pipeline_fake/candidate_signal_outputs/candidate_signal_summary.json"
+  },
+  "状态统计": {
+    "DISCOVERED": 0,
+    "WATCHING": 0,
+    "ACCUMULATING": 0,
+    "READY_TO_BUY": 0,
+    "PAPER_READY": 1,
+    "BLOCKED": 0,
+    "FAILED": 0,
+    "EXITED": 0
+  },
+  "候选状态": [
+    {
+      "代币地址": "Pipe111111111111111111111111111111111111111",
+      "代币符号": "PIPE",
+      "当前状态": "PAPER_READY",
+      "状态原因": "吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0",
+      "候选筛选等级": "S3_进入SIKK结构分析",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-02-02 02:43:00 UTC",
+      "T_end": "2026-02-02 03:04:00 UTC",
+      "信号等级": "S4_强确认信号",
+      "风险门禁": "ALLOW_PAPER_TRADE_允许纸面交易",
+      "建议纸面仓位SOL": 0.2,
+      "策略类型": "SIKK-B 控盘箱体突破回踩",
+      "更新时间": "2026-04-30T11:47:46Z",
+      "模式": "paper/readiness"
+    }
+  ],
+  "说明": "本状态机只管理候选生命周期与纸面准备状态，不执行真实 swap。"
+}

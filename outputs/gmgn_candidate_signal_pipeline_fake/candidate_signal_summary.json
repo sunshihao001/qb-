@@ -1,0 +1,43 @@
+{
+  "模块": "SIKK 候选币自动信号接入模块",
+  "扫描时间": "2026-04-30T11:11:08Z",
+  "K线管道来源": "outputs/gmgn_candidate_kline_pipeline_fake/candidate_kline_pipeline_summary.json",
+  "模式": "paper",
+  "处理统计": {
+    "读取候选数": 1,
+    "成功数量": 1,
+    "跳过数量": 0,
+    "失败数量": 0
+  },
+  "信号结果": [
+    {
+      "代币地址": "Good111111111111111111111111111111111111111",
+      "代币符号": "GOOD",
+      "候选筛选等级": "S3_进入SIKK结构分析",
+      "模式": "paper",
+      "风险门禁": "ALLOW_PAPER_TRADE_允许纸面交易",
+      "风险等级": "低",
+      "信号等级": "SX_失效信号",
+      "策略类型": "风险监控",
+      "信号时间": "2026-02-02 02:55:00 UTC",
+      "信号价格": 0.00010706000000000002,
+      "信号置信分": 0.0,
+      "建议纸面仓位SOL": 0.0,
+      "止损价格": 0.000101936704,
+      "最大浮盈_pct": "",
+      "最终收益率_pct": "",
+      "自动准备输出": {
+        "json": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/token_readiness_result.json",
+        "risk": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/risk_gate_report.json",
+        "signal": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/signal_events.csv",
+        "paper": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/paper_trades.csv",
+        "exit": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/exit_plan.json",
+        "review": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/auto_readiness_review.md"
+      },
+      "状态": "ok",
+      "说明": "纸面交易/自动准备信号，不执行真实 swap"
+    }
+  ],
+  "跳过结果": [],
+  "说明": "本模块只生成 SIKK 自动交易准备/纸面信号，不执行真实 swap。"
+}

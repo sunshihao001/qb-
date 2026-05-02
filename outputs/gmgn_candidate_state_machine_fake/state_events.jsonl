@@ -1,0 +1,5 @@
+{"event_time": "2026-04-30T11:31:53Z", "token": "Ready11111111111111111111111111111111111111", "symbol": "READY", "from_state": "UNKNOWN", "to_state": "PAPER_READY", "reason": "吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0", "mode": "paper/readiness"}
+{"event_time": "2026-04-30T11:31:53Z", "token": "Accum22222222222222222222222222222222222222", "symbol": "ACCUM", "from_state": "UNKNOWN", "to_state": "ACCUMULATING", "reason": "已出现 T_start，但吸筹窗口仍 pending", "mode": "paper/readiness"}
+{"event_time": "2026-04-30T11:31:53Z", "token": "Watch33333333333333333333333333333333333333", "symbol": "WATCH", "from_state": "UNKNOWN", "to_state": "WATCHING", "reason": "候选筛选等级为观察层，等待更多 K线/结构证据", "mode": "paper/readiness"}
+{"event_time": "2026-04-30T11:31:53Z", "token": "Block44444444444444444444444444444444444444", "symbol": "BLOCK", "from_state": "UNKNOWN", "to_state": "BLOCKED", "reason": "吸筹窗口 invalid，进入风险阻断观察", "mode": "paper/readiness"}
+{"event_time": "2026-04-30T11:31:53Z", "token": "Fail555555555555555555555555555555555555555", "symbol": "FAIL", "from_state": "UNKNOWN", "to_state": "FAILED", "reason": "上游 K线管道未成功", "mode": "paper/readiness"}
