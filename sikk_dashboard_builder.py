@@ -115,6 +115,7 @@ def _event_fields(token: Mapping[str, Any], paper_open: Mapping[str, Any], paper
     signal = token.get("signal", {}) if isinstance(token.get("signal", {}), Mapping) else {}
     quote = token.get("quote", {}) if isinstance(token.get("quote", {}), Mapping) else {}
     paper = token.get("paper", {}) if isinstance(token.get("paper", {}), Mapping) else {}
+    okx_cluster = token.get("okx_cluster", {}) if isinstance(token.get("okx_cluster", {}), Mapping) else {}
     source = paper_open or paper_closed
     monitor_action = _pick(token, paper, source, failure, keys=("wallet_position_action", "事件类型"))
     return {
@@ -141,6 +142,15 @@ def _event_fields(token: Mapping[str, Any], paper_open: Mapping[str, Any], paper
         "paper_exit_at": _pick(token, paper, paper_closed, keys=("paper_exit_at", "exit_time", "退出时间")),
         "exit_reason": _pick(token, paper, paper_closed, failure, keys=("exit_reason", "退出原因", "failure_reason", "原因")),
         "failure_attribution_type": _pick(token, paper, paper_closed, failure, keys=("failure_attribution_type", "failure_type")),
+        "okx_cluster_status": _pick(token, okx_cluster, keys=("okx_cluster_status",)),
+        "okx_cluster_score": _pick(token, okx_cluster, keys=("okx_cluster_score",)),
+        "okx_cluster_risk_score": _pick(token, okx_cluster, keys=("okx_cluster_risk_score",)),
+        "okx_cluster_distribution_score": _pick(token, okx_cluster, keys=("okx_cluster_distribution_score",)),
+        "okx_cluster_control_retention_score": _pick(token, okx_cluster, keys=("okx_cluster_control_retention_score",)),
+        "largest_cluster_holding_pct": _pick(token, okx_cluster, keys=("largest_cluster_holding_pct",)),
+        "top300_total_holding_pct": _pick(token, okx_cluster, keys=("top300_total_holding_pct",)),
+        "cluster_holding_pct_delta": _pick(token, okx_cluster, keys=("cluster_holding_pct_delta",)),
+        "largest_cluster_holding_pct_delta": _pick(token, okx_cluster, keys=("largest_cluster_holding_pct_delta",)),
     }
 
 
@@ -229,6 +239,15 @@ def build_dashboard_html(*, base_dir: str | Path = DEFAULT_BASE_DIR) -> str:
             f"<td>{_display(event['paper_exit_at'])}</td>"
             f"<td>{_display(event['exit_reason'])}</td>"
             f"<td>{_display(event['failure_attribution_type'])}</td>"
+            f"<td>{_display(event['okx_cluster_status'])}</td>"
+            f"<td>{_display(event['okx_cluster_score'])}</td>"
+            f"<td>{_display(event['okx_cluster_risk_score'])}</td>"
+            f"<td>{_display(event['okx_cluster_distribution_score'])}</td>"
+            f"<td>{_display(event['okx_cluster_control_retention_score'])}</td>"
+            f"<td>{_fmt_pct(event['largest_cluster_holding_pct'])}</td>"
+            f"<td>{_fmt_pct(event['top300_total_holding_pct'])}</td>"
+            f"<td>{_fmt_pct(event['cluster_holding_pct_delta'])}</td>"
+            f"<td>{_fmt_pct(event['largest_cluster_holding_pct_delta'])}</td>"
             f"<td>{_esc(token.get('latest_reason'))}</td>"
             f"<td>{_esc(token.get('latest_action'))}</td>"
             "</tr>"
@@ -244,7 +263,7 @@ body{{font-family:Arial,sans-serif;background:#0f1115;color:#e7e7e7;margin:24px}
 <p>边界：只做候选发现、结构分析、quote/security、纸面交易和复盘，不执行真实 swap。</p>
 <div class="cards"><div class="card"><div class="card-title">Token 总数</div><div class="card-num">{_esc(state.get('token_count', len(tokens)))}</div></div>{''.join(cards)}</div>
 <div class="toolbar"><input id="token-search" placeholder="搜索 Token / 地址 / 原因"><select id="state-filter"><option value="">全部 State</option>{state_options}</select><select id="wallet-filter"><option value="">全部 Wallet</option>{wallet_options}</select></div>
-<h2>Token 状态 / 事件链路</h2><p>缺失字段统一显示“待补”，用于审计发现→判断→入场→持仓→退出链路。</p><div class="table-wrap"><table><thead><tr><th>符号</th><th>地址</th><th>Priority</th><th>State</th><th>Signal Level</th><th>Signal Gate</th><th>Wallet</th><th>结构分</th><th>风险分</th><th>对手盘</th><th>数据质量</th><th>Quote</th><th>Security</th><th>Paper</th><th>PnL</th><th>discovered_at</th><th>discovery_market_cap_usd</th><th>discovery_liquidity_usd</th><th>first_signal_at</th><th>first_signal_type</th><th>signal_market_cap_usd</th><th>wallet_decision_at</th><th>wallet_decision_market_cap_usd</th><th>paper_entry_at</th><th>paper_entry_market_cap_usd</th><th>paper_entry_price</th><th>paper_entry_amount_sol</th><th>paper_entry_amount_usd</th><th>paper_token_amount</th><th>current_market_cap_usd</th><th>current_price</th><th>unrealized_pnl_sol</th><th>unrealized_pnl_pct</th><th>exit_monitor_at</th><th>paper_exit_at</th><th>exit_reason</th><th>failure_attribution_type</th><th>Reason</th><th>Next</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
+<h2>Token 状态 / 事件链路</h2><p>缺失字段统一显示“待补”，用于审计发现→判断→入场→持仓→退出链路。</p><div class="table-wrap"><table><thead><tr><th>符号</th><th>地址</th><th>Priority</th><th>State</th><th>Signal Level</th><th>Signal Gate</th><th>Wallet</th><th>结构分</th><th>风险分</th><th>对手盘</th><th>数据质量</th><th>Quote</th><th>Security</th><th>Paper</th><th>PnL</th><th>discovered_at</th><th>discovery_market_cap_usd</th><th>discovery_liquidity_usd</th><th>first_signal_at</th><th>first_signal_type</th><th>signal_market_cap_usd</th><th>wallet_decision_at</th><th>wallet_decision_market_cap_usd</th><th>paper_entry_at</th><th>paper_entry_market_cap_usd</th><th>paper_entry_price</th><th>paper_entry_amount_sol</th><th>paper_entry_amount_usd</th><th>paper_token_amount</th><th>current_market_cap_usd</th><th>current_price</th><th>unrealized_pnl_sol</th><th>unrealized_pnl_pct</th><th>exit_monitor_at</th><th>paper_exit_at</th><th>exit_reason</th><th>failure_attribution_type</th><th>okx_cluster_status</th><th>okx_cluster_score</th><th>okx_cluster_risk_score</th><th>okx_cluster_distribution_score</th><th>okx_cluster_control_retention_score</th><th>largest_cluster_holding_pct</th><th>top300_total_holding_pct</th><th>cluster_holding_pct_delta</th><th>largest_cluster_holding_pct_delta</th><th>Reason</th><th>Next</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
 <h2>最新事件</h2><ul>{''.join(event_items)}</ul>
 <script>
 function applyFilters(){{

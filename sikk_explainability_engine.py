@@ -155,11 +155,18 @@ def _explain_token(
     chip = status.get("chip_control") if isinstance(status.get("chip_control"), Mapping) else {}
     market_ctx = status.get("market_cap_context") if isinstance(status.get("market_cap_context"), Mapping) else {}
     lifecycle = status.get("lifecycle") if isinstance(status.get("lifecycle"), Mapping) else {}
+    okx_cluster = status.get("okx_cluster") if isinstance(status.get("okx_cluster"), Mapping) else {}
     chip_state = _field(chip, "chip_control_state") or _field(status, "chip_control_state") or _field(wallet, "chip_control_state", "筹码控制权状态")
     chip_action = _field(chip, "chip_control_action") or _field(status, "chip_control_action")
     lifecycle_state = _field(lifecycle, "dominant_side_lifecycle") or _field(status, "dominant_side_lifecycle")
     dominant_intent = _field(lifecycle, "dominant_side_intent") or _field(status, "dominant_side_intent")
     counterparty_state = _field(lifecycle, "counterparty_state") or _field(status, "counterparty_state")
+    okx_cluster_status = _field(okx_cluster, "okx_cluster_status") or _field(status, "okx_cluster_status")
+    okx_cluster_reason = _field(okx_cluster, "okx_cluster_reason") or _field(status, "okx_cluster_reason")
+    okx_cluster_score = _field(okx_cluster, "okx_cluster_score") or _field(status, "okx_cluster_score")
+    okx_cluster_risk = _field(okx_cluster, "okx_cluster_risk_score") or _field(status, "okx_cluster_risk_score")
+    okx_cluster_distribution = _field(okx_cluster, "okx_cluster_distribution_score") or _field(status, "okx_cluster_distribution_score")
+    okx_cluster_retention = _field(okx_cluster, "okx_cluster_control_retention_score") or _field(status, "okx_cluster_control_retention_score")
 
     q: Dict[str, List[Dict[str, str]]] = {key: [] for key in EXPLANATION_KEYS}
 
@@ -184,21 +191,32 @@ def _explain_token(
         _append_if_present(q["为什么支持"], _field(quote, "原因", "reason"), sources.get("quote", "quote_security_summary.json"), "原因", "quote/security 原因")
         _append_if_present(q["为什么支持"], chip_state, sources.get("token_status", "token_status.json"), "chip_control_state", "筹码控制权状态")
         _append_if_present(q["为什么支持"], chip_action, sources.get("token_status", "token_status.json"), "chip_control_action", "筹码控制动作")
+        if str(okx_cluster_status or "").upper() in {"CLUSTER_SUPPORT", "CLUSTER_CONTROL_HOLDING", "CLUSTER_SECOND_STAGE_SUPPORT"}:
+            _append_if_present(q["为什么支持"], okx_cluster_status, sources.get("token_status", "token_status.json"), "okx_cluster_status", "OKX 前300集群状态")
+            _append_if_present(q["为什么支持"], okx_cluster_reason, sources.get("token_status", "token_status.json"), "okx_cluster_reason", "OKX 集群支持原因")
+            _append_if_present(q["为什么支持"], okx_cluster_retention, sources.get("token_status", "token_status.json"), "okx_cluster_control_retention_score", "OKX 集群控筹保持分")
     if not q["为什么支持"]:
         q["为什么支持"].append(_missing("为什么支持", f"{sources.get('wallet', 'wallet_structure_decision.json')}；{sources.get('quote', 'quote_security_summary.json')}"))
 
-    if "PAUSE" in str(quote_gate).upper() or "PAUSE" in str(security_gate).upper() or current_state.upper() == "PAUSED":
+    if "PAUSE" in str(quote_gate).upper() or "PAUSE" in str(security_gate).upper() or current_state.upper() == "PAUSED" or str(okx_cluster_status or "").upper() in {"CLUSTER_COUNTERPARTY_ABSORBING", "CLUSTER_BAGHOLDER_PRESSURE"}:
         _append_if_present(q["为什么暂停"], quote_gate, sources.get("quote", "quote_security_summary.json"), "quote_security_permission", "quote/security 权限")
         _append_if_present(q["为什么暂停"], security_gate, sources.get("quote", "quote_security_summary.json"), "交易前状态", "安全层状态")
         _append_if_present(q["为什么暂停"], _field(quote, "原因", "reason"), sources.get("quote", "quote_security_summary.json"), "原因", "暂停原因")
+        if str(okx_cluster_status or "").upper() in {"CLUSTER_COUNTERPARTY_ABSORBING", "CLUSTER_BAGHOLDER_PRESSURE"}:
+            _append_if_present(q["为什么暂停"], okx_cluster_status, sources.get("token_status", "token_status.json"), "okx_cluster_status", "OKX 集群对手盘/套牢压力")
+            _append_if_present(q["为什么暂停"], okx_cluster_reason, sources.get("token_status", "token_status.json"), "okx_cluster_reason", "OKX 集群暂停原因")
     if not q["为什么暂停"]:
         q["为什么暂停"].append(_missing("为什么暂停", sources.get("quote", "quote_security_summary.json")))
 
-    if "BLOCK" in current_state.upper() or "BLOCK" in str(wallet_status).upper() or "BLOCK" in str(quote_gate).upper() or "BLOCK" in str(security_gate).upper():
+    if "BLOCK" in current_state.upper() or "BLOCK" in str(wallet_status).upper() or "BLOCK" in str(quote_gate).upper() or "BLOCK" in str(security_gate).upper() or str(okx_cluster_status or "").upper() == "CLUSTER_DISTRIBUTION_RISK":
         _append_if_present(q["为什么阻断"], current_state, sources.get("token_status", "token_status.json"), "current_state", "当前状态")
         _append_if_present(q["为什么阻断"], wallet_status, sources.get("wallet", "wallet_structure_decision.json"), "wallet_structure_status", "钱包结构结论")
         _append_if_present(q["为什么阻断"], _field(wallet, "wallet_structure_reason", "状态调整原因"), sources.get("wallet", "wallet_structure_decision.json"), "wallet_structure_reason", "钱包结构原因")
         _append_if_present(q["为什么阻断"], quote_gate, sources.get("quote", "quote_security_summary.json"), "quote_security_permission", "quote/security 权限")
+        if str(okx_cluster_status or "").upper() == "CLUSTER_DISTRIBUTION_RISK":
+            _append_if_present(q["为什么阻断"], okx_cluster_status, sources.get("token_status", "token_status.json"), "okx_cluster_status", "OKX 集群派发风险")
+            _append_if_present(q["为什么阻断"], okx_cluster_distribution, sources.get("token_status", "token_status.json"), "okx_cluster_distribution_score", "OKX 集群派发分")
+            _append_if_present(q["为什么阻断"], okx_cluster_reason, sources.get("token_status", "token_status.json"), "okx_cluster_reason", "OKX 集群阻断原因")
     if not q["为什么阻断"]:
         q["为什么阻断"].append(_missing("为什么阻断", f"{sources.get('token_status', 'token_status.json')}；{sources.get('wallet', 'wallet_structure_decision.json')}"))
 
@@ -232,11 +250,13 @@ def _explain_token(
         _evidence("待复查", f"复查钱包结构是否变化：{wallet_status or '证据缺失'}", sources.get("wallet", "wallet_structure_decision.json"), "wallet_structure_status"),
         _evidence("待复查", f"复查 quote/security：{quote_gate or '证据缺失'} / {security_gate or '证据缺失'}", sources.get("quote", "quote_security_summary.json"), "quote_security_permission/交易前状态"),
         _evidence("待复查", f"复查筹码控制/生命周期：{chip_state or '证据缺失'} / {lifecycle_state or '证据缺失'} / {dominant_intent or '证据缺失'} / {counterparty_state or '证据缺失'}", sources.get("token_status", "token_status.json"), "chip_control_state/dominant_side_lifecycle/dominant_side_intent/counterparty_state"),
+        _evidence("待复查", f"复查 OKX 前300集群：状态={okx_cluster_status or '证据缺失'} 支持分={okx_cluster_score or '待补'} 风险分={okx_cluster_risk or '待补'} 派发分={okx_cluster_distribution or '待补'} 控筹保持分={okx_cluster_retention or '待补'}", sources.get("token_status", "token_status.json"), "okx_cluster"),
         _evidence("待复查", f"复查市值上下文：发现={_field(market_ctx, 'discovery_market_cap_usd') or '待补'} 信号={_field(market_ctx, 'signal_market_cap_usd') or '待补'} 入场={_field(market_ctx, 'paper_entry_market_cap_usd') or '待补'} 当前={_field(market_ctx, 'current_market_cap_usd') or '待补'}", sources.get("token_status", "token_status.json"), "market_cap_context"),
         _evidence("待复查", "如有纸面持仓，复查 paper_positions_open/closed 与 failure_attribution 是否一致", f"{sources.get('paper_open', 'paper_positions_open.json')}；{sources.get('paper_closed', 'paper_positions_closed.json')}；{sources.get('failure', 'failure_attribution.jsonl')}"),
     ])
     q["主要失效条件"].extend([
         _evidence("条件", "wallet_structure_status 变为 WALLET_BLOCK 或钱包风险/对手盘压力继续恶化", sources.get("wallet", "wallet_structure_decision.json"), "wallet_structure_status/wallet_risk_score/counterparty_pressure_score"),
+        _evidence("条件", "OKX 前300集群转为 CLUSTER_DISTRIBUTION_RISK、同步卖出分升高、最大集群持仓 delta 快速转负，paper 进入 EXIT_MONITOR / FORCE_PAPER_EXIT 复盘路径", sources.get("token_status", "token_status.json"), "okx_cluster_status/cluster_sync_sell_score/largest_cluster_holding_pct_delta"),
         _evidence("条件", "quote/security 变为 PAUSE、BLOCK、MISSING 或 ERROR", sources.get("quote", "quote_security_summary.json"), "quote_security_permission/交易前状态"),
         _evidence("条件", "paper 仓位触发止损/强制退出/failure_attribution 归因为结构走弱或执行失败", f"{sources.get('paper_closed', 'paper_positions_closed.json')}；{sources.get('failure', 'failure_attribution.jsonl')}"),
     ])

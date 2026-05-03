@@ -139,6 +139,17 @@ def test_system_audit_summarizes_normal_fake_outputs(tmp_path):
                     "wallet_structure": {"wallet_structure_status": "WALLET_SUPPORT"},
                     "signal": {"signal_level": "S4"},
                     "paper": {"paper_status": "OPEN"},
+                    "okx_cluster": {
+                        "okx_cluster_status": "CLUSTER_CONTROL_HOLDING",
+                        "okx_cluster_score": 82,
+                        "okx_cluster_risk_score": 12,
+                        "okx_cluster_distribution_score": 18,
+                        "okx_cluster_control_retention_score": 78,
+                        "largest_cluster_holding_pct": 15.5,
+                        "top300_total_holding_pct": 48,
+                        "cluster_holding_pct_delta": 1.2,
+                        "largest_cluster_holding_pct_delta": -1.0,
+                    },
                 }
             ]
         },
@@ -182,6 +193,8 @@ def test_system_audit_summarizes_normal_fake_outputs(tmp_path):
     assert audit["dashboard_missing_fields"]["missing_field_counts"]["paper_entry_market_cap_usd"] == 1
     assert audit["dashboard_missing_fields"]["missing_field_counts"]["chip_control_state"] == 1
     assert audit["dashboard_missing_fields"]["missing_field_counts"]["market_cap_context"] == 1
+    assert "okx_cluster_status" not in audit["dashboard_missing_fields"]["missing_field_counts"]
+    assert "okx_cluster_score" not in audit["dashboard_missing_fields"]["missing_field_counts"]
     assert audit["replay_unavailable_fields"]["missing_field_counts"]["paper_entry_market_cap_usd"] >= 1
     assert "状态机冲突" in md
     assert "下一步建议" in md

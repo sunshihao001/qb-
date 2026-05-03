@@ -131,6 +131,32 @@ def _index_rows_by_token(rows: Iterable[Mapping[str, Any]]) -> Dict[str, Dict[st
     return indexed
 
 
+def _okx_cluster_rows(root: Path) -> Dict[str, Dict[str, Any]]:
+    rows: List[Dict[str, Any]] = []
+    summary = _read_json(root / "okx_cluster" / "okx_cluster_summary.json")
+    rows.extend(_extract_rows(summary, ("处理结果", "results", "decisions")))
+    delta_summary = _read_json(root / "okx_cluster" / "okx_cluster_delta_summary.json")
+    delta_by_token = _index_rows_by_token(_extract_rows(delta_summary, ("处理结果", "results", "deltas")))
+    for path in sorted((root / "okx_cluster").glob("*/okx_cluster_decision.json")):
+        payload = _read_json(path)
+        if payload:
+            rows.append(payload)
+    indexed = _index_rows_by_token(rows)
+    for token, delta in delta_by_token.items():
+        row = indexed.get(token, {})
+        row.update({
+            "okx_cluster_delta": delta,
+            "okx_cluster_failure_type": delta.get("okx_cluster_failure_type"),
+            "recommended_paper_action": delta.get("recommended_paper_action"),
+            "okx_cluster_delta_flags": delta.get("okx_cluster_delta_flags"),
+            "largest_cluster_holding_pct_delta_round": delta.get("largest_cluster_holding_pct_delta_round"),
+            "cluster_sync_sell_score_delta_round": delta.get("cluster_sync_sell_score_delta_round"),
+            "okx_cluster_distribution_score_delta_round": delta.get("okx_cluster_distribution_score_delta_round"),
+        })
+        indexed[token] = row
+    return indexed
+
+
 def _quote_rows(root: Path) -> Dict[str, Dict[str, Any]]:
     payload = _read_json(root / "quote_security" / "candidate_quote_security_summary.json")
     return _index_rows_by_token(_extract_rows(payload, ("处理结果", "quote_security_results", "results", "候选列表")))
@@ -147,9 +173,13 @@ def _closed_paper_rows(root: Path) -> Dict[str, Dict[str, Any]]:
 
 
 def _failure_attribution_rows(root: Path) -> Dict[str, Dict[str, Any]]:
-    path = root / "paper_live" / "failure_attribution.jsonl"
     rows: List[Dict[str, Any]] = []
-    if path.exists():
+    for path in [
+        root / "paper_live" / "failure_attribution.jsonl",
+        *sorted((root / "okx_cluster").glob("*/okx_cluster_failure_attribution.jsonl")),
+    ]:
+        if not path.exists():
+            continue
         for line in path.read_text(encoding="utf-8").splitlines():
             try:
                 row = json.loads(line)
@@ -206,7 +236,14 @@ def _apply_latest_runtime_decision(status: Dict[str, Any]) -> None:
 
     if paper_status == "OPEN":
         status["priority_level"] = "P0_ACTIVE_POSITION"
-        status["latest_action"] = "EXIT_MONITOR" if quote_gate in {"PAUSE_NEED_CONFIRM", "PAUSE", "MISSING", "ERROR", "BLOCK_BUY"} or security_gate in {"PAUSE", "PAUSE_NEED_CONFIRM", "BLOCK", "BLOCK_BUY", "MISSING", "ERROR"} or wallet_status == "WALLET_PAUSE" else "HOLD"
+        okx_cluster = status.get("okx_cluster") if isinstance(status.get("okx_cluster"), Mapping) else {}
+        okx_action = str(okx_cluster.get("recommended_paper_action") or "").upper()
+        okx_failure = str(okx_cluster.get("okx_cluster_failure_type") or "").upper()
+        if okx_action == "FORCE_PAPER_EXIT":
+            status["latest_action"] = "FORCE_PAPER_EXIT"
+            status["latest_reason"] = f"{status.get('latest_reason')}；OKX集群归因：{okx_failure or 'CLUSTER_RISK'}（仅纸面退出/复盘）"
+            return
+        status["latest_action"] = "EXIT_MONITOR" if quote_gate in {"PAUSE_NEED_CONFIRM", "PAUSE", "MISSING", "ERROR", "BLOCK_BUY"} or security_gate in {"PAUSE", "PAUSE_NEED_CONFIRM", "BLOCK", "BLOCK_BUY", "MISSING", "ERROR"} or wallet_status == "WALLET_PAUSE" or okx_action == "EXIT_MONITOR" else "HOLD"
         return
     if current_state in {"PAPER_READY", "READY_FOR_CONFIRMATION"}:
         status["priority_level"] = status.get("priority_level") or "P1_PAPER_READY"
@@ -220,6 +257,7 @@ def build_enriched_runtime_statuses(root: str | Path, now: str) -> List[Dict[str
     """合并状态机、quote/security、paper-live 的证据，生成专业面板可直接消费的 token_status。"""
     base = Path(root)
     quote_by_token = _quote_rows(base)
+    okx_cluster_by_token = _okx_cluster_rows(base)
     open_by_token = _open_paper_rows(base)
     closed_by_token = _closed_paper_rows(base)
     failure_by_token = _failure_attribution_rows(base)
@@ -228,6 +266,9 @@ def build_enriched_runtime_statuses(root: str | Path, now: str) -> List[Dict[str
         status = _status_from_state_row(row, now)
         token = status.get("token_address")
         quote_row = quote_by_token.get(str(token), {})
+        okx_cluster_row = okx_cluster_by_token.get(str(token), {})
+        if okx_cluster_row:
+            status["okx_cluster"] = okx_cluster_row
         if quote_row:
             status["quote"] = {
                 "quote_gate": _quote_gate_from_row(quote_row),
@@ -254,6 +295,8 @@ def build_enriched_runtime_statuses(root: str | Path, now: str) -> List[Dict[str
         if failure_row:
             paper = status.get("paper") if isinstance(status.get("paper"), dict) else {}
             paper["failure_attribution_type"] = failure_row.get("failure_type") or paper.get("failure_attribution_type")
+            paper["okx_cluster_failure_type"] = failure_row.get("okx_cluster_failure_type") or paper.get("okx_cluster_failure_type")
+            paper["recommended_paper_action"] = failure_row.get("recommended_paper_action") or paper.get("recommended_paper_action")
             paper["exit_reason"] = failure_row.get("failure_reason") or failure_row.get("原因") or paper.get("exit_reason")
             if failure_row.get("事件类型") == "EXIT_MONITOR":
                 paper["exit_monitor_at"] = failure_row.get("事件时间") or paper.get("exit_monitor_at")

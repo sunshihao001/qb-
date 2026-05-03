@@ -91,3 +91,80 @@ def test_open_paper_position_gets_exit_monitor_when_control_migrates():
     assert decision.chip_control_state == "CONTROL_MIGRATING_TO_COUNTERPARTY"
     assert "PAPER_OPEN_REQUIRES_EXIT_MONITOR" in decision.reason_codes
     assert any("EXIT_MONITOR" in item for item in decision.invalidators)
+
+
+def test_okx_cluster_support_strengthens_retained_control_without_trade_authorization():
+    decision = evaluate_chip_control_state(
+        wallet_decision={
+            "token_address": "Token555",
+            "wallet_structure_status": "WALLET_SUPPORT",
+            "wallet_structure_score": 70,
+            "wallet_risk_score": 10,
+            "counterparty_pressure_score": 15,
+            "data_quality_score": 90,
+            "data_quality_status": "OK",
+            "max_sync_sell_score": 8,
+        },
+        lifecycle_row={"dominant_side_lifecycle": "CONTROL_BOX_ACCUMULATION"},
+        okx_cluster_decision={
+            "okx_cluster_status": "CLUSTER_CONTROL_HOLDING",
+            "okx_cluster_control_retention_score": 78,
+            "okx_cluster_risk_score": 12,
+            "okx_cluster_reason": "横盘控筹阶段前300/最大集群持仓相对稳定。",
+        },
+    )
+
+    assert decision.chip_control_state == "CONTROL_RETAINED_BY_STRUCTURE_SIDE"
+    assert decision.chip_control_action == "ALLOW_PAPER_READY_IF_OTHER_GATES_PASS"
+    assert "OKX_CLUSTER_CLUSTER_CONTROL_HOLDING" in decision.reason_codes
+    assert any("OKX 前300集群转为同步卖出" in item for item in decision.invalidators)
+    assert "okx_cluster_decision.json" in decision.evidence_refs
+
+
+def test_okx_cluster_distribution_overrides_support_to_control_lost():
+    decision = evaluate_chip_control_state(
+        wallet_decision={
+            "token_address": "Token666",
+            "wallet_structure_status": "WALLET_SUPPORT",
+            "wallet_structure_score": 74,
+            "wallet_risk_score": 10,
+            "counterparty_pressure_score": 15,
+            "data_quality_score": 90,
+            "data_quality_status": "OK",
+        },
+        okx_cluster_decision={
+            "okx_cluster_status": "CLUSTER_DISTRIBUTION_RISK",
+            "okx_cluster_distribution_score": 84,
+            "cluster_sync_sell_score": 80,
+            "largest_cluster_holding_pct_delta": -12,
+            "okx_cluster_reason": "前300关联集群出现同步卖出/持仓快速下降。",
+        },
+    )
+
+    assert decision.chip_control_state == "CONTROL_LOST_TO_DISTRIBUTION"
+    assert decision.chip_control_action == "BLOCK_OR_FORCE_PAPER_EXIT"
+    assert "OKX_CLUSTER_DISTRIBUTION_RISK" in decision.reason_codes
+    assert decision.risk_level == "HIGH"
+
+
+def test_okx_cluster_counterparty_pressure_migrates_control():
+    decision = evaluate_chip_control_state(
+        wallet_decision={
+            "token_address": "Token777",
+            "wallet_structure_status": "WALLET_SUPPORT",
+            "wallet_structure_score": 68,
+            "wallet_risk_score": 15,
+            "counterparty_pressure_score": 15,
+            "data_quality_score": 90,
+            "data_quality_status": "OK",
+        },
+        okx_cluster_decision={
+            "okx_cluster_status": "CLUSTER_BAGHOLDER_PRESSURE",
+            "okx_cluster_risk_score": 76,
+            "okx_cluster_reason": "晚期集群买入且 ROI 偏弱，存在套牢/接盘压力。",
+        },
+    )
+
+    assert decision.chip_control_state == "CONTROL_MIGRATING_TO_COUNTERPARTY"
+    assert decision.chip_control_action == "PAUSE_OR_EXIT_MONITOR"
+    assert "OKX_CLUSTER_COUNTERPARTY_OR_BAGHOLDER_PRESSURE" in decision.reason_codes

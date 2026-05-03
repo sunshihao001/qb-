@@ -117,6 +117,7 @@ def evaluate_chip_control_state(
     lifecycle_row: Mapping[str, Any] | None = None,
     market_context: Mapping[str, Any] | None = None,
     paper_row: Mapping[str, Any] | None = None,
+    okx_cluster_decision: Mapping[str, Any] | None = None,
 ) -> ChipControlDecision:
     """Evaluate chip-control state from existing evidence.
 
@@ -128,9 +129,10 @@ def evaluate_chip_control_state(
     lifecycle = lifecycle_row or {}
     market = market_context or {}
     paper = paper_row or {}
+    okx_cluster = okx_cluster_decision or {}
 
-    token = str(_first(wallet, "token_address", "代币地址", "token", default=_first(lifecycle, "token_address", "代币地址", default=_first(market, "token_address", "代币地址", default=""))))
-    symbol = str(_first(wallet, "symbol", "token_symbol", "代币符号", default=_first(lifecycle, "symbol", "token_symbol", "代币符号", default="")))
+    token = str(_first(wallet, "token_address", "代币地址", "token", default=_first(lifecycle, "token_address", "代币地址", default=_first(market, "token_address", "代币地址", default=_first(okx_cluster, "token_address", "代币地址", default="")))))
+    symbol = str(_first(wallet, "symbol", "token_symbol", "代币符号", default=_first(lifecycle, "symbol", "token_symbol", "代币符号", default=_first(okx_cluster, "symbol", "token_symbol", "代币符号", default=""))))
 
     wallet_status = str(_first(wallet, "wallet_structure_status", "钱包结构结论", default="WALLET_UNKNOWN"))
     wallet_score = _num(_first(wallet, "wallet_structure_score", "钱包结构评分", default=0))
@@ -152,11 +154,29 @@ def evaluate_chip_control_state(
     current_mc = _first(market, "current_market_cap_usd", "当前市值", default=None)
     paper_status = str(_first(paper, "paper_status", "纸面状态", default="NONE")).upper()
 
+    okx_cluster_status = str(_first(okx_cluster, "okx_cluster_status", "OKX集群状态", default="OKX_CLUSTER_MISSING"))
+    okx_cluster_score = _num(_first(okx_cluster, "okx_cluster_score", "OKX集群评分", default=0))
+    okx_cluster_risk = _num(_first(okx_cluster, "okx_cluster_risk_score", "OKX集群风险评分", default=0))
+    okx_cluster_distribution = _num(_first(okx_cluster, "okx_cluster_distribution_score", "OKX集群派发评分", default=0))
+    okx_cluster_retention = _num(_first(okx_cluster, "okx_cluster_control_retention_score", "OKX集群控筹保持评分", default=0))
+    okx_cluster_sync_sell = _num(_first(okx_cluster, "cluster_sync_sell_score", "OKX集群同步卖出分", default=0))
+    okx_cluster_largest_delta = _num(_first(okx_cluster, "largest_cluster_holding_pct_delta", "最大集群持仓变化", default=0))
+    okx_cluster_reason = str(_first(okx_cluster, "okx_cluster_reason", "OKX集群原因", default=""))
+    okx_support_statuses = {"CLUSTER_SUPPORT", "CLUSTER_CONTROL_HOLDING", "CLUSTER_SECOND_STAGE_SUPPORT"}
+    okx_distribution_statuses = {"CLUSTER_DISTRIBUTION_RISK"}
+    okx_migrating_statuses = {"CLUSTER_COUNTERPARTY_ABSORBING", "CLUSTER_BAGHOLDER_PRESSURE"}
+    has_okx_distribution = okx_cluster_status in okx_distribution_statuses or okx_cluster_distribution >= 75 or okx_cluster_sync_sell >= 70 or okx_cluster_largest_delta <= -10
+    has_okx_migration = okx_cluster_status in okx_migrating_statuses or okx_cluster_risk >= 70
+    has_okx_support = okx_cluster_status in okx_support_statuses and okx_cluster_retention >= 50 and okx_cluster_risk < 70
+
     missing: list[str] = []
     if not wallet:
         missing.append("wallet_decision")
     if data_quality_status in {"MISSING", "DEGRADED"} or data_quality <= 0:
         missing.append("wallet_data_quality")
+
+    if not okx_cluster:
+        missing.append("okx_cluster_decision")
 
     reasons: list[str] = []
     refs: list[str] = []
@@ -176,9 +196,9 @@ def evaluate_chip_control_state(
         risk_level = "MEDIUM"
         reasons.append("WALLET_DATA_QUALITY_FAIL")
         invalidators.append("钱包结构数据质量不足，必须补采或降级观察")
-    elif lifecycle_state in BLOCKING_LIFECYCLES or has_distribution:
+    elif lifecycle_state in BLOCKING_LIFECYCLES or has_distribution or has_okx_distribution:
         state = "CONTROL_LOST_TO_DISTRIBUTION"
-        confidence = 85 if lifecycle_state in BLOCKING_LIFECYCLES else 78
+        confidence = 88 if has_okx_distribution else (85 if lifecycle_state in BLOCKING_LIFECYCLES else 78)
         risk_level = "HIGH"
         reasons.append("CONTROL_BREAK_OR_DISTRIBUTION")
         if lifecycle_state in BLOCKING_LIFECYCLES:
@@ -187,11 +207,15 @@ def evaluate_chip_control_state(
             reasons.append("WALLET_BLOCK")
         if has_distribution:
             reasons.append("DISTRIBUTION_ACTIVE")
-        invalidators.extend(["主动分发/生命周期阻断已出现", "quote/security 转为 BLOCK 或 MISSING", "paper 持仓进入 FORCE_PAPER_EXIT 复盘"])
-    elif has_sync_sell or sync_sell >= 60 or counterparty >= 50 or lifecycle_state in MIGRATING_LIFECYCLES:
+        if has_okx_distribution:
+            reasons.append("OKX_CLUSTER_DISTRIBUTION_RISK")
+            if okx_cluster_reason:
+                refs.append(f"okx_cluster_reason={okx_cluster_reason}")
+        invalidators.extend(["主动分发/生命周期阻断已出现", "OKX 前300集群出现同步卖出或持仓快速下降", "quote/security 转为 BLOCK 或 MISSING", "paper 持仓进入 FORCE_PAPER_EXIT 复盘"])
+    elif has_sync_sell or sync_sell >= 60 or counterparty >= 50 or lifecycle_state in MIGRATING_LIFECYCLES or has_okx_migration:
         state = "CONTROL_MIGRATING_TO_COUNTERPARTY"
-        confidence = 70 if (has_sync_sell or sync_sell >= 70 or counterparty >= 70) else 58
-        risk_level = "HIGH" if counterparty >= 70 else "MEDIUM"
+        confidence = 75 if has_okx_migration else (70 if (has_sync_sell or sync_sell >= 70 or counterparty >= 70) else 58)
+        risk_level = "HIGH" if counterparty >= 70 or has_okx_migration else "MEDIUM"
         reasons.append("CONTROL_MIGRATING_TO_COUNTERPARTY")
         if has_sync_sell or sync_sell >= 60:
             reasons.append("SAME_SOURCE_SYNC_SELL")
@@ -199,7 +223,11 @@ def evaluate_chip_control_state(
             reasons.append("COUNTERPARTY_PRESSURE_HIGH")
         if lifecycle_state in MIGRATING_LIFECYCLES:
             reasons.append(f"LIFECYCLE_{lifecycle_state}")
-        invalidators.extend(["对手盘压力继续升高", "同源/同步组继续卖出", "高结果钱包持仓继续下降"])
+        if has_okx_migration:
+            reasons.append("OKX_CLUSTER_COUNTERPARTY_OR_BAGHOLDER_PRESSURE")
+            if okx_cluster_reason:
+                refs.append(f"okx_cluster_reason={okx_cluster_reason}")
+        invalidators.extend(["对手盘压力继续升高", "同源/同步组继续卖出", "OKX 前300集群继续转向对手盘承接/套牢压力", "高结果钱包持仓继续下降"])
     elif has_clearout or (wallet_status == "WALLET_BLOCK" and not has_sync_sell and sync_sell < 60):
         state = "CONTROL_LOST_TO_DISTRIBUTION" if (has_clearout or has_distribution or lifecycle_state in {"ACTIVE_DISTRIBUTION", "FINAL_DISTRIBUTION"}) else "CONTROL_MIGRATING_TO_COUNTERPARTY"
         confidence = 85 if lifecycle_state in BLOCKING_LIFECYCLES else 75
@@ -225,13 +253,23 @@ def evaluate_chip_control_state(
         if lifecycle_state in SUPPORTIVE_LIFECYCLES:
             confidence += 8
             reasons.append(f"LIFECYCLE_{lifecycle_state}")
-        invalidators.extend(["同源/同步组卖出分升至 60+", "对手盘压力升至 50+", "wallet_structure_status 变为 WALLET_PAUSE/WALLET_BLOCK", "quote/security 未通过时不得进入 PAPER_READY"])
+        if has_okx_support:
+            confidence += min(12, int(okx_cluster_retention // 10))
+            reasons.append(f"OKX_CLUSTER_{okx_cluster_status}")
+            if okx_cluster_reason:
+                refs.append(f"okx_cluster_reason={okx_cluster_reason}")
+        invalidators.extend(["同源/同步组卖出分升至 60+", "对手盘压力升至 50+", "OKX 前300集群转为同步卖出/派发风险", "wallet_structure_status 变为 WALLET_PAUSE/WALLET_BLOCK", "quote/security 未通过时不得进入 PAPER_READY"])
     elif wallet_score >= 20 and wallet_risk < 35 and counterparty < 40 and data_quality >= 35:
         state = "CONTROL_RETAINED_BY_STRUCTURE_SIDE"
         confidence = 48
         risk_level = "MEDIUM"
         reasons.append("MINIMAL_STRUCTURE_SIDE_RETAINED")
-        invalidators.extend(["单点结构证据偏弱，只能作为记录/观察", "quote/security 未通过时不得进入 PAPER_READY"])
+        if has_okx_support:
+            confidence += min(18, int(okx_cluster_retention // 6))
+            reasons.append(f"OKX_CLUSTER_{okx_cluster_status}")
+            if okx_cluster_reason:
+                refs.append(f"okx_cluster_reason={okx_cluster_reason}")
+        invalidators.extend(["单点结构证据偏弱，只能作为记录/观察", "OKX 集群支持仍不能绕过 signal/quote/security gates", "quote/security 未通过时不得进入 PAPER_READY"])
     else:
         state = "CONTROL_UNCLEAR"
         confidence = 45 if data_quality >= 50 else 30
@@ -257,6 +295,7 @@ def evaluate_chip_control_state(
         "wallet_structure_decision.json" if wallet else "wallet_structure_decision_missing",
         "dominant_lifecycle" if lifecycle else "dominant_lifecycle_missing",
         "market_cap_context" if market else "market_cap_context_missing",
+        "okx_cluster_decision.json" if okx_cluster else "okx_cluster_decision_missing",
     ])
     confidence = int(max(0, min(round(confidence), 100)))
     reasons = list(dict.fromkeys(reasons))

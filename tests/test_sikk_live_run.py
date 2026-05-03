@@ -153,6 +153,7 @@ def test_runtime_status_merges_quote_security_and_paper_position_evidence(tmp_pa
     _write_json(root / "paper_live" / "paper_positions_open.json", {"open_positions": [{"代币地址": "T1", "代币符号": "AAA", "entry_price_mode": "live", "entry_time": "2026-05-02T00:01:00Z", "entry_price": 2.0, "position_sol": 0.02, "last_price": 2.25, "unrealized_pnl_pct": 12.5}]})
     (root / "paper_live" / "failure_attribution.jsonl").parent.mkdir(parents=True, exist_ok=True)
     (root / "paper_live" / "failure_attribution.jsonl").write_text(json.dumps({"事件时间": "2026-05-02T00:02:00Z", "事件类型": "EXIT_MONITOR", "代币地址": "T1", "failure_type": "DATA_QUALITY_FAIL", "failure_reason": "数据质量不足"}, ensure_ascii=False) + "\n", encoding="utf-8")
+    _write_json(root / "okx_cluster" / "T1" / "okx_cluster_decision.json", {"token_address": "T1", "token_symbol": "AAA", "okx_cluster_status": "CLUSTER_CONTROL_HOLDING", "okx_cluster_score": 80, "largest_cluster_holding_pct": 14.0})
 
     statuses = build_enriched_runtime_statuses(root, "2026-05-02T00:00:00Z")
 
@@ -168,6 +169,8 @@ def test_runtime_status_merges_quote_security_and_paper_position_evidence(tmp_pa
     assert status["paper"]["current_price"] == 2.25
     assert status["paper"]["exit_monitor_at"] == "2026-05-02T00:02:00Z"
     assert status["paper"]["failure_attribution_type"] == "DATA_QUALITY_FAIL"
+    assert status["okx_cluster"]["okx_cluster_status"] == "CLUSTER_CONTROL_HOLDING"
+    assert status["okx_cluster"]["largest_cluster_holding_pct"] == 14.0
     assert status["market_cap_context"]["discovery_market_cap_usd"] == 100000
     assert status["market_cap_context"]["signal_market_cap_usd"] == 120000
     assert status["market_cap_context"]["wallet_decision_market_cap_usd"] == 130000
@@ -175,6 +178,26 @@ def test_runtime_status_merges_quote_security_and_paper_position_evidence(tmp_pa
     assert status["market_cap_change_from_discovery_pct"] == 50.0
     assert status["latest_action"] == "EXIT_MONITOR"
     assert "报价缺失" in status["latest_reason"]
+
+
+def test_runtime_status_applies_okx_cluster_delta_failure_for_paper_action(tmp_path):
+    from sikk_live_run import build_enriched_runtime_statuses
+
+    root = tmp_path / "run"
+    _write_json(root / "state_machine" / "candidate_states.json", {"候选状态": [{"代币地址": "T2", "代币符号": "BBB", "当前状态": "PAPER_READY"}]})
+    _write_json(root / "quote_security" / "candidate_quote_security_summary.json", {"处理结果": [{"代币地址": "T2", "最终权限": "ALLOW_CONFIRMATION_LAYER", "交易前状态": "READY_FOR_CONFIRMATION"}]})
+    _write_json(root / "paper_live" / "paper_positions_open.json", {"open_positions": [{"代币地址": "T2", "代币符号": "BBB", "entry_time": "2026-05-02T00:01:00Z", "entry_price": 1.0, "last_price": 0.8, "unrealized_pnl_pct": -20}]})
+    _write_json(root / "okx_cluster" / "T2" / "okx_cluster_decision.json", {"token_address": "T2", "token_symbol": "BBB", "okx_cluster_status": "CLUSTER_DISTRIBUTION_RISK", "recommended_paper_action": "FORCE_PAPER_EXIT", "okx_cluster_failure_type": "CLUSTER_DISTRIBUTION_ACTIVE"})
+    (root / "okx_cluster" / "T2" / "okx_cluster_failure_attribution.jsonl").parent.mkdir(parents=True, exist_ok=True)
+    (root / "okx_cluster" / "T2" / "okx_cluster_failure_attribution.jsonl").write_text(json.dumps({"事件时间": "2026-05-02T00:03:00Z", "事件类型": "FORCE_PAPER_EXIT", "代币地址": "T2", "failure_type": "CLUSTER_DISTRIBUTION_ACTIVE", "okx_cluster_failure_type": "CLUSTER_DISTRIBUTION_ACTIVE", "recommended_paper_action": "FORCE_PAPER_EXIT", "failure_reason": "OKX集群派发风险"}, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    status = build_enriched_runtime_statuses(root, "2026-05-02T00:00:00Z")[0]
+
+    assert status["latest_action"] == "FORCE_PAPER_EXIT"
+    assert status["paper"]["failure_attribution_type"] == "CLUSTER_DISTRIBUTION_ACTIVE"
+    assert status["paper"]["okx_cluster_failure_type"] == "CLUSTER_DISTRIBUTION_ACTIVE"
+    assert status["paper"]["recommended_paper_action"] == "FORCE_PAPER_EXIT"
+    assert "仅纸面退出/复盘" in status["latest_reason"]
 
 
 def test_build_runtime_candidates_from_state_file_prefers_state_rows(tmp_path):

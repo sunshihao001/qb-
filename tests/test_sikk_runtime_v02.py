@@ -121,6 +121,17 @@ def test_dashboard_builder_writes_html_with_token_status_and_events(tmp_path):
                     "quote": {"quote_gate": "PASS"},
                     "security": {"security_gate": "PASS"},
                     "paper": {"paper_status": "READY", "unrealized_pnl_pct": 0},
+                    "okx_cluster": {
+                        "okx_cluster_status": "CLUSTER_CONTROL_HOLDING",
+                        "okx_cluster_score": 82,
+                        "okx_cluster_risk_score": 12,
+                        "okx_cluster_distribution_score": 18,
+                        "okx_cluster_control_retention_score": 78,
+                        "largest_cluster_holding_pct": 15.5,
+                        "top300_total_holding_pct": 48,
+                        "cluster_holding_pct_delta": 1.2,
+                        "largest_cluster_holding_pct_delta": -1.0,
+                    },
                     "latest_action": "OPEN_PAPER_POSITION",
                     "latest_reason": "测试通过",
                 }
@@ -168,6 +179,9 @@ def test_dashboard_builder_writes_html_with_token_status_and_events(tmp_path):
     assert "paper_entry_at" in html
     assert "current_price" in html
     assert "failure_attribution_type" in html
+    assert "okx_cluster_status" in html
+    assert "CLUSTER_CONTROL_HOLDING" in html
+    assert "largest_cluster_holding_pct_delta" in html
     assert "2026-05-02T00:04:00Z" in html
     assert "0.42" in html
     assert "WALLET_EXIT" in html

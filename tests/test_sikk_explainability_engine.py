@@ -45,6 +45,14 @@ def test_explainability_engine_explains_existing_results_without_redeciding(tmp_
                 "dominant_side_intent": "STRUCTURE_MAINTAINING",
                 "counterparty_state": "LOW_PRESSURE",
             },
+            "okx_cluster": {
+                "okx_cluster_status": "CLUSTER_CONTROL_HOLDING",
+                "okx_cluster_score": 82,
+                "okx_cluster_risk_score": 12,
+                "okx_cluster_distribution_score": 18,
+                "okx_cluster_control_retention_score": 78,
+                "okx_cluster_reason": "横盘控筹阶段前300/最大集群持仓相对稳定。",
+            },
         },
     )
     (tmp_path / "tokens" / token / "process_trace.jsonl").write_text(
@@ -95,6 +103,8 @@ def test_explainability_engine_explains_existing_results_without_redeciding(tmp_
     assert "CONTROL_RETAINED_BY_STRUCTURE_SIDE" in json.dumps(questions["为什么支持"], ensure_ascii=False)
     assert "paper_entry_market_cap_usd" in json.dumps(questions["为什么进入paper"], ensure_ascii=False)
     assert "STRUCTURE_MAINTAINING" in json.dumps(questions["下一步看什么"], ensure_ascii=False)
+    assert "CLUSTER_CONTROL_HOLDING" in json.dumps(questions["为什么支持"], ensure_ascii=False)
+    assert "OKX 前300集群" in json.dumps(questions["下一步看什么"], ensure_ascii=False)
     assert "证据缺失/待复查" in json.dumps(questions["为什么失败"], ensure_ascii=False)
     assert "来源" in md
     assert str(tmp_path / "tokens" / token / "token_status.json") in md
