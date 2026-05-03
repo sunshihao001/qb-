@@ -29,6 +29,22 @@ def test_explainability_engine_explains_existing_results_without_redeciding(tmp_
             "quote": {"quote_gate": "ALLOW_CONFIRMATION_LAYER"},
             "security": {"security_gate": "READY_FOR_CONFIRMATION"},
             "paper": {"paper_status": "NONE"},
+            "chip_control": {
+                "chip_control_state": "CONTROL_RETAINED_BY_STRUCTURE_SIDE",
+                "chip_control_action": "ALLOW_PAPER_READY_IF_OTHER_GATES_PASS",
+                "evidence_points": ["钱包结构支持且其他门控通过"],
+            },
+            "market_cap_context": {
+                "discovery_market_cap_usd": 100000,
+                "signal_market_cap_usd": 120000,
+                "paper_entry_market_cap_usd": 135000,
+                "market_cap_context_quality": "PARTIAL",
+            },
+            "lifecycle": {
+                "dominant_side_lifecycle": "ACCUMULATION_CONTROL",
+                "dominant_side_intent": "STRUCTURE_MAINTAINING",
+                "counterparty_state": "LOW_PRESSURE",
+            },
         },
     )
     (tmp_path / "tokens" / token / "process_trace.jsonl").write_text(
@@ -76,6 +92,9 @@ def test_explainability_engine_explains_existing_results_without_redeciding(tmp_
     questions = report["tokens"][0]["questions"]
     assert "报价与安全扫描未触发硬阻断" in json.dumps(questions["为什么支持"], ensure_ascii=False)
     assert "吸筹窗口 valid" in json.dumps(questions["为什么进入paper"], ensure_ascii=False)
+    assert "CONTROL_RETAINED_BY_STRUCTURE_SIDE" in json.dumps(questions["为什么支持"], ensure_ascii=False)
+    assert "paper_entry_market_cap_usd" in json.dumps(questions["为什么进入paper"], ensure_ascii=False)
+    assert "STRUCTURE_MAINTAINING" in json.dumps(questions["下一步看什么"], ensure_ascii=False)
     assert "证据缺失/待复查" in json.dumps(questions["为什么失败"], ensure_ascii=False)
     assert "来源" in md
     assert str(tmp_path / "tokens" / token / "token_status.json") in md

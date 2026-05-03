@@ -18,6 +18,7 @@ from typing import Any, Callable, Dict, Iterable, List, Mapping, Optional
 from run_sikk_gmgn_pipeline import _default_wallet_address, run_full_pipeline
 from sikk_dashboard_builder import write_dashboard
 from sikk_live_orchestrator import write_live_board as write_professional_live_board
+from sikk_market_cap_context import build_market_cap_context, merge_market_cap_context
 from sikk_paper_live_runner import run_paper_live_cycle
 from sikk_wallet_structure_daily_report import build_wallet_structure_daily_report
 
@@ -231,6 +232,7 @@ def build_enriched_runtime_statuses(root: str | Path, now: str) -> List[Dict[str
             status["quote"] = {
                 "quote_gate": _quote_gate_from_row(quote_row),
                 "quote_security_reason": quote_row.get("说明") or quote_row.get("reason") or quote_row.get("状态原因"),
+                "current_market_cap_usd": quote_row.get("current_market_cap_usd") or quote_row.get("当前市值USD") or quote_row.get("market_cap_usd"),
             }
             status["security"] = {"security_gate": _security_gate_from_row(quote_row)}
             reason = quote_row.get("说明") or quote_row.get("reason") or quote_row.get("状态原因")
@@ -256,6 +258,15 @@ def build_enriched_runtime_statuses(root: str | Path, now: str) -> List[Dict[str
             if failure_row.get("事件类型") == "EXIT_MONITOR":
                 paper["exit_monitor_at"] = failure_row.get("事件时间") or paper.get("exit_monitor_at")
             status["paper"] = paper
+        market_context = build_market_cap_context(
+            discovery_row=row,
+            signal_row={**row, **(status.get("signal") if isinstance(status.get("signal"), dict) else {})},
+            wallet_row={**row, **(status.get("wallet_structure") if isinstance(status.get("wallet_structure"), dict) else {})},
+            paper_row=status.get("paper") if isinstance(status.get("paper"), dict) else {},
+            current_row={**row, **(status.get("quote") if isinstance(status.get("quote"), dict) else {}), **(status.get("paper") if isinstance(status.get("paper"), dict) else {})},
+            exit_row=closed_row or failure_row,
+        )
+        merge_market_cap_context(status, market_context)
         _apply_latest_runtime_decision(status)
         statuses.append(status)
     return statuses

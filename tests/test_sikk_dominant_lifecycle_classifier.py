@@ -39,6 +39,8 @@ def test_active_distribution_from_wallet_block_and_high_counterparty_pressure():
     assert decision["evidence_level"] in {"E3", "E4"}
     assert "alternative_hypothesis" in decision
     assert decision["invalid_conditions"]
+    assert decision["chip_control_state"] == "CONTROL_LOST_TO_DISTRIBUTION"
+    assert decision["chip_control_action"] == "BLOCK_OR_FORCE_PAPER_EXIT"
 
 
 def test_second_stage_preparation_from_control_box_without_distribution_conflict():
@@ -76,6 +78,8 @@ def test_second_stage_preparation_from_control_box_without_distribution_conflict
     assert decision["allowed_action"] == "HIGH_PRIORITY_WATCHING"
     assert decision["would_pause_by_lifecycle"] is True
     assert decision["would_block_by_lifecycle"] is False
+    assert decision["chip_control_state"] in {"CONTROL_RETAINED_BY_STRUCTURE_SIDE", "CONTROL_UNCLEAR"}
+    assert decision["chip_control_action"] != "BLOCK_OR_FORCE_PAPER_EXIT"
 
 
 def test_reactivation_from_dead_sideways_with_second_stage_valid():
@@ -103,6 +107,7 @@ def test_reactivation_from_dead_sideways_with_second_stage_valid():
     assert decision["dominant_side_intent"] == "REACTIVATION"
     assert decision["allowed_action"] == "REACTIVATED_BY_SECOND_STAGE"
     assert decision["would_block_by_lifecycle"] is False
+    assert decision["chip_control_action"] in {"ALLOW_PAPER_READY_IF_OTHER_GATES_PASS", "OBSERVE_ONLY"}
 
 
 def test_run_classifier_writes_summary_files(tmp_path):
@@ -167,4 +172,5 @@ def test_run_classifier_writes_summary_files(tmp_path):
     assert row["主导侧生命周期"] == "ACTIVE_DISTRIBUTION"
     assert row["主导侧行为动机"] == "ACTIVE_DISTRIBUTION"
     assert row["允许动作"] == "BLOCKED"
+    assert row["筹码控制权状态"] in {"CONTROL_LOST_TO_DISTRIBUTION", "CONTROL_MIGRATING_TO_COUNTERPARTY"}
     assert "本模块只生成生命周期旁路判断" in summary["说明"]

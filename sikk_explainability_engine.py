@@ -152,6 +152,14 @@ def _explain_token(
     wallet_status = _field(wallet, "wallet_structure_status", "钱包结构结论") or _field(status.get("wallet_structure", {}) if isinstance(status.get("wallet_structure"), Mapping) else {}, "wallet_structure_status")
     quote_gate = _field(quote, "quote_security_permission", "最终权限", "quote_gate") or _field(status.get("quote", {}) if isinstance(status.get("quote"), Mapping) else {}, "quote_gate")
     security_gate = _field(quote, "交易前状态", "pre_trade_state", "security_gate") or _field(status.get("security", {}) if isinstance(status.get("security"), Mapping) else {}, "security_gate")
+    chip = status.get("chip_control") if isinstance(status.get("chip_control"), Mapping) else {}
+    market_ctx = status.get("market_cap_context") if isinstance(status.get("market_cap_context"), Mapping) else {}
+    lifecycle = status.get("lifecycle") if isinstance(status.get("lifecycle"), Mapping) else {}
+    chip_state = _field(chip, "chip_control_state") or _field(status, "chip_control_state") or _field(wallet, "chip_control_state", "筹码控制权状态")
+    chip_action = _field(chip, "chip_control_action") or _field(status, "chip_control_action")
+    lifecycle_state = _field(lifecycle, "dominant_side_lifecycle") or _field(status, "dominant_side_lifecycle")
+    dominant_intent = _field(lifecycle, "dominant_side_intent") or _field(status, "dominant_side_intent")
+    counterparty_state = _field(lifecycle, "counterparty_state") or _field(status, "counterparty_state")
 
     q: Dict[str, List[Dict[str, str]]] = {key: [] for key in EXPLANATION_KEYS}
 
@@ -174,6 +182,8 @@ def _explain_token(
         _append_if_present(q["为什么支持"], wallet_status, sources.get("wallet", "wallet_structure_decision.json"), "wallet_structure_status", "钱包结构结论")
         _append_if_present(q["为什么支持"], quote_gate, sources.get("quote", "quote_security_summary.json"), "quote_security_permission", "quote/security 权限")
         _append_if_present(q["为什么支持"], _field(quote, "原因", "reason"), sources.get("quote", "quote_security_summary.json"), "原因", "quote/security 原因")
+        _append_if_present(q["为什么支持"], chip_state, sources.get("token_status", "token_status.json"), "chip_control_state", "筹码控制权状态")
+        _append_if_present(q["为什么支持"], chip_action, sources.get("token_status", "token_status.json"), "chip_control_action", "筹码控制动作")
     if not q["为什么支持"]:
         q["为什么支持"].append(_missing("为什么支持", f"{sources.get('wallet', 'wallet_structure_decision.json')}；{sources.get('quote', 'quote_security_summary.json')}"))
 
@@ -198,6 +208,7 @@ def _explain_token(
         _append_if_present(q["为什么进入paper"], latest_action, sources.get("token_status", "token_status.json"), "latest_action", "最新动作")
         _append_if_present(q["为什么进入paper"], latest_reason, sources.get("token_status", "token_status.json"), "latest_reason", "入场依据")
         _append_if_present(q["为什么进入paper"], paper_open.get("entry_time"), sources.get("paper_open", "paper_positions_open.json"), "entry_time", "纸面入场时间")
+        _append_if_present(q["为什么进入paper"], _field(market_ctx, "paper_entry_market_cap_usd", "入场市值USD"), sources.get("token_status", "token_status.json"), "paper_entry_market_cap_usd", "纸面入场市值")
     if not q["为什么进入paper"]:
         q["为什么进入paper"].append(_missing("为什么进入paper", f"{sources.get('token_status', 'token_status.json')}；{sources.get('paper_open', 'paper_positions_open.json')}"))
 
@@ -220,6 +231,8 @@ def _explain_token(
         _evidence("待复查", f"复查最新状态/动作：{current_state} / {latest_action or '证据缺失'}", sources.get("token_status", "token_status.json"), "current_state/latest_action"),
         _evidence("待复查", f"复查钱包结构是否变化：{wallet_status or '证据缺失'}", sources.get("wallet", "wallet_structure_decision.json"), "wallet_structure_status"),
         _evidence("待复查", f"复查 quote/security：{quote_gate or '证据缺失'} / {security_gate or '证据缺失'}", sources.get("quote", "quote_security_summary.json"), "quote_security_permission/交易前状态"),
+        _evidence("待复查", f"复查筹码控制/生命周期：{chip_state or '证据缺失'} / {lifecycle_state or '证据缺失'} / {dominant_intent or '证据缺失'} / {counterparty_state or '证据缺失'}", sources.get("token_status", "token_status.json"), "chip_control_state/dominant_side_lifecycle/dominant_side_intent/counterparty_state"),
+        _evidence("待复查", f"复查市值上下文：发现={_field(market_ctx, 'discovery_market_cap_usd') or '待补'} 信号={_field(market_ctx, 'signal_market_cap_usd') or '待补'} 入场={_field(market_ctx, 'paper_entry_market_cap_usd') or '待补'} 当前={_field(market_ctx, 'current_market_cap_usd') or '待补'}", sources.get("token_status", "token_status.json"), "market_cap_context"),
         _evidence("待复查", "如有纸面持仓，复查 paper_positions_open/closed 与 failure_attribution 是否一致", f"{sources.get('paper_open', 'paper_positions_open.json')}；{sources.get('paper_closed', 'paper_positions_closed.json')}；{sources.get('failure', 'failure_attribution.jsonl')}"),
     ])
     q["主要失效条件"].extend([

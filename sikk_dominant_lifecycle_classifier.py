@@ -15,6 +15,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+from sikk_chip_control_state_machine import evaluate_chip_control_state
+
 
 LIFECYCLE_BLOCK = {"ACTIVE_DISTRIBUTION", "FINAL_DISTRIBUTION", "STRUCTURE_COLLAPSE"}
 LIFECYCLE_TRADE_CANDIDATE = {"FAST_ACCUMULATION_LAUNCH", "SECOND_STAGE_EXPANSION", "REACTIVATION"}
@@ -353,6 +355,18 @@ def classify_lifecycle(
         alternative = "也可能是短期换手导致的风险升高，但需看到对手盘压力回落和结构侧重新持有才可降级。"
 
     reason = "；".join(reason_parts)
+    chip_control = evaluate_chip_control_state(
+        wallet_decision=wallet,
+        lifecycle_row={
+            "token_address": token,
+            "token_symbol": symbol,
+            "dominant_side_lifecycle": lifecycle,
+            "dominant_side_intent": intent,
+            "allowed_action": allowed_action,
+            "counterparty_state": counterparty_state,
+        },
+        market_context=market,
+    ).to_dict()
     return {
         "token_address": token,
         "token_symbol": symbol,
@@ -382,6 +396,12 @@ def classify_lifecycle(
         "wallet_risk_score": wallet_risk,
         "counterparty_pressure_score": counterparty,
         "data_quality_score": data_quality,
+        "chip_control_state": chip_control["chip_control_state"],
+        "chip_control_confidence": chip_control["chip_control_confidence"],
+        "chip_control_action": chip_control["chip_control_action"],
+        "chip_control_reason_codes": chip_control["chip_control_reason_codes"],
+        "chip_control_invalidators": chip_control["chip_control_invalidators"],
+        "chip_control_evidence_refs": chip_control["chip_control_evidence_refs"],
         "current_state": _first(state_row, "当前状态", "current_state", default="UNKNOWN"),
         "signal_level": signal_level,
     }
@@ -419,6 +439,11 @@ def _cn_row(row: dict[str, Any]) -> dict[str, Any]:
         "钱包风险评分": row["wallet_risk_score"],
         "对手盘压力评分": row["counterparty_pressure_score"],
         "数据质量评分": row["data_quality_score"],
+        "筹码控制权状态": row.get("chip_control_state"),
+        "筹码控制置信度": row.get("chip_control_confidence"),
+        "筹码控制动作": row.get("chip_control_action"),
+        "筹码控制原因码": "；".join(row.get("chip_control_reason_codes") or []),
+        "筹码控制失效条件": "；".join(row.get("chip_control_invalidators") or []),
     }
 
 

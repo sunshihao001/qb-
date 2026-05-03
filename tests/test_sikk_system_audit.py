@@ -180,6 +180,8 @@ def test_system_audit_summarizes_normal_fake_outputs(tmp_path):
     assert any(item["token"] == token_stuck for item in audit["wallet_bypass_or_degraded"])
     assert any(item["conflict"] == "open_position_with_terminal_state" for item in audit["state_machine_conflicts"])
     assert audit["dashboard_missing_fields"]["missing_field_counts"]["paper_entry_market_cap_usd"] == 1
+    assert audit["dashboard_missing_fields"]["missing_field_counts"]["chip_control_state"] == 1
+    assert audit["dashboard_missing_fields"]["missing_field_counts"]["market_cap_context"] == 1
     assert audit["replay_unavailable_fields"]["missing_field_counts"]["paper_entry_market_cap_usd"] >= 1
     assert "状态机冲突" in md
     assert "下一步建议" in md

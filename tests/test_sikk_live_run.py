@@ -148,8 +148,8 @@ def test_runtime_status_merges_quote_security_and_paper_position_evidence(tmp_pa
     from sikk_live_run import build_enriched_runtime_statuses
 
     root = tmp_path / "run"
-    _write_json(root / "state_machine" / "candidate_states.json", {"候选状态": [{"代币地址": "T1", "代币符号": "AAA", "当前状态": "PAPER_READY"}]})
-    _write_json(root / "quote_security" / "candidate_quote_security_summary.json", {"处理结果": [{"代币地址": "T1", "最终权限": "PAUSE_NEED_CONFIRM", "交易前状态": "PAUSE", "说明": "报价缺失"}]})
+    _write_json(root / "state_machine" / "candidate_states.json", {"候选状态": [{"代币地址": "T1", "代币符号": "AAA", "当前状态": "PAPER_READY", "discovery_market_cap_usd": 100000, "signal_market_cap_usd": 120000, "wallet_decision_market_cap_usd": 130000}]})
+    _write_json(root / "quote_security" / "candidate_quote_security_summary.json", {"处理结果": [{"代币地址": "T1", "最终权限": "PAUSE_NEED_CONFIRM", "交易前状态": "PAUSE", "说明": "报价缺失", "current_market_cap_usd": 150000}]})
     _write_json(root / "paper_live" / "paper_positions_open.json", {"open_positions": [{"代币地址": "T1", "代币符号": "AAA", "entry_price_mode": "live", "entry_time": "2026-05-02T00:01:00Z", "entry_price": 2.0, "position_sol": 0.02, "last_price": 2.25, "unrealized_pnl_pct": 12.5}]})
     (root / "paper_live" / "failure_attribution.jsonl").parent.mkdir(parents=True, exist_ok=True)
     (root / "paper_live" / "failure_attribution.jsonl").write_text(json.dumps({"事件时间": "2026-05-02T00:02:00Z", "事件类型": "EXIT_MONITOR", "代币地址": "T1", "failure_type": "DATA_QUALITY_FAIL", "failure_reason": "数据质量不足"}, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -168,6 +168,11 @@ def test_runtime_status_merges_quote_security_and_paper_position_evidence(tmp_pa
     assert status["paper"]["current_price"] == 2.25
     assert status["paper"]["exit_monitor_at"] == "2026-05-02T00:02:00Z"
     assert status["paper"]["failure_attribution_type"] == "DATA_QUALITY_FAIL"
+    assert status["market_cap_context"]["discovery_market_cap_usd"] == 100000
+    assert status["market_cap_context"]["signal_market_cap_usd"] == 120000
+    assert status["market_cap_context"]["wallet_decision_market_cap_usd"] == 130000
+    assert status["market_cap_context"]["current_market_cap_usd"] == 150000
+    assert status["market_cap_change_from_discovery_pct"] == 50.0
     assert status["latest_action"] == "EXIT_MONITOR"
     assert "报价缺失" in status["latest_reason"]
 

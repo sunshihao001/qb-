@@ -21,6 +21,8 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
+from sikk_chip_control_state_machine import evaluate_chip_control_state
+
 WALLET_ROLES = {
     "EARLY_BUYER",
     "EARLY_EXIT",
@@ -461,16 +463,27 @@ def evaluate_wallet_structure_gate(*, token: str, symbol: str = "", wallet_rows:
         if not reasons:
             reasons.append("无明显结构证据，钱包侧保持中性")
 
-    if status == "WALLET_SUPPORT" or (structure_score >= 28 and risk_score < 35 and counterparty_score < 40):
-        chip_state = "CONTROL_RETAINED_BY_STRUCTURE_SIDE"
-    elif has_same_source_sync_sell:
-        chip_state = "CONTROL_MIGRATING_TO_COUNTERPARTY"
-    elif has_concentrated_clearout:
-        chip_state = "CONTROL_LOST_TO_DISTRIBUTION"
-    elif counterparty_score >= 50:
-        chip_state = "CONTROL_MIGRATING_TO_COUNTERPARTY"
-    else:
-        chip_state = "CONTROL_UNCLEAR"
+    chip_decision = evaluate_chip_control_state(
+        wallet_decision={
+            "token_address": token,
+            "symbol": symbol,
+            "wallet_structure_status": status,
+            "wallet_structure_score": structure_score,
+            "wallet_risk_score": risk_score,
+            "counterparty_pressure_score": counterparty_score,
+            "data_quality_score": data_quality_score,
+            "data_quality_status": data_quality_status,
+            "max_sync_buy_score": max_sync_buy_score,
+            "max_sync_sell_score": max_sync_sell_score,
+            "has_concentrated_clearout": has_concentrated_clearout,
+            "has_same_source_sync_sell": has_same_source_sync_sell,
+            "has_distribution": has_distribution,
+        }
+    )
+    chip_state = chip_decision.chip_control_state
+    for chip_reason in chip_decision.reason_codes:
+        if chip_reason not in reasons:
+            reasons.append(f"筹码控制状态机：{chip_reason}")
 
     return WalletStructureDecision(
         token=token,

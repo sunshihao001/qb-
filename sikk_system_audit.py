@@ -46,6 +46,15 @@ DASHBOARD_FIELDS = [
     "exit_reason",
     "failure_attribution_type",
 ]
+V03_REQUIRED_FIELDS = [
+    "chip_control_state",
+    "chip_control_action",
+    "market_cap_context",
+    "market_cap_context_quality",
+    "dominant_side_lifecycle",
+    "dominant_side_intent",
+    "counterparty_state",
+]
 REPLAY_FIELDS = [
     "entry_time",
     "entry_price",
@@ -244,7 +253,17 @@ def _dashboard_missing(live_state_payload: Any) -> Dict[str, Any]:
     per_token = []
     missing_counter: Counter[str] = Counter()
     for row in tokens:
-        missing = _missing_fields(row, DASHBOARD_FIELDS)
+        market_ctx = row.get("market_cap_context") if isinstance(row.get("market_cap_context"), Mapping) else {}
+        chip_ctx = row.get("chip_control") if isinstance(row.get("chip_control"), Mapping) else {}
+        lifecycle_ctx = row.get("lifecycle") if isinstance(row.get("lifecycle"), Mapping) else {}
+        flattened = dict(row)
+        if isinstance(market_ctx, Mapping):
+            flattened.update({k: v for k, v in market_ctx.items() if k not in flattened or flattened.get(k) in (None, "", [])})
+        if isinstance(chip_ctx, Mapping):
+            flattened.update({k: v for k, v in chip_ctx.items() if k not in flattened or flattened.get(k) in (None, "", [])})
+        if isinstance(lifecycle_ctx, Mapping):
+            flattened.update({k: v for k, v in lifecycle_ctx.items() if k not in flattened or flattened.get(k) in (None, "", [])})
+        missing = _missing_fields(flattened, DASHBOARD_FIELDS + V03_REQUIRED_FIELDS)
         nested = {
             "wallet_structure_status": (row.get("wallet_structure") or {}).get("wallet_structure_status") if isinstance(row.get("wallet_structure"), dict) else row.get("wallet_structure_status"),
             "signal_level": (row.get("signal") or {}).get("signal_level") if isinstance(row.get("signal"), dict) else row.get("signal_level"),
@@ -286,7 +305,7 @@ def _recommendations(payload: Mapping[str, Any]) -> List[str]:
     if payload["state_machine_conflicts"]:
         recs.append("处理状态机冲突：开放纸面仓位不得同时处于 BLOCKED/FAILED/EXITED，关闭与开放仓位索引需去重。")
     if payload["dashboard_missing_fields"].get("missing_field_counts"):
-        recs.append("升级 dashboard live_state 事件级字段，覆盖发现→判断→入场→持仓→退出。")
+        recs.append("升级 dashboard live_state 事件级字段，覆盖发现→判断→入场→持仓→退出，并接入 chip_control / market_cap_context / lifecycle v0.3 字段。")
     if payload["replay_unavailable_fields"].get("missing_field_counts"):
         recs.append("补齐复盘字段：市值、入场/退出时间价格、failure_type/failure_reason。")
     if not recs:
