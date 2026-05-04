@@ -1,2 +1,0 @@
-{"title": "SIKK 知识吸收固定流程", "content": "外部文章必须按 原文保存→知识护照→可执行规则→系统差异审计→系统更新方案→skill/docs/code→测试验证 的链路进入 SIKK-SOL。", "keywords": ["SIKK-SOL", "知识吸收", "Hermes", "skill", "系统差异审计"], "use_case": "用户提供 GPT/交易/工程文章并要求吸收进系统体系时使用。"}
-{"title": "SIKK 文章吸收安全边界", "content": "paper-only；不真实买入；不真实卖出；不调用 swap；不签名；不广播；不读取或保存私钥。 涉及庄家心理必须改写成主导侧行为假设、证据条件、反证条件。", "keywords": ["paper-only", "安全边界", "不调用 swap", "主导侧行为假设"], "use_case": "吸收交易方法论或自动交易文章时防止越界。"}
