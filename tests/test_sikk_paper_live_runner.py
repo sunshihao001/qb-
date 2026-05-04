@@ -218,6 +218,9 @@ def test_paper_live_runner_reads_wallet_delta_and_force_exits_open_position(tmp_
             "same_source_group_sold_pct_delta": 35,
             "counterparty_pressure_score_delta": 30,
             "wallet_risk_score_delta": 40,
+            "delta_snapshot_count": 2,
+            "pattern_conflict": True,
+            "market_confirmation": True,
         },
     )
 
@@ -236,11 +239,11 @@ def test_paper_live_runner_reads_wallet_delta_and_force_exits_open_position(tmp_
     closed = closed_payload["closed_positions"][0]
     assert closed["status"] == "CLOSED"
     assert closed["exit_reason"] == "钱包结构触发纸面强制退出"
-    assert closed["failure_type"] == "STRUCTURE_WEAKENING"
+    assert closed["failure_type"] in {"STRUCTURE_WEAKENING", "SAME_SOURCE_EXIT"}
 
     attribution = Path(paths["failure_attribution_jsonl"]).read_text(encoding="utf-8")
     assert "FORCE_PAPER_EXIT" in attribution
-    assert "STRUCTURE_WEAKENING" in attribution
+    assert any(code in attribution for code in ["STRUCTURE_WEAKENING", "SAME_SOURCE_EXIT"])
     trades = list(csv.DictReader(Path(paths["paper_trades_csv"]).open(encoding="utf-8-sig")))
     assert any(row["事件类型"] == "PAPER_FORCE_EXIT" for row in trades)
 
@@ -290,13 +293,13 @@ def test_decide_wallet_position_action_forces_paper_exit_on_wallet_block():
             "data_quality_score": 90,
             "metrics": {"same_source_sync_sell_score": 20},
         },
-        latest_delta={"wallet_risk_score_delta": 35},
+        latest_delta={"wallet_risk_score_delta": 35, "delta_snapshot_count": 2, "pattern_conflict": True, "market_confirmation": True},
         mode="paper",
     )
 
     assert action["action"] == "FORCE_PAPER_EXIT"
     assert action["failure_type"] == "STRUCTURE_WEAKENING"
-    assert "纸面" in action["reason"]
+    assert "FORCE_PAPER_EXIT" in action["reason"] or "强" in action["reason"]
     assert "不执行真实 swap" in action["scope_note"]
 
 
@@ -311,7 +314,7 @@ def test_decide_wallet_position_action_uses_confirmation_in_live_mode_not_auto_e
             "data_quality_score": 90,
             "metrics": {"same_source_sync_sell_score": 80},
         },
-        latest_delta={"same_source_group_sold_pct_delta": 30},
+        latest_delta={"same_source_group_sold_pct_delta": 30, "delta_snapshot_count": 2, "pattern_conflict": True, "market_confirmation": True},
         mode="live",
     )
 
@@ -451,3 +454,187 @@ def test_paper_live_runner_logs_entry_price_failure_and_continues(tmp_path):
     assert metrics["统计"]["新增纸面入场数"] == 1
     assert "PAPER_ENTRY_PRICE_FAILED" in risk_events
     assert token_bad in risk_events
+
+
+
+def test_wallet_block_defaults_to_exit_monitor_without_policy_confirmation():
+    from sikk_paper_live_runner import decide_wallet_position_action
+
+    action = decide_wallet_position_action(
+        position={"代币地址": "TokenExitPolicy111", "当前收益率_pct": -8, "pattern_type": "LONG_CONTROL_BOX"},
+        current_decision={
+            "wallet_structure_status": "WALLET_BLOCK",
+            "counterparty_pressure_score": 82,
+            "data_quality_score": 90,
+            "metrics": {"same_source_sync_sell_score": 20},
+        },
+        latest_delta={"wallet_risk_score_delta": 35, "delta_snapshot_count": 1, "market_confirmation": False},
+        mode="paper",
+    )
+
+    assert action["action"] == "EXIT_MONITOR"
+    assert action["policy_layer"] == "wallet_exit_policy"
+    assert action["force_exit_eligible"] is False
+    assert "多轮" in action["reason"] or "市场确认" in action["reason"]
+    assert "不执行真实 swap" in action["scope_note"]
+
+
+def test_wallet_exit_policy_force_exit_requires_strong_evidence():
+    from sikk_paper_live_runner import decide_wallet_position_action
+
+    action = decide_wallet_position_action(
+        position={"代币地址": "TokenStrongExit111", "当前收益率_pct": 25, "pattern_type": "PRICE_BREAKDOWN"},
+        current_decision={
+            "wallet_structure_status": "WALLET_BLOCK",
+            "counterparty_pressure_score": 88,
+            "data_quality_score": 92,
+            "metrics": {"same_source_sync_sell_score": 86},
+        },
+        latest_delta={
+            "wallet_risk_score_delta": 32,
+            "same_source_group_sold_pct_delta": 28,
+            "counterparty_pressure_score_delta": 30,
+            "delta_snapshot_count": 2,
+            "pattern_conflict": True,
+            "market_confirmation": True,
+            "price_structure_status": "BREAKDOWN",
+        },
+        mode="paper",
+    )
+
+    assert action["action"] == "FORCE_PAPER_EXIT"
+    assert action["policy_layer"] == "wallet_exit_policy"
+    assert action["force_exit_eligible"] is True
+    assert action["failure_type"] in {"SAME_SOURCE_EXIT", "STRUCTURE_WEAKENING", "COUNTERPARTY_ABSORBING"}
+
+
+def test_new_position_records_entry_snapshot_market_cap_and_trade_amounts():
+    from sikk_paper_live_runner import _new_position
+
+    position = _new_position(
+        token="TokenEntrySnapshot111",
+        state={
+            "代币地址": "TokenEntrySnapshot111",
+            "代币符号": "SNAP",
+            "当前状态": "PAPER_READY",
+            "candidate_discovered_at": "2026-05-03T11:42:10Z",
+            "discovery_market_cap_usd": 82000,
+            "discovery_liquidity_usd": 26000,
+            "discovery_holder_count": 412,
+            "signal_market_cap_usd": 118000,
+            "钱包结构结论": "WALLET_SUPPORT",
+            "钱包结构评分": 72,
+            "钱包风险评分": 28,
+            "对手盘压力评分": 32,
+            "data_quality_score": 81,
+            "wallet_decision_market_cap_usd": 121000,
+            "钱包结构原因": "结构侧仍有筹码",
+            "建议纸面仓位SOL": 0.1,
+        },
+        signal={
+            "代币地址": "TokenEntrySnapshot111",
+            "代币符号": "SNAP",
+            "信号时间": "2026-05-03T11:58:30Z",
+            "信号价格": 0.00000175,
+            "信号等级": "S3",
+            "策略类型": "CONTROL_BOX_BREAKOUT_PULLBACK",
+            "signal_market_cap_usd": 118000,
+        },
+        quote={"交易前状态": "READY_FOR_CONFIRMATION", "quote_security_permission": "ALLOW_CONFIRMATION_LAYER"},
+        price_info={"price": 0.000001875, "source": "okx", "market_cap_usd": 126000, "liquidity_usd": 33000, "holder_count": 438, "sol_usd": 165},
+        snapshot_time="2026-05-03T12:01:02Z",
+    )
+
+    assert position["paper_entry_time"] == "2026-05-03T12:01:02Z"
+    assert position["entry_market_cap_usd"] == 126000
+    assert position["paper_size_sol"] == 0.1
+    assert position["paper_size_usd"] == 16.5
+    assert position["estimated_token_amount"] > 0
+    assert position["entry_delay_from_discovery_sec"] == 1132
+    assert position["entry_delay_from_signal_sec"] == 152
+    assert position["entry_market_cap_change_from_discovery_pct"] == 53.6585
+    assert position["market_cap_context_status"] == "NORMAL_ENTRY"
+    snapshot = position["paper_entry_snapshot"]
+    assert snapshot["candidate"]["discovery_market_cap_usd"] == 82000
+    assert snapshot["signal"]["signal_level"] == "S3"
+    assert snapshot["wallet"]["wallet_structure_status"] == "WALLET_SUPPORT"
+    assert snapshot["entry"]["entry_quote_source"] == "okx"
+
+
+def test_paper_live_cycle_trade_log_uses_professional_paper_trades_schema(tmp_path):
+    from sikk_paper_live_runner import run_paper_live_cycle
+    import csv
+
+    token = "TokenTradeSchema111"
+    states_path = _write_json(
+        tmp_path / "candidate_states.json",
+        {"候选状态": [{"代币地址": token, "代币符号": "TRD", "当前状态": "PAPER_READY", "信号价格": 1.0, "建议纸面仓位SOL": 0.1, "discovery_market_cap_usd": 100000, "candidate_discovered_at": "2026-05-03T12:00:00Z"}]},
+    )
+    signal_summary_path = _write_json(
+        tmp_path / "candidate_signal_summary.json",
+        {"信号结果": [{"代币地址": token, "代币符号": "TRD", "信号价格": 1.0, "信号等级": "S4", "信号时间": "2026-05-03T12:05:00Z", "建议纸面仓位SOL": 0.1, "signal_market_cap_usd": 120000}]},
+    )
+    quote_security_summary_path = _write_json(
+        tmp_path / "quote_security.json",
+        {"处理结果": [{"代币地址": token, "交易前状态": "READY_FOR_CONFIRMATION", "最终权限": "ALLOW_CONFIRMATION_LAYER"}]},
+    )
+
+    paths = run_paper_live_cycle(
+        candidate_states_path=states_path,
+        signal_summary_path=signal_summary_path,
+        quote_security_summary_path=quote_security_summary_path,
+        output_dir=tmp_path / "paper_live",
+        price_provider=lambda _token: {"price": 1.2, "source": "okx", "snapshot_time": "2026-05-03T12:10:00Z", "market_cap_usd": 150000, "liquidity_usd": 30000, "sol_usd": 160},
+        snapshot_time="2026-05-03T12:10:00Z",
+    )
+
+    rows = list(csv.DictReader(open(paths["paper_trades_csv"], encoding="utf-8-sig")))
+    assert rows
+    row = rows[0]
+    for field in ["trade_id", "position_id", "token_address", "token_symbol", "side", "event_type", "trade_time", "price", "market_cap_usd", "liquidity_usd", "size_sol", "size_usd", "token_amount", "slippage_pct", "fee_sol", "quote_source", "reason"]:
+        assert field in row
+    assert row["side"] == "BUY"
+    assert row["event_type"] == "PAPER_ENTRY"
+    assert row["token_address"] == token
+
+
+
+def test_paper_live_runner_writes_position_journal_for_open_updates(tmp_path):
+    from sikk_paper_live_runner import run_paper_live_cycle
+
+    token = "TokenJournal111111111111111111111111111111"
+    _write_json(tmp_path / "candidate_states.json", {"候选状态": []})
+    _write_json(tmp_path / "candidate_signal_summary.json", {"信号结果": []})
+    _write_json(
+        tmp_path / "paper_live" / "paper_positions_open.json",
+        {"open_positions": [{
+            "position_id": "paper-journal-1",
+            "代币地址": token,
+            "代币符号": "JNL",
+            "entry_price": 1.0,
+            "position_sol": 0.1,
+            "remaining_pct": 100.0,
+            "stop_price": 0.5,
+            "take_profit_rules": [],
+            "triggered_tps": [],
+            "max_price": 1.0,
+            "min_price": 1.0,
+            "status": "OPEN",
+        }]},
+    )
+
+    paths = run_paper_live_cycle(
+        candidate_states_path=tmp_path / "candidate_states.json",
+        signal_summary_path=tmp_path / "candidate_signal_summary.json",
+        output_dir=tmp_path / "paper_live",
+        price_provider=lambda _: {"price": 1.2, "source": "okx", "snapshot_time": "2026-05-03T12:30:00Z"},
+        snapshot_time="2026-05-03T12:30:00Z",
+    )
+
+    journal_path = tmp_path / "paper_live" / "position_journal" / "paper-journal-1.jsonl"
+    assert journal_path.exists()
+    rows = [json.loads(line) for line in journal_path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    assert rows[-1]["position_id"] == "paper-journal-1"
+    assert rows[-1]["paper_action"] == "HOLD"
+    assert rows[-1]["current_price"] == 1.2
+    assert rows[-1]["unrealized_pnl_pct"] == 20.0

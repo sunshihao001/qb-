@@ -1,0 +1,18 @@
+{
+  "token": "6AVAUKa9uxQpruHZUinFECpXEh1usRVtzQWK8N2wpump",
+  "symbol": "SCAM",
+  "creation_time": "2026-04-27 16:22:11 UTC",
+  "open_market_time": "2026-04-27 16:30:38 UTC",
+  "chip_accumulation_start": "2026-04-27 16:22:11 UTC",
+  "initial_pull_start": "2026-04-27 16:36:00 UTC",
+  "initial_pull_start_market_cap": 194177.84178547564,
+  "kline_confirm_start": "2026-04-27 16:38:00 UTC",
+  "kline_confirm_end": "2026-04-27 16:52:00 UTC",
+  "kline_confirm_end_market_cap": 674289.4010027684,
+  "early_structural_wallet_count_sample": 51,
+  "early_structural_buy_usd_sample": 683268.5723003419,
+  "early_structural_sell_usd_sample": 1513807.018255474,
+  "early_structural_current_hold_pct_sample_excluding_infra": 4.173561384504411,
+  "sample_scope_note": "GMGN top traders/holders/tagged wallets 样本口径，非全量链上筹码；用于疑似结构强度估算，不强判同源。",
+  "interpretation": "从创建第一秒开始计算，早期结构相关地址先在创建/曲线阶段与开放后0-5分钟拿筹码，随后进入拉盘确认与派发/兑现窗口。"
+}

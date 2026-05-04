@@ -1,0 +1,5 @@
+# Hermes Start Command
+
+```bash
+python3 sikk_research_loop_controller.py review-hermes --input research_loop/task_packages/generated/SIKK_candidate_discovery_wallet_structure_telegram_web_dashboard_cli_runtime_paper_runner_hermes_execution_repomix_context_paper-only_1f728e37f1fa_task
+```

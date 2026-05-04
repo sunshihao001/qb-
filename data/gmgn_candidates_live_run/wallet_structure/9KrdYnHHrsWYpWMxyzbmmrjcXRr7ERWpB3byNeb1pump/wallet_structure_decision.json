@@ -1,0 +1,53 @@
+{
+  "代币地址": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
+  "代币符号": "UNIPUMP",
+  "钱包结构结论": "WALLET_BLOCK",
+  "钱包结构系数": 0.0,
+  "钱包结构评分": 28,
+  "钱包风险评分": 100,
+  "对手盘压力评分": 100,
+  "数据质量评分": 100,
+  "筹码控制权状态": "CONTROL_MIGRATING_TO_COUNTERPARTY",
+  "钱包证据等级": "E4",
+  "早期钱包数量": 79,
+  "角色计数": {
+    "RETAIL_NOISE": 26,
+    "DISTRIBUTION_SELLER": 4,
+    "HIGH_RESULT_WALLET": 2,
+    "EARLY_BUYER": 29,
+    "BAGHOLDER_WHALE": 18
+  },
+  "game_side计数": {
+    "NOISE_SIDE": 26,
+    "DISTRIBUTION_SIDE": 4,
+    "STRUCTURE_SIDE": 31,
+    "COUNTERPARTY_SIDE": 18
+  },
+  "证据计数": {
+    "E1": 26,
+    "E3": 8,
+    "E4": 2,
+    "E2": 25,
+    "R2": 18
+  },
+  "是否存在分发派发": "是",
+  "是否存在集中清仓": "否",
+  "是否存在同源组同步卖出": "否",
+  "最高同步买入分": 0,
+  "最高同步卖出分": 0,
+  "建议状态调整": "调整为 BLOCKED",
+  "状态机建议": "BLOCKED",
+  "状态调整原因": "发现分发侧钱包 4 个；对手盘压力高，接盘/套牢筹码占比偏高",
+  "PAPER_READY允许说明": "钱包结构支持但不绕过 K线/quote/安全扫描；只有 signal_gate、quote_gate、security_gate 都通过，才允许 PAPER_READY。",
+  "wallet_structure_status": "WALLET_BLOCK",
+  "wallet_structure_score": 28,
+  "wallet_risk_score": 100,
+  "counterparty_pressure_score": 100,
+  "data_quality_score": 100,
+  "wallet_structure_factor": 0.0,
+  "wallet_structure_reason": "发现分发侧钱包 4 个；对手盘压力高，接盘/套牢筹码占比偏高",
+  "wallet_evidence_level": "E4",
+  "说明": "钱包结构门禁只影响纸面/确认层状态，不执行真实 swap。",
+  "生成时间": "2026-05-02T18:27:07Z",
+  "模块": "SIKK-SOL v1.0 钱包结构门禁"
+}

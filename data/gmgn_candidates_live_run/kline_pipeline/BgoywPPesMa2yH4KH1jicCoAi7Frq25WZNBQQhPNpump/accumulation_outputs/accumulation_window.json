@@ -1,0 +1,22 @@
+{
+  "token": "BgoywPPesMa2yH4KH1jicCoAi7Frq25WZNBQQhPNpump",
+  "T_start": "2026-04-30 11:41:00 UTC",
+  "T_end": "2026-04-30 11:44:00 UTC",
+  "T_start_timestamp": 1777549260,
+  "T_end_timestamp": 1777549440,
+  "T_start_market_cap": 37029.61892654138,
+  "T_end_market_cap": 42607.12146360863,
+  "window_high": 4.5741127e-05,
+  "window_low": 2.8577467e-05,
+  "window_duration_bars": 4,
+  "window_duration_minutes": 3.0,
+  "POC_price": 3.7338085125e-05,
+  "VAH_price": 4.3059305125e-05,
+  "VAL_price": 3.7338085125e-05,
+  "AVWAP_anchor_time": "2026-04-30 11:13:00 UTC",
+  "latest_AVWAP": 3.448406292402434e-05,
+  "accumulation_score_avg": 88.75,
+  "breakout_type": "突破VAH且OBV/CMF同步增强",
+  "window_status": "valid",
+  "interpretation": "识别到疑似早期吸筹窗口：2026-04-30 11:41:00 UTC 至 2026-04-30 11:44:00 UTC。结束信号为：突破VAH且OBV/CMF同步增强。该窗口可用于后续固定范围成交量分布、POC/VAH/VAL、AVWAP 与 Fib 区间锚定。"
+}

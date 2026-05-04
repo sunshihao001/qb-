@@ -94,6 +94,82 @@ def _first(data: Dict[str, Any], *keys: str, default: Any = None) -> Any:
     return default
 
 
+def _utc_text(value: Optional[str] = None) -> str:
+    if value:
+        return value
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def _batch_id(now_text: str) -> str:
+    dt = datetime.fromisoformat(now_text.replace("Z", "+00:00"))
+    return dt.strftime("RUN_%Y%m%d_%H%M%S")
+
+
+def _timestamp_to_utc(value: Any) -> str:
+    if value in (None, "", [], {}, 0, "0"):
+        return ""
+    if isinstance(value, str):
+        text = value.strip()
+        if not text:
+            return ""
+        if "T" in text:
+            return text.replace("+00:00", "Z")
+        try:
+            value = float(text)
+        except ValueError:
+            return text
+    try:
+        ts = float(value)
+    except (TypeError, ValueError):
+        return ""
+    if ts > 10_000_000_000:
+        ts = ts / 1000.0
+    return datetime.fromtimestamp(ts, tz=timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def _time_anchor_from_raw(raw: Dict[str, Any], *keys: str) -> str:
+    pool = raw.get("pool") or {}
+    pairs = raw.get("pairs") or []
+    for key in keys:
+        value = _first(raw, key, default=None)
+        if value not in (None, "", [], {}, 0, "0"):
+            return _timestamp_to_utc(value)
+        if isinstance(pool, dict):
+            value = _first(pool, key, default=None)
+            if value not in (None, "", [], {}, 0, "0"):
+                return _timestamp_to_utc(value)
+        if isinstance(pairs, list):
+            for pair in pairs:
+                if isinstance(pair, dict):
+                    value = _first(pair, key, default=None)
+                    if value not in (None, "", [], {}, 0, "0"):
+                        return _timestamp_to_utc(value)
+    return ""
+
+
+def _registry_path(output_dir: Path, base_dir: Path | str | None = None) -> Path:
+    if base_dir is not None:
+        return Path(base_dir) / "time_context" / "token_first_seen_registry.json"
+    if output_dir.name == "gmgn_new_token_filter":
+        return output_dir.parent / "time_context" / "token_first_seen_registry.json"
+    return output_dir / "time_context" / "token_first_seen_registry.json"
+
+
+def _load_first_seen_registry(path: Path) -> Dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def _write_first_seen_registry(path: Path, registry: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(registry, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def _pct_text(value: float) -> str:
     return f"{value * 100:.2f}%"
 
@@ -124,6 +200,8 @@ def normalize_token(raw: Dict[str, Any], source_category: str = "unknown") -> Di
         "代币名称": _first(raw, "name", "token_name", default="未知"),
         "创建时间戳": _int(_first(raw, "created_timestamp", "creation_timestamp", default=0), 0),
         "开盘时间戳": _int(_first(raw, "open_timestamp", "open_ts", default=0), 0),
+        "token_open_time": _time_anchor_from_raw(raw, "token_open_time", "open_time", "open_timestamp", "open_ts", "launch_time", "launch_timestamp"),
+        "pool_created_at": _time_anchor_from_raw(raw, "pool_created_at", "pool_creation_time", "pool_created_time", "pool_created_timestamp", "created_timestamp", "creation_timestamp"),
         "总供应量": _num(_first(raw, "total_supply", "circulating_supply", "supply", default=0), 0),
         "发射平台": _first(raw, "launchpad_platform", "platform", default="未知"),
         "当前市值USD": _num(_first(raw, "usd_market_cap", "market_cap", "fdv", default=inferred_market_cap), 0),
@@ -376,11 +454,22 @@ def _csv_value(value: Any) -> Any:
     return value
 
 
-def write_candidate_outputs(results: List[Dict[str, Any]], output_dir: Path | str, config: Dict[str, Any], raw_response: Any) -> Dict[str, Path]:
+def write_candidate_outputs(
+    results: List[Dict[str, Any]],
+    output_dir: Path | str,
+    config: Dict[str, Any],
+    raw_response: Any,
+    *,
+    now: Optional[str] = None,
+    base_dir: Path | str | None = None,
+) -> Dict[str, Path]:
     """写出候选池 JSON 和中文 CSV。"""
     outdir = Path(output_dir)
     outdir.mkdir(parents=True, exist_ok=True)
-    scan_time = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    scan_time = _utc_text(now)
+    candidate_batch_id = _batch_id(scan_time)
+    registry_file = _registry_path(outdir, base_dir=base_dir)
+    registry = _load_first_seen_registry(registry_file)
 
     candidate_rows = [r for r in results if r["是否进入候选池"]]
     blocked_rows = [r for r in results if not r["是否进入候选池"]]
@@ -391,13 +480,39 @@ def write_candidate_outputs(results: List[Dict[str, Any]], output_dir: Path | st
 
     def public_row(row: Dict[str, Any]) -> Dict[str, Any]:
         clean = {k: v for k, v in row.items() if k != "raw"}
-        clean["扫描时间"] = scan_time
+        token_address = str(clean.get("代币地址") or "")
+        token_symbol = str(clean.get("代币符号") or "")
+        entry = registry.setdefault(token_address, {}) if token_address else {}
+        if entry is not None and token_address:
+            entry.setdefault("token_address", token_address)
+            entry.setdefault("token_symbol", token_symbol)
+            entry.setdefault("first_seen_at", scan_time)
+            entry["last_seen_at"] = scan_time
+            entry["candidate_source"] = f"gmgn_trenches:{clean.get('来源分类') or 'unknown'}"
+        first_seen_at = entry.get("first_seen_at") if isinstance(entry, dict) else scan_time
+        clean.update({
+            "扫描时间": scan_time,
+            "token_address": token_address,
+            "token_symbol": token_symbol,
+            "token_open_time": clean.get("token_open_time") or _timestamp_to_utc(clean.get("开盘时间戳")),
+            "pool_created_at": clean.get("pool_created_at") or _timestamp_to_utc(clean.get("创建时间戳")),
+            "discovered_at": scan_time,
+            "first_seen_at": first_seen_at,
+            "last_seen_at": scan_time,
+            "candidate_snapshot_at": scan_time,
+            "candidate_batch_id": candidate_batch_id,
+            "candidate_source": f"gmgn_trenches:{clean.get('来源分类') or 'unknown'}",
+        })
         return clean
 
     payload = {
         "模块": "SIKK-GMGN 新币筛选",
         "配置名称": config.get("template_name"),
         "扫描时间": scan_time,
+        "candidate_snapshot_at": scan_time,
+        "candidate_batch_id": candidate_batch_id,
+        "candidate_source": "gmgn_trenches",
+        "first_seen_registry": str(registry_file),
         "候选统计": {
             "总扫描数": len(results),
             "进入候选池": len(candidate_rows),
@@ -411,6 +526,7 @@ def write_candidate_outputs(results: List[Dict[str, Any]], output_dir: Path | st
         "排除列表": [public_row(r) for r in blocked_rows],
         "说明": "GMGN 新币筛选只负责候选池入口；自动买卖由后续 SIKK 信号/风控/仓位/执行状态机决定。",
     }
+    _write_first_seen_registry(registry_file, registry)
     json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     raw_path.write_text(json.dumps(raw_response, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -431,6 +547,8 @@ def collect_and_write_candidate_pool(
     config: Optional[Dict[str, Any]] = None,
     runner: Callable[[List[str]], Dict[str, Any]] = default_runner,
     limit: Optional[int] = None,
+    now: Optional[str] = None,
+    base_dir: Path | str | None = None,
 ) -> Dict[str, Path]:
     """采集 GMGN 新币列表、筛选候选池并写出 JSON/CSV。"""
     cfg = config or load_filter_config()
@@ -440,7 +558,7 @@ def collect_and_write_candidate_pool(
     # 进入候选池优先，再按 S3/S2/S1 和结构加分排序。
     rank = {"S3_进入SIKK结构分析": 0, "S2_重点观察": 1, "S1_普通观察": 2, "S0_排除": 3}
     results.sort(key=lambda r: (rank.get(r["筛选等级"], 9), -r["结构加分"], -r["24H净买入USD"], -r["24H成交额USD"]))
-    return write_candidate_outputs(results, output_dir, cfg, raw)
+    return write_candidate_outputs(results, output_dir, cfg, raw, now=now, base_dir=base_dir)
 
 
 def main() -> None:

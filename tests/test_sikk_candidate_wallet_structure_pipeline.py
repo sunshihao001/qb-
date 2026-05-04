@@ -135,3 +135,43 @@ def test_candidate_wallet_structure_pipeline_does_not_turn_support_into_executio
     assert row["钱包结构结论"] == "WALLET_SUPPORT"
     assert row["状态机建议"] == "ALLOW_PAPER_READY_IF_OTHER_GATES_PASS"
     assert "不绕过 K线/quote/安全扫描" in row["PAPER_READY允许说明"]
+
+
+def test_wallet_structure_decision_writes_standard_time_anchors(tmp_path):
+    from sikk_candidate_wallet_structure_pipeline import run_candidate_wallet_structure_pipeline
+
+    token = "TokenTime11111111111111111111111111111111111"
+    states = _write_json(
+        tmp_path / "candidate_states.json",
+        {"候选状态": [{"代币地址": token, "代币符号": "TIME", "当前状态": "PAPER_READY"}]},
+    )
+
+    paths = run_candidate_wallet_structure_pipeline(
+        candidate_states_path=states,
+        output_dir=tmp_path / "wallet_structure",
+        wallet_collector=lambda token, symbol: [
+            {"wallet_address": "H1", "role": "HIGH_RESULT_WALLET", "game_side": "STRUCTURE_SIDE", "holding_ratio": 0.2, "sell_ratio": 0.0, "evidence_level": "E4", "source_time": "2026-05-04T11:59:40Z"},
+            {"wallet_address": "P1", "role": "PARTIAL_HOLDER", "game_side": "STRUCTURE_SIDE", "holding_ratio": 0.1, "sell_ratio": 0.1, "evidence_level": "E3", "source_time": "2026-05-04T11:59:45Z"},
+            {"wallet_address": "E1", "role": "EARLY_BUYER", "game_side": "EXECUTION_SIDE", "holding_ratio": 0.1, "sell_ratio": 0.0, "evidence_level": "E3", "source_time": "2026-05-04T11:59:50Z"},
+        ],
+        now="2026-05-04T12:00:00Z",
+    )
+
+    summary = _read_json(Path(paths["summary_json"]))
+    row = summary["处理结果"][0]
+    decision_path = Path(row["钱包结构输出"]["decision_json"])
+    decision = _read_json(decision_path)
+    for field in [
+        "wallet_snapshot_time",
+        "wallet_decision_created_at",
+        "wallet_delta_time",
+        "wallet_source_time",
+        "wallet_refresh_started_at",
+        "wallet_refresh_finished_at",
+    ]:
+        assert decision[field], field
+        assert row[field] == decision[field]
+    assert decision["wallet_snapshot_time"] == "2026-05-04T12:00:00Z"
+    assert decision["wallet_decision_created_at"] == "2026-05-04T12:00:00Z"
+    assert decision["wallet_delta_time"] == "2026-05-04T12:00:00Z"
+    assert decision["wallet_source_time"] == "2026-05-04T11:59:50Z"

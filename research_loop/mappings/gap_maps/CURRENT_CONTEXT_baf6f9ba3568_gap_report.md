@@ -1,0 +1,71 @@
+# SIKK Gap Detector
+
+- doc_id: `CURRENT_CONTEXT_baf6f9ba3568`
+- gap rows: 147
+- safety boundary: paper-only；不执行真实 swap；不读取私钥；不签名；不广播。
+
+## Gap Counts
+- MISSING_MODULE: 18
+- SURFACE_TEMPLATE: 18
+- FIELD_MISSING: 0
+- NOT_RUNTIME_CONNECTED: 18
+- NOT_VISIBLE_IN_TG: 13
+- NOT_VISIBLE_IN_WEB: 14
+- NOT_VISIBLE_IN_CLI: 12
+- NO_TEST: 18
+- NO_SOURCE_TRACE: 18
+- NO_ACCEPTANCE: 18
+- SAFETY_RISK: 0
+- OVER_COMPLEXITY: 0
+
+## Matrix Preview
+- `candidate_discovery` / MISSING_MODULE / 模块在映射中缺失或未接入
+- `candidate_discovery` / SURFACE_TEMPLATE / 缺失模块也没有表层模板
+- `candidate_discovery` / NOT_RUNTIME_CONNECTED / 未与 runtime 主流程连接
+- `candidate_discovery` / NOT_VISIBLE_IN_TG / TG 中不可见
+- `candidate_discovery` / NOT_VISIBLE_IN_WEB / Web 中不可见
+- `candidate_discovery` / NOT_VISIBLE_IN_CLI / CLI 中不可见
+- `candidate_discovery` / NO_TEST / 缺少对应测试
+- `candidate_discovery` / NO_SOURCE_TRACE / 缺少源文件或来源追踪
+- `candidate_discovery` / NO_ACCEPTANCE / 缺少验收声明
+- `kline_signal` / MISSING_MODULE / 模块在映射中缺失或未接入
+- `kline_signal` / SURFACE_TEMPLATE / 缺失模块也没有表层模板
+- `kline_signal` / NOT_RUNTIME_CONNECTED / 未与 runtime 主流程连接
+- `kline_signal` / NOT_VISIBLE_IN_TG / TG 中不可见
+- `kline_signal` / NOT_VISIBLE_IN_WEB / Web 中不可见
+- `kline_signal` / NOT_VISIBLE_IN_CLI / CLI 中不可见
+- `kline_signal` / NO_TEST / 缺少对应测试
+- `kline_signal` / NO_SOURCE_TRACE / 缺少源文件或来源追踪
+- `kline_signal` / NO_ACCEPTANCE / 缺少验收声明
+- `wallet_structure` / MISSING_MODULE / 模块在映射中缺失或未接入
+- `wallet_structure` / SURFACE_TEMPLATE / 缺失模块也没有表层模板
+- `wallet_structure` / NOT_RUNTIME_CONNECTED / 未与 runtime 主流程连接
+- `wallet_structure` / NOT_VISIBLE_IN_TG / TG 中不可见
+- `wallet_structure` / NOT_VISIBLE_IN_WEB / Web 中不可见
+- `wallet_structure` / NOT_VISIBLE_IN_CLI / CLI 中不可见
+- `wallet_structure` / NO_TEST / 缺少对应测试
+- `wallet_structure` / NO_SOURCE_TRACE / 缺少源文件或来源追踪
+- `wallet_structure` / NO_ACCEPTANCE / 缺少验收声明
+- `okx_cluster` / MISSING_MODULE / 模块在映射中缺失或未接入
+- `okx_cluster` / SURFACE_TEMPLATE / 缺失模块也没有表层模板
+- `okx_cluster` / NOT_RUNTIME_CONNECTED / 未与 runtime 主流程连接
+- `okx_cluster` / NOT_VISIBLE_IN_TG / TG 中不可见
+- `okx_cluster` / NOT_VISIBLE_IN_WEB / Web 中不可见
+- `okx_cluster` / NOT_VISIBLE_IN_CLI / CLI 中不可见
+- `okx_cluster` / NO_TEST / 缺少对应测试
+- `okx_cluster` / NO_SOURCE_TRACE / 缺少源文件或来源追踪
+- `okx_cluster` / NO_ACCEPTANCE / 缺少验收声明
+- `structure_fusion` / MISSING_MODULE / 模块在映射中缺失或未接入
+- `structure_fusion` / SURFACE_TEMPLATE / 缺失模块也没有表层模板
+- `structure_fusion` / NOT_RUNTIME_CONNECTED / 未与 runtime 主流程连接
+- `structure_fusion` / NOT_VISIBLE_IN_TG / TG 中不可见
+- `structure_fusion` / NOT_VISIBLE_IN_WEB / Web 中不可见
+- `structure_fusion` / NOT_VISIBLE_IN_CLI / CLI 中不可见
+- `structure_fusion` / NO_TEST / 缺少对应测试
+- `structure_fusion` / NO_SOURCE_TRACE / 缺少源文件或来源追踪
+- `structure_fusion` / NO_ACCEPTANCE / 缺少验收声明
+- `state_machine` / MISSING_MODULE / 模块在映射中缺失或未接入
+- `state_machine` / SURFACE_TEMPLATE / 缺失模块也没有表层模板
+- `state_machine` / NOT_RUNTIME_CONNECTED / 未与 runtime 主流程连接
+- `state_machine` / NOT_VISIBLE_IN_WEB / Web 中不可见
+- `state_machine` / NOT_VISIBLE_IN_CLI / CLI 中不可见

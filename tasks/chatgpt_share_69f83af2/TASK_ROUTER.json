@@ -1,0 +1,128 @@
+{
+  "task_router_name": "SIKK HER 任务启动器",
+  "version": "her_task_router_v1",
+  "source": "https://chatgpt.com/share/69f83af2-a380-83a7-a429-200c72d43279",
+  "task_type": "chatgpt_share",
+  "slug": "chatgpt_share_69f83af2",
+  "root": "/root/sikk-gmgn",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_swap_enabled": false,
+    "private_key_required": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "scope_note": "HER 任务启动器只生成任务计划、知识吸收入口、工具路由和验收清单；不执行真实 swap。"
+  },
+  "recommended_skills": [
+    "conversation-transcript-ingestion",
+    "sikk-sol-core-methodology",
+    "test-driven-development"
+  ],
+  "task_lens": [
+    {
+      "stage_id": "lens_1_read",
+      "中文名称": "任务棱镜 1：读取与证据保存",
+      "actions": [
+        "读取链接或确认不可读",
+        "保存原文/目标到 knowledge/inbox 或 tasks",
+        "记录来源、时间、可读性"
+      ],
+      "acceptance": "存在可追溯输入文件；不可读时明确声明。"
+    },
+    {
+      "stage_id": "lens_2_problem",
+      "中文名称": "任务棱镜 2：问题识别与断点发现",
+      "actions": [
+        "提取核心机制",
+        "识别隐藏问题",
+        "指出表面完成但未接入真实流程的部分"
+      ],
+      "acceptance": "输出问题诊断、缺口清单和约束报告。"
+    },
+    {
+      "stage_id": "lens_3_mapping",
+      "中文名称": "任务棱镜 3：系统映射与工具选择",
+      "actions": [
+        "搜索 SIKK/Hermes 相关文件",
+        "选择 skill/命令/工具",
+        "绑定字段、模块、测试和报告"
+      ],
+      "acceptance": "每个结论都落到文件、字段、命令、测试或验收标准。"
+    },
+    {
+      "stage_id": "lens_4_execution",
+      "中文名称": "任务棱镜 4：分阶段执行",
+      "actions": [
+        "先写测试",
+        "修改知识资产/代码/文档",
+        "运行专项测试"
+      ],
+      "acceptance": "阶段产物可追溯，测试通过。"
+    },
+    {
+      "stage_id": "lens_5_acceptance",
+      "中文名称": "任务棱镜 5：审计验收与沉淀",
+      "actions": [
+        "运行全量测试",
+        "运行 sikk_live_run 最小验证",
+        "更新 skill/knowledge/index/报告"
+      ],
+      "acceptance": "安全断言通过，生成中文验收报告。"
+    }
+  ],
+  "tool_routes": [
+    {
+      "场景": "链接读取",
+      "工具": "browser/readability",
+      "用途": "读取链接或明确声明不可读。"
+    },
+    {
+      "场景": "知识吸收",
+      "工具": "sikk_knowledge_absorption.py",
+      "用途": "生成 passport/rules/audit/update/skill/Hindsight。"
+    },
+    {
+      "场景": "SIKK 运行落地",
+      "工具": "sikk_live_run.py",
+      "用途": "保持 canonical 单入口与 paper-only runtime 验证。"
+    },
+    {
+      "场景": "测试验收",
+      "工具": "pytest",
+      "用途": "专项测试、全量测试、防回归。"
+    },
+    {
+      "场景": "结构深度审计",
+      "工具": "Super Hermes prism 思维",
+      "用途": "生成任务棱镜、盲点与约束报告。"
+    },
+    {
+      "场景": "跨模型上下文",
+      "工具": "repomix",
+      "用途": "需要跨 LLM 提供代码库上下文时打包，必须先排除 secrets。"
+    },
+    {
+      "场景": "多代理长任务",
+      "工具": "DeerFlow/delegate_task",
+      "用途": "研究、审计、实现、验收可拆分为独立子代理。"
+    }
+  ],
+  "expected_outputs": [
+    "tasks/chatgpt_share_69f83af2/TASK_ROUTER.json",
+    "tasks/chatgpt_share_69f83af2/TASK_ROUTER.md",
+    "tasks/chatgpt_share_69f83af2/SECTION_TASK.md",
+    "reports/<slug>/acceptance.md",
+    "knowledge/inbox/chatgpt_share_69f83af2.md",
+    "knowledge/passports/chatgpt_share_69f83af2.passport.md",
+    "knowledge/extracted_rules/chatgpt_share_69f83af2.rules.md",
+    "knowledge/audits/chatgpt_share_69f83af2.system_audit.md",
+    "knowledge/system_updates/chatgpt_share_69f83af2.sikk_update.md"
+  ],
+  "acceptance_checks": [
+    "PYTHONPATH=/root/sikk-gmgn python3 -m pytest tests/test_sikk_her_task_router.py -q",
+    "PYTHONPATH=/root/sikk-gmgn python3 -m pytest -q",
+    "PYTHONPATH=/root/sikk-gmgn python3 sikk_live_run.py --mode once --output-root data/gmgn_candidates_live_run --limit 5 --quote-sources none",
+    "检查 live_run_manifest.json 中 real_swap_enabled=false 且 confirmation_enabled=false"
+  ],
+  "next_action": "先执行任务棱镜 1：读取与证据保存；不要直接改核心代码。"
+}

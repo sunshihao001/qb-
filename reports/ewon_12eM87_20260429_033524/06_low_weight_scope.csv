@@ -1,0 +1,4 @@
+﻿scope,condition,action,reason
+中后期小额普通买家,无GMGN标签/无Top排名/无异常路径,A1记录或跳过深挖,防止历史库污染
+普通散户追涨钱包,非早期窗口且无结果表现,A1低权重,不占用深挖额度
+非Top Holder/Trader普通钱包,无transfer_in/无同源/无回流,A1或不写核心库,只在复现时升级

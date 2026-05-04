@@ -1,0 +1,264 @@
+# SIKK 候选币状态机汇总
+
+- 更新时间：2026-05-01T08:23:52Z
+- 候选数量：49
+- 执行边界：只管理状态与纸面准备，不执行真实 swap。
+
+## 状态统计
+
+- DISCOVERED：0
+- WATCHING：37
+- ACCUMULATING：0
+- READY_TO_BUY：0
+- PAPER_READY：4
+- BLOCKED：8
+- FAILED：0
+- EXITED：0
+
+## 候选状态
+
+- 代币：CCP / F8ZVdDU2EdqYaBuJsA488Hr1QPachasWnQF6k3TDpump
+  - 当前状态：PAPER_READY
+  - 状态原因：吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+- 代币：free / GoCeZ8QUUc5WEXW5swRiTKcmhybCKJ1YVKG4td8apump
+  - 当前状态：BLOCKED
+  - 状态原因：吸筹窗口 invalid，进入风险阻断观察
+  - 信号等级：
+  - 风险门禁：
+- 代币：AALIEN / ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  - 当前状态：PAPER_READY
+  - 状态原因：吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+- 代币：PEPE / 5eK3XbtBCfqvK98eGDEve6fRLZALyZ1LvnQ6Zxm4pump
+  - 当前状态：BLOCKED
+  - 状态原因：吸筹窗口 invalid，进入风险阻断观察
+  - 信号等级：
+  - 风险门禁：
+- 代币：HEALTH / 6RhH7zVMckGazH6DMBQrKfpKc2C3M7Rk8D6HzEgqpump
+  - 当前状态：BLOCKED
+  - 状态原因：吸筹窗口 invalid，进入风险阻断观察
+  - 信号等级：
+  - 风险门禁：
+- 代币：FOFAR / Ha5Z2DfRv6Ar2nAeBLCGWHqzwXKL3of4DqKwzzwpump
+  - 当前状态：BLOCKED
+  - 状态原因：吸筹窗口 invalid，进入风险阻断观察
+  - 信号等级：
+  - 风险门禁：
+- 代币：PEPX / 9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump
+  - 当前状态：BLOCKED
+  - 状态原因：吸筹窗口 invalid，进入风险阻断观察
+  - 信号等级：
+  - 风险门禁：
+- 代币：UNITED / LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA
+  - 当前状态：PAPER_READY
+  - 状态原因：吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+- 代币：ELUENT / DQa4mxFws6WsXMwn8gpEBXqMsGfDn4Uopi8W2Zvopump
+  - 当前状态：WATCHING
+  - 状态原因：SIKK 信号仍为观察/预备层
+  - 信号等级：S2_预备信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+- 代币：GRUMP / 7EGDrbCHHzqHgBry83L26ChDKhakDe17GqaaTE3Zpump
+  - 当前状态：PAPER_READY
+  - 状态原因：吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+- 代币：MGGA / 8E7bdJLwfLSeeWBkjTKEQPtRBJxzDB5MbfCjfTPHpump
+  - 当前状态：BLOCKED
+  - 状态原因：风险门禁阻断或 SIKK 信号 SX
+  - 信号等级：SX_失效信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+- 代币：PEPTA / 7WddhpM5mLMTyS16Dqeru1mUcoHetVVkh92zU8Tppump
+  - 当前状态：BLOCKED
+  - 状态原因：吸筹窗口 invalid，进入风险阻断观察
+  - 信号等级：
+  - 风险门禁：
+- 代币：CLUTCH / 74CQjPmRd5A7MGc7Dnp1kgUNdPsYtB8FNbtak2Padpce
+  - 当前状态：BLOCKED
+  - 状态原因：风险门禁阻断或 SIKK 信号 SX
+  - 信号等级：SX_失效信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+- 代币：PXC / PXCgWpfDv6hnNE9rac8qTk6Z1zWKJrRUcfjkVQWpXm7
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：MSGA / DJWPpERd8aHL4oYkNmBLEUowBjTt4Wpd7WEJgMQdpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：GA / BhCuLLN38Ru7qBkXBmGzNeG6ipiAcqvywpvNjQW7pump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：NONGMOODAENG / BZPRp1m5iXZerMdNChU5z1Kcd4MgLgGCCEdkmBpWpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：rice / 2wQq3MrFFHPQnapMt1wnZ2vGkVZDv5ENDCrdLCqFpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：Life / 533wS5wLqdr9JtnLfRW5WKv5cFdKHLKMnjwidJSgpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：CHADLON / hLokvfUnqYUztoVdA4gwZnpvTKsPNefkdn2DyxGpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：AGI / 3qwtMkiBc4uFSPmZeK7TMq8dVzmB4kCqnARXxAkmpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：小丫头 / J1UpPrMTEv2sNPFtB8ecyc4YScvrYoZJ7iriWJnwpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：HANAMI / A2AeTCJn8w2AMPCg3iSiHMKJbADpEbXUURDG4XJpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：小丫头 / BkjP1Um3ZZZTyGVxd7vrRaqGiaZC2K2Xk2VjKexzpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：RJGN / hpvoUYjKkvy2hyqC7444mU6eXFD3ETZW4tLd6Dapump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：CHUDBOB / Bvh8xqP2nkzZBBEywAFqNAc7Mek7QiUofeTmTbKRpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：HIIE / AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：AMC / B85ta9Qp7EgoVXaMka9BQYrFogSmC3PRjsxNM6HaHF41
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：FIT / CFRX4w9w2mvhwZAxCPnyTY3PhHTJ9vQgninuXZfH5Wwn
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：CHEETO / 7Jka23K4r8Lw5FC47HTB2TVdikFbfVBKGU1eP6Fdbrrr
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：RC / 79ogrGd2bhRS455phmsJo8iHYzBusqgLeyxF9Tf5pump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：BP / JB8rMqyFmypiMqjiJ13bitubssM6aYDdq5ndUF5Wpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：1000x / C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：SIGHT  / ByqipPbSHxzLi6ga5LNrnE229vsLuSrCfHMaDbe1TRND
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：STJUDE / E8syR4zsgQG2zo9YyiyfX4ujubByR4z6qj9stjASpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：Dragon / 2p5e3sudKx2LtM8iSefaSszMY9nCiHz6CTEASQ9Xpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：MEOWNANA / 3R4eD5GpzCaPRWeBHBGHLYgE5bxCRX5t9R247qXNpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：STEWARD / 7x9hTp6NrvmirYynvFVGpQDiUAvWRNHH67AYpzJRpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：MOODANG / DWeB4iHoQ2gMKwaU3NjCYW9RJfpiXcuzUkCvcNf6pump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：Scribbli / 8c3JdTcEqy9XdUJ36NAns7XVDfh356nWxvwcMYKNpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：three / FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：SCRIBBLE / 33xDbZM2bUHF841LKJauRZFrDtBJiUKhCH5yVh2KDWH2
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：Walter / 2CKp88BFyPzr7gEuQKXMJ9cqa24AFXUNC41FR7udpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：MSPAINTIFY / HDmojpFZvf1F421Gev2hh2p1ThaVbWsW5qh9C5Bipump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：EVA / 57kFRAk9EH57rLcW3XoHa8ATr5zNahoQAS8NNAoKpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：Lorna / 4dhfBMj2qwvZunCmDSfthjSCHgEgaEzG4vVSNBGRpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：ROAF / 4ne9SgdsLE2P2FJEjxDxUnpwS3fLGCPpHFzYeuDCpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：ROAF / 5ByEYVGSKtTzcQRhY8QkWRqKdhweXMHvHnacRznYnhUY
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+- 代币：TrumpPepe / 3YiZjecnYgcGKjKdkUt4CNS6rkzC8kJohef7HQCQHYQ2
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：

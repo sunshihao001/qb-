@@ -51,22 +51,48 @@ def _write_json(path: str | Path, payload: Dict[str, Any]) -> None:
     p.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def _write_csv(path: str | Path, rows: Iterable[Dict[str, Any]]) -> None:
+def _write_csv(path: str | Path, rows: Iterable[Dict[str, Any]], default_fieldnames: Optional[List[str]] = None) -> None:
     rows = list(rows)
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
-    if not rows:
-        p.write_text("", encoding="utf-8")
-        return
     fieldnames: List[str] = []
+    for name in default_fieldnames or []:
+        if name not in fieldnames:
+            fieldnames.append(name)
     for row in rows:
         for key in row:
             if key not in fieldnames:
                 fieldnames.append(key)
+    if not fieldnames:
+        p.write_text("", encoding="utf-8")
+        return
     with p.open("w", encoding="utf-8-sig", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
+
+
+PAPER_POSITION_CSV_FIELDS = [
+    "position_id", "token_address", "token_symbol", "代币地址", "代币符号", "status",
+    "paper_entry_time", "entry_time", "paper_entry_price", "entry_price", "entry_quote_source",
+    "paper_size_sol", "position_sol", "paper_size_usd", "estimated_token_amount",
+    "candidate_discovered_at", "discovery_market_cap_usd", "signal_time", "signal_level", "signal_type",
+    "signal_market_cap_usd", "wallet_decision_time", "wallet_structure_status", "wallet_structure_score",
+    "wallet_risk_score", "counterparty_pressure_score", "data_quality_score",
+    "entry_market_cap_usd", "entry_liquidity_usd", "entry_holder_count",
+    "entry_delay_from_discovery_sec", "entry_delay_from_signal_sec",
+    "entry_market_cap_change_from_discovery_pct", "entry_market_cap_change_from_signal_pct",
+    "market_cap_context_status", "wallet_exit_action", "wallet_exit_trigger_time", "wallet_exit_trigger_type",
+    "shadow_hold_tracking", "shadow_hold_price_15m", "shadow_hold_price_30m", "shadow_hold_price_60m",
+    "missed_profit_pct", "avoided_drawdown_pct", "false_exit_flag", "最终收益率_pct", "exit_reason",
+]
+
+PAPER_TRADE_CSV_FIELDS = [
+    "trade_id", "position_id", "token_address", "token_symbol", "side", "event_type", "trade_time",
+    "price", "market_cap_usd", "liquidity_usd", "size_sol", "size_usd", "token_amount",
+    "slippage_pct", "fee_sol", "quote_source", "reason",
+    "事件时间", "事件类型", "代币地址", "代币符号", "价格", "仓位SOL", "原因",
+]
 
 
 def _append_jsonl(path: str | Path, rows: Iterable[Dict[str, Any]]) -> None:
@@ -89,6 +115,59 @@ def _to_float(value: Any, default: float = 0.0) -> float:
         return float(value)
     except (TypeError, ValueError):
         return default
+
+
+
+
+def _parse_iso_time(value: Any) -> Optional[datetime]:
+    if not value:
+        return None
+    try:
+        text = str(value)
+        if text.endswith("Z"):
+            text = text[:-1] + "+00:00"
+        dt = datetime.fromisoformat(text)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+    except Exception:
+        return None
+
+
+def _seconds_between(start: Any, end: Any) -> Optional[int]:
+    a = _parse_iso_time(start)
+    b = _parse_iso_time(end)
+    if not a or not b:
+        return None
+    return int((b - a).total_seconds())
+
+
+def _pct_change(new: Any, old: Any) -> Optional[float]:
+    old_f = _to_float(old, 0.0)
+    new_f = _to_float(new, 0.0)
+    if old_f <= 0 or new_f <= 0:
+        return None
+    return round((new_f - old_f) / old_f * 100.0, 4)
+
+
+def _market_cap_context_status(change_pct: Any) -> str:
+    if change_pct is None:
+        return "UNKNOWN_ENTRY"
+    value = _to_float(change_pct, 0.0)
+    if value < 50:
+        return "EARLY_ENTRY"
+    if value <= 150:
+        return "NORMAL_ENTRY"
+    if value <= 300:
+        return "LATE_ENTRY"
+    return "CHASE_ENTRY"
+
+
+def _first_non_empty(*values: Any, default: Any = None) -> Any:
+    for value in values:
+        if value is not None and value != "":
+            return value
+    return default
 
 
 def _state_rows(payload: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -146,15 +225,30 @@ def _load_wallet_structure_runtime_inputs(token: str, wallet_structure_dir: str 
 def _close_position_for_wallet_action(position: Dict[str, Any], current_price: float, snapshot_time: str, action: Dict[str, Any]) -> Dict[str, Any]:
     entry_price = _to_float(position.get("entry_price"), 0.0)
     closed = dict(position)
+    pnl = round((current_price - entry_price) / entry_price * 100.0, 4) if entry_price > 0 else 0.0
     closed.update({
         "status": "CLOSED",
         "exit_time": snapshot_time,
         "exit_price": current_price,
         "exit_reason": "钱包结构触发纸面强制退出",
-        "最终收益率_pct": round((current_price - entry_price) / entry_price * 100.0, 4) if entry_price > 0 else 0.0,
+        "最终收益率_pct": pnl,
         "wallet_position_action": action.get("action"),
         "failure_type": action.get("failure_type"),
         "failure_reason": action.get("reason"),
+        "wallet_exit_trigger_time": snapshot_time,
+        "wallet_exit_trigger_type": action.get("failure_type"),
+        "wallet_exit_trigger_score": action.get("trigger_score") or action.get("wallet_risk_score"),
+        "wallet_exit_action": action.get("action"),
+        "force_exit_price": current_price,
+        "shadow_hold_tracking": True,
+        "shadow_hold_price_15m": None,
+        "shadow_hold_price_30m": None,
+        "shadow_hold_price_60m": None,
+        "shadow_hold_max_profit_after_exit": None,
+        "shadow_hold_max_drawdown_after_exit": None,
+        "false_exit_flag": None,
+        "avoided_drawdown_pct": None,
+        "missed_profit_pct": None,
         "scope_note": "钱包结构触发纸面退出；不执行真实 swap。",
     })
     return closed
@@ -254,21 +348,54 @@ def _new_position(
     exit_plan = _extract_exit_plan(signal)
     stop_price = _to_float(exit_plan.get("hard_stop_price"), 0.0) or _to_float(signal.get("止损价格"), 0.0) or entry_price * 0.8
     symbol = str(state.get("代币符号") or signal.get("代币符号") or "")
-    return {
-        "position_id": f"paper-{token}-{snapshot_time}",
+    signal_time = str(signal.get("信号时间") or state.get("信号时间") or snapshot_time)
+    discovery_time = _first_non_empty(state.get("candidate_discovered_at"), state.get("discovered_at"), state.get("发现时间"), default="")
+    discovery_market_cap = _first_non_empty(state.get("discovery_market_cap_usd"), state.get("发现市值USD"), default=None)
+    signal_market_cap = _first_non_empty(signal.get("signal_market_cap_usd"), state.get("signal_market_cap_usd"), signal.get("信号市值USD"), default=None)
+    entry_market_cap = _first_non_empty(price_info.get("market_cap_usd"), price_info.get("marketCapUsd"), state.get("paper_entry_market_cap_usd"), signal_market_cap, default=None)
+    entry_liquidity = _first_non_empty(price_info.get("liquidity_usd"), price_info.get("liquidityUsd"), state.get("liquidity_usd"), state.get("discovery_liquidity_usd"), default=None)
+    entry_holder_count = _first_non_empty(price_info.get("holder_count"), state.get("holder_count"), state.get("discovery_holder_count"), default=None)
+    sol_usd = _to_float(price_info.get("sol_usd") or price_info.get("sol_price_usd"), 0.0)
+    paper_size_usd = round(position_sol * sol_usd, 6) if sol_usd > 0 else 0.0
+    estimated_token_amount = round((position_sol / entry_price), 8) if entry_price > 0 else 0.0
+    delay_from_discovery = _seconds_between(discovery_time, snapshot_time)
+    delay_from_signal = _seconds_between(signal_time, snapshot_time)
+    cap_change_from_discovery = _pct_change(entry_market_cap, discovery_market_cap)
+    cap_change_from_signal = _pct_change(entry_market_cap, signal_market_cap)
+    market_cap_status = _market_cap_context_status(cap_change_from_discovery)
+    wallet_status = str(state.get("钱包结构结论") or state.get("wallet_structure_status") or "未接入")
+    wallet_score = _to_float(state.get("钱包结构评分") or state.get("wallet_structure_score"), 0.0)
+    wallet_risk = _to_float(state.get("钱包风险评分") or state.get("wallet_risk_score"), 0.0)
+    counterparty = _to_float(state.get("对手盘压力评分") or state.get("counterparty_pressure_score"), 0.0)
+    data_quality = _to_float(state.get("data_quality_score") or state.get("数据质量评分"), 0.0)
+    position_id = f"paper-{token}-{snapshot_time}"
+    position = {
+        "position_id": position_id,
         "代币地址": token,
         "代币符号": symbol,
-        "entry_time": str(signal.get("信号时间") or state.get("信号时间") or snapshot_time),
+        "token_address": token,
+        "token_symbol": symbol,
+        "entry_time": signal_time,
+        "paper_entry_time": snapshot_time,
         "entry_price": entry_price,
+        "paper_entry_price": entry_price,
         "entry_price_mode": entry_price_mode,
+        "entry_quote_source": str(price_info.get("source") or "unknown"),
         "signal_entry_price": signal_entry_price,
         "live_entry_price": live_entry_price,
+        "entry_raw_quote_price": live_entry_price,
+        "entry_simulated_price": entry_price,
         "signal_pnl_pct": 0.0,
         "live_pnl_pct": 0.0,
         "entry_price_diff_pct": entry_price_diff_pct,
+        "entry_slippage_pct": cost_model["buy_slippage_pct"],
+        "entry_fee_sol": cost_model["priority_fee_sol"],
         "cost_model": cost_model,
         "cost_buffer_pct": _cost_buffer_pct(cost_model),
         "position_sol": position_sol,
+        "paper_size_sol": position_sol,
+        "paper_size_usd": paper_size_usd,
+        "estimated_token_amount": estimated_token_amount,
         "remaining_pct": 100.0,
         "stop_price": stop_price,
         "take_profit_rules": list(exit_plan.get("take_profit_rules") or []),
@@ -277,19 +404,83 @@ def _new_position(
         "min_price": entry_price,
         "last_price": entry_price,
         "last_update_time": snapshot_time,
+        "candidate_discovered_at": discovery_time,
+        "discovery_market_cap_usd": discovery_market_cap,
+        "discovery_liquidity_usd": _first_non_empty(state.get("discovery_liquidity_usd"), default=None),
+        "discovery_holder_count": _first_non_empty(state.get("discovery_holder_count"), default=None),
+        "discovery_source": _first_non_empty(state.get("discovery_source"), default="gmgn_new_token_filter"),
+        "signal_time": signal_time,
         "signal_level": str(signal.get("信号等级") or state.get("信号等级") or ""),
+        "signal_type": str(signal.get("策略类型") or state.get("策略类型") or ""),
         "strategy_type": str(signal.get("策略类型") or state.get("策略类型") or ""),
-        "quote_security_state": str(quote.get("交易前状态") or ""),
-        "wallet_structure_status": str(state.get("钱包结构结论") or "未接入"),
+        "signal_price": signal_entry_price,
+        "signal_market_cap_usd": signal_market_cap,
+        "wallet_decision_time": _first_non_empty(state.get("wallet_decision_time"), snapshot_time),
+        "wallet_structure_status": wallet_status,
         "wallet_structure_factor": wallet_factor,
-        "wallet_structure_score": _to_float(state.get("钱包结构评分"), 0.0),
-        "wallet_risk_score": _to_float(state.get("钱包风险评分"), 0.0),
-        "counterparty_pressure_score": _to_float(state.get("对手盘压力评分"), 0.0),
-        "wallet_structure_reason": str(state.get("钱包结构原因") or ""),
+        "wallet_structure_score": wallet_score,
+        "wallet_risk_score": wallet_risk,
+        "counterparty_pressure_score": counterparty,
+        "data_quality_score": data_quality,
+        "wallet_decision_market_cap_usd": _first_non_empty(state.get("wallet_decision_market_cap_usd"), default=None),
+        "wallet_structure_reason": str(state.get("钱包结构原因") or state.get("wallet_reason") or ""),
         "wallet_evidence_level": str(state.get("钱包证据等级") or ""),
+        "quote_security_state": str(quote.get("交易前状态") or ""),
+        "entry_market_cap_usd": entry_market_cap,
+        "paper_entry_market_cap_usd": entry_market_cap,
+        "entry_liquidity_usd": entry_liquidity,
+        "entry_holder_count": entry_holder_count,
+        "entry_delay_from_discovery_sec": delay_from_discovery,
+        "entry_delay_from_signal_sec": delay_from_signal,
+        "entry_market_cap_change_from_discovery_pct": cap_change_from_discovery,
+        "entry_market_cap_change_from_signal_pct": cap_change_from_signal,
+        "market_cap_context_status": market_cap_status,
         "status": "OPEN",
         "scope_note": "纸面持仓，不执行真实 swap。",
     }
+    position["paper_entry_snapshot"] = {
+        "candidate": {
+            "candidate_discovered_at": discovery_time,
+            "discovery_price": state.get("discovery_price"),
+            "discovery_market_cap_usd": discovery_market_cap,
+            "discovery_liquidity_usd": position.get("discovery_liquidity_usd"),
+            "discovery_holder_count": position.get("discovery_holder_count"),
+            "discovery_source": position.get("discovery_source"),
+        },
+        "signal": {
+            "signal_time": signal_time,
+            "signal_level": position["signal_level"],
+            "signal_type": position["signal_type"],
+            "signal_price": signal_entry_price,
+            "signal_market_cap_usd": signal_market_cap,
+        },
+        "wallet": {
+            "wallet_decision_time": position["wallet_decision_time"],
+            "wallet_structure_status": wallet_status,
+            "wallet_structure_score": wallet_score,
+            "wallet_risk_score": wallet_risk,
+            "counterparty_pressure_score": counterparty,
+            "data_quality_score": data_quality,
+            "wallet_decision_market_cap_usd": position.get("wallet_decision_market_cap_usd"),
+            "wallet_reason": position["wallet_structure_reason"],
+        },
+        "entry": {
+            "paper_entry_time": snapshot_time,
+            "entry_price_mode": entry_price_mode,
+            "entry_quote_source": position["entry_quote_source"],
+            "entry_raw_quote_price": live_entry_price,
+            "entry_simulated_price": entry_price,
+            "entry_slippage_pct": cost_model["buy_slippage_pct"],
+            "entry_fee_sol": cost_model["priority_fee_sol"],
+            "entry_market_cap_usd": entry_market_cap,
+            "entry_liquidity_usd": entry_liquidity,
+            "entry_holder_count": entry_holder_count,
+            "paper_size_sol": position_sol,
+            "paper_size_usd": paper_size_usd,
+            "estimated_token_amount": estimated_token_amount,
+        },
+    }
+    return position
 
 
 def _decision_get(decision: Any, key: str, default: Any = None) -> Any:
@@ -313,9 +504,13 @@ def decide_wallet_position_action(
     latest_delta: Optional[Dict[str, Any]] = None,
     mode: str = "paper",
 ) -> Dict[str, Any]:
-    """根据当前钱包结构与 latest_delta 决定纸面持仓动作。
+    """钱包退出策略层：钱包结构先进入风险监控，强证据才允许 FORCE_PAPER_EXIT。
 
-    paper 模式可模拟 FORCE_PAPER_EXIT；live 模式只返回确认要求，不自动卖出。
+    该函数落实链接文档里的 wallet_exit_policy：
+    - 钱包结构不是直接卖出按钮；
+    - 默认动作是 EXIT_MONITOR；
+    - FORCE_PAPER_EXIT 需要数据质量、多轮 delta、盘型冲突、市场确认同时支持；
+    - live 模式仍然只生成确认要求，不自动卖出。
     """
 
     latest_delta = latest_delta or {}
@@ -330,58 +525,85 @@ def decide_wallet_position_action(
     same_source_sold_delta = _to_float(latest_delta.get("same_source_group_sold_pct_delta"), 0.0)
     high_result_delta = _to_float(latest_delta.get("high_result_remaining_pct_delta"), 0.0)
     risk_delta = _to_float(latest_delta.get("wallet_risk_score_delta"), 0.0)
+    delta_snapshot_count = int(_to_float(latest_delta.get("delta_snapshot_count") or latest_delta.get("snapshot_count") or latest_delta.get("confirmed_delta_rounds"), 1.0))
+    pattern_type = str(position.get("pattern_type") or latest_delta.get("pattern_type") or latest_delta.get("lifecycle_phase") or "UNKNOWN")
+    price_structure_status = str(latest_delta.get("price_structure_status") or latest_delta.get("control_box_status") or "")
+    pattern_conflict = bool(latest_delta.get("pattern_conflict")) or pattern_type in {"PRICE_BREAKDOWN", "DISTRIBUTION_TOP", "CONTROL_LOST_TO_DISTRIBUTION"} or price_structure_status in {"BREAKDOWN", "BELOW_CONTROL_BOX", "BELOW_AVWAP"}
+    market_confirmation = bool(latest_delta.get("market_confirmation")) or pattern_conflict or counterparty_delta >= 25
     position_pnl_pct = _to_float(position.get("当前收益率_pct") or position.get("unrealized_pnl_pct"), 0.0)
 
-    def hard_exit(reason: str, failure_type: str) -> Dict[str, Any]:
-        if mode == "paper":
-            return {
-                "action": "FORCE_PAPER_EXIT",
-                "failure_type": failure_type,
-                "reason": reason,
-                "scope_note": "纸面阶段模拟退出，用于验证钱包结构风控；不执行真实 swap。",
-            }
+    def monitor(reason: str, failure_type: str | None = None, *, eligible: bool = False) -> Dict[str, Any]:
         return {
-            "action": "REAL_TRADE_CONFIRMATION_REQUIRED",
+            "action": "EXIT_MONITOR",
             "failure_type": failure_type,
             "reason": reason,
-            "scope_note": "实盘/未来 live 模式不自动卖出，只生成确认层动作，不自动广播、不自动执行。",
+            "policy_layer": "wallet_exit_policy",
+            "force_exit_eligible": eligible,
+            "scope_note": "纸面阶段进入退出监控；不执行真实 swap。",
         }
 
-    if current_status == "WALLET_BLOCK":
-        return hard_exit("钱包结构状态变为 WALLET_BLOCK，纸面阶段直接模拟退出", "STRUCTURE_WEAKENING")
-    if sync_sell_score >= 70 or same_source_sold_delta >= 20:
-        return hard_exit("疑似同源组同步卖出达到高风险阈值", "SAME_SOURCE_EXIT")
-    if counterparty_score >= 70 and counterparty_delta >= 25:
-        return hard_exit("对手盘压力高且快速上升，疑似筹码向晚期承接方转移", "COUNTERPARTY_ABSORBING")
+    def hard_exit(reason: str, failure_type: str) -> Dict[str, Any]:
+        payload = {
+            "failure_type": failure_type,
+            "reason": reason,
+            "policy_layer": "wallet_exit_policy",
+            "force_exit_eligible": True,
+        }
+        if mode == "paper":
+            payload.update({
+                "action": "FORCE_PAPER_EXIT",
+                "scope_note": "纸面阶段模拟强制退出，用于验证钱包结构风控；不执行真实 swap。",
+            })
+            return payload
+        payload.update({
+            "action": "REAL_TRADE_CONFIRMATION_REQUIRED",
+            "scope_note": "实盘/未来 live 模式不自动卖出，只生成确认层动作，不自动广播、不自动执行。",
+        })
+        return payload
+
+    if data_quality_score and data_quality_score < 65:
+        return monitor("数据质量低于 wallet_exit_policy 阈值，不能强制退出，先进入 EXIT_MONITOR", "DATA_QUALITY_FAIL")
+
+    strong_same_source = sync_sell_score >= 80 and same_source_sold_delta >= 20
+    strong_counterparty = counterparty_score >= 75 and counterparty_delta >= 25
+    strong_structure = current_status == "WALLET_BLOCK" and risk_delta >= 20
+    strong_high_result = high_result_delta <= -30 and risk_delta >= 20
+    strong_early_distribution = early_sold_delta >= 25 and (strong_counterparty or position_pnl_pct > 0)
+    strong_evidence = strong_same_source or strong_counterparty or strong_structure or strong_high_result or strong_early_distribution
+    force_allowed = strong_evidence and delta_snapshot_count >= 2 and pattern_conflict and market_confirmation
+
+    if force_allowed:
+        if strong_same_source:
+            return hard_exit("同源组同步卖出 + 多轮 delta + 盘型/市场确认，允许 FORCE_PAPER_EXIT", "SAME_SOURCE_EXIT")
+        if strong_counterparty:
+            return hard_exit("对手盘压力高且快速上升，并得到市场确认，允许 FORCE_PAPER_EXIT", "COUNTERPARTY_ABSORBING")
+        if strong_high_result:
+            return hard_exit("高结果钱包集体退出且风险分上升，允许 FORCE_PAPER_EXIT", "HIGH_RESULT_EXIT")
+        return hard_exit("钱包结构强恶化并与盘型/市场确认冲突，允许 FORCE_PAPER_EXIT", "STRUCTURE_WEAKENING")
+
+    if current_status in {"WALLET_BLOCK", "WALLET_PAUSE"} or strong_evidence:
+        missing = []
+        if delta_snapshot_count < 2:
+            missing.append("多轮 delta 未确认")
+        if not pattern_conflict:
+            missing.append("盘型冲突未确认")
+        if not market_confirmation:
+            missing.append("市场确认不足")
+        suffix = "；".join(missing) if missing else "强证据不足"
+        failure = "STRUCTURE_WEAKENING" if current_status == "WALLET_BLOCK" else "WALLET_EXIT"
+        return monitor(f"钱包结构出现风险，但 {suffix}，默认 EXIT_MONITOR", failure)
+
     if early_sold_delta >= 20:
-        if position_pnl_pct <= 0:
-            return hard_exit("早期钱包卖出增加且当前仓位未盈利", "WALLET_EXIT")
-        return {
-            "action": "EXIT_MONITOR",
-            "failure_type": "WALLET_EXIT",
-            "reason": "早期钱包卖出增加，但当前仓位仍盈利，先进入退出观察",
-            "scope_note": "纸面阶段进入退出监控；不执行真实 swap。",
-        }
+        return monitor("早期钱包卖出增加，先进入退出观察，等待下一轮快照", "WALLET_EXIT")
     if high_result_delta <= -20:
-        if risk_delta >= 20:
-            return hard_exit("高结果钱包退出且钱包风险分明显上升", "HIGH_RESULT_EXIT")
-        return {
-            "action": "EXIT_MONITOR",
-            "failure_type": "HIGH_RESULT_EXIT",
-            "reason": "高结果钱包剩余筹码下降，进入退出观察",
-            "scope_note": "纸面阶段进入退出监控；不执行真实 swap。",
-        }
-    if data_quality_score and data_quality_score < 50:
-        return {
-            "action": "EXIT_MONITOR",
-            "failure_type": "DATA_QUALITY_FAIL",
-            "reason": "当前钱包结构数据质量不足，暂停激进动作",
-            "scope_note": "纸面阶段进入退出监控；不执行真实 swap。",
-        }
+        return monitor("高结果钱包剩余筹码下降，进入退出观察", "HIGH_RESULT_EXIT")
+
     return {
         "action": "HOLD",
         "failure_type": None,
         "reason": "钱包结构未触发持仓退出条件",
+        "policy_layer": "wallet_exit_policy",
+        "force_exit_eligible": False,
         "scope_note": "继续纸面持仓观察；不执行真实 swap。",
     }
 
@@ -510,6 +732,64 @@ def _default_price_provider(token: str) -> Dict[str, Any]:
     return build_okx_market_price_provider()(token)
 
 
+
+def _journal_row(position: Dict[str, Any], *, snapshot_time: str, paper_action: str = "HOLD", monitor_reason: str = "") -> Dict[str, Any]:
+    return {
+        "time": snapshot_time,
+        "position_id": position.get("position_id"),
+        "token_address": position.get("token_address") or position.get("代币地址"),
+        "token_symbol": position.get("token_symbol") or position.get("代币符号", ""),
+        "current_price": position.get("last_price") or position.get("current_price"),
+        "current_market_cap_usd": position.get("current_market_cap_usd"),
+        "unrealized_pnl_pct": position.get("当前收益率_pct") or position.get("live_pnl_pct"),
+        "max_floating_profit_pct": position.get("最大浮盈_pct"),
+        "max_floating_loss_pct": position.get("最大浮亏_pct"),
+        "wallet_structure_status": position.get("wallet_structure_status"),
+        "wallet_structure_score": position.get("wallet_structure_score"),
+        "wallet_risk_score": position.get("wallet_risk_score"),
+        "counterparty_pressure_score": position.get("counterparty_pressure_score"),
+        "paper_action": paper_action,
+        "monitor_reason": monitor_reason,
+        "boundary": "纸面持仓过程日志；不执行真实 swap。",
+    }
+
+
+def _append_position_journal(output_dir: Path, position: Dict[str, Any], *, snapshot_time: str, paper_action: str = "HOLD", monitor_reason: str = "") -> None:
+    position_id = str(position.get("position_id") or position.get("代币地址") or position.get("token_address") or "unknown")
+    _append_jsonl(output_dir / "position_journal" / f"{position_id}.jsonl", [_journal_row(position, snapshot_time=snapshot_time, paper_action=paper_action, monitor_reason=monitor_reason)])
+
+
+def _trade_row(position: Dict[str, Any], *, event_type: str, side: str, trade_time: str, price: Any, reason: str, extra: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    extra = extra or {}
+    trade_id = f"TRD-{event_type}-{position.get('position_id')}-{trade_time}"
+    return {
+        "trade_id": trade_id,
+        "position_id": position.get("position_id"),
+        "token_address": position.get("token_address") or position.get("代币地址"),
+        "token_symbol": position.get("token_symbol") or position.get("代币符号", ""),
+        "side": side,
+        "event_type": event_type,
+        "trade_time": trade_time,
+        "price": price,
+        "market_cap_usd": extra.get("market_cap_usd") or position.get("entry_market_cap_usd") or position.get("paper_entry_market_cap_usd") or position.get("exit_market_cap_usd"),
+        "liquidity_usd": extra.get("liquidity_usd") or position.get("entry_liquidity_usd"),
+        "size_sol": position.get("paper_size_sol") or position.get("position_sol"),
+        "size_usd": position.get("paper_size_usd"),
+        "token_amount": position.get("estimated_token_amount"),
+        "slippage_pct": extra.get("slippage_pct") or position.get("entry_slippage_pct"),
+        "fee_sol": extra.get("fee_sol") or position.get("entry_fee_sol"),
+        "quote_source": position.get("entry_quote_source") or extra.get("quote_source"),
+        "reason": reason,
+        "事件时间": trade_time,
+        "事件类型": event_type,
+        "代币地址": position.get("token_address") or position.get("代币地址"),
+        "代币符号": position.get("token_symbol") or position.get("代币符号", ""),
+        "价格": price,
+        "仓位SOL": position.get("paper_size_sol") or position.get("position_sol"),
+        "原因": reason,
+        **{k: v for k, v in extra.items() if k not in {"market_cap_usd", "liquidity_usd", "slippage_pct", "fee_sol", "quote_source"}},
+    }
+
 def run_paper_live_cycle(
     *,
     candidate_states_path: str | Path,
@@ -558,17 +838,7 @@ def run_paper_live_cycle(
                 attribution = _failure_attribution_row(closed, wallet_action, now)
                 failure_attributions.append(attribution)
                 risk_events.append({**attribution, "事件类型": "PAPER_FORCE_EXIT"})
-                trades.append({
-                    "事件时间": now,
-                    "事件类型": "PAPER_FORCE_EXIT",
-                    "代币地址": token,
-                    "代币符号": closed.get("代币符号", ""),
-                    "价格": closed.get("exit_price"),
-                    "仓位SOL": closed.get("position_sol"),
-                    "收益率_pct": closed.get("最终收益率_pct"),
-                    "failure_type": closed.get("failure_type"),
-                    "原因": closed.get("failure_reason"),
-                })
+                trades.append(_trade_row(closed, event_type="PAPER_FORCE_EXIT", side="SELL", trade_time=now, price=closed.get("exit_price"), reason=closed.get("failure_reason", ""), extra={"收益率_pct": closed.get("最终收益率_pct"), "failure_type": closed.get("failure_type")}))
                 continue
             if wallet_action.get("action") == "EXIT_MONITOR":
                 pos["wallet_position_action"] = "EXIT_MONITOR"
@@ -578,17 +848,9 @@ def run_paper_live_cycle(
             if closed:
                 exits += 1
                 closed_positions.append(closed)
-                trades.append({
-                    "事件时间": now,
-                    "事件类型": "PAPER_EXIT",
-                    "代币地址": token,
-                    "代币符号": closed.get("代币符号", ""),
-                    "价格": closed.get("exit_price"),
-                    "仓位SOL": closed.get("position_sol"),
-                    "收益率_pct": closed.get("最终收益率_pct"),
-                    "原因": closed.get("exit_reason"),
-                })
+                trades.append(_trade_row(closed, event_type="PAPER_EXIT", side="SELL", trade_time=now, price=closed.get("exit_price"), reason=closed.get("exit_reason", ""), extra={"收益率_pct": closed.get("最终收益率_pct")}))
             elif updated:
+                _append_position_journal(out, updated, snapshot_time=now, paper_action=updated.get("wallet_position_action") or "HOLD", monitor_reason=updated.get("wallet_exit_monitor_reason", ""))
                 updated_open.append(updated)
         except Exception as exc:  # pragma: no cover - defensive logging path
             updated_open.append(pos)
@@ -642,23 +904,17 @@ def run_paper_live_cycle(
             exits += 1
             closed_positions.append(closed)
         elif updated:
+            _append_position_journal(out, updated, snapshot_time=now, paper_action="PAPER_ENTRY", monitor_reason="新纸面仓位入场后记录首条持仓日志")
             open_positions.append(updated)
             open_tokens.add(token)
         new_entries += 1
-        trades.append({
-            "事件时间": now,
-            "事件类型": "PAPER_ENTRY",
-            "代币地址": token,
-            "代币符号": position.get("代币符号", ""),
-            "价格": position.get("entry_price"),
-            "仓位SOL": position.get("position_sol"),
+        trades.append(_trade_row(position, event_type="PAPER_ENTRY", side="BUY", trade_time=now, price=position.get("entry_price"), reason=reason, extra={
             "信号等级": position.get("signal_level"),
             "wallet_structure_status": position.get("wallet_structure_status"),
             "wallet_structure_factor": position.get("wallet_structure_factor"),
             "wallet_structure_score": position.get("wallet_structure_score"),
             "wallet_risk_score": position.get("wallet_risk_score"),
-            "原因": reason,
-        })
+        }))
 
     closed_returns = [_to_float(row.get("最终收益率_pct"), 0.0) for row in closed_positions]
     win_count = sum(1 for value in closed_returns if value > 0)
@@ -697,7 +953,7 @@ def run_paper_live_cycle(
 
     _write_json(out / "paper_positions_open.json", {"snapshot_time": now, "open_positions": open_positions})
     _write_json(out / "paper_positions_closed.json", {"snapshot_time": now, "closed_positions": closed_positions})
-    _write_csv(out / "paper_trades.csv", trades)
+    _write_csv(out / "paper_trades.csv", trades, PAPER_TRADE_CSV_FIELDS)
     _write_csv(
         out / "paper_equity_curve.csv",
         [{"snapshot_time": now, "closed_trade_count": len(closed_positions), "average_return_pct": metrics["统计"]["已关闭平均收益率_pct"]}],

@@ -110,6 +110,15 @@ def _num(row: Dict[str, Any], *keys: str, default: float = 0.0) -> float:
     return default
 
 
+def _latest_source_time(rows: Iterable[Dict[str, Any]]) -> str:
+    values: List[str] = []
+    for row in rows:
+        value = _text(row, "wallet_source_time", "source_time", "snapshot_time", "updated_at", "last_seen_at", "首次买入时间", "first_buy_time")
+        if value:
+            values.append(value)
+    return max(values) if values else ""
+
+
 def _classify_gmgn_wallet(row: Dict[str, Any]) -> Dict[str, Any]:
     tags = row.get("tags") or []
     maker_tags = row.get("maker_token_tags") or []
@@ -190,20 +199,32 @@ def run_candidate_wallet_structure_pipeline(
     candidate_states_path: str | Path,
     output_dir: str | Path = "data/gmgn_candidates/wallet_structure",
     wallet_collector: WalletCollector = default_gmgn_wallet_collector,
+    now: str | None = None,
 ) -> Dict[str, str]:
     states_payload = _read_json(candidate_states_path)
     candidates = [row for row in _state_rows(states_payload) if row.get("当前状态") == "PAPER_READY"]
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
-    now = _utc_now_text()
+    now = now or _utc_now_text()
     results: List[Dict[str, Any]] = []
 
     for row in candidates:
         token = _text(row, "代币地址", "token", "address")
         symbol = _text(row, "代币符号", "symbol")
         token_dir = out / token
+        wallet_refresh_started_at = now
         try:
             wallet_rows = wallet_collector(token, symbol)
+            wallet_refresh_finished_at = now
+            wallet_source_time = _latest_source_time(wallet_rows) or wallet_refresh_finished_at
+            time_anchors = {
+                "wallet_snapshot_time": wallet_refresh_finished_at,
+                "wallet_decision_created_at": wallet_refresh_finished_at,
+                "wallet_delta_time": wallet_refresh_finished_at,
+                "wallet_source_time": wallet_source_time,
+                "wallet_refresh_started_at": wallet_refresh_started_at,
+                "wallet_refresh_finished_at": wallet_refresh_finished_at,
+            }
             candidate_groups = build_same_source_groups(token_address=token, token_symbol=symbol, wallet_rows=wallet_rows)
             paths = evaluate_and_write_wallet_structure(token=token, symbol=symbol, wallet_rows=wallet_rows, output_dir=token_dir, candidate_groups=candidate_groups)
             write_candidate_groups_csv(paths["candidate_groups_csv"], candidate_groups)
@@ -223,6 +244,8 @@ def run_candidate_wallet_structure_pipeline(
                 base_dir=out,
             )
             decision = _read_json(paths["wallet_structure_decision_json"])
+            decision.update(time_anchors)
+            _write_json(paths["wallet_structure_decision_json"], decision)
             results.append({
                 "代币地址": token,
                 "代币符号": symbol,
@@ -251,6 +274,7 @@ def run_candidate_wallet_structure_pipeline(
                 "钱包结构Delta": snapshot_result.get("delta_path"),
                 "wallet_structure_snapshot_path": snapshot_result.get("snapshot_path"),
                 "wallet_structure_delta_path": snapshot_result.get("delta_path"),
+                **time_anchors,
                 "钱包结构输出": {
                     "decision_json": paths["wallet_structure_decision_json"],
                     "summary_md": paths["wallet_structure_summary_md"],
@@ -261,6 +285,15 @@ def run_candidate_wallet_structure_pipeline(
                 },
             })
         except Exception as exc:
+            wallet_refresh_finished_at = now
+            time_anchors = {
+                "wallet_snapshot_time": wallet_refresh_finished_at,
+                "wallet_decision_created_at": wallet_refresh_finished_at,
+                "wallet_delta_time": wallet_refresh_finished_at,
+                "wallet_source_time": wallet_refresh_finished_at,
+                "wallet_refresh_started_at": wallet_refresh_started_at,
+                "wallet_refresh_finished_at": wallet_refresh_finished_at,
+            }
             decision = evaluate_wallet_structure_gate(token=token, symbol=symbol, wallet_rows=[])
             failure_reason = f"钱包结构采集失败：{exc}"
             results.append({
@@ -287,6 +320,7 @@ def run_candidate_wallet_structure_pipeline(
                 "wallet_structure_factor": 0.3,
                 "wallet_structure_reason": failure_reason,
                 "wallet_evidence_level": decision.wallet_evidence_level,
+                **time_anchors,
                 "钱包结构输出": {},
             })
 

@@ -1,0 +1,121 @@
+{
+  "task_slug": "chatgpt_share_69f868b8_repomix_deerflow",
+  "root": "/root/sikk-gmgn",
+  "contexts": [
+    {
+      "phase": "full",
+      "description": "全仓库压缩上下文，用于系统架构审计。",
+      "output": "ai_context/full/sikk_full_architecture.xml",
+      "files": []
+    },
+    {
+      "phase": "index",
+      "description": "统一索引、查询、dashboard 与 paper review 上下文。",
+      "output": "ai_context/index/sikk_index_context.xml",
+      "files": [
+        "sikk_unified_view_builder.py",
+        "sikkctl.py",
+        "sikk_dashboard_site_builder.py",
+        "sikk_paper_live_runner.py",
+        "sikk_paper_auto_reviewer.py",
+        "sikk_paper_explanation_builder.py",
+        "tests/test_sikk_unified_view_builder.py",
+        "tests/test_sikkctl.py"
+      ]
+    },
+    {
+      "phase": "wallet",
+      "description": "GMGN 钱包结构、同源候选、结构融合上下文。",
+      "output": "ai_context/wallet/sikk_wallet_context.xml",
+      "files": [
+        "sikk_gmgn_token_report.py",
+        "sikk_candidate_wallet_structure_pipeline.py",
+        "sikk_wallet_structure_gate.py",
+        "sikk_wallet_structure_snapshot.py",
+        "sikk_same_source_grouping.py",
+        "sikk_wallet_intelligence_adapter.py",
+        "sikk_structure_intelligence_fusion.py",
+        "tests/test_sikk_wallet_structure_gate.py"
+      ]
+    },
+    {
+      "phase": "cluster",
+      "description": "OKX Top300 cluster 与筹码控制上下文。",
+      "output": "ai_context/cluster/sikk_cluster_context.xml",
+      "files": [
+        "sikk_okx_cluster_holding_analyzer.py",
+        "sikk_okx_cluster_delta.py",
+        "sikk_chip_control_state_machine.py",
+        "sikk_structure_intelligence_fusion.py",
+        "tests/test_sikk_okx_cluster_holding_analyzer.py"
+      ]
+    },
+    {
+      "phase": "case",
+      "description": "Case File、证据链、完整性审计上下文。",
+      "output": "ai_context/case/sikk_case_context.xml",
+      "files": [
+        "sikk_case_field_source_map.py",
+        "sikk_case_data_completeness_auditor.py",
+        "sikk_case_data_backfill.py",
+        "sikk_paper_explanation_builder.py"
+      ]
+    },
+    {
+      "phase": "telegram",
+      "description": "Telegram 中文控制台、按钮与回调上下文。",
+      "output": "ai_context/telegram/sikk_telegram_context.xml",
+      "files": [
+        "sikk_telegram_bot_handler.py",
+        "sikk_telegram_views.py",
+        "sikk_telegram_gateway_adapter.py",
+        "tests/test_sikk_telegram_views.py"
+      ]
+    },
+    {
+      "phase": "web",
+      "description": "静态 dashboard 与移动端详情页上下文。",
+      "output": "ai_context/web/sikk_web_context.xml",
+      "files": [
+        "sikk_dashboard_site_builder.py",
+        "site/app.js",
+        "site/index.html",
+        "site/style.css",
+        "tests/test_sikk_dashboard_site_builder.py"
+      ]
+    },
+    {
+      "phase": "runtime",
+      "description": "canonical runtime 与 paper runner 上下文。",
+      "output": "ai_context/runtime/sikk_runtime_context.xml",
+      "files": [
+        "sikk_live_run.py",
+        "sikk_full_auto_orchestrator.py",
+        "sikk_paper_live_runner.py",
+        "tests/test_sikk_live_run.py",
+        "tests/test_sikk_full_auto_orchestrator.py"
+      ]
+    },
+    {
+      "phase": "audit",
+      "description": "系统审计、解释、研究循环上下文。",
+      "output": "ai_context/audit/sikk_audit_context.xml",
+      "files": [
+        "sikk_system_audit.py",
+        "sikk_explainability_engine.py",
+        "sikk_research_loop_controller.py",
+        "sikk_gap_detector.py",
+        "tests/test_sikk_system_audit.py",
+        "tests/test_sikk_research_loop_controller.py"
+      ]
+    }
+  ],
+  "ignore_patterns": "data/**,reports/**,her_tasks/**/reports/**,her_tasks/**/logs/**,*.log,__pycache__/**,.pytest_cache/**,node_modules/**,venv/**,.venv/**,.env,*.env,*key*,*secret*,*token*,*webhook*",
+  "安全边界": {
+    "paper_only": true,
+    "不真实交易": true,
+    "不读取私钥": true,
+    "不签名": true,
+    "不广播": true
+  }
+}

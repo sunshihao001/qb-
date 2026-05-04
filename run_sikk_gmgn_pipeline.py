@@ -190,6 +190,8 @@ def run_full_pipeline(
         config=load_filter_config(config_path),
         runner=trenches_runner,
         limit=limit,
+        now=started_at,
+        base_dir=root,
     )
     candidates_json = filter_outputs["json_path"]
 

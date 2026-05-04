@@ -86,6 +86,55 @@ def _failure_type(row: Mapping[str, Any]) -> str:
     return str(row.get("failure_type") or row.get("exit_reason") or row.get("出场原因") or "UNKNOWN")
 
 
+def _position_size(row: Mapping[str, Any]) -> float:
+    return _num(row.get("paper_position_sol") or row.get("paper_size_sol") or row.get("position_sol") or row.get("模拟仓位SOL"), 0.0)
+
+
+def _token(row: Mapping[str, Any]) -> str:
+    return str(row.get("token_address") or row.get("代币地址") or row.get("token") or row.get("address") or row.get("mint") or "")
+
+
+def _audit_statistics(closed_rows: List[Mapping[str, Any]], failure_rows: List[Mapping[str, Any]]) -> Dict[str, Any]:
+    tokens = [_token(row) for row in closed_rows if _token(row)]
+    token_counter = Counter(tokens)
+    duplicates = {token: count for token, count in token_counter.items() if count > 1}
+    weighted_num = 0.0
+    weighted_den = 0.0
+    for row in closed_rows:
+        size = _position_size(row)
+        if size <= 0:
+            size = 1.0
+        weighted_num += _closed_return(row) * size
+        weighted_den += size
+    force_events = [row for row in failure_rows if str(row.get("事件类型") or row.get("event_type") or row.get("recommended_paper_action") or "").upper() == "FORCE_PAPER_EXIT"]
+    exit_counter = Counter(_failure_type(row) for row in closed_rows)
+    shadow_ready = [row for row in closed_rows if any(row.get(k) not in (None, "") for k in ["shadow_hold_price_15m", "shadow_hold_price_30m", "shadow_hold_price_60m", "missed_profit_pct", "avoided_drawdown_pct"])]
+    return {
+        "样本独立性审计": {
+            "position_count": len(closed_rows),
+            "unique_token_count": len(token_counter),
+            "duplicate_token_count": len(duplicates),
+            "duplicate_tokens": duplicates,
+            "audit_note": "同一 token 多笔重复会抬高统计权重，策略结论应优先看 unique token 与分桶表现。",
+        },
+        "加权收益审计": {
+            "position_size_weighted_return_pct": round(weighted_num / weighted_den, 4) if weighted_den else 0.0,
+            "weight_source": "paper_position_sol/paper_size_sol/position_sol；缺失时按 1 等权。",
+        },
+        "退出政策审计": {
+            "force_paper_exit_count": len(force_events),
+            "force_paper_exit_rate_pct": round(len(force_events) / len(closed_rows) * 100.0, 4) if closed_rows else 0.0,
+            "exit_reason_counts": dict(sorted(exit_counter.items())),
+            "audit_note": "FORCE_PAPER_EXIT 过多时必须复查是否从 EXIT_MONITOR 过早升级。",
+        },
+        "shadow_hold审计": {
+            "shadow_hold_ready_count": len(shadow_ready),
+            "shadow_hold_missing_count": max(len(closed_rows) - len(shadow_ready), 0),
+            "audit_note": "force exit 后应跟踪 shadow hold 15m/30m/60m，判断错杀右尾或规避回撤。",
+        },
+    }
+
+
 def _summarize(rows: List[Mapping[str, Any]]) -> Dict[str, Any]:
     returns = [_closed_return(row) for row in rows]
     pnl_sols = [_num(row.get("net_pnl_sol") or row.get("收益SOL"), 0.0) for row in rows]
@@ -170,6 +219,16 @@ def _write_md(path: Path, payload: Mapping[str, Any]) -> None:
     else:
         for key, value in events.items():
             lines.append(f"- {key}：{value}")
+
+    lines.extend(["", "## 审计统计"])
+    audit = payload.get("审计统计", {})
+    for title, metrics in audit.items():
+        lines.append(f"- {title}")
+        if isinstance(metrics, Mapping):
+            for key, value in metrics.items():
+                lines.append(f"  - {key}：{value}")
+        else:
+            lines.append(f"  - {metrics}")
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -195,6 +254,7 @@ def build_wallet_structure_daily_report(
         "按失败归因": by_failure,
         "按钱包结构状态与信号等级": by_wallet_signal,
         "failure_attribution事件统计": dict(sorted(failure_counter.items())),
+        "审计统计": _audit_statistics(closed_rows, failure_rows),
         "说明": "只统计纸面交易与钱包结构失败归因，不执行真实 swap。",
     }
 

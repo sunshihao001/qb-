@@ -1,0 +1,46 @@
+{
+  "loop_id": "loop_0001",
+  "input": "her_tasks/sikk_full_auto_rebuild_v1/CURRENT_CONTEXT.md",
+  "capture": {
+    "doc_id": "CURRENT_CONTEXT_baf6f9ba3568",
+    "raw_doc_path": "research_loop/corpus/raw/CURRENT_CONTEXT_baf6f9ba3568.md",
+    "metadata_path": "research_loop/corpus/raw/CURRENT_CONTEXT_baf6f9ba3568_metadata.json"
+  },
+  "passport": {
+    "passport_json": "research_loop/corpus/passports/CURRENT_CONTEXT_baf6f9ba3568_passport.json",
+    "passport_md": "research_loop/corpus/passports/CURRENT_CONTEXT_baf6f9ba3568_passport.md"
+  },
+  "topic_map": {
+    "outline_json": "research_loop/corpus/outlines/CURRENT_CONTEXT_baf6f9ba3568_outline.json",
+    "topic_map_md": "research_loop/corpus/topic_maps/CURRENT_CONTEXT_baf6f9ba3568_topic_map.md"
+  },
+  "route": {
+    "route_json": "research_loop/analysis/task_route/CURRENT_CONTEXT_baf6f9ba3568_route.json"
+  },
+  "system_map": {
+    "sikk_map_json": "research_loop/mappings/sikk_module_maps/CURRENT_CONTEXT_baf6f9ba3568_sikk_map.json",
+    "sikk_map_md": "research_loop/mappings/sikk_module_maps/CURRENT_CONTEXT_baf6f9ba3568_sikk_map.md"
+  },
+  "gap_report": {
+    "gap_matrix_csv": "research_loop/mappings/gap_maps/CURRENT_CONTEXT_baf6f9ba3568_gap_matrix.csv",
+    "gap_report_md": "research_loop/mappings/gap_maps/CURRENT_CONTEXT_baf6f9ba3568_gap_report.md"
+  },
+  "task_package": {
+    "task_dir": "research_loop/task_packages/generated/CURRENT_CONTEXT_baf6f9ba3568_task",
+    "MASTER_TASK.md": "research_loop/task_packages/generated/CURRENT_CONTEXT_baf6f9ba3568_task/MASTER_TASK.md",
+    "PHASE_PLAN.md": "research_loop/task_packages/generated/CURRENT_CONTEXT_baf6f9ba3568_task/PHASE_PLAN.md",
+    "SAFETY_BOUNDARY.md": "research_loop/task_packages/generated/CURRENT_CONTEXT_baf6f9ba3568_task/SAFETY_BOUNDARY.md",
+    "ACCEPTANCE_CHECKLIST.md": "research_loop/task_packages/generated/CURRENT_CONTEXT_baf6f9ba3568_task/ACCEPTANCE_CHECKLIST.md",
+    "CURRENT_CONTEXT.md": "research_loop/task_packages/generated/CURRENT_CONTEXT_baf6f9ba3568_task/CURRENT_CONTEXT.md",
+    "REPOMIX_CONTEXT_PLAN.md": "research_loop/task_packages/generated/CURRENT_CONTEXT_baf6f9ba3568_task/REPOMIX_CONTEXT_PLAN.md",
+    "DEERFLOW_METHOD.md": "research_loop/task_packages/generated/CURRENT_CONTEXT_baf6f9ba3568_task/DEERFLOW_METHOD.md",
+    "HERMES_START_COMMAND.md": "research_loop/task_packages/generated/CURRENT_CONTEXT_baf6f9ba3568_task/HERMES_START_COMMAND.md"
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "real_swap_enabled": false,
+    "private_key_required": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false
+  }
+}

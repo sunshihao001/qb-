@@ -1,0 +1,55 @@
+你是 Hermes Agent，在 `/root/sikk-gmgn` 项目中执行一个最多 5 小时的全自动 SIKK 闭环任务。
+
+来源链接：`https://chatgpt.com/share/69f76bde-c760-83a7-a6b9-b60778d65f3f`
+
+用户要求：
+- 长时间运行任务，预算 5 小时内持续推进。
+- 流程全自动化运行。
+- 途中遇到 Hermes 终端权限申请/命令确认，本任务范围内全部通过；你运行时已带 `--yolo`，但仍必须遵守安全边界。
+- 按之前给 GPT 设置的 ChatGPT 文档闭环方法执行。
+
+必须加载/遵守的技能与边界：
+- conversation-transcript-ingestion：实际读取 ChatGPT share；如果不可读，要明确记录不可读原因，不可假装读到。
+- SIKK/Solana 方法论相关技能，特别是 `sikk-sol-auto-trading-readiness`、`sikk-sol-core-methodology`、必要时其它 `sikk-sol-*` 技能。
+- verification-before-completion：任何完成/通过声明必须有新鲜验证证据。
+- 项目 `/root/sikk-gmgn/AGENTS.md`：绝对遵守 paper-only / no-real-swap / no-private-key / no-broadcast。
+
+硬安全边界：
+- 不执行真实 swap。
+- 不读取、写入或保存私钥。
+- 不自动签名或 broadcast。
+- 不新增交易按钮。
+- 不把 `priority_level` 当买入信号。
+- 真实交易/safety 默认关闭，所有改动保持纸面验证。
+
+目标闭环：
+1. 实际读取 ChatGPT share 链接：
+   - 尝试浏览器/HTTP/HTML embedded payload 多路径抽取。
+   - 若可读，生成规范化 transcript/摘要/结构图，保存到 `knowledge/inbox/` 或 `reports/`。
+   - 若不可读，生成不可读报告并继续做当前系统审计与待办映射，不要编造文档内容。
+2. 建立文章/对话 passport：标题、来源、可读状态、关键主张、可执行能力、风险边界、映射模块。
+3. 映射到当前项目文件和模块：
+   - `sikk_live_run.py` 单入口。
+   - paper JSON/CSV 同步。
+   - wallet daily report 使用新 CSV。
+   - `live_state` / `live_board` / `live_dashboard`。
+   - `data/gmgn_candidates_live_run/site/dashboard_data.json`。
+   - `data/gmgn_candidates_live_run/site/index.html` / `app.js` / `style.css`。
+   - safety 默认关闭真实交易。
+4. 以测试优先方式推进必要代码/文档修改：
+   - 不删除已有模块。
+   - 不新增复杂后端、数据库、登录系统。
+   - 若已有未提交改动，先检查并尽量在其基础上继续，避免覆盖。
+5. 运行验证：
+   - 至少运行与本任务相关的 pytest：`tests/test_sikk_live_run.py`、paper runner、wallet daily report、dashboard/site builder、knowledge absorption 等实际存在测试。
+   - 运行主入口 once smoke：`python3 sikk_live_run.py --output-root data/gmgn_candidates_live_run --limit 50 --quote-sources okx --default-quote-amount-sol 0.01 --mode once`；如外部网络/API 不可用，记录原因并用可行的本地测试替代。
+   - 验证 `data/gmgn_candidates_live_run/site/` 下静态文件存在且 JSON 可解析。
+6. 生成最终中文验收报告：
+   - 保存到 `SIKK_VERIFY_REPORT.md` 或 `reports/`。
+   - 包含：读取状态、改动文件、测试命令与结果、产物路径、未完成/阻塞项、下一步。
+7. 如发现通用可复用工作流，更新/创建 skill 或 reference；但不要保存密钥/私钥/临时市场数据到 memory。
+
+执行纪律：
+- 每 20-40 分钟做一次阶段性自检，继续推进到 5 小时预算或任务闭环完成。
+- 不要只写计划；必须实际读取、修改、运行测试、生成产物。
+- 结束时必须给 Telegram/当前会话可读中文摘要。

@@ -179,3 +179,56 @@ def test_collect_and_write_candidate_pool_from_fake_runner(tmp_path):
     assert rows[0]["代币符号"] == "GOOD"
     assert rows[0]["筛选等级"] == "S3_进入SIKK结构分析"
     assert rows[1]["代币符号"] == "WEAK"
+
+
+def test_candidate_outputs_write_standard_time_anchors_and_first_seen_registry(tmp_path):
+    from sikk_gmgn_new_token_filter import collect_and_write_candidate_pool, load_filter_config
+
+    token = {
+        **GOOD_TOKEN,
+        "address": "Anchor111111111111111111111111111111111111",
+        "symbol": "ANCH",
+        "created_timestamp": 1770000000,
+        "pool_created_at": 1770000123,
+        "open_timestamp": 1770000300,
+    }
+
+    outputs = collect_and_write_candidate_pool(
+        output_dir=tmp_path / "gmgn_new_token_filter",
+        config=load_filter_config(),
+        runner=lambda cmd: {"completed": [token], "new_creation": [], "near_completion": []},
+        limit=1,
+        now="2026-05-04T12:00:00Z",
+        base_dir=tmp_path,
+    )
+
+    payload = json.loads(outputs["json_path"].read_text(encoding="utf-8"))
+    row = payload["候选列表"][0]
+    assert payload["candidate_batch_id"] == "RUN_20260504_120000"
+    assert row["token_address"] == token["address"]
+    assert row["token_symbol"] == "ANCH"
+    assert row["token_open_time"] == "2026-02-02T02:45:00Z"
+    assert row["pool_created_at"] == "2026-02-02T02:42:03Z"
+    assert row["discovered_at"] == "2026-05-04T12:00:00Z"
+    assert row["first_seen_at"] == "2026-05-04T12:00:00Z"
+    assert row["last_seen_at"] == "2026-05-04T12:00:00Z"
+    assert row["candidate_snapshot_at"] == "2026-05-04T12:00:00Z"
+    assert row["candidate_batch_id"] == "RUN_20260504_120000"
+    assert row["candidate_source"] == "gmgn_trenches:completed"
+
+    registry_path = tmp_path / "time_context" / "token_first_seen_registry.json"
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    assert registry[token["address"]]["first_seen_at"] == "2026-05-04T12:00:00Z"
+    assert registry[token["address"]]["last_seen_at"] == "2026-05-04T12:00:00Z"
+
+    collect_and_write_candidate_pool(
+        output_dir=tmp_path / "gmgn_new_token_filter",
+        config=load_filter_config(),
+        runner=lambda cmd: {"completed": [token], "new_creation": [], "near_completion": []},
+        limit=1,
+        now="2026-05-04T12:05:00Z",
+        base_dir=tmp_path,
+    )
+    registry2 = json.loads(registry_path.read_text(encoding="utf-8"))
+    assert registry2[token["address"]]["first_seen_at"] == "2026-05-04T12:00:00Z"
+    assert registry2[token["address"]]["last_seen_at"] == "2026-05-04T12:05:00Z"

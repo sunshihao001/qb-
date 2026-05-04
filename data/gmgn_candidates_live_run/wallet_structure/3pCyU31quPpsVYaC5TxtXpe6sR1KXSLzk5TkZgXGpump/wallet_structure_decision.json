@@ -1,0 +1,73 @@
+{
+  "代币地址": "3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump",
+  "代币符号": "GOP",
+  "wallet_structure_status": "WALLET_BLOCK",
+  "wallet_structure_score": 0,
+  "wallet_risk_score": 100,
+  "counterparty_pressure_score": 0,
+  "data_quality_score": 100,
+  "data_quality_status": "DEGRADED",
+  "decision_at": "2026-05-03T12:38:08Z",
+  "action_code": "WALLET_BLOCK",
+  "wallet_gate_result": "BLOCKED",
+  "paper_gate_effect": "BLOCK_OR_PAUSE",
+  "risk_level": "HIGH",
+  "reason_codes": [
+    "WALLET_BLOCK",
+    "DISTRIBUTION_ACTIVE",
+    "DATA_QUALITY_DEGRADED"
+  ],
+  "missing_fields": [
+    "wallet_address",
+    "role",
+    "game_side",
+    "evidence_level"
+  ],
+  "source_files": [
+    "wallet_structure_decision.json"
+  ],
+  "token_address": "3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump",
+  "symbol": "GOP",
+  "wallet_gate_result_cn": "BLOCKED",
+  "钱包结构结论": "WALLET_BLOCK",
+  "钱包结构系数": 0.0,
+  "钱包结构评分": 0,
+  "钱包风险评分": 100,
+  "对手盘压力评分": 0,
+  "数据质量评分": 100,
+  "筹码控制权状态": "CONTROL_LOST_TO_DISTRIBUTION",
+  "钱包证据等级": "E4",
+  "早期钱包数量": 89,
+  "角色计数": {
+    "RETAIL_NOISE": 4,
+    "DISTRIBUTION_SELLER": 53,
+    "EARLY_BUYER": 32
+  },
+  "game_side计数": {
+    "NOISE_SIDE": 4,
+    "DISTRIBUTION_SIDE": 53,
+    "STRUCTURE_SIDE": 32
+  },
+  "证据计数": {
+    "E1": 4,
+    "E3": 28,
+    "E4": 27,
+    "E2": 30
+  },
+  "是否存在分发派发": "是",
+  "是否存在集中清仓": "否",
+  "是否存在同源组同步卖出": "否",
+  "最高同步买入分": 0,
+  "最高同步卖出分": 0,
+  "建议状态调整": "调整为 BLOCKED",
+  "状态机建议": "BLOCKED",
+  "状态调整原因": "发现分发侧钱包 53 个；缺失字段：wallet_address, role, game_side, evidence_level；筹码控制状态机：CONTROL_BREAK_OR_DISTRIBUTION；筹码控制状态机：WALLET_BLOCK；筹码控制状态机：DISTRIBUTION_ACTIVE",
+  "PAPER_READY允许说明": "钱包结构支持但不绕过 K线/quote/安全扫描；只有 signal_gate、quote_gate、security_gate 都通过，才允许 PAPER_READY。",
+  "valid_until": "2026-05-04T12:38:08Z",
+  "wallet_structure_factor": 0.0,
+  "wallet_structure_reason": "发现分发侧钱包 53 个；缺失字段：wallet_address, role, game_side, evidence_level；筹码控制状态机：CONTROL_BREAK_OR_DISTRIBUTION；筹码控制状态机：WALLET_BLOCK；筹码控制状态机：DISTRIBUTION_ACTIVE",
+  "wallet_evidence_level": "E4",
+  "说明": "钱包结构门禁只影响纸面/确认层状态，不执行真实 swap。",
+  "生成时间": "2026-05-03T12:38:08Z",
+  "模块": "SIKK-SOL v1.0 钱包结构门禁"
+}

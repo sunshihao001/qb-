@@ -1,0 +1,2641 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SIKK 全系统时间坐标 schema v1.1",
+  "schema_version": "1.1.0",
+  "scope": "阶段 1.1：只定义时间字段、TTL、stale 判断、过期动作和输出 schema；不修改交易/钱包/paper逻辑。",
+  "generated_for": "/root/sikk-gmgn/data/gmgn_candidates_live_run/time_context/time_context_schema.json",
+  "common_required_time_fields": [
+    "source_time",
+    "created_at",
+    "input_window_start",
+    "input_window_end",
+    "age_sec",
+    "ttl_sec",
+    "stale",
+    "elapsed_sec",
+    "time_skew_sec",
+    "refresh_required",
+    "stale_action"
+  ],
+  "common_field_definitions": {
+    "source_time": "源数据自身时间；优先取链上事件时间/API返回时间/K线时间/quote时间。",
+    "created_at": "本阶段产物生成时间；用于计算 age_sec。",
+    "input_window_start": "本阶段读取输入证据窗口开始时间。",
+    "input_window_end": "本阶段读取输入证据窗口结束时间。",
+    "age_sec": "now - created_at；没有 created_at 时标记为 null/待补，不编造。",
+    "ttl_sec": "本阶段 freshness 有效期秒数；schema 默认值可被模块显式配置覆盖。",
+    "stale": "age_sec > ttl_sec；缺 age/ttl 时为 null/UNKNOWN。",
+    "elapsed_sec": "本阶段处理耗时；finished_at - started_at。",
+    "time_skew_sec": "本阶段输入之间或跨阶段关键输入之间的最大 age 差。",
+    "refresh_required": "是否需要刷新；通常 stale=true 或 critical field missing 时为 true。",
+    "stale_action": "过期后的动作；只读治理动作，不等于交易动作。"
+  },
+  "temporal_gate_rules": {
+    "sync_thresholds": {
+      "TEMPORAL_SYNCED": "time_skew_sec <= 180",
+      "TEMPORAL_PARTIAL_SYNC": "180 < time_skew_sec <= 600",
+      "TEMPORAL_DESYNC": "time_skew_sec > 600",
+      "TEMPORAL_UNKNOWN": "critical time fields missing"
+    },
+    "hard_rules": [
+      {
+        "rule": "D0_SCOUT_ONLY 不能 TEMPORAL_ALLOW",
+        "effect": "temporal_gate=TEMPORAL_WATCH"
+      },
+      {
+        "rule": "D4_OLD_TOKEN 不能自动 BLOCK",
+        "effect": "temporal_gate 不得因 D4 单独变成 TEMPORAL_BLOCK"
+      },
+      {
+        "rule": "D4_OLD_TOKEN 必须 requires_pattern_review=true",
+        "effect": "requires_pattern_review=true"
+      },
+      {
+        "rule": "quote_stale=true 不能 TEMPORAL_ALLOW",
+        "effect": "temporal_gate=TEMPORAL_EXPIRED"
+      },
+      {
+        "rule": "S3/S4 signal_stale=true 必须 TEMPORAL_EXPIRED",
+        "effect": "temporal_gate=TEMPORAL_EXPIRED"
+      },
+      {
+        "rule": "D4_OLD_TOKEN 是否可继续分析由阶段 2 盘型识别判断",
+        "effect": "phase_2_pattern_review_decision"
+      }
+    ]
+  },
+  "stages": [
+    {
+      "id": "S0_SYSTEM_BASELINE",
+      "order": 0,
+      "zh": "系统基线审查",
+      "ttl": 3600,
+      "action": "TEMPORAL_AUDIT_ONLY",
+      "source": "live_run_manifest / runtime safety / system index",
+      "notes": "只审查系统安全边界、入口、manifest 与运行目录；过期只要求重新审计，不改变交易状态。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 3600
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_AUDIT_ONLY"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/live_run_manifest.json",
+        "data/gmgn_candidates_live_run/index/system_index.json",
+        "data/gmgn_candidates_live_run/site/dashboard_data.json"
+      ],
+      "required_input_fields": [
+        "report_generated_at",
+        "last_update_time"
+      ],
+      "optional_input_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "candidate_stage_enum",
+        "temporal_sync_status"
+      ],
+      "derived_fields": [
+        "age_sec",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "requires_pattern_review",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/live_run_manifest.json",
+          "data/gmgn_candidates_live_run/index/system_index.json",
+          "data/gmgn_candidates_live_run/site/dashboard_data.json"
+        ],
+        "required_input_fields": [
+          "report_generated_at",
+          "last_update_time"
+        ],
+        "optional_input_fields": [
+          "source_time",
+          "created_at",
+          "input_window_start",
+          "input_window_end",
+          "candidate_stage_enum",
+          "temporal_sync_status"
+        ],
+        "derived_fields": [
+          "age_sec",
+          "elapsed_sec",
+          "time_skew_sec",
+          "refresh_required",
+          "stale",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "requires_pattern_review",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S1_CANDIDATE_DISCOVERY",
+      "order": 1,
+      "zh": "候选发现",
+      "ttl": 86400,
+      "action": "TEMPORAL_WATCH_OR_REFRESH_CANDIDATES",
+      "source": "GMGN candidates / live_state / discovery list",
+      "notes": "候选发现时间可较长；D0_SCOUT_ONLY 只能 WATCH，不能 TEMPORAL_ALLOW。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 86400
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_WATCH_OR_REFRESH_CANDIDATES"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/live_state.json",
+        "data/gmgn_candidates_live_run/site/dashboard_data.json",
+        "data/gmgn_candidates_live_run/index/token_detail_index.json"
+      ],
+      "required_input_fields": [
+        "discovered_at",
+        "candidate_discovered_at",
+        "first_seen_at"
+      ],
+      "optional_input_fields": [
+        "token_open_time",
+        "pool_created_at",
+        "last_seen_at",
+        "candidate_snapshot_at",
+        "signal_time",
+        "signal_level",
+        "candidate_stage_enum",
+        "discovery_quality_enum"
+      ],
+      "derived_fields": [
+        "age_sec",
+        "stale",
+        "refresh_required",
+        "discovery_quality",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "candidate_stage",
+        "discovery_quality",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/live_state.json",
+          "data/gmgn_candidates_live_run/site/dashboard_data.json",
+          "data/gmgn_candidates_live_run/index/token_detail_index.json"
+        ],
+        "required_input_fields": [
+          "discovered_at",
+          "candidate_discovered_at",
+          "first_seen_at"
+        ],
+        "optional_input_fields": [
+          "token_open_time",
+          "pool_created_at",
+          "last_seen_at",
+          "candidate_snapshot_at",
+          "signal_time",
+          "signal_level",
+          "candidate_stage_enum",
+          "discovery_quality_enum"
+        ],
+        "derived_fields": [
+          "age_sec",
+          "stale",
+          "refresh_required",
+          "discovery_quality",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "candidate_stage",
+          "discovery_quality",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S2_KLINE_COLLECTION",
+      "order": 2,
+      "zh": "K线采集",
+      "ttl": 300,
+      "action": "TEMPORAL_REFRESH_KLINE",
+      "source": "GMGN/OKX kline latest candle",
+      "notes": "K线过期只能要求刷新K线或降级观察，不新增交易规则。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 300
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_REFRESH_KLINE"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "gmgn market kline api response",
+        "data/gmgn_candidates_live_run/live_state.json",
+        "data/gmgn_candidates_live_run/site/dashboard_data.json"
+      ],
+      "required_input_fields": [
+        "quote_time",
+        "quote_requested_at",
+        "quote_received_at",
+        "source_time"
+      ],
+      "optional_input_fields": [
+        "token_open_time",
+        "pool_created_at",
+        "last_update_time",
+        "input_window_start",
+        "input_window_end",
+        "signal_time"
+      ],
+      "derived_fields": [
+        "age_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "kline_window_start",
+        "kline_window_end",
+        "latest_kline_time",
+        "kline_stale",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "gmgn market kline api response",
+          "data/gmgn_candidates_live_run/live_state.json",
+          "data/gmgn_candidates_live_run/site/dashboard_data.json"
+        ],
+        "required_input_fields": [
+          "quote_time",
+          "quote_requested_at",
+          "quote_received_at",
+          "source_time"
+        ],
+        "optional_input_fields": [
+          "token_open_time",
+          "pool_created_at",
+          "last_update_time",
+          "input_window_start",
+          "input_window_end",
+          "signal_time"
+        ],
+        "derived_fields": [
+          "age_sec",
+          "stale",
+          "elapsed_sec",
+          "time_skew_sec",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "kline_window_start",
+          "kline_window_end",
+          "latest_kline_time",
+          "kline_stale",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S3_PATTERN_RECOGNITION",
+      "order": 3,
+      "zh": "盘型识别",
+      "ttl": 900,
+      "action": "TEMPORAL_EXPIRED_FOR_S3_S4_SIGNAL_STALE",
+      "source": "pattern classifier output",
+      "notes": "S3/S4 signal_stale=true 必须 TEMPORAL_EXPIRED。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 900
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_EXPIRED_FOR_S3_S4_SIGNAL_STALE"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/live_state.json",
+        "data/gmgn_candidates_live_run/index/token_detail_index.json",
+        "pattern classifier output"
+      ],
+      "required_input_fields": [
+        "pattern_created_at",
+        "signal_level",
+        "latest_kline_time"
+      ],
+      "optional_input_fields": [
+        "candidate_stage_enum",
+        "discovered_at",
+        "wallet_decision_created_at",
+        "quote_time",
+        "source_time"
+      ],
+      "derived_fields": [
+        "pattern_stale",
+        "age_sec",
+        "stale",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "requires_pattern_review",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "pattern_created_at",
+        "pattern_stale",
+        "candidate_stage",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "requires_pattern_review",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/live_state.json",
+          "data/gmgn_candidates_live_run/index/token_detail_index.json",
+          "pattern classifier output"
+        ],
+        "required_input_fields": [
+          "pattern_created_at",
+          "signal_level",
+          "latest_kline_time"
+        ],
+        "optional_input_fields": [
+          "candidate_stage_enum",
+          "discovered_at",
+          "wallet_decision_created_at",
+          "quote_time",
+          "source_time"
+        ],
+        "derived_fields": [
+          "pattern_stale",
+          "age_sec",
+          "stale",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "requires_pattern_review",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "pattern_created_at",
+          "pattern_stale",
+          "candidate_stage",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "requires_pattern_review",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S4_WALLET_STRUCTURE",
+      "order": 4,
+      "zh": "钱包结构",
+      "ttl": 900,
+      "action": "TEMPORAL_REFRESH_WALLET_STRUCTURE",
+      "source": "wallet_structure_decision / snapshot / delta",
+      "notes": "只定义时间上下文，不修改钱包结构评分或角色分类。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 900
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_REFRESH_WALLET_STRUCTURE"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/index/position_index.json",
+        "data/gmgn_candidates_live_run/index/token_detail_index.json",
+        "wallet_structure_decision.json"
+      ],
+      "required_input_fields": [
+        "wallet_decision_created_at",
+        "wallet_decision_time",
+        "last_update_time"
+      ],
+      "optional_input_fields": [
+        "pattern_created_at",
+        "discovered_at",
+        "candidate_stage_enum",
+        "signal_time"
+      ],
+      "derived_fields": [
+        "wallet_decision_age_sec",
+        "wallet_decision_stale",
+        "age_sec",
+        "stale",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "wallet_decision_created_at",
+        "wallet_decision_stale",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "requires_pattern_review",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/index/position_index.json",
+          "data/gmgn_candidates_live_run/index/token_detail_index.json",
+          "wallet_structure_decision.json"
+        ],
+        "required_input_fields": [
+          "wallet_decision_created_at",
+          "wallet_decision_time",
+          "last_update_time"
+        ],
+        "optional_input_fields": [
+          "pattern_created_at",
+          "discovered_at",
+          "candidate_stage_enum",
+          "signal_time"
+        ],
+        "derived_fields": [
+          "wallet_decision_age_sec",
+          "wallet_decision_stale",
+          "age_sec",
+          "stale",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "wallet_decision_created_at",
+          "wallet_decision_stale",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "requires_pattern_review",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S5_WALLET_PATTERN_ALIGNMENT",
+      "order": 5,
+      "zh": "钱包 × 盘型匹配",
+      "ttl": 900,
+      "action": "TEMPORAL_PAUSE_IF_DESYNC",
+      "source": "alignment of wallet decision + pattern output",
+      "notes": "wallet与pattern时间偏移过大时暂停/复查，不直接放行。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 900
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_PAUSE_IF_DESYNC"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/index/token_detail_index.json",
+        "data/gmgn_candidates_live_run/site/dashboard_data.json",
+        "wallet_pattern_alignment output"
+      ],
+      "required_input_fields": [
+        "wallet_decision_created_at",
+        "pattern_created_at"
+      ],
+      "optional_input_fields": [
+        "alignment_created_at",
+        "signal_time",
+        "discovered_at",
+        "candidate_stage_enum"
+      ],
+      "derived_fields": [
+        "alignment_created_at",
+        "alignment_age_sec",
+        "alignment_stale",
+        "alignment_time_skew_sec",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "alignment_created_at",
+        "alignment_stale",
+        "alignment_time_skew_sec",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/index/token_detail_index.json",
+          "data/gmgn_candidates_live_run/site/dashboard_data.json",
+          "wallet_pattern_alignment output"
+        ],
+        "required_input_fields": [
+          "wallet_decision_created_at",
+          "pattern_created_at"
+        ],
+        "optional_input_fields": [
+          "alignment_created_at",
+          "signal_time",
+          "discovered_at",
+          "candidate_stage_enum"
+        ],
+        "derived_fields": [
+          "alignment_created_at",
+          "alignment_age_sec",
+          "alignment_stale",
+          "alignment_time_skew_sec",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "alignment_created_at",
+          "alignment_stale",
+          "alignment_time_skew_sec",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S6_DOMINANT_LIFECYCLE",
+      "order": 6,
+      "zh": "主导侧生命周期",
+      "ttl": 1800,
+      "action": "TEMPORAL_REFRESH_LIFECYCLE",
+      "source": "dominant lifecycle classifier",
+      "notes": "生命周期过期时刷新或标记证据待复查。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1800
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_REFRESH_LIFECYCLE"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/index/token_detail_index.json",
+        "data/gmgn_candidates_live_run/index/case_file_index.json",
+        "dominant_lifecycle output"
+      ],
+      "required_input_fields": [
+        "lifecycle_created_at",
+        "signal_level",
+        "wallet_decision_created_at"
+      ],
+      "optional_input_fields": [
+        "phase_started_at",
+        "lifecycle_transition_at",
+        "candidate_stage_enum",
+        "pattern_created_at"
+      ],
+      "derived_fields": [
+        "lifecycle_age_sec",
+        "lifecycle_stale",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "lifecycle_created_at",
+        "dominant_lifecycle",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/index/token_detail_index.json",
+          "data/gmgn_candidates_live_run/index/case_file_index.json",
+          "dominant_lifecycle output"
+        ],
+        "required_input_fields": [
+          "lifecycle_created_at",
+          "signal_level",
+          "wallet_decision_created_at"
+        ],
+        "optional_input_fields": [
+          "phase_started_at",
+          "lifecycle_transition_at",
+          "candidate_stage_enum",
+          "pattern_created_at"
+        ],
+        "derived_fields": [
+          "lifecycle_age_sec",
+          "lifecycle_stale",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "lifecycle_created_at",
+          "dominant_lifecycle",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S7_DOMINANT_INTENT",
+      "order": 7,
+      "zh": "主导侧行为动机",
+      "ttl": 1800,
+      "action": "TEMPORAL_REFRESH_INTENT",
+      "source": "operator psychology / intent layer",
+      "notes": "行为动机只解释已有证据，不重新裁决。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1800
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_REFRESH_INTENT"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/index/case_file_index.json",
+        "data/gmgn_candidates_live_run/site/dashboard_data.json",
+        "operator_psychology output"
+      ],
+      "required_input_fields": [
+        "intent_created_at",
+        "lifecycle_created_at",
+        "signal_level"
+      ],
+      "optional_input_fields": [
+        "paper_signal_time",
+        "paper_entry_time",
+        "candidate_stage_enum",
+        "quote_time"
+      ],
+      "derived_fields": [
+        "intent_age_sec",
+        "intent_stale",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "intent_created_at",
+        "dominant_intent",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/index/case_file_index.json",
+          "data/gmgn_candidates_live_run/site/dashboard_data.json",
+          "operator_psychology output"
+        ],
+        "required_input_fields": [
+          "intent_created_at",
+          "lifecycle_created_at",
+          "signal_level"
+        ],
+        "optional_input_fields": [
+          "paper_signal_time",
+          "paper_entry_time",
+          "candidate_stage_enum",
+          "quote_time"
+        ],
+        "derived_fields": [
+          "intent_age_sec",
+          "intent_stale",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "intent_created_at",
+          "dominant_intent",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S8_QUOTE_SECURITY_LIQUIDITY",
+      "order": 8,
+      "zh": "quote/security/liquidity",
+      "ttl": 120,
+      "action": "TEMPORAL_EXPIRED_NO_ALLOW",
+      "source": "quote / security / liquidity checks",
+      "notes": "quote_stale=true 不能 TEMPORAL_ALLOW，必须 TEMPORAL_EXPIRED 或刷新。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 120
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_EXPIRED_NO_ALLOW"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/index/token_detail_index.json",
+        "quote/security response",
+        "liquidity check output"
+      ],
+      "required_input_fields": [
+        "quote_time",
+        "quote_requested_at",
+        "quote_received_at",
+        "security_scan_time"
+      ],
+      "optional_input_fields": [
+        "token_open_time",
+        "pool_created_at",
+        "last_update_time",
+        "liquidity_check_time",
+        "source_time"
+      ],
+      "derived_fields": [
+        "quote_age_sec",
+        "quote_stale",
+        "security_scan_age_sec",
+        "security_scan_stale",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "quote_time",
+        "quote_stale",
+        "security_scan_time",
+        "security_scan_stale",
+        "liquidity_check_status",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/index/token_detail_index.json",
+          "quote/security response",
+          "liquidity check output"
+        ],
+        "required_input_fields": [
+          "quote_time",
+          "quote_requested_at",
+          "quote_received_at",
+          "security_scan_time"
+        ],
+        "optional_input_fields": [
+          "token_open_time",
+          "pool_created_at",
+          "last_update_time",
+          "liquidity_check_time",
+          "source_time"
+        ],
+        "derived_fields": [
+          "quote_age_sec",
+          "quote_stale",
+          "security_scan_age_sec",
+          "security_scan_stale",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "quote_time",
+          "quote_stale",
+          "security_scan_time",
+          "security_scan_stale",
+          "liquidity_check_status",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S9_FINAL_TRADE_GATE",
+      "order": 9,
+      "zh": "最终交易门禁",
+      "ttl": 180,
+      "action": "TEMPORAL_PAUSE_OR_EXPIRED",
+      "source": "final gate aggregation",
+      "notes": "最终门禁只读取上游；时间不同步不能放行。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 180
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_PAUSE_OR_EXPIRED"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/live_run_manifest.json",
+        "data/gmgn_candidates_live_run/index/token_detail_index.json",
+        "final gate aggregation"
+      ],
+      "required_input_fields": [
+        "final_gate_created_at",
+        "quote_time",
+        "security_scan_time"
+      ],
+      "optional_input_fields": [
+        "candidate_stage_enum",
+        "wallet_decision_created_at",
+        "pattern_created_at",
+        "lifecycle_created_at"
+      ],
+      "derived_fields": [
+        "final_gate_age_sec",
+        "final_gate_stale",
+        "final_gate_input_time_skew_sec",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "final_gate_created_at",
+        "final_gate_stale",
+        "final_gate_input_time_skew_sec",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/live_run_manifest.json",
+          "data/gmgn_candidates_live_run/index/token_detail_index.json",
+          "final gate aggregation"
+        ],
+        "required_input_fields": [
+          "final_gate_created_at",
+          "quote_time",
+          "security_scan_time"
+        ],
+        "optional_input_fields": [
+          "candidate_stage_enum",
+          "wallet_decision_created_at",
+          "pattern_created_at",
+          "lifecycle_created_at"
+        ],
+        "derived_fields": [
+          "final_gate_age_sec",
+          "final_gate_stale",
+          "final_gate_input_time_skew_sec",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "final_gate_created_at",
+          "final_gate_stale",
+          "final_gate_input_time_skew_sec",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S10_PAPER_RUNNER",
+      "order": 10,
+      "zh": "paper runner",
+      "ttl": 86400,
+      "action": "TEMPORAL_REVIEW_PAPER_POSITION",
+      "source": "paper live runner / paper positions",
+      "notes": "只影响纸面复盘/纸面持仓更新，不触发真实买卖。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 86400
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_REVIEW_PAPER_POSITION"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/index/latest_open_positions.json",
+        "data/gmgn_candidates_live_run/index/latest_closed_positions.json",
+        "paper runner output"
+      ],
+      "required_input_fields": [
+        "paper_signal_time",
+        "paper_entry_time",
+        "entry_time"
+      ],
+      "optional_input_fields": [
+        "exit_time",
+        "last_update_time",
+        "candidate_stage_enum",
+        "wallet_decision_created_at"
+      ],
+      "derived_fields": [
+        "paper_entry_age_from_signal_sec",
+        "paper_entry_age_from_wallet_decision_sec",
+        "position_age_sec",
+        "holding_duration_sec",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "paper_signal_time",
+        "paper_entry_time",
+        "entry_time",
+        "exit_time",
+        "position_age_sec",
+        "holding_duration_sec",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/index/latest_open_positions.json",
+          "data/gmgn_candidates_live_run/index/latest_closed_positions.json",
+          "paper runner output"
+        ],
+        "required_input_fields": [
+          "paper_signal_time",
+          "paper_entry_time",
+          "entry_time"
+        ],
+        "optional_input_fields": [
+          "exit_time",
+          "last_update_time",
+          "candidate_stage_enum",
+          "wallet_decision_created_at"
+        ],
+        "derived_fields": [
+          "paper_entry_age_from_signal_sec",
+          "paper_entry_age_from_wallet_decision_sec",
+          "position_age_sec",
+          "holding_duration_sec",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "paper_signal_time",
+          "paper_entry_time",
+          "entry_time",
+          "exit_time",
+          "position_age_sec",
+          "holding_duration_sec",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S11_FAILURE_ATTRIBUTION",
+      "order": 11,
+      "zh": "失败归因",
+      "ttl": 604800,
+      "action": "TEMPORAL_APPEND_REVIEW_REQUIRED",
+      "source": "failure attribution jsonl / case files",
+      "notes": "失败归因允许长TTL；过期表示日报/复盘需要补跑。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 604800
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_APPEND_REVIEW_REQUIRED"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/index/case_file_index.json",
+        "failure attribution jsonl",
+        "paper failure review output"
+      ],
+      "required_input_fields": [
+        "failure_detected_at",
+        "entry_time",
+        "exit_time"
+      ],
+      "optional_input_fields": [
+        "time_to_failure_sec",
+        "time_to_max_profit_sec",
+        "time_to_max_drawdown_sec",
+        "last_update_time",
+        "candidate_stage_enum"
+      ],
+      "derived_fields": [
+        "failure_detected_at",
+        "holding_duration_sec",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "failure_detected_at",
+        "time_to_failure_sec",
+        "time_to_max_profit_sec",
+        "time_to_max_drawdown_sec",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/index/case_file_index.json",
+          "failure attribution jsonl",
+          "paper failure review output"
+        ],
+        "required_input_fields": [
+          "failure_detected_at",
+          "entry_time",
+          "exit_time"
+        ],
+        "optional_input_fields": [
+          "time_to_failure_sec",
+          "time_to_max_profit_sec",
+          "time_to_max_drawdown_sec",
+          "last_update_time",
+          "candidate_stage_enum"
+        ],
+        "derived_fields": [
+          "failure_detected_at",
+          "holding_duration_sec",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "failure_detected_at",
+          "time_to_failure_sec",
+          "time_to_max_profit_sec",
+          "time_to_max_drawdown_sec",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ]
+      }
+    },
+    {
+      "id": "S12_DAILY_REVIEW",
+      "order": 12,
+      "zh": "日报复盘",
+      "ttl": 129600,
+      "action": "TEMPORAL_GENERATE_DAILY_REVIEW",
+      "source": "daily report / dashboard / case index",
+      "notes": "日报过期只触发复盘生成/提醒，不改交易逻辑。",
+      "required_fields": [
+        "source_time",
+        "created_at",
+        "input_window_start",
+        "input_window_end",
+        "age_sec",
+        "ttl_sec",
+        "stale",
+        "elapsed_sec",
+        "time_skew_sec",
+        "refresh_required",
+        "stale_action"
+      ],
+      "field_schema": {
+        "source_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "源数据自身时间"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "阶段产物生成时间"
+        },
+        "input_window_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "input_window_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "age_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ttl_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 129600
+        },
+        "stale": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "elapsed_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "time_skew_sec": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "refresh_required": {
+          "type": "boolean"
+        },
+        "stale_action": {
+          "type": "string",
+          "const": "TEMPORAL_GENERATE_DAILY_REVIEW"
+        },
+        "requires_pattern_review": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "仅 D4_OLD_TOKEN 等需要盘型复查的阶段/候选使用；其他阶段可为 null。"
+        }
+      },
+      "source_paths": [
+        "data/gmgn_candidates_live_run/events/latest_events.md",
+        "data/gmgn_candidates_live_run/index/system_index.json",
+        "daily report output"
+      ],
+      "required_input_fields": [
+        "report_generated_at",
+        "last_update_time"
+      ],
+      "optional_input_fields": [
+        "report_window_start",
+        "report_window_end",
+        "sample_first_time",
+        "sample_last_time",
+        "candidate_stage_enum"
+      ],
+      "derived_fields": [
+        "report_generated_at",
+        "refresh_required",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "output_fields": [
+        "report_generated_at",
+        "report_window_start",
+        "report_window_end",
+        "time_context_gate",
+        "temporal_sync_status",
+        "temporal_gate",
+        "time_context_score",
+        "stage_missing_fields"
+      ],
+      "field_classification": {
+        "source_paths": [
+          "data/gmgn_candidates_live_run/events/latest_events.md",
+          "data/gmgn_candidates_live_run/index/system_index.json",
+          "daily report output"
+        ],
+        "required_input_fields": [
+          "report_generated_at",
+          "last_update_time"
+        ],
+        "optional_input_fields": [
+          "report_window_start",
+          "report_window_end",
+          "sample_first_time",
+          "sample_last_time",
+          "candidate_stage_enum"
+        ],
+        "derived_fields": [
+          "report_generated_at",
+          "refresh_required",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ],
+        "output_fields": [
+          "report_generated_at",
+          "report_window_start",
+          "report_window_end",
+          "time_context_gate",
+          "temporal_sync_status",
+          "temporal_gate",
+          "time_context_score",
+          "stage_missing_fields"
+        ]
+      }
+    }
+  ],
+  "output_contract": {
+    "per_token_time_context": {
+      "token_address": "string",
+      "token_symbol": "string",
+      "generated_at": "date-time",
+      "temporal_sync_status": "enum",
+      "temporal_gate": "enum",
+      "time_context_score": "number",
+      "requires_pattern_review": "boolean",
+      "stage_time_contexts": "array of stage objects",
+      "stage_missing_fields": "object"
+    },
+    "summary_files": [
+      "time_context_summary.json",
+      "time_context_summary.csv",
+      "time_context_report.md",
+      "time_context_schema.json"
+    ]
+  },
+  "existing_time_like_fields_sample": [
+    "closed_positions[].entry_time",
+    "closed_positions[].exit_time",
+    "closed_positions[].last_update_time",
+    "generated_at",
+    "last_update",
+    "meta.generated_at",
+    "meta.source_last_update",
+    "metadata.generated_at",
+    "metadata.source_last_update",
+    "methodology.exit_plan.time_stop",
+    "open_positions[].candidate_discovered_at",
+    "open_positions[].entry_time",
+    "open_positions[].last_update_time",
+    "open_positions[].paper_entry_snapshot.candidate.candidate_discovered_at",
+    "open_positions[].paper_entry_snapshot.entry.paper_entry_time",
+    "open_positions[].paper_entry_snapshot.signal.signal_time",
+    "open_positions[].paper_entry_snapshot.wallet.wallet_decision_time",
+    "open_positions[].paper_entry_time",
+    "open_positions[].signal_time",
+    "open_positions[].wallet_decision_time",
+    "opportunities[].last_update",
+    "paper_positions.closed[].entry_time",
+    "paper_positions.closed[].exit_time",
+    "paper_positions.closed[].last_update_time",
+    "paper_positions.closed[].paper_entry_time",
+    "paper_positions.closed[].paper_last_update_time",
+    "paper_positions.closed[].paper_signal_time",
+    "paper_positions.open[].candidate_discovered_at",
+    "paper_positions.open[].entry_time",
+    "paper_positions.open[].last_update_time",
+    "paper_positions.open[].paper_entry_snapshot.candidate.candidate_discovered_at",
+    "paper_positions.open[].paper_entry_snapshot.entry.paper_entry_time",
+    "paper_positions.open[].paper_entry_snapshot.signal.signal_time",
+    "paper_positions.open[].paper_entry_snapshot.wallet.wallet_decision_time",
+    "paper_positions.open[].paper_entry_time",
+    "paper_positions.open[].paper_last_update_time",
+    "paper_positions.open[].paper_signal_time",
+    "paper_positions.open[].signal_time",
+    "paper_positions.open[].wallet_decision_time",
+    "paper_positions.strategy_metrics.snapshot_time",
+    "paper_positions.strategy_panel.summary.snapshot_time",
+    "runtime_outputs",
+    "strategy_panel.summary.snapshot_time",
+    "system_health.runtime_status",
+    "system_health.source_last_update",
+    "tokens[].last_update"
+  ],
+  "canonical_field_map": {
+    "token_open_time": [
+      "token_open_time",
+      "pool_open_time",
+      "opened_at",
+      "pair_created_at",
+      "launch_time",
+      "token_created_at"
+    ],
+    "pool_created_at": [
+      "pool_created_at",
+      "liquidity_created_at",
+      "pair_created_at",
+      "lp_created_at",
+      "pool_open_time"
+    ],
+    "discovered_at": [
+      "discovered_at",
+      "candidate_discovered_at",
+      "first_seen_at",
+      "candidate_snapshot_at",
+      "first_seen_by_system_at"
+    ],
+    "candidate_discovered_at": [
+      "candidate_discovered_at",
+      "discovered_at",
+      "first_seen_at",
+      "first_seen_by_system_at"
+    ],
+    "first_seen_at": [
+      "first_seen_at",
+      "first_seen_by_system_at",
+      "candidate_discovered_at",
+      "discovered_at"
+    ],
+    "last_seen_at": [
+      "last_seen_at",
+      "last_update",
+      "updated_at",
+      "source_last_update",
+      "last_update_time"
+    ],
+    "candidate_snapshot_at": [
+      "candidate_snapshot_at",
+      "snapshot_time",
+      "last_update",
+      "generated_at",
+      "last_update_time"
+    ],
+    "signal_time": [
+      "signal_time",
+      "first_signal_at",
+      "signal.created_at",
+      "signal.detected_at"
+    ],
+    "signal_level": [
+      "signal_level",
+      "signal_level_code",
+      "signal.level",
+      "signal.signal_level"
+    ],
+    "wallet_decision_time": [
+      "wallet_decision_time",
+      "wallet_decision_created_at",
+      "wallet_decision_at",
+      "decision_time"
+    ],
+    "wallet_decision_created_at": [
+      "wallet_decision_created_at",
+      "wallet_decision_time",
+      "wallet_decision_at",
+      "decision_time"
+    ],
+    "pattern_created_at": [
+      "pattern_created_at",
+      "pattern_time",
+      "pattern_classified_at",
+      "pattern.detected_at"
+    ],
+    "lifecycle_created_at": [
+      "lifecycle_created_at",
+      "lifecycle_classified_at",
+      "dominant_lifecycle_created_at",
+      "lifecycle.time"
+    ],
+    "intent_created_at": [
+      "intent_created_at",
+      "intent_time",
+      "dominant_intent_created_at",
+      "intent.detected_at"
+    ],
+    "quote_time": [
+      "quote_time",
+      "quote_checked_at",
+      "quote_received_at",
+      "quote_requested_at"
+    ],
+    "quote_requested_at": [
+      "quote_requested_at",
+      "quote_requested_time",
+      "quote.requested_at"
+    ],
+    "quote_received_at": [
+      "quote_received_at",
+      "quote_time",
+      "quote_checked_at",
+      "quote.received_at"
+    ],
+    "security_scan_time": [
+      "security_scan_time",
+      "security_checked_at",
+      "security_time",
+      "security.scan_at"
+    ],
+    "final_gate_created_at": [
+      "final_gate_created_at",
+      "final_gate_time",
+      "final_gate_checked_at",
+      "final_gate.generated_at"
+    ],
+    "paper_entry_time": [
+      "paper_entry_time",
+      "paper_entry_at",
+      "entry_time",
+      "paper.entry_time"
+    ],
+    "paper_signal_time": [
+      "paper_signal_time",
+      "signal_time",
+      "first_signal_at",
+      "paper.signal_time"
+    ],
+    "entry_time": [
+      "entry_time",
+      "paper_entry_time",
+      "paper_entry_at",
+      "position_opened_at"
+    ],
+    "exit_time": [
+      "exit_time",
+      "paper_exit_time",
+      "paper_exit_at",
+      "position_closed_at"
+    ],
+    "last_update_time": [
+      "last_update_time",
+      "last_update",
+      "updated_at",
+      "source_last_update",
+      "generated_at"
+    ],
+    "failure_detected_at": [
+      "failure_detected_at",
+      "failed_at",
+      "failure_time",
+      "exit_triggered_at",
+      "paper_failure_time"
+    ],
+    "report_generated_at": [
+      "report_generated_at",
+      "generated_at",
+      "report_time",
+      "summary_generated_at"
+    ]
+  },
+  "enums": {
+    "candidate_stage_enum": [
+      "D0_SCOUT_ONLY",
+      "D1_EARLY_STRUCTURE_WINDOW",
+      "D2_MAIN_TRADING_WINDOW",
+      "D3_LATE_WINDOW",
+      "D4_OLD_TOKEN",
+      "STAGE_UNKNOWN"
+    ],
+    "discovery_quality_enum": [
+      "EARLY_DISCOVERY",
+      "NORMAL_DISCOVERY",
+      "LATE_DISCOVERY",
+      "VERY_LATE_DISCOVERY",
+      "DISCOVERY_UNKNOWN"
+    ],
+    "temporal_sync_status_enum": [
+      "TEMPORAL_SYNCED",
+      "TEMPORAL_PARTIAL_SYNC",
+      "TEMPORAL_DESYNC",
+      "TEMPORAL_UNKNOWN"
+    ],
+    "temporal_gate_enum": [
+      "TEMPORAL_ALLOW",
+      "TEMPORAL_WATCH",
+      "TEMPORAL_PAUSE",
+      "TEMPORAL_EXPIRED",
+      "TEMPORAL_BLOCK",
+      "TEMPORAL_UNKNOWN"
+    ],
+    "stale_action_enum": [
+      "TEMPORAL_AUDIT_ONLY",
+      "TEMPORAL_WATCH_OR_REFRESH_CANDIDATES",
+      "TEMPORAL_REFRESH_KLINE",
+      "TEMPORAL_EXPIRED_FOR_S3_S4_SIGNAL_STALE",
+      "TEMPORAL_REFRESH_WALLET_STRUCTURE",
+      "TEMPORAL_PAUSE_IF_DESYNC",
+      "TEMPORAL_REFRESH_LIFECYCLE",
+      "TEMPORAL_REFRESH_INTENT",
+      "TEMPORAL_EXPIRED_NO_ALLOW",
+      "TEMPORAL_PAUSE_OR_EXPIRED",
+      "TEMPORAL_REVIEW_PAPER_POSITION",
+      "TEMPORAL_APPEND_REVIEW_REQUIRED",
+      "TEMPORAL_GENERATE_DAILY_REVIEW"
+    ]
+  }
+}

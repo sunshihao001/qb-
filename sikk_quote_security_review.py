@@ -60,6 +60,78 @@ def _to_float(value: Any) -> Optional[float]:
         return None
 
 
+def _first_non_empty(data: Dict[str, Any], *keys: str) -> Any:
+    for key in keys:
+        value = data.get(key)
+        if value not in (None, "", [], {}):
+            return value
+    return None
+
+
+def _normal_time(value: Any) -> str:
+    if value in (None, "", [], {}, 0, "0"):
+        return ""
+    if isinstance(value, str):
+        text = value.strip()
+        if not text:
+            return ""
+        if "T" in text:
+            return text.replace("+00:00", "Z")
+        try:
+            value = float(text)
+        except ValueError:
+            return text
+    try:
+        ts = float(value)
+    except (TypeError, ValueError):
+        return ""
+    if ts > 10_000_000_000:
+        ts = ts / 1000.0
+    return datetime.fromtimestamp(ts, tz=timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def _provider_time(raw: Dict[str, Any], *keys: str) -> str:
+    data = raw.get("data") if isinstance(raw.get("data"), dict) else {}
+    for key in keys:
+        value = _first_non_empty(raw, key)
+        if value not in (None, "", [], {}):
+            return _normal_time(value)
+        value = _first_non_empty(data, key)
+        if value not in (None, "", [], {}):
+            return _normal_time(value)
+    return ""
+
+
+def _enrich_quote(quote: QuoteResult, requested_at: str, received_at: str) -> Dict[str, Any]:
+    row = _serialize(quote)
+    provider_time = _provider_time(quote.raw or {}, "quote_time", "timestamp", "time", "createdAt", "created_at", "ts")
+    quote_time = provider_time or received_at
+    row.update({
+        "token_address": quote.output_token,
+        "quote_source": quote.source,
+        "quote_requested_at": requested_at,
+        "quote_received_at": received_at,
+        "quote_time": quote_time,
+        "quote_time_source": "provider_timestamp" if provider_time else "received_at_fallback",
+    })
+    return row
+
+
+def _enrich_scan(scan: SecurityScanResult, started_at: str, finished_at: str) -> Dict[str, Any]:
+    row = _serialize(scan)
+    provider_time = _provider_time(scan.raw or {}, "security_scan_time", "scanTime", "scan_time", "timestamp", "time", "createdAt", "created_at", "ts")
+    scan_time = provider_time or finished_at
+    row.update({
+        "token_address": scan.token_address,
+        "security_scan_started_at": started_at,
+        "security_scan_finished_at": finished_at,
+        "security_scan_time": scan_time,
+        "security_scan_created_at": finished_at,
+        "security_scan_time_source": "provider_timestamp" if provider_time else "finished_at_fallback",
+    })
+    return row
+
+
 def _quote_deviation_pct(quotes: List[QuoteResult]) -> Optional[float]:
     """用 output_amount 粗略计算多源报价偏离百分比。"""
 
@@ -99,19 +171,39 @@ def build_quote_snapshot(
     quotes = list(quote_results)
     deviation_pct = _quote_deviation_pct(quotes)
     max_impact = _max_price_impact(quotes)
+    requested_at = snapshot_time or _now_utc_text()
+    received_at = requested_at
+    enriched_quotes = [_enrich_quote(q, requested_at, received_at) for q in quotes]
+    quote_time = ""
+    quote_time_source = ""
+    for row in enriched_quotes:
+        if row.get("quote_time"):
+            quote_time = row["quote_time"]
+            quote_time_source = row.get("quote_time_source", "")
+            if quote_time_source == "provider_timestamp":
+                break
+    if not quote_time:
+        quote_time = received_at
+        quote_time_source = "received_at_fallback"
     return {
         "token": token,
+        "token_address": token,
         "chain": chain,
         "wallet_address": wallet_address,
         "human_amount": human_amount,
-        "snapshot_time": snapshot_time or _now_utc_text(),
+        "snapshot_time": requested_at,
+        "quote_source": ",".join(q.source for q in quotes),
+        "quote_requested_at": requested_at,
+        "quote_received_at": received_at,
+        "quote_time": quote_time,
+        "quote_time_source": quote_time_source,
         "max_quote_age_seconds": max_quote_age_seconds,
         "quote_status": "AVAILABLE" if quotes else "MISSING",
         "source_count": len(quotes),
         "sources": [q.source for q in quotes],
         "max_price_impact_pct": max_impact,
         "quote_deviation_pct": deviation_pct,
-        "quotes": _serialize(quotes),
+        "quotes": enriched_quotes,
         "scope_note": "只读报价快照；不执行真实交易。",
     }
 
@@ -127,14 +219,34 @@ def build_security_scan_report(
 
     scans = list(scan_results)
     decision = evaluate_pre_trade_security(scans)
+    started_at = snapshot_time or _now_utc_text()
+    finished_at = started_at
+    enriched_scans = [_enrich_scan(s, started_at, finished_at) for s in scans]
+    scan_time = ""
+    scan_time_source = ""
+    for row in enriched_scans:
+        if row.get("security_scan_time"):
+            scan_time = row["security_scan_time"]
+            scan_time_source = row.get("security_scan_time_source", "")
+            if scan_time_source == "provider_timestamp":
+                break
+    if not scan_time:
+        scan_time = finished_at
+        scan_time_source = "finished_at_fallback"
     return {
         "token": token,
+        "token_address": token,
         "chain": chain,
-        "snapshot_time": snapshot_time or _now_utc_text(),
+        "snapshot_time": started_at,
+        "security_scan_started_at": started_at,
+        "security_scan_finished_at": finished_at,
+        "security_scan_time": scan_time,
+        "security_scan_created_at": finished_at,
+        "security_scan_time_source": scan_time_source,
         "scan_status": "AVAILABLE" if scans else "MISSING",
         "source_count": len(scans),
         "sources": [s.source for s in scans],
-        "scan_results": _serialize(scans),
+        "scan_results": enriched_scans,
         "pre_trade_security_decision": _serialize(decision),
         "scope_note": "安全扫描报告只用于交易前审查；扫描缺失不是安全通过。",
     }
@@ -196,8 +308,19 @@ def build_quote_security_decision(quote_snapshot: Dict[str, Any], security_repor
 
     return {
         "token": quote_snapshot.get("token"),
+        "token_address": quote_snapshot.get("token_address") or quote_snapshot.get("token"),
         "chain": quote_snapshot.get("chain"),
         "snapshot_time": quote_snapshot.get("snapshot_time"),
+        "quote_source": quote_snapshot.get("quote_source"),
+        "quote_requested_at": quote_snapshot.get("quote_requested_at"),
+        "quote_received_at": quote_snapshot.get("quote_received_at"),
+        "quote_time": quote_snapshot.get("quote_time"),
+        "quote_time_source": quote_snapshot.get("quote_time_source"),
+        "security_scan_started_at": security_report.get("security_scan_started_at"),
+        "security_scan_finished_at": security_report.get("security_scan_finished_at"),
+        "security_scan_time": security_report.get("security_scan_time"),
+        "security_scan_created_at": security_report.get("security_scan_created_at"),
+        "security_scan_time_source": security_report.get("security_scan_time_source"),
         "final_permission": final_permission,
         "requires_user_confirmation": final_permission != "BLOCK_BUY",
         "quote_status": quote_snapshot.get("quote_status"),

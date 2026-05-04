@@ -1,0 +1,147 @@
+{
+  "workflow_name": "SIKK-SOL HER 核心自动化工作流",
+  "version": "her_core_automation_v1",
+  "output_root": "data/gmgn_candidates_live_run",
+  "cognitive_principle": "目标自治 + 工具选择自治 + 阶段执行自治 + 验收自治，但必须受 paper-only 与测试验收护栏约束。",
+  "tool_routing": {
+    "GPT/ChatGPT 分享链接": [
+      "conversation-transcript-ingestion",
+      "sikk_knowledge_absorption.py",
+      "Section Task 合同"
+    ],
+    "复杂代码/架构审计": [
+      "Super Hermes prism-scan/prism-3way/prism-reflect",
+      "systematic-debugging",
+      "requesting-code-review"
+    ],
+    "跨模型代码库上下文包": [
+      "repomix",
+      "secretlint/安全排除",
+      "限定 include/exclude 范围"
+    ],
+    "多小时研究/多代理任务": [
+      "DeerFlow",
+      "delegate_task 子代理",
+      "阶段验收报告"
+    ],
+    "SIKK 运行落地": [
+      "sikk_live_run.py 单入口",
+      "sikk_query/sikkctl",
+      "Telegram 中文视图",
+      "静态 dashboard"
+    ]
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "real_swap_enabled": false,
+    "private_key_required": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "scope_note": "本计划只调度候选发现、报价安全、纸面持仓、复盘与静态看板；不执行真实 swap。"
+  },
+  "default_command": "PYTHONPATH=/root/sikk-gmgn python3 sikk_live_run.py --mode once --output-root data/gmgn_candidates_live_run --limit 50 --quote-sources okx --default-quote-amount-sol 0.01",
+  "task_lens_stages": [
+    {
+      "stage_id": "lens_1_read",
+      "中文名称": "读取与证据保存",
+      "required_actions": [
+        "读取链接或声明不可读",
+        "保存原文到 knowledge/inbox",
+        "记录来源与可读性"
+      ],
+      "acceptance": "存在 inbox 原文；报告中不假装读取。"
+    },
+    {
+      "stage_id": "lens_2_problem",
+      "中文名称": "问题识别与隐藏断点",
+      "required_actions": [
+        "提取核心机制",
+        "识别表面完成但未接入流程的断点",
+        "列出盲点"
+      ],
+      "acceptance": "输出缺口清单与约束报告。"
+    },
+    {
+      "stage_id": "lens_3_map",
+      "中文名称": "系统映射审计",
+      "required_actions": [
+        "搜索现有文件",
+        "映射到 runtime/TG/dashboard/paper/skill",
+        "确定最小修改路径"
+      ],
+      "acceptance": "每个结论绑定文件、字段、命令或测试。"
+    },
+    {
+      "stage_id": "lens_4_execute",
+      "中文名称": "分阶段实现",
+      "required_actions": [
+        "先写/更新测试",
+        "修改代码或知识资产",
+        "运行专项验证"
+      ],
+      "acceptance": "测试通过且产物可追溯。"
+    },
+    {
+      "stage_id": "lens_5_verify",
+      "中文名称": "审计验收与沉淀",
+      "required_actions": [
+        "运行主入口最小验证",
+        "检查 manifest 安全开关",
+        "更新 skill/knowledge/index"
+      ],
+      "acceptance": "验收报告说明完成项、未完成项、风险、下一步。"
+    }
+  ],
+  "schedules": [
+    {
+      "job_id": "candidate_signal_cycle",
+      "中文名称": "候选发现 + K线信号 + 状态机 + quote/security + 纸面更新",
+      "interval_minutes": 10,
+      "command": "PYTHONPATH=/root/sikk-gmgn python3 sikk_live_run.py --mode once --output-root data/gmgn_candidates_live_run --limit 50 --quote-sources okx --default-quote-amount-sol 0.01",
+      "expected_outputs": [
+        "data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.json",
+        "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json",
+        "data/gmgn_candidates_live_run/state_machine/candidate_states.json",
+        "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json",
+        "data/gmgn_candidates_live_run/paper_live/paper_positions_open.json",
+        "data/gmgn_candidates_live_run/paper_live/paper_positions_closed.json"
+      ]
+    },
+    {
+      "job_id": "paper_position_refresh",
+      "中文名称": "纸面持仓刷新",
+      "interval_minutes": 3,
+      "command": "PYTHONPATH=/root/sikk-gmgn python3 sikk_live_run.py --mode once --output-root data/gmgn_candidates_live_run --limit 50 --quote-sources okx --default-quote-amount-sol 0.01",
+      "expected_outputs": [
+        "data/gmgn_candidates_live_run/paper_live/paper_positions_open.json",
+        "data/gmgn_candidates_live_run/paper_live/paper_trades.csv",
+        "data/gmgn_candidates_live_run/paper_live/position_journal/"
+      ]
+    },
+    {
+      "job_id": "daily_review",
+      "中文名称": "日报 + 钱包结构日报 + 静态控制台刷新",
+      "cron": "0 0 * * *",
+      "command": "PYTHONPATH=/root/sikk-gmgn python3 sikk_live_run.py --mode once --output-root data/gmgn_candidates_live_run --limit 50 --quote-sources okx --default-quote-amount-sol 0.01",
+      "expected_outputs": [
+        "data/gmgn_candidates_live_run/paper_live/daily_reports/",
+        "data/gmgn_candidates_live_run/wallet_structure_daily_report/",
+        "data/gmgn_candidates_live_run/site/dashboard_data.json",
+        "data/gmgn_candidates_live_run/site/index.html"
+      ]
+    }
+  ],
+  "gates": [
+    "PAPER_READY 才能进入纸面候选",
+    "quote/security 为 BLOCK_BUY 时必须阻断",
+    "PAUSE_NEED_CONFIRM 只暂停，不纸面入场",
+    "同一 token 只允许一个开放纸面仓位",
+    "钱包结构强风险默认 EXIT_MONITOR；多轮 delta + 盘型/市场确认后才 FORCE_PAPER_EXIT"
+  ],
+  "acceptance_checks": [
+    "PYTHONPATH=/root/sikk-gmgn python3 -m pytest -q",
+    "PYTHONPATH=/root/sikk-gmgn python3 sikk_live_run.py --mode once --output-root data/gmgn_candidates_live_run --limit 50 --quote-sources okx --default-quote-amount-sol 0.01",
+    "检查 live_run_manifest.json 中 real_swap_enabled=false 且 confirmation_enabled=false",
+    "检查 paper_daily_report 中包含 不执行真实 swap"
+  ]
+}

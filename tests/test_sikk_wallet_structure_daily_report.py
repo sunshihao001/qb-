@@ -45,6 +45,7 @@ def test_wallet_structure_daily_report_groups_by_failure_type_and_wallet_status(
                 "最大浮盈_pct": "80",
                 "最大浮亏_pct": "-10",
                 "failure_type": "TAKE_PROFIT",
+                "paper_position_sol": "0.01",
             },
             {
                 "position_id": "p2",
@@ -58,6 +59,7 @@ def test_wallet_structure_daily_report_groups_by_failure_type_and_wallet_status(
                 "最大浮盈_pct": "10",
                 "最大浮亏_pct": "-25",
                 "failure_type": "WALLET_EXIT",
+                "paper_position_sol": "0.01",
             },
             {
                 "position_id": "p3",
@@ -71,6 +73,7 @@ def test_wallet_structure_daily_report_groups_by_failure_type_and_wallet_status(
                 "最大浮盈_pct": "5",
                 "最大浮亏_pct": "-30",
                 "failure_type": "SAME_SOURCE_EXIT",
+                "paper_position_sol": "0.01",
             },
             {
                 "position_id": "p4",
@@ -84,6 +87,7 @@ def test_wallet_structure_daily_report_groups_by_failure_type_and_wallet_status(
                 "最大浮盈_pct": "20",
                 "最大浮亏_pct": "-8",
                 "failure_type": "TIME_STOP",
+                "paper_position_sol": "0.01",
             },
         ],
     )
@@ -111,6 +115,12 @@ def test_wallet_structure_daily_report_groups_by_failure_type_and_wallet_status(
     assert summary["按失败归因"]["SAME_SOURCE_EXIT"]["平均收益率_pct"] == -22.0
     assert summary["按钱包结构状态与信号等级"]["WALLET_SUPPORT|S4_强确认信号"]["平均收益率_pct"] == 35.0
     assert summary["failure_attribution事件统计"]["SAME_SOURCE_EXIT"] == 1
+    audit = summary["审计统计"]
+    assert audit["样本独立性审计"]["unique_token_count"] == 4
+    assert audit["样本独立性审计"]["duplicate_token_count"] == 0
+    assert audit["加权收益审计"]["position_size_weighted_return_pct"] == 2.25
+    assert audit["退出政策审计"]["force_paper_exit_count"] == 2
+    assert "shadow hold" in audit["shadow_hold审计"]["audit_note"]
 
     md = Path(paths["summary_md"]).read_text(encoding="utf-8")
     assert "SIKK 钱包结构纸面交易日报" in md

@@ -1,0 +1,14 @@
+# SIKK-SOL v1.0 钱包结构门禁
+
+- 代币符号：GRUMP
+- 代币地址：21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump
+- 钱包结构结论：WALLET_BLOCK
+- 筹码控制权状态：CONTROL_UNCLEAR
+- 钱包结构评分：0
+- 钱包风险评分：100
+- 对手盘压力评分：0
+- 数据质量评分：100
+- 钱包结构系数：0.0
+- 建议状态调整：调整为 BLOCKED
+- 状态调整原因：
+- 边界：只做钱包结构门禁，不执行真实 swap；WALLET_SUPPORT 不能绕过 K线、quote、安全扫描。

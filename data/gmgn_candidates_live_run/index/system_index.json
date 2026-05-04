@@ -1,0 +1,148 @@
+{
+  "schema_version": "sikk.unified_view.v1",
+  "generated_at": "2026-05-04T12:48:03Z",
+  "boundary": "SIKK 统一索引层；只读展示、诊断、复盘和提醒；不执行真实 swap，不读取私钥，不签名，不自动 broadcast。",
+  "safety": {
+    "real_swap_enabled": false,
+    "broadcast_allowed": false,
+    "private_key_required": false,
+    "confirmation_enabled": false,
+    "telegram_broadcast_enabled": false
+  },
+  "entrypoint": {
+    "canonical": "sikk_live_run.py",
+    "mode": "paper_runtime_once"
+  },
+  "base_dir": "data/gmgn_candidates_live_run",
+  "source_files": {
+    "live_run_manifest": {
+      "path": "data/gmgn_candidates_live_run/live_run_manifest.json",
+      "exists": true,
+      "size_bytes": 5711
+    },
+    "live_state": {
+      "path": "data/gmgn_candidates_live_run/live_state.json",
+      "exists": true,
+      "size_bytes": 22713
+    },
+    "live_board": {
+      "path": "data/gmgn_candidates_live_run/live_board.md",
+      "exists": true,
+      "size_bytes": 3090
+    },
+    "live_dashboard": {
+      "path": "data/gmgn_candidates_live_run/live_dashboard.html",
+      "exists": true,
+      "size_bytes": 13440
+    },
+    "site_dashboard_data": {
+      "path": "data/gmgn_candidates_live_run/site/dashboard_data.json",
+      "exists": true,
+      "size_bytes": 2069546
+    },
+    "site_index": {
+      "path": "data/gmgn_candidates_live_run/site/index.html",
+      "exists": true,
+      "size_bytes": 6231
+    },
+    "site_app": {
+      "path": "data/gmgn_candidates_live_run/site/app.js",
+      "exists": true,
+      "size_bytes": 23414
+    },
+    "site_style": {
+      "path": "data/gmgn_candidates_live_run/site/style.css",
+      "exists": true,
+      "size_bytes": 4587
+    },
+    "paper_open_json": {
+      "path": "data/gmgn_candidates_live_run/paper_live/paper_positions_open.json",
+      "exists": true,
+      "size_bytes": 20754
+    },
+    "paper_closed_json": {
+      "path": "data/gmgn_candidates_live_run/paper_live/paper_positions_closed.json",
+      "exists": true,
+      "size_bytes": 628299
+    },
+    "paper_open_csv": {
+      "path": "data/gmgn_candidates_live_run/paper_live/paper_positions_open.csv",
+      "exists": true,
+      "size_bytes": 12723
+    },
+    "paper_closed_csv": {
+      "path": "data/gmgn_candidates_live_run/paper_live/paper_positions_closed.csv",
+      "exists": true,
+      "size_bytes": 324322
+    },
+    "case_files_manifest": {
+      "path": "data/gmgn_candidates_live_run/paper_live/case_files/case_files_manifest.json",
+      "exists": true,
+      "size_bytes": 160713
+    }
+  },
+  "runtime_outputs": {
+    "live_state_json": "data/gmgn_candidates_live_run/live_state.json",
+    "live_board_md": "data/gmgn_candidates_live_run/live_board.md",
+    "live_dashboard_html": "data/gmgn_candidates_live_run/live_dashboard.html"
+  },
+  "site_outputs": {
+    "dashboard_data_json": "data/gmgn_candidates_live_run/site/dashboard_data.json",
+    "index_html": "data/gmgn_candidates_live_run/site/index.html",
+    "app_js": "data/gmgn_candidates_live_run/site/app.js",
+    "style_css": "data/gmgn_candidates_live_run/site/style.css"
+  },
+  "wallet_daily_report": {
+    "latest_csv": "data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260504.csv",
+    "latest_json": "data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260504.json",
+    "latest_md": "data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260504.md"
+  },
+  "paper_sync": {
+    "open_json_count": 5,
+    "closed_json_count": 201,
+    "open_csv_count": 5,
+    "closed_csv_count": 201,
+    "open_csv_exists": true,
+    "closed_csv_exists": true,
+    "json_csv_note": "paper JSON 与 CSV 均作为统一索引输入；数量差异需由日报/审计层解释。"
+  },
+  "counts": {
+    "token_count": 199,
+    "open_position_count": 5,
+    "closed_position_count": 201,
+    "opportunity_count": 30
+  },
+  "system_health": {
+    "runtime_status": "OK",
+    "source_last_update": "2026-05-04T12:40:24Z",
+    "token_count": 199,
+    "paper_open_count": 5,
+    "paper_closed_count": 201,
+    "wallet_missing_count": 168,
+    "opportunity_count": 40,
+    "event_count": 50
+  },
+  "coverage_diagnostics": {
+    "wallet_coverage": 31,
+    "wallet_missing_count": 168,
+    "wallet_missing_rate_pct": 84.4221,
+    "wallet_missing_repair_plan": [
+      "优先检查 wallet_structure_decision.json 是否生成并被 dashboard/load_wallet_decisions 读取。",
+      "对 PAPER_READY/PAPER_OPEN 且 wallet_structure_status=MISSING 的 token 输出源文件、字段、状态诊断；不放宽入场。",
+      "复查 early_wallet_raw.csv / wallet_classification.csv / candidate_groups.csv 与 token_address join key。"
+    ],
+    "paper_json_csv_sync": {
+      "open_json_count": 5,
+      "closed_json_count": 201,
+      "open_csv_exists": true,
+      "closed_csv_exists": true,
+      "source_note": "sikk_live_run.py 单入口负责 paper JSON/CSV 同步与 dashboard_data.json 刷新。"
+    },
+    "safety_defaults": {
+      "real_swap_enabled": false,
+      "broadcast_allowed": false,
+      "private_key_required": false,
+      "boundary": "只读静态观察控制台；不执行真实 swap，不读取私钥，不自动 broadcast。"
+    }
+  }
+}

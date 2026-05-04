@@ -1,0 +1,75 @@
+# SIKK 钱包结构纸面交易日报
+
+- 报告日期：20260503
+- 边界：本报告只统计纸面交易、钱包结构变化和失败归因，不执行真实 swap。
+
+## 总体统计
+- 关闭仓位数：178
+- 盈利仓位数：57
+- 胜率_pct：32.0225
+- 平均收益率_pct：6.0194
+- 中位数收益率_pct：-0.1864
+- 总收益SOL：0.0
+- 平均最大浮盈_pct：9.7887
+- 平均最大浮亏_pct：-0.2995
+- 最佳单笔_pct：679.3995
+- 最差单笔_pct：-98.3146
+
+## 按钱包结构状态统计
+- UNKNOWN
+  - 关闭仓位数：4
+  - 胜率：75.0%
+  - 平均收益率：212.2423%
+  - 平均最大浮亏：-7.7257%
+- WALLET_BLOCK
+  - 关闭仓位数：174
+  - 胜率：31.0345%
+  - 平均收益率：1.2786%
+  - 平均最大浮亏：-0.1288%
+
+## 按失败归因统计
+- STRUCTURE_WEAKENING
+  - 关闭仓位数：158
+  - 胜率：36.0759%
+  - 平均收益率：6.7813%
+  - 平均最大浮亏：-0.3374%
+- 命中纸面止损
+  - 关闭仓位数：20
+  - 胜率：0.0%
+  - 平均收益率：0.0%
+  - 平均最大浮亏：0.0%
+
+## 按钱包结构状态与信号等级统计
+- UNKNOWN|S4_强确认信号
+  - 关闭仓位数：4
+  - 胜率：75.0%
+  - 平均收益率：212.2423%
+  - 平均最大浮亏：-7.7257%
+- WALLET_BLOCK|S4_强确认信号
+  - 关闭仓位数：174
+  - 胜率：31.0345%
+  - 平均收益率：1.2786%
+  - 平均最大浮亏：-0.1288%
+
+## failure_attribution 事件统计
+- STRUCTURE_WEAKENING：195
+
+## 审计统计
+- 样本独立性审计
+  - position_count：178
+  - unique_token_count：17
+  - duplicate_token_count：12
+  - duplicate_tokens：{'F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump': 8, 'ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1': 58, '9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump': 8, '7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump': 27, 'EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump': 9, 'CEqaq1pe8TZUFyiTSy8MAz7wzoBu5xWExqW99BBVpump': 5, '5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump': 5, 'GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump': 13, '3hHZ3QFWKVgUdi64uHJumK9T7hDR2Tr6WZBjUfP5pump': 3, 'q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump': 6, '6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump': 17, '3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump': 14}
+  - audit_note：同一 token 多笔重复会抬高统计权重，策略结论应优先看 unique token 与分桶表现。
+- 加权收益审计
+  - position_size_weighted_return_pct：6.5085
+  - weight_source：paper_position_sol/paper_size_sol/position_sol；缺失时按 1 等权。
+- 退出政策审计
+  - force_paper_exit_count：158
+  - force_paper_exit_rate_pct：88.764
+  - exit_reason_counts：{'STRUCTURE_WEAKENING': 158, '命中纸面止损': 20}
+  - audit_note：FORCE_PAPER_EXIT 过多时必须复查是否从 EXIT_MONITOR 过早升级。
+- shadow_hold审计
+  - shadow_hold_ready_count：0
+  - shadow_hold_missing_count：178
+  - audit_note：force exit 后应跟踪 shadow hold 15m/30m/60m，判断错杀右尾或规避回撤。

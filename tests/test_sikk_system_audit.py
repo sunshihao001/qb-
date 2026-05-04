@@ -198,3 +198,35 @@ def test_system_audit_summarizes_normal_fake_outputs(tmp_path):
     assert audit["replay_unavailable_fields"]["missing_field_counts"]["paper_entry_market_cap_usd"] >= 1
     assert "状态机冲突" in md
     assert "下一步建议" in md
+
+
+def test_system_audit_ranks_wallet_coverage_and_repair_plan(tmp_path):
+    from sikk_system_audit import run_system_audit
+
+    rows = []
+    for i in range(10):
+        rows.append({
+            "代币地址": f"Token{i}",
+            "代币符号": f"T{i}",
+            "当前状态": "WATCHING",
+            "状态原因": "等待钱包结构" if i < 7 else "已有钱包结构",
+            "钱包结构结论": "未接入" if i < 7 else "WALLET_SUPPORT",
+            "钱包门禁效果": "NO_WALLET_INPUT" if i < 7 else "HAS_WALLET_DECISION",
+        })
+    _write_json(tmp_path / "state_machine" / "candidate_states.json", {"候选状态": rows})
+    _write_json(tmp_path / "live_state.json", {"tokens": rows})
+    _write_json(tmp_path / "wallet_structure" / "candidate_wallet_structure_summary.json", {"处理结果": []})
+
+    paths = run_system_audit(live_run_dir=tmp_path)
+    audit = _read_json(Path(paths["system_audit_json"]))
+
+    diag = audit["wallet_coverage_diagnostics"]
+    assert diag["coverage_level"] == "P0_CRITICAL"
+    assert diag["wallet_missing_count"] == 7
+    assert diag["wallet_coverage_pct"] == 30.0
+    assert diag["top_missing_reasons"][0]["reason"] == "NO_WALLET_INPUT"
+    assert "检查 wallet_structure/candidate_wallet_structure_summary.json" in diag["repair_plan"][0]
+    assert any(item["priority"] == "P0" and "钱包结构" in item["title"] for item in audit["ranked_gaps"])
+    md = Path(paths["system_audit_md"]).read_text(encoding="utf-8")
+    assert "缺口优先级" in md
+    assert "钱包结构覆盖诊断" in md

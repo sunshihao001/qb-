@@ -1,0 +1,63 @@
+{
+  "token": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
+  "chain": "sol",
+  "snapshot_time": "2026-05-02T18:27:31Z",
+  "scan_status": "AVAILABLE",
+  "source_count": 1,
+  "sources": [
+    "OKX"
+  ],
+  "scan_results": [
+    {
+      "source": "OKX",
+      "token_address": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
+      "token_side": "buy",
+      "risk_level": "LOW",
+      "triggered_labels": [],
+      "raw": {
+        "ok": true,
+        "data": [
+          {
+            "buyTaxes": null,
+            "chainId": "501",
+            "isAirdropScam": false,
+            "isChainSupported": true,
+            "isCounterfeit": false,
+            "isDumping": false,
+            "isFakeLiquidity": false,
+            "isFundLinkage": false,
+            "isHasAssetEditAuth": false,
+            "isHasBlockingHis": false,
+            "isHasFrozenAuth": false,
+            "isHoneypot": false,
+            "isLiquidityRemoval": false,
+            "isLowLiquidity": false,
+            "isMintable": false,
+            "isNotOpenSource": false,
+            "isNotRenounced": false,
+            "isOverIssued": false,
+            "isPump": false,
+            "isRubbishAirdrop": false,
+            "isVeryHighLpHolderProp": false,
+            "isVeryLowLpBurn": false,
+            "isWash": false,
+            "isWash2": false,
+            "riskLevel": "LOW",
+            "sellTaxes": null,
+            "tokenAddress": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump"
+          }
+        ]
+      }
+    }
+  ],
+  "pre_trade_security_decision": {
+    "permission": "ALLOW",
+    "risk_level": "LOW",
+    "requires_user_confirmation": false,
+    "reasons": [
+      "多源安全扫描未发现 HIGH/CRITICAL 买入风险"
+    ],
+    "source_count": 1
+  },
+  "scope_note": "安全扫描报告只用于交易前审查；扫描缺失不是安全通过。"
+}

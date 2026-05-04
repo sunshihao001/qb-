@@ -113,3 +113,44 @@ def test_quote_security_decision_blocks_high_price_impact():
 
     assert decision["final_permission"] == "BLOCK_BUY"
     assert any("价格影响过高" in reason for reason in decision["reasons"])
+
+
+def test_quote_and_security_reports_write_standard_time_anchors():
+    from sikk_execution_adapter_base import QuoteResult, SecurityScanResult, TokenSide
+    from sikk_quote_security_review import build_quote_snapshot, build_security_scan_report, build_quote_security_decision
+
+    quote_snapshot = build_quote_snapshot(
+        token="TOKEN",
+        chain="sol",
+        wallet_address="Wallet1111111111111111111111111111111111",
+        human_amount="0.01 SOL",
+        quote_results=[
+            QuoteResult("GMGN", "SOL", "TOKEN", "0.01", "1000", "980", 1.2, {"timestamp": "2026-05-04T11:59:58Z"}),
+            QuoteResult("OKX", "SOL", "TOKEN", "0.01", "990", "970", 1.4, {}),
+        ],
+        snapshot_time="2026-05-04T12:00:00Z",
+    )
+    assert quote_snapshot["token_address"] == "TOKEN"
+    assert quote_snapshot["quote_requested_at"] == "2026-05-04T12:00:00Z"
+    assert quote_snapshot["quote_received_at"] == "2026-05-04T12:00:00Z"
+    assert quote_snapshot["quote_time"] == "2026-05-04T11:59:58Z"
+    assert quote_snapshot["quote_time_source"] == "provider_timestamp"
+    assert quote_snapshot["quotes"][0]["quote_source"] == "GMGN"
+    assert quote_snapshot["quotes"][1]["quote_time_source"] == "received_at_fallback"
+
+    security_report = build_security_scan_report(
+        token="TOKEN",
+        chain="sol",
+        scan_results=[SecurityScanResult("OKX", "TOKEN", TokenSide.BUY, "LOW", [], {"scanTime": "2026-05-04T11:59:59Z"})],
+        snapshot_time="2026-05-04T12:00:01Z",
+    )
+    assert security_report["token_address"] == "TOKEN"
+    assert security_report["security_scan_started_at"] == "2026-05-04T12:00:01Z"
+    assert security_report["security_scan_finished_at"] == "2026-05-04T12:00:01Z"
+    assert security_report["security_scan_time"] == "2026-05-04T11:59:59Z"
+    assert security_report["security_scan_created_at"] == "2026-05-04T12:00:01Z"
+    assert security_report["security_scan_time_source"] == "provider_timestamp"
+
+    decision = build_quote_security_decision(quote_snapshot, security_report)
+    assert decision["quote_time"] == "2026-05-04T11:59:58Z"
+    assert decision["security_scan_time"] == "2026-05-04T11:59:59Z"

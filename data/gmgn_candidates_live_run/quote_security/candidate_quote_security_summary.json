@@ -1,0 +1,64 @@
+{
+  "模块": "SIKK Candidate Quote/Security Pipeline v0.6",
+  "扫描时间": "2026-05-04T12:40:32Z",
+  "输入文件": {
+    "候选状态": "data/gmgn_candidates_live_run/state_machine/candidate_states.json",
+    "信号汇总": "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json"
+  },
+  "处理统计": {
+    "读取状态数": 5,
+    "PAPER_READY数量": 1,
+    "成功数量": 1,
+    "跳过数量": 4,
+    "失败数量": 0,
+    "READY_FOR_CONFIRMATION": 1,
+    "PAUSE": 0,
+    "BLOCK": 0
+  },
+  "处理结果": [
+    {
+      "代币地址": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+      "代币符号": "TROLLIEN",
+      "原状态": "PAPER_READY",
+      "交易前状态": "READY_FOR_CONFIRMATION",
+      "quote_security_permission": "ALLOW_CONFIRMATION_LAYER",
+      "报价状态": "AVAILABLE",
+      "安全权限": "ALLOW",
+      "安全风险等级": "LOW",
+      "最大价格影响_pct": null,
+      "报价偏离_pct": 3.045449,
+      "原因": "报价与安全扫描未触发硬阻断，可进入人工确认层",
+      "审查输出目录": "data/gmgn_candidates_live_run/quote_security/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+      "quote_security_decision_json": "data/gmgn_candidates_live_run/quote_security/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/quote_security_decision.json",
+      "trade_confirmation_ticket_md": "data/gmgn_candidates_live_run/quote_security/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/trade_confirmation_ticket.md"
+    }
+  ],
+  "跳过结果": [
+    {
+      "代币地址": "Y4vtfnvGSTe2exSm94SXUq3684MGWwWEhXzASkupump",
+      "代币符号": "trollina",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "ziffq43QSCC95DUjVc7cULKYttEHyA1pops25gDpump",
+      "代币符号": "CARDS",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "7CR3CBpivSMzBEet3cvUckjeSLdbCKaxRB1yNNm6pump",
+      "代币符号": "trolls",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "D5GpuB8FAWAc6Qex1p3B1vT9DJKvjPNuBzQgX5y3bonk",
+      "代币符号": "jestin ",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    }
+  ],
+  "失败结果": [],
+  "说明": "PAPER_READY 后置只读报价与安全扫描管道；输出 READY_FOR_CONFIRMATION / PAUSE / BLOCK，不执行真实 swap。"
+}

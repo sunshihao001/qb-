@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import time
 from datetime import datetime, timezone
@@ -17,10 +18,14 @@ from typing import Any, Callable, Dict, Iterable, List, Mapping, Optional
 
 from run_sikk_gmgn_pipeline import _default_wallet_address, run_full_pipeline
 from sikk_dashboard_builder import write_dashboard
+from sikk_dashboard_site_builder import build_dashboard_data as build_site_dashboard_data, write_site_files as write_static_site_files
 from sikk_live_orchestrator import write_live_board as write_professional_live_board
 from sikk_market_cap_context import build_market_cap_context, merge_market_cap_context
 from sikk_paper_live_runner import run_paper_live_cycle
+from sikk_paper_explanation_builder import build_case_files
+from sikk_operator_psychology_engine import enrich_status_with_operator_psychology
 from sikk_wallet_structure_daily_report import build_wallet_structure_daily_report
+from sikk_unified_view_builder import build_unified_indexes
 
 DEFAULT_OUTPUT_ROOT = Path("data/gmgn_candidates_live_run")
 
@@ -105,6 +110,18 @@ def _status_from_state_row(row: Mapping[str, Any], now: str) -> Dict[str, Any]:
             "counterparty_pressure_score": row.get("对手盘压力评分") or row.get("counterparty_pressure_score"),
             "data_quality_score": row.get("数据质量评分") or row.get("data_quality_score"),
             "missing_reason": row.get("钱包结构缺失原因") or row.get("wallet_missing_reason"),
+        },
+        "lifecycle": {
+            "dominant_side_lifecycle": row.get("主导侧生命周期") or row.get("dominant_side_lifecycle"),
+            "dominant_side_intent": row.get("主导侧动机") or row.get("dominant_side_intent"),
+            "counterparty_state": row.get("对手盘状态") or row.get("counterparty_state"),
+            "liquidity_intent": row.get("流动性意图") or row.get("liquidity_intent"),
+            "trap_risk_type": row.get("套牢风险类型") or row.get("trap_risk_type"),
+            "structure_defense_status": row.get("结构防守状态") or row.get("structure_defense_status"),
+        },
+        "chip_control": {
+            "chip_control_state": row.get("筹码控制权状态") or row.get("chip_control_state"),
+            "chip_control_action": row.get("筹码控制权动作") or row.get("chip_control_action"),
         },
         "signal": {"signal_level": row.get("信号等级") or row.get("signal_level") or "UNKNOWN", "signal_gate": row.get("信号门禁") or row.get("signal_gate") or "UNKNOWN"},
         "quote": {"quote_gate": row.get("报价门禁") or row.get("quote_gate") or "MISSING"},
@@ -311,6 +328,7 @@ def build_enriched_runtime_statuses(root: str | Path, now: str) -> List[Dict[str
         )
         merge_market_cap_context(status, market_context)
         _apply_latest_runtime_decision(status)
+        status = enrich_status_with_operator_psychology(status)
         statuses.append(status)
     return statuses
 
@@ -345,6 +363,20 @@ def _write_live_state(root: Path, statuses: List[Mapping[str, Any]], now: str) -
 
 def _write_live_board(root: Path, statuses: List[Mapping[str, Any]], now: str, paper_paths: Mapping[str, str], report_paths: Mapping[str, str]) -> str:
     return write_professional_live_board(statuses, base_dir=root, now=now)
+
+
+def _write_static_dashboard_site(root: Path) -> Dict[str, str]:
+    """刷新本地静态 dashboard site；仅写 site 目录，不改变运行/交易状态。"""
+
+    site_dir = root / "site"
+    data = build_site_dashboard_data(root)
+    write_static_site_files(site_dir, data)
+    return {
+        "site_dashboard_data_json": str(site_dir / "dashboard_data.json"),
+        "site_index_html": str(site_dir / "index.html"),
+        "site_app_js": str(site_dir / "app.js"),
+        "site_style_css": str(site_dir / "style.css"),
+    }
 
 
 def _write_latest_events(root: Path) -> str:
@@ -420,29 +452,75 @@ def _send_telegram_broadcast(
         _append_jsonl(event_path, {"time": run_time, "event_type": "TG_BROADCAST_ERROR", "level": "ERROR", "message": str(exc)})
 
 
-def _paper_closed_csv_path(root: Path) -> Path:
-    csv_path = root / "paper_live" / "paper_positions_closed.csv"
-    if csv_path.exists():
-        return csv_path
-    json_path = root / "paper_live" / "paper_positions_closed.json"
-    payload = _read_json(json_path)
-    rows = payload.get("closed_positions", []) if isinstance(payload.get("closed_positions", []), list) else []
-    csv_path.parent.mkdir(parents=True, exist_ok=True)
-    if not rows:
-        csv_path.write_text("", encoding="utf-8-sig")
-        return csv_path
-    import csv
+def _paper_position_rows_from_json(root: Path, filename: str, keys: Iterable[str]) -> List[Dict[str, Any]]:
+    payload = _read_json(root / "paper_live" / filename)
+    if not payload:
+        return []
+    rows = _extract_rows(payload, keys)
+    if rows:
+        return rows
+    if isinstance(payload, list):
+        return [dict(row) for row in payload if isinstance(row, Mapping)]
+    return []
 
+PAPER_POSITION_CSV_FIELDS = [
+    "position_id", "token_address", "token_symbol", "代币地址", "代币符号", "status",
+    "paper_entry_time", "entry_time", "paper_entry_price", "entry_price", "entry_quote_source",
+    "paper_size_sol", "position_sol", "paper_size_usd", "estimated_token_amount",
+    "candidate_discovered_at", "discovery_market_cap_usd", "signal_time", "signal_level", "signal_type",
+    "signal_market_cap_usd", "wallet_decision_time", "wallet_structure_status", "wallet_structure_score",
+    "wallet_risk_score", "counterparty_pressure_score", "data_quality_score",
+    "entry_market_cap_usd", "entry_liquidity_usd", "entry_holder_count",
+    "entry_delay_from_discovery_sec", "entry_delay_from_signal_sec",
+    "entry_market_cap_change_from_discovery_pct", "entry_market_cap_change_from_signal_pct",
+    "market_cap_context_status", "wallet_exit_action", "wallet_exit_trigger_time", "wallet_exit_trigger_type",
+    "shadow_hold_tracking", "shadow_hold_price_15m", "shadow_hold_price_30m", "shadow_hold_price_60m",
+    "missed_profit_pct", "avoided_drawdown_pct", "false_exit_flag", "最终收益率_pct", "exit_reason",
+]
+
+
+def _write_rows_csv(path: Path, rows: List[Mapping[str, Any]], default_fieldnames: Optional[List[str]] = None) -> str:
+    path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames: List[str] = []
+    for key in default_fieldnames or []:
+        key_str = str(key)
+        if key_str not in fieldnames:
+            fieldnames.append(key_str)
     for row in rows:
         for key in row:
-            if key not in fieldnames:
-                fieldnames.append(key)
-    with csv_path.open("w", encoding="utf-8-sig", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+            key_str = str(key)
+            if key_str not in fieldnames:
+                fieldnames.append(key_str)
+    with path.open("w", encoding="utf-8-sig", newline="") as f:
+        if not fieldnames:
+            f.write("")
+            return str(path)
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
-        writer.writerows(rows)
-    return csv_path
+        for row in rows:
+            writer.writerow({str(key): value for key, value in row.items()})
+    return str(path)
+
+
+def sync_paper_position_csvs(root: str | Path) -> Dict[str, str]:
+    """从 paper_positions_open/closed.json 重建 CSV，避免日报/面板读取旧表。
+
+    JSON 是 paper live runner 的权威仓位源；每轮主流程结束后强制重建 CSV。
+    本函数只做文件格式同步，不改变 paper 仓位、不执行真实 swap。
+    """
+
+    base = Path(root)
+    open_rows = _paper_position_rows_from_json(base, "paper_positions_open.json", ("open_positions", "开放仓位", "positions"))
+    closed_rows = _paper_position_rows_from_json(base, "paper_positions_closed.json", ("closed_positions", "关闭仓位", "positions"))
+    paper_dir = base / "paper_live"
+    return {
+        "open_positions_csv": _write_rows_csv(paper_dir / "paper_positions_open.csv", open_rows, PAPER_POSITION_CSV_FIELDS),
+        "closed_positions_csv": _write_rows_csv(paper_dir / "paper_positions_closed.csv", closed_rows, PAPER_POSITION_CSV_FIELDS),
+    }
+
+
+def _paper_closed_csv_path(root: Path) -> Path:
+    return Path(sync_paper_position_csvs(root)["closed_positions_csv"])
 
 
 def run_live_once(
@@ -507,9 +585,12 @@ def run_live_once(
         output_dir=root / "paper_live",
         wallet_structure_dir=wallet_structure_dir,
     )
+    paper_paths = {**paper_paths, **sync_paper_position_csvs(root)}
+    paper_case_paths = build_case_files(paper_dir=root / "paper_live", base_dir=root, output_dir=root / "paper_live" / "case_files")
+    paper_paths = {**paper_paths, **paper_case_paths}
 
     report_paths = build_wallet_structure_daily_report(
-        closed_positions_path=_paper_closed_csv_path(root),
+        closed_positions_path=Path(paper_paths["closed_positions_csv"]),
         failure_attribution_path=root / "paper_live" / "failure_attribution.jsonl",
         output_dir=root / "reports",
         report_date=report_date_from_now(run_time),
@@ -532,7 +613,22 @@ def run_live_once(
     live_state = _write_live_state(root, statuses, run_time)
     live_board = _write_live_board(root, statuses, run_time, paper_paths, report_paths)
     dashboard = write_dashboard(base_dir=root)
+    site_paths: Dict[str, str] = {}
+    try:
+        site_paths = _write_static_dashboard_site(root)
+    except Exception as exc:  # pragma: no cover - defensive runtime path
+        _append_jsonl(event_path, {"time": run_time, "event_type": "STATIC_DASHBOARD_SITE_ERROR", "level": "ERROR", "message": str(exc), "scope_note": "site 生成失败不影响主流程；不执行真实 swap。"})
     latest_events = _write_latest_events(root)
+    unified_paths: Dict[str, str] = {}
+    try:
+        unified_result = build_unified_indexes(root)
+        unified_paths = {
+            "unified_index_dir": unified_result.get("index_dir", ""),
+            "telegram_callback_index_json": str(root / "index" / "telegram_callback_index.json"),
+            "system_index_json": str(root / "index" / "system_index.json"),
+        }
+    except Exception as exc:  # pragma: no cover - defensive runtime path
+        _append_jsonl(event_path, {"time": run_time, "event_type": "UNIFIED_INDEX_REFRESH_ERROR", "level": "ERROR", "message": str(exc), "scope_note": "统一索引刷新失败不影响主流程；不执行真实 swap。"})
 
     _append_jsonl(event_path, {"time": run_time, "event_type": "LIVE_RUN_FINISHED", "level": "INFO", "message": "SIKK 主入口完成一轮运行", "scope_note": "不执行真实 swap。"})
 
@@ -576,9 +672,11 @@ def run_live_once(
                 "live_state_json": live_state,
                 "live_board_md": live_board,
                 "live_dashboard_html": dashboard,
+                **site_paths,
                 "events_jsonl": str(event_path),
                 "latest_events_md": latest_events,
                 "token_status_md": token_status_md,
+                **unified_paths,
             },
         },
         "说明": "统一主入口只做候选发现、K线/钱包结构/quote-security、纸面交易、状态观测和日报复盘，不执行真实 swap。notification/confirmation/real swap 默认关闭。",
@@ -591,11 +689,13 @@ def run_live_once(
         "live_state_json": live_state,
         "live_board_md": live_board,
         "live_dashboard_html": dashboard,
+        **site_paths,
         "events_jsonl": str(event_path),
         "latest_events_md": latest_events,
         "paper_daily_report_md": paper_paths.get("daily_report_md", ""),
         "wallet_daily_report_md": report_paths.get("summary_md", ""),
         "token_status_md": token_status_md,
+        **unified_paths,
     }
 
 

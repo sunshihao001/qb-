@@ -306,6 +306,125 @@ def _replay_unavailable(open_rows: Sequence[Mapping[str, Any]], closed_rows: Seq
     return {"missing_field_counts": dict(counter), "positions_with_unavailable_replay_fields": per_token[:50], "failure_attribution_event_count": len(failure_rows)}
 
 
+def _wallet_status_value(row: Mapping[str, Any]) -> str:
+    return str(row.get("wallet_structure_status") or row.get("钱包结构结论") or row.get("data_quality_status") or "")
+
+
+def _wallet_effect_value(row: Mapping[str, Any]) -> str:
+    return str(row.get("wallet_gate_effect") or row.get("paper_gate_effect") or row.get("钱包门禁效果") or "")
+
+
+def _is_wallet_missing_or_degraded(row: Mapping[str, Any]) -> bool:
+    status = _wallet_status_value(row)
+    effect = _wallet_effect_value(row)
+    return any(x in (status + effect).upper() for x in ["MISSING", "DEGRADED", "NO_WALLET_INPUT", "BYPASS", "未接入"])
+
+
+def _wallet_coverage_diagnostics(candidate_count: int, state_rows: Sequence[Mapping[str, Any]], wallet_rows: Sequence[Mapping[str, Any]], missing_files: Sequence[str]) -> Dict[str, Any]:
+    """Summarize wallet-structure coverage as an actionable repair diagnosis."""
+    wallet_by_token = {_token(row): row for row in wallet_rows if _token(row)}
+    state_by_token = {_token(row): row for row in state_rows if _token(row)}
+    universe = sorted(set(wallet_by_token) | set(state_by_token))
+    denominator = candidate_count or len(universe)
+    missing_items: List[Dict[str, Any]] = []
+    covered = 0
+    for token in universe:
+        row = wallet_by_token.get(token) or state_by_token.get(token) or {}
+        status = _wallet_status_value(row)
+        effect = _wallet_effect_value(row)
+        if not _is_wallet_missing_or_degraded(row) and status not in {"", "MISSING", "未接入", "WALLET_UNKNOWN"}:
+            covered += 1
+            continue
+        reason = effect or status or "NO_WALLET_INPUT"
+        missing_items.append({
+            "token": token,
+            "symbol": _symbol(row),
+            "status": status or "MISSING",
+            "reason": reason,
+            "state": row.get("当前状态") or row.get("current_state") or "",
+        })
+    missing_count = max(denominator - covered, len(missing_items)) if denominator else len(missing_items)
+    coverage_pct = round(covered / denominator * 100.0, 4) if denominator else 0.0
+    missing_pct = round(100.0 - coverage_pct, 4) if denominator else 0.0
+    if missing_pct >= 50 or missing_count >= 20:
+        level = "P0_CRITICAL"
+    elif missing_pct >= 25 or missing_count >= 5:
+        level = "P1_HIGH"
+    elif missing_count:
+        level = "P2_MEDIUM"
+    else:
+        level = "OK"
+    reason_counter = Counter(str(item["reason"] or "UNKNOWN") for item in missing_items)
+    repair_plan = [
+        "检查 wallet_structure/candidate_wallet_structure_summary.json 是否由 sikk_live_run.py 单入口生成，禁止用空 summary 覆盖旧结果。",
+        "逐 token 核对 wallet_structure/<token>/wallet_structure_decision.json、early_wallet_raw.csv、wallet_classification.csv、candidate_groups.csv 是否存在。",
+        "缺数据时显式写 data_quality_status=MISSING/DEGRADED、reason_codes、missing_fields，不允许空白绕过。",
+        "MISSING 只进入 OBSERVE/FIX_DATA_SOURCE，不放宽纸面入场或真实交易确认。",
+    ]
+    if not any("wallet_structure" in str(p) for p in missing_files):
+        repair_plan.append("若文件存在但覆盖率低，优先排查 token 地址 join 键：token_address/代币地址/mint 是否不一致。")
+    return {
+        "coverage_level": level,
+        "candidate_count": denominator,
+        "wallet_covered_count": covered,
+        "wallet_missing_count": missing_count,
+        "wallet_coverage_pct": coverage_pct,
+        "wallet_missing_pct": missing_pct,
+        "top_missing_reasons": [{"reason": k, "count": v} for k, v in reason_counter.most_common(10)],
+        "sample_missing_tokens": missing_items[:30],
+        "repair_plan": repair_plan,
+    }
+
+
+def _ranked_gaps(payload: Mapping[str, Any]) -> List[Dict[str, Any]]:
+    gaps: List[Dict[str, Any]] = []
+    diag = payload.get("wallet_coverage_diagnostics") or {}
+    if diag.get("coverage_level") in {"P0_CRITICAL", "P1_HIGH"}:
+        gaps.append({
+            "priority": "P0" if diag.get("coverage_level") == "P0_CRITICAL" else "P1",
+            "title": "钱包结构大面积未接入",
+            "impact": "阻断纸面入场质量与退出归因；不能靠放宽门禁解决。",
+            "evidence": f"覆盖率 {diag.get('wallet_coverage_pct')}%，缺失 {diag.get('wallet_missing_count')}/{diag.get('candidate_count')}",
+            "fix": "先修 wallet_structure 输出与 token join，再刷新 live_state/dashboard。",
+        })
+    dash_missing = payload.get("dashboard_missing_fields", {}).get("missing_field_counts") or {}
+    if dash_missing:
+        top = sorted(dash_missing.items(), key=lambda x: -x[1])[:5]
+        gaps.append({
+            "priority": "P1",
+            "title": "live_state/dashboard 事件级字段缺失",
+            "impact": "Visual Console 无法回答发现→信号→钱包→入场→退出链路。",
+            "evidence": ", ".join(f"{k}={v}" for k, v in top),
+            "fix": "补齐 discovery/signal/wallet/paper/market_cap/chip_control 字段并同步 site/dashboard_data.json。",
+        })
+    replay_missing = payload.get("replay_unavailable_fields", {}).get("missing_field_counts") or {}
+    if replay_missing:
+        top = sorted(replay_missing.items(), key=lambda x: -x[1])[:5]
+        gaps.append({
+            "priority": "P1",
+            "title": "paper/case file 复盘字段缺失",
+            "impact": "纸面仓位只能作为 PnL 记录，不能作为高质量策略复盘样本。",
+            "evidence": ", ".join(f"{k}={v}" for k, v in top),
+            "fix": "补 Paper Entry Snapshot、退出证据、failure_type/failure_reason、case file 质量等级。",
+        })
+    if payload.get("state_machine_conflicts"):
+        gaps.append({
+            "priority": "P2",
+            "title": "状态机与纸面仓位冲突",
+            "impact": "OPEN/CLOSED/blocked 状态不一致会污染 dashboard 与日报统计。",
+            "evidence": f"冲突 {len(payload.get('state_machine_conflicts') or [])} 条",
+            "fix": "统一 open/closed 索引，开放仓位不得同时处于终态。",
+        })
+    gaps.append({
+        "priority": "SAFETY",
+        "title": "真实交易默认关闭",
+        "impact": "所有修复必须保持 paper-only；live/real 仅进入确认层。",
+        "evidence": payload.get("readonly_note", "只读审计"),
+        "fix": "不新增 swap/签名/broadcast/私钥读取路径。",
+    })
+    return gaps
+
+
 def _recommendations(payload: Mapping[str, Any]) -> List[str]:
     recs: List[str] = []
     if payload["missing_files"]:
@@ -365,6 +484,23 @@ def _markdown(payload: Mapping[str, Any]) -> str:
         lines.append(f"- {key}：{value}")
     if not payload["replay_unavailable_fields"].get("missing_field_counts"):
         lines.append("- 无")
+    lines.extend(["", "## 缺口优先级"])
+    for gap in payload.get("ranked_gaps", []):
+        lines.append(f"- {gap.get('priority')}｜{gap.get('title')}：{gap.get('evidence')}；修复：{gap.get('fix')}")
+    if not payload.get("ranked_gaps"):
+        lines.append("- 无")
+    diag = payload.get("wallet_coverage_diagnostics", {})
+    lines.extend([
+        "",
+        "## 钱包结构覆盖诊断",
+        f"- 等级：{diag.get('coverage_level', 'UNKNOWN')}",
+        f"- 覆盖：{diag.get('wallet_covered_count', 0)}/{diag.get('candidate_count', 0)}（{diag.get('wallet_coverage_pct', 0)}%）",
+        f"- 缺失：{diag.get('wallet_missing_count', 0)}（{diag.get('wallet_missing_pct', 0)}%）",
+    ])
+    for item in diag.get("top_missing_reasons", []):
+        lines.append(f"- 缺失原因 {item.get('reason')}：{item.get('count')}")
+    for step in diag.get("repair_plan", []):
+        lines.append(f"- 修复步骤：{step}")
     lines.extend(["", "## 下一步建议"])
     lines.extend([f"- {rec}" for rec in payload["recommendations"]])
     return "\n".join(lines) + "\n"
@@ -440,28 +576,32 @@ def run_system_audit(*, live_run_dir: str | Path = DEFAULT_LIVE_RUN_DIR, output_
 
     wallet_bypass_or_degraded = []
     for row in wallet_rows + state_rows:
-        status = str(row.get("wallet_structure_status") or row.get("钱包结构结论") or row.get("data_quality_status") or "")
-        effect = str(row.get("wallet_gate_effect") or row.get("paper_gate_effect") or row.get("钱包门禁效果") or "")
+        status = _wallet_status_value(row)
+        effect = _wallet_effect_value(row)
         reason = row.get("reason") or row.get("钱包结构原因") or row.get("降级原因") or row.get("reason_codes") or ""
-        if any(x in (status + effect).upper() for x in ["MISSING", "DEGRADED", "NO_WALLET_INPUT", "BYPASS", "未接入"]):
+        if _is_wallet_missing_or_degraded(row):
             wallet_bypass_or_degraded.append({"token": _token(row), "status": status, "effect": effect, "reason": reason})
 
+    candidate_count = len(candidate_rows) if candidate_rows else len(state_rows)
+    wallet_diag = _wallet_coverage_diagnostics(candidate_count, state_rows, wallet_rows, missing_files)
     payload: Dict[str, Any] = {
         "audit_time": _utc_now_text(),
         "live_run_dir": str(base),
         "paper_only": True,
         "readonly_note": "只读系统审计；不采集、不交易、不调用 gmgn_swap/gmgn_cooking、不广播、不 yolo。",
         "input_paths": {key: str(value) for key, value in paths.items()},
-        "candidate_count": len(candidate_rows) if candidate_rows else len(state_rows),
+        "candidate_count": candidate_count,
         "module_counts": module_counts,
         "missing_files": missing_files,
         "missing_fields": missing_fields,
         "stuck_tokens": stuck_tokens,
         "wallet_bypass_or_degraded": wallet_bypass_or_degraded,
+        "wallet_coverage_diagnostics": wallet_diag,
         "state_machine_conflicts": _detect_state_conflicts(state_rows, open_rows, closed_rows),
         "dashboard_missing_fields": _dashboard_missing(live_state_payload),
         "replay_unavailable_fields": _replay_unavailable(open_rows, closed_rows, failure_rows),
     }
+    payload["ranked_gaps"] = _ranked_gaps(payload)
     payload["recommendations"] = _recommendations(payload)
 
     json_path = out / "system_audit.json"

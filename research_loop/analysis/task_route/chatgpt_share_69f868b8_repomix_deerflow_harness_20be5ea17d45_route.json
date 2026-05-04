@@ -1,0 +1,25 @@
+{
+  "doc_id": "chatgpt_share_69f868b8_repomix_deerflow_harness_20be5ea17d45",
+  "passport_json": "research_loop/corpus/passports/chatgpt_share_69f868b8_repomix_deerflow_harness_20be5ea17d45_passport.json",
+  "supported_lenses": [
+    "SCAN",
+    "DEEP",
+    "ANGLE",
+    "MIX",
+    "HYP",
+    "VOICES",
+    "CHALLENGE",
+    "TIMELINE",
+    "STATUS",
+    "OVERVIEW",
+    "ARTEFACT"
+  ],
+  "selected_lenses": [
+    "OVERVIEW",
+    "SCAN",
+    "ARTEFACT"
+  ],
+  "primary_lens": "OVERVIEW",
+  "why": "基于标题/摘要/标签/机制选择 OVERVIEW, SCAN, ARTEFACT",
+  "acceptance": "输出 route.json 供后续系统映射、gap detector、任务包生成使用"
+}

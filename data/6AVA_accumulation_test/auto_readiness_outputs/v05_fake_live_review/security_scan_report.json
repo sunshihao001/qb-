@@ -1,0 +1,41 @@
+{
+  "token": "6AVAUKa9uxQpruHZUinFECpXEh1usRVtzQWK8N2wpump",
+  "chain": "sol",
+  "snapshot_time": "2026-04-30T00:00:00Z",
+  "scan_status": "AVAILABLE",
+  "source_count": 1,
+  "sources": [
+    "OKX"
+  ],
+  "scan_results": [
+    {
+      "source": "OKX",
+      "token_address": "6AVAUKa9uxQpruHZUinFECpXEh1usRVtzQWK8N2wpump",
+      "token_side": "buy",
+      "risk_level": "LOW",
+      "triggered_labels": [],
+      "raw": {
+        "data": [
+          {
+            "chainId": "501",
+            "tokenAddress": "6AVAUKa9uxQpruHZUinFECpXEh1usRVtzQWK8N2wpump",
+            "riskLevel": "LOW",
+            "isHoneypot": false,
+            "isLowLiquidity": false,
+            "isPump": false
+          }
+        ]
+      }
+    }
+  ],
+  "pre_trade_security_decision": {
+    "permission": "ALLOW",
+    "risk_level": "LOW",
+    "requires_user_confirmation": false,
+    "reasons": [
+      "多源安全扫描未发现 HIGH/CRITICAL 买入风险"
+    ],
+    "source_count": 1
+  },
+  "scope_note": "安全扫描报告只用于交易前审查；扫描缺失不是安全通过。"
+}

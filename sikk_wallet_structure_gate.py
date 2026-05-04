@@ -622,7 +622,23 @@ def evaluate_and_write_wallet_structure(*, token: str, symbol: str = "", wallet_
             "备注": "风险观察",
         })
 
+    wallet_source_time = ""
+    source_candidates = []
+    for row in rows:
+        value = _text(row, "wallet_source_time", "source_time", "snapshot_time", "updated_at", "last_seen_at", "首次买入时间", "first_buy_time")
+        if value:
+            source_candidates.append(value)
+    if source_candidates:
+        wallet_source_time = max(source_candidates)
     decision_payload = decision.to_dict()
+    decision_payload.update({
+        "wallet_snapshot_time": now,
+        "wallet_decision_created_at": now,
+        "wallet_delta_time": now,
+        "wallet_source_time": wallet_source_time or now,
+        "wallet_refresh_started_at": now,
+        "wallet_refresh_finished_at": now,
+    })
     decision_payload["生成时间"] = now
     decision_payload["模块"] = "SIKK-SOL v1.0 钱包结构门禁"
     decision_json = out / "wallet_structure_decision.json"
