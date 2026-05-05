@@ -1,0 +1,524 @@
+2026-05-05 01:21:07,625 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-05-05 01:21:07,626 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-05-05 01:21:07,629 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-05-05 01:21:07,969 INFO hermes_cli.plugins: Plugin discovery complete: 9 found, 6 enabled
+2026-05-05 01:21:09,134 INFO tools.tirith_security: tirith not found — downloading latest release for x86_64-unknown-linux-gnu...
+2026-05-05 01:21:09,140 INFO gateway.run: Starting Hermes Gateway...
+2026-05-05 01:21:09,140 INFO gateway.run: Session storage: /root/.hermes/profiles/jiegoufenxibot/sessions
+2026-05-05 01:21:09,141 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-05-05 01:21:09,145 INFO gateway.run: Active profile: jiegoufenxibot
+2026-05-05 01:21:09,216 INFO gateway.run: Connecting to api_server...
+2026-05-05 01:21:09,220 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:21:09,220 WARNING gateway.run: ✗ api_server failed to connect
+2026-05-05 01:21:09,221 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-05-05 01:21:09,644 INFO gateway.run: Connecting to telegram...
+2026-05-05 01:21:09,764 INFO gateway.platforms.telegram_network: DoH discovery yielded no new IPs (system DNS: 149.154.166.110); using seed fallback IPs 149.154.167.220
+2026-05-05 01:21:09,764 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.167.220
+2026-05-05 01:21:09,764 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.167.220
+2026-05-05 01:21:10,358 INFO tools.tirith_security: cosign not on PATH — installing tirith with SHA-256 verification only (install cosign for full supply chain verification)
+2026-05-05 01:21:10,482 ERROR gateway.platforms.telegram: [Telegram] Failed to connect to Telegram: The token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 857, in initialize
+    await self.get_me()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 2008, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 990, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.InvalidToken: [REDACTED] Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/platforms/telegram.py", line 968, in connect
+    await self._app.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 489, in initialize
+    await self.bot.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 316, in initialize
+    await super().initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 860, in initialize
+    raise InvalidToken(f"The token `{self._token}` was rejected by the server.") from exc
+telegram.error.InvalidToken: [REDACTED] token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+2026-05-05 01:21:10,490 INFO tools.tirith_security: tirith installed to /root/.hermes/profiles/jiegoufenxibot/bin/tirith (SHA-256 only)
+2026-05-05 01:21:10,494 WARNING gateway.run: ✗ telegram failed to connect
+2026-05-05 01:21:10,495 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-05-05 01:21:10,496 ERROR gateway.run: Gateway failed to connect any configured messaging platform: api_server: failed to connect; telegram: Telegram startup failed: The token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+2026-05-05 01:22:11,619 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-05-05 01:22:11,620 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-05-05 01:22:11,622 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-05-05 01:22:12,015 INFO hermes_cli.plugins: Plugin discovery complete: 9 found, 6 enabled
+2026-05-05 01:22:12,773 INFO gateway.run: Starting Hermes Gateway...
+2026-05-05 01:22:12,773 INFO gateway.run: Session storage: /root/.hermes/profiles/jiegoufenxibot/sessions
+2026-05-05 01:22:12,773 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-05-05 01:22:12,774 INFO gateway.run: Active profile: jiegoufenxibot
+2026-05-05 01:22:12,812 INFO gateway.run: Connecting to api_server...
+2026-05-05 01:22:12,814 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:22:12,815 WARNING gateway.run: ✗ api_server failed to connect
+2026-05-05 01:22:12,817 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-05-05 01:22:13,091 INFO gateway.run: Connecting to telegram...
+2026-05-05 01:22:13,187 INFO gateway.platforms.telegram_network: DoH discovery yielded no new IPs (system DNS: 149.154.166.110); using seed fallback IPs 149.154.167.220
+2026-05-05 01:22:13,187 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.167.220
+2026-05-05 01:22:13,188 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.167.220
+2026-05-05 01:22:13,903 ERROR gateway.platforms.telegram: [Telegram] Failed to connect to Telegram: The token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 857, in initialize
+    await self.get_me()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 2008, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 990, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.InvalidToken: [REDACTED] Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/platforms/telegram.py", line 968, in connect
+    await self._app.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 489, in initialize
+    await self.bot.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 316, in initialize
+    await super().initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 860, in initialize
+    raise InvalidToken(f"The token `{self._token}` was rejected by the server.") from exc
+telegram.error.InvalidToken: [REDACTED] token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+2026-05-05 01:22:13,910 WARNING gateway.run: ✗ telegram failed to connect
+2026-05-05 01:22:13,910 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-05-05 01:22:13,912 ERROR gateway.run: Gateway failed to connect any configured messaging platform: api_server: failed to connect; telegram: Telegram startup failed: The token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+2026-05-05 01:23:37,410 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-05-05 01:23:37,411 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-05-05 01:23:37,413 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-05-05 01:23:37,700 INFO hermes_cli.plugins: Plugin discovery complete: 9 found, 6 enabled
+2026-05-05 01:23:38,367 INFO gateway.run: Starting Hermes Gateway...
+2026-05-05 01:23:38,368 INFO gateway.run: Session storage: /root/.hermes/profiles/jiegoufenxibot/sessions
+2026-05-05 01:23:38,368 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-05-05 01:23:38,370 INFO gateway.run: Active profile: jiegoufenxibot
+2026-05-05 01:23:38,397 INFO gateway.run: Connecting to api_server...
+2026-05-05 01:23:38,399 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:23:38,399 WARNING gateway.run: ✗ api_server failed to connect
+2026-05-05 01:23:38,406 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-05-05 01:23:38,519 INFO gateway.run: Connecting to telegram...
+2026-05-05 01:23:38,578 INFO gateway.platforms.telegram_network: DoH discovery yielded no new IPs (system DNS: 149.154.166.110); using seed fallback IPs 149.154.167.220
+2026-05-05 01:23:38,578 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.167.220
+2026-05-05 01:23:38,579 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.167.220
+2026-05-05 01:23:39,288 ERROR gateway.platforms.telegram: [Telegram] Failed to connect to Telegram: The token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 857, in initialize
+    await self.get_me()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 2008, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 990, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.InvalidToken: [REDACTED] Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/platforms/telegram.py", line 968, in connect
+    await self._app.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 489, in initialize
+    await self.bot.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 316, in initialize
+    await super().initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 860, in initialize
+    raise InvalidToken(f"The token `{self._token}` was rejected by the server.") from exc
+telegram.error.InvalidToken: [REDACTED] token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+2026-05-05 01:23:39,294 WARNING gateway.run: ✗ telegram failed to connect
+2026-05-05 01:23:39,295 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-05-05 01:23:39,299 ERROR gateway.run: Gateway failed to connect any configured messaging platform: api_server: failed to connect; telegram: Telegram startup failed: The token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+2026-05-05 01:25:34,202 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-05-05 01:25:34,202 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-05-05 01:25:34,203 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-05-05 01:25:34,359 INFO hermes_cli.plugins: Plugin discovery complete: 9 found, 6 enabled
+2026-05-05 01:25:34,897 INFO gateway.run: Starting Hermes Gateway...
+2026-05-05 01:25:34,898 INFO gateway.run: Session storage: /root/.hermes/profiles/jiegoufenxibot/sessions
+2026-05-05 01:25:34,898 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-05-05 01:25:34,900 INFO gateway.run: Active profile: jiegoufenxibot
+2026-05-05 01:25:34,923 INFO gateway.run: Connecting to api_server...
+2026-05-05 01:25:34,925 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:25:34,925 WARNING gateway.run: ✗ api_server failed to connect
+2026-05-05 01:25:34,927 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-05-05 01:25:35,059 INFO gateway.run: Connecting to telegram...
+2026-05-05 01:25:35,156 INFO gateway.platforms.telegram_network: DoH discovery yielded no new IPs (system DNS: 149.154.166.110); using seed fallback IPs 149.154.167.220
+2026-05-05 01:25:35,157 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.167.220
+2026-05-05 01:25:35,157 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.167.220
+2026-05-05 01:25:35,868 ERROR gateway.platforms.telegram: [Telegram] Failed to connect to Telegram: The token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 857, in initialize
+    await self.get_me()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 2008, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 990, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.InvalidToken: [REDACTED] Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/platforms/telegram.py", line 968, in connect
+    await self._app.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 489, in initialize
+    await self.bot.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 316, in initialize
+    await super().initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 860, in initialize
+    raise InvalidToken(f"The token `{self._token}` was rejected by the server.") from exc
+telegram.error.InvalidToken: [REDACTED] token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+2026-05-05 01:25:35,876 WARNING gateway.run: ✗ telegram failed to connect
+2026-05-05 01:25:35,877 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-05-05 01:25:35,880 ERROR gateway.run: Gateway failed to connect any configured messaging platform: api_server: failed to connect; telegram: Telegram startup failed: The token `AAH8G44KSmXWE5xDtGFPPNm3pBcMa88tBgY` was rejected by the server.
+2026-05-05 01:26:33,386 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-05-05 01:26:33,387 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-05-05 01:26:33,388 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-05-05 01:26:33,599 INFO hermes_cli.plugins: Plugin discovery complete: 9 found, 6 enabled
+2026-05-05 01:26:34,175 INFO gateway.run: Starting Hermes Gateway...
+2026-05-05 01:26:34,175 INFO gateway.run: Session storage: /root/.hermes/profiles/jiegoufenxibot/sessions
+2026-05-05 01:26:34,175 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-05-05 01:26:34,178 INFO gateway.run: Active profile: jiegoufenxibot
+2026-05-05 01:26:34,218 INFO gateway.run: Connecting to api_server...
+2026-05-05 01:26:34,220 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:26:34,221 WARNING gateway.run: ✗ api_server failed to connect
+2026-05-05 01:26:34,223 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-05-05 01:26:34,457 INFO gateway.run: Connecting to telegram...
+2026-05-05 01:26:34,560 INFO gateway.platforms.telegram_network: DoH discovery yielded no new IPs (system DNS: 149.154.166.110); using seed fallback IPs 149.154.167.220
+2026-05-05 01:26:34,560 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.167.220
+2026-05-05 01:26:34,560 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.167.220
+2026-05-05 01:26:35,286 ERROR gateway.platforms.telegram: [Telegram] Failed to connect to Telegram: The token `AAGtWQxlpEHJmi9E1wdPSckobA7j9uc8GvY` was rejected by the server.
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 857, in initialize
+    await self.get_me()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 2008, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 990, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.InvalidToken: [REDACTED] Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/platforms/telegram.py", line 968, in connect
+    await self._app.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 489, in initialize
+    await self.bot.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 316, in initialize
+    await super().initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 860, in initialize
+    raise InvalidToken(f"The token `{self._token}` was rejected by the server.") from exc
+telegram.error.InvalidToken: [REDACTED] token `AAGtWQxlpEHJmi9E1wdPSckobA7j9uc8GvY` was rejected by the server.
+2026-05-05 01:26:35,298 WARNING gateway.run: ✗ telegram failed to connect
+2026-05-05 01:26:35,299 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-05-05 01:26:35,301 ERROR gateway.run: Gateway failed to connect any configured messaging platform: api_server: failed to connect; telegram: Telegram startup failed: The token `AAGtWQxlpEHJmi9E1wdPSckobA7j9uc8GvY` was rejected by the server.
+2026-05-05 01:29:13,863 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-05-05 01:29:13,864 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-05-05 01:29:13,865 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-05-05 01:29:14,146 INFO hermes_cli.plugins: Plugin discovery complete: 9 found, 6 enabled
+2026-05-05 01:29:14,899 INFO gateway.run: Starting Hermes Gateway...
+2026-05-05 01:29:14,900 INFO gateway.run: Session storage: /root/.hermes/profiles/jiegoufenxibot/sessions
+2026-05-05 01:29:14,900 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-05-05 01:29:14,902 INFO gateway.run: Active profile: jiegoufenxibot
+2026-05-05 01:29:14,933 INFO gateway.run: Connecting to api_server...
+2026-05-05 01:29:14,936 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:29:14,937 WARNING gateway.run: ✗ api_server failed to connect
+2026-05-05 01:29:14,939 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-05-05 01:29:15,137 INFO gateway.run: Connecting to telegram...
+2026-05-05 01:29:15,193 INFO gateway.platforms.telegram_network: DoH discovery yielded no new IPs (system DNS: 149.154.166.110); using seed fallback IPs 149.154.167.220
+2026-05-05 01:29:15,193 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.167.220
+2026-05-05 01:29:15,193 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.167.220
+2026-05-05 01:29:15,894 ERROR gateway.platforms.telegram: [Telegram] Failed to connect to Telegram: The token `AAGtWQxlpEHJmi9E1wdPSckobA7j9uc8GvY` was rejected by the server.
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 857, in initialize
+    await self.get_me()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 2008, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 990, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.InvalidToken: [REDACTED] Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/platforms/telegram.py", line 968, in connect
+    await self._app.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 489, in initialize
+    await self.bot.initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 316, in initialize
+    await super().initialize()
+  File "/usr/local/lib/hermes-agent/venv/lib/python3.11/site-packages/telegram/_bot.py", line 860, in initialize
+    raise InvalidToken(f"The token `{self._token}` was rejected by the server.") from exc
+telegram.error.InvalidToken: [REDACTED] token `AAGtWQxlpEHJmi9E1wdPSckobA7j9uc8GvY` was rejected by the server.
+2026-05-05 01:29:15,903 WARNING gateway.run: ✗ telegram failed to connect
+2026-05-05 01:29:15,904 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-05-05 01:29:15,905 ERROR gateway.run: Gateway failed to connect any configured messaging platform: api_server: failed to connect; telegram: Telegram startup failed: The token `AAGtWQxlpEHJmi9E1wdPSckobA7j9uc8GvY` was rejected by the server.
+2026-05-05 01:29:42,917 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-05-05 01:29:42,918 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-05-05 01:29:42,919 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-05-05 01:29:43,168 INFO hermes_cli.plugins: Plugin discovery complete: 9 found, 6 enabled
+2026-05-05 01:29:43,795 INFO gateway.run: Starting Hermes Gateway...
+2026-05-05 01:29:43,795 INFO gateway.run: Session storage: /root/.hermes/profiles/jiegoufenxibot/sessions
+2026-05-05 01:29:43,795 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-05-05 01:29:43,797 INFO gateway.run: Active profile: jiegoufenxibot
+2026-05-05 01:29:43,823 INFO gateway.run: Connecting to api_server...
+2026-05-05 01:29:43,831 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:29:43,832 WARNING gateway.run: ✗ api_server failed to connect
+2026-05-05 01:29:43,834 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-05-05 01:29:43,987 INFO gateway.run: Connecting to telegram...
+2026-05-05 01:29:44,077 INFO gateway.platforms.telegram_network: DoH discovery yielded no new IPs (system DNS: 149.154.166.110); using seed fallback IPs 149.154.167.220
+2026-05-05 01:29:44,078 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.167.220
+2026-05-05 01:29:44,078 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.167.220
+2026-05-05 01:29:48,316 INFO apscheduler.scheduler: Scheduler started
+2026-05-05 01:29:48,316 INFO telegram.ext.Application: Application started
+2026-05-05 01:29:49,526 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 100 commands registered, 22 hidden (over 100 limit). Use /commands for full list.
+2026-05-05 01:29:49,528 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-05-05 01:29:49,530 INFO gateway.run: ✓ telegram connected
+2026-05-05 01:29:49,532 INFO gateway.run: Gateway running with 1 platform(s)
+2026-05-05 01:29:49,536 INFO gateway.run: Channel directory built: 0 target(s)
+2026-05-05 01:29:49,536 INFO gateway.run: Starting reconnection watcher for 1 failed platform(s): api_server
+2026-05-05 01:29:49,536 INFO gateway.run: Press Ctrl+C to stop
+2026-05-05 01:29:49,539 INFO gateway.run: Cron ticker started (interval=60s)
+2026-05-05 01:29:54,543 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-05-05 01:30:01,943 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (2 chars)
+2026-05-05 01:30:01,957 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='你好'
+2026-05-05 01:30:02,892 INFO run_agent: Loaded environment variables from /root/.hermes/profiles/jiegoufenxibot/.env
+2026-05-05 01:30:04,863 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 01:30:05,593 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 01:30:05,598 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 01:30:05,599 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 01:30:06,425 INFO [20260505_013001_9b5553a7] agent.credential_pool: credential pool: marking Ai.input.im exhausted (status=401), rotating
+2026-05-05 01:30:06,427 INFO [20260505_013001_9b5553a7] agent.credential_pool: credential pool: rotated to model_config
+2026-05-05 01:30:10,031 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 01:30:10,031 INFO agent.auxiliary_client: Auxiliary title_generation: using auto (gpt-5.5) at https://ai.input.im/v1/
+2026-05-05 01:30:10,034 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=8.1s api_calls=1 response=62 chars
+2026-05-05 01:30:10,051 INFO gateway.platforms.base: [Telegram] Sending response (62 chars) to 7634169147
+2026-05-05 01:30:19,849 INFO gateway.run: Reconnecting api_server (attempt 2/20)...
+2026-05-05 01:30:19,852 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:30:19,855 INFO gateway.run: Reconnect api_server failed, next retry in 60s
+2026-05-05 01:31:19,932 INFO gateway.run: Reconnecting api_server (attempt 3/20)...
+2026-05-05 01:31:19,935 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:31:19,938 INFO gateway.run: Reconnect api_server failed, next retry in 120s
+2026-05-05 01:33:20,109 INFO gateway.run: Reconnecting api_server (attempt 4/20)...
+2026-05-05 01:33:20,112 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:33:20,114 INFO gateway.run: Reconnect api_server failed, next retry in 240s
+2026-05-05 01:37:20,455 INFO gateway.run: Reconnecting api_server (attempt 5/20)...
+2026-05-05 01:37:20,457 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:37:20,462 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 01:42:20,831 INFO gateway.run: Reconnecting api_server (attempt 6/20)...
+2026-05-05 01:42:20,834 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:42:20,838 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 01:47:21,243 INFO gateway.run: Reconnecting api_server (attempt 7/20)...
+2026-05-05 01:47:21,248 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:47:21,251 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 01:52:21,669 INFO gateway.run: Reconnecting api_server (attempt 8/20)...
+2026-05-05 01:52:21,672 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:52:21,676 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 01:57:22,122 INFO gateway.run: Reconnecting api_server (attempt 9/20)...
+2026-05-05 01:57:22,124 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 01:57:22,126 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:02:22,648 INFO gateway.run: Reconnecting api_server (attempt 10/20)...
+2026-05-05 02:02:22,653 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:02:22,694 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:07:23,130 INFO gateway.run: Reconnecting api_server (attempt 11/20)...
+2026-05-05 02:07:23,134 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:07:23,137 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:12:23,593 INFO gateway.run: Reconnecting api_server (attempt 12/20)...
+2026-05-05 02:12:23,597 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:12:23,602 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:17:24,018 INFO gateway.run: Reconnecting api_server (attempt 13/20)...
+2026-05-05 02:17:24,021 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:17:24,024 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:22:24,460 INFO gateway.run: Reconnecting api_server (attempt 14/20)...
+2026-05-05 02:22:24,463 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:22:24,476 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:27:24,895 INFO gateway.run: Reconnecting api_server (attempt 15/20)...
+2026-05-05 02:27:24,897 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:27:24,899 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:30:55,213 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:7634169147 (idle=3645s)
+2026-05-05 02:30:55,221 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-05-05 02:32:25,339 INFO gateway.run: Reconnecting api_server (attempt 16/20)...
+2026-05-05 02:32:25,340 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:32:25,343 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:37:25,783 INFO gateway.run: Reconnecting api_server (attempt 17/20)...
+2026-05-05 02:37:25,785 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:37:25,787 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:42:26,219 INFO gateway.run: Reconnecting api_server (attempt 18/20)...
+2026-05-05 02:42:26,221 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:42:26,224 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:47:26,664 INFO gateway.run: Reconnecting api_server (attempt 19/20)...
+2026-05-05 02:47:26,666 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:47:26,709 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:52:27,162 INFO gateway.run: Reconnecting api_server (attempt 20/20)...
+2026-05-05 02:52:27,167 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-05-05 02:52:27,195 INFO gateway.run: Reconnect api_server failed, next retry in 300s
+2026-05-05 02:57:27,592 WARNING gateway.run: Giving up reconnecting api_server after 20 attempts
+2026-05-05 03:08:55,305 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (3101 chars)
+2026-05-05 03:08:55,328 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='任务名称：Intel Bot 主导侧成本区与量化模型设计  目标： 在 Intel Structure Bot 中新增“主导侧成本区与量化结构推断层”。  核心'
+2026-05-05 03:08:58,224 INFO [20260505_013001_9b5553a7] agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:08:58,229 INFO [20260505_013001_9b5553a7] agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 03:08:58,230 INFO [20260505_013001_9b5553a7] agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:08:58,593 INFO [20260505_013001_9b5553a7] agent.credential_pool: credential pool: marking Ai.input.im exhausted (status=401), rotating
+2026-05-05 03:08:58,595 INFO [20260505_013001_9b5553a7] agent.credential_pool: credential pool: rotated to model_config
+2026-05-05 03:13:59,725 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=304.4s api_calls=14 response=1428 chars
+2026-05-05 03:13:59,731 INFO gateway.platforms.base: [Telegram] Sending response (1428 chars) to 7634169147
+2026-05-05 03:15:05,552 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (1 chars)
+2026-05-05 03:15:05,555 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='好'
+2026-05-05 03:15:05,612 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:15:05,690 INFO [20260505_013001_9b5553a7] agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:15:05,697 INFO [20260505_013001_9b5553a7] agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 03:15:05,698 INFO [20260505_013001_9b5553a7] agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:15:16,814 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=11.3s api_calls=1 response=122 chars
+2026-05-05 03:15:16,818 INFO gateway.platforms.base: [Telegram] Sending response (122 chars) to 7634169147
+2026-05-05 03:16:32,777 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (1 chars)
+2026-05-05 03:16:32,778 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='1'
+2026-05-05 03:16:32,791 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:18:41,978 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=129.2s api_calls=5 response=549 chars
+2026-05-05 03:18:41,983 INFO gateway.platforms.base: [Telegram] Sending response (549 chars) to 7634169147
+2026-05-05 03:34:44,692 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (2 chars)
+2026-05-05 03:34:44,696 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='都要'
+2026-05-05 03:34:44,930 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:36:08,089 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=83.4s api_calls=4 response=658 chars
+2026-05-05 03:36:08,094 INFO gateway.platforms.base: [Telegram] Sending response (658 chars) to 7634169147
+2026-05-05 03:39:56,836 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (2 chars)
+2026-05-05 03:39:56,840 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='都要'
+2026-05-05 03:39:57,074 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:41:51,749 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=114.9s api_calls=4 response=812 chars
+2026-05-05 03:41:51,773 INFO gateway.platforms.base: [Telegram] Sending response (812 chars) to 7634169147
+2026-05-05 03:49:09,858 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (16 chars)
+2026-05-05 03:49:09,863 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='好，下次能不能理论和代码一起实现'
+2026-05-05 03:49:10,507 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:49:20,830 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:49:20,833 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=11.0s api_calls=2 response=65 chars
+2026-05-05 03:49:20,835 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 03:49:20,836 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:49:20,838 INFO gateway.platforms.base: [Telegram] Sending response (65 chars) to 7634169147
+2026-05-05 03:52:04,946 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (276 chars)
+2026-05-05 03:52:04,950 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='原来的 Intel Bot 结构可以升级为：  1. 钱包事实层 2. 钱包基础分类层 3. 当前 token 行为层 4. 同源组与资金路径层 5. 主导侧成'
+2026-05-05 03:52:05,002 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:52:21,494 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=16.5s api_calls=2 response=309 chars
+2026-05-05 03:52:21,498 INFO gateway.platforms.base: [Telegram] Sending response (309 chars) to 7634169147
+2026-05-05 03:52:48,503 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (368 chars)
+2026-05-05 03:52:48,505 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='主导侧成本区怎么算  1. 单钱包成本  对主动买入钱包，计算：  钱包平均买入成本 = 总买入金额 / 总买入 token 数量  需要字段：  wallet'
+2026-05-05 03:52:48,532 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:56:05,056 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=196.6s api_calls=20 response=1816 chars
+2026-05-05 03:56:05,065 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:56:05,071 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 03:56:05,072 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 03:56:05,086 INFO gateway.platforms.base: [Telegram] Sending response (1816 chars) to 7634169147
+2026-05-05 04:01:04,474 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
+2026-05-05 04:01:04,481 INFO gateway.run: Session expiry done: 1 finalized
+2026-05-05 05:16:03,939 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (268 chars)
+2026-05-05 05:16:03,951 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='同源组成本  对疑似同源组，计算组成本：  同源组加权平均成本 = 组内所有主动买入金额总和 / 组内所有主动买入 token 数量总和  并计算成本区间：  '
+2026-05-05 05:16:05,503 INFO [20260505_013001_9b5553a7] agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 05:16:05,510 INFO [20260505_013001_9b5553a7] agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 05:16:05,511 INFO [20260505_013001_9b5553a7] agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 05:16:06,021 INFO [20260505_051603_fbb93d66] agent.credential_pool: credential pool: marking Ai.input.im exhausted (status=401), rotating
+2026-05-05 05:16:06,023 INFO [20260505_051603_fbb93d66] agent.credential_pool: credential pool: rotated to model_config
+2026-05-05 05:19:29,213 INFO agent.auxiliary_client: Auxiliary title_generation: using auto (gpt-5.5) at https://ai.input.im/v1/
+2026-05-05 05:19:29,226 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=205.3s api_calls=31 response=1251 chars
+2026-05-05 05:19:29,227 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 05:19:29,232 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 05:19:29,233 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 05:19:29,253 INFO gateway.platforms.base: [Telegram] Sending response (1251 chars) to 7634169147
+2026-05-05 05:20:36,368 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (276 chars)
+2026-05-05 05:20:36,371 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='早期结构钱包成本区  不是所有钱包都应该进入结构侧成本计算。  只纳入：  早期买入钱包 疑似临时执行钱包 疑似同源组成员 疑似核心持有钱包 高结果仍持有钱包 '
+2026-05-05 05:20:36,395 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 05:20:36,456 INFO [20260505_051603_fbb93d66] agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 05:20:36,462 INFO [20260505_051603_fbb93d66] agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 05:20:36,462 INFO [20260505_051603_fbb93d66] agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 05:32:05,241 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 05:32:05,247 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (gpt-5.5)
+2026-05-05 05:32:05,248 INFO agent.model_metadata: Could not detect context length for model 'gpt-5.5' at https://ai.input.im/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-05-05 05:32:05,263 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=688.9s api_calls=33 response=1213 chars
+2026-05-05 05:32:05,279 INFO gateway.platforms.base: [Telegram] Sending response (1213 chars) to 7634169147
