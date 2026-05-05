@@ -3,3 +3,5 @@ SIKK-GMGN wallet data package ewon_12eM87_20260429_025329 was retained as a wall
 The Telegram bot定位 is strictly SIKK-GMGN wallet data collection and analysis only: wallet data采集, wallet structure analysis, address profiling, fund-source analysis, token-source analysis, same-source relationship analysis, historical address recurrence queries, legacy report import/query, wallet intelligence report display, and Telegram query/export. The 2026-04-30 10:22 SIKK-GMGN retention package is legacy wallet intelligence data, not live data, and should be handled read-only under a legacy_wallet_system or wallet_intelligence/legacy path without affecting live wallet_structure or trading/state-machine logic.
 §
 SIKK Intel Bot 的定位是把 GMGN / OKX / 链上钱包数据整理成结构分析能直接使用的证据包；不负责判断主导侧动机、对手盘压力、派发是否完成，也不输出“确定庄家”。它只负责原始证据采集、时间对齐、字段标准化、来源可追踪，并基于字段证据、规则依据、证据等级和风险等级输出疑似结构角色；每个地址需保留原始交易证据、当前代币行为、地址画像、Token 来源、资金来源、GMGN 标签、盈亏结果、同源关系和历史复现等证据链。
+§
+SIKK Intel Bot 判断规则中，GMGN 捆绑标注 + 早期买入可直接标为“疑似庄家早期买入钱包”或高优先级疑似结构钱包；第 8 类 GMGN 标签不必过度保守，但仍应保留“疑似/候选”措辞和证据字段。

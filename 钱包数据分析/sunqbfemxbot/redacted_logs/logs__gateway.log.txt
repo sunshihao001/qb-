@@ -280,3 +280,271 @@
 2026-05-05 03:35:17,458 INFO gateway.platforms.base: [Telegram] Sending response (1022 chars) to 7634169147
 2026-05-05 03:36:22,937 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (563 chars)
 2026-05-05 03:36:22,938 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='、Source Bot 需要的上游数据源分层 第 1 类：候选与基础代币数据 用途：确定 token 是什么时候出现的、系统什么时候发现的、当前处于哪个生命周期'
+2026-05-05 03:40:28,113 INFO [20260504_235259_d312bf] gateway.run: Session split detected: 20260504_235259_d312bf → 20260505_033849_856f1e (compression)
+2026-05-05 03:40:28,143 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=245.2s api_calls=14 response=2132 chars
+2026-05-05 03:40:28,151 INFO gateway.platforms.base: [Telegram] Sending response (2132 chars) to 7634169147
+2026-05-05 03:50:30,937 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (408 chars)
+2026-05-05 03:50:30,940 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 2 类：K线与市场结构数据 用途：给盘型识别、成本区辅助、钱包 × 盘型匹配、二段扩张判断使用。 必须采集： Plain text token_addres'
+2026-05-05 03:52:46,823 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=135.9s api_calls=16 response=1597 chars
+2026-05-05 03:52:46,831 INFO gateway.platforms.base: [Telegram] Sending response (1597 chars) to 7634169147
+2026-05-05 03:53:55,938 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (449 chars)
+2026-05-05 03:53:55,940 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 3 类：Holder 快照数据 用途：判断筹码集中度、Top Holder、结构侧剩余筹码、筹码是否转移。 必须采集： Plain text token_a'
+2026-05-05 03:56:13,680 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=137.7s api_calls=22 response=2177 chars
+2026-05-05 03:56:13,699 INFO gateway.platforms.base: [Telegram] Sending response (2177 chars) to 7634169147
+2026-05-05 04:01:02,235 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
+2026-05-05 04:01:02,240 INFO gateway.run: Session expiry done: 1 finalized
+2026-05-05 05:14:58,119 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (564 chars)
+2026-05-05 05:14:58,126 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 4 类：钱包交易数据  用途：计算单钱包成本、买卖行为、派发进度、收益状态。  必须采集：  token_address wallet_address fi'
+2026-05-05 05:15:33,069 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=34.9s api_calls=2 response=6652 chars
+2026-05-05 05:15:33,080 INFO gateway.platforms.base: [Telegram] Sending response (6652 chars) to 7634169147
+2026-05-05 05:17:48,414 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (525 chars)
+2026-05-05 05:17:48,417 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 5 类：Token 转入 / 转出数据  用途：区分主动买入、Token 转入、分发接收、空投接收，避免成本区计算错误。  必须采集：  token_add'
+2026-05-05 05:18:41,051 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=52.6s api_calls=1 response=10932 chars
+2026-05-05 05:18:41,057 INFO gateway.platforms.base: [Telegram] Sending response (10932 chars) to 7634169147
+2026-05-05 05:21:15,388 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (537 chars)
+2026-05-05 05:21:15,391 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 6 类：资金来源数据  用途：判断买入前资金从哪里来，是否形成同源组。  必须采集：  wallet_address funding_source_addr'
+2026-05-05 05:24:12,428 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=177.0s api_calls=1 response=13006 chars
+2026-05-05 05:24:12,434 INFO gateway.platforms.base: [Telegram] Sending response (13006 chars) to 7634169147
+2026-05-05 05:29:59,052 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (357 chars)
+2026-05-05 05:29:59,056 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 7 类：卖后回流数据  用途：判断利润是否回收，是否存在核心回流节点。  必须采集：  wallet_address sell_tx_hash post_s'
+2026-05-05 05:30:54,358 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=55.3s api_calls=1 response=9884 chars
+2026-05-05 05:30:54,372 INFO gateway.platforms.base: [Telegram] Sending response (9884 chars) to 7634169147
+2026-05-05 05:44:18,495 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (230 chars)
+2026-05-05 05:44:18,501 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 8 类：GMGN 平台自己带有的标签比如有捆绑标志，或者钓鱼标注，kol标注，等等，与地址画像数据  用途：基础钱包分类、辅助证据，不作为唯一判断依据。  '
+2026-05-05 05:45:13,819 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=55.3s api_calls=2 response=9971 chars
+2026-05-05 05:45:13,823 INFO gateway.platforms.base: [Telegram] Sending response (9971 chars) to 7634169147
+2026-05-05 05:45:37,545 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (322 chars)
+2026-05-05 05:45:37,546 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 8 类：GMGN 平台自己带有的标签比如有捆绑标志，或者钓鱼标注，kol标注，等等，与地址画像数据  用途：基础钱包分类、辅助证据，不作为唯一判断依据。  '
+2026-05-05 05:46:37,746 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=60.2s api_calls=1 response=12216 chars
+2026-05-05 05:46:37,756 INFO gateway.platforms.base: [Telegram] Sending response (12216 chars) to 7634169147
+2026-05-05 05:47:17,180 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (41 chars)
+2026-05-05 05:47:17,181 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='判断标准不用作为这么严，因为有捆绑标注再加上早期买入基本就是疑似庄家早期买入钱包了'
+2026-05-05 05:48:00,430 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=43.2s api_calls=3 response=4025 chars
+2026-05-05 05:48:00,433 INFO gateway.platforms.base: [Telegram] Sending response (4025 chars) to 7634169147
+2026-05-05 05:59:32,385 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (449 chars)
+2026-05-05 05:59:32,390 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 9 类：同源组基础证据    Source Bot 不做最终同源组判断，但要提供同源组计算所需的基础证据。    必须采集：    wallet_addre'
+2026-05-05 06:00:33,442 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=61.1s api_calls=2 response=9952 chars
+2026-05-05 06:00:33,471 INFO gateway.platforms.base: [Telegram] Sending response (9952 chars) to 7634169147
+2026-05-05 06:02:34,301 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (426 chars)
+2026-05-05 06:02:34,326 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 10 类：多轮快照与 delta 数据  用途：判断结构是增强、维持、派发还是崩塌。  必须采集并保留：  snapshot_id snapshot_tim'
+2026-05-05 06:03:22,317 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=48.0s api_calls=2 response=9526 chars
+2026-05-05 06:03:22,323 INFO gateway.platforms.base: [Telegram] Sending response (9526 chars) to 7634169147
+2026-05-05 06:11:35,515 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (390 chars)
+2026-05-05 06:11:35,520 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='第 11 类：quote / security / liquidity 数据  用途：最终交易门禁和执行风控，不是 Intel Bot 直接交易判断，但结构分析'
+2026-05-05 06:12:29,373 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=53.9s api_calls=2 response=9189 chars
+2026-05-05 06:12:29,388 INFO gateway.platforms.base: [Telegram] Sending response (9189 chars) to 7634169147
+2026-05-05 06:26:47,898 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (599 chars)
+2026-05-05 06:26:47,901 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='四、Source Bot 应该输出哪些 normalized 文件  建议固定为 12 类：  1. candidates_normalized.json 2.'
+2026-05-05 06:27:37,066 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=49.2s api_calls=2 response=10596 chars
+2026-05-05 06:27:37,071 INFO gateway.platforms.base: [Telegram] Sending response (10596 chars) to 7634169147
+2026-05-05 06:29:14,934 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (375 chars)
+2026-05-05 06:29:14,937 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='五、每条 normalized 记录必须带的通用字段  无论是哪类数据，都要有：  token_address wallet_address（如适用） sour'
+2026-05-05 06:30:05,169 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=50.2s api_calls=2 response=9208 chars
+2026-05-05 06:30:05,180 INFO gateway.platforms.base: [Telegram] Sending response (9208 chars) to 7634169147
+2026-05-05 06:30:27,833 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (1 chars)
+2026-05-05 06:30:27,837 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='好'
+2026-05-05 06:30:33,339 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=5.5s api_calls=1 response=261 chars
+2026-05-05 06:30:33,344 INFO gateway.platforms.base: [Telegram] Sending response (261 chars) to 7634169147
+2026-05-05 06:30:43,386 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:30:48,396 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:30:53,404 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:30:58,410 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:31:03,416 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:31:07,402 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (162 chars)
+2026-05-05 06:31:07,404 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='六、结构分析模型对应的 Source Bot 准备工作  准备 1：字段字典  先建立：  docs/source_bot/source_to_structur'
+2026-05-05 06:31:07,405 ERROR gateway.platforms.base: [Telegram] Error handling message: [Errno 28] No space left on device
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/session.py", line 728, in _save
+    f.flush()
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/platforms/base.py", line 2710, in _process_message_background
+    response = await self._message_handler(event)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/gateway/run.py", line 5347, in _handle_message
+    _agent_result = await self._handle_message_with_agent(event, source, _quick_key, _run_generation)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/gateway/run.py", line 5608, in _handle_message_with_agent
+    session_entry = self.session_store.get_or_create_session(source)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/gateway/session.py", line 897, in get_or_create_session
+    self._save()
+  File "/usr/local/lib/hermes-agent/gateway/session.py", line 726, in _save
+    with os.fdopen(fd, "w", encoding="utf-8") as f:
+OSError: [Errno 28] No space left on device
+2026-05-05 06:31:08,422 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:31:13,427 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:31:17,197 WARNING gateway.channel_directory: Channel directory: failed to write: [Errno 28] No space left on device
+2026-05-05 06:31:18,433 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:31:21,435 ERROR [20260505_051458_186cdf14] gateway.run: kanban dispatcher: tick failed
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/run.py", line 3465, in _tick_once
+    conn = _kb.connect()
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/hermes_cli/kanban_db.py", line 388, in connect
+    conn.execute("PRAGMA journal_mode=WAL")
+sqlite3.OperationalError: disk I/O error
+2026-05-05 06:31:23,438 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:31:28,449 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:31:33,457 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:32:53,335 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (162 chars)
+2026-05-05 06:32:53,339 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='六、结构分析模型对应的 Source Bot 准备工作  准备 1：字段字典  先建立：  docs/source_bot/source_to_structur'
+2026-05-05 06:33:08,687 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:33:13,704 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:33:18,711 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:33:21,680 ERROR [20260505_051458_186cdf14] gateway.run: kanban dispatcher: tick failed
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/run.py", line 3465, in _tick_once
+    conn = _kb.connect()
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/hermes_cli/kanban_db.py", line 388, in connect
+    conn.execute("PRAGMA journal_mode=WAL")
+sqlite3.OperationalError: disk I/O error
+2026-05-05 06:33:23,715 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:33:28,721 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:33:33,727 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:33:35,285 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=41.9s api_calls=2 response=6803 chars
+2026-05-05 06:33:35,288 ERROR gateway.run: Agent error in session agent:main:telegram:dm:7634169147
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/run.py", line 6477, in _handle_message_with_agent
+    self.session_store.append_to_transcript(
+  File "/usr/local/lib/hermes-agent/gateway/session.py", line 1275, in append_to_transcript
+    f.write(json.dumps(message, ensure_ascii=False) + "\n")
+OSError: [Errno 28] No space left on device
+2026-05-05 06:33:35,293 INFO gateway.platforms.base: [Telegram] Sending response (125 chars) to 7634169147
+2026-05-05 06:33:38,732 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:33:43,739 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:33:48,751 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:33:53,774 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:33:58,778 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:03,783 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:08,791 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:13,800 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:18,805 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:21,774 ERROR [20260505_051458_186cdf14] gateway.run: kanban dispatcher: tick failed
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/run.py", line 3465, in _tick_once
+    conn = _kb.connect()
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/hermes_cli/kanban_db.py", line 388, in connect
+    conn.execute("PRAGMA journal_mode=WAL")
+sqlite3.OperationalError: disk I/O error
+2026-05-05 06:34:23,816 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:28,830 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:33,835 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:38,844 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:43,852 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:48,859 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:53,867 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:34:58,875 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 06:35:03,883 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:33:14,658 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:33:19,666 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:33:24,675 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:33:27,647 ERROR [20260505_051458_186cdf14] gateway.run: kanban dispatcher: tick failed
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/run.py", line 3465, in _tick_once
+    conn = _kb.connect()
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/hermes_cli/kanban_db.py", line 388, in connect
+    conn.execute("PRAGMA journal_mode=WAL")
+sqlite3.OperationalError: disk I/O error
+2026-05-05 07:33:29,684 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:33:34,691 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:33:39,696 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:33:44,701 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:33:49,708 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:33:54,713 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:33:59,718 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:04,725 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:09,734 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:14,739 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:19,750 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:24,762 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:27,738 ERROR [20260505_051458_186cdf14] gateway.run: kanban dispatcher: tick failed
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/run.py", line 3465, in _tick_once
+    conn = _kb.connect()
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/hermes_cli/kanban_db.py", line 388, in connect
+    conn.execute("PRAGMA journal_mode=WAL")
+sqlite3.OperationalError: disk I/O error
+2026-05-05 07:34:29,770 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:34,781 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:39,789 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:44,796 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:49,803 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:54,811 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:34:59,817 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:35:04,826 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:35:09,832 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:35:14,840 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:35:19,847 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:35:24,854 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:35:27,844 ERROR [20260505_051458_186cdf14] gateway.run: kanban dispatcher: tick failed
+Traceback (most recent call last):
+  File "/usr/local/lib/hermes-agent/gateway/run.py", line 3465, in _tick_once
+    conn = _kb.connect()
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/hermes-agent/hermes_cli/kanban_db.py", line 388, in connect
+    conn.execute("PRAGMA journal_mode=WAL")
+sqlite3.OperationalError: disk I/O error
+2026-05-05 07:35:29,860 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:35:34,870 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:35:39,878 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:35:44,890 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 07:35:49,899 WARNING gateway.run: kanban notifier tick failed: disk I/O error
+2026-05-05 08:55:26,072 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (162 chars)
+2026-05-05 08:55:26,096 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='六、结构分析模型对应的 Source Bot 准备工作  准备 1：字段字典  先建立：  docs/source_bot/source_to_structur'
+2026-05-05 08:55:26,156 WARNING gateway.session: Skipping corrupt line in transcript 20260505_051458_186cdf14: {"role": "tool", "content": "{\"success\": true, \"name\": \"legacy-wallet-intelligence\", \"description\": \"Import, st
+2026-05-05 08:57:27,297 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=121.2s api_calls=3 response=242 chars
+2026-05-05 08:57:27,306 INFO gateway.platforms.base: [Telegram] Sending response (242 chars) to 7634169147
+2026-05-05 09:01:16,873 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (212 chars)
+2026-05-05 09:01:16,874 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='准备 2：Source Manifest  建立：  shared/registry/source_manifest.json  它要记录：  source_n'
+2026-05-05 09:01:16,885 WARNING gateway.session: Skipping corrupt line in transcript 20260505_051458_186cdf14: {"role": "tool", "content": "{\"success\": true, \"name\": \"legacy-wallet-intelligence\", \"description\": \"Import, st
+2026-05-05 09:02:08,849 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=52.0s api_calls=2 response=365 chars
+2026-05-05 09:02:08,861 INFO gateway.platforms.base: [Telegram] Sending response (365 chars) to 7634169147
+2026-05-05 09:03:49,489 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (282 chars)
+2026-05-05 09:03:49,491 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='准备 3：字段可用率报告  每一轮 Source Bot 运行后输出：  source_quality_report.json source_quality_r'
+2026-05-05 09:03:49,505 WARNING gateway.session: Skipping corrupt line in transcript 20260505_051458_186cdf14: {"role": "tool", "content": "{\"success\": true, \"name\": \"legacy-wallet-intelligence\", \"description\": \"Import, st
+2026-05-05 09:05:03,092 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=73.6s api_calls=3 response=411 chars
+2026-05-05 09:05:03,105 INFO gateway.platforms.base: [Telegram] Sending response (411 chars) to 7634169147
+2026-05-05 09:05:17,072 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (187 chars)
+2026-05-05 09:05:17,073 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='准备 4：数据质量分  Source Bot 必须给每个 token 输出：  source_data_quality_score  建议分成：  时间完整度 '
+2026-05-05 09:05:17,079 WARNING gateway.session: Skipping corrupt line in transcript 20260505_051458_186cdf14: {"role": "tool", "content": "{\"success\": true, \"name\": \"legacy-wallet-intelligence\", \"description\": \"Import, st
+2026-05-05 09:06:37,272 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=80.2s api_calls=4 response=553 chars
+2026-05-05 09:06:37,277 INFO gateway.platforms.base: [Telegram] Sending response (553 chars) to 7634169147
+2026-05-05 10:11:37,532 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:7634169147 (idle=3900s)
+2026-05-05 10:11:37,581 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-05-05 10:25:16,894 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (162 chars)
+2026-05-05 10:25:16,906 WARNING gateway.run: Stale-code self-check: source files newer than gateway boot time (boot=1777803082, newest=1777974002) — requesting graceful restart. See Issue #17648.
+2026-05-05 10:25:16,914 INFO gateway.platforms.base: [Telegram] Sending response (139 chars) to 7634169147
+2026-05-05 10:25:16,972 INFO gateway.run: Stopping gateway for restart...
+2026-05-05 10:25:20,709 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-05-05 10:25:20,709 INFO gateway.run: ✓ telegram disconnected
+2026-05-05 10:25:20,794 INFO gateway.run: Gateway stopped
+2026-05-05 10:25:20,795 INFO gateway.run: Cron ticker stopped
+2026-05-05 10:26:26,558 INFO gateway.run: Starting Hermes Gateway...
+2026-05-05 10:26:26,558 INFO gateway.run: Session storage: /root/.hermes/profiles/sunqbfemxbot/sessions
+2026-05-05 10:26:26,559 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-05-05 10:26:26,563 INFO gateway.run: Active profile: sunqbfemxbot
+2026-05-05 10:26:26,566 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-05-05 10:26:26,781 INFO gateway.run: Connecting to telegram...
+2026-05-05 10:26:26,856 INFO gateway.platforms.telegram_network: DoH discovery yielded no new IPs (system DNS: 149.154.166.110); using seed fallback IPs 149.154.167.220
+2026-05-05 10:26:26,856 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.167.220
+2026-05-05 10:26:26,856 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.167.220
+2026-05-05 10:26:29,013 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 100 commands registered, 21 hidden (over 100 limit). Use /commands for full list.
+2026-05-05 10:26:29,016 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-05-05 10:26:29,018 INFO gateway.run: ✓ telegram connected
+2026-05-05 10:26:29,020 INFO gateway.run: Gateway running with 1 platform(s)
+2026-05-05 10:26:29,023 INFO gateway.run: Channel directory built: 1 target(s)
+2026-05-05 10:26:30,024 INFO gateway.run: Press Ctrl+C to stop
+2026-05-05 10:26:30,065 INFO gateway.run: Cron ticker started (interval=60s)
+2026-05-05 10:26:35,031 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
