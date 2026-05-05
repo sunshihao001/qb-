@@ -1,5 +1,5 @@
 {
-  "backup_time": "2026-05-04T15:34:39+00:00",
+  "backup_time": "2026-05-05T00:38:21+00:00",
   "source_profile": "sunqbfemxbot",
   "source_path": "/root/.hermes/profiles/sunqbfemxbot",
   "destination": "钱包数据分析/sunqbfemxbot",
@@ -8,7 +8,7 @@
       "source": "/root/.hermes/profiles/sunqbfemxbot/channel_directory.json",
       "dest": "钱包数据分析/sunqbfemxbot/runtime/channel_directory.json",
       "bytes": 581,
-      "sha256": "f6db1be15cfaf295d57c9d9f26e4e57ce2ef7e297b33d2239b573ccf29252dbf"
+      "sha256": "7e75a908d80f3d07b25848309464cb2b8210b747e789dd8961c6ae95389b6c55"
     },
     {
       "source": "/root/.hermes/profiles/sunqbfemxbot/gateway_state.json",
@@ -19,44 +19,110 @@
     {
       "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/20260504_152622_484962f4.jsonl",
       "dest": "钱包数据分析/sunqbfemxbot/sessions/20260504_152622_484962f4.jsonl",
-      "bytes": 294091,
-      "sha256": "25a32848f3944f26ec4518c64c4dc97b387e4f08b345ad169f335cee2499cf25"
+      "bytes": 451048,
+      "sha256": "c38d0c524ee43d0e6785ec2cd8064680a698ea6ff4378133bdd0d9c4568ad376"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/20260504_222552_22e8ab.jsonl",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/20260504_222552_22e8ab.jsonl",
+      "bytes": 174306,
+      "sha256": "6cbb43e4f2e149801db7587c15ba1bfc3e8e49c352e40e1d86238036dc2dab26"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/20260504_225537_c7c125.jsonl",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/20260504_225537_c7c125.jsonl",
+      "bytes": 345386,
+      "sha256": "fed59fcaffdcc447da1765b534bd250d71c496635b1af32c8d0ffceb286a3f9c"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/20260504_235259_d312bf.jsonl",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/20260504_235259_d312bf.jsonl",
+      "bytes": 203789,
+      "sha256": "ea55a3e2c587d3ec83126a12b2a00e2f22d3c04b6eb763968eb57a44b3d1fdd9"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/request_dump_20260504_224509_11b08b_20260504_224517_377185.json",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/request_dump_20260504_224509_11b08b_20260504_224517_377185.json",
+      "bytes": 27106,
+      "sha256": "a5d0c7043cc3255ceb29f4e15b4a5dae30b1085c764ad39300fce3dfafb24b89"
     },
     {
       "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/session_20260504_152622_484962f4.json",
       "dest": "钱包数据分析/sunqbfemxbot/sessions/session_20260504_152622_484962f4.json",
-      "bytes": 327148,
-      "sha256": "5b36b338db35f3db2893f266a0bd2f323874b18766a3d845c62c9cf6b6a148c3"
+      "bytes": 486021,
+      "sha256": "75cad9ec9f2e51b359b3addeee51b634705793ea5956ae8bdb6ccade34b618bd"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/session_20260504_160211_f91ded.json",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/session_20260504_160211_f91ded.json",
+      "bytes": 362934,
+      "sha256": "fbf89fc1ef9a7d647196c5326822f93b4161962b3c5deb94d8a1873009a71e94"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/session_20260504_222552_22e8ab.json",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/session_20260504_222552_22e8ab.json",
+      "bytes": 556711,
+      "sha256": "a5c8e6da4c3b4752e1331acabd0a6a0d5c1e42d9e6ab6564f7b6eb7209d62370"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/session_20260504_224509_11b08b.json",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/session_20260504_224509_11b08b.json",
+      "bytes": 19970,
+      "sha256": "3001c98b6f6da4d4e99a679040d36321ceaf7579f488353152b83ce21c44445e"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/session_20260504_225537_c7c125.json",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/session_20260504_225537_c7c125.json",
+      "bytes": 554592,
+      "sha256": "d3f02751200861a1aca2bb1a1a8ec2282d92b0bb5cb47a40b84ee251abeabcda"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/session_20260504_225719_dda20e.json",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/session_20260504_225719_dda20e.json",
+      "bytes": 347110,
+      "sha256": "18802253e405e7168e42d6472fe206f3f82b1ede9346d1256295ba44bf8c89a1"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/session_20260504_235259_d312bf.json",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/session_20260504_235259_d312bf.json",
+      "bytes": 286348,
+      "sha256": "cfb567258b14d77305565bb14973a94d1a3d7453bf1dbbbd663666f16397c039"
+    },
+    {
+      "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/session_20260504_235629_bddbf4.json",
+      "dest": "钱包数据分析/sunqbfemxbot/sessions/session_20260504_235629_bddbf4.json",
+      "bytes": 298430,
+      "sha256": "00306429d94705949200932142c22039b8c8c368107d5bff352a6588174cfe45"
     },
     {
       "source": "/root/.hermes/profiles/sunqbfemxbot/sessions/sessions.json",
       "dest": "钱包数据分析/sunqbfemxbot/sessions/sessions.json",
-      "bytes": 994,
-      "sha256": "4ab423c890422582ec8af1b9e2f19a5a46117cb4a59ba7146ae3af128f775997"
+      "bytes": 992,
+      "sha256": "0c51eb8288a7e29ba8824e5575a58dcf6c0edf3866976daa3ba8cf812a2de1ec"
     },
     {
       "source": "/root/.hermes/profiles/sunqbfemxbot/memories/MEMORY.md",
       "dest": "钱包数据分析/sunqbfemxbot/memories/MEMORY.md",
-      "bytes": 625,
-      "sha256": "6ec887cd5ece8fa6047a6ed0957852cad4874305ed7c44ec6a091501e90976eb"
+      "bytes": 1580,
+      "sha256": "9bbe9fa10b3033bcde78d58f1ec79bb3d48e402d0ae8667757f2a0ef9cc43113"
     },
     {
       "source": "/root/.hermes/profiles/sunqbfemxbot/logs/agent.log",
       "dest": "钱包数据分析/sunqbfemxbot/redacted_logs/logs__agent.log.txt",
-      "bytes": 32424,
-      "sha256": "34d17e263101bbe7dfd9deb416ef170689dc1a4e5d1bff9bbb0a23088141a1b7"
+      "bytes": 51254,
+      "sha256": "246f607213a4b01308be39b76ec941a588f77d83a5ee1fa926b5178a4c7fabc2"
     },
     {
       "source": "/root/.hermes/profiles/sunqbfemxbot/logs/gateway.log",
       "dest": "钱包数据分析/sunqbfemxbot/redacted_logs/logs__gateway.log.txt",
-      "bytes": 25911,
-      "sha256": "211aefe8c5a28161b710641163e2381413d53d6f49dc825d9a2acc40d3e90d14"
+      "bytes": 34539,
+      "sha256": "9d7682aeea82c7b973eb4766b551ed02f51f368e3b3b7b411d9ddf5043380069"
     },
     {
       "source": "/root/.hermes/profiles/sunqbfemxbot/logs/errors.log",
       "dest": "钱包数据分析/sunqbfemxbot/redacted_logs/logs__errors.log.txt",
-      "bytes": 12770,
-      "sha256": "4dcd6392c0ff0d7c3e98e3a59bce8633f48048f9b16074954e172c180279d535"
+      "bytes": 13366,
+      "sha256": "cb5325070822e370f0cefbb0d780c3e575dcc841ba675c3ca79d3b392838d198"
     }
   ],
   "excluded_secret_or_binary_files": [
