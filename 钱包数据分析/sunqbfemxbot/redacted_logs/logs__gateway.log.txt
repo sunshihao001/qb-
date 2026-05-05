@@ -244,3 +244,39 @@
 2026-05-04 23:56:29,789 INFO [20260504_225537_c7c125] gateway.run: Session split detected: 20260504_225537_c7c125 → 20260504_235259_d312bf (compression)
 2026-05-04 23:56:29,821 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=483.4s api_calls=19 response=1656 chars
 2026-05-04 23:56:29,842 INFO gateway.platforms.base: [Telegram] Sending response (1656 chars) to 7634169147
+2026-05-05 01:00:44,505 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:7634169147 (idle=3855s)
+2026-05-05 01:00:44,515 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-05-05 03:03:28,153 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (44 chars)
+2026-05-05 03:03:28,198 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='Aw5SxKyYhXFdZj2BHCqs11UaV5ohwpFQjauB9jFhpump'
+2026-05-05 03:04:56,558 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=88.4s api_calls=7 response=771 chars
+2026-05-05 03:04:56,568 INFO gateway.platforms.base: [Telegram] Sending response (771 chars) to 7634169147
+2026-05-05 03:09:39,717 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (1 chars)
+2026-05-05 03:09:39,721 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='1'
+2026-05-05 03:09:55,633 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=15.9s api_calls=1 response=502 chars
+2026-05-05 03:09:55,638 INFO gateway.platforms.base: [Telegram] Sending response (502 chars) to 7634169147
+2026-05-05 03:10:14,665 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (1 chars)
+2026-05-05 03:10:14,666 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='好'
+2026-05-05 03:10:23,136 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=8.5s api_calls=1 response=322 chars
+2026-05-05 03:10:23,140 INFO gateway.platforms.base: [Telegram] Sending response (322 chars) to 7634169147
+2026-05-05 03:11:02,279 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (7 chars)
+2026-05-05 03:11:02,280 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='为什么暂停住了'
+2026-05-05 03:11:25,590 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=23.3s api_calls=2 response=552 chars
+2026-05-05 03:11:25,594 INFO gateway.platforms.base: [Telegram] Sending response (552 chars) to 7634169147
+2026-05-05 03:12:49,104 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (14 chars)
+2026-05-05 03:12:49,105 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='抓取的是那个时间段的钱包数据'
+2026-05-05 03:13:00,190 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=11.1s api_calls=1 response=491 chars
+2026-05-05 03:13:00,194 INFO gateway.platforms.base: [Telegram] Sending response (491 chars) to 7634169147
+2026-05-05 03:14:06,396 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (31 chars)
+2026-05-05 03:14:06,401 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='我之前的钱包结构筹码分析没有明确定位抓取那个时间段的钱包数据吗'
+2026-05-05 03:14:46,438 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=40.0s api_calls=4 response=921 chars
+2026-05-05 03:14:46,444 INFO gateway.platforms.base: [Telegram] Sending response (921 chars) to 7634169147
+2026-05-05 03:15:34,923 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (1 chars)
+2026-05-05 03:15:34,924 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='好'
+2026-05-05 03:15:57,904 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=23.0s api_calls=1 response=697 chars
+2026-05-05 03:15:57,908 INFO gateway.platforms.base: [Telegram] Sending response (697 chars) to 7634169147
+2026-05-05 03:33:00,473 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (260 chars)
+2026-05-05 03:33:00,480 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='Bot 的专业目标是： Plain text 把 GMGN / OKX / 链上钱包数据整理成结构分析能直接使用的证据包。 它不负责判断“主导侧动机”“对手盘压'
+2026-05-05 03:35:17,440 INFO gateway.run: response ready: platform=telegram chat=7634169147 time=137.0s api_calls=14 response=1022 chars
+2026-05-05 03:35:17,458 INFO gateway.platforms.base: [Telegram] Sending response (1022 chars) to 7634169147
+2026-05-05 03:36:22,937 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:7634169147 (563 chars)
+2026-05-05 03:36:22,938 INFO gateway.run: inbound message: platform=telegram user=guvvvh vhhdbhd chat=7634169147 msg='、Source Bot 需要的上游数据源分层 第 1 类：候选与基础代币数据 用途：确定 token 是什么时候出现的、系统什么时候发现的、当前处于哪个生命周期'
