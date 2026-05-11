@@ -1,0 +1,11 @@
+# source_wallet_bot archive round3
+# Goal: continue selective cleanup without touching strong-preserve roots.
+# ACTION	RELATIVE_PATH	DEST_RELATIVE_PATH	REASON
+MOVE	data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump	/root/sikk-archive/source_wallet_bot_round3/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump	continue shrinking historical legacy buckets; keep a smaller representative core only
+MOVE	data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump	/root/sikk-archive/source_wallet_bot_round3/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump	continue shrinking historical legacy buckets; keep a smaller representative core only
+MOVE	data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump	/root/sikk-archive/source_wallet_bot_round3/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump	continue shrinking historical legacy buckets; keep a smaller representative core only
+MOVE	data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump	/root/sikk-archive/source_wallet_bot_round3/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump	continue shrinking historical legacy buckets; keep a smaller representative core only
+MOVE	data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump	/root/sikk-archive/source_wallet_bot_round3/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump	continue shrinking historical legacy buckets; keep a smaller representative core only
+MOVE	data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump	/root/sikk-archive/source_wallet_bot_round3/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump	continue shrinking historical legacy buckets; keep a smaller representative core only
+MOVE	data/source_wallet_bot/auto_tasks/wallet_structure_registry_consumption_final_20260508_022106	/root/sikk-archive/source_wallet_bot_round3/auto_tasks/wallet_structure_registry_consumption_final_20260508_022106	archive final task output after representative keepers remain
+MOVE	data/source_wallet_bot/ad_hoc/8jpRiwbUXLWH4yFQaF2TBDUkWDkfKWtBMX95sibTpump	/root/sikk-archive/source_wallet_bot_round3/ad_hoc/8jpRiwbUXLWH4yFQaF2TBDUkWDkfKWtBMX95sibTpump	archive extra ad hoc sample after keeping one representative ad hoc bucket
