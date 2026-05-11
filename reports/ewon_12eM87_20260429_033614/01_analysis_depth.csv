@@ -1,9 +1,0 @@
-﻿field,value,remark
-analysis_depth_level,L3 深度结构复盘,先判断深度，不默认全量深挖
-depth_reason,"bundler占比46.55%, fresh=9.09%, sniper=54, smart=44, Top10=17.64%, liquidity=60598.28",由结构指标触发
-selected_time_windows,"W1,W2,W3,W4,W6",优先0-30分钟，复盘派发/清仓/回流
-deep_analysis_address_scope,"0-30m早期买入,bundled,insider,sniper,fresh,transfer_in,Top Holder,Top Trader,Smart/KOL,rat_trader,核心资金源,回流节点",只深挖关键地址
-low_weight_address_scope,"中后期小额普通买家,无标签,无复现,无异常来源,非Top Holder/Trader",低权重记录
-skipped_address_reason,不全量深挖所有散户,降低成本并避免历史库污染
-infrastructure_edges_kept,LP/Pool/Router/Aggregator/CEX/Program/native_from/token_from,基础设施不评分但保留关系边
-next_review_plan,"T+1h,T+6h,T+24h,T+72h,T+7d",E4/R优先复盘

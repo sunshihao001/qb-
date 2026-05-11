@@ -1,0 +1,6 @@
+# full directory cleanup round1
+# Strong-preserve roots remain in place. Archive obvious output/analysis directories.
+ACTION	RELATIVE_PATH	DEST_RELATIVE_PATH	REASON
+MOVE	reports	/root/sikk-archive/full_cleanup_20260511/reports	large report/output corpus; archive instead of keeping at repo root
+MOVE	结构分析	/root/sikk-archive/full_cleanup_20260511/结构分析	legacy analysis corpus; archive as non-root evidence bundle
+MOVE	钱包数据分析	/root/sikk-archive/full_cleanup_20260511/钱包数据分析	legacy wallet-data analysis corpus; archive as non-root evidence bundle

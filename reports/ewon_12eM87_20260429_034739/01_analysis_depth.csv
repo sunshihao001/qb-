@@ -1,9 +1,0 @@
-﻿字段,值,备注
-分析深度等级,L3 深度结构复盘,先判断深度，不默认全量深挖
-深度原因,"bundler占比47.34%, fresh=9.51%, sniper=54, smart=45, Top10=17.64%, liquidity=65720.18",由结构指标触发
-选定时间窗口,"W1,W2,W3,W4,W6",优先0-30分钟，复盘派发/清仓/回流
-深挖地址范围,"0-30m早期买入,bundled,insider,sniper,fresh,transfer_in,Top Holder,Top Trader,Smart/KOL,rat_trader,核心资金源,回流节点",只深挖关键地址
-低权重地址范围,"中后期小额普通买家,无标签,无复现,无异常来源,非Top Holder/Trader",低权重记录
-跳过深挖原因,不全量深挖所有散户,降低成本并避免历史库污染
-基础设施关系边保留,LP/Pool/Router/Aggregator/CEX/Program/native_from/token_from,基础设施不评分但保留关系边
-下一轮复盘计划,"T+1h,T+6h,T+24h,T+72h,T+7d",E4/R优先复盘
