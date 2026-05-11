@@ -1,0 +1,62 @@
+[
+  {
+    "token_address": "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+    "timeframe": "1m",
+    "kline_window_start": "2026-05-08T00:38:00Z",
+    "kline_window_end": "2026-05-08T01:47:00Z",
+    "latest_kline_time": "2026-05-08T01:47:00Z",
+    "open": 9.1891463e-05,
+    "high": 0.00040184767,
+    "low": 5.7792762e-05,
+    "close": 0.00035096825,
+    "volume": 371580.6603174323,
+    "vwap": 0.00019363152821921714,
+    "avwap_if_available": null,
+    "high_low_range": 0.000344054908,
+    "control_box_high": 0.00040184767,
+    "control_box_low": 5.7792762e-05,
+    "breakout_time": "",
+    "pullback_time": "",
+    "volume_expansion_ratio": 0.48259946377674057,
+    "source_trace": {
+      "gmgn_kline": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/gmgn_kline_1m_raw.json",
+      "okx_kline": "",
+      "local_kline_processor": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/kline_1m.csv"
+    },
+    "field_quality": {
+      "missing_required_fields": [],
+      "kline_window_status": "K线窗口完整",
+      "market_structure_status": "市场结构辅助已生成"
+    }
+  },
+  {
+    "token_address": "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+    "timeframe": "5m",
+    "kline_window_start": "2026-05-08T00:40:00Z",
+    "kline_window_end": "2026-05-08T01:45:00Z",
+    "latest_kline_time": "2026-05-08T01:45:00Z",
+    "open": 0.00010471208,
+    "high": 0.00040184767,
+    "low": 7.618804e-05,
+    "close": 0.00035096825,
+    "volume": 346448.674550134,
+    "vwap": 0.00020498148914475296,
+    "avwap_if_available": null,
+    "high_low_range": 0.00032565963000000004,
+    "control_box_high": 0.00040184767,
+    "control_box_low": 7.618804e-05,
+    "breakout_time": "",
+    "pullback_time": "",
+    "volume_expansion_ratio": 0.5319042122766543,
+    "source_trace": {
+      "gmgn_kline": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/gmgn_kline_5m_raw.json",
+      "okx_kline": "",
+      "local_kline_processor": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/kline_5m.csv"
+    },
+    "field_quality": {
+      "missing_required_fields": [],
+      "kline_window_status": "K线窗口完整",
+      "market_structure_status": "市场结构辅助已生成"
+    }
+  }
+]

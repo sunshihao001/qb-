@@ -1,0 +1,35 @@
+{
+  "source": "okx",
+  "endpoint": "token_info",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "info",
+    "--address",
+    "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T01:47:41Z",
+  "finished_at": "2026-05-08T01:47:41Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "chainIndex": "501",
+        "decimal": "6",
+        "tagList": {
+          "communityRecognized": false
+        },
+        "tokenContractAddress": "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+        "tokenLogoUrl": "https://static.oklink.com/cdn/web3/currency/token/large/501-KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump-109/type=default_90_0?v=1778203833758",
+        "tokenName": "Robot Monk",
+        "tokenSymbol": "GABI"
+      }
+    ]
+  }
+}

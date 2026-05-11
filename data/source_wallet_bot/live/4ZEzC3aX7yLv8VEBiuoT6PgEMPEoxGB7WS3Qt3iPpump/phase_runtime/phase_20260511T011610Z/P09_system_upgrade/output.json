@@ -1,0 +1,23 @@
+{
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "phase_id": "P09_system_upgrade",
+  "artifact_kind": "output",
+  "generated_at": "2026-05-11T01:16:10Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "planbook_repository_status": "PLANBOOK_REPOSITORY_READY",
+  "upgrade_candidates": [
+    "接入固定 CA P01-P09 phase evidence 到 sikk_ca_runtime_pipeline",
+    "补 quote/kline/AVWAP/POC 位置层数据源",
+    "补 funding/source/backflow 资金路径数据源",
+    "把 phase_runtime final report 接入 dashboard/review ops"
+  ],
+  "shadow_mode_package": true,
+  "real_trade_upgrade_allowed": false
+}

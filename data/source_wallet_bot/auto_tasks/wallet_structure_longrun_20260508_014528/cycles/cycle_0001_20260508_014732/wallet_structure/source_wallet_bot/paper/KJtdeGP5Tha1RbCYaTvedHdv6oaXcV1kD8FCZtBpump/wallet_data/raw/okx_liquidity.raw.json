@@ -1,0 +1,60 @@
+{
+  "source": "okx",
+  "endpoint": "liquidity",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "liquidity",
+    "--address",
+    "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T01:47:41Z",
+  "finished_at": "2026-05-08T01:47:41Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "73551375.889104",
+            "tokenSymbol": "GABI"
+          },
+          {
+            "tokenAmount": "259.264650989",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "0.25%",
+        "liquidityUsd": "46029.9370445649250784222527647205964984609805248",
+        "pool": "GABI/SOL",
+        "poolAddress": "8Lzxj7G4wCKRwLvYe86eFK3jSy42dGWKPCpZWuQGnHG2",
+        "poolCreator": "Ezor4NYcJhKxnNkC1rah65rs9EeenPw3bQbRUcmPm7re",
+        "protocolName": "PumpSwap"
+      },
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "12765.53499",
+            "tokenSymbol": "GABI"
+          },
+          {
+            "tokenAmount": "0.004389197",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "5.00%",
+        "liquidityUsd": "0.7738154311",
+        "pool": "GABI/SOL",
+        "poolAddress": "6WMgkxwri1EjJN7xeuFHCTDTEvmrHC5mhMiAdqjhAW79",
+        "poolCreator": "D2uqNx3vDFk3aYnmpyeW7vRM56qi8E9Gvm5vq1id6KD2",
+        "protocolName": "Meteora"
+      }
+    ]
+  }
+}

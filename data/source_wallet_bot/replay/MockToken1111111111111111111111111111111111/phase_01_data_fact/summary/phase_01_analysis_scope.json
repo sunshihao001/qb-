@@ -1,0 +1,12 @@
+{
+  "phase": "phase_01_data_fact",
+  "scope": "data facts only",
+  "forbidden": [
+    "wallet_structure_status",
+    "WALLET_SUPPORT",
+    "CONTROL_RETAINED",
+    "SCENARIO_ALLOW",
+    "PAPER_READY",
+    "buy_signal"
+  ]
+}

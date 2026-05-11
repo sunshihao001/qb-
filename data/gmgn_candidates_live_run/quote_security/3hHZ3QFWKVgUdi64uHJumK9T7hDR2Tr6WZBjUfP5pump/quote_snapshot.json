@@ -1,0 +1,85 @@
+{
+  "token": "3hHZ3QFWKVgUdi64uHJumK9T7hDR2Tr6WZBjUfP5pump",
+  "chain": "sol",
+  "wallet_address": "6m6dSTyv7aJQYJpAQKq2VnHjNtfj2mE5KFSJNevHjgSp",
+  "human_amount": "0.01 SOL",
+  "snapshot_time": "2026-05-02T20:02:18Z",
+  "max_quote_age_seconds": 30,
+  "quote_status": "AVAILABLE",
+  "source_count": 1,
+  "sources": [
+    "OKX"
+  ],
+  "max_price_impact_pct": null,
+  "quote_deviation_pct": null,
+  "quotes": [
+    {
+      "source": "OKX",
+      "input_token": "11111111111111111111111111111111",
+      "output_token": "3hHZ3QFWKVgUdi64uHJumK9T7hDR2Tr6WZBjUfP5pump",
+      "input_amount": "10000000",
+      "output_amount": "15211267433",
+      "min_output_amount": null,
+      "price_impact_pct": null,
+      "raw": {
+        "ok": true,
+        "data": [
+          {
+            "chainIndex": "501",
+            "contextSlot": 417163580,
+            "dexRouterList": [
+              {
+                "dexProtocol": {
+                  "dexName": "PumpSwap",
+                  "percent": "100"
+                },
+                "fromToken": {
+                  "decimal": "9",
+                  "isHoneyPot": false,
+                  "taxRate": "0",
+                  "tokenContractAddress": "So11111111111111111111111111111111111111112",
+                  "tokenSymbol": "wSOL",
+                  "tokenUnitPrice": "84.16"
+                },
+                "fromTokenIndex": "0",
+                "toToken": {
+                  "decimal": "6",
+                  "isHoneyPot": false,
+                  "taxRate": "0",
+                  "tokenContractAddress": "3hHZ3QFWKVgUdi64uHJumK9T7hDR2Tr6WZBjUfP5pump",
+                  "tokenSymbol": "FINE",
+                  "tokenUnitPrice": "0.00005402698826323903675032500088818320"
+                },
+                "toTokenIndex": "1"
+              }
+            ],
+            "estimateGasFee": "232400",
+            "fromToken": {
+              "decimal": "9",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "11111111111111111111111111111111",
+              "tokenSymbol": "SOL",
+              "tokenUnitPrice": "84.16"
+            },
+            "fromTokenAmount": "10000000",
+            "priceImpactPercent": "-2.35",
+            "router": "11111111111111111111111111111111--3hHZ3QFWKVgUdi64uHJumK9T7hDR2Tr6WZBjUfP5pump",
+            "swapMode": "exactIn",
+            "toToken": {
+              "decimal": "6",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "3hHZ3QFWKVgUdi64uHJumK9T7hDR2Tr6WZBjUfP5pump",
+              "tokenSymbol": "FINE",
+              "tokenUnitPrice": "0.00005402698826323903675032500088818320"
+            },
+            "toTokenAmount": "15211267433",
+            "tradeFee": "0.0004208"
+          }
+        ]
+      }
+    }
+  ],
+  "scope_note": "只读报价快照；不执行真实交易。"
+}

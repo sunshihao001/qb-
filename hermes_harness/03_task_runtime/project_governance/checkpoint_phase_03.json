@@ -1,0 +1,92 @@
+{
+  "checkpoint_id": "checkpoint.phase_03",
+  "phase": "03_conflict_audit",
+  "status": "complete",
+  "resume_command": "continue from phase_04 governance recommendations",
+  "artifacts": [
+    "/root/sikk-gmgn/hermes_harness/10_audit/project_governance/phase_03_conflict_audit.md"
+  ],
+  "issue_count": 370,
+  "sample_issues": [
+    {
+      "type": "root_scatter",
+      "path": ".git/keep_before_or_at_20260430_1022.txt"
+    },
+    {
+      "type": "root_scatter",
+      "path": ".git/remove_after_20260430_1022.txt"
+    },
+    {
+      "type": "root_scatter",
+      "path": ".hermes_long_task_prompt_20260503_chatgpt_share_sikk.txt"
+    },
+    {
+      "type": "root_scatter",
+      "path": ".pytest_cache/README.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/chatgpt_share_69f6a19a_okx_cluster_summary.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/initial_codebase_audit.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/module_inventory.json"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/module_inventory.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/phase_1_3_time_context_acceptance.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/phase_1_3c_upstream_time_anchor_report.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/v03_initial_audit.json"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/v03_initial_audit.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/v03_work_packages.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/v03_wp1_chip_control_state_machine_report.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/v03_wp2_market_cap_context_report.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/v03_wp3_lifecycle_closed_loop_report.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/v03_wp4_audit_explain_dashboard_report.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/v04_initial_audit.json"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/v04_initial_audit.md"
+    },
+    {
+      "type": "root_scatter",
+      "path": "audits/v04_work_packages.md"
+    }
+  ]
+}

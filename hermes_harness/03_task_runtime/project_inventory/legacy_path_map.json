@@ -1,0 +1,986 @@
+[
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/artifact_contract_policy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/input_contract_policy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/memory_write_rules.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/method_wheel_policy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/permission_rules.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/recovery_decision_table.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/recovery_rules.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/risk_tier_policy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/role_boundaries.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/role_system_v1.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/system_constitution.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/task_id_policy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/task_routing_policy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/verification_definition.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/禁止行为清单.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/记忆写入规则.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_control_plane/输出标准.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_startup/HERMES_BOOT_SEQUENCE.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/00_startup/startup_check_report.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/01_goals/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/01_goals/goal_passport_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/01_goals/goal_passports/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/01_goals/raw_user_requests/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/01_goals/task_passport_current.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/02_research_loop/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/02_research_loop/gap_detection/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/02_research_loop/intake/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/02_research_loop/method_lenses/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/02_research_loop/passports/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/02_research_loop/synthesis/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/02_research_loop/task_decomposition_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/02_research_loop/theme_maps/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/context_layering_rules.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/evidence_index/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/memory_deposition_rules.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/memory_deposition_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/memory_entry_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/memory_staleness_policy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/project_memory/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/session_memory/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/stale_memory.jsonl",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/stale_memory_review/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/superseded_memory.jsonl",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/03_context_governance/system_memory/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/active_task_context.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/active_task_state.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/active_task_state_schema.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/checkpoint_protocol.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/checkpoints/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/checkpoints/checkpoint.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/checkpoints/checkpoint.phase_05.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/execution_packets/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/handoff_contracts/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/phase_plan.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/phase_plans/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/task_state_machine.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/04_task_plans/task_state_record_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/command_log.jsonl",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/command_log_schema.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/command_logs/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/execution_loop_log.jsonl",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/outputs/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/query_loop_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/run_log_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/run_logs/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/runtime_state/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/05_execution_runs/tool_call_log_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/06_verification/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/06_verification/audit_question_checklist.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/06_verification/checklists/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/06_verification/completion_definition_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/06_verification/failed_verification/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/06_verification/v1_acceptance_criteria.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/06_verification/v1_acceptance_verification_report.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/06_verification/verification_policy_advanced.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/06_verification/verification_reports/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/07_recovery/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/07_recovery/error_logs/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/07_recovery/error_taxonomy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/07_recovery/recovery_report_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/07_recovery/recovery_reports/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/07_recovery/retry_plans/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/audit_independence_policy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/completion_audit/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/memory_audit_reports/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/permission_audit_reports/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/stale_rule_audit/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/surface_completion_audit/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/surface_completion_audit/harness_professional_completion_audit.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/surface_work_audit/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/system_gap_audit/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/task_audit_reports/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/08_audit/task_audit_reports/harness_professional_completion_task_audit.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/audit_reports/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/daily/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/final_reports/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/final_reports/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/final_reports/harness_professional_completion_final_report.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/phase_reports/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/phase_reports/harness_professional_completion_phase_report.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/recovery_reports/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/report_classification_policy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/report_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/retrospective_report_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/scan_reports/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/task_reports/.gitkeep",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/verification_reports/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_reports/verification_reports/harness_professional_completion_verification.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_scripts/hermes_artifact_verify.py",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_scripts/hermes_boot_check.py",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_scripts/hermes_permission_check.py",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_scripts/hermes_resume_task.py",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_scripts/hermes_stale_memory_check.py",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/09_scripts/hermes_surface_completion_audit.py",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/10_templates/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/10_templates/artifact_header_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/10_templates/audit_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/10_templates/execution_loop_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/10_templates/input_intake_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/10_templates/method_wheel_task_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/10_templates/method_wheel_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/10_templates/recovery_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/10_templates/task_route_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/10_templates/verification_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/11_hermes_bot_invocation/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/11_hermes_bot_invocation/chinese_command_system.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/11_hermes_bot_invocation/core_workflows_v1.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/11_hermes_bot_invocation/hermes_invocation_template.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/11_hermes_bot_invocation/hermes_task_router.py",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/AI_HARNESS_SYSTEM_V1.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/current_environment_scan.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/directory_map.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/directory_purpose_table.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/final_manifesto_v1.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/recovery_report.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/harness/ai_harness_system/verification_report.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "docs/source_wallet_bot/directory_governance/legacy_runtime_policy.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/directory_zh_aliases.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/manifests/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/manifests/copy_only_migration_plan_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/path_maps/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/path_maps/ai_context_path_map_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/path_maps/audits_path_map_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/path_maps/chinese_directory_navigation_map_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/path_maps/data_path_map_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/path_maps/knowledge_path_map_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/path_maps/outputs_path_map_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/path_maps/tasks_path_map_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/path_maps/结构分析_path_map_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/path_maps/钱包数据分析_path_map_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/read_fallbacks/README.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "legacy_compat/read_fallbacks/system_legacy_read_fallback_rules_20260506.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "modules/source_wallet_bot/legacy_mapping.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "modules/wallet_structure/legacy_mapping.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "reports/review_ops_bot/audit/system_directory_governance_20260506/legacy_read_fallback_rules_20260506.json",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "scripts/migrate_intel_bot_legacy_data.py",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  },
+  {
+    "old_path": "tasks/chatgpt_share_69f809c6/S03_legacy_wallet_data_source_backfill_task.md",
+    "new_path": null,
+    "mode": "retain_only",
+    "reason": "legacy_or_reference_path"
+  }
+]

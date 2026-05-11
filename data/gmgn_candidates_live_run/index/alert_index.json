@@ -1,0 +1,68 @@
+{
+  "schema_version": "sikk.unified_view.v1",
+  "generated_at": "2026-05-07T12:51:31Z",
+  "boundary": "SIKK 统一索引层；只读展示、诊断、复盘和提醒；不执行真实 swap，不读取私钥，不签名，不自动 broadcast。",
+  "safety": {
+    "real_swap_enabled": false,
+    "broadcast_allowed": false,
+    "private_key_required": false,
+    "confirmation_enabled": false
+  },
+  "alert_count": 6,
+  "alerts": [
+    {
+      "alert_id": "A1",
+      "type": "DATA_SYNC_FAIL",
+      "severity": "HIGH",
+      "title": "钱包结构覆盖缺口较高",
+      "reason": "wallet_missing_rate_pct=84.4221",
+      "action": "数据补全"
+    },
+    {
+      "alert_id": "A2",
+      "type": "WALLET_BLOCK",
+      "severity": "HIGH",
+      "token_address": "ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1",
+      "title": "开放纸面仓位钱包结构阻断",
+      "reason": "WALLET_BLOCK",
+      "action": "退出监控"
+    },
+    {
+      "alert_id": "A3",
+      "type": "WALLET_BLOCK",
+      "severity": "HIGH",
+      "token_address": "7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump",
+      "title": "开放纸面仓位钱包结构阻断",
+      "reason": "WALLET_BLOCK",
+      "action": "退出监控"
+    },
+    {
+      "alert_id": "A4",
+      "type": "WALLET_BLOCK",
+      "severity": "HIGH",
+      "token_address": "3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump",
+      "title": "开放纸面仓位钱包结构阻断",
+      "reason": "WALLET_BLOCK",
+      "action": "退出监控"
+    },
+    {
+      "alert_id": "A5",
+      "type": "WALLET_BLOCK",
+      "severity": "HIGH",
+      "token_address": "4pzuXZwn4N2oGzrjnTv57FkD31eSqwnhx4w96uH1pump",
+      "title": "开放纸面仓位钱包结构阻断",
+      "reason": "WALLET_BLOCK",
+      "action": "退出监控"
+    },
+    {
+      "alert_id": "A6",
+      "type": "WALLET_BLOCK",
+      "severity": "HIGH",
+      "token_address": "FcqVeXBc4S3YoVjTJGUDZrLcErtXzPPSspHiuDKpump",
+      "title": "开放纸面仓位钱包结构阻断",
+      "reason": "WALLET_BLOCK",
+      "action": "退出监控"
+    }
+  ],
+  "scope_note": "Alert 只读提醒；不执行、不授权、不广播真实交易。"
+}

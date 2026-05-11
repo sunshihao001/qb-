@@ -1,0 +1,133 @@
+{
+  "task_name": "Hermes 项目体系侦察与目录治理长任务 V1",
+  "task_type": "project_governance_long_task",
+  "version": "1.0",
+  "scope": {
+    "project_root": "/root/sikk-gmgn",
+    "harness_root": "/root/sikk-gmgn/hermes_harness"
+  },
+  "objective": "先侦察、再分类、再建目录宪法、再建路径注册表、再建模块注册表、再建旧目录映射、再建迁移建议，最后才决定是否执行迁移。",
+  "constraints": {
+    "no_delete": true,
+    "no_move": true,
+    "no_rename_core_files": true,
+    "no_rm": true,
+    "no_rm_rf": true,
+    "no_git_push": true,
+    "no_git_reset_hard": true,
+    "no_git_clean_fd": true,
+    "no_real_trading": true,
+    "no_secret_read": true,
+    "no_hindsight": true,
+    "no_telegram": true,
+    "no_business_code_changes": true
+  },
+  "stages": [
+    {
+      "id": 0,
+      "name": "startup_and_boundary_lock",
+      "goal": "初始化本任务状态，固定边界和输出目录。",
+      "outputs": [
+        "03_task_runtime/project_governance/",
+        "03_task_runtime/project_inventory/",
+        "08_reports/project_governance/",
+        "06_verification/project_governance/",
+        "07_recovery/project_governance/",
+        "10_audit/project_governance/"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "read_only_global_recon",
+      "goal": "扫描项目全局目录，不修改任何文件。",
+      "outputs": [
+        "file_inventory.jsonl",
+        "directory_inventory.jsonl"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "classification",
+      "goal": "对文件和目录进行类型、状态、可写性、可读性、模块归属分类。",
+      "outputs": [
+        "classified inventories"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "entrypoint_and_dataflow_discovery",
+      "goal": "识别代码入口、CLI 参数、输入输出和数据流向。",
+      "outputs": [
+        "code_entrypoint_index.json",
+        "dataflow_map.json"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "conflict_audit",
+      "goal": "识别重复、冲突、旧路径、命名漂移、主路径不统一问题。",
+      "outputs": [
+        "conflict list",
+        "stale path list"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "directory_constitution_and_registry",
+      "goal": "建立目录宪法建议、路径注册表、模块注册表、旧目录映射。",
+      "outputs": [
+        "path_registry.json",
+        "module_registry.json",
+        "legacy_path_map.json"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "migration_recommendation_only",
+      "goal": "生成迁移建议，不执行迁移。",
+      "outputs": [
+        "MIGRATION_RECOMMENDATION_V1.md"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "integrity_and_resume_validation",
+      "goal": "验证索引、注册表、报告是否存在且可读。",
+      "outputs": [
+        "verification report"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "long_term_rule_candidates",
+      "goal": "提炼可写入 Hermes 控制面的稳定规则候选。",
+      "outputs": [
+        "rule candidate notes"
+      ]
+    }
+  ],
+  "required_outputs": {
+    "human_reports": [
+      "/root/sikk-gmgn/hermes_harness/08_reports/final_reports/PROJECT_SYSTEM_MAP_V1.md",
+      "/root/sikk-gmgn/hermes_harness/08_reports/final_reports/DIRECTORY_GOVERNANCE_REPORT_V1.md",
+      "/root/sikk-gmgn/hermes_harness/08_reports/final_reports/MIGRATION_RECOMMENDATION_V1.md"
+    ],
+    "machine_indexes": [
+      "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/file_inventory.jsonl",
+      "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/directory_inventory.jsonl",
+      "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/module_registry.json",
+      "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/path_registry.json",
+      "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/legacy_path_map.json",
+      "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/code_entrypoint_index.json",
+      "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/dataflow_map.json"
+    ]
+  },
+  "execution_principles": [
+    "先侦察，后分类",
+    "先建图，后迁移",
+    "每阶段写 checkpoint",
+    "每阶段可独立验证",
+    "失败进入 recovery，不允许假完成",
+    "所有产物必须可回读、可索引、可追踪"
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "wallet_trade_normalized.json",
+  "type": "object",
+  "description": "单钱包成本、买卖行为、派发进度、收益状态 normalized contract。来源：GMGN wallet trade / GMGN trader detail / 链上 DEX swap 记录。",
+  "additionalProperties": false,
+  "required": [
+    "token_address",
+    "wallet_address",
+    "first_buy_time",
+    "last_buy_time",
+    "last_sell_time",
+    "buy_count",
+    "sell_count",
+    "buy_amount_sol",
+    "buy_amount_usd",
+    "buy_token_amount",
+    "sell_amount_sol",
+    "sell_amount_usd",
+    "sell_token_amount",
+    "avg_buy_price",
+    "avg_sell_price",
+    "current_balance",
+    "sold_pct",
+    "remaining_pct",
+    "realized_profit",
+    "unrealized_profit",
+    "total_profit",
+    "pnl_multiple",
+    "holding_duration_seconds",
+    "is_full_exit",
+    "is_partial_exit",
+    "schema_version",
+    "source_level",
+    "source_name",
+    "normalized_at",
+    "missing_fields",
+    "fallback_used",
+    "fallback_source"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "source_level": {
+      "type": "string",
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "unknown"
+      ]
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "raw_snapshot_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wallet_snapshot_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retrieved_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "normalized_at": {
+      "type": "string"
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "fallback_used": {
+      "type": "boolean"
+    },
+    "fallback_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "unknown"
+      ]
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "unknown"
+      ]
+    },
+    "token_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wallet_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "first_buy_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "last_buy_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "last_sell_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "buy_count": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "sell_count": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "buy_amount_sol": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "buy_amount_usd": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "buy_token_amount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "sell_amount_sol": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "sell_amount_usd": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "sell_token_amount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "avg_buy_price": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "avg_sell_price": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "current_balance": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "sold_pct": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "remaining_pct": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "realized_profit": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "unrealized_profit": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "total_profit": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "pnl_multiple": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "holding_duration_seconds": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "is_full_exit": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "is_partial_exit": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  }
+}

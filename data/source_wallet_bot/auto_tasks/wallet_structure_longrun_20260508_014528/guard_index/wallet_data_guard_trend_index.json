@@ -1,0 +1,16 @@
+{
+  "artifact_type": "wallet_data_guard_trend_index",
+  "generated_at": "2026-05-08T01:48:00Z",
+  "cycles_total": 1,
+  "status_counts": {
+    "PASS": 1
+  },
+  "records": [
+    {
+      "cycle": 1,
+      "started_at": "2026-05-08T01:47:32Z",
+      "status": "PASS",
+      "pipeline_manifest": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/orchestrator/pipeline_manifest.json"
+    }
+  ]
+}

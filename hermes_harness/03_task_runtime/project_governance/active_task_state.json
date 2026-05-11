@@ -1,0 +1,43 @@
+{
+  "task_id": "hermes.project_governance.v1",
+  "task_name": "Hermes 项目体系侦察与目录治理长任务 V1",
+  "status": "REVIEW_REFINEMENT_DRAFTED",
+  "current_phase": "high_risk_review_refinement_and_copy_only_plan",
+  "project_root": "/root/sikk-gmgn",
+  "harness_root": "/root/sikk-gmgn/hermes_harness",
+  "source_artifact": "/root/sikk-gmgn/hermes_harness/08_reports/project_governance/project_governance_task_package.json",
+  "allowed_actions": [
+    "read_only_scan",
+    "text_file_inspection",
+    "inventory_generation",
+    "registry_generation",
+    "report_generation",
+    "checkpoint_creation"
+  ],
+  "forbidden_actions": [
+    "delete_files",
+    "move_old_directories",
+    "rename_core_files",
+    "rm",
+    "rm_rf",
+    "git_push",
+    "git_reset_hard",
+    "git_clean_fd",
+    "real_trading",
+    "secret_read"
+  ],
+  "stages_total": 9,
+  "completed_stages": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "next_action": "verify refined review documents",
+  "created_at": "2026-05-06T00:00:00Z"
+}

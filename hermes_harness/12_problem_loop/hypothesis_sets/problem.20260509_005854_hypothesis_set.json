@@ -1,0 +1,32 @@
+[
+  {
+    "hypothesis_id": "H1",
+    "claim": "任务只生成文档可能因为缺少外部化判断产物链。",
+    "supporting_evidence": [
+      "APUR 运行目录此前缺失"
+    ],
+    "counter_evidence": [],
+    "confidence": "high",
+    "verification_needed": true
+  },
+  {
+    "hypothesis_id": "H2",
+    "claim": "任务停在设计层可能因为没有 dry-run 脚本验证闭环。",
+    "supporting_evidence": [
+      "本轮新增 hermes_problem_loop_run.py dry-run"
+    ],
+    "counter_evidence": [],
+    "confidence": "high",
+    "verification_needed": true
+  },
+  {
+    "hypothesis_id": "H3",
+    "claim": "完成判断不稳定可能因为验证报告和记忆队列没有绑定。",
+    "supporting_evidence": [
+      "闭环完成定义要求 memory_write_queue"
+    ],
+    "counter_evidence": [],
+    "confidence": "medium",
+    "verification_needed": true
+  }
+]

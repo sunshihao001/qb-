@@ -1,0 +1,50 @@
+{
+  "source": "okx",
+  "endpoint": "advanced_info",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "advanced-info",
+    "--address",
+    "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T01:47:57Z",
+  "finished_at": "2026-05-08T01:47:57Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": {
+      "bundleHoldingPercent": "2.0291",
+      "chainIndex": "501",
+      "createTime": "1778199036000",
+      "creatorAddress": "4AUdTyqqVrVby6HyZjeY3Peoe31JsYeh4fepocqk82PP",
+      "devCreateTokenCount": "1",
+      "devHoldingPercent": "0",
+      "devLaunchedTokenCount": "1",
+      "devRugPullTokenCount": "0",
+      "isInternal": false,
+      "lpBurnedPercent": "100",
+      "progress": "",
+      "protocolId": "120596",
+      "riskControlLevel": "1",
+      "sniperHoldingPercent": "0.0393",
+      "snipersClearAddressCount": "24",
+      "snipersTotal": "32",
+      "suspiciousHoldingPercent": "",
+      "tokenContractAddress": "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+      "tokenTags": [
+        "devHoldingStatusSellAll",
+        "smartMoneyBuy",
+        "dexScreenerTokenCommunityTakeOver",
+        "dsPaid"
+      ],
+      "top10HoldPercent": "2.5399",
+      "totalFee": "0.433119705"
+    }
+  }
+}

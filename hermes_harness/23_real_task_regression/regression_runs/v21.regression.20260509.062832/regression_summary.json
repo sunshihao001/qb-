@@ -1,0 +1,20 @@
+{
+  "run_id": "v21.regression.20260509.062832",
+  "created_at": "2026-05-09T06:28:32.552685+00:00",
+  "status": "COMPLETED",
+  "route": "hermes_real_task_regression_v2_1",
+  "fixture_set": "core",
+  "case_ids": [
+    "rt_v21_001",
+    "rt_v21_002",
+    "rt_v21_003",
+    "rt_v21_004",
+    "rt_v21_005"
+  ],
+  "total_cases": 5,
+  "passed_cases": 5,
+  "failed_cases": 0,
+  "overall_passed": true,
+  "reliability_claim": "fixture_regression_passed_not_proven_in_live_tasks",
+  "run_dir": "/root/sikk-gmgn/hermes_harness/23_real_task_regression/regression_runs/v21.regression.20260509.062832"
+}

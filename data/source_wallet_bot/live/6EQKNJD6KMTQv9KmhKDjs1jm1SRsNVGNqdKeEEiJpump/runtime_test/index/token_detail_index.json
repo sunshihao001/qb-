@@ -1,0 +1,61 @@
+{
+  "schema_version": "sikk.unified_view.v1",
+  "generated_at": "2026-05-10T17:35:47Z",
+  "boundary": "SIKK 统一索引层；只读展示、诊断、复盘和提醒；不执行真实 swap，不读取私钥，不签名，不自动 broadcast。",
+  "safety": {
+    "real_swap_enabled": false,
+    "broadcast_allowed": false,
+    "private_key_required": false,
+    "confirmation_enabled": false
+  },
+  "tokens": [
+    {
+      "token_symbol": "IMGN",
+      "token_address": "J81YExNqSMwQHGMtPaBK9sUB6wHEPp1q2oBk7Nfwo111",
+      "current_state": "WATCHING",
+      "priority_level": "P3_WATCHING",
+      "signal_level": "UNKNOWN",
+      "signal_gate": "UNKNOWN",
+      "discovery_market_cap_usd": "",
+      "signal_market_cap_usd": "",
+      "wallet_decision_market_cap_usd": "",
+      "paper_entry_market_cap_usd": "",
+      "current_market_cap_usd": "",
+      "market_cap_context_quality": "MISSING",
+      "operator_lifecycle_stage": "UNKNOWN",
+      "operator_psychology_label": "证据不足 / 待复查",
+      "operator_psychology": "DATA_INSUFFICIENT",
+      "paper_trade_alignment": "DATA_INSUFFICIENT",
+      "psychology_reason": "主导侧心理解释：主导侧心理证据不足，不能把盘型直接解释为明确控筹或派发。",
+      "next_observation_focus": "证据不足，先复查生命周期、钱包结构、市值上下文与多轮快照。",
+      "wallet_structure_status": "MISSING",
+      "wallet_missing_reason": "WAIT_SIGNAL",
+      "wallet_structure_score": 0.0,
+      "wallet_risk_score": 0.0,
+      "counterparty_pressure_score": 0.0,
+      "data_quality_score": 0.0,
+      "quote_gate": "MISSING",
+      "security_gate": "MISSING",
+      "paper_status": "NONE",
+      "paper_pnl_pct": 0.0,
+      "main_reason": "未进入钱包结构阶段：等待 K线/信号确认",
+      "next_action": "FIX_DATA_SOURCE",
+      "last_update": "2026-05-10T17:35:46Z",
+      "token_id": "T1",
+      "状态": "WATCHING",
+      "信号等级": "UNKNOWN",
+      "钱包结构": "MISSING",
+      "主导侧心理": "证据不足 / 待复查",
+      "纸面对齐": "DATA_INSUFFICIENT",
+      "观察重点": "证据不足，先复查生命周期、钱包结构、市值上下文与多轮快照。",
+      "安全边界": "SIKK 统一索引层；只读展示、诊断、复盘和提醒；不执行真实 swap，不读取私钥，不签名，不自动 broadcast。"
+    }
+  ],
+  "by_address": {
+    "J81YExNqSMwQHGMtPaBK9sUB6wHEPp1q2oBk7Nfwo111": "T1"
+  },
+  "by_symbol": {
+    "IMGN": "T1"
+  },
+  "token_count": 1
+}

@@ -1,0 +1,19 @@
+{
+  "task_id": "string",
+  "status": "RECEIVED|SCOUTING|PLANNING|EXECUTING|VERIFYING|RECOVERING|BLOCKED|DONE|ARCHIVED",
+  "task_type": "string",
+  "current_phase": "string",
+  "phases": [
+    {
+      "phase_id": "string",
+      "status": "PASSED|FAILED|PENDING",
+      "outputs": [
+        "path"
+      ],
+      "verification": "PASSED|FAILED|PENDING"
+    }
+  ],
+  "blocked": "boolean",
+  "recovery_required": "boolean",
+  "next_action": "string"
+}

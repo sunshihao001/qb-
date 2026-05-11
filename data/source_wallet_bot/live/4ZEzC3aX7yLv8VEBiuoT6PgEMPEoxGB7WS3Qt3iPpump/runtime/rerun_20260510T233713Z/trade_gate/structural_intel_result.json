@@ -1,0 +1,82 @@
+{
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "token_symbol": "AGI",
+  "structure_activity_score": 72.96,
+  "early_execution_score": 84.89,
+  "chase_risk_score": 76.37,
+  "early_execution_strength": "STRONG",
+  "chase_risk_level": "HIGH",
+  "bundler_pressure": 39.5,
+  "sniper_density": 4.8878,
+  "fresh_wallet_rate": 9.27,
+  "smart_kol_count": 69,
+  "holder_concentration": 15.49,
+  "wallet_profiles": [
+    {
+      "address": "Fej6xTZ4w2EgTUtAsDe7Dzdtq3T1oRDfGeQbXeWAw37w",
+      "role": "INFRA_EXCLUDED",
+      "action_code": "I",
+      "keep_edges": true,
+      "tags": [
+        "pool",
+        "pump_amm",
+        "lp"
+      ],
+      "holder_pct": 6.09,
+      "pnl_usd": 0.0,
+      "reason": "基础设施排除普通钱包评分"
+    },
+    {
+      "address": "7Btw_AGI_top_bundler_loss_sample",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "top_holder",
+        "bundler"
+      ],
+      "holder_pct": 1.23,
+      "pnl_usd": -10530.0,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "4HfU_AGI_high_float_sample",
+      "role": "HIGH_FLOATING_PROFIT_HOLDER",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "top_holder",
+        "bundler"
+      ],
+      "holder_pct": 0.91,
+      "pnl_usd": 10796.0,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "4JoE_AGI_transfer_in_sample",
+      "role": "TOKEN_RECEIVER_FUNDING_PENDING",
+      "action_code": "A2",
+      "keep_edges": true,
+      "tags": [
+        "top_holder",
+        "transfer_in"
+      ],
+      "holder_pct": 0.73,
+      "pnl_usd": 0.0,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "Sniper_AGI_sample",
+      "role": "EARLY_EXECUTION_CANDIDATE",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "sniper",
+        "fresh_wallet"
+      ],
+      "holder_pct": 0.08,
+      "pnl_usd": 512.0,
+      "reason": "结构角色候选，需证据复查"
+    }
+  ]
+}

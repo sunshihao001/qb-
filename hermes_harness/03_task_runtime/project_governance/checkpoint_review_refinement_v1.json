@@ -1,0 +1,21 @@
+{
+  "checkpoint_id": "checkpoint.review_refinement_v1",
+  "status": "complete",
+  "artifacts": [
+    "/root/sikk-gmgn/hermes_harness/08_reports/project_governance/HIGH_RISK_PATH_REVIEW_REFINED_V1.md",
+    "/root/sikk-gmgn/hermes_harness/08_reports/project_governance/HIGH_RISK_PATH_REVIEW_REFINED_V1.json",
+    "/root/sikk-gmgn/hermes_harness/08_reports/project_governance/COPY_ONLY_MIGRATION_PLAN_DRAFT_V1.md",
+    "/root/sikk-gmgn/hermes_harness/08_reports/project_governance/RECOMMENDED_PATH_GROUPS_V1.md"
+  ],
+  "groups": {
+    "system_cache_do_not_touch": 3,
+    "context_candidate": 1,
+    "audit_candidate": 1,
+    "configuration_candidate": 1,
+    "documentation_or_navigation_candidate": 3,
+    "runtime_output_candidate": 2,
+    "script_candidate": 1,
+    "task_state_candidate": 1,
+    "domain_analysis_candidate": 2
+  }
+}

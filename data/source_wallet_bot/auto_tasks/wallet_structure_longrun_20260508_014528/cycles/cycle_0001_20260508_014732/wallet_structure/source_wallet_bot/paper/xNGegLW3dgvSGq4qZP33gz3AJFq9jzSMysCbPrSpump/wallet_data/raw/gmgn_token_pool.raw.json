@@ -1,0 +1,43 @@
+{
+  "source": "gmgn",
+  "endpoint": "token_pool",
+  "required": true,
+  "command_redacted": [
+    "gmgn-cli",
+    "token",
+    "pool",
+    "--chain",
+    "sol",
+    "--address",
+    "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+    "--raw"
+  ],
+  "started_at": "2026-05-08T01:47:45Z",
+  "finished_at": "2026-05-08T01:47:45Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "address": "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+    "pool_address": "4dZoyjAdqWBhPaMdqTvfAw5spQpevTfrzEzieSiDqTEK",
+    "quote_address": "So11111111111111111111111111111111111111112",
+    "quote_symbol": "SOL",
+    "liquidity": "46884.1414573",
+    "base_reserve": "69394535.910958",
+    "quote_reserve": "265.933871",
+    "initial_liquidity": "15022.89586709208",
+    "initial_base_reserve": "206900000",
+    "initial_quote_reserve": "84.990359058",
+    "creation_timestamp": 1778200656,
+    "base_reserve_value": "23462.5111842830193177",
+    "quote_reserve_value": "23442.07072865",
+    "quote_vault_address": "D5AjrB1SFh7GjwZUBydwcewZ5vXjTwp5PuzXDStX3e5M",
+    "base_vault_address": "38XWUpD7KVb7ScSxnzHpsym3cxSwfB12ppJb5u67CzUh",
+    "creator": "",
+    "exchange": "pump_amm",
+    "token0_address": "",
+    "token1_address": "",
+    "base_address": "",
+    "fee_ratio": "0"
+  }
+}

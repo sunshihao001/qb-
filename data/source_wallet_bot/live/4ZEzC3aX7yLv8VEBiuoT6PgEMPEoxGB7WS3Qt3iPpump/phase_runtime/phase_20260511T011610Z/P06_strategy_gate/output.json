@@ -1,0 +1,30 @@
+{
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "phase_id": "P06_strategy_gate",
+  "artifact_kind": "output",
+  "generated_at": "2026-05-11T01:16:10Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "decision": "OBSERVE_ONLY",
+  "final_status": "OBSERVE",
+  "signal_level": "S1",
+  "permission": "BLOCK_REAL_TRADE",
+  "allowed_modes": [
+    "observe",
+    "paper"
+  ],
+  "forbidden_modes": [
+    "real_auto",
+    "buy_now",
+    "auto_trade",
+    "sell_now"
+  ],
+  "risk_level": "MEDIUM_HIGH",
+  "real_trade_enabled": false
+}

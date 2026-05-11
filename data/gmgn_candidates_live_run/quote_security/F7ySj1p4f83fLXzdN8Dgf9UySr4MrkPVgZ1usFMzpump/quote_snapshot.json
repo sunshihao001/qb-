@@ -1,0 +1,85 @@
+{
+  "token": "F7ySj1p4f83fLXzdN8Dgf9UySr4MrkPVgZ1usFMzpump",
+  "chain": "sol",
+  "wallet_address": "6m6dSTyv7aJQYJpAQKq2VnHjNtfj2mE5KFSJNevHjgSp",
+  "human_amount": "0.01 SOL",
+  "snapshot_time": "2026-05-02T22:28:29Z",
+  "max_quote_age_seconds": 30,
+  "quote_status": "AVAILABLE",
+  "source_count": 1,
+  "sources": [
+    "OKX"
+  ],
+  "max_price_impact_pct": null,
+  "quote_deviation_pct": null,
+  "quotes": [
+    {
+      "source": "OKX",
+      "input_token": "11111111111111111111111111111111",
+      "output_token": "F7ySj1p4f83fLXzdN8Dgf9UySr4MrkPVgZ1usFMzpump",
+      "input_amount": "10000000",
+      "output_amount": "6927486752",
+      "min_output_amount": null,
+      "price_impact_pct": null,
+      "raw": {
+        "ok": true,
+        "data": [
+          {
+            "chainIndex": "501",
+            "contextSlot": 417185719,
+            "dexRouterList": [
+              {
+                "dexProtocol": {
+                  "dexName": "PumpSwap",
+                  "percent": "100"
+                },
+                "fromToken": {
+                  "decimal": "9",
+                  "isHoneyPot": false,
+                  "taxRate": "0",
+                  "tokenContractAddress": "So11111111111111111111111111111111111111112",
+                  "tokenSymbol": "wSOL",
+                  "tokenUnitPrice": "84.22"
+                },
+                "fromTokenIndex": "0",
+                "toToken": {
+                  "decimal": "6",
+                  "isHoneyPot": false,
+                  "taxRate": "0",
+                  "tokenContractAddress": "F7ySj1p4f83fLXzdN8Dgf9UySr4MrkPVgZ1usFMzpump",
+                  "tokenSymbol": "NYAN",
+                  "tokenUnitPrice": "0.0001207064980708392680426835234531433"
+                },
+                "toTokenIndex": "1"
+              }
+            ],
+            "estimateGasFee": "232400",
+            "fromToken": {
+              "decimal": "9",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "11111111111111111111111111111111",
+              "tokenSymbol": "SOL",
+              "tokenUnitPrice": "84.22"
+            },
+            "fromTokenAmount": "10000000",
+            "priceImpactPercent": "-0.71",
+            "router": "11111111111111111111111111111111--F7ySj1p4f83fLXzdN8Dgf9UySr4MrkPVgZ1usFMzpump",
+            "swapMode": "exactIn",
+            "toToken": {
+              "decimal": "6",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "F7ySj1p4f83fLXzdN8Dgf9UySr4MrkPVgZ1usFMzpump",
+              "tokenSymbol": "NYAN",
+              "tokenUnitPrice": "0.0001207064980708392680426835234531433"
+            },
+            "toTokenAmount": "6927486752",
+            "tradeFee": "0.0004211"
+          }
+        ]
+      }
+    }
+  ],
+  "scope_note": "只读报价快照；不执行真实交易。"
+}

@@ -1,0 +1,27 @@
+{
+  "token_address": "6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump",
+  "phase_id": "P02_wallet_structure",
+  "artifact_kind": "input",
+  "generated_at": "2026-05-11T01:19:58Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "source_snapshot_token": "6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump",
+  "converted_refs": [
+    "token_intake",
+    "structural_intel",
+    "evidence_bundle",
+    "trade_gate_decision",
+    "risk_control_profile",
+    "execution_intent",
+    "review_writeback",
+    "wallet_decision"
+  ],
+  "permission_status": "PAPER_OBSERVE_ONLY",
+  "input_contract": "fixed_ca_phase_evidence_v1"
+}

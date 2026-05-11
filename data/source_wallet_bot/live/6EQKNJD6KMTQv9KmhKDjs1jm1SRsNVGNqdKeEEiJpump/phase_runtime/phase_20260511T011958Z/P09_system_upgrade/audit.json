@@ -1,0 +1,26 @@
+{
+  "token_address": "6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump",
+  "phase_id": "P09_system_upgrade",
+  "artifact_kind": "audit",
+  "generated_at": "2026-05-11T01:19:58Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "status": "OK",
+  "ca_consistency_passed": true,
+  "safety_boundary_passed": true,
+  "files_required": [
+    "input.json",
+    "output.json",
+    "evidence.json",
+    "handoff_packet.json",
+    "audit.json"
+  ],
+  "degraded_reason": [],
+  "block_reason": []
+}

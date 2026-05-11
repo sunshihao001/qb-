@@ -1,0 +1,14 @@
+{
+  "task_id": "hermes.task.20260506.001",
+  "same_error_count": 2,
+  "max_same_error_retry": 3,
+  "recovery_attempts": [
+    {
+      "error_type": "json_invalid",
+      "attempt": 1,
+      "action": "repair_json",
+      "result": "failed"
+    }
+  ],
+  "circuit_breaker_status": "OPEN_IF_NEXT_FAILS"
+}

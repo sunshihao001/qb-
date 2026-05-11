@@ -1,0 +1,75 @@
+{
+  "代币地址": "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+  "代币符号": "MASK",
+  "wallet_structure_status": "WALLET_BLOCK",
+  "wallet_structure_score": 0,
+  "wallet_risk_score": 100,
+  "counterparty_pressure_score": 100,
+  "data_quality_score": 100,
+  "data_quality_status": "DEGRADED",
+  "decision_at": "2026-05-08T01:48:00Z",
+  "action_code": "WALLET_BLOCK",
+  "wallet_gate_result": "BLOCKED",
+  "paper_gate_effect": "BLOCK_OR_PAUSE",
+  "risk_level": "HIGH",
+  "reason_codes": [
+    "WALLET_BLOCK",
+    "DATA_QUALITY_DEGRADED"
+  ],
+  "missing_fields": [
+    "game_side"
+  ],
+  "source_files": [
+    "wallet_structure_decision.json"
+  ],
+  "token_address": "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+  "symbol": "MASK",
+  "wallet_gate_result_cn": "BLOCKED",
+  "钱包结构结论": "WALLET_BLOCK",
+  "钱包结构系数": 0.0,
+  "钱包结构评分": 0,
+  "钱包风险评分": 100,
+  "对手盘压力评分": 100,
+  "数据质量评分": 100,
+  "筹码控制权状态": "CONTROL_MIGRATING_TO_COUNTERPARTY",
+  "钱包证据等级": "E3",
+  "早期钱包数量": 135,
+  "角色计数": {
+    "RETAIL_NOISE": 83,
+    "EARLY_BUYER": 29,
+    "BAGHOLDER_WHALE": 23
+  },
+  "game_side计数": {
+    "NOISE_SIDE": 83,
+    "STRUCTURE_SIDE": 29,
+    "COUNTERPARTY_SIDE": 23
+  },
+  "证据计数": {
+    "E1": 83,
+    "E2": 28,
+    "R2": 23,
+    "E3": 1
+  },
+  "是否存在分发派发": "否",
+  "是否存在集中清仓": "否",
+  "是否存在同源组同步卖出": "否",
+  "最高同步买入分": 0,
+  "最高同步卖出分": 0,
+  "建议状态调整": "调整为 BLOCKED",
+  "状态机建议": "BLOCKED",
+  "状态调整原因": "对手盘压力高，接盘/套牢筹码占比偏高；缺失字段：game_side；筹码控制状态机：CONTROL_MIGRATING_TO_COUNTERPARTY；筹码控制状态机：COUNTERPARTY_PRESSURE_HIGH",
+  "PAPER_READY允许说明": "钱包结构支持但不绕过 K线/quote/安全扫描；只有 signal_gate、quote_gate、security_gate 都通过，才允许 PAPER_READY。",
+  "valid_until": "2026-05-09T01:48:00Z",
+  "wallet_structure_factor": 0.0,
+  "wallet_structure_reason": "对手盘压力高，接盘/套牢筹码占比偏高；缺失字段：game_side；筹码控制状态机：CONTROL_MIGRATING_TO_COUNTERPARTY；筹码控制状态机：COUNTERPARTY_PRESSURE_HIGH",
+  "wallet_evidence_level": "E3",
+  "说明": "钱包结构门禁只影响纸面/确认层状态，不执行真实 swap。",
+  "wallet_snapshot_time": "2026-05-08T01:47:36Z",
+  "wallet_decision_created_at": "2026-05-08T01:47:36Z",
+  "wallet_delta_time": "2026-05-08T01:47:36Z",
+  "wallet_source_time": "2026-05-08T01:48:00Z",
+  "wallet_refresh_started_at": "2026-05-08T01:47:36Z",
+  "wallet_refresh_finished_at": "2026-05-08T01:47:36Z",
+  "生成时间": "2026-05-08T01:48:00Z",
+  "模块": "SIKK-SOL v1.0 钱包结构门禁"
+}

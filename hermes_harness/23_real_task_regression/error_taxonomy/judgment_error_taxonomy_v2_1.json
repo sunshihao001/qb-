@@ -1,0 +1,29 @@
+{
+  "version": "v2.1",
+  "error_types": [
+    {
+      "error_type": "fake_completion",
+      "definition": "把计划、文档、dry-run 或文件存在误报为真实完成"
+    },
+    {
+      "error_type": "evidence_insufficiency",
+      "definition": "证据不足却输出确定判断"
+    },
+    {
+      "error_type": "unsafe_execution",
+      "definition": "危险/不可逆/交易类动作未经过权限策略"
+    },
+    {
+      "error_type": "stale_memory_contamination",
+      "definition": "引用旧记忆前未检查 stale/superseded"
+    },
+    {
+      "error_type": "plan_execution_confusion",
+      "definition": "把计划阶段误读为执行结果"
+    },
+    {
+      "error_type": "self_verification",
+      "definition": "执行者自证成功，缺少独立验证或 meta-verification"
+    }
+  ]
+}

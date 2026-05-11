@@ -1,0 +1,26 @@
+{
+  "task_package_id": "TP_003_strategy_handoff_contract",
+  "source_gap_id": "GAP_003",
+  "priority": "P1",
+  "mode": "paper_only_readonly_additive",
+  "forbidden_actions": [
+    "real_swap",
+    "private_key_read",
+    "signing",
+    "broadcast",
+    "withdrawal",
+    "write_api_key_to_report"
+  ],
+  "acceptance": [
+    "contract/schema exists",
+    "tests pass",
+    "verification report written",
+    "no forbidden action terms in execution code path"
+  ],
+  "target_paths": [
+    "/root/sikk-gmgn/modules/",
+    "/root/sikk-gmgn/hermes_harness/",
+    "/root/sikk-gmgn/research_loop/state/"
+  ],
+  "next_action_zh": "创建 strategy_handoff_status_contract.json 和中文状态字典。"
+}

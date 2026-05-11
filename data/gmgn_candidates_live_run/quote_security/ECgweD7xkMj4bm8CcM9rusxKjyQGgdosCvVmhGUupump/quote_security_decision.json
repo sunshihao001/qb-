@@ -1,0 +1,29 @@
+{
+  "token": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+  "token_address": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+  "chain": "sol",
+  "snapshot_time": "2026-05-04T12:40:32Z",
+  "quote_source": "GMGN,OKX",
+  "quote_requested_at": "2026-05-04T12:40:32Z",
+  "quote_received_at": "2026-05-04T12:40:32Z",
+  "quote_time": "2026-05-04T12:40:32Z",
+  "quote_time_source": "received_at_fallback",
+  "security_scan_started_at": "2026-05-04T12:40:32Z",
+  "security_scan_finished_at": "2026-05-04T12:40:32Z",
+  "security_scan_time": "2026-05-04T12:40:32Z",
+  "security_scan_created_at": "2026-05-04T12:40:32Z",
+  "security_scan_time_source": "finished_at_fallback",
+  "final_permission": "ALLOW_CONFIRMATION_LAYER",
+  "requires_user_confirmation": true,
+  "quote_status": "AVAILABLE",
+  "security_permission": "ALLOW",
+  "security_risk_level": "LOW",
+  "quote_source_count": 2,
+  "security_source_count": 1,
+  "max_price_impact_pct": null,
+  "quote_deviation_pct": 3.045449,
+  "reasons": [
+    "报价与安全扫描未触发硬阻断，可进入人工确认层"
+  ],
+  "scope_note": "quote_security_decision 只决定能否进入人工确认层，不执行真实交易。"
+}

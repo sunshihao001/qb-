@@ -1,0 +1,313 @@
+# SIKK 候选币状态机汇总
+
+- 更新时间：2026-05-02T05:00:42Z
+- 候选数量：49
+- 执行边界：只管理状态与纸面准备，不执行真实 swap。
+
+## 状态统计
+
+- DISCOVERED：0
+- WATCHING：39
+- ACCUMULATING：0
+- READY_TO_BUY：0
+- PAPER_READY：0
+- BLOCKED：10
+- FAILED：0
+- EXITED：0
+
+## 候选状态
+
+- 代币：NKT / iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump
+  - 当前状态：BLOCKED
+  - 状态原因：钱包结构门禁阻断：多个新钱包/临时执行钱包资金待查，暂不强判同源；E3/E4 正向结构钱包仍有持仓或结果证据
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+  - 钱包结构结论：WALLET_BLOCK
+- 代币：UNIPUMP / 9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump
+  - 当前状态：BLOCKED
+  - 状态原因：钱包结构门禁阻断：多个新钱包/临时执行钱包资金待查，暂不强判同源；E3/E4 正向结构钱包仍有持仓或结果证据
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+  - 钱包结构结论：WALLET_BLOCK
+- 代币：lolcat / F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump
+  - 当前状态：BLOCKED
+  - 状态原因：钱包结构门禁阻断：多个新钱包/临时执行钱包资金待查，暂不强判同源；E3/E4 正向结构钱包仍有持仓或结果证据
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+  - 钱包结构结论：WALLET_BLOCK
+- 代币：AALIEN / ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  - 当前状态：BLOCKED
+  - 状态原因：钱包结构门禁阻断：发现分发派发/接收相关钱包 2 个；多个新钱包/临时执行钱包资金待查，暂不强判同源；E3/E4 正向结构钱包仍有持仓或结果证据
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+  - 钱包结构结论：WALLET_BLOCK
+- 代币：HIIE / AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk
+  - 当前状态：BLOCKED
+  - 状态原因：吸筹窗口 invalid，进入风险阻断观察
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：1000x / C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump
+  - 当前状态：BLOCKED
+  - 状态原因：钱包结构门禁阻断：发现分发派发/接收相关钱包 4 个；多个新钱包/临时执行钱包资金待查，暂不强判同源；E3/E4 正向结构钱包仍有持仓或结果证据
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+  - 钱包结构结论：WALLET_BLOCK
+- 代币：SCRIBBELON / 9EZ8N5ukVzSQJGu2K38f1ZydTK6JrqCx57j8yTipump
+  - 当前状态：BLOCKED
+  - 状态原因：吸筹窗口 invalid，进入风险阻断观察
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：freetrump / FYLdHidVxz373JdKwq8F5oFi7cn5eQFF997QrtnZpump
+  - 当前状态：BLOCKED
+  - 状态原因：吸筹窗口 invalid，进入风险阻断观察
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：UNITED / LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA
+  - 当前状态：BLOCKED
+  - 状态原因：钱包结构门禁阻断：发现分发派发/接收相关钱包 5 个；多个新钱包/临时执行钱包资金待查，暂不强判同源；E3/E4 正向结构钱包仍有持仓或结果证据
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+  - 钱包结构结论：WALLET_BLOCK
+- 代币：GRUMP / 21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump
+  - 当前状态：BLOCKED
+  - 状态原因：钱包结构门禁阻断：多个新钱包/临时执行钱包资金待查，暂不强判同源；E3/E4 正向结构钱包仍有持仓或结果证据
+  - 信号等级：S4_强确认信号
+  - 风险门禁：ALLOW_PAPER_TRADE_允许纸面交易
+  - 钱包结构结论：WALLET_BLOCK
+- 代币：GMEBAY / 8n58q3pUr7VK3jhCXfx75rPLiygRWLuSSiyxP7aapump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：Spirit / HXzqEEUjQ6JevbrJiMBAwoiCVikZb93XHmYtde4iCA3G
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：GA / BhCuLLN38Ru7qBkXBmGzNeG6ipiAcqvywpvNjQW7pump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：rice / 2wQq3MrFFHPQnapMt1wnZ2vGkVZDv5ENDCrdLCqFpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：ELIENUS / yrKmZe5x2YBp1P6ufKLUCNifPbqxwHiwsbfDRWBpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：Shrek / 6ixv7h9LQ8Vz4S9F4Ta8BWM7USaDapihZroDWSRBpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：CHUDBOB / Bvh8xqP2nkzZBBEywAFqNAc7Mek7QiUofeTmTbKRpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：小丫头 / J1UpPrMTEv2sNPFtB8ecyc4YScvrYoZJ7iriWJnwpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：FIT / CFRX4w9w2mvhwZAxCPnyTY3PhHTJ9vQgninuXZfH5Wwn
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：RC / 79ogrGd2bhRS455phmsJo8iHYzBusqgLeyxF9Tf5pump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：musk / GUfyGEF62BUUqj5f5PveZknhBQMWWFSXm2jqAdikpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：STJUDE / E8syR4zsgQG2zo9YyiyfX4ujubByR4z6qj9stjASpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：SIGHT  / ByqipPbSHxzLi6ga5LNrnE229vsLuSrCfHMaDbe1TRND
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：AMC / B85ta9Qp7EgoVXaMka9BQYrFogSmC3PRjsxNM6HaHF41
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：Dragon / 2p5e3sudKx2LtM8iSefaSszMY9nCiHz6CTEASQ9Xpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：PETS / 3QQQxazHaMb72d7N9iftT26vuk6A4Re31fYmkwA2pump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：Octopus / HDG8Ng6YLpiYXzBASD1Zd5Wh7T8DHRYFcbf4YGuvpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：LOKN / 7thaUtsPjcef9hd5p34PEkvr8wTuF63LhmPY7a3Vpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：RJGN / hpvoUYjKkvy2hyqC7444mU6eXFD3ETZW4tLd6Dapump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：Walter / 2CKp88BFyPzr7gEuQKXMJ9cqa24AFXUNC41FR7udpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：AGI / 3qwtMkiBc4uFSPmZeK7TMq8dVzmB4kCqnARXxAkmpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：ODAI / HxFSWTJE3SeUCgsKJUcuGQYAiH4S4BFEnSoktfKLpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：ELUENT / DQa4mxFws6WsXMwn8gpEBXqMsGfDn4Uopi8W2Zvopump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：monk  / GH6MV3UVLjSbY2WaMUZqEECkDFnt7W4Z7Jrij43gpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：SHUSH / GVa4jr163EaBG1fv5hKFQbePKPojsoawuxdozcMSpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：three / FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：CRACKROCK / HdRFFy6Sm42rDAPLGRAZ1YymtpLukziwBrE9QGs4pump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：SCAM / 6AVAUKa9uxQpruHZUinFECpXEh1usRVtzQWK8N2wpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：CREATURES / 4y1gkKzCb4qAiH8pH8ft2xvezf6sazurmYDajWXwpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：MSPAINTIFY / HDmojpFZvf1F421Gev2hh2p1ThaVbWsW5qh9C5Bipump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：LUNCHMONEY / 3vH3NzuHafRNvwKKzoGTWNuLtg5Kc38BxsmfUwgPpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：Scribbli / 8c3JdTcEqy9XdUJ36NAns7XVDfh356nWxvwcMYKNpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：ROME / 6r9CBT6kYgC49CwcnsX4NNtZmdixxhbjBGAfnXhqpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：GOP / 3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：ROAF / 4ne9SgdsLE2P2FJEjxDxUnpwS3fLGCPpHFzYeuDCpump
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：CLUTCH / 74CQjPmRd5A7MGc7Dnp1kgUNdPsYtB8FNbtak2Padpce
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：RunPepe / 3q8TXW31M8i3MPGRAfSnwPim6SwBQUqSSJwt1egcinDw
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：ROAF / 5ByEYVGSKtTzcQRhY8QkWRqKdhweXMHvHnacRznYnhUY
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入
+- 代币：PXC / PXCgWpfDv6hnNE9rac8qTk6Z1zWKJrRUcfjkVQWpXm7
+  - 当前状态：WATCHING
+  - 状态原因：候选筛选等级为观察层，等待更多 K线/结构证据
+  - 信号等级：
+  - 风险门禁：
+  - 钱包结构结论：未接入

@@ -1,0 +1,23 @@
+{
+  "schema_version": "sikk.unified_view.v1",
+  "generated_at": "2026-05-10T17:35:47Z",
+  "boundary": "SIKK 统一索引层；只读展示、诊断、复盘和提醒；不执行真实 swap，不读取私钥，不签名，不自动 broadcast。",
+  "safety": {
+    "real_swap_enabled": false,
+    "broadcast_allowed": false,
+    "private_key_required": false,
+    "confirmation_enabled": false
+  },
+  "alert_count": 1,
+  "alerts": [
+    {
+      "alert_id": "A1",
+      "type": "DATA_SYNC_FAIL",
+      "severity": "HIGH",
+      "title": "钱包结构覆盖缺口较高",
+      "reason": "wallet_missing_rate_pct=100.0",
+      "action": "数据补全"
+    }
+  ],
+  "scope_note": "Alert 只读提醒；不执行、不授权、不广播真实交易。"
+}

@@ -1,0 +1,13 @@
+{"rule_id": "rule.control.0001", "source": "her2.0.md", "type": "invariant", "scope": "global", "precedence": 100, "content": "每条规则必须有 source/type/scope/precedence。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0002", "source": "her2.0.md", "type": "invariant", "scope": "task", "precedence": 100, "content": "每个任务必须有 thread_id。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0003", "source": "her2.0.md", "type": "invariant", "scope": "runtime", "precedence": 100, "content": "每一轮动作必须写入 rollout event。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0004", "source": "her2.0.md", "type": "invariant", "scope": "tool", "precedence": 100, "content": "每个 tool_call 必须有 tool_result；中断时必须 synthetic result。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0005", "source": "her2.0.md", "type": "invariant", "scope": "tool", "precedence": 100, "content": "工具执行前必须经过 schema + policy + permission。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0006", "source": "her2.0.md", "type": "invariant", "scope": "context", "precedence": 95, "content": "上下文装配前必须经过 input governance。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0007", "source": "her2.0.md", "type": "invariant", "scope": "context", "precedence": 95, "content": "context 超预算时必须 compact，而不是继续堆。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0008", "source": "her2.0.md", "type": "invariant", "scope": "compact", "precedence": 95, "content": "compact 目标是恢复工作语义，不是摘要历史。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0009", "source": "her2.0.md", "type": "invariant", "scope": "role", "precedence": 100, "content": "执行者不得验证自己。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0010", "source": "her2.0.md", "type": "invariant", "scope": "verification", "precedence": 100, "content": "验证报告本身必须接受 meta-verification。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0011", "source": "her2.0.md", "type": "invariant", "scope": "recovery", "precedence": 100, "content": "同类恢复失败超过阈值必须熔断。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0012", "source": "her2.0.md", "type": "invariant", "scope": "memory", "precedence": 100, "content": "任何记忆被引用前必须检查是否 stale / superseded。", "status": "active", "superseded_by": null}
+{"rule_id": "rule.control.0013", "source": "her2.0.md", "type": "principle", "scope": "system", "precedence": 90, "content": "Hermes 不是让 AI 更自由地做事，而是让不稳定 AI 在受控制度中做事。", "status": "active", "superseded_by": null}

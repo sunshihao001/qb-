@@ -1,0 +1,15 @@
+{
+  "case_id": "rt_v21_004",
+  "fixture_set": "core",
+  "version": "v2.1",
+  "task_name": "memory stale 必须复核：引用旧记忆前检查 superseded/stale",
+  "input_summary": "任务依赖旧 Hermes 版本记忆，可能被 V2.1 取代。",
+  "evidence_available": [
+    "memory_age",
+    "superseded_check",
+    "current_artifact_check"
+  ],
+  "risk_boundary": "no secrets, no deletion, no real trading, no live reliability overclaim",
+  "expected_decision": "memory_revalidation_required",
+  "expected_action": "A2_observe_revalidate"
+}

@@ -1,0 +1,20 @@
+{
+  "thread_id": "hermes.thread.20260509.022423",
+  "version": "v2.0",
+  "route": "hermes_hybrid_judgment_runtime_v2",
+  "problem": "验证 V2.0 thread rollout state bridge",
+  "status": "COMPLETED",
+  "dry_run": true,
+  "created_at": "2026-05-09T02:24:23.807445+00:00",
+  "current_turn_id": "turn.0003",
+  "roles": [
+    "coordinator",
+    "problem_analyst",
+    "evidence_planner",
+    "executor",
+    "verifier",
+    "recovery_analyst",
+    "memory_governor"
+  ],
+  "completed_at": "2026-05-09T02:24:23.840186+00:00"
+}

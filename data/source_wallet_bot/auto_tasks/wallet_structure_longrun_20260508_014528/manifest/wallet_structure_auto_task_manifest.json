@@ -1,0 +1,77 @@
+{
+  "artifact_type": "wallet_structure_auto_task_manifest",
+  "status": "COMPLETED",
+  "generated_at": "2026-05-08T01:48:00Z",
+  "long_running_task": {
+    "cycles_requested": 1,
+    "cycles_completed": 1,
+    "interval_seconds": 0.0,
+    "checkpoint_path": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/checkpoint/wallet_structure_auto_task_checkpoint.json",
+    "resume": false
+  },
+  "canonical_route": [
+    "modules/source_wallet_bot",
+    "modules/wallet_data_guard",
+    "sikk_candidate_wallet_structure_pipeline.py",
+    "sikk_wallet_structure_gate.py",
+    "sikk_candidate_state_machine.py / sikk_live_run.py"
+  ],
+  "cycles": [
+    {
+      "cycle": 1,
+      "started_at": "2026-05-08T01:47:32Z",
+      "cycle_dir": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732",
+      "pipeline_manifest": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/orchestrator/pipeline_manifest.json",
+      "pipeline_report": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/orchestrator/pipeline_report.md",
+      "wallet_structure_status": "PASS",
+      "state_machine_stats": {
+        "DISCOVERED": 0,
+        "WATCHING": 0,
+        "ACCUMULATING": 0,
+        "READY_TO_BUY": 0,
+        "PAPER_READY": 3,
+        "BLOCKED": 0,
+        "FAILED": 0,
+        "EXITED": 0,
+        "候选数量": 3
+      },
+      "wallet_structure_stats": {
+        "处理数量": 3,
+        "WALLET_BLOCK": 3
+      },
+      "acceptance_status": "PASS",
+      "acceptance": {
+        "status": "PASS",
+        "details": {
+          "ok": true,
+          "missing_files": [],
+          "json_results": {
+            "modules/source_wallet_bot/source_registry_schema.json": "PASS",
+            "modules/source_wallet_bot/wallet_raw_normalized_schema.json": "PASS",
+            "modules/source_wallet_bot/wallet_entity_profile_schema.json": "PASS",
+            "modules/source_wallet_bot/current_token_behavior_schema.json": "PASS",
+            "modules/source_wallet_bot/same_source_group_schema.json": "PASS",
+            "modules/source_wallet_bot/wallet_intelligence_decision_schema.json": "PASS",
+            "modules/source_wallet_bot/bot2_handoff_packet_schema.json": "PASS"
+          }
+        }
+      }
+    }
+  ],
+  "guard_trend_index_path": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/guard_index/wallet_data_guard_trend_index.json",
+  "system_audit": {
+    "overall_status": "PASS",
+    "json_path": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/system_audit/wallet_structure_system_audit.json",
+    "md_path": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/system_audit/wallet_structure_system_audit.md",
+    "gap_count": 0
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_collectors": true,
+    "real_swap_enabled": false,
+    "private_key_required": false,
+    "secret_file_reading_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false
+  }
+}

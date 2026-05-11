@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "empty_normalized_dataset",
+  "file_name": "wallet_trade_normalized.json",
+  "records": [],
+  "missing_fields": [
+    "token_address",
+    "wallet_address",
+    "first_buy_time",
+    "last_buy_time",
+    "last_sell_time",
+    "buy_count",
+    "sell_count",
+    "buy_amount_sol",
+    "buy_amount_usd",
+    "buy_token_amount",
+    "sell_amount_sol",
+    "sell_amount_usd",
+    "sell_token_amount",
+    "avg_buy_price",
+    "avg_sell_price",
+    "current_balance",
+    "sold_pct",
+    "remaining_pct",
+    "realized_profit",
+    "unrealized_profit",
+    "total_profit",
+    "pnl_multiple",
+    "holding_duration_seconds",
+    "is_full_exit",
+    "is_partial_exit"
+  ],
+  "missing_reason": "字段缺失：尚未接入 live GMGN wallet trade / GMGN trader detail / 链上 DEX swap 输入；本文件只保留 contract 输出，不编造交易事实。",
+  "allowed_sources": [
+    "GMGN wallet trade",
+    "GMGN trader detail",
+    "链上 DEX swap 记录"
+  ],
+  "used_for": [
+    "单钱包成本",
+    "同源组成本",
+    "派发进度",
+    "高结果钱包判断",
+    "接盘鲸鱼判断"
+  ],
+  "forbidden_reverse_sources": [
+    "dashboard",
+    "paper",
+    "report",
+    "case file",
+    "state_machine"
+  ],
+  "normalized_at": "2026-05-05T13:26:00Z"
+}

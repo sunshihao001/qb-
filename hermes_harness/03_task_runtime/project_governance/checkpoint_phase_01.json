@@ -1,0 +1,13 @@
+{
+  "checkpoint_id": "checkpoint.phase_01",
+  "phase": "01_read_only_global_recon",
+  "status": "complete",
+  "resume_command": "continue from phase_02 using inventories in project_inventory",
+  "artifacts": [
+    "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/file_inventory.jsonl",
+    "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/directory_inventory.jsonl",
+    "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_governance/phase_01_recon.md"
+  ],
+  "file_count": 12253,
+  "directory_count": 1469
+}

@@ -1,0 +1,53 @@
+{
+  "artifact_type": "runtime_hook_state",
+  "version": "v1.4",
+  "runtime_run_id": "runtime.20260509_014645.执行任务_全自动完成_验证_V1_6_判断治理_hook_是否接",
+  "route": "hermes_runtime_hook_autonomous_problem_loop",
+  "created_at": "2026-05-09T01:46:45Z",
+  "dry_run": true,
+  "user_request": "执行任务，全自动完成：验证 V1.6 判断治理 hook 是否接入 runtime hook。",
+  "task_classification": {
+    "complexity": "complex",
+    "risk": "medium",
+    "requires_apur": true,
+    "reason": "matched_runtime_hook_trigger"
+  },
+  "hooks": {
+    "router_hook": "done",
+    "problem_passport_hook": "done",
+    "judgment_governance_hook": "done",
+    "apur_execution_hook": "done",
+    "tool_ledger_hook": "done",
+    "verification_hook": "done",
+    "recovery_hook": "not_required",
+    "learning_writeback_hook": "done",
+    "completion_audit_hook": "done"
+  },
+  "linked_artifacts": {
+    "problem_passport": "14_runtime_hooks/runtime_runs/runtime.20260509_014645.执行任务_全自动完成_验证_V1_6_判断治理_hook_是否接/problem_passport.md",
+    "judgment_governance": "/root/sikk-gmgn/hermes_harness/15_judgment_governance/runs/judgment.20260509_014645.执行任务_全自动完成_验证_V1_6_判断治理_hook_是否接入_ru",
+    "apur_loop_state": "14_runtime_hooks/runtime_runs/runtime.20260509_014645.执行任务_全自动完成_验证_V1_6_判断治理_hook_是否接/apur_stub_loop_state.json",
+    "tool_ledger": "14_runtime_hooks/runtime_runs/runtime.20260509_014645.执行任务_全自动完成_验证_V1_6_判断治理_hook_是否接/tool_ledger.jsonl",
+    "completion_audit": "14_runtime_hooks/runtime_runs/runtime.20260509_014645.执行任务_全自动完成_验证_V1_6_判断治理_hook_是否接/runtime_completion_audit.md",
+    "memory_queue": "04_memory/memory_write_queue.jsonl"
+  },
+  "status": "COMPLETED",
+  "verification": {
+    "overall_passed": true,
+    "checks": {
+      "runtime_state_exists": true,
+      "tool_ledger_exists": true,
+      "judgment_governance_hook": true,
+      "verification_passed": true,
+      "learning_queued": true,
+      "final_report_exists": true
+    }
+  },
+  "completion_definition": [
+    "runtime_state_exists",
+    "tool_ledger_exists",
+    "verification_passed",
+    "learning_queued",
+    "final_report_exists"
+  ]
+}

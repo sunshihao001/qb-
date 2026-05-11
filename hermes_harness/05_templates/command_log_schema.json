@@ -1,0 +1,15 @@
+{
+  "task_id": "string",
+  "phase_id": "string",
+  "command_id": "string",
+  "cwd": "string",
+  "command": "string",
+  "risk_tier": "R0-R5",
+  "permission": "ALLOW|ASK|DENY",
+  "expected_effect": "string",
+  "actual_result": "string",
+  "stdout_path": "string|null",
+  "stderr_path": "string|null",
+  "exit_code": "integer",
+  "timestamp": "ISO8601"
+}

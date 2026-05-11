@@ -1,0 +1,317 @@
+{
+  "模块": "SIKK Candidate Quote/Security Pipeline v0.6",
+  "扫描时间": "2026-05-02T05:00:42Z",
+  "输入文件": {
+    "候选状态": "data/gmgn_candidates_live_run/state_machine/candidate_states.json",
+    "信号汇总": "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json"
+  },
+  "处理统计": {
+    "读取状态数": 49,
+    "PAPER_READY数量": 0,
+    "成功数量": 0,
+    "跳过数量": 49,
+    "失败数量": 0,
+    "READY_FOR_CONFIRMATION": 0,
+    "PAUSE": 0,
+    "BLOCK": 0
+  },
+  "处理结果": [],
+  "跳过结果": [
+    {
+      "代币地址": "iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump",
+      "代币符号": "NKT",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
+      "代币符号": "UNIPUMP",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump",
+      "代币符号": "lolcat",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1",
+      "代币符号": "AALIEN",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk",
+      "代币符号": "HIIE",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump",
+      "代币符号": "1000x",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "9EZ8N5ukVzSQJGu2K38f1ZydTK6JrqCx57j8yTipump",
+      "代币符号": "SCRIBBELON",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "FYLdHidVxz373JdKwq8F5oFi7cn5eQFF997QrtnZpump",
+      "代币符号": "freetrump",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA",
+      "代币符号": "UNITED",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump",
+      "代币符号": "GRUMP",
+      "原状态": "BLOCKED",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "8n58q3pUr7VK3jhCXfx75rPLiygRWLuSSiyxP7aapump",
+      "代币符号": "GMEBAY",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "HXzqEEUjQ6JevbrJiMBAwoiCVikZb93XHmYtde4iCA3G",
+      "代币符号": "Spirit",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "BhCuLLN38Ru7qBkXBmGzNeG6ipiAcqvywpvNjQW7pump",
+      "代币符号": "GA",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "2wQq3MrFFHPQnapMt1wnZ2vGkVZDv5ENDCrdLCqFpump",
+      "代币符号": "rice",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "yrKmZe5x2YBp1P6ufKLUCNifPbqxwHiwsbfDRWBpump",
+      "代币符号": "ELIENUS",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "6ixv7h9LQ8Vz4S9F4Ta8BWM7USaDapihZroDWSRBpump",
+      "代币符号": "Shrek",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "Bvh8xqP2nkzZBBEywAFqNAc7Mek7QiUofeTmTbKRpump",
+      "代币符号": "CHUDBOB",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "J1UpPrMTEv2sNPFtB8ecyc4YScvrYoZJ7iriWJnwpump",
+      "代币符号": "小丫头",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "CFRX4w9w2mvhwZAxCPnyTY3PhHTJ9vQgninuXZfH5Wwn",
+      "代币符号": "FIT",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "79ogrGd2bhRS455phmsJo8iHYzBusqgLeyxF9Tf5pump",
+      "代币符号": "RC",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "GUfyGEF62BUUqj5f5PveZknhBQMWWFSXm2jqAdikpump",
+      "代币符号": "musk",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "E8syR4zsgQG2zo9YyiyfX4ujubByR4z6qj9stjASpump",
+      "代币符号": "STJUDE",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "ByqipPbSHxzLi6ga5LNrnE229vsLuSrCfHMaDbe1TRND",
+      "代币符号": "SIGHT ",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "B85ta9Qp7EgoVXaMka9BQYrFogSmC3PRjsxNM6HaHF41",
+      "代币符号": "AMC",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "2p5e3sudKx2LtM8iSefaSszMY9nCiHz6CTEASQ9Xpump",
+      "代币符号": "Dragon",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "3QQQxazHaMb72d7N9iftT26vuk6A4Re31fYmkwA2pump",
+      "代币符号": "PETS",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "HDG8Ng6YLpiYXzBASD1Zd5Wh7T8DHRYFcbf4YGuvpump",
+      "代币符号": "Octopus",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "7thaUtsPjcef9hd5p34PEkvr8wTuF63LhmPY7a3Vpump",
+      "代币符号": "LOKN",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "hpvoUYjKkvy2hyqC7444mU6eXFD3ETZW4tLd6Dapump",
+      "代币符号": "RJGN",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "2CKp88BFyPzr7gEuQKXMJ9cqa24AFXUNC41FR7udpump",
+      "代币符号": "Walter",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "3qwtMkiBc4uFSPmZeK7TMq8dVzmB4kCqnARXxAkmpump",
+      "代币符号": "AGI",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "HxFSWTJE3SeUCgsKJUcuGQYAiH4S4BFEnSoktfKLpump",
+      "代币符号": "ODAI",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "DQa4mxFws6WsXMwn8gpEBXqMsGfDn4Uopi8W2Zvopump",
+      "代币符号": "ELUENT",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "GH6MV3UVLjSbY2WaMUZqEECkDFnt7W4Z7Jrij43gpump",
+      "代币符号": "monk ",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "GVa4jr163EaBG1fv5hKFQbePKPojsoawuxdozcMSpump",
+      "代币符号": "SHUSH",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump",
+      "代币符号": "three",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "HdRFFy6Sm42rDAPLGRAZ1YymtpLukziwBrE9QGs4pump",
+      "代币符号": "CRACKROCK",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "6AVAUKa9uxQpruHZUinFECpXEh1usRVtzQWK8N2wpump",
+      "代币符号": "SCAM",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "4y1gkKzCb4qAiH8pH8ft2xvezf6sazurmYDajWXwpump",
+      "代币符号": "CREATURES",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "HDmojpFZvf1F421Gev2hh2p1ThaVbWsW5qh9C5Bipump",
+      "代币符号": "MSPAINTIFY",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "3vH3NzuHafRNvwKKzoGTWNuLtg5Kc38BxsmfUwgPpump",
+      "代币符号": "LUNCHMONEY",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "8c3JdTcEqy9XdUJ36NAns7XVDfh356nWxvwcMYKNpump",
+      "代币符号": "Scribbli",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "6r9CBT6kYgC49CwcnsX4NNtZmdixxhbjBGAfnXhqpump",
+      "代币符号": "ROME",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump",
+      "代币符号": "GOP",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "4ne9SgdsLE2P2FJEjxDxUnpwS3fLGCPpHFzYeuDCpump",
+      "代币符号": "ROAF",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "74CQjPmRd5A7MGc7Dnp1kgUNdPsYtB8FNbtak2Padpce",
+      "代币符号": "CLUTCH",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "3q8TXW31M8i3MPGRAfSnwPim6SwBQUqSSJwt1egcinDw",
+      "代币符号": "RunPepe",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "5ByEYVGSKtTzcQRhY8QkWRqKdhweXMHvHnacRznYnhUY",
+      "代币符号": "ROAF",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    },
+    {
+      "代币地址": "PXCgWpfDv6hnNE9rac8qTk6Z1zWKJrRUcfjkVQWpXm7",
+      "代币符号": "PXC",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    }
+  ],
+  "失败结果": [],
+  "说明": "PAPER_READY 后置只读报价与安全扫描管道；输出 READY_FOR_CONFIRMATION / PAUSE / BLOCK，不执行真实 swap。"
+}

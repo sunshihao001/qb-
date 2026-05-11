@@ -1,0 +1,1522 @@
+{
+  ".git": {
+    "entrypoints": [],
+    "file_count": 4746,
+    "kinds": {
+      "other": 4746
+    },
+    "module_root": ".git",
+    "notes": []
+  },
+  ".gitignore": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "other": 1
+    },
+    "module_root": ".gitignore",
+    "notes": []
+  },
+  ".hermes_long_task_prompt_20260503_chatgpt_share_sikk.txt": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "other": 1
+    },
+    "module_root": ".hermes_long_task_prompt_20260503_chatgpt_share_sikk.txt",
+    "notes": []
+  },
+  ".pytest_cache": {
+    "entrypoints": [],
+    "file_count": 5,
+    "kinds": {
+      "document": 1,
+      "other": 4
+    },
+    "module_root": ".pytest_cache",
+    "notes": []
+  },
+  "AGENTS.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "AGENTS.md",
+    "notes": []
+  },
+  "README.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "README.md",
+    "notes": []
+  },
+  "SIKK_AUDIT_REPORT.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "SIKK_AUDIT_REPORT.md",
+    "notes": []
+  },
+  "SIKK_CHANGELOG.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "SIKK_CHANGELOG.md",
+    "notes": []
+  },
+  "SIKK_LESSONS_LEARNED.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "SIKK_LESSONS_LEARNED.md",
+    "notes": []
+  },
+  "SIKK_NEXT_TASK.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "SIKK_NEXT_TASK.md",
+    "notes": []
+  },
+  "SIKK_PROJECT_STATE.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "SIKK_PROJECT_STATE.md",
+    "notes": []
+  },
+  "SIKK_SYSTEM_INDEX.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "SIKK_SYSTEM_INDEX.md",
+    "notes": []
+  },
+  "SIKK_TASK_PLAN.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "SIKK_TASK_PLAN.md",
+    "notes": []
+  },
+  "SIKK_VERIFY_REPORT.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "SIKK_VERIFY_REPORT.md",
+    "notes": []
+  },
+  "SIKK_交易系统固定命令.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "SIKK_交易系统固定命令.md",
+    "notes": []
+  },
+  "__pycache__": {
+    "entrypoints": [],
+    "file_count": 76,
+    "kinds": {
+      "other": 76
+    },
+    "module_root": "__pycache__",
+    "notes": []
+  },
+  "ai_context": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "data": 1
+    },
+    "module_root": "ai_context",
+    "notes": []
+  },
+  "audits": {
+    "entrypoints": [],
+    "file_count": 25,
+    "kinds": {
+      "data": 3,
+      "document": 22
+    },
+    "module_root": "audits",
+    "notes": []
+  },
+  "config": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "data": 1
+    },
+    "module_root": "config",
+    "notes": []
+  },
+  "contracts": {
+    "entrypoints": [],
+    "file_count": 2,
+    "kinds": {
+      "document": 2
+    },
+    "module_root": "contracts",
+    "notes": []
+  },
+  "data": {
+    "entrypoints": [
+      "data/gmgn_candidates_live_run/site/app.js"
+    ],
+    "file_count": 6234,
+    "kinds": {
+      "code": 1,
+      "data": 5127,
+      "document": 873,
+      "other": 219,
+      "report": 14
+    },
+    "module_root": "data",
+    "notes": []
+  },
+  "docs": {
+    "entrypoints": [
+      "docs/harness/ai_harness_system/09_scripts/hermes_artifact_verify.py",
+      "docs/harness/ai_harness_system/09_scripts/hermes_boot_check.py",
+      "docs/harness/ai_harness_system/09_scripts/hermes_permission_check.py",
+      "docs/harness/ai_harness_system/09_scripts/hermes_resume_task.py",
+      "docs/harness/ai_harness_system/09_scripts/hermes_stale_memory_check.py",
+      "docs/harness/ai_harness_system/09_scripts/hermes_surface_completion_audit.py",
+      "docs/harness/ai_harness_system/11_hermes_bot_invocation/hermes_task_router.py"
+    ],
+    "file_count": 195,
+    "kinds": {
+      "docs": 188,
+      "script": 7
+    },
+    "module_root": "docs",
+    "notes": []
+  },
+  "hermes_harness": {
+    "entrypoints": [
+      "hermes_harness/09_scripts/hermes_artifact_verify.py",
+      "hermes_harness/09_scripts/hermes_bash_classifier.py",
+      "hermes_harness/09_scripts/hermes_blindspot_audit.py",
+      "hermes_harness/09_scripts/hermes_boot_check.py",
+      "hermes_harness/09_scripts/hermes_compact_rebuild.py",
+      "hermes_harness/09_scripts/hermes_context_budget_check.py",
+      "hermes_harness/09_scripts/hermes_context_build.py",
+      "hermes_harness/09_scripts/hermes_input_governance.py",
+      "hermes_harness/09_scripts/hermes_memory_audit.py",
+      "hermes_harness/09_scripts/hermes_memory_revalidate.py",
+      "hermes_harness/09_scripts/hermes_narrative_check.py",
+      "hermes_harness/09_scripts/hermes_permission_check.py",
+      "hermes_harness/09_scripts/hermes_recovery_circuit_check.py",
+      "hermes_harness/09_scripts/hermes_recovery_pack.py",
+      "hermes_harness/09_scripts/hermes_resume_task.py",
+      "hermes_harness/09_scripts/hermes_stale_memory_check.py",
+      "hermes_harness/09_scripts/hermes_surface_completion_audit.py",
+      "hermes_harness/09_scripts/hermes_task_init.py",
+      "hermes_harness/09_scripts/hermes_task_router.py",
+      "hermes_harness/09_scripts/hermes_tool_ledger_check.py",
+      "hermes_harness/09_scripts/hermes_v12_architecture_check.py",
+      "hermes_harness/09_scripts/hermes_verify_task.py"
+    ],
+    "file_count": 161,
+    "kinds": {
+      "document": 27,
+      "memory": 14,
+      "policy": 24,
+      "recovery": 7,
+      "report": 19,
+      "runtime": 21,
+      "script": 23,
+      "template": 16,
+      "verification": 4,
+      "workflow": 6
+    },
+    "module_root": "hermes_harness",
+    "notes": []
+  },
+  "imports": {
+    "entrypoints": [],
+    "file_count": 11,
+    "kinds": {
+      "other": 11
+    },
+    "module_root": "imports",
+    "notes": []
+  },
+  "knowledge": {
+    "entrypoints": [],
+    "file_count": 56,
+    "kinds": {
+      "data": 1,
+      "document": 55
+    },
+    "module_root": "knowledge",
+    "notes": []
+  },
+  "legacy_compat": {
+    "entrypoints": [],
+    "file_count": 15,
+    "kinds": {
+      "data": 11,
+      "document": 4
+    },
+    "module_root": "legacy_compat",
+    "notes": []
+  },
+  "logs": {
+    "entrypoints": [],
+    "file_count": 2,
+    "kinds": {
+      "other": 2
+    },
+    "module_root": "logs",
+    "notes": []
+  },
+  "modules": {
+    "entrypoints": [
+      "modules/__init__.py",
+      "modules/source_wallet_bot/__init__.py",
+      "modules/source_wallet_bot/config.py",
+      "modules/source_wallet_bot/directory_governance.py",
+      "modules/source_wallet_bot/errors.py",
+      "modules/source_wallet_bot/gmgn_live_adapter.py",
+      "modules/source_wallet_bot/handoff_exporter.py",
+      "modules/source_wallet_bot/io_utils.py",
+      "modules/source_wallet_bot/models.py",
+      "modules/source_wallet_bot/role_classifier.py",
+      "modules/source_wallet_bot/runner.py",
+      "modules/source_wallet_bot/schema_validator.py",
+      "modules/source_wallet_bot/source_group_engine.py",
+      "modules/source_wallet_bot/validate_acceptance.py",
+      "modules/source_wallet_bot/wallet_fact_builder.py",
+      "modules/source_wallet_bot/wallet_profile_normalizer.py",
+      "modules/source_wallet_bot/wallet_trade_normalizer.py",
+      "modules/strategy_gate/__init__.py",
+      "modules/strategy_gate/cost_risk_reward_calculator.py",
+      "modules/wallet_structure/__init__.py",
+      "modules/wallet_structure/chinese_judgement.py",
+      "modules/wallet_structure/constants.py",
+      "modules/wallet_structure/counterparty_pressure_calculator.py",
+      "modules/wallet_structure/decision_builder.py",
+      "modules/wallet_structure/distribution_progress_calculator.py",
+      "modules/wallet_structure/dominant_cost_zone_calculator.py",
+      "modules/wallet_structure/edge_builder.py",
+      "modules/wallet_structure/history_store.py",
+      "modules/wallet_structure/markup_motivation_calculator.py",
+      "modules/wallet_structure/models.py",
+      "modules/wallet_structure/normalizer.py",
+      "modules/wallet_structure/note_generator.py",
+      "modules/wallet_structure/quantitative_aggregator.py",
+      "modules/wallet_structure/quantitative_structure_models.py",
+      "modules/wallet_structure/role_classifier.py",
+      "modules/wallet_structure/run.py",
+      "modules/wallet_structure/source_reader.py",
+      "modules/wallet_structure/structure_inventory_calculator.py",
+      "modules/wallet_structure/token_cluster_analyzer.py",
+      "modules/wallet_structure/wallet_pattern_cost_alignment_calculator.py"
+    ],
+    "file_count": 124,
+    "kinds": {
+      "data": 24,
+      "document": 34,
+      "other": 26,
+      "script": 40
+    },
+    "module_root": "modules",
+    "notes": []
+  },
+  "outputs": {
+    "entrypoints": [],
+    "file_count": 55,
+    "kinds": {
+      "data": 50,
+      "document": 5
+    },
+    "module_root": "outputs",
+    "notes": []
+  },
+  "reports": {
+    "entrypoints": [],
+    "file_count": 116,
+    "kinds": {
+      "data": 72,
+      "document": 37,
+      "other": 7
+    },
+    "module_root": "reports",
+    "notes": []
+  },
+  "research_loop": {
+    "entrypoints": [],
+    "file_count": 105,
+    "kinds": {
+      "data": 20,
+      "document": 78,
+      "report": 7
+    },
+    "module_root": "research_loop",
+    "notes": []
+  },
+  "restore_intel_bot_to_20260505_1330_report.json": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "data": 1
+    },
+    "module_root": "restore_intel_bot_to_20260505_1330_report.json",
+    "notes": []
+  },
+  "run_sikk_gmgn_pipeline.py": {
+    "entrypoints": [
+      "run_sikk_gmgn_pipeline.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "run_sikk_gmgn_pipeline.py",
+    "notes": []
+  },
+  "schemas": {
+    "entrypoints": [],
+    "file_count": 4,
+    "kinds": {
+      "data": 3,
+      "document": 1
+    },
+    "module_root": "schemas",
+    "notes": []
+  },
+  "scripts": {
+    "entrypoints": [
+      "scripts/backup_jiegoufenxibot_structure_data.py",
+      "scripts/backup_sunqbfemxbot_wallet_data.py",
+      "scripts/configure_hindsight_llm_key.sh",
+      "scripts/consolidate_intel_bot_data.py",
+      "scripts/hindsight_recall_sikk.py",
+      "scripts/hindsight_reflect_sikk.py",
+      "scripts/hindsight_retain_sikk.py",
+      "scripts/hindsight_smoke_sikk.sh",
+      "scripts/migrate_intel_bot_legacy_data.py",
+      "scripts/restore_intel_bot_to_20260505_1330.py",
+      "scripts/start_hindsight_docker.sh"
+    ],
+    "file_count": 15,
+    "kinds": {
+      "other": 4,
+      "script": 11
+    },
+    "module_root": "scripts",
+    "notes": []
+  },
+  "sikk_accumulation_window_detector.py": {
+    "entrypoints": [
+      "sikk_accumulation_window_detector.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_accumulation_window_detector.py",
+    "notes": []
+  },
+  "sikk_auto_exit_planner.py": {
+    "entrypoints": [
+      "sikk_auto_exit_planner.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_auto_exit_planner.py",
+    "notes": []
+  },
+  "sikk_auto_position_sizer.py": {
+    "entrypoints": [
+      "sikk_auto_position_sizer.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_auto_position_sizer.py",
+    "notes": []
+  },
+  "sikk_auto_readiness_runner.py": {
+    "entrypoints": [
+      "sikk_auto_readiness_runner.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_auto_readiness_runner.py",
+    "notes": []
+  },
+  "sikk_auto_risk_gate.py": {
+    "entrypoints": [
+      "sikk_auto_risk_gate.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_auto_risk_gate.py",
+    "notes": []
+  },
+  "sikk_auto_signal_engine.py": {
+    "entrypoints": [
+      "sikk_auto_signal_engine.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_auto_signal_engine.py",
+    "notes": []
+  },
+  "sikk_auto_trade_types.py": {
+    "entrypoints": [
+      "sikk_auto_trade_types.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_auto_trade_types.py",
+    "notes": []
+  },
+  "sikk_automation_workflow.py": {
+    "entrypoints": [
+      "sikk_automation_workflow.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_automation_workflow.py",
+    "notes": []
+  },
+  "sikk_candidate_kline_pipeline.py": {
+    "entrypoints": [
+      "sikk_candidate_kline_pipeline.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_candidate_kline_pipeline.py",
+    "notes": []
+  },
+  "sikk_candidate_quote_security_pipeline.py": {
+    "entrypoints": [
+      "sikk_candidate_quote_security_pipeline.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_candidate_quote_security_pipeline.py",
+    "notes": []
+  },
+  "sikk_candidate_signal_pipeline.py": {
+    "entrypoints": [
+      "sikk_candidate_signal_pipeline.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_candidate_signal_pipeline.py",
+    "notes": []
+  },
+  "sikk_candidate_state_machine.py": {
+    "entrypoints": [
+      "sikk_candidate_state_machine.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_candidate_state_machine.py",
+    "notes": []
+  },
+  "sikk_candidate_wallet_structure_pipeline.py": {
+    "entrypoints": [
+      "sikk_candidate_wallet_structure_pipeline.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_candidate_wallet_structure_pipeline.py",
+    "notes": []
+  },
+  "sikk_case_field_source_map.py": {
+    "entrypoints": [
+      "sikk_case_field_source_map.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_case_field_source_map.py",
+    "notes": []
+  },
+  "sikk_chip_control_state_machine.py": {
+    "entrypoints": [
+      "sikk_chip_control_state_machine.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_chip_control_state_machine.py",
+    "notes": []
+  },
+  "sikk_control_chip_window_detector.py": {
+    "entrypoints": [
+      "sikk_control_chip_window_detector.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_control_chip_window_detector.py",
+    "notes": []
+  },
+  "sikk_dashboard_builder.py": {
+    "entrypoints": [
+      "sikk_dashboard_builder.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_dashboard_builder.py",
+    "notes": []
+  },
+  "sikk_dashboard_site_builder.py": {
+    "entrypoints": [
+      "sikk_dashboard_site_builder.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_dashboard_site_builder.py",
+    "notes": []
+  },
+  "sikk_document_ingestor.py": {
+    "entrypoints": [
+      "sikk_document_ingestor.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_document_ingestor.py",
+    "notes": []
+  },
+  "sikk_document_passport_builder.py": {
+    "entrypoints": [
+      "sikk_document_passport_builder.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_document_passport_builder.py",
+    "notes": []
+  },
+  "sikk_dominant_lifecycle_classifier.py": {
+    "entrypoints": [
+      "sikk_dominant_lifecycle_classifier.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_dominant_lifecycle_classifier.py",
+    "notes": []
+  },
+  "sikk_execution_adapter_base.py": {
+    "entrypoints": [
+      "sikk_execution_adapter_base.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_execution_adapter_base.py",
+    "notes": []
+  },
+  "sikk_execution_state_machine.py": {
+    "entrypoints": [
+      "sikk_execution_state_machine.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_execution_state_machine.py",
+    "notes": []
+  },
+  "sikk_explainability_engine.py": {
+    "entrypoints": [
+      "sikk_explainability_engine.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_explainability_engine.py",
+    "notes": []
+  },
+  "sikk_full_auto_orchestrator.py": {
+    "entrypoints": [
+      "sikk_full_auto_orchestrator.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_full_auto_orchestrator.py",
+    "notes": []
+  },
+  "sikk_gap_detector.py": {
+    "entrypoints": [
+      "sikk_gap_detector.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_gap_detector.py",
+    "notes": []
+  },
+  "sikk_gmgn_new_token_filter.py": {
+    "entrypoints": [
+      "sikk_gmgn_new_token_filter.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_gmgn_new_token_filter.py",
+    "notes": []
+  },
+  "sikk_gmgn_quote_adapter.py": {
+    "entrypoints": [
+      "sikk_gmgn_quote_adapter.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_gmgn_quote_adapter.py",
+    "notes": []
+  },
+  "sikk_gmgn_token_report.py": {
+    "entrypoints": [
+      "sikk_gmgn_token_report.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_gmgn_token_report.py",
+    "notes": []
+  },
+  "sikk_her_task_router.py": {
+    "entrypoints": [
+      "sikk_her_task_router.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_her_task_router.py",
+    "notes": []
+  },
+  "sikk_knowledge_absorption.py": {
+    "entrypoints": [
+      "sikk_knowledge_absorption.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_knowledge_absorption.py",
+    "notes": []
+  },
+  "sikk_live_orchestrator.py": {
+    "entrypoints": [
+      "sikk_live_orchestrator.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_live_orchestrator.py",
+    "notes": []
+  },
+  "sikk_live_quote_security_collector.py": {
+    "entrypoints": [
+      "sikk_live_quote_security_collector.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_live_quote_security_collector.py",
+    "notes": []
+  },
+  "sikk_live_run.py": {
+    "entrypoints": [
+      "sikk_live_run.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_live_run.py",
+    "notes": []
+  },
+  "sikk_loop_review_ingestor.py": {
+    "entrypoints": [
+      "sikk_loop_review_ingestor.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_loop_review_ingestor.py",
+    "notes": []
+  },
+  "sikk_loop_state_manager.py": {
+    "entrypoints": [
+      "sikk_loop_state_manager.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_loop_state_manager.py",
+    "notes": []
+  },
+  "sikk_market_cap_context.py": {
+    "entrypoints": [
+      "sikk_market_cap_context.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_market_cap_context.py",
+    "notes": []
+  },
+  "sikk_method_lens_router.py": {
+    "entrypoints": [
+      "sikk_method_lens_router.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_method_lens_router.py",
+    "notes": []
+  },
+  "sikk_module_runner.py": {
+    "entrypoints": [
+      "sikk_module_runner.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_module_runner.py",
+    "notes": []
+  },
+  "sikk_notifier.py": {
+    "entrypoints": [
+      "sikk_notifier.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_notifier.py",
+    "notes": []
+  },
+  "sikk_okx_cluster_delta.py": {
+    "entrypoints": [
+      "sikk_okx_cluster_delta.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_okx_cluster_delta.py",
+    "notes": []
+  },
+  "sikk_okx_cluster_holding_analyzer.py": {
+    "entrypoints": [
+      "sikk_okx_cluster_holding_analyzer.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_okx_cluster_holding_analyzer.py",
+    "notes": []
+  },
+  "sikk_okx_quote_adapter.py": {
+    "entrypoints": [
+      "sikk_okx_quote_adapter.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_okx_quote_adapter.py",
+    "notes": []
+  },
+  "sikk_operator_psychology_engine.py": {
+    "entrypoints": [
+      "sikk_operator_psychology_engine.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_operator_psychology_engine.py",
+    "notes": []
+  },
+  "sikk_output_directory_governance.py": {
+    "entrypoints": [
+      "sikk_output_directory_governance.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_output_directory_governance.py",
+    "notes": []
+  },
+  "sikk_paper_explanation_builder.py": {
+    "entrypoints": [
+      "sikk_paper_explanation_builder.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_paper_explanation_builder.py",
+    "notes": []
+  },
+  "sikk_paper_live_runner.py": {
+    "entrypoints": [
+      "sikk_paper_live_runner.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_paper_live_runner.py",
+    "notes": []
+  },
+  "sikk_paper_trading_engine.py": {
+    "entrypoints": [
+      "sikk_paper_trading_engine.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_paper_trading_engine.py",
+    "notes": []
+  },
+  "sikk_pre_trade_security_checker.py": {
+    "entrypoints": [
+      "sikk_pre_trade_security_checker.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_pre_trade_security_checker.py",
+    "notes": []
+  },
+  "sikk_query.py": {
+    "entrypoints": [
+      "sikk_query.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_query.py",
+    "notes": []
+  },
+  "sikk_quote_security_review.py": {
+    "entrypoints": [
+      "sikk_quote_security_review.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_quote_security_review.py",
+    "notes": []
+  },
+  "sikk_real_trade_guard.py": {
+    "entrypoints": [
+      "sikk_real_trade_guard.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_real_trade_guard.py",
+    "notes": []
+  },
+  "sikk_repomix_context_planner.py": {
+    "entrypoints": [
+      "sikk_repomix_context_planner.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_repomix_context_planner.py",
+    "notes": []
+  },
+  "sikk_research_loop_controller.py": {
+    "entrypoints": [
+      "sikk_research_loop_controller.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_research_loop_controller.py",
+    "notes": []
+  },
+  "sikk_same_source_grouping.py": {
+    "entrypoints": [
+      "sikk_same_source_grouping.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_same_source_grouping.py",
+    "notes": []
+  },
+  "sikk_system_audit.py": {
+    "entrypoints": [
+      "sikk_system_audit.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_system_audit.py",
+    "notes": []
+  },
+  "sikk_system_mapper.py": {
+    "entrypoints": [
+      "sikk_system_mapper.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_system_mapper.py",
+    "notes": []
+  },
+  "sikk_task_package_builder.py": {
+    "entrypoints": [
+      "sikk_task_package_builder.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_task_package_builder.py",
+    "notes": []
+  },
+  "sikk_telegram_bot_handler.py": {
+    "entrypoints": [
+      "sikk_telegram_bot_handler.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_telegram_bot_handler.py",
+    "notes": []
+  },
+  "sikk_telegram_gateway_adapter.py": {
+    "entrypoints": [
+      "sikk_telegram_gateway_adapter.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_telegram_gateway_adapter.py",
+    "notes": []
+  },
+  "sikk_telegram_open.py": {
+    "entrypoints": [
+      "sikk_telegram_open.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_telegram_open.py",
+    "notes": []
+  },
+  "sikk_telegram_views.py": {
+    "entrypoints": [
+      "sikk_telegram_views.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_telegram_views.py",
+    "notes": []
+  },
+  "sikk_telegram_zh.py": {
+    "entrypoints": [
+      "sikk_telegram_zh.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_telegram_zh.py",
+    "notes": []
+  },
+  "sikk_time_context_gate.py": {
+    "entrypoints": [
+      "sikk_time_context_gate.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_time_context_gate.py",
+    "notes": []
+  },
+  "sikk_token_skip_policy.py": {
+    "entrypoints": [
+      "sikk_token_skip_policy.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_token_skip_policy.py",
+    "notes": []
+  },
+  "sikk_topic_map_builder.py": {
+    "entrypoints": [
+      "sikk_topic_map_builder.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_topic_map_builder.py",
+    "notes": []
+  },
+  "sikk_trace_logger.py": {
+    "entrypoints": [
+      "sikk_trace_logger.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_trace_logger.py",
+    "notes": []
+  },
+  "sikk_trade_confirmation_ticket.py": {
+    "entrypoints": [
+      "sikk_trade_confirmation_ticket.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_trade_confirmation_ticket.py",
+    "notes": []
+  },
+  "sikk_trade_journal.py": {
+    "entrypoints": [
+      "sikk_trade_journal.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_trade_journal.py",
+    "notes": []
+  },
+  "sikk_transaction_broadcast_guard.py": {
+    "entrypoints": [
+      "sikk_transaction_broadcast_guard.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_transaction_broadcast_guard.py",
+    "notes": []
+  },
+  "sikk_unified_view_builder.py": {
+    "entrypoints": [
+      "sikk_unified_view_builder.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_unified_view_builder.py",
+    "notes": []
+  },
+  "sikk_wallet_structure_daily_report.py": {
+    "entrypoints": [
+      "sikk_wallet_structure_daily_report.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_wallet_structure_daily_report.py",
+    "notes": []
+  },
+  "sikk_wallet_structure_gate.py": {
+    "entrypoints": [
+      "sikk_wallet_structure_gate.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_wallet_structure_gate.py",
+    "notes": []
+  },
+  "sikk_wallet_structure_snapshot.py": {
+    "entrypoints": [
+      "sikk_wallet_structure_snapshot.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_wallet_structure_snapshot.py",
+    "notes": []
+  },
+  "sikk_wallet_trade_adapter.py": {
+    "entrypoints": [
+      "sikk_wallet_trade_adapter.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikk_wallet_trade_adapter.py",
+    "notes": []
+  },
+  "sikkctl.py": {
+    "entrypoints": [
+      "sikkctl.py"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "sikkctl.py",
+    "notes": []
+  },
+  "strategy_sikk_b_control_box_retest.md": {
+    "entrypoints": [],
+    "file_count": 1,
+    "kinds": {
+      "document": 1
+    },
+    "module_root": "strategy_sikk_b_control_box_retest.md",
+    "notes": []
+  },
+  "tasks": {
+    "entrypoints": [
+      "tasks/chatgpt_share_69f809c6/workflow_automation/run_workflow_automation.sh",
+      "tasks/chatgpt_share_69f868b8/workflow_automation/run_workflow_automation.sh",
+      "tasks/chatgpt_share_69f868b8_repomix_deerflow/repomix_context/make_sikk_context.sh"
+    ],
+    "file_count": 27,
+    "kinds": {
+      "data": 6,
+      "document": 18,
+      "script": 3
+    },
+    "module_root": "tasks",
+    "notes": []
+  },
+  "tests": {
+    "entrypoints": [
+      "tests/test_counterparty_pressure_calculator.py",
+      "tests/test_directory_constitution.py",
+      "tests/test_distribution_progress_calculator.py",
+      "tests/test_dominant_cost_zone_calculator.py",
+      "tests/test_dominant_intent_dictionary.py",
+      "tests/test_markup_motivation_calculator.py",
+      "tests/test_quantitative_aggregator.py",
+      "tests/test_run_sikk_gmgn_pipeline.py",
+      "tests/test_sikk_auto_framework.py",
+      "tests/test_sikk_automation_workflow.py",
+      "tests/test_sikk_candidate_kline_pipeline.py",
+      "tests/test_sikk_candidate_quote_security_pipeline.py",
+      "tests/test_sikk_candidate_signal_pipeline.py",
+      "tests/test_sikk_candidate_state_machine.py",
+      "tests/test_sikk_candidate_wallet_structure_pipeline.py",
+      "tests/test_sikk_case_field_source_map.py",
+      "tests/test_sikk_chip_control_state_machine.py",
+      "tests/test_sikk_dashboard_site_builder.py",
+      "tests/test_sikk_document_ingestor.py",
+      "tests/test_sikk_document_passport_builder.py",
+      "tests/test_sikk_dominant_lifecycle_classifier.py",
+      "tests/test_sikk_execution_adapters.py",
+      "tests/test_sikk_execution_state_machine.py",
+      "tests/test_sikk_explainability_engine.py",
+      "tests/test_sikk_full_auto_orchestrator.py",
+      "tests/test_sikk_gap_detector.py",
+      "tests/test_sikk_gmgn_new_token_filter.py",
+      "tests/test_sikk_her_task_router.py",
+      "tests/test_sikk_knowledge_absorption.py",
+      "tests/test_sikk_live_collectors.py",
+      "tests/test_sikk_live_run.py",
+      "tests/test_sikk_loop_review_ingestor.py",
+      "tests/test_sikk_loop_state_manager.py",
+      "tests/test_sikk_market_cap_context.py",
+      "tests/test_sikk_method_lens_router.py",
+      "tests/test_sikk_okx_cluster_delta.py",
+      "tests/test_sikk_okx_cluster_holding_analyzer.py",
+      "tests/test_sikk_operator_psychology_engine.py",
+      "tests/test_sikk_orchestrator_wallet_structure_integration.py",
+      "tests/test_sikk_paper_explanation_builder.py",
+      "tests/test_sikk_paper_live_runner.py",
+      "tests/test_sikk_paper_wallet_structure_integration.py",
+      "tests/test_sikk_pipeline_wallet_structure_mode.py",
+      "tests/test_sikk_query.py",
+      "tests/test_sikk_quote_security_outputs.py",
+      "tests/test_sikk_repomix_context_planner.py",
+      "tests/test_sikk_research_loop_controller.py",
+      "tests/test_sikk_research_loop_controller_status.py",
+      "tests/test_sikk_research_loop_final_reports.py",
+      "tests/test_sikk_runtime_v02.py",
+      "tests/test_sikk_same_source_grouping.py",
+      "tests/test_sikk_state_wallet_structure_integration.py",
+      "tests/test_sikk_system_audit.py",
+      "tests/test_sikk_system_mapper.py",
+      "tests/test_sikk_task_package_builder.py",
+      "tests/test_sikk_telegram_bot_handler_phase_4_7.py",
+      "tests/test_sikk_telegram_entry_gateway.py",
+      "tests/test_sikk_telegram_views.py",
+      "tests/test_sikk_time_context_gate.py",
+      "tests/test_sikk_topic_map_builder.py",
+      "tests/test_sikk_trade_confirmation_ticket.py",
+      "tests/test_sikk_transaction_broadcast_guard.py",
+      "tests/test_sikk_unified_view_builder.py",
+      "tests/test_sikk_wallet_structure_daily_report.py",
+      "tests/test_sikk_wallet_structure_gate.py",
+      "tests/test_sikk_wallet_structure_snapshot.py",
+      "tests/test_sikk_wallet_trade_adapter.py",
+      "tests/test_source_wallet_bot_core.py",
+      "tests/test_source_wallet_bot_end_to_end.py",
+      "tests/test_source_wallet_directory_governance.py",
+      "tests/test_source_wallet_fact_builder.py",
+      "tests/test_source_wallet_gmgn_live_adapter.py",
+      "tests/test_source_wallet_handoff_exporter.py",
+      "tests/test_source_wallet_profile_normalizer.py",
+      "tests/test_source_wallet_role_classifier.py",
+      "tests/test_source_wallet_runner.py",
+      "tests/test_source_wallet_schema_validator.py",
+      "tests/test_source_wallet_source_group_engine.py",
+      "tests/test_source_wallet_trade_normalizer.py",
+      "tests/test_source_wallet_trade_summary_rows.py",
+      "tests/test_strategy_gate_cost_risk_reward_calculator.py",
+      "tests/test_structure_inventory_calculator.py",
+      "tests/test_token_cluster_analyzer.py",
+      "tests/test_wallet_structure_package.py"
+    ],
+    "file_count": 99,
+    "kinds": {
+      "other": 15,
+      "script": 84
+    },
+    "module_root": "tests",
+    "notes": []
+  },
+  "tools": {
+    "entrypoints": [
+      "tools/__init__.py",
+      "tools/generate_system_directory_governance.py",
+      "tools/harness/check_routes.py",
+      "tools/validate_directory_constitution.py",
+      "tools/validate_system_directory_governance.py"
+    ],
+    "file_count": 10,
+    "kinds": {
+      "document": 1,
+      "other": 4,
+      "script": 5
+    },
+    "module_root": "tools",
+    "notes": []
+  },
+  "中文导航": {
+    "entrypoints": [],
+    "file_count": 2,
+    "kinds": {
+      "document": 2
+    },
+    "module_root": "中文导航",
+    "notes": []
+  },
+  "中文目录导航": {
+    "entrypoints": [],
+    "file_count": 19,
+    "kinds": {
+      "document": 19
+    },
+    "module_root": "中文目录导航",
+    "notes": []
+  },
+  "单轮检查交易系统.sh": {
+    "entrypoints": [
+      "单轮检查交易系统.sh"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "单轮检查交易系统.sh",
+    "notes": []
+  },
+  "启动SIKK专业会话.sh": {
+    "entrypoints": [
+      "启动SIKK专业会话.sh"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "启动SIKK专业会话.sh",
+    "notes": []
+  },
+  "启动交易系统.sh": {
+    "entrypoints": [
+      "启动交易系统.sh"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "启动交易系统.sh",
+    "notes": []
+  },
+  "查看交易系统状态.sh": {
+    "entrypoints": [
+      "查看交易系统状态.sh"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "查看交易系统状态.sh",
+    "notes": []
+  },
+  "查看交易系统进程.sh": {
+    "entrypoints": [
+      "查看交易系统进程.sh"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "查看交易系统进程.sh",
+    "notes": []
+  },
+  "查看交易证据面板.sh": {
+    "entrypoints": [
+      "查看交易证据面板.sh"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "查看交易证据面板.sh",
+    "notes": []
+  },
+  "查询代币明细.sh": {
+    "entrypoints": [
+      "查询代币明细.sh"
+    ],
+    "file_count": 1,
+    "kinds": {
+      "script": 1
+    },
+    "module_root": "查询代币明细.sh",
+    "notes": []
+  },
+  "结构分析": {
+    "entrypoints": [],
+    "file_count": 18,
+    "kinds": {
+      "data": 12,
+      "document": 3,
+      "other": 3
+    },
+    "module_root": "结构分析",
+    "notes": []
+  },
+  "钱包数据分析": {
+    "entrypoints": [],
+    "file_count": 30,
+    "kinds": {
+      "data": 25,
+      "document": 2,
+      "other": 3
+    },
+    "module_root": "钱包数据分析",
+    "notes": []
+  }
+}

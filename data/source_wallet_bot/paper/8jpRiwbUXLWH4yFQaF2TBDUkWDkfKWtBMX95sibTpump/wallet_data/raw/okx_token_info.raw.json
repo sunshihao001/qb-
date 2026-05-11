@@ -1,0 +1,35 @@
+{
+  "source": "okx",
+  "endpoint": "token_info",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "info",
+    "--address",
+    "8jpRiwbUXLWH4yFQaF2TBDUkWDkfKWtBMX95sibTpump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T03:25:59Z",
+  "finished_at": "2026-05-08T03:25:59Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "chainIndex": "501",
+        "decimal": "6",
+        "tagList": {
+          "communityRecognized": false
+        },
+        "tokenContractAddress": "8jpRiwbUXLWH4yFQaF2TBDUkWDkfKWtBMX95sibTpump",
+        "tokenLogoUrl": "https://static.oklink.com/cdn/web3/currency/token/large/501-8jpRiwbUXLWH4yFQaF2TBDUkWDkfKWtBMX95sibTpump-109/type=default_90_0?v=1778118247524",
+        "tokenName": "Hentaivirus",
+        "tokenSymbol": "HENTAI"
+      }
+    ]
+  }
+}

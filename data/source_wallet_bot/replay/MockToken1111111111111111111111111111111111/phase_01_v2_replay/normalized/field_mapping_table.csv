@@ -1,0 +1,10 @@
+source_file,source_field,standard_field,chinese_name,required,allow_missing,missing_action,notes
+raw_token_basic,address,token_address,代币地址,True,False,BLOCK,contract mapped
+raw_token_basic,symbol,token_symbol,代币符号,False,True,DEGRADE,contract mapped
+raw_wallet_trade,wallet_address,wallet_address,钱包地址,True,False,BLOCK,contract mapped
+raw_wallet_trade,transaction_time,transaction_time,交易时间,True,False,BLOCK,contract mapped
+raw_wallet_trade,transaction_type,transaction_type,交易类型,True,False,BLOCK,contract mapped
+raw_wallet_trade,current_token_balance,current_token_balance,当前余额,True,False,BLOCK,contract mapped
+raw_holder,holder_address,holder_address,持有人地址,True,False,BLOCK,contract mapped
+raw_kline,timestamp,timestamp,K线时间,True,False,BLOCK,contract mapped
+raw_quote_security,quote_price_usd,quote_price_usd,报价,True,False,BLOCK,contract mapped

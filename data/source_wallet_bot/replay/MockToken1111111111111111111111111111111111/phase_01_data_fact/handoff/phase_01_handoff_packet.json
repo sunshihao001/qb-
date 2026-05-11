@@ -1,0 +1,78 @@
+{
+  "phase": "phase_01_data_fact",
+  "token_address": "MockToken1111111111111111111111111111111111",
+  "token_symbol": "MOCK",
+  "chain": "solana",
+  "snapshot_id": "phase01_20260509T150000Z",
+  "snapshot_time": "2026-05-09T15:00:00Z",
+  "phase_status": "DATA_PARTIAL",
+  "primary_status": "DATA_PARTIAL",
+  "data_quality_status": "DATA_PARTIAL",
+  "time_validity_status": "TIME_VALIDITY_OK",
+  "handoff_status": "HANDOFF_DEGRADED",
+  "allow_next_stage": true,
+  "allowed_next_stage": "phase_02_wallet_structure",
+  "next_stage": "phase_02_wallet_structure",
+  "required_files_for_next_stage": {
+    "phase_01_handoff_packet": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/handoff/phase_01_handoff_packet.json",
+    "data_quality_summary": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/summary/data_quality_summary.json",
+    "token_basic_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/token_basic_normalized.json",
+    "token_market_context": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/token_market_context.json",
+    "wallet_trade_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/wallet_trade_normalized.csv",
+    "holder_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/holder_normalized.csv"
+  },
+  "optional_files_for_next_stage": {
+    "time_validity_report": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/summary/time_validity_report.json",
+    "kline_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/kline_normalized.csv",
+    "quote_security_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/quote_security_normalized.json",
+    "top_trader_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/top_trader_normalized.csv",
+    "transfer_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/transfer_normalized.csv"
+  },
+  "handoff_files": {
+    "phase_01_handoff_packet": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/handoff/phase_01_handoff_packet.json",
+    "data_quality_summary": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/summary/data_quality_summary.json",
+    "token_basic_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/token_basic_normalized.json",
+    "token_market_context": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/token_market_context.json",
+    "wallet_trade_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/wallet_trade_normalized.csv",
+    "holder_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/holder_normalized.csv",
+    "time_validity_report": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/summary/time_validity_report.json",
+    "kline_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/kline_normalized.csv",
+    "quote_security_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/quote_security_normalized.json",
+    "top_trader_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/top_trader_normalized.csv",
+    "transfer_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/normalized/transfer_normalized.csv"
+  },
+  "required_context_for_next_stage": {
+    "data_quality_status": "DATA_PARTIAL",
+    "time_validity_status": "TIME_VALIDITY_OK",
+    "required_normalized_files_available": true,
+    "p01_scope": "data_fact_only_no_wallet_structure_judgement"
+  },
+  "positive_evidence": [
+    "P01 normalized outputs generated",
+    "P01 data_quality_summary generated",
+    "P01 handoff packet generated"
+  ],
+  "negative_evidence": [
+    "missing_optional_raw:raw_top_trader.json",
+    "missing_optional_raw:raw_transfer.json",
+    "missing_optional_raw:legacy_candidate_snapshot.json",
+    "optional_missing_field:raw_top_trader.json",
+    "optional_missing_field:raw_transfer.json",
+    "transfer_missing_no_distribution_inference",
+    "transfer_missing_no_backflow_inference"
+  ],
+  "counter_evidence": [],
+  "missing_fields": [
+    "raw_top_trader.json",
+    "raw_transfer.json",
+    "raw_top_trader.json",
+    "raw_transfer.json",
+    "legacy_candidate_snapshot.json"
+  ],
+  "degrade_reason": "missing_optional_raw:raw_top_trader.json; missing_optional_raw:raw_transfer.json; missing_optional_raw:legacy_candidate_snapshot.json; optional_missing_field:raw_top_trader.json; optional_missing_field:raw_transfer.json; transfer_missing_no_distribution_inference; transfer_missing_no_backflow_inference",
+  "block_reason": "",
+  "hard_negative_triggered": false,
+  "hard_negative_reasons": [],
+  "audit_file": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_data_fact/audit/phase_01_audit_report.md",
+  "created_at": "2026-05-09T15:15:35Z"
+}

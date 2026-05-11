@@ -1,0 +1,114 @@
+{
+  "source": "okx",
+  "endpoint": "liquidity",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "liquidity",
+    "--address",
+    "8jpRiwbUXLWH4yFQaF2TBDUkWDkfKWtBMX95sibTpump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T03:25:59Z",
+  "finished_at": "2026-05-08T03:25:59Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "20840821.365754",
+            "tokenSymbol": "HENTAI"
+          },
+          {
+            "tokenAmount": "628.002440333",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "3.00%",
+        "liquidityUsd": "74119.329442282174629436553750867172536141111534",
+        "pool": "HENTAI/SOL",
+        "poolAddress": "8Ekpf8vdwW3woQZFV1cWu8PatZb5ZQuZAt9mDTMvDyb9",
+        "poolCreator": "6nFfpBeAYrLkyRayXSFu1oMTosGV5wWoQbv7zMzQwSvR",
+        "protocolName": "Meteora"
+      },
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "50538404.518061",
+            "tokenSymbol": "HENTAI"
+          },
+          {
+            "tokenAmount": "521.043085011",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "0.25%",
+        "liquidityUsd": "91444.673407077254540033492683621288513153181831",
+        "pool": "HENTAI/SOL",
+        "poolAddress": "4tJ9DY3nLZ8WQdGsNs3a8BZreXzCdQFAe7ZVT4vpqwBK",
+        "poolCreator": "HhG2dSuEJMfEA1WVSVCSyqSo4dVUWieNBvrifFDZF5DV",
+        "protocolName": "PumpSwap"
+      },
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "569830.482873",
+            "tokenSymbol": "HENTAI"
+          },
+          {
+            "tokenAmount": "23.522443949",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "10.00%",
+        "liquidityUsd": "2578.1063619654723165092938585171241053510876932",
+        "pool": "HENTAI/SOL",
+        "poolAddress": "47Pu4XAz9bvExRmU8Mb6TxaCgvCiMdMB1GCjjnWvAySb",
+        "poolCreator": "9Lou5nKUDfydCcHsxScbNhSa3SrbTVGD7SVYM9XwHDDP",
+        "protocolName": "Meteora"
+      },
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "310683.777572",
+            "tokenSymbol": "HENTAI"
+          },
+          {
+            "tokenAmount": "3.232690722",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "1.00%",
+        "liquidityUsd": "564.4244796617645455637347384095635946186841372",
+        "pool": "HENTAI/SOL",
+        "poolAddress": "DFmGUpgpyksfb4ec2pbudvb7FGTAo5qUj57nHL9grRA5",
+        "poolCreator": "9Lou5nKUDfydCcHsxScbNhSa3SrbTVGD7SVYM9XwHDDP",
+        "protocolName": "Meteora"
+      },
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "0.796299",
+            "tokenSymbol": "HENTAI"
+          },
+          {
+            "tokenAmount": "0.00000836",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "20.00%",
+        "liquidityUsd": "0.0013761956505220656526967871254352458737525",
+        "pool": "HENTAI/SOL",
+        "poolAddress": "F49Ljuxdrq7wGYfs7LmTDurcyDqy4LmhdZtvr56pwdtc",
+        "poolCreator": "9Lou5nKUDfydCcHsxScbNhSa3SrbTVGD7SVYM9XwHDDP",
+        "protocolName": "Meteora"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "phase_id": "P08_review_learning",
+  "artifact_kind": "evidence",
+  "generated_at": "2026-05-11T01:16:10Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "positive_evidence": [
+    "review_writeback generated"
+  ],
+  "missing_evidence": [],
+  "risk_evidence": [
+    "单 token 结论只能进入 review，不直接升级长期规则"
+  ]
+}

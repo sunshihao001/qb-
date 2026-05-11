@@ -1,0 +1,34 @@
+{
+  "token_address": "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+  "token_symbol": "GABI",
+  "generated_at": "2026-05-08T01:47:33Z",
+  "source_files": {
+    "kline_normalized": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/kline_normalized.json",
+    "gmgn_kline_raw": {
+      "1m": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/gmgn_kline_1m_raw.json",
+      "5m": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/gmgn_kline_5m_raw.json"
+    },
+    "kline_csv": {
+      "1m": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/kline_1m.csv",
+      "5m": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/kline_5m.csv"
+    },
+    "accumulation_window": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/accumulation_outputs/accumulation_window.json"
+  },
+  "pattern_inputs": {
+    "timeframes": [
+      "1m",
+      "5m"
+    ],
+    "latest_kline_time": "2026-05-08T01:45:00Z",
+    "control_box_high": 0.00034246513,
+    "control_box_low": 3.9709199e-05,
+    "breakout_time": "",
+    "pullback_time": "",
+    "volume_expansion_ratio": 0.6320542493800123
+  },
+  "scope_limits_zh": [
+    "本文件只提供盘型识别和钱包匹配所需的市场结构来源快照",
+    "不直接判断主导侧动机、对手盘压力或派发是否完成",
+    "不输出确定庄家，不触发交易"
+  ]
+}

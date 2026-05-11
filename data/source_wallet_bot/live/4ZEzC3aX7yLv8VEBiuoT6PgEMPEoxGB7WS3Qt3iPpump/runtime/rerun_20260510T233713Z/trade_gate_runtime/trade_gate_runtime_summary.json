@@ -1,0 +1,42 @@
+{
+  "处理结果": [
+    {
+      "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+      "final_status": "OBSERVE",
+      "signal_level": "S1",
+      "decision": "OBSERVE_ONLY",
+      "permission": "BLOCK_REAL_TRADE",
+      "contract_permission": "PAUSE_NEED_CONFIRM_需要人工确认",
+      "allowed_modes": [
+        "observe",
+        "paper"
+      ],
+      "forbidden_modes": [
+        "real_auto",
+        "buy_now",
+        "auto_trade",
+        "sell_now"
+      ],
+      "block_reasons": [],
+      "pause_reasons": [
+        "STRUCTURAL_PAUSE",
+        "FUNDING_PENDING"
+      ],
+      "allow_reasons": [],
+      "reason_codes": [
+        "STRUCTURAL_PAUSE",
+        "FUNDING_PENDING"
+      ],
+      "human_confirmation_required": true,
+      "real_trade_enabled": false,
+      "token_symbol": "AGI",
+      "funding_status": "资金待查",
+      "risk_level": "MEDIUM_HIGH",
+      "execution_action": "OBSERVE",
+      "wallet_structure_status": "WALLET_PAUSE",
+      "wallet_structure_score": 72.96,
+      "wallet_risk_score": 76.37
+    }
+  ],
+  "说明": "固定 CA trade gate runtime summary；不执行真实 swap。"
+}

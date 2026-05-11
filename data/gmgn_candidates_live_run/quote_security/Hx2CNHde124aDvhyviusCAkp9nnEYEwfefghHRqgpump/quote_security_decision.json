@@ -1,0 +1,18 @@
+{
+  "token": "Hx2CNHde124aDvhyviusCAkp9nnEYEwfefghHRqgpump",
+  "chain": "sol",
+  "snapshot_time": "2026-05-03T11:14:21Z",
+  "final_permission": "ALLOW_CONFIRMATION_LAYER",
+  "requires_user_confirmation": true,
+  "quote_status": "AVAILABLE",
+  "security_permission": "ALLOW",
+  "security_risk_level": "LOW",
+  "quote_source_count": 1,
+  "security_source_count": 1,
+  "max_price_impact_pct": null,
+  "quote_deviation_pct": null,
+  "reasons": [
+    "报价与安全扫描未触发硬阻断，可进入人工确认层"
+  ],
+  "scope_note": "quote_security_decision 只决定能否进入人工确认层，不执行真实交易。"
+}

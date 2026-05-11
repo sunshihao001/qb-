@@ -1,0 +1,5 @@
+{"policy_id": "exec.allow.read_root", "match_tool": "read_file", "match": "/root/sikk-gmgn/hermes_harness", "risk_level": "R1", "decision": "allow", "reason": "read-only harness inspection"}
+{"policy_id": "exec.ask.write_harness", "match_tool": "write_file|patch", "match": "/root/sikk-gmgn/hermes_harness", "risk_level": "R3", "decision": "allow", "reason": "authorized by user for V2.0 harness update"}
+{"policy_id": "exec.deny.rm_rf", "match_tool": "terminal", "match": "rm -rf", "risk_level": "R5", "decision": "deny", "reason": "explicit destructive delete forbidden"}
+{"policy_id": "exec.deny.secret", "match_tool": "*", "match": "private_key|api_key|token|\\.env", "risk_level": "R5", "decision": "deny", "reason": "secret access/output forbidden"}
+{"policy_id": "exec.ask.git_push", "match_tool": "terminal", "match": "git push", "risk_level": "R4", "decision": "deny", "reason": "git push forbidden in task boundary"}

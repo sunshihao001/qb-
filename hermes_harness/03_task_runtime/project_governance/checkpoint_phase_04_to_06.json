@@ -1,0 +1,14 @@
+{
+  "checkpoint_id": "checkpoint.phase_04_to_06",
+  "phase": "04_to_06_governance_recommendation",
+  "status": "complete",
+  "resume_command": "continue from phase_07 integrity validation",
+  "artifacts": [
+    "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_governance/phase_04_to_06_governance.md",
+    "/root/sikk-gmgn/hermes_harness/08_reports/final_reports/PROJECT_SYSTEM_MAP_V1.md",
+    "/root/sikk-gmgn/hermes_harness/08_reports/final_reports/DIRECTORY_GOVERNANCE_REPORT_V1.md",
+    "/root/sikk-gmgn/hermes_harness/08_reports/final_reports/MIGRATION_RECOMMENDATION_V1.md"
+  ],
+  "issue_count": 370,
+  "recommendation": "no_migration_now"
+}

@@ -1,0 +1,245 @@
+[
+  {
+    "current_path": ".git/",
+    "status": "system_or_cache",
+    "recommended_path": "none",
+    "recommended_action": "keep_in_place_no_new_writes",
+    "risk": "high",
+    "requires_human_review": true,
+    "reason": "system/cache directory; never migrate via governance task"
+  },
+  {
+    "current_path": ".pytest_cache/",
+    "status": "system_or_cache",
+    "recommended_path": "none",
+    "recommended_action": "keep_in_place_no_new_writes",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "system/cache directory; never migrate via governance task"
+  },
+  {
+    "current_path": "__pycache__/",
+    "status": "system_or_cache",
+    "recommended_path": "none",
+    "recommended_action": "keep_in_place_no_new_writes",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "system/cache directory; never migrate via governance task"
+  },
+  {
+    "current_path": "ai_context/",
+    "status": "non_canonical_root",
+    "recommended_path": "pending_classification",
+    "recommended_action": "map_only_pending_review",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "root directory outside canonical route table"
+  },
+  {
+    "current_path": "audits/",
+    "status": "non_canonical_root",
+    "recommended_path": "pending_classification",
+    "recommended_action": "map_only_pending_review",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "root directory outside canonical route table"
+  },
+  {
+    "current_path": "config/",
+    "status": "non_canonical_root",
+    "recommended_path": "pending_classification",
+    "recommended_action": "map_only_pending_review",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "root directory outside canonical route table"
+  },
+  {
+    "current_path": "contracts/",
+    "status": "canonical_root",
+    "recommended_path": "contracts/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "data/",
+    "status": "canonical_root",
+    "recommended_path": "data/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "docs/",
+    "status": "canonical_root",
+    "recommended_path": "docs/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "hermes_harness/",
+    "status": "canonical_root",
+    "recommended_path": "hermes_harness/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "imports/",
+    "status": "canonical_root",
+    "recommended_path": "imports/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "knowledge/",
+    "status": "legacy_or_ambiguous",
+    "recommended_path": "legacy_compat/path_maps/ + possible reports/data/research_loop mapping",
+    "recommended_action": "map_only_pending_review",
+    "risk": "high",
+    "requires_human_review": true,
+    "reason": "non-canonical root with project-significant content"
+  },
+  {
+    "current_path": "legacy_compat/",
+    "status": "canonical_root",
+    "recommended_path": "legacy_compat/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "logs/",
+    "status": "non_canonical_root",
+    "recommended_path": "pending_classification",
+    "recommended_action": "map_only_pending_review",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "root directory outside canonical route table"
+  },
+  {
+    "current_path": "modules/",
+    "status": "canonical_root",
+    "recommended_path": "modules/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "outputs/",
+    "status": "legacy_or_ambiguous",
+    "recommended_path": "legacy_compat/path_maps/ + possible reports/data/research_loop mapping",
+    "recommended_action": "map_only_pending_review",
+    "risk": "high",
+    "requires_human_review": true,
+    "reason": "non-canonical root with project-significant content"
+  },
+  {
+    "current_path": "reports/",
+    "status": "canonical_root",
+    "recommended_path": "reports/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "research_loop/",
+    "status": "canonical_root",
+    "recommended_path": "research_loop/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "schemas/",
+    "status": "canonical_root",
+    "recommended_path": "schemas/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "scripts/",
+    "status": "non_canonical_root",
+    "recommended_path": "pending_classification",
+    "recommended_action": "map_only_pending_review",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "root directory outside canonical route table"
+  },
+  {
+    "current_path": "tasks/",
+    "status": "non_canonical_root",
+    "recommended_path": "pending_classification",
+    "recommended_action": "map_only_pending_review",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "root directory outside canonical route table"
+  },
+  {
+    "current_path": "tests/",
+    "status": "canonical_root",
+    "recommended_path": "tests/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "tools/",
+    "status": "canonical_root",
+    "recommended_path": "tools/",
+    "recommended_action": "retain",
+    "risk": "low",
+    "requires_human_review": false,
+    "reason": "existing canonical or harmless project root"
+  },
+  {
+    "current_path": "中文导航/",
+    "status": "non_canonical_root",
+    "recommended_path": "pending_classification",
+    "recommended_action": "map_only_pending_review",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "root directory outside canonical route table"
+  },
+  {
+    "current_path": "中文目录导航/",
+    "status": "non_canonical_root",
+    "recommended_path": "pending_classification",
+    "recommended_action": "map_only_pending_review",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "root directory outside canonical route table"
+  },
+  {
+    "current_path": "结构分析/",
+    "status": "non_canonical_root",
+    "recommended_path": "pending_classification",
+    "recommended_action": "map_only_pending_review",
+    "risk": "medium",
+    "requires_human_review": true,
+    "reason": "root directory outside canonical route table"
+  },
+  {
+    "current_path": "钱包数据分析/",
+    "status": "legacy_or_ambiguous",
+    "recommended_path": "legacy_compat/path_maps/ + possible reports/data/research_loop mapping",
+    "recommended_action": "map_only_pending_review",
+    "risk": "high",
+    "requires_human_review": true,
+    "reason": "non-canonical root with project-significant content"
+  }
+]

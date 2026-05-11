@@ -1,0 +1,129 @@
+{
+  "last_update": "2026-05-10T21:25:00Z",
+  "token_count": 1,
+  "tokens": [
+    {
+      "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+      "token_symbol": "AGI",
+      "current_state": "WATCHING",
+      "priority_level": "P2_STRUCTURE_OBSERVE",
+      "last_update": "2026-05-10T21:25:00Z",
+      "latest_action": "STRUCTURE_OBSERVE",
+      "latest_reason": "交易门控暂停：OBSERVE_ONLY；交易门控：OBSERVE_ONLY / PAUSE_NEED_CONFIRM_需要人工确认",
+      "wallet_structure": {
+        "wallet_structure_status": "未接入",
+        "wallet_structure_score": null,
+        "wallet_risk_score": null,
+        "counterparty_pressure_score": null,
+        "data_quality_score": null,
+        "missing_reason": null
+      },
+      "trade_gate": {
+        "final_status": "OBSERVE",
+        "decision": "OBSERVE_ONLY",
+        "permission": "BLOCK_REAL_TRADE",
+        "contract_permission": "PAUSE_NEED_CONFIRM_需要人工确认",
+        "real_trade_enabled": false,
+        "execution_action": "OBSERVE",
+        "funding_status": "资金待查",
+        "risk_level": "MEDIUM_HIGH",
+        "reason_codes": [
+          "STRUCTURAL_PAUSE",
+          "FUNDING_PENDING"
+        ]
+      },
+      "lifecycle": {
+        "dominant_side_lifecycle": null,
+        "dominant_side_intent": null,
+        "counterparty_state": null,
+        "liquidity_intent": null,
+        "trap_risk_type": null,
+        "structure_defense_status": null
+      },
+      "chip_control": {
+        "chip_control_state": null,
+        "chip_control_action": null
+      },
+      "signal": {
+        "signal_level": "UNKNOWN",
+        "signal_gate": "UNKNOWN"
+      },
+      "quote": {
+        "quote_gate": "MISSING"
+      },
+      "security": {
+        "security_gate": "MISSING"
+      },
+      "paper": {
+        "paper_status": "NONE",
+        "unrealized_pnl_pct": null
+      },
+      "scope_note": "token_status 只用于主流程观测与纸面验证，不执行真实 swap。",
+      "market_cap_context": {
+        "discovery_market_cap_usd": null,
+        "signal_market_cap_usd": null,
+        "wallet_decision_market_cap_usd": null,
+        "paper_entry_market_cap_usd": null,
+        "current_market_cap_usd": null,
+        "exit_market_cap_usd": null,
+        "market_cap_change_from_discovery_pct": null,
+        "market_cap_change_from_signal_pct": null,
+        "market_cap_change_from_wallet_decision_pct": null,
+        "market_cap_context_quality": "MISSING",
+        "market_cap_missing_fields": [
+          "discovery_market_cap_usd",
+          "signal_market_cap_usd",
+          "wallet_decision_market_cap_usd",
+          "paper_entry_market_cap_usd",
+          "current_market_cap_usd",
+          "exit_market_cap_usd"
+        ],
+        "scope_note": "市值上下文只用于复盘发现/信号/钱包判断/paper/退出链路，不代表交易授权。"
+      },
+      "discovery_market_cap_usd": null,
+      "signal_market_cap_usd": null,
+      "wallet_decision_market_cap_usd": null,
+      "paper_entry_market_cap_usd": null,
+      "current_market_cap_usd": null,
+      "exit_market_cap_usd": null,
+      "market_cap_change_from_discovery_pct": null,
+      "market_cap_change_from_signal_pct": null,
+      "market_cap_change_from_wallet_decision_pct": null,
+      "market_cap_context_quality": "MISSING",
+      "market_cap_missing_fields": [
+        "discovery_market_cap_usd",
+        "signal_market_cap_usd",
+        "wallet_decision_market_cap_usd",
+        "paper_entry_market_cap_usd",
+        "current_market_cap_usd",
+        "exit_market_cap_usd"
+      ],
+      "operator_psychology": {
+        "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+        "token_symbol": "AGI",
+        "operator_lifecycle_stage": "UNKNOWN",
+        "operator_psychology": "DATA_INSUFFICIENT",
+        "operator_psychology_label": "证据不足 / 待复查",
+        "dominant_side_intent": "UNKNOWN",
+        "counterparty_psychology": "UNKNOWN",
+        "liquidity_intent": "UNKNOWN",
+        "trap_risk_type": "UNKNOWN",
+        "structure_defense_status": "UNKNOWN",
+        "chip_control_state": "CONTROL_UNCLEAR",
+        "paper_trade_alignment": "DATA_INSUFFICIENT",
+        "psychology_evidence_level": "E1",
+        "psychology_reason": "主导侧心理解释：主导侧心理证据不足，不能把盘型直接解释为明确控筹或派发。",
+        "next_observation_focus": "证据不足，先复查生命周期、钱包结构、市值上下文与多轮快照。",
+        "invalidation_conditions": [
+          "生命周期证据缺失",
+          "钱包结构或 K线 delta 未形成"
+        ],
+        "scope_note": "主导侧心理解释只用于 paper 观察、复盘与风险审计；不执行真实 swap，不读取私钥，不签名，不广播。"
+      },
+      "operator_lifecycle_stage": "UNKNOWN",
+      "operator_psychology_label": "证据不足 / 待复查",
+      "paper_trade_alignment": "DATA_INSUFFICIENT"
+    }
+  ],
+  "scope_note": "Live state 不代表真实交易授权；以分阶段门禁和纸面验证为准。"
+}

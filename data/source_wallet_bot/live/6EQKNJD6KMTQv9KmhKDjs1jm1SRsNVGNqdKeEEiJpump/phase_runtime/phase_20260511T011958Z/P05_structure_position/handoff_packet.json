@@ -1,0 +1,23 @@
+{
+  "token_address": "6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump",
+  "phase_id": "P05_structure_position",
+  "artifact_kind": "handoff_packet",
+  "generated_at": "2026-05-11T01:19:58Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "status": "DEGRADED",
+  "next_phase": "P06_strategy_gate",
+  "can_continue": true,
+  "missing_evidence": [
+    "P05_POSITION_DATA_MISSING",
+    "quote_or_kline_avwap_poc_missing"
+  ],
+  "block_reasons": [],
+  "handoff_contract": "fixed_ca_phase_handoff_v1"
+}

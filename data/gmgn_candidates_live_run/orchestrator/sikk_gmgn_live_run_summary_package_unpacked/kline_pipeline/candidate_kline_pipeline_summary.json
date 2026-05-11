@@ -1,0 +1,227 @@
+{
+  "模块": "SIKK 候选币 K线接入管道",
+  "扫描时间": "2026-05-02T05:00:01Z",
+  "候选来源": "data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.json",
+  "处理等级": [
+    "S3_进入SIKK结构分析"
+  ],
+  "处理统计": {
+    "读取候选数": 10,
+    "处理候选数": 10,
+    "成功数量": 10,
+    "失败数量": 0
+  },
+  "处理结果": [
+    {
+      "代币地址": "iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump",
+      "代币符号": "NKT",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1777680781,
+      "输出目录": "data/gmgn_candidates_live_run/kline_pipeline/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump",
+      "K线文件": {
+        "1m": "data/gmgn_candidates_live_run/kline_pipeline/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/kline_1m.csv",
+        "5m": "data/gmgn_candidates_live_run/kline_pipeline/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 100,
+        "5m": 57
+      },
+      "吸筹窗口输出": "data/gmgn_candidates_live_run/kline_pipeline/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-05-02 00:53:00 UTC",
+      "T_end": "2026-05-02 00:56:00 UTC"
+    },
+    {
+      "代币地址": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
+      "代币符号": "UNIPUMP",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1777660475,
+      "输出目录": "data/gmgn_candidates_live_run/kline_pipeline/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
+      "K线文件": {
+        "1m": "data/gmgn_candidates_live_run/kline_pipeline/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/kline_1m.csv",
+        "5m": "data/gmgn_candidates_live_run/kline_pipeline/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 100,
+        "5m": 72
+      },
+      "吸筹窗口输出": "data/gmgn_candidates_live_run/kline_pipeline/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-05-01 19:27:00 UTC",
+      "T_end": "2026-05-01 19:33:00 UTC"
+    },
+    {
+      "代币地址": "F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump",
+      "代币符号": "lolcat",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1777644465,
+      "输出目录": "data/gmgn_candidates_live_run/kline_pipeline/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump",
+      "K线文件": {
+        "1m": "data/gmgn_candidates_live_run/kline_pipeline/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/kline_1m.csv",
+        "5m": "data/gmgn_candidates_live_run/kline_pipeline/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 93,
+        "5m": 66
+      },
+      "吸筹窗口输出": "data/gmgn_candidates_live_run/kline_pipeline/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-05-01 14:39:00 UTC",
+      "T_end": "2026-05-01 14:42:00 UTC"
+    },
+    {
+      "代币地址": "ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1",
+      "代币符号": "AALIEN",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1777564934,
+      "输出目录": "data/gmgn_candidates_live_run/kline_pipeline/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1",
+      "K线文件": {
+        "1m": "data/gmgn_candidates_live_run/kline_pipeline/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/kline_1m.csv",
+        "5m": "data/gmgn_candidates_live_run/kline_pipeline/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 100,
+        "5m": 72
+      },
+      "吸筹窗口输出": "data/gmgn_candidates_live_run/kline_pipeline/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-04-30 16:43:00 UTC",
+      "T_end": "2026-04-30 16:49:00 UTC"
+    },
+    {
+      "代币地址": "AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk",
+      "代币符号": "HIIE",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1777447979,
+      "输出目录": "data/gmgn_candidates_live_run/kline_pipeline/AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk",
+      "K线文件": {
+        "1m": "data/gmgn_candidates_live_run/kline_pipeline/AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk/kline_1m.csv",
+        "5m": "data/gmgn_candidates_live_run/kline_pipeline/AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 73,
+        "5m": 58
+      },
+      "吸筹窗口输出": "data/gmgn_candidates_live_run/kline_pipeline/AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "invalid",
+      "T_start": "2026-04-29 07:58:00 UTC",
+      "T_end": "2026-04-29 08:04:00 UTC"
+    },
+    {
+      "代币地址": "C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump",
+      "代币符号": "1000x",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1777414203,
+      "输出目录": "data/gmgn_candidates_live_run/kline_pipeline/C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump",
+      "K线文件": {
+        "1m": "data/gmgn_candidates_live_run/kline_pipeline/C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump/kline_1m.csv",
+        "5m": "data/gmgn_candidates_live_run/kline_pipeline/C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 100,
+        "5m": 72
+      },
+      "吸筹窗口输出": "data/gmgn_candidates_live_run/kline_pipeline/C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-04-28 22:51:00 UTC",
+      "T_end": "2026-04-28 22:57:00 UTC"
+    },
+    {
+      "代币地址": "9EZ8N5ukVzSQJGu2K38f1ZydTK6JrqCx57j8yTipump",
+      "代币符号": "SCRIBBELON",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1777667108,
+      "输出目录": "data/gmgn_candidates_live_run/kline_pipeline/9EZ8N5ukVzSQJGu2K38f1ZydTK6JrqCx57j8yTipump",
+      "K线文件": {
+        "1m": "data/gmgn_candidates_live_run/kline_pipeline/9EZ8N5ukVzSQJGu2K38f1ZydTK6JrqCx57j8yTipump/kline_1m.csv",
+        "5m": "data/gmgn_candidates_live_run/kline_pipeline/9EZ8N5ukVzSQJGu2K38f1ZydTK6JrqCx57j8yTipump/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 100,
+        "5m": 72
+      },
+      "吸筹窗口输出": "data/gmgn_candidates_live_run/kline_pipeline/9EZ8N5ukVzSQJGu2K38f1ZydTK6JrqCx57j8yTipump/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "invalid",
+      "T_start": "2026-05-01 21:02:00 UTC",
+      "T_end": "2026-05-01 21:07:00 UTC"
+    },
+    {
+      "代币地址": "FYLdHidVxz373JdKwq8F5oFi7cn5eQFF997QrtnZpump",
+      "代币符号": "freetrump",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1777680691,
+      "输出目录": "data/gmgn_candidates_live_run/kline_pipeline/FYLdHidVxz373JdKwq8F5oFi7cn5eQFF997QrtnZpump",
+      "K线文件": {
+        "1m": "data/gmgn_candidates_live_run/kline_pipeline/FYLdHidVxz373JdKwq8F5oFi7cn5eQFF997QrtnZpump/kline_1m.csv",
+        "5m": "data/gmgn_candidates_live_run/kline_pipeline/FYLdHidVxz373JdKwq8F5oFi7cn5eQFF997QrtnZpump/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 100,
+        "5m": 58
+      },
+      "吸筹窗口输出": "data/gmgn_candidates_live_run/kline_pipeline/FYLdHidVxz373JdKwq8F5oFi7cn5eQFF997QrtnZpump/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "invalid",
+      "T_start": "2026-05-02 00:46:00 UTC",
+      "T_end": "2026-05-02 00:49:00 UTC"
+    },
+    {
+      "代币地址": "LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA",
+      "代币符号": "UNITED",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1777478499,
+      "输出目录": "data/gmgn_candidates_live_run/kline_pipeline/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA",
+      "K线文件": {
+        "1m": "data/gmgn_candidates_live_run/kline_pipeline/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/kline_1m.csv",
+        "5m": "data/gmgn_candidates_live_run/kline_pipeline/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 100,
+        "5m": 72
+      },
+      "吸筹窗口输出": "data/gmgn_candidates_live_run/kline_pipeline/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-04-29 16:37:00 UTC",
+      "T_end": "2026-04-29 16:41:00 UTC"
+    },
+    {
+      "代币地址": "21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump",
+      "代币符号": "GRUMP",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1777671555,
+      "输出目录": "data/gmgn_candidates_live_run/kline_pipeline/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump",
+      "K线文件": {
+        "1m": "data/gmgn_candidates_live_run/kline_pipeline/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/kline_1m.csv",
+        "5m": "data/gmgn_candidates_live_run/kline_pipeline/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 100,
+        "5m": 72
+      },
+      "吸筹窗口输出": "data/gmgn_candidates_live_run/kline_pipeline/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-05-01 22:19:00 UTC",
+      "T_end": "2026-05-01 22:22:00 UTC"
+    }
+  ],
+  "说明": "本管道只读取 GMGN K线并运行吸筹窗口识别，不执行交易。"
+}

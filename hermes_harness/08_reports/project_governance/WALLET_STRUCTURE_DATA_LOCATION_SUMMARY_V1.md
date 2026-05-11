@@ -1,0 +1,1269 @@
+# 钱包数据采集 / 结构分析项目旧数据目录清单 V1
+
+## 目标
+列出当前项目里，哪些旧目录存在“钱包数据采集、钱包事实、同源证据、结构分析、行为推断、handoff 包、报告输出”相关文件。
+
+## 边界
+- 只读扫描。
+- 未移动、未删除、未迁移旧目录。
+- 本清单用于后续统一整合到新的标准数据体系。
+
+## 一、主要命中目录族
+- `data/gmgn_candidates_live_run/site/case_files/` — 文件 `618`；报告/Case/Dashboard 输出:618
+- `data/gmgn_candidates_live_run/paper_live/case_files/` — 文件 `413`；报告/Case/Dashboard 输出:413
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/` — 文件 `211`；结构分析数据:211, 钱包数据采集:211, 钱包事实数据:211
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/` — 文件 `211`；结构分析数据:211, 钱包数据采集:211, 钱包事实数据:211
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/` — 文件 `115`；结构分析数据:115, 钱包数据采集:115, 钱包事实数据:115
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/` — 文件 `115`；结构分析数据:115, 钱包数据采集:115, 钱包事实数据:115
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/` — 文件 `101`；结构分析数据:101, 钱包数据采集:101, 钱包事实数据:101
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/` — 文件 `101`；结构分析数据:101, 钱包数据采集:101, 钱包事实数据:101
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/` — 文件 `81`；结构分析数据:81, 钱包数据采集:81, 钱包事实数据:81
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/` — 文件 `81`；结构分析数据:81, 钱包数据采集:81, 钱包事实数据:81
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/` — 文件 `79`；结构分析数据:79, 钱包数据采集:79, 钱包事实数据:79
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/` — 文件 `79`；结构分析数据:79, 钱包数据采集:79, 钱包事实数据:79
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/` — 文件 `69`；结构分析数据:69, 钱包数据采集:69, 钱包事实数据:69
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/` — 文件 `69`；结构分析数据:69, 钱包数据采集:69, 钱包事实数据:69
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/` — 文件 `65`；结构分析数据:65, 钱包数据采集:65, 钱包事实数据:65
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/` — 文件 `65`；结构分析数据:65, 钱包数据采集:65, 钱包事实数据:65
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/` — 文件 `55`；结构分析数据:55, 钱包数据采集:55, 钱包事实数据:55
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/` — 文件 `55`；结构分析数据:55, 钱包数据采集:55, 钱包事实数据:55
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/` — 文件 `51`；结构分析数据:51, 钱包数据采集:51, 钱包事实数据:51
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/` — 文件 `51`；结构分析数据:51, 钱包数据采集:51, 钱包事实数据:51
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/` — 文件 `47`；结构分析数据:47, 钱包数据采集:47, 钱包事实数据:47
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/` — 文件 `47`；结构分析数据:47, 钱包数据采集:47, 钱包事实数据:47
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/` — 文件 `41`；结构分析数据:41, 钱包数据采集:41, 钱包事实数据:41
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/` — 文件 `41`；结构分析数据:41, 钱包数据采集:41, 钱包事实数据:41
+- `modules/wallet_structure/` — 文件 `35`；行为推断/生命周期数据:1, handoff/decision/gate 数据:1, 报告/Case/Dashboard 输出:6, 同源/资金证据数据:1, 结构分析数据:35, 钱包事实数据:35
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/` — 文件 `31`；结构分析数据:31, 钱包数据采集:31, 钱包事实数据:31
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/` — 文件 `31`；结构分析数据:31, 钱包数据采集:31, 钱包事实数据:31
+- `modules/source_wallet_bot/` — 文件 `31`；行为推断/生命周期数据:1, handoff/decision/gate 数据:4, 报告/Case/Dashboard 输出:20, 同源/资金证据数据:1, 钱包数据采集:5, 钱包事实数据:7
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/snapshots/` — 文件 `25`；结构分析数据:25, 钱包数据采集:25, 钱包事实数据:25
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/structure_analysis/snapshots/` — 文件 `25`；结构分析数据:25, 钱包数据采集:25, 钱包事实数据:25
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4pzuXZwn4N2oGzrjnTv57FkD31eSqwnhx4w96uH1pump/snapshots/` — 文件 `25`；结构分析数据:25, 钱包数据采集:25, 钱包事实数据:25
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4pzuXZwn4N2oGzrjnTv57FkD31eSqwnhx4w96uH1pump/structure_analysis/snapshots/` — 文件 `25`；结构分析数据:25, 钱包数据采集:25, 钱包事实数据:25
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/snapshots/` — 文件 `23`；结构分析数据:23, 钱包数据采集:23, 钱包事实数据:23
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/structure_analysis/snapshots/` — 文件 `23`；结构分析数据:23, 钱包数据采集:23, 钱包事实数据:23
+- `钱包数据分析/sunqbfemxbot/sessions/` — 文件 `22`；钱包数据采集:22
+- `docs/intel_bot/` — 文件 `20`；行为推断/生命周期数据:1, 报告/Case/Dashboard 输出:20, 钱包数据采集:1
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/32NJtnoQXoSZPZ8PpUgH3GocZxLf2AoWbaQ7yBRKpump/snapshots/` — 文件 `19`；结构分析数据:19, 钱包数据采集:19, 钱包事实数据:19
+- `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/32NJtnoQXoSZPZ8PpUgH3GocZxLf2AoWbaQ7yBRKpump/structure_analysis/snapshots/` — 文件 `19`；结构分析数据:19, 钱包数据采集:19, 钱包事实数据:19
+- `reports/` — 文件 `17`；handoff/decision/gate 数据:2, 报告/Case/Dashboard 输出:17
+- `hermes_harness/08_reports/project_governance/` — 文件 `15`；报告/Case/Dashboard 输出:15
+
+## 二、按数据类型分类
+### 钱包数据采集
+- 命中目录数：`185`
+- 命中文件数：`2930`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/`
+- 该类型文件数：`211`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/snapshot_20260502T174336Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/snapshot_20260502T103718Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/delta_20260503T123633Z__20260503T123748Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/delta_20260503T071126Z__20260503T072154Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/delta_20260502T201237Z__20260502T202301Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/`
+- 该类型文件数：`211`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/snapshot_20260502T174336Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/snapshot_20260502T103718Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/delta_20260503T123633Z__20260503T123748Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/delta_20260503T071126Z__20260503T072154Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/delta_20260502T201237Z__20260502T202301Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/`
+- 该类型文件数：`115`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/snapshot_20260503T065034Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/delta_20260502T095443Z__20260502T100522Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/delta_20260502T102646Z__20260502T103728Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/delta_20260502T092248Z__20260502T093325Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/snapshot_20260503T083502Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/`
+- 该类型文件数：`115`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/snapshot_20260503T065034Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/delta_20260502T095443Z__20260502T100522Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/delta_20260502T102646Z__20260502T103728Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/delta_20260502T092248Z__20260502T093325Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/snapshot_20260503T083502Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/`
+- 该类型文件数：`101`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260503T100911Z__20260503T111421Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260502T214640Z__20260502T215702Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260503T091648Z__20260503T092722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260502T215702Z__20260502T220722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/snapshot_20260502T202310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/`
+- 该类型文件数：`101`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260503T100911Z__20260503T111421Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260502T214640Z__20260502T215702Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260503T091648Z__20260503T092722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260502T215702Z__20260502T220722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/snapshot_20260502T202310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/`
+- 该类型文件数：`81`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/snapshot_20260502T180531Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/delta_20260502T114134Z__20260502T115215Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/snapshot_20260502T075703Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/delta_20260502T070751Z__20260502T071821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/delta_20260502T172240Z__20260502T173310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/`
+- 该类型文件数：`81`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/snapshot_20260502T180531Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/delta_20260502T114134Z__20260502T115215Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/snapshot_20260502T075703Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/delta_20260502T070751Z__20260502T071821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/delta_20260502T172240Z__20260502T173310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/`
+- 该类型文件数：`79`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T115206Z__20260502T125821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T073539Z__20260502T074613Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/snapshot_20260502T183759Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T092219Z__20260502T093306Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T093306Z__20260502T094347Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/`
+- 该类型文件数：`79`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T115206Z__20260502T125821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T073539Z__20260502T074613Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/snapshot_20260502T183759Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T092219Z__20260502T093306Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T093306Z__20260502T094347Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/`
+- 该类型文件数：`69`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/snapshot_20260502T075659Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/delta_20260502T081820Z__20260502T082855Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/snapshot_20260502T065739Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/snapshot_20260502T085022Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/delta_20260502T114129Z__20260502T115211Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/`
+- 该类型文件数：`69`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/snapshot_20260502T075659Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/delta_20260502T081820Z__20260502T082855Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/snapshot_20260502T065739Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/snapshot_20260502T085022Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/delta_20260502T114129Z__20260502T115211Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/`
+- 该类型文件数：`65`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/snapshot_20260503T081405Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T123647Z__20260503T123803Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T093756Z__20260503T095847Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T071136Z__20260503T072204Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T053810Z__20260503T054827Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/`
+- 该类型文件数：`65`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/snapshot_20260503T081405Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T123647Z__20260503T123803Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T093756Z__20260503T095847Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T071136Z__20260503T072204Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T053810Z__20260503T054827Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/`
+- 该类型文件数：`55`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/delta_20260503T123652Z__20260503T123808Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/delta_20260503T083512Z__20260503T084534Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/delta_20260503T090630Z__20260503T091658Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/snapshot_20260503T123808Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/`
+- 该类型文件数：`55`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/delta_20260503T123652Z__20260503T123808Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/delta_20260503T083512Z__20260503T084534Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/delta_20260503T090630Z__20260503T091658Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/snapshot_20260503T123808Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/`
+- 该类型文件数：`51`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T204410Z__20260502T205438Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T201247Z__20260502T202315Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T213624Z__20260502T214645Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T181629Z__20260502T182721Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/snapshot_20260502T212556Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/`
+- 该类型文件数：`51`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T204410Z__20260502T205438Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T201247Z__20260502T202315Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T213624Z__20260502T214645Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T181629Z__20260502T182721Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/snapshot_20260502T212556Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/`
+- 该类型文件数：`47`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/delta_20260502T090048Z__20260502T091129Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/snapshot_20260502T094343Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/delta_20260502T082841Z__20260502T083921Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/delta_20260502T095419Z__20260502T100458Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/latest_delta.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/`
+- 该类型文件数：`47`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/delta_20260502T090048Z__20260502T091129Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/snapshot_20260502T094343Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/delta_20260502T082841Z__20260502T083921Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/delta_20260502T095419Z__20260502T100458Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/latest_delta.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/`
+- 该类型文件数：`41`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/snapshot_20260502T125840Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/snapshot_20260502T101609Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/delta_20260502T085036Z__20260502T090116Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/delta_20260502T101609Z__20260502T102651Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/`
+- 该类型文件数：`41`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/snapshot_20260502T125840Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/snapshot_20260502T101609Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/delta_20260502T085036Z__20260502T090116Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/delta_20260502T101609Z__20260502T102651Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/`
+- 该类型文件数：`31`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/delta_20260504T050346Z__20260504T050433Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/snapshot_20260504T080843Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/delta_20260504T045944Z__20260504T050346Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/snapshot_20260504T050346Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/`
+- 该类型文件数：`31`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/delta_20260504T050346Z__20260504T050433Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/snapshot_20260504T080843Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/delta_20260504T045944Z__20260504T050346Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/snapshot_20260504T050346Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/snapshots/`
+- 该类型文件数：`25`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/snapshots/snapshot_20260504T072850Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/snapshots/delta_20260504T045237Z__20260504T045526Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/snapshots/snapshot_20260504T012259Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/snapshots/delta_20260504T073741Z__20260504T075551Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/snapshots/latest_delta.json`
+
+### 钱包事实数据
+- 命中目录数：`194`
+- 命中文件数：`2980`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/`
+- 该类型文件数：`211`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/snapshot_20260502T174336Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/snapshot_20260502T103718Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/delta_20260503T123633Z__20260503T123748Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/delta_20260503T071126Z__20260503T072154Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/delta_20260502T201237Z__20260502T202301Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/`
+- 该类型文件数：`211`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/snapshot_20260502T174336Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/snapshot_20260502T103718Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/delta_20260503T123633Z__20260503T123748Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/delta_20260503T071126Z__20260503T072154Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/delta_20260502T201237Z__20260502T202301Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/`
+- 该类型文件数：`115`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/snapshot_20260503T065034Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/delta_20260502T095443Z__20260502T100522Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/delta_20260502T102646Z__20260502T103728Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/delta_20260502T092248Z__20260502T093325Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/snapshot_20260503T083502Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/`
+- 该类型文件数：`115`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/snapshot_20260503T065034Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/delta_20260502T095443Z__20260502T100522Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/delta_20260502T102646Z__20260502T103728Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/delta_20260502T092248Z__20260502T093325Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/snapshot_20260503T083502Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/`
+- 该类型文件数：`101`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260503T100911Z__20260503T111421Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260502T214640Z__20260502T215702Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260503T091648Z__20260503T092722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260502T215702Z__20260502T220722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/snapshot_20260502T202310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/`
+- 该类型文件数：`101`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260503T100911Z__20260503T111421Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260502T214640Z__20260502T215702Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260503T091648Z__20260503T092722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260502T215702Z__20260502T220722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/snapshot_20260502T202310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/`
+- 该类型文件数：`81`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/snapshot_20260502T180531Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/delta_20260502T114134Z__20260502T115215Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/snapshot_20260502T075703Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/delta_20260502T070751Z__20260502T071821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/delta_20260502T172240Z__20260502T173310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/`
+- 该类型文件数：`81`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/snapshot_20260502T180531Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/delta_20260502T114134Z__20260502T115215Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/snapshot_20260502T075703Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/delta_20260502T070751Z__20260502T071821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/delta_20260502T172240Z__20260502T173310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/`
+- 该类型文件数：`79`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T115206Z__20260502T125821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T073539Z__20260502T074613Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/snapshot_20260502T183759Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T092219Z__20260502T093306Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T093306Z__20260502T094347Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/`
+- 该类型文件数：`79`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T115206Z__20260502T125821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T073539Z__20260502T074613Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/snapshot_20260502T183759Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T092219Z__20260502T093306Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T093306Z__20260502T094347Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/`
+- 该类型文件数：`69`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/snapshot_20260502T075659Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/delta_20260502T081820Z__20260502T082855Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/snapshot_20260502T065739Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/snapshot_20260502T085022Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/delta_20260502T114129Z__20260502T115211Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/`
+- 该类型文件数：`69`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/snapshot_20260502T075659Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/delta_20260502T081820Z__20260502T082855Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/snapshot_20260502T065739Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/snapshot_20260502T085022Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/delta_20260502T114129Z__20260502T115211Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/`
+- 该类型文件数：`65`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/snapshot_20260503T081405Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T123647Z__20260503T123803Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T093756Z__20260503T095847Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T071136Z__20260503T072204Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T053810Z__20260503T054827Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/`
+- 该类型文件数：`65`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/snapshot_20260503T081405Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T123647Z__20260503T123803Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T093756Z__20260503T095847Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T071136Z__20260503T072204Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T053810Z__20260503T054827Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/`
+- 该类型文件数：`55`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/delta_20260503T123652Z__20260503T123808Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/delta_20260503T083512Z__20260503T084534Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/delta_20260503T090630Z__20260503T091658Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/snapshot_20260503T123808Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/`
+- 该类型文件数：`55`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/delta_20260503T123652Z__20260503T123808Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/delta_20260503T083512Z__20260503T084534Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/delta_20260503T090630Z__20260503T091658Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/snapshot_20260503T123808Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/`
+- 该类型文件数：`51`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T204410Z__20260502T205438Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T201247Z__20260502T202315Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T213624Z__20260502T214645Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T181629Z__20260502T182721Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/snapshot_20260502T212556Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/`
+- 该类型文件数：`51`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T204410Z__20260502T205438Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T201247Z__20260502T202315Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T213624Z__20260502T214645Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T181629Z__20260502T182721Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/snapshot_20260502T212556Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/`
+- 该类型文件数：`47`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/delta_20260502T090048Z__20260502T091129Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/snapshot_20260502T094343Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/delta_20260502T082841Z__20260502T083921Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/delta_20260502T095419Z__20260502T100458Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/latest_delta.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/`
+- 该类型文件数：`47`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/delta_20260502T090048Z__20260502T091129Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/snapshot_20260502T094343Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/delta_20260502T082841Z__20260502T083921Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/delta_20260502T095419Z__20260502T100458Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/latest_delta.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/`
+- 该类型文件数：`41`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/snapshot_20260502T125840Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/snapshot_20260502T101609Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/delta_20260502T085036Z__20260502T090116Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/delta_20260502T101609Z__20260502T102651Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/`
+- 该类型文件数：`41`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/snapshot_20260502T125840Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/snapshot_20260502T101609Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/delta_20260502T085036Z__20260502T090116Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/delta_20260502T101609Z__20260502T102651Z.json`
+#### `modules/wallet_structure/`
+- 该类型文件数：`35`
+- 代表文件：
+  - `modules/wallet_structure/constants.py`
+  - `modules/wallet_structure/legacy_mapping.md`
+  - `modules/wallet_structure/evidence_level_matrix.csv`
+  - `modules/wallet_structure/normalizer.py`
+  - `modules/wallet_structure/role_classifier.py`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/`
+- 该类型文件数：`31`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/delta_20260504T050346Z__20260504T050433Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/snapshot_20260504T080843Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/delta_20260504T045944Z__20260504T050346Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/snapshot_20260504T050346Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/`
+- 该类型文件数：`31`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/delta_20260504T050346Z__20260504T050433Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/snapshot_20260504T080843Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/delta_20260504T045944Z__20260504T050346Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/snapshot_20260504T050346Z.json`
+
+### 同源/资金证据数据
+- 命中目录数：`13`
+- 命中文件数：`29`
+#### `audits/`
+- 该类型文件数：`5`
+- 代表文件：
+  - `audits/wp1_wallet_contract_report.md`
+  - `audits/v03_wp2_market_cap_context_report.md`
+  - `audits/v04_wp2_chip_state_cluster_report.md`
+  - `audits/chatgpt_share_69f6a19a_okx_cluster_summary.md`
+  - `audits/v04_wp1_okx_cluster_report.md`
+#### `tests/`
+- 该类型文件数：`4`
+- 代表文件：
+  - `tests/test_sikk_same_source_grouping.py`
+  - `tests/test_sikk_research_loop_controller.py`
+  - `tests/test_source_wallet_handoff_exporter.py`
+  - `tests/test_source_wallet_profile_normalizer.py`
+  - `tests/test_sikk_wallet_structure_daily_report.py`
+#### `./`
+- 该类型文件数：`3`
+- 代表文件：
+  - `sikk_okx_cluster_delta.py`
+  - `sikk_dashboard_builder.py`
+  - `sikk_auto_risk_gate.py`
+  - `sikk_operator_psychology_engine.py`
+  - `sikk_candidate_wallet_structure_pipeline.py`
+#### `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/`
+- 该类型文件数：`3`
+- 代表文件：
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/token_transfer_normalized.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/wallet_entity_profile_normalized.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/holder_delta_normalized.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/gmgn_wallet_tags_normalized.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/quote_security_normalized.json`
+#### `data/source_wallet_bot/schemas/`
+- 该类型文件数：`3`
+- 代表文件：
+  - `data/source_wallet_bot/schemas/token_transfer_normalized.schema.json`
+  - `data/source_wallet_bot/schemas/funding_flow_normalized.schema.json`
+  - `data/source_wallet_bot/schemas/backflow_paths_normalized.schema.json`
+  - `data/source_wallet_bot/schemas/bot2_handoff_packet.schema.json`
+  - `data/source_wallet_bot/schemas/wallet_profile_normalized.schema.json`
+#### `data/source_wallet_bot/`
+- 该类型文件数：`2`
+- 代表文件：
+  - `data/source_wallet_bot/backflow_paths_normalized.json`
+  - `data/source_wallet_bot/bot2_handoff_packet.json`
+  - `data/source_wallet_bot/same_source_evidence_normalized.json`
+  - `data/source_wallet_bot/wallet_trade_normalized.json`
+#### `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/`
+- 该类型文件数：`2`
+- 代表文件：
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/same_source_groups.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/fund_flow_edges.csv`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/wallet_fact_package_manifest.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/wallet_structure_normalized.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/chip_distribution_summary.json`
+#### `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/`
+- 该类型文件数：`2`
+- 代表文件：
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/same_source_groups.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/fund_flow_edges.csv`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/wallet_fact_package_manifest.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/wallet_fact_report.md`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/wallet_structure_normalized.json`
+#### `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_intelligence_decision.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/gmgn_wallet_profile_input.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_entity_profile_normalized.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/gmgn_wallet_trade_input.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/bot2_handoff_packet.json`
+#### `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/intelligence/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/intelligence/wallet_intelligence_decision.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/intelligence/same_source_evidence_normalized.json`
+#### `modules/source_wallet_bot/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `modules/source_wallet_bot/distribution_recovery_whale_rules.md`
+  - `modules/source_wallet_bot/missing_fields_report.md`
+  - `modules/source_wallet_bot/wallet_trade_contract.md`
+  - `modules/source_wallet_bot/legacy_mapping.md`
+  - `modules/source_wallet_bot/source_manifest_contract.md`
+#### `modules/wallet_structure/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `modules/wallet_structure/constants.py`
+  - `modules/wallet_structure/legacy_mapping.md`
+  - `modules/wallet_structure/evidence_level_matrix.csv`
+  - `modules/wallet_structure/normalizer.py`
+  - `modules/wallet_structure/role_classifier.py`
+#### `tasks/chatgpt_share_69f809c6/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `tasks/chatgpt_share_69f809c6/S07_visual_console_dashboard_task.md`
+  - `tasks/chatgpt_share_69f809c6/S06_telegram_interaction_console_task.md`
+  - `tasks/chatgpt_share_69f809c6/S09_wallet_structure_gate_task.md`
+  - `tasks/chatgpt_share_69f809c6/S03_legacy_wallet_data_source_backfill_task.md`
+  - `tasks/chatgpt_share_69f809c6/S08_live_runtime_design_task.md`
+
+### 结构分析数据
+- 命中目录数：`197`
+- 命中文件数：`3010`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/`
+- 该类型文件数：`211`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/snapshot_20260502T174336Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/snapshot_20260502T103718Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/delta_20260503T123633Z__20260503T123748Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/delta_20260503T071126Z__20260503T072154Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/snapshots/delta_20260502T201237Z__20260502T202301Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/`
+- 该类型文件数：`211`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/snapshot_20260502T174336Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/snapshot_20260502T103718Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/delta_20260503T123633Z__20260503T123748Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/delta_20260503T071126Z__20260503T072154Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/structure_analysis/snapshots/delta_20260502T201237Z__20260502T202301Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/`
+- 该类型文件数：`115`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/snapshot_20260503T065034Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/delta_20260502T095443Z__20260502T100522Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/delta_20260502T102646Z__20260502T103728Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/delta_20260502T092248Z__20260502T093325Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/snapshots/snapshot_20260503T083502Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/`
+- 该类型文件数：`115`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/snapshot_20260503T065034Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/delta_20260502T095443Z__20260502T100522Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/delta_20260502T102646Z__20260502T103728Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/delta_20260502T092248Z__20260502T093325Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/structure_analysis/snapshots/snapshot_20260503T083502Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/`
+- 该类型文件数：`101`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260503T100911Z__20260503T111421Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260502T214640Z__20260502T215702Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260503T091648Z__20260503T092722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/delta_20260502T215702Z__20260502T220722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/snapshots/snapshot_20260502T202310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/`
+- 该类型文件数：`101`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260503T100911Z__20260503T111421Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260502T214640Z__20260502T215702Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260503T091648Z__20260503T092722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/delta_20260502T215702Z__20260502T220722Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/structure_analysis/snapshots/snapshot_20260502T202310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/`
+- 该类型文件数：`81`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/snapshot_20260502T180531Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/delta_20260502T114134Z__20260502T115215Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/snapshot_20260502T075703Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/delta_20260502T070751Z__20260502T071821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/snapshots/delta_20260502T172240Z__20260502T173310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/`
+- 该类型文件数：`81`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/snapshot_20260502T180531Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/delta_20260502T114134Z__20260502T115215Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/snapshot_20260502T075703Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/delta_20260502T070751Z__20260502T071821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/structure_analysis/snapshots/delta_20260502T172240Z__20260502T173310Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/`
+- 该类型文件数：`79`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T115206Z__20260502T125821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T073539Z__20260502T074613Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/snapshot_20260502T183759Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T092219Z__20260502T093306Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/snapshots/delta_20260502T093306Z__20260502T094347Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/`
+- 该类型文件数：`79`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T115206Z__20260502T125821Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T073539Z__20260502T074613Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/snapshot_20260502T183759Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T092219Z__20260502T093306Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/structure_analysis/snapshots/delta_20260502T093306Z__20260502T094347Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/`
+- 该类型文件数：`69`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/snapshot_20260502T075659Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/delta_20260502T081820Z__20260502T082855Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/snapshot_20260502T065739Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/snapshot_20260502T085022Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/snapshots/delta_20260502T114129Z__20260502T115211Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/`
+- 该类型文件数：`69`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/snapshot_20260502T075659Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/delta_20260502T081820Z__20260502T082855Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/snapshot_20260502T065739Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/snapshot_20260502T085022Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/structure_analysis/snapshots/delta_20260502T114129Z__20260502T115211Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/`
+- 该类型文件数：`65`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/snapshot_20260503T081405Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T123647Z__20260503T123803Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T093756Z__20260503T095847Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T071136Z__20260503T072204Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/snapshots/delta_20260503T053810Z__20260503T054827Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/`
+- 该类型文件数：`65`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/snapshot_20260503T081405Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T123647Z__20260503T123803Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T093756Z__20260503T095847Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T071136Z__20260503T072204Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/structure_analysis/snapshots/delta_20260503T053810Z__20260503T054827Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/`
+- 该类型文件数：`55`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/delta_20260503T123652Z__20260503T123808Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/delta_20260503T083512Z__20260503T084534Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/delta_20260503T090630Z__20260503T091658Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/snapshots/snapshot_20260503T123808Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/`
+- 该类型文件数：`55`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/delta_20260503T123652Z__20260503T123808Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/delta_20260503T083512Z__20260503T084534Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/delta_20260503T090630Z__20260503T091658Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/structure_analysis/snapshots/snapshot_20260503T123808Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/`
+- 该类型文件数：`51`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T204410Z__20260502T205438Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T201247Z__20260502T202315Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T213624Z__20260502T214645Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/delta_20260502T181629Z__20260502T182721Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/snapshots/snapshot_20260502T212556Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/`
+- 该类型文件数：`51`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T204410Z__20260502T205438Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T201247Z__20260502T202315Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T213624Z__20260502T214645Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/delta_20260502T181629Z__20260502T182721Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/structure_analysis/snapshots/snapshot_20260502T212556Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/`
+- 该类型文件数：`47`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/delta_20260502T090048Z__20260502T091129Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/snapshot_20260502T094343Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/delta_20260502T082841Z__20260502T083921Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/delta_20260502T095419Z__20260502T100458Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/snapshots/latest_delta.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/`
+- 该类型文件数：`47`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/delta_20260502T090048Z__20260502T091129Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/snapshot_20260502T094343Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/delta_20260502T082841Z__20260502T083921Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/delta_20260502T095419Z__20260502T100458Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/iBcavzgHdvaHHEM6Tdm9UsRqEJu2iQRac3cjinbpump/structure_analysis/snapshots/latest_delta.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/`
+- 该类型文件数：`41`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/snapshot_20260502T125840Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/snapshot_20260502T101609Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/delta_20260502T085036Z__20260502T090116Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/snapshots/delta_20260502T101609Z__20260502T102651Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/`
+- 该类型文件数：`41`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/snapshot_20260502T125840Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/snapshot_20260502T101609Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/delta_20260502T085036Z__20260502T090116Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/4kCZp6rLBNSrjHEYXbE54MYbFb5dpMuptBtZHnMvpump/structure_analysis/snapshots/delta_20260502T101609Z__20260502T102651Z.json`
+#### `modules/wallet_structure/`
+- 该类型文件数：`35`
+- 代表文件：
+  - `modules/wallet_structure/constants.py`
+  - `modules/wallet_structure/legacy_mapping.md`
+  - `modules/wallet_structure/evidence_level_matrix.csv`
+  - `modules/wallet_structure/normalizer.py`
+  - `modules/wallet_structure/role_classifier.py`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/`
+- 该类型文件数：`31`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/delta_20260504T050346Z__20260504T050433Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/snapshot_20260504T080843Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/delta_20260504T045944Z__20260504T050346Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/snapshots/snapshot_20260504T050346Z.json`
+#### `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/`
+- 该类型文件数：`31`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/delta_20260504T050346Z__20260504T050433Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/snapshot_20260504T080843Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/delta_20260504T045944Z__20260504T050346Z.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/latest_delta.json`
+  - `data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/structure_analysis/snapshots/snapshot_20260504T050346Z.json`
+
+### 行为推断/生命周期数据
+- 命中目录数：`15`
+- 命中文件数：`19`
+#### `tests/`
+- 该类型文件数：`4`
+- 代表文件：
+  - `tests/test_sikk_same_source_grouping.py`
+  - `tests/test_sikk_research_loop_controller.py`
+  - `tests/test_source_wallet_handoff_exporter.py`
+  - `tests/test_source_wallet_profile_normalizer.py`
+  - `tests/test_sikk_wallet_structure_daily_report.py`
+#### `./`
+- 该类型文件数：`2`
+- 代表文件：
+  - `sikk_okx_cluster_delta.py`
+  - `sikk_dashboard_builder.py`
+  - `sikk_auto_risk_gate.py`
+  - `sikk_operator_psychology_engine.py`
+  - `sikk_candidate_wallet_structure_pipeline.py`
+#### `audits/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `audits/wp1_wallet_contract_report.md`
+  - `audits/v03_wp2_market_cap_context_report.md`
+  - `audits/v04_wp2_chip_state_cluster_report.md`
+  - `audits/chatgpt_share_69f6a19a_okx_cluster_summary.md`
+  - `audits/v04_wp1_okx_cluster_report.md`
+#### `data/intel_bot/live/_TEMPLATE_TOKEN/behavior_inference/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/intel_bot/live/_TEMPLATE_TOKEN/behavior_inference/README.md`
+#### `docs/harness/ai_harness_system/00_control_plane/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `docs/harness/ai_harness_system/00_control_plane/risk_tier_policy.md`
+  - `docs/harness/ai_harness_system/00_control_plane/input_contract_policy.md`
+  - `docs/harness/ai_harness_system/00_control_plane/method_wheel_policy.md`
+  - `docs/harness/ai_harness_system/00_control_plane/memory_write_rules.md`
+  - `docs/harness/ai_harness_system/00_control_plane/role_system_v1.md`
+#### `docs/intel_bot/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `docs/intel_bot/source_bot_upstream_layer_02_kline_market_structure.md`
+  - `docs/intel_bot/dominant_cost_zone_framework.md`
+  - `docs/intel_bot/wallet_intel_layer_reconstruction.md`
+  - `docs/intel_bot/wallet_intel_2h_workflow_report.md`
+  - `docs/intel_bot/source_bot_upstream_layer_01_candidate_token_data.md`
+#### `docs/plans/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `docs/plans/2026-05-02-dominant-side-lifecycle-intent-v12.md`
+  - `docs/plans/2026-05-01-sikk-paper-live-runner.md`
+  - `docs/plans/2026-05-02-wallet-trade-adapter-observe-soft-hard.md`
+  - `docs/plans/sikk_professional_interaction_investigation_design_20260503.md`
+  - `docs/plans/2026-04-30-sikk-auto-trading-readiness-framework.md`
+#### `knowledge/audits/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `knowledge/audits/chatgpt_share_69f809c6_full_automation_paper_optimization.system_audit.md`
+  - `knowledge/audits/chatgpt_share_69f75c79_paper_trade_optimization.system_audit.md`
+  - `knowledge/audits/chatgpt_share_69f72598_sikk_paper_trade_optimization.system_audit.md`
+  - `knowledge/audits/chatgpt_share_69f83af2_her_core_automation_system.system_audit.md`
+  - `knowledge/audits/chatgpt_share_69f70180_unified_query_dashboard_harness.system_audit.md`
+#### `knowledge/extracted_rules/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `knowledge/extracted_rules/chatgpt_share_69f809c6_full_automation_paper_optimization.rules.md`
+  - `knowledge/extracted_rules/chatgpt_share_69f7026b_paper_trade_optimization.rules.md`
+  - `knowledge/extracted_rules/chatgpt_share_69f83af2_her_core_automation_system.rules.md`
+  - `knowledge/extracted_rules/chatgpt_share_69f72598_sikk_paper_trade_optimization.rules.md`
+  - `knowledge/extracted_rules/hermes_knowledge_absorption_from_chatgpt_share.rules.md`
+#### `knowledge/inbox/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `knowledge/inbox/chatgpt_share_69f6fc90_paper_lifecycle_runtime.md`
+  - `knowledge/inbox/chatgpt_share_69f70180_unified_query_dashboard_harness.md`
+  - `knowledge/inbox/chatgpt_share_69f7026b_paper_trade_optimization.md`
+  - `knowledge/inbox/chatgpt_share_69f809c6_full_automation_paper_optimization.md`
+  - `knowledge/inbox/chatgpt_share_69f72598_sikk_paper_trade_optimization.md`
+#### `knowledge/passports/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `knowledge/passports/chatgpt_share_69f868b8.passport.md`
+  - `knowledge/passports/chatgpt_share_69f6fc90_paper_lifecycle_runtime.passport.md`
+  - `knowledge/passports/chatgpt_share_69f809c6.passport.md`
+  - `knowledge/passports/chatgpt_share_69f72598_sikk_paper_trade_optimization.passport.md`
+  - `knowledge/passports/chatgpt_share_69f70180_unified_query_dashboard_harness.passport.md`
+#### `knowledge/system_updates/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `knowledge/system_updates/chatgpt_share_69f6fc90_paper_lifecycle_runtime.sikk_update.md`
+  - `knowledge/system_updates/sikk_unified_view_section_a_20260503.md`
+  - `knowledge/system_updates/chatgpt_share_69f809c6.sikk_update.md`
+  - `knowledge/system_updates/gpt_share_69f747af_document_ingestion_20260503.md`
+  - `knowledge/system_updates/hermes_knowledge_absorption_from_chatgpt_share.sikk_update.md`
+#### `modules/source_wallet_bot/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `modules/source_wallet_bot/distribution_recovery_whale_rules.md`
+  - `modules/source_wallet_bot/missing_fields_report.md`
+  - `modules/source_wallet_bot/wallet_trade_contract.md`
+  - `modules/source_wallet_bot/legacy_mapping.md`
+  - `modules/source_wallet_bot/source_manifest_contract.md`
+#### `modules/wallet_structure/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `modules/wallet_structure/constants.py`
+  - `modules/wallet_structure/legacy_mapping.md`
+  - `modules/wallet_structure/evidence_level_matrix.csv`
+  - `modules/wallet_structure/normalizer.py`
+  - `modules/wallet_structure/role_classifier.py`
+#### `中文目录导航/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `中文目录导航/00_总览.md`
+  - `中文目录导航/01_运行数据.md`
+  - `中文目录导航/11_导入暂存.md`
+  - `中文目录导航/16_旧混合运行区.md`
+  - `中文目录导航/18_旧中文钱包资料.md`
+
+### handoff/decision/gate 数据
+- 命中目录数：`252`
+- 命中文件数：`269`
+#### `tests/`
+- 该类型文件数：`5`
+- 代表文件：
+  - `tests/test_sikk_same_source_grouping.py`
+  - `tests/test_sikk_research_loop_controller.py`
+  - `tests/test_source_wallet_handoff_exporter.py`
+  - `tests/test_source_wallet_profile_normalizer.py`
+  - `tests/test_sikk_wallet_structure_daily_report.py`
+#### `./`
+- 该类型文件数：`4`
+- 代表文件：
+  - `sikk_okx_cluster_delta.py`
+  - `sikk_dashboard_builder.py`
+  - `sikk_auto_risk_gate.py`
+  - `sikk_operator_psychology_engine.py`
+  - `sikk_candidate_wallet_structure_pipeline.py`
+#### `modules/source_wallet_bot/`
+- 该类型文件数：`4`
+- 代表文件：
+  - `modules/source_wallet_bot/distribution_recovery_whale_rules.md`
+  - `modules/source_wallet_bot/missing_fields_report.md`
+  - `modules/source_wallet_bot/wallet_trade_contract.md`
+  - `modules/source_wallet_bot/legacy_mapping.md`
+  - `modules/source_wallet_bot/source_manifest_contract.md`
+#### `data/6AVA_accumulation_test/auto_readiness_outputs/`
+- 该类型文件数：`2`
+- 代表文件：
+  - `data/6AVA_accumulation_test/auto_readiness_outputs/quote_security_decision.json`
+  - `data/6AVA_accumulation_test/auto_readiness_outputs/auto_readiness_review.md`
+  - `data/6AVA_accumulation_test/auto_readiness_outputs/trade_confirmation_ticket.md`
+  - `data/6AVA_accumulation_test/auto_readiness_outputs/security_scan_report.json`
+  - `data/6AVA_accumulation_test/auto_readiness_outputs/risk_gate_report.json`
+#### `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/`
+- 该类型文件数：`2`
+- 代表文件：
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_intelligence_decision.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/gmgn_wallet_profile_input.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_entity_profile_normalized.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/gmgn_wallet_trade_input.json`
+  - `data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/bot2_handoff_packet.json`
+#### `data/source_wallet_bot/schemas/`
+- 该类型文件数：`2`
+- 代表文件：
+  - `data/source_wallet_bot/schemas/token_transfer_normalized.schema.json`
+  - `data/source_wallet_bot/schemas/funding_flow_normalized.schema.json`
+  - `data/source_wallet_bot/schemas/backflow_paths_normalized.schema.json`
+  - `data/source_wallet_bot/schemas/bot2_handoff_packet.schema.json`
+  - `data/source_wallet_bot/schemas/wallet_profile_normalized.schema.json`
+#### `modules/strategy_gate/`
+- 该类型文件数：`2`
+- 代表文件：
+  - `modules/strategy_gate/cost_risk_reward_calculator.py`
+  - `modules/strategy_gate/__init__.py`
+#### `reports/`
+- 该类型文件数：`2`
+- 代表文件：
+  - `reports/ewon_12eM87_20260429_030541.tar.gz`
+  - `reports/sikk_site_case_file_link_fix_acceptance_20260503.md`
+  - `reports/ewon_12eM87_20260429_034659.zip`
+  - `reports/sikk_gpt_share_69f74bb3_automation_acceptance_report.md`
+  - `reports/chatgpt_share_69f75c79_absorption_acceptance_20260503.md`
+#### `reports/review_ops_bot/audit/system_directory_governance_20260506/`
+- 该类型文件数：`2`
+- 代表文件：
+  - `reports/review_ops_bot/audit/system_directory_governance_20260506/directory_governance_validation_report_20260506.md`
+  - `reports/review_ops_bot/audit/system_directory_governance_20260506/file_routing_matrix_20260506.json`
+  - `reports/review_ops_bot/audit/system_directory_governance_20260506/new_task_write_routing_table_20260506.json`
+  - `reports/review_ops_bot/audit/system_directory_governance_20260506/directory_official_decisions_20260506.md`
+  - `reports/review_ops_bot/audit/system_directory_governance_20260506/file_routing_matrix_summary_20260506.md`
+#### `reports/review_ops_bot/audit/system_directory_inventory/`
+- 该类型文件数：`2`
+- 代表文件：
+  - `reports/review_ops_bot/audit/system_directory_inventory/system_directory_file_inventory_20260506.md`
+  - `reports/review_ops_bot/audit/system_directory_inventory/chinese_directory_naming_proposal_20260506.md`
+  - `reports/review_ops_bot/audit/system_directory_inventory/system_directory_validator_acceptance_spec_20260506.json`
+  - `reports/review_ops_bot/audit/system_directory_inventory/system_directory_file_routing_matrix_20260506.json`
+  - `reports/review_ops_bot/audit/system_directory_inventory/system_directory_usage_map_for_decision_20260506.md`
+#### `contracts/bot_handoff/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `contracts/bot_handoff/README.md`
+#### `data/6AVA_accumulation_test/auto_readiness_outputs/v05_fake_live_review/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/6AVA_accumulation_test/auto_readiness_outputs/v05_fake_live_review/quote_security_decision.json`
+  - `data/6AVA_accumulation_test/auto_readiness_outputs/v05_fake_live_review/trade_confirmation_ticket.md`
+  - `data/6AVA_accumulation_test/auto_readiness_outputs/v05_fake_live_review/security_scan_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/13YRWhuYBvMqYYqWsBNs6j6K1CU2MNKx2d9c1xN9pump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/13YRWhuYBvMqYYqWsBNs6j6K1CU2MNKx2d9c1xN9pump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/13YRWhuYBvMqYYqWsBNs6j6K1CU2MNKx2d9c1xN9pump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/21EZ83KVV3YqhXiAuEwsWsUF8C2EkNVZC3ejV29Hpump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/2CKp88BFyPzr7gEuQKXMJ9cqa24AFXUNC41FR7udpump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2CKp88BFyPzr7gEuQKXMJ9cqa24AFXUNC41FR7udpump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2CKp88BFyPzr7gEuQKXMJ9cqa24AFXUNC41FR7udpump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/2D7VoRQCHrGr1ZK93XeGAEmbQ6Y5iSa1nzuUSpuppump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2D7VoRQCHrGr1ZK93XeGAEmbQ6Y5iSa1nzuUSpuppump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2D7VoRQCHrGr1ZK93XeGAEmbQ6Y5iSa1nzuUSpuppump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/2RqoJc2jwkR8AfRhDMnV9uC87dXLWpqjq5mxsttxpump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2RqoJc2jwkR8AfRhDMnV9uC87dXLWpqjq5mxsttxpump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2RqoJc2jwkR8AfRhDMnV9uC87dXLWpqjq5mxsttxpump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2WMf3Ad3j7SctC3zDttzuM3LXHBf6MHNJXPrkUBHpump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/2wQq3MrFFHPQnapMt1wnZ2vGkVZDv5ENDCrdLCqFpump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2wQq3MrFFHPQnapMt1wnZ2vGkVZDv5ENDCrdLCqFpump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2wQq3MrFFHPQnapMt1wnZ2vGkVZDv5ENDCrdLCqFpump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/2yoZ6cnXqu5k3EVPH949zwBeXkjhUy2WHWxBXpFXpump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2yoZ6cnXqu5k3EVPH949zwBeXkjhUy2WHWxBXpFXpump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/2yoZ6cnXqu5k3EVPH949zwBeXkjhUy2WHWxBXpFXpump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/32NJtnoQXoSZPZ8PpUgH3GocZxLf2AoWbaQ7yBRKpump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/32NJtnoQXoSZPZ8PpUgH3GocZxLf2AoWbaQ7yBRKpump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/32NJtnoQXoSZPZ8PpUgH3GocZxLf2AoWbaQ7yBRKpump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/38CNkUWA8RKHMEAuTGQ5AYUQ5jwKgWLpuKkCsYPLpump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/38CNkUWA8RKHMEAuTGQ5AYUQ5jwKgWLpuKkCsYPLpump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/38CNkUWA8RKHMEAuTGQ5AYUQ5jwKgWLpuKkCsYPLpump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/3eMG67f9WeWB119wd9dsGd5ih5DB21rM2fGwP5k5pump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/3eMG67f9WeWB119wd9dsGd5ih5DB21rM2fGwP5k5pump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/3eMG67f9WeWB119wd9dsGd5ih5DB21rM2fGwP5k5pump/signal_outputs/risk_gate_report.json`
+#### `data/gmgn_candidates_live_run/candidate_signal_outputs/3hHZ3QFWKVgUdi64uHJumK9T7hDR2Tr6WZBjUfP5pump/signal_outputs/`
+- 该类型文件数：`1`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/3hHZ3QFWKVgUdi64uHJumK9T7hDR2Tr6WZBjUfP5pump/signal_outputs/auto_readiness_review.md`
+  - `data/gmgn_candidates_live_run/candidate_signal_outputs/3hHZ3QFWKVgUdi64uHJumK9T7hDR2Tr6WZBjUfP5pump/signal_outputs/risk_gate_report.json`
+
+### 报告/Case/Dashboard 输出
+- 命中目录数：`637`
+- 命中文件数：`2385`
+#### `data/gmgn_candidates_live_run/site/case_files/`
+- 该类型文件数：`618`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/site/case_files/paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_17_38Z.html`
+  - `data/gmgn_candidates_live_run/site/case_files/paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T19_51_43Z.html`
+  - `data/gmgn_candidates_live_run/site/case_files/paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T08_35_14Z.json`
+  - `data/gmgn_candidates_live_run/site/case_files/paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T06_19_20Z.html`
+  - `data/gmgn_candidates_live_run/site/case_files/paper-6Wbs2dcRwMMivXV3TmBP1MmrqJ7SJkN768tC5rG5pump-2026-05-04T04_55_43Z.json`
+#### `data/gmgn_candidates_live_run/paper_live/case_files/`
+- 该类型文件数：`413`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/paper_live/case_files/paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T08_35_14Z.json`
+  - `data/gmgn_candidates_live_run/paper_live/case_files/paper-6Wbs2dcRwMMivXV3TmBP1MmrqJ7SJkN768tC5rG5pump-2026-05-04T04_55_43Z.json`
+  - `data/gmgn_candidates_live_run/paper_live/case_files/paper-FESx6q1owjzTqaysjSkcaJRBKvNAcE6TEwSuaY65pump-2026-05-04T08_09_00Z.md`
+  - `data/gmgn_candidates_live_run/paper_live/case_files/paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T17_54_54Z.json`
+  - `data/gmgn_candidates_live_run/paper_live/case_files/paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T02_59_33Z.md`
+#### `hermes_harness/01_control_plane/`
+- 该类型文件数：`24`
+- 代表文件：
+  - `hermes_harness/01_control_plane/risk_tier_policy.md`
+  - `hermes_harness/01_control_plane/input_contract_policy.md`
+  - `hermes_harness/01_control_plane/method_wheel_policy.md`
+  - `hermes_harness/01_control_plane/directory_invocation_policy.md`
+  - `hermes_harness/01_control_plane/README.md`
+#### `audits/`
+- 该类型文件数：`22`
+- 代表文件：
+  - `audits/wp1_wallet_contract_report.md`
+  - `audits/v03_wp2_market_cap_context_report.md`
+  - `audits/v04_wp2_chip_state_cluster_report.md`
+  - `audits/chatgpt_share_69f6a19a_okx_cluster_summary.md`
+  - `audits/v04_wp1_okx_cluster_report.md`
+#### `research_loop/checkpoints/`
+- 该类型文件数：`21`
+- 代表文件：
+  - `research_loop/checkpoints/system_directory_constitution_acceptance.md`
+  - `research_loop/checkpoints/round_4_wallet_contracts.md`
+  - `research_loop/checkpoints/round_6_summary.md`
+  - `research_loop/checkpoints/round_3_field_mapping.md`
+  - `research_loop/checkpoints/round_8_handoff_contract.md`
+#### `docs/intel_bot/`
+- 该类型文件数：`20`
+- 代表文件：
+  - `docs/intel_bot/source_bot_upstream_layer_02_kline_market_structure.md`
+  - `docs/intel_bot/dominant_cost_zone_framework.md`
+  - `docs/intel_bot/wallet_intel_layer_reconstruction.md`
+  - `docs/intel_bot/wallet_intel_2h_workflow_report.md`
+  - `docs/intel_bot/source_bot_upstream_layer_01_candidate_token_data.md`
+#### `modules/source_wallet_bot/`
+- 该类型文件数：`20`
+- 代表文件：
+  - `modules/source_wallet_bot/distribution_recovery_whale_rules.md`
+  - `modules/source_wallet_bot/missing_fields_report.md`
+  - `modules/source_wallet_bot/wallet_trade_contract.md`
+  - `modules/source_wallet_bot/legacy_mapping.md`
+  - `modules/source_wallet_bot/source_manifest_contract.md`
+#### `中文目录导航/`
+- 该类型文件数：`19`
+- 代表文件：
+  - `中文目录导航/00_总览.md`
+  - `中文目录导航/01_运行数据.md`
+  - `中文目录导航/11_导入暂存.md`
+  - `中文目录导航/16_旧混合运行区.md`
+  - `中文目录导航/18_旧中文钱包资料.md`
+#### `docs/harness/ai_harness_system/00_control_plane/`
+- 该类型文件数：`18`
+- 代表文件：
+  - `docs/harness/ai_harness_system/00_control_plane/risk_tier_policy.md`
+  - `docs/harness/ai_harness_system/00_control_plane/input_contract_policy.md`
+  - `docs/harness/ai_harness_system/00_control_plane/method_wheel_policy.md`
+  - `docs/harness/ai_harness_system/00_control_plane/memory_write_rules.md`
+  - `docs/harness/ai_harness_system/00_control_plane/role_system_v1.md`
+#### `./`
+- 该类型文件数：`17`
+- 代表文件：
+  - `sikk_okx_cluster_delta.py`
+  - `sikk_dashboard_builder.py`
+  - `sikk_auto_risk_gate.py`
+  - `sikk_operator_psychology_engine.py`
+  - `sikk_candidate_wallet_structure_pipeline.py`
+#### `reports/`
+- 该类型文件数：`17`
+- 代表文件：
+  - `reports/ewon_12eM87_20260429_030541.tar.gz`
+  - `reports/sikk_site_case_file_link_fix_acceptance_20260503.md`
+  - `reports/ewon_12eM87_20260429_034659.zip`
+  - `reports/sikk_gpt_share_69f74bb3_automation_acceptance_report.md`
+  - `reports/chatgpt_share_69f75c79_absorption_acceptance_20260503.md`
+#### `hermes_harness/08_reports/project_governance/`
+- 该类型文件数：`15`
+- 代表文件：
+  - `hermes_harness/08_reports/project_governance/HIGH_RISK_PATH_REVIEW_LIST_V1.md`
+  - `hermes_harness/08_reports/project_governance/PATH_MIGRATION_MATRIX_V1.json`
+  - `hermes_harness/08_reports/project_governance/project_governance_task_package.json`
+  - `hermes_harness/08_reports/project_governance/PATH_MIGRATION_MATRIX_V1.md`
+  - `hermes_harness/08_reports/project_governance/HIGH_RISK_PATH_REVIEW_REFINED_V1.md`
+#### `hermes_harness/05_templates/`
+- 该类型文件数：`13`
+- 代表文件：
+  - `hermes_harness/05_templates/task_route_template.md`
+  - `hermes_harness/05_templates/recovery_report_template.md`
+  - `hermes_harness/05_templates/README.md`
+  - `hermes_harness/05_templates/final_report_template.md`
+  - `hermes_harness/05_templates/phase_report_template.md`
+#### `knowledge/system_updates/`
+- 该类型文件数：`13`
+- 代表文件：
+  - `knowledge/system_updates/chatgpt_share_69f6fc90_paper_lifecycle_runtime.sikk_update.md`
+  - `knowledge/system_updates/sikk_unified_view_section_a_20260503.md`
+  - `knowledge/system_updates/chatgpt_share_69f809c6.sikk_update.md`
+  - `knowledge/system_updates/gpt_share_69f747af_document_ingestion_20260503.md`
+  - `knowledge/system_updates/hermes_knowledge_absorption_from_chatgpt_share.sikk_update.md`
+#### `reports/ewon_12eM87_20260429_030541/`
+- 该类型文件数：`12`
+- 代表文件：
+  - `reports/ewon_12eM87_20260429_030541/sikk_gmgn_master_log.csv`
+  - `reports/ewon_12eM87_20260429_030541/05_infrastructure_registry.tsv`
+  - `reports/ewon_12eM87_20260429_030541/07_review_plan.tsv`
+  - `reports/ewon_12eM87_20260429_030541/02_token_basic.tsv`
+  - `reports/ewon_12eM87_20260429_030541/04_key_address_matrix.tsv`
+#### `reports/ewon_12eM87_20260429_033614/`
+- 该类型文件数：`12`
+- 代表文件：
+  - `reports/ewon_12eM87_20260429_033614/sikk_gmgn_master_log.csv`
+  - `reports/ewon_12eM87_20260429_033614/05_infrastructure_registry.csv`
+  - `reports/ewon_12eM87_20260429_033614/sikk_gmgn_report.md`
+  - `reports/ewon_12eM87_20260429_033614/06_low_weight_scope.csv`
+  - `reports/ewon_12eM87_20260429_033614/01_analysis_depth.csv`
+#### `reports/ewon_12eM87_20260429_034659/`
+- 该类型文件数：`12`
+- 代表文件：
+  - `reports/ewon_12eM87_20260429_034659/sikk_gmgn_master_log.csv`
+  - `reports/ewon_12eM87_20260429_034659/05_infrastructure_registry.csv`
+  - `reports/ewon_12eM87_20260429_034659/sikk_gmgn_report.md`
+  - `reports/ewon_12eM87_20260429_034659/06_low_weight_scope.csv`
+  - `reports/ewon_12eM87_20260429_034659/01_analysis_depth.csv`
+#### `reports/ewon_12eM87_20260429_034739/`
+- 该类型文件数：`12`
+- 代表文件：
+  - `reports/ewon_12eM87_20260429_034739/sikk_gmgn_master_log.csv`
+  - `reports/ewon_12eM87_20260429_034739/05_infrastructure_registry.csv`
+  - `reports/ewon_12eM87_20260429_034739/sikk_gmgn_report.md`
+  - `reports/ewon_12eM87_20260429_034739/06_low_weight_scope.csv`
+  - `reports/ewon_12eM87_20260429_034739/01_analysis_depth.csv`
+#### `reports/review_ops_bot/audit/system_directory_governance_20260506/`
+- 该类型文件数：`12`
+- 代表文件：
+  - `reports/review_ops_bot/audit/system_directory_governance_20260506/directory_governance_validation_report_20260506.md`
+  - `reports/review_ops_bot/audit/system_directory_governance_20260506/file_routing_matrix_20260506.json`
+  - `reports/review_ops_bot/audit/system_directory_governance_20260506/new_task_write_routing_table_20260506.json`
+  - `reports/review_ops_bot/audit/system_directory_governance_20260506/directory_official_decisions_20260506.md`
+  - `reports/review_ops_bot/audit/system_directory_governance_20260506/file_routing_matrix_summary_20260506.md`
+#### `knowledge/inbox/`
+- 该类型文件数：`11`
+- 代表文件：
+  - `knowledge/inbox/chatgpt_share_69f6fc90_paper_lifecycle_runtime.md`
+  - `knowledge/inbox/chatgpt_share_69f70180_unified_query_dashboard_harness.md`
+  - `knowledge/inbox/chatgpt_share_69f7026b_paper_trade_optimization.md`
+  - `knowledge/inbox/chatgpt_share_69f809c6_full_automation_paper_optimization.md`
+  - `knowledge/inbox/chatgpt_share_69f72598_sikk_paper_trade_optimization.md`
+#### `tasks/chatgpt_share_69f809c6/`
+- 该类型文件数：`11`
+- 代表文件：
+  - `tasks/chatgpt_share_69f809c6/S07_visual_console_dashboard_task.md`
+  - `tasks/chatgpt_share_69f809c6/S06_telegram_interaction_console_task.md`
+  - `tasks/chatgpt_share_69f809c6/S09_wallet_structure_gate_task.md`
+  - `tasks/chatgpt_share_69f809c6/S03_legacy_wallet_data_source_backfill_task.md`
+  - `tasks/chatgpt_share_69f809c6/S08_live_runtime_design_task.md`
+#### `data/gmgn_candidates_live_run/reports/`
+- 该类型文件数：`10`
+- 代表文件：
+  - `data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260502.md`
+  - `data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260502.csv`
+  - `data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260503.csv`
+  - `data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260503.md`
+  - `data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260504.json`
+#### `docs/harness/ai_harness_system/10_templates/`
+- 该类型文件数：`10`
+- 代表文件：
+  - `docs/harness/ai_harness_system/10_templates/method_wheel_template.md`
+  - `docs/harness/ai_harness_system/10_templates/task_route_template.md`
+  - `docs/harness/ai_harness_system/10_templates/README.md`
+  - `docs/harness/ai_harness_system/10_templates/artifact_header_template.md`
+  - `docs/harness/ai_harness_system/10_templates/input_intake_template.md`
+#### `knowledge/audits/`
+- 该类型文件数：`10`
+- 代表文件：
+  - `knowledge/audits/chatgpt_share_69f809c6_full_automation_paper_optimization.system_audit.md`
+  - `knowledge/audits/chatgpt_share_69f75c79_paper_trade_optimization.system_audit.md`
+  - `knowledge/audits/chatgpt_share_69f72598_sikk_paper_trade_optimization.system_audit.md`
+  - `knowledge/audits/chatgpt_share_69f83af2_her_core_automation_system.system_audit.md`
+  - `knowledge/audits/chatgpt_share_69f70180_unified_query_dashboard_harness.system_audit.md`
+#### `knowledge/extracted_rules/`
+- 该类型文件数：`10`
+- 代表文件：
+  - `knowledge/extracted_rules/chatgpt_share_69f809c6_full_automation_paper_optimization.rules.md`
+  - `knowledge/extracted_rules/chatgpt_share_69f7026b_paper_trade_optimization.rules.md`
+  - `knowledge/extracted_rules/chatgpt_share_69f83af2_her_core_automation_system.rules.md`
+  - `knowledge/extracted_rules/chatgpt_share_69f72598_sikk_paper_trade_optimization.rules.md`
+  - `knowledge/extracted_rules/hermes_knowledge_absorption_from_chatgpt_share.rules.md`
+
+## 三、后续整合方向
+建议目标标准体系按 token/run 分层，不直接搬旧目录：
+
+```text
+data/source_wallet_bot/<mode>/<asset_id>/wallet_data/raw/
+data/source_wallet_bot/<mode>/<asset_id>/wallet_data/normalized/
+data/source_wallet_bot/<mode>/<asset_id>/structure_analysis/wallet_fact/
+data/source_wallet_bot/<mode>/<asset_id>/structure_analysis/intelligence/
+data/source_wallet_bot/<mode>/<asset_id>/structure_analysis/handoff/
+data/source_wallet_bot/<mode>/<asset_id>/structure_analysis/reports/
+data/source_wallet_bot/<mode>/<asset_id>/manifest/
+reports/source_wallet_bot/<mode>/<asset_id>/
+legacy_compat/path_maps/
+```
+
+## 四、机器可读索引
+- 分类目录索引：`/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/wallet_structure_data_map/wallet_structure_category_directory_index.json`
+- 文件级索引：`/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/wallet_structure_data_map/wallet_structure_related_file_inventory.jsonl`
+- 目录级索引：`/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/wallet_structure_data_map/wallet_structure_related_directory_inventory.json`
+- 分类文件索引：`/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/wallet_structure_data_map/wallet_structure_category_index.json`

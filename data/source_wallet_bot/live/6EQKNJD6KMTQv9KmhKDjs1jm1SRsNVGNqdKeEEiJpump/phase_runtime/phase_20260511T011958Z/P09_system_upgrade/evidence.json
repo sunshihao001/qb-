@@ -1,0 +1,21 @@
+{
+  "token_address": "6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump",
+  "phase_id": "P09_system_upgrade",
+  "artifact_kind": "evidence",
+  "generated_at": "2026-05-11T01:19:58Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "positive_evidence": [
+    "phase evidence runner completed P01-P08"
+  ],
+  "missing_evidence": [],
+  "risk_evidence": [
+    "系统升级候选必须走 shadow mode 和回归测试"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "source": "okx",
+  "endpoint": "cluster_top_holders_50",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "cluster-top-holders",
+    "--address",
+    "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+    "--chain",
+    "solana",
+    "--range-filter",
+    "2"
+  ],
+  "started_at": "2026-05-08T01:47:42Z",
+  "finished_at": "2026-05-08T01:47:43Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": {
+      "averageBuyPricePercent": "-1.0000000000",
+      "averageBuyPriceUsd": "0.0001202575",
+      "averageHoldingPeriod": "1778202595",
+      "averagePnlUsd": "-247.7971832505",
+      "averageSellPricePercent": "-1.0000000000",
+      "averageSellPriceUsd": "0.0001500887",
+      "clusterTrendType": [
+        "buy",
+        "transferIn"
+      ],
+      "holdingAmount": "226534048.8",
+      "holdingPercent": "0.22653"
+    }
+  }
+}

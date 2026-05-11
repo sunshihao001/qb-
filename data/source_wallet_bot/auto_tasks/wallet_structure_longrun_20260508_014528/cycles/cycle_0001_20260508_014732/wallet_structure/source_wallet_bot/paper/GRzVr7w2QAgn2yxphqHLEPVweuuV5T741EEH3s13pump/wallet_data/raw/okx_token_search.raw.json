@@ -1,0 +1,42 @@
+{
+  "source": "okx",
+  "endpoint": "token_search",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "search",
+    "--query",
+    "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+    "--chains",
+    "501"
+  ],
+  "started_at": "2026-05-08T01:47:56Z",
+  "finished_at": "2026-05-08T01:47:56Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "chainIndex": "501",
+        "change": "10357.06",
+        "cursor": "0",
+        "decimal": "6",
+        "explorerUrl": "https://web3.okx.com/explorer/solana/token/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+        "holders": "4443",
+        "liquidity": "41558.762543944588776811607414390609738369606317",
+        "marketCap": "260701.908265783530697784",
+        "price": "0.0002607019082657835306977846322215261",
+        "tagList": {
+          "communityRecognized": false
+        },
+        "tokenContractAddress": "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+        "tokenLogoUrl": "https://static.oklink.com/cdn/web3/currency/token/large/501-GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump-109/type=default_90_0?v=1778203228186",
+        "tokenName": "Elon Mask",
+        "tokenSymbol": "MASK"
+      }
+    ]
+  }
+}

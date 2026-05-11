@@ -1,0 +1,20 @@
+{
+  "thread_id": "hermes.thread.20260509.020359",
+  "version": "v2.0",
+  "route": "hermes_hybrid_judgment_runtime_v2",
+  "problem": "Hermes Harness V2.0 混合式判断运行时 dry-run 验证",
+  "status": "COMPLETED",
+  "dry_run": true,
+  "created_at": "2026-05-09T02:03:59.552076+00:00",
+  "current_turn_id": "turn.0003",
+  "roles": [
+    "coordinator",
+    "problem_analyst",
+    "evidence_planner",
+    "executor",
+    "verifier",
+    "recovery_analyst",
+    "memory_governor"
+  ],
+  "completed_at": "2026-05-09T02:03:59.582626+00:00"
+}

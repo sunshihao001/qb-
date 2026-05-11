@@ -1,0 +1,21 @@
+{
+  "artifact_type": "reliability_calibration_state",
+  "version": "v1.7",
+  "route": "hermes_reliability_calibration_layer",
+  "calibration_run_id": "",
+  "created_at": "",
+  "problem": "",
+  "dry_run": true,
+  "expected_outcome": {},
+  "observed_outcome": {},
+  "evidence_links": [],
+  "calibration_delta": {},
+  "judgment_error_rate": {},
+  "benchmark_update": {},
+  "rule_adjustment_candidate": {},
+  "memory_candidate_review": {},
+  "revalidation_window": {},
+  "next_run_bias_correction": {},
+  "calibration_decision": "needs_revalidation",
+  "overall_passed": false
+}

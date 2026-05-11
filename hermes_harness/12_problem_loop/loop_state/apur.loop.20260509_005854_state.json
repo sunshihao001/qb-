@@ -1,0 +1,22 @@
+{
+  "loop_id": "apur.loop.20260509_005854",
+  "problem_id": "problem.20260509_005854",
+  "status": "CLOSED",
+  "current_stage": "learning_writeback",
+  "completed_stages": [
+    "PROBLEM_RECEIVED",
+    "UNDERSTANDING",
+    "EVIDENCE_PLANNING",
+    "HYPOTHESIS_GENERATING",
+    "ROOT_CAUSE_ANALYZING",
+    "SOLUTION_DESIGNING",
+    "EXECUTION_PLANNING",
+    "VERIFYING_RESOLUTION",
+    "LEARNING_WRITEBACK"
+  ],
+  "main_hypothesis": "H2",
+  "confidence": "high",
+  "evidence_status": "sufficient_for_dry_run",
+  "resolution_status": "passed_harness_dry_run",
+  "next_action": "connect APUR route to Hermes runtime router"
+}

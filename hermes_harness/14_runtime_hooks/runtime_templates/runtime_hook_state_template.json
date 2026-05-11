@@ -1,0 +1,44 @@
+{
+  "artifact_type": "runtime_hook_state",
+  "version": "v1.4",
+  "runtime_run_id": "<runtime_run_id>",
+  "route": "hermes_runtime_hook_autonomous_problem_loop",
+  "created_at": "<iso8601>",
+  "user_request": "<raw_request>",
+  "task_classification": {
+    "complexity": "complex|simple",
+    "risk": "low|medium|high",
+    "requires_apur": true,
+    "reason": "<why>"
+  },
+  "hooks": {
+    "router_hook": "pending",
+    "problem_passport_hook": "pending",
+    "apur_execution_hook": "pending",
+    "tool_ledger_hook": "pending",
+    "verification_hook": "pending",
+    "recovery_hook": "pending",
+    "learning_writeback_hook": "pending",
+    "completion_audit_hook": "pending"
+  },
+  "linked_artifacts": {
+    "problem_passport": null,
+    "apur_loop_state": null,
+    "verification_report": null,
+    "recovery_report": null,
+    "final_report": null,
+    "memory_queue": "04_memory/memory_write_queue.jsonl"
+  },
+  "status": "CREATED",
+  "verification": {
+    "overall_passed": false,
+    "checks": {}
+  },
+  "completion_definition": [
+    "runtime_state_exists",
+    "tool_ledger_exists",
+    "verification_passed",
+    "learning_queued",
+    "final_report_exists"
+  ]
+}

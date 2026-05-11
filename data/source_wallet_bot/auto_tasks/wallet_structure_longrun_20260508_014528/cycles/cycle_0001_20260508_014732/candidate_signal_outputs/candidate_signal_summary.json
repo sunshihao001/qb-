@@ -1,0 +1,97 @@
+{
+  "模块": "SIKK 候选币自动信号接入模块",
+  "扫描时间": "2026-05-08T01:47:36Z",
+  "K线管道来源": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/candidate_kline_pipeline_summary.json",
+  "模式": "paper",
+  "处理统计": {
+    "读取候选数": 3,
+    "成功数量": 3,
+    "跳过数量": 0,
+    "失败数量": 0
+  },
+  "信号结果": [
+    {
+      "代币地址": "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+      "代币符号": "GABI",
+      "候选筛选等级": "S3_进入SIKK结构分析",
+      "模式": "paper",
+      "风险门禁": "ALLOW_PAPER_TRADE_允许纸面交易",
+      "风险等级": "低",
+      "信号等级": "S4_强确认信号",
+      "策略类型": "SIKK-B 控盘箱体突破回踩",
+      "信号时间": "2026-05-08 01:18:00 UTC",
+      "信号价格": 0.00017444363,
+      "信号置信分": 99.0,
+      "建议纸面仓位SOL": 0.080914,
+      "止损价格": 0.000120546077292,
+      "最大浮盈_pct": 96.3185,
+      "最终收益率_pct": -10.6726,
+      "自动准备输出": {
+        "json": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/signal_outputs/token_readiness_result.json",
+        "risk": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/signal_outputs/risk_gate_report.json",
+        "signal": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/signal_outputs/signal_events.csv",
+        "paper": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/signal_outputs/paper_trades.csv",
+        "exit": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/signal_outputs/exit_plan.json",
+        "review": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/signal_outputs/auto_readiness_review.md"
+      },
+      "状态": "ok",
+      "说明": "纸面交易/自动准备信号，不执行真实 swap"
+    },
+    {
+      "代币地址": "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+      "代币符号": "MV",
+      "候选筛选等级": "S3_进入SIKK结构分析",
+      "模式": "paper",
+      "风险门禁": "ALLOW_PAPER_TRADE_允许纸面交易",
+      "风险等级": "低",
+      "信号等级": "S4_强确认信号",
+      "策略类型": "SIKK-B 控盘箱体突破回踩",
+      "信号时间": "2026-05-08 00:46:00 UTC",
+      "信号价格": 0.00011541619,
+      "信号置信分": 95.0,
+      "建议纸面仓位SOL": 0.2,
+      "止损价格": 0.000101220315872,
+      "最大浮盈_pct": 3.1952,
+      "最终收益率_pct": -12.2997,
+      "自动准备输出": {
+        "json": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/signal_outputs/token_readiness_result.json",
+        "risk": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/signal_outputs/risk_gate_report.json",
+        "signal": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/signal_outputs/signal_events.csv",
+        "paper": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/signal_outputs/paper_trades.csv",
+        "exit": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/signal_outputs/exit_plan.json",
+        "review": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/signal_outputs/auto_readiness_review.md"
+      },
+      "状态": "ok",
+      "说明": "纸面交易/自动准备信号，不执行真实 swap"
+    },
+    {
+      "代币地址": "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+      "代币符号": "MASK",
+      "候选筛选等级": "S3_进入SIKK结构分析",
+      "模式": "paper",
+      "风险门禁": "ALLOW_PAPER_TRADE_允许纸面交易",
+      "风险等级": "低",
+      "信号等级": "S4_强确认信号",
+      "策略类型": "SIKK-B 控盘箱体突破回踩",
+      "信号时间": "2026-05-08 01:17:00 UTC",
+      "信号价格": 0.0002128099,
+      "信号置信分": 99.0,
+      "建议纸面仓位SOL": 0.2,
+      "止损价格": 0.0001995552992,
+      "最大浮盈_pct": 3.063,
+      "最终收益率_pct": -6.2284,
+      "自动准备输出": {
+        "json": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/signal_outputs/token_readiness_result.json",
+        "risk": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/signal_outputs/risk_gate_report.json",
+        "signal": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/signal_outputs/signal_events.csv",
+        "paper": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/signal_outputs/paper_trades.csv",
+        "exit": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/signal_outputs/exit_plan.json",
+        "review": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/candidate_signal_outputs/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/signal_outputs/auto_readiness_review.md"
+      },
+      "状态": "ok",
+      "说明": "纸面交易/自动准备信号，不执行真实 swap"
+    }
+  ],
+  "跳过结果": [],
+  "说明": "本模块只生成 SIKK 自动交易准备/纸面信号，不执行真实 swap。"
+}

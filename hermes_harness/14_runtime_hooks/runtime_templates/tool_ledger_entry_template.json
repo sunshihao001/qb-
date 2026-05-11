@@ -1,0 +1,14 @@
+{
+  "artifact_type": "tool_ledger_entry",
+  "version": "v1.4",
+  "runtime_run_id": "<runtime_run_id>",
+  "timestamp": "<iso8601>",
+  "phase": "<hook_or_stage>",
+  "tool": "<tool_name>",
+  "purpose": "<why_called>",
+  "input_scope": "<safe_summary_no_secret>",
+  "result": "success|failed|partial",
+  "evidence": "<file_or_output_summary>",
+  "side_effects": "none|files_written|commands_run|network|other",
+  "follow_up": "<next_action>"
+}

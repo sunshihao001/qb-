@@ -1,0 +1,85 @@
+{
+  "token": "GtWeBeErLkeZCRSVFZHeukcghQKbJoz3w22j2nnYpump",
+  "chain": "sol",
+  "wallet_address": "6m6dSTyv7aJQYJpAQKq2VnHjNtfj2mE5KFSJNevHjgSp",
+  "human_amount": "0.01 SOL",
+  "snapshot_time": "2026-05-04T01:23:18Z",
+  "max_quote_age_seconds": 30,
+  "quote_status": "AVAILABLE",
+  "source_count": 1,
+  "sources": [
+    "OKX"
+  ],
+  "max_price_impact_pct": null,
+  "quote_deviation_pct": null,
+  "quotes": [
+    {
+      "source": "OKX",
+      "input_token": "11111111111111111111111111111111",
+      "output_token": "GtWeBeErLkeZCRSVFZHeukcghQKbJoz3w22j2nnYpump",
+      "input_amount": "10000000",
+      "output_amount": "7555823958",
+      "min_output_amount": null,
+      "price_impact_pct": null,
+      "raw": {
+        "ok": true,
+        "data": [
+          {
+            "chainIndex": "501",
+            "contextSlot": 417430987,
+            "dexRouterList": [
+              {
+                "dexProtocol": {
+                  "dexName": "PumpSwap",
+                  "percent": "100"
+                },
+                "fromToken": {
+                  "decimal": "9",
+                  "isHoneyPot": false,
+                  "taxRate": "0",
+                  "tokenContractAddress": "So11111111111111111111111111111111111111112",
+                  "tokenSymbol": "wSOL",
+                  "tokenUnitPrice": "83.46"
+                },
+                "fromTokenIndex": "0",
+                "toToken": {
+                  "decimal": "6",
+                  "isHoneyPot": false,
+                  "taxRate": "0",
+                  "tokenContractAddress": "GtWeBeErLkeZCRSVFZHeukcghQKbJoz3w22j2nnYpump",
+                  "tokenSymbol": "Trolljak",
+                  "tokenUnitPrice": "0.0001107930292611879392329139825395219"
+                },
+                "toTokenIndex": "1"
+              }
+            ],
+            "estimateGasFee": "232400",
+            "fromToken": {
+              "decimal": "9",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "11111111111111111111111111111111",
+              "tokenSymbol": "SOL",
+              "tokenUnitPrice": "83.46"
+            },
+            "fromTokenAmount": "10000000",
+            "priceImpactPercent": "0.3",
+            "router": "11111111111111111111111111111111--GtWeBeErLkeZCRSVFZHeukcghQKbJoz3w22j2nnYpump",
+            "swapMode": "exactIn",
+            "toToken": {
+              "decimal": "6",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "GtWeBeErLkeZCRSVFZHeukcghQKbJoz3w22j2nnYpump",
+              "tokenSymbol": "Trolljak",
+              "tokenUnitPrice": "0.0001107930292611879392329139825395219"
+            },
+            "toTokenAmount": "7555823958",
+            "tradeFee": "0.0004173"
+          }
+        ]
+      }
+    }
+  ],
+  "scope_note": "只读报价快照；不执行真实交易。"
+}

@@ -1,0 +1,49 @@
+{
+  "source": "okx",
+  "endpoint": "price_info",
+  "required": true,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "price-info",
+    "--address",
+    "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T01:47:41Z",
+  "finished_at": "2026-05-08T01:47:41Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "chainIndex": "501",
+        "circSupply": "1000000000.000000000000000000",
+        "holders": "1985",
+        "liquidity": "46030.71085999602507842225276472059649846098052480",
+        "marketCap": "310549.090166287145762735",
+        "maxPrice": "0.0003423874869634879425778423397302011",
+        "minPrice": "0.000002473123007979218352726772365510274",
+        "price": "0.0003105490901662871457627352095957931",
+        "priceChange1H": "12456.96",
+        "priceChange24H": "12456.96",
+        "priceChange4H": "12456.96",
+        "priceChange5M": "57.92",
+        "time": "1778204861435",
+        "tokenContractAddress": "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+        "tradeNum": "5517413892.925246",
+        "txs1H": "5324",
+        "txs24H": "5324",
+        "txs4H": "5324",
+        "txs5M": "544",
+        "volume1H": "626199.57406155638",
+        "volume24H": "626199.57406155638",
+        "volume4H": "626199.57406155638",
+        "volume5M": "71511.5780228675"
+      }
+    ]
+  }
+}

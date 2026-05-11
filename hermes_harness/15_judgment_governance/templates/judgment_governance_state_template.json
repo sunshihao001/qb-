@@ -1,0 +1,84 @@
+{
+  "artifact_type": "judgment_governance_state",
+  "version": "v1.6",
+  "route": "hermes_judgment_governance_layer",
+  "governance_run_id": "",
+  "created_at": "",
+  "problem": "",
+  "dry_run": true,
+  "problem_triage": {
+    "problem_realness": "unknown",
+    "problem_priority_score": 0,
+    "impact_scope": "unknown",
+    "urgency_level": "unknown",
+    "root_vs_symptom": "unknown",
+    "solve_now_or_later": "unknown"
+  },
+  "evidence_sufficiency": {
+    "score": 0,
+    "threshold": 0.7,
+    "sufficient_for_action": false,
+    "missing_evidence": [],
+    "counter_evidence": [],
+    "confidence": "low"
+  },
+  "abstention_decision": {
+    "decision": "observe",
+    "reason": "template",
+    "allowed_next_action": "evidence_only"
+  },
+  "solution_cost_review": {
+    "implementation_cost": "unknown",
+    "maintenance_cost": "unknown",
+    "cognitive_cost": "unknown",
+    "operational_cost": "unknown",
+    "failure_cost": "unknown",
+    "rollback_cost": "unknown",
+    "over_engineering_risk": "unknown",
+    "worth_doing_now": false
+  },
+  "meta_verification": {
+    "verification_quality_score": 0,
+    "covers_original_problem": false,
+    "independent": false,
+    "can_fail": false,
+    "reproducible": false,
+    "surface_only_risk": "unknown"
+  },
+  "anti_self_deception_audit": {
+    "fake_completion_risk": "unknown",
+    "plan_as_execution": false,
+    "document_as_landing": false,
+    "dry_run_as_real_run": false,
+    "no_error_as_success": false,
+    "model_claim_as_evidence": false
+  },
+  "causal_graph": {
+    "symptom": "",
+    "causal_chain": [],
+    "root_node": "",
+    "intervention_point": ""
+  },
+  "memory_lifecycle_review": {
+    "memory_action": "queue_unverified",
+    "scope": "",
+    "staleness_risk": "unknown",
+    "conflict_risk": "unknown",
+    "decay_condition": "",
+    "verified_memory_allowed": false
+  },
+  "operator_decision_gate": {
+    "human_required": false,
+    "reason": "",
+    "forbidden_actions": [],
+    "handoff_packet": ""
+  },
+  "judgment_error_tracking": {
+    "expected_error_classes": [],
+    "judgment_error_rate_signal": "not_measured",
+    "benchmark_candidate": false,
+    "rule_update_candidate": false
+  },
+  "governance_decision": "observe",
+  "overall_passed": false
+}

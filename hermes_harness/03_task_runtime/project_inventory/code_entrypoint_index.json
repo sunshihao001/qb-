@@ -1,0 +1,1801 @@
+[
+  {
+    "path": "/root/sikk-gmgn/data/gmgn_candidates_live_run/site/app.js",
+    "relative_path": "data/gmgn_candidates_live_run/site/app.js",
+    "kind": "code",
+    "has_help": true,
+    "help_excerpt": "File \"/root/sikk-gmgn/data/gmgn_candidates_live_run/site/app.js\", line 12\n    function positionCard(p){ const caseLink = p.case_file_md ? `<a class=\"case-link\" href=\"${fmt(p.case_file_md)}\" target=\"_blank\" rel=\"noopener\">实战档案</a>` : '<span class=\"muted\">实战档案待生成</span>'; const miss=(p.evidence_missing_fields||p.case_missing_fields||p.missing_fields||[]); return `<article class=\"position\"><strong>${fmt(p.token_symbol || p.代币符号 || p.token_address || p.代币地址)}</strong><span>${badge(p.status || p.pape"
+  },
+  {
+    "path": "/root/sikk-gmgn/docs/harness/ai_harness_system/09_scripts/hermes_artifact_verify.py",
+    "relative_path": "docs/harness/ai_harness_system/09_scripts/hermes_artifact_verify.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "[\n  {\n    \"path\": \"--help\",\n    \"structure_verification\": \"FAILED\",\n    \"content_verification\": \"FAILED\",\n    \"flow_verification\": \"MANUAL_REQUIRED\",\n    \"risk_verification\": \"MANUAL_REQUIRED\",\n    \"evidence_verification\": \"MANUAL_REQUIRED\"\n  }\n]"
+  },
+  {
+    "path": "/root/sikk-gmgn/docs/harness/ai_harness_system/09_scripts/hermes_boot_check.py",
+    "relative_path": "docs/harness/ai_harness_system/09_scripts/hermes_boot_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"checked_at\": \"2026-05-06T17:23:44.461429Z\",\n  \"state_file\": \"/root/sikk-gmgn/docs/harness/ai_harness_system/04_task_plans/active_task_state.json\",\n  \"state_exists\": true,\n  \"task_mode\": \"new\",\n  \"has_unfinished_task\": false,\n  \"blocked\": false,\n  \"recovery_required\": false,\n  \"allowed_to_execute\": true,\n  \"need_verify_old_task\": false\n}"
+  },
+  {
+    "path": "/root/sikk-gmgn/docs/harness/ai_harness_system/09_scripts/hermes_permission_check.py",
+    "relative_path": "docs/harness/ai_harness_system/09_scripts/hermes_permission_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"command\": \"--help\",\n  \"risk_tier\": \"R0\",\n  \"permission\": \"ALLOW\"\n}"
+  },
+  {
+    "path": "/root/sikk-gmgn/docs/harness/ai_harness_system/09_scripts/hermes_resume_task.py",
+    "relative_path": "docs/harness/ai_harness_system/09_scripts/hermes_resume_task.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"can_resume\": false,\n  \"reason\": \"checkpoint not found\",\n  \"checkpoint\": \"--help\"\n}"
+  },
+  {
+    "path": "/root/sikk-gmgn/docs/harness/ai_harness_system/09_scripts/hermes_stale_memory_check.py",
+    "relative_path": "docs/harness/ai_harness_system/09_scripts/hermes_stale_memory_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"checked_files\": [\n    \"/root/sikk-gmgn/docs/harness/ai_harness_system/03_context_governance/stale_memory.jsonl\",\n    \"/root/sikk-gmgn/docs/harness/ai_harness_system/03_context_governance/superseded_memory.jsonl\"\n  ],\n  \"count\": 2,\n  \"stale\": [\n    {\n      \"memory_id\": \"example.memory.0001\",\n      \"status\": \"stale\",\n      \"validity\": \"unknown\",\n      \"last_verified_at\": null,\n      \"stale_check_required\": true,\n      \"stale_reason\": \"example only\",\n      \"superseded_by\": null\n    }\n  ],\n  \"s"
+  },
+  {
+    "path": "/root/sikk-gmgn/docs/harness/ai_harness_system/09_scripts/hermes_surface_completion_audit.py",
+    "relative_path": "docs/harness/ai_harness_system/09_scripts/hermes_surface_completion_audit.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"base\": \"--help\",\n  \"surface_completion_risk\": true,\n  \"findings\": [\n    \"verification_report_missing\",\n    \"active_state_missing\",\n    \"audit_policy_missing\"\n  ]\n}"
+  },
+  {
+    "path": "/root/sikk-gmgn/docs/harness/ai_harness_system/11_hermes_bot_invocation/hermes_task_router.py",
+    "relative_path": "docs/harness/ai_harness_system/11_hermes_bot_invocation/hermes_task_router.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"task_type\": \"--help\",\n  \"route_flow\": \"通用受控流程\"\n}"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_artifact_verify.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_artifact_verify.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_artifact_verify.py [-h] [--dry-run] [--base BASE] [paths ...]\n\nHermes artifact verify\n\npositional arguments:\n  paths\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_bash_classifier.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_bash_classifier.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_bash_classifier.py [-h] [--dry-run] [--base BASE] [command ...]\n\nHermes bash risk classifier\n\npositional arguments:\n  command      Command to classify\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_blindspot_audit.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_blindspot_audit.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"passed\": false,\n  \"findings\": [\n    \"missing:directory_invocation_policy:--help/01_control_plane/directory_invocation_policy.md\",\n    \"missing:boot_check_script:--help/09_scripts/hermes_boot_check.py\",\n    \"missing:task_routing_policy:--help/01_control_plane/task_routing_policy.md\",\n    \"missing:command_log:--help/03_task_runtime/command_log.jsonl\",\n    \"missing:advanced_verification:--help/06_verification/verification_policy_advanced.md\",\n    \"missing:recovery_decision_table:--help/01_cont"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_boot_check.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_boot_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_boot_check.py [-h] [--dry-run] [--base BASE]\n\nHermes boot check\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_compact_rebuild.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_compact_rebuild.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_compact_rebuild.py [-h] [--dry-run] [--base BASE]\n\nHermes compact rebuild\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_context_budget_check.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_context_budget_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_context_budget_check.py [-h] [--dry-run] [--base BASE]\n\nHermes context budget check\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_context_build.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_context_build.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"base\": \"--help\",\n  \"context_refs\": []\n}"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_input_governance.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_input_governance.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_input_governance.py [-h] [--dry-run] [--base BASE]\n                                  [--input INPUT]\n\nHermes input governance\n\noptions:\n  -h, --help     show this help message and exit\n  --dry-run      Do not write files\n  --base BASE    Hermes harness root; defaults to this hermes_harness\n  --input INPUT  Input text or path to classify"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_memory_audit.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_memory_audit.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"passed\": false,\n  \"summary\": {\n    \"memory_write_queue.jsonl\": 0,\n    \"verified_memory.jsonl\": 0,\n    \"stale_memory.jsonl\": 0,\n    \"superseded_memory.jsonl\": 0\n  },\n  \"findings\": [\n    \"missing:memory_write_queue.jsonl\",\n    \"missing:verified_memory.jsonl\",\n    \"missing:stale_memory.jsonl\",\n    \"missing:superseded_memory.jsonl\"\n  ]\n}"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_memory_revalidate.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_memory_revalidate.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_memory_revalidate.py [-h] [--dry-run] [--base BASE]\n\nHermes memory revalidation\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_narrative_check.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_narrative_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_narrative_check.py [-h] [--dry-run] [--base BASE]\n\nHermes execution narrative check\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_permission_check.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_permission_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_permission_check.py [-h] [--dry-run] [--base BASE] [command]\n\nHermes permission check\n\npositional arguments:\n  command\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_recovery_circuit_check.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_recovery_circuit_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_recovery_circuit_check.py [-h] [--base BASE] [--dry-run]\n\nHermes recovery circuit breaker check\n\noptions:\n  -h, --help   show this help message and exit\n  --base BASE  Hermes harness root; defaults to this hermes_harness\n  --dry-run    Do not write files"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_recovery_pack.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_recovery_pack.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"failure_type\": \"--help\",\n  \"recovery_action\": \"查 recovery_decision_table 并生成恢复报告\",\n  \"created_at\": \"2026-05-06T17:23:49.332709Z\"\n}"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_resume_task.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_resume_task.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_resume_task.py [-h] [--dry-run] [--base BASE] [checkpoint]\n\nHermes resume task\n\npositional arguments:\n  checkpoint\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_stale_memory_check.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_stale_memory_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_stale_memory_check.py [-h] [--dry-run] [--base BASE]\n\nHermes stale memory check\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_surface_completion_audit.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_surface_completion_audit.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_surface_completion_audit.py [-h] [--dry-run] [--base BASE]\n\nHermes surface completion audit\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_task_init.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_task_init.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"task_id\": \"hermes.task.20260506.172350.help\",\n  \"status\": \"RECEIVED\"\n}"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_task_router.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_task_router.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_task_router.py [-h] [--dry-run] [--base BASE] [task_type]\n\nHermes task router\n\npositional arguments:\n  task_type\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_tool_ledger_check.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_tool_ledger_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_tool_ledger_check.py [-h] [--dry-run] [--base BASE]\n\nHermes tool ledger closure check\n\noptions:\n  -h, --help   show this help message and exit\n  --dry-run    Do not write files\n  --base BASE  Hermes harness root; defaults to this hermes_harness"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_v12_architecture_check.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_v12_architecture_check.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "usage: hermes_v12_architecture_check.py [-h] [--base BASE] [--dry-run]\n\nVerify Hermes Harness V1.2 target architecture\n\noptions:\n  -h, --help   show this help message and exit\n  --base BASE  Hermes harness root\n  --dry-run"
+  },
+  {
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_verify_task.py",
+    "relative_path": "hermes_harness/09_scripts/hermes_verify_task.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "{\n  \"passed\": false,\n  \"missing\": [\n    \"03_task_runtime/active_task_state.json\",\n    \"03_task_runtime/command_log.jsonl\",\n    \"03_task_runtime/checkpoints/checkpoint.json\"\n  ]\n}"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/__init__.py",
+    "relative_path": "modules/__init__.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": ""
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/__init__.py",
+    "relative_path": "modules/source_wallet_bot/__init__.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/source_wallet_bot/__init__.py\", line 7, in <module>\n    from .config import SourceWalletBotConfig\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/config.py",
+    "relative_path": "modules/source_wallet_bot/config.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": ""
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/directory_governance.py",
+    "relative_path": "modules/source_wallet_bot/directory_governance.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": ""
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/errors.py",
+    "relative_path": "modules/source_wallet_bot/errors.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": ""
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/gmgn_live_adapter.py",
+    "relative_path": "modules/source_wallet_bot/gmgn_live_adapter.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/source_wallet_bot/gmgn_live_adapter.py\", line 10, in <module>\n    from .io_utils import write_json\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/handoff_exporter.py",
+    "relative_path": "modules/source_wallet_bot/handoff_exporter.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/source_wallet_bot/handoff_exporter.py\", line 6, in <module>\n    from .config import FORBIDDEN_HANDOFF_FIELDS\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/io_utils.py",
+    "relative_path": "modules/source_wallet_bot/io_utils.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": ""
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/models.py",
+    "relative_path": "modules/source_wallet_bot/models.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": ""
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/role_classifier.py",
+    "relative_path": "modules/source_wallet_bot/role_classifier.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/source_wallet_bot/role_classifier.py\", line 3, in <module>\n    from .models import MISSING, UNKNOWN, SourceGroupRecord, WalletDecision, WalletProfileRecord, WalletTradeRecord\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/runner.py",
+    "relative_path": "modules/source_wallet_bot/runner.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/source_wallet_bot/runner.py\", line 9, in <module>\n    from .handoff_exporter import build_handoff_packet\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/schema_validator.py",
+    "relative_path": "modules/source_wallet_bot/schema_validator.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/source_wallet_bot/schema_validator.py\", line 7, in <module>\n    from .config import FORBIDDEN_HANDOFF_FIELDS\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/source_group_engine.py",
+    "relative_path": "modules/source_wallet_bot/source_group_engine.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/source_wallet_bot/source_group_engine.py\", line 5, in <module>\n    from .models import MISSING, SourceGroupRecord, WalletProfileRecord, WalletTradeRecord\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/validate_acceptance.py",
+    "relative_path": "modules/source_wallet_bot/validate_acceptance.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "SOURCE_WALLET_BOT_ACCEPTANCE_PASS"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_fact_builder.py",
+    "relative_path": "modules/source_wallet_bot/wallet_fact_builder.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/source_wallet_bot/wallet_fact_builder.py\", line 10, in <module>\n    from .io_utils import write_json\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_profile_normalizer.py",
+    "relative_path": "modules/source_wallet_bot/wallet_profile_normalizer.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/source_wallet_bot/wallet_profile_normalizer.py\", line 5, in <module>\n    from .models import MISSING, UNKNOWN, WalletProfileRecord\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_trade_normalizer.py",
+    "relative_path": "modules/source_wallet_bot/wallet_trade_normalizer.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/source_wallet_bot/wallet_trade_normalizer.py\", line 7, in <module>\n    from .models import MISSING, UNKNOWN, WalletTradeRecord\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/strategy_gate/__init__.py",
+    "relative_path": "modules/strategy_gate/__init__.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/strategy_gate/__init__.py\", line 1, in <module>\n    from .cost_risk_reward_calculator import StrategyGateRiskRewardResult, calculate_cost_risk_reward_ratio\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/strategy_gate/cost_risk_reward_calculator.py",
+    "relative_path": "modules/strategy_gate/cost_risk_reward_calculator.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/strategy_gate/cost_risk_reward_calculator.py\", line 6, in <module>\n    from modules.wallet_structure.quantitative_structure_models import (\nModuleNotFoundError: No module named 'modules'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/__init__.py",
+    "relative_path": "modules/wallet_structure/__init__.py",
+    "kind": "script",
+    "has_help": true,
+    "help_excerpt": "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/wallet_structure/__init__.py\", line 3, in <module>\n    from .constants import PACKAGE_NAME, SCHEMA_VERSION, OUTPUT_FILENAMES\nImportError: attempted relative import with no known parent package"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/chinese_judgement.py",
+    "relative_path": "modules/wallet_structure/chinese_judgement.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/constants.py",
+    "relative_path": "modules/wallet_structure/constants.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/counterparty_pressure_calculator.py",
+    "relative_path": "modules/wallet_structure/counterparty_pressure_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/decision_builder.py",
+    "relative_path": "modules/wallet_structure/decision_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/distribution_progress_calculator.py",
+    "relative_path": "modules/wallet_structure/distribution_progress_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/dominant_cost_zone_calculator.py",
+    "relative_path": "modules/wallet_structure/dominant_cost_zone_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/edge_builder.py",
+    "relative_path": "modules/wallet_structure/edge_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/history_store.py",
+    "relative_path": "modules/wallet_structure/history_store.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/markup_motivation_calculator.py",
+    "relative_path": "modules/wallet_structure/markup_motivation_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/models.py",
+    "relative_path": "modules/wallet_structure/models.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/normalizer.py",
+    "relative_path": "modules/wallet_structure/normalizer.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/note_generator.py",
+    "relative_path": "modules/wallet_structure/note_generator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/quantitative_aggregator.py",
+    "relative_path": "modules/wallet_structure/quantitative_aggregator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/quantitative_structure_models.py",
+    "relative_path": "modules/wallet_structure/quantitative_structure_models.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/role_classifier.py",
+    "relative_path": "modules/wallet_structure/role_classifier.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/run.py",
+    "relative_path": "modules/wallet_structure/run.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/source_reader.py",
+    "relative_path": "modules/wallet_structure/source_reader.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/structure_inventory_calculator.py",
+    "relative_path": "modules/wallet_structure/structure_inventory_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/token_cluster_analyzer.py",
+    "relative_path": "modules/wallet_structure/token_cluster_analyzer.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/modules/wallet_structure/wallet_pattern_cost_alignment_calculator.py",
+    "relative_path": "modules/wallet_structure/wallet_pattern_cost_alignment_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/run_sikk_gmgn_pipeline.py",
+    "relative_path": "run_sikk_gmgn_pipeline.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/backup_jiegoufenxibot_structure_data.py",
+    "relative_path": "scripts/backup_jiegoufenxibot_structure_data.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/backup_sunqbfemxbot_wallet_data.py",
+    "relative_path": "scripts/backup_sunqbfemxbot_wallet_data.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/configure_hindsight_llm_key.sh",
+    "relative_path": "scripts/configure_hindsight_llm_key.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/consolidate_intel_bot_data.py",
+    "relative_path": "scripts/consolidate_intel_bot_data.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/hindsight_recall_sikk.py",
+    "relative_path": "scripts/hindsight_recall_sikk.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/hindsight_reflect_sikk.py",
+    "relative_path": "scripts/hindsight_reflect_sikk.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/hindsight_retain_sikk.py",
+    "relative_path": "scripts/hindsight_retain_sikk.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/hindsight_smoke_sikk.sh",
+    "relative_path": "scripts/hindsight_smoke_sikk.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/migrate_intel_bot_legacy_data.py",
+    "relative_path": "scripts/migrate_intel_bot_legacy_data.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/restore_intel_bot_to_20260505_1330.py",
+    "relative_path": "scripts/restore_intel_bot_to_20260505_1330.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/scripts/start_hindsight_docker.sh",
+    "relative_path": "scripts/start_hindsight_docker.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_accumulation_window_detector.py",
+    "relative_path": "sikk_accumulation_window_detector.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_auto_exit_planner.py",
+    "relative_path": "sikk_auto_exit_planner.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_auto_position_sizer.py",
+    "relative_path": "sikk_auto_position_sizer.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_auto_readiness_runner.py",
+    "relative_path": "sikk_auto_readiness_runner.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_auto_risk_gate.py",
+    "relative_path": "sikk_auto_risk_gate.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_auto_signal_engine.py",
+    "relative_path": "sikk_auto_signal_engine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_auto_trade_types.py",
+    "relative_path": "sikk_auto_trade_types.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_automation_workflow.py",
+    "relative_path": "sikk_automation_workflow.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_candidate_kline_pipeline.py",
+    "relative_path": "sikk_candidate_kline_pipeline.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_candidate_quote_security_pipeline.py",
+    "relative_path": "sikk_candidate_quote_security_pipeline.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_candidate_signal_pipeline.py",
+    "relative_path": "sikk_candidate_signal_pipeline.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_candidate_state_machine.py",
+    "relative_path": "sikk_candidate_state_machine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_candidate_wallet_structure_pipeline.py",
+    "relative_path": "sikk_candidate_wallet_structure_pipeline.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_case_field_source_map.py",
+    "relative_path": "sikk_case_field_source_map.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_chip_control_state_machine.py",
+    "relative_path": "sikk_chip_control_state_machine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_control_chip_window_detector.py",
+    "relative_path": "sikk_control_chip_window_detector.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_dashboard_builder.py",
+    "relative_path": "sikk_dashboard_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_dashboard_site_builder.py",
+    "relative_path": "sikk_dashboard_site_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_document_ingestor.py",
+    "relative_path": "sikk_document_ingestor.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_document_passport_builder.py",
+    "relative_path": "sikk_document_passport_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_dominant_lifecycle_classifier.py",
+    "relative_path": "sikk_dominant_lifecycle_classifier.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_execution_adapter_base.py",
+    "relative_path": "sikk_execution_adapter_base.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_execution_state_machine.py",
+    "relative_path": "sikk_execution_state_machine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_explainability_engine.py",
+    "relative_path": "sikk_explainability_engine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_full_auto_orchestrator.py",
+    "relative_path": "sikk_full_auto_orchestrator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_gap_detector.py",
+    "relative_path": "sikk_gap_detector.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_gmgn_new_token_filter.py",
+    "relative_path": "sikk_gmgn_new_token_filter.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_gmgn_quote_adapter.py",
+    "relative_path": "sikk_gmgn_quote_adapter.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_gmgn_token_report.py",
+    "relative_path": "sikk_gmgn_token_report.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_her_task_router.py",
+    "relative_path": "sikk_her_task_router.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_knowledge_absorption.py",
+    "relative_path": "sikk_knowledge_absorption.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_live_orchestrator.py",
+    "relative_path": "sikk_live_orchestrator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_live_quote_security_collector.py",
+    "relative_path": "sikk_live_quote_security_collector.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_live_run.py",
+    "relative_path": "sikk_live_run.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_loop_review_ingestor.py",
+    "relative_path": "sikk_loop_review_ingestor.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_loop_state_manager.py",
+    "relative_path": "sikk_loop_state_manager.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_market_cap_context.py",
+    "relative_path": "sikk_market_cap_context.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_method_lens_router.py",
+    "relative_path": "sikk_method_lens_router.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_module_runner.py",
+    "relative_path": "sikk_module_runner.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_notifier.py",
+    "relative_path": "sikk_notifier.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_okx_cluster_delta.py",
+    "relative_path": "sikk_okx_cluster_delta.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_okx_cluster_holding_analyzer.py",
+    "relative_path": "sikk_okx_cluster_holding_analyzer.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_okx_quote_adapter.py",
+    "relative_path": "sikk_okx_quote_adapter.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_operator_psychology_engine.py",
+    "relative_path": "sikk_operator_psychology_engine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_output_directory_governance.py",
+    "relative_path": "sikk_output_directory_governance.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_paper_explanation_builder.py",
+    "relative_path": "sikk_paper_explanation_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_paper_live_runner.py",
+    "relative_path": "sikk_paper_live_runner.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_paper_trading_engine.py",
+    "relative_path": "sikk_paper_trading_engine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_pre_trade_security_checker.py",
+    "relative_path": "sikk_pre_trade_security_checker.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_query.py",
+    "relative_path": "sikk_query.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_quote_security_review.py",
+    "relative_path": "sikk_quote_security_review.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_real_trade_guard.py",
+    "relative_path": "sikk_real_trade_guard.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_repomix_context_planner.py",
+    "relative_path": "sikk_repomix_context_planner.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_research_loop_controller.py",
+    "relative_path": "sikk_research_loop_controller.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_same_source_grouping.py",
+    "relative_path": "sikk_same_source_grouping.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_system_audit.py",
+    "relative_path": "sikk_system_audit.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_system_mapper.py",
+    "relative_path": "sikk_system_mapper.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_task_package_builder.py",
+    "relative_path": "sikk_task_package_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_telegram_bot_handler.py",
+    "relative_path": "sikk_telegram_bot_handler.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_telegram_gateway_adapter.py",
+    "relative_path": "sikk_telegram_gateway_adapter.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_telegram_open.py",
+    "relative_path": "sikk_telegram_open.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_telegram_views.py",
+    "relative_path": "sikk_telegram_views.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_telegram_zh.py",
+    "relative_path": "sikk_telegram_zh.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_time_context_gate.py",
+    "relative_path": "sikk_time_context_gate.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_token_skip_policy.py",
+    "relative_path": "sikk_token_skip_policy.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_topic_map_builder.py",
+    "relative_path": "sikk_topic_map_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_trace_logger.py",
+    "relative_path": "sikk_trace_logger.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_trade_confirmation_ticket.py",
+    "relative_path": "sikk_trade_confirmation_ticket.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_trade_journal.py",
+    "relative_path": "sikk_trade_journal.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_transaction_broadcast_guard.py",
+    "relative_path": "sikk_transaction_broadcast_guard.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_unified_view_builder.py",
+    "relative_path": "sikk_unified_view_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_wallet_structure_daily_report.py",
+    "relative_path": "sikk_wallet_structure_daily_report.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_wallet_structure_gate.py",
+    "relative_path": "sikk_wallet_structure_gate.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_wallet_structure_snapshot.py",
+    "relative_path": "sikk_wallet_structure_snapshot.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikk_wallet_trade_adapter.py",
+    "relative_path": "sikk_wallet_trade_adapter.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/sikkctl.py",
+    "relative_path": "sikkctl.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tasks/chatgpt_share_69f809c6/workflow_automation/run_workflow_automation.sh",
+    "relative_path": "tasks/chatgpt_share_69f809c6/workflow_automation/run_workflow_automation.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tasks/chatgpt_share_69f868b8/workflow_automation/run_workflow_automation.sh",
+    "relative_path": "tasks/chatgpt_share_69f868b8/workflow_automation/run_workflow_automation.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tasks/chatgpt_share_69f868b8_repomix_deerflow/repomix_context/make_sikk_context.sh",
+    "relative_path": "tasks/chatgpt_share_69f868b8_repomix_deerflow/repomix_context/make_sikk_context.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_counterparty_pressure_calculator.py",
+    "relative_path": "tests/test_counterparty_pressure_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_directory_constitution.py",
+    "relative_path": "tests/test_directory_constitution.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_distribution_progress_calculator.py",
+    "relative_path": "tests/test_distribution_progress_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_dominant_cost_zone_calculator.py",
+    "relative_path": "tests/test_dominant_cost_zone_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_dominant_intent_dictionary.py",
+    "relative_path": "tests/test_dominant_intent_dictionary.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_markup_motivation_calculator.py",
+    "relative_path": "tests/test_markup_motivation_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_quantitative_aggregator.py",
+    "relative_path": "tests/test_quantitative_aggregator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_run_sikk_gmgn_pipeline.py",
+    "relative_path": "tests/test_run_sikk_gmgn_pipeline.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_auto_framework.py",
+    "relative_path": "tests/test_sikk_auto_framework.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_automation_workflow.py",
+    "relative_path": "tests/test_sikk_automation_workflow.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_candidate_kline_pipeline.py",
+    "relative_path": "tests/test_sikk_candidate_kline_pipeline.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_candidate_quote_security_pipeline.py",
+    "relative_path": "tests/test_sikk_candidate_quote_security_pipeline.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_candidate_signal_pipeline.py",
+    "relative_path": "tests/test_sikk_candidate_signal_pipeline.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_candidate_state_machine.py",
+    "relative_path": "tests/test_sikk_candidate_state_machine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_candidate_wallet_structure_pipeline.py",
+    "relative_path": "tests/test_sikk_candidate_wallet_structure_pipeline.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_case_field_source_map.py",
+    "relative_path": "tests/test_sikk_case_field_source_map.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_chip_control_state_machine.py",
+    "relative_path": "tests/test_sikk_chip_control_state_machine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_dashboard_site_builder.py",
+    "relative_path": "tests/test_sikk_dashboard_site_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_document_ingestor.py",
+    "relative_path": "tests/test_sikk_document_ingestor.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_document_passport_builder.py",
+    "relative_path": "tests/test_sikk_document_passport_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_dominant_lifecycle_classifier.py",
+    "relative_path": "tests/test_sikk_dominant_lifecycle_classifier.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_execution_adapters.py",
+    "relative_path": "tests/test_sikk_execution_adapters.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_execution_state_machine.py",
+    "relative_path": "tests/test_sikk_execution_state_machine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_explainability_engine.py",
+    "relative_path": "tests/test_sikk_explainability_engine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_full_auto_orchestrator.py",
+    "relative_path": "tests/test_sikk_full_auto_orchestrator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_gap_detector.py",
+    "relative_path": "tests/test_sikk_gap_detector.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_gmgn_new_token_filter.py",
+    "relative_path": "tests/test_sikk_gmgn_new_token_filter.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_her_task_router.py",
+    "relative_path": "tests/test_sikk_her_task_router.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_knowledge_absorption.py",
+    "relative_path": "tests/test_sikk_knowledge_absorption.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_live_collectors.py",
+    "relative_path": "tests/test_sikk_live_collectors.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_live_run.py",
+    "relative_path": "tests/test_sikk_live_run.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_loop_review_ingestor.py",
+    "relative_path": "tests/test_sikk_loop_review_ingestor.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_loop_state_manager.py",
+    "relative_path": "tests/test_sikk_loop_state_manager.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_market_cap_context.py",
+    "relative_path": "tests/test_sikk_market_cap_context.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_method_lens_router.py",
+    "relative_path": "tests/test_sikk_method_lens_router.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_okx_cluster_delta.py",
+    "relative_path": "tests/test_sikk_okx_cluster_delta.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_okx_cluster_holding_analyzer.py",
+    "relative_path": "tests/test_sikk_okx_cluster_holding_analyzer.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_operator_psychology_engine.py",
+    "relative_path": "tests/test_sikk_operator_psychology_engine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_orchestrator_wallet_structure_integration.py",
+    "relative_path": "tests/test_sikk_orchestrator_wallet_structure_integration.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_paper_explanation_builder.py",
+    "relative_path": "tests/test_sikk_paper_explanation_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_paper_live_runner.py",
+    "relative_path": "tests/test_sikk_paper_live_runner.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_paper_wallet_structure_integration.py",
+    "relative_path": "tests/test_sikk_paper_wallet_structure_integration.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_pipeline_wallet_structure_mode.py",
+    "relative_path": "tests/test_sikk_pipeline_wallet_structure_mode.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_query.py",
+    "relative_path": "tests/test_sikk_query.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_quote_security_outputs.py",
+    "relative_path": "tests/test_sikk_quote_security_outputs.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_repomix_context_planner.py",
+    "relative_path": "tests/test_sikk_repomix_context_planner.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_research_loop_controller.py",
+    "relative_path": "tests/test_sikk_research_loop_controller.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_research_loop_controller_status.py",
+    "relative_path": "tests/test_sikk_research_loop_controller_status.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_research_loop_final_reports.py",
+    "relative_path": "tests/test_sikk_research_loop_final_reports.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_runtime_v02.py",
+    "relative_path": "tests/test_sikk_runtime_v02.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_same_source_grouping.py",
+    "relative_path": "tests/test_sikk_same_source_grouping.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_state_wallet_structure_integration.py",
+    "relative_path": "tests/test_sikk_state_wallet_structure_integration.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_system_audit.py",
+    "relative_path": "tests/test_sikk_system_audit.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_system_mapper.py",
+    "relative_path": "tests/test_sikk_system_mapper.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_task_package_builder.py",
+    "relative_path": "tests/test_sikk_task_package_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_telegram_bot_handler_phase_4_7.py",
+    "relative_path": "tests/test_sikk_telegram_bot_handler_phase_4_7.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_telegram_entry_gateway.py",
+    "relative_path": "tests/test_sikk_telegram_entry_gateway.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_telegram_views.py",
+    "relative_path": "tests/test_sikk_telegram_views.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_time_context_gate.py",
+    "relative_path": "tests/test_sikk_time_context_gate.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_topic_map_builder.py",
+    "relative_path": "tests/test_sikk_topic_map_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_trade_confirmation_ticket.py",
+    "relative_path": "tests/test_sikk_trade_confirmation_ticket.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_transaction_broadcast_guard.py",
+    "relative_path": "tests/test_sikk_transaction_broadcast_guard.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_unified_view_builder.py",
+    "relative_path": "tests/test_sikk_unified_view_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_wallet_structure_daily_report.py",
+    "relative_path": "tests/test_sikk_wallet_structure_daily_report.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_wallet_structure_gate.py",
+    "relative_path": "tests/test_sikk_wallet_structure_gate.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_wallet_structure_snapshot.py",
+    "relative_path": "tests/test_sikk_wallet_structure_snapshot.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_sikk_wallet_trade_adapter.py",
+    "relative_path": "tests/test_sikk_wallet_trade_adapter.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_bot_core.py",
+    "relative_path": "tests/test_source_wallet_bot_core.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_bot_end_to_end.py",
+    "relative_path": "tests/test_source_wallet_bot_end_to_end.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_directory_governance.py",
+    "relative_path": "tests/test_source_wallet_directory_governance.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_fact_builder.py",
+    "relative_path": "tests/test_source_wallet_fact_builder.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_gmgn_live_adapter.py",
+    "relative_path": "tests/test_source_wallet_gmgn_live_adapter.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_handoff_exporter.py",
+    "relative_path": "tests/test_source_wallet_handoff_exporter.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_profile_normalizer.py",
+    "relative_path": "tests/test_source_wallet_profile_normalizer.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_role_classifier.py",
+    "relative_path": "tests/test_source_wallet_role_classifier.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_runner.py",
+    "relative_path": "tests/test_source_wallet_runner.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_schema_validator.py",
+    "relative_path": "tests/test_source_wallet_schema_validator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_source_group_engine.py",
+    "relative_path": "tests/test_source_wallet_source_group_engine.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_trade_normalizer.py",
+    "relative_path": "tests/test_source_wallet_trade_normalizer.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_source_wallet_trade_summary_rows.py",
+    "relative_path": "tests/test_source_wallet_trade_summary_rows.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_strategy_gate_cost_risk_reward_calculator.py",
+    "relative_path": "tests/test_strategy_gate_cost_risk_reward_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_structure_inventory_calculator.py",
+    "relative_path": "tests/test_structure_inventory_calculator.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_token_cluster_analyzer.py",
+    "relative_path": "tests/test_token_cluster_analyzer.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tests/test_wallet_structure_package.py",
+    "relative_path": "tests/test_wallet_structure_package.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tools/__init__.py",
+    "relative_path": "tools/__init__.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tools/generate_system_directory_governance.py",
+    "relative_path": "tools/generate_system_directory_governance.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tools/harness/check_routes.py",
+    "relative_path": "tools/harness/check_routes.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tools/validate_directory_constitution.py",
+    "relative_path": "tools/validate_directory_constitution.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/tools/validate_system_directory_governance.py",
+    "relative_path": "tools/validate_system_directory_governance.py",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/单轮检查交易系统.sh",
+    "relative_path": "单轮检查交易系统.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/启动SIKK专业会话.sh",
+    "relative_path": "启动SIKK专业会话.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/启动交易系统.sh",
+    "relative_path": "启动交易系统.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/查看交易系统状态.sh",
+    "relative_path": "查看交易系统状态.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/查看交易系统进程.sh",
+    "relative_path": "查看交易系统进程.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/查看交易证据面板.sh",
+    "relative_path": "查看交易证据面板.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  },
+  {
+    "path": "/root/sikk-gmgn/查询代币明细.sh",
+    "relative_path": "查询代币明细.sh",
+    "kind": "script",
+    "has_help": false,
+    "help_excerpt": "'output'"
+  }
+]

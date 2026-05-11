@@ -1,0 +1,17 @@
+{
+  "checkpoint_id": "checkpoint.phase_02",
+  "phase": "02_classification_and_registries",
+  "status": "complete",
+  "resume_command": "continue from phase_03 conflict audit",
+  "artifacts": [
+    "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/module_registry.json",
+    "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/path_registry.json",
+    "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/legacy_path_map.json",
+    "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/code_entrypoint_index.json",
+    "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/dataflow_map.json",
+    "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_governance/phase_02_classification_and_registries.md"
+  ],
+  "module_count": 126,
+  "entrypoint_count": 257,
+  "legacy_candidate_count": 164
+}

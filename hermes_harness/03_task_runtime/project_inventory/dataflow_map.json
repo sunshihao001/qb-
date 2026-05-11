@@ -1,0 +1,3600 @@
+[
+  {
+    "entrypoint": "data/gmgn_candidates_live_run/site/app.js",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "docs/harness/ai_harness_system/09_scripts/hermes_artifact_verify.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "docs/harness/ai_harness_system/09_scripts/hermes_boot_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "docs/harness/ai_harness_system/09_scripts/hermes_permission_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "docs/harness/ai_harness_system/09_scripts/hermes_resume_task.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "docs/harness/ai_harness_system/09_scripts/hermes_stale_memory_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "docs/harness/ai_harness_system/09_scripts/hermes_surface_completion_audit.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "docs/harness/ai_harness_system/11_hermes_bot_invocation/hermes_task_router.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_artifact_verify.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_bash_classifier.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_blindspot_audit.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_boot_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_compact_rebuild.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_context_budget_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_context_build.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_input_governance.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_memory_audit.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_memory_revalidate.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_narrative_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_permission_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_recovery_circuit_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_recovery_pack.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_resume_task.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_stale_memory_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_surface_completion_audit.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_task_init.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_task_router.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_tool_ledger_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_v12_architecture_check.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "hermes_harness/09_scripts/hermes_verify_task.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/__init__.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/__init__.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/config.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/directory_governance.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/errors.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/gmgn_live_adapter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/handoff_exporter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/io_utils.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/models.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/role_classifier.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/runner.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/schema_validator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/source_group_engine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/validate_acceptance.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/wallet_fact_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/wallet_profile_normalizer.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/source_wallet_bot/wallet_trade_normalizer.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/strategy_gate/__init__.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/strategy_gate/cost_risk_reward_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/__init__.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/chinese_judgement.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/constants.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/counterparty_pressure_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/decision_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/distribution_progress_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/dominant_cost_zone_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/edge_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/history_store.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/markup_motivation_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/models.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/normalizer.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/note_generator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/quantitative_aggregator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/quantitative_structure_models.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/role_classifier.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/run.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/source_reader.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/structure_inventory_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/token_cluster_analyzer.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "modules/wallet_structure/wallet_pattern_cost_alignment_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "run_sikk_gmgn_pipeline.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/backup_jiegoufenxibot_structure_data.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/backup_sunqbfemxbot_wallet_data.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/configure_hindsight_llm_key.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/consolidate_intel_bot_data.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/hindsight_recall_sikk.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/hindsight_reflect_sikk.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/hindsight_retain_sikk.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/hindsight_smoke_sikk.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/migrate_intel_bot_legacy_data.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/restore_intel_bot_to_20260505_1330.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "scripts/start_hindsight_docker.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_accumulation_window_detector.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_auto_exit_planner.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_auto_position_sizer.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_auto_readiness_runner.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_auto_risk_gate.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_auto_signal_engine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_auto_trade_types.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_automation_workflow.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_candidate_kline_pipeline.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_candidate_quote_security_pipeline.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_candidate_signal_pipeline.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_candidate_state_machine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_candidate_wallet_structure_pipeline.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_case_field_source_map.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_chip_control_state_machine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_control_chip_window_detector.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_dashboard_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_dashboard_site_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_document_ingestor.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_document_passport_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_dominant_lifecycle_classifier.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_execution_adapter_base.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_execution_state_machine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_explainability_engine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_full_auto_orchestrator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_gap_detector.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_gmgn_new_token_filter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_gmgn_quote_adapter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_gmgn_token_report.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_her_task_router.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_knowledge_absorption.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_live_orchestrator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_live_quote_security_collector.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_live_run.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_loop_review_ingestor.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_loop_state_manager.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_market_cap_context.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_method_lens_router.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_module_runner.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_notifier.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_okx_cluster_delta.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_okx_cluster_holding_analyzer.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_okx_quote_adapter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_operator_psychology_engine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_output_directory_governance.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_paper_explanation_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_paper_live_runner.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_paper_trading_engine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_pre_trade_security_checker.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_query.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_quote_security_review.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_real_trade_guard.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_repomix_context_planner.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_research_loop_controller.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_same_source_grouping.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_system_audit.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_system_mapper.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_task_package_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_telegram_bot_handler.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_telegram_gateway_adapter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_telegram_open.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_telegram_views.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_telegram_zh.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_time_context_gate.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_token_skip_policy.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_topic_map_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_trace_logger.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_trade_confirmation_ticket.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_trade_journal.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_transaction_broadcast_guard.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_unified_view_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_wallet_structure_daily_report.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_wallet_structure_gate.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_wallet_structure_snapshot.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikk_wallet_trade_adapter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "sikkctl.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tasks/chatgpt_share_69f809c6/workflow_automation/run_workflow_automation.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tasks/chatgpt_share_69f868b8/workflow_automation/run_workflow_automation.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tasks/chatgpt_share_69f868b8_repomix_deerflow/repomix_context/make_sikk_context.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_counterparty_pressure_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_directory_constitution.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_distribution_progress_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_dominant_cost_zone_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_dominant_intent_dictionary.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_markup_motivation_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_quantitative_aggregator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_run_sikk_gmgn_pipeline.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_auto_framework.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_automation_workflow.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_candidate_kline_pipeline.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_candidate_quote_security_pipeline.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_candidate_signal_pipeline.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_candidate_state_machine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_candidate_wallet_structure_pipeline.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_case_field_source_map.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_chip_control_state_machine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_dashboard_site_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_document_ingestor.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_document_passport_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_dominant_lifecycle_classifier.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_execution_adapters.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_execution_state_machine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_explainability_engine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_full_auto_orchestrator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_gap_detector.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_gmgn_new_token_filter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_her_task_router.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_knowledge_absorption.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_live_collectors.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_live_run.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_loop_review_ingestor.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_loop_state_manager.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_market_cap_context.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_method_lens_router.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_okx_cluster_delta.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_okx_cluster_holding_analyzer.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_operator_psychology_engine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_orchestrator_wallet_structure_integration.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_paper_explanation_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_paper_live_runner.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_paper_wallet_structure_integration.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_pipeline_wallet_structure_mode.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_query.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_quote_security_outputs.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_repomix_context_planner.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_research_loop_controller.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_research_loop_controller_status.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_research_loop_final_reports.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_runtime_v02.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_same_source_grouping.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_state_wallet_structure_integration.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_system_audit.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_system_mapper.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_task_package_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_telegram_bot_handler_phase_4_7.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_telegram_entry_gateway.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_telegram_views.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_time_context_gate.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_topic_map_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_trade_confirmation_ticket.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_transaction_broadcast_guard.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_unified_view_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_wallet_structure_daily_report.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_wallet_structure_gate.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_wallet_structure_snapshot.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_sikk_wallet_trade_adapter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_bot_core.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_bot_end_to_end.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_directory_governance.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_fact_builder.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_gmgn_live_adapter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_handoff_exporter.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_profile_normalizer.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_role_classifier.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_runner.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_schema_validator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_source_group_engine.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_trade_normalizer.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_source_wallet_trade_summary_rows.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_strategy_gate_cost_risk_reward_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_structure_inventory_calculator.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_token_cluster_analyzer.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tests/test_wallet_structure_package.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tools/__init__.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tools/generate_system_directory_governance.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tools/harness/check_routes.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tools/validate_directory_constitution.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "tools/validate_system_directory_governance.py",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "单轮检查交易系统.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "启动SIKK专业会话.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "启动交易系统.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "查看交易系统状态.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "查看交易系统进程.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "查看交易证据面板.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  },
+  {
+    "entrypoint": "查询代币明细.sh",
+    "inputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/01_control_plane",
+      "hermes_harness/04_memory"
+    ],
+    "outputs": [
+      "hermes_harness/03_task_runtime",
+      "hermes_harness/06_verification",
+      "hermes_harness/07_recovery",
+      "hermes_harness/08_reports"
+    ]
+  }
+]

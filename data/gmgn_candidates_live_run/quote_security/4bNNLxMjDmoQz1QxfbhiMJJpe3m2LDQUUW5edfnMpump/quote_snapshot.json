@@ -1,0 +1,85 @@
+{
+  "token": "4bNNLxMjDmoQz1QxfbhiMJJpe3m2LDQUUW5edfnMpump",
+  "chain": "sol",
+  "wallet_address": "6m6dSTyv7aJQYJpAQKq2VnHjNtfj2mE5KFSJNevHjgSp",
+  "human_amount": "0.01 SOL",
+  "snapshot_time": "2026-05-02T13:54:44Z",
+  "max_quote_age_seconds": 30,
+  "quote_status": "AVAILABLE",
+  "source_count": 1,
+  "sources": [
+    "OKX"
+  ],
+  "max_price_impact_pct": null,
+  "quote_deviation_pct": null,
+  "quotes": [
+    {
+      "source": "OKX",
+      "input_token": "11111111111111111111111111111111",
+      "output_token": "4bNNLxMjDmoQz1QxfbhiMJJpe3m2LDQUUW5edfnMpump",
+      "input_amount": "10000000",
+      "output_amount": "6334631670",
+      "min_output_amount": null,
+      "price_impact_pct": null,
+      "raw": {
+        "ok": true,
+        "data": [
+          {
+            "chainIndex": "501",
+            "contextSlot": 417107743,
+            "dexRouterList": [
+              {
+                "dexProtocol": {
+                  "dexName": "PumpSwap",
+                  "percent": "100"
+                },
+                "fromToken": {
+                  "decimal": "9",
+                  "isHoneyPot": false,
+                  "taxRate": "0",
+                  "tokenContractAddress": "So11111111111111111111111111111111111111112",
+                  "tokenSymbol": "wSOL",
+                  "tokenUnitPrice": "83.89"
+                },
+                "fromTokenIndex": "0",
+                "toToken": {
+                  "decimal": "6",
+                  "isHoneyPot": false,
+                  "taxRate": "0",
+                  "tokenContractAddress": "4bNNLxMjDmoQz1QxfbhiMJJpe3m2LDQUUW5edfnMpump",
+                  "tokenSymbol": "GOBLIEN",
+                  "tokenUnitPrice": "0.0001289401501601198461371000109582222"
+                },
+                "toTokenIndex": "1"
+              }
+            ],
+            "estimateGasFee": "232400",
+            "fromToken": {
+              "decimal": "9",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "11111111111111111111111111111111",
+              "tokenSymbol": "SOL",
+              "tokenUnitPrice": "83.89"
+            },
+            "fromTokenAmount": "10000000",
+            "priceImpactPercent": "-2.64",
+            "router": "11111111111111111111111111111111--4bNNLxMjDmoQz1QxfbhiMJJpe3m2LDQUUW5edfnMpump",
+            "swapMode": "exactIn",
+            "toToken": {
+              "decimal": "6",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "4bNNLxMjDmoQz1QxfbhiMJJpe3m2LDQUUW5edfnMpump",
+              "tokenSymbol": "GOBLIEN",
+              "tokenUnitPrice": "0.0001289401501601198461371000109582222"
+            },
+            "toTokenAmount": "6334631670",
+            "tradeFee": "0.00041945"
+          }
+        ]
+      }
+    }
+  ],
+  "scope_note": "只读报价快照；不执行真实交易。"
+}

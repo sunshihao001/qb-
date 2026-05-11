@@ -1,0 +1,35 @@
+{
+  "source": "okx",
+  "endpoint": "token_info",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "info",
+    "--address",
+    "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T01:47:56Z",
+  "finished_at": "2026-05-08T01:47:57Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "chainIndex": "501",
+        "decimal": "6",
+        "tagList": {
+          "communityRecognized": false
+        },
+        "tokenContractAddress": "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+        "tokenLogoUrl": "https://static.oklink.com/cdn/web3/currency/token/large/501-GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump-109/type=default_90_0?v=1778203228186",
+        "tokenName": "Elon Mask",
+        "tokenSymbol": "MASK"
+      }
+    ]
+  }
+}

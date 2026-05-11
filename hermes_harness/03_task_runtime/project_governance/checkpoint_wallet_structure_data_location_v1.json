@@ -1,0 +1,36 @@
+{
+  "checkpoint_id": "checkpoint.wallet_structure_data_location_v1",
+  "status": "complete",
+  "category_directory_index": "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_inventory/wallet_structure_data_map/wallet_structure_category_directory_index.json",
+  "summary_report": "/root/sikk-gmgn/hermes_harness/08_reports/project_governance/WALLET_STRUCTURE_DATA_LOCATION_SUMMARY_V1.md",
+  "categories": {
+    "钱包数据采集": {
+      "dirs": 185,
+      "files": 2930
+    },
+    "钱包事实数据": {
+      "dirs": 194,
+      "files": 2980
+    },
+    "同源/资金证据数据": {
+      "dirs": 13,
+      "files": 29
+    },
+    "结构分析数据": {
+      "dirs": 197,
+      "files": 3010
+    },
+    "行为推断/生命周期数据": {
+      "dirs": 15,
+      "files": 19
+    },
+    "handoff/decision/gate 数据": {
+      "dirs": 252,
+      "files": 269
+    },
+    "报告/Case/Dashboard 输出": {
+      "dirs": 637,
+      "files": 2385
+    }
+  }
+}

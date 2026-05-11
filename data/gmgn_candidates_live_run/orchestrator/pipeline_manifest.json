@@ -1,0 +1,92 @@
+{
+  "模块": "SIKK-GMGN Pipeline Orchestrator v1.0",
+  "运行时间": "2026-05-04T12:40:24Z",
+  "模式": "paper/readiness",
+  "参数": {
+    "include_s2": false,
+    "run_accumulation": true,
+    "run_signal": true,
+    "run_state": true,
+    "run_wallet_structure": true,
+    "wallet_structure_mode": "observe",
+    "run_quote_security": true,
+    "quote_sources": [
+      "okx",
+      "gmgn"
+    ],
+    "default_quote_amount_sol": 0.01,
+    "use_position_amount": false,
+    "account_equity_sol": 10.0,
+    "risk_per_trade_pct": 0.25,
+    "max_position_sol": 0.2
+  },
+  "阶段统计": {
+    "新币筛选": {
+      "总扫描数": 5,
+      "进入候选池": 5,
+      "排除数量": 0,
+      "S3数量": 4,
+      "S2数量": 0,
+      "S1数量": 1,
+      "S0数量": 0
+    },
+    "K线吸筹管道": {
+      "读取候选数": 4,
+      "处理候选数": 4,
+      "成功数量": 4,
+      "失败数量": 0
+    },
+    "信号管道": {
+      "读取候选数": 4,
+      "成功数量": 4,
+      "跳过数量": 0,
+      "失败数量": 0
+    },
+    "状态机": {
+      "DISCOVERED": 0,
+      "WATCHING": 2,
+      "ACCUMULATING": 0,
+      "READY_TO_BUY": 0,
+      "PAPER_READY": 1,
+      "BLOCKED": 2,
+      "FAILED": 0,
+      "EXITED": 0,
+      "候选数量": 5
+    },
+    "钱包结构门禁": {
+      "处理数量": 1,
+      "WALLET_BLOCK": 1
+    },
+    "报价安全确认层": {
+      "读取状态数": 5,
+      "PAPER_READY数量": 1,
+      "成功数量": 1,
+      "跳过数量": 4,
+      "失败数量": 0,
+      "READY_FOR_CONFIRMATION": 1,
+      "PAUSE": 0,
+      "BLOCK": 0
+    }
+  },
+  "输出文件": {
+    "候选池JSON": "data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.json",
+    "候选池CSV": "data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.csv",
+    "原始GMGN响应": "data/gmgn_candidates_live_run/gmgn_new_token_filter/gmgn_trenches_raw.json",
+    "K线管道汇总": "data/gmgn_candidates_live_run/kline_pipeline/candidate_kline_pipeline_summary.json",
+    "信号汇总JSON": "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json",
+    "信号汇总CSV": "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.csv",
+    "状态机JSON": "data/gmgn_candidates_live_run/state_machine/candidate_states.json",
+    "状态机CSV": "data/gmgn_candidates_live_run/state_machine/candidate_states.csv",
+    "状态事件JSONL": "data/gmgn_candidates_live_run/state_machine/state_events.jsonl",
+    "状态报告MD": "data/gmgn_candidates_live_run/state_machine/state_summary.md",
+    "钱包结构汇总JSON": "data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json",
+    "钱包结构汇总CSV": "data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.csv",
+    "钱包结构报告MD": "data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.md",
+    "报价安全汇总JSON": "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json",
+    "报价安全汇总CSV": "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.csv",
+    "报价安全报告MD": "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.md",
+    "运行报告MD": "data/gmgn_candidates_live_run/orchestrator/pipeline_report.md",
+    "运行ManifestJSON": "data/gmgn_candidates_live_run/orchestrator/pipeline_manifest.json"
+  },
+  "说明": "本 Orchestrator 只串联 GMGN 新币筛选、K线吸筹、SIKK 纸面信号、状态机与可选报价/安全确认层，不执行真实 swap。"
+}

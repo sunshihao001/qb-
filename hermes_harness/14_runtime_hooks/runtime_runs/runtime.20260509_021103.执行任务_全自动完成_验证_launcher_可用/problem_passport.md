@@ -1,0 +1,12 @@
+# Runtime Problem Passport
+
+- runtime_run_id: `runtime.20260509_021103.执行任务_全自动完成_验证_launcher_可用`
+- route: `hermes_runtime_hook_autonomous_problem_loop`
+- created_at: `2026-05-09T02:11:03Z`
+- user_request: 执行任务，全自动完成：验证 launcher 可用。
+- classification: `complex`
+- requires_apur: `True`
+- risk: `medium`
+
+## Intent
+把用户的执行命令转成可追踪、可验证、可恢复的 runtime hook 任务。

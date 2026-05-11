@@ -1,0 +1,16 @@
+{
+  "case_id": "rt_v21_001",
+  "fixture_set": "core",
+  "version": "v2.1",
+  "task_name": "真实任务样本：文档生成后必须验证接入流程",
+  "input_summary": "用户要求升级系统，不能只写报告，要确认 runner/test/readme/skill reference 接入。",
+  "evidence_available": [
+    "file_exists",
+    "runner_exists",
+    "readme_updated",
+    "skill_reference_candidate"
+  ],
+  "risk_boundary": "no secrets, no deletion, no real trading, no live reliability overclaim",
+  "expected_decision": "verify_integration",
+  "expected_action": "A3_track_and_verify"
+}

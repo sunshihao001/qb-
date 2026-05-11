@@ -1,0 +1,23 @@
+{
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "phase_id": "P04_scenario_recognition",
+  "artifact_kind": "handoff_packet",
+  "generated_at": "2026-05-11T01:16:10Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "status": "DEGRADED",
+  "next_phase": "P05_structure_position",
+  "can_continue": true,
+  "missing_evidence": [
+    "资金层跳过",
+    "funding_path_missing"
+  ],
+  "block_reasons": [],
+  "handoff_contract": "fixed_ca_phase_handoff_v1"
+}

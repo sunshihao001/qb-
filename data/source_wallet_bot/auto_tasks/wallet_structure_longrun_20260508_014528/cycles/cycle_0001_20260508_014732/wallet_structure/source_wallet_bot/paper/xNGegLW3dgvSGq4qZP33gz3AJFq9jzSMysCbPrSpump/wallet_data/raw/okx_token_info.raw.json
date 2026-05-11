@@ -1,0 +1,35 @@
+{
+  "source": "okx",
+  "endpoint": "token_info",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "info",
+    "--address",
+    "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T01:47:48Z",
+  "finished_at": "2026-05-08T01:47:49Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "chainIndex": "501",
+        "decimal": "6",
+        "tagList": {
+          "communityRecognized": false
+        },
+        "tokenContractAddress": "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+        "tokenLogoUrl": "https://static.oklink.com/cdn/web3/currency/token/large/501-xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump-108/type=default_90_0?v=1778200658221",
+        "tokenName": "MV Hondius",
+        "tokenSymbol": "MV"
+      }
+    ]
+  }
+}

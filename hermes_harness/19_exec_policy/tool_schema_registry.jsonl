@@ -1,0 +1,4 @@
+{"tool": "read_file", "capability": "read text files", "risk_default": "R1", "requires_result": true}
+{"tool": "write_file", "capability": "write/overwrite files", "risk_default": "R3", "requires_result": true}
+{"tool": "patch", "capability": "targeted file edits", "risk_default": "R3", "requires_result": true}
+{"tool": "terminal", "capability": "shell execution", "risk_default": "R2-R5", "requires_result": true}

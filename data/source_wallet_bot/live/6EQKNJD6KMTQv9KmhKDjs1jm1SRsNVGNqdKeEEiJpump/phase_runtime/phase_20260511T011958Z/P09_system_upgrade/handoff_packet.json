@@ -1,0 +1,20 @@
+{
+  "token_address": "6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump",
+  "phase_id": "P09_system_upgrade",
+  "artifact_kind": "handoff_packet",
+  "generated_at": "2026-05-11T01:19:58Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "status": "OK",
+  "next_phase": "completed",
+  "can_continue": true,
+  "missing_evidence": [],
+  "block_reasons": [],
+  "handoff_contract": "fixed_ca_phase_handoff_v1"
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "sikk.unified_view.v1",
+  "generated_at": "2026-05-07T12:51:31Z",
+  "boundary": "SIKK 统一索引层；只读展示、诊断、复盘和提醒；不执行真实 swap，不读取私钥，不签名，不自动 broadcast。",
+  "safety": {
+    "real_swap_enabled": false,
+    "broadcast_allowed": false,
+    "private_key_required": false,
+    "confirmation_enabled": false
+  },
+  "review_status": "READY_FROM_STRATEGY_PANEL",
+  "strategy_summary": {
+    "snapshot_time": "2026-05-04T12:40:33Z",
+    "scope_note": "OKX/GMGN 只读报价驱动的纸面自动交易统计；不执行真实 swap。",
+    "统计": {
+      "读取候选数": 5,
+      "新增纸面入场数": 1,
+      "纸面退出数": 1,
+      "阻断候选数": 0,
+      "重复持仓跳过数": 0,
+      "当前开放仓位数": 5,
+      "累计关闭仓位数": 201,
+      "已关闭胜率_pct": 28.3582,
+      "已关闭平均收益率_pct": 1.5444
+    }
+  },
+  "signal_groups": {
+    "S4": {
+      "count": 206,
+      "occurrence_pct": 100.0,
+      "win_rate_pct": 9.2233,
+      "avg_live_pnl_pct": 4.0756,
+      "avg_signal_pnl_pct": 258.7437
+    }
+  },
+  "wallet_groups": {
+    "MISSING": {
+      "count": 5,
+      "occurrence_pct": 2.4272,
+      "win_rate_pct": 60.0,
+      "avg_live_pnl_pct": 119.5032,
+      "avg_signal_pnl_pct": -6.0079
+    },
+    "WALLET_BLOCK": {
+      "count": 200,
+      "occurrence_pct": 97.0874,
+      "win_rate_pct": 8.0,
+      "avg_live_pnl_pct": 1.3521,
+      "avg_signal_pnl_pct": 266.7454
+    },
+    "WALLET_PAUSE": {
+      "count": 1,
+      "occurrence_pct": 0.4854,
+      "win_rate_pct": 0.0,
+      "avg_live_pnl_pct": -28.371,
+      "avg_signal_pnl_pct": -17.8209
+    }
+  },
+  "scope_note": "自动复盘索引只聚合策略表现与样本质量，不输出真实交易建议。"
+}

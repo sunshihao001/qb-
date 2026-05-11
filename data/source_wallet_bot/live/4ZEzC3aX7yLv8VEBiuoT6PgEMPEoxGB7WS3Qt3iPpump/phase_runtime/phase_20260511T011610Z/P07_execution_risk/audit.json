@@ -1,0 +1,28 @@
+{
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "phase_id": "P07_execution_risk",
+  "artifact_kind": "audit",
+  "generated_at": "2026-05-11T01:16:10Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "status": "DEGRADED",
+  "ca_consistency_passed": true,
+  "safety_boundary_passed": true,
+  "files_required": [
+    "input.json",
+    "output.json",
+    "evidence.json",
+    "handoff_packet.json",
+    "audit.json"
+  ],
+  "degraded_reason": [
+    "P07_REALTIME_QUOTE_OR_SLIPPAGE_CHECK_MISSING"
+  ],
+  "block_reason": []
+}

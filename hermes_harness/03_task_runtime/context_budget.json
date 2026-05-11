@@ -1,0 +1,17 @@
+{
+  "task_id": "hermes.task.20260506.001",
+  "budget_total": 100,
+  "budget_used": 0,
+  "budget_status": "OK",
+  "surfaces": {
+    "startup_context": {"priority": 1, "status": "admit"},
+    "task_passport": {"priority": 2, "status": "admit"},
+    "phase_plan": {"priority": 3, "status": "admit"},
+    "execution_log": {"priority": 4, "status": "index_only"},
+    "command_log": {"priority": 5, "status": "recent_errors_only"},
+    "memory": {"priority": 6, "status": "verified_summary_only"},
+    "reports": {"priority": 7, "status": "phase_subset_only"}
+  },
+  "over_budget_policy": ["preserve_current_state", "preserve_errors", "drop_unverified_noise"],
+  "last_updated_reason": "context_budget_policy_absorbed"
+}

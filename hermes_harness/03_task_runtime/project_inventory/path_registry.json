@@ -1,0 +1,968 @@
+{
+  "hermes_harness/00_startup/HERMES_BOOT_SEQUENCE.md": {
+    "kind": "document",
+    "module": "00_startup",
+    "path": "/root/sikk-gmgn/hermes_harness/00_startup/HERMES_BOOT_SEQUENCE.md",
+    "status": "active"
+  },
+  "hermes_harness/00_startup/HERMES_V1_2_RUNTIME_JUDGMENT.md": {
+    "kind": "document",
+    "module": "00_startup",
+    "path": "/root/sikk-gmgn/hermes_harness/00_startup/HERMES_V1_2_RUNTIME_JUDGMENT.md",
+    "status": "active"
+  },
+  "hermes_harness/00_startup/README.md": {
+    "kind": "document",
+    "module": "00_startup",
+    "path": "/root/sikk-gmgn/hermes_harness/00_startup/README.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/README.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/README.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/artifact_contract_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/artifact_contract_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/bash_risk_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/bash_risk_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/compact_rebuild_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/compact_rebuild_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/context_budget_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/context_budget_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/context_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/context_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/directory_invocation_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/directory_invocation_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/execution_narrative_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/execution_narrative_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/hermes_constitution.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/hermes_constitution.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/input_contract_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/input_contract_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/input_governance_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/input_governance_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/interrupt_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/interrupt_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/method_wheel_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/method_wheel_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/prompt_layer_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/prompt_layer_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/recovery_circuit_breaker_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/recovery_circuit_breaker_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/recovery_decision_table.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/recovery_decision_table.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/recovery_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/recovery_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/risk_tier_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/risk_tier_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/runtime_judgment_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/runtime_judgment_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/runtime_state_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/runtime_state_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/task_routing_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/task_routing_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/tool_ledger_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/tool_ledger_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/tool_permission_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/tool_permission_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/01_control_plane/verification_policy.md": {
+    "kind": "policy",
+    "module": "01_control_plane",
+    "path": "/root/sikk-gmgn/hermes_harness/01_control_plane/verification_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/02_task_intake/README.md": {
+    "kind": "document",
+    "module": "02_task_intake",
+    "path": "/root/sikk-gmgn/hermes_harness/02_task_intake/README.md",
+    "status": "active"
+  },
+  "hermes_harness/02_task_intake/task_passport_current.md": {
+    "kind": "document",
+    "module": "02_task_intake",
+    "path": "/root/sikk-gmgn/hermes_harness/02_task_intake/task_passport_current.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/README.md": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/README.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/active_task_context.md": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/active_task_context.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/active_task_state.json": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/active_task_state.json",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/checkpoints/README.md": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/checkpoints/README.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/checkpoints/checkpoint.json": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/checkpoints/checkpoint.json",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/command_log.jsonl": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/command_log.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/compact_snapshots/README.md": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/compact_snapshots/README.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/compact_snapshots/compact_boundary.json": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/compact_snapshots/compact_boundary.json",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/compact_snapshots/compact_summary.md": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/compact_snapshots/compact_summary.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/compact_snapshots/post_compact_context.md": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/compact_snapshots/post_compact_context.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/context_budget.json": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/context_budget.json",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/execution_loop_log.jsonl": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/execution_loop_log.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/execution_narrative.md": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/execution_narrative.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/input_governance_queue.jsonl": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/input_governance_queue.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/phase_plan.md": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/phase_plan.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/project_governance/README.md": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_governance/README.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/project_governance/active_task_state.json": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_governance/active_task_state.json",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/project_governance/checkpoint_phase_00.json": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_governance/checkpoint_phase_00.json",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/project_governance/phase_00_startup.md": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/project_governance/phase_00_startup.md",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/recovery_counter.json": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/recovery_counter.json",
+    "status": "active"
+  },
+  "hermes_harness/03_task_runtime/tool_ledger.jsonl": {
+    "kind": "runtime",
+    "module": "03_task_runtime",
+    "path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/tool_ledger.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/README.md": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/README.md",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/hermes_memory_index.md": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/hermes_memory_index.md",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/lessons_learned.jsonl": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/lessons_learned.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/memory_governance_policy.md": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/memory_governance_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/memory_revalidation_policy.md": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/memory_revalidation_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/memory_status_policy.md": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/memory_status_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/memory_verification_log.jsonl": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/memory_verification_log.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/memory_write_queue.jsonl": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/memory_write_queue.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/project_memory.jsonl": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/project_memory.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/stale_memory.jsonl": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/stale_memory.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/superseded_memory.jsonl": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/superseded_memory.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/system_memory.jsonl": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/system_memory.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/verified_memory.jsonl": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/verified_memory.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/04_memory/workflow_memory.jsonl": {
+    "kind": "memory",
+    "module": "04_memory",
+    "path": "/root/sikk-gmgn/hermes_harness/04_memory/workflow_memory.jsonl",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/README.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/README.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/active_task_context_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/active_task_context_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/active_task_state_schema.json": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/active_task_state_schema.json",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/artifact_header_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/artifact_header_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/checkpoint_template.json": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/checkpoint_template.json",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/command_log_schema.json": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/command_log_schema.json",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/execution_loop_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/execution_loop_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/final_report_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/final_report_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/input_intake_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/input_intake_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/method_wheel_task_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/method_wheel_task_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/phase_plan_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/phase_plan_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/phase_report_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/phase_report_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/recovery_report_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/recovery_report_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/task_passport_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/task_passport_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/task_route_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/task_route_template.md",
+    "status": "active"
+  },
+  "hermes_harness/05_templates/verification_report_template.md": {
+    "kind": "template",
+    "module": "05_templates",
+    "path": "/root/sikk-gmgn/hermes_harness/05_templates/verification_report_template.md",
+    "status": "active"
+  },
+  "hermes_harness/06_verification/README.md": {
+    "kind": "verification",
+    "module": "06_verification",
+    "path": "/root/sikk-gmgn/hermes_harness/06_verification/README.md",
+    "status": "active"
+  },
+  "hermes_harness/06_verification/three_layer_verification_checklist.md": {
+    "kind": "verification",
+    "module": "06_verification",
+    "path": "/root/sikk-gmgn/hermes_harness/06_verification/three_layer_verification_checklist.md",
+    "status": "active"
+  },
+  "hermes_harness/06_verification/verification_policy_advanced.md": {
+    "kind": "verification",
+    "module": "06_verification",
+    "path": "/root/sikk-gmgn/hermes_harness/06_verification/verification_policy_advanced.md",
+    "status": "active"
+  },
+  "hermes_harness/06_verification/verification_reports/HERMES_HARNESS_V1_1_VERIFICATION.md": {
+    "kind": "verification",
+    "module": "06_verification",
+    "path": "/root/sikk-gmgn/hermes_harness/06_verification/verification_reports/HERMES_HARNESS_V1_1_VERIFICATION.md",
+    "status": "active"
+  },
+  "hermes_harness/07_recovery/README.md": {
+    "kind": "recovery",
+    "module": "07_recovery",
+    "path": "/root/sikk-gmgn/hermes_harness/07_recovery/README.md",
+    "status": "active"
+  },
+  "hermes_harness/07_recovery/blocked_tasks/README.md": {
+    "kind": "recovery",
+    "module": "07_recovery",
+    "path": "/root/sikk-gmgn/hermes_harness/07_recovery/blocked_tasks/README.md",
+    "status": "active"
+  },
+  "hermes_harness/07_recovery/interrupt_reports/.gitkeep": {
+    "kind": "recovery",
+    "module": "07_recovery",
+    "path": "/root/sikk-gmgn/hermes_harness/07_recovery/interrupt_reports/.gitkeep",
+    "status": "active"
+  },
+  "hermes_harness/07_recovery/interrupt_reports/interrupt_report_template.md": {
+    "kind": "recovery",
+    "module": "07_recovery",
+    "path": "/root/sikk-gmgn/hermes_harness/07_recovery/interrupt_reports/interrupt_report_template.md",
+    "status": "active"
+  },
+  "hermes_harness/07_recovery/recovery_report_template.md": {
+    "kind": "recovery",
+    "module": "07_recovery",
+    "path": "/root/sikk-gmgn/hermes_harness/07_recovery/recovery_report_template.md",
+    "status": "active"
+  },
+  "hermes_harness/07_recovery/recovery_reports/HERMES_HARNESS_V1_1_RECOVERY.md": {
+    "kind": "recovery",
+    "module": "07_recovery",
+    "path": "/root/sikk-gmgn/hermes_harness/07_recovery/recovery_reports/HERMES_HARNESS_V1_1_RECOVERY.md",
+    "status": "active"
+  },
+  "hermes_harness/07_recovery/recovery_reports/README.md": {
+    "kind": "recovery",
+    "module": "07_recovery",
+    "path": "/root/sikk-gmgn/hermes_harness/07_recovery/recovery_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/README.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/audit_reports/README.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/audit_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/final_reports/HERMES_HARNESS_V1_1_UPGRADE_REPORT.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/final_reports/HERMES_HARNESS_V1_1_UPGRADE_REPORT.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/final_reports/README.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/final_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/final_reports/hermes_harness_v11_final_report.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/final_reports/hermes_harness_v11_final_report.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/final_reports/hermes_harness_v11_first_priority_plan.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/final_reports/hermes_harness_v11_first_priority_plan.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/phase_reports/README.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/phase_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/project_governance/README.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/project_governance/README.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/project_governance/project_governance_task_package.json": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/project_governance/project_governance_task_package.json",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/recovery_reports/README.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/recovery_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/recovery_reports/hermes_harness_v11_priority1_recovery.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/recovery_reports/hermes_harness_v11_priority1_recovery.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/report_classification_policy.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/report_classification_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/scan_reports/README.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/scan_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/verification_reports/README.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/verification_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/verification_reports/hermes_harness_v11_blindspots_verification.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/verification_reports/hermes_harness_v11_blindspots_verification.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/verification_reports/hermes_harness_v11_priority1_verification.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/verification_reports/hermes_harness_v11_priority1_verification.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/verification_reports/hermes_harness_v11_priority3_verification.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/verification_reports/hermes_harness_v11_priority3_verification.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/verification_reports/hermes_harness_v11_priority4_memory_verification.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/verification_reports/hermes_harness_v11_priority4_memory_verification.md",
+    "status": "active"
+  },
+  "hermes_harness/08_reports/verification_reports/hermes_harness_v11_verification.md": {
+    "kind": "report",
+    "module": "08_reports",
+    "path": "/root/sikk-gmgn/hermes_harness/08_reports/verification_reports/hermes_harness_v11_verification.md",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/README.md": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/README.md",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_artifact_verify.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_artifact_verify.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_bash_classifier.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_bash_classifier.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_blindspot_audit.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_blindspot_audit.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_boot_check.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_boot_check.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_compact_rebuild.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_compact_rebuild.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_context_budget_check.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_context_budget_check.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_context_build.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_context_build.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_input_governance.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_input_governance.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_memory_audit.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_memory_audit.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_memory_revalidate.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_memory_revalidate.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_narrative_check.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_narrative_check.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_permission_check.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_permission_check.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_recovery_circuit_check.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_recovery_circuit_check.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_recovery_pack.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_recovery_pack.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_resume_task.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_resume_task.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_stale_memory_check.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_stale_memory_check.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_surface_completion_audit.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_surface_completion_audit.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_task_init.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_task_init.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_task_router.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_task_router.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_tool_ledger_check.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_tool_ledger_check.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_v12_architecture_check.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_v12_architecture_check.py",
+    "status": "active"
+  },
+  "hermes_harness/09_scripts/hermes_verify_task.py": {
+    "kind": "script",
+    "module": "09_scripts",
+    "path": "/root/sikk-gmgn/hermes_harness/09_scripts/hermes_verify_task.py",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/README.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/README.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/audit_independence_policy.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/audit_independence_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/executor_verifier_role_policy.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/executor_verifier_role_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/memory_audit_reports/README.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/memory_audit_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/memory_audit_reports/memory_audit_policy.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/memory_audit_reports/memory_audit_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/permission_audit_reports/README.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/permission_audit_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/professionalization_blindspots.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/professionalization_blindspots.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/stale_rule_audit/README.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/stale_rule_audit/README.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/surface_completion_audit/README.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/surface_completion_audit/README.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/surface_completion_audit/harness_professional_completion_audit.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/surface_completion_audit/harness_professional_completion_audit.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/surface_completion_audit/surface_completion_audit_policy.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/surface_completion_audit/surface_completion_audit_policy.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/task_audit_reports/README.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/task_audit_reports/README.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/task_audit_reports/harness_professional_completion_task_audit.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/task_audit_reports/harness_professional_completion_task_audit.md",
+    "status": "active"
+  },
+  "hermes_harness/10_audit/task_audit_reports/hermes_harness_v1_gap_audit.md": {
+    "kind": "document",
+    "module": "10_audit",
+    "path": "/root/sikk-gmgn/hermes_harness/10_audit/task_audit_reports/hermes_harness_v1_gap_audit.md",
+    "status": "active"
+  },
+  "hermes_harness/11_workflows/README.md": {
+    "kind": "workflow",
+    "module": "11_workflows",
+    "path": "/root/sikk-gmgn/hermes_harness/11_workflows/README.md",
+    "status": "active"
+  },
+  "hermes_harness/11_workflows/code_change.workflow.md": {
+    "kind": "workflow",
+    "module": "11_workflows",
+    "path": "/root/sikk-gmgn/hermes_harness/11_workflows/code_change.workflow.md",
+    "status": "active"
+  },
+  "hermes_harness/11_workflows/directory_governance.workflow.md": {
+    "kind": "workflow",
+    "module": "11_workflows",
+    "path": "/root/sikk-gmgn/hermes_harness/11_workflows/directory_governance.workflow.md",
+    "status": "active"
+  },
+  "hermes_harness/11_workflows/method_wheel.workflow.md": {
+    "kind": "workflow",
+    "module": "11_workflows",
+    "path": "/root/sikk-gmgn/hermes_harness/11_workflows/method_wheel.workflow.md",
+    "status": "active"
+  },
+  "hermes_harness/11_workflows/recovery.workflow.md": {
+    "kind": "workflow",
+    "module": "11_workflows",
+    "path": "/root/sikk-gmgn/hermes_harness/11_workflows/recovery.workflow.md",
+    "status": "active"
+  },
+  "hermes_harness/11_workflows/verification.workflow.md": {
+    "kind": "workflow",
+    "module": "11_workflows",
+    "path": "/root/sikk-gmgn/hermes_harness/11_workflows/verification.workflow.md",
+    "status": "active"
+  },
+  "hermes_harness/CONTROL_CLOSURE_MANIFESTO.md": {
+    "kind": "document",
+    "module": "hermes_harness_root",
+    "path": "/root/sikk-gmgn/hermes_harness/CONTROL_CLOSURE_MANIFESTO.md",
+    "status": "active"
+  },
+  "hermes_harness/README.md": {
+    "kind": "document",
+    "module": "hermes_harness_root",
+    "path": "/root/sikk-gmgn/hermes_harness/README.md",
+    "status": "active"
+  },
+  "hermes_harness/RUNTIME_HARNESS_V1_2_MANIFESTO.md": {
+    "kind": "document",
+    "module": "hermes_harness_root",
+    "path": "/root/sikk-gmgn/hermes_harness/RUNTIME_HARNESS_V1_2_MANIFESTO.md",
+    "status": "active"
+  },
+  "hermes_harness/V1_0_TO_V1_1_MIGRATION_MAP.md": {
+    "kind": "document",
+    "module": "hermes_harness_root",
+    "path": "/root/sikk-gmgn/hermes_harness/V1_0_TO_V1_1_MIGRATION_MAP.md",
+    "status": "active"
+  },
+  "hermes_harness/references/hermes-harness-v12-architecture-session-notes.md": {
+    "kind": "document",
+    "module": "references",
+    "path": "/root/sikk-gmgn/hermes_harness/references/hermes-harness-v12-architecture-session-notes.md",
+    "status": "active"
+  },
+  "hermes_harness/references/hermes-project-system-governance-long-task-v1.md": {
+    "kind": "document",
+    "module": "references",
+    "path": "/root/sikk-gmgn/hermes_harness/references/hermes-project-system-governance-long-task-v1.md",
+    "status": "active"
+  },
+  "hermes_harness/references/hermes-v12-runtime-invariants-taskbook.md": {
+    "kind": "document",
+    "module": "references",
+    "path": "/root/sikk-gmgn/hermes_harness/references/hermes-v12-runtime-invariants-taskbook.md",
+    "status": "active"
+  },
+  "hermes_harness/references/hermes-v12-runtime-judgment.md": {
+    "kind": "document",
+    "module": "references",
+    "path": "/root/sikk-gmgn/hermes_harness/references/hermes-v12-runtime-judgment.md",
+    "status": "active"
+  }
+}

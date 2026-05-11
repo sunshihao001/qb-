@@ -1,0 +1,11 @@
+{
+  "case_id": "rt_v21_003",
+  "expected_decision": "chain_runnable_not_real_complete",
+  "expected_action": "A2_observe_revalidate",
+  "must_check": [
+    "evidence",
+    "policy",
+    "anti_self_deception"
+  ],
+  "must_not_claim": "live task reliability proven"
+}

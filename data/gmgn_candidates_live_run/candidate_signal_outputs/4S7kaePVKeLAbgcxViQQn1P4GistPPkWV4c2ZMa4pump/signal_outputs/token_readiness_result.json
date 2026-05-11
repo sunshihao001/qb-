@@ -1,0 +1,95 @@
+{
+  "token": "4S7kaePVKeLAbgcxViQQn1P4GistPPkWV4c2ZMa4pump",
+  "risk_gate": {
+    "permission": "ALLOW_PAPER_TRADE_允许纸面交易",
+    "risk_level": "低",
+    "block_reasons": [],
+    "pause_reasons": [],
+    "allow_reasons": [
+      "安全层通过",
+      "流动性/报价/滑点未触发硬风险"
+    ],
+    "missing_evidence": []
+  },
+  "signal": {
+    "signal_level": "S4_强确认信号",
+    "strategy_type": "SIKK-B 控盘箱体突破回踩",
+    "signal_time": "2026-04-30 04:31:00 UTC",
+    "signal_price": 0.0002042487,
+    "confidence_score": 99.0,
+    "evidence": [
+      "第一波控盘箱体明确",
+      "收盘突破控盘箱体上沿",
+      "回踩不破 0.236 强控位",
+      "收盘站上 AVWAP",
+      "OBV 不弱或增强",
+      "CMF 改善或转正",
+      "早期钱包未集中清仓",
+      "突破最近 LH",
+      "形成 HL → HH"
+    ],
+    "invalidation_reasons": []
+  },
+  "position_plan": {
+    "suggested_position_sol": 0.2,
+    "max_position_sol": 0.2,
+    "risk_per_trade_sol": 0.025,
+    "stop_price": 0.00018665912152,
+    "stop_type": "结构止损",
+    "position_reason": "按 0.25% 单笔风险、S4_强确认信号 信号、止损距离 8.61% 计算"
+  },
+  "exit_plan": {
+    "hard_stop_price": 0.00018665912152,
+    "time_stop_minutes": 30,
+    "take_profit_rules": [
+      {
+        "触发收益率": 50,
+        "卖出比例": 25,
+        "说明": "+50% 卖出 25%，回收部分风险"
+      },
+      {
+        "触发收益率": 100,
+        "卖出比例": 25,
+        "说明": "+100% 再卖出 25%"
+      },
+      {
+        "触发收益率": 200,
+        "卖出比例": 25,
+        "说明": "+200% 再卖出 25%，剩余跟踪"
+      }
+    ],
+    "trailing_stop_rule": {
+      "启用条件": "首次止盈后或最大浮盈超过 100%",
+      "峰值回撤_pct": 35,
+      "卖出比例": "剩余仓位"
+    },
+    "emergency_exit_rules": [
+      "早期钱包集中清仓",
+      "跌破控盘底",
+      "跌破 POC 且放量",
+      "跌破 AVWAP 且放量",
+      "安全风险升级为 HIGH/CRITICAL",
+      "流动性骤降或无有效报价",
+      "硬止损参考：控盘 0.236 / 0.382 / 控盘底"
+    ]
+  },
+  "paper_trade": {
+    "代币地址": "4S7kaePVKeLAbgcxViQQn1P4GistPPkWV4c2ZMa4pump",
+    "信号时间": "2026-04-30 04:31:00 UTC",
+    "策略类型": "SIKK-B 控盘箱体突破回踩",
+    "信号等级": "S4_强确认信号",
+    "模拟入场价": 0.0002042487,
+    "模拟仓位SOL": 0.2,
+    "止损价": 0.00018665912152,
+    "最大浮盈_pct": 22.731,
+    "最大浮亏_pct": -10.6291,
+    "最终出场价": 0.00018665912152,
+    "最终收益率_pct": -8.6118,
+    "最终R倍数": -1.0,
+    "出场原因": "命中硬止损",
+    "是否命中止损": true,
+    "是否命中止盈": false,
+    "已触发止盈次数": 0
+  },
+  "scope_note": "第一版为纸面交易/自动交易准备框架，不执行真实 swap。"
+}

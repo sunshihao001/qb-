@@ -1,0 +1,44 @@
+{
+  "schema_version": "sikk.unified_view.v1",
+  "generated_at": "2026-05-10T17:35:47Z",
+  "boundary": "SIKK 统一索引层；只读展示、诊断、复盘和提醒；不执行真实 swap，不读取私钥，不签名，不自动 broadcast。",
+  "safety": {
+    "real_swap_enabled": false,
+    "broadcast_allowed": false,
+    "private_key_required": false,
+    "confirmation_enabled": false
+  },
+  "callbacks": {
+    "menu:main": {
+      "type": "menu",
+      "view": "main"
+    },
+    "list:open:0": {
+      "type": "list",
+      "view": "open_positions",
+      "page": 0
+    },
+    "list:closed:0": {
+      "type": "list",
+      "view": "closed_positions",
+      "page": 0
+    },
+    "refresh:main": {
+      "type": "refresh",
+      "view": "main"
+    },
+    "tok:T1": {
+      "type": "token",
+      "token_id": "T1",
+      "token_address": "J81YExNqSMwQHGMtPaBK9sUB6wHEPp1q2oBk7Nfwo111",
+      "token_symbol": "IMGN"
+    },
+    "alert:A1": {
+      "type": "alert",
+      "alert_id": "A1",
+      "alert_type": "DATA_SYNC_FAIL"
+    }
+  },
+  "callback_count": 6,
+  "rule": "callback_data 使用英文短码；用户可见内容由 view 层中文化。"
+}

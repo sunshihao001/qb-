@@ -1,0 +1,22 @@
+{
+  "token": "DcTVUogWykX1JeBmTq48Fzj2Lc3Y7zwHQS1CyZ9SHnXf",
+  "T_start": "2026-05-03 06:22:00 UTC",
+  "T_end": "2026-05-03 06:25:00 UTC",
+  "T_start_timestamp": 1777789320,
+  "T_end_timestamp": 1777789500,
+  "T_start_market_cap": 17955.352,
+  "T_end_market_cap": 22483.402000000002,
+  "window_high": 2.2483402e-05,
+  "window_low": 1.6041466e-05,
+  "window_duration_bars": 4,
+  "window_duration_minutes": 3.0,
+  "POC_price": 2.14768495e-05,
+  "VAH_price": 2.24162985e-05,
+  "VAL_price": 1.7316432499999998e-05,
+  "AVWAP_anchor_time": "2026-05-03 04:43:00 UTC",
+  "latest_AVWAP": 3.796994754040531e-05,
+  "accumulation_score_avg": 65.0,
+  "breakout_type": "close跌破AVWAP且放量",
+  "window_status": "invalid",
+  "interpretation": "窗口从 2026-05-03 06:22:00 UTC 开始后被失败条件破坏：close跌破AVWAP且放量。第一版标记为 invalid_window，不进入策略执行，只保留复盘证据。"
+}

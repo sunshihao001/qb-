@@ -1,0 +1,58 @@
+{
+  "artifact_type": "runtime_hook_state",
+  "version": "v1.7",
+  "runtime_run_id": "runtime.20260509_061523.深层扫描HER本体设计系统数据连接状态_判断是否需要补全",
+  "route": "hermes_runtime_hook_autonomous_problem_loop",
+  "created_at": "2026-05-09T06:15:23Z",
+  "dry_run": true,
+  "user_request": "深层扫描HER本体设计系统数据连接状态，判断是否需要补全",
+  "task_classification": {
+    "complexity": "complex",
+    "risk": "medium",
+    "requires_apur": true,
+    "reason": "matched_runtime_hook_trigger"
+  },
+  "hooks": {
+    "router_hook": "done",
+    "problem_passport_hook": "done",
+    "judgment_governance_hook": "done",
+    "apur_execution_hook": "done",
+    "tool_ledger_hook": "done",
+    "verification_hook": "done",
+    "reliability_calibration_hook": "done",
+    "recovery_hook": "not_required",
+    "learning_writeback_hook": "done",
+    "completion_audit_hook": "done"
+  },
+  "linked_artifacts": {
+    "problem_passport": "14_runtime_hooks/runtime_runs/runtime.20260509_061523.深层扫描HER本体设计系统数据连接状态_判断是否需要补全/problem_passport.md",
+    "judgment_governance": "/root/sikk-gmgn/hermes_harness/15_judgment_governance/runs/judgment.20260509_061523.深层扫描HER本体设计系统数据连接状态_判断是否需要补全",
+    "reliability_calibration": "/root/sikk-gmgn/hermes_harness/16_reliability_calibration/runs/calibration.20260509_061523.深层扫描HER本体设计系统数据连接状态_判断是否需要补全",
+    "apur_loop_state": "14_runtime_hooks/runtime_runs/runtime.20260509_061523.深层扫描HER本体设计系统数据连接状态_判断是否需要补全/apur_stub_loop_state.json",
+    "tool_ledger": "14_runtime_hooks/runtime_runs/runtime.20260509_061523.深层扫描HER本体设计系统数据连接状态_判断是否需要补全/tool_ledger.jsonl",
+    "completion_audit": "14_runtime_hooks/runtime_runs/runtime.20260509_061523.深层扫描HER本体设计系统数据连接状态_判断是否需要补全/runtime_completion_audit.md",
+    "memory_queue": "04_memory/memory_write_queue.jsonl"
+  },
+  "status": "COMPLETED",
+  "verification": {
+    "overall_passed": true,
+    "checks": {
+      "runtime_state_exists": true,
+      "tool_ledger_exists": true,
+      "judgment_governance_hook": true,
+      "reliability_calibration_hook": true,
+      "verification_passed": true,
+      "learning_queued": true,
+      "final_report_exists": true
+    }
+  },
+  "completion_definition": [
+    "runtime_state_exists",
+    "tool_ledger_exists",
+    "verification_passed",
+    "judgment_governance_done",
+    "reliability_calibration_done",
+    "learning_queued",
+    "final_report_exists"
+  ]
+}

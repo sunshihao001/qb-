@@ -1,0 +1,14 @@
+{
+  "task_id": "hermes.task.20260506.140632.hermes_harness_v11",
+  "checkpoint_id": "checkpoint.phase_02_resume_foundation",
+  "completed_phase": "phase_02_resume_foundation",
+  "verified": true,
+  "next_phase": "phase_03_runtime_audit",
+  "resume_command": "continue from phase_03_runtime_audit using active_task_state.json",
+  "required_context_files": [
+    "03_task_runtime/active_task_context.md",
+    "03_task_runtime/phase_plan.md",
+    "03_task_runtime/execution_loop_log.jsonl",
+    "03_task_runtime/command_log.jsonl"
+  ]
+}

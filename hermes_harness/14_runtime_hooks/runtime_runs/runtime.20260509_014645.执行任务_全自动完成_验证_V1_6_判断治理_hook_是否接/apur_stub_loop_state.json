@@ -1,0 +1,18 @@
+{
+  "artifact_type": "apur_runtime_hook_stub",
+  "version": "v1.4",
+  "route": "problem_understanding_closed_loop_resolution",
+  "states": [
+    "intake",
+    "understanding",
+    "evidence",
+    "hypothesis",
+    "root_cause",
+    "solution",
+    "execution",
+    "verification",
+    "recovery",
+    "writeback"
+  ],
+  "overall_passed": true
+}

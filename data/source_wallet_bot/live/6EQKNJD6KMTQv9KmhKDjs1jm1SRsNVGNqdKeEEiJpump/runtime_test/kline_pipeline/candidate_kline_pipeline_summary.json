@@ -1,0 +1,16 @@
+{
+  "模块": "SIKK 候选币 K线接入管道",
+  "扫描时间": "2026-05-10T17:35:47Z",
+  "候选来源": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/gmgn_new_token_filter/token_candidates.json",
+  "处理等级": [
+    "S3_进入SIKK结构分析"
+  ],
+  "处理统计": {
+    "读取候选数": 0,
+    "处理候选数": 0,
+    "成功数量": 0,
+    "失败数量": 0
+  },
+  "处理结果": [],
+  "说明": "本管道只读取 GMGN K线并运行吸筹窗口识别，不执行交易。"
+}

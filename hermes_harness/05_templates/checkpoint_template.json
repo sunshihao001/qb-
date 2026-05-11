@@ -1,0 +1,14 @@
+{
+  "task_id": "hermes.task.YYYYMMDD.HHMMSS.slug",
+  "checkpoint_id": "checkpoint.phase_00",
+  "completed_phase": "phase_00",
+  "verified": false,
+  "next_phase": "phase_01",
+  "resume_command": "continue from phase_01 using active_task_state.json",
+  "required_context_files": [
+    "03_task_runtime/active_task_context.md",
+    "03_task_runtime/phase_plan.md",
+    "03_task_runtime/execution_loop_log.jsonl",
+    "03_task_runtime/command_log.jsonl"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "v1.3",
+  "route": "problem_understanding_closed_loop_resolution",
+  "description": "State schema for Hermes Harness V1.3 autonomous problem understanding and closed-loop resolution tasks.",
+  "required_states": [
+    "S0_intake",
+    "S1_understanding",
+    "S2_evidence_collection",
+    "S3_hypothesis_generation",
+    "S4_root_cause_localization",
+    "S5_solution_generation",
+    "S6_execution",
+    "S7_verification",
+    "S8_failure_recovery",
+    "S9_retrospective_writeback"
+  ],
+  "state_contracts": {
+    "S0_intake": ["raw_input", "explicit_request", "inferred_intent", "affected_systems", "risk_boundary", "permission_requirement", "expected_artifacts"],
+    "S1_understanding": ["problem_type", "real_goal", "completion_definition", "unknowns", "evidence_needed", "initial_hypotheses"],
+    "S2_evidence_collection": ["evidence_sources", "tool_outputs", "verified_facts", "unverified_claims", "missing_evidence"],
+    "S3_hypothesis_generation": ["primary_hypothesis", "alternative_hypotheses", "disconfirming_evidence", "next_checks", "fallback_path"],
+    "S4_root_cause_localization": ["symptom", "direct_cause", "structural_cause", "control_plane_gap", "memory_or_rule_pollution"],
+    "S5_solution_generation": ["selected_solution", "rejected_solutions", "touched_paths", "risk_tier", "rollback_or_recovery", "verification_plan"],
+    "S6_execution": ["step_id", "intended_effect", "tool_used", "ledger_entry", "output", "immediate_result"],
+    "S7_verification": ["verifier", "checks", "evidence", "result_status", "remaining_risk"],
+    "S8_failure_recovery": ["failure_state", "failure_type", "impact_scope", "recovery_target_state", "next_entry_point", "circuit_breaker_status"],
+    "S9_retrospective_writeback": ["durable_lesson", "writeback_target", "validation_evidence", "pollution_risk", "version_scope", "stale_condition"]
+  },
+  "allowed_verification_statuses": ["verified", "partially_verified", "failed", "blocked", "unsafe_to_continue"],
+  "allowed_writeback_targets": ["control_plane", "workflow", "template", "verifier", "recovery_rule", "skill", "memory", "audit_note", "no_writeback"],
+  "recovery_matrix": {
+    "understanding_wrong": "S1_understanding",
+    "evidence_insufficient": "S2_evidence_collection",
+    "hypothesis_falsified": "S3_hypothesis_generation",
+    "root_cause_incomplete": "S4_root_cause_localization",
+    "solution_unsafe_or_too_broad": "S5_solution_generation",
+    "execution_failed": "S5_solution_generation",
+    "verification_failed": "S4_root_cause_localization",
+    "permission_missing": "blocked",
+    "repeated_failure": "circuit_breaker"
+  }
+}
