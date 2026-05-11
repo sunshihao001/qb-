@@ -1,0 +1,454 @@
+{
+  "generated_at": "2026-05-11T02:31:56Z",
+  "purpose": "pre-clean backup classification for SIKK data analysis assets",
+  "root": "/root/sikk-gmgn",
+  "keep_core": [
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os",
+      "exists": true,
+      "bytes": 100649,
+      "human": "98.3K",
+      "files": 109
+    },
+    {
+      "path": "/root/sikk-gmgn/hermes_harness",
+      "exists": true,
+      "bytes": 12941765,
+      "human": "12.3M",
+      "files": 1024
+    },
+    {
+      "path": "/root/sikk-gmgn/modules",
+      "exists": true,
+      "bytes": 2238009,
+      "human": "2.1M",
+      "files": 293
+    },
+    {
+      "path": "/root/sikk-gmgn/tests",
+      "exists": true,
+      "bytes": 3511085,
+      "human": "3.3M",
+      "files": 359
+    },
+    {
+      "path": "/root/sikk-gmgn/docs",
+      "exists": true,
+      "bytes": 1327229,
+      "human": "1.3M",
+      "files": 256
+    },
+    {
+      "path": "/root/sikk-gmgn/schemas",
+      "exists": true,
+      "bytes": 154870,
+      "human": "151.2K",
+      "files": 80
+    },
+    {
+      "path": "/root/sikk-gmgn/contracts",
+      "exists": true,
+      "bytes": 81936,
+      "human": "80.0K",
+      "files": 81
+    },
+    {
+      "path": "/root/sikk-gmgn/configs",
+      "exists": true,
+      "bytes": 24352,
+      "human": "23.8K",
+      "files": 23
+    },
+    {
+      "path": "/root/sikk-gmgn/scripts",
+      "exists": true,
+      "bytes": 68512,
+      "human": "66.9K",
+      "files": 15
+    },
+    {
+      "path": "/root/sikk-gmgn/tools",
+      "exists": true,
+      "bytes": 137564,
+      "human": "134.3K",
+      "files": 14
+    },
+    {
+      "path": "/root/sikk-gmgn/skills",
+      "exists": true,
+      "bytes": 83769,
+      "human": "81.8K",
+      "files": 63
+    },
+    {
+      "path": "/root/sikk-gmgn/knowledge",
+      "exists": true,
+      "bytes": 2866366,
+      "human": "2.7M",
+      "files": 56
+    },
+    {
+      "path": "/root/sikk-gmgn/shared_handoff",
+      "exists": true,
+      "bytes": 145354,
+      "human": "141.9K",
+      "files": 74
+    },
+    {
+      "path": "/root/sikk-gmgn/task_books",
+      "exists": true,
+      "bytes": 188115,
+      "human": "183.7K",
+      "files": 60
+    },
+    {
+      "path": "/root/sikk-gmgn/audits",
+      "exists": true,
+      "bytes": 242924,
+      "human": "237.2K",
+      "files": 25
+    },
+    {
+      "path": "/root/sikk-gmgn/AGENTS.md",
+      "exists": true,
+      "bytes": 2968,
+      "human": "2968B",
+      "files": 1
+    }
+  ],
+  "backup_first": [
+    {
+      "path": "/root/sikk-gmgn/data/source_wallet_bot",
+      "exists": true,
+      "bytes": 32060007,
+      "human": "30.6M",
+      "files": 2293
+    },
+    {
+      "path": "/root/sikk-gmgn/data/stable_trader_os",
+      "exists": true,
+      "bytes": 7953628,
+      "human": "7.6M",
+      "files": 226
+    },
+    {
+      "path": "/root/sikk-gmgn/data/shared_handoff",
+      "exists": true,
+      "bytes": 6137,
+      "human": "6.0K",
+      "files": 1
+    },
+    {
+      "path": "/root/sikk-gmgn/data/runtime",
+      "exists": true,
+      "bytes": 473533,
+      "human": "462.4K",
+      "files": 245
+    },
+    {
+      "path": "/root/sikk-gmgn/data/gmgn_candidates_live_run/index",
+      "exists": true,
+      "bytes": 2547871,
+      "human": "2.4M",
+      "files": 9
+    },
+    {
+      "path": "/root/sikk-gmgn/data/gmgn_candidates_live_run/tokens",
+      "exists": true,
+      "bytes": 2335342,
+      "human": "2.2M",
+      "files": 594
+    },
+    {
+      "path": "/root/sikk-gmgn/data/gmgn_candidates_live_run/kline_pipeline",
+      "exists": true,
+      "bytes": 6933206,
+      "human": "6.6M",
+      "files": 603
+    },
+    {
+      "path": "/root/sikk-gmgn/data/gmgn_candidates_live_run/quote_security",
+      "exists": true,
+      "bytes": 502060,
+      "human": "490.3K",
+      "files": 193
+    },
+    {
+      "path": "/root/sikk-gmgn/data/gmgn_candidates_live_run/time_context",
+      "exists": true,
+      "bytes": 3949737,
+      "human": "3.8M",
+      "files": 8
+    },
+    {
+      "path": "/root/sikk-gmgn/data/gmgn_candidates_live_run/candidate_signal_outputs",
+      "exists": true,
+      "bytes": 483301,
+      "human": "472.0K",
+      "files": 518
+    },
+    {
+      "path": "/root/sikk-gmgn/data/gmgn_candidates_live_run/paper_live",
+      "exists": true,
+      "bytes": 5919510,
+      "human": "5.6M",
+      "files": 462
+    },
+    {
+      "path": "/root/sikk-gmgn/data/gmgn_candidates_live_run/site",
+      "exists": true,
+      "bytes": 8782475,
+      "human": "8.4M",
+      "files": 623
+    },
+    {
+      "path": "/root/sikk-gmgn/data/sikk_sol_full_auto_workflow",
+      "exists": true,
+      "bytes": 1218151,
+      "human": "1.2M",
+      "files": 144
+    },
+    {
+      "path": "/root/sikk-gmgn/data/sikk_sol_gmgn_okx_full_auto_run_20260507",
+      "exists": true,
+      "bytes": 87774,
+      "human": "85.7K",
+      "files": 12
+    },
+    {
+      "path": "/root/sikk-gmgn/data/sikk_sol_gmgn_okx_full_auto_run_20260507_161504",
+      "exists": true,
+      "bytes": 87862,
+      "human": "85.8K",
+      "files": 12
+    },
+    {
+      "path": "/root/sikk-gmgn/data/sikk_sol_full_auto_workflow_run_20260507_oneshot",
+      "exists": true,
+      "bytes": 62128,
+      "human": "60.7K",
+      "files": 10
+    },
+    {
+      "path": "/root/sikk-gmgn/data/6AVA_accumulation_test",
+      "exists": true,
+      "bytes": 1553681,
+      "human": "1.5M",
+      "files": 39
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/methodology",
+      "exists": true,
+      "bytes": 98121,
+      "human": "95.8K",
+      "files": 38
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/mappings",
+      "exists": true,
+      "bytes": 87612,
+      "human": "85.6K",
+      "files": 12
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/phase_00_system_constitution",
+      "exists": true,
+      "bytes": 85219,
+      "human": "83.2K",
+      "files": 17
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/phase_01_data_fact",
+      "exists": true,
+      "bytes": 25605,
+      "human": "25.0K",
+      "files": 16
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/phase_01_data_fact_layer",
+      "exists": true,
+      "bytes": 85470,
+      "human": "83.5K",
+      "files": 17
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/phase_02_wallet_structure_layer",
+      "exists": true,
+      "bytes": 93782,
+      "human": "91.6K",
+      "files": 22
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/total_control",
+      "exists": true,
+      "bytes": 9498,
+      "human": "9.3K",
+      "files": 11
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/acceptance",
+      "exists": true,
+      "bytes": 11301,
+      "human": "11.0K",
+      "files": 5
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/corpus",
+      "exists": true,
+      "bytes": 13930,
+      "human": "13.6K",
+      "files": 18
+    },
+    {
+      "path": "/root/sikk-gmgn/reports/system_audit",
+      "exists": true,
+      "bytes": 172963,
+      "human": "168.9K",
+      "files": 66
+    },
+    {
+      "path": "/root/sikk-gmgn/reports/source_wallet_bot",
+      "exists": true,
+      "bytes": 25289,
+      "human": "24.7K",
+      "files": 3
+    },
+    {
+      "path": "/root/sikk-gmgn/reports/intel_bot",
+      "exists": true,
+      "bytes": 175,
+      "human": "175.0B",
+      "files": 1
+    },
+    {
+      "path": "/root/sikk-gmgn/reports/runtime",
+      "exists": true,
+      "bytes": 106222,
+      "human": "103.7K",
+      "files": 82
+    },
+    {
+      "path": "/root/sikk-gmgn/legacy_compat",
+      "exists": true,
+      "bytes": 12519849,
+      "human": "11.9M",
+      "files": 25
+    },
+    {
+      "path": "/root/sikk-gmgn/imports/staging",
+      "exists": true,
+      "bytes": 691903,
+      "human": "675.7K",
+      "files": 94
+    },
+    {
+      "path": "/root/sikk-gmgn/钱包数据分析",
+      "exists": true,
+      "bytes": 7922533,
+      "human": "7.6M",
+      "files": 30
+    },
+    {
+      "path": "/root/sikk-gmgn/结构分析",
+      "exists": true,
+      "bytes": 3682415,
+      "human": "3.5M",
+      "files": 18
+    }
+  ],
+  "archive_then_clean": [
+    {
+      "path": "/root/sikk-gmgn/research_loop/state/wallet_data_semantic_classification_v2",
+      "exists": true,
+      "bytes": 61037983,
+      "human": "58.2M",
+      "files": 13
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/state/wallet_data_copy_v7",
+      "exists": true,
+      "bytes": 8362169,
+      "human": "8.0M",
+      "files": 3
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/state/wallet_data_token_index_v3",
+      "exists": true,
+      "bytes": 7515351,
+      "human": "7.2M",
+      "files": 218
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/state/wallet_data_legacy_mapping_v6",
+      "exists": true,
+      "bytes": 6608860,
+      "human": "6.3M",
+      "files": 4
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/state/wallet_data_recon_v1",
+      "exists": true,
+      "bytes": 3699839,
+      "human": "3.5M",
+      "files": 4
+    },
+    {
+      "path": "/root/sikk-gmgn/research_loop/state/wallet_data_passports_v4",
+      "exists": true,
+      "bytes": 73573,
+      "human": "71.8K",
+      "files": 2
+    },
+    {
+      "path": "/root/sikk-gmgn/reports/review_ops_bot",
+      "exists": true,
+      "bytes": 27510335,
+      "human": "26.2M",
+      "files": 32
+    },
+    {
+      "path": "/root/sikk-gmgn/data/gmgn_candidates_live_run_20260501T082334Z",
+      "exists": true,
+      "bytes": 1810324,
+      "human": "1.7M",
+      "files": 204
+    },
+    {
+      "path": "/root/sikk-gmgn/data/paper_live_20260501T082334Z",
+      "exists": true,
+      "bytes": 1043,
+      "human": "1.0K",
+      "files": 7
+    },
+    {
+      "path": "/root/sikk-gmgn/runtime_logs",
+      "exists": true,
+      "bytes": 500415,
+      "human": "488.7K",
+      "files": 425
+    },
+    {
+      "path": "/root/sikk-gmgn/outputs",
+      "exists": true,
+      "bytes": 196022,
+      "human": "191.4K",
+      "files": 55
+    }
+  ],
+  "safe_delete_after_backup": [
+    {
+      "path": "/root/sikk-gmgn/__pycache__",
+      "exists": true,
+      "bytes": 1775370,
+      "human": "1.7M",
+      "files": 88
+    },
+    {
+      "path": "/root/sikk-gmgn/.pytest_cache",
+      "exists": true,
+      "bytes": 63669,
+      "human": "62.2K",
+      "files": 5
+    }
+  ]
+}
