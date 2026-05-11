@@ -1,0 +1,15 @@
+Cleanup start: 20260511T035223Z
+Plan: /root/sikk-gmgn/research_loop/plans/data_cleanup_20260511/archive_then_remove_paths.txt
+ARCHIVED: research_loop/state/wallet_data_semantic_classification_v2 -> /root/sikk-archive/research_loop/state/wallet_data_semantic_classification_v2 | backed-up historical run/state/report output; move to /root/sikk-archive after GitHub backup
+ARCHIVED: research_loop/state/wallet_data_copy_v7 -> /root/sikk-archive/research_loop/state/wallet_data_copy_v7 | backed-up historical run/state/report output; move to /root/sikk-archive after GitHub backup
+ARCHIVED: research_loop/state/wallet_data_token_index_v3 -> /root/sikk-archive/research_loop/state/wallet_data_token_index_v3 | backed-up historical run/state/report output; move to /root/sikk-archive after GitHub backup
+ARCHIVED: research_loop/state/wallet_data_legacy_mapping_v6 -> /root/sikk-archive/research_loop/state/wallet_data_legacy_mapping_v6 | backed-up historical run/state/report output; move to /root/sikk-archive after GitHub backup
+ARCHIVED: research_loop/state/wallet_data_recon_v1 -> /root/sikk-archive/research_loop/state/wallet_data_recon_v1 | backed-up historical run/state/report output; move to /root/sikk-archive after GitHub backup
+ARCHIVED: reports/review_ops_bot -> /root/sikk-archive/reports/review_ops_bot | backed-up historical run/state/report output; move to /root/sikk-archive after GitHub backup
+ARCHIVED: data/gmgn_candidates_live_run_20260501T082334Z -> /root/sikk-archive/data/gmgn_candidates_live_run_20260501T082334Z | backed-up historical run/state/report output; move to /root/sikk-archive after GitHub backup
+ARCHIVED: data/paper_live_20260501T082334Z -> /root/sikk-archive/data/paper_live_20260501T082334Z | backed-up historical run/state/report output; move to /root/sikk-archive after GitHub backup
+ARCHIVED: runtime_logs -> /root/sikk-archive/runtime_logs | backed-up historical run/state/report output; move to /root/sikk-archive after GitHub backup
+ARCHIVED: outputs -> /root/sikk-archive/outputs | backed-up historical run/state/report output; move to /root/sikk-archive after GitHub backup
+QUARANTINED: __pycache__ -> /root/sikk-archive/quarantine/__pycache__ | cache only; move to /root/sikk-archive/quarantine instead of direct delete
+QUARANTINED: .pytest_cache -> /root/sikk-archive/quarantine/.pytest_cache | cache only; move to /root/sikk-archive/quarantine instead of direct delete
+Cleanup done
