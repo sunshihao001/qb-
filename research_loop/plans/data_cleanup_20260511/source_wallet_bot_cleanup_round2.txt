@@ -1,0 +1,14 @@
+# source_wallet_bot cleanup round2
+# KEEP = strong preserve, REVIEW = consider selective shrink only, MOVE = archive candidate
+KEEP	data/source_wallet_bot/live	primary wallet-structure analysis runtime and fixtures
+KEEP	data/source_wallet_bot/registry	registry and inventory support for source-wallet analysis
+KEEP	data/source_wallet_bot/schemas	schema contracts for wallet-structure outputs
+KEEP	data/source_wallet_bot/paper	paper-run evidence and reports for analysis verification
+KEEP	data/source_wallet_bot/replay	replay fixtures for regression and verification
+KEEP	data/source_wallet_bot/audit	audit index and board references
+KEEP	data/source_wallet_bot/system_audit_20260508_014528	system audit evidence
+KEEP	data/source_wallet_bot/_template_token	template token layout for future runs
+KEEP	data/source_wallet_bot/backtest	reserved placeholder; keep until confirmed empty
+REVIEW	data/source_wallet_bot/legacy	largest historical bucket; keep directory, shrink internals only
+REVIEW	data/source_wallet_bot/auto_tasks	automation outputs; keep workflow, prune redundant runs
+REVIEW	data/source_wallet_bot/ad_hoc	ad hoc experiments; retain only representative examples
