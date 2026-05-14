@@ -33,7 +33,11 @@ PY
 if [ $? -ne 0 ]; then fail=1; fi
 if [ -f requirements.txt ] || [ -f pyproject.toml ]; then
   echo "PASS dependency_lock_present"
+  if [ -f requirements.txt ]; then
+    echo "PASS requirements_txt_present"
+  fi
 else
   echo "WARN dependency_lock_missing: restore can clone/check, but environment install is best-effort"
 fi
+check_exec "备份恢复/scripts/run_restore_smoke_test.sh"
 exit "$fail"

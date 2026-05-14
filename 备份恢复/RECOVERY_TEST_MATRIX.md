@@ -72,10 +72,11 @@
 - 通过标准：返回版本
 - 失败处理：环境 gap，不代表代码备份失败
 
-- 检查项：依赖锁存在
+- 检查项：依赖入口存在
 - 命令：`test -f requirements.txt || test -f pyproject.toml`
-- 当前状态：已知 gap，当前备份未发现统一依赖锁
-- 处理建议：下一轮备份前补 `requirements.txt` 或 `pyproject.toml`
+- 当前状态：已补 `requirements.txt`
+- 通过标准：fresh checkout 后可执行 `pip install -r requirements.txt`
+- 处理建议：如果后续引入更多外部库，同步更新 `requirements.txt`
 
 ## F. 可展开恢复结论
 

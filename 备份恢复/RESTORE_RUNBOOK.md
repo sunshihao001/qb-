@@ -86,9 +86,9 @@ git rev-parse HEAD
 
 ## 6. 环境恢复
 
-当前备份包没有强制依赖锁文件。恢复时按以下顺序处理：
+当前备份包包含根目录 `requirements.txt` 作为最小依赖恢复入口。恢复时按以下顺序处理：
 
-1. 如果未来存在 `requirements.txt`：
+1. 使用 `requirements.txt` 建立隔离 Python 环境：
 
 ```bash
 python3 -m venv .venv

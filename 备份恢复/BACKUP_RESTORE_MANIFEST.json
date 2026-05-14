@@ -44,6 +44,7 @@
     "acceptance_template": "备份恢复/RESTORE_ACCEPTANCE_TEMPLATE.md"
   },
   "minimum_acceptance_commands": [
+    "bash 备份恢复/scripts/check_restore_readiness.sh",
     "python3 tools/validate_directory_constitution.py",
     "python3 tools/validate_system_directory_governance.py",
     "python3 -m pytest tests/test_wallet_data_guard.py tests/test_wallet_data_guard_legacy_quarantine.py tests/test_sikk_transaction_broadcast_guard.py"
@@ -58,7 +59,6 @@
     "RESTORE_ACCEPTANCE_REPORT.md generated in target directory"
   ],
   "known_gaps": [
-    "No universal requirements.txt or pyproject.toml was found during package creation; dependency install is best-effort unless a later backup adds a lock file.",
     "Large runtime data and external live data sources may require separate data snapshot manifests if not included in git.",
     "Connected Telegram gateway credentials must be re-injected manually and are not part of backup."
   ]

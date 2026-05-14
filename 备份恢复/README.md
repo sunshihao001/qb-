@@ -23,6 +23,17 @@
 - `scripts/restore_from_backup.sh`：从 GitHub 分支恢复到隔离目录并执行最小验收。
 - `scripts/check_restore_readiness.sh`：在当前仓库静态检查恢复包是否完整。
 - `scripts/create_backup_snapshot.sh`：后续创建新备份分支的最小脚本模板。
+- `scripts/run_restore_smoke_test.sh`：从当前备份分支执行一次真实 clone/checkout/验收演练，并把结果写入 `备份恢复/results/latest_restore_result.md`。
+
+## 依赖恢复入口
+
+本分支现在包含根目录 `requirements.txt`，用于 fresh checkout 后安装最小恢复/验收依赖：
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+```
 
 ## 最短恢复命令
 
