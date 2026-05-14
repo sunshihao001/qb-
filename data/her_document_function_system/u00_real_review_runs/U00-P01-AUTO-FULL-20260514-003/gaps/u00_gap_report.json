@@ -1,0 +1,142 @@
+{
+  "status": "U00_REAL_READY_WITH_GAPS",
+  "gaps": [
+    {
+      "case_id": "review_case_gap_sample_001_v00_test_not_executed",
+      "case_type": "GAP_CASE",
+      "source_phase": "UNKNOWN",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "sample replay does not execute real tests",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      ],
+      "gap_refs": [
+        "gap_sample_001_v00_test_not_executed"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "gap_sample_001_v00_test_not_executed",
+        "gap_level": "NON_BLOCKING_GAP",
+        "reason": "sample replay does not execute real tests",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      }
+    },
+    {
+      "case_id": "review_case_gap_sample_001_g00_policy_not_active",
+      "case_type": "GAP_CASE",
+      "source_phase": "UNKNOWN",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "governance output is candidate only",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      ],
+      "gap_refs": [
+        "gap_sample_001_g00_policy_not_active"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "gap_sample_001_g00_policy_not_active",
+        "gap_level": "NON_BLOCKING_GAP",
+        "reason": "governance output is candidate only",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      }
+    },
+    {
+      "case_id": "review_case_gap_sample_001_r00_not_required",
+      "case_type": "GAP_CASE",
+      "source_phase": "UNKNOWN",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "runner binding skipped in sample replay",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      ],
+      "gap_refs": [
+        "gap_sample_001_r00_not_required"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "gap_sample_001_r00_not_required",
+        "gap_level": "NON_BLOCKING_GAP",
+        "reason": "runner binding skipped in sample replay",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      }
+    },
+    {
+      "case_id": "review_case_gap_sample_001_v00_test_not_executed",
+      "case_type": "GAP_CASE",
+      "source_phase": "UNKNOWN",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "sample replay does not execute real tests",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      ],
+      "gap_refs": [
+        "gap_sample_001_v00_test_not_executed"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "gap_sample_001_v00_test_not_executed",
+        "gap_level": "NON_BLOCKING_GAP",
+        "reason": "sample replay does not execute real tests",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      }
+    },
+    {
+      "case_id": "review_case_gap_sample_001_g00_policy_not_active",
+      "case_type": "GAP_CASE",
+      "source_phase": "UNKNOWN",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "governance output is candidate only",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      ],
+      "gap_refs": [
+        "gap_sample_001_g00_policy_not_active"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "gap_sample_001_g00_policy_not_active",
+        "gap_level": "NON_BLOCKING_GAP",
+        "reason": "governance output is candidate only",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      }
+    },
+    {
+      "case_id": "review_case_gap_sample_001_r00_not_required",
+      "case_type": "GAP_CASE",
+      "source_phase": "UNKNOWN",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "runner binding skipped in sample replay",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      ],
+      "gap_refs": [
+        "gap_sample_001_r00_not_required"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "gap_sample_001_r00_not_required",
+        "gap_level": "NON_BLOCKING_GAP",
+        "reason": "runner binding skipped in sample replay",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      }
+    }
+  ],
+  "blocking_gaps": [],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_downstream_task_directly",
+    "modify_production_rules_directly",
+    "drop_unresolved_gaps",
+    "convert_ready_with_gaps_to_ready"
+  ]
+}

@@ -1,0 +1,9 @@
+closed_loop_trace_integrity_record:
+  validation_id: I05_TRACE_INTEGRITY_20260512_01
+  generated_at: '2026-05-12T15:30:01Z'
+mode: SKELETON_VALIDATION
+source_doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  trace_chain_complete: false
+  available_trace_refs: [/root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/trace/i04_runtime_trace.yaml]
+  missing_trace_refs: [p09_replay_trace, p10_upgrade_trace]
+  status: READY_WITH_GAPS

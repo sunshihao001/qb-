@@ -1,0 +1,13 @@
+phase_state_machine:
+  states: [PHASE_NOT_STARTED, PHASE_INPUT_CHECK, PHASE_CONTEXT_LOADED, PHASE_TASK_TREE_COMPILED, PHASE_EXECUTION_RUNNING, PHASE_OUTPUT_GENERATED, PHASE_ACCEPTANCE_RUNNING, PHASE_READY, PHASE_READY_WITH_GAPS, PHASE_REJECTED, PHASE_NEEDS_REWORK, PHASE_BLOCKED, HANDOFF_READY]
+  transitions:
+    - {from: PHASE_NOT_STARTED, to: PHASE_INPUT_CHECK, condition: phase_selected}
+    - {from: PHASE_INPUT_CHECK, to: PHASE_CONTEXT_LOADED, condition: required_input_contracts_valid}
+    - {from: PHASE_CONTEXT_LOADED, to: PHASE_TASK_TREE_COMPILED, condition: task_tree_created}
+    - {from: PHASE_TASK_TREE_COMPILED, to: PHASE_EXECUTION_RUNNING, condition: tasks_ready}
+    - {from: PHASE_EXECUTION_RUNNING, to: PHASE_OUTPUT_GENERATED, condition: expected_artifacts_created}
+    - {from: PHASE_OUTPUT_GENERATED, to: PHASE_ACCEPTANCE_RUNNING, condition: acceptance_gate_started}
+    - {from: PHASE_ACCEPTANCE_RUNNING, to: PHASE_READY, condition: all_required_checks_passed}
+    - {from: PHASE_ACCEPTANCE_RUNNING, to: PHASE_READY_WITH_GAPS, condition: non_blocking_gaps_exist}
+    - {from: PHASE_ACCEPTANCE_RUNNING, to: PHASE_REJECTED, condition: blocking_failure_detected}
+    - {from: PHASE_READY, to: HANDOFF_READY, condition: handoff_packet_generated}

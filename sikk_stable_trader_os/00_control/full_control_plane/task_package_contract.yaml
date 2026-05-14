@@ -1,0 +1,8 @@
+phase_task_package_contract:
+  required_sections: [package_id, package_name, target_plane, target_controller, created_at, created_by, input_context, execution_scope, task_tree, validation, output, recovery]
+  execution_scope_required: [must_create_files, must_update_files, must_not_touch_files, allowed_directories, forbidden_directories]
+  recovery_defaults:
+    on_missing_input: REQUIRE_INPUT_BACKFILL
+    on_contract_mismatch: BLOCK_AND_REPORT
+    on_acceptance_failure: MARK_NEEDS_REWORK
+    on_partial_completion: MARK_READY_WITH_GAPS

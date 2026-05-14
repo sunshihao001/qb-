@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Priority model",
+  "type": "object",
+  "required": [
+    "queue_item_id",
+    "priority",
+    "priority_reason",
+    "execution_window"
+  ],
+  "properties": {
+    "queue_item_id": {
+      "type": "string"
+    },
+    "priority": {
+      "enum": [
+        "P0_CRITICAL",
+        "P1_HIGH",
+        "P2_MEDIUM",
+        "P3_LOW",
+        "P4_BACKLOG"
+      ]
+    },
+    "priority_reason": {
+      "type": "array"
+    },
+    "execution_window": {
+      "type": "string"
+    },
+    "defer_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

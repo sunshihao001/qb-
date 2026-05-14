@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 handoff packet schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "evidence_bundle_refs",
+    "readiness_certificate_refs",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "handoff_status"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "from_phase": {
+      "const": "A00"
+    },
+    "to_phase": {
+      "enum": [
+        "H00",
+        "U00",
+        "G00",
+        "DOWNSTREAM"
+      ]
+    },
+    "source_doc_refs": {
+      "type": "array"
+    },
+    "k00_refs": {
+      "type": "array"
+    },
+    "f00_refs": {
+      "type": "array"
+    },
+    "v00_refs": {
+      "type": "array"
+    },
+    "r00_refs": {
+      "type": "array"
+    },
+    "evidence_bundle_refs": {
+      "type": "array"
+    },
+    "phase_status_matrix_refs": {
+      "type": "array"
+    },
+    "artifact_manifest_refs": {
+      "type": "array"
+    },
+    "gap_propagation_refs": {
+      "type": "array"
+    },
+    "trace_audit_refs": {
+      "type": "array"
+    },
+    "acceptance_scorecard_refs": {
+      "type": "array"
+    },
+    "readiness_certificate_refs": {
+      "type": "array"
+    },
+    "failure_refs": {
+      "type": "array"
+    },
+    "recovery_refs": {
+      "type": "array"
+    },
+    "allowed_next_actions": {
+      "type": "array"
+    },
+    "forbidden_next_actions": {
+      "type": "array",
+      "contains": {
+        "enum": [
+          "live_runtime",
+          "wallet_signing",
+          "auto_deploy",
+          "production_trading"
+        ]
+      }
+    },
+    "unresolved_gaps": {
+      "type": "array"
+    },
+    "accepted_risks": {
+      "type": "array"
+    },
+    "handoff_status": {
+      "enum": [
+        "HANDOFF_READY",
+        "HANDOFF_READY_WITH_GAPS",
+        "HANDOFF_BLOCKED"
+      ]
+    }
+  }
+}

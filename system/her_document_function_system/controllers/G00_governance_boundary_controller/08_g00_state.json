@@ -1,0 +1,42 @@
+{
+  "phase_id": "G00",
+  "phase_name": "G00_governance_boundary_controller",
+  "status": "G00_READY_WITH_GAPS",
+  "previous_status": "DESIGN_BLUEPRINT_READY",
+  "execution_status": "NOT_EXECUTED",
+  "subphase_status_map": {
+    "G00.0": "PENDING",
+    "G00.1": "PENDING",
+    "G00.2": "PENDING",
+    "G00.3": "PENDING",
+    "G00.4": "PENDING",
+    "G00.5": "PENDING",
+    "G00.6": "PENDING",
+    "G00.7": "PENDING",
+    "G00.8": "PENDING",
+    "G00.9": "PENDING",
+    "G00.10": "PENDING",
+    "G00.11": "PENDING",
+    "G00.12": "PENDING",
+    "G00.13": "PENDING",
+    "G00.14": "PENDING",
+    "G00.15": "PENDING",
+    "G00.16": "PENDING",
+    "G00.17": "PENDING"
+  },
+  "preflight_status": "PENDING",
+  "policy_status": "PENDING",
+  "registry_status": "PENDING",
+  "handoff_status": "PENDING",
+  "safe_mode": true,
+  "unresolved_gaps": [
+    "runtime implementation not yet executed"
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ],
+  "updated_at": "2026-05-13T15:10:00+00:00"
+}

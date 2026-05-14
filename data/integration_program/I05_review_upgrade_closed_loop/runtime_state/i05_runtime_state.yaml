@@ -1,0 +1,45 @@
+i05_runtime_state:
+  state_id: I05_RUNTIME_STATE_20260512_01
+  updated_at: '2026-05-12T16:03:17Z'
+  status: I05_AUTOMATION_READY_WITH_GAPS
+  mode: dry-run
+  current_task_packet: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/automation_task_packages/i05_full_automation_task_packet.yaml
+  current_issue_package: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/automation_task_packages/i05_automated_issue_list_package.yaml
+  next_allowed_routes:
+  - REPLAY_FIXTURE_TASK_QUEUE
+  - GOVERNANCE_REVIEW
+  - DRY_RUN_VALIDATION
+  forbidden_routes:
+  - LIVE_EXECUTION
+  - WALLET_SIGNING
+  - AUTO_DEPLOY
+  - DIRECT_RULE_MUTATION
+  - PAPER_RUNTIME_MUTATION_WITHOUT_TEST
+  open_gaps:
+  - issue_id: I05_GAP_REAL_REPLAY_CASES
+    priority: P1
+    category: REAL_REPLAY_EVIDENCE
+    target_path: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop
+    problem_cn: 真实多案例 paper runtime replay 证据尚未接入。
+    auto_action_cn: 保留为下一轮自动任务，不提升为 READY。
+    status: OPEN
+  - issue_id: I05_GAP_P09_P10_FIXTURE
+    priority: P1
+    category: P09_P10_FIXTURE
+    target_path: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop
+    problem_cn: P09→P10 candidate handoff 与 P10 controlled package fixture 仍需真实样本。
+    auto_action_cn: 保留为下一轮自动任务，不提升为 READY。
+    status: OPEN
+  - issue_id: I05_GAP_CI_DRY_RUN
+    priority: P2
+    category: RUNNER_CI
+    target_path: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop
+    problem_cn: I05 runner 已可 dry-run，但尚未接 CI/定时回放。
+    auto_action_cn: 保留为下一轮自动任务，不提升为 READY。
+    status: OPEN
+  restrictions:
+    live_execution_allowed: false
+    wallet_signing_allowed: false
+    auto_deploy_allowed: false
+    direct_rule_mutation_allowed: false
+    paper_runtime_mutation_allowed: false

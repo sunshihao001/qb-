@@ -1,0 +1,29 @@
+{
+  "review_cases": [
+    {
+      "case_id": "review_case_no_gap_inputs_loaded",
+      "case_type": "READY_WITH_GAPS_CASE",
+      "source_phase": "U00_REAL",
+      "severity": "HIGH_GAP",
+      "symptom": "No gap inputs were loaded; review can only emit recovery/backlog evidence.",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/a00_real_20260514_000000/handoffs/h00_to_u00_ref.json",
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/a00_real_20260514_000000/handoffs/a00_to_h00_ref.json",
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/a00_real_20260514_000000/evidence/pipeline_evidence_bundle.json",
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/a00_real_20260514_000000/state/stage_state_matrix.json",
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/a00_real_20260514_000000/queue/pipeline_queue.json",
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/a00_real_20260514_000000/gaps/pipeline_gap_register.json",
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/a00_real_20260514_000000/gaps/unresolved_gaps.json",
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/a00_real_20260514_000000/gaps/accepted_risks.json",
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/a00_real_20260514_000000/trace/o00_trace.jsonl",
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/a00_real_20260514_000000/trace/o00_audit.jsonl"
+      ],
+      "gap_refs": [
+        "gap_u00_real_missing_gap_inputs"
+      ],
+      "current_status": "OPEN"
+    }
+  ],
+  "total_cases": 1
+}

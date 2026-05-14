@@ -1,0 +1,21 @@
+registry_id: runtime_absorption_validation_runner_registry_v1
+created_at: "2026-05-14T20:34:54Z"
+validators:
+  required_file_presence:
+    runner: filesystem_presence_check
+    validates: [P01, P02, P03, P04, P05, P06, P07, P08, P09]
+  trace_completeness:
+    runner: runtime_absorption_trace_validator
+    required_fields: [phase_id, input_files, output_files, runner_used, decision, evidence_level, counter_evidence, missing_fields, status, failure_reason, downstream_handoff]
+  strategy_gate_consumption:
+    runner: upstream_consumption_check
+    validates: [P07]
+    required_inputs: [P01, P02, P03, P04, P05, P06]
+  paper_only_gate:
+    runner: paper_runner_gate_check
+    validates: [P08]
+    forbidden: [real_swap, signing, private_key, broadcast]
+  review_containment:
+    runner: p09_p10_containment_check
+    validates: [P09]
+    rule: failure/review may only write issue registry and P10 candidate package

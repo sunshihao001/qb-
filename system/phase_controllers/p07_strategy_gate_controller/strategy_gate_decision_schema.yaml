@@ -1,0 +1,7 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: STRATEGY_GATE_DECISION_SCHEMA
+required_fields: [decision_id, candidate_id, token_address, generated_at, final_decision, decision_basis, decision_reason_cn, next_step, downstream_permission, invalidation_bindings, audit]
+final_decision_enum: [OBSERVE, PAUSE, BLOCK, PAPER_CANDIDATE, HUMAN_CONFIRMATION_REQUIRED, STRATEGY_GATE_REJECTED]
+downstream_permission: {p08_execution_risk_check_allowed: boolean, paper_runtime_allowed: false, live_execution_allowed: false}

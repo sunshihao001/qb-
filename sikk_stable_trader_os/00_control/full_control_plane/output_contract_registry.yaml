@@ -1,0 +1,41 @@
+output_contracts:
+  - contract_id: p00_full_control_plane_handoff_contract
+    produced_by: P00_FULL_CONTROL_PLANE
+    required_sections: [source_plane, target_plane, output_assets, acceptance_result, known_gaps, next_legal_stage, safety_boundary]
+    missing_policy: MARK_NEEDS_REWORK
+  - contract_id: p01_governance_plane_handoff_contract
+    produced_by: P01_GOVERNANCE_PLANE
+    required_sections: [source_plane, target_plane, output_assets, acceptance_result, known_gaps, next_legal_stage, safety_boundary]
+    missing_policy: MARK_NEEDS_REWORK
+  - contract_id: p02_domain_plane_handoff_contract
+    produced_by: P02_DOMAIN_PLANE
+    required_sections: [source_plane, target_plane, output_assets, acceptance_result, known_gaps, next_legal_stage, safety_boundary]
+    missing_policy: MARK_NEEDS_REWORK
+  - contract_id: p03_data_plane_handoff_contract
+    produced_by: P03_DATA_PLANE
+    required_sections: [source_plane, target_plane, output_assets, acceptance_result, known_gaps, next_legal_stage, safety_boundary]
+    missing_policy: MARK_NEEDS_REWORK
+  - contract_id: p04_evidence_plane_handoff_contract
+    produced_by: P04_EVIDENCE_PLANE
+    required_sections: [source_plane, target_plane, output_assets, acceptance_result, known_gaps, next_legal_stage, safety_boundary]
+    missing_policy: MARK_NEEDS_REWORK
+  - contract_id: p05_scenario_recognition_plane_handoff_contract
+    produced_by: P05_SCENARIO_RECOGNITION_PLANE
+    required_sections: [source_plane, target_plane, output_assets, acceptance_result, known_gaps, next_legal_stage, safety_boundary]
+    missing_policy: MARK_NEEDS_REWORK
+  - contract_id: p06_strategy_gate_plane_handoff_contract
+    produced_by: P06_STRATEGY_GATE_PLANE
+    required_sections: [source_plane, target_plane, output_assets, acceptance_result, known_gaps, next_legal_stage, safety_boundary]
+    missing_policy: MARK_NEEDS_REWORK
+  - contract_id: p07_execution_risk_plane_handoff_contract
+    produced_by: P07_EXECUTION_RISK_PLANE
+    required_sections: [source_plane, target_plane, output_assets, acceptance_result, known_gaps, next_legal_stage, safety_boundary]
+    missing_policy: MARK_NEEDS_REWORK
+  - contract_id: p08_review_replay_plane_handoff_contract
+    produced_by: P08_REVIEW_REPLAY_PLANE
+    required_sections: [source_plane, target_plane, output_assets, acceptance_result, known_gaps, next_legal_stage, safety_boundary]
+    missing_policy: MARK_NEEDS_REWORK
+  - contract_id: p09_self_upgrade_plane_handoff_contract
+    produced_by: P09_SELF_UPGRADE_PLANE
+    required_sections: [source_plane, target_plane, output_assets, acceptance_result, known_gaps, next_legal_stage, safety_boundary]
+    missing_policy: MARK_NEEDS_REWORK

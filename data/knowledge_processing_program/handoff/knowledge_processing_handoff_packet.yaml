@@ -1,0 +1,15 @@
+knowledge_processing_handoff_packet:
+  document_id: KPP-DOC-20260512-001
+  from: KNOWLEDGE_PROCESSING_PROGRAM_K00_K08
+  to: P00_OR_GOVERNANCE_REVIEW_FOR_SYSTEM_CONSUMPTION
+  route_status: K00_ACCEPTED_WITH_DEGRADED_GAPS
+  handoff_artifacts:
+    - /root/sikk-gmgn/system/knowledge_processing_program/knowledge_processing_controller.yaml
+    - /root/sikk-gmgn/data/knowledge_processing_program/document_passports/document_passport.yaml
+    - /root/sikk-gmgn/data/knowledge_processing_program/system_mapping/system_mapping_matrix.yaml
+    - /root/sikk-gmgn/data/knowledge_processing_program/task_packages/her_task_package.yaml
+    - /root/sikk-gmgn/data/knowledge_processing_program/acceptance/knowledge_processing_acceptance_result.yaml
+  constraints:
+    - candidate_only_until_governance_review
+    - no_runtime_or_trading_unblock
+    - preserve_raw_source

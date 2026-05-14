@@ -1,0 +1,19 @@
+{
+  "recurring_issues": [
+    {
+      "issue_type": "GOVERNANCE_POLICY_NOT_ACTIVE",
+      "frequency": 2,
+      "recurring": true
+    },
+    {
+      "issue_type": "MISSING_TEST_EXECUTION_EVIDENCE",
+      "frequency": 2,
+      "recurring": true
+    },
+    {
+      "issue_type": "RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "frequency": 2,
+      "recurring": true
+    }
+  ]
+}

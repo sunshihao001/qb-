@@ -1,0 +1,33 @@
+{
+  "expected_trace_events": [
+    "o00_started",
+    "governance_policy_loaded",
+    "pipeline_run_created",
+    "controller_registry_loaded",
+    "source_routed",
+    "k00_dispatched",
+    "k00_completed",
+    "f00_dispatched",
+    "f00_completed",
+    "v00_dispatched",
+    "v00_completed_with_gaps",
+    "r00_skipped_with_reason",
+    "a00_dispatched",
+    "a00_completed_with_gaps",
+    "h00_dispatched",
+    "h00_completed",
+    "u00_dispatched",
+    "u00_completed",
+    "g00_dispatched",
+    "g00_completed_with_gaps",
+    "pipeline_acceptance_built",
+    "o00_final_report_written"
+  ],
+  "forbidden_trace_events": [
+    "live_runtime_started",
+    "wallet_signing_requested",
+    "auto_deploy_started",
+    "production_trade_executed",
+    "test_plan_marked_as_tested"
+  ]
+}

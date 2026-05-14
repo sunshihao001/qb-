@@ -1,0 +1,44 @@
+{
+  "rules": [
+    {
+      "logic_type": "boolean_gate",
+      "description": "Missing legal K00 entry or boundary blocks F00; missing KV is non-blocking KV_GAP.",
+      "input_fields": [
+        "k00_handoff_packet",
+        "execution_boundary",
+        "write_policy"
+      ],
+      "output_status": "F00_BLOCKED_OR_PREFLIGHT_PASSED",
+      "failure_condition": "missing required handoff/boundary/write policy/repo root",
+      "trace_required": true,
+      "rule_id": "rule_func_f00_001",
+      "rule_type": "HARD_BLOCK_RULE"
+    },
+    {
+      "logic_type": "mapping_rule",
+      "description": "Each core concept maps to at least one function object with type, fields, assets, validation and handoff obligations.",
+      "input_fields": [
+        "source_concept"
+      ],
+      "output_status": "FUNCTION_MAPPED",
+      "failure_condition": "concept has no function mapping and no explicit NOT_FUNCTIONAL reason",
+      "trace_required": true,
+      "rule_id": "rule_func_f00_002",
+      "rule_type": "NEW_FUNCTION"
+    },
+    {
+      "logic_type": "status_gate",
+      "description": "Only evidence refs can upgrade status; plans cannot masquerade as execution evidence.",
+      "input_fields": [
+        "patch_refs",
+        "test_refs",
+        "runner_binding_refs"
+      ],
+      "output_status": "F00_ACCEPTED_OR_READY_WITH_GAPS_OR_BLOCKED",
+      "failure_condition": "claim exceeds evidence",
+      "trace_required": true,
+      "rule_id": "rule_func_f00_003",
+      "rule_type": "GOVERNANCE_RULE"
+    }
+  ]
+}

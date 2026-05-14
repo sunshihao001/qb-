@@ -1,0 +1,111 @@
+{
+  "doc_id": "DOC-20260511-018",
+  "overall_passed": true,
+  "passed": 20,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "context_md_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/context.md"
+    },
+    {
+      "name": "controller_yaml_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/controller.yaml"
+    },
+    {
+      "name": "candidate_template_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/phase_controller_candidates/phase_controller_candidate_spec.template.yaml"
+    },
+    {
+      "name": "handoff_template_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet.template.json"
+    },
+    {
+      "name": "concrete_candidate_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/phase_controller_candidates/DOC-20260511-018_phase_controller_candidate_spec.yaml"
+    },
+    {
+      "name": "concrete_handoff_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-018.json"
+    },
+    {
+      "name": "passport_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260511-018.yaml"
+    },
+    {
+      "name": "controller_yaml_parseable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate_template_yaml_parseable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "handoff_template_json_parseable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "handoff_target_is_p00",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "controller_forbids_formal_registration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "controller_has_required_outputs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "controller_has_acceptance_gate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "controller_has_blocking_conditions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate_status_not_registered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate_no_p01_ready_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "paper_only_true",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "real_trade_enabled_false",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "p01_not_ready",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "created_at": "2026-05-11T14:40:47+00:00",
+  "next_legal_stage": "P00_system_bootstrap_controller",
+  "p01_allowed": false
+}

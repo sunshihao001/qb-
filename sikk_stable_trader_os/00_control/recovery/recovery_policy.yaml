@@ -1,0 +1,20 @@
+policy_id: RECOVERY_POLICY_BOOTSTRAP_001
+cases:
+- case: current_system_state.json corrupted
+  recovery: restore latest snapshot then validate schema and force safety boundary
+    false/true values
+- case: phase_registry.yaml corrupted
+  recovery: restore latest snapshot or regenerate from current_system_state stage_status
+- case: next_stage_decision conflict
+  recovery: current_system_state wins; rewrite next_stage_decision
+- case: P01 mislabeled READY
+  recovery: force P01_data_fact_controller to BLOCKED_BY_DATA_PLANE and record P0_CONTROL
+    event
+- case: real_trade_enabled true
+  recovery: force false, add hard blocker, record P0_SECURITY event
+- case: HER interrupted
+  recovery: read current_system_state, task_queue.bootstrap, event log; resume from
+    last non-terminal queued task
+- case: P00 execution partial failure
+  recovery: restore snapshots, keep P01 blocked, rerun validation rules before any
+    next stage

@@ -1,0 +1,30 @@
+{
+  "queue_id": "h00_queue_her_doc_full_gap_scan_run",
+  "queue_status": "QUEUE_READY_WITH_GAPS",
+  "items": [
+    {
+      "queue_item_id": "queue_item_001",
+      "source_gap": "gap_001",
+      "target_controller": "U00",
+      "task_type": "REVIEW_AND_UPGRADE",
+      "priority": "P1_HIGH",
+      "status": "QUEUED"
+    },
+    {
+      "queue_item_id": "queue_item_002",
+      "source_gap": "gap_002",
+      "target_controller": "H00",
+      "task_type": "ROUTED_GAP_REVIEW",
+      "priority": "P2_MEDIUM",
+      "status": "QUEUED"
+    },
+    {
+      "queue_item_id": "queue_item_003",
+      "source_gap": "gap_003",
+      "target_controller": "G00",
+      "task_type": "ROUTED_GAP_REVIEW",
+      "priority": "P2_MEDIUM",
+      "status": "QUEUED"
+    }
+  ]
+}

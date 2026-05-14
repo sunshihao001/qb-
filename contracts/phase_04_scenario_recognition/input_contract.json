@@ -1,0 +1,27 @@
+{
+  "phase": 4,
+  "name": "多模型场景识别层",
+  "goal": "识别市场生命周期、成交真实性、钱包配合和主场景裁决",
+  "output_file": "primary_scenario.json",
+  "required_fields": [
+    "token_address",
+    "run_id",
+    "phase",
+    "status_code",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_trigger",
+    "confidence_level",
+    "missing_fields",
+    "source_files",
+    "handoff_to"
+  ],
+  "allowed_status_codes": [
+    "SCENARIO_ALLOW",
+    "SCENARIO_PAUSE",
+    "SCENARIO_BLOCK"
+  ],
+  "missing_policy": "缺失字段必须写 missing；自动推导写 系统推导",
+  "downstream": "结构位置确认层"
+}

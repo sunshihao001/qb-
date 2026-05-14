@@ -1,0 +1,89 @@
+{
+  "system": "HER-DFAFS",
+  "index_id": "her_dfafs_runtime_index",
+  "created_at": "2026-05-13T15:32:00Z",
+  "updated_at": "2026-05-13T16:02:06Z",
+  "canonical_route_ref": "/root/sikk-gmgn/system/her_document_function_system/CANONICAL_ROUTE.json",
+  "canonical_system_root": "/root/sikk-gmgn/system/her_document_function_system",
+  "canonical_data_root": "/root/sikk-gmgn/data/her_document_function_system",
+  "phases": {
+    "K00": {
+      "status": "K00_ACCEPTED",
+      "run_root": "/root/sikk-gmgn/data/her_document_function_system/k00_runs",
+      "primary_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/handoff/k00_to_f00_handoff_packet.json",
+        "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/acceptance/k00_acceptance_result.json"
+      ]
+    },
+    "F00": {
+      "status": "F00_ACCEPTED",
+      "run_root": "/root/sikk-gmgn/data/her_document_function_system/f00_runs",
+      "primary_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_to_downstream_handoff_packet.json",
+        "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_acceptance_result.json"
+      ]
+    },
+    "V00": {
+      "status": "V00_ACCEPTED",
+      "run_root": "/root/sikk-gmgn/data/her_document_function_system/v00_runs",
+      "primary_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/handoff/v00_to_r00_handoff_packet.json",
+        "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/acceptance/v00_acceptance_result.json"
+      ]
+    },
+    "R00": {
+      "status": "R00_ACCEPTED",
+      "run_root": "/root/sikk-gmgn/data/her_document_function_system/r00_runs",
+      "primary_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/run_manifest.json",
+        "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/acceptance/r00_acceptance_result.json",
+        "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/handoff/r00_to_a00_handoff_packet.json"
+      ]
+    },
+    "O00": {
+      "status": "DESIGN_BLUEPRINT_READY",
+      "controller_root": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator",
+      "run_root": "/root/sikk-gmgn/data/her_document_function_system/o00_runs",
+      "primary_refs": [
+        "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/01_o00_manifest.yaml",
+        "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/04_o00_input_contract.json",
+        "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/06_o00_execution_protocol.md",
+        "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/07_o00_acceptance_gate.yaml"
+      ]
+    }
+  },
+  "handoff_chain": [
+    {
+      "from_phase": "K00",
+      "to_phase": "F00",
+      "handoff_ref": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/handoff/k00_to_f00_handoff_packet.json",
+      "status": "HANDOFF_READY"
+    },
+    {
+      "from_phase": "F00",
+      "to_phase": "V00",
+      "handoff_ref": "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_to_downstream_handoff_packet.json",
+      "status": "HANDOFF_READY"
+    },
+    {
+      "from_phase": "V00",
+      "to_phase": "R00",
+      "handoff_ref": "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/handoff/v00_to_r00_handoff_packet.json",
+      "status": "HANDOFF_READY"
+    },
+    {
+      "from_phase": "R00",
+      "to_phase": "A00",
+      "handoff_ref": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/handoff/r00_to_a00_handoff_packet.json",
+      "status": "HANDOFF_READY"
+    }
+  ],
+  "safe_runtime_boundary": {
+    "live_runtime": false,
+    "wallet_signing": false,
+    "auto_deploy": false,
+    "production_trading": false
+  },
+  "blocking_gaps": [],
+  "unresolved_gaps": []
+}

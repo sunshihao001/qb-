@@ -1,0 +1,26 @@
+pool_identity_resolution:
+  pool_identity_resolution_id: string
+  candidate_id: string
+  inputs:
+  - raw_pair_address
+  - raw_pool_address
+  - dex_name
+  - quote_token
+  - base_token
+  normalized:
+  - pair_address_normalized
+  - pool_address_normalized
+  status:
+  - POOL_CONFIRMED
+  - POOL_MISSING
+  - MULTI_POOL_DETECTED
+  - POOL_CONFLICTED
+  - UNKNOWN
+  p02_requests_if_missing:
+  - pair_address
+  - pool_address
+  - dex_name
+  - quote_token
+  - base_token
+  trace:
+  - pool_identity_trace_id

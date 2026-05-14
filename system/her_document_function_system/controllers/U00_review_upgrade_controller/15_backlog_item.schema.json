@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Backlog Item",
+  "type": "object",
+  "required": [
+    "backlog_item_id",
+    "source_candidate_id",
+    "reason",
+    "priority",
+    "status"
+  ],
+  "properties": {
+    "backlog_item_id": {
+      "type": "string"
+    },
+    "source_candidate_id": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "P0_CRITICAL",
+        "P1_HIGH",
+        "P2_MEDIUM",
+        "P3_LOW",
+        "P4_BACKLOG"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "QUEUED",
+        "BLOCKED",
+        "DEFERRED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

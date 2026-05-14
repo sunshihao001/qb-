@@ -1,0 +1,29 @@
+controller_id: P05_EVIDENCE_CONTROLLER
+version: v3.0-professional
+status: PACKAGE_SPEC_READY_WITH_RUNTIME_GAPS
+created_at: '2026-05-12T02:44:17Z'
+paper_only: true
+real_trade_enabled: false
+runtime_allowed: false
+paper_runtime_allowed: false
+live_execution_allowed: false
+schema_id: EVIDENCE_SUFFICIENCY_SCHEMA
+statuses:
+- SUFFICIENT_FOR_P06
+- SUFFICIENT_WITH_LIMITATIONS
+- INSUFFICIENT_WEAK_ONLY
+- BLOCK_P06_USE
+checks:
+- minimum_supporting_evidence_present
+- counter_evidence_checked
+- conflict_checked
+- unknowns_registered
+- trace_complete
+- quality_above_threshold
+required:
+- sufficiency_id
+- candidate_id
+- sufficiency_scope
+- sufficiency_checks
+- sufficiency_status
+- limitations

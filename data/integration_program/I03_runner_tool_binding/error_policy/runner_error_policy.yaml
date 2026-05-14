@@ -1,0 +1,11 @@
+{
+  "runner_error_policy": {
+    "binding_id": "RUNNER_ERROR_POLICY",
+    "ready": true,
+    "failure_policy": "BLOCK_ON_REQUIRED_FAILURE",
+    "safety": {
+      "no_live_execution": true,
+      "no_wallet_signing": true
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "handoff_id": "handoff_U00-P01-AUTO-FULL-20260514-003_to_g00",
+  "from_phase": "U00_REAL",
+  "to_phase": "G00",
+  "handoff_type": "U00_TO_G00_HANDOFF",
+  "governance_candidates": [
+    {
+      "upgrade_candidate_id": "uc_u00_real_002",
+      "upgrade_type": "GOVERNANCE_UPGRADE",
+      "target_controller": "G00",
+      "target_asset": "g00_controller_or_runtime_assets",
+      "problem_statement": "governance output is candidate only -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "proposed_change": "Create or improve governance_upgrade evidence/control for G00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": true,
+      "handoff_target": "G00",
+      "source_root_cause_id": "rca_review_case_gap_sample_001_g00_policy_not_active"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_005",
+      "upgrade_type": "GOVERNANCE_UPGRADE",
+      "target_controller": "G00",
+      "target_asset": "g00_controller_or_runtime_assets",
+      "problem_statement": "governance output is candidate only -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "proposed_change": "Create or improve governance_upgrade evidence/control for G00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": true,
+      "handoff_target": "G00",
+      "source_root_cause_id": "rca_review_case_gap_sample_001_g00_policy_not_active"
+    }
+  ],
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_downstream_task_directly",
+    "modify_production_rules_directly",
+    "drop_unresolved_gaps",
+    "convert_ready_with_gaps_to_ready"
+  ],
+  "handoff_status": "HANDOFF_READY_WITH_GAPS"
+}

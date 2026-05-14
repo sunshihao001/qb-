@@ -1,0 +1,28 @@
+meta:
+  standard_id: S00_ACCEPTANCE_EVIDENCE_SCHEMA
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+required_fields:
+- acceptance_id
+- phase_id
+- token_id
+- run_id
+- required_checks
+- passed_checks
+- failed_checks
+- missing_fields
+- schema_validation_result
+- runner_validation_result
+- data_quality_result
+- decision_quality_result
+- status
+- blocking_reason
+- next_allowed_phase

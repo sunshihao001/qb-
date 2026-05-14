@@ -1,0 +1,7 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: OBSERVE_CONDITION_SCHEMA
+required_fields: [observe_id, candidate_id, observe_reason, observe_conditions, allowed_next_status]
+observe_reason_enum: [EARLY_BUT_NOT_READY, DATA_INCOMPLETE, SCENARIO_WEAK, EVIDENCE_WEAK, CHIP_STRUCTURE_NEEDS_REFRESH, MARKET_POSITION_NOT_READY, WAIT_FOR_CONFIRMATION_STRUCTURE]
+allowed_next_status: [CONTINUE_OBSERVE, PAUSE, BLOCK, PAPER_CANDIDATE_AFTER_REFRESH]

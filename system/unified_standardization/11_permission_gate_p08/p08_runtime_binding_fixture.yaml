@@ -1,0 +1,40 @@
+metadata:
+  producer: ISSUEPACK_FULL_AUTOMATION
+  version: 0.1.0
+  status: fixture_ready
+  acceptance: paper runner must call equivalent gate before opening paper position
+  updated_at: '2026-05-14T14:27:43Z'
+policy:
+  allowed_open_status:
+  - PAPER_READY
+  - PAPER_ACTIVE
+  blocked_status:
+  - BLOCKED
+  - WATCH_ONLY
+  - PAPER_ELIGIBLE
+  - EXIT_MONITOR
+  - FORCE_PAPER_EXIT
+  - READY_FOR_CONFIRMATION
+  - REAL_TRADE_FORBIDDEN
+  forbidden_real_trade: true
+fixtures:
+- permission_status: BLOCKED
+  paper_open_allowed: false
+  real_trade_allowed: false
+  trace_event: P08_PERMISSION_EVALUATED
+- permission_status: WATCH_ONLY
+  paper_open_allowed: false
+  real_trade_allowed: false
+  trace_event: P08_PERMISSION_EVALUATED
+- permission_status: PAPER_READY
+  paper_open_allowed: true
+  real_trade_allowed: false
+  trace_event: P08_PERMISSION_EVALUATED
+- permission_status: PAPER_ACTIVE
+  paper_open_allowed: true
+  real_trade_allowed: false
+  trace_event: P08_PERMISSION_EVALUATED
+- permission_status: REAL_TRADE_FORBIDDEN
+  paper_open_allowed: false
+  real_trade_allowed: false
+  trace_event: P08_PERMISSION_EVALUATED

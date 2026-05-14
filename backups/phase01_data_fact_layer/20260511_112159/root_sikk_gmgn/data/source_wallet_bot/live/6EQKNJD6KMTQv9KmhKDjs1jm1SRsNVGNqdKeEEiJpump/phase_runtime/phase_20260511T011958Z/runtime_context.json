@@ -1,0 +1,17 @@
+{
+  "token_address": "6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump",
+  "run_id": "20260511T011958Z",
+  "mode": "live",
+  "snapshot_path": "data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/structural_snapshot.json",
+  "output_root": "data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/phase_runtime/phase_20260511T011958Z",
+  "planbook_id": "ca_phase_evidence_runtime_planbook",
+  "started_at": "2026-05-11T01:19:58Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

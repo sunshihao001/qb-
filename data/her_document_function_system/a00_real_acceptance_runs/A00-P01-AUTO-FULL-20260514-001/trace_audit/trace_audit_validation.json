@@ -1,0 +1,14 @@
+{
+  "trace_audit_status": "PASSED_WITH_GAPS",
+  "trace_files_checked": [
+    "trace_audit/a00_real_acceptance_trace.jsonl"
+  ],
+  "audit_files_checked": [
+    "trace_audit/a00_real_acceptance_audit.jsonl"
+  ],
+  "missing_trace_events": [],
+  "missing_audit_events": [],
+  "warnings": [
+    "cross_phase_trace_index_not_fully_implemented"
+  ]
+}

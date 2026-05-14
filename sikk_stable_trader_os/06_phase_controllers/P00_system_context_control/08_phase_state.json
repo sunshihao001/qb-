@@ -1,0 +1,47 @@
+{
+  "phase_id": "P00",
+  "status": "P00_STUB_READY_FOR_SYSTEM_CONTEXT_VALIDATION",
+  "generated_at": "2026-05-11T13:38:45.487069+00:00",
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    "stub controller; full controller package pending next system plane/controller landing"
+  ],
+  "next_phase": "P01",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "updated_at": "2026-05-11T14:12:21.903922+00:00",
+  "current_doc_id": "DOC-20260511-014",
+  "current_status": "READY_TO_BUILD",
+  "phase_target_data_path": "06_phase_controllers/P00_system_context_control/phase_target_data.yaml",
+  "raw_user_proposed_phase_target_data_path": "06_phase_controllers/P00_system_context_control/phase_target_data.raw_user_proposed.yaml",
+  "acceptance_status": "ACCEPTANCE_PENDING",
+  "gap_list": [
+    {
+      "gap_id": "GAP-P00-PHASE-STATUS-ENUM-MISMATCH",
+      "severity": "DEGRADED",
+      "description": "User-proposed P00 phase_status REQUIRED_BEFORE_BUSINESS_PHASES is not in legal phase status enum; raw proposal preserved and executable target normalized to READY_TO_BUILD."
+    },
+    {
+      "gap_id": "GAP-P00-CONTROLLER-ID-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "User-proposed P00 phase_id P00_system_bootstrap_controller differs from existing controller directory P00_system_context_control; raw proposal preserved and executable target normalized to existing controller id."
+    },
+    {
+      "gap_id": "GAP-PER-PHASE-TARGET-DATA-INSTANCES",
+      "severity": "DEGRADED",
+      "description": "K00 and P00 concrete instances are now generated; P01-P10 concrete target data instances still need to be generated/validated."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ]
+}

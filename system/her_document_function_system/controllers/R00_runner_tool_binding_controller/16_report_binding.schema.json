@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Report binding schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "report_binding_id",
+    "source_output",
+    "report_target",
+    "required_sections"
+  ],
+  "properties": {
+    "report_binding_id": {
+      "type": "string"
+    },
+    "source_output": {
+      "type": "string"
+    },
+    "report_target": {
+      "type": "string"
+    },
+    "required_sections": {
+      "type": "array"
+    }
+  }
+}

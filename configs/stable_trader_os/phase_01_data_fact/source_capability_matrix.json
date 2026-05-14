@@ -1,0 +1,84 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "gmgn": {
+    "can_provide": [
+      "token_symbol",
+      "current_market_cap_usd",
+      "current_liquidity_usd",
+      "holder_count",
+      "gmgn_tags",
+      "first_buy_time",
+      "pnl_multiple",
+      "realized_profit_usd",
+      "unrealized_profit_usd"
+    ],
+    "cannot_provide_reliably": [
+      "complete_funding_source",
+      "complete_backflow_path",
+      "wallet_first_seen_time"
+    ],
+    "risk_note": "GMGN 标签只能作为辅助事实，不允许作为最终结构角色判断。"
+  },
+  "chain": {
+    "can_provide": [
+      "tx_hash",
+      "transfer_time",
+      "source_address",
+      "counterparty_address",
+      "token_transfer",
+      "sol_funding",
+      "usdc_funding",
+      "token_create_time",
+      "wallet_address"
+    ],
+    "cannot_provide_reliably": [
+      "gmgn_tags",
+      "human_readable_wallet_role"
+    ],
+    "risk_note": "链上数据能证明交易事实，不能直接证明地址意图。"
+  },
+  "quote": {
+    "can_provide": [
+      "current_price_usd",
+      "current_market_cap_usd",
+      "liquidity_usd",
+      "volume_usd",
+      "kline_fact_table"
+    ],
+    "cannot_provide_reliably": [
+      "wallet_role",
+      "funding_source"
+    ],
+    "risk_note": "quote 数据必须记录快照时间，避免后续回测污染。"
+  },
+  "security": {
+    "can_provide": [
+      "honeypot_status",
+      "mint_authority_status",
+      "freeze_authority_status",
+      "lp_locked_status",
+      "rug_risk_flags"
+    ],
+    "cannot_provide_reliably": [
+      "wallet_role",
+      "market_scenario"
+    ],
+    "risk_note": "security 缺失时不得进入强策略门禁。"
+  },
+  "history_database": {
+    "can_provide": [
+      "wallet_role_history",
+      "appeared_token_count",
+      "historical_winrate",
+      "historical_roi",
+      "known_noise_wallet",
+      "known_cex_wallet",
+      "known_router_wallet"
+    ],
+    "cannot_provide_reliably": [
+      "current_token_balance_without_refresh"
+    ],
+    "risk_note": "历史库只作为复现证据，不得覆盖当前事实。"
+  }
+}

@@ -1,0 +1,8 @@
+closed_loop_handoff_integrity:
+  type: object
+  required:
+    - validation_id
+    - handoff_chain_complete
+    - missing_handoffs
+    - status
+  additional_properties_allowed: true

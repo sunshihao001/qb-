@@ -1,0 +1,40 @@
+controller_id: I04_PAPER_RUNTIME_INTEGRATION
+required_inputs:
+  from_i03:
+  - i03_to_i04_handoff_packet
+  - i04_paper_runtime_prerequisite_packet
+  - i03_runner_tool_binding_dry_run_report
+  - path_guard_binding
+  - trace_writer_binding
+  - acceptance_runner_binding
+  - handoff_writer_binding
+  from_p08:
+  - p08_to_paper_runtime_handoff_packet
+  - paper_runtime_permission_records
+  - paper_entry_simulation_plans
+  - quote_records
+  - slippage_model_records
+  - cost_model_records
+  - invalidation_records
+  - risk_limit_records
+  from_control_planes:
+  - governance_handoff_packet
+  - trace_handoff_packet
+  - acceptance_result_packet
+  - handoff_packet
+  - limitation_transfer_packet
+  - forbidden_use_policy
+  from_system_indices:
+  - phase_controller_index.yaml
+  - contract_index.md
+  - schema_index.md
+  - global_status_code_table.md
+  - global_hard_negative_rules.md
+  - professional_build_order.md
+  - directory_constitution.md
+  - system_methodology_blueprint.md
+forbidden_inputs:
+- live_execution_permission
+- wallet_signing_permission
+- auto_deploy_permission
+- direct_P07_input

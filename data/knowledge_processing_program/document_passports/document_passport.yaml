@@ -1,0 +1,31 @@
+document_passport:
+  document_id: KPP-DOC-20260512-001
+  title: "文档处理工作体系重建 1.0"
+  source_type: SYSTEM_DESIGN_DOC
+  source_name: "文档处理工作体系重建_1.0.md"
+  source_origin: user_uploaded_text_document
+  received_at: "2026-05-12"
+  ingested_at_utc: "20260512T222112Z"
+  raw_path: "/root/sikk-gmgn/data/knowledge_processing_program/raw_documents/KPP-DOC-20260512-001_文档处理工作体系重建_1_0.md"
+  checksum_sha256: "b68162fdca5b6d7e46e950434ca4fad8a8b17b2eafb54136825a01ff4945225d"
+  project_scope:
+    - HER_SYSTEM
+    - SIKK_STABLE_TRADER_OS
+  document_role:
+    primary_role: KNOWLEDGE_PROCESSING_PROGRAM_SYSTEM_DESIGN
+    secondary_roles:
+      - K00_K08_CONTROLLER_SPEC
+      - DOCUMENT_FUNCTIONALIZATION_POLICY
+      - HER_TASK_PACKAGE_CONTRACT_SOURCE
+  use_permission:
+    - CAN_INFORM_DESIGN
+    - CAN_GENERATE_TASK
+    - CAN_GENERATE_SCHEMA
+    - CAN_GENERATE_CONTRACT
+    - NEEDS_REVIEW_BEFORE_PRODUCTION_RULE
+  confidence_level: HIGH
+  processing_route: FULL_FUNCTIONALIZATION
+  status: PASSPORT_READY
+  trace:
+    source_file: "/root/.hermes/cache/documents/doc_cb6202b30191_文档处理工作体系重建😁1. 0.md"
+    preserved_raw_file: "/root/sikk-gmgn/data/knowledge_processing_program/raw_documents/KPP-DOC-20260512-001_文档处理工作体系重建_1_0.md"

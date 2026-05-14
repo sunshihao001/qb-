@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "required": [
+    "packet_id",
+    "packet_type",
+    "permission_to_enter_i04",
+    "restrictions"
+  ],
+  "properties": {
+    "packet_type": {
+      "const": "I03_TO_I04_RUNNER_TOOL_BINDING_HANDOFF"
+    }
+  }
+}

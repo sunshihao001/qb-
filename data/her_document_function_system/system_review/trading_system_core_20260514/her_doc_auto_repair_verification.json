@@ -1,0 +1,90 @@
+{
+  "verification_id": "HER_DOC_AUTO_REPAIR_VERIFY_20260514",
+  "files": [
+    {
+      "path": "system/her_document_function_system/application_scenarios/trading_system_runtime_repair_20260514/HER_DOC_AUTO_REPAIR_TASK_PACKAGE_20260514.md",
+      "exists": true,
+      "json_ok": null,
+      "status": "PRESENT"
+    },
+    {
+      "path": "system/her_document_function_system/application_scenarios/trading_system_runtime_repair_20260514/operator_goal_auto_repair.json",
+      "exists": true,
+      "json_ok": true,
+      "status": "PRESENT",
+      "final_status": null
+    },
+    {
+      "path": "data/her_document_function_system/system_review/trading_system_core_20260514/her_doc_auto_repair_pipeline_run/o00/run_summary.json",
+      "exists": true,
+      "json_ok": true,
+      "status": "PRESENT",
+      "final_status": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS"
+    },
+    {
+      "path": "data/her_document_function_system/system_review/trading_system_core_20260514/her_doc_auto_repair_pipeline_run/a00/a00_acceptance_result.json",
+      "exists": true,
+      "json_ok": true,
+      "status": "PRESENT",
+      "final_status": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS"
+    },
+    {
+      "path": "data/her_document_function_system/system_review/trading_system_core_20260514/her_doc_auto_repair_pipeline_run/v00/gap_register.json",
+      "exists": true,
+      "json_ok": true,
+      "status": "PRESENT",
+      "final_status": null
+    },
+    {
+      "path": "data/her_document_function_system/system_review/trading_system_core_20260514/her_doc_auto_repair_pipeline_run/h00/downstream_queue.json",
+      "exists": true,
+      "json_ok": true,
+      "status": "PRESENT",
+      "final_status": "QUEUE_READY_WITH_GAPS"
+    },
+    {
+      "path": "data/her_document_function_system/system_review/trading_system_core_20260514/v00_runtime_evidence_bundle.json",
+      "exists": true,
+      "json_ok": true,
+      "status": "PRESENT",
+      "final_status": "V00_RUNTIME_EVIDENCE_READY_WITH_GAPS"
+    },
+    {
+      "path": "data/her_document_function_system/system_review/trading_system_core_20260514/h00_runtime_repair_downstream_queue.json",
+      "exists": true,
+      "json_ok": true,
+      "status": "PRESENT",
+      "final_status": "QUEUE_READY_WITH_GAPS"
+    },
+    {
+      "path": "data/her_document_function_system/system_review/trading_system_core_20260514/phase_runtime_application_index.json",
+      "exists": true,
+      "json_ok": true,
+      "status": "PRESENT",
+      "final_status": "PHASE_RUNTIME_APPLICATION_INDEX_READY_WITH_GAPS"
+    },
+    {
+      "path": "data/her_document_function_system/system_review/trading_system_core_20260514/u00_review_upgrade_candidate_package.json",
+      "exists": true,
+      "json_ok": true,
+      "status": "PRESENT",
+      "final_status": "U00_UPGRADE_CANDIDATES_READY_WITH_GAPS"
+    },
+    {
+      "path": "data/her_document_function_system/system_review/trading_system_core_20260514/her_doc_auto_repair_actual_application.json",
+      "exists": true,
+      "json_ok": true,
+      "status": "PRESENT",
+      "final_status": "HER_DOC_AUTO_REPAIR_APPLIED_READY_WITH_GAPS"
+    }
+  ],
+  "checks": {
+    "all_files_present": true,
+    "all_json_valid": true,
+    "ready_for_production_false": true,
+    "wallet_missing_not_safe_policy": true,
+    "phase_index_ready_with_gaps": true,
+    "upgrade_candidates_not_active": true
+  },
+  "final_status": "READY_WITH_GAPS"
+}

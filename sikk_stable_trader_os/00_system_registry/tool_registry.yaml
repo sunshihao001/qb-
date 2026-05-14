@@ -1,0 +1,22 @@
+registry_id: tool_registry
+version: '2.0'
+tools:
+- tool_id: registry_validator
+  path: 06_tools/validators/validate_system_registry.py
+  purpose: validate required registry files and phase packages
+  allowed: true
+- tool_id: phase_runner
+  path: 06_tools/runners/phase_runner.py
+  purpose: future resumable phase runner
+  allowed: false
+  reason: not implemented in this task
+- tool_id: replay_validator
+  path: 06_tools/replay/replay_validator.py
+  purpose: future replay acceptance validation
+  allowed: false
+  reason: not implemented in this task
+- tool_id: report_builder
+  path: 06_tools/report_builders/report_builder.py
+  purpose: future report from JSON outputs
+  allowed: false
+  reason: reports cannot be primary machine source

@@ -1,0 +1,68 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "priority": {
+    "token_address": [
+      "manual_config",
+      "chain",
+      "gmgn"
+    ],
+    "chain": [
+      "manual_config"
+    ],
+    "token_symbol": [
+      "gmgn",
+      "chain",
+      "manual_config"
+    ],
+    "token_create_time": [
+      "chain",
+      "gmgn"
+    ],
+    "current_price_usd": [
+      "quote",
+      "gmgn"
+    ],
+    "current_market_cap_usd": [
+      "quote",
+      "gmgn"
+    ],
+    "current_liquidity_usd": [
+      "quote",
+      "gmgn"
+    ],
+    "first_buy_time": [
+      "chain",
+      "gmgn"
+    ],
+    "first_buy_amount_sol": [
+      "chain",
+      "gmgn"
+    ],
+    "pnl_multiple": [
+      "gmgn",
+      "calculated"
+    ],
+    "wallet_first_seen_time": [
+      "history_database",
+      "chain",
+      "gmgn"
+    ],
+    "gmgn_tags": [
+      "gmgn"
+    ],
+    "source_address": [
+      "chain"
+    ],
+    "security_flags": [
+      "security"
+    ]
+  },
+  "conflict_policy": [
+    "地址类字段优先 manual_config / chain",
+    "时间类字段优先 chain",
+    "标签类字段只能来自 GMGN 或内部历史库",
+    "quote 类字段必须记录快照时间",
+    "如果来源冲突，必须写入 anomaly_fields_report.csv"
+  ]
+}

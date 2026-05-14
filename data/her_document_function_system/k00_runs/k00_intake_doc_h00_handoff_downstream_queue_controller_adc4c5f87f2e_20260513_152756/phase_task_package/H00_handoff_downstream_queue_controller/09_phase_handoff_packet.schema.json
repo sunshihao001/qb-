@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "K00 to H00 Handoff Packet",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "source_doc_refs",
+    "document_passport_ref",
+    "phase_task_package_ref",
+    "gap_refs",
+    "allowed_next_actions",
+    "forbidden_next_actions"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "from_phase": {
+      "const": "K00"
+    },
+    "to_phase": {
+      "const": "H00"
+    },
+    "source_doc_refs": {
+      "type": "array"
+    },
+    "document_passport_ref": {
+      "type": "string"
+    },
+    "phase_task_package_ref": {
+      "type": "string"
+    },
+    "gap_refs": {
+      "type": "array"
+    },
+    "allowed_next_actions": {
+      "type": "array"
+    },
+    "forbidden_next_actions": {
+      "type": "array"
+    }
+  }
+}

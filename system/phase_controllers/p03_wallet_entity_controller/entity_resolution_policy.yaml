@@ -1,0 +1,9 @@
+policy: "no_silent_merge"
+required_record: "wallet_entity_resolution_record"
+minimum_factors:
+  - "funding_source"
+  - "time_pattern"
+  - "amount_pattern"
+  - "transfer_relation"
+  - "behavior_similarity"
+all_merges_are_candidates_until_later_confirmation: true

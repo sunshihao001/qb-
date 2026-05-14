@@ -1,0 +1,17 @@
+policy_id: PAPER_RUNTIME_HARD_NEGATIVE_RULES
+controller_id: I04_PAPER_RUNTIME_INTEGRATION
+rules:
+- missing I03 handoff -> I04_BLOCKED
+- missing P08 handoff -> I04_BLOCKED
+- missing P08 permission -> I04_BLOCKED
+- direct P07 input -> I04_BLOCKED
+- live execution path -> I04_BLOCKED
+- wallet signing path -> I04_BLOCKED
+- unregistered write path -> I04_BLOCKED
+- trace missing -> I04_BLOCKED
+- P09 review input missing -> I04_BLOCKED
+safety_boundaries:
+  paper_only: true
+  no_live_execution: true
+  no_wallet_signing: true
+  no_auto_deploy: true

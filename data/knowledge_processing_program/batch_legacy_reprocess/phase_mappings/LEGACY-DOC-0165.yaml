@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0165
+source_path: docs/plans/2026-04-30-sikk-auto-trading-readiness-framework.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 9
+  P04: 2
+  P05: 3
+  P06: 0
+  P07: 16
+  P08: 16
+  P09: 3
+  P10: 2
+primary_phase: P07
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

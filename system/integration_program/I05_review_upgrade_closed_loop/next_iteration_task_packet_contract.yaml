@@ -1,0 +1,8 @@
+next_iteration_task_packet_contract:
+  type: object
+  required:
+    - record_id
+    - generated_at
+    - status
+    - trace
+  additional_properties_allowed: true

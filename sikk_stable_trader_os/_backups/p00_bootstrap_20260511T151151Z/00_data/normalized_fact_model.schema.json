@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sikk.normalized_fact_model.v1",
+  "title": "SIKK Normalized Fact Model",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "missing_policy",
+    "fact_packet_id",
+    "facts",
+    "fact_status",
+    "fact_id",
+    "safety_boundary",
+    "source_refs",
+    "evidence_level",
+    "subject_id",
+    "generated_at",
+    "subject_type",
+    "fields",
+    "observed_at",
+    "source"
+  ],
+  "properties": {
+    "fact_packet_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_type",
+          "path_or_id"
+        ],
+        "properties": {
+          "source_type": {
+            "type": "string"
+          },
+          "path_or_id": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "facts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "value",
+          "status",
+          "source_ref"
+        ],
+        "properties": {
+          "value": {},
+          "status": {
+            "enum": [
+              "PRESENT",
+              "MISSING_OPTIONAL",
+              "MISSING_REQUIRED",
+              "STALE",
+              "CONFLICTED",
+              "DERIVED"
+            ]
+          },
+          "source_ref": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "fact_status": {
+      "enum": [
+        "FACT_READY",
+        "FACT_READY_WITH_GAPS",
+        "FACT_BLOCKED"
+      ]
+    },
+    "blocking_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "degraded_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "safety_boundary": {
+      "type": "object"
+    },
+    "fact_id": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "observed_at": {
+      "type": "string"
+    },
+    "subject_type": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "evidence_level": {
+      "type": "string"
+    },
+    "missing_policy": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "object"
+    },
+    "contradictions": {
+      "type": "array"
+    }
+  },
+  "updated_by_doc_id": "DOC-20260511-017"
+}

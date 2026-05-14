@@ -1,0 +1,4 @@
+contradiction_record_rules:
+  contradiction_record_required_for_strategy_gate: true
+  no_contradiction_record_action: BLOCK_STRATEGY_GATE
+  contradiction_statuses: [NONE_FOUND, PRESENT, UNKNOWN, NOT_CHECKED]

@@ -1,0 +1,19 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: INVALIDATION_PRECHECK_SCHEMA
+version: v3.0
+required_fields:
+  - invalidation_precheck_id
+  - candidate_id
+  - inherited_invalidations
+  - precheck_results
+  - invalidation_status
+  - gate_effect
+allowed_statuses:
+  - NO_INVALIDATION_TRIGGERED
+  - WATCH_INVALIDATION_TRIGGERED
+  - SOFT_INVALIDATION_TRIGGERED
+  - HARD_INVALIDATION_TRIGGERED
+  - INVALIDATION_UNKNOWN_NEEDS_REFRESH
+no_live_execution_fields_allowed: true

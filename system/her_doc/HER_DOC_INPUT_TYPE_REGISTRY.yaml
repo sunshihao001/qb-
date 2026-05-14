@@ -1,0 +1,36 @@
+schema_id: HER_DOC_INPUT_TYPE_REGISTRY
+version: 1
+supported_inputs:
+  - input_type: new_research_doc
+    route: [document_passport, functional_object_extraction, k00_assetization_candidate]
+  - input_type: old_gpt_research
+    route: [document_passport, legacy_absorption, gpt_research_queue_or_k00_candidate]
+  - input_type: system_methodology_doc
+    route: [functional_object_extraction, system_mapping, evidence_requirement]
+  - input_type: phase_controller_doc
+    route: [phase_completeness, system_mapping, stage_completion_queue]
+  - input_type: schema_doc
+    route: [schema_candidate, evidence_requirement, her_build_queue]
+  - input_type: contract_doc
+    route: [contract_candidate, evidence_requirement, her_build_queue]
+  - input_type: old_script
+    route: [legacy_script_absorption, runtime_binding_review]
+  - input_type: old_runtime_output
+    route: [legacy_data_replay, p09_replay_candidate]
+  - input_type: old_report
+    route: [legacy_absorption, evidence_reference]
+  - input_type: old_data_sample
+    route: [legacy_data_replay, data_pollution_check]
+  - input_type: acceptance_report
+    route: [evidence_requirement, downstream_handoff_check]
+  - input_type: blocker_report
+    route: [gap_queue, recovery_plan]
+classification_required_fields:
+  - source_path
+  - source_type
+  - target_phase
+  - target_plane
+  - safety_class
+  - legacy_policy
+  - allowed_next_action
+legacy_policy_enum: [CURRENT, CANDIDATE_ONLY, LEGACY_READ_ONLY, ARCHIVE_ONLY, FORBIDDEN]

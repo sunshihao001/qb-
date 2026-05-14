@@ -1,0 +1,20 @@
+controller_id: P07_execution_risk_controller
+controller_name_cn: 执行风控层
+phase_type: paper_execution_risk_simulation
+status: NOT_READY
+created_by: P00_system_bootstrap_controller
+primary_goal: 模拟执行风险、滑点、手续费、流动性和熔断条件
+paper_only: true
+real_trade_enabled: false
+p01_runtime_connection_allowed: false
+required_before_ready:
+  - upstream_handoff_consumed
+  - input_contract_valid
+  - output_contract_valid
+  - acceptance_gate_passed
+  - current_system_state_allows_stage
+forbidden:
+  - real_trade
+  - private_key
+  - seed_phrase
+  - exchange_write_order

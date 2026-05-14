@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "执行风控层",
+  "type": "object",
+  "required": [
+    "token_address",
+    "run_id",
+    "phase",
+    "status_code",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_trigger",
+    "confidence_level",
+    "missing_fields",
+    "source_files",
+    "handoff_to"
+  ],
+  "properties": {
+    "token_address": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "run_id": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "phase": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "status_code": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "positive_evidence": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "negative_evidence": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "counter_evidence": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "hard_negative_trigger": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "confidence_level": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "missing_fields": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "source_files": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "handoff_to": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    }
+  }
+}

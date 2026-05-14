@@ -1,0 +1,18 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: WALLET_DELTA_REFRESH_REQUIREMENT_SCHEMA
+version: v3.0
+required_fields:
+  - wallet_delta_refresh_id
+  - candidate_id
+  - triggers
+  - refresh_decision
+  - required_refresh_outputs
+  - if_refresh_not_available
+allowed_statuses:
+  - HIGH
+  - MEDIUM
+  - LOW
+  - NONE
+no_live_execution_fields_allowed: true

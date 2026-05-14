@@ -1,0 +1,18 @@
+{
+  "gap_report_id": "gap_report_DOC-20260511-027",
+  "created_at": "2026-05-11T17:41:23Z",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "handoff_validator.py not code-implemented",
+    "field usage permission not yet enforced in code",
+    "limitation tag propagation not runtime-hooked",
+    "legacy artifact handoff requires LIMITED/OBSERVE_ONLY policy",
+    "Tool Binding/Paper Runtime/Review Upgrade handoff samples not yet available"
+  ],
+  "propagated_upstream_gaps": [
+    "acceptance validator not yet code-implemented",
+    "trace validator not code-implemented",
+    "runner/tool/paper runtime samples not available"
+  ],
+  "decision": "ALLOW_LIMITED_HANDOFF_DESIGN_ONLY"
+}

@@ -1,0 +1,20 @@
+controller_id: P02_wallet_structure_controller
+controller_name_cn: 钱包结构层
+phase_type: wallet_entity_and_role_analysis
+status: NOT_READY
+created_by: P00_system_bootstrap_controller
+primary_goal: 识别钱包角色、实体归并、同源组、资金路径、利润回收和分发接收关系
+paper_only: true
+real_trade_enabled: false
+p01_runtime_connection_allowed: false
+required_before_ready:
+  - upstream_handoff_consumed
+  - input_contract_valid
+  - output_contract_valid
+  - acceptance_gate_passed
+  - current_system_state_allows_stage
+forbidden:
+  - real_trade
+  - private_key
+  - seed_phrase
+  - exchange_write_order

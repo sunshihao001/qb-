@@ -1,0 +1,29 @@
+{
+  "title": "Policy Versioning",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "version",
+    "status",
+    "change_reason"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PENDING",
+        "DEPRECATED"
+      ]
+    },
+    "change_reason": {
+      "type": "string"
+    }
+  }
+}

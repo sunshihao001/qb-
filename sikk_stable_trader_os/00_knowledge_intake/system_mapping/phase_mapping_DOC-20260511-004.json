@@ -1,0 +1,24 @@
+{
+  "doc_id": "DOC-20260511-004",
+  "generated_at": "2026-05-11T13:11:13Z",
+  "phase_start_rules": {
+    "P00": "allowed_in_SYSTEM_BUILDING",
+    "P01": "requires_P00_complete_and_handoff",
+    "P02": "requires_P01_ready_or_nonblocking_gaps",
+    "P03": "requires_wallet_fact_fields",
+    "P04": "requires_P03_wallet_outputs",
+    "P05": "requires_P02_P03_P04_and_no_hard_negative",
+    "P06": "requires_P05_gate_status",
+    "P07": "requires_P05_paper_ready_or_confirmation_and_P06_risk_approved",
+    "P08": "requires_paper_position_or_rejected_sample_and_trace",
+    "P09": "requires_P08_attribution_and_rule_candidates"
+  },
+  "forbidden_phase_skips": [
+    "skip_P00",
+    "skip_P01",
+    "skip_handoff",
+    "skip_acceptance_gate",
+    "risk_bypass"
+  ],
+  "next_phase_or_plane": "domain_plane_generation"
+}

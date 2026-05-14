@@ -1,0 +1,15 @@
+{
+  "legacy_reader_binding": {
+    "allowed_legacy_roots": [
+      "/root/sikk-gmgn/data/gmgn_candidates_live_run",
+      "/root/sikk-gmgn/data/source_wallet_bot",
+      "/root/sikk-gmgn/data/intel_bot"
+    ],
+    "write_permission": "READ_ONLY",
+    "forbidden_usage": [
+      "overwrite_canonical_output",
+      "delete_legacy_data",
+      "move_legacy_data"
+    ]
+  }
+}

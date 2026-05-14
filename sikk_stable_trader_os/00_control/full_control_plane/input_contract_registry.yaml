@@ -1,0 +1,41 @@
+input_contracts:
+  - contract_id: p00_full_control_plane_input_contract
+    required_by: [P00_FULL_CONTROL_PLANE]
+    required_fields: [upstream_handoff_packet, acceptance_status, safety_boundary, required_assets]
+    missing_policy: BLOCK_AND_REGISTER_GAP
+  - contract_id: p01_governance_plane_input_contract
+    required_by: [P01_GOVERNANCE_PLANE]
+    required_fields: [upstream_handoff_packet, acceptance_status, safety_boundary, required_assets]
+    missing_policy: BLOCK_AND_REGISTER_GAP
+  - contract_id: p02_domain_plane_input_contract
+    required_by: [P02_DOMAIN_PLANE]
+    required_fields: [upstream_handoff_packet, acceptance_status, safety_boundary, required_assets]
+    missing_policy: BLOCK_AND_REGISTER_GAP
+  - contract_id: p03_data_plane_input_contract
+    required_by: [P03_DATA_PLANE]
+    required_fields: [upstream_handoff_packet, acceptance_status, safety_boundary, required_assets]
+    missing_policy: BLOCK_AND_REGISTER_GAP
+  - contract_id: p04_evidence_plane_input_contract
+    required_by: [P04_EVIDENCE_PLANE]
+    required_fields: [upstream_handoff_packet, acceptance_status, safety_boundary, required_assets]
+    missing_policy: BLOCK_AND_REGISTER_GAP
+  - contract_id: p05_scenario_recognition_plane_input_contract
+    required_by: [P05_SCENARIO_RECOGNITION_PLANE]
+    required_fields: [upstream_handoff_packet, acceptance_status, safety_boundary, required_assets]
+    missing_policy: BLOCK_AND_REGISTER_GAP
+  - contract_id: p06_strategy_gate_plane_input_contract
+    required_by: [P06_STRATEGY_GATE_PLANE]
+    required_fields: [upstream_handoff_packet, acceptance_status, safety_boundary, required_assets]
+    missing_policy: BLOCK_AND_REGISTER_GAP
+  - contract_id: p07_execution_risk_plane_input_contract
+    required_by: [P07_EXECUTION_RISK_PLANE]
+    required_fields: [upstream_handoff_packet, acceptance_status, safety_boundary, required_assets]
+    missing_policy: BLOCK_AND_REGISTER_GAP
+  - contract_id: p08_review_replay_plane_input_contract
+    required_by: [P08_REVIEW_REPLAY_PLANE]
+    required_fields: [upstream_handoff_packet, acceptance_status, safety_boundary, required_assets]
+    missing_policy: BLOCK_AND_REGISTER_GAP
+  - contract_id: p09_self_upgrade_plane_input_contract
+    required_by: [P09_SELF_UPGRADE_PLANE]
+    required_fields: [upstream_handoff_packet, acceptance_status, safety_boundary, required_assets]
+    missing_policy: BLOCK_AND_REGISTER_GAP

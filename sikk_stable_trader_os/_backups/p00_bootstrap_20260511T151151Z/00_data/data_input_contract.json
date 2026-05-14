@@ -1,0 +1,32 @@
+{
+  "contract_id": "DATA_INPUT_CONTRACT-20260511-P0",
+  "accepted_inputs": [
+    "K00 document passports",
+    "governance/domain canonical assets",
+    "raw token/wallet/market facts",
+    "prior phase handoff packets"
+  ],
+  "rejected_inputs": [
+    "secrets/private keys",
+    "unsigned assumptions",
+    "unlabeled inferred facts",
+    "real trade execution requests"
+  ],
+  "required_before_P01": [
+    "00_data/data_plane.md",
+    "00_data/field_source_map.yaml",
+    "00_data/normalized_fact_model.schema.json",
+    "00_control/current_system_state.json",
+    "00_control/phase_registry.yaml"
+  ],
+  "missing_policy": "Required missing facts block; optional missing facts degrade; AI guessing is forbidden.",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

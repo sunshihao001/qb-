@@ -1,0 +1,15 @@
+{
+  "preflight_status": "PASSED",
+  "safe_mode": true,
+  "allowed_modes": [
+    "DESIGN_LEVEL_REPLAY"
+  ],
+  "forbidden_modes": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ],
+  "blocking_gaps": []
+}

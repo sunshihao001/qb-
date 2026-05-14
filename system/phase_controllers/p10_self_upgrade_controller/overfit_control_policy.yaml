@@ -1,0 +1,11 @@
+policy_id: overfit_control_policy
+checks:
+- sample_count
+- case_diversity
+- counterexamples
+- threshold_sensitivity
+- regression_impact
+block_if: single anecdote broadens or narrows global rule without review
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+controller_id: P10_SELF_UPGRADE_CONTROLLER

@@ -1,0 +1,37 @@
+doc_id: DOC-20260512-001
+source_type: user_uploaded_markdown
+source_name: P01 专业版 v3.0
+received_at: '2026-05-12T01:42:26Z'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-001_p01_candidate_intake_controller_v3.md
+sha256: c98cd6411d5008262ea6085d6e01e9bc0e8c4b33d925dd1d8ff9bbd1d094d63f
+document_role:
+  primary_role: P01_CANDIDATE_INTAKE_CONTROLLER_PACKAGE_SPEC
+  secondary_roles:
+  - candidate_master_data_governance
+  - source_event_contract
+  - identity_resolution_contract
+  - p02_data_request_handoff_design
+summary:
+  core_intent: 将 P01 从候选导入模块升级为候选主数据治理控制器。
+  key_points:
+  - P01 只做候选接收、来源登记、身份解析、去重、缺口、P02请求、handoff
+  - P01 禁止钱包、筹码、证据、场景、策略、paper、live execution
+  - 核心对象包括 Candidate Master Record、Source Event、Identity Resolution、Discovery/Intake
+    Context、Dedup、Quality、Gap、P02 Request、Handoff
+  - 必须创建 26 个控制器文件和运行数据目录
+  - P01_READY_WITH_GAPS 是允许交接 P02 的专业状态
+system_mapping:
+  planes:
+  - Knowledge Plane
+  - Control Plane
+  - Data Plane
+  - Trace Plane
+  - Acceptance Plane
+  - Handoff Plane
+  - Execution Plane
+  affected_phases:
+  - K00
+  - P00
+  - P01
+  - P02
+status: PASSPORT_READY

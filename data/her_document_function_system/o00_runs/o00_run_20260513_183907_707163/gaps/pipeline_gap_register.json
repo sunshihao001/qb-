@@ -1,0 +1,38 @@
+{
+  "pipeline_run_id": "o00_run_20260513_183907_707163",
+  "gaps": [
+    {
+      "gap_id": "gap_sample_001_v00_test_not_executed",
+      "origin_phase": "V00",
+      "gap_type": "test_evidence_not_executed",
+      "gap_level": "MEDIUM_GAP",
+      "status": "OPEN",
+      "blocking": false,
+      "reason": "sample replay is design-level and does not execute pytest",
+      "required_fix": "implement V00 real test executor and run pytest evidence collection",
+      "route_to": "U00"
+    },
+    {
+      "gap_id": "gap_sample_001_g00_policy_not_active",
+      "origin_phase": "G00",
+      "gap_type": "policy_candidate_not_active",
+      "gap_level": "HIGH_GAP",
+      "status": "OPEN",
+      "blocking": false,
+      "reason": "G00 generated evidence policy candidate but active_policy_bundle is not validated",
+      "required_fix": "implement G00 policy conflict check and active policy activation workflow",
+      "route_to": "G00"
+    },
+    {
+      "gap_id": "gap_sample_001_r00_not_required",
+      "origin_phase": "R00",
+      "gap_type": "runner_binding_skipped",
+      "gap_level": "LOW_GAP",
+      "status": "ACCEPTED_RISK",
+      "blocking": false,
+      "reason": "runner_binding_required=false for governance-only sample",
+      "required_fix": "none for this sample",
+      "route_to": "A00"
+    }
+  ]
+}

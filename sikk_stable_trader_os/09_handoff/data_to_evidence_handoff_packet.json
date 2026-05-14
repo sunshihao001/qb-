@@ -1,0 +1,44 @@
+{
+  "handoff_id": "P03_TO_P04_DOC-20260511-023",
+  "source_stage": "P03_DATA_PLANE",
+  "target_stage": "P04_EVIDENCE_PLANE",
+  "generated_at": "2026-05-11T16:34:30Z",
+  "included_assets": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_data/data_manifest.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_data/data_field_dictionary.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_data/data_handoff_contract.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_data/data_quality_model.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_data/data_missing_policy.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_data/data_conflict_policy.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_data/data_lineage_model.yaml"
+  ],
+  "known_gaps": [
+    "真实 API 稳定性未验证",
+    "字段覆盖率未知",
+    "钱包归并准确度未知",
+    "多源报价偏差阈值未校准",
+    "K线指标计算口径未完全固定",
+    "安全扫描覆盖范围未确认",
+    "数据质量权重未回测",
+    "历史地址库还不成熟",
+    "legacy runtime 数据吸收映射待建"
+  ],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "真实 API 稳定性未验证",
+    "字段覆盖率未知",
+    "钱包归并准确度未知",
+    "多源报价偏差阈值未校准",
+    "K线指标计算口径未完全固定",
+    "安全扫描覆盖范围未确认",
+    "数据质量权重未回测",
+    "历史地址库还不成熟",
+    "legacy runtime 数据吸收映射待建"
+  ],
+  "acceptance_status": "DATA_READY_WITH_GAPS",
+  "next_legal_stage": "P04_EVIDENCE_PLANE_DESIGN",
+  "consumption_required": true,
+  "downstream_permission": "ALLOW_EVIDENCE_PLANE_DESIGN_ONLY_NO_P01_RUNTIME",
+  "paper_only": true,
+  "real_trade_enabled": false
+}

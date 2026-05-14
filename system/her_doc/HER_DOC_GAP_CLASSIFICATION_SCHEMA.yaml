@@ -1,0 +1,98 @@
+schema_id: HER_DOC_GAP_CLASSIFICATION_SCHEMA
+version: HER_DOC_PROFESSIONAL_CONTROL_V1
+status: SCHEMA_ACTIVE
+purpose: >
+  Standard schema for classifying gaps found by HER_DOC. A gap is not a vague
+  statement such as "needs improvement". It must identify the missing part,
+  why it matters, where it belongs, who should handle it, and what evidence
+  proves closure.
+
+required_fields:
+  - gap_id
+  - source_ref
+  - source_type
+  - target_system_unit
+  - gap_type
+  - missing_part
+  - why_it_matters
+  - current_evidence_level
+  - required_evidence_level
+  - severity
+  - primary_route
+  - target_file_or_directory
+  - acceptance_required
+  - blocked_claims
+
+field_definitions:
+  gap_id: Stable unique identifier.
+  source_ref: Source document/file/object that produced the gap.
+  source_type: Type from HER_DOC_INPUT_TYPE_REGISTRY or control object registry.
+  target_system_unit: K00-K08, P00, plane, P01-P10, I01-I05, R00, CPO, P09, P10, or HER_DOC.
+  gap_type: Missing category.
+  missing_part: Concrete absent or insufficient object.
+  why_it_matters: Runtime, evidence, handoff, replay, upgrade, or safety consequence.
+  current_evidence_level: Current proof level.
+  required_evidence_level: Required proof level for closure.
+  severity: BLOCKING/HIGH/MEDIUM/LOW.
+  primary_route: GPT_RESEARCH_FIRST/HER_BUILD_DIRECT/RUNTIME_BINDING_REVIEW/LEGACY_ABSORPTION/K00_ASSETIZATION/STAGE_COMPLETION/BLOCKED_BY_SAFETY.
+  target_file_or_directory: Exact intended home.
+  acceptance_required: Command, validator, handoff, or review required to close.
+  blocked_claims: Claims that must not be made until gap closes.
+
+allowed_values:
+  source_type:
+    - DOCUMENT
+    - GPT_RESEARCH
+    - METHODOLOGY
+    - LEGACY_SCRIPT
+    - LEGACY_DATA
+    - LEGACY_REPORT
+    - SYSTEM_FILE
+    - OPERATOR_GOAL
+    - CONTROL_OBJECT
+  gap_type:
+    - MISSING_GOAL
+    - MISSING_FIELD_MODEL
+    - MISSING_SCHEMA
+    - MISSING_CONTRACT
+    - MISSING_CONTROLLER
+    - MISSING_RUNNER
+    - MISSING_TRACE
+    - MISSING_ACCEPTANCE
+    - MISSING_HANDOFF
+    - MISSING_EVIDENCE_RULE
+    - MISSING_COUNTER_EVIDENCE_RULE
+    - MISSING_RUNTIME_PROOF
+    - MISSING_REPLAY_FIELD
+    - MISSING_UPGRADE_RULE
+    - MISSING_LEGACY_ABSORPTION
+    - MISSING_QUEUE_ROUTE
+    - SAFETY_BLOCKER
+  evidence_level:
+    - E0_NONE
+    - E1_DECLARED
+    - E2_FILE_EXISTS
+    - E3_FILE_READ_OR_SCHEMA_VALID
+    - E4_SAFE_RUNTIME_PROOF
+    - E5_ACCEPTED_HANDOFF
+  severity:
+    - BLOCKING
+    - HIGH
+    - MEDIUM
+    - LOW
+  primary_route:
+    - GPT_RESEARCH_FIRST
+    - HER_BUILD_DIRECT
+    - RUNTIME_BINDING_REVIEW
+    - LEGACY_ABSORPTION
+    - K00_ASSETIZATION
+    - STAGE_COMPLETION
+    - BLOCKED_BY_SAFETY
+
+closure_rules:
+  - A gap cannot close because a report mentions it.
+  - A gap cannot close because a queue item exists.
+  - Schema/contract gaps require file-backed schema/contract and validator/static parse proof.
+  - Runtime gaps require E4 safe runtime proof.
+  - Handoff gaps require E5 accepted downstream packet.
+  - Safety blockers can only close with explicit proof that forbidden actions remain impossible.

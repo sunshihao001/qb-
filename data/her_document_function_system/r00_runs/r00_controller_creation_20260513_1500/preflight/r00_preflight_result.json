@@ -1,0 +1,13 @@
+{
+  "preflight_status": "PASSED",
+  "scope": "controller_asset_creation",
+  "v00_handoff_requirement_encoded": true,
+  "safe_mode_required": true,
+  "forbidden_modes": [
+    "LIVE_RUNTIME",
+    "WALLET_SIGNING",
+    "AUTO_DEPLOY",
+    "PRODUCTION_TRADING"
+  ],
+  "blocking_gaps": []
+}

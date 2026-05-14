@@ -1,0 +1,60 @@
+{
+  "document": "phase_01_system_goal_alignment",
+  "version": "v1.0",
+  "generated_at": "2026-05-09T04:47:35Z",
+  "stable_trader_os_total_goal": "从所有看起来像机会的结构中，连续剔除低质量、错误场景、假成交、派发风险、疲劳拖延和错误位置，只保留极少数 A+P1 且证据链未被否决的样本。",
+  "phase_01_stage_goal": "Phase 01 数据事实层：建立可审计、可复盘、可交接的数据事实包；裁决数据是否可靠、是否缺失、是否降级、是否阻断 Phase 02。",
+  "phase_01_position_in_system": "Phase 01 不寻找机会，不解释市场，不判定结构角色；它只为 Phase 02 结构地址层提供事实底座，并通过质量门禁阻断污染数据。handoff target 固定为 phase_02_wallet_structure_controller。",
+  "goal_to_phase_01_controls": [
+    {
+      "system_goal_fragment": "连续剔除低质量",
+      "phase_01_control": "quality_gate_rules + missing_field_policy",
+      "output": "phase_01_quality_gate.json",
+      "block_status": [
+        "DATA_INVALID",
+        "DATA_SOURCE_CONFLICT",
+        "DATA_STALE"
+      ]
+    },
+    {
+      "system_goal_fragment": "剔除假成交",
+      "phase_01_control": "anomaly_detection_rules + trade_fact_table schema",
+      "output": "anomaly_fields_report.csv",
+      "block_status": [
+        "DATA_SOURCE_CONFLICT",
+        "DATA_WEAK"
+      ]
+    },
+    {
+      "system_goal_fragment": "保留证据链未被否决样本",
+      "phase_01_control": "raw_source_manifest + field_source_priority + runtime_trace",
+      "output": "raw_source_manifest.json / phase_01_runtime_trace.jsonl",
+      "block_status": [
+        "HANDOFF_BLOCKED"
+      ]
+    },
+    {
+      "system_goal_fragment": "不得把机会当事实",
+      "phase_01_control": "forbidden_judgement_contract",
+      "output": "forbidden_judgement_scan",
+      "block_status": [
+        "DATA_INVALID"
+      ]
+    },
+    {
+      "system_goal_fragment": "进入下游前先判断数据可靠",
+      "phase_01_control": "phase_01_to_phase_02_contract",
+      "output": "phase_01_to_phase_02_handoff_packet.json",
+      "block_status": [
+        "HANDOFF_BLOCKED"
+      ]
+    }
+  ],
+  "forbidden_goal_drift": [
+    "把 Phase 01 当成买点识别",
+    "把 GMGN 标签当成最终角色",
+    "把缺失字段填 0",
+    "跳过质量门禁直接进入 Phase 02",
+    "把 Phase 01 handoff 指向 Phase 04 场景识别"
+  ]
+}

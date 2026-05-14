@@ -1,0 +1,473 @@
+{
+  "doc_id": "doc_20260513_her_dfafs_rebuild_v1",
+  "content_hash": "0256e8443b7f21c59d7e4bae3fb105754b806b71336ff353941852f4b3176b4e",
+  "line_count": 1616,
+  "headings": [
+    {
+      "line": 20,
+      "heading": "# 1. 系统总定义"
+    },
+    {
+      "line": 22,
+      "heading": "## 1.1 系统名称"
+    },
+    {
+      "line": 38,
+      "heading": "## 1.2 核心使命"
+    },
+    {
+      "line": 67,
+      "heading": "# 2. 总体系统哲学"
+    },
+    {
+      "line": 69,
+      "heading": "## 2.1 文档不是阅读材料"
+    },
+    {
+      "line": 107,
+      "heading": "## 2.2 K00 不是终点"
+    },
+    {
+      "line": 130,
+      "heading": "## 2.3 功能落实必须有证据"
+    },
+    {
+      "line": 169,
+      "heading": "# 3. 系统总体架构"
+    },
+    {
+      "line": 184,
+      "heading": "# 4. 六层总表"
+    },
+    {
+      "line": 197,
+      "heading": "# 5. 全流程主链路"
+    },
+    {
+      "line": 247,
+      "heading": "# 6. 阶段 0：L0 入口治理层"
+    },
+    {
+      "line": 249,
+      "heading": "## 6.1 阶段目标"
+    },
+    {
+      "line": 257,
+      "heading": "## 6.2 必须判断的资料类型"
+    },
+    {
+      "line": 276,
+      "heading": "## 6.3 输出：task_intent"
+    },
+    {
+      "line": 298,
+      "heading": "## 6.4 入口验收"
+    },
+    {
+      "line": 310,
+      "heading": "# 7. 阶段 1：K00 Knowledge Intake & Taskization"
+    },
+    {
+      "line": 312,
+      "heading": "## 7.1 阶段目标"
+    },
+    {
+      "line": 330,
+      "heading": "## 7.2 K00 必须生成的资产"
+    },
+    {
+      "line": 347,
+      "heading": "## 7.3 K00 输出结构"
+    },
+    {
+      "line": 365,
+      "heading": "## 7.4 K00 状态"
+    },
+    {
+      "line": 385,
+      "heading": "# 8. 阶段 2：KV Memory Index 层"
+    },
+    {
+      "line": 387,
+      "heading": "## 8.1 KV 定义"
+    },
+    {
+      "line": 401,
+      "heading": "## 8.2 KV 保存什么"
+    },
+    {
+      "line": 420,
+      "heading": "## 8.3 KV 禁止事项"
+    },
+    {
+      "line": 437,
+      "heading": "## 8.4 KV 输出资产"
+    },
+    {
+      "line": 455,
+      "heading": "# 9. 阶段 3：System Mapping 系统位置映射"
+    },
+    {
+      "line": 457,
+      "heading": "## 9.1 目标"
+    },
+    {
+      "line": 481,
+      "heading": "## 9.2 映射平面"
+    },
+    {
+      "line": 499,
+      "heading": "## 9.3 输出表"
+    },
+    {
+      "line": 506,
+      "heading": "# 10. 阶段 4：Gap Detection 缺口检测"
+    },
+    {
+      "line": 508,
+      "heading": "## 10.1 目标"
+    },
+    {
+      "line": 514,
+      "heading": "## 10.2 Gap 等级"
+    },
+    {
+      "line": 526,
+      "heading": "## 10.3 Gap 类型"
+    },
+    {
+      "line": 550,
+      "heading": "# 11. 阶段 5：F00 Function Realization Controller"
+    },
+    {
+      "line": 554,
+      "heading": "## 11.1 F00 定义"
+    },
+    {
+      "line": 580,
+      "heading": "## 11.2 F00 处理对象"
+    },
+    {
+      "line": 597,
+      "heading": "# 12. 阶段 6：F01 Concept-to-Function Compiler"
+    },
+    {
+      "line": 599,
+      "heading": "## 12.1 目标"
+    },
+    {
+      "line": 605,
+      "heading": "## 12.2 输出：concept_to_function_map"
+    },
+    {
+      "line": 611,
+      "heading": "## 12.3 function_type 白名单"
+    },
+    {
+      "line": 635,
+      "heading": "## 12.4 核心原则"
+    },
+    {
+      "line": 651,
+      "heading": "# 13. 阶段 7：F02 Implementation Decision Gate"
+    },
+    {
+      "line": 653,
+      "heading": "## 13.1 目标"
+    },
+    {
+      "line": 661,
+      "heading": "## 13.2 决策状态"
+    },
+    {
+      "line": 681,
+      "heading": "## 13.3 决策输出"
+    },
+    {
+      "line": 688,
+      "heading": "# 14. 阶段 8：R01 Repository State Scanner"
+    },
+    {
+      "line": 690,
+      "heading": "## 14.1 目标"
+    },
+    {
+      "line": 698,
+      "heading": "## 14.2 扫描内容"
+    },
+    {
+      "line": 715,
+      "heading": "## 14.3 输出"
+    },
+    {
+      "line": 731,
+      "heading": "# 15. 阶段 9：F03 Implementation Asset Planner"
+    },
+    {
+      "line": 733,
+      "heading": "## 15.1 目标"
+    },
+    {
+      "line": 739,
+      "heading": "## 15.2 资产类型"
+    },
+    {
+      "line": 765,
+      "heading": "## 15.3 输出表"
+    },
+    {
+      "line": 784,
+      "heading": "# 16. 阶段 10：F04 Field Model Builder"
+    },
+    {
+      "line": 786,
+      "heading": "## 16.1 目标"
+    },
+    {
+      "line": 794,
+      "heading": "## 16.2 字段模型结构"
+    },
+    {
+      "line": 801,
+      "heading": "## 16.3 必须考虑的字段属性"
+    },
+    {
+      "line": 826,
+      "heading": "# 17. 阶段 11：F05 Rule Logic Builder"
+    },
+    {
+      "line": 828,
+      "heading": "## 17.1 目标"
+    },
+    {
+      "line": 844,
+      "heading": "## 17.2 规则结构"
+    },
+    {
+      "line": 864,
+      "heading": "## 17.3 不可量化时的替代结构"
+    },
+    {
+      "line": 880,
+      "heading": "# 18. 阶段 12：F06 Schema / Contract Generator"
+    },
+    {
+      "line": 882,
+      "heading": "## 18.1 目标"
+    },
+    {
+      "line": 888,
+      "heading": "## 18.2 必须生成或更新"
+    },
+    {
+      "line": 900,
+      "heading": "## 18.3 合约原则"
+    },
+    {
+      "line": 918,
+      "heading": "# 19. 阶段 13：F07 Patch Writer / Code Realizer"
+    },
+    {
+      "line": 920,
+      "heading": "## 19.1 目标"
+    },
+    {
+      "line": 926,
+      "heading": "## 19.2 Patch 输出"
+    },
+    {
+      "line": 938,
+      "heading": "## 19.3 状态"
+    },
+    {
+      "line": 950,
+      "heading": "## 19.4 代码实现必须包含"
+    },
+    {
+      "line": 967,
+      "heading": "# 20. 阶段 14：V01 Schema / Contract Validation"
+    },
+    {
+      "line": 969,
+      "heading": "## 20.1 目标"
+    },
+    {
+      "line": 975,
+      "heading": "## 20.2 验证内容"
+    },
+    {
+      "line": 988,
+      "heading": "# 21. 阶段 15：V02 Unit / Contract Test Runner"
+    },
+    {
+      "line": 990,
+      "heading": "## 21.1 目标"
+    },
+    {
+      "line": 996,
+      "heading": "## 21.2 测试类型"
+    },
+    {
+      "line": 1011,
+      "heading": "## 21.3 测试证据输出"
+    },
+    {
+      "line": 1029,
+      "heading": "# 22. 阶段 16：V03 End-to-End Replay Gate"
+    },
+    {
+      "line": 1031,
+      "heading": "## 22.1 目标"
+    },
+    {
+      "line": 1037,
+      "heading": "## 22.2 Replay 链路"
+    },
+    {
+      "line": 1054,
+      "heading": "## 22.3 Replay 输出"
+    },
+    {
+      "line": 1066,
+      "heading": "# 23. 阶段 17：R02 Runner / Tool Binding Validator"
+    },
+    {
+      "line": 1068,
+      "heading": "## 23.1 目标"
+    },
+    {
+      "line": 1074,
+      "heading": "## 23.2 可接入对象"
+    },
+    {
+      "line": 1088,
+      "heading": "## 23.3 状态"
+    },
+    {
+      "line": 1102,
+      "heading": "# 24. 阶段 18：A01 Acceptance Evidence Collector"
+    },
+    {
+      "line": 1104,
+      "heading": "## 24.1 目标"
+    },
+    {
+      "line": 1110,
+      "heading": "## 24.2 验收证据必须包括"
+    },
+    {
+      "line": 1128,
+      "heading": "## 24.3 验收状态"
+    },
+    {
+      "line": 1139,
+      "heading": "# 25. 阶段 19：H01 Downstream Handoff Writer"
+    },
+    {
+      "line": 1141,
+      "heading": "## 25.1 目标"
+    },
+    {
+      "line": 1147,
+      "heading": "## 25.2 Handoff 必须包含"
+    },
+    {
+      "line": 1176,
+      "heading": "# 26. 阶段 20：U01 Review / Upgrade Loop"
+    },
+    {
+      "line": 1178,
+      "heading": "## 26.1 目标"
+    },
+    {
+      "line": 1184,
+      "heading": "## 26.2 复盘内容"
+    },
+    {
+      "line": 1198,
+      "heading": "# 27. 总状态机"
+    },
+    {
+      "line": 1245,
+      "heading": "# 28. 目录体系建议"
+    },
+    {
+      "line": 1328,
+      "heading": "# 29. 关键数据模型总表"
+    },
+    {
+      "line": 1330,
+      "heading": "## 29.1 document_passport"
+    },
+    {
+      "line": 1350,
+      "heading": "## 29.2 function_mapping"
+    },
+    {
+      "line": 1369,
+      "heading": "## 29.3 field_model"
+    },
+    {
+      "line": 1388,
+      "heading": "## 29.4 rule_logic"
+    },
+    {
+      "line": 1408,
+      "heading": "## 29.5 implementation_asset"
+    },
+    {
+      "line": 1426,
+      "heading": "# 30. 专业级功能完整性审计"
+    },
+    {
+      "line": 1457,
+      "heading": "# 31. 角色视角审计"
+    },
+    {
+      "line": 1473,
+      "heading": "# 32. 系统验收标准"
+    },
+    {
+      "line": 1475,
+      "heading": "## 32.1 不能算完成的情况"
+    },
+    {
+      "line": 1504,
+      "heading": "## 32.2 可以算专业完成的情况"
+    },
+    {
+      "line": 1531,
+      "heading": "# 33. 这套系统和之前版本的区别"
+    },
+    {
+      "line": 1551,
+      "heading": "# 34. 最终系统定义"
+    },
+    {
+      "line": 1563,
+      "heading": "# 35. 当前是否达到专业化轻量机构水准"
+    },
+    {
+      "line": 1589,
+      "heading": "# 36. 下一步建议"
+    }
+  ],
+  "keywords": [
+    "HER-DFAFS",
+    "K00",
+    "KV",
+    "F00",
+    "Concept-to-Function",
+    "Schema",
+    "Contract",
+    "Patch",
+    "Test",
+    "Replay",
+    "Runner Binding",
+    "Acceptance",
+    "Handoff",
+    "Review"
+  ],
+  "status": "INDEXED",
+  "created_at": "2026-05-13T14:30:44.366397+00:00"
+}

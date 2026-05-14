@@ -1,0 +1,26 @@
+{
+  "schema_name": "phase_01_to_phase_02_handoff_schema",
+  "version": "v1.1",
+  "from_phase": "phase_01_data_fact_controller",
+  "to_phase": "phase_02_wallet_structure_controller",
+  "required_fields": [
+    "run_id",
+    "token_address",
+    "chain",
+    "data_snapshot_time",
+    "quality_score",
+    "phase_01_gate_status",
+    "missing_fields",
+    "required_files_for_phase_02",
+    "restricted_models",
+    "audit_file"
+  ],
+  "allowed_gate_status": [
+    "PASS",
+    "PASS_WITH_WARNING",
+    "PAUSE",
+    "BLOCK"
+  ],
+  "block_rule": "phase_01_gate_status == BLOCK 时禁止进入 Phase 02。",
+  "degrade_rule": "PASS_WITH_WARNING 必须携带 missing_fields 与 restricted_models。"
+}

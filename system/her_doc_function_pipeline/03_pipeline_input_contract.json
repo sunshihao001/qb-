@@ -1,0 +1,40 @@
+{
+  "phase_id": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE",
+  "required_inputs": {
+    "document": {
+      "required": true,
+      "description": "真实 GPT 研究资料、系统建设资料或方法论文档"
+    },
+    "operator_goal": {
+      "required": true,
+      "description": "本次文档希望落实到系统中的目标"
+    },
+    "repo_root": {
+      "required": true,
+      "default": "/root/sikk-gmgn"
+    },
+    "output_dir": {
+      "required": true,
+      "description": "本次 run 输出目录"
+    },
+    "safe_mode": {
+      "required": true,
+      "must_equal": true
+    }
+  },
+  "optional_inputs": {
+    "controller_registry": {
+      "required": false
+    },
+    "pipeline_config": {
+      "required": false
+    }
+  },
+  "forbidden_inputs": [
+    "wallet_private_key",
+    "live_runtime_request",
+    "auto_deploy_request",
+    "production_trading_request",
+    "wallet_signing_request"
+  ]
+}

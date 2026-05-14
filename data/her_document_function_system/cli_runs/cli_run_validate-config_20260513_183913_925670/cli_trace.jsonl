@@ -1,0 +1,8 @@
+{"timestamp": "2026-05-13T18:39:13Z", "event_type": "cli_started", "cli_run_id": "cli_run_validate-config_20260513_183913_925670", "pipeline_run_id": null, "command": "validate-config"}
+{"timestamp": "2026-05-13T18:39:13Z", "event_type": "args_parsed", "cli_run_id": "cli_run_validate-config_20260513_183913_925670", "pipeline_run_id": null, "command": "validate-config"}
+{"timestamp": "2026-05-13T18:39:13Z", "event_type": "safe_mode_checked", "cli_run_id": "cli_run_validate-config_20260513_183913_925670", "pipeline_run_id": null, "command": "validate-config", "safe_mode": true}
+{"timestamp": "2026-05-13T18:39:13Z", "event_type": "forbidden_actions_checked", "cli_run_id": "cli_run_validate-config_20260513_183913_925670", "pipeline_run_id": null, "command": "validate-config"}
+{"timestamp": "2026-05-13T18:39:13Z", "event_type": "registry_loaded", "cli_run_id": "cli_run_validate-config_20260513_183913_925670", "pipeline_run_id": null, "command": "validate-config", "path": "/root/sikk-gmgn/system/her_document_function_system/registry/controller_registry.json"}
+{"timestamp": "2026-05-13T18:39:13Z", "event_type": "config_loaded", "cli_run_id": "cli_run_validate-config_20260513_183913_925670", "pipeline_run_id": null, "command": "validate-config", "path": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.full_safe_replay.json"}
+{"timestamp": "2026-05-13T18:39:13Z", "event_type": "exit_code_written", "cli_run_id": "cli_run_validate-config_20260513_183913_925670", "pipeline_run_id": null, "command": "validate-config", "exit_code": 0}
+{"timestamp": "2026-05-13T18:39:13Z", "event_type": "final_report_written", "cli_run_id": "cli_run_validate-config_20260513_183913_925670", "pipeline_run_id": null, "command": "validate-config"}

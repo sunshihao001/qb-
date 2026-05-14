@@ -1,0 +1,20 @@
+test_matrix:
+  parse_tests:
+    - all_yaml_files_parse
+    - all_json_files_parse
+  path_tests:
+    - system_required_files_exist
+    - data_required_directories_exist
+  semantic_anchor_tests:
+    - Knowledge Processing Program
+    - document_passport
+    - functional_object_registry
+    - system_mapping_matrix
+    - her_task_package
+    - acceptance
+    - handoff
+    - trace
+  safety_tests:
+    - production_mutation_allowed_false
+    - runtime_trading_allowed_false
+    - paper_runtime_start_allowed_false

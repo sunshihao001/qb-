@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0200
+source_path: docs/system_directory_constitution.md
+phase_scores:
+  P01: 2
+  P02: 3
+  P03: 29
+  P04: 0
+  P05: 3
+  P06: 0
+  P07: 3
+  P08: 1
+  P09: 0
+  P10: 5
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

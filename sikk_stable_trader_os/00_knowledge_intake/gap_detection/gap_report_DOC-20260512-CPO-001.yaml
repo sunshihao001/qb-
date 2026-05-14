@@ -1,0 +1,18 @@
+gap_report_id: GAP-DOC-20260512-CPO-001
+generated_at: 2026-05-12T16:29:31Z
+material_id: MAT-CPO-v1-001
+gaps:
+  - gap_id: CPO-GAP-001
+    severity: MEDIUM
+    description_cn: I05 paper operation readiness 真实运行结果未在本次任务内验证。
+    handling: propagate_to_acceptance_and_handoff
+  - gap_id: CPO-GAP-002
+    severity: MEDIUM
+    description_cn: 定时 runner/cron 未实际启用。
+    handling: next_operation_task_packet
+  - gap_id: CPO-GAP-003
+    severity: LOW
+    description_cn: 真实多轮 paper sample library 尚需运行积累。
+    handling: scheduled_paper_operation_after_approval
+blocking_gaps: []
+route_status: K00_GAP_RECORDED_NON_BLOCKING

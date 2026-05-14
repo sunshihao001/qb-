@@ -1,0 +1,197 @@
+{
+  "verification_id": "VERIFICATION-DOC-20260511-007",
+  "generated_at": "2026-05-11T13:52:02.216783+00:00",
+  "doc_id": "DOC-20260511-007",
+  "overall_passed": true,
+  "passed_count": 34,
+  "failed_count": 0,
+  "checks": [
+    {
+      "name": "exists:00_knowledge_intake/raw_inputs/DOC-20260511-007.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_methodology/system_methodology_blueprint.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/document_passports/document_passport_DOC-20260511-007.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-007.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-007.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-007.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-007.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-007.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_control/current_system_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-007.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-007.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-007.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-007.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-007.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/current_system_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:passport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical_anchor:## 2. 系统建造总原则",
+      "passed": true,
+      "detail": "## 2. 系统建造总原则"
+    },
+    {
+      "name": "canonical_anchor:方法论蓝图",
+      "passed": true,
+      "detail": "方法论蓝图"
+    },
+    {
+      "name": "canonical_anchor:治理平面",
+      "passed": true,
+      "detail": "治理平面"
+    },
+    {
+      "name": "canonical_anchor:领域平面",
+      "passed": true,
+      "detail": "领域平面"
+    },
+    {
+      "name": "canonical_anchor:数据平面",
+      "passed": true,
+      "detail": "数据平面"
+    },
+    {
+      "name": "canonical_anchor:控制平面",
+      "passed": true,
+      "detail": "控制平面"
+    },
+    {
+      "name": "canonical_anchor:阶段控制器",
+      "passed": true,
+      "detail": "阶段控制器"
+    },
+    {
+      "name": "canonical_anchor:Runner",
+      "passed": true,
+      "detail": "Runner"
+    },
+    {
+      "name": "canonical_anchor:验收与回写",
+      "passed": true,
+      "detail": "验收与回写"
+    },
+    {
+      "name": "canonical_anchor:下游业务工作流",
+      "passed": true,
+      "detail": "下游业务工作流"
+    },
+    {
+      "name": "canonical_anchor:禁止在缺少数据平面、控制平面、阶段控制器和验收矩阵时，直接推进自动化交易功能",
+      "passed": true,
+      "detail": "禁止在缺少数据平面、控制平面、阶段控制器和验收矩阵时，直接推进自动化交易功能"
+    },
+    {
+      "name": "automation_blocked_in_state",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "remaining_degraded_gaps": [
+    {
+      "gap_id": "GAP-STAGE-TARGET-DATA-DETAILS",
+      "severity": "DEGRADED",
+      "description": "Every phase target data object still needs explicit enumeration in later sections."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

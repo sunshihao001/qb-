@@ -1,0 +1,32 @@
+{
+  "handoff_id": "P00_TO_DATA_PLANE_ACCEPTANCE_REVIEW",
+  "source_stage": "P00_system_bootstrap_controller",
+  "target_stage": "DATA_PLANE_ACCEPTANCE_REVIEW",
+  "included_assets": [
+    "00_data/data_plane.md",
+    "00_data/field_source_map.yaml",
+    "00_data/normalized_fact_model.schema.json",
+    "00_data/data_input_contract.json",
+    "00_control/current_system_state.json",
+    "00_control/phase_registry.yaml"
+  ],
+  "included_schemas": [
+    "00_data/normalized_fact_model.schema.json"
+  ],
+  "known_gaps": [
+    "Data Plane acceptance not yet executed",
+    "P01 preflight not yet executed"
+  ],
+  "blocking_gaps": [
+    "DATA_PLANE_ACCEPTANCE_NOT_RUN"
+  ],
+  "non_blocking_gaps": [
+    "P02-P10 stubs need phase-specific expansion"
+  ],
+  "acceptance_status": "HANDOFF_READY",
+  "next_legal_stage": "DATA_PLANE_ACCEPTANCE_REVIEW",
+  "consumption_required": true,
+  "p01_runtime_connection_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false
+}

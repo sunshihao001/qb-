@@ -1,0 +1,23 @@
+metadata:
+  producer: ISSUEPACK_FULL_AUTOMATION
+  version: 0.1.0
+  status: contract_ready
+  updated_at: '2026-05-14T14:27:43Z'
+wrapper_id: S00_LEGACY_RUNTIME_TRACE_ACCEPTANCE_HANDOFF_WRAPPER
+created_at: '2026-05-14T14:27:43Z'
+mode: scaffold_safe_mode
+wraps:
+- /root/sikk-gmgn/sikk_live_run.py
+- /root/sikk-gmgn/run_sikk_gmgn_pipeline.py
+- /root/sikk-gmgn/modules/runtime/full_system_runner.py
+- /root/sikk-gmgn/modules/runtime/phase_runner.py
+required_outputs:
+- trace_event.jsonl
+- acceptance_result.json
+- handoff_packet.json
+forbidden:
+- live_swap
+- sign
+- broadcast
+- private_key_access
+status: WRAPPER_CONTRACT_READY_NOT_ATTACHED

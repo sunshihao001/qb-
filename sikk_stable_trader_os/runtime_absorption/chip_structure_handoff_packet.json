@@ -1,0 +1,25 @@
+{
+  "phase_id": "P04",
+  "token_address": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+  "kline_accumulation": {},
+  "chip_structure": {
+    "early_wallet_count": 60,
+    "distribution": "否",
+    "centralized_clearance": "否",
+    "counterparty_pressure_score": 72,
+    "control_state": "CONTROL_MIGRATING_TO_COUNTERPARTY"
+  },
+  "decision": "CHIP_CONTROL_MIGRATING_TO_COUNTERPARTY",
+  "evidence_level": "E3",
+  "counter_evidence": [
+    "K线吸筹窗口 valid",
+    "信号 S4 强确认"
+  ],
+  "missing_fields": [
+    "wallet_address",
+    "role",
+    "game_side",
+    "evidence_level"
+  ],
+  "downstream_handoff": "P05"
+}

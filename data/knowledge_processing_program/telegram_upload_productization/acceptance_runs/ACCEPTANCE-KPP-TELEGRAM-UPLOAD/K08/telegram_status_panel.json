@@ -1,0 +1,232 @@
+{
+  "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+  "doc_id": "ACCEPTANCE-KPP-TELEGRAM-DOC",
+  "overall_status": "KPP_READY_FOR_GOVERNANCE_QUEUE_WITH_CANDIDATES",
+  "current_stage": "K08",
+  "progress_percent": 100,
+  "stage_statuses": [
+    {
+      "stage_id": "K00",
+      "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+      "status": "K00_ACCEPTED",
+      "started_at": "2026-05-13T06:30:56Z",
+      "ended_at": "2026-05-13T06:30:56Z",
+      "validator_status": "PASS",
+      "acceptance_status": "ACCEPTED",
+      "artifact_refs": [
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/run_request.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/raw_source_manifest.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/source_registry_entry.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/k00_state.json"
+      ],
+      "gaps": [],
+      "source_trace": true
+    },
+    {
+      "stage_id": "K01",
+      "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+      "status": "K01_ACCEPTED",
+      "started_at": "2026-05-13T06:30:56Z",
+      "ended_at": "2026-05-13T06:30:56Z",
+      "validator_status": "PASS",
+      "acceptance_status": "ACCEPTED",
+      "artifact_refs": [
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K01/document_passport.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K01/document_type_classification.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K01/k01_state.json"
+      ],
+      "gaps": [],
+      "source_trace": true
+    },
+    {
+      "stage_id": "K02",
+      "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+      "status": "K02_ACCEPTED",
+      "started_at": "2026-05-13T06:30:56Z",
+      "ended_at": "2026-05-13T06:30:56Z",
+      "validator_status": "PASS",
+      "acceptance_status": "ACCEPTED",
+      "artifact_refs": [
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K02/semantic_chunk_index.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K02/concept_registry.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K02/method_principle_registry.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K02/k02_state.json"
+      ],
+      "gaps": [],
+      "source_trace": true
+    },
+    {
+      "stage_id": "K03",
+      "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+      "status": "K03_ACCEPTED",
+      "started_at": "2026-05-13T06:30:56Z",
+      "ended_at": "2026-05-13T06:30:56Z",
+      "validator_status": "PASS",
+      "acceptance_status": "ACCEPTED",
+      "artifact_refs": [
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/functional_object_registry.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/assumption_registry.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/constraint_registry.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/unknown_gap_registry.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/k03_state.json"
+      ],
+      "gaps": [],
+      "source_trace": true
+    },
+    {
+      "stage_id": "K04",
+      "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+      "status": "K04_ACCEPTED",
+      "started_at": "2026-05-13T06:30:56Z",
+      "ended_at": "2026-05-13T06:30:56Z",
+      "validator_status": "PASS",
+      "acceptance_status": "ACCEPTED",
+      "artifact_refs": [
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K04/system_mapping_matrix.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K04/phase_mapping_matrix.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K04/gap_detection_report.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K04/k04_state.json"
+      ],
+      "gaps": [],
+      "source_trace": true
+    },
+    {
+      "stage_id": "K05",
+      "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+      "status": "K05_ACCEPTED",
+      "started_at": "2026-05-13T06:30:56Z",
+      "ended_at": "2026-05-13T06:30:56Z",
+      "validator_status": "PASS",
+      "acceptance_status": "ACCEPTED",
+      "artifact_refs": [
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K05/controller_candidate_packet.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K05/schema_contract_candidate_packet.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K05/candidate_risk_review.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K05/k05_state.json"
+      ],
+      "gaps": [],
+      "source_trace": true
+    },
+    {
+      "stage_id": "K06",
+      "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+      "status": "K06_ACCEPTED",
+      "started_at": "2026-05-13T06:30:56Z",
+      "ended_at": "2026-05-13T06:30:56Z",
+      "validator_status": "PASS",
+      "acceptance_status": "ACCEPTED",
+      "artifact_refs": [
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K06/her_task_package.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K06/execution_plan.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K06/runner_binding_spec.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K06/k06_state.json"
+      ],
+      "gaps": [],
+      "source_trace": true
+    },
+    {
+      "stage_id": "K07",
+      "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+      "status": "K07_ACCEPTED",
+      "started_at": "2026-05-13T06:30:56Z",
+      "ended_at": "2026-05-13T06:30:56Z",
+      "validator_status": "PASS",
+      "acceptance_status": "ACCEPTED",
+      "artifact_refs": [
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K07/knowledge_processing_acceptance_result.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K07/validation_report.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K07/handoff_packet.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K07/k07_state.json"
+      ],
+      "gaps": [],
+      "source_trace": true
+    },
+    {
+      "stage_id": "K08",
+      "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+      "status": "K08_ACCEPTED",
+      "started_at": "2026-05-13T06:30:56Z",
+      "ended_at": "2026-05-13T06:30:56Z",
+      "validator_status": "PASS",
+      "acceptance_status": "ACCEPTED",
+      "artifact_refs": [
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K08/knowledge_memory_index.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K08/governance_queue_entry.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K08/telegram_status_panel.json",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K08/final_run_summary.md",
+        "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K08/k08_state.json"
+      ],
+      "gaps": [],
+      "source_trace": true
+    }
+  ],
+  "latest_event": "RUN_COMPLETED",
+  "blockers": [],
+  "degraded_gaps": [],
+  "handoff_status": "HANDOFF_WRITTEN",
+  "governance_queue_status": "QUEUED_FOR_GOVERNANCE_REVIEW",
+  "next_action": "manual_governance_or_P00_review_required",
+  "query_commands": [
+    "/kpp_status ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+    "/kpp_panel ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+    "/kpp_handoff ACCEPTANCE-KPP-TELEGRAM-UPLOAD"
+  ],
+  "artifact_index": {
+    "K00": [
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/run_request.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/raw_source_manifest.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/source_registry_entry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/k00_state.json"
+    ],
+    "K01": [
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K01/document_passport.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K01/document_type_classification.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K01/k01_state.json"
+    ],
+    "K02": [
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K02/semantic_chunk_index.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K02/concept_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K02/method_principle_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K02/k02_state.json"
+    ],
+    "K03": [
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/functional_object_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/assumption_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/constraint_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/unknown_gap_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/k03_state.json"
+    ],
+    "K04": [
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K04/system_mapping_matrix.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K04/phase_mapping_matrix.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K04/gap_detection_report.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K04/k04_state.json"
+    ],
+    "K05": [
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K05/controller_candidate_packet.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K05/schema_contract_candidate_packet.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K05/candidate_risk_review.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K05/k05_state.json"
+    ],
+    "K06": [
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K06/her_task_package.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K06/execution_plan.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K06/runner_binding_spec.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K06/k06_state.json"
+    ],
+    "K07": [
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K07/knowledge_processing_acceptance_result.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K07/validation_report.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K07/handoff_packet.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K07/k07_state.json"
+    ],
+    "K08": [
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K08/knowledge_memory_index.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K08/governance_queue_entry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K08/telegram_status_panel.json",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K08/final_run_summary.md",
+      "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K08/k08_state.json"
+    ]
+  },
+  "updated_at": "2026-05-13T06:30:56Z"
+}

@@ -1,0 +1,55 @@
+data_handoff_packet:
+  packet_id: string
+  token_address: string
+  generated_at: datetime
+  data_plane_version: string
+  run_id: string
+  source_summary:
+    sources_used: list
+    sources_missing: list
+    source_conflicts: list
+    source_freshness_summary: object
+  normalized_entities:
+    token_entity_path: string
+    wallet_entities_path: string
+    wallet_group_entities_path: string
+    pool_entity_path: string
+  normalized_events:
+    transaction_events_path: string
+    wallet_behavior_events_path: string
+    chip_structure_events_path: string
+    market_structure_events_path: string
+  snapshots:
+    discovery_snapshot_path: string
+    wallet_decision_snapshot_path: string
+    market_structure_snapshot_path: string
+    latest_snapshot_path: string
+  data_quality:
+    overall_data_quality_score: number
+    completeness_score: number
+    consistency_score: number
+    freshness_score: number
+    traceability_score: number
+    replayability_score: number
+    quality_status: string
+  missing_fields:
+    critical_missing_fields: list
+    high_impact_missing_fields: list
+    medium_impact_missing_fields: list
+  conflict_fields:
+    fields: list
+    conflict_report_path: string
+  lineage:
+    lineage_index_path: string
+    replay_manifest_path: string
+  downstream_permission:
+    evidence_plane_permission:
+    - ALLOW_EVIDENCE_GENERATION
+    - ALLOW_WEAK_EVIDENCE_ONLY
+    - REQUIRE_DATA_REFRESH
+    - BLOCK_EVIDENCE_GENERATION
+    forbidden_claims:
+    - NO_STRONG_WALLET_STRUCTURE_CLAIM
+    - NO_STRONG_MARKET_CAP_CLAIM
+    - NO_STRONG_BREAKOUT_CLAIM
+    - NO_EXECUTION_CLAIM

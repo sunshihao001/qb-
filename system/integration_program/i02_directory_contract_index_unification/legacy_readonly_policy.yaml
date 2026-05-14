@@ -1,0 +1,7 @@
+policy_id: legacy_readonly_policy
+rules:
+- legacy paths may be scanned
+- legacy paths may be mapped
+- legacy content may be copied only by later approved task
+- legacy paths must not be deleted or overwritten by I02
+- readers may fallback only after canonical miss

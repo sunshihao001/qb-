@@ -1,0 +1,28 @@
+schema_id: SAMPLE_SUPPORT_ASSESSMENT_RECORD_SCHEMA
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+controller_id: P10_SELF_UPGRADE_CONTROLLER
+type: object
+required:
+- record_id
+- candidate_id
+- generated_at
+- trace
+properties:
+  record_id: string
+  candidate_id: string
+  generated_at: datetime
+  source_p09_records: list
+  assessment: object
+  decision: object
+  limitations:
+  - NO_AUTO_DEPLOY
+  - NO_DIRECT_RULE_MUTATION
+  - NO_PAPER_RUNTIME
+  - NO_LIVE_EXECUTION
+  trace:
+    trace_id: string
+    source_trace_ids: list
+acceptance:
+  must_be_traceable: true
+  must_preserve_backward_compatibility_or_mark_migration: true

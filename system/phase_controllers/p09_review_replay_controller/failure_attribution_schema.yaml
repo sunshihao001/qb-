@@ -1,0 +1,47 @@
+schema_id: FAILURE_ATTRIBUTION_SCHEMA
+title: Failure Attribution
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- failure_attr_id
+- review_case_id
+- failure_phase
+- root_causes
+- evidence_refs
+- upgrade_candidate_refs
+fields:
+  failure_attr_id: string
+  review_case_id: string
+  failure_phase: enum
+  root_causes: list
+  evidence_refs: list
+  upgrade_candidate_refs: list
+enums:
+  failure_phase:
+  - P02_DATA
+  - P03_ENTITY
+  - P04_CHIP
+  - P05_EVIDENCE
+  - P06_SCENARIO
+  - P07_GATE
+  - P08_EXECUTION_RISK
+  - PAPER_RUNTIME
+  - MARKET_EXOGENOUS
+  - UNKNOWN
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

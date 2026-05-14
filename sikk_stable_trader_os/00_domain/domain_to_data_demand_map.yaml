@@ -1,0 +1,7 @@
+domain_to_data_demand_map:
+  token: [token_identity, market_cap_context, quote_security]
+  wallet: [wallet_identity, wallet_behavior, fund_flow]
+  same_source_group: [same_source_group, fund_flow, chip_distribution]
+  market_structure: [kline_volume_structure, avwap_context, volume_context]
+  scenario: [scenario_context, contradiction_trace]
+  strategy_candidate: [strategy_gate_fact, risk_boundary, contradiction_trace]

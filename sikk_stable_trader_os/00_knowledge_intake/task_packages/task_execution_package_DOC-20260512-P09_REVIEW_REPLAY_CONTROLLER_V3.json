@@ -1,0 +1,29 @@
+{
+  "task_package_id": "TASK_PACKAGE_DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3",
+  "doc_id": "DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3",
+  "generated_at": "2026-05-12T08:06:11Z",
+  "task_name": "建立 P09 Review Replay Controller 专业版 v3.0",
+  "target_phase": "P09_review_replay_controller",
+  "required_outputs": [
+    "44 system package files",
+    "31 runtime data directories",
+    "K00 passport/index/mapping/gap/task/handoff artifacts",
+    "control-plane state update",
+    "verification report"
+  ],
+  "constraints": [
+    "review-only",
+    "no direct rule mutation",
+    "no runtime mutation",
+    "no paper runtime trigger",
+    "live execution forbidden",
+    "wallet signing forbidden"
+  ],
+  "acceptance_criteria": [
+    "all required files exist",
+    "yaml/json parse where applicable",
+    "safety anchors present",
+    "phase registry/current state preserve runtime blocks",
+    "handoff only to P10"
+  ]
+}

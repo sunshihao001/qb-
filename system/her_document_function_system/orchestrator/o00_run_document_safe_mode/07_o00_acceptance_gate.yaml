@@ -1,0 +1,39 @@
+acceptance_gate:
+  phase_id: O00
+  pass_status: PIPELINE_ACCEPTED
+  gap_status: PIPELINE_READY_WITH_GAPS
+  fail_status: PIPELINE_BLOCKED
+  required_checks:
+    - id: o00_safe_mode_preflight
+      required: true
+      evidence: preflight/o00_preflight_result.json
+    - id: o00_registry_config_validated
+      required: true
+      evidence: preflight/config_validation_result.json
+    - id: o00_pipeline_plan_written
+      required: true
+      evidence: plan/pipeline_execution_plan.json
+    - id: o00_dependency_graph_written
+      required: true
+      evidence: plan/stage_dependency_graph.json
+    - id: o00_state_written
+      required: true
+      evidence: state/pipeline_state.json
+    - id: o00_evidence_bundle_written
+      required: true
+      evidence: evidence/pipeline_evidence_bundle.json
+    - id: o00_gap_register_written
+      required: true
+      evidence: gaps/pipeline_gap_register.json
+    - id: o00_trace_audit_written
+      required: true
+      evidence: trace/o00_trace.jsonl
+    - id: o00_acceptance_written
+      required: true
+      evidence: acceptance/o00_acceptance_result.json
+  cannot_claim_without_evidence:
+    TESTED: test_execution_evidence
+    RUNNER_BOUND: runner_binding_evidence
+    POLICY_ACTIVE: governance_activation_evidence
+    PIPELINE_ACCEPTED: all_blocking_gaps_resolved
+    SYSTEM_FULLY_IMPLEMENTED: real_downstream_implementation_evidence

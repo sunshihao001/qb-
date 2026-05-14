@@ -1,0 +1,88 @@
+{
+  "handoff_id": "F00_TO_REVIEW_20260513_001",
+  "from_phase": "F00",
+  "to_phase": "A01/H01/Review",
+  "source_doc_refs": [
+    "DOC-20260513-F00-001"
+  ],
+  "k00_handoff_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/handoff/k00_to_f00_handoff_packet.json"
+  ],
+  "function_mapping_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/concept_to_function/concept_to_function_map.json"
+  ],
+  "implementation_decision_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/implementation_decision/implementation_decision.json"
+  ],
+  "asset_plan_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/asset_plan/function_asset_plan.json"
+  ],
+  "field_model_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/field_model/field_model.json"
+  ],
+  "rule_logic_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/rule_logic/rule_logic.json"
+  ],
+  "schema_contract_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/schema_contract/schema_contract_plan.json"
+  ],
+  "patch_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/code_patch/patch_plan.json"
+  ],
+  "test_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/tests/test_replay_plan.json"
+  ],
+  "replay_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/replay/replay_plan.json"
+  ],
+  "runner_binding_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/runner_binding/runner_binding_plan.json"
+  ],
+  "kv_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/kv/kv_retrieval_index.json"
+  ],
+  "gap_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/acceptance/f00_acceptance_result.json"
+  ],
+  "acceptance_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001/acceptance/f00_acceptance_result.json"
+  ],
+  "allowed_next_actions": [
+    "A01_REVIEW",
+    "V01_SCHEMA_VALIDATION",
+    "V02_TEST_IMPLEMENTATION",
+    "V03_REPLAY_EXECUTION",
+    "R01_RUNNER_BINDING_IMPLEMENTATION"
+  ],
+  "forbidden_next_actions": [
+    "claim_FUNCTION_TESTED",
+    "claim_RUNNER_BOUND",
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy"
+  ],
+  "unresolved_gaps": [
+    {
+      "gap_id": "gap_test_not_executed",
+      "gap_type": "test_gap",
+      "gap_level": "MEDIUM_GAP",
+      "blocking": false,
+      "reason": "No pytest suite executed in this F00 realization run."
+    },
+    {
+      "gap_id": "gap_replay_not_executed",
+      "gap_type": "replay_gap",
+      "gap_level": "MEDIUM_GAP",
+      "blocking": false,
+      "reason": "Replay cases planned but not executed."
+    },
+    {
+      "gap_id": "gap_runner_not_bound",
+      "gap_type": "runner_binding_gap",
+      "gap_level": "MEDIUM_GAP",
+      "blocking": false,
+      "reason": "Runner binding planned but not verified as RUNNER_BOUND."
+    }
+  ],
+  "handoff_status": "HANDOFF_READY_WITH_GAPS"
+}

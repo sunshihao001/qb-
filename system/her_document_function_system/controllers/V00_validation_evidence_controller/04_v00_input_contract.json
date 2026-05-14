@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V00 Input Contract",
+  "description": "V00 cannot directly read chat context. The legal entry is F00 handoff plus explicit file-backed F00 output references and safe execution boundary.",
+  "type": "object",
+  "required": [
+    "phase_id",
+    "k00_handoff_packet",
+    "f00_handoff_packet",
+    "function_mapping",
+    "implementation_decision",
+    "asset_plan",
+    "field_model",
+    "rule_logic",
+    "schema_contract_plan",
+    "test_plan",
+    "replay_plan",
+    "execution_boundary",
+    "repo_root"
+  ],
+  "properties": {
+    "phase_id": {
+      "const": "V00"
+    },
+    "k00_handoff_packet": {
+      "type": [
+        "object",
+        "string"
+      ],
+      "description": "K00 upstream reference or loaded packet."
+    },
+    "f00_handoff_packet": {
+      "type": "object",
+      "required": [
+        "handoff_id",
+        "from_phase",
+        "to_phase",
+        "f00_status",
+        "artifact_refs"
+      ],
+      "properties": {
+        "handoff_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "from_phase": {
+          "const": "F00"
+        },
+        "to_phase": {
+          "enum": [
+            "V00",
+            "R00",
+            "A00",
+            "H00",
+            "DOWNSTREAM"
+          ]
+        },
+        "f00_status": {
+          "enum": [
+            "F00_ACCEPTED",
+            "F00_READY_WITH_GAPS"
+          ]
+        },
+        "artifact_refs": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    },
+    "function_mapping": {
+      "type": [
+        "object",
+        "array",
+        "string"
+      ],
+      "description": "F00 concept/function mapping or file ref."
+    },
+    "implementation_decision": {
+      "type": [
+        "object",
+        "array",
+        "string"
+      ]
+    },
+    "asset_plan": {
+      "type": [
+        "object",
+        "array",
+        "string"
+      ]
+    },
+    "field_model": {
+      "type": [
+        "object",
+        "array",
+        "string"
+      ]
+    },
+    "rule_logic": {
+      "type": [
+        "object",
+        "array",
+        "string"
+      ]
+    },
+    "schema_contract_plan": {
+      "type": [
+        "object",
+        "array",
+        "string"
+      ]
+    },
+    "patch_refs": {
+      "type": [
+        "object",
+        "array",
+        "string"
+      ],
+      "description": "Required when implementation patch is claimed."
+    },
+    "test_plan": {
+      "type": [
+        "object",
+        "array",
+        "string"
+      ]
+    },
+    "replay_plan": {
+      "type": [
+        "object",
+        "array",
+        "string"
+      ]
+    },
+    "execution_boundary": {
+      "type": "object",
+      "required": [
+        "allowed_modes",
+        "forbidden_modes"
+      ],
+      "properties": {
+        "allowed_modes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "SCHEMA_VALIDATE",
+              "CONTRACT_VALIDATE",
+              "SAFE_TEST",
+              "SAFE_REPLAY",
+              "EVIDENCE_COLLECT"
+            ]
+          }
+        },
+        "forbidden_modes": {
+          "type": "array",
+          "contains": {
+            "const": "LIVE_RUNTIME"
+          }
+        },
+        "allow_live_runtime": {
+          "const": false
+        },
+        "allow_wallet_signing": {
+          "const": false
+        },
+        "allow_auto_deploy": {
+          "const": false
+        }
+      },
+      "additionalProperties": true
+    },
+    "repo_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "bypass_f00",
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "x_missing_input_handling": {
+    "missing_f00_handoff_packet": "V00_BLOCKED",
+    "f00_status_blocked": "V00_REJECTED",
+    "missing_execution_boundary": "V00_BLOCKED",
+    "missing_test_plan": "V00_BLOCKED",
+    "missing_replay_plan": "V00_READY_WITH_GAPS_OR_BLOCKED",
+    "missing_repo_root": "V00_BLOCKED"
+  }
+}

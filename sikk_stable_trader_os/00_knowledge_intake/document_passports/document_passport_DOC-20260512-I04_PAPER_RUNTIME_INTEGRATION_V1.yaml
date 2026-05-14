@@ -1,0 +1,29 @@
+document_passport:
+  doc_id: DOC-20260512-I04_PAPER_RUNTIME_INTEGRATION_V1
+  title: I04 Paper Runtime Integration 专业版 v1.0
+  document_type: integration_program_controller_spec
+  controller_id: I04_PAPER_RUNTIME_INTEGRATION
+  version: v1.0
+  language: zh-CN
+  raw_input_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I04_paper_runtime_integration_v1_0.md
+  canonical_target: /root/sikk-gmgn/system/integration_program/I04_paper_runtime_integration/
+  runtime_target: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/
+  canonical_paper_runtime: /root/sikk-gmgn/data/paper_runtime/
+  route_status: accepted
+  k00_required_outputs:
+  - raw
+  - registry
+  - passport
+  - index
+  - mapping
+  - gap
+  - task_package
+  - phase_state
+  - acceptance
+  - handoff
+  safety_boundaries:
+    paper_only: true
+    no_live_execution: true
+    no_wallet_signing: true
+    no_auto_deploy: true
+    no_direct_p07_input: true

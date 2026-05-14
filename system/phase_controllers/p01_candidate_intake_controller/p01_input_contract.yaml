@@ -1,0 +1,36 @@
+contract_id: P01_INPUT_CONTRACT_V3
+accepted_sources:
+- GMGN_TRENDING
+- GMGN_NEW_TOKEN
+- GMGN_SMART_MONEY
+- GMGN_KOL_SIGNAL
+- MANUAL_INPUT
+- TELEGRAM_COMMAND
+- LEGACY_RUNTIME
+- REPLAY_SAMPLE
+- WATCHLIST_IMPORT
+- EXTERNAL_CSV_IMPORT
+- SYSTEM_REDISCOVERY
+minimum_required_fields:
+- chain
+- token_address
+- source_type
+optional_fields:
+- pair_address
+- pool_address
+- symbol
+- source_rank
+- discovery_market_cap_usd
+- discovery_liquidity_usd
+- discovery_time
+- raw_payload_path
+reject_if:
+- token_address_missing
+- token_address_invalid
+- source_untraceable
+- unsupported_chain
+- live_execution_requested
+upstream_required:
+- handoff_packet
+- acceptance_result_packet
+- trace_handoff_packet

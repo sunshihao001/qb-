@@ -1,0 +1,27 @@
+{
+  "doc_id": "DOC-20260511-026",
+  "anchors": [
+    "Acceptance Plane 是裁决平面",
+    "Trace Plane 之后 Handoff Plane 之前",
+    "READY / READY_WITH_GAPS / REJECTED / BLOCKED / NEEDS_REWORK",
+    "Handoff without Acceptance is blocked",
+    "Tool Binding without Acceptance is blocked",
+    "Paper Runtime without Acceptance is blocked",
+    "Live execution remains blocked"
+  ],
+  "sections": [
+    "定位",
+    "建造顺序",
+    "边界",
+    "文件体系",
+    "状态码",
+    "评分模型",
+    "阻断规则",
+    "缺口策略",
+    "Trace依赖",
+    "Contract依赖",
+    "HER执行协议",
+    "Full Control同步更新"
+  ],
+  "downstream_use": "P00/Full Control consumes into system/acceptance_plane and full_control_plane registries"
+}

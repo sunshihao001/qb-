@@ -1,0 +1,16 @@
+{
+  "doc_id": "DOC-20260511-005",
+  "generated_at": "2026-05-11T13:18:52Z",
+  "blocking_gap_count": 0,
+  "degraded_gap_count": 1,
+  "gaps": [
+    {
+      "gap_id": "DOMAIN-GAP-001",
+      "severity": "DEGRADED",
+      "status": "OPEN",
+      "description": "data_plane.md is required next but not generated yet",
+      "required_action": "generate data_plane.md"
+    }
+  ],
+  "next_recommended_artifact": "00_data/data_plane.md"
+}

@@ -1,0 +1,26 @@
+statuses:
+  success: H00_ACCEPTED
+  gaps: H00_READY_WITH_GAPS
+  blocked: H00_BLOCKED
+  rejected: H00_REJECTED
+required_gates:
+  - a00_handoff_loaded
+  - readiness_certificate_interpreted
+  - downstream_targets_classified
+  - routing_decision_generated
+  - queue_items_generated
+  - dependency_graph_generated
+  - priority_plan_generated
+  - gap_risk_bound
+  - downstream_handoff_packets_written
+  - queue_state_written
+  - trace_audit_written
+  - recovery_policy_generated
+false_pass_rules:
+  no_a00_handoff_blocks: true
+  no_readiness_certificate_blocks_queue: true
+  a00_blocked_cannot_enter_execution_queue: true
+  ready_with_gaps_must_retain_gaps: true
+  queue_created_is_not_task_executed: true
+  forbidden_actions_must_not_be_removed: true
+  missing_trace_audit_blocks_accepted: true

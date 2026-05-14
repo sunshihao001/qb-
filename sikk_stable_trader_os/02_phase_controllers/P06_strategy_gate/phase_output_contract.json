@@ -1,0 +1,69 @@
+{
+  "phase_id": "P06",
+  "contract_type": "phase_output_contract",
+  "version": "2.1",
+  "required_outputs": [
+    {
+      "file": "strategy_gate_decision.json",
+      "type": "json",
+      "required": true
+    },
+    {
+      "file": "strategy_counter_evidence.json",
+      "type": "json",
+      "required": true
+    },
+    {
+      "file": "phase_06_handoff_packet.json",
+      "type": "json",
+      "required": true
+    },
+    {
+      "file": "decision_trace.json",
+      "type": "json",
+      "required": true
+    },
+    {
+      "file": "counter_evidence.json",
+      "type": "json",
+      "required": true
+    },
+    {
+      "file": "phase_runtime_log.jsonl",
+      "type": "jsonl",
+      "required": true
+    },
+    {
+      "file": "phase_audit_report.md",
+      "type": "markdown",
+      "required": true
+    },
+    {
+      "file": "phase_state.json",
+      "type": "json",
+      "required": true
+    }
+  ],
+  "required_output_fields": [
+    "phase_id",
+    "phase_status",
+    "decision_or_summary",
+    "field_source_map",
+    "evidence_level",
+    "counter_evidence",
+    "hard_negative_hits",
+    "gap_list",
+    "audit_ref",
+    "next_phase_allowed",
+    "next_phase_id"
+  ],
+  "forbidden_outputs": [
+    "buy_now",
+    "sell_now",
+    "auto_trade",
+    "real_trade_allowed",
+    "private_key",
+    "signed_transaction",
+    "broadcast_hash_without_manual_approval"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "doc_id": "DOC-20260512-001",
+  "mapped_at": "2026-05-12T01:42:26Z",
+  "phases": {
+    "K00": "assetizes uploaded P01 spec",
+    "P00": "receives asset index update",
+    "P01": "canonical controller package expansion target",
+    "P02": "allowed downstream target via data request and handoff only"
+  },
+  "forbidden_phase_routes": [
+    "P01_TO_P03",
+    "P01_TO_P04",
+    "P01_TO_P05",
+    "P01_TO_P06",
+    "P01_TO_PAPER_RUNTIME",
+    "P01_TO_LIVE_EXECUTION"
+  ]
+}

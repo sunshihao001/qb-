@@ -1,0 +1,49 @@
+controller_id: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION_CONTROLLER
+version: '1.0'
+program: Integration Program
+not_business_phase: true
+definition: Unifies P01-P10/I01 directories, contracts, schemas, handoffs, runtime
+  data paths, reports, trace/acceptance artifacts and legacy path mappings into HER/Runner-readable
+  indexes.
+responsibilities:
+- canonical root declaration
+- phase controller file indexing
+- runtime data path indexing
+- schema/contract/handoff/data request indexing
+- control artifact indexing
+- naming/path policy
+- legacy readonly mapping
+- gap/conflict reporting
+- read order manifest
+- I03 prerequisite packet
+- I02 to I03 handoff
+forbidden:
+- create P11/P12
+- modify P01-P10 business logic
+- write runner/tool binding implementation
+- start paper runtime
+- modify strategy rules or trading thresholds
+- generate buy/sell signal
+- auto migrate/delete legacy data
+- auto deploy
+- live execution
+- wallet signing
+upstream:
+- I01_FULL_PHASE_CONSISTENCY_AUDIT
+- K00_KNOWLEDGE_INTAKE
+downstream:
+- I03_RUNNER_TOOL_BINDING
+status_codes:
+- I02_UNINITIALIZED
+- I02_CONTEXT_LOADED
+- I02_INDEXES_BUILT
+- I02_READY
+- I02_READY_WITH_GAPS
+- I02_BLOCKED
+- I02_REJECTED
+safety:
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+  auto_deploy_allowed: false
+  business_logic_mutation_allowed: false

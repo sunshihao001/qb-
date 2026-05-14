@@ -1,0 +1,39 @@
+{
+  "explanations": [
+    {
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "final_state": "WATCHING",
+      "claim_type": "state_machine_handoff",
+      "summary": "证据不足，保持观察。",
+      "evidence_refs": [
+        "gmgn:token_info",
+        "okx:token_search",
+        "okx:price_info",
+        "gmgn:token_security",
+        "okx:advanced_info",
+        "okx:security_token_scan",
+        "gmgn:token_info",
+        "gmgn:token_pool",
+        "okx:price_info",
+        "okx:liquidity",
+        "gmgn:token_holders",
+        "gmgn:token_traders",
+        "gmgn:holders_transfer_in",
+        "gmgn:holders_bundler",
+        "gmgn:holders_fresh",
+        "okx:cluster_overview",
+        "okx:cluster_top_holders_10",
+        "okx:cluster_top_holders_50",
+        "okx:cluster_top_holders_100",
+        "okx:cluster_list",
+        "gmgn:token_holders",
+        "gmgn:token_traders",
+        "okx:top_trader",
+        "okx:cluster_list"
+      ],
+      "counter_evidence": [],
+      "inference_boundary": "状态输出只用于排除/记录/观察/纸面验证/人工确认，不代表真实买入。",
+      "audit_status": "PASS"
+    }
+  ]
+}

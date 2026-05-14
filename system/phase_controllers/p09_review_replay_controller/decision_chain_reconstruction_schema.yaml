@@ -1,0 +1,39 @@
+schema_id: DECISION_CHAIN_RECONSTRUCTION_SCHEMA
+title: Decision Chain Reconstruction
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- chain_id
+- review_case_id
+- phase_steps
+- missing_links
+- decision_consistency_status
+fields:
+  chain_id: string
+  review_case_id: string
+  phase_steps: list
+  missing_links: list
+  decision_consistency_status: enum
+enums:
+  decision_consistency_status:
+  - CHAIN_COMPLETE
+  - CHAIN_COMPLETE_WITH_GAPS
+  - CHAIN_BROKEN
+  - CHAIN_UNUSABLE
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

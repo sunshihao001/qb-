@@ -1,0 +1,5 @@
+policy: scenario_feature_mapping_policy
+rules:
+- map evidence bundles to scenario features
+- weak evidence cannot create high-confidence scenario
+- counter/conflict/unknown must be mapped

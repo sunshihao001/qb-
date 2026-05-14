@@ -1,0 +1,29 @@
+{
+  "doc_id": "DOC-20260512-008",
+  "gaps": [
+    {
+      "id": "P08-GAP-001",
+      "severity": "P0",
+      "status": "CLOSED_BY_PACKAGE",
+      "description": "P08 system package files and runtime data directories must be created."
+    },
+    {
+      "id": "P08-GAP-002",
+      "severity": "P0",
+      "status": "BOUNDARY_BLOCKED",
+      "description": "P08 cannot output live execution, wallet signing, or real order."
+    },
+    {
+      "id": "P08-GAP-003",
+      "severity": "P1",
+      "status": "OPEN_RUNTIME_GAP",
+      "description": "Runner/tool binding, real quote/security APIs and paper runtime are not implemented."
+    },
+    {
+      "id": "P08-GAP-004",
+      "severity": "P1",
+      "status": "OPEN_NEXT_PHASE_GAP",
+      "description": "Paper-only Runtime package is not yet landed."
+    }
+  ]
+}

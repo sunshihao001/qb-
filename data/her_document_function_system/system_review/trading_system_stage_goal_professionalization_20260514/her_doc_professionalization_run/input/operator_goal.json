@@ -1,0 +1,37 @@
+{
+  "goal_id": "HER_DOC_PROFESSIONAL_STAGE_GOAL_20260514",
+  "created_at": "2026-05-14T10:35:40+00:00",
+  "operator_intent": "Build a professional lightweight-institutional stage-goal problem list, task package, safe-mode application artifacts, and completeness judgment for the SIKK HER trading-structure system.",
+  "mode": "SAFE_MODE_APPLICATION_REPAIR",
+  "repo_root": "/root/sikk-gmgn",
+  "quality_target": "LIGHTWEIGHT_INSTITUTIONAL_ONE_PASS",
+  "paper_only_boundary": true,
+  "forbidden_actions": [
+    "real_swap",
+    "private_key_read",
+    "private_key_write",
+    "signing",
+    "broadcast",
+    "mark_ready_with_gaps_as_accepted",
+    "activate_upgrade_policy"
+  ],
+  "required_outputs": [
+    "problem_issue_register",
+    "p01_p10_data_completeness_matrix",
+    "runner_binding_application_pack",
+    "phase_output_index_seed",
+    "handoff_consumption_queue",
+    "wallet_structure_gap_queue",
+    "acceptance_status_matrix",
+    "review_upgrade_candidate_package",
+    "verification"
+  ],
+  "acceptance_policy": {
+    "file_level": true,
+    "structure_level": true,
+    "semantic_level": "READY_WITH_GAPS_ALLOWED",
+    "consumption_level": "MUST_BE_EXPLICIT",
+    "runtime_level": "MUST_BE_EXPLICIT"
+  },
+  "existing_evidence_root": "data/her_document_function_system/system_review/trading_system_full_gap_scan_20260514"
+}

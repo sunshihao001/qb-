@@ -1,0 +1,19 @@
+{
+  "doc_id": "DOC-20260513-P01-DATA-FACT-001",
+  "gap_status": "GAPS_IDENTIFIED",
+  "blocking_for_runtime": [
+    "Need audit of actual GMGN connector/source path (skill/API/script/cache).",
+    "Need audit of actual OKX connector capabilities beyond quote/security summary.",
+    "Need implementation or reconciliation of P01 controller/contracts/tests with existing repo state.",
+    "Need at least 3 replay fixtures before robust offline validation.",
+    "Need downstream readers changed to consume P01 handoff instead of raw/legacy JSON."
+  ],
+  "non_blocking_for_package_landing": [
+    "Uploaded spec is sufficiently complete to create K00 task package and P01 implementation contract."
+  ],
+  "acceptance_risks": [
+    "Do not claim DATA_READY without real connector output and freshness/provenance validation.",
+    "Do not claim P01_READY if only documents/skeletons exist.",
+    "Do not unblock P02/P03/P06 unless handoff quality gate permits."
+  ]
+}

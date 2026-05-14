@@ -1,0 +1,40 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+controller_id: P07_STRATEGY_GATE_CONTROLLER
+phase_id: P07
+version: v3.0
+name_cn: 策略准入、阻断、暂停、观察、纸面候选与 P08 执行风控交接控制器
+controller_type: BUSINESS_PHASE_CONTROLLER
+positioning:
+  is_strategy_gate: true
+  is_signal_module: false
+  is_trade_trigger: false
+  is_paper_runtime_starter: false
+  is_live_execution_approver: false
+responsibility:
+  primary: 将 P06 场景、P05 证据、P04 筹码、P02 数据质量和 Governance 硬规则转化为策略门控裁决。
+  decisions: [OBSERVE, PAUSE, BLOCK, PAPER_CANDIDATE, HUMAN_CONFIRMATION_REQUIRED, STRATEGY_GATE_REJECTED]
+  handoff_target: P08_EXECUTION_RISK_CONTROLLER
+upstream_required:
+  - p06_to_p07_handoff_packet
+  - p07_strategy_gate_data_request_packet
+  - trace_handoff_packet
+  - acceptance_result_packet
+  - governance_handoff_packet
+  - domain_strategy_policy_handoff
+permissions:
+  may_output_paper_candidate: true
+  may_send_to_p08: true
+  may_start_paper_runtime: false
+  may_output_buy_signal: false
+  may_allow_live_execution: false
+  may_sign_wallet: false
+forbidden_outputs: [buy_signal, paper_runtime_started, live_execution_allowed, wallet_signature_request, auto_order]
+state_machine_ref: strategy_gate_state_machine.yaml
+acceptance_ref: p07_acceptance_criteria.md
+runtime_status: PACKAGE_READY_WITH_RUNTIME_GAPS
+safety_boundary:
+  paper_candidate_not_paper_ready: true
+  p08_required_before_any_paper_runtime: true
+  live_execution_forbidden: true

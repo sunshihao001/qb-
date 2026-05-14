@@ -1,0 +1,42 @@
+candidate_intake_quality_model:
+  dimensions:
+    identity_completeness:
+      weight: 0.25
+      checks:
+      - token_address_present
+      - chain_present
+      - token_address_valid
+      - pool_or_pair_present_or_requested
+    source_traceability:
+      weight: 0.2
+      checks:
+      - source_type_present
+      - source_id_present
+      - source_trace_id_present
+      - raw_source_payload_available
+    discovery_context_quality:
+      weight: 0.2
+      checks:
+      - discovery_time_present
+      - discovery_market_cap_present
+      - discovery_liquidity_present
+      - token_age_present
+    dedup_integrity:
+      weight: 0.15
+      checks:
+      - duplicate_check_completed
+      - candidate_id_stable
+      - rediscovery_attached_not_recreated
+    downstream_readiness:
+      weight: 0.2
+      checks:
+      - p02_data_request_generated
+      - gaps_registered
+      - limitation_tags_attached
+      - handoff_packet_ready
+  quality_status:
+  - INTAKE_HIGH_CONFIDENCE
+  - INTAKE_USABLE
+  - INTAKE_USABLE_WITH_GAPS
+  - INTAKE_LOW_CONFIDENCE
+  - INTAKE_REJECTED

@@ -1,0 +1,48 @@
+{
+  "pipeline_run_id": "o00_run_20260513_160616",
+  "pipeline_run_dir": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_160616",
+  "pipeline_state": {
+    "pipeline_run_id": "o00_run_20260513_160616",
+    "current_status": "PIPELINE_READY_WITH_GAPS",
+    "current_stage": "H00",
+    "completed_stages": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00"
+    ],
+    "blocked_stages": [],
+    "ready_with_gaps": [
+      "PIPELINE"
+    ],
+    "open_gaps": [
+      "design_level_replay_not_real_test",
+      "runner_binding_not_executed",
+      "policy_candidate_not_active"
+    ],
+    "forbidden_actions": [
+      "live_runtime",
+      "wallet_signing",
+      "auto_deploy",
+      "production_trading",
+      "execute_real_order"
+    ],
+    "final_report_path": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_160616/reports/o00_final_report.md"
+  },
+  "replay_result": {
+    "sample_id": "sample_001_document_to_function",
+    "status": "DESIGN_LEVEL_REPLAY_COMPLETED",
+    "final_status": "PIPELINE_READY_WITH_GAPS",
+    "expected_vs_actual_checked": true,
+    "forbidden_claims": {
+      "TESTED": "BLOCKED",
+      "RUNNER_BOUND": "BLOCKED",
+      "POLICY_ACTIVE": "BLOCKED",
+      "PIPELINE_ACCEPTED": "BLOCKED",
+      "SYSTEM_FULLY_IMPLEMENTED": "BLOCKED"
+    }
+  },
+  "final_status": "PIPELINE_READY_WITH_GAPS",
+  "report": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_160616/reports/o00_final_report.md"
+}

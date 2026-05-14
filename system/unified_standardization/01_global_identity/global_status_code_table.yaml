@@ -1,0 +1,37 @@
+meta:
+  standard_id: S00_GLOBAL_STATUS_CODE_TABLE
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+s00_status_codes:
+- S00_NOT_STARTED
+- S00_STRUCTURE_CREATED
+- S00_STANDARD_OBJECTS_DEFINED
+- S00_PHASES_MAPPED
+- S00_RUNNERS_BOUND
+- S00_TRACE_ACCEPTANCE_READY
+- S00_R00_VALIDATED
+- S00_P08_BOUND
+- S00_P09_P10_BOUND
+- S00_LEGACY_ABSORBED
+- S00_REGRESSION_READY
+- S00_PROFESSIONAL_READY_WITH_GAPS
+- S00_PROFESSIONAL_READY
+- S00_REJECTED
+runtime_status:
+- READY
+- READY_WITH_GAPS
+- BLOCKED
+- REJECTED
+- PASS
+- PASS_WITH_GAPS
+- FAIL
+- WITH_GAPS
+current_status: S00_TRACE_ACCEPTANCE_RUNNER_BOUND_READY_WITH_GAPS

@@ -1,0 +1,68 @@
+{
+  "phase_id": "P02",
+  "controller_id": "P02_SOURCE_DATA_FACT_CONTROLLER",
+  "controller_name_cn": "数据事实接收与标准化控制器",
+  "primary_responsibility": "根据 P01 候选对象采集或接收事实数据，并转化为 raw / normalized / entity / event / snapshot 基础数据。",
+  "required_handoff": [
+    "p01_candidate_intake_handoff_packet",
+    "data_plane_handoff_packet",
+    "field_usage_permission_packet",
+    "downstream_read_instruction"
+  ],
+  "outputs": [
+    "raw_data_index.json",
+    "normalized_token_facts.json",
+    "normalized_wallet_facts.json",
+    "normalized_market_facts.json",
+    "data_quality_report.json",
+    "data_missing_report.json",
+    "data_conflict_report.json",
+    "p02_source_data_fact_handoff_packet.yaml"
+  ],
+  "required_trace": [
+    "PHASE_TRACE",
+    "TASK_TRACE",
+    "ARTIFACT_TRACE",
+    "CONTRACT_TRACE",
+    "FIELD_TRACE",
+    "DATA_TRACE",
+    "STATE_TRACE"
+  ],
+  "acceptance_gate": "GATE_P02_SOURCE_DATA_FACT_READY",
+  "tool_binding_policy": {
+    "allowed": true,
+    "mode": [
+      "READ_ONLY_DATA_COLLECTION",
+      "DRY_RUN_ONLY",
+      "TEST_ONLY"
+    ],
+    "allowed_tools": [
+      "gmgn_token_data_reader",
+      "gmgn_wallet_data_reader",
+      "okx_quote_reader",
+      "okx_security_reader",
+      "kline_data_loader",
+      "data_normalizer"
+    ],
+    "forbidden_tools": [
+      "evidence_generator",
+      "strategy_gate_runner",
+      "trade_executor",
+      "wallet_signer"
+    ]
+  },
+  "paper_runtime_policy": {
+    "allowed": false,
+    "reason": "P02 只负责数据事实生产，不允许进入纸面运行。"
+  },
+  "forbidden": [
+    "generate_evidence_strength",
+    "classify_wallet_intent",
+    "classify_trading_scenario",
+    "output_strategy_signal",
+    "output_paper_ready",
+    "approve_execution"
+  ],
+  "status": "INDEXED_NOT_EXPANDED",
+  "runtime_allowed": false
+}

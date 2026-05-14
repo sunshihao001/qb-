@@ -1,0 +1,15 @@
+{
+  "trace_id": "i02_scan_trace_20260512",
+  "generated_at": "2026-05-12T13:05:00Z",
+  "events": [
+    "canonical_root_declared",
+    "phase_controller_scanned",
+    "runtime_paths_scanned",
+    "schema_contract_handoff_control_indexes_built",
+    "legacy_mapping_built",
+    "gap_report_built",
+    "read_order_manifest_built"
+  ],
+  "output_count": 16,
+  "safety": "read_only_scan"
+}

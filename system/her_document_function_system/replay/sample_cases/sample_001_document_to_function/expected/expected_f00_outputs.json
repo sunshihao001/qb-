@@ -1,0 +1,97 @@
+{
+  "expected_f00_status": "F00_ACCEPTED",
+  "expected_function_mapping": [
+    {
+      "source_concept": "测试计划不能等于测试证据",
+      "required_function": "建立 evidence policy rule，禁止 test_plan 满足 TESTED 状态",
+      "function_type": "GOVERNANCE_RULE",
+      "target_phase": "G00",
+      "required_assets": [
+        "evidence_policy",
+        "status_code_table",
+        "v00_acceptance_gate",
+        "a00_status_consistency_validator"
+      ]
+    },
+    {
+      "source_concept": "TESTED 必须有真实 test_command、exit_code、stdout_path、stderr_path",
+      "required_function": "更新 V00 test_evidence schema，强制 required evidence fields",
+      "function_type": "SCHEMA_UPDATE",
+      "target_phase": "V00",
+      "required_assets": [
+        "test_evidence.schema.json",
+        "v00_acceptance_gate.yaml"
+      ]
+    },
+    {
+      "source_concept": "只有 test_plan 时状态必须降级",
+      "required_function": "在 A00 状态一致性验证中识别 TEST_PLAN_AS_TESTED",
+      "function_type": "HARD_BLOCK_RULE",
+      "target_phase": "A00",
+      "required_assets": [
+        "status_consistency_validator",
+        "acceptance_decision.schema.json"
+      ]
+    }
+  ],
+  "expected_field_model": [
+    {
+      "field_name": "test_command",
+      "required": true,
+      "used_by": [
+        "V00",
+        "A00",
+        "G00"
+      ]
+    },
+    {
+      "field_name": "exit_code",
+      "required": true,
+      "used_by": [
+        "V00",
+        "A00"
+      ]
+    },
+    {
+      "field_name": "stdout_path",
+      "required": true,
+      "used_by": [
+        "V00",
+        "A00"
+      ]
+    },
+    {
+      "field_name": "stderr_path",
+      "required": true,
+      "used_by": [
+        "V00",
+        "A00"
+      ]
+    },
+    {
+      "field_name": "passed_count",
+      "required": true,
+      "used_by": [
+        "V00",
+        "A00"
+      ]
+    },
+    {
+      "field_name": "failed_count",
+      "required": true,
+      "used_by": [
+        "V00",
+        "A00"
+      ]
+    }
+  ],
+  "expected_rule_logic": [
+    {
+      "rule_id": "rule_evidence_test_plan_not_tested",
+      "rule_type": "HARD_BLOCK_RULE",
+      "condition": "status == TESTED AND missing(test_command OR exit_code OR stdout_path OR stderr_path)",
+      "output_status": "TEST_EVIDENCE_INVALID",
+      "target_phase": "V00,A00,G00"
+    }
+  ]
+}

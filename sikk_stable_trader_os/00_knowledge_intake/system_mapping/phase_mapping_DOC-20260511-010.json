@@ -1,0 +1,27 @@
+{
+  "doc_id": "DOC-20260511-010",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T13:56:09.172903+00:00",
+  "phase_impact": {
+    "K00": {
+      "impact": "must_write_state_handoff",
+      "rules": [
+        "no_chat_context_only",
+        "no_summary_only"
+      ]
+    },
+    "P00": {
+      "impact": "primary_controller",
+      "rules": [
+        "read current_system_state first",
+        "read phase_registry",
+        "decide next legal phase"
+      ]
+    },
+    "P01-P10": {
+      "impact": "blocked_if_control_plane_missing",
+      "missing_state": "SYSTEM_CONTROL_PLANE_MISSING"
+    }
+  },
+  "canonical_next_phase": "P00_system_context_control"
+}

@@ -1,0 +1,7 @@
+forbidden_use_inheritance_report:
+  status: PENDING_EXECUTION
+  inherited_forbidden_uses:
+    - NO_LIVE_EXECUTION
+    - NO_WALLET_SIGNING
+    - NO_AUTO_DEPLOY
+  violations: []

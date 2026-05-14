@@ -1,0 +1,15 @@
+report_sections:
+  - "input_manifest_summary"
+  - "wallet_address_record_summary"
+  - "wallet_entity_master_summary"
+  - "entity_resolution_summary"
+  - "funding_source_link_summary"
+  - "same_source_candidate_summary"
+  - "sync_behavior_candidate_summary"
+  - "role_candidate_summary"
+  - "quality_summary"
+  - "p04_request_summary"
+  - "handoff_summary"
+  - "gap_summary"
+  - "blocked_paths"
+must_state_candidate_only: true

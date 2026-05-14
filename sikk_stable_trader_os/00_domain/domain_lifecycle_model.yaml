@@ -1,0 +1,73 @@
+dominant_side_lifecycle_model:
+  - state_name: 早期吸筹
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: OBSERVE_OR_CANDIDATE
+  - state_name: 控盘箱体
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: OBSERVE_OR_CANDIDATE
+  - state_name: 一段扩张
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: OBSERVE_OR_CANDIDATE
+  - state_name: 部分派发
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: OBSERVE_OR_CANDIDATE
+  - state_name: 再吸筹
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: OBSERVE_OR_CANDIDATE
+  - state_name: 二段扩张
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: OBSERVE_OR_CANDIDATE
+  - state_name: 主动派发
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: OBSERVE_OR_CANDIDATE
+  - state_name: 下跌派发
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: BLOCK
+  - state_name: 流动性陷阱
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: BLOCK
+  - state_name: 崩塌退出
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: BLOCK
+  - state_name: 死亡横盘
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: BLOCK
+  - state_name: 再激活
+    entry_conditions: [wallet_evidence_present, market_structure_context_present, no_required_field_forced_unknown]
+    exit_conditions: [hard_negative_triggered, lifecycle_transition_confirmed, evidence_expired]
+    supporting_evidence: [early_wallet_retention, chip_concentration, avwap_or_box_context, volume_structure]
+    counter_evidence: [sync_exit, early_wallet_clearance, fake_volume, structural_breakdown, missing_critical_fields]
+    downstream_tendency: OBSERVE_OR_CANDIDATE

@@ -1,0 +1,15 @@
+artifact_id: OPERATION_DATA_QUALITY_SCHEMA
+version: 1.0.0
+generated_at: 2026-05-12T16:29:31Z
+source_doc_id: DOC-20260512-CPO-001
+safety_boundary:
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+  auto_order_allowed: false
+  auto_deploy_allowed: false
+  p07_bypass_p08_allowed: false
+  p10_auto_deploy_allowed: false
+validation:
+  yaml_parse_required: true
+  trace_required: true
+  acceptance_reference_required: true

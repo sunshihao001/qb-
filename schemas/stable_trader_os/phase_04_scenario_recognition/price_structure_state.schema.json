@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "price_structure_state",
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "price_structure_status",
+    "positive_evidence",
+    "negative_evidence",
+    "missing_fields"
+  ],
+  "properties": {
+    "phase": {},
+    "token_address": {},
+    "price_structure_status": {},
+    "positive_evidence": {},
+    "negative_evidence": {},
+    "missing_fields": {}
+  },
+  "additionalProperties": true
+}

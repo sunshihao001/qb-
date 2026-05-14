@@ -1,0 +1,7 @@
+record_type: paper_candidate_dedup_record
+fields:
+- dedup_id
+- candidate_id
+- duplicate_of
+- dedup_reason
+- trace_id

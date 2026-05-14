@@ -1,0 +1,87 @@
+{
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "phase_id": "P02_wallet_structure",
+  "artifact_kind": "output",
+  "generated_at": "2026-05-11T01:16:10Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "wallet_structure_status": "WALLET_PAUSE",
+  "wallet_structure_score": 72.96,
+  "wallet_risk_score": 76.37,
+  "role_matrix": [
+    {
+      "address": "Fej6xTZ4w2EgTUtAsDe7Dzdtq3T1oRDfGeQbXeWAw37w",
+      "role": "INFRA_EXCLUDED",
+      "action_code": "I",
+      "keep_edges": true,
+      "tags": [
+        "pool",
+        "pump_amm",
+        "lp"
+      ],
+      "holder_pct": 6.09,
+      "pnl_usd": 0.0,
+      "reason": "基础设施排除普通钱包评分"
+    },
+    {
+      "address": "7Btw_AGI_top_bundler_loss_sample",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "top_holder",
+        "bundler"
+      ],
+      "holder_pct": 1.23,
+      "pnl_usd": -10530.0,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "4HfU_AGI_high_float_sample",
+      "role": "HIGH_FLOATING_PROFIT_HOLDER",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "top_holder",
+        "bundler"
+      ],
+      "holder_pct": 0.91,
+      "pnl_usd": 10796.0,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "4JoE_AGI_transfer_in_sample",
+      "role": "TOKEN_RECEIVER_FUNDING_PENDING",
+      "action_code": "A2",
+      "keep_edges": true,
+      "tags": [
+        "top_holder",
+        "transfer_in"
+      ],
+      "holder_pct": 0.73,
+      "pnl_usd": 0.0,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "Sniper_AGI_sample",
+      "role": "EARLY_EXECUTION_CANDIDATE",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "sniper",
+        "fresh_wallet"
+      ],
+      "holder_pct": 0.08,
+      "pnl_usd": 512.0,
+      "reason": "结构角色候选，需证据复查"
+    }
+  ],
+  "infra_excluded_count": 1,
+  "reason": "结构活跃但追高/资金证据不足，进入观察/纸面门控"
+}

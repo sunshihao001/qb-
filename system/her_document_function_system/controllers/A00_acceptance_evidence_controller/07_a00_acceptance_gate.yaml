@@ -1,0 +1,48 @@
+phase_id: A00
+acceptance_gate_name: A00_total_acceptance_evidence_gate
+required_checks:
+  - k00_handoff_loaded
+  - f00_handoff_loaded
+  - v00_handoff_loaded
+  - r00_handoff_loaded_when_runner_required
+  - evidence_bundle_built
+  - evidence_integrity_checked
+  - phase_status_matrix_built
+  - status_consistency_validated
+  - artifact_manifest_validated
+  - gap_propagation_validated
+  - trace_audit_validated
+  - acceptance_scorecard_built
+  - readiness_decision_generated
+  - readiness_certificate_written
+  - a00_handoff_written
+blocking_conditions:
+  - missing_k00_handoff
+  - missing_f00_handoff
+  - missing_v00_handoff
+  - missing_required_r00_handoff
+  - missing_evidence_bundle
+  - missing_artifact_manifest
+  - missing_trace_audit
+  - hidden_gap_detected
+  - blocking_gap_present
+  - status_evidence_inconsistent
+  - test_plan_as_tested
+  - binding_plan_as_bound
+false_ready_policy:
+  ready_with_gaps_must_not_be_rewritten_to_ready: true
+  plan_is_not_execution: true
+  design_is_not_implementation: true
+forbidden_modes:
+  - LIVE_RUNTIME
+  - WALLET_SIGNING
+  - AUTO_DEPLOY
+  - PRODUCTION_TRADING
+pass_statuses:
+  - A00_ACCEPTED
+  - A00_READY_WITH_GAPS
+fail_statuses:
+  - A00_BLOCKED
+  - A00_REJECTED
+  - DESIGN_ONLY
+  - NOT_EXECUTED

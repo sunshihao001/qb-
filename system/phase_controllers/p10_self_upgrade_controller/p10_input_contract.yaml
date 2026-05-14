@@ -1,0 +1,28 @@
+contract_id: p10_input_contract
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+required_inputs:
+  from_p09:
+  - p09_to_p10_handoff_packet
+  - p10_upgrade_candidate_data_request_packet
+  - upgrade_candidate_records
+  - failure_attribution_records
+  - success_attribution_records
+  - false_negative_records
+  - false_positive_records
+  - missed_opportunity_records
+  - threshold_sensitivity_records
+  - risk_rule_effectiveness_records
+  - model_calibration_candidate_records
+  from_control_planes:
+  - trace_handoff_packet
+  - acceptance_result_packet
+  - governance_review_policy
+  - phase_controller_index
+  - current_system_state
+  - system_asset_index
+startup_requirements:
+- P09 handoff exists
+- upgrade candidates are traceable
+- Governance hard rules loaded
+- runtime/paper/live remain blocked

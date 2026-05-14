@@ -1,0 +1,12 @@
+phase_id: H00_REAL_DOWNSTREAM_QUEUE
+status_code: H00_REAL_DOWNSTREAM_QUEUE_READY_WITH_GAPS
+owner_controller: H00_handoff_downstream_queue_controller
+safe_mode_required: true
+upstream_required_status:
+  - A00_REAL_ACCEPTANCE_EVIDENCE_READY_WITH_GAPS
+forbidden_actions:
+  - live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading
+  - execute_real_order

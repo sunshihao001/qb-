@@ -1,0 +1,75 @@
+{
+  "blocked_call_policy": "must_route_through_standard_stage_closure",
+  "blocked_runners": [
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "scripts/migrate_intel_bot_legacy_data.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/a00_acceptance_status.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/g00_policy_status.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/kpp_batch_legacy_reprocess.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/o00_cli.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/o00_pipeline_orchestrator.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/stable_trader_os/a01_a02_a04_upgrade.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/stable_trader_os/second_pass_audit.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/stable_trader_os/standard_stage_closure.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/u00_real_review_executor.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/v00_real_validation_executor.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    }
+  ],
+  "blocklist_id": "SIKK_OLD_RUNNER_BLOCKLIST",
+  "generated_at": "2026-05-14T05:19:09.075414+00:00",
+  "real_execution_allowed": false,
+  "status": "OLD_RUNNER_BLOCKLIST_ENFORCED_PAPER_ONLY"
+}

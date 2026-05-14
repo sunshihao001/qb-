@@ -1,0 +1,112 @@
+{
+  "created_at": "2026-05-11T11:55:03Z",
+  "states": [
+    {
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "symbol": "LOBSTER",
+      "final_state": "WATCHING",
+      "transition_reason": "证据不足，保持观察。",
+      "support_evidence": [
+        "gmgn:token_info",
+        "okx:token_search",
+        "okx:price_info",
+        "gmgn:token_security",
+        "okx:advanced_info",
+        "okx:security_token_scan",
+        "gmgn:token_info",
+        "gmgn:token_pool",
+        "okx:price_info",
+        "okx:liquidity",
+        "gmgn:token_holders",
+        "gmgn:token_traders",
+        "gmgn:holders_transfer_in",
+        "gmgn:holders_bundler",
+        "gmgn:holders_fresh",
+        "okx:cluster_overview",
+        "okx:cluster_top_holders_10",
+        "okx:cluster_top_holders_50",
+        "okx:cluster_top_holders_100",
+        "okx:cluster_list",
+        "gmgn:token_holders",
+        "gmgn:token_traders",
+        "okx:top_trader",
+        "okx:cluster_list"
+      ],
+      "counter_evidence": [],
+      "invalidation_condition": "安全/市场转 BLOCK、钱包结构转 PAUSE/BLOCK、K线结构破坏或纸面验证失败。",
+      "next_review_at": "2026-05-11T11:55:03Z",
+      "live_disabled": true,
+      "validation": {
+        "overall_status": "PASS",
+        "validator_results": [
+          {
+            "validator": "PermissionBoundaryValidator",
+            "status": "PASS",
+            "failed_rules": [],
+            "forbidden_fields": [],
+            "downgrade_to": "",
+            "checked_at": "2026-05-11T11:55:03Z"
+          },
+          {
+            "validator": "FieldCompletenessValidator",
+            "status": "PASS",
+            "failed_rules": [],
+            "missing_fields": [],
+            "downgrade_to": "",
+            "checked_at": "2026-05-11T11:55:03Z"
+          },
+          {
+            "validator": "StageOutputValidator",
+            "status": "PASS",
+            "failed_rules": [],
+            "missing_fields": [],
+            "downgrade_to": "",
+            "checked_at": "2026-05-11T11:55:03Z"
+          },
+          {
+            "validator": "FreshnessValidator",
+            "status": "PASS",
+            "failed_rules": [],
+            "age_sec": 0.36169,
+            "downgrade_to": "",
+            "checked_at": "2026-05-11T11:55:03Z"
+          },
+          {
+            "validator": "StateTransitionSafetyValidator",
+            "status": "PASS",
+            "failed_rules": [],
+            "downgrade_to": "",
+            "checked_at": "2026-05-11T11:55:03Z"
+          }
+        ],
+        "downgrade_to": "",
+        "checked_at": "2026-05-11T11:55:03Z"
+      }
+    }
+  ],
+  "state_counts": {
+    "WATCHING": 1
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_collectors": true,
+    "real_swap_enabled": false,
+    "private_key_required": false,
+    "secret_file_reading_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "live_disabled": true
+  },
+  "compatibility_route": {
+    "route_type": "legacy_compat_one_shot",
+    "canonical_wallet_system": [
+      "modules/source_wallet_bot",
+      "sikk_candidate_wallet_structure_pipeline.py",
+      "sikk_wallet_structure_gate.py",
+      "sikk_candidate_state_machine.py",
+      "sikk_live_run.py"
+    ],
+    "compat_policy": "保留旧 one-shot/readiness/sample 命令；新钱包结构能力必须优先接入 canonical source_wallet_bot + wallet_structure pipeline。",
+    "not_primary_entry": true
+  }
+}

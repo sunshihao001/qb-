@@ -1,0 +1,7 @@
+handoff_consumption_matrix:
+  - handoff: K00_to_P00_handoff_packet
+    consumed_by: P00_system_bootstrap_controller
+    status: CONSUMED_OR_REGISTERED_IF_PRESENT
+  - handoff: P00_to_DATA_PLANE_ACCEPTANCE_REVIEW
+    consumed_by: DATA_PLANE_ACCEPTANCE_REVIEW
+    status: HANDOFF_READY

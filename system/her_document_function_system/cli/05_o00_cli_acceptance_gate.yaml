@@ -1,0 +1,37 @@
+acceptance_gate:
+  required:
+    - command_json_written
+    - cli_run_id_created
+    - safe_mode_checked
+    - forbidden_actions_checked
+    - stdout_stderr_recorded
+    - exit_code_recorded
+    - cli_trace_written
+    - cli_audit_written
+  validate_config:
+    required:
+      - registry_loaded
+      - config_loaded
+      - registry_schema_valid
+      - config_schema_valid
+      - required_controllers_registered
+      - safe_mode_true
+  run_sample:
+    required:
+      - replay_config_loaded
+      - sample_document_loaded
+      - expected_outputs_loaded
+      - pipeline_run_id_created
+      - expected_vs_actual_checked
+      - final_status_recorded
+      - no_false_tested_status
+      - no_false_runner_bound_status
+      - no_false_policy_active_status
+      - no_forbidden_actions
+  forbidden:
+    - live_runtime_started
+    - wallet_signing_requested
+    - auto_deploy_started
+    - production_trade_executed
+    - trace_overwritten
+    - raw_document_overwritten

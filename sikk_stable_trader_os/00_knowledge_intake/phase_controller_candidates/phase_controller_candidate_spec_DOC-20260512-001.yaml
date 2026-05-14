@@ -1,0 +1,20 @@
+doc_id: DOC-20260512-001
+controller_candidate: P01_CANDIDATE_INTAKE_CONTROLLER
+required_files_count: 26
+core_objects:
+- candidate_master_record
+- candidate_source_event
+- token_identity_resolution
+- pool_identity_resolution
+- discovery_context
+- intake_time_context
+- dedup_resolution
+- p02_data_request_packet
+- p01_to_p02_handoff_packet
+forbidden_outputs:
+- evidence
+- scenario
+- strategy_gate
+- paper_ready
+- live_execution
+status: CANDIDATE_SPEC_READY_FOR_P01_PACKAGE_LANDING

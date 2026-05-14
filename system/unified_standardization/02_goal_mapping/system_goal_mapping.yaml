@@ -1,0 +1,48 @@
+meta:
+  standard_id: S00_SYSTEM_GOAL_MAPPING
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+goals:
+- goal_id: S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+  goal_name: 真实 token 阶段化判断闭环可追溯
+  goal_type: system
+  goal_statement: 任意 token 判断可反向追溯目标/方法/输入/字段血缘/schema/contract/runner/trace/acceptance/handoff/P08/P09/P10。
+  success_definition: token_judgment_case_file contains all required refs
+  related_phases:
+  - P01
+  - P02
+  - P03
+  - P04
+  - P05
+  - P06
+  - P07
+  - P08
+  - P09
+  - P10
+  required_inputs:
+  - data_fact_handoff_packet
+  - wallet/chip/scenario/evidence/strategy handoffs
+  required_outputs:
+  - token_judgment_case_file
+  - P08 permission result
+  - P09 review case if paper result exists
+  required_decisions:
+  - paper permission
+  - observe/block/ready
+  required_evidence:
+  - positive_evidence
+  - counter_evidence
+  - field_lineage
+  required_runners:
+  - phase runners
+  - R00 validators
+  acceptance_gate: S00_TOKEN_JUDGMENT_ACCEPTANCE
+  downstream_consumer: paper-only runtime / review upgrade

@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0159
+source_path: docs/intel_bot/wallet_intel_command_lens.md
+phase_scores:
+  P01: 2
+  P02: 0
+  P03: 15
+  P04: 3
+  P05: 8
+  P06: 0
+  P07: 0
+  P08: 3
+  P09: 2
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

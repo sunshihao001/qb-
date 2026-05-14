@@ -1,0 +1,48 @@
+phase_id: P00
+objective_tree:
+  level_1_main_goal:
+    id: P00-GOAL-001
+    name: 锁定系统目标、运行模式、权限边界、禁止事项与下游启动条件
+    required: true
+  level_2_sub_goals:
+  - id: P00-SG-001
+    name: 读取并校验输入契约
+    required: true
+  - id: P00-SG-002
+    name: 执行阶段任务树并绑定 Atomic Skill
+    required: true
+  - id: P00-SG-003
+    name: 生成输出契约要求的机器文件
+    required: true
+  - id: P00-SG-004
+    name: 运行验收门并回写状态/handoff
+    required: true
+  level_3_tasks:
+  - id: P00-T-001
+    name: load_context_pack
+    input: phase_context_pack.md
+    output: runtime_trace.context_loaded
+    acceptance: context_loaded == true
+  - id: P00-T-002
+    name: validate_inputs
+    input: phase_input_contract.json
+    output: input_validation_result
+    acceptance: required fields handled by missing_action
+  - id: P00-T-003
+    name: execute_atomic_skill_bindings
+    input:
+    - forbidden_action_boundary_skill
+    - system_goal_check_skill
+    - hard_negative_filter_skill
+    output: evidence_bundle
+    acceptance: field_source/evidence/counter_evidence present
+  - id: P00-T-004
+    name: write_outputs_and_state
+    input: phase_output_contract.json
+    output: phase_state + required outputs
+    acceptance: all required outputs exist or gaps recorded
+  - id: P00-T-005
+    name: validate_acceptance_and_handoff
+    input: phase_acceptance_gate.yaml
+    output: handoff_packet
+    acceptance: handoff schema valid and status mapped

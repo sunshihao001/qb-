@@ -1,0 +1,11 @@
+doc_id: I01_full_phase_consistency_audit_v1_0
+plane: Integration Program
+stage: I01
+depends_on:
+- P01-P10 phase controller packages
+- phase_controller_index
+- global status/hard negative/directory/contract/schema indices
+produces:
+- I01 system package
+- I01 audit runtime outputs
+- I01_TO_I02 handoff

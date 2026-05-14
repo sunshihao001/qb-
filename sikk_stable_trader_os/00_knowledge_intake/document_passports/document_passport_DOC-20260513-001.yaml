@@ -1,0 +1,38 @@
+document_passport:
+  doc_id: "DOC-20260513-001"
+  source_type: "telegram_text_directive"
+  source_name: "KV Cache model integration into vNext document processing methodology"
+  received_at: "2026-05-13"
+  raw_path: "00_knowledge_intake/raw_inputs/DOC-20260513-001_kv_cache_document_processing_model.md"
+  document_role:
+    primary_role: "K00 document processing methodology upgrade directive"
+    secondary_roles:
+      - "kv_cache_methodology_addendum"
+      - "stable_trader_os_design_memory_layer"
+      - "document_assetization_upgrade"
+  summary:
+    core_intent: "把 KV Cache 作为新版文档处理方式的结构化语义缓存层，优先融入 K00，再由 P00/P01-P09 消费。"
+    key_points:
+      - "KV Cache 不是聊天记忆，而是可追踪、可验收、可复用的 Key-Value 知识单元层。"
+      - "每份文档除 raw/passport/mapping/gap/task/handoff 外，还应生成 kv_items 与 kv_cache_manifest。"
+      - "KV 单元应绑定六类资产吸收法，并扩展 phase_contract/task_node/glossary 等系统资产。"
+      - "交易系统体系设计可以通过 KV item 精确复用字段、规则、反证、阶段目标和任务节点。"
+  system_mapping:
+    planes:
+      - "Knowledge Plane"
+      - "Methodology Plane"
+      - "Data Plane"
+      - "Control Plane"
+      - "Trace Plane"
+    affected_phases:
+      - "K00_knowledge_intake_taskization"
+      - "P00_system_bootstrap_controller"
+      - "P01_data_fact"
+      - "P09_system_upgrade"
+  required_actions:
+    - "Create KV cache methodology addendum."
+    - "Create kv_cache schema draft and manifest."
+    - "Update K00 task/handoff contracts to reference kv_cache_manifest."
+    - "Add validation status for K00_READY_WITH_KV_GAP."
+  evidence_level: "EVIDENCE_B_MEDIUM"
+  status: "PASSPORT_READY"

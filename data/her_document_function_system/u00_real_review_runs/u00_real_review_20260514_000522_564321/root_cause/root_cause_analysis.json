@@ -1,0 +1,107 @@
+{
+  "root_cause_items": [
+    {
+      "root_cause_id": "rca_review_case_gap_sample_001_v00_test_not_executed",
+      "review_case_id": "review_case_gap_sample_001_v00_test_not_executed",
+      "root_cause_type": "MISSING_TEST_EXECUTION_EVIDENCE",
+      "root_cause_statement": "sample replay does not execute real tests -> MISSING_TEST_EXECUTION_EVIDENCE",
+      "causal_chain": [
+        "UNKNOWN",
+        "MISSING_TEST_EXECUTION_EVIDENCE",
+        "TEST_UPGRADE"
+      ],
+      "confidence": "HIGH",
+      "required_fix_type": "TEST_UPGRADE",
+      "recommended_owner": "V00",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_184513_393401/gaps/pipeline_gap_register.json"
+      ]
+    },
+    {
+      "root_cause_id": "rca_review_case_gap_sample_001_g00_policy_not_active",
+      "review_case_id": "review_case_gap_sample_001_g00_policy_not_active",
+      "root_cause_type": "GOVERNANCE_POLICY_NOT_ACTIVE",
+      "root_cause_statement": "governance output is candidate only -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "causal_chain": [
+        "UNKNOWN",
+        "GOVERNANCE_POLICY_NOT_ACTIVE",
+        "GOVERNANCE_UPGRADE"
+      ],
+      "confidence": "HIGH",
+      "required_fix_type": "GOVERNANCE_UPGRADE",
+      "recommended_owner": "G00",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_184513_393401/gaps/pipeline_gap_register.json"
+      ]
+    },
+    {
+      "root_cause_id": "rca_review_case_gap_sample_001_r00_not_required",
+      "review_case_id": "review_case_gap_sample_001_r00_not_required",
+      "root_cause_type": "RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "root_cause_statement": "runner binding skipped in sample replay -> RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "causal_chain": [
+        "UNKNOWN",
+        "RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+        "RUNNER_BINDING_UPGRADE"
+      ],
+      "confidence": "HIGH",
+      "required_fix_type": "RUNNER_BINDING_UPGRADE",
+      "recommended_owner": "R00",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_184513_393401/gaps/pipeline_gap_register.json"
+      ]
+    },
+    {
+      "root_cause_id": "rca_review_case_gap_sample_001_v00_test_not_executed",
+      "review_case_id": "review_case_gap_sample_001_v00_test_not_executed",
+      "root_cause_type": "MISSING_TEST_EXECUTION_EVIDENCE",
+      "root_cause_statement": "sample replay does not execute real tests -> MISSING_TEST_EXECUTION_EVIDENCE",
+      "causal_chain": [
+        "UNKNOWN",
+        "MISSING_TEST_EXECUTION_EVIDENCE",
+        "TEST_UPGRADE"
+      ],
+      "confidence": "HIGH",
+      "required_fix_type": "TEST_UPGRADE",
+      "recommended_owner": "V00",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_184513_393401/gaps/unresolved_gaps.json"
+      ]
+    },
+    {
+      "root_cause_id": "rca_review_case_gap_sample_001_g00_policy_not_active",
+      "review_case_id": "review_case_gap_sample_001_g00_policy_not_active",
+      "root_cause_type": "GOVERNANCE_POLICY_NOT_ACTIVE",
+      "root_cause_statement": "governance output is candidate only -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "causal_chain": [
+        "UNKNOWN",
+        "GOVERNANCE_POLICY_NOT_ACTIVE",
+        "GOVERNANCE_UPGRADE"
+      ],
+      "confidence": "HIGH",
+      "required_fix_type": "GOVERNANCE_UPGRADE",
+      "recommended_owner": "G00",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_184513_393401/gaps/unresolved_gaps.json"
+      ]
+    },
+    {
+      "root_cause_id": "rca_review_case_gap_sample_001_r00_not_required",
+      "review_case_id": "review_case_gap_sample_001_r00_not_required",
+      "root_cause_type": "RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "root_cause_statement": "runner binding skipped in sample replay -> RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "causal_chain": [
+        "UNKNOWN",
+        "RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+        "RUNNER_BINDING_UPGRADE"
+      ],
+      "confidence": "HIGH",
+      "required_fix_type": "RUNNER_BINDING_UPGRADE",
+      "recommended_owner": "R00",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_184513_393401/gaps/unresolved_gaps.json"
+      ]
+    }
+  ],
+  "total_items": 6
+}

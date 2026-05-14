@@ -1,0 +1,9 @@
+forbidden_actions:
+  - live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_rule_direct_change
+  - storing_private_keys
+  - storing_api_keys_in_kv
+  - treating_chat_context_as_system_state
+  - marking_unaccepted_rules_as_KV_ACCEPTED

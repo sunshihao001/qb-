@@ -1,0 +1,23 @@
+schema_id: HER_DOC_GPT_RESEARCH_QUEUE_SCHEMA
+version: 1
+required_fields:
+  - research_id
+  - source_gap_id
+  - phase
+  - research_title
+  - research_question
+  - known_assets
+  - missing_decision
+  - expected_gpt_output
+  - priority
+  - acceptance_for_return
+priority_enum: [BLOCKING, HIGH, MEDIUM, LOW]
+route_to_gpt_when:
+  - methodology_missing
+  - field_model_unclear
+  - calculation_logic_unclear
+  - evidence_rule_missing
+  - counter_evidence_rule_missing
+  - hard_negative_rule_missing
+  - gate_semantics_unclear
+  - replay_upgrade_logic_unclear

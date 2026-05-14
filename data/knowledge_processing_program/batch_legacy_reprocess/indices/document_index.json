@@ -1,0 +1,3728 @@
+{
+  "summary": {
+    "run_id": "KPP_BATCH_LEGACY_REPROCESS_20260513",
+    "status": "PASS",
+    "created_at": "2026-05-13T01:25:59.654892+00:00",
+    "unique_documents_processed": 371,
+    "duplicate_documents_skipped": 0,
+    "output_root": "data/knowledge_processing_program/batch_legacy_reprocess",
+    "safety_boundary": {
+      "real_trade_enabled": false,
+      "signing_enabled": false,
+      "broadcast_enabled": false,
+      "swap_enabled": false
+    }
+  },
+  "documents": [
+    {
+      "document_id": "LEGACY-DOC-0001",
+      "source_path": "docs/00_system_goal/README.md",
+      "sha256": "253b876d819f26fc94901b5e31cc1bbc63033f50744a95aadc69f4a9876c2e15",
+      "bytes": 59,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0002",
+      "source_path": "docs/00_system_goal/sikk_stable_trader_os_goal.md",
+      "sha256": "202983040beb67c99a9014b834692e94383e7b22f3798726c4df3beaf04e2444",
+      "bytes": 1039,
+      "line_count": 35,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0003",
+      "source_path": "docs/01_stage_definitions/README.md",
+      "sha256": "7dbd56a169d3202171a5416137cde88999083c0eb0b1ab9592b59030246f2586",
+      "bytes": 65,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0004",
+      "source_path": "docs/01_stage_definitions/full_stage_map.md",
+      "sha256": "a6978ece3b1a193fd7736bf066c93967c52442676324b6d9c88d987d9eba2e5e",
+      "bytes": 1266,
+      "line_count": 15,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0005",
+      "source_path": "docs/02_phase_layer_step_maps/README.md",
+      "sha256": "374fcc33374d01a9ba19c321760438f814c017c11117e61e8ee60ecb43cc8c28",
+      "bytes": 69,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0006",
+      "source_path": "docs/02_phase_layer_step_maps/full_phase_layer_step_map.md",
+      "sha256": "cef3b4d394f138f968239692b0d503ac6e5aa701a9efcf2a845bb05b681f9cef",
+      "bytes": 5658,
+      "line_count": 112,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0007",
+      "source_path": "docs/03_handoff_flow/phase_handoff_flow.md",
+      "sha256": "97a308889a27321f0c30f8da7ebbb875d7ef764e8cbe2254176b950aa1af5469",
+      "bytes": 1011,
+      "line_count": 14,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0008",
+      "source_path": "docs/03_reasoning_rules/README.md",
+      "sha256": "64576ff68cf76e23dd9213c6e9f0168598c9eefecde2f342be346289584cb62c",
+      "bytes": 63,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0009",
+      "source_path": "docs/03_reasoning_rules/evidence_and_counter_evidence_rules.md",
+      "sha256": "87aa6a7aa6bcd14f2d5c8d389101ca222d6360a16f7ed9a126c67af5bb2dc897",
+      "bytes": 478,
+      "line_count": 6,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0010",
+      "source_path": "docs/03_reasoning_rules/phase_auto_expander_protocol.md",
+      "sha256": "ce8cb20fbb914da9e2f9a704bd7f4f8ba97d5cb28bb596d1237f305b101b53e7",
+      "bytes": 843,
+      "line_count": 15,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0011",
+      "source_path": "docs/04_hard_negative_rules/README.md",
+      "sha256": "27e3225b200d3b83cb873a7088e3e7ae60f335e570170b66a630961d069f0204",
+      "bytes": 67,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0012",
+      "source_path": "docs/04_hard_negative_rules/global_hard_negative_rules.md",
+      "sha256": "c38237a13d42d3e4603e2536a2f60728e1a244373e795c01bc5f47b5e031c07d",
+      "bytes": 245,
+      "line_count": 8,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0013",
+      "source_path": "docs/04_status_codes/global_status_code_table.md",
+      "sha256": "2d13ae053db59416ec57ef8c1f70095ac14386f408c373f69236f8b737aed869",
+      "bytes": 695,
+      "line_count": 12,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0014",
+      "source_path": "docs/05_hard_negative_rules/global_hard_negative_rules.md",
+      "sha256": "1b744454625fca29a86c1c9bfcf0eebb4a4250ca9f5328e8e4b65b0ca8d2b23f",
+      "bytes": 1967,
+      "line_count": 19,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0015",
+      "source_path": "docs/05_status_codes/README.md",
+      "sha256": "806dbebb7c7ae4ea25c0f7d1a16c871f749ff425280d9939d52146791e4d5fc7",
+      "bytes": 60,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0016",
+      "source_path": "docs/05_status_codes/global_status_code_table.md",
+      "sha256": "3379407d6d68914c0d7ed9b14168bc2ab40e10c3ba800dbb5ed141a91a8bfab1",
+      "bytes": 1045,
+      "line_count": 46,
+      "classified_phase": "P06",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0017",
+      "source_path": "docs/06_directory_constitution/README.md",
+      "sha256": "ce5ab88b6084491367049fca888ee0c7c7d0ecdd5a7415a86e92843cf559ca11",
+      "bytes": 70,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0018",
+      "source_path": "docs/06_directory_constitution/directory_constitution.md",
+      "sha256": "3be1ab4288d1a22ab31e7e2359a70a6fd7b569c4dd3c2a8ef7aa9dcd1ff73711",
+      "bytes": 686,
+      "line_count": 16,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0019",
+      "source_path": "docs/07_contract_index/contract_index.md",
+      "sha256": "51ab2cb516bfaede26f8b797b28b271509bbc7ec672fa3ef3816dede90ca6582",
+      "bytes": 2252,
+      "line_count": 15,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0020",
+      "source_path": "docs/07_telegram_panel_design/README.md",
+      "sha256": "0c57b7bd20ab8907a696267ff5141a623e1332c7948edbf1e8322d77d0866bc4",
+      "bytes": 69,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0021",
+      "source_path": "docs/07_telegram_panel_design/telegram_panel_professional_design.md",
+      "sha256": "3bbb5c06f3f7ad53bdd95157e08148fea87a1fbbcfc5ea1b023206c5c87aba98",
+      "bytes": 188,
+      "line_count": 4,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0022",
+      "source_path": "docs/08_review_learning_rules/README.md",
+      "sha256": "b616044245c3fcc7cc3f467db75ce969e54bb3441f2a0881175a540f678a943f",
+      "bytes": 69,
+      "line_count": 4,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0023",
+      "source_path": "docs/08_review_learning_rules/review_learning_rules.md",
+      "sha256": "7b22d96fb50fed9704c1d92536c97e2aa36f4e792e536a62d7311ef422d3eff8",
+      "bytes": 189,
+      "line_count": 4,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0024",
+      "source_path": "docs/08_schema_index/schema_index.md",
+      "sha256": "4393fbb8d89f389c8ee56e2e18029e1e41f9abbc33636273660b4699ff7a5b43",
+      "bytes": 1446,
+      "line_count": 15,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0025",
+      "source_path": "docs/09_her_execution_protocol/her_system_integration_cognition_master.md",
+      "sha256": "09d6fbda5fc9b6e59dd41c9e70b26295883779919926a657491f1a8f227d1dcf",
+      "bytes": 9368,
+      "line_count": 446,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0026",
+      "source_path": "docs/09_her_execution_protocol/her_task_book_standard.md",
+      "sha256": "46877e10dd8a30c5635803c1e27908568ddd3ddcc6873e87b16ab7a544f33d17",
+      "bytes": 12206,
+      "line_count": 625,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0027",
+      "source_path": "docs/09_her_execution_protocol/her_total_control_execution_protocol.md",
+      "sha256": "cdc9653032695cc2ed0cb53f92b7f0a0f4b49ae0ed042286f26256c42c8686cf",
+      "bytes": 840,
+      "line_count": 23,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0028",
+      "source_path": "docs/09_her_execution_protocol/trading_system_planbook_repository_protocol.md",
+      "sha256": "4e2bd8813c38855d7bcfd16301797267179445ffe8bd39235431335bc3ef7c54",
+      "bytes": 4609,
+      "line_count": 194,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0029",
+      "source_path": "docs/09_system_upgrade_rules/README.md",
+      "sha256": "8e2ca325d565de13f5f024262d656fa3e6f584ea439f56c3ed6e6778671d80de",
+      "bytes": 68,
+      "line_count": 4,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0030",
+      "source_path": "docs/09_system_upgrade_rules/system_upgrade_rules.md",
+      "sha256": "924d4f2139c64635e05e6e23773ab6be47a0f4794eef53c507cdfc45efd772f7",
+      "bytes": 179,
+      "line_count": 4,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0031",
+      "source_path": "docs/10_professional_acceptance/professional_baseline_acceptance.md",
+      "sha256": "596fd8be825af871d6ad95b276d3707e8d5502aeec1271853d7dde8f47dad2ac",
+      "bytes": 433,
+      "line_count": 6,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0032",
+      "source_path": "docs/11_phase_01_data_fact_landing/phase_01_data_fact_her_taskbook.md",
+      "sha256": "cb8458d360759814eeb85f93c0a9867d53865a163c101b0bb8c6fc47a316c926",
+      "bytes": 3613,
+      "line_count": 69,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0033",
+      "source_path": "docs/README.md",
+      "sha256": "e37ba8702cfe649c17e013937e5435ea5b1544be316362d42eee37bd65c2b8a5",
+      "bytes": 221,
+      "line_count": 6,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0034",
+      "source_path": "docs/SIKK_CASE_FIELD_SOURCE_MAP.md",
+      "sha256": "1f38f5b9e04b780e652e45b92d3c1878c141485ad3320a79a237596f3772de74",
+      "bytes": 2299,
+      "line_count": 52,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0035",
+      "source_path": "docs/directory_zh_mapping.md",
+      "sha256": "e8e45b903adf541186103af675e45eb6a9e1960aa4b113e3f0514814f8f93770",
+      "bytes": 3817,
+      "line_count": 124,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0036",
+      "source_path": "docs/harness/HER_CONTROL_PLANE_RULES_V1.md",
+      "sha256": "44c8c5cb52d85269d5c48ad551de03f4d55127a23a518348e2dd0bb3f274c114",
+      "bytes": 3597,
+      "line_count": 143,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0037",
+      "source_path": "docs/harness/HER_HARNESS_MINIMAL_V0.md",
+      "sha256": "9e9e72bf6492cc2e2fd971ac5f1493b2cdb08f2b39ebef9f5b4a3c40faa5d38c",
+      "bytes": 5846,
+      "line_count": 207,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0038",
+      "source_path": "docs/harness/HER_HARNESS_PROFESSIONALIZATION_ROADMAP.md",
+      "sha256": "7e870d6fc14f263271009d9de4dd33f70002ea34c41f060f8852fe9dc531af7e",
+      "bytes": 4089,
+      "line_count": 155,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0039",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/README.md",
+      "sha256": "2d44a1e4606ba6285ba22a8a5535a0d614c4f3df2995f50e6402821d839146cf",
+      "bytes": 241,
+      "line_count": 13,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0040",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/artifact_contract_policy.md",
+      "sha256": "5a6645c1a1c8c06c112c295e45b8ec568d43a6b5d363df62174812fca8bcb59e",
+      "bytes": 1675,
+      "line_count": 54,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0041",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/input_contract_policy.md",
+      "sha256": "baddfd3291c313bd1666e4c621b4e45824c07c2982affc60ad8a45dc2cb7c7e8",
+      "bytes": 1815,
+      "line_count": 43,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0042",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/memory_write_rules.md",
+      "sha256": "17d6ec8c28b2f81014096f5f485df8ab2b5842dad6780133c3796ffbef8fa5dc",
+      "bytes": 723,
+      "line_count": 29,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0043",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/method_wheel_policy.md",
+      "sha256": "af2307e37b5b1188f95d8ce9d09f66cc64f583048b2a212e5e79d1b831920895",
+      "bytes": 801,
+      "line_count": 33,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0044",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/module_maturity_governance.md",
+      "sha256": "87fcd200d426c43747676abaf9ca5a125c0d3ee1d29e8acc4687c0f8d60948b3",
+      "bytes": 1549,
+      "line_count": 85,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0045",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/natural_language_intake_protocol.md",
+      "sha256": "1ea5ac277e80f6212c645f214db6d1c3f52fe926e8dc47dc35e249de34c9b275",
+      "bytes": 4206,
+      "line_count": 153,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0046",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/permission_rules.md",
+      "sha256": "94eea9c2c3aa55675d9f39a4377c3737429d25741399123c003c136ff42e932a",
+      "bytes": 1118,
+      "line_count": 28,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0047",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/recovery_decision_table.md",
+      "sha256": "904f8973e3a22a9aab6a36a5a9c7178a74e46b0e55e96bd85b06634271f60380",
+      "bytes": 919,
+      "line_count": 26,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0048",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/recovery_rules.md",
+      "sha256": "fcdc5c69d9ce77dc1364415c98423415d49c581da1306167b16be80885464c93",
+      "bytes": 964,
+      "line_count": 29,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0049",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/risk_tier_policy.md",
+      "sha256": "5f2bf9692bc9e03ccafbf328543bcb3bbb07098fe1fc5e86cd02c5ff49bba0f8",
+      "bytes": 871,
+      "line_count": 38,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0050",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/role_boundaries.md",
+      "sha256": "89e59030c85e181195a1c8c78c590f4654f0534fec6adfa82d8aac15a04f9da1",
+      "bytes": 1014,
+      "line_count": 27,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0051",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/role_system_v1.md",
+      "sha256": "5aee4537fd5553ae90187efbae8675ea9ba9cc5996642a0ac34e3d31a456f289",
+      "bytes": 1225,
+      "line_count": 98,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0052",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/system_constitution.md",
+      "sha256": "75fb8ccec3239b6ce9aa017ab4fdea754b5fb31fd8636d56e235b331ba241ce7",
+      "bytes": 1620,
+      "line_count": 43,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0053",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/task_id_policy.md",
+      "sha256": "062469326c4d8136a7f55e86279c992c199d2312939ef60e66b39c8307ebb9ae",
+      "bytes": 816,
+      "line_count": 39,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0054",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/task_routing_policy.md",
+      "sha256": "8661a017430ac52e4e43a882076a66c372b0866921f987463a24e0748b6e97a7",
+      "bytes": 2624,
+      "line_count": 60,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0055",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/verification_definition.md",
+      "sha256": "e8229755aee0922148b40fc877340d59426d100342dd5c5de0f9ea8b4df46806",
+      "bytes": 821,
+      "line_count": 25,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0056",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/禁止行为清单.md",
+      "sha256": "99895a499716d8c2a57599432d5257bb8104c7007e24cd22e4bbd0a59453a0fc",
+      "bytes": 619,
+      "line_count": 19,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0057",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/记忆写入规则.md",
+      "sha256": "ab2642e04cac54251d98e8239f8d459673e6d6999f16025947115e706625fc3c",
+      "bytes": 1058,
+      "line_count": 44,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0058",
+      "source_path": "docs/harness/ai_harness_system/00_control_plane/输出标准.md",
+      "sha256": "dbd01164b484550a293fc0aba843916d1da4248ca0cacba33fa27e7db83d2df0",
+      "bytes": 814,
+      "line_count": 31,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0059",
+      "source_path": "docs/harness/ai_harness_system/00_startup/HERMES_BOOT_SEQUENCE.md",
+      "sha256": "98b881f952db74c480e8fb93f6d681ddbaf9e3cbb170f4cc4da55d6804d140a2",
+      "bytes": 1054,
+      "line_count": 46,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0060",
+      "source_path": "docs/harness/ai_harness_system/00_startup/startup_check_report.md",
+      "sha256": "7be8b4b7ee5dcdc958851307008c810474f0502cce7b1466f617d0a16ed4a3b5",
+      "bytes": 380,
+      "line_count": 16,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0061",
+      "source_path": "docs/harness/ai_harness_system/01_goals/README.md",
+      "sha256": "b76b684772650f34f1da26803b4dfc2ebbcef7ac186832348850e31618577158",
+      "bytes": 1811,
+      "line_count": 66,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0062",
+      "source_path": "docs/harness/ai_harness_system/01_goals/goal_passport_template.md",
+      "sha256": "dc5709aeed9a582064facb762035e3cad39d14f98fd2c982b9d04dc1b83034a8",
+      "bytes": 285,
+      "line_count": 15,
+      "classified_phase": "P06",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0063",
+      "source_path": "docs/harness/ai_harness_system/01_goals/task_passport_current.md",
+      "sha256": "64fb8129a2be45f40fe229af7d787ce492f723221cb432a387ec00d3f6f47608",
+      "bytes": 1654,
+      "line_count": 55,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0064",
+      "source_path": "docs/harness/ai_harness_system/02_research_loop/README.md",
+      "sha256": "a3e7f1f673fe5f0d986a60b758c86800aadc4f48a613d2bd0586780edbeded96",
+      "bytes": 1329,
+      "line_count": 76,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0065",
+      "source_path": "docs/harness/ai_harness_system/02_research_loop/method_wheel_completion_checklist_v1.md",
+      "sha256": "98be04cd0092d38e23c4a2192ef5d12c0d92a3660774b1812bb552a8314347c5",
+      "bytes": 11458,
+      "line_count": 418,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0066",
+      "source_path": "docs/harness/ai_harness_system/02_research_loop/task_decomposition_template.md",
+      "sha256": "e4e7cc86930efaa4549c20cc1ac266d833fe2919e22814dd842e4eeb0b0c0f92",
+      "bytes": 353,
+      "line_count": 14,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0067",
+      "source_path": "docs/harness/ai_harness_system/03_context_governance/README.md",
+      "sha256": "72006fef8c6c8c94c3001e049bbdda5a252d183649f70298944233d65d08df64",
+      "bytes": 2514,
+      "line_count": 106,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0068",
+      "source_path": "docs/harness/ai_harness_system/03_context_governance/context_layering_rules.md",
+      "sha256": "5066aa231cd3207f1385a7e81943e6447c67c417217130eff0d2168072c45bd6",
+      "bytes": 811,
+      "line_count": 20,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0069",
+      "source_path": "docs/harness/ai_harness_system/03_context_governance/memory_deposition_rules.md",
+      "sha256": "d29de29a575675ac97ed45e6144acb09d0947e0eb4c4ee4c8ade1cd04b6a22a1",
+      "bytes": 827,
+      "line_count": 52,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0070",
+      "source_path": "docs/harness/ai_harness_system/03_context_governance/memory_deposition_template.md",
+      "sha256": "4df8e3987d318bb21b018d0e3525d75e87507920686e54367f7a8319d19b0e0d",
+      "bytes": 344,
+      "line_count": 14,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0071",
+      "source_path": "docs/harness/ai_harness_system/03_context_governance/memory_entry_template.md",
+      "sha256": "03b7d9f5ee5b673d932ae24108c0f0e1c6f720ac21f32736c74a76c113105b2a",
+      "bytes": 541,
+      "line_count": 21,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0072",
+      "source_path": "docs/harness/ai_harness_system/03_context_governance/memory_staleness_policy.md",
+      "sha256": "68b15fc0755b006ecd2c8f5727257eb6f3a3c9e7f65baab1c5f10af889e0cd95",
+      "bytes": 853,
+      "line_count": 33,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0073",
+      "source_path": "docs/harness/ai_harness_system/04_task_plans/README.md",
+      "sha256": "162afd09372bf0ec84a2150c1ed02f21b497997666bc03556e1925d8c3f3c3e8",
+      "bytes": 1096,
+      "line_count": 53,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0074",
+      "source_path": "docs/harness/ai_harness_system/04_task_plans/active_task_context.md",
+      "sha256": "376d7c355068adc5a7a6f7fe66e256b1e02bcb71fc4a963e73139e7f573fe0ed",
+      "bytes": 738,
+      "line_count": 21,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0075",
+      "source_path": "docs/harness/ai_harness_system/04_task_plans/active_task_state_schema.md",
+      "sha256": "e46ee6669c94d0b44ad7db13f30d61a9d8b7b352581c6a4b8e044a03f28600c2",
+      "bytes": 1123,
+      "line_count": 48,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0076",
+      "source_path": "docs/harness/ai_harness_system/04_task_plans/checkpoint_protocol.md",
+      "sha256": "38f29aa967c35cf31337569cbcd33c9022f5b18fd06fe5f0492beb14d4624970",
+      "bytes": 772,
+      "line_count": 36,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0077",
+      "source_path": "docs/harness/ai_harness_system/04_task_plans/checkpoints/README.md",
+      "sha256": "b56b9e5b18bd7c94d55d8811e1f926a71dc2c7a43decd3bbb425dcf90f5c6763",
+      "bytes": 88,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0078",
+      "source_path": "docs/harness/ai_harness_system/04_task_plans/phase_plan.md",
+      "sha256": "b6a2f21d1cf6cd45a86b898a9b5cdbf9bb7807e7900cc039912b4d0dbf25a1ae",
+      "bytes": 750,
+      "line_count": 31,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0079",
+      "source_path": "docs/harness/ai_harness_system/04_task_plans/task_state_machine.md",
+      "sha256": "a044cac1ffa360f8e5c3ed2875b8b98fad6e3a4fd2a244b824d39751481f0a39",
+      "bytes": 1065,
+      "line_count": 51,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0080",
+      "source_path": "docs/harness/ai_harness_system/04_task_plans/task_state_record_template.md",
+      "sha256": "40f0e0d71396a1945a0831f3411b1e3f37a71b3344d8b0836010d4aee722b3f9",
+      "bytes": 388,
+      "line_count": 17,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0081",
+      "source_path": "docs/harness/ai_harness_system/05_execution_runs/README.md",
+      "sha256": "3267a9b759dde86c873ce2e97e3662406059ea3489f01e534788404da806ce18",
+      "bytes": 1255,
+      "line_count": 76,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0082",
+      "source_path": "docs/harness/ai_harness_system/05_execution_runs/command_log_schema.md",
+      "sha256": "f302bc9bab2965e4079e82ac8c25b50a0837b7b141189f0156d52cad08522ca2",
+      "bytes": 941,
+      "line_count": 49,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0083",
+      "source_path": "docs/harness/ai_harness_system/05_execution_runs/query_loop_template.md",
+      "sha256": "d351d044dcb0117e9c4f209b3b56bcd76cd57eb033506379d838237bdafd9afa",
+      "bytes": 491,
+      "line_count": 28,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0084",
+      "source_path": "docs/harness/ai_harness_system/05_execution_runs/run_log_template.md",
+      "sha256": "f6ffe95f3223cf84be6ded776ee562e89209dc98e28f4ad4660bc5497d9e9808",
+      "bytes": 167,
+      "line_count": 16,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0085",
+      "source_path": "docs/harness/ai_harness_system/05_execution_runs/tool_call_log_template.md",
+      "sha256": "60546cabbd4679e91ad9ee5ddf1252981e0528e6efb1e3f9ce9dbff5b2a1f9a4",
+      "bytes": 503,
+      "line_count": 31,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0086",
+      "source_path": "docs/harness/ai_harness_system/06_verification/README.md",
+      "sha256": "a6dec05103894805688cbf978570f41eeb070a17bfe3c94625b4acb14936d1bf",
+      "bytes": 1438,
+      "line_count": 59,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0087",
+      "source_path": "docs/harness/ai_harness_system/06_verification/audit_question_checklist.md",
+      "sha256": "3e8e3f99601a6e618c13c99e1a96c36207042aed0e61503963a481f181a07fdf",
+      "bytes": 549,
+      "line_count": 19,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0088",
+      "source_path": "docs/harness/ai_harness_system/06_verification/completion_definition_template.md",
+      "sha256": "88a32bc7be1d44736116019a28cd4ccc3cbb103d52a6c2263a40119d3b4d44ee",
+      "bytes": 392,
+      "line_count": 21,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0089",
+      "source_path": "docs/harness/ai_harness_system/06_verification/v1_acceptance_criteria.md",
+      "sha256": "142881ff8f9c657ff4bf4fab88a96464ab4b7ef35d90c7ff6f4b872fb574d72b",
+      "bytes": 818,
+      "line_count": 22,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0090",
+      "source_path": "docs/harness/ai_harness_system/06_verification/v1_acceptance_verification_report.md",
+      "sha256": "80a91c31062634e580965e771ee59d5dd74784102e252beb4df9a9164e18fbdd",
+      "bytes": 992,
+      "line_count": 20,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0091",
+      "source_path": "docs/harness/ai_harness_system/06_verification/verification_policy_advanced.md",
+      "sha256": "062509a31673c83dba89b0fcf4661436f7efe88cbedc01f8cbfad8c3201d5593",
+      "bytes": 997,
+      "line_count": 27,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0092",
+      "source_path": "docs/harness/ai_harness_system/07_recovery/README.md",
+      "sha256": "c0946688f62e2f4375f364b4f78b48407ee685c1f13abad9757879d168f29244",
+      "bytes": 1257,
+      "line_count": 62,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0093",
+      "source_path": "docs/harness/ai_harness_system/07_recovery/error_taxonomy.md",
+      "sha256": "98126a8b4f397f8898cea9b8e332838a10947775624c9b29208620a8f56ae6f2",
+      "bytes": 416,
+      "line_count": 14,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0094",
+      "source_path": "docs/harness/ai_harness_system/07_recovery/recovery_report_template.md",
+      "sha256": "08a745601723303d3c1df06bfd1638b1707a51fd9e28459ba31d7a8b95d751e0",
+      "bytes": 367,
+      "line_count": 20,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0095",
+      "source_path": "docs/harness/ai_harness_system/08_audit/README.md",
+      "sha256": "f6e4f8d6a8f5152177fac783bb1f27d5a3d3594a11484f578a206dc95c84ea89",
+      "bytes": 150,
+      "line_count": 10,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0096",
+      "source_path": "docs/harness/ai_harness_system/08_audit/audit_independence_policy.md",
+      "sha256": "6503d8cc673b65e18e858afe3879ed984f46ddd639139bd5acca93834cb11bf8",
+      "bytes": 804,
+      "line_count": 32,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0097",
+      "source_path": "docs/harness/ai_harness_system/08_audit/memory_audit_reports/README.md",
+      "sha256": "5308b1cb763cfb36b8219bfe83520a04a60f64151afe9e7d80ad70fa24fa3261",
+      "bytes": 96,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0098",
+      "source_path": "docs/harness/ai_harness_system/08_audit/permission_audit_reports/README.md",
+      "sha256": "b5ab8cded1ca9c5ae903185473a0703078515eb2895b7086ee2ef2972c9c87ec",
+      "bytes": 104,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0099",
+      "source_path": "docs/harness/ai_harness_system/08_audit/stale_rule_audit/README.md",
+      "sha256": "ea2d31674b9448addcfb057404949b5b6cea0a08fea355bdc25e1b656e3084f8",
+      "bytes": 88,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0100",
+      "source_path": "docs/harness/ai_harness_system/08_audit/surface_completion_audit/README.md",
+      "sha256": "82fb8b3192b7a42062f0b41e58d2b875ce49799650a9b25836d762f28a0edf92",
+      "bytes": 104,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0101",
+      "source_path": "docs/harness/ai_harness_system/08_audit/surface_completion_audit/harness_professional_completion_audit.md",
+      "sha256": "6493100d767de7f6be93d76980320f1412bea2dc999d00897a9134aa4105509c",
+      "bytes": 589,
+      "line_count": 19,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0102",
+      "source_path": "docs/harness/ai_harness_system/08_audit/task_audit_reports/README.md",
+      "sha256": "023b43896714b261cd28e91a7a035b2424266ca982555a7946754dda08afc5fe",
+      "bytes": 92,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0103",
+      "source_path": "docs/harness/ai_harness_system/08_audit/task_audit_reports/harness_professional_completion_task_audit.md",
+      "sha256": "98b9df0eaea20772ca214100ad8ba31c3b3818a1c63057049ead633b329c1563",
+      "bytes": 995,
+      "line_count": 24,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0104",
+      "source_path": "docs/harness/ai_harness_system/09_reports/README.md",
+      "sha256": "594ff0264526835358a8337f57ec13f11595c20327925bf5346d81ef92069b47",
+      "bytes": 978,
+      "line_count": 56,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0105",
+      "source_path": "docs/harness/ai_harness_system/09_reports/audit_reports/README.md",
+      "sha256": "cd6c43c98d676ee0a1c23ae492a41835d20f45f9900f31d51f46462622c478d2",
+      "bytes": 86,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0106",
+      "source_path": "docs/harness/ai_harness_system/09_reports/final_reports/README.md",
+      "sha256": "f3bede81e6a1d8db58b97fa5a1bc7fcf73a9253f660b96f94aa39bd0c8a3ff3a",
+      "bytes": 86,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0107",
+      "source_path": "docs/harness/ai_harness_system/09_reports/final_reports/harness_professional_completion_final_report.md",
+      "sha256": "e829b1398b827fd9ec4ebde93e1f9c1d19f67a32c17197b8842ba4a9bc1ba1b2",
+      "bytes": 1078,
+      "line_count": 28,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0108",
+      "source_path": "docs/harness/ai_harness_system/09_reports/phase_reports/README.md",
+      "sha256": "87544c36baea3f1643d9eb5f55d7e7af283614c634d8a1df4e0fd1a0ccef0b25",
+      "bytes": 86,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0109",
+      "source_path": "docs/harness/ai_harness_system/09_reports/phase_reports/harness_professional_completion_phase_report.md",
+      "sha256": "a941a54bbd290d1f3d2bcfacf5e77efab7d907da5d6d7d9ab6f4852635c0dc25",
+      "bytes": 719,
+      "line_count": 25,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0110",
+      "source_path": "docs/harness/ai_harness_system/09_reports/recovery_reports/README.md",
+      "sha256": "b55fc7dd7abb29e1e946784cd987a492f1839bb78fe1dccd24f053cd18f13b6a",
+      "bytes": 92,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0111",
+      "source_path": "docs/harness/ai_harness_system/09_reports/report_classification_policy.md",
+      "sha256": "f7def876065f0daa33875f59c30a2d15f11bd4693affc5cd795c9f9bc3f7e2e2",
+      "bytes": 705,
+      "line_count": 29,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0112",
+      "source_path": "docs/harness/ai_harness_system/09_reports/report_template.md",
+      "sha256": "03886bad424c89a3d66f57ac1ec9149827c33599b8173937c32e92583f998355",
+      "bytes": 362,
+      "line_count": 29,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0113",
+      "source_path": "docs/harness/ai_harness_system/09_reports/retrospective_report_template.md",
+      "sha256": "e99b7f3fe8614e203f85a6fea72003538a2d650363f7f342b5f3a4b802783e53",
+      "bytes": 225,
+      "line_count": 26,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0114",
+      "source_path": "docs/harness/ai_harness_system/09_reports/scan_reports/README.md",
+      "sha256": "533fa5b4241a9ccf28460b39a48d5d4e6a06e8c55505270908da7e9cb770d2a5",
+      "bytes": 84,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0115",
+      "source_path": "docs/harness/ai_harness_system/09_reports/verification_reports/README.md",
+      "sha256": "2d4b7804f7b9052d70b358de2d4f22579fbe4ae931b794ab78b879cec499f187",
+      "bytes": 100,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0116",
+      "source_path": "docs/harness/ai_harness_system/09_reports/verification_reports/harness_professional_completion_verification.md",
+      "sha256": "d6dfa61ccc7b889a441ec3269ae937f6fcc259979064fbf27b83cd9fe33c6f6e",
+      "bytes": 2225,
+      "line_count": 57,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0117",
+      "source_path": "docs/harness/ai_harness_system/10_templates/README.md",
+      "sha256": "01d9f2b1bf9c698db190f444193ad22148b3004323c6c8aa7c1e6f8eeea5d342",
+      "bytes": 174,
+      "line_count": 11,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0118",
+      "source_path": "docs/harness/ai_harness_system/10_templates/artifact_header_template.md",
+      "sha256": "128561aedf5ebbcbab060ad9ba0f4456f6a382a22fbbc97c909a768819574f25",
+      "bytes": 288,
+      "line_count": 15,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0119",
+      "source_path": "docs/harness/ai_harness_system/10_templates/audit_template.md",
+      "sha256": "4668f893cc6041dc905d04e0021b1fde669e4f2a1ab6bacedc695c74b6e72190",
+      "bytes": 236,
+      "line_count": 13,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0120",
+      "source_path": "docs/harness/ai_harness_system/10_templates/execution_loop_template.md",
+      "sha256": "c7306d88696fc32d11abfe738bcbac1cf8189db28480803868bcfae65ec7be6f",
+      "bytes": 154,
+      "line_count": 12,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0121",
+      "source_path": "docs/harness/ai_harness_system/10_templates/input_intake_template.md",
+      "sha256": "1f4cfb42d86e8df120dc03ec2fc137bede20435db2d2efd3bc3e47938daa5028",
+      "bytes": 233,
+      "line_count": 14,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0122",
+      "source_path": "docs/harness/ai_harness_system/10_templates/method_wheel_task_template.md",
+      "sha256": "5a2316d13ab81fff20ee11b89cf0064ad9fce81b77ff3acf71cd14506a66e5da",
+      "bytes": 657,
+      "line_count": 34,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0123",
+      "source_path": "docs/harness/ai_harness_system/10_templates/method_wheel_template.md",
+      "sha256": "cdde94fd57f2059bab6b0a19bfb9a8763d9b7208bca583a398b001b4d8dd2b2b",
+      "bytes": 193,
+      "line_count": 14,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0124",
+      "source_path": "docs/harness/ai_harness_system/10_templates/recovery_template.md",
+      "sha256": "7e96cf1a24e337f8ea41cd3d805806709096561c024b661c32b9692a622e53bd",
+      "bytes": 163,
+      "line_count": 12,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0125",
+      "source_path": "docs/harness/ai_harness_system/10_templates/task_route_template.md",
+      "sha256": "e9bd94f6ef26beb55da803c97957a912ca7963cdf2cbc22947ca419ad8233951",
+      "bytes": 194,
+      "line_count": 14,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0126",
+      "source_path": "docs/harness/ai_harness_system/10_templates/verification_template.md",
+      "sha256": "e54f8b18014570554517795956e23ff767566ca64c08dcfb20b0fff0e6b7ce36",
+      "bytes": 216,
+      "line_count": 13,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0127",
+      "source_path": "docs/harness/ai_harness_system/11_hermes_bot_invocation/README.md",
+      "sha256": "ccab2c89ded24df8f02d8f42089dd2dd28ebf380a8d0a38e8b75094a0cc0817d",
+      "bytes": 2691,
+      "line_count": 159,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0128",
+      "source_path": "docs/harness/ai_harness_system/11_hermes_bot_invocation/chinese_command_system.md",
+      "sha256": "05e6c4723a49465045854328bbb98e66f055544d22723644f9fbfa6dbf46122c",
+      "bytes": 1515,
+      "line_count": 47,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0129",
+      "source_path": "docs/harness/ai_harness_system/11_hermes_bot_invocation/core_workflows_v1.md",
+      "sha256": "526aedf01800558ad0f9f69df920b813b8ac5f9efb96a65c5967c0aa7fceda66",
+      "bytes": 1452,
+      "line_count": 112,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0130",
+      "source_path": "docs/harness/ai_harness_system/11_hermes_bot_invocation/hermes_invocation_template.md",
+      "sha256": "0500f42c0f51f0c9cd58ee68935d7266599e65ec3afd1ecaf7211f5bd4a2292e",
+      "bytes": 283,
+      "line_count": 19,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0131",
+      "source_path": "docs/harness/ai_harness_system/AI_HARNESS_SYSTEM_V1.md",
+      "sha256": "f3494f9a476af81c4e6c09a0dcacbe17819343916cfc614fb99913e0156b7954",
+      "bytes": 2750,
+      "line_count": 115,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0132",
+      "source_path": "docs/harness/ai_harness_system/README.md",
+      "sha256": "ea2eb22dba4dd0c9fe0490b4108b552e946bb5eaaa9c4994429cb7f853a1fd71",
+      "bytes": 4277,
+      "line_count": 179,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0133",
+      "source_path": "docs/harness/ai_harness_system/current_environment_scan.md",
+      "sha256": "807a927d3ec4dca3ec6aa68d22331963569ea1aad3bb2d12229cbaadf6220f4c",
+      "bytes": 1688,
+      "line_count": 40,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0134",
+      "source_path": "docs/harness/ai_harness_system/directory_map.md",
+      "sha256": "fd3d084fda7bc710756a7a2abacc4bd436aef45ec4ebdda94fc2591d5270020b",
+      "bytes": 1334,
+      "line_count": 25,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0135",
+      "source_path": "docs/harness/ai_harness_system/directory_purpose_table.md",
+      "sha256": "319630efe5d99f4dabb8525a69645b7f131f0ac8985c9815c060270d2cbb05e9",
+      "bytes": 1252,
+      "line_count": 17,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0136",
+      "source_path": "docs/harness/ai_harness_system/final_manifesto_v1.md",
+      "sha256": "3b5e58ee4d8c6b9c0757b202aca75656b3f2ac8af7638134bfff08e30128c2d8",
+      "bytes": 645,
+      "line_count": 31,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0137",
+      "source_path": "docs/harness/ai_harness_system/recovery_report.md",
+      "sha256": "03e1ab9f42f11f846dbc77852c08e5f91751cb3b226dc6ceb9a503173a916b72",
+      "bytes": 120,
+      "line_count": 5,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0138",
+      "source_path": "docs/harness/ai_harness_system/verification_report.md",
+      "sha256": "1f416860aa1c86156082cf53a0ee3febb318b2523b4c8d9326a90ed848d46027",
+      "bytes": 1482,
+      "line_count": 34,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0139",
+      "source_path": "docs/harness/trading_structure_control/AI_DRIVEN_TRADING_STRUCTURE_CONTROL_SYSTEM.md",
+      "sha256": "f43fa284737b0edbcb985dbd1327f9b1b56196e8a0f29353992c57dffbc8dd5c",
+      "bytes": 11929,
+      "line_count": 689,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0140",
+      "source_path": "docs/hindsight_sikk_integration_plan.md",
+      "sha256": "d22664e41bb4a1a60dbb03b5b59d5d429473d69cb6cb09dfe04c7323a27ae41f",
+      "bytes": 8387,
+      "line_count": 270,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0141",
+      "source_path": "docs/imported/chatgpt_share_69f809c6_section_index.md",
+      "sha256": "c20d74e680729982544e509ab4c8d7b913eb9a8891e2e671704e2972f97e56dc",
+      "bytes": 8709,
+      "line_count": 277,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0142",
+      "source_path": "docs/imported/chatgpt_share_69f868b8_extract_index.md",
+      "sha256": "ae4c868b08080daa4b2dd16df640d330a5de54957ea9cc1391ca57f8bb05b154",
+      "bytes": 9568,
+      "line_count": 74,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0143",
+      "source_path": "docs/intel_bot/chinese_judgement_dictionary.md",
+      "sha256": "334f8d7846b60fb8d458f62adb623ba55bfe5fc6d69f184fc84808d7cffe5e6e",
+      "bytes": 7824,
+      "line_count": 248,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0144",
+      "source_path": "docs/intel_bot/counterparty_pressure_quant_model.md",
+      "sha256": "396071e83afbf29bea482ac956758b4b566423668a64841d7f5d1738a5665b6c",
+      "bytes": 3628,
+      "line_count": 109,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0145",
+      "source_path": "docs/intel_bot/distribution_progress_model.md",
+      "sha256": "66d78c267ee1e5a968390c8f62339c481859cd4baf5a24205dcdd3de0e363613",
+      "bytes": 2251,
+      "line_count": 86,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0146",
+      "source_path": "docs/intel_bot/dominant_cost_zone_framework.md",
+      "sha256": "57eb7cc142421e979255e3211998375dd56f3e52e221b5f0d453e2731963fd30",
+      "bytes": 4458,
+      "line_count": 134,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0147",
+      "source_path": "docs/intel_bot/intel_structure_bot_delivery_checklist.md",
+      "sha256": "c48a39aa7d7a4dbf3dfa18c4cedf17f51a72dceebcfe7b66bdcb9c6df06596ba",
+      "bytes": 4421,
+      "line_count": 91,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0148",
+      "source_path": "docs/intel_bot/intel_structure_bot_index.md",
+      "sha256": "408be8ddd8ffb758751073e343912583dfece5d5b9a1e11839e6d701feef0de9",
+      "bytes": 4788,
+      "line_count": 145,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0149",
+      "source_path": "docs/intel_bot/markup_motivation_model.md",
+      "sha256": "ec84ef2dd9ef87cdbaa914d3fadb712d13f6dc45ecdd17c0627091369d49fe0f",
+      "bytes": 2918,
+      "line_count": 122,
+      "classified_phase": "P06",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0150",
+      "source_path": "docs/intel_bot/quantitative_structure_models.md",
+      "sha256": "5a75488b8625b86f4728ad31d0f2cacda952bde6ee2bf3ec3b89257656faed5d",
+      "bytes": 5592,
+      "line_count": 178,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0151",
+      "source_path": "docs/intel_bot/quantitative_structure_schema_contract.md",
+      "sha256": "ce6018ea77d4ad9dc986ab8161df59cc6576e2805479d8b277dc50b98652a895",
+      "bytes": 15137,
+      "line_count": 445,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0152",
+      "source_path": "docs/intel_bot/source_bot_upstream_layer_01_candidate_token_data.md",
+      "sha256": "f9bda00c641dc8bf5bb29a52d016cf03b2a2cee393e3c97a34310c4b16860b3d",
+      "bytes": 4802,
+      "line_count": 217,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0153",
+      "source_path": "docs/intel_bot/source_bot_upstream_layer_02_kline_market_structure.md",
+      "sha256": "0added03c1adb8b0d075f3db9760ef37c28d44f63e6db88b3b5016096969e7af",
+      "bytes": 4107,
+      "line_count": 178,
+      "classified_phase": "P06",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0154",
+      "source_path": "docs/intel_bot/source_bot_upstream_layer_03_holder_snapshot.md",
+      "sha256": "9226a3657b46dc96cb1a35e7704b1cd347502b783c1fc8e3d523afcd4ce8339b",
+      "bytes": 3608,
+      "line_count": 141,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0155",
+      "source_path": "docs/intel_bot/theory_to_code_rules.md",
+      "sha256": "03f9df5b27d9e8cf7e466591c1c4d9259a261235f1acf6671b363af41d62d49b",
+      "bytes": 4979,
+      "line_count": 171,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0156",
+      "source_path": "docs/intel_bot/wallet_file_passports.md",
+      "sha256": "a58b0d62681f78182857872c2e9b8e4dcaf2bee50e620e3c6116bfa7cebe6b94",
+      "bytes": 6928,
+      "line_count": 113,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0157",
+      "source_path": "docs/intel_bot/wallet_intel_2h_workflow_report.md",
+      "sha256": "fa7a8cbae926569552f03b77d900110f5f93c02e6b353af80cc5f07cbb4b6698",
+      "bytes": 2075,
+      "line_count": 88,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0158",
+      "source_path": "docs/intel_bot/wallet_intel_bottom_system_design_flow.md",
+      "sha256": "67e6595337ce58faccf7d547cc4e6bf1a202384aaf51712e05256c4b5e155fd3",
+      "bytes": 8188,
+      "line_count": 159,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0159",
+      "source_path": "docs/intel_bot/wallet_intel_command_lens.md",
+      "sha256": "d96b23eb117f8a987ce78ce47a91895c87c1befb1d991abdaa03f7a5dc84ff4b",
+      "bytes": 2777,
+      "line_count": 65,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0160",
+      "source_path": "docs/intel_bot/wallet_intel_execution_plan.md",
+      "sha256": "25b808b1725d7205e5eef8a43548a0609100037a74746c9832702004f54ddcc7",
+      "bytes": 7856,
+      "line_count": 278,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0161",
+      "source_path": "docs/intel_bot/wallet_intel_layer_reconstruction.md",
+      "sha256": "0691dcebdb48a17debfcb5a0d1510305a2390d752ced82943333768ff4e63a08",
+      "bytes": 1669,
+      "line_count": 42,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0162",
+      "source_path": "docs/intel_bot/wallet_intel_module_map.md",
+      "sha256": "35daaa60a57c81cf59971986598088254efb2ad40c5590dd3241f073842d0c3d",
+      "bytes": 13999,
+      "line_count": 193,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0163",
+      "source_path": "docs/intel_bot/wallet_research_scope.md",
+      "sha256": "4c60d41af3fc2d8d8555b6924eabc87f46321b529b619e6baad429ae6ad9b07c",
+      "bytes": 4090,
+      "line_count": 135,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0164",
+      "source_path": "docs/output_directory_governance.md",
+      "sha256": "2e40e9fdbea688f4c455612a4420ec9fb02955240f4aeaa4894883d4d3d79bc4",
+      "bytes": 2134,
+      "line_count": 99,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0165",
+      "source_path": "docs/plans/2026-04-30-sikk-auto-trading-readiness-framework.md",
+      "sha256": "f7c9c95213248d40f39eb167f2a05cf46acf9f5f519db784179c3b774a867412",
+      "bytes": 12199,
+      "line_count": 526,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0166",
+      "source_path": "docs/plans/2026-05-01-sikk-paper-live-runner.md",
+      "sha256": "5e7aeef3df112b08bcdd3121a1a0d6bbe5008c889d2e4479d37c001db9be7cb6",
+      "bytes": 3775,
+      "line_count": 72,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0167",
+      "source_path": "docs/plans/2026-05-02-dominant-side-lifecycle-intent-v12.md",
+      "sha256": "06804e34a442a1dadc711b933272d122eb3e08b176d24ef3597a7cd8dc73c978",
+      "bytes": 15569,
+      "line_count": 636,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0168",
+      "source_path": "docs/plans/2026-05-02-wallet-trade-adapter-observe-soft-hard.md",
+      "sha256": "ad840bd999d2008792d3c3f49839a44d6ccfc792fff4559e04dadd27370455d4",
+      "bytes": 11755,
+      "line_count": 296,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0169",
+      "source_path": "docs/plans/sikk_professional_interaction_investigation_design_20260503.md",
+      "sha256": "e06d59eeb45fdec2e28e009f5cfb339cff35ce293bbfb714ea34d1aa4b74e35a",
+      "bytes": 9500,
+      "line_count": 253,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0170",
+      "source_path": "docs/sikk_time_context_schema.md",
+      "sha256": "27077ef2eedea17729db2f7164631cfd1f930be05ab64e578c1e6559c2241d53",
+      "bytes": 26425,
+      "line_count": 386,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0171",
+      "source_path": "docs/sikk_wallet_normalized_contract.md",
+      "sha256": "2e5d4a86a826ed2438ac5093719cb71e823a6a926f8bf6f2d2124a85c59d0c80",
+      "bytes": 19250,
+      "line_count": 768,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0172",
+      "source_path": "docs/sikk_wallet_structure_integration_v2.md",
+      "sha256": "bbea22916cb0f1a8b6d014535fd8d7a3962b58bd18e3428370b1227ec73620ce",
+      "bytes": 12997,
+      "line_count": 569,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0173",
+      "source_path": "docs/source_wallet_bot/acceptance/current_directory_inventory_acceptance.md",
+      "sha256": "c67f9081ec724cdeccc0c734537529e6fa4578d80419d301acda9a5e80494fe7",
+      "bytes": 2801,
+      "line_count": 69,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0174",
+      "source_path": "docs/source_wallet_bot/ai_trade_structure_control_system.md",
+      "sha256": "4261fde960bb5883081f30bdf08f0645f58ae07993a4f4b88fde3b50255683d5",
+      "bytes": 12518,
+      "line_count": 613,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0175",
+      "source_path": "docs/source_wallet_bot/directory_governance/current_directory_baseline.md",
+      "sha256": "89b14aece2ced28c7760a6ee856241b7d9c273243a646269c6cf61d0df4e4bff",
+      "bytes": 3243,
+      "line_count": 35,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0176",
+      "source_path": "docs/source_wallet_bot/directory_governance/data_dependency_map_v1.md",
+      "sha256": "c4039a68e5037786cbaf5493781ccae016b54fa36e6b4bdb6d3151dd59204809",
+      "bytes": 19582,
+      "line_count": 295,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0177",
+      "source_path": "docs/source_wallet_bot/directory_governance/file_level_inventory_acceptance.md",
+      "sha256": "991530054ef7b63031eb6b0fa14b914977389261ad7d8393736b4445a3cb4e56",
+      "bytes": 752,
+      "line_count": 25,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0178",
+      "source_path": "docs/source_wallet_bot/directory_governance/file_level_inventory_summary.md",
+      "sha256": "c0db7c31348c0b8587c5d31c79413c38af04fc45edb36e98e9c48c4f28bcf7ff",
+      "bytes": 827,
+      "line_count": 20,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0179",
+      "source_path": "docs/source_wallet_bot/directory_governance/interface_capability_inventory_v1.md",
+      "sha256": "25d6e5eb0ad22f079b1a242bb5b41623439ee7f3aa9ec4fb67a3437207624911",
+      "bytes": 14165,
+      "line_count": 493,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0180",
+      "source_path": "docs/source_wallet_bot/directory_governance/legacy_runtime_policy.md",
+      "sha256": "482c274eaae120524e7838f37fa646c120bb1a9125cdf9a4b0290a3eab301dcd",
+      "bytes": 789,
+      "line_count": 27,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0181",
+      "source_path": "docs/source_wallet_bot/directory_governance/wallet_structure_primary_root_policy.md",
+      "sha256": "bf15a0131e1fc1b3353a93518cddba61437d8943f56ed8050f1b0c639e2a5232",
+      "bytes": 7369,
+      "line_count": 257,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0182",
+      "source_path": "docs/source_wallet_bot/directory_governance/write_routing_policy.md",
+      "sha256": "3fb128a827832320ad6bfb560294e1adba010501a8846be9e4a5aa81c256105f",
+      "bytes": 2361,
+      "line_count": 51,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0183",
+      "source_path": "docs/stable_trader_os/03_handoff_flow/phase_handoff_flow.md",
+      "sha256": "17155b7139b2fe4b0d6ad9dc60a7992bbf9b6cc5cc5016c744367f8070466029",
+      "bytes": 682,
+      "line_count": 36,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0184",
+      "source_path": "docs/stable_trader_os/04_status_codes/global_status_code_table.md",
+      "sha256": "f7f1eec42c971153f402fe33332c0ffe425f3a1fe64bdc3ff5be8cf5d8f6ec9c",
+      "bytes": 1773,
+      "line_count": 35,
+      "classified_phase": "P06",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0185",
+      "source_path": "docs/stable_trader_os/05_hard_negative_rules/global_hard_negative_rules.md",
+      "sha256": "519047a699a60db0de2334ca3dc3081f6917f0dc85b575556db208c713e2d686",
+      "bytes": 975,
+      "line_count": 21,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0186",
+      "source_path": "docs/stable_trader_os/07_contract_index/contract_index.md",
+      "sha256": "dbded7f08eecac9457d6566b5a72f76e020550b86a8ca977b5b2896fad81800e",
+      "bytes": 5761,
+      "line_count": 57,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0187",
+      "source_path": "docs/stable_trader_os/08_schema_index/schema_index.md",
+      "sha256": "4d85f8372c8c7cb1496271c61cbeaded2422522c06ed5da7275f1c85637f42ce",
+      "bytes": 5271,
+      "line_count": 56,
+      "classified_phase": "P06",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0188",
+      "source_path": "docs/stable_trader_os/09_her_execution_protocol/her_execution_protocol.md",
+      "sha256": "809d8e49d1018c03da1a7670ca694d8c4c851b4c153b319f0ff5bbaddb6bec1c",
+      "bytes": 617,
+      "line_count": 22,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0189",
+      "source_path": "docs/stable_trader_os/phase01_phase02_closure_completion_report.md",
+      "sha256": "5fba1ff259fccd8b4ef9c20426f8627171d9a15eba1ec80e7ca847979b151a2c",
+      "bytes": 4303,
+      "line_count": 108,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0190",
+      "source_path": "docs/stable_trader_os/phases/phase_01_acceptance_standard.md",
+      "sha256": "786c7dc085bb482d9033bde034ea224adb22e8075dffeec32269a0853ca5a0d9",
+      "bytes": 2104,
+      "line_count": 77,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0191",
+      "source_path": "docs/stable_trader_os/phases/phase_01_data_fact_controller.md",
+      "sha256": "28f6a1d41a2faf0f2816450eff7bfa08338de8a4077ebac3d4bac259f2330693",
+      "bytes": 35601,
+      "line_count": 1403,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0192",
+      "source_path": "docs/stable_trader_os/phases/phase_01_her_runtime_logic_calibration.md",
+      "sha256": "d033f93557d60e2e784629b7e0a9721453d41d162d2ca8a27de593dc23cc9f46",
+      "bytes": 8828,
+      "line_count": 317,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0193",
+      "source_path": "docs/stable_trader_os/phases/phase_01_professional_data_design.md",
+      "sha256": "fc42b607a75b86b0ec174d631f25a3b7bc1783a3b1872237209646a92152589f",
+      "bytes": 27944,
+      "line_count": 1068,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0194",
+      "source_path": "docs/stable_trader_os/phases/phase_01_professional_data_design_report.md",
+      "sha256": "afcf1f4758cb1c81346077021de1601f70a91a67a25314f08f333b19a70ad4ea",
+      "bytes": 6603,
+      "line_count": 126,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0195",
+      "source_path": "docs/stable_trader_os/phases/phase_01_professional_runtime_completion_report.md",
+      "sha256": "902ae16c4e3b3f190b96556a73f50fa3b5af836c53f130abdc36c09af273c1b2",
+      "bytes": 4193,
+      "line_count": 107,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0196",
+      "source_path": "docs/stable_trader_os/phases/phase_01_runtime_asset_index.md",
+      "sha256": "810dca79a489866572daab4f873e7541277eae6cba54a8b770890f9ce3a365da",
+      "bytes": 2475,
+      "line_count": 56,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0197",
+      "source_path": "docs/stable_trader_os/phases/phase_01_system_goal_alignment.md",
+      "sha256": "7e51d5c1198f0d01da072cc3b45e24467a44bae0e20bfdacab9cc2b8a6425725",
+      "bytes": 1506,
+      "line_count": 50,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0198",
+      "source_path": "docs/stable_trader_os/schemas/phase_01_field_schema.md",
+      "sha256": "99a9e3ba89ef08cb69b22f4e3e82a948248e9c0917f58b029a7d1facd265812a",
+      "bytes": 237,
+      "line_count": 6,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0199",
+      "source_path": "docs/system_cleanup_constitution.md",
+      "sha256": "c87a51a7bf690449ebde14b7aa716a12156c364dcea779645eca677b7512d350",
+      "bytes": 3993,
+      "line_count": 143,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0200",
+      "source_path": "docs/system_directory_constitution.md",
+      "sha256": "df6b292d5e7dca11ee803d63ce0f019cafd41c3502136470be9d15468c65853e",
+      "bytes": 18742,
+      "line_count": 653,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0201",
+      "source_path": "docs/system_split/sikk_system_split_audit.md",
+      "sha256": "1f3fff3d3c4ff7da80d306e73f903f914179501b5955db4048295dddb78caaf0",
+      "bytes": 121073,
+      "line_count": 2233,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0202",
+      "source_path": "docs/templates/source_wallet_bot_token_directory_template.md",
+      "sha256": "7491c61f814253753630ba1f0b9e9b8518c78daa6d5353c5838332a5558c2573",
+      "bytes": 2257,
+      "line_count": 110,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0203",
+      "source_path": "sikk_stable_trader_os/00_control/full_control_plane/control_acceptance_criteria.md",
+      "sha256": "3ebc27d7f39bbdaf53f524ceffb245d086e23bcd04f330a515e3d01c54e3890e",
+      "bytes": 1038,
+      "line_count": 16,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0204",
+      "source_path": "sikk_stable_trader_os/00_control/full_control_plane/control_context.md",
+      "sha256": "7759ff8cdeb565b7e95725de26c0721e53fce085f1b11ed879d1c120f3d5c5a6",
+      "bytes": 1626,
+      "line_count": 40,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0205",
+      "source_path": "sikk_stable_trader_os/00_control/full_control_plane/control_review_checklist.md",
+      "sha256": "8f86659753d8ac800cb8bb60bd7cd07c296fbc5247a2277480dbe58595bef460",
+      "bytes": 658,
+      "line_count": 10,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0206",
+      "source_path": "sikk_stable_trader_os/00_control/full_control_plane/her_full_control_execution_protocol.md",
+      "sha256": "73f865d166ffc01c5a8ba0be265f43a35344645ed750da46b1d9e567f98921a7",
+      "bytes": 730,
+      "line_count": 18,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0207",
+      "source_path": "sikk_stable_trader_os/00_data/data_acceptance_criteria.md",
+      "sha256": "919ce5ca18cb7fa9a2b5c4251296397d5456b3b7d7310fb048107824f4b0b08b",
+      "bytes": 869,
+      "line_count": 11,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0208",
+      "source_path": "sikk_stable_trader_os/00_data/data_context.md",
+      "sha256": "a5b3c173b868ff77d993a6cd1f7b4d38d908930ae1d5b6a78dd7a967e3e5aa46",
+      "bytes": 889,
+      "line_count": 19,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0209",
+      "source_path": "sikk_stable_trader_os/00_data/data_gap_register.md",
+      "sha256": "9d4e5ac23024e2e06a5bf79056ecb30f44b810c3a85896ac293cf685a021823c",
+      "bytes": 327,
+      "line_count": 12,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0210",
+      "source_path": "sikk_stable_trader_os/00_data/data_plane.md",
+      "sha256": "7b44c6ffd337354015c645ca4f7fee48a4f8fbe52f8c29c1514ad94f841a7eb6",
+      "bytes": 305,
+      "line_count": 7,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0211",
+      "source_path": "sikk_stable_trader_os/00_data/data_review_checklist.md",
+      "sha256": "3c88af1e9a6c122b8d7b00bcb5373043e1bb5a600a78c38df4b34791e0ff1565",
+      "bytes": 504,
+      "line_count": 17,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0212",
+      "source_path": "sikk_stable_trader_os/00_data/data_storage_constitution.md",
+      "sha256": "9f223b8f5776a3ac5e46b91814a328bf7e373c362533bffee3be9ba63ba6eceb",
+      "bytes": 772,
+      "line_count": 16,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0213",
+      "source_path": "sikk_stable_trader_os/00_domain/domain_acceptance_criteria.md",
+      "sha256": "559da49f30623c005c0b1989deeb37145bcd542c5852982e97bac304223cbe54",
+      "bytes": 743,
+      "line_count": 11,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0214",
+      "source_path": "sikk_stable_trader_os/00_domain/domain_context.md",
+      "sha256": "35b7843bbd1d46ebf2650c77a98da62c2f93fc7475901e1dbf4d5e8e3da6cdc4",
+      "bytes": 968,
+      "line_count": 17,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0215",
+      "source_path": "sikk_stable_trader_os/00_domain/domain_gap_register.md",
+      "sha256": "fefa01ca20c151d46b13ea2489437e8165a56efc2a14b2c31a027c2d8de41648",
+      "bytes": 633,
+      "line_count": 10,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0216",
+      "source_path": "sikk_stable_trader_os/00_domain/domain_plane.md",
+      "sha256": "7bdd2140f64122546f5acbe408e9cf23293ba9e13d5037d903f30381a05156af",
+      "bytes": 350,
+      "line_count": 7,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0217",
+      "source_path": "sikk_stable_trader_os/00_domain/domain_reasoning_boundary.md",
+      "sha256": "2ac5a47b2562aff8da1c1fe9858ed5cbaea180159ebe6db9d7dabb767c30c811",
+      "bytes": 673,
+      "line_count": 22,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0218",
+      "source_path": "sikk_stable_trader_os/00_domain/domain_review_checklist.md",
+      "sha256": "08a36cc0b986209739e96113187ce24e293c0586f1fa0ff3ddd14f178cc9e94d",
+      "bytes": 557,
+      "line_count": 18,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0219",
+      "source_path": "sikk_stable_trader_os/00_domain/entity_relationship_map.md",
+      "sha256": "863427641d49242963ef51f0ec3dcf5f01845e80a189f7d0f1b2da5352a78acb",
+      "bytes": 874,
+      "line_count": 25,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0220",
+      "source_path": "sikk_stable_trader_os/00_governance/governance_plane.md",
+      "sha256": "97e254253a001932ddf8d2a0444f9eec013e9e5a337456b3f2e3bad2886b40bc",
+      "bytes": 1059,
+      "line_count": 32,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0221",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/README.md",
+      "sha256": "5b99abd83e13a97b2681d889c275636465eff73b5150458bf274601d5758bc51",
+      "bytes": 6041,
+      "line_count": 142,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0222",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-004.md",
+      "sha256": "2b8877fc0a5d7be912e6b9be617efbc911bfe938c936ba24c406607d9525ed6e",
+      "bytes": 784,
+      "line_count": 29,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0223",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-005.md",
+      "sha256": "04672d425046d6ece8c5151ea5be82f21c3b0f6641a5ab8b8e0607c602441d6b",
+      "bytes": 1925,
+      "line_count": 54,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0224",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-006.md",
+      "sha256": "2c19985bdb2651ecd855081f5c5cbf8f1acd2e3d953d8b47df0d4f8a01cda9b5",
+      "bytes": 745,
+      "line_count": 22,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0225",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-023.md",
+      "sha256": "6a53abd3ec109b82bc200c614e0ddcbd5567cc09d683b094e6e86e63943d9440",
+      "bytes": 484,
+      "line_count": 8,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0226",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260512-CPO-001.md",
+      "sha256": "10926a07bbb4d328c067977b9523a2fd0d4e8fc1085a3bdb9bd472ec836828f9",
+      "bytes": 805,
+      "line_count": 18,
+      "classified_phase": "P06",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0227",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260512-INTEGRATION-PROGRAM-V1.md",
+      "sha256": "9d5d3413f1a9352a885e9dee1a8a43ceee2f6d3b18e5dbef5bb703480ae4af35",
+      "bytes": 1314,
+      "line_count": 29,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0228",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-002.md",
+      "sha256": "52286f56afb2c588f92144b4c7f39594b8af026705e700c264f8746c3cd1f5c2",
+      "bytes": 2131,
+      "line_count": 48,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0229",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-003.md",
+      "sha256": "7f8b0e4d8a1ca73e459528c66ba0d31d4dd93b562afc31ec3b59d2cb86ff24fc",
+      "bytes": 1160,
+      "line_count": 35,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0230",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-004.md",
+      "sha256": "9cbe4298432be215a7aed6f3a496e6de03fd3d5b787aa1798121ca5b527a7c96",
+      "bytes": 597,
+      "line_count": 14,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0231",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-006.md",
+      "sha256": "06c05e885399c2c59d80fc56ee8aaa1de7e01f554d337b56253a433873d2dcb7",
+      "bytes": 550,
+      "line_count": 8,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0232",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-018.md",
+      "sha256": "2524ba709bc321596085510d56f7e7b5cd1daf708df9dde80ff785519ca6fe0e",
+      "bytes": 880,
+      "line_count": 12,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0233",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-025.md",
+      "sha256": "9bdcc5f860a6dc4b6ae892f47e433117f54e0597f687e814963b66c7d6584b27",
+      "bytes": 365,
+      "line_count": 8,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0234",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-026.md",
+      "sha256": "f3999da8a042eff03d62c8ba340ec6c6f5cf01f1e92af42457a7dcef0c55c279",
+      "bytes": 443,
+      "line_count": 10,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0235",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-002.md",
+      "sha256": "d7149d767f48c3a597a524089e9134ee5f985fe2c88dcfcd95fa7dd97d5b3476",
+      "bytes": 454,
+      "line_count": 9,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0236",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-003.md",
+      "sha256": "e1bf24ca6dc781ce4f2b2724ac9cd84f151f7b52d143b025b5490e51adea15c1",
+      "bytes": 585,
+      "line_count": 14,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0237",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-004.md",
+      "sha256": "520ec843bf524784c86935e0fd0dc021bb758dda20bb2f101710381ce7b87a86",
+      "bytes": 619,
+      "line_count": 14,
+      "classified_phase": "P04",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0238",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-005.md",
+      "sha256": "c77930c4823abd46eb6758735fb0c0d9a6f04a00a1831be4bd3e75ca62ab6b5c",
+      "bytes": 412,
+      "line_count": 9,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0239",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-007.md",
+      "sha256": "5c491f5659b3bbc86257a69fa68dcdd087fac986f7a93e4a296fa2f7eabebd3c",
+      "bytes": 484,
+      "line_count": 9,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0240",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-008.md",
+      "sha256": "2c9b68c205d9876bff4c2c438b870815eab8c71d764223efd0507d5cde24bd88",
+      "bytes": 515,
+      "line_count": 10,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0241",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-CPO-001.md",
+      "sha256": "c5b36a9190b6e75716b651ae5ad1414fb872579edc4354259470842f1d4ccd87",
+      "bytes": 97,
+      "line_count": 5,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0242",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-I03_RUNNER_TOOL_BINDING_V1.md",
+      "sha256": "c6a60613f699aef6944f00121281909d0d4fcd4222929d582f91d9b7095fae42",
+      "bytes": 428,
+      "line_count": 9,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0243",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-I04_PAPER_RUNTIME_INTEGRATION_V1.md",
+      "sha256": "35ebbbba8d9be13c3032f76ec1f15b762d83cce11f7cda233f06999421c25630",
+      "bytes": 622,
+      "line_count": 11,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0244",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1.md",
+      "sha256": "e604959107ec86fd010f6827ba92650eab3b6aea849d64e6af3e3cb72b0eedea",
+      "bytes": 389,
+      "line_count": 8,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0245",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-INTEGRATION-PROGRAM-V1.md",
+      "sha256": "9f530c9207f749593e40a18a5323d1896bf80d7118e98439db13bf4f342995e2",
+      "bytes": 1537,
+      "line_count": 18,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0246",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3.md",
+      "sha256": "68d60875bec3844c4c60aeb8919d0b209da1109060c2de91362453ab7e708e2f",
+      "bytes": 449,
+      "line_count": 8,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0247",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3.md",
+      "sha256": "46ee00b3d88e996dd0ca3eb2112848c384b39cbd59aafc771917dffee35c290e",
+      "bytes": 440,
+      "line_count": 8,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0248",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/k00_route_recovery_report_DOC-20260512-007.md",
+      "sha256": "74bd835392de3c9febcb135e6d7ffd95b3ca52bc744e025d4fa5de9375706f9e",
+      "bytes": 2446,
+      "line_count": 33,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0249",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/intake_reports/p07_professional_completion_taskbook_report_DOC-20260512-007.md",
+      "sha256": "b0c3e69c5acd72f39f3f38fb3973a0b24cbea75ade7b1ed755ea1521f3a607f5",
+      "bytes": 5871,
+      "line_count": 92,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0250",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-001.md",
+      "sha256": "e85f5cffef63f102f13d3fe594351844135b63bd494a22901b2509582d9aaa2a",
+      "bytes": 528,
+      "line_count": 12,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0251",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-002.md",
+      "sha256": "8696f28e4979c83645c759329b31dc6f7c56e37f6b455dd5f9c2e69c13546e1f",
+      "bytes": 37858,
+      "line_count": 1589,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0252",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-003-DUP-001.md",
+      "sha256": "5bad928e6b4e279cff5ea1c7ad65cf39f916ec2633bf8a9c6e6317131b9357bc",
+      "bytes": 29943,
+      "line_count": 1732,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0253",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-003.md",
+      "sha256": "65fee19660034a4e85dbba595d4ad8c4187c79529a84c82aa210bdcd9ddce025",
+      "bytes": 30337,
+      "line_count": 1744,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0254",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-004.md",
+      "sha256": "a11038c4c0140eeb6c03fa190810e91f3faf4ff23dc1a5ec16c7ec60990dbaba",
+      "bytes": 15979,
+      "line_count": 874,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0255",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-004_system_methodology_blueprint_v2_institutional_upload.md",
+      "sha256": "21b709caa6d52b80c35ee41c4100774d4b4f1717090fc08bbfc5456a027dae99",
+      "bytes": 36282,
+      "line_count": 1532,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0256",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005.md",
+      "sha256": "73310f4be27df1b6d045f698da0dcac59ee3d460664308afff5dbb3e5a5c0794",
+      "bytes": 24400,
+      "line_count": 1600,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0257",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005_p00_system_bootstrap_controller_institutional.md",
+      "sha256": "7f357812c58d4d7edc68ca2f726ad052d3706524b9e8493f22516dc88f576606",
+      "bytes": 60132,
+      "line_count": 2069,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0258",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-006.md",
+      "sha256": "66430be1f3a8649f3d09191e16442720379e351fb8c2aa4d1e894eba465499dc",
+      "bytes": 2575,
+      "line_count": 76,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0259",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-006_p00_system_bootstrap_controller_landing_and_acceptance.md",
+      "sha256": "63fa654d27beca3f8e6b7463c9bd967af612e6a1c358af3f70c5578fb3e1c778",
+      "bytes": 19851,
+      "line_count": 693,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0260",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-007.md",
+      "sha256": "a4aa3661737b4d6bd3db9a8be8fcd9875618cacca108735896f368f9c1efa7eb",
+      "bytes": 412,
+      "line_count": 28,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0261",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-007_bootstrap_full_control_plane_v3_system_planes_professional_generation.md",
+      "sha256": "63de023524e39c3549f74b03538a395894bce21f4dfd435b344957f8ad36101a",
+      "bytes": 18726,
+      "line_count": 851,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0262",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-008.md",
+      "sha256": "beff1b6b3972bf401fa230248989861f8dd5fd9a22ee5de0a4b96f14d8c5de6f",
+      "bytes": 2223,
+      "line_count": 72,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0263",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-009.md",
+      "sha256": "e2ff72dd4035f2e1ff05689faa9581cf6878cd0239d63cca3fdaff3e19f54f74",
+      "bytes": 644,
+      "line_count": 42,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0264",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-010.md",
+      "sha256": "3d7c8ec049d7d1d814e8688095a9856f2b39b97d17758f94cc9c30beaabb9a6b",
+      "bytes": 1624,
+      "line_count": 65,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0265",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-011.md",
+      "sha256": "326a7b73184ec549de8efe3bcd24dbe087a94411ada989d1b1d106f477063b33",
+      "bytes": 959,
+      "line_count": 19,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0266",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-012.md",
+      "sha256": "4c630292d081bd4df9c86998aadeea0e7594069eac7b0b4790640e0902126055",
+      "bytes": 1073,
+      "line_count": 68,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0267",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-013.md",
+      "sha256": "b9198e8426674077550ee8a344f9f721bcceba6308b8196f42ad2d94128e40d0",
+      "bytes": 1724,
+      "line_count": 65,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0268",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-014.md",
+      "sha256": "04e7888b9132a415b965e9bd7df983b4a0ddd558e085b06881496c58ab037826",
+      "bytes": 2504,
+      "line_count": 78,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0269",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-015.md",
+      "sha256": "fa655147876024fc7abe1e1d2305389d20eafc581b6c86540f4c306473324069",
+      "bytes": 1258,
+      "line_count": 38,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0270",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-016.md",
+      "sha256": "1ebc1e182825db647272f40294d3160792fe3e499c7812caabc7e91ce695761f",
+      "bytes": 2422,
+      "line_count": 75,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0271",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-017.md",
+      "sha256": "5aff408b3d303951efc4e8260c2c1d3d4eefac54c29ad165a32ec61fa2ce8454",
+      "bytes": 1710,
+      "line_count": 52,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0272",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md",
+      "sha256": "62b5f51591bbbc430a1aa1c552dd6f270aac9825d83a765014520fc6f3c82287",
+      "bytes": 28640,
+      "line_count": 1109,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0273",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-019_k00_system_chain_professional_update.md",
+      "sha256": "e8295acc14077c8713f7646f85edc6909694ca3ba3e60d4bc86d9974093e2da8",
+      "bytes": 802,
+      "line_count": 26,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0274",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-020_bootstrap_control_plane_v2_professional_completion.md",
+      "sha256": "c738bbcb8a569e63db51cfc4b28a91e77accd53aa9219c50db61f297e818c8a8",
+      "bytes": 30339,
+      "line_count": 1237,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0275",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-021_governance_plane_v2_institutional_design.md",
+      "sha256": "0d463e529dc665f436af4885bc09f47fa500d4b87ef01776908c3c31332ca6da",
+      "bytes": 44549,
+      "line_count": 1768,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0276",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-022_domain_plane_professional_design.md",
+      "sha256": "2b0909bbb9b81587c9accf14d01c90612cc3c1be523c6cf8f8bf1afd329f7a25",
+      "bytes": 34291,
+      "line_count": 1069,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0277",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-023_data_plane_professional_design.md",
+      "sha256": "84343f4674147f62cca503934928fdcf287678e5bde9bcc20e9ecc45e21eecec",
+      "bytes": 42900,
+      "line_count": 1690,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0278",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-024_full_control_plane_professional_design.md",
+      "sha256": "280bea2b565472d250f7096a3dc21aad1f33ec1e89c0b6eec1fa44f839eae656",
+      "bytes": 47790,
+      "line_count": 2001,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0279",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-025_trace_plane_professional_v2.md",
+      "sha256": "ceff92bc85de859b5e7b6582659a26032a705e872ccf9c580d2ef0317d199a7b",
+      "bytes": 43911,
+      "line_count": 1775,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0280",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-026_acceptance_plane_v2.md",
+      "sha256": "eeae51689eaa3b41271a4f29e38f3b4ed47d8cc98e7f4c277824d7b010653d3e",
+      "bytes": 46932,
+      "line_count": 1738,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0281",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-027_handoff_plane_v2.md",
+      "sha256": "712b1410f257d2779f01c4a6f7ca6f2f72fa0ef90702a6ba22a260bc3cadfbec",
+      "bytes": 53460,
+      "line_count": 1995,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0282",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-028_phase_controller_index_v2.md",
+      "sha256": "f24c4b0c05bae9717862d19677f8589880966c7a79bb20bf5533cd3e972eb9c2",
+      "bytes": 31532,
+      "line_count": 1053,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0283",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-001_p01_candidate_intake_controller_v3.md",
+      "sha256": "c98cd6411d5008262ea6085d6e01e9bc0e8c4b33d925dd1d8ff9bbd1d094d63f",
+      "bytes": 38384,
+      "line_count": 1443,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0284",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-002_p02_source_data_fact_controller_v3.md",
+      "sha256": "948b7fd9ff8d731a03cdda468cdb6fba8dd646056f2afe67adcbece46001bf7c",
+      "bytes": 48590,
+      "line_count": 1864,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0285",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-003_p03_wallet_entity_controller_v3.md",
+      "sha256": "73fe23832145e6844869e9bd41f460fc416228877863bf74c372f68af97438d4",
+      "bytes": 57329,
+      "line_count": 2081,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0286",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-004_p04_chip_structure_controller_v3.md",
+      "sha256": "d57e5666c218bef04fe4e66210f7b46cd1ddd160550082941f3949cd486f7788",
+      "bytes": 54907,
+      "line_count": 1926,
+      "classified_phase": "P04",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0287",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-005_p05_evidence_controller_v3.md",
+      "sha256": "7e3f4bd0e8210f27dfb19622320c3b08a93aba9b94bbf2d037274ea9ef862860",
+      "bytes": 44833,
+      "line_count": 1671,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0288",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-006_p06_scenario_recognition_controller_v3.md",
+      "sha256": "2d8a2aecfd737c7a9731d17731b2da90d8de1d070f4b37e2d7c614ead454ace8",
+      "bytes": 51898,
+      "line_count": 1881,
+      "classified_phase": "P06",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0289",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-007_p07_strategy_gate_controller_v3.md",
+      "sha256": "4433491d7e914d386826b75e406c37650d5cf15dbce5393577ae24e5f3513126",
+      "bytes": 59431,
+      "line_count": 2155,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0290",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-008_p08_execution_risk_controller_v3.md",
+      "sha256": "18d3de3654a45bd0e58aa8bf59790f579c61199b6193b7b1c84ff0afc567a300",
+      "bytes": 57385,
+      "line_count": 2050,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0291",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-CPO-001_continuous_paper_operation_v1.md",
+      "sha256": "80b0c93ef2dbe7cd5289c869b5807cc0f16519e5e42f0dbb2e5e1285ff6441a7",
+      "bytes": 41656,
+      "line_count": 1636,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0292",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-INTEGRATION-PROGRAM-V1_系统集成落地阶段.md",
+      "sha256": "6b631f35dbeb32e7570f010c1363774abaf7a8dfee7847dd6c92ef024c098e45",
+      "bytes": 8737,
+      "line_count": 412,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0293",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3.md",
+      "sha256": "364857538d03d5386f9637eadf6ddcc69c91f95b643c0b82c3d4a6af09e08f62",
+      "bytes": 65864,
+      "line_count": 2373,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0294",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3.md",
+      "sha256": "b1d8fd060b8f3d5ab5c438a3c0a89747a6d7448d54ca1e16e195030b8a3f52f0",
+      "bytes": 64452,
+      "line_count": 2341,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0295",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I01_full_phase_consistency_audit_v1_0.md",
+      "sha256": "ba11871fbe3e75bd96a1753854fd1e353ff187a6600c9b088b203406de8f2dda",
+      "bytes": 54621,
+      "line_count": 2037,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0296",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I02_directory_contract_index_unification_v1_0.md",
+      "sha256": "35b8d97465d1e1ca377329d658549a2b8efc52c106570b789c46272b9babc936",
+      "bytes": 71321,
+      "line_count": 2475,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0297",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I03_runner_tool_binding_v1_0.md",
+      "sha256": "3d5106279345995d901c28589c9cc79cd3438da9a8f9e9b9fd601040f79cc1ae",
+      "bytes": 68916,
+      "line_count": 2529,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0298",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I04_paper_runtime_integration_v1_0.md",
+      "sha256": "f2680c50edbf60d9d2943f9c0a0315b039199a95fa8e1acb918480a22be058b1",
+      "bytes": 58640,
+      "line_count": 2178,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0299",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I05_review_upgrade_closed_loop_v1_0.md",
+      "sha256": "029201473942dd4814fd896773facd450ff06b7b93d4bc287f53a8cfc66c5493",
+      "bytes": 61535,
+      "line_count": 2165,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0300",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/continuous_paper_operation/phase_task_pack.md",
+      "sha256": "be02b563228ed743705aff6f66fa69f733bf87ed72e858508e4baa18062ad406",
+      "bytes": 671,
+      "line_count": 16,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0301",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I01_full_phase_consistency_audit/02_phase_context_pack.md",
+      "sha256": "3ecd216069fc07f3cc922cf0579c7c19eba19999c7b0a657d22112f4a1cf4bff",
+      "bytes": 349,
+      "line_count": 4,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0302",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I01_full_phase_consistency_audit/06_phase_execution_protocol.md",
+      "sha256": "1116b1d8e34aa561fe7d87ef6a94bd9e9bcd52aaa79dc46cccd303b7ee8717af",
+      "bytes": 364,
+      "line_count": 4,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0303",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I02_directory_contract_index_unification/02_phase_context_pack.md",
+      "sha256": "0356f97072ad84cb41163da6a179cd01fb11f365f2994ac286065226ad502284",
+      "bytes": 327,
+      "line_count": 4,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0304",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I02_directory_contract_index_unification/06_phase_execution_protocol.md",
+      "sha256": "f09d1876953cef8c46cb0b9c3744bb14659e63dc01e8f5d3e813231c143131a6",
+      "bytes": 419,
+      "line_count": 11,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0305",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I03_runner_tool_binding/02_phase_context_pack.md",
+      "sha256": "5c51b15662ed414ef6f6704a6bab17c18c6d925f971592139e77b2391cd18cad",
+      "bytes": 193,
+      "line_count": 4,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0306",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I03_runner_tool_binding/06_phase_execution_protocol.md",
+      "sha256": "277ecfd26593acea72a69ae9963ff8e83404706cad3331da785960a2f011c87d",
+      "bytes": 219,
+      "line_count": 4,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0307",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/02_phase_context_pack_TEMPLATE.md",
+      "sha256": "e31234bc1622552422439e53d1d696b6e4cc34f7ed0228bf37cca6e678277e99",
+      "bytes": 952,
+      "line_count": 32,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0308",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/06_phase_execution_protocol_TEMPLATE.md",
+      "sha256": "6ee1dbed11e175af33cb8942fecccc2ae88dc9e60d3ac8deb21205fcfa83f3cf",
+      "bytes": 1510,
+      "line_count": 48,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0309",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/HER_K00_FORMAL_TASK_BOOK.md",
+      "sha256": "c3e7bd63e4665543983c23b56acb454889fc84b0913fbff65b2d5752e0f34dda",
+      "bytes": 4636,
+      "line_count": 120,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0310",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/HER_K00_VERSION_UPDATE_13_14.md",
+      "sha256": "609e7273c20d8adf91be07cd6aa557cf18f8a895c7f7bd1db9418da6f549e064",
+      "bytes": 2405,
+      "line_count": 53,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0311",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/README.md",
+      "sha256": "6ec0f6a71f4241288eced4219e9158578cd41addb3c74f7846cb78907ad5405c",
+      "bytes": 24975,
+      "line_count": 609,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0312",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/automated_trading_workflow_safety_boundary.md",
+      "sha256": "30b0380f176133e81ed3518a10d090e0cc208926850e42048d789e13d4ae14b1",
+      "bytes": 1778,
+      "line_count": 65,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0313",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_pack_DOC-20260511-004_to_P00.md",
+      "sha256": "ce952ec57b6b38eabed2aa083c0cb704b5a230b929d10231e8cd930864e7aebe",
+      "bytes": 1758,
+      "line_count": 43,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0314",
+      "source_path": "sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_pack_DOC-20260511-005_P00_build.md",
+      "sha256": "79a2cd80e700c56294d13d8ab992fefcecf78eeee5a5e3e2239f34f2763a8993",
+      "bytes": 1124,
+      "line_count": 31,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0315",
+      "source_path": "sikk_stable_trader_os/00_methodology/materials/indexes/stable_trader_os_v2_0_corpus_index.md",
+      "sha256": "68c3ef130deb2f059c328038ffa179ac1fbc98d9d5497055c9f415b2b909faf5",
+      "bytes": 1490,
+      "line_count": 24,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0316",
+      "source_path": "sikk_stable_trader_os/00_methodology/materials/passports/stable_trader_os_v2_0_design_doc_passport.md",
+      "sha256": "1d848f2d434f902ad1a76f571ea7e3d0f767d6dafbb2e5a063504c18efa4e128",
+      "bytes": 1510,
+      "line_count": 38,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0317",
+      "source_path": "sikk_stable_trader_os/00_methodology/materials/task_packs/methodology_blueprint_landing_task_pack.md",
+      "sha256": "97890182904a2a9ff360cd94547f6b01353ce53285fdae11c9c8a72675b58af4",
+      "bytes": 1309,
+      "line_count": 40,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0318",
+      "source_path": "sikk_stable_trader_os/00_methodology/materials/task_packs/phase_controller_data_model_workflow_plan.md",
+      "sha256": "dce1345d85b0e3b4c8220363b4042eb9e2364be1e91cd156dcf0c9bb8ea5aabd",
+      "bytes": 3978,
+      "line_count": 80,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0319",
+      "source_path": "sikk_stable_trader_os/00_methodology/methodology_v3_bootstrap_full_control_plane_supplement.md",
+      "sha256": "e63d2903ae76abf96e307c5fed15630ff18d97eeeebcbfb6fb8923e1dd2abfc5",
+      "bytes": 3998,
+      "line_count": 112,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0320",
+      "source_path": "sikk_stable_trader_os/00_methodology/system_methodology_blueprint.backup_before_DOC-20260511-003.md",
+      "sha256": "bcb8985a97012fdcd27b8b168abddac43805cb6431be043424b80bfe07a37f7b",
+      "bytes": 19550,
+      "line_count": 481,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0321",
+      "source_path": "sikk_stable_trader_os/00_methodology/system_methodology_blueprint.backup_before_DOC-20260511-004.md",
+      "sha256": "8bc1cf1cef7c74cf269df6be1bc9c0efc383261f80034f86edcc2e4b2fb0b794",
+      "bytes": 20443,
+      "line_count": 712,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0322",
+      "source_path": "sikk_stable_trader_os/00_methodology/system_methodology_blueprint.backup_before_DOC-20260511-007.md",
+      "sha256": "a5a29ae7b69d97e8c6c98a40ff381ea27f236270571a298c636c9302ff978858",
+      "bytes": 34527,
+      "line_count": 1477,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0323",
+      "source_path": "sikk_stable_trader_os/00_methodology/system_methodology_blueprint.md",
+      "sha256": "b0a5c082336c226ca71c5f1cbc94ce144d6bc89e3b9484b73460fc5947dbe2b6",
+      "bytes": 35711,
+      "line_count": 1497,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0324",
+      "source_path": "sikk_stable_trader_os/00_trace/trace_plane/her_trace_execution_protocol.md",
+      "sha256": "2afd31ca859384bc12ce580b2fd53c1602444bdf4b95e92e498b1a4de4692c49",
+      "bytes": 1050,
+      "line_count": 27,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0325",
+      "source_path": "sikk_stable_trader_os/00_trace/trace_plane/trace_acceptance_criteria.md",
+      "sha256": "12a318d93796ae39131bb6b47ccee3abc1d6127a2fb0fdae7ccebe69ecb670ca",
+      "bytes": 700,
+      "line_count": 11,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0326",
+      "source_path": "sikk_stable_trader_os/00_trace/trace_plane/trace_context.md",
+      "sha256": "ef877b9983bf872672332df712c7f0fc2bb828747bb9a3eb1ed8699728aac847",
+      "bytes": 702,
+      "line_count": 16,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0327",
+      "source_path": "sikk_stable_trader_os/00_trace/trace_plane/trace_gap_register.md",
+      "sha256": "2dc7ebc4da574b9b0ff2f279de7228f3be013c2977e526089f6b0033bcf97c35",
+      "bytes": 579,
+      "line_count": 21,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0328",
+      "source_path": "sikk_stable_trader_os/00_trace/trace_plane/trace_review_checklist.md",
+      "sha256": "893efb76cb6078411ac08e4004f982889de74b0beefe4f5058a4363da99c7c11",
+      "bytes": 508,
+      "line_count": 13,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0329",
+      "source_path": "sikk_stable_trader_os/00_trace/trace_plane/trace_storage_constitution.md",
+      "sha256": "d9442124730085485d9e3d696fce8de08646af169040f4169e08fa2c93ec8ce8",
+      "bytes": 495,
+      "line_count": 15,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0330",
+      "source_path": "sikk_stable_trader_os/01_total_control_skill/SKILL.md",
+      "sha256": "a4e90e890f40ad166455ce0d3189fb695b0d28d8bcadb39d95dd73076e4ab6ee",
+      "bytes": 18233,
+      "line_count": 439,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0331",
+      "source_path": "sikk_stable_trader_os/01_total_control_skill/total_control_execution_protocol.md",
+      "sha256": "01182334886a78c4a179fe17b47bcda2e2fe3e792985d22781f01e5a5570909e",
+      "bytes": 970,
+      "line_count": 19,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0332",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P00_system_boundary/phase_context_pack.md",
+      "sha256": "76adc4d031bdfbae388b8757e45b152faf9e2041199ab85d6c035888ea5c2850",
+      "bytes": 1341,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0333",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P00_system_boundary/phase_execution_protocol.md",
+      "sha256": "c71b5d564b014ff2de82c04df929fa5bb115d40596fe1682f0ebf4ad6b29f159",
+      "bytes": 1763,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0334",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P01_data_fact/phase_context_pack.md",
+      "sha256": "bb06ea96b707c6323bf542e238296be5dc6630d310283ef0d2d0f609d5a450e8",
+      "bytes": 1338,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0335",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P01_data_fact/phase_execution_protocol.md",
+      "sha256": "67c0ef621113f7d48cca8a2dddc6ef2c1c4cb73ab3833c2403583c444a0fb606",
+      "bytes": 1748,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0336",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P01_data_fact/phase_replay_plan.md",
+      "sha256": "e8820792ec8548c662b82d35ea511b7dac8cc249b37cb2ae45a88184253fcfb8",
+      "bytes": 155,
+      "line_count": 4,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0337",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P01_data_fact/phase_report_template.md",
+      "sha256": "499e0269823c46de25246f55a8339f6214a893e19c4da7720b468c996ee9c3a6",
+      "bytes": 112,
+      "line_count": 4,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0338",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P02_wallet_structure/phase_context_pack.md",
+      "sha256": "40fe8023c95c1bb11280f5861ff9ed9485211b7fa9b1e3d6ce8246efe1bdf40c",
+      "bytes": 1326,
+      "line_count": 30,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0339",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P02_wallet_structure/phase_execution_protocol.md",
+      "sha256": "ada4fd9f8e1a3a820679c2f47e140bfdc6176f5a723abeafb43caaafc8d02961",
+      "bytes": 1772,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0340",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P03_chip_control/phase_context_pack.md",
+      "sha256": "922fd29c07ee91903e8b9f622c11f357dd0e566f26aee18a85c4b0b3229f1164",
+      "bytes": 1320,
+      "line_count": 30,
+      "classified_phase": "P04",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0341",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P03_chip_control/phase_execution_protocol.md",
+      "sha256": "3551a5ab190e6b1691fc88d2979555d3a0856bddea7211f2c8e9ad69438d236c",
+      "bytes": 1753,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0342",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P04_scenario_recognition/phase_context_pack.md",
+      "sha256": "448c24dc659892c88bd05ffea86f7e960306ee29d0639903643fd815b798e6f6",
+      "bytes": 1341,
+      "line_count": 30,
+      "classified_phase": "P06",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0343",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P04_scenario_recognition/phase_execution_protocol.md",
+      "sha256": "88d077d7fc078c7309cad1578297eaf10f7fdb78334d334855be1e39d2f9f9ad",
+      "bytes": 1751,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0344",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P05_structure_position/phase_context_pack.md",
+      "sha256": "6e70b02904ce9996edd6bdc373b0c75b66b4583a2fe704bdcd1138133023edae",
+      "bytes": 1345,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0345",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P05_structure_position/phase_execution_protocol.md",
+      "sha256": "e0f487a94b106f4d8413ffff997bd1d18cd6e693ca88740990ca239eec722d43",
+      "bytes": 1742,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0346",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P06_strategy_gate/phase_context_pack.md",
+      "sha256": "79e98cb26ec9fd28fc45c6787f6dc03827a2790565c938514918f4d0ef7eb82a",
+      "bytes": 1364,
+      "line_count": 30,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0347",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P06_strategy_gate/phase_execution_protocol.md",
+      "sha256": "ae10a718e10f68b4313f2c40cd3814eb6111c29c71cb5f603b45a598619ceb6a",
+      "bytes": 1743,
+      "line_count": 30,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0348",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P07_execution_risk/phase_context_pack.md",
+      "sha256": "5aa664bc80602a0eb555aa054c83c5809642a28fe00e67c0c5e7e566d120ebcd",
+      "bytes": 1348,
+      "line_count": 30,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0349",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P07_execution_risk/phase_execution_protocol.md",
+      "sha256": "af9e7bf4288124f8cff9d80e22e7c49fd722f2e358cb4c09b0089eb428c5e4f2",
+      "bytes": 1736,
+      "line_count": 30,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0350",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P08_review_learning/phase_context_pack.md",
+      "sha256": "06b1e8071270f4313dfaec4526eeb981cbdb387613b77a68e0b82f068cea1cba",
+      "bytes": 1338,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0351",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P08_review_learning/phase_execution_protocol.md",
+      "sha256": "2cdab6b10e3b889ba1bf9020e1b0e04a57e06d0d569b4f7b59742aebbc61669f",
+      "bytes": 1749,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0352",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P09_system_upgrade/phase_context_pack.md",
+      "sha256": "f22a4f18a877ab4b7af08e04c5bcf9bf79d02fea693fd2430e4df5dce0dc4881",
+      "bytes": 1336,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0353",
+      "source_path": "sikk_stable_trader_os/02_phase_controllers/P09_system_upgrade/phase_execution_protocol.md",
+      "sha256": "4f77af40a9bfb1aa86bd53a94dd69b0ea33d691ba167f10afb2271ee39d3e510",
+      "bytes": 1740,
+      "line_count": 30,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0354",
+      "source_path": "sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/02_phase_context_pack.md",
+      "sha256": "efef3f96ae2a58514237872e306badc7e1b6d1f4ad2f586feb5f45e3ae3548b4",
+      "bytes": 24634,
+      "line_count": 555,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0355",
+      "source_path": "sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/06_phase_execution_protocol.md",
+      "sha256": "b7be7788806afbf2c78fa8a888e4f700eb733996564586543b7fb787ac6da74a",
+      "bytes": 11656,
+      "line_count": 255,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0356",
+      "source_path": "sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/context.md",
+      "sha256": "0d9bdaee9eeb56a4b7491aa59d43beee45e7203e870ad79edd16c3aaeeabca17",
+      "bytes": 8928,
+      "line_count": 113,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0357",
+      "source_path": "sikk_stable_trader_os/06_phase_controllers/P00_system_bootstrap_controller/context.md",
+      "sha256": "5a050c57f22ec2ca2112bfe260fcc091397a42d26bc47c7ed430a220e303737a",
+      "bytes": 3558,
+      "line_count": 56,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0358",
+      "source_path": "sikk_stable_trader_os/06_phase_controllers/P00_system_context_control/02_phase_context_pack.md",
+      "sha256": "6a87a6b43130343c60b34674cd510c0b148df05a45e3add9333ed17b71dfc543",
+      "bytes": 165,
+      "line_count": 4,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0359",
+      "source_path": "sikk_stable_trader_os/06_phase_controllers/P00_system_context_control/06_phase_execution_protocol.md",
+      "sha256": "9effbcbe2e09320697932dd4aa55402ff564e0ae5bdc410b73155d4302f0365a",
+      "bytes": 240,
+      "line_count": 8,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0360",
+      "source_path": "sikk_stable_trader_os/06_phase_controllers/P01_data_fact_runtime_connection/02_phase_context_pack.md",
+      "sha256": "03baa3e6ef1648dfc54d143774429bc25768003c15495ab8650c92489eb1e5c7",
+      "bytes": 171,
+      "line_count": 4,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0361",
+      "source_path": "sikk_stable_trader_os/06_phase_controllers/P01_data_fact_runtime_connection/06_phase_execution_protocol.md",
+      "sha256": "2ece0ae104f9a0141934a90ea05a705588f2c3c29951ab966d7f7c622c105714",
+      "bytes": 240,
+      "line_count": 8,
+      "classified_phase": "P08",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0362",
+      "source_path": "sikk_stable_trader_os/08_acceptance/acceptance_plane_acceptance_report.md",
+      "sha256": "1b7bd235532067e9dd1b5e77e78ddcbf63cc3ea90ba3511212ba0e239aa1dce5",
+      "bytes": 446,
+      "line_count": 11,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0363",
+      "source_path": "sikk_stable_trader_os/08_acceptance/phase_controller_index_acceptance_report.md",
+      "sha256": "6a47c87b20d21adec2e47f8a3b02b07298a7f30cc45ef24b1520c7116eba65c1",
+      "bytes": 874,
+      "line_count": 22,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0364",
+      "source_path": "sikk_stable_trader_os/09_handoff/handoff_plane_acceptance_report.md",
+      "sha256": "3f0f271ae6770fba164259bd035b6bd1e412de07a3b78f06144bd3c304b22513",
+      "bytes": 1172,
+      "line_count": 32,
+      "classified_phase": "P09",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0365",
+      "source_path": "sikk_stable_trader_os/09_reports/audit_reports/next_step_plan.md",
+      "sha256": "2db5c8784cef7a83eb7c3e70e9ca0539b980827617d6f7887d2ddc44b7fa3394",
+      "bytes": 3136,
+      "line_count": 74,
+      "classified_phase": "P05",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0366",
+      "source_path": "sikk_stable_trader_os/09_reports/audit_reports/system_registry_audit_report.md",
+      "sha256": "25d2335581113f2878704b9fb38abe76ed58a76f2578179bb08d78f453afb56e",
+      "bytes": 8190,
+      "line_count": 164,
+      "classified_phase": "P07",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0367",
+      "source_path": "sikk_stable_trader_os/09_runtime_state/task_journal/phase_controller_data_model_workflow_v1.md",
+      "sha256": "8e895696f94987f89ef2614ae6e45fd558358ef3387c96fe63e320ce83a905ad",
+      "bytes": 814,
+      "line_count": 27,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0368",
+      "source_path": "sikk_stable_trader_os/09_runtime_state/task_journal/stable_trader_os_v2_methodology_blueprint_landing.md",
+      "sha256": "9b275a77314bee1c55952828e3b8682441a265b4abf00c7571597fbbc4044730",
+      "bytes": 671,
+      "line_count": 22,
+      "classified_phase": "K00",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0369",
+      "source_path": "sikk_stable_trader_os/_backups/p00_bootstrap_20260511T151151Z/00_data/data_plane.md",
+      "sha256": "dd7b4ca7e9450a51fa7edb952597d09f3c2cde1a918bc85af4e13c53f20070c3",
+      "bytes": 2245,
+      "line_count": 43,
+      "classified_phase": "P01",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0370",
+      "source_path": "sikk_stable_trader_os/_backups/p00_bootstrap_20260511T151151Z/00_domain/domain_plane.md",
+      "sha256": "d7c349c0092812bb2f437298178ecbb30402c864225f4bfef5c384fc9a6984ed",
+      "bytes": 24305,
+      "line_count": 1592,
+      "classified_phase": "P03",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    },
+    {
+      "document_id": "LEGACY-DOC-0371",
+      "source_path": "sikk_stable_trader_os/_backups/p00_bootstrap_20260511T151151Z/00_governance/governance_plane.md",
+      "sha256": "fa7e31d234fae7783ba4929c57db1210dc3b9200e8e9e4529423d9c7e7ef92a8",
+      "bytes": 15817,
+      "line_count": 858,
+      "classified_phase": "P10",
+      "status": "KPP_LIGHT_REPROCESSED_CANDIDATE_ONLY",
+      "created_at": "2026-05-13T01:25:59.654892+00:00"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 input contract",
+  "type": "object",
+  "required": [
+    "source_document_or_document_refs",
+    "operator_goal",
+    "governance_policy_bundle",
+    "controller_registry",
+    "execution_boundary",
+    "pipeline_config",
+    "repo_root",
+    "write_policy",
+    "safe_mode"
+  ],
+  "properties": {
+    "source_document_or_document_refs": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "operator_goal": {
+      "type": "string"
+    },
+    "governance_policy_bundle": {
+      "type": "object"
+    },
+    "controller_registry": {
+      "type": "object"
+    },
+    "execution_boundary": {
+      "type": "object",
+      "required": [
+        "allow_live_runtime",
+        "allow_wallet_signing",
+        "allow_auto_deploy",
+        "allow_production_trading"
+      ],
+      "properties": {
+        "allow_write_files": {
+          "type": "boolean"
+        },
+        "allow_run_tests": {
+          "type": "boolean"
+        },
+        "allow_safe_dry_run": {
+          "type": "boolean"
+        },
+        "allow_live_runtime": {
+          "const": false
+        },
+        "allow_wallet_signing": {
+          "const": false
+        },
+        "allow_auto_deploy": {
+          "const": false
+        },
+        "allow_production_trading": {
+          "const": false
+        }
+      }
+    },
+    "pipeline_config": {
+      "type": "object"
+    },
+    "repo_root": {
+      "type": "string"
+    },
+    "write_policy": {
+      "type": "object"
+    },
+    "safe_mode": {
+      "const": true
+    }
+  },
+  "additionalProperties": true
+}

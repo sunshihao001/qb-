@@ -1,0 +1,16 @@
+acceptance_gate:
+  phase_id: I01_full_phase_consistency_audit
+  ready_if:
+    - all_required_i01_outputs_exist
+    - no_blocking_handoff_chain_break
+    - no_live_execution_path_detected
+    - no_runner_binding_started_before_i01_acceptance
+  ready_with_gaps_if:
+    - non_blocking_contract_or_index_gaps_exist
+    - fix_priority_list_created
+    - i01_to_i02_handoff_limits_are_explicit
+  blocked_if:
+    - missing_phase_controller_index
+    - p01_p10_artifacts_unreadable
+    - live_execution_or_auto_deploy_requested
+    - no_handoff_chain_can_be_constructed

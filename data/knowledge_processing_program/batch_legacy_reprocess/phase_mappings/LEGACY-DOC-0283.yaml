@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0283
+source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-001_p01_candidate_intake_controller_v3.md
+phase_scores:
+  P01: 39
+  P02: 0
+  P03: 13
+  P04: 1
+  P05: 3
+  P06: 2
+  P07: 2
+  P08: 3
+  P09: 3
+  P10: 2
+primary_phase: P01
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

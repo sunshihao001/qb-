@@ -1,0 +1,15 @@
+extension_id,extension_name,value,risk,dependency,phase,should_do_now,reason
+EXT-01,input/output schema 固化,模块可用基础,低,无,P0,yes,否则无法开发和验收
+EXT-02,wallet_structure_decision.json,主系统稳定读取,中,schema/decision rules,P0,yes,这是唯一交接文件
+EXT-03,旧脚本拆分 source_reader/normalizer,降低耦合,中,legacy_mapping,P0,yes,避免继续堆单脚本
+EXT-04,资金边表展开,支撑同源和回流,中,native_transfer,P1,no,先用已有字段，稳定后补查
+EXT-05,Token 流边表,支撑分发路径,中,token_transfer_in/out,P1,no,需要更多链上数据
+EXT-06,疑似同源组算法,识别结构执行组,高,funding/token/time edges,P1,no,没有边表不能强做
+EXT-07,历史地址库,跨币复现和结果稳定性,中,normalized outputs,P1,no,先定义，后实现更新
+EXT-08,多快照 diff,识别清仓/回流变化,中,snapshot history,P2,no,模块基础稳定后做
+EXT-09,解释模块接入,报告可审计,中,evidence_chain,P2,no,先保证 evidence_chain
+EXT-10,paper runner factor,纸面验证量化,中,decision json,P2,no,不能先于 decision
+EXT-11,图数据库/Neo4j,强图查询,高,全量边数据,P3,no,当前避免复杂化
+EXT-12,Telegram 面板,用户交互,中,后端稳定接口,P3,no,本任务明确不做
+EXT-13,自动 GMGN 写备注,减少人工操作,高,权限/API 安全,P3,no,先只输出 note table
+EXT-14,真实交易联动,交易执行,极高,交易系统,P3,no,违反当前边界

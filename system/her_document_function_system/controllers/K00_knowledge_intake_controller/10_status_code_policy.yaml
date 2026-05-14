@@ -1,0 +1,6 @@
+status_codes:
+  K00_HANDOFF_READY: all mandatory refs exist and F00 may preflight
+  K00_READY_WITH_GAPS: mandatory route exists but gaps must be propagated
+  K00_BLOCKED: source/handoff/passport/index/gap missing
+  K00_DESIGN_ONLY: repo_root or write_policy prevents execution writes
+  KV_GAP: optional KV refs missing but pipeline may continue with explicit gap

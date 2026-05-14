@@ -1,0 +1,18 @@
+import json
+from pathlib import Path
+
+ROOT = Path('/root/sikk-gmgn')
+
+def latest_a00_run():
+    runs = sorted((ROOT/'data/her_document_function_system/a00_real_acceptance_runs').glob('a00_real_*'))
+    assert runs, 'no A00 real acceptance run found'
+    return runs[-1]
+
+def load(rel):
+    return json.loads((latest_a00_run()/rel).read_text())
+
+def test_a00_no_policy_active_without_g00():
+    decision = load('decision/acceptance_decision.json')
+    assert 'POLICY_ACTIVE' in decision['forbidden_claims_blocked']
+    cert = load('certificate/readiness_certificate.json')
+    assert 'mark_policy_active_without_g00_acceptance' in cert['forbidden_next_actions']

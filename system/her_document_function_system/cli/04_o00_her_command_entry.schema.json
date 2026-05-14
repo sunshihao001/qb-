@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "O00 HER Command Entry",
+  "type": "object",
+  "required": [
+    "command",
+    "repo_root",
+    "safe_mode",
+    "inputs"
+  ],
+  "properties": {
+    "command": {
+      "type": "string",
+      "enum": [
+        "init",
+        "validate-config",
+        "run-sample",
+        "run-document",
+        "status",
+        "resume",
+        "recover",
+        "show-report",
+        "show-gaps",
+        "show-trace"
+      ]
+    },
+    "repo_root": {
+      "type": "string"
+    },
+    "safe_mode": {
+      "type": "boolean"
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "execution_boundary": {
+      "type": "object"
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

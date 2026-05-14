@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0034
+source_path: docs/SIKK_CASE_FIELD_SOURCE_MAP.md
+phase_scores:
+  P01: 7
+  P02: 0
+  P03: 9
+  P04: 0
+  P05: 2
+  P06: 0
+  P07: 3
+  P08: 2
+  P09: 2
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

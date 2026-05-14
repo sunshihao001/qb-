@@ -1,0 +1,12 @@
+domain_to_phase_map:
+  token: P01_data_fact_controller
+  wallet: P02_wallet_structure_controller
+  same_source_group: P02_wallet_structure_controller
+  chip_cluster: P03_chip_control_controller
+  market_structure: P04_market_structure_controller
+  scenario: P05_scenario_classification_controller
+  strategy_candidate: P06_strategy_gate_controller
+  execution_risk: P07_execution_risk_controller
+  paper_trade: P08_paper_trading_controller
+  review_case: P09_review_learning_controller
+  upgrade_candidate: P10_system_upgrade_controller

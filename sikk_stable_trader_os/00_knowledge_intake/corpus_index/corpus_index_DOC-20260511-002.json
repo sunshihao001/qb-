@@ -1,0 +1,56 @@
+{
+  "doc_id": "DOC-20260511-002",
+  "created_at": "2026-05-11T12:06:52Z",
+  "raw_path": "00_knowledge_intake/raw_inputs/DOC-20260511-002.md",
+  "title": "K00 Phase Package 目录结构与九文件控制器规范",
+  "keywords": [
+    "K00",
+    "knowledge_intake",
+    "taskization",
+    "phase_controller",
+    "doc_id",
+    "source_registry",
+    "document_passport",
+    "corpus_index",
+    "plane_mapping",
+    "phase_mapping",
+    "gap_detection",
+    "task_execution_package",
+    "handoff_packet",
+    "acceptance_gate",
+    "phase_state",
+    "total_control_skill"
+  ],
+  "topic_tags": [
+    "HER_runtime",
+    "SIKK_Stable_Trader_OS",
+    "pre_phase_controller",
+    "file_backed_memory",
+    "handoff",
+    "acceptance"
+  ],
+  "key_concepts": [
+    {
+      "concept": "K00 before P00",
+      "anchor": "K00 是知识资料摄取与任务化控制器"
+    },
+    {
+      "concept": "9-file Phase Package",
+      "anchor": "01_phase_manifest.yaml ... 09_phase_handoff_packet.schema.json"
+    },
+    {
+      "concept": "禁止普通总结",
+      "anchor": "不能把输入资料当作普通文档总结后结束"
+    },
+    {
+      "concept": "自动继续",
+      "anchor": "如果 PHASE_READY：进入 P00 / P01 / P09 / system_methodology_update"
+    }
+  ],
+  "retrieval_prompts": [
+    "K00 Phase Package 需要哪些文件？",
+    "HER 收到知识资料为什么不能只总结？",
+    "K00 输出哪些机器可读资产？",
+    "K00 acceptance_gate 如何决定下游阶段？"
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "validated_at": "2026-05-12T01:42:26Z",
+  "expected_files": 26,
+  "files": {
+    "p01_candidate_intake_controller.yaml": {
+      "exists": true,
+      "size": 1065
+    },
+    "p01_candidate_intake_context.md": {
+      "exists": true,
+      "size": 372
+    },
+    "p01_input_contract.yaml": {
+      "exists": true,
+      "size": 687
+    },
+    "p01_output_contract.yaml": {
+      "exists": true,
+      "size": 561
+    },
+    "candidate_master_record_schema.yaml": {
+      "exists": true,
+      "size": 1464
+    },
+    "candidate_source_event_schema.yaml": {
+      "exists": true,
+      "size": 715
+    },
+    "token_identity_resolution_schema.yaml": {
+      "exists": true,
+      "size": 790
+    },
+    "pool_identity_resolution_schema.yaml": {
+      "exists": true,
+      "size": 496
+    },
+    "discovery_context_schema.yaml": {
+      "exists": true,
+      "size": 504
+    },
+    "intake_time_context_schema.yaml": {
+      "exists": true,
+      "size": 524
+    },
+    "dedup_resolution_schema.yaml": {
+      "exists": true,
+      "size": 577
+    },
+    "candidate_source_registry.yaml": {
+      "exists": true,
+      "size": 297
+    },
+    "candidate_source_quality_model.yaml": {
+      "exists": true,
+      "size": 359
+    },
+    "candidate_intake_quality_model.yaml": {
+      "exists": true,
+      "size": 1076
+    },
+    "candidate_intake_gap_policy.yaml": {
+      "exists": true,
+      "size": 1088
+    },
+    "candidate_intake_state_machine.yaml": {
+      "exists": true,
+      "size": 1023
+    },
+    "candidate_intake_hard_negative_rules.yaml": {
+      "exists": true,
+      "size": 1787
+    },
+    "candidate_intake_trace_requirements.yaml": {
+      "exists": true,
+      "size": 285
+    },
+    "p02_data_request_packet_contract.yaml": {
+      "exists": true,
+      "size": 995
+    },
+    "candidate_intake_handoff_contract.yaml": {
+      "exists": true,
+      "size": 1121
+    },
+    "candidate_intake_acceptance_criteria.md": {
+      "exists": true,
+      "size": 699
+    },
+    "candidate_intake_storage_constitution.md": {
+      "exists": true,
+      "size": 406
+    },
+    "candidate_intake_test_matrix.yaml": {
+      "exists": true,
+      "size": 1442
+    },
+    "candidate_intake_report_model.yaml": {
+      "exists": true,
+      "size": 791
+    },
+    "candidate_intake_review_checklist.md": {
+      "exists": true,
+      "size": 453
+    },
+    "her_p01_execution_protocol.md": {
+      "exists": true,
+      "size": 1144
+    }
+  },
+  "runtime_dirs": {
+    "source_inbox": true,
+    "raw_candidate_inputs": true,
+    "source_events": true,
+    "normalized_candidates": true,
+    "candidate_master": true,
+    "token_identity": true,
+    "pool_identity": true,
+    "discovery_context": true,
+    "intake_time_context": true,
+    "dedup_resolution": true,
+    "duplicate_index": true,
+    "source_quality": true,
+    "intake_quality": true,
+    "gap_reports": true,
+    "p02_data_requests": true,
+    "rejected_candidates": true,
+    "blocked_candidates": true,
+    "trace": true,
+    "acceptance": true,
+    "handoff": true,
+    "reports": true,
+    "audit": true
+  },
+  "yaml_parse_errors": {},
+  "safety_anchor_passed": true,
+  "overall_status": "PASS_WITH_RUNTIME_GAPS"
+}

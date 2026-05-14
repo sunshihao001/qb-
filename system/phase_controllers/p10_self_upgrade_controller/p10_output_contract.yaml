@@ -1,0 +1,33 @@
+contract_id: p10_output_contract
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+outputs:
+- upgrade_input_manifest
+- upgrade_candidate_review_records
+- sample_support_assessment_records
+- upgrade_classification_records
+- impact_assessment_records
+- overfit_risk_assessment_records
+- compatibility_assessment_records
+- schema_contract_upgrade_proposals
+- rule_policy_upgrade_proposals
+- parameter_calibration_proposals
+- test_matrix_upgrade_records
+- tool_binding_upgrade_proposals
+- runtime_model_upgrade_proposals
+- report_explanation_upgrade_proposals
+- upgrade_decision_records
+- regression_test_plan_records
+- release_and_rollback_plan_records
+- approval_requirement_records
+- controlled_upgrade_package_records
+- controlled_upgrade_task_packets
+- version_change_records
+- upgrade_backlog_records
+- p10_to_implementation_handoff_packet
+forbidden_outputs:
+- direct_rule_mutation
+- auto_deploy
+- paper_runtime_started
+- live_execution_allowed
+- wallet_signing_request

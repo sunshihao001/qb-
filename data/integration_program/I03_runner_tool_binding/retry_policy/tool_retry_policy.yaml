@@ -1,0 +1,11 @@
+{
+  "tool_retry_policy": {
+    "binding_id": "TOOL_RETRY_POLICY",
+    "ready": true,
+    "failure_policy": "BLOCK_ON_REQUIRED_FAILURE",
+    "safety": {
+      "no_live_execution": true,
+      "no_wallet_signing": true
+    }
+  }
+}

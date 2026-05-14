@@ -1,0 +1,37 @@
+event_types:
+- TOKEN_DISCOVERED
+- WALLET_FIRST_BUY
+- WALLET_ACCUMULATION
+- WALLET_PARTIAL_SELL
+- WALLET_FULL_EXIT
+- WALLET_TRANSFER_OUT
+- FUNDING_SOURCE_LINKED
+- SAME_SOURCE_GROUP_DETECTED
+- SYNC_BUY_DETECTED
+- SYNC_SELL_DETECTED
+- CHIP_CONCENTRATION_CHANGED
+- CHIP_DISTRIBUTION_CHANGED
+- MARKET_CAP_STAGE_CHANGED
+- BREAKOUT_DETECTED
+- PULLBACK_DETECTED
+- FAILURE_TEST_DETECTED
+- QUOTE_DEVIATION_DETECTED
+- SECURITY_RISK_DETECTED
+data_event:
+  event_id: string
+  event_type: string
+  token_address: string
+  related_entity_id: string
+  related_wallet_address: string|null
+  related_group_id: string|null
+  event_time: datetime
+  observed_at: datetime
+  source_id: string
+  source_record_id: string
+  event_fields: object
+  event_quality_score: number
+  event_freshness_status: string
+  downstream_relevance:
+  - EVIDENCE_PLANE
+  - SCENARIO_PLANE
+  - REVIEW_PLANE

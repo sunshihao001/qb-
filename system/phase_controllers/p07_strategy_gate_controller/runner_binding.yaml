@@ -1,0 +1,14 @@
+runner_binding_id: P07_strategy_gate_runner_binding
+mode: READ_ONLY_VALIDATOR_ONLY
+business_runtime: BLOCKED_UNTIL_EXPLICIT_MODULE_AND_FIXTURE_ACCEPTANCE
+entrypoint:
+  command: python3 tools/stable_trader_os/validate_phase_controller_contracts.py --phase
+    P07
+  workdir: /root/sikk-gmgn
+forbidden_capabilities:
+- private_key_read
+- sign_transaction
+- broadcast_transaction
+- swap
+- live_order
+- paper_runtime_start

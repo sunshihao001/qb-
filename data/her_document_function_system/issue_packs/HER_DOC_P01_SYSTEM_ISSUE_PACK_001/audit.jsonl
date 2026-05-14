@@ -1,0 +1,5 @@
+{"ts":"2026-05-14T04:02:24Z","actor":"hermes","action":"write_issue_pack","risk":"safe_file_write","boundary":"no_live_runtime,no_wallet_signing,no_auto_deploy,no_production_trading","result":"ok"}
+{"ts":"2026-05-14T04:02:24Z","actor":"hermes","action":"preserve_status_discipline","result":"issue_pack_created_not_resolved"}
+{"ts": "2026-05-14T04:20:51Z", "actor": "hermes", "action": "HER_DOC_SYSTEM_REVIEW", "result": "READY_WITH_GAPS", "allow_audit": true, "allow_pipeline": false}
+{"ts": "2026-05-14T04:22:49Z", "actor": "hermes", "action": "HER_DOC_SYSTEM_AUDIT", "result": "READY_WITH_GAPS", "allow_pipeline": true, "allow_production": false}
+{"ts": "2026-05-14T04:24:09Z", "actor": "hermes", "action": "HER_DOC_PIPELINE", "result": "RUNNABLE_WITH_GAPS", "ready_for_production": false}

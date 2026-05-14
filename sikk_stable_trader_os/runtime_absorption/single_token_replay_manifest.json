@@ -1,0 +1,71 @@
+{
+  "task": "SIKK/HER Runtime Absorption single token replay",
+  "created_at": "2026-05-14T20:34:54Z",
+  "replay_mode": "readonly_existing_runtime_output_absorption",
+  "token_address": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+  "token_symbol": "TROLLIEN",
+  "runtime_root": "data/gmgn_candidates_live_run",
+  "scope_exclusions": [
+    "batch",
+    "dashboard",
+    "telegram",
+    "new_strategy",
+    "P11",
+    "P12",
+    "new_plane"
+  ],
+  "source_files": {
+    "data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.json": {
+      "exists": true,
+      "size": 12394
+    },
+    "data/gmgn_candidates_live_run/kline_pipeline/candidate_kline_pipeline_summary.json": {
+      "exists": true,
+      "size": 4373
+    },
+    "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json": {
+      "exists": true,
+      "size": 7356
+    },
+    "data/gmgn_candidates_live_run/state_machine/candidate_states.json": {
+      "exists": true,
+      "size": 6426
+    },
+    "data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/candidate_wallet_structure_summary.json": {
+      "exists": true,
+      "size": 3857
+    },
+    "data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/wallet_structure_decision.json": {
+      "exists": true,
+      "size": 2981
+    },
+    "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json": {
+      "exists": true,
+      "size": 2591
+    },
+    "data/gmgn_candidates_live_run/quote_security/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/quote_security_decision.json": {
+      "exists": true,
+      "size": 1176
+    },
+    "data/gmgn_candidates_live_run/paper_live/paper_positions_closed.json": {
+      "exists": true,
+      "size": 628299
+    },
+    "data/gmgn_candidates_live_run/paper_live/paper_positions_open.json": {
+      "exists": true,
+      "size": 20754
+    },
+    "data/gmgn_candidates_live_run/paper_live/failure_attribution.jsonl": {
+      "exists": true,
+      "size": 165332
+    }
+  },
+  "registries": [
+    "sikk_stable_trader_os/07_runners/runner_registry.yaml",
+    "sikk_stable_trader_os/07_runners/phase_runner_binding.yaml",
+    "sikk_stable_trader_os/07_runners/validation_runner_registry.yaml",
+    "sikk_stable_trader_os/07_runners/replay_runner_registry.yaml",
+    "sikk_stable_trader_os/07_runners/runner_failure_policy.yaml"
+  ],
+  "expected_acceptance": "PHASE_REPLAY_PASS_WITH_GAPS"
+}

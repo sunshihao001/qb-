@@ -1,0 +1,71 @@
+wallet_role_taxonomy:
+  - role_name: 新钱包狙击者
+    definition: "新钱包狙击者 的领域定义，必须由字段证据支持，不得凭直觉归类。"
+    supporting_evidence: [first_buy_time, funding_source_type, current_holding_pct, sync_group_id, realized_profit_usd, historical_token_count]
+    counter_evidence: [evidence_conflict, missing_required_fields, opposite_behavior, stale_data]
+    risk_meaning: "用于判断结构资金、对手盘、派发或噪音风险。"
+    required_fields: [wallet_address, first_buy_time, first_buy_market_cap_usd, total_buy_amount, total_sell_amount, current_holding_pct, funding_source_address, funding_source_type, wallet_age, transaction_count, same_source_group_id, distribution_path_id]
+    output_fields: [wallet_address, entity_id, wallet_role_primary, wallet_role_secondary, role_confidence, evidence_level, risk_tags, supporting_evidence_ids, counter_evidence_ids, current_action_label]
+  - role_name: 早期结构钱包
+    definition: "早期结构钱包 的领域定义，必须由字段证据支持，不得凭直觉归类。"
+    supporting_evidence: [first_buy_time, funding_source_type, current_holding_pct, sync_group_id, realized_profit_usd, historical_token_count]
+    counter_evidence: [evidence_conflict, missing_required_fields, opposite_behavior, stale_data]
+    risk_meaning: "用于判断结构资金、对手盘、派发或噪音风险。"
+    required_fields: [wallet_address, first_buy_time, first_buy_market_cap_usd, total_buy_amount, total_sell_amount, current_holding_pct, funding_source_address, funding_source_type, wallet_age, transaction_count, same_source_group_id, distribution_path_id]
+    output_fields: [wallet_address, entity_id, wallet_role_primary, wallet_role_secondary, role_confidence, evidence_level, risk_tags, supporting_evidence_ids, counter_evidence_ids, current_action_label]
+  - role_name: 同源执行钱包
+    definition: "同源执行钱包 的领域定义，必须由字段证据支持，不得凭直觉归类。"
+    supporting_evidence: [first_buy_time, funding_source_type, current_holding_pct, sync_group_id, realized_profit_usd, historical_token_count]
+    counter_evidence: [evidence_conflict, missing_required_fields, opposite_behavior, stale_data]
+    risk_meaning: "用于判断结构资金、对手盘、派发或噪音风险。"
+    required_fields: [wallet_address, first_buy_time, first_buy_market_cap_usd, total_buy_amount, total_sell_amount, current_holding_pct, funding_source_address, funding_source_type, wallet_age, transaction_count, same_source_group_id, distribution_path_id]
+    output_fields: [wallet_address, entity_id, wallet_role_primary, wallet_role_secondary, role_confidence, evidence_level, risk_tags, supporting_evidence_ids, counter_evidence_ids, current_action_label]
+  - role_name: 主控筹码候选
+    definition: "主控筹码候选 的领域定义，必须由字段证据支持，不得凭直觉归类。"
+    supporting_evidence: [first_buy_time, funding_source_type, current_holding_pct, sync_group_id, realized_profit_usd, historical_token_count]
+    counter_evidence: [evidence_conflict, missing_required_fields, opposite_behavior, stale_data]
+    risk_meaning: "用于判断结构资金、对手盘、派发或噪音风险。"
+    required_fields: [wallet_address, first_buy_time, first_buy_market_cap_usd, total_buy_amount, total_sell_amount, current_holding_pct, funding_source_address, funding_source_type, wallet_age, transaction_count, same_source_group_id, distribution_path_id]
+    output_fields: [wallet_address, entity_id, wallet_role_primary, wallet_role_secondary, role_confidence, evidence_level, risk_tags, supporting_evidence_ids, counter_evidence_ids, current_action_label]
+  - role_name: 分发接收钱包
+    definition: "分发接收钱包 的领域定义，必须由字段证据支持，不得凭直觉归类。"
+    supporting_evidence: [first_buy_time, funding_source_type, current_holding_pct, sync_group_id, realized_profit_usd, historical_token_count]
+    counter_evidence: [evidence_conflict, missing_required_fields, opposite_behavior, stale_data]
+    risk_meaning: "用于判断结构资金、对手盘、派发或噪音风险。"
+    required_fields: [wallet_address, first_buy_time, first_buy_market_cap_usd, total_buy_amount, total_sell_amount, current_holding_pct, funding_source_address, funding_source_type, wallet_age, transaction_count, same_source_group_id, distribution_path_id]
+    output_fields: [wallet_address, entity_id, wallet_role_primary, wallet_role_secondary, role_confidence, evidence_level, risk_tags, supporting_evidence_ids, counter_evidence_ids, current_action_label]
+  - role_name: 利润回收钱包
+    definition: "利润回收钱包 的领域定义，必须由字段证据支持，不得凭直觉归类。"
+    supporting_evidence: [first_buy_time, funding_source_type, current_holding_pct, sync_group_id, realized_profit_usd, historical_token_count]
+    counter_evidence: [evidence_conflict, missing_required_fields, opposite_behavior, stale_data]
+    risk_meaning: "用于判断结构资金、对手盘、派发或噪音风险。"
+    required_fields: [wallet_address, first_buy_time, first_buy_market_cap_usd, total_buy_amount, total_sell_amount, current_holding_pct, funding_source_address, funding_source_type, wallet_age, transaction_count, same_source_group_id, distribution_path_id]
+    output_fields: [wallet_address, entity_id, wallet_role_primary, wallet_role_secondary, role_confidence, evidence_level, risk_tags, supporting_evidence_ids, counter_evidence_ids, current_action_label]
+  - role_name: 接盘鲸鱼
+    definition: "接盘鲸鱼 的领域定义，必须由字段证据支持，不得凭直觉归类。"
+    supporting_evidence: [first_buy_time, funding_source_type, current_holding_pct, sync_group_id, realized_profit_usd, historical_token_count]
+    counter_evidence: [evidence_conflict, missing_required_fields, opposite_behavior, stale_data]
+    risk_meaning: "用于判断结构资金、对手盘、派发或噪音风险。"
+    required_fields: [wallet_address, first_buy_time, first_buy_market_cap_usd, total_buy_amount, total_sell_amount, current_holding_pct, funding_source_address, funding_source_type, wallet_age, transaction_count, same_source_group_id, distribution_path_id]
+    output_fields: [wallet_address, entity_id, wallet_role_primary, wallet_role_secondary, role_confidence, evidence_level, risk_tags, supporting_evidence_ids, counter_evidence_ids, current_action_label]
+  - role_name: 历史复现钱包
+    definition: "历史复现钱包 的领域定义，必须由字段证据支持，不得凭直觉归类。"
+    supporting_evidence: [first_buy_time, funding_source_type, current_holding_pct, sync_group_id, realized_profit_usd, historical_token_count]
+    counter_evidence: [evidence_conflict, missing_required_fields, opposite_behavior, stale_data]
+    risk_meaning: "用于判断结构资金、对手盘、派发或噪音风险。"
+    required_fields: [wallet_address, first_buy_time, first_buy_market_cap_usd, total_buy_amount, total_sell_amount, current_holding_pct, funding_source_address, funding_source_type, wallet_age, transaction_count, same_source_group_id, distribution_path_id]
+    output_fields: [wallet_address, entity_id, wallet_role_primary, wallet_role_secondary, role_confidence, evidence_level, risk_tags, supporting_evidence_ids, counter_evidence_ids, current_action_label]
+  - role_name: 噪音交易钱包
+    definition: "噪音交易钱包 的领域定义，必须由字段证据支持，不得凭直觉归类。"
+    supporting_evidence: [first_buy_time, funding_source_type, current_holding_pct, sync_group_id, realized_profit_usd, historical_token_count]
+    counter_evidence: [evidence_conflict, missing_required_fields, opposite_behavior, stale_data]
+    risk_meaning: "用于判断结构资金、对手盘、派发或噪音风险。"
+    required_fields: [wallet_address, first_buy_time, first_buy_market_cap_usd, total_buy_amount, total_sell_amount, current_holding_pct, funding_source_address, funding_source_type, wallet_age, transaction_count, same_source_group_id, distribution_path_id]
+    output_fields: [wallet_address, entity_id, wallet_role_primary, wallet_role_secondary, role_confidence, evidence_level, risk_tags, supporting_evidence_ids, counter_evidence_ids, current_action_label]
+  - role_name: 可疑刷量钱包
+    definition: "可疑刷量钱包 的领域定义，必须由字段证据支持，不得凭直觉归类。"
+    supporting_evidence: [first_buy_time, funding_source_type, current_holding_pct, sync_group_id, realized_profit_usd, historical_token_count]
+    counter_evidence: [evidence_conflict, missing_required_fields, opposite_behavior, stale_data]
+    risk_meaning: "用于判断结构资金、对手盘、派发或噪音风险。"
+    required_fields: [wallet_address, first_buy_time, first_buy_market_cap_usd, total_buy_amount, total_sell_amount, current_holding_pct, funding_source_address, funding_source_type, wallet_age, transaction_count, same_source_group_id, distribution_path_id]
+    output_fields: [wallet_address, entity_id, wallet_role_primary, wallet_role_secondary, role_confidence, evidence_level, risk_tags, supporting_evidence_ids, counter_evidence_ids, current_action_label]

@@ -1,0 +1,20 @@
+meta:
+  standard_id: S00_TASK_PRIORITY_POLICY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+priority_order:
+- security_violation
+- permission_gap
+- runner_gap
+- contract_gap
+- trace_acceptance_handoff_gap
+- legacy_absorption_gap
+- regression_gap

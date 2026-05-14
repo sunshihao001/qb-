@@ -1,0 +1,24 @@
+runtime_acceptance_check:
+  runtime_id: string
+  runtime_type: PAPER_ONLY
+  required_inputs:
+  - strategy_gate_acceptance
+  - execution_risk_acceptance
+  - tool_binding_acceptance
+  - runtime_trace
+  - risk_controls
+  - paper_only_flag
+  checks:
+    paper_only_enforced: boolean
+    live_execution_disabled: boolean
+    runtime_trace_exists: boolean
+    input_contracts_valid: boolean
+    output_files_defined: boolean
+    risk_events_logged: boolean
+    replay_ready: boolean
+  result:
+    acceptance_status:
+    - PAPER_RUNTIME_READY
+    - PAPER_RUNTIME_READY_WITH_GAPS
+    - PAPER_RUNTIME_REJECTED
+    - PAPER_RUNTIME_BLOCKED

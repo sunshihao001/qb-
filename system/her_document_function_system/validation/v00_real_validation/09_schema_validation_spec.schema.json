@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": [
+    "validation_type",
+    "status",
+    "schemas_checked",
+    "errors",
+    "warnings"
+  ],
+  "properties": {
+    "validation_type": {
+      "const": "schema_validation"
+    },
+    "status": {
+      "type": "string"
+    },
+    "schemas_checked": {
+      "type": "array"
+    },
+    "errors": {
+      "type": "array"
+    },
+    "warnings": {
+      "type": "array"
+    }
+  }
+}

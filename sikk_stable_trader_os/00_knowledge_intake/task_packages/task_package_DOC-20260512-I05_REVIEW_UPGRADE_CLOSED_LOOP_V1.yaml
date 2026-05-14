@@ -1,0 +1,15 @@
+controlled_task_package:
+  task_packet_id: K00_TO_I05_TASK_PACKAGE_V1
+  doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  task_name: I05 Review / Upgrade Closed Loop：复盘升级闭环验证任务包
+  target_system_dir: /root/sikk-gmgn/system/integration_program/I05_review_upgrade_closed_loop/
+  target_data_dir: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/
+  required_system_files: 39
+  required_runtime_outputs: 25
+  acceptance: I05_READY_WITH_GAPS allowed for skeleton build; I05_READY requires real replay cases and automated runner validation later
+  restrictions:
+    - NO_LIVE_EXECUTION
+    - NO_WALLET_SIGNING
+    - NO_AUTO_DEPLOY
+    - NO_DIRECT_RULE_MUTATION
+    - NO_SINGLE_CASE_GLOBAL_UPGRADE

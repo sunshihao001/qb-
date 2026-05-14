@@ -1,0 +1,38 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+controller_id: P08_EXECUTION_RISK_CONTROLLER
+phase_id: P08
+version: v3.0
+name_cn: 执行前风控、报价安全、滑点费用、纸面运行许可与 Runtime 交接控制器
+controller_type: BUSINESS_PHASE_CONTROLLER
+positioning:
+  is_execution_risk_gate: true
+  is_order_executor: false
+  is_live_risk_module: false
+  is_paper_runtime: false
+responsibility:
+  primary: 将 P07 PAPER_CANDIDATE / HUMAN_CONFIRMATION_REQUIRED 候选转化为 Paper-only Runtime 许可或阻断/暂停裁决。
+  decisions: [PAPER_RUNTIME_ALLOWED, PAPER_RUNTIME_ALLOWED_WITH_LIMITATIONS, PAPER_RUNTIME_PAUSED, PAPER_RUNTIME_BLOCKED, HUMAN_CONFIRMATION_REQUIRED, EXECUTION_RISK_REJECTED]
+  handoff_target: PAPER_ONLY_RUNTIME
+upstream_required:
+  - p07_to_p08_handoff_packet
+  - p08_execution_risk_data_request_packet
+  - strategy_gate_decision_records
+  - strategy_candidate_records
+  - strategy_usage_permission_records
+  - strategy_invalidation_binding_records
+permissions:
+  may_allow_paper_runtime_handoff: true
+  may_execute_trade: false
+  may_sign_wallet: false
+  may_allow_live_execution: false
+  may_bypass_paper_runtime: false
+forbidden_outputs: [LIVE_EXECUTION_ALLOWED, wallet_signature_request, real_order, real_fill_confirmation, auto_swap]
+state_machine_ref: execution_risk_state_machine.yaml
+acceptance_ref: p08_acceptance_criteria.md
+runtime_status: PACKAGE_READY_WITH_RUNTIME_GAPS
+safety_boundary:
+  paper_runtime_allowed_is_not_live_permission: true
+  paper_only_runtime_required: true
+  live_execution_forbidden: true

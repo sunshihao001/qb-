@@ -1,0 +1,33 @@
+{
+  "contract_name": "phase_05_structure_position_output_contract",
+  "phase": "phase_05_structure_position_controller",
+  "required_outputs": {
+    "scenario_position_constraints": "position_fact/scenario_position_constraints.json",
+    "poc_context": "position_fact/poc_context.json",
+    "fixed_range_volume_profile": "position_fact/fixed_range_volume_profile.csv",
+    "avwap_anchor_context": "position_fact/avwap_anchor_context.json",
+    "avwap_acceptance": "position_fact/avwap_acceptance.json",
+    "retracement_context": "position_fact/retracement_context.json",
+    "position_volume_confirmation": "position_fact/position_volume_confirmation.json",
+    "adx_noise_filter": "position_fact/adx_noise_filter.json",
+    "failure_test_result": "position_fact/failure_test_result.json",
+    "avwap_completion_gate": "position_decision/avwap_completion_gate.json",
+    "fatigue_filter_result": "position_decision/fatigue_filter_result.json",
+    "position_overextension_check": "position_decision/position_overextension_check.json",
+    "structure_position_hard_negative_checklist": "position_decision/structure_position_hard_negative_checklist.json",
+    "structure_position_decision": "position_decision/structure_position_decision.json",
+    "phase_05_handoff_packet": "handoff/phase_05_handoff_packet.json",
+    "structure_position_report": "reports/structure_position_report.md"
+  },
+  "handoff_to": "phase_06_strategy_gate_controller",
+  "handoff_rule": {
+    "COMPLETION_PASS": "allow",
+    "POSITION_VALID": "allow",
+    "COMPLETION_WAIT": "pause",
+    "POSITION_UNKNOWN": "pause",
+    "FATIGUE_BLOCK": "block",
+    "POSITION_OVEREXTENDED": "block_positive_path",
+    "COMPLETION_FAIL": "block",
+    "COMPLETION_BLOCKED": "block"
+  }
+}

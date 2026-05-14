@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "bundle_id",
+    "validation_run_id",
+    "source_pipeline_run_id",
+    "evidence_groups",
+    "summary",
+    "open_gaps",
+    "blocking_gaps",
+    "ready_for_a00",
+    "ready_for_r00"
+  ],
+  "properties": {
+    "ready_for_a00": {
+      "type": "boolean"
+    },
+    "ready_for_r00": {
+      "type": "boolean"
+    }
+  }
+}

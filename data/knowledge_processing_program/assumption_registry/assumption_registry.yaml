@@ -1,0 +1,7 @@
+assumption_registry:
+  document_id: KPP-DOC-20260512-001
+  assumptions:
+    - KPP 位于 P01-P10 与 I01-I05 之前，是上游知识加工层。
+    - /root/sikk-gmgn/system/knowledge_processing_program/ 是系统定义主目录。
+    - /root/sikk-gmgn/data/knowledge_processing_program/ 是运行数据主目录。
+    - 生产规则生效仍需 P10/Governance 审查。

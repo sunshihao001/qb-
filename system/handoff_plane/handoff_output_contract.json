@@ -1,0 +1,23 @@
+{
+  "plane": "HANDOFF_PLANE",
+  "version": "v2.0",
+  "doc_id": "DOC-20260511-027",
+  "updated_at": "2026-05-11T17:41:51Z",
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "required_outputs": [
+    "handoff_packet",
+    "downstream_read_instruction",
+    "gap_propagation_packet",
+    "limitation_transfer_packet",
+    "forbidden_use_policy",
+    "field_usage_permission",
+    "handoff_audit_record"
+  ],
+  "status_values": [
+    "HANDOFF_READY",
+    "HANDOFF_READY_WITH_GAPS",
+    "HANDOFF_BLOCKED",
+    "HANDOFF_REJECTED"
+  ]
+}

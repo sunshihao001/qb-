@@ -1,0 +1,34 @@
+schema_id: PHASE_REPLAY_STEP_SCHEMA
+title: Phase Replay Step
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- phase_id
+- input_snapshot_ids
+- historical_output_id
+- reconstructed_decision
+- counterfactual_not_allowed
+fields:
+  phase_id: string
+  input_snapshot_ids: list
+  historical_output_id: string
+  reconstructed_decision: object
+  counterfactual_not_allowed: boolean
+enums: {}
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

@@ -1,0 +1,6 @@
+POLICIES=["forbidden_action_policy_v1","status_code_policy_v1","evidence_policy_v1","gap_policy_v1","runner_safety_policy_v1","human_confirmation_policy_v1","production_risk_policy_v1"]
+def build_bundles(run_id):
+    pending={"bundle_id":f"pending_policy_bundle_{run_id}","bundle_status":"PENDING_ACTIVE","included_policies":POLICIES,"activation_requirements":["policy_conflict_report has no blocking conflicts","governance_registry written","G00 acceptance result generated","policy handoff generated for all controllers"],"open_gaps":["controller_consumption_not_yet_verified","run_document_safe_mode_not_yet_validated_with_active_policy"]}
+    active={"bundle_id":f"active_policy_bundle_{run_id}","bundle_status":"LOCAL_ACTIVE_WITH_GAPS","status":"LOCAL_ACTIVE_WITH_GAPS","scope":"G00_LOCAL_ACTIVE_NOT_SYSTEM_ENFORCED","included_policies":POLICIES,"system_enforcement_status":"NOT_YET_VERIFIED","requires_downstream_consumption":["O00","K00","F00","V00","R00","A00","H00","U00"],"open_gaps":["downstream_policy_consumption_not_verified","run_document_safe_mode_not_yet_validated"]}
+    rejected={"bundle_id":f"rejected_policy_bundle_{run_id}","bundle_status":"EMPTY","rejected_policies":[]}
+    return pending,active,rejected

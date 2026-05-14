@@ -1,0 +1,31 @@
+trace_audit_spec:
+  phase_id: O00
+  required_events:
+    - o00_started
+    - safe_mode_checked
+    - input_loaded
+    - registry_loaded
+    - config_loaded
+    - forbidden_actions_checked
+    - pipeline_run_created
+    - pipeline_plan_written
+    - stage_dependency_graph_written
+    - stage_refs_written
+    - evidence_bundle_written
+    - gap_register_written
+    - acceptance_written
+    - handoff_written
+    - final_report_written
+    - o00_completed
+    - o00_blocked
+  event_fields:
+    - event_id
+    - timestamp
+    - phase_id
+    - run_id
+    - event_type
+    - status_before
+    - status_after
+    - evidence_refs
+    - gap_refs
+    - message

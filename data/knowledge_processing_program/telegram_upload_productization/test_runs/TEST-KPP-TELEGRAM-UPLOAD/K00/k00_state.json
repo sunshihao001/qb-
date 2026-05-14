@@ -1,0 +1,17 @@
+{
+  "stage_id": "K00",
+  "run_id": "TEST-KPP-TELEGRAM-UPLOAD",
+  "status": "K00_ACCEPTED",
+  "started_at": "2026-05-13T06:37:07Z",
+  "ended_at": "2026-05-13T06:37:07Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K00/run_request.json",
+    "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K00/raw_source_manifest.json",
+    "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K00/source_registry_entry.json",
+    "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K00/k00_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

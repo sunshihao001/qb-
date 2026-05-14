@@ -1,0 +1,15 @@
+{
+  "doc_id": "DOC-20260511-005",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "DATA_PLANE_ACCEPTANCE_PENDING",
+      "description": "P00 can bootstrap data plane tasks, but Data Plane acceptance remains next stage."
+    },
+    {
+      "gap_id": "P01_PREFLIGHT_PENDING",
+      "description": "P01 must remain blocked until Data Plane acceptance/preflight."
+    }
+  ],
+  "p01_runtime_connection_allowed": false
+}

@@ -1,0 +1,4 @@
+policy: scenario_invalidation_policy
+rules:
+- each scenario requires hard/soft/watch invalidation conditions
+- P07 must apply invalidations

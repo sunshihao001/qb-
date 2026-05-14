@@ -1,0 +1,25 @@
+{
+  "gap_register_id": "GAP-AUTO-TRADING-WORKFLOW-DATA-MODEL-V1",
+  "generated_at": "2026-05-11T12:27:21.964160Z",
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "AUTO-WF-GAP-CA-ORCH-CONNECT",
+      "severity": "degraded",
+      "description": "Task package exists but CA orchestrator P0 connection must be validated with fixture run.",
+      "repair_route": "run fixed-CA no-discovery fixture and write completion audit"
+    },
+    {
+      "gap_id": "AUTO-WF-GAP-REPLAY-FIXTURES",
+      "severity": "degraded",
+      "description": "Replay fixture coverage for normal/risk/missing-data tokens should be expanded.",
+      "repair_route": "add or run tests/test_sikk_ca_pipeline_single_token.py fixtures"
+    },
+    {
+      "gap_id": "AUTO-WF-GAP-DASHBOARD-STATUS",
+      "severity": "degraded",
+      "description": "Dashboard/status surface is optional and not yet part of this task package acceptance.",
+      "repair_route": "connect only after control closure passes"
+    }
+  ]
+}

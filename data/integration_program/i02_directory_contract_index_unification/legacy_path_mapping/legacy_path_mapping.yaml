@@ -1,0 +1,41 @@
+record_id: legacy_path_mapping_20260512
+generated_at: '2026-05-12T13:05:00Z'
+status: BUILT_WITH_GAPS
+items:
+- path: /root/sikk-gmgn/sikk_stable_trader_os
+  exists: true
+  classification: canonical_or_legacy_reference
+  file_count: 1001
+  use: fallback_scan_or_historical_reference
+- path: /root/sikk-gmgn/research_loop
+  exists: true
+  classification: canonical_or_legacy_reference
+  file_count: 916
+  use: fallback_scan_or_historical_reference
+- path: /root/sikk-gmgn/docs
+  exists: true
+  classification: canonical_or_legacy_reference
+  file_count: 257
+  use: fallback_scan_or_historical_reference
+- path: /root/sikk-gmgn/data/source_wallet_bot
+  exists: true
+  classification: canonical_or_legacy_reference
+  file_count: 978
+  use: fallback_scan_or_historical_reference
+- path: /root/sikk-gmgn/data/shared_handoff
+  exists: false
+  classification: missing
+  file_count: 0
+  use: fallback_scan_or_historical_reference
+- path: /root/sikk-gmgn/system/integration_program
+  exists: true
+  classification: canonical_or_legacy_reference
+  file_count: 90
+  use: fallback_scan_or_historical_reference
+gaps:
+- gap_id: LEGACY_ROOT_MISSING
+  severity: LOW
+  path: /root/sikk-gmgn/data/shared_handoff
+restrictions:
+- legacy_readonly
+- copy_only_later_if_approved

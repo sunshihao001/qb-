@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 REAL Execution Result",
+  "type": "object",
+  "required": [
+    "status",
+    "run_id",
+    "run_dir",
+    "final_report",
+    "review_cases",
+    "upgrade_candidates"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "U00_REAL_ACCEPTED",
+        "U00_REAL_READY_WITH_GAPS",
+        "U00_REAL_BLOCKED",
+        "U00_REAL_REJECTED"
+      ]
+    },
+    "run_id": {"type": "string"},
+    "run_dir": {"type": "string"},
+    "final_report": {"type": "string"},
+    "review_cases": {"type": "integer", "minimum": 0},
+    "upgrade_candidates": {"type": "integer", "minimum": 0}
+  },
+  "additionalProperties": true
+}

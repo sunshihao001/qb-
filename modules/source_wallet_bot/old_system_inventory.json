@@ -1,0 +1,71 @@
+{
+  "project": "SIKK-GMGN legacy-to-source bot transition",
+  "old_primary_script": {
+    "path": "sikk_gmgn_token_report.py",
+    "role": "single-token wallet report generator",
+    "observed_outputs": [
+      "01_analysis_depth.csv",
+      "02_token_basic.csv",
+      "03_structure_metrics.csv",
+      "04_key_address_matrix.csv",
+      "05_infrastructure_registry.csv",
+      "06_low_weight_scope.csv",
+      "07_review_plan.csv",
+      "08_summary.csv",
+      "sikk_gmgn_report.md",
+      "<symbol>_<short>_<timestamp>.zip"
+    ],
+    "observed_methods": [
+      "token basics",
+      "security metrics",
+      "kline summary",
+      "wallet classification",
+      "review plan generation"
+    ],
+    "risk_note": "This script mixes classification and review planning but still needs to be treated as historical evidence for the new bot, not as a live fact source."
+  },
+  "old_wallet_structure_pipeline": {
+    "path": "sikk_candidate_wallet_structure_pipeline.py",
+    "role": "candidate wallet-structure pipeline",
+    "observed_outputs": [
+      "candidate_wallet_structure_summary.json",
+      "candidate_wallet_structure_summary.csv",
+      "candidate_wallet_structure_summary.md",
+      "candidate_states.json",
+      "candidate_states.csv",
+      "state_summary.md"
+    ],
+    "observed_methods": [
+      "candidate-state filtering",
+      "same-source grouping",
+      "snapshot/delta writing",
+      "wallet structure gate evaluation"
+    ],
+    "risk_note": "Pipeline outputs are downstream evidence, not live execution authority."
+  },
+  "old_quote_security_pipeline": {
+    "path": "quote_security/candidate_quote_security_summary.json",
+    "role": "quote/security summary artifact",
+    "observed_outputs": [
+      "candidate_quote_security_summary.json",
+      "candidate_quote_security_summary.csv",
+      "candidate_quote_security_summary.md"
+    ],
+    "risk_note": "Historical scan summary only; cannot be used as a direct live quote source without re-validation."
+  },
+  "old_new_token_filter": {
+    "path": "sikk_gmgn_new_token_filter.py",
+    "role": "candidate discovery / token filtering",
+    "observed_outputs": [
+      "token_candidates.json",
+      "token_candidates.csv"
+    ],
+    "risk_note": "Can seed candidates_normalized but not overwrite source registry truth."
+  },
+  "audit_notes": [
+    "sikk_gmgn_token_report.py is a single-token report generator that combines token basics, security metrics, wallet classification, and review-plan generation.",
+    "sikk_candidate_wallet_structure_pipeline.py already contains candidate-state filtering, same-source grouping, and snapshot/delta writing.",
+    "candidate_quote_security_summary.json is a historical scan artifact and cannot be used as a live quote source without re-validation.",
+    "candidate_states.* and pipeline_report.md are review/audit artifacts, not live state-machine truth."
+  ]
+}

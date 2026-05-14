@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "phase_04_handoff_packet",
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "scenario_status",
+    "primary_scenario",
+    "handoff_files",
+    "phase_05_required_context",
+    "allowed_next_stage",
+    "handoff_status"
+  ],
+  "properties": {
+    "phase": {},
+    "token_address": {},
+    "scenario_status": {},
+    "primary_scenario": {},
+    "handoff_files": {},
+    "phase_05_required_context": {},
+    "allowed_next_stage": {},
+    "handoff_status": {}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,11 @@
+controller_candidate_packet:
+  document_id: KPP-DOC-20260512-001
+  candidates:
+    - controller_id: KPP_MASTER_CONTROLLER
+      target_path: /root/sikk-gmgn/system/knowledge_processing_program/knowledge_processing_controller.yaml
+      responsibility: orchestrate K00-K08 document functionalization
+      boundary: candidate-generation and validation only; no production mutation
+    - controller_id: K00_KNOWLEDGE_INTAKE_CONTROLLER
+      responsibility: raw preservation, document classification, route decision, taskization requirement
+    - controller_id: K07_KNOWLEDGE_ACCEPTANCE_CONTROLLER
+      responsibility: validate output completeness, trace, gaps, handoff, forbidden actions

@@ -1,0 +1,242 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-05-06T03:20:17",
+  "root": "/root/sikk-gmgn",
+  "routes": [
+    {
+      "task_type": "directory_governance",
+      "write_root": "/root/sikk-gmgn/docs/source_wallet_bot/directory_governance/",
+      "allowed_subdirs": [
+        "current_baseline",
+        "legacy_runtime",
+        "acceptance"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run",
+        "/root/sikk-gmgn/outputs"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": true
+    },
+    {
+      "task_type": "method_loop",
+      "write_root": "/root/sikk-gmgn/research_loop/source_wallet_bot/",
+      "allowed_subdirs": [
+        "plans",
+        "checkpoints",
+        "acceptance",
+        "state",
+        "methodology"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/outputs"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": true
+    },
+    {
+      "task_type": "long_running_workflow",
+      "write_root": "/root/sikk-gmgn/research_loop/source_wallet_bot/",
+      "allowed_subdirs": [
+        "state",
+        "task_packages",
+        "checkpoints",
+        "acceptance"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": true
+    },
+    {
+      "task_type": "field_contract",
+      "write_root": "/root/sikk-gmgn/contracts/source_wallet_bot/",
+      "allowed_subdirs": [
+        "schemas",
+        "handoff",
+        "contracts"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": false
+    },
+    {
+      "task_type": "schema_design",
+      "write_root": "/root/sikk-gmgn/contracts/source_wallet_bot/",
+      "allowed_subdirs": [
+        "schemas",
+        "shared"
+      ],
+      "forbidden_roots": [
+        "/root/sikk-gmgn/data",
+        "/root/sikk"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": false
+    },
+    {
+      "task_type": "code_module",
+      "write_root": "/root/sikk-gmgn/modules/source_wallet_bot/",
+      "allowed_subdirs": [
+        "code",
+        "schemas",
+        "contracts"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run"
+      ],
+      "required_manifest": false,
+      "requires_acceptance_report": false
+    },
+    {
+      "task_type": "token_live_output",
+      "write_root": "/root/sikk-gmgn/data/source_wallet_bot/<mode>/<token_address>/",
+      "allowed_subdirs": [
+        "wallet_data/raw",
+        "wallet_data/normalized",
+        "wallet_data/summary",
+        "structure_analysis/wallet_fact",
+        "structure_analysis/intelligence",
+        "structure_analysis/handoff",
+        "structure_analysis/reports",
+        "manifest"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run",
+        "/root/sikk-gmgn/outputs"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": true
+    },
+    {
+      "task_type": "token_structure_analysis",
+      "write_root": "/root/sikk-gmgn/data/source_wallet_bot/<mode>/<token_address>/structure_analysis/",
+      "allowed_subdirs": [
+        "wallet_fact",
+        "intelligence",
+        "handoff",
+        "reports"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": true
+    },
+    {
+      "task_type": "wallet_fact_output",
+      "write_root": "/root/sikk-gmgn/data/source_wallet_bot/<mode>/<token_address>/wallet_data/",
+      "allowed_subdirs": [
+        "raw",
+        "normalized",
+        "summary"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": true
+    },
+    {
+      "task_type": "behavior_inference_output",
+      "write_root": "/root/sikk-gmgn/data/source_wallet_bot/<mode>/<token_address>/structure_analysis/intelligence/",
+      "allowed_subdirs": [
+        "behavior",
+        "counter_evidence",
+        "decision"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": true
+    },
+    {
+      "task_type": "historical_address_db",
+      "write_root": "/root/sikk-gmgn/data/source_wallet_bot/history/",
+      "allowed_subdirs": [
+        "addresses",
+        "snapshots",
+        "index"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": false
+    },
+    {
+      "task_type": "import_package",
+      "write_root": "/root/sikk-gmgn/data/source_wallet_bot/imports/",
+      "allowed_subdirs": [
+        "staging",
+        "passports",
+        "manifests"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": false
+    },
+    {
+      "task_type": "compatibility_audit",
+      "write_root": "/root/sikk-gmgn/legacy_compat/",
+      "allowed_subdirs": [
+        "manifests",
+        "path_maps",
+        "read_fallbacks"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run"
+      ],
+      "required_manifest": true,
+      "requires_acceptance_report": true
+    },
+    {
+      "task_type": "test",
+      "write_root": "/root/sikk-gmgn/tests/source_wallet_bot/",
+      "allowed_subdirs": [
+        "unit",
+        "integration",
+        "fixtures"
+      ],
+      "forbidden_roots": [
+        "/root/sikk-gmgn/data/gmgn_candidates_live_run",
+        "/root/sikk"
+      ],
+      "required_manifest": false,
+      "requires_acceptance_report": false
+    },
+    {
+      "task_type": "log",
+      "write_root": "/root/sikk-gmgn/logs/source_wallet_bot/",
+      "allowed_subdirs": [
+        "runtime",
+        "audit",
+        "workflow"
+      ],
+      "forbidden_roots": [
+        "/root/sikk",
+        "/root/sikk-gmgn/outputs"
+      ],
+      "required_manifest": false,
+      "requires_acceptance_report": false
+    }
+  ]
+}

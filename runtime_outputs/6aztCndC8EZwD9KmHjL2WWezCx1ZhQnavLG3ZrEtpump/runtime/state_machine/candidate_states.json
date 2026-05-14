@@ -1,0 +1,67 @@
+{
+  "模块": "SIKK Candidate State Machine v0.9",
+  "更新时间": "2026-05-13T01:28:06Z",
+  "输入文件": {
+    "候选池": "/root/sikk-gmgn/runtime_outputs/6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump/runtime/fixed_ca_candidates.json",
+    "K线管道": "",
+    "信号管道": "",
+    "钱包结构门禁": "",
+    "交易系统门控": "/root/sikk-gmgn/runtime_outputs/6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump/runtime/trade_gate_runtime/trade_gate_runtime_summary.json",
+    "钱包结构模式": "observe"
+  },
+  "状态统计": {
+    "DISCOVERED": 0,
+    "WATCHING": 1,
+    "ACCUMULATING": 0,
+    "READY_TO_BUY": 0,
+    "PAPER_READY": 0,
+    "BLOCKED": 0,
+    "FAILED": 0,
+    "EXITED": 0
+  },
+  "候选状态": [
+    {
+      "代币地址": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+      "代币符号": "",
+      "当前状态": "WATCHING",
+      "状态原因": "交易门控暂停：BLOCK",
+      "候选筛选等级": "FIXED_CA_RUNTIME_INPUT",
+      "吸筹窗口状态": "",
+      "T_start": "",
+      "T_end": "",
+      "信号等级": "",
+      "风险门禁": "",
+      "建议纸面仓位SOL": 0.0,
+      "钱包结构结论": "未接入",
+      "钱包结构系数": "",
+      "钱包结构评分": "",
+      "钱包风险评分": "",
+      "对手盘压力评分": "",
+      "数据质量评分": "",
+      "钱包证据等级": "",
+      "钱包结构原因": "",
+      "钱包门禁模式": "observe",
+      "钱包门禁效果": "NO_WALLET_INPUT",
+      "would_block": false,
+      "would_pause": false,
+      "wallet_decision_stale": false,
+      "交易门控状态": "RISK_MONITOR",
+      "交易门控决策": "BLOCK",
+      "交易权限": "BLOCK_REAL_TRADE",
+      "合约门控权限": "BLOCK_BUY_禁止买入",
+      "真实交易允许": false,
+      "交易执行动作": "OBSERVE",
+      "资金状态": "资金待查",
+      "交易门控风险等级": "HIGH",
+      "交易门控原因码": [
+        "SECURITY_OR_LIQUIDITY_BLOCK",
+        "STRUCTURAL_PAUSE",
+        "FUNDING_PENDING"
+      ],
+      "策略类型": "",
+      "更新时间": "2026-05-13T01:28:06Z",
+      "模式": "paper/readiness"
+    }
+  ],
+  "说明": "本状态机只管理候选生命周期与纸面准备状态，不执行真实 swap。"
+}

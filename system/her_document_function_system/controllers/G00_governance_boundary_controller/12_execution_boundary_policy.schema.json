@@ -1,0 +1,35 @@
+{
+  "title": "Execution Boundary Policy",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "allowed_execution_modes",
+    "forbidden_execution_modes",
+    "status"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "allowed_execution_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_execution_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PENDING",
+        "DEPRECATED"
+      ]
+    }
+  }
+}

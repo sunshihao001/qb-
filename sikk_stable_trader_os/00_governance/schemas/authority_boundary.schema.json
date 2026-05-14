@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "version",
+    "source_doc_id",
+    "stages"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "source_doc_id": {
+      "type": "string"
+    },
+    "stages": {
+      "type": "object"
+    }
+  }
+}

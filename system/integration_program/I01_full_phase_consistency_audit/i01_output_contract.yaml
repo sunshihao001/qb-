@@ -1,0 +1,27 @@
+required_outputs:
+- full_phase_consistency_audit_report.md
+- phase_inventory.yaml
+- phase_responsibility_boundary_matrix.yaml
+- phase_io_alignment_matrix.yaml
+- handoff_chain_integrity_report.yaml
+- data_request_chain_report.yaml
+- schema_contract_coverage_report.yaml
+- status_code_consistency_report.yaml
+- gap_propagation_report.yaml
+- forbidden_use_inheritance_report.yaml
+- trace_coverage_report.yaml
+- acceptance_coverage_report.yaml
+- phase_boundary_violation_report.yaml
+- downstream_permission_report.yaml
+- runtime_readiness_precheck_report.yaml
+- review_upgrade_readiness_report.yaml
+- audit_findings.yaml
+- fix_priority_list.yaml
+- i01_to_i02_handoff_packet.yaml
+- i01_acceptance_result.yaml
+forbidden_outputs:
+- runner_code
+- tool_binding
+- paper_runtime_start
+- live_execution
+- business_logic_patch

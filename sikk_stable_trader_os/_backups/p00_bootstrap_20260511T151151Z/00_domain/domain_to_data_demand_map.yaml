@@ -1,0 +1,31 @@
+source_doc_id: DOC-20260511-016
+data_demands:
+- domain_object: token
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: wallet
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: wallet_entity
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: same_source_group
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: funding_source
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: chip_cluster
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: early_wallet_group
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: dominant_side
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: counterparty_group
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: market_structure
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: scenario
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: strategy_candidate
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: paper_trade
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+- domain_object: review_case
+  required_data_status: TO_BE_DEFINED_IN_DATA_PLANE
+downstream: Data Plane

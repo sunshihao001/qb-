@@ -1,0 +1,13 @@
+objective_tree:
+  phase_id: U00
+  root_objective: Transform post-acceptance failures and gaps into upgrade inputs
+  branches:
+    - review_case_classification
+    - failure_gap_normalization
+    - root_cause_analysis
+    - recurring_issue_detection
+    - upgrade_candidate_generation
+    - queue_and_backlog_building
+    - governance_candidate_extraction
+    - learning_index_update
+    - downstream_handoff

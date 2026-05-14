@@ -1,0 +1,140 @@
+{
+  "schema_version": "trade_fact_table_schema_v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "file_role": "trade_fact_table",
+  "format": "csv",
+  "fields": [
+    {
+      "field_name": "run_id",
+      "field_chinese_name": "运行编号",
+      "field_group": "runtime",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_01_audit",
+        "phase_02_wallet_structure"
+      ],
+      "description": "本次 Phase 01 运行的唯一编号。"
+    },
+    {
+      "field_name": "token_address",
+      "field_chinese_name": "代币地址",
+      "field_group": "token_fact",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control",
+        "phase_04_scenario_recognition"
+      ],
+      "description": "Solana 代币 mint 地址，是本次分析对象的唯一标识。"
+    },
+    {
+      "field_name": "wallet_address",
+      "field_chinese_name": "钱包地址",
+      "field_group": "wallet_fact",
+      "data_type": "string",
+      "required_level": "phase_03_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "参与当前 token 的钱包地址。"
+    },
+    {
+      "field_name": "first_buy_time",
+      "field_chinese_name": "首次买入时间",
+      "field_group": "trade_fact",
+      "data_type": "datetime",
+      "required_level": "phase_03_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "钱包首次买入当前 token 的时间。"
+    },
+    {
+      "field_name": "first_buy_amount_sol",
+      "field_chinese_name": "首次买入 SOL 数量",
+      "field_group": "trade_fact",
+      "data_type": "number",
+      "required_level": "warning_allowed",
+      "unit": "SOL",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure"
+      ],
+      "description": "首次买入金额，缺失时只能降级。"
+    },
+    {
+      "field_name": "trade_fact_table",
+      "field_chinese_name": "交易事实表",
+      "field_group": "trade_fact",
+      "data_type": "file",
+      "required_level": "phase_02_required",
+      "unit": "csv",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "gmgn",
+        "chain"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "标准化钱包交易事实表路径。"
+    }
+  ]
+}

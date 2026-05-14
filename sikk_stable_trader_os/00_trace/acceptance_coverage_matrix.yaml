@@ -1,0 +1,11 @@
+acceptance_coverage_matrix:
+  P00_system_bootstrap_controller:
+    file_level: PASSED_BY_GENERATION
+    structure_level: PASSED_BY_REGISTRY
+    semantic_level: PASSED_WITH_STUB_GAPS
+    consumption_level: PASSED_BY_CONSUMPTION_LOG
+    runtime_level: PASSED_BY_STATE_WRITEBACK
+    safety_level: PASSED_PAPER_ONLY
+  P01_data_fact_controller:
+    status: BLOCKED_BY_DATA_PLANE
+    reason: DATA_PLANE_ACCEPTANCE_NOT_RUN

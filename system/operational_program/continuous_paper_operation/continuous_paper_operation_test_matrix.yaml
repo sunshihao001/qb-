@@ -1,0 +1,19 @@
+continuous_paper_operation_test_matrix:
+  - {test_id: CPO_TEST_001, name: I05_READY 后启动单轮 paper operation, expected_status: CPO_READY}
+  - {test_id: CPO_TEST_002, name: I05 未允许持续运行, expected_status: CPO_BLOCKED}
+  - {test_id: CPO_TEST_003, name: scheduled cycle 正常执行 P01-P08, expected_status: CPO_READY}
+  - {test_id: CPO_TEST_004, name: P08 无 permission 但 runtime 尝试开仓, expected_status: CPO_BLOCKED}
+  - {test_id: CPO_TEST_005, name: P07 直接进入 paper runtime, expected_status: CPO_BLOCKED}
+  - {test_id: CPO_TEST_006, name: live execution path detected, expected_status: CPO_BLOCKED}
+  - {test_id: CPO_TEST_007, name: wallet signing path detected, expected_status: CPO_BLOCKED}
+  - {test_id: CPO_TEST_008, name: trace chain degraded but usable, expected_status: CPO_READY_WITH_GAPS_OR_PAUSED}
+  - {test_id: CPO_TEST_009, name: trace chain unusable, expected_status: CPO_BLOCKED}
+  - {test_id: CPO_TEST_010, name: P09 连续三次复盘失败, expected_status: CPO_PAUSED}
+  - {test_id: CPO_TEST_011, name: P10 生成升级候选但样本不足, expected_status: CPO_READY_WITH_GAPS}
+  - {test_id: CPO_TEST_012, name: P10 单样本全局升级, expected_status: CPO_BLOCKED}
+  - {test_id: CPO_TEST_013, name: paper model drift high, expected_status: CPO_PAUSED}
+  - {test_id: CPO_TEST_014, name: 数据源部分缺失但被 gap 传递, expected_status: CPO_READY_WITH_GAPS}
+  - {test_id: CPO_TEST_015, name: 每日复盘生成 next_day_mode, expected_status: CPO_READY}
+  - {test_id: CPO_TEST_016, name: 风险事件高于阈值, expected_status: CPO_PAUSED_OR_TRIGGER_FIX_SPRINT}
+  - {test_id: CPO_TEST_017, name: sample library 正常累计, expected_status: CPO_READY}
+  - {test_id: CPO_TEST_018, name: 未登记路径写入, expected_status: CPO_BLOCKED}

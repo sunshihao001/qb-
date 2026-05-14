@@ -1,0 +1,28 @@
+{
+  "phase": 3,
+  "name": "筹码控制层",
+  "goal": "判断结构侧筹码是否仍有控制权、是否迁移/松动/派发",
+  "output_file": "chip_control_summary.json",
+  "required_fields": [
+    "token_address",
+    "run_id",
+    "phase",
+    "status_code",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_trigger",
+    "confidence_level",
+    "missing_fields",
+    "source_files",
+    "handoff_to"
+  ],
+  "allowed_status_codes": [
+    "CONTROL_RETAINED",
+    "CONTROL_WEAKENING",
+    "ACTIVE_DISTRIBUTION",
+    "STRUCTURE_COLLAPSE"
+  ],
+  "missing_policy": "缺失字段必须写 missing；自动推导写 系统推导",
+  "downstream": "多模型场景识别层"
+}

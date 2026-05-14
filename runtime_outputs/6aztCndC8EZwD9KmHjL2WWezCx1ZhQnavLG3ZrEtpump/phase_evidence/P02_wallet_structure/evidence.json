@@ -1,0 +1,25 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P02_wallet_structure",
+  "artifact_kind": "evidence",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "positive_evidence": [
+    "sample wallet profiles=0"
+  ],
+  "missing_evidence": [
+    "P02_WALLET_PROFILE_SAMPLE_MISSING",
+    "资金层跳过",
+    "funding_path_missing"
+  ],
+  "risk_evidence": [
+    "结构活跃但追高/资金证据不足，进入观察/纸面门控"
+  ]
+}

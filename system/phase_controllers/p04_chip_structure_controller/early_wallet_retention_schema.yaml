@@ -1,0 +1,74 @@
+schema_id: "early_wallet_retention_schema"
+json_schema:
+  $schema: "https://json-schema.org/draft/2020-12/schema"
+  title: "Early Wallet Retention Record"
+  description: "P04 structure-state record. Candidate-only and trace-required."
+  type: "object"
+  required:
+    - "record_id"
+    - "cohort_id"
+    - "initial_holding"
+    - "current_holding"
+    - "retention_pct"
+    - "trace_ids"
+  properties:
+    record_id:
+      type: "string"
+    token_address:
+      type:
+        - "string"
+        - "null"
+    snapshot_time:
+      type:
+        - "string"
+        - "null"
+    cohort_id:
+      type:
+        - "string"
+        - "null"
+    wallet_entity_id:
+      type:
+        - "string"
+        - "null"
+    candidate_only:
+      const: true
+    source_record_ids:
+      type: "array"
+      items:
+        type: "string"
+    trace_ids:
+      type: "array"
+      items:
+        type: "string"
+    limitations:
+      type: "array"
+      items:
+        type: "string"
+    quality_level:
+      type: "string"
+      enum:
+        - "BLOCKED"
+        - "LOW"
+        - "MEDIUM"
+        - "HIGH"
+        - "UNKNOWN"
+        - "NOT_APPLICABLE"
+    created_at:
+      type: "string"
+    initial_holding:
+      type:
+        - "number"
+        - "null"
+    current_holding:
+      type:
+        - "number"
+        - "null"
+    retention_pct:
+      type:
+        - "number"
+        - "null"
+    chip_retention_status_candidate:
+      type:
+        - "string"
+        - "null"
+  additionalProperties: true

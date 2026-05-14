@@ -1,0 +1,71 @@
+trace_objects:
+  -
+    object_type: knowledge_source
+    source_stage: K00
+    must_have_trace: true
+    trace_model: knowledge_trace_model
+  -
+    object_type: methodology_blueprint
+    source_stage: METHODOLOGY_PLANE
+    must_have_trace: true
+    trace_model: methodology_trace_model
+  -
+    object_type: phase_controller_candidate
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: build_trace_model
+  -
+    object_type: plane_file
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: artifact_trace_model
+  -
+    object_type: input_contract
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: contract_trace_model
+  -
+    object_type: output_contract
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: contract_trace_model
+  -
+    object_type: status_transition
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: state_trace_model
+  -
+    object_type: acceptance_result
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: acceptance_trace_model
+  -
+    object_type: handoff_packet
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: handoff_trace_model
+  -
+    object_type: tool_execution
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: tool_binding_trace_model
+  -
+    object_type: paper_runtime_event
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: runtime_trace_model
+  -
+    object_type: review_case
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: review_trace_model
+  -
+    object_type: upgrade_candidate
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: upgrade_trace_model
+  -
+    object_type: error_event
+    source_stage: ALL_PLANES
+    must_have_trace: true
+    trace_model: error_trace_model

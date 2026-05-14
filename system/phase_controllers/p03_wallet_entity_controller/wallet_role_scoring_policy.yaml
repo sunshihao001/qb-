@@ -1,0 +1,11 @@
+role_candidate_only: true
+must_not_output:
+  - "chip_control"
+  - "scenario"
+  - "strategy"
+  - "paper_ready"
+uses:
+  - "behavior_features"
+  - "funding_links"
+  - "position_facts"
+  - "quality_record"

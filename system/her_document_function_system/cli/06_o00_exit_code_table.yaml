@@ -1,0 +1,10 @@
+exit_codes:
+  0: {name: SUCCESS, meaning: Command completed successfully}
+  10: {name: READY_WITH_GAPS, meaning: Command completed but non-blocking gaps remain}
+  20: {name: VALIDATION_FAILED, meaning: Config or schema validation failed}
+  30: {name: BLOCKING_GAP, meaning: Blocking gap prevents continuation}
+  40: {name: FORBIDDEN_ACTION_DETECTED, meaning: Command attempted forbidden action}
+  50: {name: MISSING_INPUT, meaning: Required input file or arg missing}
+  60: {name: PIPELINE_FAILED, meaning: Pipeline execution failed}
+  70: {name: RECOVERY_REQUIRED, meaning: Recovery report generated}
+  90: {name: INTERNAL_ERROR, meaning: Unexpected error}

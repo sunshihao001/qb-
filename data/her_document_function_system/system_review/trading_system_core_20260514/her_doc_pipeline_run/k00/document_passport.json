@@ -1,0 +1,65 @@
+{
+  "doc_id": "doc_her_doc_pipeline_run",
+  "source_name": "trading_system_core_task_issue_package.md",
+  "source_type": "SYSTEM_CONSTRUCTION_MATERIAL",
+  "received_at": "2026-05-14T09:27:25Z",
+  "raw_path": "input/raw_document.md",
+  "sha256": "2cde56460917bec64c4a42bc729031705083100071e41c4c13225f18ee5f2c50",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance"
+    ]
+  },
+  "summary": {
+    "core_intent": "让真实 GPT 研究资料 / 系统建设资料进入 HER，按主链路跑完，生成完整文件输出，保留 gap。",
+    "key_points": [
+      "mode: safe-mode / paper-only / no real swap",
+      "问题: safe-mode HER_DOC 管线已有执行证据，但 F00/V00/H00 仍指出没有生产实现证据或 live/paper runtime 证据闭环，不能声称生产完成。",
+      "影响阶段: F00/V00/H00/U00",
+      "修复任务: 把 safe-mode 执行证据、runtime manifest、paper-only 运行证据纳入 V00 evidence bundle，并保持 READY_WITH_GAPS 与 ACCEPTED 分离。",
+      "验收标准: V00 evidence bundle 包含命令、输入、输出、退出码、runtime 文件存在性；A00 不把 safe-mode 等同生产 ACCEPTED。",
+      "修复任务: 创建 P02/P03 runtime-field mapping 与反证字段清单；缺失字段进入 H00 downstream queue。",
+      "问题: 策略门禁、paper-only 风控、复盘升级之间还需要显式禁止“paper ready=实盘授权”的治理规则与验收检查。",
+      "影响阶段: P06/P07/P08/P09/G00/A00",
+      "需要把该边界纳入 G00/A00 可验证规则",
+      "修复任务: 补充 paper-only boundary acceptance：禁止 swap/sign/broadcast/private-key；PAPER_READY 仅进入 paper runner；复盘只生成升级候选不直接改实时规则。",
+      "验收标准: A00 检查项包含 no_real_swap/no_private_key/no_signature/no_broadcast/review_no_direct_rule_mutation。"
+    ]
+  },
+  "system_mapping": {
+    "affected_planes": [
+      "input",
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00",
+      "trace",
+      "audit"
+    ],
+    "affected_controllers": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_document_function_system",
+      "tools",
+      "tests/her_document_function_system",
+      "data/her_document_function_system/runs"
+    ]
+  },
+  "status": "K00_READY_WITH_GAPS"
+}

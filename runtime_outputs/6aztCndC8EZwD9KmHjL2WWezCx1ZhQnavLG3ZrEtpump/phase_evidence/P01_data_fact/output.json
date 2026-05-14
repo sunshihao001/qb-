@@ -1,0 +1,25 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P01_data_fact",
+  "artifact_kind": "output",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "data_quality_status": "DEGRADED",
+  "token_symbol": "",
+  "chain": "sol",
+  "available_facts": {
+    "security_fields": false,
+    "liquidity_usd": null,
+    "holder_count": 0.0,
+    "sample_wallet_count": 0,
+    "funding_traced": false
+  },
+  "no_trading_signal": true
+}

@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Output Contract",
+  "type": "object",
+  "required": [
+    "preflight_result",
+    "review_case_inventory",
+    "review_cases",
+    "normalized_issues",
+    "root_cause_analysis",
+    "recurring_issue_report",
+    "upgrade_candidates",
+    "upgrade_queue",
+    "learning_index",
+    "u00_trace",
+    "u00_audit",
+    "u00_acceptance_result",
+    "u00_handoff_packets",
+    "u00_final_report"
+  ],
+  "properties": {
+    "preflight_result": {
+      "type": "object"
+    },
+    "review_case_inventory": {
+      "type": "object"
+    },
+    "review_cases": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "normalized_issues": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "root_cause_analysis": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "recurring_issue_report": {
+      "type": "object"
+    },
+    "anti_pattern_index": {
+      "type": "object"
+    },
+    "success_pattern_index": {
+      "type": "object"
+    },
+    "upgrade_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "controller_upgrade_map": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "schema_contract_test_upgrade_map": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "runner_tool_upgrade_map": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "governance_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "upgrade_queue": {
+      "type": "object"
+    },
+    "backlog_items": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "learning_index": {
+      "type": "object"
+    },
+    "u00_trace": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "u00_audit": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "u00_acceptance_result": {
+      "type": "object"
+    },
+    "u00_handoff_packets": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "u00_final_report": {
+      "type": "string"
+    },
+    "u00_subphase_outputs": {
+      "type": "object",
+      "properties": {
+        "U00.0": {
+          "type": "object"
+        },
+        "U00.1": {
+          "type": "object"
+        },
+        "U00.2": {
+          "type": "object"
+        },
+        "U00.3": {
+          "type": "object"
+        },
+        "U00.4": {
+          "type": "object"
+        },
+        "U00.5": {
+          "type": "object"
+        },
+        "U00.6": {
+          "type": "object"
+        },
+        "U00.7": {
+          "type": "object"
+        },
+        "U00.8": {
+          "type": "object"
+        },
+        "U00.9": {
+          "type": "object"
+        },
+        "U00.10": {
+          "type": "object"
+        },
+        "U00.11": {
+          "type": "object"
+        },
+        "U00.12": {
+          "type": "object"
+        },
+        "U00.13": {
+          "type": "object"
+        },
+        "U00.14": {
+          "type": "object"
+        },
+        "U00.15": {
+          "type": "object"
+        },
+        "U00.16": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

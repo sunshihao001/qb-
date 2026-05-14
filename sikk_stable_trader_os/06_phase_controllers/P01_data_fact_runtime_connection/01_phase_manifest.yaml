@@ -1,0 +1,23 @@
+phase_id: P01
+phase_name: data_fact_runtime_connection
+generated_at: '2026-05-11T13:38:45.487069+00:00'
+status: P01_STUB_READY_WAITING_FOR_P00_ACCEPTANCE
+depends_on:
+- P00
+placement: after_P00
+non_trading: true
+required_assets:
+- 00_methodology/system_methodology_blueprint.md
+- 00_governance/governance_plane.md
+- 00_domain/domain_plane.md
+- 00_data/data_plane.md
+- 00_control/current_system_state.json
+- 00_control/phase_registry.yaml
+safety_boundary:
+  paper_only: true
+  read_only_research: true
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  auto_swap_enabled: false
+  secret_access: not_requested_not_used

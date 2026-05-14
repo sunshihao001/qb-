@@ -1,0 +1,20 @@
+trace_events:
+  - o00_started
+  - governance_policy_loaded
+  - pipeline_run_created
+  - controller_registry_loaded
+  - source_routed
+  - execution_plan_created
+  - stage_queue_created
+  - transition_checked
+  - stage_dispatched
+  - stage_completed
+  - stage_failed
+  - gap_propagated
+  - recovery_decided
+  - pipeline_acceptance_built
+  - final_handoff_written
+  - o00_completed
+  - o00_blocked
+trace_fields: [event_id, timestamp, phase_id, pipeline_run_id, event_type, stage_id, status_before, status_after, evidence_refs, gap_refs, handoff_refs, message]
+audit_policy: {append_only: true, no_overwrite: true, every_transition_requires_trace: true}

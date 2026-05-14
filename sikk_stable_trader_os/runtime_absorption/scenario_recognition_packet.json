@@ -1,0 +1,58 @@
+{
+  "phase_id": "P06",
+  "token_address": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+  "scenario": "接盘鲸鱼陷阱 / 退出流动性陷阱风险",
+  "candidate_scenarios_checked": [
+    "吸筹",
+    "二段扩张",
+    "高位派发",
+    "下跌再派发",
+    "诱多反抽",
+    "退出流动性陷阱",
+    "假横盘",
+    "再吸筹",
+    "末端拉盘派发",
+    "刷量假突破",
+    "接盘鲸鱼陷阱"
+  ],
+  "basis": {
+    "signal": {
+      "代币地址": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+      "代币符号": "TROLLIEN",
+      "候选筛选等级": "S3_进入SIKK结构分析",
+      "模式": "paper",
+      "风险门禁": "ALLOW_PAPER_TRADE_允许纸面交易",
+      "风险等级": "低",
+      "信号等级": "S4_强确认信号",
+      "策略类型": "SIKK-B 控盘箱体突破回踩",
+      "信号时间": "2026-05-04 11:43:00 UTC",
+      "信号价格": 0.00015111259,
+      "信号置信分": 95.0,
+      "建议纸面仓位SOL": 0.2,
+      "止损价格": 0.00013546734045600002,
+      "最大浮盈_pct": 2.8639,
+      "最终收益率_pct": -10.3534,
+      "自动准备输出": {
+        "json": "data/gmgn_candidates_live_run/candidate_signal_outputs/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/signal_outputs/token_readiness_result.json",
+        "risk": "data/gmgn_candidates_live_run/candidate_signal_outputs/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/signal_outputs/risk_gate_report.json",
+        "signal": "data/gmgn_candidates_live_run/candidate_signal_outputs/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/signal_outputs/signal_events.csv",
+        "paper": "data/gmgn_candidates_live_run/candidate_signal_outputs/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/signal_outputs/paper_trades.csv",
+        "exit": "data/gmgn_candidates_live_run/candidate_signal_outputs/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/signal_outputs/exit_plan.json",
+        "review": "data/gmgn_candidates_live_run/candidate_signal_outputs/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/signal_outputs/auto_readiness_review.md"
+      },
+      "状态": "ok",
+      "说明": "纸面交易/自动准备信号，不执行真实 swap"
+    },
+    "kline": {},
+    "wallet_counter_evidence": "对手盘压力高，接盘/套牢筹码占比偏高；缺失字段：wallet_address, role, game_side, evidence_level；筹码控制状态机：CONTROL_MIGRATING_TO_COUNTERPARTY；筹码控制状态机：COUNTERPARTY_PRESSURE_HIGH"
+  },
+  "decision": "RISK_SCENARIO_RECOGNIZED_WITH_SIGNAL_CONFLICT",
+  "evidence_level": "E3",
+  "missing_fields": [
+    "wallet_address",
+    "role",
+    "game_side",
+    "evidence_level"
+  ],
+  "downstream_handoff": "P07"
+}

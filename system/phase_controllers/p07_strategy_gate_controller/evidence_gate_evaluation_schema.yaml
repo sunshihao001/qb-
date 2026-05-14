@@ -1,0 +1,6 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: EVIDENCE_GATE_EVALUATION_SCHEMA
+required_fields: [evidence_gate_eval_id, candidate_id, evidence_inputs, evidence_eval, evidence_status, evidence_gate_score_dimensions, no_single_score_policy, downstream_effect]
+evidence_status_enum: [EVIDENCE_SUPPORTS_GATE, EVIDENCE_SUPPORTS_WITH_LIMITATIONS, EVIDENCE_WEAK_OBSERVE_ONLY, EVIDENCE_CONFLICTED_PAUSE, EVIDENCE_BLOCKS_GATE]

@@ -1,0 +1,62 @@
+controller_name: H00_handoff_downstream_queue_controller
+controller_type: HER_PHASE_CONTROLLER
+phase_id: H00
+phase_name: Handoff / Downstream Queue Controller
+中文名称: 交接与下游队列控制器
+version: 1.0
+source_doc_id: doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e
+legal_entry: a00_handoff_packet
+k00_entry_required: true
+controller_root: /root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller
+run_root: /root/sikk-gmgn/data/her_document_function_system/h00_runs
+mission: convert A00 accepted outcomes into downstream handoff packets and downstream execution queue without executing downstream tasks
+upstream_phase:
+  - A00_acceptance_evidence_controller
+  - K00_knowledge_intake
+  - F00_function_realization
+  - V00_validation_evidence
+  - R00_runner_tool_binding
+downstream_phase:
+  - PXX_phase_controllers
+  - IXX_integration_controllers
+  - Runner_Tool_Binding
+  - U00_review_upgrade_controller
+  - G00_governance_boundary_controller
+  - Report_Audit_System
+permissions:
+  - read_a00_handoff
+  - read_readiness_certificate
+  - read_evidence_bundle
+  - read_phase_status_matrix
+  - read_artifact_manifest
+  - read_gap_propagation_report
+  - read_acceptance_scorecard
+  - read_trace_audit_refs
+  - classify_downstream_targets
+  - build_downstream_queue
+  - build_dependency_graph
+  - build_priority_plan
+  - write_downstream_handoff_packets
+  - write_queue_manifest
+  - write_queue_state
+  - write_trace_log
+  - write_audit_log
+  - write_recovery_report
+  - write_h00_final_report
+forbidden_actions:
+  - bypass_a00
+  - handoff_without_readiness_certificate
+  - drop_unresolved_gaps
+  - drop_accepted_risks
+  - remove_forbidden_actions
+  - convert_ready_with_gaps_to_ready
+  - route_blocked_task_to_execution
+  - execute_downstream_task_directly
+  - start_live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading
+  - modify_production_rules_directly
+  - overwrite_a00_decision
+  - hide_failed_handoff
+  - treat_queue_created_as_task_executed

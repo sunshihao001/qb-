@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "token_address",
+    "dominant_side_status",
+    "reason"
+  ],
+  "properties": {
+    "token_address": {},
+    "dominant_side_status": {},
+    "reason": {}
+  }
+}

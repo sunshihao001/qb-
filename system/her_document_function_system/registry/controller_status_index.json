@@ -1,0 +1,84 @@
+{
+  "index_id": "controller_status_index_v1",
+  "controllers": [
+    {
+      "controller_id": "G00",
+      "status": "DESIGN_ONLY",
+      "default_mode": "POLICY_WRITE",
+      "gaps": [
+        "active_policy_bundle_not_yet_validated"
+      ]
+    },
+    {
+      "controller_id": "K00",
+      "status": "DESIGN_ONLY",
+      "default_mode": "SAFE_WRITE",
+      "gaps": [
+        "controller_files_not_yet_written_or_not_validated"
+      ]
+    },
+    {
+      "controller_id": "F00",
+      "status": "DESIGN_ONLY",
+      "default_mode": "DESIGN_ONLY",
+      "gaps": [
+        "code_realizer_not_yet_implemented"
+      ]
+    },
+    {
+      "controller_id": "V00",
+      "status": "DESIGN_ONLY",
+      "default_mode": "SAFE_REPLAY",
+      "gaps": [
+        "test_executor_not_yet_implemented"
+      ]
+    },
+    {
+      "controller_id": "R00",
+      "status": "DESIGN_ONLY",
+      "default_mode": "SAFE_DRY_RUN",
+      "gaps": [
+        "dry_run_runner_not_yet_implemented"
+      ]
+    },
+    {
+      "controller_id": "A00",
+      "status": "DESIGN_ONLY",
+      "default_mode": "EVIDENCE_REVIEW",
+      "gaps": [
+        "evidence_bundle_checker_not_yet_implemented"
+      ]
+    },
+    {
+      "controller_id": "H00",
+      "status": "DESIGN_ONLY",
+      "default_mode": "QUEUE_WRITE",
+      "gaps": [
+        "target_capability_matrix_not_yet_validated"
+      ]
+    },
+    {
+      "controller_id": "U00",
+      "status": "DESIGN_ONLY",
+      "default_mode": "EVIDENCE_REVIEW",
+      "gaps": [
+        "recurring_issue_detector_not_yet_implemented"
+      ]
+    },
+    {
+      "controller_id": "O00",
+      "status": "DESIGN_ONLY",
+      "default_mode": "ORCHESTRATE_ONLY",
+      "gaps": [
+        "orchestrator_runtime_not_yet_implemented"
+      ]
+    }
+  ],
+  "overall_status": "CONFIG_AND_REPLAY_BLUEPRINT_READY_AFTER_VALIDATION",
+  "must_not_claim": [
+    "PIPELINE_RUNNING",
+    "POLICY_ACTIVE",
+    "TESTED",
+    "RUNNER_BOUND"
+  ]
+}

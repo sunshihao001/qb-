@@ -1,0 +1,10 @@
+{
+  "ready_requires": [
+    "all_required_bindings_created",
+    "dry_run_validation_report_created",
+    "no_live_execution_path",
+    "no_wallet_signing",
+    "no_unregistered_write_path"
+  ],
+  "status": "ACCEPTANCE_GATE_READY"
+}

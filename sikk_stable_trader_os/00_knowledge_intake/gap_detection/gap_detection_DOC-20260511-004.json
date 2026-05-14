@@ -1,0 +1,19 @@
+{
+  "doc_id": "DOC-20260511-004",
+  "generated_at": "2026-05-11T13:11:13Z",
+  "blocking_gap_count": 0,
+  "degraded_gap_count": 0,
+  "gaps": [
+    {
+      "gap_id": "GOV-GAP-001",
+      "severity": "DEGRADED",
+      "status": "CLOSED",
+      "description": "domain_plane.md is required next but not generated yet",
+      "required_action": "generate domain_plane.md",
+      "closed_by_doc_id": "DOC-20260511-005",
+      "closed_at": "2026-05-11T13:18:52Z"
+    }
+  ],
+  "next_recommended_artifact": "00_domain/domain_plane.md",
+  "updated_at": "2026-05-11T13:18:52Z"
+}

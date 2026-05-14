@@ -1,0 +1,91 @@
+# Corpus Index — DOC-20260513-P01-DSIC-001
+
+- raw_path: `/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DSIC-001_p01_data_source_intelligence_controller_upgrade.md`
+- checksum_sha256: `d43a4a4c6fa818efeb4b57275f4e97cb37db8efe13577f181d4119db094703b3`
+- route: `K00_ACCEPTED_PENDING_PHASE_EXECUTION`
+
+## Section anchors
+- S01 L1: P01 数据事实层认知升级版
+- S02 L2: 从“数据采集层”升级为“数据源情报控制层”
+- S03 L1: 0. 核心结论
+- S04 L1: 1. P01 新定位
+- S05 L2: 旧定位
+- S06 L2: 新定位
+- S07 L1: 2. P01 专业化目标
+- S08 L1: 3. P01 应升级为 12 个专业子系统
+- S09 L1: 4. P01 的“专业计算大脑”模型群
+- S10 L2: 4.1 Source Reliability Model｜数据源可靠性模型
+- S11 L3: 计算维度
+- S12 L3: 输出
+- S13 L2: 4.2 Schema Drift Detection｜字段漂移检测模型
+- S14 L3: 检测内容
+- S15 L3: 输出
+- S16 L2: 4.3 Data Freshness Model｜数据新鲜度模型
+- S17 L3: 输出
+- S18 L2: 4.4 Field Provenance Graph｜字段血缘图
+- S19 L3: 输出
+- S20 L2: 4.5 Cross-source Reconciliation｜跨源一致性仲裁模型
+- S21 L3: 输出
+- S22 L2: 4.6 Data Completeness Probability Model｜数据完整度概率模型
+- S23 L3: 输出
+- S24 L2: 4.7 Missing Data Root Cause Model｜缺失数据根因模型
+- S25 L3: 输出
+- S26 L2: 4.8 Acquisition Priority Model｜采集优先级模型
+- S27 L3: 输出
+- S28 L2: 4.9 Data Quality Decision Brain｜数据质量裁决大脑
+- S29 L1: 5. P01 专业阶段时间设计
+- S30 L1: 5.1 系统建设阶段时间
+- S31 L2: Phase P01-T0：阶段身份与边界建立
+- S32 L2: Phase P01-T1：Source Registry 与能力矩阵
+- S33 L2: Phase P01-T2：Source Health 与 SLA 模型
+- S34 L2: Phase P01-T3：采集调度与优先级系统
+- S35 L2: Phase P01-T4：Raw Snapshot 与事件溯源
+- S36 L2: Phase P01-T5：Schema Drift 与合约检测
+- S37 L2: Phase P01-T6：Normalization 与字段血缘图
+- S38 L2: Phase P01-T7：Freshness 与多快照版本管理
+- S39 L2: Phase P01-T8：Cross-source Reconciliation
+- S40 L2: Phase P01-T9：Data Quality Brain
+- S41 L2: Phase P01-T10：Handoff Packet 与下游权限
+- S42 L2: Phase P01-T11：Replay Fixture 与回补机制
+- S43 L2: Phase P01-T12：P01 日报 / 审计 / 校准
+- S44 L1: 5.2 单次运行时间轴
+- S45 L1: 6. P01 输出目录升级版
+- S46 L1: 7. P01 专业状态码升级
+- S47 L2: 数据源状态
+- S48 L2: 字段状态
+- S49 L2: Token 数据状态
+- S50 L2: 下游权限状态
+- S51 L1: 8. P01 下游权限裁决矩阵
+- S52 L1: 9. P01 关键输出：升级版 `data_fact_handoff_packet.json`
+- S53 L1: 10. P01 多角色审计设计
+- S54 L2: 10.1 数据源工程师
+- S55 L2: 10.2 数据质量官
+- S56 L2: 10.3 Schema 合约审计官
+- S57 L2: 10.4 字段血缘官
+- S58 L2: 10.5 时间一致性官
+- S59 L2: 10.6 跨源仲裁官
+- S60 L2: 10.7 下游权限官
+- S61 L1: 11. P01 专业验收标准
+- S62 L2: 11.1 不再接受的低标准
+- S63 L2: 11.2 专业验收标准
+- S64 L1: 12. HER 可复制执行任务书
+- S65 L1: 13. 最终判断
+- S66 L1: 本次认知升级点
+- S67 L1: 尚未解决问题
+
+## Key semantic anchors
+- P01_data_source_intelligence_controller
+- P01_data_source_intelligence_brain
+- source reliability model
+- schema drift detection
+- field lineage graph
+- data freshness model
+- cross-source reconciliation
+- data completeness probability model
+- missing data root cause model
+- acquisition priority model
+- data quality decision brain
+- data_fact_handoff_packet.json
+- downstream permission matrix
+- replay/backfill/audit
+- real_execution=false

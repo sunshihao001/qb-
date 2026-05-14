@@ -1,0 +1,16 @@
+{
+  "plane": "governance_plane",
+  "system": "SIKK Stable Trader OS",
+  "status": "GOVERNANCE_READY",
+  "runtime_mode": "SYSTEM_BUILDING",
+  "live_trading_allowed": false,
+  "automated_execution_allowed": false,
+  "paper_trading_allowed": true,
+  "active_phase_allowed": [
+    "P00_system_boundary",
+    "P01_data_fact"
+  ],
+  "blocking_gaps": [],
+  "next_required_plane": "domain_plane.md",
+  "source_doc_id": "DOC-20260511-004"
+}

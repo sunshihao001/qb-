@@ -1,0 +1,8 @@
+upgrade_candidate_review_validation:
+  type: object
+  required:
+    - validation_id
+    - candidate_reviews_created
+    - low_confidence_count
+    - status
+  additional_properties_allowed: true

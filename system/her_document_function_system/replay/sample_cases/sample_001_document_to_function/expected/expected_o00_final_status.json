@@ -1,0 +1,27 @@
+{
+  "sample_id": "sample_001_document_to_function",
+  "expected_pipeline_status": "PIPELINE_READY_WITH_GAPS",
+  "reason": "The sample document is successfully mapped into governance, validation, and acceptance upgrade requirements, but actual schema updates, policy activation, and test execution are not yet implemented.",
+  "must_not_claim": [
+    "PIPELINE_ACCEPTED",
+    "TESTED",
+    "RUNNER_BOUND",
+    "POLICY_ACTIVE",
+    "SYSTEM_FULLY_IMPLEMENTED"
+  ],
+  "allowed_next_actions": [
+    "write_controller_registry_files",
+    "write_pipeline_config_files",
+    "create_sample_replay_assets",
+    "run design-level replay",
+    "route governance candidates to G00",
+    "create implementation tasks for V00 and A00"
+  ],
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "mark_tested_without_evidence"
+  ]
+}

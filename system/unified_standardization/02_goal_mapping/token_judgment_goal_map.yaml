@@ -1,0 +1,28 @@
+meta:
+  standard_id: S00_TOKEN_JUDGMENT_GOAL_MAP
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+token_judgment_required_refs:
+- goal_refs
+- method_refs
+- input_data_refs
+- field_lineage_refs
+- schema_refs
+- contract_refs
+- runner_refs
+- trace_refs
+- acceptance_refs
+- handoff_refs
+- permission_gate_result
+- paper_decision
+- review_status
+- upgrade_candidate_refs
+- known_gaps

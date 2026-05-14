@@ -1,0 +1,76 @@
+{
+  "matrix_name": "stable_trader_os_status_transition_matrix",
+  "version": "v1.0",
+  "phase_01_data_fact_controller": {
+    "PASS": {
+      "phase_state": "P01_COMPLETE",
+      "allow_next_stage": true,
+      "next_stage": "phase_02_wallet_structure_controller"
+    },
+    "PASS_WITH_WARNING": {
+      "phase_state": "P01_COMPLETE",
+      "allow_next_stage": true,
+      "next_stage": "phase_02_wallet_structure_controller",
+      "degrade": true
+    },
+    "PAUSE": {
+      "phase_state": "P01_PAUSED",
+      "allow_next_stage": false
+    },
+    "BLOCK": {
+      "phase_state": "P01_BLOCKED",
+      "allow_next_stage": false,
+      "hard_negative": true
+    }
+  },
+  "phase_02_wallet_structure_controller": {
+    "WALLET_SUPPORT": {
+      "phase_state": "P02_COMPLETE",
+      "allow_next_stage": true,
+      "next_stage": "phase_03_chip_control_controller"
+    },
+    "WALLET_SAME_SOURCE_DETECTED": {
+      "phase_state": "P02_COMPLETE_WITH_STRUCTURE_EVIDENCE",
+      "allow_next_stage": true,
+      "next_stage": "phase_03_chip_control_controller",
+      "degrade": false
+    },
+    "WALLET_PAUSE": {
+      "phase_state": "P02_PAUSED",
+      "allow_next_stage": false,
+      "next_stage": "phase_03_chip_control_controller",
+      "degrade": true
+    },
+    "WALLET_UNKNOWN": {
+      "phase_state": "P02_UNKNOWN",
+      "allow_next_stage": false,
+      "degrade": true
+    },
+    "WALLET_DATA_WEAK": {
+      "phase_state": "P02_DATA_WEAK",
+      "allow_next_stage": false,
+      "degrade": true
+    },
+    "WALLET_COUNTERPARTY_PRESSURE": {
+      "phase_state": "P02_RISK_PAUSED",
+      "allow_next_stage": false,
+      "degrade": true,
+      "risk_monitor": true
+    },
+    "WALLET_DISTRIBUTION_DETECTED": {
+      "phase_state": "P02_BLOCKED",
+      "allow_next_stage": false,
+      "hard_negative": true
+    },
+    "WALLET_BACKFLOW_DETECTED": {
+      "phase_state": "P02_BLOCKED",
+      "allow_next_stage": false,
+      "hard_negative": true
+    },
+    "WALLET_BLOCK": {
+      "phase_state": "P02_BLOCKED",
+      "allow_next_stage": false,
+      "hard_negative": true
+    }
+  }
+}

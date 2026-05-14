@@ -1,0 +1,18 @@
+task_tree_id: P02_source_data_fact_standard_task_tree
+tasks:
+- id: T01_LOAD_UPSTREAM_HANDOFF
+  type: read_only_validation
+  required: true
+- id: T02_VALIDATE_INPUT_CONTRACT
+  type: json_schema_validation
+  required: true
+- id: T03_EXECUTE_DOMAIN_LOGIC
+  type: blocked_until_runtime_module_bound
+  required: false
+  status: BLOCKED_BY_DESIGN
+- id: T04_VALIDATE_OUTPUT_CONTRACT
+  type: json_schema_validation
+  required: true
+- id: T05_WRITE_TRACE_AND_HANDOFF
+  type: handoff_packet_generation
+  required: true

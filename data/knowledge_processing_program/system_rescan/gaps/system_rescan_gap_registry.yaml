@@ -1,0 +1,766 @@
+summary:
+  scan_id: KPP_SYSTEM_RESCAN_20260513
+  generated_at: '2026-05-14T05:45:45.806022+00:00'
+  root: /root/sikk-gmgn
+  status: GAPS_FOUND
+  file_count: 3095
+  doc_count: 416
+  gap_count: 1
+  auto_fixable_gap_count: 1
+  safety_boundary: OBSERVE_PAPER_ONLY; no signing/broadcast/swap/live trading
+  forbidden_enable_hits:
+  - path: sikk_stable_trader_os/00_governance/risk_boundary.yaml
+    suffix: .yaml
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: true
+    size: 298
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: false
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_governance/hard_negative_rules.yaml.bak_before_govv2_20260511160803
+    suffix: .bak_before_govv2_20260511160803
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 550
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_governance/authority_boundary.yaml
+    suffix: .yaml
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: true
+    size: 2872
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+    - sign_transaction
+    - broadcast_transaction
+  - path: sikk_stable_trader_os/00_governance/governance_phase_target_data.yaml
+    suffix: .yaml
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: true
+    size: 2401
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_governance/real_trade_forbidden_policy.yaml.bak_before_govv2_20260511160803
+    suffix: .bak_before_govv2_20260511160803
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 241
+    has_explanatory_language: false
+    has_contract_language: false
+    has_runner_language: false
+    has_acceptance_language: false
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_governance/authority_boundary.yaml.bak_before_govv2_20260511160803
+    suffix: .bak_before_govv2_20260511160803
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 632
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_governance/risk_boundary.yaml.bak_before_govv2_20260511160803
+    suffix: .bak_before_govv2_20260511160803
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 202
+    has_explanatory_language: false
+    has_contract_language: false
+    has_runner_language: false
+    has_acceptance_language: false
+    forbidden_hits:
+    - sign_transaction
+    - broadcast_transaction
+  - path: sikk_stable_trader_os/00_governance/stage_permission_matrix.yaml
+    suffix: .yaml
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: true
+    size: 4395
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - sign_transaction
+    - broadcast_transaction
+  - path: sikk_stable_trader_os/06_tools/validators/validate_system_registry.py
+    suffix: .py
+    is_doc: false
+    is_code: true
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 3812
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - broadcast_transaction
+    - 'swap_enabled: true'
+    - 'real_trade_enabled: true'
+  - path: sikk_stable_trader_os/06_tools/validators/validate_phase_controller_data_model.py
+    suffix: .py
+    is_doc: false
+    is_code: true
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 6514
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - broadcast_transaction
+    - 'swap_enabled: true'
+    - 'real_trade_enabled: true'
+  - path: sikk_stable_trader_os/06_tools/validators/validate_total_control_landing.py
+    suffix: .py
+    is_doc: false
+    is_code: true
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 7281
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - broadcast_transaction
+    - 'swap_enabled: true'
+    - 'real_trade_enabled: true'
+  - path: sikk_stable_trader_os/00_data/data_phase_target_data.yaml
+    suffix: .yaml
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: true
+    size: 2598
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_methodology/kv_cache_document_processing_method.md
+    suffix: .md
+    is_doc: true
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 6678
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_methodology/materials/task_packs/phase_controller_data_model_task_manifest.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 1340
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_domain/domain_phase_target_data.yaml
+    suffix: .yaml
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: true
+    size: 3000
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_control/current_system_state.json.bak_before_govv2_20260511160837
+    suffix: .bak_before_govv2_20260511160837
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 5383
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/current_system_state.json.bak_before_bcpv2_20260511155601
+    suffix: .bak_before_bcpv2_20260511155601
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 2566
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/current_blockers.json.bak_before_p05_20260512024536
+    suffix: .bak_before_p05_20260512024536
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 2700
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/current_blockers.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 5988
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/phase_registry.yaml.bak_before_p05_20260512024536
+    suffix: .bak_before_p05_20260512024536
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 2848
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/current_blockers.json.bak_before_govv2_20260511160837
+    suffix: .bak_before_govv2_20260511160837
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 2336
+    has_explanatory_language: false
+    has_contract_language: false
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/phase_registry.yaml.bak_k00_correction_202605120255
+    suffix: .bak_k00_correction_202605120255
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 3453
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/phase_registry.yaml
+    suffix: .yaml
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: true
+    size: 7660
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/current_system_state.json.bak_before_p05_20260512024536
+    suffix: .bak_before_p05_20260512024536
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 10380
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/current_system_state.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 20500
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/current_blockers.json.bak_k00_correction_202605120255
+    suffix: .bak_k00_correction_202605120255
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 3860
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/current_system_state.json.bak_k00_correction_202605120255
+    suffix: .bak_k00_correction_202605120255
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 11468
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/bootstrap_to_system_planes_handoff_packet.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 1552
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/snapshots/current_system_state.json.snapshot_20260511155601
+    suffix: .snapshot_20260511155601
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 2566
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_control/full_control_plane/control_acceptance_result.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 2338
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_system_registry/phase_registry.yaml
+    suffix: .yaml
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: true
+    size: 21635
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - sign_transaction
+    - broadcast_transaction
+  - path: sikk_stable_trader_os/00_system_registry/system_manifest.yaml
+    suffix: .yaml
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: true
+    size: 1815
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - broadcast_transaction
+  - path: sikk_stable_trader_os/00_system_registry/directory_registry.yaml
+    suffix: .yaml
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: true
+    size: 2318
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/08_acceptance/control_plane_acceptance_result.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 2338
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/08_acceptance/p05_k00_alignment_correction_report.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 1881
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_knowledge_intake/task_packages/task_execution_package_DOC-20260513-002.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 1283
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: false
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_knowledge_intake/task_packages/task_execution_package_DOC-20260513-P01-DSIC-001.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 3391
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/ca_orchestrator_p0_control_closure/task_execution_package.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 7742
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - broadcast_transaction
+  - path: sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I03_runner_tool_binding/04_phase_input_contract.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: true
+    is_schema: false
+    is_yaml: false
+    size: 241
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: false
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet.template.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 2326
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-018.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 3963
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_knowledge_intake/kv_cache/kv_items_DOC-20260513-001.jsonl
+    suffix: .jsonl
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 3996
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_knowledge_intake/system_mapping/system_mapping_DOC-20260513-P01-DSIC-001.json
+    suffix: .json
+    is_doc: false
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 1166
+    has_explanatory_language: false
+    has_contract_language: true
+    has_runner_language: false
+    has_acceptance_language: false
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-021_governance_plane_v2_institutional_design.md
+    suffix: .md
+    is_doc: true
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 44549
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md
+    suffix: .md
+    is_doc: true
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 28640
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS.md
+    suffix: .md
+    is_doc: true
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 26738
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+  - path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I03_runner_tool_binding_v1_0.md
+    suffix: .md
+    is_doc: true
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 68916
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-020_bootstrap_control_plane_v2_professional_completion.md
+    suffix: .md
+    is_doc: true
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 30339
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005_p00_system_bootstrap_controller_institutional.md
+    suffix: .md
+    is_doc: true
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 60132
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+  - path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-006_p00_system_bootstrap_controller_landing_and_acceptance.md
+    suffix: .md
+    is_doc: true
+    is_code: false
+    is_contract: false
+    is_schema: false
+    is_yaml: false
+    size: 19851
+    has_explanatory_language: true
+    has_contract_language: true
+    has_runner_language: true
+    has_acceptance_language: true
+    forbidden_hits:
+    - private_key
+    - seed_phrase
+gaps:
+- gap_id: KPP_RESCAN_GAP_001
+  severity: HIGH
+  phase: K00-K08
+  area: knowledge_processing
+  title: 旧系统文档未按 K00-K08 批量重处理
+  evidence:
+  - candidate_docs=416
+  - processed_raw_documents=1
+  - batch_reprocess_passports=371
+  required_action: 建立旧文档批量 KPP 重处理任务包，输出 passport/chunks/mapping/candidates/task_packages。
+  target_paths:
+  - data/knowledge_processing_program/system_rescan/task_packages/batch_legacy_document_reprocess_task_package.yaml
+  auto_fixable: true
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING

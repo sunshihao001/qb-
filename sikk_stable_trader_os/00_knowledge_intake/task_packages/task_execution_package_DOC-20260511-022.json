@@ -1,0 +1,42 @@
+{
+  "task_id": "TASK-DOC-20260511-022-DOMAIN-PLANE-LANDING",
+  "doc_id": "DOC-20260511-022",
+  "task_name": "ESTABLISH_P02_DOMAIN_PLANE_PROFESSIONAL_PACKET",
+  "task_type": "system_plane_generation_not_trading",
+  "source_refs": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-022_domain_plane_professional_design.md"
+  ],
+  "target_root": "/root/sikk-gmgn/sikk_stable_trader_os/00_domain",
+  "required_outputs": [
+    "domain_plane.yaml",
+    "domain_context.md",
+    "domain_object_model.yaml",
+    "domain_wallet_role_taxonomy.yaml",
+    "domain_lifecycle_model.yaml",
+    "domain_scenario_taxonomy.yaml",
+    "domain_evidence_model.yaml",
+    "domain_counter_evidence_model.yaml",
+    "domain_hard_negative_rules.yaml",
+    "domain_market_cap_context_model.yaml",
+    "domain_reasoning_boundary.md",
+    "domain_data_requirement_map.yaml",
+    "domain_handoff_contract.yaml",
+    "domain_acceptance_criteria.md",
+    "domain_gap_register.md",
+    "domain_review_checklist.md",
+    "domain_manifest.json",
+    "domain_acceptance_result.json",
+    "domain_handoff_packet.json"
+  ],
+  "constraints": [
+    "no direct trade signal",
+    "no buy signal",
+    "no execution logic",
+    "paper_only=true",
+    "real_trade_enabled=false",
+    "do not unblock P01"
+  ],
+  "acceptance_target": "DOMAIN_READY_WITH_GAPS_OR_DOMAIN_READY",
+  "next_stage_if_accepted": "P03_DATA_PLANE_FIELD_MODELING",
+  "created_at": "2026-05-11T16:25:42Z"
+}

@@ -1,0 +1,52 @@
+{
+  "doc_id": "DOC-20260511-024",
+  "core_definition": "Full Control Plane is the top-level runtime control layer for scheduling, contracts, state, acceptance, handoff, audit, gap and failure recovery.",
+  "must_create_components": [
+    "full_control_plane.yaml",
+    "control_context.md",
+    "global_plane_registry.yaml",
+    "phase_controller_registry.yaml",
+    "phase_dependency_graph.yaml",
+    "phase_execution_order.yaml",
+    "task_tree_schema.yaml",
+    "task_package_contract.yaml",
+    "contract_router.yaml",
+    "input_contract_registry.yaml",
+    "output_contract_registry.yaml",
+    "acceptance_gate_registry.yaml",
+    "global_status_code_table.yaml",
+    "global_hard_negative_rules.yaml",
+    "phase_state_machine.yaml",
+    "execution_permission_matrix.yaml",
+    "skill_tool_registry.yaml",
+    "data_path_router.yaml",
+    "handoff_packet_registry.yaml",
+    "audit_log_model.yaml",
+    "gap_register_model.yaml",
+    "failure_recovery_policy.yaml",
+    "legacy_mapping_policy.yaml",
+    "human_override_policy.yaml",
+    "control_acceptance_criteria.md",
+    "control_review_checklist.md",
+    "her_full_control_execution_protocol.md"
+  ],
+  "non_goals": [
+    "direct_trade_judgment",
+    "direct_data_collection",
+    "direct_buy_signal",
+    "direct_order_execution",
+    "bypass_governance",
+    "bypass_acceptance",
+    "delete_or_move_legacy_runtime"
+  ],
+  "acceptance_target": "CONTROL_READY_WITH_GAPS",
+  "known_allowed_gaps": [
+    "phase_controllers_not_all_code_implemented",
+    "acceptance_gates_not_all_automated",
+    "legacy_mapping_not_scanned",
+    "skill_tool_registry_not_runtime_verified",
+    "handoff_not_integration_tested",
+    "state_machine_not_attached_to_real_orchestrator",
+    "telegram_dashboard_not_connected"
+  ]
+}

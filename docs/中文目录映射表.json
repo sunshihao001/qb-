@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-05-06",
+  "policy": "human_readable_chinese_navigation_only",
+  "root": "/root/sikk-gmgn",
+  "entries": [
+    {
+      "zh": "运行数据",
+      "en": "data/",
+      "purpose": "所有运行数据与标准化输出",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "钱包事实数据",
+      "en": "data/source_wallet_bot/",
+      "purpose": "Source 钱包事实主路径",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "结构推断数据",
+      "en": "data/intel_bot/",
+      "purpose": "Intel 主导侧行为推断主路径",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "旧运行混合区",
+      "en": "data/gmgn_candidates_live_run/",
+      "purpose": "旧 live run / dashboard / paper 混合区",
+      "is_primary_write_path": false
+    },
+    {
+      "zh": "功能代码",
+      "en": "modules/",
+      "purpose": "功能代码模块",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "自动化测试",
+      "en": "tests/",
+      "purpose": "自动化测试",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "方法轮",
+      "en": "research_loop/",
+      "purpose": "方法论、长任务、checkpoint、状态",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "方法论资产",
+      "en": "research_loop/methodology/",
+      "purpose": "判断规则、反证、模型、字段映射",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "系统文档",
+      "en": "docs/",
+      "purpose": "宪法、规则、设计说明",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "人类报告",
+      "en": "reports/",
+      "purpose": "审计、验收、分析报告",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "旧路径兼容",
+      "en": "legacy_compat/",
+      "purpose": "manifest、path map、fallback",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "交接合同",
+      "en": "contracts/",
+      "purpose": "shared 合同、bot handoff",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "系统Schema",
+      "en": "schemas/",
+      "purpose": "系统级 schema",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "导入暂存",
+      "en": "imports/",
+      "purpose": "外部资料 staging",
+      "is_primary_write_path": true
+    },
+    {
+      "zh": "项目工具",
+      "en": "tools/",
+      "purpose": "校验器、治理脚本",
+      "is_primary_write_path": true
+    }
+  ]
+}

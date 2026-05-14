@@ -1,0 +1,8 @@
+policy_id: sample_support_policy
+single_sample_global_upgrade_allowed: false
+safety_critical_single_sample_handling: temporary protective block + human approval
+  + rollback plan only
+minimum_support: multi-case or explicit safety-critical exception
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+controller_id: P10_SELF_UPGRADE_CONTROLLER

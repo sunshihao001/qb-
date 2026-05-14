@@ -1,0 +1,112 @@
+controller_name: U00_review_upgrade_controller
+controller_type: HER_PHASE_CONTROLLER
+phase_id: U00
+phase_name: Review / Upgrade Controller
+chinese_name: 复盘升级控制器
+version: 1.0.1
+system: HER-DFAFS
+owner_layer: 10_review_upgrade
+purpose: >-
+  Convert post-acceptance gaps, failures, recurring issues, and governance risks into
+  structured review cases, root cause analysis, upgrade candidates, queue items,
+  learning index entries, and downstream handoff.
+subphase_coverage:
+  - U00.0 Preflight Gate
+  - U00.1 Evidence & Queue Loader
+  - U00.2 Review Case Classifier
+  - U00.3 Failure / Gap Normalizer
+  - U00.4 Root Cause Analysis Engine
+  - U00.5 Recurring Issue Detector
+  - U00.6 Anti-pattern / Success-pattern Extractor
+  - U00.7 Upgrade Candidate Builder
+  - U00.8 Controller Upgrade Mapper
+  - U00.9 Schema / Contract / Test Upgrade Mapper
+  - U00.10 Runner / Tool Upgrade Mapper
+  - U00.11 Governance Candidate Extractor
+  - U00.12 Upgrade Queue Builder
+  - U00.13 Learning Index Writer
+  - U00.14 Trace / Audit Binder
+  - U00.15 Acceptance Gate
+  - U00.16 Handoff Writer
+positioning:
+  plain_text: U00 = 复盘升级控制器，不是普通复盘报告器。
+upstream_phases:
+  - H00_handoff_downstream_queue
+  - A00_acceptance_evidence
+  - V00_validation_evidence
+  - R00_runner_tool_binding
+  - F00_function_realization
+  - K00_knowledge_intake
+downstream_phases:
+  - K00_knowledge_intake
+  - F00_function_realization
+  - V00_validation_evidence
+  - R00_runner_tool_binding
+  - G00_governance_boundary_controller
+  - Backlog_Upgrade_Queue
+entry_status_required:
+  - H00_HANDOFF_AVAILABLE
+  - A00_EVIDENCE_BUNDLE_AVAILABLE
+permissions:
+  - read_h00_handoff
+  - read_a00_evidence_bundle
+  - read_phase_status_matrix
+  - read_gap_reports
+  - read_failure_evidence
+  - read_queue_state
+  - read_trace_logs
+  - read_audit_logs
+  - classify_review_cases
+  - perform_root_cause_analysis
+  - detect_recurring_issues
+  - build_upgrade_candidates
+  - build_backlog_queue
+  - build_governance_candidates
+  - write_review_report
+  - write_upgrade_plan
+  - write_upgrade_queue
+  - write_learning_index
+  - write_u00_handoff_packet
+forbidden_actions:
+  - bypass_a00_or_h00
+  - rewrite_failure_history
+  - delete_gap_evidence
+  - hide_failed_test
+  - hide_failed_replay
+  - hide_failed_binding
+  - mark_upgrade_as_completed_without_execution
+  - modify_production_rules_directly
+  - start_live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading
+  - treat_review_as_fix
+  - treat_backlog_as_completed
+  - treat_upgrade_candidate_as_applied
+outputs:
+  - preflight_result
+  - review_case_inventory
+  - review_cases
+  - normalized_issues
+  - root_cause_analysis
+  - recurring_issue_report
+  - anti_pattern_index
+  - success_pattern_index
+  - upgrade_candidates
+  - controller_upgrade_map
+  - schema_contract_test_upgrade_map
+  - runner_tool_upgrade_map
+  - governance_candidates
+  - upgrade_queue
+  - backlog_items
+  - learning_index
+  - u00_trace
+  - u00_audit
+  - u00_acceptance_result
+  - u00_handoff_packets
+  - u00_final_report
+completion_status:
+  success: U00_ACCEPTED
+  blocked: U00_BLOCKED
+  gaps: U00_READY_WITH_GAPS
+updated_at: "2026-05-13T15:05:00+00:00"

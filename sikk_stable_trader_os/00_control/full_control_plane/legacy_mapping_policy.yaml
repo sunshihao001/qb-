@@ -1,0 +1,11 @@
+legacy_mapping_policy:
+  legacy_roots:
+    - path: /root/sikk-gmgn/data/gmgn_candidates_live_run
+      status: KEEP_IN_PLACE
+      allowed_use: [replay_reference, historical_runtime_reference, migration_source, audit_reference]
+      forbidden_use: [new_primary_write_path, silent_overwrite, direct_schema_authority]
+  migration_rules:
+    - {rule_id: LEGACY_001, name: 旧数据只读扫描, action: read_only_inventory}
+    - {rule_id: LEGACY_002, name: 旧数据生成映射表, action: create_legacy_mapping_index}
+    - {rule_id: LEGACY_003, name: 旧数据吸收前必须标准化, action: normalize_before_import}
+    - {rule_id: LEGACY_004, name: 不允许直接移动旧 runtime, action: block_move_delete}

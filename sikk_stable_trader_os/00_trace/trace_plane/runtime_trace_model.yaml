@@ -1,0 +1,20 @@
+runtime_trace_record:
+  trace_id: string
+  runtime_id: required
+  runtime_type: required
+  token_address: required
+  started_at: required
+  finished_at: required
+  inputs: required
+  runtime_events: required
+  result: required
+  review: required
+  required_trace_links:
+    - parent_trace_ids
+    - child_trace_ids
+    - related_artifact_trace_ids
+  validation_rules:
+    - trace_id_present
+    - source_present
+    - downstream_usage_declared
+    - forbidden_actions_respected

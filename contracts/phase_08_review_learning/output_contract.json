@@ -1,0 +1,27 @@
+{
+  "phase": 8,
+  "name": "复盘学习层",
+  "goal": "沉淀失败归因、历史样本、规则修正候选",
+  "output_file": "failure_attribution.jsonl",
+  "required_fields": [
+    "token_address",
+    "run_id",
+    "phase",
+    "status_code",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_trigger",
+    "confidence_level",
+    "missing_fields",
+    "source_files",
+    "handoff_to"
+  ],
+  "allowed_status_codes": [
+    "RULE_UPDATE_REQUIRED",
+    "MODEL_RECALIBRATION_REQUIRED",
+    "REVIEW_ARCHIVED"
+  ],
+  "missing_policy": "缺失字段必须写 missing；自动推导写 系统推导",
+  "downstream": "系统自我升级层"
+}

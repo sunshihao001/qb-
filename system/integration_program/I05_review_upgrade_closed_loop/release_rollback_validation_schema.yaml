@@ -1,0 +1,8 @@
+release_rollback_validation:
+  type: object
+  required:
+    - validation_id
+    - release_plan_present
+    - rollback_plan_present
+    - status
+  additional_properties_allowed: true

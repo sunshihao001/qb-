@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "I01 to I02 Handoff Packet",
+  "type": "object",
+  "required": [
+    "packet_id",
+    "from",
+    "to",
+    "i01_status",
+    "audit_outputs",
+    "fix_priority_list_path",
+    "restrictions"
+  ],
+  "properties": {
+    "packet_id": {
+      "type": "string"
+    },
+    "from": {
+      "const": "I01_full_phase_consistency_audit"
+    },
+    "to": {
+      "const": "I02_directory_contract_index_unification"
+    },
+    "i01_status": {
+      "enum": [
+        "I01_READY",
+        "I01_READY_WITH_GAPS",
+        "I01_BLOCKED"
+      ]
+    },
+    "audit_outputs": {
+      "type": "object"
+    },
+    "fix_priority_list_path": {
+      "type": "string"
+    },
+    "restrictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

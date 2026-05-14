@@ -1,0 +1,15 @@
+{
+  "tool_retry_policy_schema": {
+    "controller_id": "I03_RUNNER_TOOL_BINDING",
+    "version": "v1.0",
+    "authority_doc_id": "DOC-20260512-I03_RUNNER_TOOL_BINDING_V1",
+    "purpose": "tool_retry_policy_schema.yaml",
+    "required": true,
+    "safety_boundaries": {
+      "no_live_execution": true,
+      "no_wallet_signing": true,
+      "no_auto_deploy": true,
+      "legacy_readonly": true
+    }
+  }
+}

@@ -1,0 +1,131 @@
+planes:
+  - plane_id: P00_FULL_CONTROL_PLANE
+    plane_name: 完整控制面
+    responsibility: 全阶段调度、验收、状态回写、阻断、交接
+    current_status: CONTROL_READY_WITH_GAPS
+    input_contracts:
+      - p00_full_control_plane_input_contract
+    output_contracts:
+      - p00_full_control_plane_handoff_contract
+    forbidden_outputs:
+      - buy_signal
+      - execution_order
+      - direct_trade_judgment
+      - raw_data_overwrite
+    acceptance_gate: GATE_CONTROL
+  - plane_id: P01_GOVERNANCE_PLANE
+    plane_name: 治理平面
+    responsibility: 定义系统边界、权限、风险红线、禁止事项
+    current_status: GOVERNANCE_READY
+    input_contracts:
+      - p01_governance_plane_input_contract
+    output_contracts:
+      - p01_governance_plane_handoff_contract
+    forbidden_outputs:
+      - buy_signal
+      - execution_order
+    acceptance_gate: GATE_P01_GOVERNANCE
+  - plane_id: P02_DOMAIN_PLANE
+    plane_name: 领域平面
+    responsibility: 定义领域对象、场景、生命周期、证据/反证语义
+    current_status: DOMAIN_READY_WITH_GAPS
+    input_contracts:
+      - p02_domain_plane_input_contract
+    output_contracts:
+      - p02_domain_plane_handoff_contract
+    forbidden_outputs:
+      - buy_signal
+      - execution_order
+    acceptance_gate: GATE_P02_DOMAIN
+  - plane_id: P03_DATA_PLANE
+    plane_name: 数据平面
+    responsibility: 生成可采集、可校验、可追溯的数据事实体系
+    current_status: DATA_READY_WITH_GAPS
+    input_contracts:
+      - p03_data_plane_input_contract
+    output_contracts:
+      - p03_data_plane_handoff_contract
+    forbidden_outputs:
+      - buy_signal
+      - execution_order
+    acceptance_gate: GATE_P03_DATA
+  - plane_id: P04_EVIDENCE_PLANE
+    plane_name: 证据平面
+    responsibility: 把标准化事实转换为证据对象、证据等级、反证对象
+    current_status: NOT_READY
+    input_contracts:
+      - p04_evidence_plane_input_contract
+    output_contracts:
+      - p04_evidence_plane_handoff_contract
+    forbidden_outputs:
+      - buy_signal
+      - execution_order
+    acceptance_gate: GATE_P04_EVIDENCE
+  - plane_id: P05_SCENARIO_RECOGNITION_PLANE
+    plane_name: 场景识别平面
+    responsibility: 基于证据链识别盘型/生命周期候选
+    current_status: NOT_READY
+    input_contracts:
+      - p05_scenario_recognition_plane_input_contract
+    output_contracts:
+      - p05_scenario_recognition_plane_handoff_contract
+    forbidden_outputs:
+      - buy_signal
+      - execution_order
+    acceptance_gate: GATE_P05_SCENARIO_RECOGNITION
+  - plane_id: P06_STRATEGY_GATE_PLANE
+    plane_name: 策略门禁平面
+    responsibility: 只允许未被否定的样本进入 paper-only 候选
+    current_status: NOT_READY
+    input_contracts:
+      - p06_strategy_gate_plane_input_contract
+    output_contracts:
+      - p06_strategy_gate_plane_handoff_contract
+    forbidden_outputs:
+      - buy_signal
+      - execution_order
+    acceptance_gate: GATE_P06_STRATEGY_GATE
+  - plane_id: P07_EXECUTION_RISK_PLANE
+    plane_name: 执行风控平面
+    responsibility: 模拟执行风险、滑点、流动性、熔断，不允许实盘
+    current_status: NOT_READY
+    input_contracts:
+      - p07_execution_risk_plane_input_contract
+    output_contracts:
+      - p07_execution_risk_plane_handoff_contract
+    forbidden_outputs:
+      - buy_signal
+      - execution_order
+    acceptance_gate: GATE_P07_EXECUTION_RISK
+  - plane_id: P08_REVIEW_REPLAY_PLANE
+    plane_name: 复盘回放平面
+    responsibility: 对 paper/replay 样本做失败归因与规则反馈
+    current_status: NOT_READY
+    input_contracts:
+      - p08_review_replay_plane_input_contract
+    output_contracts:
+      - p08_review_replay_plane_handoff_contract
+    forbidden_outputs:
+      - buy_signal
+      - execution_order
+    acceptance_gate: GATE_P08_REVIEW_REPLAY
+  - plane_id: P09_SELF_UPGRADE_PLANE
+    plane_name: 自升级治理平面
+    responsibility: 把复盘证据转成受控升级候选，不直接污染实时规则
+    current_status: NOT_READY
+    input_contracts:
+      - p09_self_upgrade_plane_input_contract
+    output_contracts:
+      - p09_self_upgrade_plane_handoff_contract
+    forbidden_outputs:
+      - buy_signal
+      - execution_order
+    acceptance_gate: GATE_P09_SELF_UPGRADE
+
+# TRACE_PLANE registered by DOC-20260511-025
+trace_plane:
+  plane_id: TRACE_PLANE
+  canonical_path: /root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane
+  status: TRACE_READY_WITH_GAPS
+  previous: FULL_CONTROL_PLANE
+  next: [ACCEPTANCE_PLANE, HANDOFF_PLANE]

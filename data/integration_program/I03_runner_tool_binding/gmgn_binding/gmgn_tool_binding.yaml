@@ -1,0 +1,16 @@
+{
+  "gmgn_tool_binding": {
+    "owner_stages": [
+      "P02_SOURCE_DATA_FACT",
+      "P03_WALLET_ENTITY",
+      "P04_CHIP_STRUCTURE"
+    ],
+    "canonical_outputs": [
+      "token_basic_fact",
+      "holder_snapshot_fact",
+      "wallet_entity_seed",
+      "chip_structure_seed"
+    ],
+    "failure_policy": "MARK_FIELD_GAP_OR_READY_WITH_GAPS"
+  }
+}

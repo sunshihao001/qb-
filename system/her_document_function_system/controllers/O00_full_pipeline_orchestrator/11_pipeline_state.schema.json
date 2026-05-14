@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 pipeline state",
+  "type": "object",
+  "required": [
+    "pipeline_run_id",
+    "status",
+    "current_stage",
+    "stage_state_matrix",
+    "status_history",
+    "blocking_gaps",
+    "unresolved_gaps"
+  ],
+  "properties": {
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "O00_INIT",
+        "GOVERNANCE_PREFLIGHT_PASSED",
+        "PIPELINE_RUN_CREATED",
+        "CONTROLLER_REGISTRY_LOADED",
+        "SOURCE_ROUTED",
+        "EXECUTION_PLAN_CREATED",
+        "STAGE_DEPENDENCY_GRAPH_CREATED",
+        "STAGE_QUEUE_CREATED",
+        "K00_DISPATCHED",
+        "K00_COMPLETED",
+        "F00_DISPATCHED",
+        "F00_COMPLETED",
+        "V00_DISPATCHED",
+        "V00_COMPLETED",
+        "R00_DISPATCHED_OR_SKIPPED",
+        "R00_COMPLETED_OR_SKIPPED",
+        "A00_DISPATCHED",
+        "A00_COMPLETED",
+        "H00_DISPATCHED",
+        "H00_COMPLETED",
+        "PIPELINE_COMPLETED",
+        "O00_BLOCKED",
+        "PIPELINE_REVIEW_REQUIRED",
+        "PIPELINE_GOVERNANCE_REQUIRED",
+        "PIPELINE_REJECTED"
+      ]
+    },
+    "current_stage": {
+      "type": "string"
+    },
+    "stage_state_matrix": {
+      "type": "object"
+    },
+    "status_history": {
+      "type": "array"
+    },
+    "blocking_gaps": {
+      "type": "array"
+    },
+    "unresolved_gaps": {
+      "type": "array"
+    }
+  }
+}

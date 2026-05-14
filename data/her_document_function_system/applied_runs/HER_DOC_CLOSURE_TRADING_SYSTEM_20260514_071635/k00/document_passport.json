@@ -1,0 +1,74 @@
+{
+  "doc_id": "doc_HER_DOC_CLOSURE_TRADING_SYSTEM_20260514_071635",
+  "source_name": "HER_DOC_CLOSURE_TRADING_SYSTEM.md",
+  "source_type": "SYSTEM_CONSTRUCTION_MATERIAL",
+  "received_at": "2026-05-14T07:18:22Z",
+  "raw_path": "input/raw_document.md",
+  "sha256": "4579f447dd9d8801e3b346644a24e55f0e9328014877d4eaf46cb99c954746fa",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance"
+    ]
+  },
+  "summary": {
+    "core_intent": "让真实 GPT 研究资料 / 系统建设资料进入 HER，按主链路跑完，生成完整文件输出，保留 gap。",
+    "key_points": [
+      "source: 上一轮 `HER_DOC_TASKLIST_TRADING_SYSTEM` 的 A00/H00/V00/F00 输出",
+      "主目标：继续按照 HER_DOC-skill 的系统体系流程自动化处理任务，把文档任务从“清单 + READY_WITH_GAPS”推进到“下游缺口闭环任务包 + 可验收应用场景”。",
+      "边界：safe-mode、paper-only、document-governance only；不触发真实交易、不签名、不 broadcast、不声明 production ready。",
+      "### O00：闭环编排",
+      "禁止把上一轮 READY_WITH_GAPS 误标为 ACCEPTED。",
+      "### K00：闭环文档摄取",
+      "### F00：功能实现映射",
+      "每条实现链必须有 input_contract、output_contract、acceptance_gate、forbidden_claims。",
+      "### V00：验证证据",
+      "若没有真实实现代码或测试证据，继续保留 READY_WITH_GAPS。",
+      "### A00：验收判断",
+      "结构级：O00/K00/F00/V00/A00/H00/U00/G00 均有输出。",
+      "运行级：只允许 safe-mode run 证据，不允许生产运行声明。",
+      "### H00：下游交接",
+      "H00-CLOSE-001：实现证据索引器/绑定器。",
+      "H00-CLOSE-002：批量文档 safe-mode runner。",
+      "H00-CLOSE-003：治理候选审批包生成器。",
+      "队列状态：`QUEUE_READY_WITH_GAPS`。",
+      "### U00：复盘升级",
+      "safe-mode 能跑单文档，但缺少批处理/统一索引。"
+    ]
+  },
+  "system_mapping": {
+    "affected_planes": [
+      "input",
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00",
+      "trace",
+      "audit"
+    ],
+    "affected_controllers": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_document_function_system",
+      "tools",
+      "tests/her_document_function_system",
+      "data/her_document_function_system/runs"
+    ]
+  },
+  "status": "K00_READY_WITH_GAPS"
+}

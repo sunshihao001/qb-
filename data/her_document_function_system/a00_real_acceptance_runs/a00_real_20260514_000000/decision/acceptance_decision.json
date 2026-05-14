@@ -1,0 +1,24 @@
+{
+  "decision_id": "acceptance_decision_a00_real_20260514_000000",
+  "final_status": "A00_REAL_ACCEPTANCE_EVIDENCE_READY_WITH_GAPS",
+  "reason": "O00, V00 and R00 real evidence exists; non-blocking gaps remain around policy activation, paper/live runtime, and downstream consumption.",
+  "ready_for_h00": true,
+  "ready_for_u00": true,
+  "ready_for_g00": true,
+  "ready_for_production": false,
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "policy_not_active",
+    "paper_runtime_not_enabled",
+    "live_runtime_forbidden",
+    "telegram_binding_design_only",
+    "V00_READY_WITH_GAPS",
+    "R00_READY_WITH_GAPS"
+  ],
+  "forbidden_claims_blocked": [
+    "PIPELINE_ACCEPTED",
+    "POLICY_ACTIVE",
+    "PRODUCTION_READY",
+    "LIVE_READY"
+  ]
+}

@@ -1,0 +1,23 @@
+schema_id: HER_DOC_EVIDENCE_REQUIREMENT_SCHEMA
+version: 1
+required_fields:
+  - evidence_id
+  - claim_ref
+  - required_level
+  - current_level
+  - status
+  - evidence_path
+  - evidence_excerpt
+  - proof_method
+  - proof_command
+  - downstream_consumer_path
+  - missing_reason
+field_enums:
+  evidence_level: [E0_NONE, E1_DECLARED, E2_FILE_EXISTS, E3_FILE_READ_OR_SCHEMA_VALID, E4_SAFE_RUNTIME_PROOF, E5_ACCEPTED_HANDOFF]
+  proof_method: [NOT_CHECKED, OPERATOR_DECLARATION, PATH_INFERENCE, FILE_EXISTS, FILE_READ, STATIC_SCAN, YAML_JSON_PARSE, SCHEMA_VALIDATE, IMPORT_CHECK, DRY_RUN, PAPER_ONLY_RUN, REPLAY_RUN, HANDOFF_READ]
+  status: [EVIDENCE_MISSING, EVIDENCE_PARTIAL, EVIDENCE_READY, EVIDENCE_REJECTED, BLOCKED]
+rules:
+  - If evidence_path is empty, status cannot be EVIDENCE_READY.
+  - PATH_INFERENCE cannot prove PRESENT, READY, or ACCEPTED states.
+  - Runtime claims require E4 or above.
+  - Downstream acceptance claims require E5.

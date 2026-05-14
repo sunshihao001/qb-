@@ -1,0 +1,12 @@
+system_mapping:
+  doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  target_system_dir: /root/sikk-gmgn/system/integration_program/I05_review_upgrade_closed_loop/
+  target_data_dir: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/
+  upstream:
+    - I04_paper_runtime_integration
+    - P09_review_replay_controller
+    - P10_self_upgrade_controller
+  downstream:
+    - next_iteration_task_packet
+    - paper_only_operation_readiness
+  route_status: K00_ACCEPTED

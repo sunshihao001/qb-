@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0028
+source_path: docs/09_her_execution_protocol/trading_system_planbook_repository_protocol.md
+phase_scores:
+  P01: 2
+  P02: 0
+  P03: 0
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 0
+  P08: 6
+  P09: 0
+  P10: 0
+primary_phase: P08
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

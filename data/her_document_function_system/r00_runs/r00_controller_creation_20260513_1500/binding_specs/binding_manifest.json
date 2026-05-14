@@ -1,0 +1,29 @@
+{
+  "manifest_status": "CREATED",
+  "controller_files": [
+    "01_r00_manifest.yaml",
+    "02_r00_context_pack.md",
+    "03_r00_objective_tree.yaml",
+    "04_r00_input_contract.json",
+    "05_r00_output_contract.json",
+    "06_r00_execution_protocol.md",
+    "07_r00_acceptance_gate.yaml",
+    "08_r00_state.json",
+    "09_r00_handoff_packet.schema.json",
+    "10_binding_target_inventory.schema.json",
+    "11_command_contract.schema.json",
+    "12_cli_binding.schema.json",
+    "13_orchestrator_binding.schema.json",
+    "14_tool_binding.schema.json",
+    "15_telegram_binding.schema.json",
+    "16_report_binding.schema.json",
+    "17_dashboard_binding.schema.json",
+    "18_scheduler_binding.schema.json",
+    "19_dry_run_evidence.schema.json",
+    "20_binding_failure_evidence.schema.json",
+    "21_trace_audit_spec.yaml",
+    "22_recovery_policy.md",
+    "23_r00_final_report_template.md"
+  ],
+  "binding_evidence_scope": "controller_asset_schema_protocol_tests"
+}

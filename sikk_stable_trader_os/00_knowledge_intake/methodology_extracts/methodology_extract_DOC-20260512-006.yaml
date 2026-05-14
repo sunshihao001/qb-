@@ -1,0 +1,22 @@
+doc_id: DOC-20260512-006
+methodology_requirements:
+- scenario_is_not_signal
+- scenario_must_be_evidence_bundle_driven
+- rejection_checks_required
+- conflicts_and_unknowns_must_propagate
+- weak_evidence_cannot_create_high_confidence_scenario
+- handoff_only_to_P07
+scenario_families:
+- ACCUMULATION_FAMILY
+- EXPANSION_FAMILY
+- DISTRIBUTION_FAMILY
+- TRAP_FAMILY
+- ROTATION_FAMILY
+- UNCERTAIN_FAMILY
+required_files_count: 40
+runtime_dirs_count: 26
+safety_invariants:
+- paper_only_true
+- real_trade_enabled_false
+- paper_runtime_blocked
+- live_execution_blocked

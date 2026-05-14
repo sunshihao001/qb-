@@ -1,0 +1,11 @@
+acceptance:
+  required:
+    - k00_handoff_loaded
+    - controller_files_created
+    - schemas_parse
+    - protocol_covers_H00_0_to_H00_15
+    - trace_audit_written
+    - tests_executed
+  false_pass_rules:
+    queue_created_is_not_task_executed: true
+    missing_a00_sample_blocks_real_queue_replay_claim: true

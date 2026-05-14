@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0363
+source_path: sikk_stable_trader_os/08_acceptance/phase_controller_index_acceptance_report.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 0
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 0
+  P08: 0
+  P09: 0
+  P10: 0
+primary_phase: K00
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

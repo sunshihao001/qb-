@@ -1,0 +1,60 @@
+{
+  "schema_version": "P01_DATA_SOURCE_INTELLIGENCE_V2_SCAFFOLD",
+  "sources": {
+    "gmgn": {
+      "source_id": "gmgn",
+      "source_type": "market_wallet_intelligence",
+      "live_fetch_enabled": false,
+      "capabilities": [
+        "token_profile",
+        "trade_events",
+        "holder_list",
+        "wallet_profile"
+      ],
+      "requires_live_audit": true
+    },
+    "okx": {
+      "source_id": "okx",
+      "source_type": "quote_liquidity_security_route",
+      "live_fetch_enabled": false,
+      "capabilities": [
+        "quote",
+        "liquidity",
+        "route",
+        "security"
+      ],
+      "requires_live_audit": true
+    },
+    "manual": {
+      "source_id": "manual",
+      "source_type": "human_supplied_evidence",
+      "live_fetch_enabled": false,
+      "capabilities": [
+        "gap_fill",
+        "review_notes"
+      ]
+    },
+    "cache": {
+      "source_id": "local_cache",
+      "source_type": "local_readonly_cache",
+      "live_fetch_enabled": false,
+      "capabilities": [
+        "replay",
+        "fallback_read"
+      ]
+    },
+    "replay": {
+      "source_id": "replay_fixture",
+      "source_type": "controlled_fixture",
+      "live_fetch_enabled": false,
+      "capabilities": [
+        "offline_validation",
+        "regression"
+      ]
+    }
+  },
+  "required_live_audits": [
+    "gmgn",
+    "okx"
+  ]
+}

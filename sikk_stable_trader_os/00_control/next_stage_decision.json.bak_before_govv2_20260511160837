@@ -1,0 +1,18 @@
+{
+  "decision_id": "NEXT_STAGE_DECISION_BOOTSTRAP_V2",
+  "decided_at": "2026-05-11T15:56:01.156545Z",
+  "authority": "00_control/current_system_state.json",
+  "current_authoritative_stage": "P00_system_bootstrap_controller",
+  "next_legal_stage": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE",
+  "p01_runtime_connection_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "auto_order_allowed": false,
+  "blocked_next_tasks": [
+    "P01_DATA_FACT_RUNTIME_CONNECTION",
+    "P02_WALLET_STRUCTURE_RUNTIME",
+    "PAPER_TRADING_RUNTIME",
+    "REAL_TRADE_EXECUTION"
+  ],
+  "decision_reason": "Bootstrap Control Plane v2 is the startup authority; full system planes must be generated and accepted before P01."
+}

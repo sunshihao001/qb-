@@ -1,0 +1,147 @@
+{
+  "binding_id": "controller_policy_binding_v1",
+  "global_policy_ref": "system/her_document_function_system/controllers/G00_governance_boundary_controller/active_policy_bundle.json",
+  "global_forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order",
+    "overwrite_raw_documents",
+    "overwrite_trace_audit",
+    "delete_legacy_runtime",
+    "convert_ready_with_gaps_to_ready",
+    "treat_design_as_implemented",
+    "treat_plan_as_evidence",
+    "treat_binding_plan_as_runner_bound"
+  ],
+  "controller_policy_refs": [
+    {
+      "controller_id": "G00",
+      "policy_refs": [
+        "forbidden_action_registry",
+        "status_code_table",
+        "evidence_policy",
+        "gap_policy"
+      ],
+      "forbidden_actions": [
+        "start_live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "silent_policy_overwrite"
+      ]
+    },
+    {
+      "controller_id": "K00",
+      "policy_refs": [
+        "directory_policy",
+        "evidence_policy",
+        "gap_policy"
+      ],
+      "forbidden_actions": [
+        "direct_summary_only",
+        "bypass_k00",
+        "overwrite_raw_documents",
+        "start_runner"
+      ]
+    },
+    {
+      "controller_id": "F00",
+      "policy_refs": [
+        "status_code_table",
+        "evidence_policy",
+        "execution_boundary_policy"
+      ],
+      "forbidden_actions": [
+        "declare_implemented_without_patch",
+        "declare_tested_without_test_evidence",
+        "start_live_runtime",
+        "wallet_signing"
+      ]
+    },
+    {
+      "controller_id": "V00",
+      "policy_refs": [
+        "evidence_policy",
+        "gap_policy",
+        "status_code_table"
+      ],
+      "forbidden_actions": [
+        "treat_test_plan_as_test_evidence",
+        "treat_replay_plan_as_replay_evidence",
+        "declare_passed_without_command_output"
+      ]
+    },
+    {
+      "controller_id": "R00",
+      "policy_refs": [
+        "runner_safety_policy",
+        "production_risk_policy",
+        "evidence_policy"
+      ],
+      "forbidden_actions": [
+        "start_live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "declare_runner_bound_without_dry_run"
+      ]
+    },
+    {
+      "controller_id": "A00",
+      "policy_refs": [
+        "status_code_table",
+        "evidence_policy",
+        "gap_policy"
+      ],
+      "forbidden_actions": [
+        "mark_ready_without_evidence",
+        "convert_ready_with_gaps_to_ready",
+        "treat_plan_as_execution"
+      ]
+    },
+    {
+      "controller_id": "H00",
+      "policy_refs": [
+        "handoff_policy",
+        "gap_policy",
+        "execution_boundary_policy"
+      ],
+      "forbidden_actions": [
+        "route_blocked_task_to_execution",
+        "drop_unresolved_gaps",
+        "delete_forbidden_actions"
+      ]
+    },
+    {
+      "controller_id": "U00",
+      "policy_refs": [
+        "evidence_policy",
+        "gap_policy",
+        "governance_policy"
+      ],
+      "forbidden_actions": [
+        "treat_review_as_fix",
+        "treat_upgrade_candidate_as_applied",
+        "delete_failure_history"
+      ]
+    },
+    {
+      "controller_id": "O00",
+      "policy_refs": [
+        "active_policy_bundle",
+        "stage_transition_policy",
+        "pipeline_gap_policy"
+      ],
+      "forbidden_actions": [
+        "bypass_governance_policy",
+        "bypass_k00",
+        "start_live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading"
+      ]
+    }
+  ]
+}

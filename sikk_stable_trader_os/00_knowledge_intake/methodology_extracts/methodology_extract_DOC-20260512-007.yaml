@@ -1,0 +1,24 @@
+doc_id: DOC-20260512-007
+methodology_extract_id: METHODOLOGY_EXTRACT_DOC-20260512-007
+principles:
+- Gate is not Signal
+- 先否定再准入
+- UNKNOWN/CONFLICT are strategy risks
+- PAPER_CANDIDATE is not PAPER_READY
+- P07 only hands off to P08
+decision_statuses:
+- OBSERVE
+- PAUSE
+- BLOCK
+- PAPER_CANDIDATE
+- HUMAN_CONFIRMATION_REQUIRED
+- STRATEGY_GATE_REJECTED
+required_objects:
+- Strategy Gate Input Manifest
+- Strategy Policy Registry
+- Hard Negative Evaluation
+- Scenario/Evidence/Chip/Data/Conflict/Market gates
+- Strategy Pattern Fit
+- Invalidation Binding
+- P08 data request
+- P07 to P08 handoff

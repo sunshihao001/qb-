@@ -1,0 +1,67 @@
+{
+  "phase_id": "P07",
+  "controller_id": "P07_STRATEGY_GATE_CONTROLLER",
+  "controller_name_cn": "策略准入与阻断控制器",
+  "primary_responsibility": "基于场景、证据、反证、风险、限制标签和治理规则，判断候选是否进入 OBSERVE / PAUSE / BLOCK / PAPER_CANDIDATE / HUMAN_CONFIRMATION_REQUIRED。",
+  "required_handoff": [
+    "p06_scenario_handoff_packet",
+    "p05_evidence_handoff_packet",
+    "governance_handoff_packet",
+    "limitation_transfer_packet",
+    "forbidden_use_policy",
+    "field_usage_permission_packet"
+  ],
+  "outputs": [
+    "strategy_gate_decisions.json",
+    "strategy_gate_block_reasons.json",
+    "paper_candidate_candidates.json",
+    "strategy_gate_report.md",
+    "p07_strategy_gate_handoff_packet.yaml"
+  ],
+  "required_trace": [
+    "PHASE_TRACE",
+    "TASK_TRACE",
+    "ARTIFACT_TRACE",
+    "CONTRACT_TRACE",
+    "DECISION_TRACE",
+    "STATE_TRACE",
+    "ERROR_TRACE"
+  ],
+  "acceptance_gate": "GATE_P07_STRATEGY_GATE_READY",
+  "tool_binding_policy": {
+    "allowed": true,
+    "mode": [
+      "READ_ONLY_DECISION",
+      "TEST_ONLY"
+    ],
+    "allowed_tools": [
+      "strategy_gate_evaluator",
+      "hard_negative_rule_checker",
+      "limitation_enforcer"
+    ],
+    "forbidden_tools": [
+      "live_trade_executor",
+      "wallet_signer",
+      "auto_order_router"
+    ]
+  },
+  "paper_runtime_policy": {
+    "allowed": "conditional",
+    "condition": [
+      "strategy_gate_acceptance_ready",
+      "execution_risk_required",
+      "runtime_handoff_required"
+    ],
+    "reason": "P07 可以产生 PAPER_CANDIDATE，但不能直接进入 Paper Runtime，必须经过 P08 Execution Risk 和 runtime_handoff。"
+  },
+  "forbidden": [
+    "execute_trade",
+    "bypass_execution_risk",
+    "bypass_handoff_limitations",
+    "convert_observe_to_paper_ready_without_acceptance",
+    "ignore_governance_hard_negative",
+    "enable_live_execution"
+  ],
+  "status": "INDEXED_NOT_EXPANDED",
+  "runtime_allowed": false
+}

@@ -1,0 +1,107 @@
+{
+  "doc_id": "DOC-20260511-012",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T13:59:07.724119+00:00",
+  "phase_target_data_standard": {
+    "required_fields": [
+      "phase_id",
+      "phase_name_cn",
+      "phase_type",
+      "phase_status",
+      "authority_scope",
+      "primary_goal",
+      "non_goal",
+      "upstream_dependencies",
+      "required_inputs",
+      "optional_inputs",
+      "forbidden_inputs",
+      "core_objects",
+      "core_questions",
+      "required_outputs",
+      "handoff_outputs",
+      "acceptance_gate",
+      "blocking_conditions",
+      "downstream_consumers",
+      "runner_binding_status",
+      "state_writeback_required",
+      "paper_only_required",
+      "real_trade_allowed"
+    ],
+    "legal_statuses": [
+      "NOT_CREATED",
+      "STUB_REQUIRED",
+      "WAITING_INPUT",
+      "READY_TO_BUILD",
+      "READY_TO_EXECUTE",
+      "BLOCKED",
+      "BLOCKED_BY_DATA_PLANE",
+      "BLOCKED_BY_CONTROL_PLANE",
+      "BLOCKED_BY_ACCEPTANCE",
+      "RUNNING",
+      "OUTPUT_CREATED",
+      "ACCEPTANCE_PENDING",
+      "ACCEPTANCE_PASSED",
+      "ACCEPTANCE_FAILED",
+      "HANDOFF_READY",
+      "CONSUMED_BY_DOWNSTREAM",
+      "DEPRECATED"
+    ],
+    "forbidden_statuses": [
+      "done",
+      "finished",
+      "ok",
+      "looks good",
+      "almost complete",
+      "maybe ready"
+    ],
+    "schema_path": "00_control/phase_target_data.schema.json",
+    "enum_path": "00_control/phase_status_enum.json"
+  },
+  "planes": {
+    "Control Plane": {
+      "impact": "primary",
+      "assets": [
+        "phase_target_data.schema.json",
+        "phase_status_enum.json"
+      ]
+    },
+    "Acceptance Plane": {
+      "impact": "primary",
+      "requires": [
+        "acceptance_gate",
+        "blocking_conditions",
+        "phase_status enum"
+      ]
+    },
+    "Trace Plane": {
+      "impact": "primary",
+      "requires": [
+        "downstream_consumers",
+        "handoff_outputs",
+        "state_writeback_required"
+      ]
+    },
+    "Execution Plane": {
+      "impact": "alignment",
+      "requires": [
+        "runner_binding_status"
+      ]
+    },
+    "Governance Plane": {
+      "impact": "constraint",
+      "requires": [
+        "paper_only_required true",
+        "real_trade_allowed false"
+      ]
+    }
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

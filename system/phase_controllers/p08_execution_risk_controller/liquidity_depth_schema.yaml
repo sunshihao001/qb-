@@ -1,0 +1,19 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: LIQUIDITY_DEPTH_SCHEMA
+version: v3.0
+required_fields:
+  - liquidity_depth_id
+  - candidate_id
+  - liquidity_snapshot
+  - depth_checks
+  - execution_capacity
+  - gate_effect
+allowed_statuses:
+  - SUFFICIENT
+  - LIMITED
+  - THIN
+  - UNUSABLE
+  - UNKNOWN
+no_live_execution_fields_allowed: true

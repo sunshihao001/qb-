@@ -1,0 +1,104 @@
+{
+  "i03_test_matrix": [
+    {
+      "test_id": "I03_TEST_001",
+      "name": "I02 handoff 存在，runner 与工具绑定完整",
+      "expected_status": "I03_READY"
+    },
+    {
+      "test_id": "I03_TEST_002",
+      "name": "缺 I02 handoff",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_003",
+      "name": "phase_runner_binding_index 缺失",
+      "expected_status": "I03_REJECTED"
+    },
+    {
+      "test_id": "I03_TEST_004",
+      "name": "path_guard 未绑定",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_005",
+      "name": "trace_writer 未绑定",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_006",
+      "name": "handoff_writer 未绑定",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_007",
+      "name": "acceptance_runner 未绑定",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_008",
+      "name": "schema_validator 校验失败",
+      "expected_status": "I03_REJECTED_OR_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_009",
+      "name": "contract_validator 校验失败",
+      "expected_status": "I03_REJECTED_OR_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_010",
+      "name": "GMGN mock 字段可映射到 P02/P03/P04",
+      "expected_status": "I03_READY"
+    },
+    {
+      "test_id": "I03_TEST_011",
+      "name": "OKX quote mock 字段可映射到 P08",
+      "expected_status": "I03_READY"
+    },
+    {
+      "test_id": "I03_TEST_012",
+      "name": "OKX security mock 返回高风险",
+      "expected_status": "SECURITY_BLOCK_OR_PAUSE_POLICY_VALIDATED"
+    },
+    {
+      "test_id": "I03_TEST_013",
+      "name": "legacy path 尝试写入",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_014",
+      "name": "P07 runner 试图写 paper_runtime",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_015",
+      "name": "P08 runner 支持 wallet signing",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_016",
+      "name": "live execution command registered",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_017",
+      "name": "dry-run 未生成 trace",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_018",
+      "name": "dry-run 未生成 handoff",
+      "expected_status": "I03_BLOCKED"
+    },
+    {
+      "test_id": "I03_TEST_019",
+      "name": "I04 prerequisite packet 未生成",
+      "expected_status": "I03_REJECTED"
+    },
+    {
+      "test_id": "I03_TEST_020",
+      "name": "optional kline binding 缺部分字段",
+      "expected_status": "I03_READY_WITH_GAPS"
+    }
+  ]
+}

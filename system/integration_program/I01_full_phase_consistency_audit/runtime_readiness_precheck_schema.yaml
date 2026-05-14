@@ -1,0 +1,8 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: runtime_readiness_precheck_record
+fields:
+- record_id
+- checks
+- readiness_status
+- gaps

@@ -1,0 +1,48 @@
+doc_id: DOC-20260512-INTEGRATION-PROGRAM-V1
+source_type: user_uploaded_markdown
+source_name: 系统集成落地阶段.md
+received_at: 20260512
+ingested_at: 2026-05-12T11:16:47+00:00
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-INTEGRATION-PROGRAM-V1_系统集成落地阶段.md
+sha256: 6b631f35dbeb32e7570f010c1363774abaf7a8dfee7847dd6c92ef024c098e45
+document_role:
+  primary_role: system_integration_program_design
+  secondary_roles:
+    - full_phase_consistency_audit_spec
+    - directory_contract_index_unification_spec
+    - runner_tool_binding_sequence_spec
+    - paper_runtime_integration_sequence_spec
+    - p09_p10_closed_loop_replay_spec
+summary:
+  core_intent: >-
+    将 P01-P10 从业务阶段控制器设计推进到系统集成与运行落地流程，明确 I01-I05 是连续集成任务包而非 P11-P15 新业务阶段，并规定当前下一步应先执行 I01 全阶段一致性审计。
+  key_points:
+    - P01-P10 是业务控制器体系；I01-I05 是系统集成落地流程。
+    - Integration Program 必须按 I01→I02→I03→I04→I05 顺序执行。
+    - 不允许跳过 I01/I02 直接做 Runner 或 Paper Runtime。
+    - I01 输出全阶段一致性审计、handoff 链完整性、状态码一致性、gap 传播、禁止事项继承、边界违规与修复优先级。
+    - 每个 IXX 是任务包，上一阶段 handoff 是下一阶段输入。
+system_mapping:
+  planes:
+    - control_plane
+    - contract_plane
+    - schema_plane
+    - trace_handoff_acceptance_plane
+    - runner_tool_binding_plane
+    - paper_runtime_plane
+    - review_upgrade_plane
+  affected_phases:
+    - K00
+    - P01-P10
+    - I01_full_phase_consistency_audit
+    - I02_directory_contract_index_unification
+    - I03_runner_tool_binding
+    - I04_paper_runtime_integration
+    - I05_review_upgrade_closed_loop
+required_actions:
+  - create_integration_program_control_root
+  - create_i01_full_phase_consistency_audit_task_package
+  - generate_i01_contracts_reports_acceptance_handoff_skeleton
+  - keep_runner_and_paper_runtime_blocked_until_i01_i02_acceptance
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

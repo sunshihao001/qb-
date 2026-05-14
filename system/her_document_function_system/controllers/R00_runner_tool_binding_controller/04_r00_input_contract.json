@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "R00 input contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "k00_handoff_packet",
+    "f00_handoff_packet",
+    "v00_handoff_packet",
+    "validation_evidence",
+    "function_mapping_refs",
+    "field_model_refs",
+    "rule_logic_refs",
+    "schema_contract_refs",
+    "test_evidence_refs",
+    "replay_evidence_refs",
+    "execution_boundary",
+    "binding_policy",
+    "repo_root",
+    "safe_mode"
+  ],
+  "properties": {
+    "phase_id": {
+      "const": "R00"
+    },
+    "k00_handoff_packet": {
+      "type": [
+        "object",
+        "string"
+      ]
+    },
+    "f00_handoff_packet": {
+      "type": [
+        "object",
+        "string"
+      ]
+    },
+    "v00_handoff_packet": {
+      "type": [
+        "object",
+        "string"
+      ]
+    },
+    "validation_evidence": {
+      "type": [
+        "object",
+        "array"
+      ]
+    },
+    "function_mapping_refs": {
+      "type": "array"
+    },
+    "field_model_refs": {
+      "type": "array"
+    },
+    "rule_logic_refs": {
+      "type": "array"
+    },
+    "schema_contract_refs": {
+      "type": "array"
+    },
+    "test_evidence_refs": {
+      "type": "array"
+    },
+    "replay_evidence_refs": {
+      "type": "array"
+    },
+    "execution_boundary": {
+      "type": "object",
+      "required": [
+        "allow_live_runtime",
+        "allow_wallet_signing",
+        "allow_auto_deploy",
+        "allow_production_trading"
+      ],
+      "properties": {
+        "allow_live_runtime": {
+          "const": false
+        },
+        "allow_wallet_signing": {
+          "const": false
+        },
+        "allow_auto_deploy": {
+          "const": false
+        },
+        "allow_production_trading": {
+          "const": false
+        }
+      }
+    },
+    "binding_policy": {
+      "type": "object"
+    },
+    "repo_root": {
+      "type": "string"
+    },
+    "safe_mode": {
+      "const": true
+    }
+  }
+}

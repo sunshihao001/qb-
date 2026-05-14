@@ -1,0 +1,20 @@
+{
+  "review_cases": [
+    {
+      "case_id": "review_case_no_gap_inputs_loaded",
+      "case_type": "READY_WITH_GAPS_CASE",
+      "source_phase": "U00_REAL",
+      "severity": "HIGH_GAP",
+      "symptom": "No gap inputs were loaded; review can only emit recovery/backlog evidence.",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/runs/HER-DOC-P01-AUTO-20260514-001/h00/h00_handoff_packets.json"
+      ],
+      "gap_refs": [
+        "gap_u00_real_missing_gap_inputs"
+      ],
+      "current_status": "OPEN"
+    }
+  ],
+  "total_cases": 1
+}

@@ -1,0 +1,14 @@
+doc_id: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+gap_status: READY_WITH_RUNTIME_GAPS
+blocking_gaps: []
+known_runtime_gaps:
+- P10 package is controller/design package only
+- No automatic production rule mutation
+- No CI/dry-run runner implementation yet
+- Governance approval workflow not tool-bound
+safety_boundary:
+  runtime_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  auto_deploy_allowed: false
+route_decision: ALLOW_PACKAGE_LANDING_ONLY

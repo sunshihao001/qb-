@@ -18,6 +18,38 @@ Complex tasks without a task passport cannot execute.
 - `long_task` → `segmented_loop`
 - `memory_cleanup` → `memory_audit`
 
+## K00 system-material intake route
+
+When the task includes uploaded/pasted system-building material, Phase Controller specs, Integration Program specs, methodology blueprints, execution protocols, schema/contract files, acceptance rules, handoff packet definitions, or P00-P10/PXX/IXX controller documents, route to:
+
+```text
+k00_knowledge_intake_taskization
+```
+
+Mandatory K00 execution order before any phase acceptance or downstream implementation:
+
+```text
+1. Preserve raw input under K00 raw/input artifact handling
+2. Create or update source registry and document passport
+3. Build corpus index / methodology extract
+4. Build system mapping and phase mapping
+5. Identify gaps
+6. Generate task package
+7. Write phase_state / acceptance / handoff evidence
+8. Set k00_route_status
+```
+
+`k00_route_status` is a mandatory acceptance field for every PXX / IXX / Phase Controller READY claim:
+
+```text
+valid_ready_requires = K00_INTAKE_ACCEPTED | K00_ROUTE_RECOVERY_DOCUMENTED
+invalid_ready_if = K00_ROUTE_FAILED | missing_k00_route_status
+```
+
+If the material was previously used without K00 intake, set route drift as a route failure, perform route recovery first, and downgrade downstream conclusions to `READY_WITH_RUNTIME_GAPS` or `READY_WITH_K00_ROUTE_RECOVERED` until recovery artifacts, acceptance evidence, and handoff evidence exist.
+
+K00 does not authorize direct production rule mutation, direct phase execution, paper runtime execution, auto deploy, live execution, wallet signing, or bypassing governance.
+
 ## Wallet-Intel route
 
 When the task involves wallet data collection analysis, wallet structure analysis, Wallet-Intel, source wallet data, old directory import, semantic data integration, data passport, field dictionary, handoff packets, facts/evidence/inference/conclusion separation, token-level understanding, or import-after validation, route to:

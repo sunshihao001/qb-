@@ -1,0 +1,14 @@
+{
+  "replay_policy_id": "replay_policy_default_v1",
+  "run_mode": "DESIGN_LEVEL_REPLAY",
+  "allow_actual_code_patch": false,
+  "allow_safe_tests": false,
+  "allow_safe_replay": true,
+  "allow_runner_dry_run": false,
+  "must_not_claim": [
+    "TESTED",
+    "RUNNER_BOUND",
+    "POLICY_ACTIVE",
+    "PIPELINE_ACCEPTED"
+  ]
+}

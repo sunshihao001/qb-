@@ -1,0 +1,16 @@
+rules:
+- rule_id: I02_BLOCK_001
+  condition: create_p11_p12_requested
+  result: I02_BLOCKED
+- rule_id: I02_BLOCK_002
+  condition: business_logic_mutation_requested
+  result: I02_BLOCKED
+- rule_id: I02_BLOCK_003
+  condition: paper_runtime_start_requested or live_execution_requested
+  result: I02_BLOCKED
+- rule_id: I02_BLOCK_004
+  condition: legacy_delete_or_auto_migration_requested
+  result: I02_BLOCKED
+- rule_id: I02_BLOCK_005
+  condition: auto_deploy_requested
+  result: I02_BLOCKED

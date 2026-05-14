@@ -1,0 +1,36 @@
+{
+  "task_id": "TASK-DOC-20260511-014-P00-PHASE-TARGET-DATA-LANDING",
+  "doc_id": "DOC-20260511-014",
+  "parent_doc_id": "DOC-20260511-006",
+  "created_at": "2026-05-11T14:12:21.903922+00:00",
+  "objective_tree": {
+    "root": "Append and materialize P00 phase target data",
+    "children": [
+      "raw preservation",
+      "canonical append",
+      "raw proposed YAML preservation",
+      "normalized executable YAML generation",
+      "schema/status/id validation",
+      "gap registration for enum/id mismatch"
+    ]
+  },
+  "acceptance_gate": [
+    "raw_saved",
+    "canonical_contains_section_9",
+    "all_required_fields_present",
+    "paper_only_required_true",
+    "real_trade_allowed_false",
+    "normalized_instance_valid_status",
+    "controller_id_reconciliation_gap_recorded_when_needed"
+  ],
+  "status": "GENERATED",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

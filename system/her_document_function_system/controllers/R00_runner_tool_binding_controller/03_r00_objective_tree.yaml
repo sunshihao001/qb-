@@ -1,0 +1,50 @@
+phase_id: R00
+objectives:
+  - id: R00.0
+    name: Preflight Gate
+    goal: block R00 unless V00 handoff, validation evidence, safe_mode, execution boundary, binding policy, and repo_root exist
+  - id: R00.1
+    name: Validation Evidence Loader
+    goal: load V00 schema, contract, test, replay, gap, acceptance, and handoff evidence
+  - id: R00.2
+    name: Binding Target Inventory Scanner
+    goal: choose appropriate binding targets without binding everything by default
+  - id: R00.3
+    name: Existing Interface Scanner
+    goal: detect CLI, runner, Telegram, report, dashboard, scheduler conflicts and reuse candidates
+  - id: R00.4
+    name: Binding Decision Gate
+    goal: decide BIND_CLI, BIND_TOOL, BIND_ORCHESTRATOR, BIND_REPORT, DESIGN_ONLY, or blocked states
+  - id: R00.5
+    name: Command Contract Builder
+    goal: define command, args, input paths, output paths, expected outputs, criteria, and failure policy
+  - id: R00.6
+    name: CLI Binding Designer
+    goal: define script path, working dir, safe mode, run_id, output_dir, trace, audit, lock, idempotency
+  - id: R00.7
+    name: HER Tool / Controller Binding Designer
+    goal: define controller entry method, contracts, state update, trace update, and failure policy
+  - id: R00.8
+    name: Orchestrator Binding Designer
+    goal: define after/before placement, input/output, skip conditions, and failure action
+  - id: R00.9
+    name: Telegram Binding Designer
+    goal: design but not enable Telegram commands with permissions and forbidden actions
+  - id: R00.10
+    name: Report / Dashboard Binding Designer
+    goal: expose report sections and dashboard fields
+  - id: R00.11
+    name: Scheduler / Dry-run Job Binding Designer
+    goal: design disabled-by-default safe dry-run jobs only
+  - id: R00.12
+    name: Safe Dry-run Binding Validator
+    goal: execute safe dry-run and collect command, exit_code, stdout, stderr, generated outputs, trace, and audit
+  - id: R00.13
+    name: Trace / Audit Binder
+    goal: ensure all binding events are traceable and auditable
+  - id: R00.14
+    name: Gap / Failure Classifier
+    goal: classify missing inputs, conflicts, dry-run failures, and production risks
+  - id: R00.15
+    name: Acceptance & Handoff Writer
+    goal: emit R00 acceptance and handoff packets for A00/H00/U00

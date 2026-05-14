@@ -1,0 +1,20 @@
+{
+  "phase_id": "F00",
+  "status": "IMPLEMENTATION_DECIDED",
+  "decisions": [
+    {
+      "function_id": "func_f00_module_runner_binding",
+      "decision": "IMPLEMENT_NOW",
+      "reason": "Module runner, CLI binding, tests, replay, schema/contract validation, and acceptance upgrade are safe-mode local assets.",
+      "required_inputs": [
+        "controller_dir",
+        "repo_root",
+        "replay_fixture",
+        "safe_mode"
+      ],
+      "blocked_by": [],
+      "next_action": "run_schema_contract_replay_binding_gates"
+    }
+  ],
+  "generated_at": "2026-05-13T14:53:53+00:00"
+}

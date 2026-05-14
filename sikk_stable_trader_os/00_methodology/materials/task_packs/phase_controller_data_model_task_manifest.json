@@ -1,0 +1,37 @@
+{
+  "task_id": "phase_controller_data_model_workflow_v1",
+  "status": "ACTIVE_CONTROL_SURFACE",
+  "runtime_boundary": "OBSERVE_PAPER_ONLY",
+  "created_at": "2026-05-11T08:19:00Z",
+  "source_plan": "00_methodology/materials/task_packs/phase_controller_data_model_workflow_plan.md",
+  "definition": "Phase Controller is a schedulable phase runtime unit binding objectives, task tree, contracts, atomic skills, tools, acceptance gates, state writeback, and handoff packets.",
+  "standard_package_files": [
+    "phase_manifest.yaml",
+    "phase_context_pack.md",
+    "phase_objective_tree.yaml",
+    "phase_input_contract.json",
+    "phase_output_contract.json",
+    "phase_execution_protocol.md",
+    "phase_acceptance_gate.yaml",
+    "phase_state.json",
+    "phase_handoff_packet.schema.json"
+  ],
+  "execution_order": [
+    "read_methodology_blueprint",
+    "read_phase_registry",
+    "inspect_phase_packages",
+    "patch_control_semantics",
+    "write_master_skill_definition",
+    "write_status_and_handoff",
+    "run_validation"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "allow_private_key": false,
+    "allow_signing": false,
+    "allow_broadcast": false,
+    "allow_swap": false,
+    "allow_real_trade": false
+  },
+  "acceptance_output": "09_reports/acceptance_reports/phase_controller_data_model_acceptance_result.json"
+}

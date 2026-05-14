@@ -1,0 +1,69 @@
+{
+  "doc_id": "doc_HER_DOC_S02_RUNNER_REGISTRY_PHASE_BINDING_20260514_141302",
+  "source_name": "HER_DOC_S02_RUNNER_REGISTRY_PHASE_BINDING_CLOSURE.md",
+  "source_type": "SYSTEM_CONSTRUCTION_MATERIAL",
+  "received_at": "2026-05-14T14:13:02Z",
+  "raw_path": "input/raw_document.md",
+  "sha256": "c19d71d293ae19c45a13f59cd0e70ab09f7f3e565fe852b58752aa02b64f8f9e",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance"
+    ]
+  },
+  "summary": {
+    "core_intent": "让真实 GPT 研究资料 / 系统建设资料进入 HER，按主链路跑完，生成完整文件输出，保留 gap。",
+    "key_points": [
+      "previous_status: `S01_READY_WITH_GAPS",
+      "目标：把 S01 已扫描登记的真实 runtime runner 从报告草案推进到 HER / Stable Trader OS 可消费的正式控制面资产草案，并通过 HER_DOC safe-mode 管线形成 K00/F00/V00/A00/H00/U00/G00 证据。",
+      "边界：safe-mode、paper-only、document-governance + control-binding only；不触发真实 swap、不签名、不 broadcast、不声明 production ready。",
+      "## 2. 必须关闭或降级的 S01 gap",
+      "不允许把 S01_READY_WITH_GAPS 升格为 ACCEPTED。",
+      "调度 K00/F00/V00/A00/H00/U00/G00 safe-mode 输出。",
+      "消费级：本轮只允许证明 control-binding draft 可消费；未实跑完整 live pipeline 则保持 READY_WITH_GAPS。",
+      "运行级：safe-mode 验证通过；不得声明 production/live accepted。",
+      "### U00/G00",
+      "U00: 把 S01 gap 根因沉淀为 review case 和 upgrade candidates。",
+      "G00: 生成候选治理规则：任何 runtime runner 必须有 phase binding、trace、acceptance、handoff、permission boundary。",
+      "## 4. 禁止事项",
+      "不把 READY_WITH_GAPS 声称为 ACCEPTED。",
+      "合法预期：`S02_CONTROL_BINDING_READY_WITH_GAPS` 或 `HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS`。",
+      "只有在 formal asset 文件存在、解析通过、且 safe-mode 验证通过时，才允许声明 S02 控制面绑定草案完成。"
+    ]
+  },
+  "system_mapping": {
+    "affected_planes": [
+      "input",
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00",
+      "trace",
+      "audit"
+    ],
+    "affected_controllers": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_document_function_system",
+      "tools",
+      "tests/her_document_function_system",
+      "data/her_document_function_system/runs"
+    ]
+  },
+  "status": "K00_READY_WITH_GAPS"
+}

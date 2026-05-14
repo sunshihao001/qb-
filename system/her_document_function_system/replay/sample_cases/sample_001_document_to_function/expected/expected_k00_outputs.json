@@ -1,0 +1,35 @@
+{
+  "expected_k00_status": "K00_ACCEPTED",
+  "expected_outputs": {
+    "raw_input": true,
+    "source_registry": true,
+    "document_passport": true,
+    "corpus_index": true,
+    "system_mapping": true,
+    "gap_detection": true,
+    "kv_memory_index": true,
+    "k00_acceptance_result": true,
+    "k00_handoff_packet": true
+  },
+  "expected_document_role": {
+    "primary_role": "SYSTEM_CONSTRUCTION_DOC",
+    "secondary_roles": [
+      "GOVERNANCE_DOC",
+      "VALIDATION_RULE_DOC",
+      "EVIDENCE_POLICY_DOC"
+    ]
+  },
+  "expected_system_mapping": {
+    "affected_planes": [
+      "governance_plane",
+      "validation_plane",
+      "acceptance_plane",
+      "trace_audit_plane"
+    ],
+    "affected_phases": [
+      "V00",
+      "A00",
+      "G00"
+    ]
+  }
+}

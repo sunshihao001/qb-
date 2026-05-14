@@ -1,0 +1,21 @@
+{
+  "goal_id": "GOAL-20260514-HER-DOC-TASKLIST-TRADING-SYSTEM",
+  "goal_text": "建立文档任务清单，使用HER_DOC-skill作为文档处理任务完善手段，按照其系统体系流程自动化处理任务，并落实到SIKK交易结构系统实际应用场景。",
+  "expected_outputs": [
+    "document task checklist",
+    "system flow mapping",
+    "downstream queue",
+    "gap register",
+    "acceptance result",
+    "final report"
+  ],
+  "safe_mode": true,
+  "forbidden_claims": [
+    "TESTED",
+    "RUNNER_BOUND",
+    "POLICY_ACTIVE",
+    "PIPELINE_ACCEPTED",
+    "SYSTEM_FULLY_IMPLEMENTED"
+  ],
+  "application_scenario": "SIKK交易结构系统文档治理、方法论摄取、控制器实现任务生成"
+}

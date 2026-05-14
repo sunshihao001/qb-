@@ -1,0 +1,11 @@
+acceptance_gate:
+  final_status: V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS
+  required_outputs:
+    - preflight/v00_real_validation_preflight.json
+    - test_execution/test_execution_evidence.json
+    - replay_execution/replay_execution_evidence.json
+    - evidence_bundle/validation_evidence_bundle.json
+  forbidden_status:
+    - RUNNER_BOUND
+    - POLICY_ACTIVE
+    - PIPELINE_ACCEPTED

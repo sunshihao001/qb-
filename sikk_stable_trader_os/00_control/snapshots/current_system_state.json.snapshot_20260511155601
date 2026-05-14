@@ -1,0 +1,67 @@
+{
+  "system_id": "SIKK_STABLE_TRADER_OS",
+  "state_version": "P00_BOOTSTRAP_V1",
+  "updated_at": "2026-05-11T15:46:58.346373+00:00",
+  "current_authoritative_stage": "P00_system_bootstrap_controller",
+  "k00_status": "ASSETIZED_AND_CONSUMED_BY_P00",
+  "methodology_blueprint_status": "CONSUMED_BY_P00",
+  "p00_status": "BOOTSTRAP_PASSED",
+  "governance_plane_status": "CREATED_BY_P00",
+  "domain_plane_status": "CREATED_BY_P00",
+  "data_plane_status": "CREATED_BY_P00_NEEDS_ACCEPTANCE",
+  "control_plane_status": "CREATED_BY_P00",
+  "trace_plane_status": "CREATED_BY_P00",
+  "acceptance_plane_status": "CREATED_BY_P00",
+  "handoff_plane_status": "CREATED_BY_P00",
+  "current_authoritative_phase_order": [
+    "K00_knowledge_intake_taskization",
+    "P00_system_bootstrap_controller",
+    "P01_data_fact_controller",
+    "P02_wallet_structure_controller",
+    "P03_chip_control_controller",
+    "P04_market_structure_controller",
+    "P05_scenario_classification_controller",
+    "P06_strategy_gate_controller",
+    "P07_execution_risk_controller",
+    "P08_paper_trading_controller",
+    "P09_review_learning_controller",
+    "P10_system_upgrade_controller"
+  ],
+  "blocked_stages": [
+    "P01_data_fact_controller",
+    "P02_wallet_structure_controller",
+    "P03_chip_control_controller",
+    "P04_market_structure_controller",
+    "P05_scenario_classification_controller",
+    "P06_strategy_gate_controller",
+    "P07_execution_risk_controller",
+    "P08_paper_trading_controller",
+    "P09_review_learning_controller",
+    "P10_system_upgrade_controller"
+  ],
+  "block_reasons": {
+    "P01_data_fact_controller": [
+      "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE_NOT_PASSED",
+      "DATA_PLANE_ACCEPTANCE_NOT_RUN",
+      "P01_PREFLIGHT_NOT_RUN"
+    ],
+    "P02_to_P10": [
+      "UPSTREAM_PHASES_NOT_READY",
+      "P01_BLOCKED"
+    ]
+  },
+  "next_legal_stage": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE",
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "p01_runtime_connection_allowed": false,
+  "auto_order_allowed": false,
+  "private_key_allowed": false,
+  "seed_phrase_allowed": false,
+  "methodology_v3_supplement_status": "CREATED_AND_REGISTERED",
+  "control_plane_model": "BOOTSTRAP_CONTROL_PLANE_PLUS_FULL_CONTROL_PLANE",
+  "bootstrap_control_plane_status": "EXISTS_AND_ACTIVE",
+  "full_control_plane_status": "REQUIRED_FOR_SYSTEM_PLANES_ACCEPTANCE",
+  "previous_next_legal_stage": "DATA_PLANE_ACCEPTANCE_REVIEW",
+  "p01_status": "BLOCKED_BY_SYSTEM_PLANES_ACCEPTANCE",
+  "last_methodology_update_doc_id": "DOC-20260511-007"
+}

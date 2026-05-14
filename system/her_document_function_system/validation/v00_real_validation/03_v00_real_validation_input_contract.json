@@ -1,0 +1,41 @@
+{
+  "phase_id": "V00_REAL_VALIDATION",
+  "required_inputs": {
+    "o00_pipeline_run_ref": {
+      "required": true
+    },
+    "f00_handoff_packet": {
+      "required": true
+    },
+    "function_mapping": {
+      "required": true
+    },
+    "field_model": {
+      "required": true
+    },
+    "rule_logic": {
+      "required": true
+    },
+    "schema_refs": {
+      "required": true
+    },
+    "contract_refs": {
+      "required": true
+    },
+    "test_plan": {
+      "required": true
+    },
+    "replay_plan": {
+      "required": true
+    },
+    "execution_boundary": {
+      "required": true
+    },
+    "repo_root": {
+      "required": true
+    },
+    "safe_mode": {
+      "required": true
+    }
+  }
+}

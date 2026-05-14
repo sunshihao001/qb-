@@ -1,0 +1,54 @@
+{
+  "allowed_outputs": [
+    "PAPER_ONLY_RUNTIME_STAGE",
+    "TRACE_PACKET",
+    "ACCEPTANCE_RESULT",
+    "HANDOFF_PACKET"
+  ],
+  "contract_id": "K05_STANDARD_STAGE_CONTRACT",
+  "forbidden_actions": [
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast",
+    "real_trade"
+  ],
+  "input_contract": {
+    "accepted_input_contract_id": "K05_STANDARD_STAGE_INPUT",
+    "explicit_previous_phase": "K04",
+    "missing_policy": "downgrade_or_block_never_fabricate",
+    "required_upstream_handoff": "K04_STANDARD_STAGE_HANDOFF"
+  },
+  "output_contract": {
+    "required_outputs": [
+      "trace_packet",
+      "semantic_acceptance",
+      "handoff_packet"
+    ]
+  },
+  "permissions": {
+    "broadcast_allowed": false,
+    "network_swap_allowed": false,
+    "private_key_access_allowed": false,
+    "real_execution_allowed": false,
+    "signing_allowed": false
+  },
+  "phase_id": "K05",
+  "phase_name": "knowledge_governance_queue",
+  "runtime_depth": "BUSINESS_BOUND_RUNTIME",
+  "runtime_mode": "paper_only",
+  "semantic_contract": {
+    "missing_policy": "downgrade_or_block_never_fabricate",
+    "real_execution_allowed": false,
+    "required_replays": [
+      "schema_validation_replay",
+      "happy_path_sample_replay",
+      "missing_field_downgrade_replay",
+      "conflict_input_blocker_replay",
+      "dirty_data_quality_replay",
+      "forbidden_action_replay_scan",
+      "handoff_contract_field_alignment",
+      "trace_evidence_completeness"
+    ]
+  }
+}

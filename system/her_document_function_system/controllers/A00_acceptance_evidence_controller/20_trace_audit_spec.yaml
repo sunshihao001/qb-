@@ -1,0 +1,40 @@
+phase_id: A00
+trace_required: true
+audit_required: true
+required_trace_events:
+  - a00_started
+  - preflight_passed
+  - upstream_handoffs_loaded
+  - evidence_bundle_built
+  - evidence_integrity_checked
+  - phase_status_matrix_built
+  - status_consistency_validated
+  - artifact_manifest_validated
+  - gap_propagation_validated
+  - trace_audit_validated
+  - acceptance_gate_replayed
+  - scorecard_built
+  - readiness_decided
+  - recovery_classified
+  - certificate_written
+  - handoff_written
+  - a00_completed
+  - a00_blocked
+trace_fields:
+  - event_id
+  - timestamp
+  - phase_id
+  - run_id
+  - event_type
+  - source_doc_id
+  - evidence_bundle_id
+  - status_before
+  - status_after
+  - evidence_refs
+  - gap_refs
+  - decision_refs
+  - message
+audit_policy:
+  append_only: true
+  overwrite_forbidden: true
+  failure_evidence_must_be_preserved: true

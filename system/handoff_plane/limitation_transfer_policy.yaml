@@ -1,0 +1,15 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+limitation_tags:
+- GAP_PROPAGATION_REQUIRED
+- MANUAL_REVIEW_REQUIRED
+- RUNTIME_BLOCKED
+- TOOL_BINDING_BLOCKED
+- WEAK_USE_ONLY
+- NO_STRONG_EVIDENCE
+- NO_PAPER_RUNTIME
+inheritance: STRICT_NO_UPGRADE

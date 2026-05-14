@@ -1,0 +1,109 @@
+meta:
+  standard_id: S00_FIELD_PERMISSION_MATRIX
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+field_permissions:
+- field_name: gmgn_raw_snapshot
+  entity: mixed
+  field_class: raw_fact
+  write_permission: forbidden_manual_write
+  read_permission: allowed_by_contract
+  allowed_writers:
+  - forbidden_manual_write
+  allowed_consumers:
+  - Phase Controllers
+  - R00
+  - reports
+  manual_override_allowed: false
+  requires_trace_event: true
+  requires_acceptance: true
+  prohibited_usage:
+  - real_trade_authorization
+- field_name: dominant_side_status
+  entity: mixed
+  field_class: decision_field
+  write_permission: phase_controller_only
+  read_permission: allowed_by_contract
+  allowed_writers:
+  - phase_controller_only
+  allowed_consumers:
+  - Phase Controllers
+  - R00
+  - reports
+  manual_override_allowed: false
+  requires_trace_event: true
+  requires_acceptance: true
+  prohibited_usage:
+  - real_trade_authorization
+- field_name: permission_status
+  entity: mixed
+  field_class: permission_field
+  write_permission: P08_or_control_plane_only
+  read_permission: allowed_by_contract
+  allowed_writers:
+  - P08_or_control_plane_only
+  allowed_consumers:
+  - Phase Controllers
+  - R00
+  - reports
+  manual_override_allowed: false
+  requires_trace_event: true
+  requires_acceptance: true
+  prohibited_usage:
+  - real_trade_authorization
+- field_name: review_case_id
+  entity: mixed
+  field_class: review_field
+  write_permission: P09_only
+  read_permission: allowed_by_contract
+  allowed_writers:
+  - P09_only
+  allowed_consumers:
+  - Phase Controllers
+  - R00
+  - reports
+  manual_override_allowed: false
+  requires_trace_event: true
+  requires_acceptance: true
+  prohibited_usage:
+  - real_trade_authorization
+- field_name: upgrade_candidate_id
+  entity: mixed
+  field_class: upgrade_field
+  write_permission: P10_only
+  read_permission: allowed_by_contract
+  allowed_writers:
+  - P10_only
+  allowed_consumers:
+  - Phase Controllers
+  - R00
+  - reports
+  manual_override_allowed: false
+  requires_trace_event: true
+  requires_acceptance: true
+  prohibited_usage:
+  - real_trade_authorization
+- field_name: analyst_note
+  entity: mixed
+  field_class: manual_note
+  write_permission: manual_allowed_not_for_auto_decision
+  read_permission: allowed_by_contract
+  allowed_writers:
+  - manual_allowed_not_for_auto_decision
+  allowed_consumers:
+  - Phase Controllers
+  - R00
+  - reports
+  manual_override_allowed: true
+  requires_trace_event: true
+  requires_acceptance: false
+  prohibited_usage:
+  - real_trade_authorization

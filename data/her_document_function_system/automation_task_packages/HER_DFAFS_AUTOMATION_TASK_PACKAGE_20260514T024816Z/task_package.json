@@ -1,0 +1,682 @@
+{
+  "package_id": "HER_DFAFS_AUTOMATION_TASK_PACKAGE_20260514T024816Z",
+  "created_at_utc": "2026-05-14T02:48:16Z",
+  "domain": "her_document_function_system",
+  "source_review_id": "HER-DFAFS-SYSTEM-SELF-REVIEW-20260514",
+  "source_refs": [
+    {
+      "path": "data/her_document_function_system/system_self_review/HER_DFAFS_SYSTEM_SELF_REVIEW_20260514.json",
+      "sha256": "e1af59782d17c98b56d14abeaace9c34dfa327215d473de0be8820d71b0eea2c"
+    },
+    {
+      "path": "data/her_document_function_system/system_self_review/HER_DFAFS_SYSTEM_SELF_REVIEW_20260514.md",
+      "sha256": "58eb07be3943c537b43a4afa4fa56e0fa084cf000ed69914c195e638cc425473"
+    }
+  ],
+  "status": "AUTOMATION_TASK_PACKAGE_READY_WITH_GAPS",
+  "execution_boundary": {
+    "mode": "SAFE_MODE_LOCAL_FILES_ONLY",
+    "allowed": [
+      "create additive controller/config/schema/docs/tests/runtime-index artifacts",
+      "run local validation/tests",
+      "write manifests and evidence"
+    ],
+    "forbidden": [
+      "real trading",
+      "private keys",
+      "signing",
+      "broadcast",
+      "deleting legacy runs",
+      "claiming ACCEPTED/PRODUCTION_READY/POLICY_ACTIVE without evidence"
+    ]
+  },
+  "objective": "Turn HER document-function-system self-review gaps into a runner-consumable automation task package with task graph, next_actions, acceptance gates, writeback and next manifest rules.",
+  "input_contract": {
+    "required_inputs": [
+      "system self-review json",
+      "system self-review markdown",
+      "repo root /root/sikk-gmgn"
+    ],
+    "optional_inputs": [
+      "latest O00 validate-config output",
+      "latest tests"
+    ]
+  },
+  "output_contract": {
+    "required_outputs": [
+      "task_package.json",
+      "task_manifest.json",
+      "acceptance_gates.json",
+      "execution_sequence.md",
+      "writeback_manifest.json",
+      "next_task_manifest.json"
+    ],
+    "status_rule": "READY_WITH_GAPS may route tasks; it must not be converted to ACCEPTED."
+  },
+  "tasks": [
+    {
+      "task_id": "TASK-P0-001",
+      "gap_refs": [
+        "GAP-001"
+      ],
+      "priority": "P0",
+      "phase": "K00",
+      "title": "Create canonical K00 document-intake controller file pack",
+      "asset_class": "phase_contract",
+      "status": "READY_TO_EXECUTE_SAFE_MODE",
+      "depends_on": [],
+      "target_paths": [
+        "system/her_document_function_system/controllers/K00_document_intake_controller/",
+        "system/her_document_function_system/registry/controller_registry.json",
+        "system/her_document_function_system/config/pipeline_config.safe_mode.json"
+      ],
+      "required_outputs": [
+        "01_k00_manifest.yaml",
+        "02_k00_context_pack.md",
+        "03_k00_objective_tree.yaml",
+        "04_k00_input_contract.json",
+        "05_k00_output_contract.json",
+        "06_k00_execution_protocol.md",
+        "07_k00_acceptance_gate.yaml",
+        "08_k00_state.json",
+        "09_k00_handoff_packet.schema.json",
+        "10_document_passport.schema.json",
+        "11_corpus_index.schema.json",
+        "12_system_mapping.schema.json",
+        "13_gap_detection.schema.json"
+      ],
+      "safe_actions": [
+        "inspect existing controller packs",
+        "create additive K00 controller directory if absent",
+        "bind registry/config path without deleting legacy references",
+        "add asset validation test"
+      ],
+      "forbidden_actions": [
+        "delete existing controllers",
+        "claim K00_ACCEPTED without validation evidence",
+        "activate production policy"
+      ],
+      "acceptance": [
+        "K00 controller directory exists",
+        "all required files exist",
+        "registry/config reference K00 controller path",
+        "validate-config passes",
+        "asset test passes"
+      ]
+    },
+    {
+      "task_id": "TASK-P0-002",
+      "gap_refs": [
+        "GAP-002"
+      ],
+      "priority": "P0",
+      "phase": "O00",
+      "title": "Unify O00 run shape contract and CLI/real-runner semantics",
+      "asset_class": "runner_binding",
+      "status": "READY_AFTER_TASK_P0_001",
+      "depends_on": [
+        "TASK-P0-001"
+      ],
+      "target_paths": [
+        "system/her_document_function_system/orchestrator/o00_run_shape_contract.schema.json",
+        "tools/o00_cli.py",
+        "tools/o00_run_document_main.py",
+        "tests/her_document_function_system/"
+      ],
+      "required_outputs": [
+        "o00_run_shape_contract.schema.json",
+        "run_shape_migration_notes.md",
+        "o00_run_document_wrapper_update",
+        "tests proving final_status and directory shape consistency"
+      ],
+      "safe_actions": [
+        "define additive schema",
+        "make CLI run-document wrap or explicitly reference real safe-mode runner",
+        "preserve legacy o00_runs as design replay",
+        "write compatibility manifest"
+      ],
+      "forbidden_actions": [
+        "break run-sample design replay",
+        "rename existing runtime roots without legacy mapping",
+        "claim RUNNER_BOUND"
+      ],
+      "acceptance": [
+        "run-document outputs input/k00/f00/v00/a00/h00/u00/g00/o00/recovery/trace/audit/report",
+        "CLI and real runner expose same final_status contract",
+        "legacy path semantics documented"
+      ]
+    },
+    {
+      "task_id": "TASK-P0-003",
+      "gap_refs": [
+        "GAP-003"
+      ],
+      "priority": "P0",
+      "phase": "F00",
+      "title": "Implement six-class document asset extraction in F00",
+      "asset_class": "judgement_logic",
+      "status": "READY_AFTER_TASK_P0_001",
+      "depends_on": [
+        "TASK-P0-001"
+      ],
+      "target_paths": [
+        "tools/f00_function_mapping.py",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/",
+        "tests/her_document_function_system/"
+      ],
+      "required_outputs": [
+        "f00/asset_classification.json",
+        "f00/method_passport_plan.json",
+        "f00/logic_library_plan.json",
+        "f00/field_contract_plan.json",
+        "f00/module_map_plan.json",
+        "f00/rule_template_plan.json",
+        "f00/output_contract_plan.json",
+        "f00/next_implementation_tasks.json"
+      ],
+      "safe_actions": [
+        "extract six user-preferred asset classes",
+        "emit empty arrays with evidence_refs when no hit",
+        "keep previous mapped_functions for compatibility"
+      ],
+      "forbidden_actions": [
+        "declare document fully absorbed from fixed templates only",
+        "drop evidence_refs",
+        "overwrite source documents"
+      ],
+      "acceptance": [
+        "six asset classes always present",
+        "plans generated from actual text/evidence refs",
+        "tests cover non-empty and empty extraction paths"
+      ]
+    },
+    {
+      "task_id": "TASK-P1-004",
+      "gap_refs": [
+        "GAP-004"
+      ],
+      "priority": "P1",
+      "phase": "V00",
+      "title": "Harden V00 from file-existence checks to schema/field/status/ref validation",
+      "asset_class": "counter_evidence_rule",
+      "status": "READY_AFTER_P0",
+      "depends_on": [
+        "TASK-P0-001",
+        "TASK-P0-002",
+        "TASK-P0-003"
+      ],
+      "target_paths": [
+        "tools/v00_validation_evidence.py",
+        "tests/her_document_function_system/"
+      ],
+      "required_outputs": [
+        "v00/schema_validation_result.json",
+        "v00/field_validation_result.json",
+        "v00/status_validation_result.json",
+        "v00/handoff_ref_validation_result.json",
+        "v00/forbidden_claim_scan.json"
+      ],
+      "safe_actions": [
+        "add validators incrementally",
+        "report warnings/gaps instead of false pass",
+        "preserve existing gap_register output"
+      ],
+      "forbidden_actions": [
+        "treat file existence as sufficient evidence",
+        "convert READY_WITH_GAPS into ACCEPTED"
+      ],
+      "acceptance": [
+        "schema/field/status/ref validation artifacts emitted",
+        "open gaps preserved",
+        "tests fail on missing required fields"
+      ]
+    },
+    {
+      "task_id": "TASK-P1-005",
+      "gap_refs": [
+        "GAP-005"
+      ],
+      "priority": "P1",
+      "phase": "A00",
+      "title": "Generate full A00 artifact manifest and evidence bundle",
+      "asset_class": "output_template",
+      "status": "READY_AFTER_TASK_P1_004",
+      "depends_on": [
+        "TASK-P1-004"
+      ],
+      "target_paths": [
+        "tools/a00_acceptance.py",
+        "tests/her_document_function_system/"
+      ],
+      "required_outputs": [
+        "a00/artifact_manifest.json",
+        "a00/phase_status_matrix.json",
+        "a00/evidence_bundle.json",
+        "a00/gap_propagation_report.json"
+      ],
+      "safe_actions": [
+        "hash key artifacts",
+        "summarize per-phase status",
+        "propagate V00 gaps into A00 result"
+      ],
+      "forbidden_actions": [
+        "claim ACCEPTED with open P0/P1 gaps",
+        "ignore missing phases"
+      ],
+      "acceptance": [
+        "artifact manifest covers G00/O00/K00/F00/V00/R00/A00/H00/U00",
+        "open gaps force RUNNABLE_WITH_GAPS or BLOCKED",
+        "tests cover false-ready guard"
+      ]
+    },
+    {
+      "task_id": "TASK-P1-006",
+      "gap_refs": [
+        "GAP-007"
+      ],
+      "priority": "P1",
+      "phase": "O00/A00",
+      "title": "Make runtime index and system health snapshot mandatory writeback",
+      "asset_class": "runner_binding",
+      "status": "READY_AFTER_TASK_P1_005",
+      "depends_on": [
+        "TASK-P1-005"
+      ],
+      "target_paths": [
+        "tools/her_runtime_index.py",
+        "data/her_document_function_system/runtime_index/run_index.json",
+        "data/her_document_function_system/runtime_index/system_health_snapshot.json"
+      ],
+      "required_outputs": [
+        "runtime_index/run_index.json",
+        "runtime_index/system_health_snapshot.json",
+        "runtime_index/latest_run_pointer.json"
+      ],
+      "safe_actions": [
+        "append-only run registration",
+        "record final_status/open_gap_count/artifact_count/report_path",
+        "write latest health snapshot"
+      ],
+      "forbidden_actions": [
+        "delete historical runs",
+        "hide failed runs",
+        "claim global health without latest evidence"
+      ],
+      "acceptance": [
+        "each O00 run registers index entry",
+        "snapshot shows latest phase status and gap counts",
+        "tests cover append-only behavior"
+      ]
+    },
+    {
+      "task_id": "TASK-P1-007",
+      "gap_refs": [
+        "GAP-008"
+      ],
+      "priority": "P1",
+      "phase": "G00/A00/V00",
+      "title": "Create canonical status code mapping and forbidden transitions",
+      "asset_class": "phase_contract",
+      "status": "READY_AFTER_TASK_P1_004",
+      "depends_on": [
+        "TASK-P1-004"
+      ],
+      "target_paths": [
+        "system/her_document_function_system/governance/status_code_mapping.json",
+        "tests/her_document_function_system/"
+      ],
+      "required_outputs": [
+        "status_code_mapping.json",
+        "status_transition_policy.json",
+        "tests blocking READY_WITH_GAPS_TO_ACCEPTED"
+      ],
+      "safe_actions": [
+        "enumerate statuses from config/tools/reports",
+        "define allowed and forbidden transitions",
+        "wire into V00/A00 checks"
+      ],
+      "forbidden_actions": [
+        "silently normalize READY_WITH_GAPS to ACCEPTED",
+        "activate policy without G00 candidate review"
+      ],
+      "acceptance": [
+        "READY_WITH_GAPS != ACCEPTED enforced",
+        "PRODUCTION_READY requires explicit evidence gates",
+        "tests cover forbidden transitions"
+      ]
+    },
+    {
+      "task_id": "TASK-P1-008",
+      "gap_refs": [
+        "GAP-006"
+      ],
+      "priority": "P1",
+      "phase": "H00/U00/G00",
+      "title": "Add safe-mode upgrade executor plan and patch proposal loop",
+      "asset_class": "task_node",
+      "status": "READY_AFTER_TASK_P1_005",
+      "depends_on": [
+        "TASK-P1-005",
+        "TASK-P1-007"
+      ],
+      "target_paths": [
+        "tools/u00_review_upgrade.py",
+        "tools/g00_governance_update.py",
+        "data/her_document_function_system/upgrade_executor_plans/"
+      ],
+      "required_outputs": [
+        "upgrade_executor_plan.json",
+        "patch_proposals.json",
+        "review_case_index.json",
+        "governance_candidate_handoff.json"
+      ],
+      "safe_actions": [
+        "convert gaps to patch proposals",
+        "do not apply production changes automatically",
+        "write human-review queue"
+      ],
+      "forbidden_actions": [
+        "auto-activate governance policy",
+        "auto-merge code patches without tests",
+        "execute downstream actions outside safe-mode"
+      ],
+      "acceptance": [
+        "patch proposals reference source gaps and evidence",
+        "queue remains review-required",
+        "G00 candidates remain candidate-only"
+      ]
+    }
+  ],
+  "next_actions": [
+    {
+      "action_id": "NA-001",
+      "task_id": "TASK-P0-001",
+      "action_type": "CREATE_OR_UPDATE_LOCAL_ASSETS",
+      "mode": "SAFE_MODE_ADDITIVE",
+      "phase": "K00",
+      "priority": "P0",
+      "depends_on": [],
+      "target_paths": [
+        "system/her_document_function_system/controllers/K00_document_intake_controller/",
+        "system/her_document_function_system/registry/controller_registry.json",
+        "system/her_document_function_system/config/pipeline_config.safe_mode.json"
+      ],
+      "expected_outputs": [
+        "01_k00_manifest.yaml",
+        "02_k00_context_pack.md",
+        "03_k00_objective_tree.yaml",
+        "04_k00_input_contract.json",
+        "05_k00_output_contract.json",
+        "06_k00_execution_protocol.md",
+        "07_k00_acceptance_gate.yaml",
+        "08_k00_state.json",
+        "09_k00_handoff_packet.schema.json",
+        "10_document_passport.schema.json",
+        "11_corpus_index.schema.json",
+        "12_system_mapping.schema.json",
+        "13_gap_detection.schema.json"
+      ],
+      "acceptance": [
+        "K00 controller directory exists",
+        "all required files exist",
+        "registry/config reference K00 controller path",
+        "validate-config passes",
+        "asset test passes"
+      ],
+      "forbidden_actions": [
+        "delete existing controllers",
+        "claim K00_ACCEPTED without validation evidence",
+        "activate production policy"
+      ]
+    },
+    {
+      "action_id": "NA-002",
+      "task_id": "TASK-P0-002",
+      "action_type": "CREATE_OR_UPDATE_LOCAL_ASSETS",
+      "mode": "SAFE_MODE_ADDITIVE",
+      "phase": "O00",
+      "priority": "P0",
+      "depends_on": [
+        "TASK-P0-001"
+      ],
+      "target_paths": [
+        "system/her_document_function_system/orchestrator/o00_run_shape_contract.schema.json",
+        "tools/o00_cli.py",
+        "tools/o00_run_document_main.py",
+        "tests/her_document_function_system/"
+      ],
+      "expected_outputs": [
+        "o00_run_shape_contract.schema.json",
+        "run_shape_migration_notes.md",
+        "o00_run_document_wrapper_update",
+        "tests proving final_status and directory shape consistency"
+      ],
+      "acceptance": [
+        "run-document outputs input/k00/f00/v00/a00/h00/u00/g00/o00/recovery/trace/audit/report",
+        "CLI and real runner expose same final_status contract",
+        "legacy path semantics documented"
+      ],
+      "forbidden_actions": [
+        "break run-sample design replay",
+        "rename existing runtime roots without legacy mapping",
+        "claim RUNNER_BOUND"
+      ]
+    },
+    {
+      "action_id": "NA-003",
+      "task_id": "TASK-P0-003",
+      "action_type": "CREATE_OR_UPDATE_LOCAL_ASSETS",
+      "mode": "SAFE_MODE_ADDITIVE",
+      "phase": "F00",
+      "priority": "P0",
+      "depends_on": [
+        "TASK-P0-001"
+      ],
+      "target_paths": [
+        "tools/f00_function_mapping.py",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/",
+        "tests/her_document_function_system/"
+      ],
+      "expected_outputs": [
+        "f00/asset_classification.json",
+        "f00/method_passport_plan.json",
+        "f00/logic_library_plan.json",
+        "f00/field_contract_plan.json",
+        "f00/module_map_plan.json",
+        "f00/rule_template_plan.json",
+        "f00/output_contract_plan.json",
+        "f00/next_implementation_tasks.json"
+      ],
+      "acceptance": [
+        "six asset classes always present",
+        "plans generated from actual text/evidence refs",
+        "tests cover non-empty and empty extraction paths"
+      ],
+      "forbidden_actions": [
+        "declare document fully absorbed from fixed templates only",
+        "drop evidence_refs",
+        "overwrite source documents"
+      ]
+    },
+    {
+      "action_id": "NA-004",
+      "task_id": "TASK-P1-004",
+      "action_type": "CREATE_OR_UPDATE_LOCAL_ASSETS",
+      "mode": "SAFE_MODE_ADDITIVE",
+      "phase": "V00",
+      "priority": "P1",
+      "depends_on": [
+        "TASK-P0-001",
+        "TASK-P0-002",
+        "TASK-P0-003"
+      ],
+      "target_paths": [
+        "tools/v00_validation_evidence.py",
+        "tests/her_document_function_system/"
+      ],
+      "expected_outputs": [
+        "v00/schema_validation_result.json",
+        "v00/field_validation_result.json",
+        "v00/status_validation_result.json",
+        "v00/handoff_ref_validation_result.json",
+        "v00/forbidden_claim_scan.json"
+      ],
+      "acceptance": [
+        "schema/field/status/ref validation artifacts emitted",
+        "open gaps preserved",
+        "tests fail on missing required fields"
+      ],
+      "forbidden_actions": [
+        "treat file existence as sufficient evidence",
+        "convert READY_WITH_GAPS into ACCEPTED"
+      ]
+    },
+    {
+      "action_id": "NA-005",
+      "task_id": "TASK-P1-005",
+      "action_type": "CREATE_OR_UPDATE_LOCAL_ASSETS",
+      "mode": "SAFE_MODE_ADDITIVE",
+      "phase": "A00",
+      "priority": "P1",
+      "depends_on": [
+        "TASK-P1-004"
+      ],
+      "target_paths": [
+        "tools/a00_acceptance.py",
+        "tests/her_document_function_system/"
+      ],
+      "expected_outputs": [
+        "a00/artifact_manifest.json",
+        "a00/phase_status_matrix.json",
+        "a00/evidence_bundle.json",
+        "a00/gap_propagation_report.json"
+      ],
+      "acceptance": [
+        "artifact manifest covers G00/O00/K00/F00/V00/R00/A00/H00/U00",
+        "open gaps force RUNNABLE_WITH_GAPS or BLOCKED",
+        "tests cover false-ready guard"
+      ],
+      "forbidden_actions": [
+        "claim ACCEPTED with open P0/P1 gaps",
+        "ignore missing phases"
+      ]
+    },
+    {
+      "action_id": "NA-006",
+      "task_id": "TASK-P1-006",
+      "action_type": "CREATE_OR_UPDATE_LOCAL_ASSETS",
+      "mode": "SAFE_MODE_ADDITIVE",
+      "phase": "O00/A00",
+      "priority": "P1",
+      "depends_on": [
+        "TASK-P1-005"
+      ],
+      "target_paths": [
+        "tools/her_runtime_index.py",
+        "data/her_document_function_system/runtime_index/run_index.json",
+        "data/her_document_function_system/runtime_index/system_health_snapshot.json"
+      ],
+      "expected_outputs": [
+        "runtime_index/run_index.json",
+        "runtime_index/system_health_snapshot.json",
+        "runtime_index/latest_run_pointer.json"
+      ],
+      "acceptance": [
+        "each O00 run registers index entry",
+        "snapshot shows latest phase status and gap counts",
+        "tests cover append-only behavior"
+      ],
+      "forbidden_actions": [
+        "delete historical runs",
+        "hide failed runs",
+        "claim global health without latest evidence"
+      ]
+    },
+    {
+      "action_id": "NA-007",
+      "task_id": "TASK-P1-007",
+      "action_type": "CREATE_OR_UPDATE_LOCAL_ASSETS",
+      "mode": "SAFE_MODE_ADDITIVE",
+      "phase": "G00/A00/V00",
+      "priority": "P1",
+      "depends_on": [
+        "TASK-P1-004"
+      ],
+      "target_paths": [
+        "system/her_document_function_system/governance/status_code_mapping.json",
+        "tests/her_document_function_system/"
+      ],
+      "expected_outputs": [
+        "status_code_mapping.json",
+        "status_transition_policy.json",
+        "tests blocking READY_WITH_GAPS_TO_ACCEPTED"
+      ],
+      "acceptance": [
+        "READY_WITH_GAPS != ACCEPTED enforced",
+        "PRODUCTION_READY requires explicit evidence gates",
+        "tests cover forbidden transitions"
+      ],
+      "forbidden_actions": [
+        "silently normalize READY_WITH_GAPS to ACCEPTED",
+        "activate policy without G00 candidate review"
+      ]
+    },
+    {
+      "action_id": "NA-008",
+      "task_id": "TASK-P1-008",
+      "action_type": "CREATE_OR_UPDATE_LOCAL_ASSETS",
+      "mode": "SAFE_MODE_ADDITIVE",
+      "phase": "H00/U00/G00",
+      "priority": "P1",
+      "depends_on": [
+        "TASK-P1-005",
+        "TASK-P1-007"
+      ],
+      "target_paths": [
+        "tools/u00_review_upgrade.py",
+        "tools/g00_governance_update.py",
+        "data/her_document_function_system/upgrade_executor_plans/"
+      ],
+      "expected_outputs": [
+        "upgrade_executor_plan.json",
+        "patch_proposals.json",
+        "review_case_index.json",
+        "governance_candidate_handoff.json"
+      ],
+      "acceptance": [
+        "patch proposals reference source gaps and evidence",
+        "queue remains review-required",
+        "G00 candidates remain candidate-only"
+      ],
+      "forbidden_actions": [
+        "auto-activate governance policy",
+        "auto-merge code patches without tests",
+        "execute downstream actions outside safe-mode"
+      ]
+    }
+  ],
+  "automation_policy": {
+    "scheduler": "manual_or_future_runner",
+    "default_order": [
+      "TASK-P0-001",
+      "TASK-P0-002",
+      "TASK-P0-003",
+      "TASK-P1-004",
+      "TASK-P1-005",
+      "TASK-P1-007",
+      "TASK-P1-006",
+      "TASK-P1-008"
+    ],
+    "parallelizable_groups": [
+      [
+        "TASK-P0-002",
+        "TASK-P0-003"
+      ],
+      [
+        "TASK-P1-006",
+        "TASK-P1-008"
+      ]
+    ],
+    "gate_policy": "P0 tasks must pass before P1 tasks can be marked executable."
+  }
+}

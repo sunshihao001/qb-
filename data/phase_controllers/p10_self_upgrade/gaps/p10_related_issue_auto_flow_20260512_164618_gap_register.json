@@ -1,0 +1,113 @@
+{
+  "gap_register_id": "p10_related_issue_auto_flow_20260512_164618_gap_register",
+  "generated_at": "2026-05-12T16:46:18Z",
+  "blocking_gaps": [],
+  "controlled_gaps": [
+    {
+      "id": "P10_ISSUE_002",
+      "priority": "P0",
+      "category": "NO_DIRECT_MUTATION_BOUNDARY",
+      "title_cn": "P10后续自动化必须禁止直接改生产规则/自动部署/实盘/签名",
+      "source": "p10_hard_negative_rules",
+      "status": "CONTROLLED",
+      "target_system_area": "SAFETY_BOUNDARY",
+      "automation_action": "encode constraints in task packet, handoff and acceptance",
+      "acceptance": "all generated records include no_auto_deploy/no_live_execution/no_wallet_signing/no_direct_rule_mutation"
+    },
+    {
+      "id": "P10_ISSUE_003",
+      "priority": "P0",
+      "category": "RUNNER_TOOL_BINDING_GAP",
+      "title_cn": "Runner / Tool Binding 尚未把P10升级包执行为dry-run任务",
+      "source": "p10_section_40",
+      "status": "BACKLOG_READY",
+      "target_system_area": "I03_RUNNER_TOOL_BINDING",
+      "automation_action": "route to implementation task queue as dry-run only",
+      "acceptance": "handoff next_route includes RUNNER_TOOL_BINDING_DRY_RUN and no runtime mutation"
+    },
+    {
+      "id": "P10_ISSUE_004",
+      "priority": "P0",
+      "category": "I01_I05_INTEGRATION_SEQUENCE",
+      "title_cn": "P10后不新增业务阶段，应进入I01-I05整合程序",
+      "source": "p10_section_40_and_memory",
+      "status": "BACKLOG_READY",
+      "target_system_area": "INTEGRATION_PROGRAM",
+      "automation_action": "sequence issues into I01 audit -> I02 unification -> I03 binding -> I04 paper-only -> I05 replay",
+      "acceptance": "flow plan contains ordered stages and gates"
+    },
+    {
+      "id": "P10_ISSUE_005",
+      "priority": "P1",
+      "category": "REGRESSION_FIXTURE_GAP",
+      "title_cn": "P09/P10闭环回放需要真实/可重放回归样例库",
+      "source": "p10_section_40",
+      "status": "BACKLOG_READY",
+      "target_system_area": "P09_P10_REPLAY_FIXTURES",
+      "automation_action": "create fixture backlog and acceptance gates",
+      "acceptance": "regression fixture tasks exist with sample support and anti-overfit requirements"
+    },
+    {
+      "id": "P10_ISSUE_006",
+      "priority": "P1",
+      "category": "GOVERNANCE_APPROVAL_GAP",
+      "title_cn": "Governance审批与Telegram/Review Ops面板尚未接通",
+      "source": "p10_section_40",
+      "status": "BACKLOG_READY",
+      "target_system_area": "GOVERNANCE_REVIEW_OPS",
+      "automation_action": "route as approval interface task, not auto-approval",
+      "acceptance": "approval_required true and approval cannot allow live execution"
+    },
+    {
+      "id": "P10_ISSUE_007",
+      "priority": "P1",
+      "category": "CI_DRY_RUN_GAP",
+      "title_cn": "升级包尚未连接CI/dry-run验证器",
+      "source": "p10_section_40",
+      "status": "BACKLOG_READY",
+      "target_system_area": "CI_DRY_RUN_VALIDATION",
+      "automation_action": "define validation commands and reports required before release",
+      "acceptance": "validation_commands and required_reports are present"
+    },
+    {
+      "id": "P10_ISSUE_008",
+      "priority": "P1",
+      "category": "SAMPLE_SUPPORT_ACCUMULATION",
+      "title_cn": "样本支持度需要长期积累，单样本只能候选/测试/人工审查",
+      "source": "p10_sample_support_policy",
+      "status": "CONTROLLED",
+      "target_system_area": "P09_REVIEW_CASE_LIBRARY",
+      "automation_action": "add backlog items for case library and sample support scoring",
+      "acceptance": "single_case_global_rule remains forbidden"
+    },
+    {
+      "id": "P10_ISSUE_009",
+      "priority": "P2",
+      "category": "REPORT_EXPLANATION_UPGRADE",
+      "title_cn": "报告解释字段、反证、限制、trace引用需持续补全",
+      "source": "p10_report_model",
+      "status": "BACKLOG_READY",
+      "target_system_area": "REPORTING_LAYER",
+      "automation_action": "create report upgrade candidates as controlled package inputs",
+      "acceptance": "report explanation tasks are non-runtime and dry-run safe"
+    },
+    {
+      "id": "P10_ISSUE_010",
+      "priority": "P2",
+      "category": "VERSION_INDEX_SYNC",
+      "title_cn": "版本索引/合约索引需在每次升级包后同步",
+      "source": "p10_version_change_record",
+      "status": "BACKLOG_READY",
+      "target_system_area": "SYSTEM_INDICES",
+      "automation_action": "add index-sync checklist and validation gate",
+      "acceptance": "version/index sync listed before handoff completion"
+    }
+  ],
+  "gap_policy": "No gap may unlock live execution, auto deploy, direct rule mutation, or wallet signing.",
+  "status": "READY_WITH_GAPS",
+  "next_resolution_order": [
+    "P0_CONTROL_CLOSURE",
+    "P1_VALIDATION_GOVERNANCE",
+    "P2_REPORT_INDEX_POLISH"
+  ]
+}

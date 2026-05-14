@@ -1,0 +1,18 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: RUNTIME_RISK_LIMIT_SCHEMA
+version: v3.0
+required_fields:
+  - risk_limit_id
+  - candidate_id
+  - global_limits
+  - current_runtime_state
+  - checks
+  - risk_limit_status
+allowed_statuses:
+  - RISK_LIMITS_CLEAR
+  - RISK_LIMITS_WITH_WARNINGS
+  - RISK_LIMITS_NEED_STATE_REFRESH
+  - RISK_LIMITS_BLOCK_RUNTIME
+no_live_execution_fields_allowed: true

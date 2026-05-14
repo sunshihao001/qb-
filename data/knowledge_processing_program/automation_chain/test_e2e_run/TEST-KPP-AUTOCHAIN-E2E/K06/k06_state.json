@@ -1,0 +1,17 @@
+{
+  "stage_id": "K06",
+  "run_id": "TEST-KPP-AUTOCHAIN-E2E",
+  "status": "K06_ACCEPTED",
+  "started_at": "2026-05-13T06:37:07Z",
+  "ended_at": "2026-05-13T06:37:07Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K06/her_task_package.json",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K06/execution_plan.json",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K06/runner_binding_spec.json",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K06/k06_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

@@ -1,0 +1,22 @@
+report_id: i02_report_model
+sections:
+- summary
+- created_files
+- index_summary
+- canonical_roots
+- phase_controller_files
+- runtime_paths
+- schemas_contracts_handoffs
+- legacy_mapping
+- gaps
+- conflicts
+- I03 prerequisite
+- handoff
+- acceptance
+- safety
+compliance:
+  business_logic_mutation: false
+  paper_runtime_started: false
+  live_execution_path: false
+  auto_deploy: false
+  legacy_deleted: false

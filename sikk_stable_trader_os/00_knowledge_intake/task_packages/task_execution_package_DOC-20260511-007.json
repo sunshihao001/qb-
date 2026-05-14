@@ -1,0 +1,36 @@
+{
+  "task_id": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE",
+  "doc_id": "DOC-20260511-007",
+  "task_type": "system_planes_generation_and_acceptance",
+  "objective": "基于 P00 已建立的 Bootstrap Control Plane，生成/验收 Governance、Domain、Data，并补全 Full Control、Trace、Acceptance、Handoff。",
+  "source_refs": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-007_bootstrap_full_control_plane_v3_system_planes_professional_generation.md"
+  ],
+  "target_stage": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE",
+  "required_outputs": [
+    "governance_plane_files",
+    "domain_plane_files",
+    "data_plane_files",
+    "full_control_plane_indexes",
+    "trace_matrices",
+    "acceptance_rules",
+    "handoff_registry_updates",
+    "verification_report"
+  ],
+  "constraints": [
+    "do_not_start_P01",
+    "no_auto_trading",
+    "no_real_trade",
+    "paper_only_true",
+    "p01_runtime_connection_allowed_false"
+  ],
+  "acceptance_criteria": [
+    "required_files_exist",
+    "json_yaml_parse_ok",
+    "semantic_anchors_present",
+    "p01_blocked_until_data_plane_acceptance",
+    "safety_boundaries_preserved"
+  ],
+  "handoff_destination": "P00_system_bootstrap_controller / system_planes_generation",
+  "status": "READY_FOR_P00_CONSUMPTION"
+}

@@ -1,0 +1,38 @@
+{
+  "pipeline_run_id": "o00_run_20260514_071835_070975",
+  "queue_status": "QUEUE_READY_WITH_GAPS",
+  "queue_items": [
+    {
+      "stage": "K00",
+      "status": "K00_READY_WITH_GAPS"
+    },
+    {
+      "stage": "F00",
+      "status": "F00_READY_WITH_GAPS"
+    },
+    {
+      "stage": "V00",
+      "status": "V00_READY_WITH_GAPS"
+    },
+    {
+      "stage": "R00",
+      "status": "SKIPPED_WITH_REASON"
+    },
+    {
+      "stage": "A00",
+      "status": "A00_READY_WITH_GAPS"
+    },
+    {
+      "stage": "H00",
+      "status": "H00_READY_WITH_GAPS"
+    },
+    {
+      "stage": "U00",
+      "status": "U00_READY_WITH_GAPS"
+    },
+    {
+      "stage": "G00",
+      "status": "G00_READY_WITH_GAPS"
+    }
+  ]
+}

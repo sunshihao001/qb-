@@ -1,0 +1,33 @@
+i05_auto_closure_final_audit:
+  audit_id: I05_AUTO_CLOSURE_FINAL_AUDIT_20260512_01
+  generated_at: '2026-05-12T16:05:45Z'
+  status: I05_AUTOMATION_READY_WITH_GAPS
+  changed_or_created_files:
+  - modules/integration_program/i05_auto_closure_runner.py
+  - tests/integration_program/test_i05_auto_closure_runner.py
+  - data/integration_program/I05_review_upgrade_closed_loop/automation_task_packages/i05_automated_issue_list_package.yaml
+  - data/integration_program/I05_review_upgrade_closed_loop/automation_task_packages/i05_full_automation_task_packet.yaml
+  - data/integration_program/I05_review_upgrade_closed_loop/priority_routing/i05_priority_routing.yaml
+  - data/integration_program/I05_review_upgrade_closed_loop/runtime_state/i05_runtime_state.yaml
+  - data/integration_program/I05_review_upgrade_closed_loop/handoff/i05_to_next_iteration_handoff_packet.yaml
+  - data/integration_program/I05_review_upgrade_closed_loop/acceptance/i05_closed_loop_acceptance_result.yaml
+  - data/integration_program/I05_review_upgrade_closed_loop/trace/i05_trace.yaml
+  - data/integration_program/I05_review_upgrade_closed_loop/gaps/i05_gap_register.yaml
+  - data/integration_program/I05_review_upgrade_closed_loop/quality/i05_auto_closure_quality_report.yaml
+  - data/integration_program/I05_review_upgrade_closed_loop/reports/i05_auto_closure_report.md
+  - data/integration_program/I05_review_upgrade_closed_loop/final_reports/i05_final_integration_report.md
+  verification:
+    runner_exit_code: 0
+    pytest_exit_code: 0
+    pytest_result: 2 passed in 0.12s
+    yaml_files_checked: 9
+    p0_open_issues: 0
+    p1_open_issues: 2
+    p2_open_issues: 1
+    safety_boundary_passed: true
+  restrictions:
+    live_execution_allowed: false
+    wallet_signing_allowed: false
+    auto_deploy_allowed: false
+    direct_rule_mutation_allowed: false
+    paper_runtime_mutation_allowed: false

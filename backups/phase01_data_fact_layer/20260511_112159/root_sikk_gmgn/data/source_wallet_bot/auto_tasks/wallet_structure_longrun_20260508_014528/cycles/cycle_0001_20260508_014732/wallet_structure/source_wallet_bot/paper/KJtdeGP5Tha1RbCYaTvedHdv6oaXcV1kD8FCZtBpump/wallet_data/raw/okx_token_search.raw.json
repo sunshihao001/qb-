@@ -1,0 +1,42 @@
+{
+  "source": "okx",
+  "endpoint": "token_search",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "search",
+    "--query",
+    "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+    "--chains",
+    "501"
+  ],
+  "started_at": "2026-05-08T01:47:40Z",
+  "finished_at": "2026-05-08T01:47:41Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "chainIndex": "501",
+        "change": "12367.86",
+        "cursor": "0",
+        "decimal": "6",
+        "explorerUrl": "https://web3.okx.com/explorer/solana/token/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+        "holders": "1985",
+        "liquidity": "46031.4011531300523737037337956473951590771439216",
+        "marketCap": "310549.090166287145762735",
+        "price": "0.0003105490901662871457627352095957931",
+        "tagList": {
+          "communityRecognized": false
+        },
+        "tokenContractAddress": "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+        "tokenLogoUrl": "https://static.oklink.com/cdn/web3/currency/token/large/501-KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump-109/type=default_90_0?v=1778203833758",
+        "tokenName": "Robot Monk",
+        "tokenSymbol": "GABI"
+      }
+    ]
+  }
+}

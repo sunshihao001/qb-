@@ -1,0 +1,528 @@
+{
+  "schema_version": "phase_01_field_schema_v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "phase_role": "数据事实层；只产出事实、质量、缺失、交接，不产出交易解释",
+  "fields": [
+    {
+      "field_name": "run_id",
+      "field_chinese_name": "运行编号",
+      "field_group": "runtime",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_01_audit",
+        "phase_02_wallet_structure"
+      ],
+      "description": "本次 Phase 01 运行的唯一编号。"
+    },
+    {
+      "field_name": "token_address",
+      "field_chinese_name": "代币地址",
+      "field_group": "token_fact",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control",
+        "phase_04_scenario_recognition"
+      ],
+      "description": "Solana 代币 mint 地址，是本次分析对象的唯一标识。"
+    },
+    {
+      "field_name": "chain",
+      "field_chinese_name": "链",
+      "field_group": "token_fact",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "all_downstream_phases"
+      ],
+      "description": "链名称，Phase 01 首版固定为 solana。"
+    },
+    {
+      "field_name": "data_snapshot_time",
+      "field_chinese_name": "数据快照时间",
+      "field_group": "runtime",
+      "data_type": "datetime",
+      "required_level": "fatal_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "quote",
+        "gmgn",
+        "chain"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "all_downstream_phases"
+      ],
+      "description": "本次数据事实快照的时间，防止回测污染。"
+    },
+    {
+      "field_name": "token_symbol",
+      "field_chinese_name": "代币符号",
+      "field_group": "token_fact",
+      "data_type": "string",
+      "required_level": "warning_allowed",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "gmgn",
+        "chain",
+        "manual_config"
+      ],
+      "preferred_source": "gmgn",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "telegram_panel"
+      ],
+      "description": "代币符号，仅用于展示和辅助索引。"
+    },
+    {
+      "field_name": "token_create_time",
+      "field_chinese_name": "开盘/创建时间",
+      "field_group": "token_fact",
+      "data_type": "datetime",
+      "required_level": "phase_02_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "代币创建或首个有效交易时间，用于时间窗口划分。"
+    },
+    {
+      "field_name": "current_market_cap_usd",
+      "field_chinese_name": "当前市值美元",
+      "field_group": "market_fact",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_04_scenario_recognition"
+      ],
+      "description": "快照时点的当前市值。"
+    },
+    {
+      "field_name": "current_liquidity_usd",
+      "field_chinese_name": "当前流动性美元",
+      "field_group": "market_fact",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_07_execution_risk"
+      ],
+      "description": "快照时点的流动性。"
+    },
+    {
+      "field_name": "wallet_address",
+      "field_chinese_name": "钱包地址",
+      "field_group": "wallet_fact",
+      "data_type": "string",
+      "required_level": "phase_03_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "参与当前 token 的钱包地址。"
+    },
+    {
+      "field_name": "first_buy_time",
+      "field_chinese_name": "首次买入时间",
+      "field_group": "trade_fact",
+      "data_type": "datetime",
+      "required_level": "phase_03_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "钱包首次买入当前 token 的时间。"
+    },
+    {
+      "field_name": "first_buy_amount_sol",
+      "field_chinese_name": "首次买入 SOL 数量",
+      "field_group": "trade_fact",
+      "data_type": "number",
+      "required_level": "warning_allowed",
+      "unit": "SOL",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure"
+      ],
+      "description": "首次买入金额，缺失时只能降级。"
+    },
+    {
+      "field_name": "current_token_balance",
+      "field_chinese_name": "当前 token 余额",
+      "field_group": "wallet_fact",
+      "data_type": "number",
+      "required_level": "phase_03_required",
+      "unit": "token",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_03_chip_control"
+      ],
+      "description": "钱包当前持有的 token 数量。"
+    },
+    {
+      "field_name": "gmgn_tags",
+      "field_chinese_name": "GMGN 标签",
+      "field_group": "wallet_fact",
+      "data_type": "array",
+      "required_level": "warning_allowed",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "gmgn"
+      ],
+      "preferred_source": "gmgn",
+      "downstream_used_by": [
+        "phase_02_wallet_structure"
+      ],
+      "description": "GMGN 标签只能作为事实标签，不得直接作为结构角色裁决。"
+    },
+    {
+      "field_name": "source_address",
+      "field_chinese_name": "资金来源地址",
+      "field_group": "transfer_fact",
+      "data_type": "string",
+      "required_level": "phase_03_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "链上资金或 token 转入来源地址。"
+    },
+    {
+      "field_name": "counterparty_address",
+      "field_chinese_name": "对手方地址",
+      "field_group": "transfer_fact",
+      "data_type": "string",
+      "required_level": "warning_allowed",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "交易或转账对手方地址。"
+    },
+    {
+      "field_name": "kline_fact_table",
+      "field_chinese_name": "K线事实表",
+      "field_group": "kline_fact",
+      "data_type": "file",
+      "required_level": "phase_02_required",
+      "unit": "csv",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "gmgn",
+        "quote",
+        "chain"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_04_scenario_recognition",
+        "phase_05_structure_position"
+      ],
+      "description": "标准化 K 线事实表路径。"
+    },
+    {
+      "field_name": "trade_fact_table",
+      "field_chinese_name": "交易事实表",
+      "field_group": "trade_fact",
+      "data_type": "file",
+      "required_level": "phase_02_required",
+      "unit": "csv",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "gmgn",
+        "chain"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "标准化钱包交易事实表路径。"
+    },
+    {
+      "field_name": "holder_fact_table",
+      "field_chinese_name": "持有人事实表",
+      "field_group": "holder_fact",
+      "data_type": "file",
+      "required_level": "warning_allowed",
+      "unit": "csv",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "gmgn",
+        "chain"
+      ],
+      "preferred_source": "gmgn",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "持有人分布事实表路径。"
+    },
+    {
+      "field_name": "transfer_fact_table",
+      "field_chinese_name": "转账事实表",
+      "field_group": "transfer_fact",
+      "data_type": "file",
+      "required_level": "phase_03_required",
+      "unit": "csv",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "token/资金转移事实表路径。"
+    },
+    {
+      "field_name": "quote_fact",
+      "field_chinese_name": "报价事实",
+      "field_group": "quote_fact",
+      "data_type": "object",
+      "required_level": "phase_05_required",
+      "unit": "json",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_05_structure_position",
+        "phase_07_execution_risk"
+      ],
+      "description": "报价快照事实，不作为买点判断。"
+    },
+    {
+      "field_name": "security_fact",
+      "field_chinese_name": "安全事实",
+      "field_group": "security_fact",
+      "data_type": "object",
+      "required_level": "phase_05_required",
+      "unit": "json",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "security"
+      ],
+      "preferred_source": "security",
+      "downstream_used_by": [
+        "phase_06_strategy_gate",
+        "phase_07_execution_risk"
+      ],
+      "description": "安全检查事实，缺失时禁止强策略通过。"
+    },
+    {
+      "field_name": "quality_score",
+      "field_chinese_name": "质量分",
+      "field_group": "quality_gate",
+      "data_type": "number",
+      "required_level": "fatal_required",
+      "unit": "score",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "calculated"
+      ],
+      "preferred_source": "calculated",
+      "downstream_used_by": [
+        "phase_02_wallet_structure"
+      ],
+      "description": "Phase 01 数据质量评分。"
+    },
+    {
+      "field_name": "phase_01_gate_status",
+      "field_chinese_name": "Phase 01 门禁状态",
+      "field_group": "quality_gate",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": [
+        "PASS",
+        "PASS_WITH_WARNING",
+        "PAUSE",
+        "BLOCK"
+      ],
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "calculated"
+      ],
+      "preferred_source": "calculated",
+      "downstream_used_by": [
+        "phase_02_wallet_structure"
+      ],
+      "description": "Phase 01 门禁状态，可取 PASS / PASS_WITH_WARNING / PAUSE / BLOCK。"
+    },
+    {
+      "field_name": "missing_fields",
+      "field_chinese_name": "缺失字段列表",
+      "field_group": "quality_gate",
+      "data_type": "array",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "calculated"
+      ],
+      "preferred_source": "calculated",
+      "downstream_used_by": [
+        "all_downstream_phases"
+      ],
+      "description": "所有缺失字段必须显式写为 missing。"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+gates:
+  ACCEPTANCE_TO_HANDOFF_GATE:
+  - acceptance_result_packet
+  - trace_handoff_packet
+  - limited_handoff_policy
+  HANDOFF_TO_PHASE_CONTROLLER_GATE:
+  - handoff_packet
+  - downstream_read_instruction
+  - field_usage_permission
+  HANDOFF_TO_TOOL_BINDING_GATE:
+  - BLOCKED_UNTIL_TOOL_ACCEPTANCE
+  HANDOFF_TO_PAPER_RUNTIME_GATE:
+  - BLOCKED_UNTIL_RUNTIME_ACCEPTANCE

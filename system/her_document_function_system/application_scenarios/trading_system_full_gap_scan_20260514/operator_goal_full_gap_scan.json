@@ -1,0 +1,26 @@
+{
+  "goal_id": "HER_DOC_FULL_TRADING_SYSTEM_GAP_SCAN_20260514",
+  "created_at": "2026-05-14T10:12:05+00:00",
+  "mode": "AUDIT_GAP_MODE_FULL_TRADING_SYSTEM",
+  "source_document": "system/her_document_function_system/application_scenarios/trading_system_full_gap_scan_20260514/HER_DOC_FULL_TRADING_SYSTEM_GAP_SCAN_20260514.md",
+  "root": "/root/sikk-gmgn",
+  "question": "scan every system layer, phase controller, runtime flow, and report missing preparations against methodology total goal and phase goals",
+  "expected_outputs": [
+    "full_trading_system_gap_matrix.json",
+    "stage_goal_preparation_gap_report.json",
+    "gpt_research_request_pack.json",
+    "methodology_total_goal_gap_summary.json"
+  ],
+  "safety_boundary": [
+    "paper_only",
+    "observe_only",
+    "no_real_swap",
+    "no_private_key",
+    "no_signature",
+    "no_broadcast"
+  ],
+  "status_discipline": [
+    "READY_WITH_GAPS_NOT_ACCEPTED",
+    "CANDIDATE_NOT_POLICY_ACTIVE"
+  ]
+}

@@ -1,0 +1,3123 @@
+{
+  "source": "okx",
+  "endpoint": "cluster_list",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "cluster-list",
+    "--address",
+    "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T01:47:59Z",
+  "finished_at": "2026-05-08T01:47:59Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": {
+      "clusterList": [
+        {
+          "averageBuyPriceUsd": "0.0",
+          "averageHoldingPeriod": "1778199036",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "0",
+          "clusterAddressList": [
+            {
+              "address": "ArwA4hci9Xz2YqAwFLWwXM2RGQJ7hiW21baCQgX4tJrV",
+              "addressRank": "1",
+              "averageHoldingPeriod": "1778199036",
+              "holdingAmount": "8.6114654874211E7",
+              "holdingPercent": "0.08611",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "0"
+            }
+          ],
+          "holdingAmount": "86114654.9",
+          "holdingPercent": "0.08611",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "0",
+          "pnlPercent": "0.0",
+          "pnlUsd": "0",
+          "sellVolume": "0",
+          "trendType": []
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199317",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "489.392663298699664766445938",
+          "clusterAddressList": [
+            {
+              "address": "4rgNerYGcmE7zJoKiWsao3kQzx9MhmUNgbv87Eo6BLG8",
+              "addressRank": "2",
+              "averageHoldingPeriod": "1778199317",
+              "holdingAmount": "3092706.61603",
+              "holdingPercent": "0.00309",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201996"
+            }
+          ],
+          "holdingAmount": "3092706.6",
+          "holdingPercent": "0.00309",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201996",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-489.39266329870052262096731",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199498",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "439.780113915519854502904495",
+          "clusterAddressList": [
+            {
+              "address": "F8YkAZBzEtKdYb5gcPUqbDfknvBodU559CCTZ3St5w5D",
+              "addressRank": "3",
+              "averageHoldingPeriod": "1778199498",
+              "holdingAmount": "2873418.648361",
+              "holdingPercent": "0.00287",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778202398"
+            }
+          ],
+          "holdingAmount": "2873418.6",
+          "holdingPercent": "0.00287",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778202398",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-439.780113915517854419969457",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199362",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "439.691733245900058020836021",
+          "clusterAddressList": [
+            {
+              "address": "3cvyDdA7G42NXaCxjJQ321PSUMRpbocRvqgsLoePfZPr",
+              "addressRank": "4",
+              "averageHoldingPeriod": "1778199362",
+              "holdingAmount": "2853778.137648",
+              "holdingPercent": "0.00285",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200986"
+            }
+          ],
+          "holdingAmount": "2853778.1",
+          "holdingPercent": "0.00285",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200986",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-439.691733245900223252050640",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199400",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "411.107328812859660375228132",
+          "clusterAddressList": [
+            {
+              "address": "wmj9kAfv1z19BwfeE42TQegRFK7hZdw8rxiA9XrQQHM",
+              "addressRank": "5",
+              "averageHoldingPeriod": "1778199400",
+              "holdingAmount": "2827922.129173",
+              "holdingPercent": "0.00283",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200782"
+            }
+          ],
+          "holdingAmount": "2827922.1",
+          "holdingPercent": "0.00283",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200782",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-411.107328812858882861044415",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199372",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "438.208964802439718339608464",
+          "clusterAddressList": [
+            {
+              "address": "ANowoSmybuC5Xd1Uydesxh6613MBMbWRpibS8b84eWZ9",
+              "addressRank": "6",
+              "averageHoldingPeriod": "1778199372",
+              "holdingAmount": "2818157.526869",
+              "holdingPercent": "0.00282",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201554"
+            }
+          ],
+          "holdingAmount": "2818157.5",
+          "holdingPercent": "0.00282",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201554",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-438.208964802440643679400603",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199984",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "411.862266753009491608099019",
+          "clusterAddressList": [
+            {
+              "address": "5HQLy5rLmCJqdAfNB43hJJ8HsXq1VK6XvPMRxcZjCR2E",
+              "addressRank": "7",
+              "averageHoldingPeriod": "1778199984",
+              "holdingAmount": "2796073.888433",
+              "holdingPercent": "0.00280",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778202539"
+            }
+          ],
+          "holdingAmount": "2796073.9",
+          "holdingPercent": "0.00280",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778202539",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-411.862266753011021624060020",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199479",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "430.267470314579995449839786",
+          "clusterAddressList": [
+            {
+              "address": "9AW5cPWmJza3Qhu1spzSpbyZHdwUVUQTvqoT2L2Nf416",
+              "addressRank": "8",
+              "averageHoldingPeriod": "1778199479",
+              "holdingAmount": "2723086.64408",
+              "holdingPercent": "0.00272",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201057"
+            }
+          ],
+          "holdingAmount": "2723086.6",
+          "holdingPercent": "0.00272",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201057",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-430.26747031458067815723456",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199608",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "409.894799084319670381448234",
+          "clusterAddressList": [
+            {
+              "address": "5GT5UuAtLuVGASCy4GKRWee4oy8fJyBQx2RWJf3zVkK4",
+              "addressRank": "9",
+              "averageHoldingPeriod": "1778199608",
+              "holdingAmount": "2699713.555973",
+              "holdingPercent": "0.00270",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201338"
+            }
+          ],
+          "holdingAmount": "2699713.6",
+          "holdingPercent": "0.00270",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201338",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-409.894799084321357926822073",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199486",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "412.630507769990301674761096",
+          "clusterAddressList": [
+            {
+              "address": "6GHiQg27GZGbh7GvmB3eDDC9XvgrkSreSvWD9iGJfign",
+              "addressRank": "10",
+              "averageHoldingPeriod": "1778199486",
+              "holdingAmount": "2691646.549289",
+              "holdingPercent": "0.00269",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201636"
+            }
+          ],
+          "holdingAmount": "2691646.5",
+          "holdingPercent": "0.00269",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201636",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-412.630507769990426356558527",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199997",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "409.181397492829773735570389",
+          "clusterAddressList": [
+            {
+              "address": "6MQb6V3nNHcVveAxJ6c3eqWmsL5srSXnj4EqhFj1kp4W",
+              "addressRank": "11",
+              "averageHoldingPeriod": "1778199997",
+              "holdingAmount": "2664520.319195",
+              "holdingPercent": "0.00266",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778202957"
+            }
+          ],
+          "holdingAmount": "2664520.3",
+          "holdingPercent": "0.00266",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778202957",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-409.181397492829391658289810",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199606",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "403.072585321499573411978806",
+          "clusterAddressList": [
+            {
+              "address": "635ZUBZAEHBaHs6FGP9CLpUCx6PjTkxPNV96FeRQdPSo",
+              "addressRank": "12",
+              "averageHoldingPeriod": "1778199606",
+              "holdingAmount": "2632005.218063",
+              "holdingPercent": "0.00263",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201585"
+            }
+          ],
+          "holdingAmount": "2632005.2",
+          "holdingPercent": "0.00263",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201585",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-403.072585321499248405984305",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199606",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "382.85237278630961916893704",
+          "clusterAddressList": [
+            {
+              "address": "BnVhzFpqGS6GR5uhznj7zLUiU2wJz8YwxBb9hQJGtxBL",
+              "addressRank": "13",
+              "averageHoldingPeriod": "1778199606",
+              "holdingAmount": "2606670.882224",
+              "holdingPercent": "0.00261",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200550"
+            }
+          ],
+          "holdingAmount": "2606670.9",
+          "holdingPercent": "0.00261",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200550",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-382.852372786311098968078128",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199972",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "386.233048346609530364546793",
+          "clusterAddressList": [
+            {
+              "address": "AZR1frvwE2GdSstnNocgyv9zjS1RyNAKnnL7XxGxSngU",
+              "addressRank": "14",
+              "averageHoldingPeriod": "1778199972",
+              "holdingAmount": "2605384.081887",
+              "holdingPercent": "0.00261",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778202866"
+            }
+          ],
+          "holdingAmount": "2605384.1",
+          "holdingPercent": "0.00261",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778202866",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-386.233048346610824978130789",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199964",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "390.831014189559468748625521",
+          "clusterAddressList": [
+            {
+              "address": "2WwiHuQ2bLvDSAz9kXZkDuLJVjY5dHgzDFKEwUSeDwut",
+              "addressRank": "15",
+              "averageHoldingPeriod": "1778199964",
+              "holdingAmount": "2602928.559631",
+              "holdingPercent": "0.00260",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778202696"
+            }
+          ],
+          "holdingAmount": "2602928.6",
+          "holdingPercent": "0.00260",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778202696",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-390.831014189557965105465848",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199607",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "404.62469235275973955470341",
+          "clusterAddressList": [
+            {
+              "address": "9QLj9m7sgG2qmwJmkzzfugmiJ5RHq8jb6DshPWPypcsL",
+              "addressRank": "16",
+              "averageHoldingPeriod": "1778199607",
+              "holdingAmount": "2602155.173983",
+              "holdingPercent": "0.00260",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778202948"
+            }
+          ],
+          "holdingAmount": "2602155.2",
+          "holdingPercent": "0.00260",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778202948",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-404.624692352759106799020350",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199427",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "428.299364572399735024458125",
+          "clusterAddressList": [
+            {
+              "address": "BrBB8V8bVjmm1u8NuN3YqRYSQX2FBC8YUMitkjW38TkL",
+              "addressRank": "17",
+              "averageHoldingPeriod": "1778199427",
+              "holdingAmount": "2590933.194424",
+              "holdingPercent": "0.00259",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200920"
+            }
+          ],
+          "holdingAmount": "2590933.2",
+          "holdingPercent": "0.00259",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200920",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-428.299364572400487501318352",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199245",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "399.711558122179909054702315",
+          "clusterAddressList": [
+            {
+              "address": "oH2cRv1T5Qpd8bpsLC9WuvxdhDZL8TNM2Ud1JNmHifP",
+              "addressRank": "18",
+              "averageHoldingPeriod": "1778199245",
+              "holdingAmount": "2559788.466605",
+              "holdingPercent": "0.00256",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201458"
+            }
+          ],
+          "holdingAmount": "2559788.5",
+          "holdingPercent": "0.00256",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201458",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-399.711558122182013322187425",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199951",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "369.456712136700237570553277",
+          "clusterAddressList": [
+            {
+              "address": "Hx2pY35GTP3uWMABkq4Epk3Kr7RcKASam391b7VFVprf",
+              "addressRank": "19",
+              "averageHoldingPeriod": "1778199951",
+              "holdingAmount": "2543620.857974",
+              "holdingPercent": "0.00254",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201255"
+            }
+          ],
+          "holdingAmount": "2543620.9",
+          "holdingPercent": "0.00254",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201255",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-369.456712136698603822652030",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199451",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "400.525038061759901523507537",
+          "clusterAddressList": [
+            {
+              "address": "FY3xAJLgA3FEbfjhVfMZJNL1rKFW8wDmCx6QbSckzxnQ",
+              "addressRank": "20",
+              "averageHoldingPeriod": "1778199451",
+              "holdingAmount": "2525073.441353",
+              "holdingPercent": "0.00253",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200903"
+            }
+          ],
+          "holdingAmount": "2525073.4",
+          "holdingPercent": "0.00253",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200903",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-400.525038061760484763041604",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199238",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "370.970747003830037267746554",
+          "clusterAddressList": [
+            {
+              "address": "E7rBEbessEZmaBxNTCJEd8Qxpyd7u83Ch1BkYT1hRXvv",
+              "addressRank": "21",
+              "averageHoldingPeriod": "1778199238",
+              "holdingAmount": "2521418.476398",
+              "holdingPercent": "0.00252",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200555"
+            }
+          ],
+          "holdingAmount": "2521418.5",
+          "holdingPercent": "0.00252",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200555",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-370.970747003830991071303500",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199935",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "389.425297049040751503048804",
+          "clusterAddressList": [
+            {
+              "address": "9sYt219SYGHyod7drQ2quzwHCBiaAkYrNH3qZTnmH84V",
+              "addressRank": "22",
+              "averageHoldingPeriod": "1778199935",
+              "holdingAmount": "2502573.715808",
+              "holdingPercent": "0.00250",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778202361"
+            }
+          ],
+          "holdingAmount": "2502573.7",
+          "holdingPercent": "0.00250",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778202361",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-389.425297049041709138494976",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199611",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "376.144947551820373557056992",
+          "clusterAddressList": [
+            {
+              "address": "65we5zb3NCqShRh96QiD88vzSj279yyapxDsRZdLNyhy",
+              "addressRank": "23",
+              "averageHoldingPeriod": "1778199611",
+              "holdingAmount": "2462607.368736",
+              "holdingPercent": "0.00246",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201682"
+            }
+          ],
+          "holdingAmount": "2462607.4",
+          "holdingPercent": "0.00246",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201682",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-376.144947551820987257713632",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199985",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "352.837952544910062634122205",
+          "clusterAddressList": [
+            {
+              "address": "A9StS6hVZ3EtXkaU9pb97DUTYVQ4k4KMjmsVfM2j6kYb",
+              "addressRank": "24",
+              "averageHoldingPeriod": "1778199985",
+              "holdingAmount": "2437333.550615",
+              "holdingPercent": "0.00244",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778202978"
+            }
+          ],
+          "holdingAmount": "2437333.6",
+          "holdingPercent": "0.00244",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778202978",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-352.837952544909890018520625",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199445",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "371.40836381116004375043823",
+          "clusterAddressList": [
+            {
+              "address": "6xDu9NYWz1YNjKYAEyRV2z6w3J4qF4gBTMgA118Gz4T6",
+              "addressRank": "25",
+              "averageHoldingPeriod": "1778199445",
+              "holdingAmount": "2436934.503654",
+              "holdingPercent": "0.00244",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201004"
+            }
+          ],
+          "holdingAmount": "2436934.5",
+          "holdingPercent": "0.00244",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201004",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-371.408363811162446643147294",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199609",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "376.4122720706997185449057",
+          "clusterAddressList": [
+            {
+              "address": "5yefCn25jnFop9AvEPtXMPYN23Ems7Wg2JeSP8MNq3vZ",
+              "addressRank": "26",
+              "averageHoldingPeriod": "1778199609",
+              "holdingAmount": "2429273.294246",
+              "holdingPercent": "0.00243",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201170"
+            }
+          ],
+          "holdingAmount": "2429273.3",
+          "holdingPercent": "0.00243",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201170",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-376.412272070699994501849632",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199608",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "374.345373548030123191629329",
+          "clusterAddressList": [
+            {
+              "address": "CHHUaJ9iPubQyHjWeynYq8nrsMuQAWLuWsaihpdvohtL",
+              "addressRank": "27",
+              "averageHoldingPeriod": "1778199608",
+              "holdingAmount": "2415208.223983",
+              "holdingPercent": "0.00242",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200658"
+            }
+          ],
+          "holdingAmount": "2415208.2",
+          "holdingPercent": "0.00242",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200658",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-374.345373548029534634340622",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199928",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "371.756581128329645659213388",
+          "clusterAddressList": [
+            {
+              "address": "4juqSPY3PHasJY53oArUCpt8Xmzb8dhShzPdqyZnkePT",
+              "addressRank": "28",
+              "averageHoldingPeriod": "1778199928",
+              "holdingAmount": "2393334.176079",
+              "holdingPercent": "0.00239",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778202420"
+            }
+          ],
+          "holdingAmount": "2393334.2",
+          "holdingPercent": "0.00239",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778202420",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-371.756581128329567068828083",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199587",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "352.663342977940393379658287",
+          "clusterAddressList": [
+            {
+              "address": "4PMRRTuA3qrmZJRRh4p4trwXzVYBUroBQadxnezoU9K6",
+              "addressRank": "29",
+              "averageHoldingPeriod": "1778199587",
+              "holdingAmount": "2326209.583555",
+              "holdingPercent": "0.00233",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201174"
+            }
+          ],
+          "holdingAmount": "2326209.6",
+          "holdingPercent": "0.00233",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201174",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-352.663342977941716056115780",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199610",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "363.195381807099927474783563",
+          "clusterAddressList": [
+            {
+              "address": "EgTVbJMQdomrUm2666XtBrce1mMh9KhsCsbnzHs28c2g",
+              "addressRank": "30",
+              "averageHoldingPeriod": "1778199610",
+              "holdingAmount": "2318343.744086",
+              "holdingPercent": "0.00232",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201814"
+            }
+          ],
+          "holdingAmount": "2318343.7",
+          "holdingPercent": "0.00232",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201814",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-363.195381807100981152923222",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199955",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "330.844701400540083575598259",
+          "clusterAddressList": [
+            {
+              "address": "Fr6qZiTpGNz2xkPTWVDnFtqtvYdw2EPH2zYw2fadKnh9",
+              "addressRank": "31",
+              "averageHoldingPeriod": "1778199955",
+              "holdingAmount": "2317265.450217",
+              "holdingPercent": "0.00232",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201050"
+            }
+          ],
+          "holdingAmount": "2317265.5",
+          "holdingPercent": "0.00232",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201050",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-330.844701400541032903261875",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199989",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "325.574599704099819439666265",
+          "clusterAddressList": [
+            {
+              "address": "BeKrTA1WmYhKBJ6uATMva4v9GkFuH3JSbrKdottYf8TU",
+              "addressRank": "32",
+              "averageHoldingPeriod": "1778199989",
+              "holdingAmount": "2299637.713734",
+              "holdingPercent": "0.00230",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200792"
+            }
+          ],
+          "holdingAmount": "2299637.7",
+          "holdingPercent": "0.00230",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200792",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-325.574599704098660583026832",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199300",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "349.384344249309931356800129",
+          "clusterAddressList": [
+            {
+              "address": "8YdUz5pm8vhp8Fs1nx3EkkeDs2rq5WnfPkKyWcwxXAhG",
+              "addressRank": "33",
+              "averageHoldingPeriod": "1778199300",
+              "holdingAmount": "2289970.988012",
+              "holdingPercent": "0.00229",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201241"
+            }
+          ],
+          "holdingAmount": "2289971.0",
+          "holdingPercent": "0.00229",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201241",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-349.384344249309829497604220",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200032",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "335.816311261139666905907668",
+          "clusterAddressList": [
+            {
+              "address": "Ebwjan1xuZAt3esdc7VM4iUhE8ahuMJqTUASYL5CqPQb",
+              "addressRank": "34",
+              "averageHoldingPeriod": "1778200032",
+              "holdingAmount": "2268153.333648",
+              "holdingPercent": "0.00227",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201347"
+            }
+          ],
+          "holdingAmount": "2268153.3",
+          "holdingPercent": "0.00227",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201347",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-335.816311261139410457526336",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199497",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "336.386677591579621414620556",
+          "clusterAddressList": [
+            {
+              "address": "6m96y8pfhvGk4cQfs7Sg9qFSfW5NbHXg35XKACZAJu9V",
+              "addressRank": "35",
+              "averageHoldingPeriod": "1778199497",
+              "holdingAmount": "2259020.310891",
+              "holdingPercent": "0.00226",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201113"
+            }
+          ],
+          "holdingAmount": "2259020.3",
+          "holdingPercent": "0.00226",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201113",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-336.386677591579870957147872",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199436",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "355.94563273606038838303022",
+          "clusterAddressList": [
+            {
+              "address": "6bd2gszX6mxF8kgjyHms5e9yW5WX9cWWJXd1ifSJTstx",
+              "addressRank": "36",
+              "averageHoldingPeriod": "1778199436",
+              "holdingAmount": "2253399.024358",
+              "holdingPercent": "0.00225",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201357"
+            }
+          ],
+          "holdingAmount": "2253399.0",
+          "holdingPercent": "0.00225",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201357",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-355.945632736060861396721400",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199954",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "322.883597512080044297278643",
+          "clusterAddressList": [
+            {
+              "address": "8cTLQEwUktorfHJX2pBYLohbMNDVGeeNA1wHD9ec4Y11",
+              "addressRank": "37",
+              "averageHoldingPeriod": "1778199954",
+              "holdingAmount": "2251051.487984",
+              "holdingPercent": "0.00225",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201470"
+            }
+          ],
+          "holdingAmount": "2251051.5",
+          "holdingPercent": "0.00225",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201470",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-322.883597512079391289828352",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199991",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "313.810142087670433399249674",
+          "clusterAddressList": [
+            {
+              "address": "7cN6SALJQDhADVi5XfxMoCQ6djDsNhqBj8Hq6uo6PAJM",
+              "addressRank": "38",
+              "averageHoldingPeriod": "1778199991",
+              "holdingAmount": "2247588.731141",
+              "holdingPercent": "0.00225",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200729"
+            }
+          ],
+          "holdingAmount": "2247588.7",
+          "holdingPercent": "0.00225",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200729",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-313.810142087669387780223773",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199982",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "311.948981602350091509978243",
+          "clusterAddressList": [
+            {
+              "address": "Ec6WfNBf2teRpDcmpKnN3teYMLQxgYe4G7BYsDQox4CQ",
+              "addressRank": "39",
+              "averageHoldingPeriod": "1778199982",
+              "holdingAmount": "2246768.946522",
+              "holdingPercent": "0.00225",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200692"
+            }
+          ],
+          "holdingAmount": "2246768.9",
+          "holdingPercent": "0.00225",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200692",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-311.948981602348606840333998",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200059",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "352.285431089730040914876607",
+          "clusterAddressList": [
+            {
+              "address": "91Ffp2qV8GijTn3mMGD4APo2MZMdwXT1pPz55SvSmV4X",
+              "addressRank": "40",
+              "averageHoldingPeriod": "1778200059",
+              "holdingAmount": "2234996.024276",
+              "holdingPercent": "0.00223",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778202949"
+            }
+          ],
+          "holdingAmount": "2234996.0",
+          "holdingPercent": "0.00223",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778202949",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-352.285431089730240077351292",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200002",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "322.10092373334040846922524",
+          "clusterAddressList": [
+            {
+              "address": "335Lwfwg521Ysu4ee6brvVtiP2eVq3nJLf3dJLdq24Hh",
+              "addressRank": "41",
+              "averageHoldingPeriod": "1778200002",
+              "holdingAmount": "2195593.380338",
+              "holdingPercent": "0.00220",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200847"
+            }
+          ],
+          "holdingAmount": "2195593.4",
+          "holdingPercent": "0.00220",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200847",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-322.100923733339102974505720",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199592",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "338.47587289469972396072318",
+          "clusterAddressList": [
+            {
+              "address": "9pgbVX1Psci356DXDr3bQKcsZZ9EqDNbzwZVujUJ6zbU",
+              "addressRank": "42",
+              "averageHoldingPeriod": "1778199592",
+              "holdingAmount": "2191546.229363",
+              "holdingPercent": "0.00219",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201491"
+            }
+          ],
+          "holdingAmount": "2191546.2",
+          "holdingPercent": "0.00219",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201491",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-338.475872894699589851109869",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199984",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "311.976284817939587197096866",
+          "clusterAddressList": [
+            {
+              "address": "CEGrjN6uXrUkZ4VAXoxH1iP8RHSPyT97ePX4fqdwWyrA",
+              "addressRank": "43",
+              "averageHoldingPeriod": "1778199984",
+              "holdingAmount": "2181074.204094",
+              "holdingPercent": "0.00218",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200901"
+            }
+          ],
+          "holdingAmount": "2181074.2",
+          "holdingPercent": "0.00218",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200901",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-311.976284817940228322165508",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200031",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "333.423911081290057571128826",
+          "clusterAddressList": [
+            {
+              "address": "3MCfyejXx3q23Cog3DgDg3CWZrM8v7h3p1yufdRJZnGk",
+              "addressRank": "44",
+              "averageHoldingPeriod": "1778200031",
+              "holdingAmount": "2169343.926426",
+              "holdingPercent": "0.00217",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201790"
+            }
+          ],
+          "holdingAmount": "2169343.9",
+          "holdingPercent": "0.00217",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201790",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-333.423911081289349113225438",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199964",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "307.411353215509684058676866",
+          "clusterAddressList": [
+            {
+              "address": "Dh7RcX2dUw5n3z14r7H1UsfisW2cfdfopYPuWmrPu18z",
+              "addressRank": "45",
+              "averageHoldingPeriod": "1778199964",
+              "holdingAmount": "2148355.995882",
+              "holdingPercent": "0.00215",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201080"
+            }
+          ],
+          "holdingAmount": "2148356.0",
+          "holdingPercent": "0.00215",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201080",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-307.411353215509047114751236",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199940",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "312.409660356110159129780218",
+          "clusterAddressList": [
+            {
+              "address": "Ao8cp3QP93K8s8yQVwJnFWaGJNifPHaSt3WJyYPhxfH",
+              "addressRank": "46",
+              "averageHoldingPeriod": "1778199940",
+              "holdingAmount": "2143437.371983",
+              "holdingPercent": "0.00214",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201378"
+            }
+          ],
+          "holdingAmount": "2143437.4",
+          "holdingPercent": "0.00214",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201378",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-312.409660356109315272532609",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200005",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "315.890171308890009248344398",
+          "clusterAddressList": [
+            {
+              "address": "9E24HnzFszaru7dCy5x5fUV33GFrbDeuYhWXCirb7gF1",
+              "addressRank": "47",
+              "averageHoldingPeriod": "1778200005",
+              "holdingAmount": "2141926.974379",
+              "holdingPercent": "0.00214",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201436"
+            }
+          ],
+          "holdingAmount": "2141927.0",
+          "holdingPercent": "0.00214",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201436",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-315.890171308891191753453232",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199421",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "335.540919303910006764599132",
+          "clusterAddressList": [
+            {
+              "address": "CmmzJ9oKh9JJrTB2PyBaQm8jo67djfxPZGnwBgUD2oeQ",
+              "addressRank": "48",
+              "averageHoldingPeriod": "1778199421",
+              "holdingAmount": "2124285.560766",
+              "holdingPercent": "0.00212",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201548"
+            }
+          ],
+          "holdingAmount": "2124285.6",
+          "holdingPercent": "0.00212",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201548",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-335.540919303909857230213500",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199159",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "332.00095891365964947407278",
+          "clusterAddressList": [
+            {
+              "address": "Bs9EC7cuGNrtXHSRV3vU3SikM3LB9KQ3aRF7iGBTEeH9",
+              "addressRank": "49",
+              "averageHoldingPeriod": "1778199159",
+              "holdingAmount": "2122190.112144",
+              "holdingPercent": "0.00212",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201827"
+            }
+          ],
+          "holdingAmount": "2122190.1",
+          "holdingPercent": "0.00212",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201827",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-332.000958913660867343399808",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199979",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "307.71006151621001806343302",
+          "clusterAddressList": [
+            {
+              "address": "DxNaC7hcHKs86nKiaEtDGmtziJRiEBJ9roDqHYweBVA",
+              "addressRank": "50",
+              "averageHoldingPeriod": "1778199979",
+              "holdingAmount": "2113150.181758",
+              "holdingPercent": "0.00211",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200996"
+            }
+          ],
+          "holdingAmount": "2113150.2",
+          "holdingPercent": "0.00211",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200996",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-307.710061516209980303529238",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199952",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "298.729912277620520065393592",
+          "clusterAddressList": [
+            {
+              "address": "EXJTTGmfEHrReLgH6dUCCDpLkhMjBfCKWK4PhmbjJevV",
+              "addressRank": "51",
+              "averageHoldingPeriod": "1778199952",
+              "holdingAmount": "2093892.628506",
+              "holdingPercent": "0.00209",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201724"
+            }
+          ],
+          "holdingAmount": "2093892.6",
+          "holdingPercent": "0.00209",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201724",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-298.729912277620675193127156",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199938",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "304.978071198390199566647205",
+          "clusterAddressList": [
+            {
+              "address": "BgiekKQvLUSyqPQsgRrJoq4MPFzauFYUM1G5BeS21NTJ",
+              "addressRank": "52",
+              "averageHoldingPeriod": "1778199938",
+              "holdingAmount": "2092373.246033",
+              "holdingPercent": "0.00209",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200545"
+            }
+          ],
+          "holdingAmount": "2092373.2",
+          "holdingPercent": "0.00209",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200545",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-304.978071198390541164924690",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199967",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "287.873602536360274907040699",
+          "clusterAddressList": [
+            {
+              "address": "9LRPCiDTH5npLq1oZ2TWMBsczzWbyhNvopMPAytBa1rz",
+              "addressRank": "53",
+              "averageHoldingPeriod": "1778199967",
+              "holdingAmount": "2067923.4728",
+              "holdingPercent": "0.00207",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201524"
+            }
+          ],
+          "holdingAmount": "2067923.5",
+          "holdingPercent": "0.00207",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201524",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-287.8736025363582870321384",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199981",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "300.025317779200297298782242",
+          "clusterAddressList": [
+            {
+              "address": "E5JvA4wXNhP4D2yjsvYBWPARSnTsR4dEGRsc8eJazfkN",
+              "addressRank": "54",
+              "averageHoldingPeriod": "1778199981",
+              "holdingAmount": "2057654.259882",
+              "holdingPercent": "0.00206",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200607"
+            }
+          ],
+          "holdingAmount": "2057654.3",
+          "holdingPercent": "0.00206",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200607",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-300.025317779200384021126944",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199943",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "296.922572412930072176291256",
+          "clusterAddressList": [
+            {
+              "address": "4WyztHJNemibYYEUEbcZnGzhgsE2rC5bmszQb4igSisJ",
+              "addressRank": "55",
+              "averageHoldingPeriod": "1778199943",
+              "holdingAmount": "2054683.557969",
+              "holdingPercent": "0.00205",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200990"
+            }
+          ],
+          "holdingAmount": "2054683.6",
+          "holdingPercent": "0.00205",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200990",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-296.922572412930251199308274",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199967",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "287.514364924880256294169482",
+          "clusterAddressList": [
+            {
+              "address": "DWFLavxWj9oGEHS3RAcvDcubbqRZ3wREu9sCgf5gPyTZ",
+              "addressRank": "56",
+              "averageHoldingPeriod": "1778199967",
+              "holdingAmount": "2051243.502136",
+              "holdingPercent": "0.00205",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201327"
+            }
+          ],
+          "holdingAmount": "2051243.5",
+          "holdingPercent": "0.00205",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201327",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-287.514364924879954217294568",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200011",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "306.855556061820240314070061",
+          "clusterAddressList": [
+            {
+              "address": "4hTDTmGaaGwXpProEZzXyNN2uAozMMG5wibQ2g6tivLH",
+              "addressRank": "57",
+              "averageHoldingPeriod": "1778200011",
+              "holdingAmount": "2046158.935644",
+              "holdingPercent": "0.00205",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200985"
+            }
+          ],
+          "holdingAmount": "2046158.9",
+          "holdingPercent": "0.00205",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200985",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-306.855556061819860974849720",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200020",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "313.786439283610320866572124",
+          "clusterAddressList": [
+            {
+              "address": "G6ggv87TeGutRTBGVpJdkenBa6oEqcVHSoXwq17jqE5V",
+              "addressRank": "58",
+              "averageHoldingPeriod": "1778200020",
+              "holdingAmount": "2041163.187789",
+              "holdingPercent": "0.00204",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201554"
+            }
+          ],
+          "holdingAmount": "2041163.2",
+          "holdingPercent": "0.00204",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201554",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-313.786439283610468654790124",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200032",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "309.962672271759665362709285",
+          "clusterAddressList": [
+            {
+              "address": "Auif35KRkwkbdUNe6gdN7hWUedioZjRATapXk2YwpYhT",
+              "addressRank": "59",
+              "averageHoldingPeriod": "1778200032",
+              "holdingAmount": "2030956.400896",
+              "holdingPercent": "0.00203",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201399"
+            }
+          ],
+          "holdingAmount": "2030956.4",
+          "holdingPercent": "0.00203",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201399",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-309.962672271760190217570816",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199949",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "293.180272213219644670261451",
+          "clusterAddressList": [
+            {
+              "address": "HFHjD7u241KSUpkwscqpYQyfoaWf3H9A6si8BWvW48h9",
+              "addressRank": "60",
+              "averageHoldingPeriod": "1778199949",
+              "holdingAmount": "2028152.585563",
+              "holdingPercent": "0.00203",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201752"
+            }
+          ],
+          "holdingAmount": "2028152.6",
+          "holdingPercent": "0.00203",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201752",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-293.180272213221336603776857",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199988",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "288.168296749449737889113695",
+          "clusterAddressList": [
+            {
+              "address": "Cg2AHBLNPJXzpEojjk8TLKTmbXjyPLdUwYA7nLnAk2MG",
+              "addressRank": "61",
+              "averageHoldingPeriod": "1778199988",
+              "holdingAmount": "2021595.951691",
+              "holdingPercent": "0.00202",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201428"
+            }
+          ],
+          "holdingAmount": "2021596.0",
+          "holdingPercent": "0.00202",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201428",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-288.168296749449049814903351",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199921",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "302.792924106450382222086132",
+          "clusterAddressList": [
+            {
+              "address": "7ujKiNzgwVAKYK2QHyBjewKnXx9ArdenQSqdu7AGhFHg",
+              "addressRank": "62",
+              "averageHoldingPeriod": "1778199921",
+              "holdingAmount": "2018581.529375",
+              "holdingPercent": "0.00202",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200691"
+            }
+          ],
+          "holdingAmount": "2018581.5",
+          "holdingPercent": "0.00202",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200691",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-302.792924106451549369986875",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199918",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "296.701376526750379131117087",
+          "clusterAddressList": [
+            {
+              "address": "9WtqENEaRqCFVZuTSp9EomW1UrPb5fTpp7aGQpg9gDFV",
+              "addressRank": "63",
+              "averageHoldingPeriod": "1778199918",
+              "holdingAmount": "2013595.467299",
+              "holdingPercent": "0.00201",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200844"
+            }
+          ],
+          "holdingAmount": "2013595.5",
+          "holdingPercent": "0.00201",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200844",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-296.701376526750396085665638",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199998",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "286.829335764999971183582034",
+          "clusterAddressList": [
+            {
+              "address": "Ajw6BcaVAzhwngPrByoe4yvsRMpQJRqF91QnjCgVmQR5",
+              "addressRank": "64",
+              "averageHoldingPeriod": "1778199998",
+              "holdingAmount": "2010607.734539",
+              "holdingPercent": "0.00201",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200634"
+            }
+          ],
+          "holdingAmount": "2010607.7",
+          "holdingPercent": "0.00201",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200634",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-286.829335765001339861629761",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199922",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "300.42464839557012230577606",
+          "clusterAddressList": [
+            {
+              "address": "CZmjWA567j11Co5TZnb5Wiu82RQLfs8sFJyScNgzRdQv",
+              "addressRank": "65",
+              "averageHoldingPeriod": "1778199922",
+              "holdingAmount": "2005415.435171",
+              "holdingPercent": "0.00201",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201783"
+            }
+          ],
+          "holdingAmount": "2005415.4",
+          "holdingPercent": "0.00201",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201783",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-300.424648395570858104592967",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199932",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "304.666784448019972647076257",
+          "clusterAddressList": [
+            {
+              "address": "Jo4DJbeJhvAKoDsvuK8xhJyhy4eWyASpmxLhJYY9xbF",
+              "addressRank": "66",
+              "averageHoldingPeriod": "1778199932",
+              "holdingAmount": "2002235.337161",
+              "holdingPercent": "0.00200",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201454"
+            }
+          ],
+          "holdingAmount": "2002235.3",
+          "holdingPercent": "0.00200",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201454",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-304.666784448019251996496566",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200044",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "303.17930367996973806207211",
+          "clusterAddressList": [
+            {
+              "address": "6qACZoeom9XS4XtbSCaKjWxTidzkgYnAAqF6ydUBfhVP",
+              "addressRank": "67",
+              "averageHoldingPeriod": "1778200044",
+              "holdingAmount": "1995392.983127",
+              "holdingPercent": "0.00200",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201449"
+            }
+          ],
+          "holdingAmount": "1995393.0",
+          "holdingPercent": "0.00200",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201449",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-303.179303679967287569966962",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199579",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "302.782408682800453749301167",
+          "clusterAddressList": [
+            {
+              "address": "G5cekYdGjiDdyhms7N3KAJM39E938K4ceV1A9ZXDvN1r",
+              "addressRank": "68",
+              "averageHoldingPeriod": "1778199579",
+              "holdingAmount": "1994088.369924",
+              "holdingPercent": "0.00199",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201125"
+            }
+          ],
+          "holdingAmount": "1994088.4",
+          "holdingPercent": "0.00199",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201125",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-302.782408682801227890028956",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199953",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "285.564941176340171859441216",
+          "clusterAddressList": [
+            {
+              "address": "3TmJefTTqDzs6bhu5GeTifhnmUxEwyo3jF1XQ3YBwswW",
+              "addressRank": "69",
+              "averageHoldingPeriod": "1778199953",
+              "holdingAmount": "1992912.292308",
+              "holdingPercent": "0.00199",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201551"
+            }
+          ],
+          "holdingAmount": "1992912.3",
+          "holdingPercent": "0.00199",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201551",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-285.564941176341068857127352",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199931",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "301.344415166429580384886987",
+          "clusterAddressList": [
+            {
+              "address": "Amh7bcav1bZuWgXJ53fgSPu7urbdADZghude5i2w28RD",
+              "addressRank": "70",
+              "averageHoldingPeriod": "1778199931",
+              "holdingAmount": "1987239.715481",
+              "holdingPercent": "0.00199",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201466"
+            }
+          ],
+          "holdingAmount": "1987239.7",
+          "holdingPercent": "0.00199",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201466",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-301.344415166427813765667025",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200035",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "294.876910809239315097711754",
+          "clusterAddressList": [
+            {
+              "address": "7n8tMbXheAGgE2drx3koAULf3aaZEhCVvtgWZozyZPc3",
+              "addressRank": "71",
+              "averageHoldingPeriod": "1778200035",
+              "holdingAmount": "1982130.522423",
+              "holdingPercent": "0.00198",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201257"
+            }
+          ],
+          "holdingAmount": "1982130.5",
+          "holdingPercent": "0.00198",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201257",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-294.876910809240040318369953",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200021",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "299.764111091289824201725727",
+          "clusterAddressList": [
+            {
+              "address": "3mtjbjcQcbBA9DpwhMWy8tTuuDdxLY9tiwt4jqzztpZj",
+              "addressRank": "72",
+              "averageHoldingPeriod": "1778200021",
+              "holdingAmount": "1980794.131113",
+              "holdingPercent": "0.00198",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201048"
+            }
+          ],
+          "holdingAmount": "1980794.1",
+          "holdingPercent": "0.00198",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201048",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-299.764111091289288137412243",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200015",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "302.417414477400333916490325",
+          "clusterAddressList": [
+            {
+              "address": "69CLmPAXsZCSrbK8w6wppPW9fBjJaawBUMcQT5zEH81J",
+              "addressRank": "73",
+              "averageHoldingPeriod": "1778200015",
+              "holdingAmount": "1980615.690978",
+              "holdingPercent": "0.00198",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201558"
+            }
+          ],
+          "holdingAmount": "1980615.7",
+          "holdingPercent": "0.00198",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201558",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-302.417414477398443388535730",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200032",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "293.287611703839860030001521",
+          "clusterAddressList": [
+            {
+              "address": "BVsNvPvt1owQJZtxo6vAMuLm8emayiGBjY1ppjGvQFMa",
+              "addressRank": "74",
+              "averageHoldingPeriod": "1778200032",
+              "holdingAmount": "1976655.327009",
+              "holdingPercent": "0.00198",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200795"
+            }
+          ],
+          "holdingAmount": "1976655.3",
+          "holdingPercent": "0.00198",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200795",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-293.287611703837681537884486",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200036",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "307.691195628820022711727147",
+          "clusterAddressList": [
+            {
+              "address": "Fz9GYqnPHEeQnUMMYTi61h1TLM4YfQ1eyGrz4vSKSGjb",
+              "addressRank": "75",
+              "averageHoldingPeriod": "1778200036",
+              "holdingAmount": "1971205.855205",
+              "holdingPercent": "0.00197",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201690"
+            }
+          ],
+          "holdingAmount": "1971205.9",
+          "holdingPercent": "0.00197",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201690",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-307.691195628822038079613385",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199252",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "302.796538521299649652532129",
+          "clusterAddressList": [
+            {
+              "address": "7TZMuYztyvzmwfySP1kW1qFtEnbPkvX8QhbrMeuyfn8M",
+              "addressRank": "76",
+              "averageHoldingPeriod": "1778199252",
+              "holdingAmount": "1949697.333421",
+              "holdingPercent": "0.00195",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201281"
+            }
+          ],
+          "holdingAmount": "1949697.3",
+          "holdingPercent": "0.00195",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201281",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-302.796538521300140460062020",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199958",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "267.421381775060016820530391",
+          "clusterAddressList": [
+            {
+              "address": "DL2VPhSWaN51BperAAvB19DyjTjWB8ybmJ47U8wcKzCx",
+              "addressRank": "77",
+              "averageHoldingPeriod": "1778199958",
+              "holdingAmount": "1938414.72182",
+              "holdingPercent": "0.00194",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200575"
+            }
+          ],
+          "holdingAmount": "1938414.7",
+          "holdingPercent": "0.00194",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200575",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-267.42138177506034417102610",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200041",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "294.065989987899753090485943",
+          "clusterAddressList": [
+            {
+              "address": "As8FPtLTW28mUNEfcttJrKN2rjTZYthTGqUx89oyr4mw",
+              "addressRank": "78",
+              "averageHoldingPeriod": "1778200041",
+              "holdingAmount": "1934080.180606",
+              "holdingPercent": "0.00193",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201338"
+            }
+          ],
+          "holdingAmount": "1934080.2",
+          "holdingPercent": "0.00193",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201338",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-294.065989987901146011265192",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199919",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "281.811968995819919353640701",
+          "clusterAddressList": [
+            {
+              "address": "7WH7EroMpzisaKot1P261Bfd5m9bMPr36pVWqAfP8kS4",
+              "addressRank": "79",
+              "averageHoldingPeriod": "1778199919",
+              "holdingAmount": "1925418.094861",
+              "holdingPercent": "0.00193",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200862"
+            }
+          ],
+          "holdingAmount": "1925418.1",
+          "holdingPercent": "0.00193",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200862",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-281.811968995819400873369268",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199912",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "282.853182889589870628011107",
+          "clusterAddressList": [
+            {
+              "address": "8mTHGUDpFS9L5TD5dTitsQ2Z1gHscfWF3utDQBYRYrY3",
+              "addressRank": "80",
+              "averageHoldingPeriod": "1778199912",
+              "holdingAmount": "1924666.44836",
+              "holdingPercent": "0.00192",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200496"
+            }
+          ],
+          "holdingAmount": "1924666.4",
+          "holdingPercent": "0.00192",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200496",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-282.85318288958929480687284",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199914",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "278.233417279550162100040572",
+          "clusterAddressList": [
+            {
+              "address": "7HeGrUbh4v4bPmR1tEVtRtzxkQb7Fy9jFeob3cSTZGEm",
+              "addressRank": "81",
+              "averageHoldingPeriod": "1778199914",
+              "holdingAmount": "1917789.510819",
+              "holdingPercent": "0.00192",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200697"
+            }
+          ],
+          "holdingAmount": "1917789.5",
+          "holdingPercent": "0.00192",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200697",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-278.233417279550367923408211",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200050",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "298.050136799349691295533216",
+          "clusterAddressList": [
+            {
+              "address": "A7dfig1tCsczaA1Dpj4hjDdkZ5YrvvfvQPDuDPdhGLnF",
+              "addressRank": "82",
+              "averageHoldingPeriod": "1778200050",
+              "holdingAmount": "1917591.149015",
+              "holdingPercent": "0.00192",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201665"
+            }
+          ],
+          "holdingAmount": "1917591.1",
+          "holdingPercent": "0.00192",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201665",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-298.050136799350733584672805",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200057",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "316.84132497411980741865007",
+          "clusterAddressList": [
+            {
+              "address": "mWKQ2gfVcmmf9dJkdZFyQQUzFDVeFFjDnaquEgxns2f",
+              "addressRank": "83",
+              "averageHoldingPeriod": "1778200057",
+              "holdingAmount": "1917387.748785",
+              "holdingPercent": "0.00192",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201772"
+            }
+          ],
+          "holdingAmount": "1917387.7",
+          "holdingPercent": "0.00192",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201772",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-316.841324974120572556333260",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199609",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "302.944270666419409143986127",
+          "clusterAddressList": [
+            {
+              "address": "BVS3c7RxrTsY3aKvp1gtGzEu5czYV3vbkq6ysDw1Mv2t",
+              "addressRank": "84",
+              "averageHoldingPeriod": "1778199609",
+              "holdingAmount": "1914944.122896",
+              "holdingPercent": "0.00191",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201301"
+            }
+          ],
+          "holdingAmount": "1914944.1",
+          "holdingPercent": "0.00191",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201301",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-302.944270666419595406917248",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200051",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "295.714289916569758432165489",
+          "clusterAddressList": [
+            {
+              "address": "CfRKQhjuCC5L2D91VRuVc9nnLgQY7xxF3nvfL6UZBdLn",
+              "addressRank": "85",
+              "averageHoldingPeriod": "1778200051",
+              "holdingAmount": "1914724.049438",
+              "holdingPercent": "0.00191",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201160"
+            }
+          ],
+          "holdingAmount": "1914724.0",
+          "holdingPercent": "0.00191",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201160",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-295.714289916569725000029586",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200012",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "284.877840977059993871043358",
+          "clusterAddressList": [
+            {
+              "address": "2i6969tmrsvKZLGvt61auHQeXA2WNpY47LQ4NXji8r5u",
+              "addressRank": "86",
+              "averageHoldingPeriod": "1778200012",
+              "holdingAmount": "1913737.218154",
+              "holdingPercent": "0.00191",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201158"
+            }
+          ],
+          "holdingAmount": "1913737.2",
+          "holdingPercent": "0.00191",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201158",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-284.877840977060123285320436",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200016",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "291.371941364940585783562858",
+          "clusterAddressList": [
+            {
+              "address": "22iVwtEDGAJTx1jgob6SaMPtDfjyKwS3uhzc4dNrztsj",
+              "addressRank": "87",
+              "averageHoldingPeriod": "1778200016",
+              "holdingAmount": "1908645.471982",
+              "holdingPercent": "0.00191",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200662"
+            }
+          ],
+          "holdingAmount": "1908645.5",
+          "holdingPercent": "0.00191",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200662",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-291.371941364941256809801546",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199992",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "269.718769592629911697923223",
+          "clusterAddressList": [
+            {
+              "address": "oDitcyZZNTFATPGQV3A41sb8bJPQUiaCU4yPHNEdfRT",
+              "addressRank": "88",
+              "averageHoldingPeriod": "1778199992",
+              "holdingAmount": "1908114.280736",
+              "holdingPercent": "0.00191",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201752"
+            }
+          ],
+          "holdingAmount": "1908114.3",
+          "holdingPercent": "0.00191",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201752",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-269.718769592628791601361248",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199913",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "279.918414106620228456642804",
+          "clusterAddressList": [
+            {
+              "address": "9RVoexyaeUq3hHniYQLa2tUngWchFr1Y4AxByUCTcj62",
+              "addressRank": "89",
+              "averageHoldingPeriod": "1778199913",
+              "holdingAmount": "1895572.165699",
+              "holdingPercent": "0.00190",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201774"
+            }
+          ],
+          "holdingAmount": "1895572.2",
+          "holdingPercent": "0.00190",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201774",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-279.918414106619037866766224",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200018",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "295.634052624279920548826002",
+          "clusterAddressList": [
+            {
+              "address": "FfshPdvjs9Ep7EfdAxYFDYdMhTVmyispzU7NXcnbvQLR",
+              "addressRank": "90",
+              "averageHoldingPeriod": "1778200018",
+              "holdingAmount": "1894929.169592",
+              "holdingPercent": "0.00189",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201513"
+            }
+          ],
+          "holdingAmount": "1894929.2",
+          "holdingPercent": "0.00189",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201513",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-295.634052624280084520965184",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199611",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "295.246821629429649811857809",
+          "clusterAddressList": [
+            {
+              "address": "8UrVdtpEHeVrxPoYg53rhemy5fhBR43HtNgTo4tRaf3Y",
+              "addressRank": "91",
+              "averageHoldingPeriod": "1778199611",
+              "holdingAmount": "1894559.254737",
+              "holdingPercent": "0.00189",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200725"
+            }
+          ],
+          "holdingAmount": "1894559.3",
+          "holdingPercent": "0.00189",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200725",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-295.246821629428907779395048",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199987",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "267.542842301349855397189712",
+          "clusterAddressList": [
+            {
+              "address": "JEYocqkA7w8UUAvgbMek5vjVoMHRudBdrggNU1e7xMZ",
+              "addressRank": "92",
+              "averageHoldingPeriod": "1778199987",
+              "holdingAmount": "1890947.743865",
+              "holdingPercent": "0.00189",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201735"
+            }
+          ],
+          "holdingAmount": "1890947.7",
+          "holdingPercent": "0.00189",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201735",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-267.542842301349203299374035",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199965",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "265.814421398120061389046671",
+          "clusterAddressList": [
+            {
+              "address": "GHHwR2qjQCjDPA3XmZHuexKhLRryFKJUGgbgmyTdj8Wp",
+              "addressRank": "93",
+              "averageHoldingPeriod": "1778199965",
+              "holdingAmount": "1886580.625457",
+              "holdingPercent": "0.00189",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201156"
+            }
+          ],
+          "holdingAmount": "1886580.6",
+          "holdingPercent": "0.00189",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201156",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-265.814421398120381298647003",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200009",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "279.512645186579684041609241",
+          "clusterAddressList": [
+            {
+              "address": "6HPScBPzWNzv7T6vvFWBBZ52vEYYhTcHnNeEX4cKpd1S",
+              "addressRank": "94",
+              "averageHoldingPeriod": "1778200009",
+              "holdingAmount": "1884024.329738",
+              "holdingPercent": "0.00188",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201364"
+            }
+          ],
+          "holdingAmount": "1884024.3",
+          "holdingPercent": "0.00188",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201364",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-279.512645186579551549771522",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200040",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "297.261464759790441435940714",
+          "clusterAddressList": [
+            {
+              "address": "EYxKEUwdusWw2vxffwpoKoqgan2FFMYax6pkER2CLWJ2",
+              "addressRank": "95",
+              "averageHoldingPeriod": "1778200040",
+              "holdingAmount": "1883618.923632",
+              "holdingPercent": "0.00188",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201025"
+            }
+          ],
+          "holdingAmount": "1883618.9",
+          "holdingPercent": "0.00188",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201025",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-297.261464759788686599842080",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199971",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "264.767647126929347398852983",
+          "clusterAddressList": [
+            {
+              "address": "4r7zUzrLnzw5DWA5eBqtBQCKahVxyBzN7VSZKeLeLHeB",
+              "addressRank": "96",
+              "averageHoldingPeriod": "1778199971",
+              "holdingAmount": "1880667.336318",
+              "holdingPercent": "0.00188",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201582"
+            }
+          ],
+          "holdingAmount": "1880667.3",
+          "holdingPercent": "0.00188",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201582",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-264.767647126928868990468918",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778199964",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "265.75005495546042722034265",
+          "clusterAddressList": [
+            {
+              "address": "8bXaEvQqJwhVUtWD3iJR2GKWACy8QQ7WreuEffNjAfmX",
+              "addressRank": "97",
+              "averageHoldingPeriod": "1778199964",
+              "holdingAmount": "1876799.397209",
+              "holdingPercent": "0.00188",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778200990"
+            }
+          ],
+          "holdingAmount": "1876799.4",
+          "holdingPercent": "0.00188",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778200990",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-265.750054955460507658744639",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200047",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "297.966598957069521387409331",
+          "clusterAddressList": [
+            {
+              "address": "6anrV8yy9w7FKCHvgzDtH5MjF1gck4Vn1kf131aYxWnJ",
+              "addressRank": "98",
+              "averageHoldingPeriod": "1778200047",
+              "holdingAmount": "1873932.554971",
+              "holdingPercent": "0.00187",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201734"
+            }
+          ],
+          "holdingAmount": "1873932.6",
+          "holdingPercent": "0.00187",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201734",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-297.966598957071563780619332",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200032",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "286.79495646474970306293047",
+          "clusterAddressList": [
+            {
+              "address": "2VnPDHnyC9iMYBXYAS9xZXAYUvevx9hcZ1Q4qEneG4Fb",
+              "addressRank": "99",
+              "averageHoldingPeriod": "1778200032",
+              "holdingAmount": "1873422.024401",
+              "holdingPercent": "0.00187",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201680"
+            }
+          ],
+          "holdingAmount": "1873422.0",
+          "holdingPercent": "0.00187",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201680",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-286.794956464749929765005478",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        },
+        {
+          "averageBuyPriceUsd": "1.0000000000",
+          "averageHoldingPeriod": "1778200025",
+          "averageSellPriceUsd": "0.0",
+          "buyVolume": "279.948555054710321917794072",
+          "clusterAddressList": [
+            {
+              "address": "CVSH419pcnjCp8sdXa2i3nouVxu9LWeyygJP4uqzagK",
+              "addressRank": "100",
+              "averageHoldingPeriod": "1778200025",
+              "holdingAmount": "1864276.313582",
+              "holdingPercent": "0.00186",
+              "holdingValueUsd": "0.0",
+              "isContract": false,
+              "isExchange": false,
+              "isKol": false,
+              "lastActiveTimestamp": "1778201386"
+            }
+          ],
+          "holdingAmount": "1864276.3",
+          "holdingPercent": "0.00186",
+          "holdingValueUsd": "0.0",
+          "lastActiveTimestamp": "1778201386",
+          "pnlPercent": "-1.00000",
+          "pnlUsd": "-279.948555054710829831415772",
+          "sellVolume": "0",
+          "trendType": [
+            "buy",
+            "transferIn"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "trace_id": "i02_handoff_trace_20260512",
+  "generated_at": "2026-05-12T13:12:00Z",
+  "events": [
+    "i03_prerequisite_packet_created",
+    "i02_to_i03_handoff_packet_created",
+    "acceptance_packet_created",
+    "final_report_created"
+  ],
+  "status": "I02_READY_WITH_GAPS",
+  "artifact_paths": {
+    "i02_system_root": "/root/sikk-gmgn/system/integration_program/i02_directory_contract_index_unification",
+    "i02_runtime_root": "/root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification",
+    "i03_prerequisite_packet": "/root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/i03_prerequisite/i03_runner_tool_binding_prerequisite_packet.yaml",
+    "acceptance_packet": "/root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/acceptance/i02_acceptance_result_packet.yaml",
+    "final_report": "/root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/reports/i02_final_report.md",
+    "gap_report": "/root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/index_gap_report/index_gap_report.yaml",
+    "read_order_manifest": "/root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/read_order_manifest/read_order_manifest.yaml"
+  }
+}

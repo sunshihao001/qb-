@@ -1,0 +1,189 @@
+{
+  "phase_runner_binding_index": {
+    "index_id": "PHASE_RUNNER_BINDING_INDEX",
+    "generated_at": "2026-05-12T14:32:32Z",
+    "phases": {
+      "P01": {
+        "runner_id": "p01_candidate_intake_runner",
+        "runner_entrypoint": "tools/runners/p01_candidate_intake_runner.py",
+        "execution_mode_allowed": [
+          "DRY_RUN",
+          "MOCK_TOOL_RUN"
+        ],
+        "required_writers": [
+          "trace_writer",
+          "acceptance_runner",
+          "handoff_writer"
+        ],
+        "forbidden": [
+          "live_execution",
+          "wallet_signing",
+          "auto_order"
+        ]
+      },
+      "P02": {
+        "runner_id": "p02_source_data_fact_runner",
+        "runner_entrypoint": "tools/runners/p02_source_data_fact_runner.py",
+        "execution_mode_allowed": [
+          "DRY_RUN",
+          "MOCK_TOOL_RUN"
+        ],
+        "required_writers": [
+          "trace_writer",
+          "acceptance_runner",
+          "handoff_writer"
+        ],
+        "forbidden": [
+          "live_execution",
+          "wallet_signing",
+          "auto_order"
+        ]
+      },
+      "P03": {
+        "runner_id": "p03_wallet_entity_runner",
+        "runner_entrypoint": "tools/runners/p03_wallet_entity_runner.py",
+        "execution_mode_allowed": [
+          "DRY_RUN",
+          "MOCK_TOOL_RUN"
+        ],
+        "required_writers": [
+          "trace_writer",
+          "acceptance_runner",
+          "handoff_writer"
+        ],
+        "forbidden": [
+          "live_execution",
+          "wallet_signing",
+          "auto_order"
+        ]
+      },
+      "P04": {
+        "runner_id": "p04_chip_structure_runner",
+        "runner_entrypoint": "tools/runners/p04_chip_structure_runner.py",
+        "execution_mode_allowed": [
+          "DRY_RUN",
+          "MOCK_TOOL_RUN"
+        ],
+        "required_writers": [
+          "trace_writer",
+          "acceptance_runner",
+          "handoff_writer"
+        ],
+        "forbidden": [
+          "live_execution",
+          "wallet_signing",
+          "auto_order"
+        ]
+      },
+      "P05": {
+        "runner_id": "p05_evidence_runner",
+        "runner_entrypoint": "tools/runners/p05_evidence_runner.py",
+        "execution_mode_allowed": [
+          "DRY_RUN",
+          "MOCK_TOOL_RUN"
+        ],
+        "required_writers": [
+          "trace_writer",
+          "acceptance_runner",
+          "handoff_writer"
+        ],
+        "forbidden": [
+          "live_execution",
+          "wallet_signing",
+          "auto_order"
+        ]
+      },
+      "P06": {
+        "runner_id": "p06_scenario_recognition_runner",
+        "runner_entrypoint": "tools/runners/p06_scenario_recognition_runner.py",
+        "execution_mode_allowed": [
+          "DRY_RUN",
+          "MOCK_TOOL_RUN"
+        ],
+        "required_writers": [
+          "trace_writer",
+          "acceptance_runner",
+          "handoff_writer"
+        ],
+        "forbidden": [
+          "live_execution",
+          "wallet_signing",
+          "auto_order"
+        ]
+      },
+      "P07": {
+        "runner_id": "p07_strategy_gate_runner",
+        "runner_entrypoint": "tools/runners/p07_strategy_gate_runner.py",
+        "execution_mode_allowed": [
+          "DRY_RUN",
+          "MOCK_TOOL_RUN"
+        ],
+        "required_writers": [
+          "trace_writer",
+          "acceptance_runner",
+          "handoff_writer"
+        ],
+        "forbidden": [
+          "live_execution",
+          "wallet_signing",
+          "auto_order"
+        ]
+      },
+      "P08": {
+        "runner_id": "p08_execution_risk_runner",
+        "runner_entrypoint": "tools/runners/p08_execution_risk_runner.py",
+        "execution_mode_allowed": [
+          "DRY_RUN",
+          "MOCK_TOOL_RUN"
+        ],
+        "required_writers": [
+          "trace_writer",
+          "acceptance_runner",
+          "handoff_writer"
+        ],
+        "forbidden": [
+          "live_execution",
+          "wallet_signing",
+          "auto_order"
+        ]
+      },
+      "P09": {
+        "runner_id": "p09_review_replay_runner",
+        "runner_entrypoint": "tools/runners/p09_review_replay_runner.py",
+        "execution_mode_allowed": [
+          "DRY_RUN",
+          "MOCK_TOOL_RUN"
+        ],
+        "required_writers": [
+          "trace_writer",
+          "acceptance_runner",
+          "handoff_writer"
+        ],
+        "forbidden": [
+          "live_execution",
+          "wallet_signing",
+          "auto_order"
+        ]
+      },
+      "P10": {
+        "runner_id": "p10_self_upgrade_runner",
+        "runner_entrypoint": "tools/runners/p10_self_upgrade_runner.py",
+        "execution_mode_allowed": [
+          "DRY_RUN",
+          "MOCK_TOOL_RUN"
+        ],
+        "required_writers": [
+          "trace_writer",
+          "acceptance_runner",
+          "handoff_writer"
+        ],
+        "forbidden": [
+          "live_execution",
+          "wallet_signing",
+          "auto_order"
+        ]
+      }
+    },
+    "binding_status": "COMPLETE"
+  }
+}

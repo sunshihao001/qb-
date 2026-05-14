@@ -1,0 +1,23 @@
+{
+  "doc_id": "DOC-20260511-026",
+  "primary_plane": "ACCEPTANCE_PLANE",
+  "plane_order": {
+    "previous": "TRACE_PLANE",
+    "current": "ACCEPTANCE_PLANE",
+    "next": "HANDOFF_PLANE"
+  },
+  "maps_to_files_root": "/root/sikk-gmgn/system/acceptance_plane",
+  "control_sync": [
+    "phase_execution_order.yaml",
+    "contract_router.yaml",
+    "global_status_code_table.yaml",
+    "global_hard_negative_rules.yaml",
+    "acceptance_gate_registry.yaml"
+  ],
+  "forbidden": [
+    "P01 runtime unblock",
+    "paper runtime start",
+    "real trade execution",
+    "tool binding without acceptance"
+  ]
+}

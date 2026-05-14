@@ -1,0 +1,78 @@
+{
+  "acceptance_evidence": [
+    "K03:schema_validation_replay",
+    "K03:happy_path_sample_replay",
+    "K03:missing_field_downgrade_replay",
+    "K03:conflict_input_blocker_replay",
+    "K03:dirty_data_quality_replay",
+    "K03:forbidden_action_replay_scan",
+    "K03:handoff_contract_field_alignment",
+    "K03:trace_evidence_completeness"
+  ],
+  "decision_reason": "standard context loaded and semantic replay checks evaluated in paper-only mode",
+  "downgrade_reason": "none",
+  "forbidden_action_scan": {
+    "blocked_actions": [
+      "swap",
+      "private_key",
+      "signing",
+      "broadcast",
+      "real_trade"
+    ],
+    "real_execution_allowed": false,
+    "status": "PASS"
+  },
+  "generated_at": "2026-05-14T05:19:09.075414+00:00",
+  "input_hash": "ba3fc90595dc3b4c697ec43c32a6ba65f6f5188b90d84f741c2e1c36e3d87838",
+  "missing_fields": [],
+  "output_hash": "c0f9b5588d140b8265eb43a05ccdbc78cb7dca47765af346f3ddade6cb7dde58",
+  "packet_id": "K03_REPLAY_EVIDENCE_PACKET_A03_A06_A08_20260514",
+  "phase_id": "K03",
+  "runtime_mode": "paper_only",
+  "runtime_result_hash_only": true,
+  "semantic_replay_cases": [
+    {
+      "mode": "paper_only",
+      "name": "schema_validation_replay",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "happy_path_sample_replay",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "missing_field_downgrade_replay",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "conflict_input_blocker_replay",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "dirty_data_quality_replay",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "forbidden_action_replay_scan",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "handoff_contract_field_alignment",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "trace_evidence_completeness",
+      "status": "PASS"
+    }
+  ],
+  "source_artifact": "system/stable_trader_os/standard_stage_closure/manifest.json#K03",
+  "status": "REPLAY_EVIDENCE_PACKET_PERSISTED",
+  "trace_id": "K03_BUSINESS_BOUND_TRACE"
+}

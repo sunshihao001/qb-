@@ -1,0 +1,203 @@
+{
+  "doc_id": "DOC-20260512-008",
+  "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-008_p08_execution_risk_controller_v3.md",
+  "heading_count": 49,
+  "headings": [
+    {
+      "line": 1,
+      "heading": "# P08 Execution Risk Controller 专业版 v3.0"
+    },
+    {
+      "line": 3,
+      "heading": "## 执行前风控、报价安全、滑点费用、纸面运行许可与 Runtime 交接控制器"
+    },
+    {
+      "line": 7,
+      "heading": "## 0. 先修正 P08 的定位"
+    },
+    {
+      "line": 54,
+      "heading": "# 1. P08 阶段核心目标"
+    },
+    {
+      "line": 81,
+      "heading": "# 2. P08 的专业角色模型"
+    },
+    {
+      "line": 96,
+      "heading": "# 3. P08 底层方法论"
+    },
+    {
+      "line": 98,
+      "heading": "## 3.1 执行前风控不是策略判断"
+    },
+    {
+      "line": 119,
+      "heading": "## 3.2 PAPER_RUNTIME_ALLOWED 仍然不是实盘许可"
+    },
+    {
+      "line": 143,
+      "heading": "## 3.3 执行风险优先级高于策略吸引力"
+    },
+    {
+      "line": 167,
+      "heading": "## 3.4 P08 必须强制刷新关键执行数据"
+    },
+    {
+      "line": 184,
+      "heading": "# 4. P08 支持的裁决状态"
+    },
+    {
+      "line": 215,
+      "heading": "# 5. P08 必须建立的核心对象"
+    },
+    {
+      "line": 243,
+      "heading": "# 6. P08 输入：必须读取什么"
+    },
+    {
+      "line": 320,
+      "heading": "# 7. Execution Risk Input Manifest"
+    },
+    {
+      "line": 368,
+      "heading": "# 8. P07 Candidate Validity Check Record"
+    },
+    {
+      "line": 404,
+      "heading": "# 9. Quote Snapshot Record"
+    },
+    {
+      "line": 452,
+      "heading": "# 10. Quote Consistency Record"
+    },
+    {
+      "line": 492,
+      "heading": "# 11. Liquidity Depth Record"
+    },
+    {
+      "line": 532,
+      "heading": "# 12. Slippage Estimation Record"
+    },
+    {
+      "line": 570,
+      "heading": "# 13. Execution Cost Model Record"
+    },
+    {
+      "line": 602,
+      "heading": "# 14. Security Recheck Record"
+    },
+    {
+      "line": 644,
+      "heading": "# 15. Sellability Risk Record"
+    },
+    {
+      "line": 677,
+      "heading": "# 16. Freshness Recheck Record"
+    },
+    {
+      "line": 718,
+      "heading": "# 17. Invalidation Precheck Record"
+    },
+    {
+      "line": 756,
+      "heading": "# 18. Wallet Delta Refresh Requirement Record"
+    },
+    {
+      "line": 794,
+      "heading": "# 19. Runtime Risk Limit Record"
+    },
+    {
+      "line": 830,
+      "heading": "# 20. Position Uniqueness Record"
+    },
+    {
+      "line": 857,
+      "heading": "# 21. Circuit Breaker Record"
+    },
+    {
+      "line": 901,
+      "heading": "# 22. Paper Entry Simulation Plan"
+    },
+    {
+      "line": 941,
+      "heading": "# 23. Paper Runtime Permission Record"
+    },
+    {
+      "line": 1001,
+      "heading": "# 24. Execution Risk Block Reason Record"
+    },
+    {
+      "line": 1041,
+      "heading": "# 25. Execution Risk Refresh Request Record"
+    },
+    {
+      "line": 1082,
+      "heading": "# 26. Paper Runtime Data Request Packet"
+    },
+    {
+      "line": 1133,
+      "heading": "# 27. P08 to Paper Runtime Handoff Packet"
+    },
+    {
+      "line": 1222,
+      "heading": "# 28. P08 Gap Policy"
+    },
+    {
+      "line": 1275,
+      "heading": "# 29. P08 Hard Negative Rules"
+    },
+    {
+      "line": 1348,
+      "heading": "# 30. P08 状态机专业版"
+    },
+    {
+      "line": 1460,
+      "heading": "# 31. P08 文件体系"
+    },
+    {
+      "line": 1462,
+      "heading": "## 31.1 系统目录"
+    },
+    {
+      "line": 1520,
+      "heading": "## 31.2 运行数据目录"
+    },
+    {
+      "line": 1555,
+      "heading": "# 32. P08 测试矩阵"
+    },
+    {
+      "line": 1634,
+      "heading": "# 33. P08 报告模型"
+    },
+    {
+      "line": 1708,
+      "heading": "# 34. HER P08 执行协议"
+    },
+    {
+      "line": 1767,
+      "heading": "# 35. 给 HER 的专业化任务书"
+    },
+    {
+      "line": 1952,
+      "heading": "# 36. 当前是否达到专业化标准"
+    },
+    {
+      "line": 1954,
+      "heading": "## 判断"
+    },
+    {
+      "line": 1983,
+      "heading": "# 37. 本版补齐的关键能力"
+    },
+    {
+      "line": 2013,
+      "heading": "# 38. 尚未解决问题"
+    },
+    {
+      "line": 2028,
+      "heading": "# 本次认知升级点"
+    }
+  ]
+}

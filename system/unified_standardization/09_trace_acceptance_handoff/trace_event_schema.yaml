@@ -1,0 +1,29 @@
+meta:
+  standard_id: S00_TRACE_EVENT_SCHEMA
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+trace_event_schema:
+  trace_id: run_id:event_sequence
+  run_id: required
+  token_id: required_if_token_task
+  phase_id: required
+  runner_id: required
+  event_type: registered_event_type
+  event_time: ISO8601
+  input_refs: list
+  output_refs: list
+  decision_refs: list
+  status_before: string
+  status_after: string
+  evidence_refs: list
+  counter_evidence_refs: list
+  error_refs: list
+  schema_version: 0.1.0

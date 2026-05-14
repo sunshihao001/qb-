@@ -1,0 +1,8 @@
+p09_decision_chain_replay_validation_record:
+  validation_id: I05_DECISION_CHAIN_20260512_01
+  generated_at: '2026-05-12T15:30:01Z'
+mode: SKELETON_VALIDATION
+source_doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  p01_to_p08_chain_reconstructed: false
+  missing_links: [real_paper_case_decision_chain]
+  status: READY_WITH_GAPS

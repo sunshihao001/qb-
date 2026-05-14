@@ -1,0 +1,9 @@
+p09_replay_execution:
+  type: object
+  required:
+    - replay_execution_id
+    - input_packet_id
+    - replay_mode
+    - status
+    - trace
+  additional_properties_allowed: true

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "H00 handoff packet",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "handoff_type",
+    "a00_refs",
+    "evidence_bundle_refs",
+    "gap_refs",
+    "risk_refs",
+    "trace_refs",
+    "queue_item_ref",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "handoff_status"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "from_phase": {
+      "const": "H00"
+    },
+    "to_phase": {
+      "type": "string"
+    },
+    "handoff_type": {
+      "type": "string"
+    },
+    "a00_refs": {
+      "type": "array"
+    },
+    "evidence_bundle_refs": {
+      "type": "array"
+    },
+    "gap_refs": {
+      "type": "array"
+    },
+    "risk_refs": {
+      "type": "array"
+    },
+    "trace_refs": {
+      "type": "array"
+    },
+    "queue_item_ref": {
+      "type": "string"
+    },
+    "allowed_next_actions": {
+      "type": "array"
+    },
+    "forbidden_next_actions": {
+      "type": "array"
+    },
+    "handoff_status": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

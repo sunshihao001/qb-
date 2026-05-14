@@ -1,0 +1,689 @@
+record_id: phase_controller_file_index_20260512
+generated_at: '2026-05-12T13:05:00Z'
+status: BUILT_WITH_GAPS
+root: /root/sikk-gmgn/system/phase_controllers
+phase_controllers:
+- phase_id: p01_candidate_intake_controller
+  path: /root/sikk-gmgn/system/phase_controllers/p01_candidate_intake_controller
+  exists: true
+  file_count: 26
+  yaml_count: 21
+  json_count: 0
+  md_count: 5
+  sample_files:
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_intake_handoff_contract.yaml
+    suffix: .yaml
+    size: 1121
+  - path: system/phase_controllers/p01_candidate_intake_controller/token_identity_resolution_schema.yaml
+    suffix: .yaml
+    size: 790
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_source_event_schema.yaml
+    suffix: .yaml
+    size: 715
+  - path: system/phase_controllers/p01_candidate_intake_controller/her_p01_execution_protocol.md
+    suffix: .md
+    size: 1144
+  - path: system/phase_controllers/p01_candidate_intake_controller/dedup_resolution_schema.yaml
+    suffix: .yaml
+    size: 577
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_intake_storage_constitution.md
+    suffix: .md
+    size: 406
+  - path: system/phase_controllers/p01_candidate_intake_controller/p01_output_contract.yaml
+    suffix: .yaml
+    size: 561
+  - path: system/phase_controllers/p01_candidate_intake_controller/p01_candidate_intake_controller.yaml
+    suffix: .yaml
+    size: 1065
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_intake_state_machine.yaml
+    suffix: .yaml
+    size: 1023
+  - path: system/phase_controllers/p01_candidate_intake_controller/intake_time_context_schema.yaml
+    suffix: .yaml
+    size: 524
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_intake_acceptance_criteria.md
+    suffix: .md
+    size: 699
+  - path: system/phase_controllers/p01_candidate_intake_controller/p01_candidate_intake_context.md
+    suffix: .md
+    size: 372
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_master_record_schema.yaml
+    suffix: .yaml
+    size: 1464
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_source_registry.yaml
+    suffix: .yaml
+    size: 297
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_intake_hard_negative_rules.yaml
+    suffix: .yaml
+    size: 1787
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_intake_test_matrix.yaml
+    suffix: .yaml
+    size: 1442
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_intake_report_model.yaml
+    suffix: .yaml
+    size: 791
+  - path: system/phase_controllers/p01_candidate_intake_controller/discovery_context_schema.yaml
+    suffix: .yaml
+    size: 504
+  - path: system/phase_controllers/p01_candidate_intake_controller/pool_identity_resolution_schema.yaml
+    suffix: .yaml
+    size: 496
+  - path: system/phase_controllers/p01_candidate_intake_controller/candidate_intake_trace_requirements.yaml
+    suffix: .yaml
+    size: 285
+- phase_id: p02_source_data_fact_controller
+  path: /root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller
+  exists: true
+  file_count: 41
+  yaml_count: 5
+  json_count: 27
+  md_count: 9
+  sample_files:
+  - path: system/phase_controllers/p02_source_data_fact_controller/test_matrix.md
+    suffix: .md
+    size: 137
+  - path: system/phase_controllers/p02_source_data_fact_controller/report_model.md
+    suffix: .md
+    size: 182
+  - path: system/phase_controllers/p02_source_data_fact_controller/acceptance_gate.yaml
+    suffix: .yaml
+    size: 413
+  - path: system/phase_controllers/p02_source_data_fact_controller/README.md
+    suffix: .md
+    size: 171
+  - path: system/phase_controllers/p02_source_data_fact_controller/runner_binding.yaml
+    suffix: .yaml
+    size: 253
+  - path: system/phase_controllers/p02_source_data_fact_controller/field_usage_limitations.md
+    suffix: .md
+    size: 142
+  - path: system/phase_controllers/p02_source_data_fact_controller/context.md
+    suffix: .md
+    size: 274
+  - path: system/phase_controllers/p02_source_data_fact_controller/handoff_packet.schema.json
+    suffix: .json
+    size: 821
+  - path: system/phase_controllers/p02_source_data_fact_controller/raw_normalized_quality_policy.md
+    suffix: .md
+    size: 181
+  - path: system/phase_controllers/p02_source_data_fact_controller/output_contract.json
+    suffix: .json
+    size: 732
+  - path: system/phase_controllers/p02_source_data_fact_controller/input_contract.json
+    suffix: .json
+    size: 569
+  - path: system/phase_controllers/p02_source_data_fact_controller/task_tree.yaml
+    suffix: .yaml
+    size: 602
+  - path: system/phase_controllers/p02_source_data_fact_controller/source_of_truth_policy.md
+    suffix: .md
+    size: 199
+  - path: system/phase_controllers/p02_source_data_fact_controller/p03_handoff_policy.md
+    suffix: .md
+    size: 134
+  - path: system/phase_controllers/p02_source_data_fact_controller/her_execution_protocol.md
+    suffix: .md
+    size: 209
+  - path: system/phase_controllers/p02_source_data_fact_controller/state_writeback_policy.yaml
+    suffix: .yaml
+    size: 259
+  - path: system/phase_controllers/p02_source_data_fact_controller/controller.yaml
+    suffix: .yaml
+    size: 910
+  - path: system/phase_controllers/p02_source_data_fact_controller/schemas/holder_snapshot_fact.schema.json
+    suffix: .json
+    size: 440
+  - path: system/phase_controllers/p02_source_data_fact_controller/schemas/token_fact_record.schema.json
+    suffix: .json
+    size: 437
+  - path: system/phase_controllers/p02_source_data_fact_controller/schemas/wallet_fact_seed_record.schema.json
+    suffix: .json
+    size: 443
+- phase_id: p03_wallet_entity_controller
+  path: /root/sikk-gmgn/system/phase_controllers/p03_wallet_entity_controller
+  exists: true
+  file_count: 68
+  yaml_count: 38
+  json_count: 20
+  md_count: 10
+  sample_files:
+  - path: system/phase_controllers/p03_wallet_entity_controller/test_matrix.md
+    suffix: .md
+    size: 110
+  - path: system/phase_controllers/p03_wallet_entity_controller/p03_wallet_entity_context.md
+    suffix: .md
+    size: 666
+  - path: system/phase_controllers/p03_wallet_entity_controller/p03_review_checklist.md
+    suffix: .md
+    size: 298
+  - path: system/phase_controllers/p03_wallet_entity_controller/funding_flow_edge_record_schema.yaml
+    suffix: .yaml
+    size: 1469
+  - path: system/phase_controllers/p03_wallet_entity_controller/her_p03_execution_protocol.md
+    suffix: .md
+    size: 387
+  - path: system/phase_controllers/p03_wallet_entity_controller/sync_behavior_scoring_policy.yaml
+    suffix: .yaml
+    size: 172
+  - path: system/phase_controllers/p03_wallet_entity_controller/wallet_entity_state_machine.yaml
+    suffix: .yaml
+    size: 427
+  - path: system/phase_controllers/p03_wallet_entity_controller/report_model.md
+    suffix: .md
+    size: 49
+  - path: system/phase_controllers/p03_wallet_entity_controller/wallet_role_taxonomy.yaml
+    suffix: .yaml
+    size: 500
+  - path: system/phase_controllers/p03_wallet_entity_controller/p03_to_p04_handoff_contract.yaml
+    suffix: .yaml
+    size: 303
+  - path: system/phase_controllers/p03_wallet_entity_controller/distribution_receiver_candidate_schema.yaml
+    suffix: .yaml
+    size: 1386
+  - path: system/phase_controllers/p03_wallet_entity_controller/wallet_entity_gap_policy.yaml
+    suffix: .yaml
+    size: 260
+  - path: system/phase_controllers/p03_wallet_entity_controller/wallet_address_record_schema.yaml
+    suffix: .yaml
+    size: 1660
+  - path: system/phase_controllers/p03_wallet_entity_controller/p03_storage_constitution.md
+    suffix: .md
+    size: 327
+  - path: system/phase_controllers/p03_wallet_entity_controller/acceptance_gate.yaml
+    suffix: .yaml
+    size: 199
+  - path: system/phase_controllers/p03_wallet_entity_controller/p04_chip_structure_data_request_packet_contract.yaml
+    suffix: .yaml
+    size: 383
+  - path: system/phase_controllers/p03_wallet_entity_controller/README.md
+    suffix: .md
+    size: 122
+  - path: system/phase_controllers/p03_wallet_entity_controller/runner_binding.yaml
+    suffix: .yaml
+    size: 191
+  - path: system/phase_controllers/p03_wallet_entity_controller/same_source_scoring_policy.yaml
+    suffix: .yaml
+    size: 226
+  - path: system/phase_controllers/p03_wallet_entity_controller/wallet_temporal_behavior_record_schema.yaml
+    suffix: .yaml
+    size: 1431
+- phase_id: p04_chip_structure_controller
+  path: /root/sikk-gmgn/system/phase_controllers/p04_chip_structure_controller
+  exists: true
+  file_count: 69
+  yaml_count: 39
+  json_count: 20
+  md_count: 10
+  sample_files:
+  - path: system/phase_controllers/p04_chip_structure_controller/same_source_group_holding_schema.yaml
+    suffix: .yaml
+    size: 1371
+  - path: system/phase_controllers/p04_chip_structure_controller/test_matrix.md
+    suffix: .md
+    size: 110
+  - path: system/phase_controllers/p04_chip_structure_controller/p04_acceptance_criteria.md
+    suffix: .md
+    size: 501
+  - path: system/phase_controllers/p04_chip_structure_controller/supply_denominator_schema.yaml
+    suffix: .yaml
+    size: 1514
+  - path: system/phase_controllers/p04_chip_structure_controller/chip_transfer_status_schema.yaml
+    suffix: .yaml
+    size: 1448
+  - path: system/phase_controllers/p04_chip_structure_controller/counterparty_pressure_policy.yaml
+    suffix: .yaml
+    size: 97
+  - path: system/phase_controllers/p04_chip_structure_controller/chip_retention_policy.yaml
+    suffix: .yaml
+    size: 104
+  - path: system/phase_controllers/p04_chip_structure_controller/p04_output_contract.yaml
+    suffix: .yaml
+    size: 1216
+  - path: system/phase_controllers/p04_chip_structure_controller/chip_exit_flow_schema.yaml
+    suffix: .yaml
+    size: 1405
+  - path: system/phase_controllers/p04_chip_structure_controller/p04_chip_structure_context.md
+    suffix: .md
+    size: 803
+  - path: system/phase_controllers/p04_chip_structure_controller/report_model.md
+    suffix: .md
+    size: 49
+  - path: system/phase_controllers/p04_chip_structure_controller/p04_chip_structure_controller.yaml
+    suffix: .yaml
+    size: 1121
+  - path: system/phase_controllers/p04_chip_structure_controller/acceptance_gate.yaml
+    suffix: .yaml
+    size: 200
+  - path: system/phase_controllers/p04_chip_structure_controller/p04_report_model.yaml
+    suffix: .yaml
+    size: 555
+  - path: system/phase_controllers/p04_chip_structure_controller/p04_storage_constitution.md
+    suffix: .md
+    size: 329
+  - path: system/phase_controllers/p04_chip_structure_controller/README.md
+    suffix: .md
+    size: 132
+  - path: system/phase_controllers/p04_chip_structure_controller/runner_binding.yaml
+    suffix: .yaml
+    size: 224
+  - path: system/phase_controllers/p04_chip_structure_controller/chip_structure_quality_schema.yaml
+    suffix: .yaml
+    size: 1417
+  - path: system/phase_controllers/p04_chip_structure_controller/early_wallet_cohort_schema.yaml
+    suffix: .yaml
+    size: 1274
+  - path: system/phase_controllers/p04_chip_structure_controller/cohort_definition_schema.yaml
+    suffix: .yaml
+    size: 1577
+- phase_id: p05_evidence_controller
+  path: /root/sikk-gmgn/system/phase_controllers/p05_evidence_controller
+  exists: true
+  file_count: 40
+  yaml_count: 34
+  json_count: 0
+  md_count: 5
+  sample_files:
+  - path: system/phase_controllers/p05_evidence_controller/evidence_usage_permission_schema.yaml
+    suffix: .yaml
+    size: 703
+  - path: system/phase_controllers/p05_evidence_controller/evidence_sufficiency_schema.yaml
+    suffix: .yaml
+    size: 687
+  - path: system/phase_controllers/p05_evidence_controller/hypothesis_frame_schema.yaml
+    suffix: .yaml
+    size: 718
+  - path: system/phase_controllers/p05_evidence_controller/evidence_hard_negative_rules.yaml
+    suffix: .yaml
+    size: 1983
+  - path: system/phase_controllers/p05_evidence_controller/p05_acceptance_criteria.md
+    suffix: .md
+    size: 873
+  - path: system/phase_controllers/p05_evidence_controller/p06_scenario_data_request_packet_contract.yaml
+    suffix: .yaml
+    size: 1117
+  - path: system/phase_controllers/p05_evidence_controller/p05_output_contract.yaml
+    suffix: .yaml
+    size: 1067
+  - path: system/phase_controllers/p05_evidence_controller/evidence_chain_schema.yaml
+    suffix: .yaml
+    size: 506
+  - path: system/phase_controllers/p05_evidence_controller/her_p05_execution_protocol.md
+    suffix: .md
+    size: 902
+  - path: system/phase_controllers/p05_evidence_controller/alternative_explanation_policy.yaml
+    suffix: .yaml
+    size: 655
+  - path: system/phase_controllers/p05_evidence_controller/evidence_sufficiency_policy.yaml
+    suffix: .yaml
+    size: 529
+  - path: system/phase_controllers/p05_evidence_controller/unknown_evidence_schema.yaml
+    suffix: .yaml
+    size: 591
+  - path: system/phase_controllers/p05_evidence_controller/evidence_bundle_schema.yaml
+    suffix: .yaml
+    size: 708
+  - path: system/phase_controllers/p05_evidence_controller/counter_evidence_policy.yaml
+    suffix: .yaml
+    size: 524
+  - path: system/phase_controllers/p05_evidence_controller/supporting_evidence_schema.yaml
+    suffix: .yaml
+    size: 649
+  - path: system/phase_controllers/p05_evidence_controller/counter_evidence_schema.yaml
+    suffix: .yaml
+    size: 678
+  - path: system/phase_controllers/p05_evidence_controller/p05_evidence_context.md
+    suffix: .md
+    size: 694
+  - path: system/phase_controllers/p05_evidence_controller/p05_storage_constitution.md
+    suffix: .md
+    size: 931
+  - path: system/phase_controllers/p05_evidence_controller/evidence_trace_requirements.yaml
+    suffix: .yaml
+    size: 646
+  - path: system/phase_controllers/p05_evidence_controller/evidence_object_schema.yaml
+    suffix: .yaml
+    size: 761
+- phase_id: p06_scenario_recognition_controller
+  path: /root/sikk-gmgn/system/phase_controllers/p06_scenario_recognition_controller
+  exists: true
+  file_count: 40
+  yaml_count: 35
+  json_count: 0
+  md_count: 5
+  sample_files:
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_rejection_schema.yaml
+    suffix: .yaml
+    size: 407
+  - path: system/phase_controllers/p06_scenario_recognition_controller/p06_input_contract.yaml
+    suffix: .yaml
+    size: 1367
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_family_policy.yaml
+    suffix: .yaml
+    size: 151
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_confidence_schema.yaml
+    suffix: .yaml
+    size: 418
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_invalidation_policy.yaml
+    suffix: .yaml
+    size: 140
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_taxonomy.yaml
+    suffix: .yaml
+    size: 819
+  - path: system/phase_controllers/p06_scenario_recognition_controller/p07_strategy_gate_data_request_packet_contract.yaml
+    suffix: .yaml
+    size: 467
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_conflict_policy.yaml
+    suffix: .yaml
+    size: 155
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_transition_schema.yaml
+    suffix: .yaml
+    size: 396
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_confidence_policy.yaml
+    suffix: .yaml
+    size: 183
+  - path: system/phase_controllers/p06_scenario_recognition_controller/primary_scenario_candidate_schema.yaml
+    suffix: .yaml
+    size: 422
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_watch_condition_schema.yaml
+    suffix: .yaml
+    size: 391
+  - path: system/phase_controllers/p06_scenario_recognition_controller/secondary_scenario_candidate_schema.yaml
+    suffix: .yaml
+    size: 410
+  - path: system/phase_controllers/p06_scenario_recognition_controller/p06_scenario_recognition_context.md
+    suffix: .md
+    size: 708
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_invalidation_schema.yaml
+    suffix: .yaml
+    size: 432
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_context_interpretation_schema.yaml
+    suffix: .yaml
+    size: 414
+  - path: system/phase_controllers/p06_scenario_recognition_controller/p06_test_matrix.yaml
+    suffix: .yaml
+    size: 1971
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_hard_negative_rules.yaml
+    suffix: .yaml
+    size: 1200
+  - path: system/phase_controllers/p06_scenario_recognition_controller/p06_review_checklist.md
+    suffix: .md
+    size: 281
+  - path: system/phase_controllers/p06_scenario_recognition_controller/scenario_context_interpretation_policy.yaml
+    suffix: .yaml
+    size: 169
+- phase_id: p07_strategy_gate_controller
+  path: /root/sikk-gmgn/system/phase_controllers/p07_strategy_gate_controller
+  exists: true
+  file_count: 41
+  yaml_count: 36
+  json_count: 0
+  md_count: 5
+  sample_files:
+  - path: system/phase_controllers/p07_strategy_gate_controller/p07_review_checklist.md
+    suffix: .md
+    size: 618
+  - path: system/phase_controllers/p07_strategy_gate_controller/strategy_gate_state_machine.yaml
+    suffix: .yaml
+    size: 1791
+  - path: system/phase_controllers/p07_strategy_gate_controller/her_p07_execution_protocol.md
+    suffix: .md
+    size: 1028
+  - path: system/phase_controllers/p07_strategy_gate_controller/market_position_context_policy.yaml
+    suffix: .yaml
+    size: 828
+  - path: system/phase_controllers/p07_strategy_gate_controller/data_quality_gate_evaluation_schema.yaml
+    suffix: .yaml
+    size: 443
+  - path: system/phase_controllers/p07_strategy_gate_controller/p07_test_matrix.yaml
+    suffix: .yaml
+    size: 1960
+  - path: system/phase_controllers/p07_strategy_gate_controller/market_position_context_gate_schema.yaml
+    suffix: .yaml
+    size: 590
+  - path: system/phase_controllers/p07_strategy_gate_controller/strategy_block_reason_schema.yaml
+    suffix: .yaml
+    size: 550
+  - path: system/phase_controllers/p07_strategy_gate_controller/chip_structure_gate_evaluation_schema.yaml
+    suffix: .yaml
+    size: 481
+  - path: system/phase_controllers/p07_strategy_gate_controller/p07_acceptance_criteria.md
+    suffix: .md
+    size: 884
+  - path: system/phase_controllers/p07_strategy_gate_controller/strategy_policy_registry.yaml
+    suffix: .yaml
+    size: 1607
+  - path: system/phase_controllers/p07_strategy_gate_controller/p07_to_p08_handoff_contract.yaml
+    suffix: .yaml
+    size: 1020
+  - path: system/phase_controllers/p07_strategy_gate_controller/p07_input_contract.yaml
+    suffix: .yaml
+    size: 1847
+  - path: system/phase_controllers/p07_strategy_gate_controller/strategy_gate_decision_schema.yaml
+    suffix: .yaml
+    size: 623
+  - path: system/phase_controllers/p07_strategy_gate_controller/p07_output_contract.yaml
+    suffix: .yaml
+    size: 1232
+  - path: system/phase_controllers/p07_strategy_gate_controller/strategy_candidate_schema.yaml
+    suffix: .yaml
+    size: 558
+  - path: system/phase_controllers/p07_strategy_gate_controller/scenario_conflict_gate_schema.yaml
+    suffix: .yaml
+    size: 477
+  - path: system/phase_controllers/p07_strategy_gate_controller/strategy_usage_permission_schema.yaml
+    suffix: .yaml
+    size: 524
+  - path: system/phase_controllers/p07_strategy_gate_controller/hard_negative_policy.yaml
+    suffix: .yaml
+    size: 688
+  - path: system/phase_controllers/p07_strategy_gate_controller/strategy_invalidation_binding_schema.yaml
+    suffix: .yaml
+    size: 513
+- phase_id: p08_execution_risk_controller
+  path: /root/sikk-gmgn/system/phase_controllers/p08_execution_risk_controller
+  exists: true
+  file_count: 45
+  yaml_count: 40
+  json_count: 0
+  md_count: 5
+  sample_files:
+  - path: system/phase_controllers/p08_execution_risk_controller/circuit_breaker_schema.yaml
+    suffix: .yaml
+    size: 458
+  - path: system/phase_controllers/p08_execution_risk_controller/p08_input_contract.yaml
+    suffix: .yaml
+    size: 1544
+  - path: system/phase_controllers/p08_execution_risk_controller/liquidity_depth_schema.yaml
+    suffix: .yaml
+    size: 452
+  - path: system/phase_controllers/p08_execution_risk_controller/security_recheck_schema.yaml
+    suffix: .yaml
+    size: 548
+  - path: system/phase_controllers/p08_execution_risk_controller/freshness_recheck_schema.yaml
+    suffix: .yaml
+    size: 518
+  - path: system/phase_controllers/p08_execution_risk_controller/position_uniqueness_schema.yaml
+    suffix: .yaml
+    size: 494
+  - path: system/phase_controllers/p08_execution_risk_controller/execution_risk_trace_requirements.yaml
+    suffix: .yaml
+    size: 640
+  - path: system/phase_controllers/p08_execution_risk_controller/execution_risk_input_manifest_schema.yaml
+    suffix: .yaml
+    size: 613
+  - path: system/phase_controllers/p08_execution_risk_controller/wallet_delta_refresh_requirement_schema.yaml
+    suffix: .yaml
+    size: 463
+  - path: system/phase_controllers/p08_execution_risk_controller/liquidity_depth_policy.yaml
+    suffix: .yaml
+    size: 379
+  - path: system/phase_controllers/p08_execution_risk_controller/p08_test_matrix.yaml
+    suffix: .yaml
+    size: 2059
+  - path: system/phase_controllers/p08_execution_risk_controller/execution_cost_model_schema.yaml
+    suffix: .yaml
+    size: 480
+  - path: system/phase_controllers/p08_execution_risk_controller/sellability_risk_schema.yaml
+    suffix: .yaml
+    size: 479
+  - path: system/phase_controllers/p08_execution_risk_controller/circuit_breaker_policy.yaml
+    suffix: .yaml
+    size: 479
+  - path: system/phase_controllers/p08_execution_risk_controller/her_p08_execution_protocol.md
+    suffix: .md
+    size: 1618
+  - path: system/phase_controllers/p08_execution_risk_controller/quote_consistency_policy.yaml
+    suffix: .yaml
+    size: 439
+  - path: system/phase_controllers/p08_execution_risk_controller/quote_consistency_schema.yaml
+    suffix: .yaml
+    size: 530
+  - path: system/phase_controllers/p08_execution_risk_controller/execution_risk_refresh_request_schema.yaml
+    suffix: .yaml
+    size: 472
+  - path: system/phase_controllers/p08_execution_risk_controller/quote_snapshot_schema.yaml
+    suffix: .yaml
+    size: 465
+  - path: system/phase_controllers/p08_execution_risk_controller/p08_report_model.yaml
+    suffix: .yaml
+    size: 898
+- phase_id: p09_review_replay_controller
+  path: /root/sikk-gmgn/system/phase_controllers/p09_review_replay_controller
+  exists: true
+  file_count: 45
+  yaml_count: 40
+  json_count: 0
+  md_count: 5
+  sample_files:
+  - path: system/phase_controllers/p09_review_replay_controller/invalidation_trigger_analysis_schema.yaml
+    suffix: .yaml
+    size: 860
+  - path: system/phase_controllers/p09_review_replay_controller/her_p09_execution_protocol.md
+    suffix: .md
+    size: 706
+  - path: system/phase_controllers/p09_review_replay_controller/success_attribution_schema.yaml
+    suffix: .yaml
+    size: 818
+  - path: system/phase_controllers/p09_review_replay_controller/p09_gap_policy.yaml
+    suffix: .yaml
+    size: 442
+  - path: system/phase_controllers/p09_review_replay_controller/failure_attribution_schema.yaml
+    suffix: .yaml
+    size: 976
+  - path: system/phase_controllers/p09_review_replay_controller/p10_upgrade_candidate_data_request_packet_contract.yaml
+    suffix: .yaml
+    size: 983
+  - path: system/phase_controllers/p09_review_replay_controller/p09_report_model.yaml
+    suffix: .yaml
+    size: 833
+  - path: system/phase_controllers/p09_review_replay_controller/review_case_record_schema.yaml
+    suffix: .yaml
+    size: 991
+  - path: system/phase_controllers/p09_review_replay_controller/decision_chain_reconstruction_schema.yaml
+    suffix: .yaml
+    size: 890
+  - path: system/phase_controllers/p09_review_replay_controller/false_negative_schema.yaml
+    suffix: .yaml
+    size: 796
+  - path: system/phase_controllers/p09_review_replay_controller/p09_state_machine.yaml
+    suffix: .yaml
+    size: 706
+  - path: system/phase_controllers/p09_review_replay_controller/p09_input_contract.yaml
+    suffix: .yaml
+    size: 947
+  - path: system/phase_controllers/p09_review_replay_controller/threshold_sensitivity_schema.yaml
+    suffix: .yaml
+    size: 829
+  - path: system/phase_controllers/p09_review_replay_controller/false_positive_schema.yaml
+    suffix: .yaml
+    size: 794
+  - path: system/phase_controllers/p09_review_replay_controller/p05_evidence_feedback_schema.yaml
+    suffix: .yaml
+    size: 847
+  - path: system/phase_controllers/p09_review_replay_controller/p09_test_matrix.yaml
+    suffix: .yaml
+    size: 1545
+  - path: system/phase_controllers/p09_review_replay_controller/model_calibration_candidate_schema.yaml
+    suffix: .yaml
+    size: 827
+  - path: system/phase_controllers/p09_review_replay_controller/replay_input_snapshot_schema.yaml
+    suffix: .yaml
+    size: 917
+  - path: system/phase_controllers/p09_review_replay_controller/historical_snapshot_policy.yaml
+    suffix: .yaml
+    size: 262
+  - path: system/phase_controllers/p09_review_replay_controller/p09_review_checklist.md
+    suffix: .md
+    size: 432
+- phase_id: p10_self_upgrade_controller
+  path: /root/sikk-gmgn/system/phase_controllers/p10_self_upgrade_controller
+  exists: true
+  file_count: 46
+  yaml_count: 41
+  json_count: 0
+  md_count: 5
+  sample_files:
+  - path: system/phase_controllers/p10_self_upgrade_controller/tool_binding_upgrade_proposal_schema.yaml
+    suffix: .yaml
+    size: 655
+  - path: system/phase_controllers/p10_self_upgrade_controller/overfit_risk_assessment_schema.yaml
+    suffix: .yaml
+    size: 649
+  - path: system/phase_controllers/p10_self_upgrade_controller/upgrade_decision_schema.yaml
+    suffix: .yaml
+    size: 642
+  - path: system/phase_controllers/p10_self_upgrade_controller/p10_review_checklist.md
+    suffix: .md
+    size: 506
+  - path: system/phase_controllers/p10_self_upgrade_controller/approval_policy.yaml
+    suffix: .yaml
+    size: 356
+  - path: system/phase_controllers/p10_self_upgrade_controller/upgrade_impact_assessment_schema.yaml
+    suffix: .yaml
+    size: 651
+  - path: system/phase_controllers/p10_self_upgrade_controller/p10_self_upgrade_context.md
+    suffix: .md
+    size: 725
+  - path: system/phase_controllers/p10_self_upgrade_controller/p10_file_manifest.yaml
+    suffix: .yaml
+    size: 2439
+  - path: system/phase_controllers/p10_self_upgrade_controller/controlled_upgrade_task_packet_schema.yaml
+    suffix: .yaml
+    size: 656
+  - path: system/phase_controllers/p10_self_upgrade_controller/overfit_control_policy.yaml
+    suffix: .yaml
+    size: 326
+  - path: system/phase_controllers/p10_self_upgrade_controller/p10_report_model.yaml
+    suffix: .yaml
+    size: 725
+  - path: system/phase_controllers/p10_self_upgrade_controller/release_and_rollback_plan_schema.yaml
+    suffix: .yaml
+    size: 651
+  - path: system/phase_controllers/p10_self_upgrade_controller/controlled_upgrade_package_schema.yaml
+    suffix: .yaml
+    size: 652
+  - path: system/phase_controllers/p10_self_upgrade_controller/self_upgrade_hard_negative_rules.yaml
+    suffix: .yaml
+    size: 537
+  - path: system/phase_controllers/p10_self_upgrade_controller/p10_output_contract.yaml
+    suffix: .yaml
+    size: 996
+  - path: system/phase_controllers/p10_self_upgrade_controller/her_p10_execution_protocol.md
+    suffix: .md
+    size: 809
+  - path: system/phase_controllers/p10_self_upgrade_controller/rule_policy_upgrade_proposal_schema.yaml
+    suffix: .yaml
+    size: 654
+  - path: system/phase_controllers/p10_self_upgrade_controller/contract_schema_upgrade_proposal_schema.yaml
+    suffix: .yaml
+    size: 658
+  - path: system/phase_controllers/p10_self_upgrade_controller/p10_input_contract.yaml
+    suffix: .yaml
+    size: 826
+  - path: system/phase_controllers/p10_self_upgrade_controller/controlled_release_policy.yaml
+    suffix: .yaml
+    size: 291
+gaps: []
+restrictions:
+- read_only_scan
+- no_business_logic_mutation

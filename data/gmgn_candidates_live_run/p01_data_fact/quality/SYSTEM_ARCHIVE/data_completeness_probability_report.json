@@ -1,0 +1,16 @@
+{
+  "token_address": "SYSTEM_ARCHIVE",
+  "completeness_probability": {
+    "for_p02_wallet_structure": 0.25,
+    "for_p03_market_structure": 0.2,
+    "for_p06_paper_trading": 0.0
+  },
+  "missing_critical_fields": [
+    "quote_price"
+  ],
+  "decision": {
+    "P02": "ALLOW_LIMITED",
+    "P03": "PAUSE",
+    "P06": "PAUSE"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "doc_id": "DOC-20260511-020",
+  "blocking_gaps_before_execution": [
+    "Bootstrap Control Plane v2 files may be missing until P00 executes this taskbook"
+  ],
+  "non_blocking_gaps_after_execution_allowed": [
+    "Governance/Domain/Data planes may remain pending generation after bootstrap handoff"
+  ],
+  "hard_blocks": [
+    "P01_READY",
+    "p01_runtime_connection_allowed_true",
+    "real_trade_enabled_true",
+    "auto_order_allowed_true"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "data_fact_status": "DATA_REPLAY_ONLY",
+  "decision_reason": "Control-plane scaffold exists, but live GMGN/OKX evidence and replay fixtures are not yet audited.",
+  "downstream_permissions": {
+    "P02_wallet_chip_structure_controller": "ALLOW_LIMITED",
+    "P03_market_structure_controller": "PAUSE",
+    "P04_scenario_recognition_controller": "PAUSE",
+    "P05_strategy_gate_controller": "PAUSE",
+    "P06_paper_trading_controller": "PAUSE",
+    "P07_real_execution_controller": false
+  }
+}

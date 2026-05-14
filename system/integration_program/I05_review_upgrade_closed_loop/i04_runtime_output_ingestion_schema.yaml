@@ -1,0 +1,9 @@
+i04_runtime_output_ingestion:
+  type: object
+  required:
+    - ingestion_id
+    - source_i04_handoff_id
+    - readable_outputs
+    - missing_outputs
+    - ingestion_status
+  additional_properties_allowed: true

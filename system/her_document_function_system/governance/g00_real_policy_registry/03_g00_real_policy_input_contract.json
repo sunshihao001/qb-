@@ -1,0 +1,44 @@
+{
+  "phase_id": "G00_REAL_GOVERNANCE_POLICY_REGISTRY",
+  "required_inputs": {
+    "u00_to_g00_handoff_packet": {
+      "required": true
+    },
+    "governance_candidates": {
+      "required": true
+    },
+    "anti_pattern_index": {
+      "required": true
+    },
+    "success_pattern_index": {
+      "required": true
+    },
+    "root_cause_analysis": {
+      "required": true
+    },
+    "upgrade_queue": {
+      "required": true
+    },
+    "learning_index": {
+      "required": true
+    },
+    "a00_readiness_certificate": {
+      "required": true
+    },
+    "h00_queue_state": {
+      "required": true
+    },
+    "controller_registry": {
+      "required": true
+    },
+    "execution_boundary": {
+      "required": true
+    },
+    "repo_root": {
+      "required": true
+    },
+    "safe_mode": {
+      "required": true
+    }
+  }
+}

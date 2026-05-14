@@ -1,0 +1,43 @@
+phase_id: R00
+trace_events:
+  - r00_started
+  - v00_handoff_loaded
+  - validation_evidence_loaded
+  - binding_target_inventory_created
+  - interface_scanned
+  - binding_decision_made
+  - command_contract_created
+  - cli_binding_created
+  - tool_binding_created
+  - orchestrator_binding_created
+  - telegram_binding_created
+  - report_binding_created
+  - dashboard_binding_created
+  - scheduler_binding_created
+  - dry_run_started
+  - dry_run_completed
+  - binding_failed
+  - acceptance_checked
+  - handoff_written
+  - r00_completed
+  - r00_blocked
+trace_fields:
+  - event_id
+  - timestamp
+  - phase_id
+  - run_id
+  - event_type
+  - function_id
+  - binding_id
+  - command_id
+  - status_before
+  - status_after
+  - evidence_refs
+  - gap_refs
+  - message
+audit_requirements:
+  dry_run_command_recorded: true
+  exit_code_recorded: true
+  stdout_stderr_recorded: true
+  generated_outputs_manifest_recorded: true
+  forbidden_modes_recorded: true

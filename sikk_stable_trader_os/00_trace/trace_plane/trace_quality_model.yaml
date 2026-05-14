@@ -1,0 +1,23 @@
+trace_quality_score_model:
+  completeness_weight: 0.2
+  continuity_weight: 0.2
+  contract_trace_weight: 0.15
+  state_trace_weight: 0.15
+  acceptance_trace_weight: 0.1
+  handoff_trace_weight: 0.1
+  runtime_replayability_weight: 0.1
+trace_quality_status:
+  - TRACE_HIGH_CONFIDENCE
+  - TRACE_USABLE
+  - TRACE_USABLE_WITH_GAPS
+  - TRACE_LOW_CONFIDENCE
+  - TRACE_UNUSABLE
+downstream_permission:
+  TRACE_USABLE_WITH_GAPS:
+    acceptance: ACCEPTANCE_WITH_GAPS_ONLY
+    handoff: HANDOFF_WITH_LIMITATIONS
+    runtime: PAPER_RUNTIME_RESTRICTED
+  TRACE_UNUSABLE:
+    acceptance: BLOCK_ACCEPTANCE
+    handoff: BLOCK_HANDOFF
+    runtime: BLOCK_RUNTIME

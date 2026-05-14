@@ -1,0 +1,12 @@
+trace_requirements:
+- candidate_trace_id
+- source_trace_id
+- raw_input_trace_id
+- identity_trace_id
+- pool_identity_trace_id
+- dedup_trace_id
+- state_trace_id
+- artifact_trace_id
+- handoff_trace_id
+trace_policy: no_trace_no_candidate_master_record
+chat_context_allowed_as_trace: false

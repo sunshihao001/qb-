@@ -1,0 +1,60 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+state_machine_id: P08_EXECUTION_RISK_STATE_MACHINE
+states: [P08_UNINITIALIZED, P08_CONTEXT_LOADED, P08_HANDOFF_READ, P08_INPUT_MANIFEST_BUILT, P08_P07_CANDIDATE_VALIDITY_CHECKED, P08_QUOTE_SNAPSHOT_COLLECTED, P08_QUOTE_CONSISTENCY_CHECKED, P08_LIQUIDITY_DEPTH_CHECKED, P08_SLIPPAGE_ESTIMATED, P08_COST_MODEL_BUILT, P08_SECURITY_RECHECKED, P08_SELLABILITY_CHECKED, P08_FRESHNESS_RECHECKED, P08_INVALIDATION_PRECHECKED, P08_WALLET_DELTA_REFRESH_EVALUATED, P08_RUNTIME_RISK_LIMIT_CHECKED, P08_POSITION_UNIQUENESS_CHECKED, P08_CIRCUIT_BREAKER_CHECKED, P08_PAPER_ENTRY_SIMULATION_PLAN_BUILT, P08_PERMISSION_DECISIONS_BUILT, P08_BLOCK_REASONS_BUILT, P08_REFRESH_REQUESTS_BUILT, P08_GAP_ANALYZED, P08_PAPER_RUNTIME_DATA_REQUEST_BUILT, P08_READY_FOR_ACCEPTANCE, P08_ACCEPTANCE_READY, P08_READY_FOR_PAPER_RUNTIME_HANDOFF, P08_READY_WITH_GAPS, P08_REJECTED, P08_BLOCKED]
+critical_transitions:
+  - from: P08_HANDOFF_READ
+    to: P08_INPUT_MANIFEST_BUILT
+    condition: p07_handoff_valid == true
+  - from: P08_INPUT_MANIFEST_BUILT
+    to: P08_P07_CANDIDATE_VALIDITY_CHECKED
+    condition: p07_candidate_validity_records_created == true
+  - from: P08_P07_CANDIDATE_VALIDITY_CHECKED
+    to: P08_QUOTE_SNAPSHOT_COLLECTED
+    condition: candidate_not_invalidated == true
+  - from: P08_QUOTE_SNAPSHOT_COLLECTED
+    to: P08_QUOTE_CONSISTENCY_CHECKED
+    condition: quote_snapshot_records_created == true
+  - from: P08_QUOTE_CONSISTENCY_CHECKED
+    to: P08_LIQUIDITY_DEPTH_CHECKED
+    condition: quote_consistency_records_created == true
+  - from: P08_LIQUIDITY_DEPTH_CHECKED
+    to: P08_SLIPPAGE_ESTIMATED
+    condition: liquidity_depth_records_created == true
+  - from: P08_SLIPPAGE_ESTIMATED
+    to: P08_COST_MODEL_BUILT
+    condition: slippage_estimation_records_created == true
+  - from: P08_COST_MODEL_BUILT
+    to: P08_SECURITY_RECHECKED
+    condition: execution_cost_model_records_created == true
+  - from: P08_SECURITY_RECHECKED
+    to: P08_FRESHNESS_RECHECKED
+    condition: security_recheck_records_created == true
+  - from: P08_FRESHNESS_RECHECKED
+    to: P08_INVALIDATION_PRECHECKED
+    condition: freshness_recheck_records_created == true
+  - from: P08_INVALIDATION_PRECHECKED
+    to: P08_RUNTIME_RISK_LIMIT_CHECKED
+    condition: invalidation_precheck_records_created == true
+  - from: P08_RUNTIME_RISK_LIMIT_CHECKED
+    to: P08_POSITION_UNIQUENESS_CHECKED
+    condition: runtime_risk_limit_records_created == true
+  - from: P08_POSITION_UNIQUENESS_CHECKED
+    to: P08_CIRCUIT_BREAKER_CHECKED
+    condition: position_uniqueness_records_created == true
+  - from: P08_CIRCUIT_BREAKER_CHECKED
+    to: P08_PERMISSION_DECISIONS_BUILT
+    condition: circuit_breaker_records_created == true
+  - from: P08_PERMISSION_DECISIONS_BUILT
+    to: P08_PAPER_RUNTIME_DATA_REQUEST_BUILT
+    condition: paper_runtime_permission_records_created == true
+  - from: P08_PAPER_RUNTIME_DATA_REQUEST_BUILT
+    to: P08_READY_FOR_ACCEPTANCE
+    condition: p08_output_contract_ready == true
+  - from: P08_READY_FOR_ACCEPTANCE
+    to: P08_ACCEPTANCE_READY
+    condition: acceptance_status in [ACCEPTANCE_READY, ACCEPTANCE_READY_WITH_GAPS]
+  - from: P08_ACCEPTANCE_READY
+    to: P08_READY_FOR_PAPER_RUNTIME_HANDOFF
+    condition: p08_to_paper_runtime_handoff_packet_created == true

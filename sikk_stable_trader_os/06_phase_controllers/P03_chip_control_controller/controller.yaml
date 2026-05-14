@@ -1,0 +1,20 @@
+controller_id: P03_chip_control_controller
+controller_name_cn: 筹码控制层
+phase_type: chip_control_and_counterparty_pressure
+status: NOT_READY
+created_by: P00_system_bootstrap_controller
+primary_goal: 判断早期结构筹码是否仍保留、撤退或转移给接盘方
+paper_only: true
+real_trade_enabled: false
+p01_runtime_connection_allowed: false
+required_before_ready:
+  - upstream_handoff_consumed
+  - input_contract_valid
+  - output_contract_valid
+  - acceptance_gate_passed
+  - current_system_state_allows_stage
+forbidden:
+  - real_trade
+  - private_key
+  - seed_phrase
+  - exchange_write_order

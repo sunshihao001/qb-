@@ -1,0 +1,6 @@
+review_to_upgrade_policy:
+  review_outputs_are_candidates_only: true
+  p10_required_for_upgrade: true
+  regression_required_before_rule_change: true
+  manual_confirmation_required: true
+  direct_runtime_mutation_allowed: false

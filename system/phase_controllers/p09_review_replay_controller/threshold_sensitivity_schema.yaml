@@ -1,0 +1,36 @@
+schema_id: THRESHOLD_SENSITIVITY_SCHEMA
+title: Threshold Sensitivity Record
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- sensitivity_id
+- threshold_name
+- phase_id
+- historical_values
+- outcome_sensitivity
+- recommendation_for_p10
+fields:
+  sensitivity_id: string
+  threshold_name: string
+  phase_id: string
+  historical_values: list
+  outcome_sensitivity: object
+  recommendation_for_p10: string
+enums: {}
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

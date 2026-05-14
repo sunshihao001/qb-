@@ -1,0 +1,16 @@
+{
+  "expected_outcome": {
+    "statement": "runtime hook reduces false completion and improves next-run reliability",
+    "source": "argument_or_default",
+    "confidence": "intended"
+  },
+  "observed_outcome": {
+    "statement": "dry-run artifacts prove hook path is runnable but not real-world reliability improvement",
+    "source": "argument_or_default",
+    "evidence_class": "dry_run_or_reported"
+  },
+  "evidence_links": [
+    "no external evidence supplied",
+    "dry-run calibration artifact only"
+  ]
+}

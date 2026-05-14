@@ -1,0 +1,51 @@
+{
+  "manifest_id": "artifact_manifest_a00_real_20260514_000000",
+  "artifacts": [
+    {
+      "artifact_id": "o00_pipeline_run",
+      "phase": "O00",
+      "artifact_type": "o00_pipeline_run",
+      "path": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_183810/pipeline_run.json",
+      "exists": true,
+      "required": true,
+      "validation_status": "PRESENT"
+    },
+    {
+      "artifact_id": "v00_validation_evidence_bundle",
+      "phase": "V00",
+      "artifact_type": "v00_validation_evidence_bundle",
+      "path": "/root/sikk-gmgn/data/her_document_function_system/v00_real_validation_runs/v00_real_20260513_235307/evidence_bundle/validation_evidence_bundle.json",
+      "exists": true,
+      "required": true,
+      "validation_status": "PRESENT"
+    },
+    {
+      "artifact_id": "r00_binding_evidence_bundle",
+      "phase": "R00",
+      "artifact_type": "r00_binding_evidence_bundle",
+      "path": "/root/sikk-gmgn/data/her_document_function_system/r00_real_binding_runs/r00_real_20260514_000000/evidence_bundle/binding_evidence_bundle.json",
+      "exists": true,
+      "required": true,
+      "validation_status": "PRESENT"
+    },
+    {
+      "artifact_id": "k00_handoff",
+      "phase": "K00",
+      "artifact_type": "k00_handoff",
+      "path": "missing",
+      "exists": false,
+      "required": false,
+      "validation_status": "OPTIONAL_MISSING"
+    },
+    {
+      "artifact_id": "f00_handoff",
+      "phase": "F00",
+      "artifact_type": "f00_handoff",
+      "path": "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_to_downstream_handoff_packet.json",
+      "exists": true,
+      "required": false,
+      "validation_status": "PRESENT"
+    }
+  ],
+  "manifest_status": "BUILT"
+}

@@ -1,0 +1,42 @@
+{
+  "source": "okx",
+  "endpoint": "token_search",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "search",
+    "--query",
+    "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+    "--chains",
+    "501"
+  ],
+  "started_at": "2026-05-08T01:47:48Z",
+  "finished_at": "2026-05-08T01:47:48Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "chainIndex": "501",
+        "change": "13272.05",
+        "cursor": "0",
+        "decimal": "6",
+        "explorerUrl": "https://web3.okx.com/explorer/solana/token/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+        "holders": "1967",
+        "liquidity": "47968.8134232500568345008733489158176141326605655",
+        "marketCap": "332601.172399963277269968",
+        "price": "0.0003326011723999632772699685569080149",
+        "tagList": {
+          "communityRecognized": false
+        },
+        "tokenContractAddress": "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+        "tokenLogoUrl": "https://static.oklink.com/cdn/web3/currency/token/large/501-xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump-108/type=default_90_0?v=1778200658221",
+        "tokenName": "MV Hondius",
+        "tokenSymbol": "MV"
+      }
+    ]
+  }
+}

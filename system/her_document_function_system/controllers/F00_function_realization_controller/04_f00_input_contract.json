@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F00 Input Contract",
+  "description": "F00 cannot read chat context directly. The only legal entry is a K00 handoff packet plus explicit file-backed references and execution boundary/policy fields.",
+  "type": "object",
+  "required": [
+    "phase_id",
+    "k00_handoff_packet",
+    "document_passport_refs",
+    "corpus_index_refs",
+    "system_mapping_refs",
+    "gap_detection_refs",
+    "target_phase_candidates",
+    "execution_boundary",
+    "write_policy",
+    "repo_root"
+  ],
+  "properties": {
+    "phase_id": {
+      "const": "F00"
+    },
+    "k00_handoff_packet": {
+      "type": "object",
+      "description": "K00 handoff packet; the only legal F00 entry point.",
+      "required": [
+        "handoff_id",
+        "from_phase",
+        "to_phase",
+        "k00_status",
+        "artifact_refs"
+      ],
+      "properties": {
+        "handoff_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "from_phase": {
+          "const": "K00"
+        },
+        "to_phase": {
+          "const": "F00"
+        },
+        "k00_status": {
+          "type": "string",
+          "enum": [
+            "K00_ACCEPTED",
+            "K00_READY_WITH_GAPS"
+          ]
+        },
+        "artifact_refs": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    },
+    "document_passport_refs": {
+      "type": "array",
+      "description": "Document passport references.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "corpus_index_refs": {
+      "type": "array",
+      "description": "Document content/corpus index references.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "system_mapping_refs": {
+      "type": "array",
+      "description": "System position / phase / plane mapping references.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "gap_detection_refs": {
+      "type": "array",
+      "description": "Gap detection references produced by K00.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "kv_retrieval_refs": {
+      "type": "array",
+      "description": "Optional KV retrieval/index references used only as auxiliary memory; absence produces KV_GAP but does not block F00.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": []
+    },
+    "target_phase_candidates": {
+      "type": "array",
+      "description": "Potential affected PXX / IXX / Runner / Review phases.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "execution_boundary": {
+      "type": "object",
+      "description": "Execution boundary: whether writing files, writing code, running tests, runner binding, or replay is permitted.",
+      "required": [
+        "allow_file_write",
+        "allow_code_write",
+        "allow_tests",
+        "allow_runner_binding",
+        "allowed_modes"
+      ],
+      "properties": {
+        "allow_file_write": {
+          "type": "boolean"
+        },
+        "allow_code_write": {
+          "type": "boolean"
+        },
+        "allow_tests": {
+          "type": "boolean"
+        },
+        "allow_runner_binding": {
+          "type": "boolean"
+        },
+        "allowed_modes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "DESIGN_ONLY",
+              "UPDATE_CONTRACT_ONLY",
+              "UPDATE_SCHEMA_ONLY",
+              "ADD_TEST_ONLY",
+              "IMPLEMENT_NOW",
+              "REPLAY_ONLY"
+            ]
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "write_policy": {
+      "type": "object",
+      "description": "Explicit write policy. If missing or file writes are not allowed, F00 must remain DESIGN_ONLY.",
+      "required": [
+        "allow_system_file_write",
+        "allowed_paths",
+        "forbidden_paths"
+      ],
+      "properties": {
+        "allow_system_file_write": {
+          "type": "boolean"
+        },
+        "allowed_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "forbidden_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "repo_root": {
+      "type": "string",
+      "description": "Current repository root. If missing, F00 can only run DESIGN_ONLY.",
+      "minLength": 1
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "read_chat_context_as_input",
+        "bypass_k00_handoff",
+        "write_files_without_write_policy",
+        "execute_without_boundary"
+      ]
+    },
+    "allowed_next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "not": {
+          "required": [
+            "kv_retrieval_refs"
+          ]
+        }
+      },
+      "then": {
+        "properties": {
+          "input_gap_status": {
+            "const": "KV_GAP"
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false,
+  "x_missing_input_handling": {
+    "missing_k00_handoff_packet": "F00_BLOCKED",
+    "missing_document_passport_refs": "F00_BLOCKED",
+    "missing_corpus_index_refs": "F00_BLOCKED",
+    "missing_system_mapping_refs": "F00_READY_WITH_GAPS_OR_BLOCKED",
+    "missing_gap_detection_refs": "F00_BLOCKED",
+    "missing_kv_retrieval_refs": "KV_GAP_CONTINUE",
+    "missing_repo_root": "DESIGN_ONLY",
+    "missing_write_policy": "DESIGN_ONLY_NO_FILE_WRITE",
+    "missing_execution_boundary": "F00_BLOCKED"
+  },
+  "x_legacy_aliases": {
+    "passport_refs": "document_passport_refs",
+    "gap_refs": "gap_detection_refs",
+    "kv_refs": "kv_retrieval_refs",
+    "source_doc_refs": "k00_handoff_packet.artifact_refs.source_doc_refs"
+  }
+}

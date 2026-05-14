@@ -1,0 +1,25 @@
+{
+  "handoff_id": "HANDOFF-DOC-20260511-019-K00-P00",
+  "source_stage": "K00_knowledge_intake_taskization",
+  "target_stage": "P00_system_bootstrap_controller",
+  "target_stage_role_cn": "方法论编译与系统建造控制器",
+  "source_asset_id": "DOC-20260511-019",
+  "source_file_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-019_k00_system_chain_professional_update.md",
+  "canonical_system_chain": "输入资料 / 用户目标 / 方法论 / 旧系统文件\n  ↓\nK00：知识摄取与 Phase Controller 候选任务化\n  ↓\nphase_controller_candidate_spec.yaml\n  ↓\nk00_to_p00_handoff_packet.json\n  ↓\nP00：方法论编译与系统建造控制器\n  ↓\n正式 controller.yaml\n  ↓\nphase_registry.yaml\n  ↓\ncurrent_system_state.json\n  ↓\ninput_contract / output_contract / acceptance_gate / handoff_packet\n  ↓\nP01-P10 可调度运行",
+  "required_p00_actions": [
+    "compile formal controller.yaml",
+    "register phase_registry.yaml",
+    "update current_system_state.json",
+    "bind input_contract/output_contract/acceptance_gate/handoff_packet",
+    "write consumption status"
+  ],
+  "k00_decision": {
+    "formal_registration_allowed_by_k00": false,
+    "ready_for_p00_compilation": true
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false
+  },
+  "p01_allowed": false
+}

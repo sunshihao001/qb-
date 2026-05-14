@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["phase", "input_status", "execution_risk_status", "paper_trade_status", "real_execution_allowed", "hard_negative_triggered", "hard_negative_reasons"],
+  "properties": {
+    "phase": {"const": "phase_07_execution_risk_controller"},
+    "input_status": {"type": "string"},
+    "execution_risk_status": {"type": "string"},
+    "paper_trade_status": {"type": "string"},
+    "real_execution_allowed": {"const": false},
+    "hard_negative_triggered": {"type": "boolean"},
+    "hard_negative_reasons": {"type": "array", "items": {"type": "string"}},
+    "missing_fields": {"type": "array", "items": {"type": "string"}}
+  }
+}

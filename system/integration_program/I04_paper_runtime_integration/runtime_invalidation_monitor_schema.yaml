@@ -1,0 +1,16 @@
+record_type: runtime_invalidation_monitor_record
+required_fields:
+- monitor_id
+- position_id
+- invalidated
+- invalidation_reason
+- required_action
+- trace_id
+required_safety:
+  paper_only: true
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+validation:
+- all required fields present
+- trace_id present
+- no live execution artifact

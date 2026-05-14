@@ -1,0 +1,22 @@
+{
+  "overall_status": "PASS",
+  "checked_at": "2026-05-13T00:58:23Z",
+  "data_root": "data/source_wallet_bot/ad_hoc",
+  "files_checked": 27,
+  "issues": [],
+  "legacy_quarantine": {
+    "status": "EMPTY",
+    "legacy_issues_count": 0,
+    "policy": {
+      "read_mode": "readonly",
+      "delete_old_files": false,
+      "move_old_files": false,
+      "contaminated_source_required": true,
+      "raw_fact_direct_use_allowed": false
+    },
+    "issues": []
+  },
+  "active_issues_count": 0,
+  "legacy_issues_count": 0,
+  "active_issues": []
+}

@@ -1,0 +1,16 @@
+{
+  "replay_id": "sample_001_document_to_function_replay",
+  "pipeline_config_ref": "system/her_document_function_system/config/pipeline_config.full_safe_replay.json",
+  "controller_registry_ref": "system/her_document_function_system/registry/controller_registry.json",
+  "input_document": "system/her_document_function_system/replay/sample_cases/sample_001_document_to_function/input/sample_document.md",
+  "operator_goal": "system/her_document_function_system/replay/sample_cases/sample_001_document_to_function/input/operator_goal.json",
+  "expected_outputs_dir": "system/her_document_function_system/replay/sample_cases/sample_001_document_to_function/expected/",
+  "actual_outputs_dir": "data/her_document_function_system/sample_replays/sample_001_document_to_function/actual_outputs/",
+  "safe_mode": true,
+  "run_mode": "DESIGN_LEVEL_REPLAY",
+  "allow_actual_code_patch": false,
+  "allow_safe_tests": false,
+  "allow_safe_replay": true,
+  "allow_runner_dry_run": false,
+  "final_expected_status": "PIPELINE_READY_WITH_GAPS"
+}

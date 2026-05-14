@@ -1,0 +1,22 @@
+{
+  "landing_id": "S00_APPLICATION_SCENARIO_LANDING_001",
+  "created_at": "2026-05-14T13:40:44Z",
+  "purpose": "Apply S00 to real token staged judgment without live trading",
+  "scenario_chain": [
+    "runner dry-run evidence",
+    "contract diff legacy outputs",
+    "P08 gate binding",
+    "single-token replay",
+    "paper-only decision",
+    "P09/P10 review",
+    "regression baseline"
+  ],
+  "minimum_professional_acceptance": [
+    "all critical gaps converted to evidence-backed tasks",
+    "P08 blocks paper open when permission missing",
+    "one token_judgment_case_file generated",
+    "regression baseline seeded",
+    "rollback plan attached to any promotion"
+  ],
+  "status": "LANDING_PLAN_READY_WITH_GAPS"
+}

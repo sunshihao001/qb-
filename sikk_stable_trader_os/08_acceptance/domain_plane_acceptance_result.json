@@ -1,0 +1,44 @@
+{
+  "plane_id": "P02_DOMAIN_PLANE",
+  "acceptance_result": "DOMAIN_READY_WITH_GAPS",
+  "file_level_passed": true,
+  "structure_level_passed": true,
+  "semantic_level_passed": true,
+  "consumption_level_passed": true,
+  "runtime_level_passed": false,
+  "runtime_level_note": "Domain Plane is not a runtime trading phase; P01 remains blocked.",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "DOMAIN-GAP-001",
+      "name": "wallet role thresholds not quantified",
+      "route": "P03/P04/Replay calibration"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-002",
+      "name": "dominant-side lifecycle needs sample calibration",
+      "route": "P08 review/replay"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-003",
+      "name": "wash-volume identification requires real data verification",
+      "route": "Data/Evidence Plane"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-004",
+      "name": "market-cap stage boundaries not statistically fixed",
+      "route": "Replay Plane"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-005",
+      "name": "same-source wallet attribution uncertainty remains",
+      "route": "Evidence confidence scoring"
+    }
+  ],
+  "overreach_logic_detected": false,
+  "direct_buy_signal_detected": false,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "next_legal_stage": "P03_DATA_PLANE_FIELD_MODELING",
+  "created_at": "2026-05-11T16:25:42Z"
+}

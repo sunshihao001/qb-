@@ -1,0 +1,14 @@
+{
+  "doc_id": "DOC-20260512-008",
+  "planes": [
+    "control_plane",
+    "data_plane",
+    "trace_plane",
+    "acceptance_plane",
+    "handoff_plane",
+    "governance_plane",
+    "runtime_state_plane"
+  ],
+  "primary_plane": "control_plane",
+  "notes": "P08 defines execution-risk package contracts, not runtime execution."
+}

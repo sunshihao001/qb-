@@ -1,0 +1,31 @@
+{
+  "expected_h00_status": "H00_ACCEPTED",
+  "expected_downstream_targets": [
+    {
+      "target": "G00",
+      "routing_decision": "ROUTE_TO_G00",
+      "reason": "evidence policy rule must be governed globally"
+    },
+    {
+      "target": "V00",
+      "routing_decision": "ROUTE_TO_V00",
+      "reason": "test_evidence schema should be updated"
+    },
+    {
+      "target": "A00",
+      "routing_decision": "ROUTE_TO_A00",
+      "reason": "status consistency validator should enforce TEST_PLAN_AS_TESTED"
+    },
+    {
+      "target": "U00",
+      "routing_decision": "ROUTE_TO_U00",
+      "reason": "sample replay contains READY_WITH_GAPS and needs review queue"
+    }
+  ],
+  "expected_queue_items": [
+    "update_g00_evidence_policy",
+    "update_v00_test_evidence_schema",
+    "update_a00_status_consistency_validator",
+    "review_sample_gap"
+  ]
+}

@@ -1,0 +1,219 @@
+phase_controllers:
+- controller_id: PC00_FULL_CONTROL_CONTROLLER
+  plane_id: P00_FULL_CONTROL_PLANE
+  controller_name: 完整控制面控制器
+  responsibility:
+  - 全阶段调度、验收、状态回写、阻断、交接
+  - 绑定输入合约、输出合约、验收门、状态回写和 handoff packet
+  input_required:
+  - p00_full_control_plane_input_contract
+  - upstream_handoff_packet
+  output_required:
+  - p00_full_control_plane_handoff_contract
+  - acceptance_result
+  - gap_register_update
+  - audit_log_record
+  acceptance_gate:
+  - CONTROL_READY_WITH_GAPS
+  - P00_REJECTED
+  downstream:
+  - P01_GOVERNANCE_PLANE
+- controller_id: PC01_GOVERNANCE_CONTROLLER
+  plane_id: P01_GOVERNANCE_PLANE
+  controller_name: 治理平面控制器
+  responsibility:
+  - 定义系统边界、权限、风险红线、禁止事项
+  - 绑定输入合约、输出合约、验收门、状态回写和 handoff packet
+  input_required:
+  - p01_governance_plane_input_contract
+  - upstream_handoff_packet
+  output_required:
+  - p01_governance_plane_handoff_contract
+  - acceptance_result
+  - gap_register_update
+  - audit_log_record
+  acceptance_gate:
+  - GOVERNANCE_READY
+  - P01_REJECTED
+  downstream:
+  - P02_DOMAIN_PLANE
+- controller_id: PC02_DOMAIN_CONTROLLER
+  plane_id: P02_DOMAIN_PLANE
+  controller_name: 领域平面控制器
+  responsibility:
+  - 定义领域对象、场景、生命周期、证据/反证语义
+  - 绑定输入合约、输出合约、验收门、状态回写和 handoff packet
+  input_required:
+  - p02_domain_plane_input_contract
+  - upstream_handoff_packet
+  output_required:
+  - p02_domain_plane_handoff_contract
+  - acceptance_result
+  - gap_register_update
+  - audit_log_record
+  acceptance_gate:
+  - DOMAIN_READY_WITH_GAPS
+  - P02_REJECTED
+  downstream:
+  - P03_DATA_PLANE
+- controller_id: PC03_DATA_CONTROLLER
+  plane_id: P03_DATA_PLANE
+  controller_name: 数据平面控制器
+  responsibility:
+  - 生成可采集、可校验、可追溯的数据事实体系
+  - 绑定输入合约、输出合约、验收门、状态回写和 handoff packet
+  input_required:
+  - p03_data_plane_input_contract
+  - upstream_handoff_packet
+  output_required:
+  - p03_data_plane_handoff_contract
+  - acceptance_result
+  - gap_register_update
+  - audit_log_record
+  acceptance_gate:
+  - DATA_READY_WITH_GAPS
+  - P03_REJECTED
+  downstream:
+  - P04_EVIDENCE_PLANE
+- controller_id: PC04_EVIDENCE_CONTROLLER
+  plane_id: P04_EVIDENCE_PLANE
+  controller_name: 证据平面控制器
+  responsibility:
+  - 把标准化事实转换为证据对象、证据等级、反证对象
+  - 绑定输入合约、输出合约、验收门、状态回写和 handoff packet
+  input_required:
+  - p04_evidence_plane_input_contract
+  - upstream_handoff_packet
+  output_required:
+  - p04_evidence_plane_handoff_contract
+  - acceptance_result
+  - gap_register_update
+  - audit_log_record
+  acceptance_gate:
+  - NOT_READY
+  - P04_REJECTED
+  downstream:
+  - P05_SCENARIO_RECOGNITION_PLANE
+- controller_id: PC05_SCENARIO_CONTROLLER
+  plane_id: P05_SCENARIO_RECOGNITION_PLANE
+  controller_name: 场景识别平面控制器
+  responsibility:
+  - 基于证据链识别盘型/生命周期候选
+  - 绑定输入合约、输出合约、验收门、状态回写和 handoff packet
+  input_required:
+  - p05_scenario_recognition_plane_input_contract
+  - upstream_handoff_packet
+  output_required:
+  - p05_scenario_recognition_plane_handoff_contract
+  - acceptance_result
+  - gap_register_update
+  - audit_log_record
+  acceptance_gate:
+  - NOT_READY
+  - P05_REJECTED
+  downstream:
+  - P06_STRATEGY_GATE_PLANE
+- controller_id: PC06_STRATEGY_CONTROLLER
+  plane_id: P06_STRATEGY_GATE_PLANE
+  controller_name: 策略门禁平面控制器
+  responsibility:
+  - 只允许未被否定的样本进入 paper-only 候选
+  - 绑定输入合约、输出合约、验收门、状态回写和 handoff packet
+  input_required:
+  - p06_strategy_gate_plane_input_contract
+  - upstream_handoff_packet
+  output_required:
+  - p06_strategy_gate_plane_handoff_contract
+  - acceptance_result
+  - gap_register_update
+  - audit_log_record
+  acceptance_gate:
+  - NOT_READY
+  - P06_REJECTED
+  downstream:
+  - P07_EXECUTION_RISK_PLANE
+- controller_id: PC07_EXECUTION_CONTROLLER
+  plane_id: P07_EXECUTION_RISK_PLANE
+  controller_name: 执行风控平面控制器
+  responsibility:
+  - 模拟执行风险、滑点、流动性、熔断，不允许实盘
+  - 绑定输入合约、输出合约、验收门、状态回写和 handoff packet
+  input_required:
+  - p07_execution_risk_plane_input_contract
+  - upstream_handoff_packet
+  output_required:
+  - p07_execution_risk_plane_handoff_contract
+  - acceptance_result
+  - gap_register_update
+  - audit_log_record
+  acceptance_gate:
+  - NOT_READY
+  - P07_REJECTED
+  downstream:
+  - P08_REVIEW_REPLAY_PLANE
+- controller_id: PC08_REVIEW_CONTROLLER
+  plane_id: P08_REVIEW_REPLAY_PLANE
+  controller_name: 复盘回放平面控制器
+  responsibility:
+  - 对 paper/replay 样本做失败归因与规则反馈
+  - 绑定输入合约、输出合约、验收门、状态回写和 handoff packet
+  input_required:
+  - p08_review_replay_plane_input_contract
+  - upstream_handoff_packet
+  output_required:
+  - p08_review_replay_plane_handoff_contract
+  - acceptance_result
+  - gap_register_update
+  - audit_log_record
+  acceptance_gate:
+  - NOT_READY
+  - P08_REJECTED
+  downstream:
+  - P09_SELF_UPGRADE_PLANE
+- controller_id: PC09_SELF_CONTROLLER
+  plane_id: P09_SELF_UPGRADE_PLANE
+  controller_name: 自升级治理平面控制器
+  responsibility:
+  - 把复盘证据转成受控升级候选，不直接污染实时规则
+  - 绑定输入合约、输出合约、验收门、状态回写和 handoff packet
+  input_required:
+  - p09_self_upgrade_plane_input_contract
+  - upstream_handoff_packet
+  output_required:
+  - p09_self_upgrade_plane_handoff_contract
+  - acceptance_result
+  - gap_register_update
+  - audit_log_record
+  acceptance_gate:
+  - NOT_READY
+  - P09_REJECTED
+  downstream:
+  - NONE
+- controller_id: PC_TRACE_PLANE_CONTROLLER
+  plane_id: TRACE_PLANE
+  controller_name: 追踪平面控制器
+  responsibility:
+  - 记录系统怎么发生
+  - 建立 trace_id、引用链、审计链、回放链
+  - 为 Acceptance/Handoff 提供追踪输入
+  input_required:
+  - full_control_plane_handoff
+  - trace_plane_professional_v2_source
+  - current_system_state
+  output_required:
+  - trace_manifest
+  - trace_object_registry
+  - trace_handoff_packet
+  - trace_plane_acceptance_result
+  - trace_implementation_matrix
+  acceptance_gate:
+  - TRACE_READY
+  - TRACE_READY_WITH_GAPS
+  - TRACE_REJECTED
+  downstream:
+  - ACCEPTANCE_PLANE_PROFESSIONAL_DESIGN
+  forbidden_outputs:
+  - buy_signal
+  - execution_order
+  - paper_runtime_start
+  - live_runtime_start

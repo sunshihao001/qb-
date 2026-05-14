@@ -1,0 +1,83 @@
+{
+  "step_map_id": "P07_PROFESSIONAL_PHASE_STEP_MAP_V1",
+  "generated_at": "2026-05-12T05:14:28Z",
+  "steps": [
+    {
+      "step": 1,
+      "name": "K00 route confirmation",
+      "input": "DOC raw/registry/passport/index/mapping/task/handoff",
+      "output": "k00_acceptance + k00_to_p07_handoff",
+      "block_if": "missing K00 route evidence"
+    },
+    {
+      "step": 2,
+      "name": "P06 handoff and control-plane load",
+      "input": "p06_to_p07_handoff + acceptance + trace + limitations",
+      "output": "strategy_gate_input_manifest",
+      "block_if": "missing P06 handoff/trace/acceptance"
+    },
+    {
+      "step": 3,
+      "name": "policy registry load",
+      "input": "strategy_policy_registry + hard rules",
+      "output": "policy_loaded_state",
+      "block_if": "strategy policy registry missing"
+    },
+    {
+      "step": 4,
+      "name": "hard negative first pass",
+      "input": "governance/P06/P05/P04/P02 hard risks",
+      "output": "hard_negative_evaluation_record",
+      "block_if": "live execution requested or critical risk"
+    },
+    {
+      "step": 5,
+      "name": "scenario/evidence/chip/data quality evaluation",
+      "input": "P06/P05/P04/P02 objects",
+      "output": "gate evaluation records",
+      "block_if": "critical conflict/unusable facts"
+    },
+    {
+      "step": 6,
+      "name": "market position + strategy pattern fit",
+      "input": "market context + strategy profiles",
+      "output": "market_position_gate + pattern_fit",
+      "block_if": "chasing/exit liquidity context"
+    },
+    {
+      "step": 7,
+      "name": "risk flags + invalidation binding",
+      "input": "risk flags + scenario invalidations",
+      "output": "risk_flag_evaluation + invalidation_binding",
+      "block_if": "hard invalidation unresolved"
+    },
+    {
+      "step": 8,
+      "name": "conditions and candidate construction",
+      "input": "all gate records",
+      "output": "observe/pause/block/candidate/human confirmation records",
+      "block_if": "candidate lacks basis or limitations"
+    },
+    {
+      "step": 9,
+      "name": "final decision + usage permission",
+      "input": "candidate + reasons + risks",
+      "output": "strategy_gate_decision + usage_permission",
+      "block_if": "decision lacks trace or forbidden use not blocked"
+    },
+    {
+      "step": 10,
+      "name": "P08 request + handoff + audit",
+      "input": "PAPER_CANDIDATE or human confirmation candidates",
+      "output": "p08 data request + p07_to_p08_handoff + report/audit",
+      "block_if": "PAPER_CANDIDATE without P08 request"
+    },
+    {
+      "step": 11,
+      "name": "independent acceptance",
+      "input": "all artifacts",
+      "output": "P07_PACKAGE_READY_WITH_RUNTIME_GAPS or blocked/rejected",
+      "block_if": "parse errors, missing artifacts, safety boundary broken"
+    }
+  ]
+}

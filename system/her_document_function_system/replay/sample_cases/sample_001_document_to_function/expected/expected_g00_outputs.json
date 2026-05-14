@@ -1,0 +1,21 @@
+{
+  "expected_g00_status": "G00_READY_WITH_GAPS",
+  "expected_policy_candidates": [
+    {
+      "policy_domain": "evidence_policy",
+      "rule_statement": "test_plan must never satisfy TESTED status",
+      "policy_level": "HARD_RULE",
+      "activation_mode": "PENDING_ACCEPTANCE"
+    },
+    {
+      "policy_domain": "status_code_policy",
+      "rule_statement": "TESTED requires test_command, exit_code, stdout_path, stderr_path, passed_count, failed_count",
+      "policy_level": "HARD_RULE",
+      "activation_mode": "PENDING_ACCEPTANCE"
+    }
+  ],
+  "expected_reason_for_not_full_accepted": "Policy registry is design blueprint only until HER writes active_policy_bundle and validates conflict check",
+  "must_not_claim": [
+    "POLICY_ACTIVE"
+  ]
+}

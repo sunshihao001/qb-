@@ -1,0 +1,20 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+policy_id: P08_GAP_POLICY
+gaps:
+  BLOCKING_GAP:
+    result: P08_BLOCKED
+    examples: [p07_handoff_missing, trace_missing, acceptance_missing, live_execution_requested, wallet_signing_requested, handoff_plane_bypassed]
+  CRITICAL_GAP:
+    result: P08_REJECTED
+    examples: [no_paper_candidate_from_p07, quote_unavailable, liquidity_unavailable, security_recheck_unavailable, no_runtime_permission_contract, output_contract_missing]
+  HIGH_GAP:
+    result: P08_PAUSED_OR_BLOCKED
+    examples: [quote_major_deviation, liquidity_thin, slippage_too_high, security_risk_detected, hard_invalidation_triggered, circuit_breaker_triggered]
+  MEDIUM_GAP:
+    result: P08_ALLOWED_WITH_LIMITATIONS_OR_PAUSED
+    examples: [holder_snapshot_stale, wallet_delta_refresh_required, execution_cost_model_weak, soft_invalidation_triggered, risk_limit_state_stale]
+  LOW_GAP:
+    result: P08_ALLOWED_WITH_NOTE
+    examples: [minor_quote_deviation, noncritical_cost_field_missing, optional_runtime_metadata_missing]

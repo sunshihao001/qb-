@@ -1,0 +1,26 @@
+{
+  "task_id": "TASK_DOC-20260512-005_P05_PACKAGE_LANDING",
+  "doc_id": "DOC-20260512-005",
+  "task_type": "phase_controller_package_landing",
+  "target_controller": "P05_EVIDENCE_CONTROLLER",
+  "objective": "Land 39-file P05 Evidence Controller package and runtime data skeleton while keeping runtime/paper/live blocked.",
+  "required_outputs": [
+    "39 controller files",
+    "24 runtime data directories",
+    "validation report",
+    "control state update",
+    "asset index registration"
+  ],
+  "acceptance": [
+    "all expected files exist",
+    "yaml/json parse ok",
+    "safety anchors pass",
+    "next legal stage P06_SCENARIO_CONTROLLER_PACKAGE_DESIGN"
+  ],
+  "constraints": [
+    "no scenario claim",
+    "no strategy signal",
+    "no paper runtime",
+    "no live execution"
+  ]
+}

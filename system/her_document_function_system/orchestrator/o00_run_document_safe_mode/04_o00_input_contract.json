@@ -1,0 +1,30 @@
+{
+  "phase_id": "O00",
+  "required_inputs": {
+    "source_document": {
+      "required": true,
+      "description": "document to process"
+    },
+    "operator_goal": {
+      "required": true,
+      "description": "explicit run goal"
+    },
+    "controller_registry": {
+      "required": true,
+      "description": "registered HER controllers"
+    },
+    "pipeline_config": {
+      "required": true,
+      "description": "safe-mode config"
+    },
+    "execution_boundary": {
+      "required": true,
+      "description": "must forbid live/signing/deploy/trading"
+    }
+  },
+  "forbidden_inputs": [
+    "wallet_private_key",
+    "signing_payload",
+    "live_order_payload"
+  ]
+}

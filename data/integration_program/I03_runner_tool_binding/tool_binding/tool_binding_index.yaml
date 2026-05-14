@@ -1,0 +1,71 @@
+{
+  "tool_binding_index": {
+    "index_id": "TOOL_BINDING_INDEX",
+    "generated_at": "2026-05-12T14:32:32Z",
+    "tools": {
+      "GMGN_TOOL_BINDING": {
+        "owner_stages": [
+          "P02",
+          "P03",
+          "P04"
+        ],
+        "adapter_id": "gmgn_tool_adapter",
+        "requires_trace": true
+      },
+      "OKX_QUOTE_BINDING": {
+        "owner_stages": [
+          "P08"
+        ],
+        "adapter_id": "okx_quote_adapter",
+        "failure_policy": "BLOCK_IF_QUOTE_UNAVAILABLE"
+      },
+      "OKX_SECURITY_BINDING": {
+        "owner_stages": [
+          "P02",
+          "P08"
+        ],
+        "adapter_id": "okx_security_adapter",
+        "failure_policy": "BLOCK_OR_PAUSE_IF_SECURITY_UNKNOWN"
+      },
+      "KLINE_PROVIDER_BINDING": {
+        "owner_stages": [
+          "P02",
+          "P06",
+          "P07"
+        ],
+        "adapter_id": "kline_provider_adapter"
+      },
+      "LEGACY_READER_BINDING": {
+        "owner_stages": [
+          "P09",
+          "I04",
+          "I05"
+        ],
+        "adapter_id": "legacy_readonly_reader",
+        "write_permission": "READ_ONLY"
+      },
+      "TRACE_WRITER_BINDING": {
+        "owner_stages": [
+          "P01_TO_P10",
+          "I01_TO_I05"
+        ],
+        "adapter_id": "trace_writer"
+      },
+      "ACCEPTANCE_RUNNER_BINDING": {
+        "owner_stages": [
+          "P01_TO_P10",
+          "I01_TO_I05"
+        ],
+        "adapter_id": "acceptance_runner"
+      },
+      "HANDOFF_WRITER_BINDING": {
+        "owner_stages": [
+          "P01_TO_P10",
+          "I01_TO_I05"
+        ],
+        "adapter_id": "handoff_writer"
+      }
+    },
+    "binding_status": "TOOL_BINDING_COMPLETE"
+  }
+}

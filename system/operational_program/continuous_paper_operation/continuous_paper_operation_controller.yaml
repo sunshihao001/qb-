@@ -1,0 +1,19 @@
+controller_id: CONTINUOUS_PAPER_OPERATION_CONTROLLER
+version: 1.0.0
+generated_at: 2026-05-12T16:29:31Z
+source_doc_id: DOC-20260512-CPO-001
+category: Operational Program
+not_phase: true
+not_p11: true
+not_i06: true
+purpose_cn: 持续纸面验证运行、样本积累、周期复盘、升级候选审查与系统稳定性监控。
+upstream_required: [I05_READY_OR_READY_WITH_GAPS, PAPER_OPERATION_READINESS_ALLOWED, P08_TO_PAPER_RUNTIME_PERMISSION, P09_REVIEW_REPLAY_AVAILABLE, P10_SELF_UPGRADE_AVAILABLE]
+status_codes: [CPO_READY, CPO_READY_WITH_GAPS, CPO_SINGLE_CYCLE_ONLY, CPO_PAUSED, CPO_BLOCKED]
+forbidden:
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+  auto_order_allowed: false
+  auto_deploy_allowed: false
+  direct_rule_mutation_allowed: false
+  p07_bypass_p08_allowed: false
+  p10_auto_deploy_allowed: false

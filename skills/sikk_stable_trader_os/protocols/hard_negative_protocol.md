@@ -1,0 +1,22 @@
+# Hard Negative Protocol
+
+## Inheritance
+
+任何上游硬否决必须写入下游 handoff，并在 Phase06/Phase07 再次检查。
+
+Representative global hard negatives:
+
+- `DATA_INVALID`
+- `WALLET_BLOCK`
+- `ACTIVE_DISTRIBUTION`
+- `TRANSFER_TO_COUNTERPARTY`
+- `STRUCTURE_COLLAPSE`
+- `SCENARIO_BLOCK`
+- `SCENARIO_TRAP_RISK`
+- `SCENARIO_DISTRIBUTION_RISK`
+- `COMPLETION_FAIL`
+- `FATIGUE_BLOCK`
+- `POSITION_OVEREXTENDED`
+- `STRATEGY_BLOCK`
+- `EXECUTION_BLOCK`
+- `REGRESSION_TEST_FAIL`

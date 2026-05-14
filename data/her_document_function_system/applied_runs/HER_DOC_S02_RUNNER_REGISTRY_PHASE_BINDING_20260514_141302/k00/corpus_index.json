@@ -1,0 +1,108 @@
+{
+  "doc_id": "doc_HER_DOC_S02_RUNNER_REGISTRY_PHASE_BINDING_20260514_141302",
+  "raw_path": "input/raw_document.md",
+  "sections": [
+    {
+      "section_id": "sec_001",
+      "level": 1,
+      "title": "HER_DOC S02 闭环任务包：runner registry 与 phase binding closure",
+      "char_offset": 0
+    },
+    {
+      "section_id": "sec_002",
+      "level": 2,
+      "title": "0. 本轮任务定位",
+      "char_offset": 61
+    },
+    {
+      "section_id": "sec_003",
+      "level": 2,
+      "title": "1. 输入证据",
+      "char_offset": 505
+    },
+    {
+      "section_id": "sec_004",
+      "level": 2,
+      "title": "2. 必须关闭或降级的 S01 gap",
+      "char_offset": 1711
+    },
+    {
+      "section_id": "sec_005",
+      "level": 2,
+      "title": "3. HER_DOC 处理流程",
+      "char_offset": 2140
+    },
+    {
+      "section_id": "sec_006",
+      "level": 3,
+      "title": "O00",
+      "char_offset": 2160
+    },
+    {
+      "section_id": "sec_007",
+      "level": 3,
+      "title": "K00",
+      "char_offset": 2273
+    },
+    {
+      "section_id": "sec_008",
+      "level": 3,
+      "title": "F00",
+      "char_offset": 2405
+    },
+    {
+      "section_id": "sec_009",
+      "level": 3,
+      "title": "V00",
+      "char_offset": 2967
+    },
+    {
+      "section_id": "sec_010",
+      "level": 3,
+      "title": "A00",
+      "char_offset": 3180
+    },
+    {
+      "section_id": "sec_011",
+      "level": 3,
+      "title": "H00",
+      "char_offset": 3450
+    },
+    {
+      "section_id": "sec_012",
+      "level": 3,
+      "title": "U00/G00",
+      "char_offset": 3641
+    },
+    {
+      "section_id": "sec_013",
+      "level": 2,
+      "title": "4. 禁止事项",
+      "char_offset": 3809
+    },
+    {
+      "section_id": "sec_014",
+      "level": 2,
+      "title": "5. 预期状态",
+      "char_offset": 4018
+    }
+  ],
+  "key_points": [
+    "previous_status: `S01_READY_WITH_GAPS",
+    "目标：把 S01 已扫描登记的真实 runtime runner 从报告草案推进到 HER / Stable Trader OS 可消费的正式控制面资产草案，并通过 HER_DOC safe-mode 管线形成 K00/F00/V00/A00/H00/U00/G00 证据。",
+    "边界：safe-mode、paper-only、document-governance + control-binding only；不触发真实 swap、不签名、不 broadcast、不声明 production ready。",
+    "## 2. 必须关闭或降级的 S01 gap",
+    "不允许把 S01_READY_WITH_GAPS 升格为 ACCEPTED。",
+    "调度 K00/F00/V00/A00/H00/U00/G00 safe-mode 输出。",
+    "消费级：本轮只允许证明 control-binding draft 可消费；未实跑完整 live pipeline 则保持 READY_WITH_GAPS。",
+    "运行级：safe-mode 验证通过；不得声明 production/live accepted。",
+    "### U00/G00",
+    "U00: 把 S01 gap 根因沉淀为 review case 和 upgrade candidates。",
+    "G00: 生成候选治理规则：任何 runtime runner 必须有 phase binding、trace、acceptance、handoff、permission boundary。",
+    "## 4. 禁止事项",
+    "不把 READY_WITH_GAPS 声称为 ACCEPTED。",
+    "合法预期：`S02_CONTROL_BINDING_READY_WITH_GAPS` 或 `HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS`。",
+    "只有在 formal asset 文件存在、解析通过、且 safe-mode 验证通过时，才允许声明 S02 控制面绑定草案完成。"
+  ],
+  "status": "CORPUS_INDEX_READY_WITH_GAPS"
+}

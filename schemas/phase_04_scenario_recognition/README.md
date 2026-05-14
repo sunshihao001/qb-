@@ -1,0 +1,3 @@
+# 多模型场景识别层 schemas
+
+状态码：SCENARIO_ALLOW, SCENARIO_PAUSE, SCENARIO_BLOCK

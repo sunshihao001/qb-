@@ -1,0 +1,14 @@
+{
+  "kline_provider_binding": {
+    "owner_stages": [
+      "P02_SOURCE_DATA_FACT",
+      "P06_SCENARIO_RECOGNITION",
+      "P07_STRATEGY_GATE"
+    ],
+    "canonical_outputs": [
+      "kline_fact_record",
+      "market_structure_fact_seed"
+    ],
+    "failure_policy": "READY_WITH_GAPS_OR_OBSERVE"
+  }
+}

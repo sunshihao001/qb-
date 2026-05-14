@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0294
+source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3.md
+phase_scores:
+  P01: 17
+  P02: 0
+  P03: 0
+  P04: 0
+  P05: 5
+  P06: 3
+  P07: 4
+  P08: 5
+  P09: 9
+  P10: 98
+primary_phase: P10
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

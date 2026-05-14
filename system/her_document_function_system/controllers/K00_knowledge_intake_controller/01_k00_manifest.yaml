@@ -1,0 +1,34 @@
+controller_name: K00_knowledge_intake_controller
+controller_type: HER_PHASE_CONTROLLER
+phase_id: K00
+phase_name: Knowledge Intake / Handoff Bridge
+中文名称: 知识摄取与 F00 合法入口桥接控制器
+version: 1.0.0
+system: HER-DFAFS
+purpose: >-
+  Preserve user/system documents as file-backed source artifacts, produce document passports,
+  corpus index refs, system mapping refs, gap detection refs, execution boundary, write policy,
+  repo root, and a K00 handoff packet that is the only legal F00 entry.
+canonical_root: /root/sikk-gmgn/system/her_document_function_system/controllers/K00_knowledge_intake_controller
+runtime_root: /root/sikk-gmgn/data/her_document_function_system/k00_runs
+upstream_phases:
+  - user_document_input
+  - raw_material_intake
+downstream_phases:
+  - F00_function_realization_controller
+forbidden_actions:
+  - skip_raw_preservation
+  - treat_chat_context_as_source_of_truth
+  - start_f00_without_handoff_packet
+  - hide_gap
+  - convert_ready_with_gaps_to_ready
+  - overwrite_raw_input
+outputs:
+  - k00_handoff_packet
+  - document_passport_refs
+  - corpus_index_refs
+  - system_mapping_refs
+  - gap_detection_refs
+  - execution_boundary
+  - write_policy
+  - repo_root

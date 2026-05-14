@@ -1,0 +1,7 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: phase_io_alignment_matrix
+fields:
+- matrix_id
+- links
+- matrix_result

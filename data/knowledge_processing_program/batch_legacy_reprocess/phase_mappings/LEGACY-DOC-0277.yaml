@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0277
+source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-023_data_plane_professional_design.md
+phase_scores:
+  P01: 3
+  P02: 6
+  P03: 9
+  P04: 0
+  P05: 11
+  P06: 2
+  P07: 5
+  P08: 3
+  P09: 7
+  P10: 2
+primary_phase: P05
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

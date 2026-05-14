@@ -1,0 +1,8 @@
+closed_loop_trace_integrity:
+  type: object
+  required:
+    - validation_id
+    - trace_chain_complete
+    - missing_trace_refs
+    - status
+  additional_properties_allowed: true

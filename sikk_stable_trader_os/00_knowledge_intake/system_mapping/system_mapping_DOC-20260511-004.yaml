@@ -1,0 +1,21 @@
+doc_id: DOC-20260511-004
+material_role: canonical_methodology_blueprint
+canonical_target: /root/sikk-gmgn/sikk_stable_trader_os/00_methodology/system_methodology_blueprint.md
+primary_consumer: P00_system_bootstrap_controller
+must_not_directly_trigger:
+  - P01_data_fact_controller
+  - paper_trading_runtime
+  - real_trade_execution
+plane_mapping:
+  methodology_plane: authoritative_source
+  governance_plane: required_output_from_p00
+  domain_plane: required_output_from_p00
+  data_plane: required_output_from_p00
+  control_plane: required_output_from_p00
+  trace_plane: required_output_from_p00
+  acceptance_plane: required_output_from_p00
+  handoff_plane: required_output_from_p00
+phase_mapping:
+  K00: source_preservation_and_taskization_complete_for_this_doc
+  P00: next_legal_stage_must_consume
+  P01: blocked_until_data_plane_acceptance

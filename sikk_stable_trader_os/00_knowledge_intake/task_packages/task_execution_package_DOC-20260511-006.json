@@ -1,0 +1,29 @@
+{
+  "task_id": "K00_INTAKE_DOC-20260511-006",
+  "task_name": "P00_SYSTEM_BOOTSTRAP_CONTROLLER_LANDING_AND_ACCEPTANCE_INTAKE",
+  "source_references": [
+    "00_knowledge_intake/raw_inputs/DOC-20260511-006_p00_system_bootstrap_controller_landing_and_acceptance.md"
+  ],
+  "phase_target": "P00_system_bootstrap_controller",
+  "objective": "Verify whether P00 landing acceptance is needed or already superseded by P00 bootstrap passed state.",
+  "required_outputs": [
+    "P00 controller file verification",
+    "landing acceptance report verification",
+    "current_system_state safety verification"
+  ],
+  "constraints": [
+    "No P01 runtime start",
+    "No auto trading",
+    "No real trade",
+    "Do not overwrite without backup",
+    "Do not downgrade BOOTSTRAP_PASSED state"
+  ],
+  "acceptance_criteria": [
+    "P00 files exist and parse",
+    "safety boundaries hold",
+    "P01 remains blocked",
+    "next legal stage is conservative and consistent with current state"
+  ],
+  "handoff_destination": "P00_system_bootstrap_controller",
+  "status": "TASK_PACKAGE_READY"
+}

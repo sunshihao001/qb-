@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Telegram binding schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "telegram_command",
+    "description",
+    "required_args",
+    "permission_level",
+    "safe_mode_required",
+    "allowed_actions",
+    "forbidden_actions",
+    "output_message_template",
+    "binding_mode"
+  ],
+  "properties": {
+    "telegram_command": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "required_args": {
+      "type": "array"
+    },
+    "permission_level": {
+      "type": "string"
+    },
+    "safe_mode_required": {
+      "const": true
+    },
+    "allowed_actions": {
+      "type": "array"
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "contains": {
+        "const": "live_runtime"
+      }
+    },
+    "output_message_template": {
+      "type": "string"
+    },
+    "binding_mode": {
+      "enum": [
+        "DESIGN_ONLY"
+      ]
+    }
+  }
+}

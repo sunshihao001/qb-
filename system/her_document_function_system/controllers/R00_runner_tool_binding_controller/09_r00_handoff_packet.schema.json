@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "R00 handoff packet schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "v00_handoff_refs",
+    "validation_evidence_refs",
+    "binding_manifest_refs",
+    "command_contract_refs",
+    "dry_run_evidence_refs",
+    "trace_refs",
+    "audit_refs",
+    "gap_refs",
+    "acceptance_refs",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "handoff_status"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "from_phase": {
+      "const": "R00"
+    },
+    "to_phase": {
+      "enum": [
+        "A00",
+        "H00",
+        "U00"
+      ]
+    },
+    "v00_handoff_refs": {
+      "type": "array"
+    },
+    "validation_evidence_refs": {
+      "type": "array"
+    },
+    "binding_manifest_refs": {
+      "type": "array"
+    },
+    "command_contract_refs": {
+      "type": "array"
+    },
+    "cli_binding_refs": {
+      "type": "array"
+    },
+    "tool_binding_refs": {
+      "type": "array"
+    },
+    "orchestrator_binding_refs": {
+      "type": "array"
+    },
+    "telegram_binding_refs": {
+      "type": "array"
+    },
+    "report_binding_refs": {
+      "type": "array"
+    },
+    "dashboard_binding_refs": {
+      "type": "array"
+    },
+    "scheduler_binding_refs": {
+      "type": "array"
+    },
+    "dry_run_evidence_refs": {
+      "type": "array"
+    },
+    "trace_refs": {
+      "type": "array"
+    },
+    "audit_refs": {
+      "type": "array"
+    },
+    "gap_refs": {
+      "type": "array"
+    },
+    "failure_refs": {
+      "type": "array"
+    },
+    "acceptance_refs": {
+      "type": "array"
+    },
+    "allowed_next_actions": {
+      "type": "array"
+    },
+    "forbidden_next_actions": {
+      "type": "array",
+      "contains": {
+        "const": "live_runtime"
+      }
+    },
+    "unresolved_gaps": {
+      "type": "array"
+    },
+    "handoff_status": {
+      "enum": [
+        "HANDOFF_READY",
+        "HANDOFF_BLOCKED",
+        "DESIGN_ONLY"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+quality_dimensions:
+- completeness
+- accuracy
+- consistency
+- freshness
+- traceability
+- replayability
+- stability
+- granularity_fit
+data_quality_score_model:
+  completeness_weight: 0.25
+  accuracy_weight: 0.2
+  consistency_weight: 0.2
+  freshness_weight: 0.15
+  traceability_weight: 0.1
+  replayability_weight: 0.1
+quality_status:
+- DATA_HIGH_CONFIDENCE
+- DATA_USABLE
+- DATA_USABLE_WITH_GAPS
+- DATA_LOW_CONFIDENCE
+- DATA_UNUSABLE
+downstream_permission:
+  DATA_HIGH_CONFIDENCE: ALLOW_EVIDENCE_GENERATION
+  DATA_USABLE: ALLOW_EVIDENCE_GENERATION_WITH_TAG
+  DATA_USABLE_WITH_GAPS: ALLOW_WEAK_EVIDENCE_ONLY
+  DATA_LOW_CONFIDENCE: NO_STRONG_CLAIM
+  DATA_UNUSABLE: BLOCK_EVIDENCE_GENERATION

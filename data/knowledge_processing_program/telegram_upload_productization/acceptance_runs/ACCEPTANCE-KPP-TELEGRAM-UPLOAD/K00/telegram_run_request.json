@@ -1,0 +1,21 @@
+{
+  "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+  "doc_id": "ACCEPTANCE-KPP-TELEGRAM-DOC",
+  "source_type": "telegram_upload",
+  "source_path": "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/normalized_text.md",
+  "original_source_path": "tests/fixtures/kpp/sample_system_design_doc.md",
+  "staged_source_path": "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/uploaded_source/ACCEPTANCE-KPP-TELEGRAM-DOC_8f72ae51ba73_sample_system_design_doc.md",
+  "normalized_source_adapter": "plain_text",
+  "normalized_source_files": [
+    "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/uploaded_source/ACCEPTANCE-KPP-TELEGRAM-DOC_8f72ae51ba73_sample_system_design_doc.md"
+  ],
+  "telegram_context": {
+    "chat_id": "ACCEPTANCE_CHAT",
+    "message_id": "ACCEPTANCE_MSG"
+  },
+  "input_classification": "system_building_material",
+  "output_root": "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs",
+  "queue_path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/input_governance_queue.jsonl",
+  "telegram_panel": true,
+  "candidate_only": true
+}

@@ -1,0 +1,21 @@
+artifact_trace_record:
+  trace_id: string
+  artifact_id: required
+  artifact_type: required
+  file_path: required
+  created_at: required
+  updated_at: required
+  produced_by_phase: required
+  produced_by_task_id: required
+  content_role: required
+  validation: required
+  downstream_usage: required
+  required_trace_links:
+    - parent_trace_ids
+    - child_trace_ids
+    - related_artifact_trace_ids
+  validation_rules:
+    - trace_id_present
+    - source_present
+    - downstream_usage_declared
+    - forbidden_actions_respected

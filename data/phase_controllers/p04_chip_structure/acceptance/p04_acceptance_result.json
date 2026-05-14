@@ -1,0 +1,20 @@
+{
+  "validated_at": "2026-05-12T02:27:13Z",
+  "doc_id": "DOC-20260512-004",
+  "controller_dir": "/root/sikk-gmgn/system/phase_controllers/p04_chip_structure_controller",
+  "data_dir": "/root/sikk-gmgn/data/phase_controllers/p04_chip_structure",
+  "expected_files": 52,
+  "missing_files": [],
+  "json_parse_errors": {},
+  "yaml_parse_errors": {},
+  "runtime_dirs_expected": 28,
+  "runtime_dirs_missing": [],
+  "safety_anchor_passed": true,
+  "overall_status": "PASS_WITH_RUNTIME_GAPS",
+  "runtime_allowed": false,
+  "paper_runtime_allowed": false,
+  "live_runtime_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "next_legal_stage": "P05_EVIDENCE_CONTROLLER_PACKAGE_DESIGN"
+}

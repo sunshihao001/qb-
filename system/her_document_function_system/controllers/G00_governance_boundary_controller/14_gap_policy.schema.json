@@ -1,0 +1,35 @@
+{
+  "title": "Gap Policy",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "gap_levels",
+    "blocking_gaps",
+    "status"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "gap_levels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocking_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PENDING",
+        "DEPRECATED"
+      ]
+    }
+  }
+}

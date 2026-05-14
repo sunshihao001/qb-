@@ -1,0 +1,278 @@
+{
+  "review_id": "runtime_binding_review_20260514_1038",
+  "created_at": "2026-05-14T12:12:16Z",
+  "repo_root": "/root/sikk-gmgn",
+  "system": "HER_DOC_RUNTIME_BINDING_REVIEW",
+  "summary_status": "RUNTIME_BINDING_REVIEW_READY_WITH_GAPS",
+  "safe_mode": true,
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order",
+    "broadcast",
+    "private_key",
+    "policy_active"
+  ],
+  "controller_runtime_binding_matrix": [
+    {
+      "phase": "K00",
+      "controller": "K00_knowledge_intake_controller",
+      "controller_exists": true,
+      "runner_files": [
+        "tools/k00_document_intake.py"
+      ],
+      "evidence_files": [],
+      "runtime_binding_status": "RUNNER_FILE_ONLY_NO_ACCEPTANCE_EVIDENCE",
+      "reason": "Runner file exists but acceptance/runtime evidence is missing.",
+      "allowed_scope": "safe-mode/read-only/design-level/candidate-only",
+      "forbidden_runtime_modes": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "broadcast",
+        "private_key",
+        "policy_active"
+      ],
+      "can_claim_policy_active": false,
+      "can_claim_production_ready": false
+    },
+    {
+      "phase": "F00",
+      "controller": "F00_function_realization_controller",
+      "controller_exists": true,
+      "runner_files": [
+        "modules/her_document_function_system/f00_runner.py",
+        "tools/her_document_function_system/f00_safe_runner.py"
+      ],
+      "evidence_files": [
+        "data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/runner_binding_evidence.json"
+      ],
+      "runtime_binding_status": "SAFE_MODE_BOUND",
+      "reason": "F00 module CLI binding evidence exists and is marked safe-mode.",
+      "allowed_scope": "safe-mode/read-only/design-level/candidate-only",
+      "forbidden_runtime_modes": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "broadcast",
+        "private_key",
+        "policy_active"
+      ],
+      "can_claim_policy_active": false,
+      "can_claim_production_ready": false
+    },
+    {
+      "phase": "V00",
+      "controller": "V00_validation_controller",
+      "controller_exists": false,
+      "runner_files": [
+        "tools/v00_real_validation_executor.py",
+        "tools/v00_replay_executor.py",
+        "tools/v00_test_runner.py"
+      ],
+      "evidence_files": [
+        "data/her_document_function_system/v00_real_validation_runs/V00-P01-AUTO-FULL-20260514-001/acceptance/v00_real_validation_acceptance.json"
+      ],
+      "runtime_binding_status": "READ_ONLY_VALIDATOR_BOUND",
+      "reason": "V00 validation executor evidence exists; read-only validation only.",
+      "allowed_scope": "safe-mode/read-only/design-level/candidate-only",
+      "forbidden_runtime_modes": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "broadcast",
+        "private_key",
+        "policy_active"
+      ],
+      "can_claim_policy_active": false,
+      "can_claim_production_ready": false
+    },
+    {
+      "phase": "R00",
+      "controller": "R00_runtime_replay_controller",
+      "controller_exists": false,
+      "runner_files": [
+        "tools/o00_replay_runner.py"
+      ],
+      "evidence_files": [],
+      "runtime_binding_status": "DESIGN_LEVEL_REPLAY_ONLY",
+      "reason": "R00 real runtime binding is not proven; replay/design-level only.",
+      "allowed_scope": "safe-mode/read-only/design-level/candidate-only",
+      "forbidden_runtime_modes": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "broadcast",
+        "private_key",
+        "policy_active"
+      ],
+      "can_claim_policy_active": false,
+      "can_claim_production_ready": false
+    },
+    {
+      "phase": "A00",
+      "controller": "A00_acceptance_evidence_controller",
+      "controller_exists": true,
+      "runner_files": [
+        "tools/a00_real_acceptance_executor.py"
+      ],
+      "evidence_files": [
+        "data/her_document_function_system/a00_real_acceptance_runs/A00-P01-AUTO-FULL-20260514-001/decision/acceptance_decision.json"
+      ],
+      "runtime_binding_status": "ACCEPTANCE_REVIEW_BOUND",
+      "reason": "A00 acceptance executor evidence exists; acceptance review only.",
+      "allowed_scope": "safe-mode/read-only/design-level/candidate-only",
+      "forbidden_runtime_modes": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "broadcast",
+        "private_key",
+        "policy_active"
+      ],
+      "can_claim_policy_active": false,
+      "can_claim_production_ready": false
+    },
+    {
+      "phase": "H00",
+      "controller": "H00_handoff_controller",
+      "controller_exists": false,
+      "runner_files": [
+        "tools/h00_real_queue_executor.py"
+      ],
+      "evidence_files": [
+        "data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/acceptance/h00_real_queue_acceptance.json"
+      ],
+      "runtime_binding_status": "QUEUE_REVIEW_BOUND",
+      "reason": "H00 handoff/queue evidence exists; queue handoff only.",
+      "allowed_scope": "safe-mode/read-only/design-level/candidate-only",
+      "forbidden_runtime_modes": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "broadcast",
+        "private_key",
+        "policy_active"
+      ],
+      "can_claim_policy_active": false,
+      "can_claim_production_ready": false
+    },
+    {
+      "phase": "U00",
+      "controller": "U00_update_learning_controller",
+      "controller_exists": false,
+      "runner_files": [
+        "tools/u00_real_review_executor.py"
+      ],
+      "evidence_files": [
+        "data/her_document_function_system/u00_real_review_runs/U00-P01-AUTO-FULL-20260514-005/acceptance/u00_acceptance_result.json"
+      ],
+      "runtime_binding_status": "ACCEPTANCE_REVIEW_BOUND",
+      "reason": "U00 review executor evidence exists; review/update candidates only.",
+      "allowed_scope": "safe-mode/read-only/design-level/candidate-only",
+      "forbidden_runtime_modes": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "broadcast",
+        "private_key",
+        "policy_active"
+      ],
+      "can_claim_policy_active": false,
+      "can_claim_production_ready": false
+    },
+    {
+      "phase": "G00",
+      "controller": "G00_governance_boundary_controller",
+      "controller_exists": true,
+      "runner_files": [
+        "tools/g00_real_policy_registry_executor.py"
+      ],
+      "evidence_files": [
+        "data/her_document_function_system/g00_real_policy_runs/G00-P01-AUTO-FULL-20260514-001/acceptance/g00_real_policy_acceptance.json"
+      ],
+      "runtime_binding_status": "GOVERNANCE_CANDIDATE_BOUND",
+      "reason": "G00 policy registry evidence exists; candidate policy only, not policy active.",
+      "allowed_scope": "safe-mode/read-only/design-level/candidate-only",
+      "forbidden_runtime_modes": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "broadcast",
+        "private_key",
+        "policy_active"
+      ],
+      "can_claim_policy_active": false,
+      "can_claim_production_ready": false
+    },
+    {
+      "phase": "O00",
+      "controller": "O00_full_pipeline_orchestrator",
+      "controller_exists": true,
+      "runner_files": [
+        "tools/o00_cli.py",
+        "tools/o00_pipeline_orchestrator.py",
+        "tools/o00_run_document_main.py"
+      ],
+      "evidence_files": [
+        "data/her_document_function_system/o00_run_document_runs/o00_run_20260514_102849_788851/reports/o00_final_report.md"
+      ],
+      "runtime_binding_status": "DESIGN_LEVEL_REPLAY_ONLY",
+      "reason": "O00 safe-mode orchestration evidence exists; final state remains READY_WITH_GAPS.",
+      "allowed_scope": "safe-mode/read-only/design-level/candidate-only",
+      "forbidden_runtime_modes": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "broadcast",
+        "private_key",
+        "policy_active"
+      ],
+      "can_claim_policy_active": false,
+      "can_claim_production_ready": false
+    }
+  ],
+  "gap_count": 1,
+  "gaps": [
+    {
+      "gap_id": "RUNTIME_BINDING_GAP_K00",
+      "phase": "K00",
+      "status": "RUNNER_FILE_ONLY_NO_ACCEPTANCE_EVIDENCE",
+      "reason": "Runner file exists but acceptance/runtime evidence is missing.",
+      "required_next_evidence": [
+        "runner_binding_evidence",
+        "contract_test_result",
+        "semantic_replay_result",
+        "handoff_consumption_trace"
+      ],
+      "safety_policy": "Do not upgrade to live runtime; keep safe-mode until explicit acceptance."
+    }
+  ],
+  "final_claims": {
+    "full_runtime_ready": false,
+    "policy_active": false,
+    "production_ready": false,
+    "real_trading_ready": false,
+    "safe_mode_review_complete": true
+  }
+}

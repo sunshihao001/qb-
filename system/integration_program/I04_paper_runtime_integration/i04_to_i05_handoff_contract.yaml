@@ -1,0 +1,28 @@
+i04_to_i05_handoff_contract:
+  packet_id: string
+  packet_type: I04_TO_I05_PAPER_RUNTIME_HANDOFF
+  generated_at: datetime
+  route:
+    from_controller: I04_PAPER_RUNTIME_INTEGRATION
+    to_controller: I05_REVIEW_REPLAY_CONTROLLER
+  required_sections:
+    - permission_summary
+    - runtime_summary
+    - trace_summary
+    - acceptance_summary
+    - gap_summary
+    - safety_summary
+  downstream_permission:
+    allowed:
+      - I05_REVIEW_REPLAY
+      - P09_REVIEW_INPUT_CONSUMPTION
+    forbidden:
+      - LIVE_EXECUTION
+      - WALLET_SIGNING
+      - AUTO_DEPLOY
+      - DIRECT_RULE_MUTATION
+  restrictions:
+    paper_only: true
+    no_live_execution: true
+    no_wallet_signing: true
+    no_auto_deploy: true

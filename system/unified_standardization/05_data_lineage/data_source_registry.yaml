@@ -1,0 +1,21 @@
+meta:
+  standard_id: S00_DATA_SOURCE_REGISTRY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+sources:
+- source_id: SRC_GMGN_LEGACY_RUNTIME
+  source_type: legacy_runtime
+  path: /root/sikk-gmgn/data/gmgn_candidates_live_run
+  status: keep_in_place_readonly_compat
+- source_id: SRC_SOURCE_WALLET_BOT
+  source_type: canonical_wallet_source
+  path: /root/sikk-gmgn/data/source_wallet_bot/<mode>/<token>
+  status: canonical_new_wallet_outputs

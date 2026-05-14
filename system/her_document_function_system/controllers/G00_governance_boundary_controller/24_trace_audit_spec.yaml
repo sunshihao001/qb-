@@ -1,0 +1,34 @@
+trace_audit_spec:
+  phase_id: G00
+  required_events:
+    - g00_started
+    - governance_evidence_loaded
+    - candidate_classified
+    - policy_domain_mapped
+    - forbidden_action_registry_built
+    - status_code_table_built
+    - execution_boundary_policy_built
+    - evidence_policy_built
+    - gap_policy_built
+    - directory_policy_built
+    - contract_policy_built
+    - runner_safety_policy_built
+    - human_confirmation_policy_built
+    - production_risk_policy_built
+    - policy_conflict_checked
+    - policy_version_written
+    - governance_registry_written
+    - handoff_written
+    - g00_completed
+    - g00_blocked
+  required_fields:
+    - event_id
+    - timestamp
+    - phase_id
+    - run_id
+    - event_type
+    - status_before
+    - status_after
+    - evidence_refs
+    - conflict_refs
+    - message

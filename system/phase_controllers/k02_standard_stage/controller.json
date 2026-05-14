@@ -1,0 +1,28 @@
+{
+  "controller_id": "K02_STANDARD_STAGE_CONTROLLER",
+  "downstream": "K03_STANDARD_STAGE_INPUT",
+  "forbidden_actions": [
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast",
+    "real_trade"
+  ],
+  "generated_at": "2026-05-14T04:23:28.862704+00:00",
+  "phase_id": "K02",
+  "phase_name": "knowledge_field_mapping",
+  "purpose": "Provide standard controller/schema/contract/trace/acceptance/handoff closure without enabling real execution.",
+  "required_assets": [
+    "schema",
+    "contract",
+    "trace",
+    "acceptance",
+    "handoff",
+    "runtime_entry"
+  ],
+  "runtime_depth": "BUSINESS_BOUND_RUNTIME",
+  "runtime_mode": "paper_only",
+  "semantic_acceptance": "SEMANTIC_REPLAY_ACCEPTANCE",
+  "status": "BUSINESS_BOUND_STAGE_READY_PAPER_ONLY",
+  "upstream": "K01_STANDARD_STAGE_HANDOFF"
+}

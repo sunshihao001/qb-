@@ -1,0 +1,17 @@
+{
+  "required_inputs": [
+    "I01 audit outputs if available",
+    "P01-P10 phase controller directories",
+    "system indices",
+    "runtime data directories",
+    "legacy paths"
+  ],
+  "optional_inputs": [
+    "I01 fix priority list",
+    "phase cards"
+  ],
+  "block_if": [
+    "live_execution_requested",
+    "business_logic_mutation_requested"
+  ]
+}

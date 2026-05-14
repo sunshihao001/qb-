@@ -1,0 +1,49 @@
+tests:
+- test_id: P09_TEST_001
+  name: valid paper case with full historical snapshot
+  expected: REPLAY_COMPLETED
+- test_id: P09_TEST_002
+  name: missing historical snapshot
+  expected: P09_BLOCKED
+- test_id: P09_TEST_003
+  name: current data overlay attempt
+  expected: P09_BLOCKED
+- test_id: P09_TEST_004
+  name: broken P01-P08 chain
+  expected: P09_READY_WITH_GAPS
+- test_id: P09_TEST_005
+  name: P07 overblocked successful missed opportunity
+  expected: CALIBRATION_CANDIDATE
+- test_id: P09_TEST_006
+  name: P08 security block later proven valid
+  expected: SUCCESS_ATTRIBUTION
+- test_id: P09_TEST_007
+  name: P08 too strict false negative
+  expected: P10_REVIEW_REQUIRED
+- test_id: P09_TEST_008
+  name: paper runtime invalidation triggered late
+  expected: FAILURE_ATTRIBUTION
+- test_id: P09_TEST_009
+  name: P09 attempts direct threshold mutation
+  expected: P09_BLOCKED
+- test_id: P09_TEST_010
+  name: P09 attempts live execution
+  expected: P09_BLOCKED
+- test_id: P09_TEST_011
+  name: success case preserve rule candidate
+  expected: P10_HANDOFF_READY
+- test_id: P09_TEST_012
+  name: failure due market exogenous shock
+  expected: ATTRIBUTION_COMPLETED
+- test_id: P09_TEST_013
+  name: missing P10 handoff contract
+  expected: P09_REJECTED
+- test_id: P09_TEST_014
+  name: false positive from weak evidence
+  expected: CALIBRATION_CANDIDATE
+- test_id: P09_TEST_015
+  name: false negative from high conflict observe only
+  expected: CALIBRATION_CANDIDATE
+- test_id: P09_TEST_016
+  name: snapshot lock hash mismatch
+  expected: P09_BLOCKED

@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0285
+source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-003_p03_wallet_entity_controller_v3.md
+phase_scores:
+  P01: 53
+  P02: 0
+  P03: 79
+  P04: 10
+  P05: 2
+  P06: 1
+  P07: 2
+  P08: 4
+  P09: 0
+  P10: 4
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

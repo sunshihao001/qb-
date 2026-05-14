@@ -1,0 +1,20 @@
+{
+  "run_id": "mock_phase_01_run_001",
+  "phase_id": "phase_01_data_fact_controller",
+  "quality_score": 82,
+  "phase_01_gate_status": "PASS_WITH_WARNING",
+  "missing_fields": [
+    {
+      "field_name": "security_fact",
+      "required_level": "phase_05_required",
+      "impact": "禁止进入强策略门禁"
+    }
+  ],
+  "restricted_models": [
+    "phase_06_strategy_gate_strong_pass",
+    "phase_07_execution_risk_real_trade"
+  ],
+  "allow_next_phase": true,
+  "next_phase": "phase_02_wallet_structure_controller",
+  "contains_mock_data": true
+}

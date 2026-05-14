@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 trace audit validation schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "trace_audit_status",
+    "missing_trace_events",
+    "missing_audit_events"
+  ],
+  "properties": {
+    "trace_audit_status": {
+      "enum": [
+        "PASSED",
+        "PASSED_WITH_GAPS",
+        "BLOCKED"
+      ]
+    },
+    "missing_trace_events": {
+      "type": "array"
+    },
+    "missing_audit_events": {
+      "type": "array"
+    },
+    "trace_integrity_warnings": {
+      "type": "array"
+    },
+    "required_events": {
+      "type": "array"
+    },
+    "validated_trace_refs": {
+      "type": "array"
+    },
+    "validated_audit_refs": {
+      "type": "array"
+    }
+  }
+}

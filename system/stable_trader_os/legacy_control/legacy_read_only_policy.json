@@ -1,0 +1,20 @@
+{
+  "allowed_new_write_paths": [
+    "legacy_compat/",
+    "system/stable_trader_os/legacy_control/",
+    "reports/stable_trader_os/"
+  ],
+  "delete_policy": "no_delete_no_move",
+  "forbidden_real_execution": [
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast",
+    "real_trade"
+  ],
+  "generated_at": "2026-05-14T05:19:09.075414+00:00",
+  "policy_id": "SIKK_LEGACY_READ_ONLY_POLICY",
+  "real_execution_allowed": false,
+  "status": "LEGACY_READ_ONLY_POLICY_READY",
+  "write_policy": "read_only_except_compat_index"
+}

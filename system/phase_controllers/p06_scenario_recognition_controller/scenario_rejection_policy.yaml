@@ -1,0 +1,4 @@
+policy: scenario_rejection_policy
+rules:
+- every candidate requires rejection check
+- invalidating evidence creates scenario_rejection_record

@@ -1,0 +1,515 @@
+{
+  "doc_id": "doc_her_doc_run_20260514_manual",
+  "raw_path": "input/raw_document.md",
+  "sections": [
+    {
+      "section_id": "sec_001",
+      "level": 1,
+      "title": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS",
+      "char_offset": 0
+    },
+    {
+      "section_id": "sec_002",
+      "level": 2,
+      "title": "HER 文档到功能自动化落实系统：主链路可运行版 v1.0",
+      "char_offset": 48
+    },
+    {
+      "section_id": "sec_003",
+      "level": 1,
+      "title": "1. 当前阶段定位",
+      "char_offset": 391
+    },
+    {
+      "section_id": "sec_004",
+      "level": 2,
+      "title": "1.1 正确目标",
+      "char_offset": 404
+    },
+    {
+      "section_id": "sec_005",
+      "level": 2,
+      "title": "1.2 暂停的旁支",
+      "char_offset": 754
+    },
+    {
+      "section_id": "sec_006",
+      "level": 1,
+      "title": "2. 主链路总结构",
+      "char_offset": 980
+    },
+    {
+      "section_id": "sec_007",
+      "level": 1,
+      "title": "3. 必须建立的目录",
+      "char_offset": 1533
+    },
+    {
+      "section_id": "sec_008",
+      "level": 2,
+      "title": "3.1 系统定义目录",
+      "char_offset": 1547
+    },
+    {
+      "section_id": "sec_009",
+      "level": 2,
+      "title": "3.2 运行输出目录",
+      "char_offset": 2026
+    },
+    {
+      "section_id": "sec_010",
+      "level": 1,
+      "title": "4. 必须建立的工具文件",
+      "char_offset": 2229
+    },
+    {
+      "section_id": "sec_011",
+      "level": 2,
+      "title": "4.1 工具职责",
+      "char_offset": 2510
+    },
+    {
+      "section_id": "sec_012",
+      "level": 1,
+      "title": "5. 输入合约",
+      "char_offset": 3068
+    },
+    {
+      "section_id": "sec_013",
+      "level": 2,
+      "title": "`03_pipeline_input_contract.json`",
+      "char_offset": 3079
+    },
+    {
+      "section_id": "sec_014",
+      "level": 1,
+      "title": "6. 输出合约",
+      "char_offset": 4066
+    },
+    {
+      "section_id": "sec_015",
+      "level": 2,
+      "title": "`04_pipeline_output_contract.json`",
+      "char_offset": 4077
+    },
+    {
+      "section_id": "sec_016",
+      "level": 1,
+      "title": "7. 每个阶段必须做什么",
+      "char_offset": 5898
+    },
+    {
+      "section_id": "sec_017",
+      "level": 2,
+      "title": "7.1 K00：文档摄取与任务化",
+      "char_offset": 5914
+    },
+    {
+      "section_id": "sec_018",
+      "level": 3,
+      "title": "目标",
+      "char_offset": 5935
+    },
+    {
+      "section_id": "sec_019",
+      "level": 3,
+      "title": "必须输出",
+      "char_offset": 5972
+    },
+    {
+      "section_id": "sec_020",
+      "level": 3,
+      "title": "`document_passport.json`",
+      "char_offset": 6096
+    },
+    {
+      "section_id": "sec_021",
+      "level": 3,
+      "title": "K00 验收标准",
+      "char_offset": 6746
+    },
+    {
+      "section_id": "sec_022",
+      "level": 2,
+      "title": "7.2 F00：功能落实映射",
+      "char_offset": 6935
+    },
+    {
+      "section_id": "sec_023",
+      "level": 3,
+      "title": "目标",
+      "char_offset": 6954
+    },
+    {
+      "section_id": "sec_024",
+      "level": 3,
+      "title": "必须输出",
+      "char_offset": 7032
+    },
+    {
+      "section_id": "sec_025",
+      "level": 3,
+      "title": "`function_mapping.json`",
+      "char_offset": 7178
+    },
+    {
+      "section_id": "sec_026",
+      "level": 3,
+      "title": "`required_system_assets.json`",
+      "char_offset": 7773
+    },
+    {
+      "section_id": "sec_027",
+      "level": 3,
+      "title": "F00 验收标准",
+      "char_offset": 8243
+    },
+    {
+      "section_id": "sec_028",
+      "level": 2,
+      "title": "7.3 V00：验证证据",
+      "char_offset": 8467
+    },
+    {
+      "section_id": "sec_029",
+      "level": 3,
+      "title": "目标",
+      "char_offset": 8484
+    },
+    {
+      "section_id": "sec_030",
+      "level": 3,
+      "title": "必须输出",
+      "char_offset": 8572
+    },
+    {
+      "section_id": "sec_031",
+      "level": 3,
+      "title": "`validation_matrix.json`",
+      "char_offset": 8697
+    },
+    {
+      "section_id": "sec_032",
+      "level": 3,
+      "title": "`gap_register.json`",
+      "char_offset": 9414
+    },
+    {
+      "section_id": "sec_033",
+      "level": 3,
+      "title": "V00 验收标准",
+      "char_offset": 9769
+    },
+    {
+      "section_id": "sec_034",
+      "level": 2,
+      "title": "7.4 A00：总验收",
+      "char_offset": 9981
+    },
+    {
+      "section_id": "sec_035",
+      "level": 3,
+      "title": "目标",
+      "char_offset": 9997
+    },
+    {
+      "section_id": "sec_036",
+      "level": 3,
+      "title": "必须输出",
+      "char_offset": 10172
+    },
+    {
+      "section_id": "sec_037",
+      "level": 3,
+      "title": "`a00_acceptance_result.json`",
+      "char_offset": 10284
+    },
+    {
+      "section_id": "sec_038",
+      "level": 2,
+      "title": "7.5 H00：下游队列",
+      "char_offset": 10882
+    },
+    {
+      "section_id": "sec_039",
+      "level": 3,
+      "title": "目标",
+      "char_offset": 10899
+    },
+    {
+      "section_id": "sec_040",
+      "level": 3,
+      "title": "必须输出",
+      "char_offset": 10944
+    },
+    {
+      "section_id": "sec_041",
+      "level": 3,
+      "title": "`downstream_queue.json`",
+      "char_offset": 11048
+    },
+    {
+      "section_id": "sec_042",
+      "level": 3,
+      "title": "H00 验收标准",
+      "char_offset": 11640
+    },
+    {
+      "section_id": "sec_043",
+      "level": 2,
+      "title": "7.6 U00：复盘升级",
+      "char_offset": 11818
+    },
+    {
+      "section_id": "sec_044",
+      "level": 3,
+      "title": "目标",
+      "char_offset": 11835
+    },
+    {
+      "section_id": "sec_045",
+      "level": 3,
+      "title": "必须输出",
+      "char_offset": 11941
+    },
+    {
+      "section_id": "sec_046",
+      "level": 3,
+      "title": "`upgrade_queue.json`",
+      "char_offset": 12062
+    },
+    {
+      "section_id": "sec_047",
+      "level": 3,
+      "title": "U00 验收标准",
+      "char_offset": 12563
+    },
+    {
+      "section_id": "sec_048",
+      "level": 2,
+      "title": "7.7 G00：治理候选",
+      "char_offset": 12734
+    },
+    {
+      "section_id": "sec_049",
+      "level": 3,
+      "title": "目标",
+      "char_offset": 12751
+    },
+    {
+      "section_id": "sec_050",
+      "level": 3,
+      "title": "必须输出",
+      "char_offset": 12797
+    },
+    {
+      "section_id": "sec_051",
+      "level": 3,
+      "title": "`governance_candidates.json`",
+      "char_offset": 12880
+    },
+    {
+      "section_id": "sec_052",
+      "level": 2,
+      "title": "7.8 O00：总控总结",
+      "char_offset": 13531
+    },
+    {
+      "section_id": "sec_053",
+      "level": 3,
+      "title": "目标",
+      "char_offset": 13548
+    },
+    {
+      "section_id": "sec_054",
+      "level": 3,
+      "title": "必须输出",
+      "char_offset": 13642
+    },
+    {
+      "section_id": "sec_055",
+      "level": 3,
+      "title": "`run_summary.json`",
+      "char_offset": 13730
+    },
+    {
+      "section_id": "sec_056",
+      "level": 1,
+      "title": "8. 状态码标准",
+      "char_offset": 14267
+    },
+    {
+      "section_id": "sec_057",
+      "level": 2,
+      "title": "8.1 允许状态",
+      "char_offset": 14279
+    },
+    {
+      "section_id": "sec_058",
+      "level": 2,
+      "title": "8.2 禁止伪状态",
+      "char_offset": 14520
+    },
+    {
+      "section_id": "sec_059",
+      "level": 1,
+      "title": "9. 主命令",
+      "char_offset": 14758
+    },
+    {
+      "section_id": "sec_060",
+      "level": 1,
+      "title": "10. 主链路执行协议",
+      "char_offset": 15153
+    },
+    {
+      "section_id": "sec_061",
+      "level": 1,
+      "title": "11. Trace / Audit 要求",
+      "char_offset": 15553
+    },
+    {
+      "section_id": "sec_062",
+      "level": 2,
+      "title": "`trace.jsonl`",
+      "char_offset": 15577
+    },
+    {
+      "section_id": "sec_063",
+      "level": 2,
+      "title": "`audit.jsonl`",
+      "char_offset": 15895
+    },
+    {
+      "section_id": "sec_064",
+      "level": 1,
+      "title": "12. 最终报告模板",
+      "char_offset": 16171
+    },
+    {
+      "section_id": "sec_065",
+      "level": 2,
+      "title": "`o00/final_report.md`",
+      "char_offset": 16185
+    },
+    {
+      "section_id": "sec_066",
+      "level": 1,
+      "title": "HER Document Function Pipeline Report",
+      "char_offset": 16223
+    },
+    {
+      "section_id": "sec_067",
+      "level": 2,
+      "title": "1. Run Info",
+      "char_offset": 16264
+    },
+    {
+      "section_id": "sec_068",
+      "level": 2,
+      "title": "2. Document Understanding",
+      "char_offset": 16349
+    },
+    {
+      "section_id": "sec_069",
+      "level": 2,
+      "title": "3. Function Mapping",
+      "char_offset": 16462
+    },
+    {
+      "section_id": "sec_070",
+      "level": 2,
+      "title": "4. Validation Result",
+      "char_offset": 16564
+    },
+    {
+      "section_id": "sec_071",
+      "level": 2,
+      "title": "5. Acceptance Decision",
+      "char_offset": 16629
+    },
+    {
+      "section_id": "sec_072",
+      "level": 2,
+      "title": "6. Downstream Queue",
+      "char_offset": 16733
+    },
+    {
+      "section_id": "sec_073",
+      "level": 2,
+      "title": "7. Review / Upgrade",
+      "char_offset": 16820
+    },
+    {
+      "section_id": "sec_074",
+      "level": 2,
+      "title": "8. Governance Candidates",
+      "char_offset": 16904
+    },
+    {
+      "section_id": "sec_075",
+      "level": 2,
+      "title": "9. Forbidden Claims Blocked",
+      "char_offset": 16975
+    },
+    {
+      "section_id": "sec_076",
+      "level": 2,
+      "title": "10. Next Action",
+      "char_offset": 17007
+    },
+    {
+      "section_id": "sec_077",
+      "level": 1,
+      "title": "13. 测试文件",
+      "char_offset": 17118
+    },
+    {
+      "section_id": "sec_078",
+      "level": 2,
+      "title": "关键测试原则",
+      "char_offset": 17625
+    },
+    {
+      "section_id": "sec_079",
+      "level": 1,
+      "title": "14. HER 执行任务书",
+      "char_offset": 17941
+    },
+    {
+      "section_id": "sec_080",
+      "level": 1,
+      "title": "15. 当前阶段状态判断",
+      "char_offset": 22359
+    },
+    {
+      "section_id": "sec_081",
+      "level": 1,
+      "title": "16. 下一步只做一件事",
+      "char_offset": 22770
+    }
+  ],
+  "key_points": [
+    "系统可以输出 K00/F00/V00/A00/H00/U00/G00/O00 文件；",
+    "→ K00 文档摄取与任务化",
+    "→ F00 功能落实映射",
+    "→ V00 验证与缺口识别",
+    "→ A00 总验收",
+    "→ H00 下游队列",
+    "→ U00 复盘升级",
+    "→ G00 治理候选",
+    "→ O00 总控报告",
+    "K00 handoff",
+    "F00 handoff",
+    "V00 handoff",
+    "# 3. 必须建立的目录",
+    "# 4. 必须建立的工具文件",
+    "|`o00_run_document_main.py`|主入口，总控 K00→F00→V00→A00→H00→U00→G00|",
+    "|`a00_acceptance.py`|总验收，生成 READY / READY_WITH_GAPS / BLOCKED|",
+    "|`g00_governance_update.py`|提取治理候选、状态规则、禁止动作规则|",
+    "\"description\": \"如已存在则读取，不存在则使用 safe-mode 默认配置\"",
+    "# 7. 每个阶段必须做什么",
+    "## 7.1 K00：文档摄取与任务化"
+  ],
+  "status": "CORPUS_INDEX_READY_WITH_GAPS"
+}

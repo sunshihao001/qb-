@@ -1,0 +1,27 @@
+{
+  "task_id": "TASK_DOC-20260511-027_HANDOFF_PLANE_LANDING",
+  "task_type": "SYSTEM_PLANE_LANDING",
+  "target": "HANDOFF_PLANE",
+  "created_at": "2026-05-11T17:41:23Z",
+  "steps": [
+    "K00 intake",
+    "system file landing",
+    "full control plane sync",
+    "acceptance-to-handoff packet generation",
+    "validation"
+  ],
+  "forbidden": [
+    "P01 runtime",
+    "Tool Binding",
+    "Paper Runtime",
+    "Live Runtime",
+    "auto order",
+    "real trade"
+  ],
+  "acceptance_criteria": [
+    "26 handoff plane files exist and parse",
+    "full control routes/status/rules synced",
+    "handoff packet inherits acceptance limitations",
+    "state remains paper_only and real_trade_enabled=false"
+  ]
+}

@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0193
+source_path: docs/stable_trader_os/phases/phase_01_professional_data_design.md
+phase_scores:
+  P01: 6
+  P02: 4
+  P03: 4
+  P04: 1
+  P05: 0
+  P06: 0
+  P07: 10
+  P08: 2
+  P09: 0
+  P10: 2
+primary_phase: P07
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

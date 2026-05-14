@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V00 Test Evidence Schema",
+  "type": "object",
+  "required": [
+    "validation_type",
+    "status",
+    "test_command",
+    "test_type",
+    "test_file",
+    "started_at",
+    "ended_at",
+    "exit_code",
+    "stdout_path",
+    "stderr_path",
+    "passed_count",
+    "failed_count",
+    "covered_functions",
+    "covered_rules",
+    "failure_reason"
+  ],
+  "properties": {
+    "validation_type": {
+      "const": "test_execution"
+    },
+    "status": {
+      "enum": [
+        "PASSED",
+        "FAILED",
+        "BLOCKED",
+        "TEST_PLANNED",
+        "NOT_EXECUTED"
+      ]
+    },
+    "test_command": {
+      "type": "string",
+      "minLength": 1
+    },
+    "test_type": {
+      "enum": [
+        "unit_test",
+        "schema_validation_test",
+        "contract_test",
+        "function_mapping_test",
+        "field_model_test",
+        "rule_logic_test",
+        "gap_detection_test",
+        "handoff_test",
+        "failure_case_test"
+      ]
+    },
+    "test_file": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "ended_at": {
+      "type": "string"
+    },
+    "exit_code": {
+      "type": "integer"
+    },
+    "stdout_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stderr_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "passed_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "failed_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "covered_functions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "covered_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "failure_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

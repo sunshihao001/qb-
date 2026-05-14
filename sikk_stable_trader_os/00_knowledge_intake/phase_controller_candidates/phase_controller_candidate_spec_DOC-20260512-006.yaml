@@ -1,0 +1,14 @@
+doc_id: DOC-20260512-006
+candidate_controller_id: P06_SCENARIO_RECOGNITION_CONTROLLER
+status: PHASE_CONTROLLER_CANDIDATE_READY_FOR_PACKAGE_LANDING
+required_files_count: 40
+runtime_dirs_count: 26
+runtime_dirs_required_by_user: 25
+upstream:
+- P05
+downstream:
+- P07
+forbidden_downstream:
+- PAPER_RUNTIME
+- LIVE_EXECUTION
+boundary: scenario recognition only; no strategy decision, no paper_ready, no runtime

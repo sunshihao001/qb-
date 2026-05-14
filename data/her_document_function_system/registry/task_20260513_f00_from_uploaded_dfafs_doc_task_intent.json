@@ -1,0 +1,39 @@
+{
+  "task_id": "task_20260513_f00_from_uploaded_dfafs_doc",
+  "doc_id": "doc_20260513_her_dfafs_rebuild_v1",
+  "task_type": "SYSTEM_CONSTRUCTION_DOC",
+  "core_goal": "将专业自动化文档处理系统升级为 HER-DFAFS：文档到功能自动化落实系统，并进入 F00 controller 落地。",
+  "target_phase_candidate": [
+    "K00",
+    "KV",
+    "SYSTEM_MAPPING",
+    "GAP_DETECTION",
+    "F00",
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "V01",
+    "V02",
+    "V03",
+    "R02",
+    "A01",
+    "H01",
+    "U01"
+  ],
+  "production_risk_flag": false,
+  "forbidden_execution_scope": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_rule_direct_change",
+    "private_keys",
+    "signing",
+    "broadcasting"
+  ],
+  "initial_status": "ENTRY_CLASSIFIED",
+  "created_at": "2026-05-13T14:30:44.366397+00:00"
+}

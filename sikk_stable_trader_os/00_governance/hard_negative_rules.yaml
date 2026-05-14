@@ -1,0 +1,38 @@
+version: '2.0'
+source_doc_id: DOC-20260511-021
+severity_scale:
+- P0_HARD_BLOCK
+- P1_BLOCK
+- P2_DEGRADE
+rules:
+- id: HN-P0-REAL-TRADE-FORBIDDEN
+  severity: P0_HARD_BLOCK
+  condition: real_trade_enabled == true OR auto_order_allowed == true OR signing/broadcast/swap
+    requested
+  action: BLOCK_AND_RESTORE_PAPER_ONLY
+- id: HN-P0-P01-BYPASS-DATA-PLANE
+  severity: P0_HARD_BLOCK
+  condition: P01 runtime starts before Data Plane acceptance and P01 preflight
+  action: BLOCK_P01
+- id: HN-P0-PAPER-RUNNER-BYPASS-P06-P07
+  severity: P0_HARD_BLOCK
+  condition: paper runtime starts without P06 paper_permission_packet and P07 execution_risk_report
+  action: BLOCK_PAPER_RUNTIME
+- id: HN-P0-REVIEW-DIRECT-RULE-MODIFY
+  severity: P0_HARD_BLOCK
+  condition: P09 review output directly modifies live/runtime rules without P10 controlled
+    upgrade
+  action: BLOCK_UPGRADE_APPLY
+- id: HN-P0-SECRET-EXPOSURE
+  severity: P0_HARD_BLOCK
+  condition: API key/token/private key/seed phrase/connection string appears in output
+    or persisted artifact
+  action: REDACT_AND_BLOCK
+- id: HN-P0-MISSING-FIELD-INFERRED-AS-FACT
+  severity: P0_HARD_BLOCK
+  condition: missing required field is filled by assumption and marked as fact
+  action: BLOCK_OR_UNKNOWN
+- id: HN-P1-DETERMINISTIC-MARKET-LANGUAGE
+  severity: P1_BLOCK
+  condition: 庄家一定/必拉/稳赚/ guaranteed moon style certainty language appears
+  action: REWRITE_AS_PROBABILISTIC_OR_BLOCK

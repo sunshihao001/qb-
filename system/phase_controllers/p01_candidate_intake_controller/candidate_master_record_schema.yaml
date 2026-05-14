@@ -1,0 +1,60 @@
+candidate_master_record:
+  candidate_id: string
+  candidate_version: string
+  candidate_status:
+  - INTAKE_RECEIVED
+  - IDENTITY_PENDING
+  - IDENTITY_VERIFIED
+  - DUPLICATE_MERGED
+  - READY_FOR_P02
+  - READY_FOR_P02_WITH_GAPS
+  - REJECTED
+  - BLOCKED
+  token_identity:
+    chain: string
+    token_address: string
+    token_address_normalized: string
+    token_address_valid: boolean
+    token_symbol: string|null
+    token_name: string|null
+    token_decimals: integer|null
+    token_standard: string|null
+  pool_identity:
+    pair_address: string|null
+    pool_address: string|null
+    dex_name: string|null
+    quote_token: string|null
+    base_token: string|null
+    pool_identity_status:
+    - POOL_CONFIRMED
+    - POOL_MISSING
+    - MULTI_POOL_DETECTED
+    - POOL_CONFLICTED
+    - UNKNOWN
+  source_summary:
+  - first_source_type
+  - first_source_id
+  - first_seen_by_system_at
+  - latest_source_type
+  - latest_seen_at
+  - source_event_count
+  - rediscovery_count
+  - source_types_seen
+  trace:
+  - candidate_trace_id
+  - source_trace_ids
+  - identity_trace_id
+  - dedup_trace_id
+  - state_trace_ids
+  - artifact_trace_ids
+  downstream:
+    allowed_next_controller:
+    - P02_SOURCE_DATA_FACT_CONTROLLER
+    forbidden_next_controller:
+    - P03_WALLET_ENTITY_CONTROLLER
+    - P04_CHIP_STRUCTURE_CONTROLLER
+    - P05_EVIDENCE_CONTROLLER
+    - P06_SCENARIO_RECOGNITION_CONTROLLER
+    - P07_STRATEGY_GATE_CONTROLLER
+    - PAPER_ONLY_RUNTIME
+    - LIVE_EXECUTION

@@ -1,0 +1,53 @@
+{
+  "doc_id": "doc_RUN-20260514-HER-CLOSED-LOOP-P0-SAFE",
+  "source_name": "issue_pack.yaml",
+  "source_type": "SYSTEM_CONSTRUCTION_MATERIAL",
+  "received_at": "2026-05-14T11:19:20Z",
+  "raw_path": "input/raw_document.md",
+  "sha256": "4edb818d8a138fd00232af3e9ebc9019136da4fe24e59f639f8b66199775cd7d",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance"
+    ]
+  },
+  "summary": {
+    "core_intent": "让真实 GPT 研究资料 / 系统建设资料进入 HER，按主链路跑完，生成完整文件输出，保留 gap。",
+    "key_points": []
+  },
+  "system_mapping": {
+    "affected_planes": [
+      "input",
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00",
+      "trace",
+      "audit"
+    ],
+    "affected_controllers": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_document_function_system",
+      "tools",
+      "tests/her_document_function_system",
+      "data/her_document_function_system/runs"
+    ]
+  },
+  "status": "K00_READY_WITH_GAPS"
+}

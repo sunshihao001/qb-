@@ -1,0 +1,66 @@
+{
+  "doc_id": "DOC-20260511-008",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T13:53:23.296365+00:00",
+  "phase_impact": {
+    "K00": {
+      "impact": "primary",
+      "consumes_planes": [
+        "Knowledge Plane",
+        "Methodology Plane",
+        "Trace Plane",
+        "Handoff Plane"
+      ]
+    },
+    "P00": {
+      "impact": "primary",
+      "consumes_planes": [
+        "Governance Plane",
+        "Control Plane",
+        "Acceptance Plane",
+        "Trace Plane"
+      ]
+    },
+    "P01": {
+      "impact": "primary",
+      "consumes_planes": [
+        "Data Plane",
+        "Control Plane",
+        "Acceptance Plane",
+        "Handoff Plane"
+      ]
+    },
+    "P02-P05": {
+      "impact": "alignment",
+      "consumes_planes": [
+        "Domain Plane",
+        "Data Plane",
+        "Trace Plane"
+      ]
+    },
+    "P06-P07": {
+      "impact": "constraint",
+      "consumes_planes": [
+        "Governance Plane",
+        "Execution Plane",
+        "Acceptance Plane"
+      ]
+    },
+    "P08": {
+      "impact": "primary",
+      "consumes_planes": [
+        "Review Plane",
+        "Trace Plane"
+      ]
+    },
+    "P09": {
+      "impact": "primary",
+      "consumes_planes": [
+        "Upgrade Plane",
+        "Methodology Plane",
+        "Governance Plane"
+      ]
+    }
+  },
+  "canonical_next_phase": "continue_methodology_or_P00_system_context_control"
+}

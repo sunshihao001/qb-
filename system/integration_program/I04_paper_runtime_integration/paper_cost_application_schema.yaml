@@ -1,0 +1,8 @@
+record_type: paper_cost_application_record
+fields:
+- cost_id
+- candidate_id
+- fee_cost
+- spread_cost
+- other_costs
+- trace_id

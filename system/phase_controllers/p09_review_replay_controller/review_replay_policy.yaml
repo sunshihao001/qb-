@@ -1,0 +1,16 @@
+policy_id: P09_REVIEW_REPLAY_POLICY
+version: v3.0
+principles:
+- historical_snapshot_first
+- decision_chain_before_attribution
+- failure_and_success_both_reviewed
+- calibration_candidate_not_direct_change
+- p10_required_for_upgrade
+decision_statuses:
+- REVIEW_CASE_READY
+- REPLAY_COMPLETED
+- ATTRIBUTION_COMPLETED
+- CALIBRATION_CANDIDATE
+- P10_HANDOFF_READY
+- REVIEW_REJECTED
+- REVIEW_BLOCKED

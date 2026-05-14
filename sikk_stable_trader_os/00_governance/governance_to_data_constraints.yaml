@@ -1,0 +1,8 @@
+version: '2.0'
+handoff_role: input_constraint_for_data_plane
+constraints:
+- every required field needs source_asset/source_module
+- missing_policy must be explicit
+- blocking_if_missing must be declared
+- assumptions cannot become facts
+- evidence_level and quality_level required

@@ -1,0 +1,35 @@
+{
+  "handoff_id": "DATA_HANDOFF-20260511-P0",
+  "from": "Data Plane",
+  "to": "P00_system_context_control",
+  "then_to": "P01_data_fact_runtime_connection",
+  "status": "DATA_PLANE_READY_FOR_P00_WITH_CONTROLLER_STUBS",
+  "artifact_paths": [
+    "00_data/data_plane.md",
+    "00_data/field_source_map.yaml",
+    "00_data/normalized_fact_model.schema.json",
+    "00_data/data_input_contract.json",
+    "00_control/current_system_state.json",
+    "00_control/phase_registry.yaml"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    "P00/P01 controllers are stubs pending P0-3 full landing"
+  ],
+  "acceptance_summary": "Data Plane canonical files exist; P01 remains paused until controller stubs and registry are verified.",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "source_doc_id": "DOC-20260511-017",
+  "updated_at": "2026-05-11T14:26:07.280460+00:00",
+  "paper_only_required": true,
+  "real_trade_allowed": false,
+  "from_plane": "DATA_PLANE",
+  "to_phase": "P01_data_fact_controller"
+}

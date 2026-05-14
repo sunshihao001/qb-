@@ -1,0 +1,37 @@
+controller_name: O00_full_pipeline_orchestrator
+alias: R99_full_pipeline_runtime_orchestrator
+controller_type: HER_MASTER_ORCHESTRATOR
+phase_id: O00
+phase_name: Full Pipeline Orchestrator
+中文名称: 全链路总控编排控制器
+version: 1.0.0
+system: HER-DFAFS
+controller_root: /root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator
+run_root: /root/sikk-gmgn/data/her_document_function_system/o00_runs
+managed_controllers:
+  - G00_governance_boundary_controller
+  - K00_knowledge_intake_controller
+  - F00_function_realization_controller
+  - V00_validation_evidence_controller
+  - R00_runner_tool_binding_controller
+  - A00_acceptance_evidence_controller
+  - H00_handoff_downstream_queue_controller
+  - U00_review_upgrade_controller
+mission: govern and orchestrate HER-DFAFS full document-to-function pipeline without live/signing/deploy/trading.
+forbidden_actions:
+  - bypass_governance_policy
+  - bypass_k00
+  - start_f00_without_k00_handoff
+  - start_v00_without_f00_handoff
+  - start_r00_without_v00_handoff
+  - start_h00_without_a00_readiness_certificate
+  - hide_gap
+  - drop_forbidden_actions
+  - convert_ready_with_gaps_to_ready
+  - treat_design_as_implemented
+  - treat_plan_as_evidence
+  - treat_binding_plan_as_runner_bound
+  - start_live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading

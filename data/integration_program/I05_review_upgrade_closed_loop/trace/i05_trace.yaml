@@ -1,0 +1,15 @@
+i05_trace:
+  trace_id: I05_TRACE_20260512_AUTO_01
+  generated_at: '2026-05-12T16:03:17Z'
+  status: I05_AUTOMATION_READY_WITH_GAPS
+  artifacts:
+    issue_package: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/automation_task_packages/i05_automated_issue_list_package.yaml
+    task_packet: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/automation_task_packages/i05_full_automation_task_packet.yaml
+    priority_routing: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/priority_routing/i05_priority_routing.yaml
+    runtime_state: /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/runtime_state/i05_runtime_state.yaml
+  restrictions:
+    live_execution_allowed: false
+    wallet_signing_allowed: false
+    auto_deploy_allowed: false
+    direct_rule_mutation_allowed: false
+    paper_runtime_mutation_allowed: false

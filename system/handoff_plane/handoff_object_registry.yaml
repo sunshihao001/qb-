@@ -1,0 +1,16 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+objects:
+- handoff_packet
+- downstream_read_instruction
+- gap_propagation_packet
+- limitation_transfer_packet
+- forbidden_use_policy
+- field_usage_permission
+- runtime_handoff_packet
+- review_feedback_handoff_packet
+- handoff_audit_record

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 recovery policy",
+  "type": "object",
+  "required": [
+    "stage_failure_policies",
+    "allowed_recovery_decisions"
+  ],
+  "properties": {
+    "allowed_recovery_decisions": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "RETRY_STAGE",
+          "RETURN_TO_PREVIOUS_STAGE",
+          "ROUTE_TO_U00",
+          "ROUTE_TO_G00",
+          "DEFER_TO_BACKLOG",
+          "BLOCK_PIPELINE",
+          "REJECT_INPUT",
+          "REQUIRE_HUMAN_CONFIRMATION"
+        ]
+      }
+    },
+    "stage_failure_policies": {
+      "type": "object",
+      "properties": {
+        "K00": {
+          "type": "object",
+          "required": [
+            "on_failure",
+            "safe_next_action",
+            "forbidden_next_action"
+          ]
+        },
+        "F00": {
+          "type": "object",
+          "required": [
+            "on_failure",
+            "safe_next_action",
+            "forbidden_next_action"
+          ]
+        },
+        "V00": {
+          "type": "object",
+          "required": [
+            "on_failure",
+            "safe_next_action",
+            "forbidden_next_action"
+          ]
+        },
+        "R00": {
+          "type": "object",
+          "required": [
+            "on_failure",
+            "safe_next_action",
+            "forbidden_next_action"
+          ]
+        },
+        "A00": {
+          "type": "object",
+          "required": [
+            "on_failure",
+            "safe_next_action",
+            "forbidden_next_action"
+          ]
+        },
+        "H00": {
+          "type": "object",
+          "required": [
+            "on_failure",
+            "safe_next_action",
+            "forbidden_next_action"
+          ]
+        },
+        "U00": {
+          "type": "object",
+          "required": [
+            "on_failure",
+            "safe_next_action",
+            "forbidden_next_action"
+          ]
+        },
+        "G00": {
+          "type": "object",
+          "required": [
+            "on_failure",
+            "safe_next_action",
+            "forbidden_next_action"
+          ]
+        }
+      }
+    }
+  }
+}

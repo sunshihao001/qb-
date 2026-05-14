@@ -1,0 +1,11 @@
+record_id: file_naming_policy_20260512
+generated_at: '2026-05-12T13:05:00Z'
+status: BUILT
+items:
+- lower_snake_case
+- '*_schema.yaml for schemas'
+- '*_contract.yaml for contracts'
+- '*_index.yaml/json for indexes'
+- '*_handoff_packet.json for handoffs'
+- '*_report.md/json for reports'
+gaps: []

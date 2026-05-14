@@ -1,0 +1,8 @@
+task_tree_schema:
+  required_fields: [task_tree_id, root_goal, target_plane, generated_at, control_version, phase_tasks, final_acceptance]
+  phase_task_required_fields: [phase_id, phase_goal, controller_id, required_inputs, required_outputs, subtasks]
+  subtask_types: [CONTEXT_BUILD, FILE_CREATE, SCHEMA_DEFINE, CONTRACT_DEFINE, VALIDATION, AUDIT, HANDOFF, STATE_WRITEBACK]
+  statuses: [PENDING, RUNNING, DONE, FAILED, BLOCKED, NEEDS_REWORK]
+  final_acceptance:
+    allowed: [PHASE_READY, PHASE_READY_WITH_GAPS, CONTROL_READY_WITH_GAPS]
+    forbidden: [PHASE_REJECTED, PHASE_BLOCKED]

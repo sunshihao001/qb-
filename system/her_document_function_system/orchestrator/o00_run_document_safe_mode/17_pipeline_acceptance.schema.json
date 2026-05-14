@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 pipeline acceptance",
+  "type": "object",
+  "required": [
+    "pipeline_run_id",
+    "final_pipeline_status",
+    "system_status_code",
+    "accepted",
+    "ready_with_gaps",
+    "blocking",
+    "forbidden_claims_blocked"
+  ],
+  "properties": {
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "final_pipeline_status": {
+      "type": "string"
+    },
+    "system_status_code": {
+      "type": "string"
+    },
+    "accepted": {
+      "type": "boolean"
+    },
+    "ready_with_gaps": {
+      "type": "boolean"
+    },
+    "blocking": {
+      "type": "boolean"
+    },
+    "forbidden_claims_blocked": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

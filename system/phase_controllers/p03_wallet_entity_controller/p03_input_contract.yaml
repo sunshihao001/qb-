@@ -1,0 +1,28 @@
+contract_id: "P03_INPUT_CONTRACT"
+status: "PACKAGE_READY"
+required_upstream_handoff:
+  - "p02_to_p03_handoff_packet"
+  - "p03_wallet_entity_data_request_packet"
+required_inputs:
+  - "wallet_fact_seed_records"
+  - "holder_snapshot_fact"
+  - "transaction_fact_seed"
+  - "market_fact_record"
+  - "pair_pool_fact_record"
+  - "data_quality_report"
+  - "data_gap_report"
+  - "data_conflict_report"
+  - "field_usage_permission_packet"
+control_inputs:
+  - "trace_handoff_packet"
+  - "acceptance_result_packet"
+  - "limitation_transfer_packet"
+  - "forbidden_use_policy"
+  - "governance_handoff_packet"
+  - "domain_wallet_role_taxonomy_handoff"
+field_usage_policy: "FACTS_ONLY_NO_EVIDENCE_NO_STRATEGY"
+blocking_if_missing:
+  - "p02_to_p03_handoff_packet"
+  - "wallet_fact_seed_records"
+  - "wallet_address_trace"
+runtime_allowed: false

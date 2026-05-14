@@ -1,0 +1,43 @@
+{
+  "phase_id": "H00",
+  "required": [
+    "k00_handoff_packet",
+    "document_passport",
+    "phase_task_package",
+    "execution_boundary"
+  ],
+  "properties": {
+    "k00_handoff_packet": {
+      "type": "object"
+    },
+    "document_passport": {
+      "type": "object"
+    },
+    "phase_task_package": {
+      "type": "object"
+    },
+    "execution_boundary": {
+      "type": "object",
+      "properties": {
+        "allow_live_runtime": {
+          "const": false
+        },
+        "allow_wallet_signing": {
+          "const": false
+        },
+        "allow_auto_deploy": {
+          "const": false
+        },
+        "allow_production_trading": {
+          "const": false
+        }
+      },
+      "required": [
+        "allow_live_runtime",
+        "allow_wallet_signing",
+        "allow_auto_deploy",
+        "allow_production_trading"
+      ]
+    }
+  }
+}

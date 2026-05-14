@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 evidence bundle schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "evidence_bundle_id",
+    "source_doc_ids",
+    "phase_refs",
+    "evidence_groups",
+    "bundle_status"
+  ],
+  "properties": {
+    "evidence_bundle_id": {
+      "type": "string"
+    },
+    "source_doc_ids": {
+      "type": "array"
+    },
+    "phase_refs": {
+      "type": "object",
+      "required": [
+        "K00",
+        "F00",
+        "V00"
+      ],
+      "properties": {
+        "K00": {
+          "type": "array"
+        },
+        "F00": {
+          "type": "array"
+        },
+        "V00": {
+          "type": "array"
+        },
+        "R00": {
+          "type": "array"
+        }
+      }
+    },
+    "evidence_groups": {
+      "type": "object",
+      "required": [
+        "document_intake",
+        "function_realization",
+        "validation",
+        "trace_audit",
+        "gap_failure",
+        "handoff"
+      ],
+      "properties": {
+        "document_intake": {
+          "type": "array"
+        },
+        "function_realization": {
+          "type": "array"
+        },
+        "validation": {
+          "type": "array"
+        },
+        "runner_binding": {
+          "type": "array"
+        },
+        "trace_audit": {
+          "type": "array"
+        },
+        "gap_failure": {
+          "type": "array"
+        },
+        "handoff": {
+          "type": "array"
+        }
+      }
+    },
+    "bundle_status": {
+      "enum": [
+        "BUILT",
+        "BUILT_WITH_GAPS",
+        "BLOCKED"
+      ]
+    }
+  }
+}

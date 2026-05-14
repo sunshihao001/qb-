@@ -1,0 +1,41 @@
+{
+  "phase": "phase_09_system_upgrade",
+  "controller": "phase_09_system_upgrade_controller",
+  "required_outputs": [
+    "upgrade_fact/upgrade_input_validation.json",
+    "upgrade_fact/upgrade_candidate_classification.json",
+    "upgrade_fact/upgrade_candidate_table.csv",
+    "upgrade_review/evidence_strength_review.json",
+    "upgrade_review/rule_update_review.json",
+    "upgrade_review/hard_negative_update_review.json",
+    "upgrade_review/threshold_calibration_review.json",
+    "upgrade_review/model_recalibration_review.json",
+    "upgrade_review/schema_contract_update_review.json",
+    "upgrade_review/status_code_update_review.json",
+    "upgrade_review/telegram_panel_update_review.json",
+    "validation/regression_validation_plan.json",
+    "validation/regression_validation_report.json",
+    "upgrade_package/rule_update_package.json",
+    "upgrade_package/system_upgrade_manifest.json",
+    "upgrade_package/upgrade_diff_summary.md",
+    "upgrade_package/version_changelog.md",
+    "upgrade_package/rollback_plan.md",
+    "reports/threshold_calibration_report.md",
+    "reports/model_recalibration_report.md",
+    "reports/system_upgrade_report.md",
+    "reports/regression_validation_report.md",
+    "handoff/phase_09_handoff_packet.json",
+    "handoff/system_upgrade_feedback_map.json",
+    "audit/phase_09_audit_report.md",
+    "audit/output_validation_report.json",
+    "audit/handoff_validation_report.json",
+    "audit/gaps.md"
+  ],
+  "package_rules": {
+    "requires_manual_confirmation": true,
+    "allow_apply_to_runtime": false,
+    "recommended_apply_mode": "SHADOW_MODE_FIRST",
+    "regression_pass_required_for_package_ready": true,
+    "rollback_plan_required": true
+  }
+}

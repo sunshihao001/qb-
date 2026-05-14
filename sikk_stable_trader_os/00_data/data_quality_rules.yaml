@@ -1,0 +1,4 @@
+data_quality_rules:
+  levels: [RAW_UNVERIFIED, NORMALIZED, CROSS_CHECKED, ACCEPTED, REJECTED]
+  missing_required_field_action: BLOCK_OR_DEGRADE_BY_POLICY
+  stale_data_action: DEGRADE_TO_UNKNOWN

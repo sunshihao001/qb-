@@ -1,0 +1,31 @@
+controller_id: P02_SOURCE_DATA_FACT_CONTROLLER
+phase_id: P02
+name: Source Data Fact
+domain: source_data_fact
+status: STANDARD_WRAPPER_READY_WITH_RUNTIME_BLOCKED
+generated_by: HER-KPP-SYSTEM-RESCAN-AUTOFIX-20260513
+purpose: Convert docs-only phase material into standard controller assets with contracts,
+  acceptance, handoff, and read-only validation binding.
+interface_binding:
+  interface_id: GMGN_OKX_SKILL_DATA_INTERFACE_V1
+  interface_path: system/data_interfaces/gmgn_okx_skill_interface.yaml
+  binding_mode: READ_ONLY_SKILL_DATA_INTERFACE
+upstream_required:
+- P01_CANDIDATE_INTAKE_CONTROLLER
+downstream_allowed:
+- P03_WALLET_ENTITY_CONTROLLER
+runtime_boundary:
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  swap_enabled: false
+  business_runtime_allowed: false
+  validator_only: true
+forbidden:
+- live_execution
+- wallet_signing
+- transaction_broadcast
+- swap
+- auto_order
+- treat_priority_level_as_buy_signal
+- skip_acceptance_gate

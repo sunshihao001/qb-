@@ -1,0 +1,39 @@
+objective_tree:
+  phase_id: K00
+  level_1_goal:
+    id: L1-1
+    title: Convert uploaded HER system construction prompt into K00-controlled file-backed assets
+  level_2_sub_goals:
+    - id: L2-1
+      title: Preserve the raw source and establish durable identity
+    - id: L2-2
+      title: Build registry, passport, and corpus index
+    - id: L2-3
+      title: Map system impact and gaps
+    - id: L2-4
+      title: Package K00 acceptance and handoff
+  level_3_tasks:
+    - id: T3-1
+      parent: L2-1
+      action: copy raw upload into canonical raw_inputs
+      output: immutable raw source copy
+    - id: T3-2
+      parent: L2-2
+      action: write source registry and passport
+      output: registry entry and passport YAML
+    - id: T3-3
+      parent: L2-2
+      action: build corpus index
+      output: corpus index markdown
+    - id: T3-4
+      parent: L2-3
+      action: map planes, contracts, and risks
+      output: system mapping JSON
+    - id: T3-5
+      parent: L2-3
+      action: detect gaps
+      output: gap report JSON
+    - id: T3-6
+      parent: L2-4
+      action: assemble task package, state, acceptance, and handoff
+      output: K00 package artifacts

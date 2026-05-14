@@ -1,0 +1,6 @@
+trace_jsonl:
+  required_fields: [timestamp, run_id, phase, event, status]
+audit_jsonl:
+  required_events:
+    - forbidden_action_check
+  forbidden_actions: [live_runtime, wallet_signing, auto_deploy, production_trading]

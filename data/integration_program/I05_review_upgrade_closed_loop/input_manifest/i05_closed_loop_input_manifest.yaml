@@ -1,0 +1,17 @@
+i05_closed_loop_input_manifest:
+  manifest_id: I05_MANIFEST_20260512_01
+  generated_at: '2026-05-12T15:30:01Z'
+mode: SKELETON_VALIDATION
+source_doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  i04_handoff_packet_path: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/i05_handoff/i04_to_i05_handoff_packet.yaml
+  p09_review_input_packet_path: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/p09_review_inputs/i04_p09_review_input_packet.yaml
+  upstream_available:
+    i04_handoff: true
+    p09_review_input: true
+    i04_acceptance: true
+    i04_trace: true
+  restrictions:
+    - NO_LIVE_EXECUTION
+    - NO_WALLET_SIGNING
+    - NO_AUTO_DEPLOY
+    - NO_DIRECT_RULE_MUTATION

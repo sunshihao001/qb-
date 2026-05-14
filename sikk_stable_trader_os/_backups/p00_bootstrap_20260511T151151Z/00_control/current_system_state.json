@@ -1,0 +1,322 @@
+{
+  "state_id": "CURRENT_SYSTEM_STATE-20260511-P0",
+  "generated_at": "2026-05-11T13:36:48.521060+00:00",
+  "system": "SIKK Stable Trader OS",
+  "mode": "SYSTEM_BUILDING",
+  "active_repair_task": "TASK-K00-SYSTEM-INTEGRATION-REPAIR-20260511",
+  "current_step": "P0_state_reconciliation",
+  "step_status": "COMPLETED",
+  "single_source_of_truth": true,
+  "canonical_next_stage": "P00_system_context_control_then_P01_data_fact_runtime_connection",
+  "next_stage_reconciliation": {
+    "k00_handoff_previous": "data_plane_generation",
+    "automation_workflow_previous": "P01_data_fact_runtime_connection",
+    "ruling": "Data Plane generated; P00/P01 stubs registered; automation P01 may only proceed after P00 acceptance, still paper-only/read-only.",
+    "resolved_competing_next_stage": true
+  },
+  "canonical_assets": {
+    "methodology": "00_methodology/system_methodology_blueprint.md",
+    "governance": "00_governance/governance_plane.md",
+    "domain": "00_domain/domain_plane.md",
+    "control_state": "00_control/current_system_state.json",
+    "phase_registry": "00_control/phase_registry.yaml",
+    "asset_index": "00_control/system_asset_index.json",
+    "data_plane": "00_data/data_plane.md"
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    "P00/P01 controllers are repair stubs; full semantic controllers pending later landing"
+  ],
+  "allowed_to_continue": true,
+  "updated_at": "2026-05-11T14:25:39.844562+00:00",
+  "latest_methodology_doc_id": "DOC-20260511-017",
+  "latest_methodology_status": "DATA_PLANE_TARGET_DATA_MATERIALIZED_WITH_DEGRADED_GAPS",
+  "canonical_build_order": [
+    "methodology_blueprint",
+    "governance_plane",
+    "domain_plane",
+    "data_plane",
+    "control_plane",
+    "phase_controllers",
+    "runner",
+    "acceptance_writeback",
+    "downstream_business_workflow"
+  ],
+  "downstream_business_workflow_gate": {
+    "automated_trading_status": "BLOCKED_UNTIL_SYSTEM_PREREQUISITES_ACCEPTED",
+    "required_before_automation": [
+      "data_plane",
+      "control_plane",
+      "phase_controllers",
+      "acceptance_matrix"
+    ]
+  },
+  "lightweight_institutional_principle": {
+    "retained_capabilities": [
+      "unique_system_state_source",
+      "phase_registry",
+      "asset_index",
+      "domain_object_registry",
+      "field_source_map",
+      "phase_io_contracts",
+      "acceptance_gate",
+      "trace_matrix",
+      "handoff_packet",
+      "paper_only_risk_boundary"
+    ],
+    "not_required_initially": [
+      "large_multi_team_permission_system",
+      "live_auto_execution",
+      "high_frequency_matching",
+      "dashboard_first",
+      "multi_tenant_architecture",
+      "distributed_database",
+      "over_microservices"
+    ]
+  },
+  "canonical_system_planes": [
+    "Knowledge Plane",
+    "Methodology Plane",
+    "Governance Plane",
+    "Domain Plane",
+    "Data Plane",
+    "Control Plane",
+    "Execution Plane",
+    "Acceptance Plane",
+    "Trace Plane",
+    "Handoff Plane",
+    "Review Plane",
+    "Upgrade Plane"
+  ],
+  "system_plane_questions": {
+    "Knowledge Plane": "哪些资料已经被摄取、保存、建档？",
+    "Methodology Plane": "系统应该按照什么方法建造？",
+    "Governance Plane": "什么允许做，什么禁止做，谁有权限裁决？",
+    "Domain Plane": "系统到底在判断哪些对象、关系、场景和问题？",
+    "Data Plane": "判断这些对象需要哪些字段、来源、质量等级？",
+    "Control Plane": "当前系统状态是什么，下一步谁合法？",
+    "Execution Plane": "哪个 runner 执行哪个任务？",
+    "Acceptance Plane": "什么条件才算阶段真正完成？",
+    "Trace Plane": "方法论、资产、字段、阶段是否被覆盖？",
+    "Handoff Plane": "上游如何把产物交给下游？",
+    "Review Plane": "纸面交易和错判如何复盘？",
+    "Upgrade Plane": "哪些规则允许被更新？"
+  },
+  "system_compilation_chain": [
+    "user_input_documents_links_legacy_material",
+    "K00_knowledge_intake_taskization",
+    "methodology_blueprint_read",
+    "P00_system_build_controller",
+    "governance_plane_generation",
+    "domain_plane_generation",
+    "data_plane_generation",
+    "control_plane_generation",
+    "phase_controller_generation",
+    "runner_binding",
+    "acceptance_gate_generation",
+    "trace_matrix_generation",
+    "handoff_packet_generation"
+  ],
+  "critical_breakpoints": {
+    "k00_assetization_not_system_consumption": true
+  },
+  "mandatory_next_after_k00": "P00_system_context_control",
+  "authoritative_state_source": "00_control/current_system_state.json",
+  "system_control_plane_missing_state": "SYSTEM_CONTROL_PLANE_MISSING",
+  "business_phase_block_when_control_missing": "P01-P10",
+  "her_runtime_order": [
+    "identify_system_phase",
+    "read_current_system_state_json",
+    "read_phase_registry_yaml",
+    "validate_phase_legality",
+    "check_input_asset_exists",
+    "check_input_asset_registered",
+    "check_downstream_consumption",
+    "execute_phase_objective",
+    "write_output_files",
+    "write_acceptance_result",
+    "write_state_back",
+    "generate_handoff_packet",
+    "decide_next_legal_phase"
+  ],
+  "completion_state_distinctions": [
+    "diagnostic_artifact_passed",
+    "system_integration_repaired",
+    "phase_acceptance_passed",
+    "downstream_consumption_verified",
+    "runtime_execution_completed"
+  ],
+  "state_source_required_questions": [
+    "current_authoritative_phase",
+    "blocked_phases",
+    "blocking_reasons",
+    "registered_assets",
+    "consumed_assets",
+    "currently_allowed_actions",
+    "currently_forbidden_actions",
+    "next_legal_phase",
+    "paper_only_status",
+    "real_trade_allowed_status"
+  ],
+  "forbidden_shortcuts": [
+    "chat_context_bypasses_system_state",
+    "user_continue_bypasses_blocking_gaps",
+    "file_generation_equals_phase_completion"
+  ],
+  "canonical_phase_sequence": [
+    "K00",
+    "P00",
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10"
+  ],
+  "phase_definitions": {
+    "K00": {
+      "name": "知识摄取与任务化",
+      "positioning": "把文档、资料、旧系统资产化"
+    },
+    "P00": {
+      "name": "系统建造与方法论编译",
+      "positioning": "把方法论编译成系统平面"
+    },
+    "P01": {
+      "name": "数据事实层",
+      "positioning": "统一事实模型与字段标准化"
+    },
+    "P02": {
+      "name": "钱包结构层",
+      "positioning": "钱包角色、同源组、资金路径"
+    },
+    "P03": {
+      "name": "筹码控制层",
+      "positioning": "控制权、筹码迁移、对手盘压力"
+    },
+    "P04": {
+      "name": "市场结构层",
+      "positioning": "K线、成交量、箱体、AVWAP、POC"
+    },
+    "P05": {
+      "name": "场景识别层",
+      "positioning": "识别吸筹、派发、二段、陷阱等盘型"
+    },
+    "P06": {
+      "name": "策略门禁层",
+      "positioning": "剔除低质量样本，裁决 paper 资格"
+    },
+    "P07": {
+      "name": "执行风控层",
+      "positioning": "模拟成交、滑点、手续费、熔断"
+    },
+    "P08": {
+      "name": "纸面交易验证层",
+      "positioning": "纸面持仓、交易、收益曲线、统计"
+    },
+    "P09": {
+      "name": "复盘学习层",
+      "positioning": "错判归因、规则修正候选"
+    },
+    "P10": {
+      "name": "系统升级层",
+      "positioning": "经过复盘证据后升级字段、规则、阶段"
+    }
+  },
+  "phase_reconciliation_required": {
+    "P09_P10_upgrade_split": true
+  },
+  "phase_target_data_standard": {
+    "schema_path": "00_control/phase_target_data.schema.json",
+    "required_fields": [
+      "phase_id",
+      "phase_name_cn",
+      "phase_type",
+      "phase_status",
+      "authority_scope",
+      "primary_goal",
+      "non_goal",
+      "upstream_dependencies",
+      "required_inputs",
+      "optional_inputs",
+      "forbidden_inputs",
+      "core_objects",
+      "core_questions",
+      "required_outputs",
+      "handoff_outputs",
+      "acceptance_gate",
+      "blocking_conditions",
+      "downstream_consumers",
+      "runner_binding_status",
+      "state_writeback_required",
+      "paper_only_required",
+      "real_trade_allowed"
+    ]
+  },
+  "phase_status_enum": {
+    "legal": [
+      "NOT_CREATED",
+      "STUB_REQUIRED",
+      "WAITING_INPUT",
+      "READY_TO_BUILD",
+      "READY_TO_EXECUTE",
+      "BLOCKED",
+      "BLOCKED_BY_DATA_PLANE",
+      "BLOCKED_BY_CONTROL_PLANE",
+      "BLOCKED_BY_ACCEPTANCE",
+      "RUNNING",
+      "OUTPUT_CREATED",
+      "ACCEPTANCE_PENDING",
+      "ACCEPTANCE_PASSED",
+      "ACCEPTANCE_FAILED",
+      "HANDOFF_READY",
+      "CONSUMED_BY_DOWNSTREAM",
+      "DEPRECATED"
+    ],
+    "forbidden": [
+      "done",
+      "finished",
+      "ok",
+      "looks good",
+      "almost complete",
+      "maybe ready"
+    ]
+  },
+  "phase_target_instances_required": true,
+  "k00_phase_target_data_path": "06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.yaml",
+  "k00_phase_target_data_raw_user_proposed_path": "06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.raw_user_proposed.yaml",
+  "k00_phase_status_enum_mismatch": true,
+  "p00_phase_target_data_path": "06_phase_controllers/P00_system_context_control/phase_target_data.yaml",
+  "p00_phase_target_data_raw_user_proposed_path": "06_phase_controllers/P00_system_context_control/phase_target_data.raw_user_proposed.yaml",
+  "p00_phase_status_enum_mismatch": true,
+  "p00_controller_id_reconciliation_required": true,
+  "current_authoritative_phase": "P00_system_context_control",
+  "business_phases_blocked_until_p00_acceptance": true,
+  "governance_phase_target_data_path": "00_governance/governance_phase_target_data.yaml",
+  "governance_phase_target_data_raw_user_proposed_path": "00_governance/governance_phase_target_data.raw_user_proposed.yaml",
+  "governance_phase_status_enum_mismatch": true,
+  "governance_required_before_domain_and_data": true,
+  "domain_phase_target_data_path": "00_domain/domain_phase_target_data.yaml",
+  "domain_phase_target_data_raw_user_proposed_path": "00_domain/domain_phase_target_data.raw_user_proposed.yaml",
+  "domain_phase_status_enum_mismatch": true,
+  "domain_required_before_data_plane": true,
+  "data_plane_blocked_until_domain_acceptance": true,
+  "data_phase_target_data_path": "00_data/data_phase_target_data.yaml",
+  "data_phase_target_data_raw_user_proposed_path": "00_data/data_phase_target_data.raw_user_proposed.yaml",
+  "data_phase_status_enum_mismatch": true,
+  "data_plane_required_before_p01_runtime": true,
+  "p01_blocked_until_data_plane_acceptance": true
+}

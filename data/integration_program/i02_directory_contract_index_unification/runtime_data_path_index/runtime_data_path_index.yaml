@@ -1,0 +1,208 @@
+record_id: runtime_data_path_index_20260512
+generated_at: '2026-05-12T13:05:00Z'
+status: BUILT_WITH_GAPS
+root: /root/sikk-gmgn/data/phase_controllers
+runtime_paths:
+- path: /root/sikk-gmgn/data/phase_controllers/p01_candidate_intake
+  dir_name: p01_candidate_intake
+  file_count: 4
+  subdir_count: 22
+  sample_files:
+  - path: data/phase_controllers/p01_candidate_intake/reports/p01_landing_report.md
+    suffix: .md
+    size: 741
+  - path: data/phase_controllers/p01_candidate_intake/reports/p01_package_validation_summary.json
+    suffix: .json
+    size: 3194
+  - path: data/phase_controllers/p01_candidate_intake/handoff/p01_package_to_p02_design_handoff_packet.json
+    suffix: .json
+    size: 311
+  - path: data/phase_controllers/p01_candidate_intake/acceptance/p01_package_acceptance_result.json
+    suffix: .json
+    size: 733
+- path: /root/sikk-gmgn/data/phase_controllers/p02_source_data_fact
+  dir_name: p02_source_data_fact
+  file_count: 2
+  subdir_count: 25
+  sample_files:
+  - path: data/phase_controllers/p02_source_data_fact/state/p02_runtime_state.json
+    suffix: .json
+    size: 262
+  - path: data/phase_controllers/p02_source_data_fact/reports/p02_package_validation_summary.json
+    suffix: .json
+    size: 639
+- path: /root/sikk-gmgn/data/phase_controllers/p03_wallet_entity
+  dir_name: p03_wallet_entity
+  file_count: 5
+  subdir_count: 28
+  sample_files:
+  - path: data/phase_controllers/p03_wallet_entity/input_manifest/package_landing_manifest.json
+    suffix: .json
+    size: 144
+  - path: data/phase_controllers/p03_wallet_entity/reports/p03_package_validation_summary.json
+    suffix: .json
+    size: 635
+  - path: data/phase_controllers/p03_wallet_entity/handoff/p03_to_p04_design_handoff_packet.json
+    suffix: .json
+    size: 675
+  - path: data/phase_controllers/p03_wallet_entity/gaps/p03_runtime_gap_report.json
+    suffix: .json
+    size: 923
+  - path: data/phase_controllers/p03_wallet_entity/acceptance/p03_acceptance_result.json
+    suffix: .json
+    size: 635
+- path: /root/sikk-gmgn/data/phase_controllers/p04_chip_structure
+  dir_name: p04_chip_structure
+  file_count: 5
+  subdir_count: 28
+  sample_files:
+  - path: data/phase_controllers/p04_chip_structure/input_manifest/package_landing_manifest.json
+    suffix: .json
+    size: 144
+  - path: data/phase_controllers/p04_chip_structure/reports/p04_package_validation_summary.json
+    suffix: .json
+    size: 698
+  - path: data/phase_controllers/p04_chip_structure/handoff/p04_to_p05_design_handoff_packet.json
+    suffix: .json
+    size: 771
+  - path: data/phase_controllers/p04_chip_structure/gaps/p04_runtime_gap_report.json
+    suffix: .json
+    size: 1070
+  - path: data/phase_controllers/p04_chip_structure/acceptance/p04_acceptance_result.json
+    suffix: .json
+    size: 698
+- path: /root/sikk-gmgn/data/phase_controllers/p05_evidence
+  dir_name: p05_evidence
+  file_count: 5
+  subdir_count: 25
+  sample_files:
+  - path: data/phase_controllers/p05_evidence/audit/p05_control_state_update_report.json
+    suffix: .json
+    size: 830
+  - path: data/phase_controllers/p05_evidence/reports/p05_package_validation_report.md
+    suffix: .md
+    size: 604
+  - path: data/phase_controllers/p05_evidence/acceptance/p05_package_validation_report.json.bak_stale_next_stage_20260512
+    suffix: .bak_stale_next_stage_20260512
+    size: 3018
+  - path: data/phase_controllers/p05_evidence/acceptance/p05_package_validation_report.json
+    suffix: .json
+    size: 3768
+  - path: data/phase_controllers/p05_evidence/acceptance/p05_package_creation_summary.json
+    suffix: .json
+    size: 350
+- path: /root/sikk-gmgn/data/phase_controllers/p06_scenario_recognition
+  dir_name: p06_scenario_recognition
+  file_count: 1
+  subdir_count: 26
+  sample_files:
+  - path: data/phase_controllers/p06_scenario_recognition/acceptance/p06_package_validation_report.json
+    suffix: .json
+    size: 976
+- path: /root/sikk-gmgn/data/phase_controllers/p07_strategy_gate
+  dir_name: p07_strategy_gate
+  file_count: 11
+  subdir_count: 29
+  sample_files:
+  - path: data/phase_controllers/p07_strategy_gate/audit/p07_control_state_update_report.json
+    suffix: .json
+    size: 288
+  - path: data/phase_controllers/p07_strategy_gate/audit/p07_k00_route_recovery_audit_DOC-20260512-007.json
+    suffix: .json
+    size: 1909
+  - path: data/phase_controllers/p07_strategy_gate/reports/p07_package_validation_report.md
+    suffix: .md
+    size: 1010
+  - path: data/phase_controllers/p07_strategy_gate/reports/p07_final_acceptance_summary_DOC-20260512-007.md
+    suffix: .md
+    size: 1058
+  - path: data/phase_controllers/p07_strategy_gate/reports/p07_k00_route_recovery_audit_DOC-20260512-007.md
+    suffix: .md
+    size: 2783
+  - path: data/phase_controllers/p07_strategy_gate/handoff/p07_to_p08_design_handoff_packet.json
+    suffix: .json
+    size: 1675
+  - path: data/phase_controllers/p07_strategy_gate/acceptance/p07_package_creation_summary.json
+    suffix: .json
+    size: 548
+  - path: data/phase_controllers/p07_strategy_gate/acceptance/p07_final_deterministic_validation_DOC-20260512-007.json
+    suffix: .json
+    size: 1202
+  - path: data/phase_controllers/p07_strategy_gate/acceptance/p07_acceptance_result.json.bak_k00_route_recovery
+    suffix: .bak_k00_route_recovery
+    size: 603
+  - path: data/phase_controllers/p07_strategy_gate/acceptance/p07_acceptance_result.json
+    suffix: .json
+    size: 1337
+  - path: data/phase_controllers/p07_strategy_gate/acceptance/p07_package_validation_report.json
+    suffix: .json
+    size: 1169
+- path: /root/sikk-gmgn/data/phase_controllers/p08_execution_risk
+  dir_name: p08_execution_risk
+  file_count: 6
+  subdir_count: 27
+  sample_files:
+  - path: data/phase_controllers/p08_execution_risk/audit/p08_k00_route_audit_DOC-20260512-008.json
+    suffix: .json
+    size: 522
+  - path: data/phase_controllers/p08_execution_risk/reports/p08_final_acceptance_summary_DOC-20260512-008.md
+    suffix: .md
+    size: 415
+  - path: data/phase_controllers/p08_execution_risk/handoff/p08_to_paper_runtime_handoff_packet_contract_stub.json
+    suffix: .json
+    size: 237
+  - path: data/phase_controllers/p08_execution_risk/acceptance/p08_final_deterministic_validation_DOC-20260512-008.json
+    suffix: .json
+    size: 1081
+  - path: data/phase_controllers/p08_execution_risk/acceptance/p08_acceptance_result.json
+    suffix: .json
+    size: 1081
+  - path: data/phase_controllers/p08_execution_risk/acceptance/p08_professional_completion_verification_DOC-20260512-008.json
+    suffix: .json
+    size: 1116
+- path: /root/sikk-gmgn/data/phase_controllers/p09_review_replay
+  dir_name: p09_review_replay
+  file_count: 4
+  subdir_count: 34
+  sample_files:
+  - path: data/phase_controllers/p09_review_replay/reports/p09_package_landing_report.md
+    suffix: .md
+    size: 177
+  - path: data/phase_controllers/p09_review_replay/handoff/p09_to_p10_handoff_placeholder.yaml
+    suffix: .yaml
+    size: 191
+  - path: data/phase_controllers/p09_review_replay/acceptance/p09_final_verification_result.json
+    suffix: .json
+    size: 6777
+  - path: data/phase_controllers/p09_review_replay/acceptance/p09_package_acceptance_result.json
+    suffix: .json
+    size: 192
+- path: /root/sikk-gmgn/data/phase_controllers/p10_self_upgrade
+  dir_name: p10_self_upgrade
+  file_count: 7
+  subdir_count: 33
+  sample_files:
+  - path: data/phase_controllers/p10_self_upgrade/reports/p10_professional_acceptance_report.md
+    suffix: .md
+    size: 3425
+  - path: data/phase_controllers/p10_self_upgrade/reports/p10_package_landing_report.md
+    suffix: .md
+    size: 385
+  - path: data/phase_controllers/p10_self_upgrade/handoff/p10_to_implementation_handoff_placeholder.yaml
+    suffix: .yaml
+    size: 262
+  - path: data/phase_controllers/p10_self_upgrade/quality/p10_validation_result.json
+    suffix: .json
+    size: 258
+  - path: data/phase_controllers/p10_self_upgrade/quality/p10_revalidation_result.json
+    suffix: .json
+    size: 1537
+  - path: data/phase_controllers/p10_self_upgrade/trace/p10_package_trace.json
+    suffix: .json
+    size: 243
+  - path: data/phase_controllers/p10_self_upgrade/acceptance/p10_package_acceptance_result.json
+    suffix: .json
+    size: 317
+gaps: []
+restrictions:
+- read_only_scan

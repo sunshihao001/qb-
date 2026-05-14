@@ -1,0 +1,26 @@
+plane_id: P02_DOMAIN_PLANE
+plane_name: 领域平面
+plane_level: light_institutional
+version: v1.0
+status: DOMAIN_READY_WITH_GAPS
+source_doc_id: DOC-20260511-022
+mission:
+  primary: 建立 SIKK Stable Trader OS 的领域语义、对象、场景、状态、风险和证据模型
+  secondary:
+    - 统一钱包结构、K线结构、市值上下文、主导侧生命周期、策略门禁之间的概念边界
+    - 为 Data Plane 提供字段需求
+    - 为 Evidence Plane 提供证据分类
+    - 为 Scenario Plane 提供场景分类基础
+    - 为 Strategy Gate Plane 提供可否决、可暂停、可观察、可进入的领域语义
+authority:
+  can_define: [领域对象, 领域状态, 领域事件, 场景类型, 生命周期类型, 钱包角色类型, 风险类型, 证据等级, 反证类型, 推理边界, 下游字段需求]
+  cannot_do: [直接采集链上数据, 直接下交易结论, 直接生成买入信号, 直接修改执行层, 用缺失数据强行推断, 启动P01运行]
+upstream_planes: [P00_BOOTSTRAP_CONTROL_PLANE, P01_GOVERNANCE_PLANE]
+downstream_planes: [P03_DATA_PLANE, P04_EVIDENCE_PLANE, P05_SCENARIO_RECOGNITION_PLANE, P06_STRATEGY_GATE_PLANE]
+acceptance_status_codes: [DOMAIN_READY, DOMAIN_READY_WITH_GAPS, DOMAIN_REJECTED, DOMAIN_NEEDS_DATA_BACKFILL, DOMAIN_CONFLICT_DETECTED]
+safety_boundary:
+  paper_only: true
+  real_trade_enabled: false
+  buy_signal_allowed: false
+  execution_decision_allowed: false
+  p01_runtime_connection_allowed: false

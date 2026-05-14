@@ -1,0 +1,23 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+test_matrix_id: P08_TEST_MATRIX
+tests:
+  - {test_id: P08_TEST_001, name: P07 PAPER_CANDIDATE，报价一致，安全通过，流动性充足, expected_permission: PAPER_RUNTIME_ALLOWED}
+  - {test_id: P08_TEST_002, name: 缺 P07 handoff, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_003, name: P07 未给 PAPER_CANDIDATE, expected_status: P08_REJECTED}
+  - {test_id: P08_TEST_004, name: 报价缺失, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_005, name: GMGN 与 OKX 报价严重偏离, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_006, name: 流动性不足, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_007, name: 滑点过高, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_008, name: 安全扫描发现 freeze 或 blacklist 风险, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_009, name: security scan 过期, expected_status: P08_PAUSED_OR_REFRESH_REQUIRED}
+  - {test_id: P08_TEST_010, name: P07 hard invalidation 已触发, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_011, name: holder snapshot stale 但其他执行条件合格, expected_status: P08_ALLOWED_WITH_LIMITATIONS_OR_PAUSED}
+  - {test_id: P08_TEST_012, name: 已存在同 token 开放纸面仓位, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_013, name: 连续失败熔断触发, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_014, name: 成本模型缺失但 policy 允许默认模型, expected_status: PAPER_RUNTIME_ALLOWED_WITH_LIMITATIONS}
+  - {test_id: P08_TEST_015, name: P08 输出 live execution allowed, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_016, name: 钱包签名请求, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_017, name: PAPER_RUNTIME_ALLOWED 但未生成 paper_runtime_data_request, expected_status: P08_BLOCKED}
+  - {test_id: P08_TEST_018, name: quote fresh 但 liquidity stale, expected_status: P08_PAUSED_OR_REFRESH_REQUIRED}

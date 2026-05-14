@@ -1,0 +1,44 @@
+schema_id: UPGRADE_CANDIDATE_RECORD_SCHEMA
+title: Upgrade Candidate Record
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- upgrade_candidate_id
+- source_calibration_ids
+- target_phase
+- upgrade_type
+- proposal_cn
+- requires_manual_review
+- p10_only
+fields:
+  upgrade_candidate_id: string
+  source_calibration_ids: list
+  target_phase: string
+  upgrade_type: enum
+  proposal_cn: string
+  requires_manual_review: boolean
+  p10_only: boolean
+enums:
+  upgrade_type:
+  - POLICY_PATCH_CANDIDATE
+  - CONTRACT_PATCH_CANDIDATE
+  - THRESHOLD_CALIBRATION_CANDIDATE
+  - TEST_FIXTURE_CANDIDATE
+  - DOCUMENTATION_CANDIDATE
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

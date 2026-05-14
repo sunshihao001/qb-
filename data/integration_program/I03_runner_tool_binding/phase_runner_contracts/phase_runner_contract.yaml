@@ -1,0 +1,23 @@
+{
+  "phase_runner_contract": {
+    "contract_id": "PHASE_RUNNER_CONTRACT",
+    "common_required_steps": [
+      "load_i02_indexes",
+      "resolve_phase_paths",
+      "validate_upstream_handoff",
+      "validate_input_contract",
+      "execute_dry_run",
+      "validate_output_schema",
+      "enforce_forbidden_use",
+      "write_trace",
+      "run_acceptance",
+      "write_handoff_packet"
+    ],
+    "hard_requirements": {
+      "no_unregistered_write_path": true,
+      "no_business_logic_mutation": true,
+      "no_live_execution": true,
+      "no_wallet_signing": true
+    }
+  }
+}

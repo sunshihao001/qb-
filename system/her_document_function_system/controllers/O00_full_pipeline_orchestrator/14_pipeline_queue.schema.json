@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 pipeline queue",
+  "type": "object",
+  "required": [
+    "pipeline_run_id",
+    "queue_items"
+  ],
+  "properties": {
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "queue_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stage_queue_item_id",
+          "stage_id",
+          "status",
+          "required_inputs",
+          "expected_outputs",
+          "entry_gate",
+          "exit_gate",
+          "retry_policy",
+          "failure_policy"
+        ],
+        "properties": {
+          "stage_queue_item_id": {
+            "type": "string"
+          },
+          "stage_id": {
+            "enum": [
+              "K00",
+              "F00",
+              "V00",
+              "R00",
+              "A00",
+              "H00",
+              "U00",
+              "G00"
+            ]
+          },
+          "status": {
+            "enum": [
+              "QUEUED",
+              "READY",
+              "RUNNING",
+              "COMPLETED",
+              "COMPLETED_WITH_GAPS",
+              "BLOCKED",
+              "FAILED",
+              "SKIPPED",
+              "DEFERRED",
+              "RETRY_PENDING"
+            ]
+          },
+          "required_inputs": {
+            "type": "array"
+          },
+          "expected_outputs": {
+            "type": "array"
+          },
+          "entry_gate": {
+            "type": "string"
+          },
+          "exit_gate": {
+            "type": "string"
+          },
+          "retry_policy": {
+            "type": "string"
+          },
+          "failure_policy": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

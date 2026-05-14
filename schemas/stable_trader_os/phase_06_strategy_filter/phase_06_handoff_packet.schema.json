@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase06HandoffPacket",
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "snapshot_id",
+    "phase_status",
+    "allow_next_stage",
+    "next_stage",
+    "required_files_for_next_stage",
+    "positive_evidence",
+    "negative_evidence",
+    "hard_negative_triggered",
+    "block_reason",
+    "degrade_reason",
+    "missing_fields",
+    "audit_file"
+  ],
+  "properties": {
+    "phase": {"const": "phase_06_strategy_gate_controller"},
+    "phase_status": {"enum": ["A_PLUS_P1_PASS", "PAPER_READY", "READY_FOR_CONFIRMATION", "STRATEGY_PAUSE", "STRATEGY_BLOCK", "REVIEW_ONLY"]},
+    "allow_next_stage": {"type": "boolean"},
+    "next_stage": {"const": "phase_07_execution_risk_controller"},
+    "required_files_for_next_stage": {"type": "object"},
+    "hard_negative_triggered": {"type": "boolean"},
+    "missing_fields": {"type": "array", "items": {"type": "string"}}
+  }
+}

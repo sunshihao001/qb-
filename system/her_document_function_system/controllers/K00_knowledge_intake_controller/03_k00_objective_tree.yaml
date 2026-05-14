@@ -1,0 +1,41 @@
+objective_tree:
+  phase_id: K00
+  level_1_goal: produce legal file-backed K00 handoff for F00
+  level_2_sub_goals:
+    - id: preserve_source
+      description: preserve raw material and source registry
+    - id: build_refs
+      description: build passport, corpus index, system mapping, gap detection refs
+    - id: define_boundaries
+      description: define execution boundary, write policy, repo root, target candidates
+    - id: write_handoff
+      description: write K00 handoff packet for F00
+  level_3_tasks:
+    - id: k00_t01
+      parent: preserve_source
+      action: write raw source ref and registry ref
+      output: raw_input_ref/source_registry_ref
+    - id: k00_t02
+      parent: build_refs
+      action: write document passport refs
+      output: document_passport_refs
+    - id: k00_t03
+      parent: build_refs
+      action: write corpus index refs
+      output: corpus_index_refs
+    - id: k00_t04
+      parent: build_refs
+      action: write system mapping refs
+      output: system_mapping_refs
+    - id: k00_t05
+      parent: build_refs
+      action: write gap detection refs
+      output: gap_detection_refs
+    - id: k00_t06
+      parent: define_boundaries
+      action: bind execution boundary/write policy/repo root
+      output: execution_boundary/write_policy/repo_root
+    - id: k00_t07
+      parent: write_handoff
+      action: produce handoff packet
+      output: k00_handoff_packet

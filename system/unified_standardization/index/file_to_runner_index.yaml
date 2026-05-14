@@ -1,0 +1,17 @@
+meta:
+  standard_id: S00_FILE_TO_RUNNER_INDEX
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+file_to_runner:
+- file: data/gmgn_candidates_live_run/**
+  runner_id: RUNNER_SIKK_LIVE_RUN_LEGACY
+- file: data/source_wallet_bot/<mode>/<token>/**
+  runner_id: SOURCE_WALLET_BOT_TBD

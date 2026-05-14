@@ -1,0 +1,22 @@
+registry_id: runtime_absorption_replay_runner_registry_v1
+created_at: "2026-05-14T20:34:54Z"
+replay_scope:
+  token_address: ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump
+  token_symbol: TROLLIEN
+  runtime_root: data/gmgn_candidates_live_run
+  batch: false
+  dashboard: false
+  telegram: false
+  new_strategy: false
+replay_mode: readonly_existing_runtime_output_absorption
+phase_sequence: [P01, P02, P03, P04, P05, P06, P07, P08, P09]
+allowed_replay_runners:
+  P01: [runner_candidate_discovery]
+  P02: [runner_wallet_structure_pipeline]
+  P03: [runner_wallet_structure_pipeline]
+  P04: [runner_kline_pipeline, runner_wallet_structure_pipeline]
+  P05: [runner_signal_engine, runner_kline_pipeline, runner_wallet_structure_pipeline]
+  P06: [runner_signal_engine, runner_kline_pipeline]
+  P07: [runner_state_machine, runner_signal_engine, runner_wallet_structure_pipeline]
+  P08: [runner_quote_security, runner_paper_live]
+  P09: [runner_paper_live, runner_failure_attribution]

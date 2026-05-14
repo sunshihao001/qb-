@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "14_acceptance_scorecard.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "scorecard_id",
+    "dimensions",
+    "overall_recommendation"
+  ],
+  "properties": {
+    "scorecard_id": {},
+    "dimensions": {},
+    "overall_recommendation": {}
+  }
+}

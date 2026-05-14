@@ -1,0 +1,7 @@
+signals:
+  - "buy_time_window"
+  - "sell_time_window"
+  - "amount_similarity"
+  - "sequence_similarity"
+output: "sync_behavior_group_candidate_record"
+candidate_only: true

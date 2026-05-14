@@ -1,0 +1,27 @@
+{
+  "trace_id": "P00_FULL_CONTROL_TRACE_20260511",
+  "updated_at": "2026-05-11T16:52:26Z",
+  "source_doc_id": "DOC-20260511-024",
+  "methodology_requirement_to_asset": {
+    "global_plane_registry": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane/global_plane_registry.yaml",
+    "phase_controller_registry": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane/phase_controller_registry.yaml",
+    "contract_router": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane/contract_router.yaml",
+    "acceptance_gate_registry": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane/acceptance_gate_registry.yaml",
+    "phase_state_machine": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane/phase_state_machine.yaml",
+    "failure_recovery_policy": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane/failure_recovery_policy.yaml",
+    "gap_register": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane/control_gap_register.json",
+    "audit_log_model": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane/audit_log_model.yaml",
+    "handoff_packet": "/root/sikk-gmgn/sikk_stable_trader_os/09_handoff/control_to_system_planes_handoff_packet.json"
+  },
+  "acceptance_result": "CONTROL_READY_WITH_GAPS",
+  "non_blocking_gaps": [
+    "phase_controllers_not_all_code_implemented",
+    "acceptance_gates_not_all_automated",
+    "legacy_mapping_not_scanned",
+    "skill_tool_registry_not_runtime_verified",
+    "handoff_not_integration_tested",
+    "state_machine_not_attached_to_real_orchestrator",
+    "telegram_dashboard_not_connected",
+    "governance_domain_data_reverse_audit_not_yet_completed_after_full_control_landing"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "flow_plan_id": "p10_related_issue_auto_flow_20260512_164618_flow_plan",
+  "generated_at": "2026-05-12T16:46:18Z",
+  "mode": "fully_automated_planning_and_system_data_landing",
+  "not_runtime_execution": true,
+  "not_auto_deploy": true,
+  "not_live_trade": true,
+  "ordered_steps": [
+    {
+      "step_id": "AFLOW_01",
+      "name_cn": "问题清单注册",
+      "input": [
+        "P10 v3.0 spec",
+        "current_system_state",
+        "P10 package files"
+      ],
+      "output": [
+        "problem_inventory.json"
+      ],
+      "gate": "all issues have id/priority/category/status"
+    },
+    {
+      "step_id": "AFLOW_02",
+      "name_cn": "按P0/P1/P2排序形成自动处理批次",
+      "input": [
+        "problem_inventory.json"
+      ],
+      "output": [
+        "execution_batches"
+      ],
+      "gate": "P0 before P1 before P2; safety boundary inherited"
+    },
+    {
+      "step_id": "AFLOW_03",
+      "name_cn": "生成HER可调度任务包",
+      "input": [
+        "problem_inventory",
+        "flow plan"
+      ],
+      "output": [
+        "task_manifest.json",
+        "next_actions.md"
+      ],
+      "gate": "contains acceptance, validation commands, no forbidden permissions"
+    },
+    {
+      "step_id": "AFLOW_04",
+      "name_cn": "写入P10体系运行数据",
+      "input": [
+        "task package"
+      ],
+      "output": [
+        "controlled_task_packet",
+        "upgrade_backlog",
+        "gap_register",
+        "trace"
+      ],
+      "gate": "runtime records exist under data/phase_controllers/p10_self_upgrade"
+    },
+    {
+      "step_id": "AFLOW_05",
+      "name_cn": "生成handoff与验收记录",
+      "input": [
+        "runtime records"
+      ],
+      "output": [
+        "handoff",
+        "acceptance",
+        "human report"
+      ],
+      "gate": "handoff downstream only Governance/Implementation/Dry-run"
+    },
+    {
+      "step_id": "AFLOW_06",
+      "name_cn": "确定性验证",
+      "input": [
+        "all generated artifacts"
+      ],
+      "output": [
+        "validation_result"
+      ],
+      "gate": "JSON/YAML parse + path existence + safety flags pass"
+    }
+  ],
+  "execution_batches": [
+    {
+      "batch_id": "BATCH_P0_CONTROL_CLOSURE",
+      "priority": "P0",
+      "issue_ids": [
+        "P10_ISSUE_001",
+        "P10_ISSUE_002",
+        "P10_ISSUE_003",
+        "P10_ISSUE_004"
+      ],
+      "allowed_action": "write_controlled_task_records_only"
+    },
+    {
+      "batch_id": "BATCH_P1_VALIDATION_AND_GOVERNANCE",
+      "priority": "P1",
+      "issue_ids": [
+        "P10_ISSUE_005",
+        "P10_ISSUE_006",
+        "P10_ISSUE_007",
+        "P10_ISSUE_008"
+      ],
+      "allowed_action": "prepare_governance_runner_ci_tasks"
+    },
+    {
+      "batch_id": "BATCH_P2_REPORT_INDEX_POLISH",
+      "priority": "P2",
+      "issue_ids": [
+        "P10_ISSUE_009",
+        "P10_ISSUE_010"
+      ],
+      "allowed_action": "prepare_report_and_index_sync_tasks"
+    }
+  ],
+  "next_legal_route": [
+    "I01_FULL_PHASE_CONSISTENCY_AUDIT",
+    "I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION",
+    "I03_RUNNER_TOOL_BINDING_DRY_RUN",
+    "I04_PAPER_ONLY_RUNTIME_INTEGRATION_AFTER_ACCEPTANCE",
+    "I05_P09_P10_CLOSED_LOOP_REPLAY"
+  ],
+  "blocked_routes": [
+    "P11_BUSINESS_PHASE",
+    "LIVE_EXECUTION",
+    "AUTO_DEPLOY",
+    "DIRECT_RULE_MUTATION",
+    "WALLET_SIGNING"
+  ]
+}

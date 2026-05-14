@@ -1,0 +1,10 @@
+policy_id: P09_HISTORICAL_SNAPSHOT_POLICY
+hard_rules:
+- use_only_data_visible_at_decision_time
+- lock_snapshot_before_replay
+- record_excluded_current_data
+- hash_snapshot_manifest
+block_if:
+- snapshot_missing
+- current_data_overlay_detected
+- trace_unavailable

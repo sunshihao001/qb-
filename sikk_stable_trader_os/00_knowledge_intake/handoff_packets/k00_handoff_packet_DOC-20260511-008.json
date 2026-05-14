@@ -1,0 +1,31 @@
+{
+  "handoff_id": "K00-HANDOFF-DOC-20260511-008",
+  "doc_id": "DOC-20260511-008",
+  "parent_doc_id": "DOC-20260511-006",
+  "from_phase": "K00",
+  "to_phase": "P00_system_context_control",
+  "status": "LIGHTWEIGHT_INSTITUTIONAL_AND_PLANES_CANONICALIZED",
+  "required_p00_checks": [
+    "all files have consumption relationship",
+    "all phases have input/output/acceptance/writeback",
+    "all judgments have field source/evidence grade/counter-evidence",
+    "12 planes registered and answerable"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-STAGE-TARGET-DATA-DETAILS",
+      "severity": "DEGRADED",
+      "description": "Every phase target data object still needs explicit enumeration in later sections."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

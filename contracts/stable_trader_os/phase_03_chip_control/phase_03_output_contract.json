@@ -1,0 +1,29 @@
+{
+  "contract_name": "phase_03_chip_control_output_contract",
+  "phase": "phase_03_chip_control_controller",
+  "required_outputs": {
+    "structure_wallet_sets": "chip_fact/structure_wallet_sets.json",
+    "early_chip_state": "chip_control/early_chip_state.json",
+    "early_exit_detection": "chip_control/early_exit_detection.json",
+    "same_source_group_chip_state": "chip_control/same_source_group_chip_state.csv",
+    "distribution_sell_state": "chip_control/distribution_sell_state.json",
+    "backflow_risk_state": "chip_control/backflow_risk_state.json",
+    "counterparty_pressure": "chip_control/counterparty_pressure.json",
+    "dominant_side_status": "chip_control/dominant_side_status.json",
+    "chip_transfer_status": "chip_control/chip_transfer_status.json",
+    "chip_control_summary": "chip_control/chip_control_summary.json",
+    "phase_03_handoff_packet": "handoff/phase_03_handoff_packet.json",
+    "chip_control_report": "reports/chip_control_report.md"
+  },
+  "handoff_to": "phase_04_scenario_recognition_controller",
+  "handoff_rule": {
+    "CONTROL_RETAINED": "allow",
+    "CONTROL_WEAKENING": "allow_with_degrade",
+    "PARTIAL_DISTRIBUTION": "allow_with_distribution_risk",
+    "ACTIVE_DISTRIBUTION": "force_distribution_scenario_check",
+    "TRANSFER_TO_COUNTERPARTY": "force_trap_scenario_check",
+    "STRUCTURE_COLLAPSE": "block_positive_scenario",
+    "RE_ACCUMULATION": "allow_reaccumulation_scenario_check",
+    "UNKNOWN_CONTROL": "allow_weak_evidence_only"
+  }
+}

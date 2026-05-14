@@ -1,0 +1,29 @@
+{
+  "handoff_id": "phase_controller_data_model_to_system_planes_definition",
+  "from_task": "phase_controller_data_model_workflow_v1",
+  "to_next_phase": "system_planes_definition_landing",
+  "status": "READY",
+  "runtime_boundary": "OBSERVE_PAPER_ONLY",
+  "generated_at": "2026-05-11T08:19:00Z",
+  "artifacts": [
+    "00_methodology/materials/task_packs/phase_controller_data_model_workflow_plan.md",
+    "00_methodology/materials/task_packs/phase_controller_data_model_task_manifest.json",
+    "01_total_control_skill/SKILL.md",
+    "09_runtime_state/current_system_state.json",
+    "02_phase_controllers/P00_system_boundary",
+    "02_phase_controllers/P01_data_fact",
+    "02_phase_controllers/P02_wallet_structure",
+    "02_phase_controllers/P03_chip_control",
+    "02_phase_controllers/P04_scenario_recognition",
+    "02_phase_controllers/P05_structure_position",
+    "02_phase_controllers/P06_strategy_gate",
+    "02_phase_controllers/P07_execution_risk",
+    "02_phase_controllers/P08_review_learning",
+    "02_phase_controllers/P09_system_upgrade"
+  ],
+  "acceptance_required": "09_reports/acceptance_reports/phase_controller_data_model_acceptance_result.json",
+  "next_phase_allowed": true,
+  "hard_negative_hits": [],
+  "degraded_gaps": [],
+  "acceptance_result": "09_reports/acceptance_reports/phase_controller_data_model_acceptance_result.json"
+}

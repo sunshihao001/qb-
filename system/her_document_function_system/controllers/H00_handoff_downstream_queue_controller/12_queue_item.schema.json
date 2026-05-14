@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Queue item",
+  "type": "object",
+  "required": [
+    "queue_item_id",
+    "target_phase",
+    "target_type",
+    "task_type",
+    "priority",
+    "status",
+    "required_inputs",
+    "expected_outputs",
+    "allowed_actions",
+    "forbidden_actions",
+    "gap_refs",
+    "accepted_risks",
+    "handoff_packet_ref"
+  ],
+  "properties": {
+    "queue_item_id": {
+      "type": "string"
+    },
+    "target_phase": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "task_type": {
+      "type": "string"
+    },
+    "priority": {
+      "enum": [
+        "P0_CRITICAL",
+        "P1_HIGH",
+        "P2_MEDIUM",
+        "P3_LOW",
+        "P4_BACKLOG",
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "status": {
+      "type": "string"
+    },
+    "required_inputs": {
+      "type": "array"
+    },
+    "expected_outputs": {
+      "type": "array"
+    },
+    "allowed_actions": {
+      "type": "array"
+    },
+    "forbidden_actions": {
+      "type": "array"
+    },
+    "gap_refs": {
+      "type": "array"
+    },
+    "accepted_risks": {
+      "type": "array"
+    },
+    "handoff_packet_ref": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

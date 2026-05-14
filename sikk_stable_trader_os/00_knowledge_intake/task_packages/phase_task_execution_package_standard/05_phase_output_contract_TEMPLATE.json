@@ -1,0 +1,111 @@
+{
+  "phase_id": "K00",
+  "required_outputs": [
+    {
+      "file": "raw_inputs/<doc_id>.md",
+      "type": "markdown",
+      "required": true,
+      "purpose": "保存原始资料"
+    },
+    {
+      "file": "source_registry/source_registry.json",
+      "type": "json",
+      "required": true,
+      "purpose": "资料来源登记"
+    },
+    {
+      "file": "document_passports/document_passport_<doc_id>.yaml",
+      "type": "yaml",
+      "required": true,
+      "purpose": "文档护照"
+    },
+    {
+      "file": "system_mapping/plane_mapping_<doc_id>.json",
+      "type": "json",
+      "required": true,
+      "purpose": "九大系统平面映射"
+    },
+    {
+      "file": "system_mapping/phase_mapping_<doc_id>.json",
+      "type": "json",
+      "required": true,
+      "purpose": "P00-P09 阶段映射"
+    },
+    {
+      "file": "gap_detection/gap_detection_<doc_id>.json",
+      "type": "json",
+      "required": true,
+      "purpose": "系统缺口识别"
+    },
+    {
+      "file": "task_packages/task_execution_package_<doc_id>.json",
+      "type": "json",
+      "required": true,
+      "purpose": "阶段任务执行包"
+    },
+    {
+      "file": "handoff_packets/k00_handoff_packet_<doc_id>.json",
+      "type": "json",
+      "required": true,
+      "purpose": "交接包"
+    },
+    {
+      "file": "auto_trigger_decisions/auto_trigger_decision_<doc_id>.json",
+      "type": "json",
+      "required": true,
+      "purpose": "K00 验收后是否自动触发下一阶段的可审计决策产物"
+    }
+  ],
+  "task_execution_package_data_model": {
+    "artifact": "task_packages/task_execution_package_<doc_id>.json",
+    "template": "00_knowledge_intake/task_packages/phase_task_execution_package_standard/task_execution_package_TEMPLATE.json",
+    "schema": "00_knowledge_intake/task_packages/phase_task_execution_package_standard/task_execution_package.schema.json",
+    "required_root_fields": [
+      "task_package_id",
+      "source_doc_id",
+      "package_type",
+      "created_for",
+      "purpose",
+      "system_understanding",
+      "affected_system_planes",
+      "affected_phases",
+      "main_objective",
+      "objective_tree",
+      "required_phase_package_files",
+      "execution_policy",
+      "acceptance_policy",
+      "auto_trigger_policy",
+      "next_action"
+    ],
+    "required_phase_package_files": [
+      "01_phase_manifest.yaml",
+      "02_phase_context_pack.md",
+      "03_phase_objective_tree.yaml",
+      "04_phase_input_contract.json",
+      "05_phase_output_contract.json",
+      "06_phase_execution_protocol.md",
+      "07_phase_acceptance_gate.yaml",
+      "08_phase_state.json",
+      "09_phase_handoff_packet.schema.json"
+    ],
+    "must_validate_before_handoff": true
+  },
+  "auto_trigger_decision_output_contract": {
+    "artifact": "auto_trigger_decisions/auto_trigger_decision_<doc_id>.json",
+    "required_fields": [
+      "doc_id",
+      "phase_id",
+      "phase_status",
+      "acceptance_gate",
+      "decision_status",
+      "next_phase_allowed",
+      "next_phase_recommendation",
+      "stop_reason",
+      "gate_evidence",
+      "handoff_packet_path",
+      "generated_at"
+    ],
+    "must_be_gate_derived": true,
+    "must_block_direct_trade_execution": true
+  }
+}

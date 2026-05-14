@@ -1,0 +1,245 @@
+{
+  "token_address": "4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump",
+  "record_counts": {
+    "wallet_trade": 95,
+    "wallet_profile": 95,
+    "same_source_groups": 4,
+    "wallet_decisions": 95
+  },
+  "trade_totals": {
+    "buy_count": 158,
+    "sell_count": 335,
+    "buy_amount_usd": 38479.6729,
+    "sell_amount_usd": 83514.3127,
+    "buy_token_amount": 898809282.9423,
+    "sell_token_amount": 969126942.8727,
+    "current_balance_sum": 287742930.2013,
+    "realized_profit_sum": 51773.7374,
+    "unrealized_profit_sum": 23622.2848,
+    "total_profit_sum": 75396.0222,
+    "full_exit_wallets": 54,
+    "partial_exit_wallets": 2,
+    "missing_trade_records": 0
+  },
+  "role_counter": {
+    "疑似结构执行钱包": 47,
+    "疑似同源执行组": 10,
+    "疑似接盘鲸鱼": 31,
+    "证据不足": 26,
+    "疑似结果钱包": 6
+  },
+  "evidence_counter": {
+    "E2": 53,
+    "E3": 16,
+    "E0": 26
+  },
+  "risk_counter": {
+    "R1": 27,
+    "R2": 42,
+    "R0": 26
+  },
+  "top_tags": {
+    "paper_hands": 42,
+    "bundler": 21,
+    "fresh_wallet": 20,
+    "top_holder": 11,
+    "gmgn": 8,
+    "transfer_in": 8,
+    "rat_trader": 7,
+    "sniper": 6,
+    "dev_team": 5,
+    "axiom": 4
+  },
+  "funding_source_known_wallets": 61,
+  "same_source_group_sizes": [
+    2,
+    2,
+    3,
+    3
+  ],
+  "top_profit_wallets": [
+    {
+      "wallet_address": "9bTo1PgDhJUQhddBt4hgn1XMTde8ht5WsPU7S9cTKGT3",
+      "total_profit": 14811.285051,
+      "realized_profit": 14811.285051,
+      "unrealized_profit": 0.0,
+      "pnl_multiple": 11.417154,
+      "buy_amount_usd": 1281.266358,
+      "current_balance": 0.0,
+      "sold_pct": 0.0
+    },
+    {
+      "wallet_address": "ChYMBKXzKRuSrRH6ESAMwAeoMPymu1CYJsA3SrycnrYd",
+      "total_profit": 10052.617499,
+      "realized_profit": 10052.617499,
+      "unrealized_profit": 0.0,
+      "pnl_multiple": 0.623955,
+      "buy_amount_usd": 0.0,
+      "current_balance": 0.0,
+      "sold_pct": 100.0
+    },
+    {
+      "wallet_address": "AFHQuVHQgCubT1RXGZfewV5KJJhiUoGD1UUhW1uEkNvL",
+      "total_profit": 6935.769998,
+      "realized_profit": 6935.769998,
+      "unrealized_profit": 0.0,
+      "pnl_multiple": 0.876469,
+      "buy_amount_usd": 0.0,
+      "current_balance": 0.0,
+      "sold_pct": 100.0
+    },
+    {
+      "wallet_address": "84YJQc5wBLPJhGUoPVBdxPnjZ8MY943bTeHqhgYGKkAt",
+      "total_profit": 3042.077995,
+      "realized_profit": 3042.077995,
+      "unrealized_profit": 0.0,
+      "pnl_multiple": 0.67191,
+      "buy_amount_usd": 0.0,
+      "current_balance": 0.0,
+      "sold_pct": 100.0
+    },
+    {
+      "wallet_address": "BsoQfMQsFq6UH9aQmE7DCbZ7gaY1T6U3HpkPWXQant9h",
+      "total_profit": 2679.096402,
+      "realized_profit": 2679.096402,
+      "unrealized_profit": 0.0,
+      "pnl_multiple": 0.972599,
+      "buy_amount_usd": 0.0,
+      "current_balance": 0.0,
+      "sold_pct": 100.0
+    },
+    {
+      "wallet_address": "9Z53oainDRAQrMoMt9bH9NXicmQBrk1rUcf9V7F6Xfqi",
+      "total_profit": 2077.269328,
+      "realized_profit": 2077.269328,
+      "unrealized_profit": 0.0,
+      "pnl_multiple": 1.318556,
+      "buy_amount_usd": 0.0,
+      "current_balance": 0.0,
+      "sold_pct": 100.0
+    },
+    {
+      "wallet_address": "FPYb7kDNSJ1JUDkjWKHZVjeYsmLMLD8EfU2r7tf2av7H",
+      "total_profit": 1784.455919,
+      "realized_profit": 1784.455919,
+      "unrealized_profit": 0.0,
+      "pnl_multiple": 1.840129,
+      "buy_amount_usd": 957.771723,
+      "current_balance": 0.0,
+      "sold_pct": 0.0
+    },
+    {
+      "wallet_address": "6FX94fqvzL8AkacqobTWuutss3HohtRiMJ4jwjBjjm3b",
+      "total_profit": 1683.765079,
+      "realized_profit": 1683.765079,
+      "unrealized_profit": 0.0,
+      "pnl_multiple": 1.054566,
+      "buy_amount_usd": 0.0,
+      "current_balance": 0.0,
+      "sold_pct": 100.0
+    },
+    {
+      "wallet_address": "8Txi7S8XbVWhrvCU7YMdGsyyycND6iWyxwADrE7vN5t6",
+      "total_profit": 1587.809835,
+      "realized_profit": 1587.809835,
+      "unrealized_profit": 0.0,
+      "pnl_multiple": 1.235072,
+      "buy_amount_usd": 0.0,
+      "current_balance": 0.0,
+      "sold_pct": 100.0
+    },
+    {
+      "wallet_address": "Ba9hmR3DKtXGETu1E9zeH3unXnQG39EcfZytaAftZBvs",
+      "total_profit": 1276.765945,
+      "realized_profit": 672.835978,
+      "unrealized_profit": 603.929967,
+      "pnl_multiple": 2.385602,
+      "buy_amount_usd": 529.881016,
+      "current_balance": 3896709.293105,
+      "sold_pct": 55.192873
+    }
+  ],
+  "top_balance_wallets": [
+    {
+      "wallet_address": "4it3QQ3JH8nPcGdKtWU54rfqM5J4CaBezmjkd7qLLkcJ",
+      "current_balance": 86559812.241342,
+      "buy_amount_usd": 0.0,
+      "sold_pct": 0.0,
+      "total_profit": 0.0,
+      "pnl_multiple": 0.0
+    },
+    {
+      "wallet_address": "3aYE5Psjo2EvTzqER4oCf361udYTkNNDnB4WW8hYz52e",
+      "current_balance": 6834124.0,
+      "buy_amount_usd": 550.553659,
+      "sold_pct": 0.0,
+      "total_profit": 922.935319,
+      "pnl_multiple": 1.659773
+    },
+    {
+      "wallet_address": "C5cJ41GgPDPXLCtsCyoqLderiaBcw8rTdwDg6uAkDAv8",
+      "current_balance": 6832095.0,
+      "buy_amount_usd": 507.486889,
+      "sold_pct": 0.0,
+      "total_profit": 965.992772,
+      "pnl_multiple": 1.884626
+    },
+    {
+      "wallet_address": "CmphNaGcM1MBaCg4fw2tJCHcypRGom7g7yqoMQ6BRCKB",
+      "current_balance": 6755643.0,
+      "buy_amount_usd": 723.137904,
+      "sold_pct": 0.0,
+      "total_profit": 731.644331,
+      "pnl_multiple": 1.001748
+    },
+    {
+      "wallet_address": "EePRQnGdv149P98VJZgCXxUpMG4SDdHB8NPSesAx3JaS",
+      "current_balance": 6742658.0,
+      "buy_amount_usd": 512.480087,
+      "sold_pct": 0.0,
+      "total_profit": 941.594371,
+      "pnl_multiple": 1.819127
+    },
+    {
+      "wallet_address": "Ee3MFcz7DCJaZX7Uh8kBvM9eACaExd7n3Xdf2hBtSYA4",
+      "current_balance": 6693799.0,
+      "buy_amount_usd": 539.586144,
+      "sold_pct": 0.0,
+      "total_profit": 903.644067,
+      "pnl_multiple": 1.65811
+    },
+    {
+      "wallet_address": "BcXBmR1n1oWB9LwfTeSEgdpyHsN58LSu9XG1xP9Suvsp",
+      "current_balance": 6654899.0,
+      "buy_amount_usd": 688.773956,
+      "sold_pct": 0.0,
+      "total_profit": 744.54881,
+      "pnl_multiple": 1.070275
+    },
+    {
+      "wallet_address": "Cph7W83NqNNZ6dmVMVJnQ9ekRBi6nSTQiY6FKo1aCpd",
+      "current_balance": 6610666.0,
+      "buy_amount_usd": 562.018949,
+      "sold_pct": 0.0,
+      "total_profit": 862.996265,
+      "pnl_multiple": 1.52032
+    },
+    {
+      "wallet_address": "AXMd2A5bfhsJupAA6qDTcLCHs6a2LYuWJXwcUVnyp9A4",
+      "current_balance": 6573225.0,
+      "buy_amount_usd": 716.147754,
+      "sold_pct": 0.0,
+      "total_profit": 699.22648,
+      "pnl_multiple": 0.966706
+    },
+    {
+      "wallet_address": "4rk3YX1iASxNKoT9RCZsyzBPb5GYnK5VPRCAhc5Rc2r3",
+      "current_balance": 6547274.0,
+      "buy_amount_usd": 559.178432,
+      "sold_pct": 0.0,
+      "total_profit": 852.14624,
+      "pnl_multiple": 1.508832
+    }
+  ],
+  "output_dir": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump"
+}

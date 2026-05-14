@@ -1,0 +1,14 @@
+{
+  "doc_id": "doc_her_doc_auto_repair_pipeline_run",
+  "status": "GAP_DETECTION_READY_WITH_GAPS",
+  "gaps": [
+    {
+      "gap_id": "gap_real_semantic_extraction_limited",
+      "gap_level": "MEDIUM_GAP",
+      "route_to": "U00",
+      "status": "OPEN",
+      "description": "K00 safe-mode writer preserves document facts but does not claim complete semantic absorption."
+    }
+  ],
+  "blocking_gaps": []
+}

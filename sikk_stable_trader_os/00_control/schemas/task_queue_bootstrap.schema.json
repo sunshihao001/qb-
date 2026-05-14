@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "queue_id",
+    "queued_tasks",
+    "blocked_tasks"
+  ],
+  "properties": {
+    "queued_tasks": {
+      "type": "array",
+      "minItems": 3
+    },
+    "blocked_tasks": {
+      "type": "array"
+    }
+  }
+}

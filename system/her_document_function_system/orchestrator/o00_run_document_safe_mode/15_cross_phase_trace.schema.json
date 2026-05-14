@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 cross phase trace event",
+  "type": "object",
+  "required": [
+    "event_id",
+    "timestamp",
+    "phase_id",
+    "run_id",
+    "event_type"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "phase_id": {
+      "const": "O00"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string"
+    },
+    "status_before": {
+      "type": "string"
+    },
+    "status_after": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gap_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

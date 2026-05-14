@@ -1,0 +1,26 @@
+{
+  "doc_id": "DOC-20260513-001",
+  "status": "PLANE_MAPPING_READY",
+  "affected_planes": [
+    {
+      "plane": "Knowledge Plane",
+      "impact": "Add KV semantic cache as a reusable knowledge-unit layer."
+    },
+    {
+      "plane": "Methodology Plane",
+      "impact": "Upgrade document processing method from document-level assets to document+KV dual-layer assets."
+    },
+    {
+      "plane": "Data Plane",
+      "impact": "Define KV item fields and manifest as structured data objects."
+    },
+    {
+      "plane": "Control Plane",
+      "impact": "Require K00 acceptance/handoff to track KV manifest state."
+    },
+    {
+      "plane": "Trace Plane",
+      "impact": "Allow downstream phases to cite kv_item keys and implementation status."
+    }
+  ]
+}

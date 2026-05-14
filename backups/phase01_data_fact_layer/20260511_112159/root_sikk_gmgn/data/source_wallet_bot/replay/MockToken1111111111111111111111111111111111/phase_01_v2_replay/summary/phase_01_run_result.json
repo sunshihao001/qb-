@@ -1,0 +1,44 @@
+{
+  "allowed_next_stage": "phase_02_wallet_structure",
+  "audit_report": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/audit/audit_report.md",
+  "handoff_packet": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/handoff/phase_01_handoff_packet.json",
+  "missing_fields_report": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/summary/missing_fields_report.md",
+  "quality": {
+    "allow_next_stage": true,
+    "counter_evidence": [
+      "legacy_candidate_snapshot",
+      "raw_top_trader",
+      "raw_transfer",
+      "transfer_missing"
+    ],
+    "critical_missing_fields": [],
+    "evidence_level": "E3",
+    "handoff_status": "HANDOFF_DEGRADED",
+    "hard_negative_reasons": [],
+    "hard_negative_triggered": false,
+    "missing_fields": [
+      "legacy_candidate_snapshot",
+      "raw_top_trader",
+      "raw_transfer",
+      "transfer_missing"
+    ],
+    "negative_evidence": [],
+    "optional_missing_fields": [
+      "legacy_candidate_snapshot",
+      "raw_top_trader",
+      "raw_transfer",
+      "transfer_missing"
+    ],
+    "phase_status": "DATA_PARTIAL",
+    "positive_evidence": [
+      "raw snapshot retained",
+      "field mapping generated",
+      "normalization attempted"
+    ],
+    "primary_status": "DATA_PARTIAL",
+    "risk_level": "R_MEDIUM"
+  },
+  "run_dir": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay",
+  "shared_handoff_packet": "/root/sikk-gmgn/data/shared_handoff/data_fact/MockToken1111111111111111111111111111111111/phase_01_handoff_packet.json",
+  "task": "phase_01_data_fact"
+}

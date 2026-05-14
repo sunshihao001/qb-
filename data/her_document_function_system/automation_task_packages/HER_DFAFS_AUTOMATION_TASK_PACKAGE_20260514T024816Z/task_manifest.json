@@ -1,0 +1,57 @@
+{
+  "manifest_id": "HER_DFAFS_AUTOMATION_TASK_PACKAGE_20260514T024816Z_MANIFEST",
+  "package_id": "HER_DFAFS_AUTOMATION_TASK_PACKAGE_20260514T024816Z",
+  "status": "READY_FOR_SAFE_MODE_EXECUTION",
+  "task_count": 8,
+  "p0_count": 3,
+  "p1_count": 5,
+  "next_action_count": 8,
+  "source_refs": [
+    {
+      "path": "data/her_document_function_system/system_self_review/HER_DFAFS_SYSTEM_SELF_REVIEW_20260514.json",
+      "sha256": "e1af59782d17c98b56d14abeaace9c34dfa327215d473de0be8820d71b0eea2c"
+    },
+    {
+      "path": "data/her_document_function_system/system_self_review/HER_DFAFS_SYSTEM_SELF_REVIEW_20260514.md",
+      "sha256": "58eb07be3943c537b43a4afa4fa56e0fa084cf000ed69914c195e638cc425473"
+    }
+  ],
+  "artifact_paths": {
+    "task_package": "task_package.json",
+    "task_manifest": "task_manifest.json",
+    "acceptance_gates": "acceptance_gates.json",
+    "execution_sequence": "execution_sequence.md",
+    "writeback_manifest": "writeback_manifest.json",
+    "next_task_manifest": "next_task_manifest.json"
+  },
+  "coverage": {
+    "covered_gap_ids": [
+      "GAP-001",
+      "GAP-002",
+      "GAP-003",
+      "GAP-004",
+      "GAP-005",
+      "GAP-006",
+      "GAP-007",
+      "GAP-008"
+    ],
+    "covered_stage_ids": [
+      "G00",
+      "O00",
+      "K00",
+      "F00",
+      "V00",
+      "R00",
+      "A00",
+      "H00",
+      "U00"
+    ],
+    "must_not_claim": [
+      "PRODUCTION_READY",
+      "PIPELINE_ACCEPTED",
+      "POLICY_ACTIVE",
+      "RUNNER_BOUND",
+      "SYSTEM_FULLY_IMPLEMENTED"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+meta:
+  standard_id: S00_GLOBAL_ID_STANDARD
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+id_patterns:
+  token_id: chain:address
+  wallet_id: chain:wallet_address
+  cluster_id: chain:token:cluster_hash
+  event_id: timestamp:source:hash
+  phase_run_id: phase_id:token_id:run_timestamp
+  decision_id: phase_id:token_id:decision_timestamp
+  trace_id: run_id:event_sequence
+  handoff_id: source_phase:target_phase:token_id:timestamp
+  review_case_id: P09:token_id:paper_position_id:timestamp
+  upgrade_candidate_id: P10:review_case_id:rule_hash
+acceptance_rule: Every token judgment case file must include token_id, analysis_run_id,
+  trace_refs, acceptance_refs, handoff_refs.

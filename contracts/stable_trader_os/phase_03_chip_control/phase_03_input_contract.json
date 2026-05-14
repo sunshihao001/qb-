@@ -1,0 +1,76 @@
+{
+  "contract_name": "phase_03_chip_control_input_contract",
+  "phase": "phase_03_chip_control_controller",
+  "required_inputs": {
+    "phase_02_handoff_packet": {
+      "path": "phase_02_wallet_structure/handoff/phase_02_handoff_packet.json",
+      "required": true
+    },
+    "wallet_structure_decision": {
+      "path": "from phase_02_handoff.required_files_for_next_stage.wallet_structure_decision",
+      "required": true
+    },
+    "wallet_classification": {
+      "path": "from phase_02_handoff.required_files_for_next_stage.wallet_classification",
+      "required": true
+    },
+    "holder_normalized": {
+      "path": "phase_01_data_fact/normalized/holder_normalized.csv",
+      "required": true
+    },
+    "token_market_context": {
+      "path": "phase_01_data_fact/normalized/token_market_context.json",
+      "required": true
+    }
+  },
+  "optional_inputs": {
+    "same_source_groups": {
+      "path": "same_source_groups",
+      "required": false
+    },
+    "distribution_paths": {
+      "path": "distribution_paths",
+      "required": false
+    },
+    "backflow_paths": {
+      "path": "backflow_paths",
+      "required": false
+    },
+    "kline_normalized": {
+      "path": "kline_normalized",
+      "required": false
+    },
+    "top_trader_normalized": {
+      "path": "top_trader_normalized",
+      "required": false
+    },
+    "wallet_trade_normalized": {
+      "path": "wallet_trade_normalized",
+      "required": false
+    },
+    "transfer_normalized": {
+      "path": "transfer_normalized",
+      "required": false
+    },
+    "previous_holder_snapshot": {
+      "path": "previous_holder_snapshot",
+      "required": false
+    }
+  },
+  "block_if": [
+    "phase_02_handoff_packet missing",
+    "wallet_structure_decision missing",
+    "wallet_classification missing",
+    "holder_normalized missing",
+    "token_address missing"
+  ],
+  "degrade_if": [
+    "same_source_groups missing",
+    "distribution_paths missing",
+    "backflow_paths missing",
+    "kline_normalized missing",
+    "top_trader_normalized missing",
+    "wallet_structure_status == WALLET_UNKNOWN",
+    "wallet_structure_status == WALLET_DATA_WEAK"
+  ]
+}

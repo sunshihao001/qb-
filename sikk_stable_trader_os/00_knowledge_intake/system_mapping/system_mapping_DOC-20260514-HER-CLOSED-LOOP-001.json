@@ -1,0 +1,30 @@
+{
+  "doc_id": "DOC-20260514-HER-CLOSED-LOOP-001",
+  "material_is": "closed_loop_constitution_and_trigger_spec",
+  "target_subsystems": [
+    "her_doc_function_pipeline",
+    "sikk_stable_trader_os",
+    "r00_runtime_orchestrator",
+    "stage_completion_program"
+  ],
+  "can_influence": [
+    "methodology_blueprint",
+    "control_plane",
+    "phase_acceptance_gates",
+    "handoff_contracts",
+    "runtime_orchestration_context",
+    "issue_pack_generation"
+  ],
+  "must_not_directly_change": [
+    "live trading",
+    "wallet signing",
+    "broadcast",
+    "auto swap",
+    "production deployment"
+  ],
+  "recommended_route": [
+    "HER_DOC_SYSTEM_REVIEW",
+    "HER_DOC_SYSTEM_AUDIT",
+    "HER_DOC_PIPELINE"
+  ]
+}

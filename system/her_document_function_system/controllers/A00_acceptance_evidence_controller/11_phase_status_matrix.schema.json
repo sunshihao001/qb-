@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 phase status matrix schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "matrix_id",
+    "phases",
+    "matrix_status"
+  ],
+  "properties": {
+    "matrix_id": {
+      "type": "string"
+    },
+    "phases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "phase_id",
+          "reported_status",
+          "evidence_status",
+          "blocking_gaps",
+          "non_blocking_gaps",
+          "handoff_status",
+          "trace_status",
+          "acceptance_status",
+          "a00_interpretation"
+        ],
+        "properties": {
+          "phase_id": {
+            "enum": [
+              "K00",
+              "F00",
+              "V00",
+              "R00",
+              "A00"
+            ]
+          },
+          "reported_status": {
+            "type": "string"
+          },
+          "evidence_status": {
+            "enum": [
+              "EVIDENCE_PRESENT",
+              "EVIDENCE_PARTIAL",
+              "EVIDENCE_MISSING"
+            ]
+          },
+          "blocking_gaps": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "non_blocking_gaps": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "handoff_status": {
+            "type": "string"
+          },
+          "trace_status": {
+            "type": "string"
+          },
+          "acceptance_status": {
+            "type": "string"
+          },
+          "a00_interpretation": {
+            "enum": [
+              "ACCEPTED",
+              "READY_WITH_GAPS",
+              "BLOCKED",
+              "REJECTED",
+              "DESIGN_ONLY",
+              "NOT_EXECUTED"
+            ]
+          }
+        }
+      }
+    },
+    "matrix_status": {
+      "enum": [
+        "BUILT",
+        "BUILT_WITH_GAPS",
+        "BLOCKED"
+      ]
+    }
+  }
+}

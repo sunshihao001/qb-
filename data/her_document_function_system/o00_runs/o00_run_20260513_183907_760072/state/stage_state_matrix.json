@@ -1,0 +1,34 @@
+{
+  "K00": {
+    "status": "K00_ACCEPTED",
+    "reason": "sample document classified"
+  },
+  "F00": {
+    "status": "F00_ACCEPTED",
+    "reason": "concept mapped to governance rule"
+  },
+  "V00": {
+    "status": "V00_READY_WITH_GAPS",
+    "reason": "test evidence not executed"
+  },
+  "R00": {
+    "status": "SKIPPED_WITH_REASON",
+    "reason": "runner_binding_required=false"
+  },
+  "A00": {
+    "status": "A00_READY_WITH_GAPS",
+    "reason": "evidence exists but real test not executed"
+  },
+  "H00": {
+    "status": "H00_ACCEPTED",
+    "reason": "downstream queue generated"
+  },
+  "U00": {
+    "status": "U00_ACCEPTED",
+    "reason": "review and governance candidates created"
+  },
+  "G00": {
+    "status": "G00_READY_WITH_GAPS",
+    "reason": "policy candidate not active"
+  }
+}

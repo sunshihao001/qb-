@@ -1,0 +1,14 @@
+{
+  "task_id": "TASK_P01_CANDIDATE_INTAKE_CONTROLLER_V3_LANDING",
+  "doc_id": "DOC-20260512-001",
+  "created_at": "2026-05-12T01:42:26Z",
+  "task_type": "phase_controller_package_expansion",
+  "target_controller": "P01_CANDIDATE_INTAKE_CONTROLLER",
+  "objective": "Create P01 Candidate Intake Controller v3.0 package files and runtime directory tree.",
+  "constraints": [
+    "no P01 runtime execution",
+    "no evidence/scenario/strategy/paper/live outputs",
+    "paper_only true",
+    "real_trade_enabled false"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "anchor": "10. 如何落实到自动化交易流程工作流",
+  "boundary_principle": "文档知识输入自动化不是直接交易自动化；K00 只把交易系统建设资料转化为系统资产与下游阶段任务，不产生真实交易执行。",
+  "knowledge_input_role": [
+    "系统方法论",
+    "阶段控制器",
+    "Atomic Skill",
+    "数据模型",
+    "状态机",
+    "验收门",
+    "交易流程"
+  ],
+  "final_trading_workflow": [
+    {
+      "order": 0,
+      "phase": "K00_knowledge_intake",
+      "name": "知识资料摄取",
+      "role": "保存、建模、任务化、系统资产化"
+    },
+    {
+      "order": 1,
+      "phase": "P00_system_boundary",
+      "name": "系统边界确认",
+      "role": "确认适用范围、禁止项、交易/纸面边界"
+    },
+    {
+      "order": 2,
+      "phase": "P01_data_fact",
+      "name": "数据事实层",
+      "role": "采集、清洗、字段事实与来源验证"
+    },
+    {
+      "order": 3,
+      "phase": "P02_market_scenario",
+      "name": "市场场景识别",
+      "role": "识别市场状态与触发条件"
+    },
+    {
+      "order": 4,
+      "phase": "P03_wallet_structure",
+      "name": "钱包结构识别",
+      "role": "识别钱包角色、结构关系、资金行为"
+    },
+    {
+      "order": 5,
+      "phase": "P04_chip_control",
+      "name": "筹码控制判断",
+      "role": "判断筹码集中度、控盘/分发/回流结构"
+    },
+    {
+      "order": 6,
+      "phase": "P05_strategy_gate",
+      "name": "策略门禁",
+      "role": "把场景、钱包、筹码证据转为是否允许策略候选"
+    },
+    {
+      "order": 7,
+      "phase": "P06_risk_control",
+      "name": "风险控制",
+      "role": "检查风险、拒绝条件、仓位/暴露边界"
+    },
+    {
+      "order": 8,
+      "phase": "P07_paper_execution_human_confirmation",
+      "name": "纸面执行 / 人工确认",
+      "role": "纸面执行或人工确认，不自动真实交易"
+    },
+    {
+      "order": 9,
+      "phase": "P08_review_attribution",
+      "name": "复盘归因",
+      "role": "结果复盘、证据归因、误差记录"
+    },
+    {
+      "order": 10,
+      "phase": "P09_self_upgrade_proposal",
+      "name": "系统升级提案",
+      "role": "将复盘结论转为方法、控制器、Skill、Schema 升级提案"
+    }
+  ],
+  "k00_assetization_rule": "K00 保证所有新资料不会停留在聊天上下文里，而是变成可索引、可验证、可交接、可复用的系统资产。",
+  "must_not_do": [
+    "直接交易自动化",
+    "生成真实买卖指令",
+    "跳过 P00 边界确认",
+    "跳过 P05/P06/P07 门禁",
+    "把聊天上下文当长期系统资产",
+    "未经验收就改写交易流程"
+  ],
+  "handoff_rule": "K00 只能把资料、映射、缺口、任务包与 next_phase_recommendation 交给 P00/P01/P09 或 HER task router；不得直接触发 P07 之后的执行。",
+  "task_package_data_model_ref": "00_knowledge_intake/task_packages/automated_trading_workflow_data_model/task_execution_package.json",
+  "planbook_ref": "research_loop/plan_books/active/automated_trading_workflow_data_model_task_package_planbook.md",
+  "paper_only_enforcement": {
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

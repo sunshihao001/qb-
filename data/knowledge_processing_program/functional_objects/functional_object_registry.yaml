@@ -1,0 +1,17 @@
+functional_object_registry:
+  document_id: KPP-DOC-20260512-001
+  candidates:
+    - object_name: knowledge_processing_program
+      object_type: UPSTREAM_CONTROL_PROGRAM
+      functions: [intake, classify, chunk, extract, map, candidate_generate, compile_task_package, validate, index]
+      required_inputs: [raw_document]
+      required_outputs: [document_passport, system_mapping_matrix, her_task_package, acceptance_result, handoff_packet]
+      acceptance: [all_outputs_exist, all_objects_traceable, no_direct_production_mutation]
+    - object_name: document_understanding_before_execution
+      object_type: CONTROL_RULE
+      forbidden: [direct_execution_without_classification, summary_only_completion]
+      acceptance: [processing_route_declared, output_objects_declared, handoff_target_declared]
+    - object_name: candidate_only_upgrade_boundary
+      object_type: GOVERNANCE_RULE
+      forbidden: [single_document_global_rule_activation, production_system_mutation]
+      acceptance: [candidate_packet_written, p10_governance_review_required]

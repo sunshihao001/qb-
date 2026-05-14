@@ -1,0 +1,116 @@
+candidate_id: DOC-20260511-018_K00_V2_CANDIDATE
+source_asset_id: DOC-20260511-018
+source_file_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md
+source_asset_type: k00_phase_controller_upgrade_spec
+created_by_stage: K00_knowledge_intake_taskization
+target_compiler_stage: P00_system_bootstrap_controller
+created_at: '2026-05-11T14:40:47+00:00'
+phase_controller_candidate:
+  proposed_phase_id: K00_knowledge_intake_taskization
+  proposed_phase_name_cn: 知识摄取与 Phase Controller 候选任务化
+  proposed_phase_type: knowledge_assetization_and_candidate_taskization
+  proposed_status: CANDIDATE_ONLY
+  proposed_authority_scope: K00 may create candidates and handoff to P00; it may not
+    formally register controllers or mark P01 ready.
+  proposed_primary_goal: 将输入资料转化为可被 P00 编译的系统建造材料。
+  proposed_non_goals:
+  - formal registration
+  - P01 launch
+  - real trade execution
+system_goal_decomposition:
+  system_goal: 防止文档堆叠，使输入资料必须转化为可被 P00 消费的 Phase Controller 候选材料。
+  phase_goal: K00 生成 candidate spec 与 handoff packet，并等待 P00 消费。
+  sub_goals: []
+  decision_questions: []
+  expected_system_effect: ''
+task_tree_candidate:
+  root_task: K00_PROFESSIONAL_PHASE_CONTROLLER_CANDIDATE_UPGRADE
+  task_nodes:
+  - task_id: K00-V2-T01
+    task_name_cn: 落盘 K00 v2 context/controller/templates
+    task_type: control_plane_upgrade
+    description: 创建或更新 context.md、controller.yaml、candidate template、handoff template
+    required_inputs:
+    - /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md
+    required_outputs:
+    - /root/sikk-gmgn/sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/context.md
+    - /root/sikk-gmgn/sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/controller.yaml
+    - /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/phase_controller_candidates/phase_controller_candidate_spec.template.yaml
+    depends_on: []
+    acceptance_gate:
+    - yaml_json_parse
+    - paper_only_true
+    - handoff_target_p00
+    failure_policy: BLOCKED_BY_INVALID_OUTPUT
+    downstream_handoff: P00_system_bootstrap_controller
+input_contract_candidate:
+  required_inputs: []
+  optional_inputs: []
+  forbidden_inputs: []
+  missing_input_policy: ''
+  source_requirements: []
+output_contract_candidate:
+  required_outputs: []
+  optional_outputs: []
+  output_format_requirements: []
+  schema_required: true
+  validation_rules: []
+atomic_skill_requirements:
+  required_atomic_skills:
+  - skill_name_candidate: ''
+    skill_purpose: ''
+    input_needed: []
+    output_expected: []
+    can_be_stub: true
+    required_for_v1: false
+tool_binding_requirements:
+  code_tools_needed: []
+  runner_needed: false
+  cli_needed: false
+  validation_tool_needed: true
+  replay_needed: false
+acceptance_gate_candidate:
+  file_level_acceptance: []
+  structure_level_acceptance: []
+  semantic_level_acceptance: []
+  consumption_level_acceptance: []
+  runtime_level_acceptance: []
+  blocking_conditions: []
+state_writeback_candidate:
+  required: true
+  writeback_targets:
+  - 00_knowledge_intake/runtime/k00_runtime_state.json
+  - 00_knowledge_intake/index/knowledge_asset_index.json
+  forbidden_writeback_targets:
+  - 00_control/current_system_state.json
+  - 00_control/phase_registry.yaml
+handoff_packet_candidate:
+  source_stage: K00_knowledge_intake_taskization
+  target_stage: P00_system_bootstrap_controller
+  required_handoff_fields:
+  - handoff_id
+  - source_asset_id
+  - extracted_requirements
+  - phase_controller_candidate
+  - known_gaps
+  - blocking_gaps
+  - non_blocking_gaps
+  - next_recommended_stage
+evidence_and_contradiction_requirements:
+  field_source_required: true
+  evidence_level_required: true
+  contradiction_record_required: true
+  failure_policy_required: true
+  review_path_required: true
+gap_assessment:
+  blocking_gaps: []
+  non_blocking_gaps: []
+  unresolved_questions: []
+  p00_review_required: true
+status:
+  candidate_status: READY_FOR_P00_COMPILATION
+  registration_status: NOT_REGISTERED
+  runner_binding_status: NOT_BOUND
+  downstream_consumption_status: WAITING_P00
+  paper_only: true
+  real_trade_enabled: false

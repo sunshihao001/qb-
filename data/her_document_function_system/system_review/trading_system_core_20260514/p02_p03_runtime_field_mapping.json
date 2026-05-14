@@ -1,0 +1,84 @@
+{
+  "mapping_id": "p02_p03_runtime_field_mapping_20260514",
+  "safe_mode": true,
+  "source_runtime_path": "data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json",
+  "required_fields": [
+    {
+      "field": "token_address",
+      "phase": "P02/P03",
+      "required": true,
+      "missing_policy": "BLOCK_FIELD_LEVEL_ACCEPTANCE"
+    },
+    {
+      "field": "wallet_structure_status",
+      "phase": "P02",
+      "required": true,
+      "missing_policy": "DEGRADED_NOT_SUPPORT"
+    },
+    {
+      "field": "evidence_level",
+      "phase": "P05",
+      "required": true,
+      "missing_policy": "READY_WITH_GAPS"
+    },
+    {
+      "field": "counter_evidence",
+      "phase": "P05",
+      "required": true,
+      "missing_policy": "READY_WITH_GAPS"
+    },
+    {
+      "field": "same_source_group",
+      "phase": "P02",
+      "required": false,
+      "missing_policy": "MISSING_MARKED"
+    },
+    {
+      "field": "funding_path",
+      "phase": "P02",
+      "required": false,
+      "missing_policy": "MISSING_MARKED"
+    },
+    {
+      "field": "dominant_side",
+      "phase": "P03",
+      "required": false,
+      "missing_policy": "MISSING_MARKED"
+    },
+    {
+      "field": "dominant_side_cost_zone",
+      "phase": "P03",
+      "required": false,
+      "missing_policy": "MISSING_MARKED"
+    },
+    {
+      "field": "distribution_progress",
+      "phase": "P03",
+      "required": false,
+      "missing_policy": "MISSING_MARKED"
+    },
+    {
+      "field": "inventory_remaining",
+      "phase": "P03",
+      "required": false,
+      "missing_policy": "MISSING_MARKED"
+    }
+  ],
+  "current_runtime_status": {
+    "stage": "P3_wallet_structure",
+    "path": "data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json",
+    "file_exists": false,
+    "json_ok": false,
+    "sample_count": 0,
+    "key_fields_present": {},
+    "status": "MISSING"
+  },
+  "final_status": "P02_P03_MAPPING_READY_WITH_GAPS",
+  "handoff_to_H00": [
+    {
+      "gap_id": "wallet_structure_summary_missing_or_field_incomplete",
+      "target": "H00 downstream queue",
+      "priority": "HIGH"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+version: '2.0'
+escalation_levels:
+  P0: block and restore safe state
+  P1: block current phase
+  P2: degrade to UNKNOWN
+must_escalate:
+- real_trade_enabled
+- p01_ready_without_data_plane
+- secret_exposure
+- schema_parse_failure_in_control_files

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Review Case",
+  "type": "object",
+  "required": [
+    "review_case_id",
+    "case_type",
+    "source_phase",
+    "evidence_refs",
+    "case_summary",
+    "severity",
+    "review_status"
+  ],
+  "properties": {
+    "review_case_id": {
+      "type": "string"
+    },
+    "case_type": {
+      "type": "string",
+      "enum": [
+        "GAP_CASE",
+        "FAILURE_CASE",
+        "BLOCKED_CASE",
+        "READY_WITH_GAPS_CASE",
+        "DESIGN_ONLY_CASE",
+        "NOT_EXECUTED_CASE",
+        "TEST_FAILED_CASE",
+        "REPLAY_FAILED_CASE",
+        "BINDING_FAILED_CASE",
+        "HANDOFF_FAILED_CASE",
+        "GOVERNANCE_RISK_CASE",
+        "RECURRING_ISSUE_CASE",
+        "SUCCESS_PATTERN_CASE"
+      ]
+    },
+    "source_phase": {
+      "type": "string"
+    },
+    "source_doc_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "related_function_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "related_queue_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gap_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "failure_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "case_summary": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "BLOCKING_GAP",
+        "CRITICAL_GAP",
+        "HIGH_GAP",
+        "MEDIUM_GAP",
+        "LOW_GAP"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "CLASSIFIED",
+        "NORMALIZED",
+        "ANALYZED",
+        "QUEUED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

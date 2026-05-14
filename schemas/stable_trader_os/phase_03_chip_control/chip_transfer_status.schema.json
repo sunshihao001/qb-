@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "token_address",
+    "chip_transfer_status",
+    "reason"
+  ],
+  "properties": {
+    "token_address": {},
+    "chip_transfer_status": {},
+    "reason": {}
+  }
+}

@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0088
+source_path: docs/harness/ai_harness_system/06_verification/completion_definition_template.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 0
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 0
+  P08: 0
+  P09: 1
+  P10: 0
+primary_phase: P09
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

@@ -1,0 +1,74 @@
+{
+  "doc_id": "doc_her_doc_run_20260514_manual",
+  "source_name": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS.md",
+  "source_type": "SYSTEM_CONSTRUCTION_MATERIAL",
+  "received_at": "2026-05-14T00:47:56Z",
+  "raw_path": "input/raw_document.md",
+  "sha256": "f432eb1c13c0727a0313711a8f9f5f71a8bf93cd5b7d83dbad98d9288b966e43",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance"
+    ]
+  },
+  "summary": {
+    "core_intent": "让真实 GPT 研究资料 / 系统建设资料进入 HER，按主链路跑完，生成完整文件输出，保留 gap。",
+    "key_points": [
+      "系统可以输出 K00/F00/V00/A00/H00/U00/G00/O00 文件；",
+      "→ K00 文档摄取与任务化",
+      "→ F00 功能落实映射",
+      "→ V00 验证与缺口识别",
+      "→ A00 总验收",
+      "→ H00 下游队列",
+      "→ U00 复盘升级",
+      "→ G00 治理候选",
+      "→ O00 总控报告",
+      "K00 handoff",
+      "F00 handoff",
+      "V00 handoff",
+      "# 3. 必须建立的目录",
+      "# 4. 必须建立的工具文件",
+      "|`o00_run_document_main.py`|主入口，总控 K00→F00→V00→A00→H00→U00→G00|",
+      "|`a00_acceptance.py`|总验收，生成 READY / READY_WITH_GAPS / BLOCKED|",
+      "|`g00_governance_update.py`|提取治理候选、状态规则、禁止动作规则|",
+      "\"description\": \"如已存在则读取，不存在则使用 safe-mode 默认配置\"",
+      "# 7. 每个阶段必须做什么",
+      "## 7.1 K00：文档摄取与任务化"
+    ]
+  },
+  "system_mapping": {
+    "affected_planes": [
+      "input",
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00",
+      "trace",
+      "audit"
+    ],
+    "affected_controllers": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_doc_function_pipeline",
+      "tools",
+      "tests/her_doc_function_pipeline",
+      "data/her_document_function_system/runs"
+    ]
+  },
+  "status": "K00_READY_WITH_GAPS"
+}

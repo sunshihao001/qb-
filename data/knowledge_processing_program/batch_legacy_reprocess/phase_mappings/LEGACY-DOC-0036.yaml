@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0036
+source_path: docs/harness/HER_CONTROL_PLANE_RULES_V1.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 1
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 0
+  P08: 7
+  P09: 2
+  P10: 1
+primary_phase: P08
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

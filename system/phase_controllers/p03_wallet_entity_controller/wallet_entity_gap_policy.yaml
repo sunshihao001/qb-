@@ -1,0 +1,10 @@
+blocking_gaps:
+  - "P02_HANDOFF_MISSING"
+  - "WALLET_FACT_SEED_MISSING"
+  - "WALLET_TRACE_MISSING"
+  - "SILENT_ENTITY_MERGE"
+runtime_gaps:
+  - "RUNNER_NOT_IMPLEMENTED"
+  - "THRESHOLDS_NOT_BACKTESTED"
+  - "P04_CONSUMER_NOT_LANDED"
+ready_with_gaps_allowed: true

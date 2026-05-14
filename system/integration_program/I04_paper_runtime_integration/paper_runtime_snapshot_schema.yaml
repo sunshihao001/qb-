@@ -1,0 +1,16 @@
+record_type: paper_runtime_snapshot_record
+required_fields:
+- snapshot_id
+- timestamp
+- open_positions
+- closed_positions
+- equity
+- trace_id
+required_safety:
+  paper_only: true
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+validation:
+- all required fields present
+- trace_id present
+- no live execution artifact

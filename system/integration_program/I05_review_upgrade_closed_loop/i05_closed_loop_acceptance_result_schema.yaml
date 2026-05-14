@@ -1,0 +1,9 @@
+i05_closed_loop_acceptance_result:
+  type: object
+  required:
+    - acceptance_id
+    - status
+    - checks
+    - restrictions
+    - generated_at
+  additional_properties_allowed: true

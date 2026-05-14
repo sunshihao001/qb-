@@ -1,0 +1,21 @@
+{
+  "current_p10_related_issue_auto_flow_task_id": "p10_related_issue_auto_flow_20260512_164618",
+  "updated_at": "2026-05-12T16:46:18Z",
+  "task_manifest_path": "/root/sikk-gmgn/research_loop/task_packages/pending/p10_related_issue_auto_flow_20260512_164618/task_manifest.json",
+  "acceptance_path": "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/acceptance/p10_related_issue_auto_flow_20260512_164618_acceptance_result.json",
+  "status": "P10_RELATED_ISSUE_AUTO_FLOW_READY_WITH_GAPS",
+  "next_legal_route": [
+    "I01_FULL_PHASE_CONSISTENCY_AUDIT",
+    "I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION",
+    "I03_RUNNER_TOOL_BINDING_DRY_RUN",
+    "I04_PAPER_ONLY_RUNTIME_INTEGRATION_AFTER_ACCEPTANCE",
+    "I05_P09_P10_CLOSED_LOOP_REPLAY"
+  ],
+  "safety": {
+    "direct_rule_mutation_generated": false,
+    "auto_deploy_generated": false,
+    "live_execution_path_detected": false,
+    "wallet_signing_generated": false,
+    "paper_runtime_trigger_generated": false
+  }
+}

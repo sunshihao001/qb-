@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Handoff bundle",
+  "type": "object",
+  "required": [
+    "bundle_id",
+    "handoff_type",
+    "target_phase",
+    "source_refs",
+    "evidence_refs",
+    "gap_refs",
+    "risk_refs",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "acceptance_requirements",
+    "handoff_status"
+  ],
+  "properties": {
+    "bundle_id": {
+      "type": "string"
+    },
+    "handoff_type": {
+      "enum": [
+        "H00_TO_PXX_HANDOFF",
+        "H00_TO_IXX_HANDOFF",
+        "H00_TO_RUNNER_HANDOFF",
+        "H00_TO_U00_HANDOFF",
+        "H00_TO_G00_HANDOFF",
+        "H00_TO_REPORT_HANDOFF",
+        "H00_TO_RECOVERY_HANDOFF"
+      ]
+    },
+    "target_phase": {
+      "type": "string"
+    },
+    "source_refs": {
+      "type": "array"
+    },
+    "evidence_refs": {
+      "type": "array"
+    },
+    "gap_refs": {
+      "type": "array"
+    },
+    "risk_refs": {
+      "type": "array"
+    },
+    "allowed_next_actions": {
+      "type": "array"
+    },
+    "forbidden_next_actions": {
+      "type": "array"
+    },
+    "acceptance_requirements": {
+      "type": "array"
+    },
+    "handoff_status": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,15 @@
+{
+  "模块": "SIKK 候选币自动信号接入模块",
+  "扫描时间": "2026-05-10T17:35:47Z",
+  "K线管道来源": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/kline_pipeline/candidate_kline_pipeline_summary.json",
+  "模式": "paper",
+  "处理统计": {
+    "读取候选数": 0,
+    "成功数量": 0,
+    "跳过数量": 0,
+    "失败数量": 0
+  },
+  "信号结果": [],
+  "跳过结果": [],
+  "说明": "本模块只生成 SIKK 自动交易准备/纸面信号，不执行真实 swap。"
+}

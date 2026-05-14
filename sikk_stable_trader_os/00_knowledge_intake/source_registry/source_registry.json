@@ -1,0 +1,471 @@
+{
+  "sources": [
+    {
+      "doc_id": "DOC-20260511-002",
+      "source_type": "user_uploaded_text_document",
+      "source_name": "K00_是知识资料摄取_保存_建模_系统映射_缺口识别_任务执行包生成和下游交接阶段.md",
+      "received_at": "2026-05-11T12:06:52Z",
+      "raw_path": "00_knowledge_intake/raw_inputs/DOC-20260511-002.md",
+      "original_cache_path": "/root/.hermes/cache/documents/doc_1a4ca94882a4_K00_是知识资料摄取、保存、建模、系统映射、缺口识别、任务执行包生成和下游交接阶段.md",
+      "content_type": "markdown",
+      "sha256": "998f0dfb33be6a5bf27b2dd8ea703ac93fb47735e12fbb67b6373e5b5a182bda",
+      "primary_role": "K00 phase package specification and controller standard refinement",
+      "processing_status": "K00_INTAKE_COMPLETED",
+      "related_phase_candidates": [
+        "K00_knowledge_intake_taskization",
+        "P00_system_boundary",
+        "P01_data_fact",
+        "P09_self_upgrade",
+        "system_methodology_update"
+      ],
+      "retention_policy": "preserve_raw_input_immutable"
+    },
+    {
+      "doc_id": "DOC-20260511-003",
+      "source_type": "user_uploaded_text_document",
+      "source_name": "r OS 的系统方法论总纲_.md",
+      "received_at": "2026-05-11T12:15:53Z",
+      "raw_path": "00_knowledge_intake/raw_inputs/DOC-20260511-003.md",
+      "original_cache_path": "/root/.hermes/cache/documents/doc_c0b2b5a6113c_r OS 的系统方法论总纲。.md",
+      "content_type": "markdown",
+      "sha256": "5bad928e6b4e279cff5ea1c7ad65cf39f916ec2633bf8a9c6e6317131b9357bc",
+      "primary_role": "system_methodology_blueprint_v2.0_authoritative_source",
+      "processing_status": "K00_INTAKE_COMPLETED",
+      "related_phase_candidates": [
+        "K00_knowledge_intake_taskization",
+        "system_methodology_update",
+        "P00_system_boundary",
+        "P01_data_fact",
+        "P02_market_scene",
+        "P03_wallet_structure",
+        "P04_chip_control",
+        "P05_strategy_gate",
+        "P06_risk_control",
+        "P07_execution",
+        "P08_review",
+        "P09_self_upgrade"
+      ],
+      "canonical_target_path": "00_methodology/system_methodology_blueprint.md",
+      "retention_policy": "preserve_raw_input_immutable_and_sync_authoritative_blueprint"
+    },
+    {
+      "doc_id": "DOC-20260511-004",
+      "source_type": "user_uploaded_text_document",
+      "source_name": "治理平面 _1_.md",
+      "received_at": "2026-05-11T13:11:13Z",
+      "raw_path": "00_knowledge_intake/raw_inputs/DOC-20260511-004.md",
+      "original_cache_path": "/root/.hermes/cache/documents/doc_ddcc69b03517_治理平面 (1).md",
+      "content_type": "markdown",
+      "sha256": "a11038c4c0140eeb6c03fa190810e91f3faf4ff23dc1a5ec16c7ec60990dbaba",
+      "primary_role": "governance_plane_v2.0_authoritative_source",
+      "processing_status": "K00_INTAKE_COMPLETED",
+      "related_phase_candidates": [
+        "K00_knowledge_intake_taskization",
+        "governance_plane_generation",
+        "P00_system_boundary",
+        "P01_data_fact",
+        "P06_risk_control",
+        "P07_execution",
+        "P08_review",
+        "P09_self_upgrade"
+      ],
+      "canonical_target_path": "00_governance/governance_plane.md",
+      "retention_policy": "preserve_raw_input_immutable_and_sync_authoritative_governance_plane"
+    },
+    {
+      "doc_id": "DOC-20260511-005",
+      "source_type": "user_uploaded_text_document",
+      "source_name": "未命名 4.md",
+      "received_at": "2026-05-11T13:18:52Z",
+      "raw_path": "00_knowledge_intake/raw_inputs/DOC-20260511-005.md",
+      "original_cache_path": "/root/.hermes/cache/documents/doc_c3dc9e71eb22_未命名 4.md",
+      "content_type": "markdown",
+      "sha256": "73310f4be27df1b6d045f698da0dcac59ee3d460664308afff5dbb3e5a5c0794",
+      "primary_role": "domain_plane_v2.0_authoritative_source",
+      "processing_status": "K00_INTAKE_COMPLETED",
+      "related_phase_candidates": [
+        "K00_knowledge_intake_taskization",
+        "domain_plane_generation",
+        "data_plane_generation",
+        "P00_system_boundary",
+        "P01_data_fact",
+        "P03_wallet_structure",
+        "P04_chip_control",
+        "P05_strategy_gate",
+        "P08_review",
+        "P09_self_upgrade"
+      ],
+      "canonical_target_path": "00_domain/domain_plane.md",
+      "retention_policy": "preserve_raw_input_immutable_and_sync_authoritative_domain_plane"
+    },
+    {
+      "doc_id": "DOC-20260511-006",
+      "title": "SIKK Stable Trader OS 系统方法论蓝图",
+      "source_type": "telegram_text",
+      "received_at": "2026-05-11T13:49:31.471070+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-006.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "66430be1f3a8649f3d09191e16442720379e351fb8c2aa4d1e894eba465499dc",
+      "status": "CANONICAL_METHODOLOGY_UPDATED",
+      "duplicate_of": null,
+      "notes": "User provided direct-save methodology blueprint partial/light institutional version."
+    },
+    {
+      "doc_id": "DOC-20260511-007",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint section 2.1 system build order",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T13:52:02.216783+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-007.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "a4aa3661737b4d6bd3db9a8be8fcd9875618cacca108735896f368f9c1efa7eb",
+      "status": "CANONICAL_METHODOLOGY_APPENDED",
+      "duplicate_of": null,
+      "notes": "Continuation section defining mandatory build order and blocking rule before automated trading."
+    },
+    {
+      "doc_id": "DOC-20260511-008",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint sections 2.2-2.3 lightweight institutionalization and system planes",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T13:53:23.296365+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-008.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "beff1b6b3972bf401fa230248989861f8dd5fd9a22ee5de0a4b96f14d8c5de6f",
+      "status": "CANONICAL_METHODOLOGY_APPENDED",
+      "duplicate_of": null,
+      "notes": "Defines lightweight institutional controls and 12 system planes with required answer questions."
+    },
+    {
+      "doc_id": "DOC-20260511-009",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint section 3 system compilation chain",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T13:54:52.930598+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-009.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "e2ff72dd4035f2e1ff05689faa9581cf6878cd0239d63cca3fdaff3e19f54f74",
+      "status": "CANONICAL_METHODOLOGY_APPENDED",
+      "duplicate_of": null,
+      "notes": "Defines mandatory compilation chain and K00 assetization != system consumption breakpoint."
+    },
+    {
+      "doc_id": "DOC-20260511-010",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint sections 4-5 HER runtime logic and authoritative state source",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T13:56:09.172903+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-010.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "3d7c8ec049d7d1d814e8688095a9856f2b39b97d17758f94cc9c30beaabb9a6b",
+      "status": "CANONICAL_METHODOLOGY_APPENDED",
+      "duplicate_of": null,
+      "notes": "Defines HER 13-step runtime order, forbidden shortcuts, completion-state distinctions, and current_system_state as sole authority."
+    },
+    {
+      "doc_id": "DOC-20260511-011",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint section 6.1 phase numbering table",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T13:57:35.735732+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-011.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "326a7b73184ec549de8efe3bcd24dbe087a94411ada989d1b1d106f477063b33",
+      "status": "CANONICAL_METHODOLOGY_APPENDED",
+      "duplicate_of": null,
+      "notes": "Defines K00 and P00-P10 phase numbering, names, and positioning."
+    },
+    {
+      "doc_id": "DOC-20260511-012",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint section 7 phase target data standard",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T13:59:07.724119+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-012.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "4c630292d081bd4df9c86998aadeea0e7594069eac7b0b4790640e0902126055",
+      "status": "CANONICAL_METHODOLOGY_APPENDED",
+      "duplicate_of": null,
+      "notes": "Defines unified phase target data fields, legal phase statuses, and forbidden vague statuses."
+    },
+    {
+      "doc_id": "DOC-20260511-013",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint section 8 K00 phase target data",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T14:02:26.798325+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-013.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "b9198e8426674077550ee8a344f9f721bcceba6308b8196f42ad2d94128e40d0",
+      "status": "CANONICAL_METHODOLOGY_APPENDED_WITH_SCHEMA_RECONCILIATION_GAP",
+      "duplicate_of": null,
+      "notes": "K00 phase target data provided; user phase_status ASSETIZATION_LAYER conflicts with legal phase status enum and was preserved as raw plus normalized for runner validation."
+    },
+    {
+      "doc_id": "DOC-20260511-014",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint section 9 P00 phase target data",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T14:12:21.903922+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-014.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "04e7888b9132a415b965e9bd7df983b4a0ddd558e085b06881496c58ab037826",
+      "status": "CANONICAL_METHODOLOGY_APPENDED_WITH_SCHEMA_RECONCILIATION_GAPS",
+      "duplicate_of": null,
+      "notes": "P00 phase target data provided; phase_status and phase_id require reconciliation with legal enum/existing controller path."
+    },
+    {
+      "doc_id": "DOC-20260511-015",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint section 10 Governance Plane phase target data",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T14:15:02.799034+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-015.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "fa655147876024fc7abe1e1d2305389d20eafc581b6c86540f4c306473324069",
+      "status": "CANONICAL_METHODOLOGY_APPENDED_WITH_SCHEMA_RECONCILIATION_GAPS",
+      "duplicate_of": null,
+      "notes": "Governance Plane target data provided; missing required schema fields filled in executable version; phase_status requires enum reconciliation."
+    },
+    {
+      "doc_id": "DOC-20260511-016",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint section 11 Domain Plane phase target data",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T14:20:29.444644+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-016.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "1ebc1e182825db647272f40294d3160792fe3e499c7812caabc7e91ce695761f",
+      "status": "CANONICAL_METHODOLOGY_APPENDED_WITH_SCHEMA_RECONCILIATION_GAPS",
+      "duplicate_of": null,
+      "notes": "Domain Plane target data provided; missing required schema fields filled in executable version; phase_status requires enum reconciliation."
+    },
+    {
+      "doc_id": "DOC-20260511-017",
+      "parent_doc_id": "DOC-20260511-006",
+      "title": "system_methodology_blueprint section 12 Data Plane phase target data",
+      "source_type": "telegram_text_continuation",
+      "received_at": "2026-05-11T14:25:39.844562+00:00",
+      "raw_input_path": "00_knowledge_intake/raw_inputs/DOC-20260511-017.md",
+      "canonical_target": "00_methodology/system_methodology_blueprint.md",
+      "sha256": "5aff408b3d303951efc4e8260c2c1d3d4eefac54c29ad165a32ec61fa2ce8454",
+      "status": "CANONICAL_METHODOLOGY_APPENDED_WITH_SCHEMA_RECONCILIATION_GAPS",
+      "duplicate_of": null,
+      "notes": "Data Plane target data provided; missing required schema fields filled in executable version; phase_status requires enum reconciliation."
+    },
+    {
+      "doc_id": "DOC-20260511-018",
+      "asset_id": "DOC-20260511-018",
+      "source_name": "未命名 4.md / K00 阶段专业化定义 v2.0",
+      "source_type": "user_uploaded_markdown",
+      "source_cache_path": "/root/.hermes/cache/documents/doc_bfb6a1ed2686_未命名 4.md",
+      "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md",
+      "sha256": "62b5f51591bbbc430a1aa1c552dd6f270aac9825d83a765014520fc6f3c82287",
+      "received_at": "2026-05-11T14:40:47+00:00",
+      "primary_role": "K00 phase controller specialization upgrade",
+      "status": "REGISTERED",
+      "downstream_target": "P00_system_bootstrap_controller"
+    },
+    {
+      "doc_id": "DOC-20260511-019",
+      "source_name": "telegram_text / K00_SYSTEM_CHAIN_PROFESSIONAL_UPDATE",
+      "source_type": "user_text_methodology_chain_update",
+      "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-019_k00_system_chain_professional_update.md",
+      "sha256": "e8295acc14077c8713f7646f85edc6909694ca3ba3e60d4bc86d9974093e2da8",
+      "received_at": "2026-05-11T14:47:39+00:00",
+      "primary_role": "Professional K00-to-P00-to-runtime chain update",
+      "status": "REGISTERED",
+      "downstream_target": "P00_system_bootstrap_controller"
+    },
+    {
+      "doc_id": "DOC-20260512-003",
+      "title": "P03 Wallet Entity Controller 专业版 v3.0",
+      "raw_input_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-003_p03_wallet_entity_controller_v3.md",
+      "target_phase": "P03_WALLET_ENTITY_CONTROLLER",
+      "registered_at": "2026-05-12T02:11:16Z"
+    },
+    {
+      "doc_id": "DOC-20260512-004",
+      "title": "P04 Chip Structure Controller 专业版 v3.0",
+      "raw_input_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-004_p04_chip_structure_controller_v3.md",
+      "target_phase": "P04_CHIP_STRUCTURE_CONTROLLER",
+      "registered_at": "2026-05-12T02:27:13Z"
+    },
+    {
+      "doc_id": "DOC-20260513-001",
+      "source_type": "telegram_text_directive",
+      "source_name": "KV Cache model integration into vNext document processing methodology",
+      "received_at": "2026-05-13T02:48:33Z",
+      "raw_path": "00_knowledge_intake/raw_inputs/DOC-20260513-001_kv_cache_document_processing_model.md",
+      "content_type": "markdown",
+      "sha256": "a595f3239dd0db6bd066f0969ab95b03b5f07ee1d0b551608a7eec51ca1acbb5",
+      "primary_role": "K00 document processing methodology upgrade directive",
+      "processing_status": "K00_INTAKE_COMPLETED_WITH_IMPLEMENTATION_GAPS",
+      "related_phase_candidates": [
+        "K00_knowledge_intake_taskization",
+        "P00_system_bootstrap_controller",
+        "P01_data_fact",
+        "P09_system_upgrade"
+      ],
+      "canonical_target_path": "00_methodology/kv_cache_document_processing_method.md",
+      "kv_cache_manifest": "00_knowledge_intake/kv_cache/kv_cache_manifest_DOC-20260513-001.json",
+      "retention_policy": "preserve_raw_input_immutable_and_sync_kv_methodology_addendum"
+    },
+    {
+      "doc_id": "DOC-20260513-002",
+      "source_type": "user_uploaded_text_document",
+      "source_name": "未命名 (2).md",
+      "received_at": "2026-05-13T03:11:34Z",
+      "raw_path": "00_knowledge_intake/raw_inputs/DOC-20260513-002_p01_data_fact_controller_professional.md",
+      "original_cache_path": "/root/.hermes/cache/documents/doc_a8cb2fc45d8d_未命名 (2).md",
+      "content_type": "markdown",
+      "sha256": "bf61c250468b94da8b2fc7ef17758315e8c60be8463b387f86e933b8781be188",
+      "primary_role": "P01_data_fact_controller professional phase package",
+      "processing_status": "K00_INTAKE_COMPLETED",
+      "related_phase_candidates": [
+        "K00_knowledge_intake_taskization",
+        "P01_data_fact_controller",
+        "P02_wallet_chip_structure_controller",
+        "P03_market_structure_controller"
+      ],
+      "retention_policy": "preserve_raw_input_immutable"
+    }
+  ],
+  "updated_at": "2026-05-12T01:52:36Z",
+  "duplicate_aliases": [
+    {
+      "duplicate_record_id": "DOC-20260511-003-DUP-001",
+      "canonical_doc_id": "DOC-20260511-003",
+      "source_name": "r OS 的系统方法论总纲_.md",
+      "received_at": "2026-05-11T12:55:00Z",
+      "original_cache_path": "/root/.hermes/cache/documents/doc_f19952e9be7c_r OS 的系统方法论总纲。.md",
+      "raw_path": "00_knowledge_intake/raw_inputs/DOC-20260511-003-DUP-001.md",
+      "sha256": "5bad928e6b4e279cff5ea1c7ad65cf39f916ec2633bf8a9c6e6317131b9357bc",
+      "classification": "DUPLICATE_OF_DOC-20260511-003",
+      "processing_status": "K00_DUPLICATE_REGISTERED",
+      "intake_report": "00_knowledge_intake/intake_reports/duplicate_intake_report_DOC-20260511-003-DUP-001.json"
+    }
+  ],
+  "last_doc_id": "DOC-20260511-019",
+  "materials": [
+    {
+      "material_id": "DOC-20260511-004",
+      "source_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-004_system_methodology_blueprint_v2_institutional_upload.md",
+      "original_cache_path": "/root/.hermes/cache/documents/doc_3a49c395c08d_未命名 4 (1).md",
+      "material_type": "user_uploaded_markdown",
+      "title": "system_methodology_blueprint.md 专业机构化 v2.0",
+      "owner_origin": "telegram_user_upload",
+      "ingested_at": "2026-05-11T15:01:39.386563+00:00",
+      "sha256": "21b709caa6d52b80c35ee41c4100774d4b4f1717090fc08bbfc5456a027dae99",
+      "ingestion_status": "K00_ACCEPTED_DUPLICATE",
+      "canonical_target_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_methodology/system_methodology_blueprint.md",
+      "backup_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_methodology/system_methodology_blueprint.backup_before_DOC-20260511-004.md",
+      "related_phase_candidates": [
+        "K00_knowledge_intake_taskization",
+        "P00_system_bootstrap_controller"
+      ],
+      "notes": "Authoritative methodology blueprint; must be consumed by P00 before business phases.",
+      "last_seen_at": "2026-05-11T15:19:49Z",
+      "duplicate_seen_path": "/root/.hermes/cache/documents/doc_389ff8a1cee5_未命名 4 (1).md"
+    },
+    {
+      "material_id": "DOC-20260511-005",
+      "source_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005_p00_system_bootstrap_controller_institutional.md",
+      "original_cache_path": "/root/.hermes/cache/documents/doc_cc423ceda60e_未命名 4 (1).md",
+      "material_type": "user_uploaded_markdown",
+      "title": "P00_system_bootstrap_controller 专业机构化版本",
+      "owner_origin": "telegram_user_upload",
+      "ingested_at": "2026-05-11T15:09:07.104835+00:00",
+      "sha256": "7f357812c58d4d7edc68ca2f726ad052d3706524b9e8493f22516dc88f576606",
+      "ingestion_status": "RAW_PRESERVED_TASKIZED_FOR_P00_BUILD",
+      "canonical_target_path": "/root/sikk-gmgn/sikk_stable_trader_os/06_phase_controllers/P00_system_bootstrap_controller",
+      "related_phase_candidates": [
+        "P00_system_bootstrap_controller"
+      ],
+      "notes": "Authoritative task document for creating institutional P00 system bootstrap controller and running P00 bootstrap outputs."
+    },
+    {
+      "doc_id": "DOC-20260511-006",
+      "material_id": "DOC-20260511-006",
+      "source_path": "00_knowledge_intake/raw_inputs/DOC-20260511-006_p00_system_bootstrap_controller_landing_and_acceptance.md",
+      "source_type": "user_uploaded_text",
+      "source_name": "未命名 4 _1_.md",
+      "received_at": "2026-05-11T15:28:29Z",
+      "source_sha256": "63fa654d27beca3f8e6b7463c9bd967af612e6a1c358af3f70c5578fb3e1c778",
+      "ingestion_status": "K00_ACCEPTED",
+      "related_phase_candidates": [
+        "P00_system_bootstrap_controller"
+      ],
+      "notes": "P00 landing acceptance task spec; verify current state before executing because P00 may already be bootstrap passed."
+    },
+    {
+      "doc_id": "DOC-20260511-007",
+      "title": "Bootstrap/Full Control Plane v3 correction and next-stage spec",
+      "source_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-007_bootstrap_full_control_plane_v3_system_planes_professional_generation.md",
+      "sha256": "63de023524e39c3549f74b03538a395894bce21f4dfd435b344957f8ad36101a",
+      "received_at": "2026-05-11T15:44:15.835396+00:00",
+      "canonical_targets": [
+        "00_methodology/system_methodology_blueprint.md",
+        "00_control/current_system_state.json",
+        "00_control/next_stage_decision.json"
+      ],
+      "status": "K00_ACCEPTED",
+      "material_type": "methodology_increment"
+    },
+    {
+      "doc_id": "DOC-20260511-020",
+      "source_type": "user_uploaded_markdown",
+      "source_name": "Bootstrap Control Plane 专业机构级别完善版 v2.0",
+      "received_at": "2026-05-11T15:54:02.945796Z",
+      "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-020_bootstrap_control_plane_v2_professional_completion.md",
+      "sha256": "c738bbcb8a569e63db51cfc4b28a91e77accd53aa9219c50db61f297e818c8a8",
+      "canonical_target": "/root/sikk-gmgn/sikk_stable_trader_os/00_control",
+      "document_role": "bootstrap_control_plane_professional_completion_taskbook",
+      "status": "K00_ACCEPTED_FOR_P00_BOOTSTRAP_CONTROL_PLANE_V2_COMPLETION",
+      "affected_planes": [
+        "Knowledge Plane",
+        "Control Plane",
+        "Trace Plane",
+        "Acceptance Plane",
+        "Handoff Plane",
+        "Execution Plane"
+      ],
+      "affected_phases": [
+        "K00_knowledge_intake_taskization",
+        "P00_system_bootstrap_controller",
+        "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+      ],
+      "safety_boundary": {
+        "paper_only": true,
+        "real_trade_enabled": false,
+        "auto_order_allowed": false,
+        "p01_runtime_connection_allowed": false
+      }
+    },
+    {
+      "doc_id": "DOC-20260512-001",
+      "title": "P01 Candidate Intake Controller 专业版 v3.0",
+      "source_type": "user_uploaded_markdown",
+      "source_cache_path": "/root/.hermes/cache/documents/doc_3c4b2ad1575b_P01  专业版 v3.0❤️.md",
+      "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-001_p01_candidate_intake_controller_v3.md",
+      "sha256": "c98cd6411d5008262ea6085d6e01e9bc0e8c4b33d925dd1d8ff9bbd1d094d63f",
+      "received_at": "2026-05-12T01:42:26Z",
+      "canonical_target": "/root/sikk-gmgn/system/phase_controllers/p01_candidate_intake_controller/",
+      "status": "K00_ASSETIZED_READY_FOR_CONTROLLER_PACKAGE_EXPANSION",
+      "parent_context": "P01-P10 controller package expansion after phase_controller_index landing"
+    }
+  ],
+  "registry_version": "1.0",
+  "assets": [
+    {
+      "asset_id": "DOC-20260512-002",
+      "doc_id": "DOC-20260512-002",
+      "title": "P02 Source Data Fact Controller 专业版 v3.0",
+      "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-002_p02_source_data_fact_controller_v3.md",
+      "sha256": "948b7fd9ff8d731a03cdda468cdb6fba8dd646056f2afe67adcbece46001bf7c",
+      "status": "K00_ASSETIZED",
+      "phase_target": "P02_SOURCE_DATA_FACT_CONTROLLER_PACKAGE_DESIGN",
+      "created_at": "2026-05-12T01:52:36Z"
+    }
+  ]
+}

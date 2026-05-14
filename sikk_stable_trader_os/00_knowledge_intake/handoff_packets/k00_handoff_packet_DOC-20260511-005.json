@@ -1,0 +1,18 @@
+{
+  "handoff_id": "K00-HANDOFF-DOC-20260511-005",
+  "from_phase": "K00_knowledge_intake_taskization",
+  "to_phase": "data_plane_generation",
+  "source_doc_id": "DOC-20260511-005",
+  "handoff_status": "READY_WITH_NONBLOCKING_GAPS",
+  "canonical_artifact": "00_domain/domain_plane.md",
+  "machine_outputs": [
+    "00_domain/domain_object_registry.yaml",
+    "00_domain/field_dictionary.yaml",
+    "00_domain/state_dictionary.yaml",
+    "00_domain/entity_relationship_map.md",
+    "00_domain/domain_handoff_packet.json"
+  ],
+  "blocking_gap_count": 0,
+  "degraded_gap_count": 1,
+  "next_required_artifact": "00_data/data_plane.md"
+}

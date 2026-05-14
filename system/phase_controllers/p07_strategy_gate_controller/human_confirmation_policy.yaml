@@ -1,0 +1,10 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+policy_id: P07_HUMAN_CONFIRMATION_POLICY
+triggers: [HIGH_VALUE_BUT_CONFLICTED, STRONG_SCENARIO_WITH_CRITICAL_UNKNOWN, PAPER_CANDIDATE_WITH_HIGH_RISK_FLAG, GOVERNANCE_REQUIRES_CONFIRMATION, LEGACY_OR_LOW_TRACE_INPUT]
+allowed_outcomes: [APPROVE_P08_CHECK_ONLY, KEEP_PAUSED, BLOCK, REQUEST_REFRESH]
+restrictions:
+  approval_does_not_allow_live_execution: true
+  approval_does_not_bypass_p08: true
+  approval_does_not_start_paper_runtime: true

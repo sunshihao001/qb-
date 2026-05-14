@@ -1,0 +1,91 @@
+{
+  "task_package_id": "f00_task_package_her_doc_run_20260514_manual",
+  "source_mapping": "f00/function_mapping.json",
+  "tasks": [
+    {
+      "task_id": "task_func_001",
+      "target_controller": "K00",
+      "required_outputs": [
+        "document_passport",
+        "corpus_index",
+        "system_mapping",
+        "k00_handoff_packet"
+      ],
+      "status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE"
+    },
+    {
+      "task_id": "task_func_002",
+      "target_controller": "F00",
+      "required_outputs": [
+        "function_mapping",
+        "required_system_assets",
+        "implementation_task_package",
+        "f00_handoff_packet"
+      ],
+      "status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE"
+    },
+    {
+      "task_id": "task_func_003",
+      "target_controller": "V00",
+      "required_outputs": [
+        "validation_matrix",
+        "gap_register",
+        "evidence_report",
+        "v00_handoff_packet"
+      ],
+      "status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE"
+    },
+    {
+      "task_id": "task_func_004",
+      "target_controller": "A00",
+      "required_outputs": [
+        "acceptance_matrix",
+        "readiness_certificate",
+        "a00_acceptance_result"
+      ],
+      "status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE"
+    },
+    {
+      "task_id": "task_func_005",
+      "target_controller": "H00",
+      "required_outputs": [
+        "downstream_queue",
+        "routing_decision",
+        "h00_handoff_packets"
+      ],
+      "status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE"
+    },
+    {
+      "task_id": "task_func_006",
+      "target_controller": "U00",
+      "required_outputs": [
+        "review_cases",
+        "root_cause_analysis",
+        "upgrade_queue",
+        "learning_index"
+      ],
+      "status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE"
+    },
+    {
+      "task_id": "task_func_007",
+      "target_controller": "G00",
+      "required_outputs": [
+        "governance_candidates",
+        "policy_rules_update"
+      ],
+      "status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE"
+    },
+    {
+      "task_id": "task_func_008",
+      "target_controller": "O00",
+      "required_outputs": [
+        "run_summary",
+        "final_report",
+        "trace",
+        "audit"
+      ],
+      "status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE"
+    }
+  ],
+  "status": "IMPLEMENTATION_TASK_PACKAGE_READY_WITH_GAPS"
+}

@@ -1,0 +1,29 @@
+{
+  "doc_id": "DOC-20260514-HER-PIPELINE-RUNNABLE-WITH-GAPS",
+  "gaps": [
+    {
+      "gap_id": "gap_pipeline_tools_not_yet_created",
+      "origin": "uploaded_doc",
+      "gap_type": "missing_implementation",
+      "gap_level": "HIGH_GAP",
+      "route_to": "F00",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "gap_real_pipeline_not_yet_executed",
+      "origin": "uploaded_doc",
+      "gap_type": "missing_execution_evidence",
+      "gap_level": "HIGH_GAP",
+      "route_to": "V00",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "gap_production_forbidden",
+      "origin": "governance_boundary",
+      "gap_type": "safety_boundary",
+      "gap_level": "NON_BLOCKING_GAP",
+      "route_to": "G00",
+      "status": "OPEN"
+    }
+  ]
+}

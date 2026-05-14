@@ -1,0 +1,12 @@
+{
+  "source_id": "gmgn",
+  "source_type": "market_wallet_intelligence",
+  "live_fetch_enabled": false,
+  "capabilities": [
+    "token_profile",
+    "trade_events",
+    "holder_list",
+    "wallet_profile"
+  ],
+  "requires_live_audit": true
+}

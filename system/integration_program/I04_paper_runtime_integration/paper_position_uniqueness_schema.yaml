@@ -1,0 +1,7 @@
+record_type: paper_position_uniqueness_record
+fields:
+- uniqueness_id
+- token
+- open_position_exists
+- decision
+- trace_id

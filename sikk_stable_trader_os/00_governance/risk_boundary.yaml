@@ -1,0 +1,15 @@
+version: '2.0'
+paper_only: true
+real_trade_enabled: false
+blocked_risks:
+- real_trade
+- signing
+- broadcast
+- private_key_use
+- unverified_paper_runtime
+- missing_counter_evidence
+unknown_required_when:
+- field_missing
+- source_unverified
+- contradiction_unresolved
+- evidence_below_required_level

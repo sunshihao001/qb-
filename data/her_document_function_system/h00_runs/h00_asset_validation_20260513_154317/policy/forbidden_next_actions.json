@@ -1,0 +1,9 @@
+{
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "treat_queue_created_as_task_executed"
+  ]
+}

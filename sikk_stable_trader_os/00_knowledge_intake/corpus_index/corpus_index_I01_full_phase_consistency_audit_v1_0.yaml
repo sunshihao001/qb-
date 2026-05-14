@@ -1,0 +1,22 @@
+doc_id: I01_full_phase_consistency_audit_v1_0
+anchors:
+- I01 is not P11
+- audit only
+- I02 handoff
+- no runner/tool binding
+- no paper runtime
+- no live execution
+sections:
+- 定位
+- 目标
+- 输入范围
+- 审计对象
+- 目录设计
+- 审计模型
+- handoff
+- gap policy
+- hard negatives
+- state machine
+- acceptance
+- test matrix
+- HER execution protocol

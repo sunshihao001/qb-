@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 policy binding",
+  "type": "object",
+  "required": [
+    "policy_bundle_ref",
+    "forbidden_action_registry_ref",
+    "status_code_table_ref",
+    "evidence_policy_ref",
+    "gap_policy_ref",
+    "execution_boundary_policy_ref",
+    "runner_safety_policy_ref",
+    "production_risk_policy_ref"
+  ],
+  "properties": {
+    "policy_bundle_ref": {
+      "type": "string"
+    },
+    "forbidden_action_registry_ref": {
+      "type": "string"
+    },
+    "status_code_table_ref": {
+      "type": "string"
+    },
+    "evidence_policy_ref": {
+      "type": "string"
+    },
+    "gap_policy_ref": {
+      "type": "string"
+    },
+    "execution_boundary_policy_ref": {
+      "type": "string"
+    },
+    "runner_safety_policy_ref": {
+      "type": "string"
+    },
+    "production_risk_policy_ref": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

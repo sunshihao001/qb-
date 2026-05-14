@@ -1,0 +1,27 @@
+{
+  "phase": 0,
+  "name": "系统宪法层",
+  "goal": "固定总目标、禁止事项、目录标准、HER 专业化角色边界",
+  "output_file": "system_constitution.md",
+  "required_fields": [
+    "token_address",
+    "run_id",
+    "phase",
+    "status_code",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_trigger",
+    "confidence_level",
+    "missing_fields",
+    "source_files",
+    "handoff_to"
+  ],
+  "allowed_status_codes": [
+    "CONSTITUTION_READY",
+    "CONSTITUTION_GAP",
+    "CONSTITUTION_BLOCK"
+  ],
+  "missing_policy": "缺失字段必须写 missing；自动推导写 系统推导",
+  "downstream": "数据事实层"
+}

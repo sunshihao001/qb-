@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "09_real_evidence_bundle.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "bundle_id",
+    "acceptance_run_id",
+    "source_pipeline_run_id",
+    "evidence_groups",
+    "summary",
+    "bundle_status"
+  ],
+  "properties": {
+    "bundle_id": {},
+    "acceptance_run_id": {},
+    "source_pipeline_run_id": {},
+    "evidence_groups": {},
+    "summary": {},
+    "bundle_status": {}
+  }
+}

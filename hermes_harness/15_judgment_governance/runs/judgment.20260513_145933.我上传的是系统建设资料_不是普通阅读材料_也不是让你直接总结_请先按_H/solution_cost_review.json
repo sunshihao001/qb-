@@ -1,0 +1,12 @@
+{
+  "artifact_type": "solution_cost_review",
+  "implementation_cost": "low_to_medium",
+  "maintenance_cost": "medium",
+  "cognitive_cost": "medium",
+  "operational_cost": "low",
+  "failure_cost": "high_if_false_completion_persists",
+  "rollback_cost": "low_for_artifact_layer",
+  "over_engineering_risk": "medium",
+  "worth_doing_now": true,
+  "complexity_brake": "keep as governance gate and artifacts; avoid replacing APUR runner wholesale"
+}

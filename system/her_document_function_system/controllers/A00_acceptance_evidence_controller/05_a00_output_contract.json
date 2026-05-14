@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 output contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "preflight_result",
+    "evidence_bundle",
+    "evidence_integrity_check",
+    "phase_status_matrix",
+    "phase_status_consistency_report",
+    "artifact_manifest",
+    "artifact_existence_check",
+    "gap_propagation_report",
+    "trace_audit_validation",
+    "acceptance_scorecard",
+    "readiness_scorecard",
+    "acceptance_decision",
+    "readiness_certificate",
+    "recovery_report",
+    "trace_log",
+    "audit_log",
+    "handoff_packet",
+    "final_report"
+  ],
+  "properties": {
+    "preflight_result": {
+      "type": "string"
+    },
+    "evidence_bundle": {
+      "type": "string"
+    },
+    "evidence_integrity_check": {
+      "type": "string"
+    },
+    "phase_status_matrix": {
+      "type": "string"
+    },
+    "phase_status_consistency_report": {
+      "type": "string"
+    },
+    "artifact_manifest": {
+      "type": "string"
+    },
+    "artifact_existence_check": {
+      "type": "string"
+    },
+    "gap_propagation_report": {
+      "type": "string"
+    },
+    "trace_audit_validation": {
+      "type": "string"
+    },
+    "acceptance_scorecard": {
+      "type": "string"
+    },
+    "readiness_scorecard": {
+      "type": "string"
+    },
+    "acceptance_decision": {
+      "type": "string"
+    },
+    "readiness_certificate": {
+      "type": "string"
+    },
+    "recovery_report": {
+      "type": "string"
+    },
+    "trace_log": {
+      "type": "string"
+    },
+    "audit_log": {
+      "type": "string"
+    },
+    "handoff_packet": {
+      "type": "string"
+    },
+    "final_report": {
+      "type": "string"
+    }
+  }
+}

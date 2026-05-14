@@ -1,0 +1,44 @@
+{
+  "doc_id": "DOC-20260513-001",
+  "package_id": "task_execution_package_DOC-20260513-001",
+  "status": "TASK_PACKAGE_READY",
+  "objective": "Integrate KV Cache model into vNext K00 document processing methodology and prepare implementation tasks.",
+  "tasks": [
+    {
+      "task_id": "KV-TASK-001",
+      "phase": "K00",
+      "action": "Adopt kv_cache_document_processing_method.md as methodology addendum",
+      "output": "00_methodology/kv_cache_document_processing_method.md",
+      "acceptance": "methodology addendum exists and is referenced by handoff"
+    },
+    {
+      "task_id": "KV-TASK-002",
+      "phase": "K00",
+      "action": "Introduce kv_cache.schema.json and kv_cache_manifest",
+      "output": "00_knowledge_intake/kv_cache/kv_cache_manifest_DOC-20260513-001.json",
+      "acceptance": "manifest validates shape and lists kv item keys"
+    },
+    {
+      "task_id": "KV-TASK-003",
+      "phase": "K00/P00",
+      "action": "Update K00 contracts/handoff/acceptance to include kv_cache_manifest",
+      "output": "contract patch task",
+      "acceptance": "K00_READY_WITH_KV_GAP status is defined"
+    },
+    {
+      "task_id": "KV-TASK-004",
+      "phase": "P09",
+      "action": "Plan rule supersession and replay tracking via kv_item.key",
+      "output": "P09 upgrade task",
+      "acceptance": "future replay can cite KV keys"
+    }
+  ],
+  "affected_phases": [
+    "K00",
+    "P00",
+    "P01",
+    "P09"
+  ],
+  "runtime_allowed": false,
+  "safety_boundary": "OBSERVE_PAPER_ONLY"
+}

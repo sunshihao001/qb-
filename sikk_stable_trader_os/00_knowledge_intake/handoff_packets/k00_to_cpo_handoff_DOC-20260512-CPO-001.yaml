@@ -1,0 +1,12 @@
+packet_id: K00-TO-CPO-DOC-20260512-CPO-001
+packet_type: K00_TO_OPERATIONAL_PROGRAM_HANDOFF
+generated_at: 2026-05-12T16:29:31Z
+route:
+  from: K00_KNOWLEDGE_INTAKE
+  to: CONTINUOUS_PAPER_OPERATION_IMPLEMENTATION
+source:
+  material_id: MAT-CPO-v1-001
+  doc_id: DOC-20260512-CPO-001
+  raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-CPO-001_continuous_paper_operation_v1.md
+route_status: K00_ACCEPTED
+restrictions: [PAPER_ONLY, NO_LIVE_EXECUTION, NO_WALLET_SIGNING, NO_AUTO_ORDER, NO_AUTO_DEPLOY, NO_DIRECT_PRODUCTION_RULE_MUTATION]

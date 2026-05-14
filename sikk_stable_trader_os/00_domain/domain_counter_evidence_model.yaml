@@ -1,0 +1,31 @@
+counter_evidence_types:
+  - type: 钱包同步退出
+    meaning: 同源或结构钱包集中卖出
+    handling: DOMAIN_BLOCK
+  - type: 早期钱包清仓
+    meaning: 关键早期筹码完全离场
+    handling: STRONG_DOWNGRADE_OR_BLOCK
+  - type: 接盘鲸鱼高位承接
+    meaning: 高位大额买入但非结构侧
+    handling: DISTRIBUTION_RISK
+  - type: 市值过度扩张
+    meaning: 从发现到当前涨幅过大
+    handling: LATE_ENTRY_WARNING_OR_BLOCK
+  - type: 成交量失真
+    meaning: 高频小额刷量或对敲
+    handling: REJECT_VOLUME_BREAKOUT
+  - type: 价格跌破结构
+    meaning: 跌破 POC / AVWAP / 箱体低点
+    handling: BLOCK_OR_ROLLBACK
+  - type: 回踩超时
+    meaning: 回踩结构长期无推进
+    handling: FATIGUE_DOWNGRADE
+  - type: 二次下探失败缺失
+    meaning: 没有完成有效失败测试
+    handling: NO_EXECUTION_PERMISSION
+  - type: 数据缺失
+    meaning: 关键字段无来源
+    handling: FORBID_STRONG_CLAIM
+  - type: 证据冲突
+    meaning: 钱包支持但成交反证或反之
+    handling: DOMAIN_CONFLICT_DETECTED

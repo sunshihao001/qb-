@@ -1,0 +1,51 @@
+{
+  "packet_id": "p10_related_issue_auto_flow_20260512_164618_handoff",
+  "packet_type": "P10_RELATED_ISSUE_AUTO_FLOW_HANDOFF",
+  "generated_at": "2026-05-12T16:46:18Z",
+  "from_controller": "P10_SELF_UPGRADE_CONTROLLER",
+  "to": [
+    "GOVERNANCE_REVIEW",
+    "CONTROLLED_IMPLEMENTATION_TASK_QUEUE",
+    "RUNNER_TOOL_BINDING_DRY_RUN",
+    "I01_FULL_PHASE_CONSISTENCY_AUDIT"
+  ],
+  "task_packet_id": "p10_related_issue_auto_flow_20260512_164618_controlled_task_packet",
+  "problem_inventory_path": "/root/sikk-gmgn/research_loop/task_packages/pending/p10_related_issue_auto_flow_20260512_164618/problem_inventory.json",
+  "controlled_task_packet_path": "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/controlled_task_packets/p10_related_issue_auto_flow_20260512_164618_controlled_task_packet.json",
+  "upgrade_backlog_path": "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/upgrade_backlog/p10_related_issue_auto_flow_20260512_164618_upgrade_backlog_record.json",
+  "gap_register_path": "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/gaps/p10_related_issue_auto_flow_20260512_164618_gap_register.json",
+  "restrictions": [
+    "CONTROLLED_TASKS_ONLY",
+    "NO_AUTO_DEPLOY",
+    "NO_DIRECT_PRODUCTION_MUTATION",
+    "NO_LIVE_EXECUTION",
+    "NO_WALLET_SIGNING",
+    "REGRESSION_REQUIRED",
+    "ROLLBACK_REQUIRED"
+  ],
+  "downstream_permission": {
+    "allowed": [
+      "GOVERNANCE_REVIEW",
+      "IMPLEMENTATION_TASK_QUEUE",
+      "RUNNER_TOOL_BINDING_DRY_RUN",
+      "TEST_MATRIX_UPDATE",
+      "I01_I05_INTEGRATION_PROGRAM"
+    ],
+    "forbidden": [
+      "LIVE_EXECUTION",
+      "AUTO_DEPLOY_WITHOUT_APPROVAL",
+      "DIRECT_RULE_MUTATION",
+      "PAPER_RUNTIME_MUTATION_WITHOUT_TEST",
+      "P11_BUSINESS_PHASE"
+    ]
+  },
+  "read_instruction": {
+    "implementation_must_read_first": [
+      "problem_inventory.json",
+      "execution_flow_plan.json",
+      "controlled_task_packet.json",
+      "gap_register.json",
+      "handoff_packet.json"
+    ]
+  }
+}

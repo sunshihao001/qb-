@@ -1,0 +1,54 @@
+{
+  "i03_hard_negative_rules": [
+    {
+      "rule_id": "I03_BLOCK_001",
+      "result": "I03_BLOCKED",
+      "name": "未读取 I02 handoff"
+    },
+    {
+      "rule_id": "I03_BLOCK_002",
+      "result": "I03_BLOCKED",
+      "name": "未绑定 path guard"
+    },
+    {
+      "rule_id": "I03_BLOCK_003",
+      "result": "I03_BLOCKED",
+      "name": "未绑定 trace writer"
+    },
+    {
+      "rule_id": "I03_BLOCK_004",
+      "result": "I03_BLOCKED",
+      "name": "未绑定 handoff writer"
+    },
+    {
+      "rule_id": "I03_BLOCK_005",
+      "result": "I03_BLOCKED",
+      "name": "未绑定 acceptance runner"
+    },
+    {
+      "rule_id": "I03_BLOCK_006",
+      "result": "I03_BLOCKED",
+      "name": "Runner 允许未登记路径写入"
+    },
+    {
+      "rule_id": "I03_BLOCK_007",
+      "result": "I03_BLOCKED",
+      "name": "P07 runner 可写入 Paper Runtime"
+    },
+    {
+      "rule_id": "I03_BLOCK_008",
+      "result": "I03_BLOCKED",
+      "name": "P08 runner 支持钱包签名"
+    },
+    {
+      "rule_id": "I03_BLOCK_009",
+      "result": "I03_BLOCKED",
+      "name": "Tool Binding 使用实盘权限"
+    },
+    {
+      "rule_id": "I03_BLOCK_010",
+      "result": "I03_BLOCKED",
+      "name": "live execution 路径"
+    }
+  ]
+}

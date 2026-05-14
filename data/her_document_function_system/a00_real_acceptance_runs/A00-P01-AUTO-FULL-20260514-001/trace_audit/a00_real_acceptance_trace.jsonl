@@ -1,0 +1,7 @@
+{"timestamp": "2026-05-14T05:12:52.874942+00:00", "event_type": "a00_real_acceptance_started", "acceptance_run_id": "A00-P01-AUTO-FULL-20260514-001"}
+{"timestamp": "2026-05-14T05:12:52.877941+00:00", "event_type": "evidence_bundle_built", "bundle_id": "real_evidence_bundle_A00-P01-AUTO-FULL-20260514-001"}
+{"timestamp": "2026-05-14T05:12:52.878451+00:00", "event_type": "status_consistency_validated", "status": "PASSED"}
+{"timestamp": "2026-05-14T05:12:52.879450+00:00", "event_type": "gap_propagation_validated", "status": "PASSED"}
+{"timestamp": "2026-05-14T05:12:52.880498+00:00", "event_type": "readiness_certificate_written", "certificate_id": "readiness_certificate_A00-P01-AUTO-FULL-20260514-001"}
+{"timestamp": "2026-05-14T05:12:52.880766+00:00", "event_type": "handoff_written", "handoff_status": "HANDOFF_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T05:12:52.881078+00:00", "event_type": "a00_real_acceptance_completed", "final_status": "A00_REAL_ACCEPTANCE_EVIDENCE_READY_WITH_GAPS"}

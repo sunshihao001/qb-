@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SIKK Stable Trader OS Phase 01 Output Contract",
+  "type": "object",
+  "required": [
+    "run_id",
+    "phase_id",
+    "token_address",
+    "chain",
+    "quality_score",
+    "quality_status",
+    "phase_01_gate_status",
+    "required_files",
+    "missing_fields",
+    "handoff_packet",
+    "audit_report"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "phase_id": {
+      "type": "string",
+      "const": "phase_01"
+    },
+    "token_address": {
+      "type": "string"
+    },
+    "chain": {
+      "type": "string",
+      "const": "solana"
+    },
+    "quality_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "quality_status": {
+      "type": "string",
+      "enum": [
+        "blocked",
+        "poor",
+        "partial",
+        "usable",
+        "good"
+      ]
+    },
+    "phase_01_gate_status": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "PASS_WITH_WARNING",
+        "PAUSE",
+        "BLOCK"
+      ]
+    },
+    "can_enter_phase_02": {
+      "type": "boolean"
+    },
+    "required_files": {
+      "type": "object"
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hard_negative_triggered": {
+      "type": "boolean"
+    },
+    "blocked_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "handoff_packet": {
+      "type": "string"
+    },
+    "audit_report": {
+      "type": "string"
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

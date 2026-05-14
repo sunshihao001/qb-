@@ -1,0 +1,179 @@
+{
+  "manifest_id": "BOOTSTRAP_CONTROL_PLANE_INTEGRITY_MANIFEST_20260511",
+  "created_at": "2026-05-11T15:56:01.156545Z",
+  "control_plane_type": "BOOTSTRAP_CONTROL_PLANE",
+  "required_files": [
+    "current_system_state.json",
+    "phase_registry.yaml",
+    "system_asset_index.json",
+    "task_consumption_log.json",
+    "current_blockers.json",
+    "next_stage_decision.json",
+    "task_queue.bootstrap.json",
+    "bootstrap_to_system_planes_handoff_packet.json",
+    "bootstrap_control_plane_report.json",
+    "control_plane_integrity_manifest.json"
+  ],
+  "schema_files": [
+    "schemas/current_system_state.schema.json",
+    "schemas/phase_registry.schema.json",
+    "schemas/system_asset_index.schema.json",
+    "schemas/current_blockers.schema.json",
+    "schemas/next_stage_decision.schema.json",
+    "schemas/task_queue_bootstrap.schema.json",
+    "schemas/handoff_packet.schema.json"
+  ],
+  "rule_files": [
+    "rules/stage_transition_rules.yaml",
+    "rules/conflict_resolution_policy.yaml",
+    "rules/control_plane_validation_rules.yaml",
+    "rules/bootstrap_readiness_gate.yaml",
+    "rules/forbidden_transition_rules.yaml"
+  ],
+  "audit_files": [
+    "audit/bootstrap_event_log.jsonl"
+  ],
+  "recovery_files": [
+    "recovery/state_snapshot_policy.yaml",
+    "recovery/recovery_policy.yaml"
+  ],
+  "file_status": {
+    "current_system_state.json": {
+      "exists": true,
+      "size": 5383,
+      "sha256": "f04941032029f156ee0c827d60ea4a4d58d4677fcd192be7b8fef304ed556728"
+    },
+    "phase_registry.yaml": {
+      "exists": true,
+      "size": 2848,
+      "sha256": "2ba56b0b5c54f55ca4f2d01ee20f8d8b1c78c699f83f9d94f1924b563c79d0b2"
+    },
+    "system_asset_index.json": {
+      "exists": true,
+      "size": 21103,
+      "sha256": "423e160d1cf9fbc68f2268bbd99ab457ac20493eb87d1a46fe7ad3b98e2db6df"
+    },
+    "task_consumption_log.json": {
+      "exists": true,
+      "size": 6000,
+      "sha256": "8701d88dd9ff2a190fd31b889409b365e562b8ba23163f7f7f1b20ac95ee0143"
+    },
+    "current_blockers.json": {
+      "exists": true,
+      "size": 2336,
+      "sha256": "d8cf406d2e64f30a037e057019233b4f5dae3c3bb10f440cd744c93d5b32c35e"
+    },
+    "next_stage_decision.json": {
+      "exists": true,
+      "size": 733,
+      "sha256": "50bb5941afcd59ff2efa83a18458210122160ef0c3963cfda7166b010e99e5dd"
+    },
+    "task_queue.bootstrap.json": {
+      "exists": true,
+      "size": 1084,
+      "sha256": "6d63b9e1b55827baf03624cc9e74a6e65eb5770aed317a60733441cf2408c7cc"
+    },
+    "bootstrap_to_system_planes_handoff_packet.json": {
+      "exists": true,
+      "size": 1552,
+      "sha256": "a99dfa826f79163db55d9a1418279718409dc780fd39839b8788af1a498c33f5"
+    },
+    "bootstrap_control_plane_report.json": {
+      "exists": true,
+      "size": 4012,
+      "sha256": "5ec70dd1c60f4696cb6c31010ace3f10bf79eebd7385ac80fea36ed0fb7710ed"
+    },
+    "control_plane_integrity_manifest.json": {
+      "exists": true,
+      "size": 3747,
+      "sha256": "44b69fdd2a3e4737e4d955f82ec9164a95d5aee361e2bc633d5bb752857f1cbb"
+    },
+    "schemas/current_system_state.schema.json": {
+      "exists": true,
+      "size": 844,
+      "sha256": "f2a5713e56ed43f26960fa8b45bd59fba0aadeda4a1724e53a3617a06537259c"
+    },
+    "schemas/phase_registry.schema.json": {
+      "exists": true,
+      "size": 226,
+      "sha256": "7cc4dbfa0d8fac65acf3ecb483a7114bfccbea562430494aa411138b9ff7b853"
+    },
+    "schemas/system_asset_index.schema.json": {
+      "exists": true,
+      "size": 185,
+      "sha256": "0c7798237a532d38b2ef480f2fa05eafaad1b452b87189f95ac5b6a9378089e8"
+    },
+    "schemas/current_blockers.schema.json": {
+      "exists": true,
+      "size": 294,
+      "sha256": "c1f2a8830479aaf1d8c50fd0cb4bd0378a2a6b9e3e0928772eada996d3c5080c"
+    },
+    "schemas/next_stage_decision.schema.json": {
+      "exists": true,
+      "size": 506,
+      "sha256": "89c89fabaa0b51696df7c6bc3dd5e92f7fa221dd8f6fcbb6e674ae26828fada2"
+    },
+    "schemas/task_queue_bootstrap.schema.json": {
+      "exists": true,
+      "size": 307,
+      "sha256": "44a147a29a9ebb91f2b76d0506bc6f2dc03179cbd200b75b2f28ffe7729144fa"
+    },
+    "schemas/handoff_packet.schema.json": {
+      "exists": true,
+      "size": 391,
+      "sha256": "f53378e906cf9e4c04c09c3aecd15cd544e2cd0ccb00a6169750f58abedfb4ad"
+    },
+    "rules/stage_transition_rules.yaml": {
+      "exists": true,
+      "size": 1097,
+      "sha256": "6f04184995ccbecc732be5978ae7ec1c02843f8006e6f99415ff1cb2f0aaa463"
+    },
+    "rules/conflict_resolution_policy.yaml": {
+      "exists": true,
+      "size": 1079,
+      "sha256": "3c92b0207ada12572a6774574de0ff6c3bd0408f5672b22482ad3c6083771488"
+    },
+    "rules/control_plane_validation_rules.yaml": {
+      "exists": true,
+      "size": 643,
+      "sha256": "0f797a137e49b1202612fb5137960de72b7d738b7fac438415c1bbc8eb5abe5b"
+    },
+    "rules/bootstrap_readiness_gate.yaml": {
+      "exists": true,
+      "size": 651,
+      "sha256": "dc2db3422d20838143bbd9a6ece2e00b17dccfe083fd8cdd738af2c534cce26a"
+    },
+    "rules/forbidden_transition_rules.yaml": {
+      "exists": true,
+      "size": 255,
+      "sha256": "0fac27105bffbcfed8b20c4684a90c7af030c80a86bf31fde1ae8838d252c25d"
+    },
+    "recovery/state_snapshot_policy.yaml": {
+      "exists": true,
+      "size": 314,
+      "sha256": "6f2ff1994a33921b420b346de097f69a601e372695ceef9d466df19a7fa8b5e0"
+    },
+    "recovery/recovery_policy.yaml": {
+      "exists": true,
+      "size": 935,
+      "sha256": "d85414734751b61704c8b42e288c6200ce03c315453102808807801b707c5e74"
+    },
+    "audit/bootstrap_event_log.jsonl": {
+      "exists": true,
+      "size": 1239,
+      "sha256": "99f758266ccfb86e560649480e938470660e7c72e90a08800ade43de61a5722c"
+    }
+  },
+  "integrity_status": "BOOTSTRAP_WITH_WARNINGS",
+  "p01_runtime_connection_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "validated_at": "2026-05-11T15:57:42.981840Z",
+  "validation_errors": [],
+  "missing_files": [],
+  "warnings": [
+    "governance_plane not fully generated/accepted",
+    "domain_plane not fully generated/accepted",
+    "data_plane not fully generated/accepted"
+  ]
+}

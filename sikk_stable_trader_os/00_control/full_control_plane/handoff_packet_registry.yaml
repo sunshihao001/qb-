@@ -1,0 +1,53 @@
+handoff_packets:
+- packet_id: control_handoff_packet
+  produced_by: P00_FULL_CONTROL_PLANE
+  consumed_by:
+  - ALL_PHASE_CONTROLLERS
+  required_sections:
+  - selected_phase
+  - phase_goal
+  - task_tree
+  - required_inputs
+  - expected_outputs
+  - acceptance_gate
+  - status_writeback_path
+- packet_id: governance_handoff_packet
+  produced_by: P01_GOVERNANCE_PLANE
+  consumed_by:
+  - P02_DOMAIN_PLANE
+  - P03_DATA_PLANE
+  - P06_STRATEGY_GATE_PLANE
+- packet_id: domain_handoff_packet
+  produced_by: P02_DOMAIN_PLANE
+  consumed_by:
+  - P03_DATA_PLANE
+  - P04_EVIDENCE_PLANE
+- packet_id: data_handoff_packet
+  produced_by: P03_DATA_PLANE
+  consumed_by:
+  - P04_EVIDENCE_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+- packet_id: ACCEPTANCE_TO_HANDOFF_DOC-20260511-027
+  produced_by: HANDOFF_PLANE_PROFESSIONAL_DESIGN
+  source: ACCEPTANCE_PLANE
+  target: HANDOFF_PLANE
+  path: /root/sikk-gmgn/sikk_stable_trader_os/09_handoff/acceptance_to_handoff_packet.json
+  handoff_mode: LIMITED_HANDOFF
+  doc_id: DOC-20260511-027
+trace_handoff_packet:
+  packet_id: TRACE_TO_ACCEPTANCE_HANDOFF_20260511
+  path: /root/sikk-gmgn/sikk_stable_trader_os/09_handoff/trace_handoff_packet.json
+  source: TRACE_PLANE
+  targets:
+  - ACCEPTANCE_PLANE
+  - HANDOFF_PLANE
+  - P01_P10_PHASE_CONTROLLERS
+updated_at: '2026-05-11T17:54:04Z'
+packets:
+  PHASE_CONTROLLER_INDEX_TO_CONTROLLER_PACKAGE_EXPANSION_DOC-20260511-028:
+    path: /root/sikk-gmgn/sikk_stable_trader_os/09_handoff/phase_controller_index_handoff_packet.json
+    source: P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN
+    target: P01_P10_CONTROLLER_PACKAGE_EXPANSION
+    status: HANDOFF_READY_WITH_GAPS
+    runtime_allowed: false
+    doc_id: DOC-20260511-028

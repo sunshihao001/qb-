@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "12_gap_propagation.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "gap_propagation_status",
+    "total_gaps",
+    "open_gaps",
+    "blocking_gaps",
+    "hidden_gaps",
+    "propagation_paths"
+  ],
+  "properties": {
+    "gap_propagation_status": {},
+    "total_gaps": {},
+    "open_gaps": {},
+    "blocking_gaps": {},
+    "hidden_gaps": {},
+    "propagation_paths": {}
+  }
+}

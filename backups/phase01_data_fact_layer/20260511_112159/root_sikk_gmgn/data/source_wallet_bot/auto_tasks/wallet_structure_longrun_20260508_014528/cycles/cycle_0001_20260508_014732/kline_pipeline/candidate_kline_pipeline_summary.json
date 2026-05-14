@@ -1,0 +1,86 @@
+{
+  "模块": "SIKK 候选币 K线接入管道",
+  "扫描时间": "2026-05-08T01:47:33Z",
+  "候选来源": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/gmgn_new_token_filter/token_candidates.json",
+  "处理等级": [
+    "S3_进入SIKK结构分析"
+  ],
+  "处理统计": {
+    "读取候选数": 3,
+    "处理候选数": 3,
+    "成功数量": 3,
+    "失败数量": 0
+  },
+  "处理结果": [
+    {
+      "代币地址": "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+      "代币符号": "GABI",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1778202047,
+      "输出目录": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+      "K线文件": {
+        "1m": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/kline_1m.csv",
+        "5m": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 47,
+        "5m": 9
+      },
+      "吸筹窗口输出": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-05-08 01:17:00 UTC",
+      "T_end": "2026-05-08 01:23:00 UTC",
+      "kline_normalized": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/kline_normalized.json",
+      "market_pattern_source_snapshot": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/market_pattern_source_snapshot.json"
+    },
+    {
+      "代币地址": "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+      "代币符号": "MV",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1778200656,
+      "输出目录": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+      "K线文件": {
+        "1m": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/kline_1m.csv",
+        "5m": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 70,
+        "5m": 14
+      },
+      "吸筹窗口输出": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-05-08 00:56:00 UTC",
+      "T_end": "2026-05-08 01:00:00 UTC",
+      "kline_normalized": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/kline_normalized.json",
+      "market_pattern_source_snapshot": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/market_pattern_source_snapshot.json"
+    },
+    {
+      "代币地址": "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+      "代币符号": "MASK",
+      "筛选等级": "S3_进入SIKK结构分析",
+      "开盘时间戳": 1778199035,
+      "输出目录": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+      "K线文件": {
+        "1m": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/kline_1m.csv",
+        "5m": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/kline_5m.csv"
+      },
+      "K线数量": {
+        "1m": 97,
+        "5m": 19
+      },
+      "吸筹窗口输出": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/accumulation_outputs/accumulation_window.json",
+      "状态": "ok",
+      "错误": "",
+      "吸筹窗口状态": "valid",
+      "T_start": "2026-05-08 00:50:00 UTC",
+      "T_end": "2026-05-08 00:56:00 UTC",
+      "kline_normalized": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/kline_normalized.json",
+      "market_pattern_source_snapshot": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/kline_pipeline/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/market_pattern_source_snapshot.json"
+    }
+  ],
+  "说明": "本管道只读取 GMGN K线并运行吸筹窗口识别，不执行交易。"
+}

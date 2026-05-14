@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0152
+source_path: docs/intel_bot/source_bot_upstream_layer_01_candidate_token_data.md
+phase_scores:
+  P01: 31
+  P02: 2
+  P03: 3
+  P04: 0
+  P05: 3
+  P06: 0
+  P07: 0
+  P08: 0
+  P09: 0
+  P10: 0
+primary_phase: P01
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

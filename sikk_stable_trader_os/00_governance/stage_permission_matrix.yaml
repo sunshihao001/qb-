@@ -1,0 +1,176 @@
+version: '2.0'
+source_doc_id: DOC-20260511-021
+coverage:
+- K00
+- P00
+- P01
+- P02
+- P03
+- P04
+- P05
+- P06
+- P07
+- P08
+- P09
+- P10
+permission_model: explicit_can_cannot
+stages:
+  K00:
+    can:
+    - preserve_raw_input
+    - create_document_passport
+    - create_task_package
+    - create_handoff_candidate
+    cannot:
+    - register_formal_phase_without_p00
+    - run_business_phase
+    - produce_trade_decision
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: false
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+  P00:
+    can:
+    - compile_system_planes
+    - register_phase_stubs
+    - write_control_state
+    - block_p01
+    cannot:
+    - trade_judgment
+    - wallet_judgment
+    - paper_trade_runtime
+    - real_trade
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: false
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+  P01:
+    can:
+    - normalize_facts_only_after_data_plane_acceptance
+    cannot:
+    - infer_intent
+    - judge_scenario
+    - paper_permission
+    - runtime_before_preflight
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: true
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+  P02:
+    can:
+    - produce_structural_or_market_judgment_after_upstream_handoff
+    cannot:
+    - paper_permission_final_decision
+    - real_trade
+    - modify_rules_directly
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: true
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+  P03:
+    can:
+    - produce_structural_or_market_judgment_after_upstream_handoff
+    cannot:
+    - paper_permission_final_decision
+    - real_trade
+    - modify_rules_directly
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: true
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+  P04:
+    can:
+    - produce_structural_or_market_judgment_after_upstream_handoff
+    cannot:
+    - paper_permission_final_decision
+    - real_trade
+    - modify_rules_directly
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: true
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+  P05:
+    can:
+    - produce_structural_or_market_judgment_after_upstream_handoff
+    cannot:
+    - paper_permission_final_decision
+    - real_trade
+    - modify_rules_directly
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: true
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+  P06:
+    can:
+    - reject_opportunity
+    - decide_paper_permission_candidate
+    cannot:
+    - execute_trade
+    - bypass_p07
+    - real_trade
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: true
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+    can_decide_paper_permission: true
+  P07:
+    can:
+    - simulate_execution_risk
+    - block_paper_runtime_on_risk
+    cannot:
+    - sign_transaction
+    - broadcast_transaction
+    - real_order
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: true
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+    can_decide_paper_runtime_risk: true
+  P08:
+    can:
+    - run_paper_only_validation_after_p06_p07
+    cannot:
+    - real_trade
+    - modify_live_rules
+    - paper_without_permission
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: true
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+    can_run_paper_trade: true
+  P09:
+    can:
+    - review_failure
+    - create_rule_adjustment_candidates
+    cannot:
+    - modify_runtime_rules_directly
+    - real_trade
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: true
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+  P10:
+    can:
+    - create_upgrade_proposal
+    - schema_migration_plan
+    - acceptance_update_plan
+    cannot:
+    - apply_runtime_without_manual_acceptance
+    - real_trade
+    - enable_real_trade
+    - store_or_output_secrets
+    requires_upstream_handoff: true
+    can_generate_trade_signal: false
+    can_enable_p01_runtime: false
+    can_modify_rules: proposal_only_requires_acceptance_manual_review

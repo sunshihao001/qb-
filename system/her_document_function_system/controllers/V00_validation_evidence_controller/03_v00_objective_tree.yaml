@@ -1,0 +1,47 @@
+phase_id: V00
+objective_tree:
+  root_goal: prove_f00_outputs_are_real_validated_and_handoff_ready
+  children:
+    - id: V00.0
+      name: Preflight Gate
+      required_outputs: [v00_preflight_result.json]
+    - id: V00.1
+      name: Input Evidence Loader
+      required_outputs: [input_evidence_status.json]
+    - id: V00.2
+      name: Function Mapping Validator
+      required_outputs: [function_mapping_validation_result.json]
+    - id: V00.3
+      name: Field Model Validator
+      required_outputs: [field_model_validation_result.json]
+    - id: V00.4
+      name: Rule Logic Validator
+      required_outputs: [rule_logic_test_result.json]
+    - id: V00.5
+      name: Schema Validator
+      required_outputs: [schema_validation_result.json]
+    - id: V00.6
+      name: Contract Validator
+      required_outputs: [contract_validation_result.json]
+    - id: V00.7
+      name: Patch Evidence Validator
+      required_outputs: [patch_evidence_validation_result.json]
+    - id: V00.8
+      name: Test Execution Evidence Collector
+      required_outputs: [test_evidence.json, test_stdout.log, test_stderr.log]
+    - id: V00.9
+      name: Replay Evidence Collector
+      required_outputs: [replay_input.json, replay_output.json, replay_trace.jsonl, replay_evidence.json, replay_report.md]
+    - id: V00.10
+      name: Trace Audit Validator
+      required_outputs: [v00_trace.jsonl, v00_audit.jsonl]
+    - id: V00.11
+      name: Gap Failure Evidence Classifier
+      required_outputs: [v00_gap_report.json, failure_evidence.json]
+    - id: V00.12
+      name: Acceptance Precheck
+      required_outputs: [v00_acceptance_result.json, acceptance_precheck_for_r00.json]
+    - id: V00.13
+      name: Handoff Writer
+      required_outputs: [v00_to_r00_handoff_packet.json, v00_to_a00_handoff_packet.json]
+acceptance_principle: no_evidence_no_pass

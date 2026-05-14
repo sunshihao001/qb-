@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "08_a00_real_acceptance_handoff.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "handoff_type",
+    "real_evidence_bundle_refs",
+    "readiness_certificate_refs",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "handoff_status"
+  ],
+  "properties": {
+    "handoff_id": {},
+    "from_phase": {},
+    "to_phase": {},
+    "handoff_type": {},
+    "real_evidence_bundle_refs": {},
+    "readiness_certificate_refs": {},
+    "allowed_next_actions": {},
+    "forbidden_next_actions": {},
+    "handoff_status": {}
+  }
+}

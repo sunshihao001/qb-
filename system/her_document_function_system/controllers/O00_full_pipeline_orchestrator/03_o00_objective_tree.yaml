@@ -1,0 +1,7 @@
+root_objective: build_safe_full_pipeline_orchestrator
+objectives:
+  governance_preflight: [load_g00_active_policy_bundle, enforce_safe_mode, inherit_forbidden_actions]
+  run_control: [create_pipeline_run_id, isolate_o00_runs, write_state_trace_audit]
+  orchestration: [load_controller_registry, build_execution_plan, build_dependency_graph, build_stage_queue, check_transition_gates]
+  dispatch: [K00, F00, V00, R00, A00, H00, U00, G00]
+  closure: [propagate_gaps, classify_failures, build_acceptance_matrix, write_final_report, write_final_handoff]

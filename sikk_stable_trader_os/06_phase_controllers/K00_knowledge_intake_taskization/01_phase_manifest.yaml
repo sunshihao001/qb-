@@ -1,0 +1,505 @@
+phase_manifest:
+  phase_id: K00
+  phase_key: K00_knowledge_intake_taskization
+  phase_name: 知识资料摄取与任务化控制器
+  phase_type: pre_phase_controller
+  mission:
+    primary: 将用户输入的文档、知识资料、方法论文本转化为 HER 可执行的阶段任务执行包
+    secondary:
+    - 保存原始资料
+    - 生成文档护照
+    - 建立语料索引
+    - 映射系统平面
+    - 识别系统缺口
+    - 生成任务执行包
+    - 输出 handoff_packet
+  authority:
+    can_do:
+    - 读取用户输入资料
+    - 保存资料
+    - 生成资料登记
+    - 建立任务包
+    - 识别系统影响
+    - 生成下一阶段建议
+    cannot_do:
+    - 不能直接输出交易判断
+    - 不能直接改写实时规则
+    - 不能跳过 P00
+    - 不能把资料当普通文档总结后结束
+    - 不能依赖聊天上下文作为唯一依据
+    - 不能把文档知识输入自动化等同于直接交易自动化
+    - 不能生成真实买卖指令
+    - 不能跳过 P00/P05/P06/P07 交易边界与门禁
+  upstream:
+    required:
+    - user_input
+    optional:
+    - uploaded_files
+    - previous_system_docs
+    - legacy_runtime_outputs
+  downstream:
+    next_phase_candidates:
+    - P00_system_boundary
+    - P01_data_fact
+    - P09_self_upgrade
+    handoff_required: true
+compatibility_runtime_metadata:
+  phase_id: K00
+  phase_name: K00_knowledge_intake_taskization_controller
+  phase_display_name: 知识资料摄取与任务化控制器
+  phase_domain: knowledge_intake_taskization
+  phase_type: schedulable_phase_runtime_unit
+  placement: before_P00
+  is_trading_phase: false
+  controller_definition: Phase Controller 不是阶段说明文档。K00 不是交易阶段，也不是普通文档总结阶段。K00 是所有上传文档、方法轮、知识资料、截图说明、旧系统文档、GPT
+    链接内容、方法论文本进入 SIKK Stable Trader OS 前的知识资料摄取、保存、建模、任务化、阶段映射、执行包生成与下游交接运行单元；它负责把用户输入资料转化为
+    HER 可执行的阶段任务包。
+  system: SIKK Stable Trader OS
+  version: 0.2.0
+  created_at: '2026-05-11T09:45:00Z'
+  updated_at: '2026-05-11T10:05:00Z'
+  runtime_boundary: OBSERVE_PAPER_ONLY
+  mission:
+    primary: 将用户提供的文档、知识、截图说明、旧系统资料、GPT 链接内容、方法论文本转化为 HER 可执行阶段任务包
+    controller_goal: 保存原始输入资料 -> 建立资料清单 -> 生成文档护照 -> 判断系统平面 -> 映射 P00-P09 -> 抽取可执行目标
+      -> 识别系统缺口 -> 生成阶段任务执行包 -> 建立 phase_state -> 建立 handoff_packet -> 自动进入下一阶段
+  k00_objectives:
+  - 保存原始输入资料
+  - 建立资料清单
+  - 生成每份资料的文档护照
+  - 判断资料属于系统哪个平面
+  - 判断资料影响 P00-P09 哪些阶段
+  - 抽取可执行目标
+  - 识别系统缺口
+  - 生成阶段任务执行包
+  - 建立 phase_state
+  - 建立 handoff_packet
+  - 自动进入下一阶段
+  authority:
+    can_do:
+    - receive_uploaded_documents
+    - receive_method_wheel_materials
+    - receive_knowledge_notes
+    - receive_screenshot_explanations
+    - receive_legacy_system_documents
+    - receive_gpt_link_content
+    - receive_methodology_text
+    - preserve_raw_material_snapshot
+    - build_material_inventory
+    - generate_document_passport
+    - classify_system_plane
+    - map_material_to_P00_P09
+    - extract_executable_objectives
+    - identify_system_gaps
+    - generate_phase_task_execution_package
+    - write_phase_state
+    - write_handoff_packet
+    - auto_route_to_next_phase_when_gate_passes
+    - write_audit_ref
+    cannot_do:
+    - 禁止 treat_summary_as_raw_fact
+    - 禁止 overwrite_raw_material_without_snapshot
+    - 禁止 infer_missing_required_fact
+    - 禁止 skip_source_attribution
+    - 禁止 skip_acceptance_gate
+    - 禁止 bypass_handoff_packet
+    - 禁止 authorize_real_trade
+    - 禁止 read_or_write_private_key
+    - 禁止 sign_transaction
+    - 禁止 broadcast_transaction
+    - 禁止 execute_swap
+  upstream:
+    required:
+    - user_supplied_material_or_import_pointer
+    optional:
+    - uploaded_document
+    - method_wheel_material
+    - knowledge_note
+    - screenshot_explanation
+    - legacy_system_document
+    - gpt_link_content
+    - methodology_text
+    - existing_system_registry
+    - existing_phase_index
+    - existing_skill_index
+    - existing_contract_index
+    - prior_gap_register
+  downstream:
+    next_phase: P00_system_boundary
+    handoff_required: true
+    auto_advance_policy: advance_to_P00_when_acceptance_gate_passes_and_handoff_schema_validates
+    consumers:
+    - P00_system_boundary
+    - HER_task_router
+    - phase_controller_registry
+    - total_control_plane
+    - task_runtime_executor
+    - gap_closure_planner
+  atomic_skills_bound:
+  - her_document_intake_task_pack_v1
+  - document_passport_generation_skill
+  - material_inventory_skill
+  - semantic_modeling_skill
+  - system_plane_mapping_skill
+  - phase_mapping_skill
+  - gap_identification_skill
+  - task_package_generation_skill
+  - acceptance_gate_skill
+  required_package_files:
+  - 01_phase_manifest.yaml
+  - 02_phase_context_pack.md
+  - 03_phase_objective_tree.yaml
+  - 04_phase_input_contract.json
+  - 05_phase_output_contract.json
+  - 06_phase_execution_protocol.md
+  - 07_phase_acceptance_gate.yaml
+  - 08_phase_state.json
+  - 09_phase_handoff_packet.schema.json
+  evidence_requirements:
+  - 字段来源 field_source_map
+  - raw_material_snapshot_ref
+  - material_inventory_ref
+  - document_passport_ref
+  - system_plane_mapping
+  - P00_P09_phase_mapping
+  - executable_objectives
+  - gap_register
+  - evidence_level
+  - 反证 counter_evidence
+  - decision_trace
+  - audit_ref
+  - 验收 acceptance_gate
+  - handoff_packet
+objective_tree_standard_ref:
+  anchor: 7.3 03_phase_objective_tree.yaml
+  file: 03_phase_objective_tree.yaml
+  template: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/03_phase_objective_tree_TEMPLATE.yaml
+input_contract_standard_ref:
+  anchor: 7.4 04_phase_input_contract.json
+  file: 04_phase_input_contract.json
+  template: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/04_phase_input_contract_TEMPLATE.json
+  rule: HER 不允许使用未声明输入；所有输入必须先保存、生成 doc_id、进入 source_registry，未保存资料不能作为长期判断依据。
+  required_inputs:
+  - name: user_input_content
+    type: text
+    required: true
+    missing_action: PHASE_REJECTED
+  optional_inputs:
+  - name: uploaded_file_paths
+    type: array
+    required: false
+    missing_action: CONTINUE_WITH_TEXT_ONLY
+  - name: legacy_system_paths
+    type: array
+    required: false
+    missing_action: MARK_AS_GAP
+output_contract_standard_ref:
+  anchor: 7.5 05_phase_output_contract.json
+  file: 05_phase_output_contract.json
+  template: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/05_phase_output_contract_TEMPLATE.json
+  rule: K00 必须生成 required_outputs 中声明的全部输出；未生成完整输出不得进入 K00_READY。
+  required_outputs:
+  - file: raw_inputs/<doc_id>.md
+    type: markdown
+    purpose: 保存原始资料
+  - file: source_registry/source_registry.json
+    type: json
+    purpose: 资料来源登记
+  - file: document_passports/document_passport_<doc_id>.yaml
+    type: yaml
+    purpose: 文档护照
+  - file: system_mapping/plane_mapping_<doc_id>.json
+    type: json
+    purpose: 九大系统平面映射
+  - file: system_mapping/phase_mapping_<doc_id>.json
+    type: json
+    purpose: P00-P09 阶段映射
+  - file: gap_detection/gap_detection_<doc_id>.json
+    type: json
+    purpose: 系统缺口识别
+  - file: task_packages/task_execution_package_<doc_id>.json
+    type: json
+    purpose: 阶段任务执行包
+  - file: handoff_packets/k00_handoff_packet_<doc_id>.json
+    type: json
+    purpose: 交接包
+execution_protocol_standard_ref:
+  anchor: 7.6 06_phase_execution_protocol.md
+  file: 06_phase_execution_protocol.md
+  template: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/06_phase_execution_protocol_TEMPLATE.md
+  role: 告诉 HER 怎么运行，不是描述阶段；这是 HER 长任务运行的核心。
+  runtime_principle: HER 不得把用户输入资料当作普通文档阅读，必须转化为系统可执行任务包。
+  phase_ready_auto_continue:
+    system_boundary: P00_system_boundary
+    data_fact: P01_data_fact
+    rule_upgrade: P09_self_upgrade
+    new_methodology: governance_plane / system_methodology_blueprint 更新流程
+  resume_rule: 每完成一个 task_id 必须更新 phase_state.json；中断后读取 phase_state.json 继续未完成任务，不得重新自由理解。
+  hard_bans:
+  - 禁止只总结文档
+  - 禁止只输出分析建议
+  - 禁止不保存资料
+  - 禁止不生成任务包
+  - 禁止没有 handoff_packet 就进入下一阶段
+  - 禁止依赖聊天上下文作为唯一系统记忆
+acceptance_gate_standard_ref:
+  anchor: 7.7 07_phase_acceptance_gate.yaml
+  file: 07_phase_acceptance_gate.yaml
+  template: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/07_phase_acceptance_gate_TEMPLATE.yaml
+  role: 决定 HER 什么时候能说完成；防止写完文档被误判为完成。
+  gate_id: K00-ACCEPTANCE-GATE
+  completion_rule: 只有 acceptance_gate 通过后 K00 才能声明完成；没有 task_execution_package 或 handoff_packet
+    不得进入下一阶段。
+  status_mapping:
+    all_professional_acceptance_passed: PHASE_READY
+    minimum_passed_with_minor_gaps: PHASE_WITH_GAPS
+    recoverable_missing_output: PHASE_PAUSED
+    critical_missing_output: PHASE_REJECTED
+    runtime_error: PHASE_ERROR
+  next_phase_targets:
+  - P00_system_boundary
+  - P01_data_fact
+  - P09_self_upgrade
+phase_state_standard_ref:
+  anchor: 7.8 08_phase_state.json
+  file: 08_phase_state.json
+  template: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/08_phase_state_TEMPLATE.json
+  role: 运行状态文件，不是设计文档；HER 每跑一步都要回写。
+  initial_status: PHASE_NOT_STARTED
+  initial_next_action: start_knowledge_intake
+  writeback_rule: 每完成一个步骤、生成一个文件、发现一个缺口、命中一个 hard negative、发生一次错误、或完成一次 handoff 判断，都必须回写
+    08_phase_state.json。
+  resume_rule: 中断恢复必须先读取 08_phase_state.json，再从 current_task_id / completed_tasks
+    / failed_tasks / next_action 继续，不得重新自由理解。
+  required_fields:
+  - phase_id
+  - phase_key
+  - current_status
+  - current_doc_id
+  - current_task_id
+  - completed_tasks
+  - failed_tasks
+  - generated_files
+  - missing_files
+  - gap_list
+  - hard_negative_hits
+  - affected_planes
+  - affected_phases
+  - next_phase_recommendation
+  - last_error
+  - next_action
+  - updated_at
+handoff_packet_schema_standard_ref:
+  anchor: 7.9 09_phase_handoff_packet.schema.json
+  file: 09_phase_handoff_packet.schema.json
+  template: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/09_phase_handoff_packet.schema_TEMPLATE.json
+  role: 交接包结构约束，不是随便写 JSON；下游阶段读取 K00 结果的唯一结构化交接入口。
+  required_handoff_fields:
+  - phase_id
+  - phase_status
+  - doc_id
+  - raw_input_path
+  - document_passport_path
+  - task_execution_package_path
+  - affected_planes
+  - affected_phases
+  - gap_list
+  - next_phase_allowed
+  - next_phase_recommendation
+  - generated_at
+  status_enum:
+  - PHASE_READY
+  - PHASE_WITH_GAPS
+  - PHASE_PAUSED
+  - PHASE_REJECTED
+  - PHASE_ERROR
+  runtime_rule: HER 生成 handoff_packet 时必须按 09 schema 写入，不得缺少 required 字段；phase_status
+    必须来自 acceptance_gate；next_phase_allowed 必须来自验收门判断。
+task_execution_package_data_model_ref:
+  anchor: 8. 阶段任务执行包数据模型
+  primary_artifact: task_packages/task_execution_package_<doc_id>.json
+  template: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/task_execution_package_TEMPLATE.json
+  schema: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/task_execution_package.schema.json
+  role: K00 最重要产物；将用户输入的系统设计资料转化为可调度、可续跑、可验收的阶段任务。
+  required_root_fields:
+  - task_package_id
+  - source_doc_id
+  - package_type
+  - created_for
+  - purpose
+  - system_understanding
+  - affected_system_planes
+  - affected_phases
+  - main_objective
+  - objective_tree
+  - required_phase_package_files
+  - execution_policy
+  - acceptance_policy
+  - next_action
+  required_phase_package_files:
+  - 01_phase_manifest.yaml
+  - 02_phase_context_pack.md
+  - 03_phase_objective_tree.yaml
+  - 04_phase_input_contract.json
+  - 05_phase_output_contract.json
+  - 06_phase_execution_protocol.md
+  - 07_phase_acceptance_gate.yaml
+  - 08_phase_state.json
+  - 09_phase_handoff_packet.schema.json
+  runtime_rule: task_execution_package 不是摘要；必须声明 system_understanding、affected_system_planes、affected_phases、objective_tree、execution_policy、acceptance_policy
+    与 next_action。
+automated_long_task_execution_logic_ref:
+  anchor: 9. 自动化长任务执行逻辑
+  standard_loop:
+  - 读取 phase_state
+  - 找到 current_task_id
+  - 执行当前 task
+  - 生成对应输出
+  - 更新 phase_state
+  - 检查 acceptance_gate
+  - 如果未完成，继续下一个 task
+  - 如果完成，生成 handoff_packet
+  - 根据 next_phase_rules 进入下一阶段
+  - 重复执行
+  auto_continue_decision_checks:
+  - 当前阶段是否 PHASE_READY
+  - 是否存在 BLOCKER gap
+  - 是否存在 next_phase_recommendation
+  - 下一个阶段是否有输入
+  - 是否允许继续
+  stop_conditions:
+  - PHASE_REJECTED
+  - PHASE_ERROR
+  - 缺少关键输入
+  - 命中 BLOCKER gap
+  - 用户明确要求停止
+  - 下一阶段不存在
+  - 下一阶段需要人工补充资料
+  runtime_rule: HER 是多步骤长任务执行器，不是单次回答器；每一轮必须读取 phase_state、执行 current_task_id、更新 phase_state、检查
+    acceptance_gate、按 next_phase_rules 自动继续或按停止条件停止。
+automated_trading_workflow_integration_ref:
+  anchor: 10. 如何落实到自动化交易流程工作流
+  boundary_principle: 文档知识输入自动化不是直接交易自动化；K00 只将交易系统建设资料资产化并交接给下游阶段。
+  final_trading_workflow:
+  - K00_knowledge_intake
+  - P00_system_boundary
+  - P01_data_fact
+  - P02_market_scenario
+  - P03_wallet_structure
+  - P04_chip_control
+  - P05_strategy_gate
+  - P06_risk_control
+  - P07_paper_execution_human_confirmation
+  - P08_review_attribution
+  - P09_self_upgrade_proposal
+  assetization_rule: 所有新资料必须离开聊天上下文，进入 raw_inputs/source_registry/document_passports/system_mapping/gap_detection/task_packages/handoff_packets
+    等系统资产。
+  must_not_do:
+  - direct_trade_automation
+  - generate_real_buy_sell_order
+  - skip_P00_boundary
+  - skip_P05_P06_P07_gates
+  - store_only_in_chat_context
+  - rewrite_trading_workflow_without_acceptance
+total_control_skill_k00_input_routing_rules:
+  anchor: 11. 总控 Skill：K00 文档知识输入强制路由核心规则
+  trigger_input_types:
+  - 文档
+  - 知识资料
+  - 方法论
+  - 系统设计
+  - 旧系统说明
+  - GPT 链接内容
+  - 截图转述内容
+  controller: K00_knowledge_intake_taskization_controller
+  rules:
+  - 不允许当作普通文档阅读后结束。
+  - 必须进入 K00_knowledge_intake_taskization_controller。
+  - 必须保存原始资料。
+  - 必须生成 doc_id。
+  - 必须生成 document_passport。
+  - 必须映射到九大系统平面。
+  - 必须映射到 P00-P09 阶段。
+  - 必须识别系统缺口。
+  - 必须生成 task_execution_package。
+  - 必须生成 handoff_packet。
+  - 必须更新 phase_state。
+  - 如果 acceptance_gate 通过，必须自动进入下一阶段。
+  - 不能依赖聊天上下文作为系统记忆。
+  - 不能只输出总结或建议。
+  required_artifacts:
+  - raw_input
+  - doc_id
+  - document_passport
+  - plane_mapping
+  - phase_mapping
+  - gap_detection
+  - task_execution_package
+  - handoff_packet
+  - phase_state
+  forbidden:
+  - plain_document_reading_then_stop
+  - summary_only
+  - advice_only
+  - chat_context_as_system_memory
+  auto_advance_when_gate_passes: true
+her_formal_task_book:
+  anchor: 12. 给 HER 的正式任务书
+  task_book_path: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/HER_K00_FORMAL_TASK_BOOK.md
+  task_name: 建立 K00 知识资料摄取与阶段任务执行包控制器
+  must_read_before_execution: true
+  core_goal: 将知识资料保存为系统资产，并转化为可调度、可续跑、可验收、可交接的阶段任务执行包
+  required_intake_directories:
+  - raw_inputs
+  - source_registry
+  - document_passports
+  - corpus_index
+  - system_mapping
+  - gap_detection
+  - task_packages
+  - intake_reports
+  - handoff_packets
+  required_phase_package_files:
+  - 01_phase_manifest.yaml
+  - 02_phase_context_pack.md
+  - 03_phase_objective_tree.yaml
+  - 04_phase_input_contract.json
+  - 05_phase_output_contract.json
+  - 06_phase_execution_protocol.md
+  - 07_phase_acceptance_gate.yaml
+  - 08_phase_state.json
+  - 09_phase_handoff_packet.schema.json
+  allowed_next_phases:
+  - P00_system_boundary
+  - P01_data_fact
+  - P09_self_upgrade
+  stop_conditions:
+  - BLOCKER
+  - ERROR
+  - REJECTED
+  - requires_human_input
+system_build_sequence_v13:
+  anchor: 13. 更新后的系统建设顺序
+  position_of_K00: step_2_before_P00
+  ordered_steps:
+  - system_methodology_blueprint
+  - K00_knowledge_intake_taskization_controller
+  - total_control_skill_document_input_taskization_rule
+  - P00_system_boundary
+  - P01_data_fact
+  - P02_P09_phase_controllers
+  - atomic_skills
+  - tools_schema_contract_replay
+  - paper_trading_and_review
+  - rule_upgrade_loop
+version_update_core_conclusion_v14:
+  anchor: 14. 本次版本更新的核心结论
+  K00_required: true
+  HER_must_not_treat_knowledge_input_as_plain_document: true
+  system_memory_basis:
+  - file_based_system_data
+  - phase_state_writeback
+  - handoff_packet
+  not_memory_basis:
+  - chat_context_only
+  phase_controller_definition: 阶段运行单元，不是阶段说明文档

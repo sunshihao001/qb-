@@ -1,0 +1,525 @@
+{
+  "record_count": 28,
+  "records": [
+    {
+      "evidence_level": "E2",
+      "gmgn_note_suggestion": "疑似接盘鲸鱼",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "2dZ5fCWavhYQwrtJtVZs2tYAjegLAJRydjq7fRWf6K3Q",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似结果钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似结果钱包",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "4GECRE2bm45JxvhaiJYDBYfjb9byq31ahj5CwhMQGq3H",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E2",
+      "gmgn_note_suggestion": "疑似接盘鲸鱼",
+      "missing_fields": [
+        "funding_source_address",
+        "wallet_first_seen_time"
+      ],
+      "need_onchain_followup": true,
+      "reason_codes": [
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似接盘鲸鱼"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "4GKdEk3g4yD8ETRz6iN3qQngMbT1hEXZ5ADF2yS24wUB",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似同源执行组",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple",
+        "same_source_group_candidate"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似同源执行组",
+        "疑似结果钱包",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "4R8DQd8YwWjNhpwGkKBahcXTMRj4tgTh4JFpsM7Nh6Wq",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似结果钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似结果钱包",
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "4wiPCvnAUko3Eu1Yw44Zejr6ndxeqmcQDbiQWJmx74Qe",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似同源执行组",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct",
+        "same_source_group_candidate"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似同源执行组",
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "4yXYPyDmsd3DKBhdeTHfrk8QuwJ31ypBEkFXfXWeXXif",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似结果钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似结果钱包",
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "5HQiFEysm7Gorj3jK5gi8BCgVXcTNdSMzhMWGtXwhsur",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E2",
+      "gmgn_note_suggestion": "疑似结构执行钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence"
+      ],
+      "risk_level": "R1",
+      "role_candidates": [
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "5KeTe5hnCJ6uCDiq2v869Q8BLahwcXt36hGutxjAxfg4",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E2",
+      "gmgn_note_suggestion": "疑似结构执行钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence"
+      ],
+      "risk_level": "R1",
+      "role_candidates": [
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "5eDqii9RaNatCV1jCxfNHyypkqTzMzPDoVFq82eZDTS2",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似结果钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似结果钱包",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "6XMKn4bm7aaDxRAsrrgWZvULgSPbCghWQeagQ7dRSjWA",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似同源执行组",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct",
+        "same_source_group_candidate"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似同源执行组",
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "6Y1EjqD6ECKCpXdogo97AgjpR3ngWBusZvo18ksMPjgw",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似结果钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似结果钱包",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "6axhtCxWouLZFLr8Uin1npUXuvAqZRd8JvGfYWZgdQer",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E2",
+      "gmgn_note_suggestion": "疑似接盘鲸鱼",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "7y4t9NKPcg6dN3uBgyaDmDHsfedEiNhaCEZZ2y7j5Dc5",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E2",
+      "gmgn_note_suggestion": "疑似接盘鲸鱼",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "8fSnLTnRViK83dDesivTsPx2wiRhwti9xoafeMGjEyLJ",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似结果钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "high_pnl_multiple"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似结果钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "9Dq1kz9PBTY7ZqnK7ZcgrSsjtb2LytnLrdftZYBJEvCp",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E2",
+      "gmgn_note_suggestion": "疑似接盘鲸鱼",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "9HNFpuKDR3Qix5rJBHFWuqP9nZJzayyT94gu7ADcbZ1A",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似结果钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似结果钱包",
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "9z37u5ZvrZ9wBavhFTrxisZFLtw1HugQdpkT4aukL8Ay",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似同源执行组",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct",
+        "same_source_group_candidate"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似同源执行组",
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "BNEnz1YtUQWH3bRtGaGjipPxHagWLeR8YjFQWmtG3JhJ",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似结果钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似结果钱包",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "CCPN1F93YJ7qwUT4bo933FuiBpYqswVWLL94o3DinS3f",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似同源执行组",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple",
+        "same_source_group_candidate"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似同源执行组",
+        "疑似结果钱包",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "DMZDEbhzYo7YqLRuSUbhRb5b2BCDJwv1mV6iY8T3BBby",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似同源执行组",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple",
+        "same_source_group_candidate"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似同源执行组",
+        "疑似结果钱包",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "DVMkhiQe1D8yenuEgsW44NjRn9LfVQjGEpZcez5x7Mff",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E2",
+      "gmgn_note_suggestion": "疑似接盘鲸鱼",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "DiDzYmYJSLhHPhqUvbW8UjCoPpkNNWvQ4VyBwrq3kYoY",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似同源执行组",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct",
+        "same_source_group_candidate"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似同源执行组",
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "FALfx9KvffS1BVmAop1MBAB9HraQuyFSs5hMHAFYSA2q",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E2",
+      "gmgn_note_suggestion": "疑似接盘鲸鱼",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "FjLCpkokfe8qX8y8aWgZSQrfj9gPYA4myV3hZvrJ32ow",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E2",
+      "gmgn_note_suggestion": "疑似接盘鲸鱼",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "GzyicuL1wmQVKPx95L4odK6hAiD8Rh86ZrCR6p233BDg",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似结果钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple",
+        "large_remaining_balance_low_sell_pct"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似结果钱包",
+        "疑似接盘鲸鱼",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "HC4YseGAYmrmh4FdKikPThkjHMLgVNDeWBeXDdDvCoB5",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E3",
+      "gmgn_note_suggestion": "疑似结果钱包",
+      "missing_fields": [],
+      "need_onchain_followup": false,
+      "reason_codes": [
+        "gmgn_tag_plus_funding_evidence",
+        "high_pnl_multiple"
+      ],
+      "risk_level": "R2",
+      "role_candidates": [
+        "疑似结果钱包",
+        "疑似结构执行钱包"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "SPTTtMyHqDJms7YSHotQ9i6qgRomYttrZMiEvSq3ZAX",
+      "watchlist_action": "track"
+    },
+    {
+      "evidence_level": "E0",
+      "gmgn_note_suggestion": "证据不足",
+      "missing_fields": [
+        "funding_source_address",
+        "wallet_first_seen_time"
+      ],
+      "need_onchain_followup": true,
+      "reason_codes": [],
+      "risk_level": "R0",
+      "role_candidates": [
+        "证据不足"
+      ],
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "wallet_address": "TiUk63PHr5xXhT36wttTTssJVExiMDSyoDKRpZf8iFP",
+      "watchlist_action": "observe"
+    }
+  ]
+}

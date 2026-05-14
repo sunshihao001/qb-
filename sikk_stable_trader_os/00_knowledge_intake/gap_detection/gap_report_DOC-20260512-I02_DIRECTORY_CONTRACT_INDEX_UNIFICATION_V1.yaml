@@ -1,0 +1,11 @@
+doc_id: DOC-20260512-I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION_V1
+generated_at: '2026-05-12T12:40:29Z'
+gap_status: K00_READY_FOR_I02_EXECUTION
+known_gaps:
+- I01 actual audit may be partial or absent; I02 will scan available artifacts and
+  mark missing I01 inputs explicitly
+- Runner/tool binding remain blocked until I02 acceptance and I03 prerequisite packet
+  exist
+blocking_gaps: []
+non_blocking_gaps:
+- legacy path semantics require read-only mapping, not migration

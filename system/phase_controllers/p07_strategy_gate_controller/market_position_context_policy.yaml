@@ -1,0 +1,16 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+policy_id: P07_MARKET_POSITION_CONTEXT_POLICY
+inputs: [discovery_market_cap_usd, current_market_cap_usd, market_cap_change_from_discovery_pct, current_liquidity_usd, current_price_usd, token_age_seconds]
+threshold_policy: REVIEW_CALIBRATION_REQUIRED
+rules:
+  - if: market_cap_change_from_discovery_pct is unknown
+    effect: UNKNOWN_CONTEXT_OR_REQUIRES_PAUSE
+  - if: context == CHASING_CONTEXT
+    effect: BLOCK_AS_CHASING
+  - if: context == EXIT_LIQUIDITY_RISK_CONTEXT
+    effect: BLOCK_AS_EXIT_LIQUIDITY_RISK
+  - if: context in [EARLY_CONTEXT, ACCEPTABLE_CONTEXT]
+    effect: SUPPORTS_PAPER_CANDIDATE_IF_OTHER_GATES_PASS
+downstream: {p08_must_recheck_quote_and_slippage: true}

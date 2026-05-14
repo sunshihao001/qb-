@@ -1,0 +1,70 @@
+{
+  "run_id": "KPP-AUTOCHAIN-20260513-001",
+  "doc_id": "KPP-AUTOCHAIN-DESIGN-20260513-001",
+  "overall_status": "TASK_PACKAGE_READY_QUEUED_FOR_GOVERNANCE_REVIEW",
+  "current_stage": "PACKAGE_CREATED",
+  "progress_percent": 100,
+  "stage_statuses": [
+    {
+      "stage_id": "K00",
+      "status": "CONTRACT_TASKIZED_PENDING_IMPLEMENTATION"
+    },
+    {
+      "stage_id": "K01",
+      "status": "CONTRACT_TASKIZED_PENDING_IMPLEMENTATION"
+    },
+    {
+      "stage_id": "K02",
+      "status": "CONTRACT_TASKIZED_PENDING_IMPLEMENTATION"
+    },
+    {
+      "stage_id": "K03",
+      "status": "CONTRACT_TASKIZED_PENDING_IMPLEMENTATION"
+    },
+    {
+      "stage_id": "K04",
+      "status": "CONTRACT_TASKIZED_PENDING_IMPLEMENTATION"
+    },
+    {
+      "stage_id": "K05",
+      "status": "CONTRACT_TASKIZED_PENDING_IMPLEMENTATION"
+    },
+    {
+      "stage_id": "K06",
+      "status": "CONTRACT_TASKIZED_PENDING_IMPLEMENTATION"
+    },
+    {
+      "stage_id": "K07",
+      "status": "CONTRACT_TASKIZED_PENDING_IMPLEMENTATION"
+    },
+    {
+      "stage_id": "K08",
+      "status": "CONTRACT_TASKIZED_PENDING_IMPLEMENTATION"
+    }
+  ],
+  "latest_event": "QUEUE_ENQUEUED",
+  "blockers": [],
+  "degraded_gaps": [
+    "runner_not_yet_implemented",
+    "validators_not_yet_implemented",
+    "telegram_adapter_not_yet_implemented",
+    "e2e_fixture_not_yet_implemented"
+  ],
+  "handoff_status": "HANDOFF_PACKET_READY",
+  "governance_queue_status": "QUEUED_FOR_GOVERNANCE_REVIEW",
+  "next_action": "IMPLEMENT_KPP_AUTOMATION_CHAIN_P0",
+  "query_commands": [
+    "/kpp_status KPP-AUTOCHAIN-20260513-001",
+    "/kpp_stage KPP-AUTOCHAIN-20260513-001",
+    "/kpp_gaps KPP-AUTOCHAIN-20260513-001",
+    "/kpp_handoff KPP-AUTOCHAIN-20260513-001",
+    "/kpp_panel KPP-AUTOCHAIN-20260513-001"
+  ],
+  "artifact_index": {
+    "task_package_root": "research_loop/task_packages/pending/KPP-AUTOCHAIN-20260513-001/",
+    "system_spec_root": "system/knowledge_processing_program/automation_chain/",
+    "state": "research_loop/state/KPP-AUTOCHAIN-20260513-001/loop_state.json",
+    "queue": "hermes_harness/03_task_runtime/input_governance_queue.jsonl"
+  },
+  "updated_at": "2026-05-13T05:34:21Z"
+}

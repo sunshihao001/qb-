@@ -1,0 +1,18 @@
+{
+  "phase": "phase_03_chip_control_controller",
+  "required_files": [
+    "contracts",
+    "schemas",
+    "runner",
+    "tests",
+    "handoff",
+    "audit"
+  ],
+  "must_not": [
+    "庄还在",
+    "庄走了",
+    "可以买",
+    "马上拉"
+  ],
+  "completion_status": "STAGE_COMPLETE only when outputs+handoff+audit exist"
+}

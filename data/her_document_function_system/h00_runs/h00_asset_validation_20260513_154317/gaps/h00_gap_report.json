@@ -1,0 +1,19 @@
+{
+  "gaps": [
+    {
+      "gap_id": "gap_h00_runtime_001",
+      "gap_type": "missing_a00_handoff",
+      "gap_level": "BLOCKING_GAP",
+      "blocking_for": "REAL_H00_QUEUE_EXECUTION",
+      "can_continue_asset_validation": true
+    },
+    {
+      "gap_id": "gap_h00_runtime_002",
+      "gap_type": "missing_readiness_certificate",
+      "gap_level": "BLOCKING_GAP",
+      "blocking_for": "REAL_H00_QUEUE_EXECUTION",
+      "can_continue_asset_validation": true
+    }
+  ],
+  "status": "H00_ASSET_VALIDATED_REAL_RUNTIME_BLOCKED"
+}

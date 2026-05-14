@@ -1,0 +1,34 @@
+{
+  "doc_id": "DOC-20260514-HER-CLOSED-LOOP-001",
+  "anchors": [
+    {
+      "section": "最终统一版主链路",
+      "claim": "资料进入→K00→methodology_blueprint→P00→控制面→P01-P10→R00→真实token→P07/P08→I04→P09/P10→shadow/regression/approval→受控更新"
+    },
+    {
+      "section": "六个全",
+      "claim": "全体系收编、全链路控制、全阶段验收、全输出追踪、全handoff消费、全复盘升级闭环"
+    },
+    {
+      "section": "R00最终要求",
+      "claim": "R00每次运行必须加载控制平面、检查合法阶段、创建run_id/token_case、写trace/acceptance/handoff、P07/P08后才允许paper、P09/P10闭环"
+    },
+    {
+      "section": "stage_completion_program",
+      "claim": "阶段补全完成不看文件是否完整，而看是否能进入HER总控闭环"
+    }
+  ],
+  "keywords": [
+    "HER_DOC_PIPELINE",
+    "HER_DOC_SYSTEM_AUDIT",
+    "HER_DOC_SYSTEM_REVIEW",
+    "R00",
+    "P01-P10",
+    "paper-only",
+    "P09",
+    "P10",
+    "shadow",
+    "regression",
+    "approval"
+  ]
+}

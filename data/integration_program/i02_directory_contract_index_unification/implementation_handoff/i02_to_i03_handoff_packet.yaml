@@ -1,0 +1,68 @@
+packet_id: i02_to_i03_handoff_packet_20260512
+packet_type: I02_TO_I03_HANDOFF
+generated_at: '2026-05-12T13:12:00Z'
+route:
+  from_controller: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION_CONTROLLER
+  to:
+  - I03_RUNNER_TOOL_BINDING
+  - GOVERNANCE_REVIEW
+  - CONTROLLED_IMPLEMENTATION_TASK_QUEUE
+upstream_control:
+  k00_route_status: K00_ACCEPTED_OR_RECOVERED_FROM_PRIOR_CONTEXT
+  i02_acceptance_status: I02_READY_WITH_GAPS
+  trace_id: i02_scan_trace_20260512
+handoff_scope:
+  total_required_outputs: 18
+  outputs_ready: 18
+  system_control_files: 36
+  runtime_index_outputs: 16
+  prerequisite_packets: 1
+  reports: 1
+artifact_paths:
+  i02_system_root: /root/sikk-gmgn/system/integration_program/i02_directory_contract_index_unification
+  i02_runtime_root: /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification
+  i03_prerequisite_packet: /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/i03_prerequisite/i03_runner_tool_binding_prerequisite_packet.yaml
+  acceptance_packet: /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/acceptance/i02_acceptance_result_packet.yaml
+  final_report: /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/reports/i02_final_report.md
+  gap_report: /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/index_gap_report/index_gap_report.yaml
+  read_order_manifest: /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/read_order_manifest/read_order_manifest.yaml
+implementation_request:
+  next_stage: I03_RUNNER_TOOL_BINDING
+  must_read_first:
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/read_order_manifest/read_order_manifest.yaml
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/canonical_root/canonical_root_declaration.yaml
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/phase_controller_file_index/phase_controller_file_index.yaml
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/runtime_data_path_index/runtime_data_path_index.yaml
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/schema_index/schema_index.yaml
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/contract_index/contract_index.yaml
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/handoff_contract_index/handoff_contract_index.yaml
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/data_request_packet_index/data_request_packet_index.yaml
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/control_artifact_index/control_artifact_index.yaml
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/index_gap_report/index_gap_report.yaml
+  - /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/legacy_path_mapping/legacy_path_mapping.yaml
+  must_preserve:
+  - P01-P10 business boundaries
+  - P10 no direct production mutation rule
+  - paper runtime blocked unless separately approved
+  - legacy readonly fallback
+downstream_permission:
+  allowed:
+  - RUNNER_TOOL_BINDING_DESIGN
+  - MOCK_OR_DRY_RUN_DISCOVERY
+  - VALIDATION_COMMAND_AUTHORING
+  - GAP_CLOSURE_TASKS
+  forbidden:
+  - LIVE_EXECUTION
+  - AUTO_DEPLOY
+  - WALLET_SIGNING
+  - DIRECT_RULE_MUTATION
+  - PAPER_RUNTIME_MUTATION_WITHOUT_TEST
+restrictions:
+- CONTROLLED_DRY_RUN_ONLY
+- NO_PAPER_RUNTIME_START
+- NO_LIVE_EXECUTION
+- NO_WALLET_SIGNING
+- NO_AUTO_DEPLOY
+- NO_DIRECT_RULE_MUTATION
+- LEGACY_READONLY
+handoff_status: HANDOFF_READY_WITH_GAPS

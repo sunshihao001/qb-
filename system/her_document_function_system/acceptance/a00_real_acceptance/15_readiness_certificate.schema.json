@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "15_readiness_certificate.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "certificate_id",
+    "acceptance_run_id",
+    "final_status",
+    "readiness_level",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "issued_by"
+  ],
+  "properties": {
+    "certificate_id": {},
+    "acceptance_run_id": {},
+    "final_status": {},
+    "readiness_level": {},
+    "allowed_next_actions": {},
+    "forbidden_next_actions": {},
+    "issued_by": {}
+  }
+}

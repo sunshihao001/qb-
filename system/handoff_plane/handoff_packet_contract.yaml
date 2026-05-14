@@ -1,0 +1,24 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+required_sections:
+- handoff_id
+- source_stage
+- target_stage
+- handoff_mode
+- included_assets
+- required_read_order
+- known_gaps
+- blocking_gaps
+- non_blocking_gaps
+- limitation_tags
+- forbidden_actions
+- field_usage_permission
+- acceptance_status
+- next_legal_stage
+- consumption_required
+- paper_only
+- real_trade_enabled

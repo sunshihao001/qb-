@@ -1,0 +1,62 @@
+phase_id: P02
+phase_name: 钱包结构层
+phase_domain: wallet_structure
+phase_type: schedulable_phase_runtime_unit
+controller_definition: Phase Controller 不是阶段说明文档。Phase Controller 是一个可调度的阶段运行单元，负责把系统目标拆成阶段目标，把阶段目标拆成任务树，把任务树绑定到输入合约、输出合约、Atomic
+  Skill、代码工具、验收门、状态回写和下游交接包。它不追求一次性给出智能判断，而是保证每一个判断都有字段来源、证据等级、反证记录、失败处理和可复盘路径。
+system: SIKK Stable Trader OS
+version: '2.1'
+updated_at: '2026-05-11T08:23:00Z'
+mission:
+  primary: 识别钱包角色、同源组、结构地址、风险地址与钱包侧反证
+  controller_goal: 将系统目标拆成阶段目标、任务树、契约、Atomic Skill、工具、验收门、状态回写和 handoff
+authority:
+  can_do:
+  - read_allowed_upstream_handoff
+  - validate_input_contract
+  - invoke_registered_atomic_skills
+  - write_machine_outputs
+  - write_phase_state
+  - write_handoff_packet
+  - write_audit_ref
+  cannot_do:
+  - 禁止 authorize_real_trade
+  - 禁止 read_or_write_private_key
+  - 禁止 sign_transaction
+  - 禁止 broadcast_transaction
+  - 禁止 execute_swap
+  - 禁止 skip_acceptance_gate
+  - 禁止 use_markdown_report_as_machine_source
+  - 禁止 infer_missing_required_fact
+upstream:
+  required:
+  - P01_data_fact
+  optional: []
+downstream:
+  next_phase: P03_chip_control
+  handoff_required: true
+runtime_boundary: OBSERVE_PAPER_ONLY
+atomic_skills_bound:
+- wallet_role_classification_skill
+- same_source_group_skill
+- fund_flow_skill
+- hard_negative_filter_skill
+required_package_files:
+- phase_manifest.yaml
+- phase_context_pack.md
+- phase_objective_tree.yaml
+- phase_input_contract.json
+- phase_output_contract.json
+- phase_execution_protocol.md
+- phase_acceptance_gate.yaml
+- phase_state.json
+- phase_handoff_packet.schema.json
+evidence_requirements:
+- 字段来源 field_source_map
+- evidence_level
+- 反证 counter_evidence
+- hard_negative_hits
+- decision_trace
+- audit_ref
+- 验收 acceptance_gate
+- handoff_packet

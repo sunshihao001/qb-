@@ -1,0 +1,3260 @@
+field_dictionary:
+- field_key: token_address
+  field_name_cn: token address
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: HARD_BLOCK
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: token_symbol
+  field_name_cn: token symbol
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: token_name
+  field_name_cn: token name
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: chain
+  field_name_cn: chain
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: pair_address
+  field_name_cn: pair address
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: pool_address
+  field_name_cn: pool address
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: launch_time
+  field_name_cn: launch time
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: discovery_time
+  field_name_cn: discovery time
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: token_age_seconds
+  field_name_cn: token age seconds
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: number
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: creator_address
+  field_name_cn: creator address
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: deployer_address
+  field_name_cn: deployer address
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: mint_authority_status
+  field_name_cn: mint authority status
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: freeze_authority_status
+  field_name_cn: freeze authority status
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: supply_total
+  field_name_cn: supply total
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: number
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: supply_circulating
+  field_name_cn: supply circulating
+  field_group: token_basic_fields
+  domain_object: 代币对象
+  data_type: number
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: discovery_market_cap_usd
+  field_name_cn: discovery market cap usd
+  field_group: market_cap_fields
+  domain_object: 市值对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: false
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: current_market_cap_usd
+  field_name_cn: current market cap usd
+  field_group: market_cap_fields
+  domain_object: 市值对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: false
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: market_cap_at_wallet_decision_usd
+  field_name_cn: market cap at wallet decision usd
+  field_group: market_cap_fields
+  domain_object: 市值对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: false
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: market_cap_at_signal_usd
+  field_name_cn: market cap at signal usd
+  field_group: market_cap_fields
+  domain_object: 市值对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: false
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: market_cap_at_paper_entry_usd
+  field_name_cn: market cap at paper entry usd
+  field_group: market_cap_fields
+  domain_object: 市值对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: false
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: market_cap_change_from_discovery_pct
+  field_name_cn: market cap change from discovery pct
+  field_group: market_cap_fields
+  domain_object: 市值对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: false
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: market_cap_stage_label
+  field_name_cn: market cap stage label
+  field_group: market_cap_fields
+  domain_object: 市值对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: false
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: market_cap_context_status
+  field_name_cn: market cap context status
+  field_group: market_cap_fields
+  domain_object: 市值对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: false
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: wallet_address
+  field_name_cn: wallet address
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: STRONG_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: entity_id
+  field_name_cn: entity id
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: first_seen_time
+  field_name_cn: first seen time
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: first_buy_time
+  field_name_cn: first buy time
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: first_buy_price
+  field_name_cn: first buy price
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: first_buy_market_cap_usd
+  field_name_cn: first buy market cap usd
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: first_buy_amount_token
+  field_name_cn: first buy amount token
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: first_buy_amount_usd
+  field_name_cn: first buy amount usd
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: total_buy_amount_token
+  field_name_cn: total buy amount token
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: total_buy_amount_usd
+  field_name_cn: total buy amount usd
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: total_sell_amount_token
+  field_name_cn: total sell amount token
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: total_sell_amount_usd
+  field_name_cn: total sell amount usd
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: current_holding_amount_token
+  field_name_cn: current holding amount token
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: current_holding_pct
+  field_name_cn: current holding pct
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: holding_duration_seconds
+  field_name_cn: holding duration seconds
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: realized_profit_usd
+  field_name_cn: realized profit usd
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: unrealized_profit_usd
+  field_name_cn: unrealized profit usd
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: realized_profit_pct
+  field_name_cn: realized profit pct
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: funding_source_address
+  field_name_cn: funding source address
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: funding_source_type
+  field_name_cn: funding source type
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: token_source_type
+  field_name_cn: token source type
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: wallet_age_seconds
+  field_name_cn: wallet age seconds
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: wallet_transaction_count
+  field_name_cn: wallet transaction count
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: historical_token_count
+  field_name_cn: historical token count
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: historical_win_rate
+  field_name_cn: historical win rate
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: historical_recurrence_score
+  field_name_cn: historical recurrence score
+  field_group: wallet_fields
+  domain_object: 钱包对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 300
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: same_source_group_id
+  field_name_cn: same source group id
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: sync_buy_group_id
+  field_name_cn: sync buy group id
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: sync_sell_group_id
+  field_name_cn: sync sell group id
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: distribution_path_id
+  field_name_cn: distribution path id
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: group_wallet_count
+  field_name_cn: group wallet count
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: group_total_holding_pct
+  field_name_cn: group total holding pct
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: group_total_buy_usd
+  field_name_cn: group total buy usd
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: group_total_sell_usd
+  field_name_cn: group total sell usd
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: group_remaining_holding_pct
+  field_name_cn: group remaining holding pct
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: group_sync_buy_score
+  field_name_cn: group sync buy score
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: group_sync_sell_score
+  field_name_cn: group sync sell score
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: group_funding_similarity_score
+  field_name_cn: group funding similarity score
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: group_behavior_similarity_score
+  field_name_cn: group behavior similarity score
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: group_distribution_risk_score
+  field_name_cn: group distribution risk score
+  field_group: wallet_group_fields
+  domain_object: 钱包群组对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: top_holder_pct
+  field_name_cn: top holder pct
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: top_10_holder_pct
+  field_name_cn: top 10 holder pct
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: top_20_holder_pct
+  field_name_cn: top 20 holder pct
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: early_wallet_remaining_pct
+  field_name_cn: early wallet remaining pct
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: early_wallet_cleared_count
+  field_name_cn: early wallet cleared count
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: early_wallet_partial_sell_count
+  field_name_cn: early wallet partial sell count
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: structural_wallet_holding_pct
+  field_name_cn: structural wallet holding pct
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: counterparty_wallet_holding_pct
+  field_name_cn: counterparty wallet holding pct
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: chip_concentration_score
+  field_name_cn: chip concentration score
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: chip_distribution_score
+  field_name_cn: chip distribution score
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: chip_transfer_status
+  field_name_cn: chip transfer status
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: dominant_side_chip_retention_status
+  field_name_cn: dominant side chip retention status
+  field_group: chip_structure_fields
+  domain_object: 筹码对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: candle_interval
+  field_name_cn: candle interval
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: open_time
+  field_name_cn: open time
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: candle_time
+  field_name_cn: candle time
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: open
+  field_name_cn: open
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: high
+  field_name_cn: high
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: low
+  field_name_cn: low
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: close
+  field_name_cn: close
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: volume
+  field_name_cn: volume
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: turnover_usd
+  field_name_cn: turnover usd
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: buy_volume
+  field_name_cn: buy volume
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: sell_volume
+  field_name_cn: sell volume
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: volume_delta
+  field_name_cn: volume delta
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: price_change_pct
+  field_name_cn: price change pct
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: box_high
+  field_name_cn: box high
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: box_low
+  field_name_cn: box low
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: box_mid
+  field_name_cn: box mid
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: control_box_status
+  field_name_cn: control box status
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: breakout_status
+  field_name_cn: breakout status
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: pullback_status
+  field_name_cn: pullback status
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: failure_test_status
+  field_name_cn: failure test status
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: avwap_status
+  field_name_cn: avwap status
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: poc_status
+  field_name_cn: poc status
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: obv_status
+  field_name_cn: obv status
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: cmf_status
+  field_name_cn: cmf status
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: ao_status
+  field_name_cn: ao status
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: adx_noise_rejection_status
+  field_name_cn: adx noise rejection status
+  field_group: market_structure_fields
+  domain_object: 价格结构对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: liquidity_usd
+  field_name_cn: liquidity usd
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: USD
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 30
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: liquidity_change_pct
+  field_name_cn: liquidity change pct
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 30
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: pool_age_seconds
+  field_name_cn: pool age seconds
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: estimated_slippage_pct
+  field_name_cn: estimated slippage pct
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: quote_price_gmgn
+  field_name_cn: quote price gmgn
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 30
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: quote_price_okx
+  field_name_cn: quote price okx
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 30
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: quote_price_chain
+  field_name_cn: quote price chain
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 30
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: quote_deviation_pct
+  field_name_cn: quote deviation pct
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: pct
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 30
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: quote_consistency_status
+  field_name_cn: quote consistency status
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 30
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: buy_sell_ratio
+  field_name_cn: buy sell ratio
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: trade_count_5m
+  field_name_cn: trade count 5m
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: trade_count_15m
+  field_name_cn: trade count 15m
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: trade_count_1h
+  field_name_cn: trade count 1h
+  field_group: liquidity_quote_fields
+  domain_object: 流动性对象
+  data_type: number
+  required: false
+  unit: null
+  source_priority:
+  - OKX_QUOTE
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: contract_risk_status
+  field_name_cn: contract risk status
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: mint_authority_risk
+  field_name_cn: mint authority risk
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: freeze_authority_risk
+  field_name_cn: freeze authority risk
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: blacklist_risk
+  field_name_cn: blacklist risk
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: tax_risk
+  field_name_cn: tax risk
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: honeypot_risk
+  field_name_cn: honeypot risk
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: liquidity_lock_status
+  field_name_cn: liquidity lock status
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: 30
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: owner_permission_status
+  field_name_cn: owner permission status
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: token_transfer_restriction_status
+  field_name_cn: token transfer restriction status
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: false
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: security_scan_source
+  field_name_cn: security scan source
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: STRONG_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: security_scan_time
+  field_name_cn: security scan time
+  field_group: security_fields
+  domain_object: 安全对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: STRONG_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: source_id
+  field_name_cn: source id
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: source_record_id
+  field_name_cn: source record id
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: raw_file_path
+  field_name_cn: raw file path
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: normalized_file_path
+  field_name_cn: normalized file path
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: collected_at
+  field_name_cn: collected at
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: normalized_at
+  field_name_cn: normalized at
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: freshness_status
+  field_name_cn: freshness status
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: completeness_score
+  field_name_cn: completeness score
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: number
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: accuracy_score
+  field_name_cn: accuracy score
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: number
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: consistency_score
+  field_name_cn: consistency score
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: number
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: traceability_score
+  field_name_cn: traceability score
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: number
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: data_quality_score
+  field_name_cn: data quality score
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: number
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: missing_fields
+  field_name_cn: missing fields
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: conflict_fields
+  field_name_cn: conflict fields
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: stale_fields
+  field_name_cn: stale fields
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+- field_key: data_ready_for_evidence
+  field_name_cn: data ready for evidence
+  field_group: data_quality_fields
+  domain_object: 数据质量对象
+  data_type: string
+  required: true
+  unit: null
+  source_priority:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+  freshness_requirement_seconds: null
+  quality_dimensions:
+    completeness_required: true
+    accuracy_required: true
+    consistency_required: true
+    freshness_required: true
+    traceability_required: true
+  downstream_use:
+  - P04_EVIDENCE_PLANE
+  - P05_SCENARIO_RECOGNITION_PLANE
+  - P08_REVIEW_REPLAY_PLANE
+  missing_policy: RECORD_AND_DOWNGRADE
+  notes: 由 Data Plane 字段字典统一解释，禁止由 AI 临时猜测字段含义。
+field_group_count: 9
+field_count: 141
+dictionary_policy: 字段含义必须读取本字典，禁止由 AI 临时解释。

@@ -1,0 +1,4 @@
+evidence_level_rules:
+  levels: [E0_NONE, E1_SINGLE_SOURCE, E2_MULTI_FIELD, E3_CROSS_SOURCE, E4_REPLAY_VERIFIED]
+  positive_judgment_minimum: E2_MULTI_FIELD
+  strategy_gate_minimum: E3_CROSS_SOURCE

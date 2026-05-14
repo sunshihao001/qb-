@@ -1,0 +1,37 @@
+contract_id: P09_INPUT_CONTRACT
+version: v3.0
+required_inputs:
+  from_p08:
+  - p08_to_p09_review_handoff_packet
+  - execution_risk_decision_records
+  - quote_security_decision_records
+  - paper_runtime_permission_records
+  - risk_event_records
+  from_paper_runtime:
+  - paper_trade_lifecycle_records
+  - position_intent_records
+  - entry_exit_observation_records
+  - runtime_invalidation_events
+  - outcome_records
+  from_p01_to_p07:
+  - phase_handoff_packets
+  - decision_records
+  - evidence_records
+  - scenario_records
+  - strategy_gate_decision_records
+  - usage_permission_records
+  from_control_planes:
+  - trace_handoff_packet
+  - acceptance_result_packet
+  - handoff_packet
+  - limitation_transfer_packet
+  - governance_handoff_packet
+block_if_missing:
+- historical_snapshot
+- trace_chain
+- p08_handoff
+- paper_runtime_or_review_case_outcome
+forbidden_use:
+- current_data_as_historical_fact
+- unaccepted_artifacts
+- live_execution_signal

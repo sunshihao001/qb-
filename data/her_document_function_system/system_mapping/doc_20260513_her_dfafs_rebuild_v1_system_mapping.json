@@ -1,0 +1,100 @@
+{
+  "doc_id": "doc_20260513_her_dfafs_rebuild_v1",
+  "status": "SYSTEM_MAPPED",
+  "rows": [
+    {
+      "plane": "governance plane",
+      "affected_phase": "L0 / 00_governance",
+      "impact_type": "ADD_POLICY_AND_FORBIDDEN_SCOPE",
+      "risk_level": "LOW",
+      "can_modify": [
+        "system_policy",
+        "forbidden_actions",
+        "status table"
+      ],
+      "cannot_modify": [
+        "production live rules"
+      ]
+    },
+    {
+      "plane": "phase controller plane",
+      "affected_phase": "F00",
+      "impact_type": "CREATE_OR_EXTEND_CONTROLLER",
+      "risk_level": "MEDIUM",
+      "can_modify": [
+        "F00 controller assets",
+        "state",
+        "protocol"
+      ],
+      "cannot_modify": [
+        "bypass K00 handoff"
+      ]
+    },
+    {
+      "plane": "KV memory plane",
+      "affected_phase": "KV",
+      "impact_type": "ADD_INDEX_LAYER",
+      "risk_level": "LOW",
+      "can_modify": [
+        "kv index refs"
+      ],
+      "cannot_modify": [
+        "replace raw/contract/state"
+      ]
+    },
+    {
+      "plane": "schema / contract plane",
+      "affected_phase": "F04-F06",
+      "impact_type": "ADD_SCHEMA_CONTRACT_REQUIREMENTS",
+      "risk_level": "MEDIUM",
+      "can_modify": [
+        "schema plan",
+        "contract plan",
+        "validation rules"
+      ],
+      "cannot_modify": [
+        "declare accepted without validation"
+      ]
+    },
+    {
+      "plane": "trace / audit plane",
+      "affected_phase": "V/A/U",
+      "impact_type": "ADD_TRACE_AUDIT_ACCEPTANCE",
+      "risk_level": "LOW",
+      "can_modify": [
+        "trace spec",
+        "audit log",
+        "acceptance evidence"
+      ],
+      "cannot_modify": [
+        "skip evidence"
+      ]
+    },
+    {
+      "plane": "runner / tool binding plane",
+      "affected_phase": "R02",
+      "impact_type": "PLAN_BINDING_VALIDATION",
+      "risk_level": "MEDIUM",
+      "can_modify": [
+        "binding plan"
+      ],
+      "cannot_modify": [
+        "start live/paper runtime without explicit safe mode"
+      ]
+    },
+    {
+      "plane": "report / review plane",
+      "affected_phase": "U01",
+      "impact_type": "ADD_REVIEW_UPGRADE_LOOP",
+      "risk_level": "LOW",
+      "can_modify": [
+        "review report",
+        "upgrade candidates"
+      ],
+      "cannot_modify": [
+        "write unaccepted rules as accepted"
+      ]
+    }
+  ],
+  "created_at": "2026-05-13T14:30:44.366397+00:00"
+}

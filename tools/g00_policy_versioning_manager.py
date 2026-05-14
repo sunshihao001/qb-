@@ -1,0 +1,4 @@
+from g00_policy_status import now_iso
+def build_versioning(run_id):
+    policies=["forbidden_action_policy_v1","status_code_policy_v1","evidence_policy_v1","gap_policy_v1","runner_safety_policy_v1","human_confirmation_policy_v1","production_risk_policy_v1"]
+    return {"versioning_id":f"policy_versioning_{run_id}","versioning_rules":{"semantic_versioning":True,"silent_overwrite_allowed":False,"deprecated_policy_requires_record":True,"policy_change_requires_evidence_ref":True,"weakening_forbidden_actions_requires_rejection":True},"policy_versions":[{"policy_id":p,"version":"1.0.0","status":"LOCAL_ACTIVE_WITH_GAPS","supersedes":None,"change_reason":"Initial real governance policy registry from U00 review candidates","source_handoff":"u00_to_g00_handoff_packet","created_at":now_iso()} for p in policies]}

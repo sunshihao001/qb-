@@ -1,0 +1,27 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: EXECUTION_RISK_BLOCK_REASON_SCHEMA
+version: v3.0
+required_fields:
+  - block_reason_id
+  - candidate_id
+  - block_type
+  - block_reasons
+  - recheck_allowed
+  - required_recheck_sources
+  - downstream
+allowed_statuses:
+  - QUOTE_BLOCK
+  - LIQUIDITY_BLOCK
+  - SLIPPAGE_BLOCK
+  - SECURITY_BLOCK
+  - SELLABILITY_BLOCK
+  - FRESHNESS_BLOCK
+  - INVALIDATION_BLOCK
+  - RISK_LIMIT_BLOCK
+  - POSITION_UNIQUENESS_BLOCK
+  - CIRCUIT_BREAKER_BLOCK
+  - GOVERNANCE_BLOCK
+  - LIVE_EXECUTION_BLOCK
+no_live_execution_fields_allowed: true

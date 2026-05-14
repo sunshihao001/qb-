@@ -1,0 +1,434 @@
+{
+  "doc_id": "DOC-20260514-HER-PIPELINE-RUNNABLE-WITH-GAPS",
+  "source_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS.md",
+  "sha256": "f432eb1c13c0727a0313711a8f9f5f71a8bf93cd5b7d83dbad98d9288b966e43",
+  "sections": [
+    {
+      "anchor": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS",
+      "level": 1,
+      "offset": 0
+    },
+    {
+      "anchor": "HER 文档到功能自动化落实系统：主链路可运行版 v1.0",
+      "level": 2,
+      "offset": 48
+    },
+    {
+      "anchor": "1. 当前阶段定位",
+      "level": 1,
+      "offset": 391
+    },
+    {
+      "anchor": "1.1 正确目标",
+      "level": 2,
+      "offset": 404
+    },
+    {
+      "anchor": "1.2 暂停的旁支",
+      "level": 2,
+      "offset": 754
+    },
+    {
+      "anchor": "2. 主链路总结构",
+      "level": 1,
+      "offset": 980
+    },
+    {
+      "anchor": "3. 必须建立的目录",
+      "level": 1,
+      "offset": 1533
+    },
+    {
+      "anchor": "3.1 系统定义目录",
+      "level": 2,
+      "offset": 1547
+    },
+    {
+      "anchor": "3.2 运行输出目录",
+      "level": 2,
+      "offset": 2026
+    },
+    {
+      "anchor": "4. 必须建立的工具文件",
+      "level": 1,
+      "offset": 2229
+    },
+    {
+      "anchor": "4.1 工具职责",
+      "level": 2,
+      "offset": 2510
+    },
+    {
+      "anchor": "5. 输入合约",
+      "level": 1,
+      "offset": 3068
+    },
+    {
+      "anchor": "`03_pipeline_input_contract.json`",
+      "level": 2,
+      "offset": 3079
+    },
+    {
+      "anchor": "6. 输出合约",
+      "level": 1,
+      "offset": 4066
+    },
+    {
+      "anchor": "`04_pipeline_output_contract.json`",
+      "level": 2,
+      "offset": 4077
+    },
+    {
+      "anchor": "7. 每个阶段必须做什么",
+      "level": 1,
+      "offset": 5898
+    },
+    {
+      "anchor": "7.1 K00：文档摄取与任务化",
+      "level": 2,
+      "offset": 5914
+    },
+    {
+      "anchor": "目标",
+      "level": 3,
+      "offset": 5935
+    },
+    {
+      "anchor": "必须输出",
+      "level": 3,
+      "offset": 5972
+    },
+    {
+      "anchor": "`document_passport.json`",
+      "level": 3,
+      "offset": 6096
+    },
+    {
+      "anchor": "K00 验收标准",
+      "level": 3,
+      "offset": 6746
+    },
+    {
+      "anchor": "7.2 F00：功能落实映射",
+      "level": 2,
+      "offset": 6935
+    },
+    {
+      "anchor": "目标",
+      "level": 3,
+      "offset": 6954
+    },
+    {
+      "anchor": "必须输出",
+      "level": 3,
+      "offset": 7032
+    },
+    {
+      "anchor": "`function_mapping.json`",
+      "level": 3,
+      "offset": 7178
+    },
+    {
+      "anchor": "`required_system_assets.json`",
+      "level": 3,
+      "offset": 7773
+    },
+    {
+      "anchor": "F00 验收标准",
+      "level": 3,
+      "offset": 8243
+    },
+    {
+      "anchor": "7.3 V00：验证证据",
+      "level": 2,
+      "offset": 8467
+    },
+    {
+      "anchor": "目标",
+      "level": 3,
+      "offset": 8484
+    },
+    {
+      "anchor": "必须输出",
+      "level": 3,
+      "offset": 8572
+    },
+    {
+      "anchor": "`validation_matrix.json`",
+      "level": 3,
+      "offset": 8697
+    },
+    {
+      "anchor": "`gap_register.json`",
+      "level": 3,
+      "offset": 9414
+    },
+    {
+      "anchor": "V00 验收标准",
+      "level": 3,
+      "offset": 9769
+    },
+    {
+      "anchor": "7.4 A00：总验收",
+      "level": 2,
+      "offset": 9981
+    },
+    {
+      "anchor": "目标",
+      "level": 3,
+      "offset": 9997
+    },
+    {
+      "anchor": "必须输出",
+      "level": 3,
+      "offset": 10172
+    },
+    {
+      "anchor": "`a00_acceptance_result.json`",
+      "level": 3,
+      "offset": 10284
+    },
+    {
+      "anchor": "7.5 H00：下游队列",
+      "level": 2,
+      "offset": 10882
+    },
+    {
+      "anchor": "目标",
+      "level": 3,
+      "offset": 10899
+    },
+    {
+      "anchor": "必须输出",
+      "level": 3,
+      "offset": 10944
+    },
+    {
+      "anchor": "`downstream_queue.json`",
+      "level": 3,
+      "offset": 11048
+    },
+    {
+      "anchor": "H00 验收标准",
+      "level": 3,
+      "offset": 11640
+    },
+    {
+      "anchor": "7.6 U00：复盘升级",
+      "level": 2,
+      "offset": 11818
+    },
+    {
+      "anchor": "目标",
+      "level": 3,
+      "offset": 11835
+    },
+    {
+      "anchor": "必须输出",
+      "level": 3,
+      "offset": 11941
+    },
+    {
+      "anchor": "`upgrade_queue.json`",
+      "level": 3,
+      "offset": 12062
+    },
+    {
+      "anchor": "U00 验收标准",
+      "level": 3,
+      "offset": 12563
+    },
+    {
+      "anchor": "7.7 G00：治理候选",
+      "level": 2,
+      "offset": 12734
+    },
+    {
+      "anchor": "目标",
+      "level": 3,
+      "offset": 12751
+    },
+    {
+      "anchor": "必须输出",
+      "level": 3,
+      "offset": 12797
+    },
+    {
+      "anchor": "`governance_candidates.json`",
+      "level": 3,
+      "offset": 12880
+    },
+    {
+      "anchor": "7.8 O00：总控总结",
+      "level": 2,
+      "offset": 13531
+    },
+    {
+      "anchor": "目标",
+      "level": 3,
+      "offset": 13548
+    },
+    {
+      "anchor": "必须输出",
+      "level": 3,
+      "offset": 13642
+    },
+    {
+      "anchor": "`run_summary.json`",
+      "level": 3,
+      "offset": 13730
+    },
+    {
+      "anchor": "8. 状态码标准",
+      "level": 1,
+      "offset": 14267
+    },
+    {
+      "anchor": "8.1 允许状态",
+      "level": 2,
+      "offset": 14279
+    },
+    {
+      "anchor": "8.2 禁止伪状态",
+      "level": 2,
+      "offset": 14520
+    },
+    {
+      "anchor": "9. 主命令",
+      "level": 1,
+      "offset": 14758
+    },
+    {
+      "anchor": "10. 主链路执行协议",
+      "level": 1,
+      "offset": 15153
+    },
+    {
+      "anchor": "11. Trace / Audit 要求",
+      "level": 1,
+      "offset": 15553
+    },
+    {
+      "anchor": "`trace.jsonl`",
+      "level": 2,
+      "offset": 15577
+    },
+    {
+      "anchor": "`audit.jsonl`",
+      "level": 2,
+      "offset": 15895
+    },
+    {
+      "anchor": "12. 最终报告模板",
+      "level": 1,
+      "offset": 16171
+    },
+    {
+      "anchor": "`o00/final_report.md`",
+      "level": 2,
+      "offset": 16185
+    },
+    {
+      "anchor": "HER Document Function Pipeline Report",
+      "level": 1,
+      "offset": 16223
+    },
+    {
+      "anchor": "1. Run Info",
+      "level": 2,
+      "offset": 16264
+    },
+    {
+      "anchor": "2. Document Understanding",
+      "level": 2,
+      "offset": 16349
+    },
+    {
+      "anchor": "3. Function Mapping",
+      "level": 2,
+      "offset": 16462
+    },
+    {
+      "anchor": "4. Validation Result",
+      "level": 2,
+      "offset": 16564
+    },
+    {
+      "anchor": "5. Acceptance Decision",
+      "level": 2,
+      "offset": 16629
+    },
+    {
+      "anchor": "6. Downstream Queue",
+      "level": 2,
+      "offset": 16733
+    },
+    {
+      "anchor": "7. Review / Upgrade",
+      "level": 2,
+      "offset": 16820
+    },
+    {
+      "anchor": "8. Governance Candidates",
+      "level": 2,
+      "offset": 16904
+    },
+    {
+      "anchor": "9. Forbidden Claims Blocked",
+      "level": 2,
+      "offset": 16975
+    },
+    {
+      "anchor": "10. Next Action",
+      "level": 2,
+      "offset": 17007
+    },
+    {
+      "anchor": "13. 测试文件",
+      "level": 1,
+      "offset": 17118
+    },
+    {
+      "anchor": "关键测试原则",
+      "level": 2,
+      "offset": 17625
+    },
+    {
+      "anchor": "14. HER 执行任务书",
+      "level": 1,
+      "offset": 17941
+    },
+    {
+      "anchor": "15. 当前阶段状态判断",
+      "level": 1,
+      "offset": 22359
+    },
+    {
+      "anchor": "16. 下一步只做一件事",
+      "level": 1,
+      "offset": 22770
+    }
+  ],
+  "key_terms": [
+    "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS",
+    "SAFE_MODE_ONLY",
+    "K00",
+    "F00",
+    "V00",
+    "A00",
+    "H00",
+    "U00",
+    "G00",
+    "O00",
+    "READY_WITH_GAPS",
+    "forbidden_actions"
+  ],
+  "critical_requirements": [
+    "safe_mode=false must block",
+    "K00 cannot raw-only complete",
+    "F00 mapping is not implementation",
+    "test plan is not tested",
+    "queue created is not completed",
+    "READY_WITH_GAPS must not become READY"
+  ]
+}

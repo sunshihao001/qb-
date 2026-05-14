@@ -1,0 +1,15 @@
+acceptance_gate:
+  required_files: 20
+  required_tools: 10
+  final_status_must_be: A00_REAL_ACCEPTANCE_EVIDENCE_READY_WITH_GAPS
+  blocked_false_claims:
+    - PIPELINE_ACCEPTED
+    - POLICY_ACTIVE
+    - PRODUCTION_READY
+    - LIVE_READY
+  forbidden_actions:
+    - live_runtime
+    - wallet_signing
+    - auto_deploy
+    - production_trading
+    - execute_real_order

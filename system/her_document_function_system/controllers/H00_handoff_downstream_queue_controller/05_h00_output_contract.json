@@ -1,0 +1,23 @@
+{
+  "phase_id": "H00",
+  "required_outputs": {
+    "preflight_result": "h00_preflight_result.json",
+    "downstream_target_inventory": "downstream_target_inventory.json",
+    "routing_decision": "routing_decision.json",
+    "target_capability_matrix": "target_capability_matrix.json",
+    "downstream_queue": "downstream_queue.json",
+    "queue_items": "queue_items.json",
+    "queue_state": "queue_state.json",
+    "dependency_graph": "dependency_graph.json",
+    "priority_plan": "queue_priority_plan.json",
+    "handoff_packets": "handoff_packets/",
+    "allowed_next_actions": "allowed_next_actions.json",
+    "forbidden_next_actions": "forbidden_next_actions.json",
+    "gap_report": "h00_gap_report.json",
+    "trace_log": "h00_trace.jsonl",
+    "audit_log": "h00_audit.jsonl",
+    "acceptance_result": "h00_acceptance_result.json",
+    "recovery_report": "recovery_report.json",
+    "final_report": "h00_final_report.md"
+  }
+}

@@ -1,0 +1,34 @@
+acceptance_id: S02_runtime_acceptance_result
+generated_at: '2026-05-14T14:15:24Z'
+status: READY_WITH_GAPS
+file_level:
+  status: PASS
+  evidence:
+  - runner_registry.yaml
+  - phase_runner_binding.yaml
+  - runtime_phase_trace_matrix.yaml
+  - handoff_consumption_status.yaml
+  - p08_permission_ticket.schema.json
+  - p10_upgrade_candidate_shadow_package.yaml
+structure_level:
+  status: PASS
+  evidence: required control-plane draft files generated and parseable
+semantic_level:
+  status: WITH_GAPS
+  gaps:
+  - wallet_structure canonical output missing
+  - runner contracts inferred_from_runtime
+consumption_level:
+  status: WITH_GAPS
+  gaps:
+  - phase controller has not yet consumed formal binding in a fresh replay
+runtime_level:
+  status: WITH_GAPS
+  gaps:
+  - safe-mode HER_DOC run completed; full token replay through formal registry pending
+forbidden_claims_blocked:
+- PRODUCTION_READY
+- LIVE_READY
+- PIPELINE_ACCEPTED
+- SYSTEM_FULLY_IMPLEMENTED
+next_legal_stage: S03_formal_registry_single_token_phase_replay

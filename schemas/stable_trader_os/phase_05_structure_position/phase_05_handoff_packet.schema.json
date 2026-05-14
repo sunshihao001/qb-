@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase05 Handoff Packet",
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "snapshot_id",
+    "completion_status",
+    "structure_position_status",
+    "handoff_files",
+    "phase_06_required_context",
+    "allowed_next_stage",
+    "handoff_status",
+    "audit_file"
+  ],
+  "properties": {
+    "phase": {
+      "const": "phase_05_structure_position"
+    },
+    "handoff_files": {
+      "type": "object"
+    },
+    "phase_06_required_context": {
+      "type": "object"
+    },
+    "handoff_status": {
+      "enum": [
+        "HANDOFF_READY",
+        "HANDOFF_BLOCKED"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "evidence_id": "v00_evidence_her_doc_pipeline_run",
+  "evidence_status": "EVIDENCE_READY_WITH_GAPS",
+  "validated_files": [
+    "k00/document_passport.json",
+    "k00/corpus_index.json",
+    "k00/system_mapping.json",
+    "k00/gap_detection.json",
+    "k00/k00_handoff_packet.json",
+    "f00/function_mapping.json",
+    "f00/required_system_assets.json",
+    "f00/implementation_task_package.json",
+    "f00/f00_handoff_packet.json",
+    "trace.jsonl",
+    "audit.jsonl"
+  ],
+  "forbidden_assertions_blocked": [
+    "TEST_PLAN_AS_TESTED",
+    "MAPPING_AS_CODE_DONE",
+    "READY_WITH_GAPS_AS_READY"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "gap_count": 14,
+  "gaps": [
+    {
+      "gap_id": "P01_data_fact_MISSING_SNAPSHOT_FIELD:TOKEN_SYMBOL",
+      "phase_id": "P01_data_fact",
+      "severity": "degraded",
+      "missing_evidence": "missing_snapshot_field:token_symbol",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P01_data_fact_MISSING_SNAPSHOT_FIELD:LIQUIDITY_USD",
+      "phase_id": "P01_data_fact",
+      "severity": "degraded",
+      "missing_evidence": "missing_snapshot_field:liquidity_usd",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P01_data_fact_MISSING_SNAPSHOT_FIELD:SAMPLE_WALLETS",
+      "phase_id": "P01_data_fact",
+      "severity": "degraded",
+      "missing_evidence": "missing_snapshot_field:sample_wallets",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P01_FUNDING_PATH_MISSING",
+      "phase_id": "P01_data_fact",
+      "severity": "degraded",
+      "missing_evidence": "P01_FUNDING_PATH_MISSING",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P02_WALLET_PROFILE_SAMPLE_MISSING",
+      "phase_id": "P02_wallet_structure",
+      "severity": "degraded",
+      "missing_evidence": "P02_WALLET_PROFILE_SAMPLE_MISSING",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P02_wallet_structure_资金层跳过",
+      "phase_id": "P02_wallet_structure",
+      "severity": "degraded",
+      "missing_evidence": "资金层跳过",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P02_wallet_structure_FUNDING_PATH_MISSING",
+      "phase_id": "P02_wallet_structure",
+      "severity": "degraded",
+      "missing_evidence": "funding_path_missing",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P04_scenario_recognition_资金层跳过",
+      "phase_id": "P04_scenario_recognition",
+      "severity": "degraded",
+      "missing_evidence": "资金层跳过",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P04_scenario_recognition_FUNDING_PATH_MISSING",
+      "phase_id": "P04_scenario_recognition",
+      "severity": "degraded",
+      "missing_evidence": "funding_path_missing",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P05_POSITION_DATA_MISSING",
+      "phase_id": "P05_structure_position",
+      "severity": "degraded",
+      "missing_evidence": "P05_POSITION_DATA_MISSING",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P05_structure_position_QUOTE_OR_KLINE_AVWAP_POC_MISSING",
+      "phase_id": "P05_structure_position",
+      "severity": "degraded",
+      "missing_evidence": "quote_or_kline_avwap_poc_missing",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P06_strategy_gate_资金层跳过",
+      "phase_id": "P06_strategy_gate",
+      "severity": "degraded",
+      "missing_evidence": "资金层跳过",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P06_strategy_gate_FUNDING_PATH_MISSING",
+      "phase_id": "P06_strategy_gate",
+      "severity": "degraded",
+      "missing_evidence": "funding_path_missing",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    },
+    {
+      "gap_id": "P07_REALTIME_QUOTE_OR_SLIPPAGE_CHECK_MISSING",
+      "phase_id": "P07_execution_risk",
+      "severity": "degraded",
+      "missing_evidence": "P07_REALTIME_QUOTE_OR_SLIPPAGE_CHECK_MISSING",
+      "repair_route": "补接对应数据源或在该阶段 contract 中显式标记不可用"
+    }
+  ]
+}

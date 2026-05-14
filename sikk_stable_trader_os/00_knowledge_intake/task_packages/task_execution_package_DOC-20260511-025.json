@@ -1,0 +1,34 @@
+{
+  "task_id": "TASK_TRACE_PLANE_V2_LANDING_20260511",
+  "doc_id": "DOC-20260511-025",
+  "task_name": "建立 Trace Plane｜追踪平面专业版 v2.0",
+  "target_plane": "TRACE_PLANE",
+  "objective": "建立全系统追踪平面文件组、trace 模型、handoff contract、HER trace execution protocol，并同步 Full Control Plane 注册/路由。",
+  "required_outputs": [
+    "27 trace plane files",
+    "full_control_plane_registry_updates",
+    "trace_acceptance_result",
+    "trace_handoff_packet",
+    "state_writeback"
+  ],
+  "constraints": [
+    "Trace Plane 不调度",
+    "不验收裁决",
+    "不交接执行",
+    "不交易判断",
+    "不真实交易",
+    "不解除 P01 阻断"
+  ],
+  "acceptance_criteria": [
+    "required_files_exist",
+    "yaml_json_parseable",
+    "trace_id_policy_exists",
+    "all_trace_models_defined",
+    "acceptance_handoff_read_trace_defined",
+    "paper_runtime_blocked_until_trace_hooked"
+  ],
+  "handoff_destination": [
+    "ACCEPTANCE_PLANE",
+    "HANDOFF_PLANE"
+  ]
+}

@@ -1,0 +1,7063 @@
+summary:
+  run_id: KPP_BATCH_LEGACY_REPROCESS_20260513
+  status: PASS
+  created_at: '2026-05-13T01:25:59.654892+00:00'
+  unique_documents_processed: 371
+  duplicate_documents_skipped: 0
+  output_root: data/knowledge_processing_program/batch_legacy_reprocess
+  safety_boundary:
+    real_trade_enabled: false
+    signing_enabled: false
+    broadcast_enabled: false
+    swap_enabled: false
+mappings:
+- document_id: LEGACY-DOC-0001
+  source_path: docs/00_system_goal/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0002
+  source_path: docs/00_system_goal/sikk_stable_trader_os_goal.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 1
+    P05: 0
+    P06: 1
+    P07: 2
+    P08: 4
+    P09: 1
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0003
+  source_path: docs/01_stage_definitions/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0004
+  source_path: docs/01_stage_definitions/full_stage_map.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 1
+    P05: 0
+    P06: 1
+    P07: 2
+    P08: 2
+    P09: 1
+    P10: 1
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0005
+  source_path: docs/02_phase_layer_step_maps/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0006
+  source_path: docs/02_phase_layer_step_maps/full_phase_layer_step_map.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 1
+    P05: 0
+    P06: 1
+    P07: 11
+    P08: 11
+    P09: 1
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0007
+  source_path: docs/03_handoff_flow/phase_handoff_flow.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 2
+    P04: 2
+    P05: 0
+    P06: 2
+    P07: 4
+    P08: 4
+    P09: 2
+    P10: 1
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0008
+  source_path: docs/03_reasoning_rules/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0009
+  source_path: docs/03_reasoning_rules/evidence_and_counter_evidence_rules.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 7
+    P06: 1
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0010
+  source_path: docs/03_reasoning_rules/phase_auto_expander_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 4
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0011
+  source_path: docs/04_hard_negative_rules/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0012
+  source_path: docs/04_hard_negative_rules/global_hard_negative_rules.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0013
+  source_path: docs/04_status_codes/global_status_code_table.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 2
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0014
+  source_path: docs/05_hard_negative_rules/global_hard_negative_rules.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 3
+    P07: 15
+    P08: 4
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0015
+  source_path: docs/05_status_codes/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0016
+  source_path: docs/05_status_codes/global_status_code_table.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 3
+    P04: 1
+    P05: 0
+    P06: 4
+    P07: 3
+    P08: 3
+    P09: 3
+    P10: 4
+  primary_phase: P06
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0017
+  source_path: docs/06_directory_constitution/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0018
+  source_path: docs/06_directory_constitution/directory_constitution.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0019
+  source_path: docs/07_contract_index/contract_index.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 1
+    P05: 0
+    P06: 1
+    P07: 2
+    P08: 3
+    P09: 1
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0020
+  source_path: docs/07_telegram_panel_design/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0021
+  source_path: docs/07_telegram_panel_design/telegram_panel_professional_design.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0022
+  source_path: docs/08_review_learning_rules/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 2
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0023
+  source_path: docs/08_review_learning_rules/review_learning_rules.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 4
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0024
+  source_path: docs/08_schema_index/schema_index.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 1
+    P05: 1
+    P06: 1
+    P07: 2
+    P08: 2
+    P09: 1
+    P10: 1
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0025
+  source_path: docs/09_her_execution_protocol/her_system_integration_cognition_master.md
+  phase_scores:
+    P01: 5
+    P02: 1
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 1
+    P07: 2
+    P08: 11
+    P09: 2
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0026
+  source_path: docs/09_her_execution_protocol/her_task_book_standard.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 2
+    P08: 15
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0027
+  source_path: docs/09_her_execution_protocol/her_total_control_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 1
+    P08: 5
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0028
+  source_path: docs/09_her_execution_protocol/trading_system_planbook_repository_protocol.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 6
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0029
+  source_path: docs/09_system_upgrade_rules/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 2
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0030
+  source_path: docs/09_system_upgrade_rules/system_upgrade_rules.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 4
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0031
+  source_path: docs/10_professional_acceptance/professional_baseline_acceptance.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0032
+  source_path: docs/11_phase_01_data_fact_landing/phase_01_data_fact_her_taskbook.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 3
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 4
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0033
+  source_path: docs/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0034
+  source_path: docs/SIKK_CASE_FIELD_SOURCE_MAP.md
+  phase_scores:
+    P01: 7
+    P02: 0
+    P03: 9
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 3
+    P08: 2
+    P09: 2
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0035
+  source_path: docs/directory_zh_mapping.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 6
+    P04: 1
+    P05: 0
+    P06: 0
+    P07: 21
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0036
+  source_path: docs/harness/HER_CONTROL_PLANE_RULES_V1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 7
+    P09: 2
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0037
+  source_path: docs/harness/HER_HARNESS_MINIMAL_V0.md
+  phase_scores:
+    P01: 0
+    P02: 1
+    P03: 26
+    P04: 2
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 3
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0038
+  source_path: docs/harness/HER_HARNESS_PROFESSIONALIZATION_ROADMAP.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 9
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 3
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0039
+  source_path: docs/harness/ai_harness_system/00_control_plane/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0040
+  source_path: docs/harness/ai_harness_system/00_control_plane/artifact_contract_policy.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0041
+  source_path: docs/harness/ai_harness_system/00_control_plane/input_contract_policy.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0042
+  source_path: docs/harness/ai_harness_system/00_control_plane/memory_write_rules.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0043
+  source_path: docs/harness/ai_harness_system/00_control_plane/method_wheel_policy.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 2
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0044
+  source_path: docs/harness/ai_harness_system/00_control_plane/module_maturity_governance.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 5
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0045
+  source_path: docs/harness/ai_harness_system/00_control_plane/natural_language_intake_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 5
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 7
+    P09: 1
+    P10: 5
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0046
+  source_path: docs/harness/ai_harness_system/00_control_plane/permission_rules.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0047
+  source_path: docs/harness/ai_harness_system/00_control_plane/recovery_decision_table.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0048
+  source_path: docs/harness/ai_harness_system/00_control_plane/recovery_rules.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 5
+    P09: 1
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0049
+  source_path: docs/harness/ai_harness_system/00_control_plane/risk_tier_policy.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 3
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0050
+  source_path: docs/harness/ai_harness_system/00_control_plane/role_boundaries.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 4
+    P09: 4
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0051
+  source_path: docs/harness/ai_harness_system/00_control_plane/role_system_v1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 2
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0052
+  source_path: docs/harness/ai_harness_system/00_control_plane/system_constitution.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 5
+    P09: 4
+    P10: 2
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0053
+  source_path: docs/harness/ai_harness_system/00_control_plane/task_id_policy.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0054
+  source_path: docs/harness/ai_harness_system/00_control_plane/task_routing_policy.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 8
+    P09: 0
+    P10: 6
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0055
+  source_path: docs/harness/ai_harness_system/00_control_plane/verification_definition.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 3
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0056
+  source_path: docs/harness/ai_harness_system/00_control_plane/禁止行为清单.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0057
+  source_path: docs/harness/ai_harness_system/00_control_plane/记忆写入规则.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0058
+  source_path: docs/harness/ai_harness_system/00_control_plane/输出标准.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0059
+  source_path: docs/harness/ai_harness_system/00_startup/HERMES_BOOT_SEQUENCE.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 5
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0060
+  source_path: docs/harness/ai_harness_system/00_startup/startup_check_report.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0061
+  source_path: docs/harness/ai_harness_system/01_goals/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 1
+    P07: 0
+    P08: 3
+    P09: 1
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0062
+  source_path: docs/harness/ai_harness_system/01_goals/goal_passport_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 1
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P06
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0063
+  source_path: docs/harness/ai_harness_system/01_goals/task_passport_current.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0064
+  source_path: docs/harness/ai_harness_system/02_research_loop/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 5
+    P09: 2
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0065
+  source_path: docs/harness/ai_harness_system/02_research_loop/method_wheel_completion_checklist_v1.md
+  phase_scores:
+    P01: 3
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 2
+    P08: 8
+    P09: 5
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0066
+  source_path: docs/harness/ai_harness_system/02_research_loop/task_decomposition_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0067
+  source_path: docs/harness/ai_harness_system/03_context_governance/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 2
+    P10: 5
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0068
+  source_path: docs/harness/ai_harness_system/03_context_governance/context_layering_rules.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 1
+    P10: 1
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0069
+  source_path: docs/harness/ai_harness_system/03_context_governance/memory_deposition_rules.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 1
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0070
+  source_path: docs/harness/ai_harness_system/03_context_governance/memory_deposition_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0071
+  source_path: docs/harness/ai_harness_system/03_context_governance/memory_entry_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 1
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0072
+  source_path: docs/harness/ai_harness_system/03_context_governance/memory_staleness_policy.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0073
+  source_path: docs/harness/ai_harness_system/04_task_plans/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 5
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0074
+  source_path: docs/harness/ai_harness_system/04_task_plans/active_task_context.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0075
+  source_path: docs/harness/ai_harness_system/04_task_plans/active_task_state_schema.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0076
+  source_path: docs/harness/ai_harness_system/04_task_plans/checkpoint_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0077
+  source_path: docs/harness/ai_harness_system/04_task_plans/checkpoints/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0078
+  source_path: docs/harness/ai_harness_system/04_task_plans/phase_plan.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0079
+  source_path: docs/harness/ai_harness_system/04_task_plans/task_state_machine.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 4
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0080
+  source_path: docs/harness/ai_harness_system/04_task_plans/task_state_record_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0081
+  source_path: docs/harness/ai_harness_system/05_execution_runs/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 13
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0082
+  source_path: docs/harness/ai_harness_system/05_execution_runs/command_log_schema.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0083
+  source_path: docs/harness/ai_harness_system/05_execution_runs/query_loop_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 4
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0084
+  source_path: docs/harness/ai_harness_system/05_execution_runs/run_log_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0085
+  source_path: docs/harness/ai_harness_system/05_execution_runs/tool_call_log_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0086
+  source_path: docs/harness/ai_harness_system/06_verification/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 2
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0087
+  source_path: docs/harness/ai_harness_system/06_verification/audit_question_checklist.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0088
+  source_path: docs/harness/ai_harness_system/06_verification/completion_definition_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0089
+  source_path: docs/harness/ai_harness_system/06_verification/v1_acceptance_criteria.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0090
+  source_path: docs/harness/ai_harness_system/06_verification/v1_acceptance_verification_report.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0091
+  source_path: docs/harness/ai_harness_system/06_verification/verification_policy_advanced.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0092
+  source_path: docs/harness/ai_harness_system/07_recovery/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 6
+    P09: 1
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0093
+  source_path: docs/harness/ai_harness_system/07_recovery/error_taxonomy.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0094
+  source_path: docs/harness/ai_harness_system/07_recovery/recovery_report_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0095
+  source_path: docs/harness/ai_harness_system/08_audit/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0096
+  source_path: docs/harness/ai_harness_system/08_audit/audit_independence_policy.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0097
+  source_path: docs/harness/ai_harness_system/08_audit/memory_audit_reports/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0098
+  source_path: docs/harness/ai_harness_system/08_audit/permission_audit_reports/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0099
+  source_path: docs/harness/ai_harness_system/08_audit/stale_rule_audit/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0100
+  source_path: docs/harness/ai_harness_system/08_audit/surface_completion_audit/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0101
+  source_path: docs/harness/ai_harness_system/08_audit/surface_completion_audit/harness_professional_completion_audit.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0102
+  source_path: docs/harness/ai_harness_system/08_audit/task_audit_reports/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0103
+  source_path: docs/harness/ai_harness_system/08_audit/task_audit_reports/harness_professional_completion_task_audit.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0104
+  source_path: docs/harness/ai_harness_system/09_reports/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 5
+    P09: 5
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0105
+  source_path: docs/harness/ai_harness_system/09_reports/audit_reports/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0106
+  source_path: docs/harness/ai_harness_system/09_reports/final_reports/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0107
+  source_path: docs/harness/ai_harness_system/09_reports/final_reports/harness_professional_completion_final_report.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0108
+  source_path: docs/harness/ai_harness_system/09_reports/phase_reports/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0109
+  source_path: docs/harness/ai_harness_system/09_reports/phase_reports/harness_professional_completion_phase_report.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0110
+  source_path: docs/harness/ai_harness_system/09_reports/recovery_reports/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0111
+  source_path: docs/harness/ai_harness_system/09_reports/report_classification_policy.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0112
+  source_path: docs/harness/ai_harness_system/09_reports/report_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0113
+  source_path: docs/harness/ai_harness_system/09_reports/retrospective_report_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0114
+  source_path: docs/harness/ai_harness_system/09_reports/scan_reports/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0115
+  source_path: docs/harness/ai_harness_system/09_reports/verification_reports/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0116
+  source_path: docs/harness/ai_harness_system/09_reports/verification_reports/harness_professional_completion_verification.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 5
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0117
+  source_path: docs/harness/ai_harness_system/10_templates/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0118
+  source_path: docs/harness/ai_harness_system/10_templates/artifact_header_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0119
+  source_path: docs/harness/ai_harness_system/10_templates/audit_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0120
+  source_path: docs/harness/ai_harness_system/10_templates/execution_loop_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0121
+  source_path: docs/harness/ai_harness_system/10_templates/input_intake_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0122
+  source_path: docs/harness/ai_harness_system/10_templates/method_wheel_task_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0123
+  source_path: docs/harness/ai_harness_system/10_templates/method_wheel_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0124
+  source_path: docs/harness/ai_harness_system/10_templates/recovery_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0125
+  source_path: docs/harness/ai_harness_system/10_templates/task_route_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0126
+  source_path: docs/harness/ai_harness_system/10_templates/verification_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0127
+  source_path: docs/harness/ai_harness_system/11_hermes_bot_invocation/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 10
+    P09: 5
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0128
+  source_path: docs/harness/ai_harness_system/11_hermes_bot_invocation/chinese_command_system.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 7
+    P09: 2
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0129
+  source_path: docs/harness/ai_harness_system/11_hermes_bot_invocation/core_workflows_v1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 4
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 2
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0130
+  source_path: docs/harness/ai_harness_system/11_hermes_bot_invocation/hermes_invocation_template.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0131
+  source_path: docs/harness/ai_harness_system/AI_HARNESS_SYSTEM_V1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 6
+    P09: 5
+    P10: 4
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0132
+  source_path: docs/harness/ai_harness_system/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 9
+    P09: 2
+    P10: 5
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0133
+  source_path: docs/harness/ai_harness_system/current_environment_scan.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 2
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0134
+  source_path: docs/harness/ai_harness_system/directory_map.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 4
+    P09: 1
+    P10: 2
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0135
+  source_path: docs/harness/ai_harness_system/directory_purpose_table.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 6
+    P09: 1
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0136
+  source_path: docs/harness/ai_harness_system/final_manifesto_v1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 2
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0137
+  source_path: docs/harness/ai_harness_system/recovery_report.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0138
+  source_path: docs/harness/ai_harness_system/verification_report.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0139
+  source_path: docs/harness/trading_structure_control/AI_DRIVEN_TRADING_STRUCTURE_CONTROL_SYSTEM.md
+  phase_scores:
+    P01: 5
+    P02: 2
+    P03: 26
+    P04: 5
+    P05: 7
+    P06: 0
+    P07: 21
+    P08: 5
+    P09: 0
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0140
+  source_path: docs/hindsight_sikk_integration_plan.md
+  phase_scores:
+    P01: 4
+    P02: 0
+    P03: 13
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 6
+    P08: 2
+    P09: 5
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0141
+  source_path: docs/imported/chatgpt_share_69f809c6_section_index.md
+  phase_scores:
+    P01: 4
+    P02: 0
+    P03: 19
+    P04: 1
+    P05: 4
+    P06: 1
+    P07: 7
+    P08: 2
+    P09: 2
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0142
+  source_path: docs/imported/chatgpt_share_69f868b8_extract_index.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 1
+    P10: 3
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0143
+  source_path: docs/intel_bot/chinese_judgement_dictionary.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 38
+    P04: 15
+    P05: 10
+    P06: 1
+    P07: 13
+    P08: 7
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0144
+  source_path: docs/intel_bot/counterparty_pressure_quant_model.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 8
+    P04: 7
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0145
+  source_path: docs/intel_bot/distribution_progress_model.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 10
+    P04: 4
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0146
+  source_path: docs/intel_bot/dominant_cost_zone_framework.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 23
+    P04: 7
+    P05: 1
+    P06: 3
+    P07: 13
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0147
+  source_path: docs/intel_bot/intel_structure_bot_delivery_checklist.md
+  phase_scores:
+    P01: 8
+    P02: 0
+    P03: 21
+    P04: 2
+    P05: 0
+    P06: 2
+    P07: 2
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0148
+  source_path: docs/intel_bot/intel_structure_bot_index.md
+  phase_scores:
+    P01: 6
+    P02: 0
+    P03: 20
+    P04: 11
+    P05: 1
+    P06: 4
+    P07: 12
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0149
+  source_path: docs/intel_bot/markup_motivation_model.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 8
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P06
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0150
+  source_path: docs/intel_bot/quantitative_structure_models.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 14
+    P04: 1
+    P05: 4
+    P06: 2
+    P07: 24
+    P08: 5
+    P09: 0
+    P10: 1
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0151
+  source_path: docs/intel_bot/quantitative_structure_schema_contract.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 30
+    P04: 2
+    P05: 12
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0152
+  source_path: docs/intel_bot/source_bot_upstream_layer_01_candidate_token_data.md
+  phase_scores:
+    P01: 31
+    P02: 2
+    P03: 3
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0153
+  source_path: docs/intel_bot/source_bot_upstream_layer_02_kline_market_structure.md
+  phase_scores:
+    P01: 2
+    P02: 1
+    P03: 5
+    P04: 0
+    P05: 3
+    P06: 8
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P06
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0154
+  source_path: docs/intel_bot/source_bot_upstream_layer_03_holder_snapshot.md
+  phase_scores:
+    P01: 0
+    P02: 1
+    P03: 13
+    P04: 5
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0155
+  source_path: docs/intel_bot/theory_to_code_rules.md
+  phase_scores:
+    P01: 6
+    P02: 0
+    P03: 19
+    P04: 2
+    P05: 0
+    P06: 1
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0156
+  source_path: docs/intel_bot/wallet_file_passports.md
+  phase_scores:
+    P01: 26
+    P02: 0
+    P03: 18
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 2
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0157
+  source_path: docs/intel_bot/wallet_intel_2h_workflow_report.md
+  phase_scores:
+    P01: 0
+    P02: 1
+    P03: 21
+    P04: 3
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 2
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0158
+  source_path: docs/intel_bot/wallet_intel_bottom_system_design_flow.md
+  phase_scores:
+    P01: 2
+    P02: 2
+    P03: 52
+    P04: 1
+    P05: 5
+    P06: 4
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0159
+  source_path: docs/intel_bot/wallet_intel_command_lens.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 15
+    P04: 3
+    P05: 8
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 2
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0160
+  source_path: docs/intel_bot/wallet_intel_execution_plan.md
+  phase_scores:
+    P01: 11
+    P02: 0
+    P03: 36
+    P04: 5
+    P05: 4
+    P06: 0
+    P07: 2
+    P08: 5
+    P09: 5
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0161
+  source_path: docs/intel_bot/wallet_intel_layer_reconstruction.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 11
+    P04: 0
+    P05: 4
+    P06: 0
+    P07: 1
+    P08: 1
+    P09: 1
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0162
+  source_path: docs/intel_bot/wallet_intel_module_map.md
+  phase_scores:
+    P01: 3
+    P02: 0
+    P03: 46
+    P04: 5
+    P05: 13
+    P06: 1
+    P07: 1
+    P08: 6
+    P09: 2
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0163
+  source_path: docs/intel_bot/wallet_research_scope.md
+  phase_scores:
+    P01: 4
+    P02: 0
+    P03: 23
+    P04: 9
+    P05: 3
+    P06: 1
+    P07: 1
+    P08: 4
+    P09: 0
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0164
+  source_path: docs/output_directory_governance.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 19
+    P04: 1
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 7
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0165
+  source_path: docs/plans/2026-04-30-sikk-auto-trading-readiness-framework.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 9
+    P04: 2
+    P05: 3
+    P06: 0
+    P07: 16
+    P08: 16
+    P09: 3
+    P10: 2
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0166
+  source_path: docs/plans/2026-05-01-sikk-paper-live-runner.md
+  phase_scores:
+    P01: 9
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 6
+    P08: 10
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0167
+  source_path: docs/plans/2026-05-02-dominant-side-lifecycle-intent-v12.md
+  phase_scores:
+    P01: 5
+    P02: 0
+    P03: 20
+    P04: 5
+    P05: 3
+    P06: 6
+    P07: 7
+    P08: 5
+    P09: 5
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0168
+  source_path: docs/plans/2026-05-02-wallet-trade-adapter-observe-soft-hard.md
+  phase_scores:
+    P01: 7
+    P02: 3
+    P03: 74
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 14
+    P08: 5
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0169
+  source_path: docs/plans/sikk_professional_interaction_investigation_design_20260503.md
+  phase_scores:
+    P01: 33
+    P02: 0
+    P03: 5
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 4
+    P10: 1
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0170
+  source_path: docs/sikk_time_context_schema.md
+  phase_scores:
+    P01: 9
+    P02: 0
+    P03: 11
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 6
+    P08: 1
+    P09: 3
+    P10: 2
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0171
+  source_path: docs/sikk_wallet_normalized_contract.md
+  phase_scores:
+    P01: 4
+    P02: 0
+    P03: 54
+    P04: 1
+    P05: 0
+    P06: 0
+    P07: 4
+    P08: 1
+    P09: 1
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0172
+  source_path: docs/sikk_wallet_structure_integration_v2.md
+  phase_scores:
+    P01: 8
+    P02: 3
+    P03: 77
+    P04: 7
+    P05: 16
+    P06: 0
+    P07: 20
+    P08: 2
+    P09: 1
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0173
+  source_path: docs/source_wallet_bot/acceptance/current_directory_inventory_acceptance.md
+  phase_scores:
+    P01: 5
+    P02: 0
+    P03: 15
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 3
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0174
+  source_path: docs/source_wallet_bot/ai_trade_structure_control_system.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 16
+    P04: 1
+    P05: 1
+    P06: 0
+    P07: 4
+    P08: 9
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0175
+  source_path: docs/source_wallet_bot/directory_governance/current_directory_baseline.md
+  phase_scores:
+    P01: 5
+    P02: 0
+    P03: 7
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 2
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0176
+  source_path: docs/source_wallet_bot/directory_governance/data_dependency_map_v1.md
+  phase_scores:
+    P01: 10
+    P02: 3
+    P03: 51
+    P04: 3
+    P05: 4
+    P06: 0
+    P07: 5
+    P08: 11
+    P09: 0
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0177
+  source_path: docs/source_wallet_bot/directory_governance/file_level_inventory_acceptance.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 3
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 2
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0178
+  source_path: docs/source_wallet_bot/directory_governance/file_level_inventory_summary.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 3
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0179
+  source_path: docs/source_wallet_bot/directory_governance/interface_capability_inventory_v1.md
+  phase_scores:
+    P01: 7
+    P02: 3
+    P03: 34
+    P04: 2
+    P05: 0
+    P06: 0
+    P07: 10
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0180
+  source_path: docs/source_wallet_bot/directory_governance/legacy_runtime_policy.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 4
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 2
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0181
+  source_path: docs/source_wallet_bot/directory_governance/wallet_structure_primary_root_policy.md
+  phase_scores:
+    P01: 2
+    P02: 2
+    P03: 76
+    P04: 3
+    P05: 9
+    P06: 0
+    P07: 3
+    P08: 4
+    P09: 0
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0182
+  source_path: docs/source_wallet_bot/directory_governance/write_routing_policy.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 28
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 0
+    P10: 4
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0183
+  source_path: docs/stable_trader_os/03_handoff_flow/phase_handoff_flow.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 1
+    P04: 1
+    P05: 1
+    P06: 1
+    P07: 2
+    P08: 2
+    P09: 1
+    P10: 1
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0184
+  source_path: docs/stable_trader_os/04_status_codes/global_status_code_table.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 3
+    P04: 0
+    P05: 1
+    P06: 5
+    P07: 2
+    P08: 5
+    P09: 3
+    P10: 4
+  primary_phase: P06
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0185
+  source_path: docs/stable_trader_os/05_hard_negative_rules/global_hard_negative_rules.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 2
+    P04: 0
+    P05: 0
+    P06: 2
+    P07: 0
+    P08: 4
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0186
+  source_path: docs/stable_trader_os/07_contract_index/contract_index.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 8
+    P04: 10
+    P05: 0
+    P06: 10
+    P07: 8
+    P08: 16
+    P09: 6
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0187
+  source_path: docs/stable_trader_os/08_schema_index/schema_index.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 8
+    P04: 25
+    P05: 1
+    P06: 26
+    P07: 7
+    P08: 11
+    P09: 5
+    P10: 3
+  primary_phase: P06
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0188
+  source_path: docs/stable_trader_os/09_her_execution_protocol/her_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 1
+    P05: 2
+    P06: 0
+    P07: 1
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0189
+  source_path: docs/stable_trader_os/phase01_phase02_closure_completion_report.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 19
+    P04: 1
+    P05: 1
+    P06: 1
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0190
+  source_path: docs/stable_trader_os/phases/phase_01_acceptance_standard.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 3
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 5
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0191
+  source_path: docs/stable_trader_os/phases/phase_01_data_fact_controller.md
+  phase_scores:
+    P01: 3
+    P02: 3
+    P03: 17
+    P04: 2
+    P05: 4
+    P06: 3
+    P07: 1
+    P08: 3
+    P09: 3
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0192
+  source_path: docs/stable_trader_os/phases/phase_01_her_runtime_logic_calibration.md
+  phase_scores:
+    P01: 2
+    P02: 2
+    P03: 11
+    P04: 0
+    P05: 4
+    P06: 4
+    P07: 9
+    P08: 2
+    P09: 0
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0193
+  source_path: docs/stable_trader_os/phases/phase_01_professional_data_design.md
+  phase_scores:
+    P01: 6
+    P02: 4
+    P03: 4
+    P04: 1
+    P05: 0
+    P06: 0
+    P07: 10
+    P08: 2
+    P09: 0
+    P10: 2
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0194
+  source_path: docs/stable_trader_os/phases/phase_01_professional_data_design_report.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 3
+    P04: 0
+    P05: 0
+    P06: 1
+    P07: 8
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0195
+  source_path: docs/stable_trader_os/phases/phase_01_professional_runtime_completion_report.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 3
+    P04: 0
+    P05: 0
+    P06: 1
+    P07: 2
+    P08: 1
+    P09: 0
+    P10: 2
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0196
+  source_path: docs/stable_trader_os/phases/phase_01_runtime_asset_index.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 3
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0197
+  source_path: docs/stable_trader_os/phases/phase_01_system_goal_alignment.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 1
+    P04: 0
+    P05: 2
+    P06: 1
+    P07: 4
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0198
+  source_path: docs/stable_trader_os/schemas/phase_01_field_schema.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0199
+  source_path: docs/system_cleanup_constitution.md
+  phase_scores:
+    P01: 1
+    P02: 2
+    P03: 16
+    P04: 1
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 2
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0200
+  source_path: docs/system_directory_constitution.md
+  phase_scores:
+    P01: 2
+    P02: 3
+    P03: 29
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 3
+    P08: 1
+    P09: 0
+    P10: 5
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0201
+  source_path: docs/system_split/sikk_system_split_audit.md
+  phase_scores:
+    P01: 7
+    P02: 0
+    P03: 8
+    P04: 2
+    P05: 1
+    P06: 0
+    P07: 5
+    P08: 3
+    P09: 2
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0202
+  source_path: docs/templates/source_wallet_bot_token_directory_template.md
+  phase_scores:
+    P01: 1
+    P02: 2
+    P03: 26
+    P04: 1
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0203
+  source_path: sikk_stable_trader_os/00_control/full_control_plane/control_acceptance_criteria.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0204
+  source_path: sikk_stable_trader_os/00_control/full_control_plane/control_context.md
+  phase_scores:
+    P01: 0
+    P02: 1
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 1
+    P07: 3
+    P08: 3
+    P09: 0
+    P10: 2
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0205
+  source_path: sikk_stable_trader_os/00_control/full_control_plane/control_review_checklist.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 1
+    P07: 1
+    P08: 0
+    P09: 2
+    P10: 1
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0206
+  source_path: sikk_stable_trader_os/00_control/full_control_plane/her_full_control_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 3
+    P08: 3
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0207
+  source_path: sikk_stable_trader_os/00_data/data_acceptance_criteria.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0208
+  source_path: sikk_stable_trader_os/00_data/data_context.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 1
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0209
+  source_path: sikk_stable_trader_os/00_data/data_gap_register.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0210
+  source_path: sikk_stable_trader_os/00_data/data_plane.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0211
+  source_path: sikk_stable_trader_os/00_data/data_review_checklist.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 2
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0212
+  source_path: sikk_stable_trader_os/00_data/data_storage_constitution.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 2
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 2
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0213
+  source_path: sikk_stable_trader_os/00_domain/domain_acceptance_criteria.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 2
+    P06: 1
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0214
+  source_path: sikk_stable_trader_os/00_domain/domain_context.md
+  phase_scores:
+    P01: 0
+    P02: 2
+    P03: 1
+    P04: 1
+    P05: 3
+    P06: 2
+    P07: 2
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0215
+  source_path: sikk_stable_trader_os/00_domain/domain_gap_register.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 2
+    P04: 0
+    P05: 1
+    P06: 1
+    P07: 2
+    P08: 0
+    P09: 3
+    P10: 1
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0216
+  source_path: sikk_stable_trader_os/00_domain/domain_plane.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 2
+    P06: 1
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0217
+  source_path: sikk_stable_trader_os/00_domain/domain_reasoning_boundary.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 2
+    P04: 1
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0218
+  source_path: sikk_stable_trader_os/00_domain/domain_review_checklist.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 1
+    P06: 1
+    P07: 0
+    P08: 0
+    P09: 2
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0219
+  source_path: sikk_stable_trader_os/00_domain/entity_relationship_map.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 5
+    P04: 3
+    P05: 0
+    P06: 0
+    P07: 3
+    P08: 4
+    P09: 3
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0220
+  source_path: sikk_stable_trader_os/00_governance/governance_plane.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 9
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0221
+  source_path: sikk_stable_trader_os/00_knowledge_intake/README.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 6
+    P06: 0
+    P07: 2
+    P08: 12
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0222
+  source_path: sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-004.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0223
+  source_path: sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-005.md
+  phase_scores:
+    P01: 3
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0224
+  source_path: sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-006.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0225
+  source_path: sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-023.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 1
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0226
+  source_path: sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260512-CPO-001.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 1
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P06
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0227
+  source_path: sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260512-INTEGRATION-PROGRAM-V1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0228
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-002.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 3
+    P09: 0
+    P10: 2
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0229
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-003.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 2
+    P10: 4
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0230
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-004.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0231
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-006.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0232
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-018.md
+  phase_scores:
+    P01: 4
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0233
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-025.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0234
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260511-026.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0235
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-002.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0236
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-003.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 6
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0237
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-004.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 3
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P04
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0238
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-005.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0239
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-007.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 8
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0240
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-008.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 7
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0241
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-CPO-001.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0242
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-I03_RUNNER_TOOL_BINDING_V1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0243
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-I04_PAPER_RUNTIME_INTEGRATION_V1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0244
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 4
+    P10: 4
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0245
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-INTEGRATION-PROGRAM-V1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0246
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 8
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0247
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 5
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0248
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/k00_route_recovery_report_DOC-20260512-007.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 4
+    P08: 7
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0249
+  source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/p07_professional_completion_taskbook_report_DOC-20260512-007.md
+  phase_scores:
+    P01: 4
+    P02: 0
+    P03: 1
+    P04: 2
+    P05: 2
+    P06: 2
+    P07: 9
+    P08: 12
+    P09: 1
+    P10: 2
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0250
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-001.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0251
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-002.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 3
+    P08: 17
+    P09: 1
+    P10: 3
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0252
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-003-DUP-001.md
+  phase_scores:
+    P01: 4
+    P02: 1
+    P03: 12
+    P04: 10
+    P05: 13
+    P06: 5
+    P07: 16
+    P08: 11
+    P09: 16
+    P10: 9
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0253
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-003.md
+  phase_scores:
+    P01: 3
+    P02: 1
+    P03: 11
+    P04: 10
+    P05: 11
+    P06: 5
+    P07: 16
+    P08: 11
+    P09: 14
+    P10: 8
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0254
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-004.md
+  phase_scores:
+    P01: 7
+    P02: 2
+    P03: 3
+    P04: 2
+    P05: 3
+    P06: 2
+    P07: 8
+    P08: 16
+    P09: 15
+    P10: 23
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0255
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-004_system_methodology_blueprint_v2_institutional_upload.md
+  phase_scores:
+    P01: 15
+    P02: 1
+    P03: 1
+    P04: 2
+    P05: 6
+    P06: 3
+    P07: 8
+    P08: 13
+    P09: 9
+    P10: 13
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0256
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 39
+    P04: 4
+    P05: 5
+    P06: 2
+    P07: 9
+    P08: 15
+    P09: 7
+    P10: 7
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0257
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005_p00_system_bootstrap_controller_institutional.md
+  phase_scores:
+    P01: 10
+    P02: 1
+    P03: 2
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 4
+    P09: 1
+    P10: 11
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0258
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-006.md
+  phase_scores:
+    P01: 1
+    P02: 2
+    P03: 2
+    P04: 2
+    P05: 2
+    P06: 2
+    P07: 3
+    P08: 5
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0259
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-006_p00_system_bootstrap_controller_landing_and_acceptance.md
+  phase_scores:
+    P01: 5
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 2
+    P08: 4
+    P09: 0
+    P10: 1
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0260
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-007.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0261
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-007_bootstrap_full_control_plane_v3_system_planes_professional_generation.md
+  phase_scores:
+    P01: 7
+    P02: 0
+    P03: 10
+    P04: 1
+    P05: 0
+    P06: 2
+    P07: 4
+    P08: 5
+    P09: 5
+    P10: 23
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0262
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-008.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 1
+    P07: 0
+    P08: 6
+    P09: 4
+    P10: 6
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0263
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-009.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0264
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-010.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 6
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0265
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-011.md
+  phase_scores:
+    P01: 2
+    P02: 1
+    P03: 2
+    P04: 2
+    P05: 1
+    P06: 2
+    P07: 2
+    P08: 2
+    P09: 2
+    P10: 2
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0266
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-012.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0267
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-013.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 2
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0268
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-014.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 1
+    P09: 0
+    P10: 3
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0269
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-015.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 2
+    P08: 4
+    P09: 2
+    P10: 11
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0270
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-016.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 10
+    P04: 3
+    P05: 3
+    P06: 9
+    P07: 5
+    P08: 1
+    P09: 1
+    P10: 1
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0271
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-017.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 2
+    P04: 1
+    P05: 2
+    P06: 0
+    P07: 3
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0272
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md
+  phase_scores:
+    P01: 41
+    P02: 0
+    P03: 2
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 1
+    P08: 4
+    P09: 2
+    P10: 7
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0273
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-019_k00_system_chain_professional_update.md
+  phase_scores:
+    P01: 3
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 0
+    P10: 1
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0274
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-020_bootstrap_control_plane_v2_professional_completion.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 5
+    P04: 3
+    P05: 1
+    P06: 4
+    P07: 9
+    P08: 11
+    P09: 2
+    P10: 5
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0275
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-021_governance_plane_v2_institutional_design.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 3
+    P04: 0
+    P05: 5
+    P06: 0
+    P07: 7
+    P08: 5
+    P09: 11
+    P10: 52
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0276
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-022_domain_plane_professional_design.md
+  phase_scores:
+    P01: 2
+    P02: 4
+    P03: 31
+    P04: 7
+    P05: 16
+    P06: 14
+    P07: 13
+    P08: 10
+    P09: 6
+    P10: 5
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0277
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-023_data_plane_professional_design.md
+  phase_scores:
+    P01: 3
+    P02: 6
+    P03: 9
+    P04: 0
+    P05: 11
+    P06: 2
+    P07: 5
+    P08: 3
+    P09: 7
+    P10: 2
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0278
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-024_full_control_plane_professional_design.md
+  phase_scores:
+    P01: 2
+    P02: 5
+    P03: 0
+    P04: 0
+    P05: 4
+    P06: 5
+    P07: 9
+    P08: 19
+    P09: 8
+    P10: 9
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0279
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-025_trace_plane_professional_v2.md
+  phase_scores:
+    P01: 1
+    P02: 3
+    P03: 0
+    P04: 0
+    P05: 6
+    P06: 1
+    P07: 3
+    P08: 8
+    P09: 12
+    P10: 18
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0280
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-026_acceptance_plane_v2.md
+  phase_scores:
+    P01: 1
+    P02: 2
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 1
+    P07: 1
+    P08: 6
+    P09: 11
+    P10: 13
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0281
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-027_handoff_plane_v2.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 1
+    P07: 0
+    P08: 2
+    P09: 8
+    P10: 8
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0282
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-028_phase_controller_index_v2.md
+  phase_scores:
+    P01: 26
+    P02: 2
+    P03: 5
+    P04: 0
+    P05: 3
+    P06: 1
+    P07: 4
+    P08: 4
+    P09: 4
+    P10: 3
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0283
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-001_p01_candidate_intake_controller_v3.md
+  phase_scores:
+    P01: 39
+    P02: 0
+    P03: 13
+    P04: 1
+    P05: 3
+    P06: 2
+    P07: 2
+    P08: 3
+    P09: 3
+    P10: 2
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0284
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-002_p02_source_data_fact_controller_v3.md
+  phase_scores:
+    P01: 14
+    P02: 5
+    P03: 17
+    P04: 2
+    P05: 2
+    P06: 1
+    P07: 1
+    P08: 1
+    P09: 0
+    P10: 4
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0285
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-003_p03_wallet_entity_controller_v3.md
+  phase_scores:
+    P01: 53
+    P02: 0
+    P03: 79
+    P04: 10
+    P05: 2
+    P06: 1
+    P07: 2
+    P08: 4
+    P09: 0
+    P10: 4
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0286
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-004_p04_chip_structure_controller_v3.md
+  phase_scores:
+    P01: 27
+    P02: 1
+    P03: 35
+    P04: 51
+    P05: 9
+    P06: 2
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 1
+  primary_phase: P04
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0287
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-005_p05_evidence_controller_v3.md
+  phase_scores:
+    P01: 8
+    P02: 1
+    P03: 9
+    P04: 11
+    P05: 94
+    P06: 11
+    P07: 2
+    P08: 1
+    P09: 0
+    P10: 2
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0288
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-006_p06_scenario_recognition_controller_v3.md
+  phase_scores:
+    P01: 23
+    P02: 0
+    P03: 1
+    P04: 2
+    P05: 20
+    P06: 116
+    P07: 15
+    P08: 4
+    P09: 0
+    P10: 0
+  primary_phase: P06
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0289
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-007_p07_strategy_gate_controller_v3.md
+  phase_scores:
+    P01: 23
+    P02: 0
+    P03: 2
+    P04: 11
+    P05: 12
+    P06: 18
+    P07: 74
+    P08: 23
+    P09: 2
+    P10: 3
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0290
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-008_p08_execution_risk_controller_v3.md
+  phase_scores:
+    P01: 10
+    P02: 0
+    P03: 7
+    P04: 1
+    P05: 0
+    P06: 1
+    P07: 11
+    P08: 48
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0291
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-CPO-001_continuous_paper_operation_v1.md
+  phase_scores:
+    P01: 11
+    P02: 0
+    P03: 2
+    P04: 0
+    P05: 0
+    P06: 1
+    P07: 5
+    P08: 7
+    P09: 21
+    P10: 17
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0292
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-INTEGRATION-PROGRAM-V1_系统集成落地阶段.md
+  phase_scores:
+    P01: 3
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 0
+    P08: 5
+    P09: 7
+    P10: 11
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0293
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3.md
+  phase_scores:
+    P01: 22
+    P02: 2
+    P03: 2
+    P04: 4
+    P05: 7
+    P06: 7
+    P07: 8
+    P08: 13
+    P09: 60
+    P10: 12
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0294
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3.md
+  phase_scores:
+    P01: 17
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 5
+    P06: 3
+    P07: 4
+    P08: 5
+    P09: 9
+    P10: 98
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0295
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I01_full_phase_consistency_audit_v1_0.md
+  phase_scores:
+    P01: 3
+    P02: 1
+    P03: 2
+    P04: 1
+    P05: 1
+    P06: 1
+    P07: 3
+    P08: 7
+    P09: 7
+    P10: 7
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0296
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I02_directory_contract_index_unification_v1_0.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 2
+    P09: 3
+    P10: 3
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0297
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I03_runner_tool_binding_v1_0.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 2
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 1
+    P08: 6
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0298
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I04_paper_runtime_integration_v1_0.md
+  phase_scores:
+    P01: 4
+    P02: 0
+    P03: 1
+    P04: 2
+    P05: 0
+    P06: 2
+    P07: 9
+    P08: 11
+    P09: 9
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0299
+  source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I05_review_upgrade_closed_loop_v1_0.md
+  phase_scores:
+    P01: 14
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 4
+    P08: 4
+    P09: 18
+    P10: 30
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0300
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/continuous_paper_operation/phase_task_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0301
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I01_full_phase_consistency_audit/02_phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0302
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I01_full_phase_consistency_audit/06_phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 1
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0303
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I02_directory_contract_index_unification/02_phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0304
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I02_directory_contract_index_unification/06_phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0305
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I03_runner_tool_binding/02_phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0306
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I03_runner_tool_binding/06_phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0307
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/02_phase_context_pack_TEMPLATE.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 3
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0308
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/06_phase_execution_protocol_TEMPLATE.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 7
+    P09: 0
+    P10: 3
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0309
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/HER_K00_FORMAL_TASK_BOOK.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 6
+    P08: 10
+    P09: 0
+    P10: 2
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0310
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/HER_K00_VERSION_UPDATE_13_14.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 3
+    P08: 6
+    P09: 5
+    P10: 5
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0311
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/README.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 4
+    P08: 27
+    P09: 0
+    P10: 3
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0312
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/automated_trading_workflow_safety_boundary.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 2
+    P08: 5
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0313
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_pack_DOC-20260511-004_to_P00.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 2
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0314
+  source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_pack_DOC-20260511-005_P00_build.md
+  phase_scores:
+    P01: 3
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 1
+    P10: 0
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0315
+  source_path: sikk_stable_trader_os/00_methodology/materials/indexes/stable_trader_os_v2_0_corpus_index.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 2
+    P04: 2
+    P05: 0
+    P06: 0
+    P07: 4
+    P08: 9
+    P09: 3
+    P10: 4
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0316
+  source_path: sikk_stable_trader_os/00_methodology/materials/passports/stable_trader_os_v2_0_design_doc_passport.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0317
+  source_path: sikk_stable_trader_os/00_methodology/materials/task_packs/methodology_blueprint_landing_task_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 2
+    P08: 2
+    P09: 2
+    P10: 1
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0318
+  source_path: sikk_stable_trader_os/00_methodology/materials/task_packs/phase_controller_data_model_workflow_plan.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 4
+    P08: 7
+    P09: 3
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0319
+  source_path: sikk_stable_trader_os/00_methodology/methodology_v3_bootstrap_full_control_plane_supplement.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 3
+    P09: 2
+    P10: 5
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0320
+  source_path: sikk_stable_trader_os/00_methodology/system_methodology_blueprint.backup_before_DOC-20260511-003.md
+  phase_scores:
+    P01: 6
+    P02: 1
+    P03: 10
+    P04: 8
+    P05: 15
+    P06: 6
+    P07: 15
+    P08: 15
+    P09: 13
+    P10: 13
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0321
+  source_path: sikk_stable_trader_os/00_methodology/system_methodology_blueprint.backup_before_DOC-20260511-004.md
+  phase_scores:
+    P01: 3
+    P02: 3
+    P03: 4
+    P04: 4
+    P05: 4
+    P06: 5
+    P07: 6
+    P08: 19
+    P09: 7
+    P10: 10
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0322
+  source_path: sikk_stable_trader_os/00_methodology/system_methodology_blueprint.backup_before_DOC-20260511-007.md
+  phase_scores:
+    P01: 16
+    P02: 1
+    P03: 1
+    P04: 2
+    P05: 6
+    P06: 3
+    P07: 8
+    P08: 13
+    P09: 9
+    P10: 13
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0323
+  source_path: sikk_stable_trader_os/00_methodology/system_methodology_blueprint.md
+  phase_scores:
+    P01: 14
+    P02: 1
+    P03: 1
+    P04: 2
+    P05: 6
+    P06: 3
+    P07: 8
+    P08: 12
+    P09: 9
+    P10: 13
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0324
+  source_path: sikk_stable_trader_os/00_trace/trace_plane/her_trace_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 6
+    P09: 3
+    P10: 3
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0325
+  source_path: sikk_stable_trader_os/00_trace/trace_plane/trace_acceptance_criteria.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0326
+  source_path: sikk_stable_trader_os/00_trace/trace_plane/trace_context.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 1
+    P08: 3
+    P09: 0
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0327
+  source_path: sikk_stable_trader_os/00_trace/trace_plane/trace_gap_register.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 1
+    P10: 1
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0328
+  source_path: sikk_stable_trader_os/00_trace/trace_plane/trace_review_checklist.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 3
+    P10: 1
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0329
+  source_path: sikk_stable_trader_os/00_trace/trace_plane/trace_storage_constitution.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 3
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0330
+  source_path: sikk_stable_trader_os/01_total_control_skill/SKILL.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 3
+    P08: 14
+    P09: 2
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0331
+  source_path: sikk_stable_trader_os/01_total_control_skill/total_control_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0332
+  source_path: sikk_stable_trader_os/02_phase_controllers/P00_system_boundary/phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0333
+  source_path: sikk_stable_trader_os/02_phase_controllers/P00_system_boundary/phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 4
+    P06: 0
+    P07: 4
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0334
+  source_path: sikk_stable_trader_os/02_phase_controllers/P01_data_fact/phase_context_pack.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0335
+  source_path: sikk_stable_trader_os/02_phase_controllers/P01_data_fact/phase_execution_protocol.md
+  phase_scores:
+    P01: 1
+    P02: 1
+    P03: 0
+    P04: 0
+    P05: 4
+    P06: 0
+    P07: 4
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0336
+  source_path: sikk_stable_trader_os/02_phase_controllers/P01_data_fact/phase_replay_plan.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 3
+    P10: 0
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0337
+  source_path: sikk_stable_trader_os/02_phase_controllers/P01_data_fact/phase_report_template.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0338
+  source_path: sikk_stable_trader_os/02_phase_controllers/P02_wallet_structure/phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 4
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0339
+  source_path: sikk_stable_trader_os/02_phase_controllers/P02_wallet_structure/phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 3
+    P04: 0
+    P05: 4
+    P06: 0
+    P07: 4
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0340
+  source_path: sikk_stable_trader_os/02_phase_controllers/P03_chip_control/phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 3
+    P05: 3
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P04
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0341
+  source_path: sikk_stable_trader_os/02_phase_controllers/P03_chip_control/phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 3
+    P05: 4
+    P06: 0
+    P07: 4
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0342
+  source_path: sikk_stable_trader_os/02_phase_controllers/P04_scenario_recognition/phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 4
+    P07: 1
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P06
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0343
+  source_path: sikk_stable_trader_os/02_phase_controllers/P04_scenario_recognition/phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 4
+    P06: 3
+    P07: 4
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0344
+  source_path: sikk_stable_trader_os/02_phase_controllers/P05_structure_position/phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 2
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0345
+  source_path: sikk_stable_trader_os/02_phase_controllers/P05_structure_position/phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 4
+    P06: 0
+    P07: 4
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0346
+  source_path: sikk_stable_trader_os/02_phase_controllers/P06_strategy_gate/phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 1
+    P05: 3
+    P06: 1
+    P07: 5
+    P08: 0
+    P09: 1
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0347
+  source_path: sikk_stable_trader_os/02_phase_controllers/P06_strategy_gate/phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 4
+    P06: 0
+    P07: 10
+    P08: 3
+    P09: 1
+    P10: 0
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0348
+  source_path: sikk_stable_trader_os/02_phase_controllers/P07_execution_risk/phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 1
+    P08: 4
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0349
+  source_path: sikk_stable_trader_os/02_phase_controllers/P07_execution_risk/phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 4
+    P06: 0
+    P07: 5
+    P08: 9
+    P09: 1
+    P10: 0
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0350
+  source_path: sikk_stable_trader_os/02_phase_controllers/P08_review_learning/phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 3
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0351
+  source_path: sikk_stable_trader_os/02_phase_controllers/P08_review_learning/phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 4
+    P06: 0
+    P07: 4
+    P08: 3
+    P09: 3
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0352
+  source_path: sikk_stable_trader_os/02_phase_controllers/P09_system_upgrade/phase_context_pack.md
+  phase_scores:
+    P01: 1
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 3
+    P06: 0
+    P07: 1
+    P08: 0
+    P09: 2
+    P10: 3
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0353
+  source_path: sikk_stable_trader_os/02_phase_controllers/P09_system_upgrade/phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 4
+    P06: 0
+    P07: 4
+    P08: 3
+    P09: 1
+    P10: 3
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0354
+  source_path: sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/02_phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 1
+    P04: 1
+    P05: 1
+    P06: 1
+    P07: 6
+    P08: 17
+    P09: 1
+    P10: 3
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0355
+  source_path: sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/06_phase_execution_protocol.md
+  phase_scores:
+    P01: 2
+    P02: 2
+    P03: 1
+    P04: 1
+    P05: 0
+    P06: 1
+    P07: 10
+    P08: 34
+    P09: 1
+    P10: 6
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0356
+  source_path: sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/context.md
+  phase_scores:
+    P01: 50
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 1
+    P06: 0
+    P07: 2
+    P08: 2
+    P09: 1
+    P10: 1
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0357
+  source_path: sikk_stable_trader_os/06_phase_controllers/P00_system_bootstrap_controller/context.md
+  phase_scores:
+    P01: 3
+    P02: 0
+    P03: 1
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 5
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0358
+  source_path: sikk_stable_trader_os/06_phase_controllers/P00_system_context_control/02_phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0359
+  source_path: sikk_stable_trader_os/06_phase_controllers/P00_system_context_control/06_phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0360
+  source_path: sikk_stable_trader_os/06_phase_controllers/P01_data_fact_runtime_connection/02_phase_context_pack.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 1
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0361
+  source_path: sikk_stable_trader_os/06_phase_controllers/P01_data_fact_runtime_connection/06_phase_execution_protocol.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 2
+    P09: 0
+    P10: 1
+  primary_phase: P08
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0362
+  source_path: sikk_stable_trader_os/08_acceptance/acceptance_plane_acceptance_report.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0363
+  source_path: sikk_stable_trader_os/08_acceptance/phase_controller_index_acceptance_report.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0364
+  source_path: sikk_stable_trader_os/09_handoff/handoff_plane_acceptance_report.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 3
+    P10: 1
+  primary_phase: P09
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0365
+  source_path: sikk_stable_trader_os/09_reports/audit_reports/next_step_plan.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 3
+    P04: 0
+    P05: 5
+    P06: 3
+    P07: 3
+    P08: 2
+    P09: 0
+    P10: 0
+  primary_phase: P05
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0366
+  source_path: sikk_stable_trader_os/09_reports/audit_reports/system_registry_audit_report.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 2
+    P04: 2
+    P05: 5
+    P06: 2
+    P07: 7
+    P08: 6
+    P09: 4
+    P10: 2
+  primary_phase: P07
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0367
+  source_path: sikk_stable_trader_os/09_runtime_state/task_journal/phase_controller_data_model_workflow_v1.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0368
+  source_path: sikk_stable_trader_os/09_runtime_state/task_journal/stable_trader_os_v2_methodology_blueprint_landing.md
+  phase_scores:
+    P01: 0
+    P02: 0
+    P03: 0
+    P04: 0
+    P05: 0
+    P06: 0
+    P07: 0
+    P08: 0
+    P09: 0
+    P10: 0
+  primary_phase: K00
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0369
+  source_path: sikk_stable_trader_os/_backups/p00_bootstrap_20260511T151151Z/00_data/data_plane.md
+  phase_scores:
+    P01: 2
+    P02: 2
+    P03: 0
+    P04: 0
+    P05: 2
+    P06: 1
+    P07: 1
+    P08: 1
+    P09: 0
+    P10: 2
+  primary_phase: P01
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0370
+  source_path: sikk_stable_trader_os/_backups/p00_bootstrap_20260511T151151Z/00_domain/domain_plane.md
+  phase_scores:
+    P01: 2
+    P02: 0
+    P03: 41
+    P04: 5
+    P05: 6
+    P06: 2
+    P07: 11
+    P08: 15
+    P09: 7
+    P10: 8
+  primary_phase: P03
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+- document_id: LEGACY-DOC-0371
+  source_path: sikk_stable_trader_os/_backups/p00_bootstrap_20260511T151151Z/00_governance/governance_plane.md
+  phase_scores:
+    P01: 7
+    P02: 2
+    P03: 3
+    P04: 2
+    P05: 3
+    P06: 2
+    P07: 8
+    P08: 16
+    P09: 15
+    P10: 24
+  primary_phase: P10
+  assetization_required:
+  - contract_check
+  - controller_asset_check
+  - runner_binding_check
+  - acceptance_gate_check
+

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "blocked_stages",
+    "blocked_tasks",
+    "hard_blocks"
+  ],
+  "properties": {
+    "blocked_stages": {
+      "type": "array"
+    },
+    "blocked_tasks": {
+      "type": "object"
+    }
+  }
+}

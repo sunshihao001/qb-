@@ -1,0 +1,28 @@
+{
+  "task_id": "TASK_DOC-20260512-006_P06_PACKAGE_LANDING",
+  "doc_id": "DOC-20260512-006",
+  "task_type": "phase_controller_package_landing",
+  "target_controller": "P06_SCENARIO_RECOGNITION_CONTROLLER",
+  "objective": "Land formal P06 Scenario Recognition Controller v3.0 package and runtime data skeleton while keeping P06/P07 runtime, paper, and live execution blocked.",
+  "required_outputs": [
+    "40 controller files",
+    "25+ runtime data directories",
+    "validation report",
+    "control state update",
+    "asset index registration"
+  ],
+  "acceptance": [
+    "all expected files exist",
+    "yaml/json parse ok",
+    "safety anchors pass",
+    "scenario controller classified as formal P06 package with runtime gaps",
+    "next legal stage P07_STRATEGY_GATE_CONTROLLER_PACKAGE_DESIGN"
+  ],
+  "constraints": [
+    "no strategy signal",
+    "no paper_ready",
+    "no direct paper runtime",
+    "no live execution",
+    "handoff only to P07"
+  ]
+}

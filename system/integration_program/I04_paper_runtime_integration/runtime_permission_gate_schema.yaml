@@ -1,0 +1,8 @@
+record_type: runtime_permission_gate_record
+fields:
+- gate_id
+- candidate_id
+- gate_result
+- gate_reason
+- blocked_by
+- trace_id

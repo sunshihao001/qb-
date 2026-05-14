@@ -1,0 +1,76 @@
+record_id: data_request_packet_index_20260512
+generated_at: '2026-05-12T13:05:00Z'
+status: BUILT_WITH_GAPS
+items:
+- path: docs/harness/ai_harness_system/01_goals/raw_user_requests/.gitkeep
+  suffix: ''
+  size: 0
+- path: system/integration_program/I01_full_phase_consistency_audit/data_request_chain_schema.yaml
+  suffix: .yaml
+  size: 167
+- path: system/integration_program/i02_directory_contract_index_unification/data_request_packet_index_schema.yaml
+  suffix: .yaml
+  size: 459
+- path: system/phase_controllers/p01_candidate_intake_controller/p02_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 995
+- path: system/phase_controllers/p01_candidate_intake_controller/p02_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 995
+- path: system/phase_controllers/p02_source_data_fact_controller/schemas/p03_wallet_entity_data_request_packet.schema.json
+  suffix: .json
+  size: 457
+- path: system/phase_controllers/p02_source_data_fact_controller/schemas/p03_wallet_entity_data_request_packet.schema.json
+  suffix: .json
+  size: 457
+- path: system/phase_controllers/p03_wallet_entity_controller/p04_chip_structure_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 383
+- path: system/phase_controllers/p03_wallet_entity_controller/p04_chip_structure_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 383
+- path: system/phase_controllers/p04_chip_structure_controller/p05_evidence_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 463
+- path: system/phase_controllers/p04_chip_structure_controller/p05_evidence_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 463
+- path: system/phase_controllers/p05_evidence_controller/p06_scenario_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 1117
+- path: system/phase_controllers/p05_evidence_controller/p06_scenario_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 1117
+- path: system/phase_controllers/p06_scenario_recognition_controller/p07_strategy_gate_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 467
+- path: system/phase_controllers/p06_scenario_recognition_controller/p07_strategy_gate_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 467
+- path: system/phase_controllers/p07_strategy_gate_controller/p08_execution_risk_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 1490
+- path: system/phase_controllers/p07_strategy_gate_controller/p08_execution_risk_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 1490
+- path: system/phase_controllers/p08_execution_risk_controller/execution_risk_refresh_request_schema.yaml
+  suffix: .yaml
+  size: 472
+- path: system/phase_controllers/p08_execution_risk_controller/execution_risk_refresh_request_schema.yaml
+  suffix: .yaml
+  size: 472
+- path: system/phase_controllers/p08_execution_risk_controller/paper_runtime_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 847
+- path: system/phase_controllers/p08_execution_risk_controller/paper_runtime_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 847
+- path: system/phase_controllers/p09_review_replay_controller/p10_upgrade_candidate_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 983
+- path: system/phase_controllers/p09_review_replay_controller/p10_upgrade_candidate_data_request_packet_contract.yaml
+  suffix: .yaml
+  size: 983
+gaps: []
+restrictions:
+- index_only

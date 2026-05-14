@@ -1,0 +1,23 @@
+{
+  "bundle_id": "pending_policy_bundle_g00_real_policy_20260514_0024",
+  "bundle_status": "PENDING_ACTIVE",
+  "included_policies": [
+    "forbidden_action_policy_v1",
+    "status_code_policy_v1",
+    "evidence_policy_v1",
+    "gap_policy_v1",
+    "runner_safety_policy_v1",
+    "human_confirmation_policy_v1",
+    "production_risk_policy_v1"
+  ],
+  "activation_requirements": [
+    "policy_conflict_report has no blocking conflicts",
+    "governance_registry written",
+    "G00 acceptance result generated",
+    "policy handoff generated for all controllers"
+  ],
+  "open_gaps": [
+    "controller_consumption_not_yet_verified",
+    "run_document_safe_mode_not_yet_validated_with_active_policy"
+  ]
+}

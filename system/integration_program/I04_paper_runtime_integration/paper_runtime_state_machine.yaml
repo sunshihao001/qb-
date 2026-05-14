@@ -1,0 +1,31 @@
+state_machine_id: I04_PAPER_RUNTIME_STATE_MACHINE
+states:
+- I04_UNINITIALIZED
+- I04_CONTEXT_LOADED
+- I04_HANDOFF_READ
+- I04_INPUT_MANIFEST_BUILT
+- I04_PERMISSION_GATED
+- I04_CANDIDATE_QUEUED
+- I04_POSITION_OPENED
+- I04_POSITION_UPDATED
+- I04_EXIT_EVALUATED
+- I04_POSITION_CLOSED
+- I04_P09_INPUT_BUILT
+- I04_READY_FOR_ACCEPTANCE
+- I04_READY
+- I04_READY_WITH_GAPS
+- I04_REJECTED
+- I04_BLOCKED
+critical_transitions:
+- from: I04_HANDOFF_READ
+  to: I04_INPUT_MANIFEST_BUILT
+  condition: i03_handoff_valid and p08_handoff_valid
+- from: I04_INPUT_MANIFEST_BUILT
+  to: I04_PERMISSION_GATED
+  condition: permission_gate_record_created
+- from: I04_PERMISSION_GATED
+  to: I04_CANDIDATE_QUEUED
+  condition: permission_allows_paper_runtime
+- from: I04_POSITION_CLOSED
+  to: I04_P09_INPUT_BUILT
+  condition: p09_review_replay_input_packet_created

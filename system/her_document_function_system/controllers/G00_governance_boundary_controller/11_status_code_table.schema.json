@@ -1,0 +1,32 @@
+{
+  "title": "Status Code Table",
+  "type": "object",
+  "required": [
+    "table_id",
+    "status_codes",
+    "status",
+    "updated_at"
+  ],
+  "properties": {
+    "table_id": {
+      "type": "string"
+    },
+    "status_codes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PENDING",
+        "DEPRECATED"
+      ]
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

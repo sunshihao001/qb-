@@ -1,0 +1,44 @@
+system_id: SIKK_STABLE_TRADER_OS
+system_name: SIKK Stable Trader OS
+system_data_version: '2.0'
+created_at: '2026-05-11T01:57:25Z'
+root: /root/sikk-gmgn/sikk_stable_trader_os
+mission:
+  primary: 建立 HER 可读取、可调度、可验证、可续跑、可审计的自动化交易分析工作流系统数据层
+  not_primary:
+  - 不直接开放真实交易
+  - 不直接输出买入卖出信号
+  - 不把 Markdown 文档视为完成
+  - 不让 AI 推测补全缺失事实字段
+architecture_layers:
+- -1_system_data_registry
+- 0_total_control_skill
+- 1_phase_controller_runtime_units
+- 2_atomic_skill_capability_units
+- 3_tools_schemas_contracts_reports_tests
+- 4_runtime_state_handoff_audit_replay_review
+core_definition: Phase Controller 不是阶段说明文档。Phase Controller 是一个可调度的阶段运行单元，负责把系统目标拆成阶段目标，把阶段目标拆成任务树，把任务树绑定到输入合约、输出合约、Atomic
+  Skill、代码工具、验收门、状态回写和下游交接包。它不追求一次性给出智能判断，而是保证每一个判断都有字段来源、证据等级、反证记录、失败处理和可复盘路径。
+runtime_mode: observe_paper_only
+safety_boundary:
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_transaction: false
+  swap_enabled: false
+  max_real_position_sol: 0
+  secret_access: not_required_for_registry
+default_run_loop:
+- read_system_manifest
+- read_phase_registry
+- resolve_active_phase
+- read_phase_manifest
+- read_phase_context_pack
+- read_input_contract
+- read_acceptance_gate
+- execute_phase_execution_protocol
+- write_outputs
+- run_validation
+- update_phase_state
+- write_handoff_packet
+- master_controller_decides_next_phase
+completion_policy: acceptance_gate_decides_completion_not_language_report

@@ -1,0 +1,59 @@
+{
+  "doc_id": "doc_her_doc_full_gap_scan_run",
+  "source_name": "HER_DOC_FULL_TRADING_SYSTEM_GAP_SCAN_20260514.md",
+  "source_type": "SYSTEM_CONSTRUCTION_MATERIAL",
+  "received_at": "2026-05-14T10:18:33Z",
+  "raw_path": "input/raw_document.md",
+  "sha256": "69c51ca05432b22c8b53242557c48d36bae7ed91070f41126fbfa4571a006462",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance"
+    ]
+  },
+  "summary": {
+    "core_intent": "让真实 GPT 研究资料 / 系统建设资料进入 HER，按主链路跑完，生成完整文件输出，保留 gap。",
+    "key_points": [
+      "mode: HER_DOC safe-mode audit/gap mode",
+      "K00 知识摄取 / KV cache",
+      "## 必须输出的扫描结论",
+      "每个系统层和业务阶段都必须输出：",
+      "不允许把 READY_WITH_GAPS 说成 ACCEPTED"
+    ]
+  },
+  "system_mapping": {
+    "affected_planes": [
+      "input",
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00",
+      "trace",
+      "audit"
+    ],
+    "affected_controllers": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_document_function_system",
+      "tools",
+      "tests/her_document_function_system",
+      "data/her_document_function_system/runs"
+    ]
+  },
+  "status": "K00_READY_WITH_GAPS"
+}

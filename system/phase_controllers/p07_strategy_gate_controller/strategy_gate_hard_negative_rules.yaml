@@ -1,0 +1,22 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+rules:
+  - {rule_id: P07_BLOCK_001, name: 未读取 P06 handoff, condition: p06_to_p07_handoff_packet_missing == true, result: P07_BLOCKED, reason: P07 不能绕过 P06 / Handoff 启动}
+  - {rule_id: P07_BLOCK_002, name: 无场景输入, condition: primary_scenario_missing == true and secondary_scenarios_missing == true, result: P07_REJECTED, reason: 无场景输入不能做策略门控}
+  - {rule_id: P07_BLOCK_003, name: 无策略政策注册, condition: strategy_policy_registry_missing == true, result: P07_REJECTED, reason: 没有策略政策不能裁决}
+  - {rule_id: P07_BLOCK_004, name: 阻断级场景冲突, condition: blocking_scenario_conflict_present == true, result: P07_BLOCKED, reason: 场景冲突未解决，不能进入 P08}
+  - {rule_id: P07_BLOCK_005, name: 主场景被否定, condition: primary_scenario_rejected == true, result: P07_BLOCKED, reason: 被否定场景不能作为策略候选基础}
+  - {rule_id: P07_BLOCK_006, name: 强反证存在, condition: strong_counter_evidence_present == true, result: P07_BLOCKED, reason: 强反证阻断策略候选}
+  - {rule_id: P07_BLOCK_007, name: 筹码结构高风险, condition: chip_gate_status == CHIP_BLOCKS_GATE, result: P07_BLOCKED, reason: 筹码结构风险阻断策略候选}
+  - rule_id: P07_BLOCK_008
+    name: 追高 / 接盘上下文
+    condition: "market_position_context in [CHASING_CONTEXT, EXIT_LIQUIDITY_RISK_CONTEXT]"
+    result: P07_BLOCKED
+    reason: 位置上下文不允许进入纸面候选
+  - rule_id: P07_BLOCK_009
+    name: 直接输出买入或纸面运行
+    condition: "output_contains in [buy_signal, paper_runtime_started, live_execution_allowed]"
+    result: P07_BLOCKED
+    reason: P07 不是执行层
+  - {rule_id: P07_BLOCK_010, name: 自动实盘路径, condition: live_execution_requested == true or live_execution_allowed == true, result: P07_BLOCKED, reason: 当前系统禁止自动实盘}

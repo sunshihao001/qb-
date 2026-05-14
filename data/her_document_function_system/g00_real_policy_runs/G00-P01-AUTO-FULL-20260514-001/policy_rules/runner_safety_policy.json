@@ -1,0 +1,29 @@
+{
+  "policy_id": "runner_safety_policy_v1",
+  "version": "1.0.0",
+  "runner_rules": [
+    {
+      "runner_mode": "SAFE_DRY_RUN",
+      "allowed": true,
+      "requirements": [
+        "safe_mode=true",
+        "dry_run_evidence",
+        "exit_code"
+      ]
+    },
+    {
+      "runner_mode": "PAPER_RUNTIME",
+      "allowed": false,
+      "activation_requirement": [
+        "explicit_human_confirmation",
+        "A00_ACCEPTED_OR_APPROVED_READY_WITH_GAPS",
+        "G00_policy_loaded"
+      ]
+    },
+    {
+      "runner_mode": "LIVE_RUNTIME",
+      "allowed": false,
+      "policy_level": "HARD_FORBIDDEN"
+    }
+  ]
+}

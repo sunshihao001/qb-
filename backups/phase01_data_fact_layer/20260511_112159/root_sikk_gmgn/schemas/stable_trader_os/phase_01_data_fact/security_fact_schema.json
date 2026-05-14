@@ -1,0 +1,76 @@
+{
+  "schema_version": "security_fact_schema_v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "file_role": "security_fact",
+  "format": "json",
+  "fields": [
+    {
+      "field_name": "token_address",
+      "field_chinese_name": "代币地址",
+      "field_group": "token_fact",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control",
+        "phase_04_scenario_recognition"
+      ],
+      "description": "Solana 代币 mint 地址，是本次分析对象的唯一标识。"
+    },
+    {
+      "field_name": "data_snapshot_time",
+      "field_chinese_name": "数据快照时间",
+      "field_group": "runtime",
+      "data_type": "datetime",
+      "required_level": "fatal_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "quote",
+        "gmgn",
+        "chain"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "all_downstream_phases"
+      ],
+      "description": "本次数据事实快照的时间，防止回测污染。"
+    },
+    {
+      "field_name": "security_fact",
+      "field_chinese_name": "安全事实",
+      "field_group": "security_fact",
+      "data_type": "object",
+      "required_level": "phase_05_required",
+      "unit": "json",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "security"
+      ],
+      "preferred_source": "security",
+      "downstream_used_by": [
+        "phase_06_strategy_gate",
+        "phase_07_execution_risk"
+      ],
+      "description": "安全检查事实，缺失时禁止强策略通过。"
+    }
+  ]
+}

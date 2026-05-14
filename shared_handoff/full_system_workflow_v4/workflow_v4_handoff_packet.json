@@ -1,0 +1,86 @@
+{
+  "workflow_version": "full_system_workflow_v4",
+  "final_status": "FULL_SYSTEM_BUNDLE_READY",
+  "routing": {
+    "stop_condition_triggered": false,
+    "current_allowed_task": "task_1_wave_1_p01_p03_foundation_runtime",
+    "next_allowed_task": "task_1_wave_1_p01_p03_foundation_runtime",
+    "reason": "bundle complete; Wave 1 may start under paper-only boundary"
+  },
+  "generated_taskbooks": [
+    {
+      "task_id": "task_0_full_system_bundle_bootstrap",
+      "path": "/root/sikk-gmgn/task_books/full_system_runtime_bundle/generated/workflow_v4/task_0_full_system_bundle_bootstrap.md",
+      "status": "generated",
+      "wave_id": "task_0",
+      "phases": []
+    },
+    {
+      "task_id": "task_1_wave_1_p01_p03_foundation_runtime",
+      "path": "/root/sikk-gmgn/task_books/full_system_runtime_bundle/generated/workflow_v4/task_1_wave_1_p01_p03_foundation_runtime.md",
+      "status": "generated",
+      "wave_id": "wave_01_p01_p03",
+      "phases": [
+        "p01",
+        "p02",
+        "p03"
+      ]
+    },
+    {
+      "task_id": "task_2_wave_2_p04_p05_scenario_position_runtime",
+      "path": "/root/sikk-gmgn/task_books/full_system_runtime_bundle/generated/workflow_v4/task_2_wave_2_p04_p05_scenario_position_runtime.md",
+      "status": "generated",
+      "wave_id": "wave_02_p04_p05",
+      "phases": [
+        "p04",
+        "p05"
+      ]
+    },
+    {
+      "task_id": "task_3_wave_3_p06_p07_strategy_execution_risk_runtime",
+      "path": "/root/sikk-gmgn/task_books/full_system_runtime_bundle/generated/workflow_v4/task_3_wave_3_p06_p07_strategy_execution_risk_runtime.md",
+      "status": "generated",
+      "wave_id": "wave_03_p06_p07",
+      "phases": [
+        "p06",
+        "p07"
+      ]
+    },
+    {
+      "task_id": "task_4_wave_4_p08_p09_review_upgrade_runtime",
+      "path": "/root/sikk-gmgn/task_books/full_system_runtime_bundle/generated/workflow_v4/task_4_wave_4_p08_p09_review_upgrade_runtime.md",
+      "status": "generated",
+      "wave_id": "wave_04_p08_p09",
+      "phases": [
+        "p08",
+        "p09"
+      ]
+    },
+    {
+      "task_id": "task_5_full_system_e2e_validation",
+      "path": "/root/sikk-gmgn/task_books/full_system_runtime_bundle/generated/workflow_v4/task_5_full_system_e2e_validation.md",
+      "status": "generated",
+      "wave_id": "full_system_e2e",
+      "phases": [
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p06",
+        "p07",
+        "p08",
+        "p09"
+      ]
+    },
+    {
+      "task_id": "task_6_patch_regression_loop",
+      "path": "/root/sikk-gmgn/task_books/full_system_runtime_bundle/generated/workflow_v4/task_6_patch_regression_loop.md",
+      "status": "generated",
+      "wave_id": "patch_and_regression",
+      "phases": []
+    }
+  ],
+  "gap_register_path": "/root/sikk-gmgn/reports/system_audit/full_system_workflow_v4_gap_register.json",
+  "audit_path": "/root/sikk-gmgn/reports/system_audit/full_system_workflow_v4_audit.md"
+}

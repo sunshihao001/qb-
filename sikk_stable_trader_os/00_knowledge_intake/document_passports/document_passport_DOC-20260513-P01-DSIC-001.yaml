@@ -1,0 +1,50 @@
+doc_id: DOC-20260513-P01-DSIC-001
+source_type: user_uploaded_markdown
+source_name: 未命名 6 (2).md
+received_at: 2026-05-13
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DSIC-001_p01_data_source_intelligence_controller_upgrade.md
+checksum_sha256: d43a4a4c6fa818efeb4b57275f4e97cb37db8efe13577f181d4119db094703b3
+document_role:
+  primary_role: P01_data_source_intelligence_controller_upgrade_spec
+  secondary_roles:
+    - data_fact_layer_methodology
+    - source_registry_and_health_design
+    - field_lineage_and_freshness_design
+    - downstream_permission_handoff_design
+summary:
+  core_intent: 将 P01 从普通 GMGN/OKX 数据采集层升级为数据源情报控制层，负责证明外部数据能否成为系统事实。
+  key_points:
+    - P01 is a data source intelligence controller, not a raw collection layer.
+    - Every field needs source, timestamp, confidence, freshness, lineage, and missing reason.
+    - GMGN/OKX must pass source reliability, schema drift, freshness, reconciliation, and quality-decision checks.
+    - Downstream phases must consume P01 data_fact_handoff_packet instead of raw interface outputs.
+    - real_execution must remain false.
+system_mapping:
+  planes:
+    - data_plane
+    - control_plane
+    - contract_schema_plane
+    - evidence_trace_plane
+    - runtime_state_plane
+    - audit_replay_plane
+  affected_phases:
+    - K00
+    - P01
+    - P02
+    - P03
+    - P04
+    - P05
+    - P06
+    - P07
+required_actions:
+  - Preserve raw uploaded spec in K00 raw_inputs.
+  - Generate K00 registry/passport/index/mapping/gap/task/handoff/state/acceptance artifacts.
+  - Route next work to P01 package/code landing, not paper/live execution.
+  - Audit current GMGN and OKX connector capabilities before claiming P01 readiness.
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY
+safety_boundaries:
+  real_execution_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  raw_direct_downstream_access_allowed: false

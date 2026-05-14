@@ -1,0 +1,18 @@
+{
+  "contract_id": "safety_boundary_contract",
+  "runtime_boundary": "OBSERVE_PAPER_ONLY",
+  "allowed": [
+    "observe",
+    "replay",
+    "paper_only",
+    "manual_review_ticket",
+    "rule_proposal"
+  ],
+  "forbidden": [
+    "private_key",
+    "signing",
+    "broadcast",
+    "swap_execution",
+    "real_trade_enabled"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "doc_id": "DOC-20260513-F00-001",
+  "mappings": [
+    {
+      "plane": "phase controller plane",
+      "affected_phase": [
+        "F00"
+      ],
+      "impact_type": "define",
+      "risk_level": "medium",
+      "can_modify": [
+        "F00 controller package",
+        "execution protocol",
+        "acceptance gate",
+        "state model"
+      ],
+      "cannot_modify": [
+        "production runtime",
+        "wallet signing"
+      ]
+    },
+    {
+      "plane": "schema / contract plane",
+      "affected_phase": [
+        "F00",
+        "V01"
+      ],
+      "impact_type": "define",
+      "risk_level": "medium",
+      "can_modify": [
+        "input/output contract",
+        "handoff schema",
+        "function/field/rule schemas"
+      ],
+      "cannot_modify": [
+        "raw source"
+      ]
+    },
+    {
+      "plane": "trace / audit plane",
+      "affected_phase": [
+        "F00",
+        "A01"
+      ],
+      "impact_type": "define",
+      "risk_level": "low",
+      "can_modify": [
+        "trace audit spec"
+      ],
+      "cannot_modify": [
+        "legacy logs deletion"
+      ]
+    },
+    {
+      "plane": "runner / tool binding plane",
+      "affected_phase": [
+        "R01",
+        "F00"
+      ],
+      "impact_type": "plan",
+      "risk_level": "medium",
+      "can_modify": [
+        "runner binding schema/plan"
+      ],
+      "cannot_modify": [
+        "live runtime start"
+      ]
+    },
+    {
+      "plane": "acceptance / handoff plane",
+      "affected_phase": [
+        "F00",
+        "H01"
+      ],
+      "impact_type": "define",
+      "risk_level": "medium",
+      "can_modify": [
+        "acceptance gate",
+        "handoff schema/report template"
+      ],
+      "cannot_modify": [
+        "downstream auto transition without handoff"
+      ]
+    }
+  ]
+}

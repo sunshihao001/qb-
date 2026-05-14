@@ -1,0 +1,6 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: STRATEGY_RISK_FLAG_EVALUATION_SCHEMA
+required_fields: [risk_eval_id, candidate_id, risk_flags_from_p06, evaluation, risk_action]
+risk_action_enum: [NO_RISK_BLOCK, OBSERVE, PAUSE, BLOCK, HUMAN_CONFIRMATION_REQUIRED]

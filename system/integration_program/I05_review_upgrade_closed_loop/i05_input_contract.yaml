@@ -1,0 +1,18 @@
+i05_input_contract:
+  required_from_i04:
+    - i04_to_i05_handoff_packet
+    - p09_review_replay_input_packet
+    - paper_runtime_outputs
+    - i04_acceptance_result
+    - i04_trace
+  required_from_p09:
+    - p09_controller_contracts
+    - p09_to_p10_handoff_contract
+    - p10_upgrade_candidate_data_request_packet_contract
+  required_from_p10:
+    - p10_controller_contracts
+    - controlled_upgrade_package_contract
+    - regression_test_plan_contract
+  blocking_if_missing:
+    - i04_to_i05_handoff_packet
+    - p09_review_replay_input_packet

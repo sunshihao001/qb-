@@ -1,0 +1,33 @@
+{
+  "doc_id": "DOC-20260511-022",
+  "gap_status": "NON_BLOCKING_GAPS_REMAIN",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "DOMAIN-GAP-001",
+      "name": "wallet role thresholds not quantified",
+      "route": "P03/P04/Replay calibration"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-002",
+      "name": "dominant-side lifecycle needs sample calibration",
+      "route": "P08 review/replay"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-003",
+      "name": "wash-volume identification requires real data verification",
+      "route": "Data/Evidence Plane"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-004",
+      "name": "market-cap stage boundaries not statistically fixed",
+      "route": "Replay Plane"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-005",
+      "name": "same-source wallet attribution uncertainty remains",
+      "route": "Evidence confidence scoring"
+    }
+  ],
+  "created_at": "2026-05-11T16:25:42Z"
+}

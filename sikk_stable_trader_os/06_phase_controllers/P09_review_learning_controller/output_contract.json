@@ -1,0 +1,12 @@
+{
+  "contract_id": "P09_review_learning_controller_OUTPUT_CONTRACT_STUB",
+  "stage": "P09_review_learning_controller",
+  "status": "STUB_CREATED_BY_P00",
+  "required_outputs": [],
+  "forbidden_outputs": [
+    "real_trade_order",
+    "signed_transaction",
+    "broadcast_transaction"
+  ],
+  "paper_only": true
+}

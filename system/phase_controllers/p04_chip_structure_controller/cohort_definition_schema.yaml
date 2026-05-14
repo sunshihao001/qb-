@@ -1,0 +1,72 @@
+schema_id: "cohort_definition_schema"
+json_schema:
+  $schema: "https://json-schema.org/draft/2020-12/schema"
+  title: "Cohort Definition Record"
+  description: "P04 structure-state record. Candidate-only and trace-required."
+  type: "object"
+  required:
+    - "record_id"
+    - "cohort_id"
+    - "cohort_type"
+    - "member_entities"
+    - "trace_ids"
+  properties:
+    record_id:
+      type: "string"
+    token_address:
+      type:
+        - "string"
+        - "null"
+    snapshot_time:
+      type:
+        - "string"
+        - "null"
+    cohort_id:
+      type:
+        - "string"
+        - "null"
+    wallet_entity_id:
+      type:
+        - "string"
+        - "null"
+    candidate_only:
+      const: true
+    source_record_ids:
+      type: "array"
+      items:
+        type: "string"
+    trace_ids:
+      type: "array"
+      items:
+        type: "string"
+    limitations:
+      type: "array"
+      items:
+        type: "string"
+    quality_level:
+      type: "string"
+      enum:
+        - "BLOCKED"
+        - "LOW"
+        - "MEDIUM"
+        - "HIGH"
+        - "UNKNOWN"
+        - "NOT_APPLICABLE"
+    created_at:
+      type: "string"
+    cohort_type:
+      type: "string"
+      enum:
+        - "EARLY_WALLET"
+        - "STRUCTURAL_WALLET_CANDIDATE"
+        - "SAME_SOURCE_EXECUTION_GROUP"
+        - "SYNC_BEHAVIOR_GROUP"
+        - "DISTRIBUTION_RECEIVER_CANDIDATE"
+        - "PROFIT_COLLECTION_CANDIDATE"
+        - "COUNTERPARTY_CANDIDATE"
+        - "UNKNOWN_RETAIL"
+    member_entities:
+      type: "array"
+      items:
+        type: "string"
+  additionalProperties: true

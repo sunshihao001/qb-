@@ -1,0 +1,103 @@
+schema_id: HER_DOC_PROJECT_MATURITY_MATRIX
+version: HER_DOC_PROFESSIONAL_CONTROL_V1
+status: MATURITY_BASELINE_ACTIVE
+generated_for: HER_DOC professionalization
+
+maturity_levels:
+  - level: L0_CONCEPT
+    meaning: idea exists only in chat or prose
+  - level: L1_DOCUMENTED
+    meaning: control docs exist
+  - level: L2_SCHEMA_BACKED
+    meaning: schemas/object registries exist
+  - level: L3_VALIDATOR_GATED
+    meaning: project/bundle validators enforce required artifacts
+  - level: L4_SAFE_RUNTIME_REVIEWABLE
+    meaning: safe runtime proof can be requested and recorded
+  - level: L5_DOWNSTREAM_HANDOFF_ACCEPTED
+    meaning: downstream accepted handoff exists with evidence refs
+
+current_assessment:
+  - capability: identity_and_constitution
+    current_level: L3_VALIDATOR_GATED
+    evidence:
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_PROJECT_CONSTITUTION.md
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_VALIDATOR.py
+    gap: Professional object registry and runbook were missing before this upgrade.
+    upgraded_by:
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_CONTROL_OBJECT_REGISTRY.yaml
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_RUNBOOK.md
+
+  - capability: document_to_function_conversion
+    current_level: L2_SCHEMA_BACKED
+    evidence:
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_DOCUMENT_PASSPORT_SCHEMA.yaml
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_FUNCTIONAL_OBJECT_SCHEMA.yaml
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_CONTROL_OBJECT_REGISTRY.yaml
+    gap: Needs repeated scan bundles proving object extraction quality.
+    next_route: SAFE_SCAN_PRACTICE
+
+  - capability: evidence_requirement_control
+    current_level: L3_VALIDATOR_GATED
+    evidence:
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_EVIDENCE_REQUIREMENT_SCHEMA.yaml
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_COMPLETION_STATUS_RULES.md
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_OVERCLAIM_GUARD.md
+    gap: Validator does not yet deeply validate evidence level consistency.
+    next_route: HER_BUILD_DIRECT
+
+  - capability: gap_classification
+    current_level: L2_SCHEMA_BACKED
+    evidence:
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_GAP_CLASSIFICATION_SCHEMA.yaml
+    gap: Need future validator professional mode to require gap_classification_matrix.yaml.
+    next_route: HER_BUILD_DIRECT
+
+  - capability: queue_routing
+    current_level: L3_VALIDATOR_GATED
+    evidence:
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_GPT_RESEARCH_QUEUE_SCHEMA.yaml
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_HER_BUILD_QUEUE_SCHEMA.yaml
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_RUNTIME_BINDING_REVIEW_SCHEMA.yaml
+    gap: Need queue-to-completion feedback records.
+    next_route: HER_BUILD_DIRECT
+
+  - capability: runtime_binding_review
+    current_level: L4_SAFE_RUNTIME_REVIEWABLE
+    evidence:
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_SAFE_RUNTIME_VERIFICATION.md
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_RUNTIME_BINDING_REVIEW_SCHEMA.yaml
+    gap: Runtime review records exist per scan, but no universal runner harness yet.
+    next_route: RUNTIME_BINDING_REVIEW
+
+  - capability: legacy_absorption
+    current_level: L2_SCHEMA_BACKED
+    evidence:
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_LEGACY_ABSORPTION_SCHEMA.yaml
+    gap: Needs stronger pollution guard and copy-only manifest convention per legacy import.
+    next_route: LEGACY_ABSORPTION
+
+  - capability: downstream_handoff
+    current_level: L2_SCHEMA_BACKED
+    evidence:
+      - /root/sikk-gmgn/system/her_doc/HER_DOC_HANDOFF_PACKET_SCHEMA.yaml
+    gap: No downstream accepted handoff proof yet.
+    next_route: STAGE_COMPLETION
+
+professionalization_gaps:
+  - gap_id: HER_DOC_PRO_GAP_001
+    missing: validator professional mode for optional advanced artifacts
+    route: HER_BUILD_DIRECT
+    severity: MEDIUM
+  - gap_id: HER_DOC_PRO_GAP_002
+    missing: queue-to-completion feedback schema
+    route: HER_BUILD_DIRECT
+    severity: MEDIUM
+  - gap_id: HER_DOC_PRO_GAP_003
+    missing: universal safe runtime review runner harness
+    route: RUNTIME_BINDING_REVIEW
+    severity: HIGH
+  - gap_id: HER_DOC_PRO_GAP_004
+    missing: downstream accepted handoff examples
+    route: STAGE_COMPLETION
+    severity: HIGH

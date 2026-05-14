@@ -1,0 +1,42 @@
+{
+  "inventory_id": "policy_candidate_inventory_g00_real_policy_20260514_0024",
+  "candidates": [
+    {
+      "upgrade_candidate_id": "uc_u00_real_002",
+      "upgrade_type": "GOVERNANCE_UPGRADE",
+      "target_controller": "G00",
+      "target_asset": "g00_controller_or_runtime_assets",
+      "problem_statement": "governance output is candidate only -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "proposed_change": "Create or improve governance_upgrade evidence/control for G00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_184513_393401/gaps/pipeline_gap_register.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": true,
+      "handoff_target": "G00",
+      "source_root_cause_id": "rca_review_case_gap_sample_001_g00_policy_not_active",
+      "candidate_id": "uc_u00_real_002",
+      "initial_status": "CANDIDATE_LOADED"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_005",
+      "upgrade_type": "GOVERNANCE_UPGRADE",
+      "target_controller": "G00",
+      "target_asset": "g00_controller_or_runtime_assets",
+      "problem_statement": "governance output is candidate only -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "proposed_change": "Create or improve governance_upgrade evidence/control for G00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_184513_393401/gaps/unresolved_gaps.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": true,
+      "handoff_target": "G00",
+      "source_root_cause_id": "rca_review_case_gap_sample_001_g00_policy_not_active",
+      "candidate_id": "uc_u00_real_005",
+      "initial_status": "CANDIDATE_LOADED"
+    }
+  ],
+  "inventory_status": "BUILT"
+}

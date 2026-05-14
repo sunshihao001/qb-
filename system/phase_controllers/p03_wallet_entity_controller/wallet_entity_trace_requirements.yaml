@@ -1,0 +1,10 @@
+required_trace:
+  - "wallet_address_trace"
+  - "entity_trace"
+  - "entity_resolution_trace"
+  - "funding_link_trace"
+  - "group_candidate_trace"
+  - "role_candidate_trace"
+  - "quality_trace"
+  - "handoff_trace"
+trace_missing_result: "P03_BLOCKED"

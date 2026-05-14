@@ -1,0 +1,18 @@
+trace_types:
+- audit_input_trace
+- phase_inventory_trace
+- boundary_audit_trace
+- io_alignment_trace
+- handoff_chain_trace
+- schema_contract_trace
+- status_gap_forbidden_trace
+- runtime_readiness_trace
+- review_upgrade_trace
+- finding_trace
+- i02_handoff_trace
+required_for_each_output:
+- generated_at
+- source_files
+- source_trace_ids
+- audit_method
+- limitations

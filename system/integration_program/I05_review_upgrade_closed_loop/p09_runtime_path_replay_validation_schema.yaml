@@ -1,0 +1,8 @@
+p09_runtime_path_replay_validation:
+  type: object
+  required:
+    - validation_id
+    - paper_runtime_path_reconstructed
+    - runtime_records_checked
+    - status
+  additional_properties_allowed: true

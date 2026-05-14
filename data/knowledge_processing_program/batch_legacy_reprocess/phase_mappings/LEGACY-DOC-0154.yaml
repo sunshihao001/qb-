@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0154
+source_path: docs/intel_bot/source_bot_upstream_layer_03_holder_snapshot.md
+phase_scores:
+  P01: 0
+  P02: 1
+  P03: 13
+  P04: 5
+  P05: 2
+  P06: 0
+  P07: 0
+  P08: 0
+  P09: 0
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

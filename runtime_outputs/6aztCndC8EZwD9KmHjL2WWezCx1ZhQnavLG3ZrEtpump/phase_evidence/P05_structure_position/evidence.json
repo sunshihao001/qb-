@@ -1,0 +1,24 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P05_structure_position",
+  "artifact_kind": "evidence",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "positive_evidence": [
+    "price/market/liquidity snapshot fields available"
+  ],
+  "missing_evidence": [
+    "P05_POSITION_DATA_MISSING",
+    "quote_or_kline_avwap_poc_missing"
+  ],
+  "risk_evidence": [
+    "无法确认 AVWAP/POC/结构位置，禁止把结构分当买入点"
+  ]
+}

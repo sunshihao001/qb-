@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["phase", "phase_status", "allow_next_stage", "next_stage", "required_files_for_next_stage", "audit_file"],
+  "properties": {
+    "phase": {"const": "phase_07_execution_risk_controller"},
+    "phase_status": {"type": "string"},
+    "allow_next_stage": {"type": "boolean"},
+    "next_stage": {"const": "phase_08_review_learning_controller"},
+    "required_files_for_next_stage": {"type": "object"},
+    "audit_file": {"type": "string"}
+  }
+}

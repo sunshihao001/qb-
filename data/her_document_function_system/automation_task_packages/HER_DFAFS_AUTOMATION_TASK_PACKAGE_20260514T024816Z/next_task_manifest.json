@@ -1,0 +1,20 @@
+{
+  "next_task_manifest_id": "HER_DFAFS_AUTOMATION_TASK_PACKAGE_20260514T024816Z_NEXT",
+  "status": "PENDING_EXECUTION",
+  "ready_now": [
+    "TASK-P0-001"
+  ],
+  "ready_after": [
+    "TASK-P0-002",
+    "TASK-P0-003",
+    "TASK-P1-004",
+    "TASK-P1-005",
+    "TASK-P1-006",
+    "TASK-P1-007",
+    "TASK-P1-008"
+  ],
+  "recommended_first_execution_batch": [
+    "TASK-P0-001"
+  ],
+  "reason": "K00 controller pack is the upstream canonical gap; O00/F00 should not be marked complete until K00 contracts exist."
+}

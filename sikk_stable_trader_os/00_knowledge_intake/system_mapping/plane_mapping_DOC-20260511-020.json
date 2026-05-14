@@ -1,0 +1,21 @@
+{
+  "doc_id": "DOC-20260511-020",
+  "mappings": [
+    {
+      "plane": "Control Plane",
+      "impact": "upgrade bootstrap control model with schemas/rules/audit/recovery/manifest"
+    },
+    {
+      "plane": "Trace Plane",
+      "impact": "event log and integrity trace"
+    },
+    {
+      "plane": "Acceptance Plane",
+      "impact": "readiness gate and validation rules"
+    },
+    {
+      "plane": "Handoff Plane",
+      "impact": "bootstrap_to_system_planes_handoff_packet"
+    }
+  ]
+}

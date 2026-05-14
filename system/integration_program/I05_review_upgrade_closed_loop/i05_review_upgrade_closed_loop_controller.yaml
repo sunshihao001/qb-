@@ -1,0 +1,43 @@
+controller_id: I05_REVIEW_UPGRADE_CLOSED_LOOP
+version: v1.0
+authority_doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+identity: Integration Program I05 review and upgrade closed-loop validation controller
+stage_domain: INTEGRATION_PROGRAM
+mission: Validate that I04 paper-only runtime outputs can be replayed by P09 and governed by P10 into controlled upgrade packages without crossing safety boundaries.
+responsibilities:
+  - ingest I04 to I05 handoff
+  - ingest P09 review replay input packet
+  - validate P09 replay, attribution, calibration, and P10 data request
+  - validate P10 upgrade ingestion, review, sample support, overfit, package, regression, rollback
+  - validate trace, handoff, and acceptance closure
+  - produce maturity scorecard, paper readiness, next iteration task packet, final report, and acceptance result
+forbidden:
+  - new business phase
+  - P01-P10 logic mutation
+  - direct schema_contract_policy_mutation
+  - P10 package deployment
+  - live execution
+  - wallet signing
+  - auto order
+  - auto deploy
+  - single case global upgrade
+upstream:
+  - I04_PAPER_RUNTIME_INTEGRATION
+  - P09_REVIEW_REPLAY_CONTROLLER
+  - P10_SELF_UPGRADE_CONTROLLER
+downstream:
+  - PAPER_ONLY_NEXT_ITERATION
+  - CONTROLLED_UPGRADE_TASK_QUEUE
+  - GOVERNANCE_REVIEW
+status_codes:
+  - I05_UNINITIALIZED
+  - I05_CONTEXT_LOADED
+  - I05_HANDOFF_READ
+  - I05_INPUT_MANIFEST_BUILT
+  - I05_P09_REPLAY_VALIDATED
+  - I05_P10_UPGRADE_VALIDATED
+  - I05_TRACE_HANDOFF_ACCEPTANCE_VALIDATED
+  - I05_READY
+  - I05_READY_WITH_GAPS
+  - I05_REJECTED
+  - I05_BLOCKED

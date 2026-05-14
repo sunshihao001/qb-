@@ -1,0 +1,45 @@
+doc_id: DOC-20260513-H00-4
+source_type: user_uploaded_markdown
+source_name: H00-4__REAL_DOWNSTREAM_QUEUE_READY_WITH_GAPS.md
+received_at: '2026-05-13'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-H00-4_H00_REAL_DOWNSTREAM_QUEUE_READY_WITH_GAPS.md
+sha256: f31af290713362304f1188dc73a5b1724672d8a00d1663296e59935bbc1d6352
+document_role:
+  primary_role: H00_REAL_DOWNSTREAM_QUEUE implementation task spec
+  secondary_roles:
+  - handoff_controller_spec
+  - downstream_queue_contract
+  - acceptance_gate_spec
+  - test_plan
+summary:
+  core_intent: 建立并执行 H00_REAL_DOWNSTREAM_QUEUE_READY_WITH_GAPS 阶段，将 A00 验收结果转成真实下游队列和交接包。
+  key_points:
+  - H00只生成queue与handoff，不执行下游任务
+  - 必须读取A00 handoff/readiness/evidence/gaps
+  - 必须生成target inventory/capability/routing/queue/dependency/priority/gap-risk/handoff/state/report
+  - 最终状态必须READY_WITH_GAPS并保留forbidden actions
+system_mapping:
+  planes:
+  - handoff
+  - queue
+  - acceptance
+  - trace_audit
+  - governance_boundary
+  affected_phases:
+  - K00
+  - A00
+  - H00
+  - U00
+  - G00
+  - O00
+  - PXX
+  - IXX
+  - R00
+required_actions:
+- create H00 system package
+- create h00 tools
+- create h00 tests via TDD
+- run h00 executor in safe_mode
+- verify evidence bundle
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

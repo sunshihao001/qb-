@@ -1,0 +1,22 @@
+methodology_implementation_trace_matrix:
+  - requirement: system_methodology_blueprint_exists
+    implemented_by: 00_methodology/system_methodology_blueprint.md
+    status: CONSUMED_BY_P00
+  - requirement: P00_system_bootstrap_controller_exists
+    implemented_by: 06_phase_controllers/P00_system_bootstrap_controller/controller.yaml
+    status: IMPLEMENTED
+  - requirement: control_plane_exists
+    implemented_by: 00_control/current_system_state.json
+    status: IMPLEMENTED
+  - requirement: governance_plane_exists
+    implemented_by: 00_governance/governance_plane.md
+    status: IMPLEMENTED
+  - requirement: domain_plane_exists
+    implemented_by: 00_domain/domain_plane.md
+    status: IMPLEMENTED_STUB
+  - requirement: data_plane_exists
+    implemented_by: 00_data/data_plane.md
+    status: IMPLEMENTED_NEEDS_ACCEPTANCE
+  - requirement: P01_blocked_before_data_plane_acceptance
+    implemented_by: 00_control/current_system_state.json
+    status: ENFORCED

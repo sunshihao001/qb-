@@ -1,0 +1,33 @@
+{
+  "handoff_id": "K00_TO_P00_DOC-20260511-027",
+  "source_stage": "K00_knowledge_intake_taskization",
+  "target_stage": "P00_system_bootstrap_controller",
+  "included_assets": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-027_handoff_plane_v2.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/passports/DOC-20260511-027_document_passport.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/methodology_extracts/DOC-20260511-027_handoff_plane_methodology_extract.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/phase_controller_candidates/DOC-20260511-027_phase_controller_candidate_spec.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/gap_reports/DOC-20260511-027_gap_report.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/DOC-20260511-027_handoff_plane_task_package.json"
+  ],
+  "known_gaps": [
+    "handoff_validator.py not code-implemented",
+    "field usage permission not yet enforced in code",
+    "limitation tag propagation not runtime-hooked",
+    "legacy artifact handoff requires LIMITED/OBSERVE_ONLY policy",
+    "Tool Binding/Paper Runtime/Review Upgrade handoff samples not yet available"
+  ],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "handoff_validator.py not code-implemented",
+    "field usage permission not yet enforced in code",
+    "limitation tag propagation not runtime-hooked",
+    "legacy artifact handoff requires LIMITED/OBSERVE_ONLY policy",
+    "Tool Binding/Paper Runtime/Review Upgrade handoff samples not yet available"
+  ],
+  "acceptance_status": "K00_ASSETIZED_READY_FOR_P00",
+  "next_legal_stage": "HANDOFF_PLANE_PROFESSIONAL_DESIGN",
+  "consumption_required": true,
+  "paper_only": true,
+  "real_trade_enabled": false
+}

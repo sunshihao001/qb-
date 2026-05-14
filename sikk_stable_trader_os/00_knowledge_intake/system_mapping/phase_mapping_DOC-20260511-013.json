@@ -1,0 +1,15 @@
+{
+  "doc_id": "DOC-20260511-013",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T14:02:26.798325+00:00",
+  "phase": "K00",
+  "phase_target_data_path": "06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.yaml",
+  "raw_user_proposed_path": "06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.raw_user_proposed.yaml",
+  "downstream_consumers": [
+    "P00_system_bootstrap_controller"
+  ],
+  "handoff_outputs": [
+    "task_package_to_P00"
+  ],
+  "status_enum_reconciliation_required": true
+}

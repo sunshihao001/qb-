@@ -1,0 +1,6 @@
+doc_id: I01_full_phase_consistency_audit_v1_0
+known_gaps:
+- Actual audit depends on existing P01-P10 artifacts and may report READY_WITH_GAPS
+  if index coverage/naming is incomplete.
+blocking_gaps_from_doc: []
+status: K00_TASKIZATION_READY

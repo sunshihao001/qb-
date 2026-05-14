@@ -1,0 +1,312 @@
+record_id: schema_contract_coverage_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+per_phase_coverage:
+- phase_id: P01
+  required_schemas:
+  - phase core object schemas
+  existing_schemas:
+  - token_identity_resolution_schema.yaml
+  - candidate_source_event_schema.yaml
+  - dedup_resolution_schema.yaml
+  - intake_time_context_schema.yaml
+  - candidate_master_record_schema.yaml
+  - discovery_context_schema.yaml
+  - pool_identity_resolution_schema.yaml
+  missing_schemas: []
+  required_contracts:
+  - input/output/handoff/data_request contracts
+  existing_contracts:
+  - candidate_intake_handoff_contract.yaml
+  - p01_output_contract.yaml
+  - p01_input_contract.yaml
+  - p02_data_request_packet_contract.yaml
+  missing_contracts: []
+  coverage_score: 1.0
+  coverage_status: COMPLETE
+- phase_id: P02
+  required_schemas:
+  - phase core object schemas
+  existing_schemas: []
+  missing_schemas:
+  - phase core object schemas
+  required_contracts:
+  - input/output/handoff/data_request contracts
+  existing_contracts: []
+  missing_contracts:
+  - input/output/handoff/data_request contracts
+  coverage_score: 0.0
+  coverage_status: WITH_GAPS
+- phase_id: P03
+  required_schemas:
+  - phase core object schemas
+  existing_schemas:
+  - funding_flow_edge_record_schema.yaml
+  - distribution_receiver_candidate_schema.yaml
+  - wallet_address_record_schema.yaml
+  - wallet_temporal_behavior_record_schema.yaml
+  - sync_behavior_group_candidate_schema.yaml
+  - wallet_position_fact_record_schema.yaml
+  - counterparty_wallet_candidate_schema.yaml
+  - profit_collection_candidate_schema.yaml
+  - wallet_entity_quality_record_schema.yaml
+  - wallet_entity_master_record_schema.yaml
+  - wallet_role_candidate_schema.yaml
+  - wallet_token_behavior_record_schema.yaml
+  - wallet_entity_resolution_record_schema.yaml
+  - wallet_history_seed_schema.yaml
+  - funding_source_link_record_schema.yaml
+  - wallet_amount_pattern_record_schema.yaml
+  - same_source_group_candidate_schema.yaml
+  missing_schemas: []
+  required_contracts:
+  - input/output/handoff/data_request contracts
+  existing_contracts:
+  - p03_to_p04_handoff_contract.yaml
+  - p04_chip_structure_data_request_packet_contract.yaml
+  - p03_output_contract.yaml
+  - p03_input_contract.yaml
+  missing_contracts: []
+  coverage_score: 1.0
+  coverage_status: COMPLETE
+- phase_id: P04
+  required_schemas:
+  - phase core object schemas
+  existing_schemas:
+  - same_source_group_holding_schema.yaml
+  - supply_denominator_schema.yaml
+  - chip_transfer_status_schema.yaml
+  - chip_exit_flow_schema.yaml
+  - chip_structure_quality_schema.yaml
+  - early_wallet_cohort_schema.yaml
+  - cohort_definition_schema.yaml
+  - distribution_progress_schema.yaml
+  - chip_participant_universe_schema.yaml
+  - chip_concentration_schema.yaml
+  - early_wallet_retention_schema.yaml
+  - counterparty_pressure_schema.yaml
+  - structural_group_holding_schema.yaml
+  - chip_structure_score_schema.yaml
+  - chip_cost_basis_schema.yaml
+  - chip_accounting_record_schema.yaml
+  - sync_group_holding_schema.yaml
+  missing_schemas: []
+  required_contracts:
+  - input/output/handoff/data_request contracts
+  existing_contracts:
+  - p04_output_contract.yaml
+  - p04_input_contract.yaml
+  - p05_evidence_data_request_packet_contract.yaml
+  - p04_to_p05_handoff_contract.yaml
+  missing_contracts: []
+  coverage_score: 1.0
+  coverage_status: COMPLETE
+- phase_id: P05
+  required_schemas:
+  - phase core object schemas
+  existing_schemas:
+  - evidence_usage_permission_schema.yaml
+  - evidence_sufficiency_schema.yaml
+  - hypothesis_frame_schema.yaml
+  - evidence_chain_schema.yaml
+  - unknown_evidence_schema.yaml
+  - evidence_bundle_schema.yaml
+  - supporting_evidence_schema.yaml
+  - counter_evidence_schema.yaml
+  - evidence_object_schema.yaml
+  - alternative_explanation_schema.yaml
+  - evidence_weight_schema.yaml
+  - evidence_input_manifest_schema.yaml
+  - evidence_conflict_schema.yaml
+  - weak_evidence_schema.yaml
+  - evidence_subject_registry_schema.yaml
+  missing_schemas: []
+  required_contracts:
+  - input/output/handoff/data_request contracts
+  existing_contracts:
+  - p06_scenario_data_request_packet_contract.yaml
+  - p05_output_contract.yaml
+  - p05_input_contract.yaml
+  - p05_to_p06_handoff_contract.yaml
+  missing_contracts: []
+  coverage_score: 1.0
+  coverage_status: COMPLETE
+- phase_id: P06
+  required_schemas:
+  - phase core object schemas
+  existing_schemas:
+  - scenario_rejection_schema.yaml
+  - scenario_confidence_schema.yaml
+  - scenario_transition_schema.yaml
+  - primary_scenario_candidate_schema.yaml
+  - scenario_watch_condition_schema.yaml
+  - secondary_scenario_candidate_schema.yaml
+  - scenario_invalidation_schema.yaml
+  - scenario_context_interpretation_schema.yaml
+  - scenario_risk_flag_schema.yaml
+  - scenario_conflict_schema.yaml
+  - scenario_feature_map_schema.yaml
+  - scenario_usage_permission_schema.yaml
+  - scenario_input_manifest_schema.yaml
+  - scenario_unknown_schema.yaml
+  - scenario_candidate_schema.yaml
+  missing_schemas: []
+  required_contracts:
+  - input/output/handoff/data_request contracts
+  existing_contracts:
+  - p06_input_contract.yaml
+  - p07_strategy_gate_data_request_packet_contract.yaml
+  - p06_to_p07_handoff_contract.yaml
+  - p06_output_contract.yaml
+  missing_contracts: []
+  coverage_score: 1.0
+  coverage_status: COMPLETE
+- phase_id: P07
+  required_schemas:
+  - phase core object schemas
+  existing_schemas:
+  - data_quality_gate_evaluation_schema.yaml
+  - market_position_context_gate_schema.yaml
+  - strategy_block_reason_schema.yaml
+  - chip_structure_gate_evaluation_schema.yaml
+  - strategy_gate_decision_schema.yaml
+  - strategy_candidate_schema.yaml
+  - scenario_conflict_gate_schema.yaml
+  - strategy_usage_permission_schema.yaml
+  - strategy_invalidation_binding_schema.yaml
+  - observe_condition_schema.yaml
+  - evidence_gate_evaluation_schema.yaml
+  - human_confirmation_requirement_schema.yaml
+  - pause_condition_schema.yaml
+  - strategy_risk_flag_evaluation_schema.yaml
+  - scenario_gate_evaluation_schema.yaml
+  - strategy_pattern_fit_schema.yaml
+  - strategy_gate_input_manifest_schema.yaml
+  - hard_negative_evaluation_schema.yaml
+  missing_schemas: []
+  required_contracts:
+  - input/output/handoff/data_request contracts
+  existing_contracts:
+  - p07_to_p08_handoff_contract.yaml
+  - p07_input_contract.yaml
+  - p07_output_contract.yaml
+  - p08_execution_risk_data_request_packet_contract.yaml
+  missing_contracts: []
+  coverage_score: 1.0
+  coverage_status: COMPLETE
+- phase_id: P08
+  required_schemas:
+  - phase core object schemas
+  existing_schemas:
+  - circuit_breaker_schema.yaml
+  - liquidity_depth_schema.yaml
+  - security_recheck_schema.yaml
+  - freshness_recheck_schema.yaml
+  - position_uniqueness_schema.yaml
+  - execution_risk_input_manifest_schema.yaml
+  - wallet_delta_refresh_requirement_schema.yaml
+  - execution_cost_model_schema.yaml
+  - sellability_risk_schema.yaml
+  - quote_consistency_schema.yaml
+  - execution_risk_refresh_request_schema.yaml
+  - quote_snapshot_schema.yaml
+  - execution_risk_block_reason_schema.yaml
+  - slippage_estimation_schema.yaml
+  - p07_candidate_validity_check_schema.yaml
+  - invalidation_precheck_schema.yaml
+  - paper_entry_simulation_plan_schema.yaml
+  - paper_runtime_permission_schema.yaml
+  - runtime_risk_limit_schema.yaml
+  missing_schemas: []
+  required_contracts:
+  - input/output/handoff/data_request contracts
+  existing_contracts:
+  - p08_input_contract.yaml
+  - p08_output_contract.yaml
+  - p08_to_paper_runtime_handoff_contract.yaml
+  - paper_runtime_data_request_packet_contract.yaml
+  missing_contracts: []
+  coverage_score: 1.0
+  coverage_status: COMPLETE
+- phase_id: P09
+  required_schemas:
+  - phase core object schemas
+  existing_schemas:
+  - invalidation_trigger_analysis_schema.yaml
+  - success_attribution_schema.yaml
+  - failure_attribution_schema.yaml
+  - review_case_record_schema.yaml
+  - decision_chain_reconstruction_schema.yaml
+  - false_negative_schema.yaml
+  - threshold_sensitivity_schema.yaml
+  - false_positive_schema.yaml
+  - p05_evidence_feedback_schema.yaml
+  - model_calibration_candidate_schema.yaml
+  - replay_input_snapshot_schema.yaml
+  - p07_gate_feedback_schema.yaml
+  - missed_opportunity_schema.yaml
+  - p09_acceptance_result_schema.yaml
+  - upgrade_candidate_record_schema.yaml
+  - p08_risk_feedback_schema.yaml
+  - risk_rule_effectiveness_schema.yaml
+  - calibration_candidate_schema.yaml
+  - phase_replay_step_schema.yaml
+  - p06_scenario_feedback_schema.yaml
+  - snapshot_lock_schema.yaml
+  - runtime_path_reconstruction_schema.yaml
+  - outcome_evaluation_schema.yaml
+  missing_schemas: []
+  required_contracts:
+  - input/output/handoff/data_request contracts
+  existing_contracts:
+  - p10_upgrade_candidate_data_request_packet_contract.yaml
+  - p09_input_contract.yaml
+  - p09_to_p10_handoff_contract.yaml
+  - p09_output_contract.yaml
+  missing_contracts: []
+  coverage_score: 1.0
+  coverage_status: COMPLETE
+- phase_id: P10
+  required_schemas:
+  - phase core object schemas
+  existing_schemas:
+  - tool_binding_upgrade_proposal_schema.yaml
+  - overfit_risk_assessment_schema.yaml
+  - upgrade_decision_schema.yaml
+  - upgrade_impact_assessment_schema.yaml
+  - controlled_upgrade_task_packet_schema.yaml
+  - release_and_rollback_plan_schema.yaml
+  - controlled_upgrade_package_schema.yaml
+  - rule_policy_upgrade_proposal_schema.yaml
+  - contract_schema_upgrade_proposal_schema.yaml
+  - upgrade_approval_requirement_schema.yaml
+  - version_change_record_schema.yaml
+  - upgrade_classification_schema.yaml
+  - upgrade_candidate_review_schema.yaml
+  - compatibility_assessment_schema.yaml
+  - upgrade_input_manifest_schema.yaml
+  - report_explanation_upgrade_proposal_schema.yaml
+  - test_matrix_upgrade_schema.yaml
+  - sample_support_assessment_schema.yaml
+  - regression_test_plan_schema.yaml
+  - upgrade_backlog_schema.yaml
+  - parameter_calibration_proposal_schema.yaml
+  - runtime_model_upgrade_proposal_schema.yaml
+  missing_schemas: []
+  required_contracts:
+  - input/output/handoff/data_request contracts
+  existing_contracts:
+  - p10_output_contract.yaml
+  - contract_schema_upgrade_proposal_schema.yaml
+  - p10_input_contract.yaml
+  - p10_to_implementation_handoff_contract.yaml
+  missing_contracts: []
+  coverage_score: 1.0
+  coverage_status: COMPLETE
+global_coverage:
+  total_required_schemas: 10
+  total_existing_schemas: 9
+  total_missing_schemas: 1
+  total_required_contracts: 10
+  total_existing_contracts: 9
+  total_missing_contracts: 1
+critical_missing: []

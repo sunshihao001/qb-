@@ -1,0 +1,39 @@
+meta:
+  standard_id: S00_SCOPE_BOUNDARY
+  producer: S00_unified_system_standardization
+  consumer:
+  - K00
+  - P00
+  - R00
+  - P01-P10
+  - P08
+  - P09
+  - P10
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+scope:
+  in_scope:
+  - goals
+  - methods
+  - entities
+  - field_lineage
+  - field_permissions
+  - schema_contracts
+  - runner_binding
+  - trace_acceptance_handoff
+  - R00 validation
+  - P08 permission
+  - P09/P10 review upgrade
+  - issue task registry
+  - legacy absorption
+  - sample regression rollback
+  - security boundary
+  out_of_scope:
+  - real trading execution
+  - private key handling
+  - automatic live rule promotion
+  - moving/deleting legacy runtime outputs
+  canonical_root: /root/sikk-gmgn/system/unified_standardization

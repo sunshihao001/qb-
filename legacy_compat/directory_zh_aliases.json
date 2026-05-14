@@ -1,0 +1,132 @@
+{
+  "updated_at": "2026-05-06T03:48:15+00:00",
+  "policy": "english_real_path_chinese_display_only",
+  "mapping": [
+    {
+      "english": "data/source_wallet_bot",
+      "chinese_display": "数据/钱包事实",
+      "purpose": "钱包事实采集、标准化、同源关系、资金路径、地址历史",
+      "write_policy": "new_primary_write_path"
+    },
+    {
+      "english": "data/intel_bot",
+      "chinese_display": "数据/行为推断",
+      "purpose": "主导侧行为动机推断、筹码控制状态、行为解释",
+      "write_policy": "new_primary_write_path"
+    },
+    {
+      "english": "research_loop/methodology",
+      "chinese_display": "研究循环/方法论库",
+      "purpose": "判断逻辑、反证规则、量化模型、字段合约、输出合约",
+      "write_policy": "method_library"
+    },
+    {
+      "english": "research_loop/structure_analysis",
+      "chinese_display": "研究循环/结构分析流水线",
+      "purpose": "护照、逻辑库、字段合约、模块地图、反证、量化、推断、输出、任务票、状态",
+      "write_policy": "workflow_pipeline"
+    },
+    {
+      "english": "legacy_compat",
+      "chinese_display": "旧路径兼容层",
+      "purpose": "old_path→new_path 映射、fallback 说明、只读兼容索引",
+      "write_policy": "index_only"
+    },
+    {
+      "english": "imports",
+      "chinese_display": "导入暂存区",
+      "purpose": "外部资料 staging 导入、历史包、原始导入文件",
+      "write_policy": "staging_only"
+    },
+    {
+      "english": "reports",
+      "chinese_display": "报告区",
+      "purpose": "审计、验收、汇总、人类可读输出",
+      "write_policy": "human_readable"
+    },
+    {
+      "english": "docs",
+      "chinese_display": "文档区",
+      "purpose": "系统宪法、目录规则、协议、设计说明、使用方法",
+      "write_policy": "documentation"
+    },
+    {
+      "english": "contracts",
+      "chinese_display": "合同区",
+      "purpose": "Bot 交接合同、模块合同、输出合约、权责边界",
+      "write_policy": "contracts"
+    },
+    {
+      "english": "schemas",
+      "chinese_display": "Schema区",
+      "purpose": "JSON schema、manifest schema、统一数据结构",
+      "write_policy": "schemas"
+    },
+    {
+      "english": "modules",
+      "chinese_display": "代码模块区",
+      "purpose": "collector、router、normalizer、validator、inference engine",
+      "write_policy": "code"
+    },
+    {
+      "english": "scripts",
+      "chinese_display": "脚本区",
+      "purpose": "迁移脚本、导入脚本、整理脚本、校验脚本",
+      "write_policy": "scripts"
+    },
+    {
+      "english": "tests",
+      "chinese_display": "测试区",
+      "purpose": "pytest、合约测试、路由测试、校验器测试",
+      "write_policy": "tests"
+    },
+    {
+      "english": "tools",
+      "chinese_display": "工具区",
+      "purpose": "通用辅助工具",
+      "write_policy": "tools"
+    },
+    {
+      "english": "knowledge",
+      "chinese_display": "知识库",
+      "purpose": "吸收后的长期知识、规则摘要、经验沉淀",
+      "write_policy": "knowledge"
+    },
+    {
+      "english": "ai_context",
+      "chinese_display": "AI上下文材料",
+      "purpose": "上下文导出、辅助理解材料",
+      "write_policy": "context"
+    },
+    {
+      "english": "audits",
+      "chinese_display": "审计区",
+      "purpose": "历史审计材料",
+      "write_policy": "audit"
+    },
+    {
+      "english": "data/gmgn_candidates_live_run",
+      "chinese_display": "历史运行冻结区",
+      "purpose": "旧 live run、混合输出、历史保留",
+      "write_policy": "legacy_keep_in_place"
+    },
+    {
+      "english": "outputs",
+      "chinese_display": "旧输出区",
+      "purpose": "旧输出，后续不作为主写路径",
+      "write_policy": "legacy_keep_in_place"
+    },
+    {
+      "english": "结构分析",
+      "chinese_display": "旧结构分析资料区",
+      "purpose": "旧结构分析备份/参考",
+      "write_policy": "legacy_keep_in_place"
+    },
+    {
+      "english": "钱包数据分析",
+      "chinese_display": "旧钱包数据分析区",
+      "purpose": "旧钱包数据分析备份/参考",
+      "write_policy": "legacy_keep_in_place"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "doc_id": "DOC-20260511-020",
+  "title": "Bootstrap Control Plane 专业机构级别完善版 v2.0",
+  "anchors": [
+    "启动控制数据模型",
+    "current_system_state.json",
+    "phase_registry.yaml",
+    "task_queue.bootstrap.json",
+    "bootstrap_to_system_planes_handoff_packet.json",
+    "schemas",
+    "rules",
+    "audit/bootstrap_event_log.jsonl",
+    "recovery_policy.yaml",
+    "control_plane_integrity_manifest.json",
+    "BOOTSTRAP_READY"
+  ],
+  "key_claims": [
+    "Bootstrap Control Plane 不是完整运行控制面，而是启动阶段权威状态裁决层。",
+    "完成后仍不能进入 P01。",
+    "下一合法阶段仍是 SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE。"
+  ]
+}

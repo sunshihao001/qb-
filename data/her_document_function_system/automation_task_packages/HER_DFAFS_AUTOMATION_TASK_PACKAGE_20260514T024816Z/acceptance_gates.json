@@ -1,0 +1,115 @@
+{
+  "gate_id": "HER_DFAFS_AUTOMATION_TASK_PACKAGE_20260514T024816Z_ACCEPTANCE_GATES",
+  "global_status_rule": {
+    "ready_with_gaps_is_not_accepted": true,
+    "blocked_claims": [
+      "PRODUCTION_READY",
+      "PIPELINE_ACCEPTED",
+      "POLICY_ACTIVE",
+      "RUNNER_BOUND",
+      "SYSTEM_FULLY_IMPLEMENTED"
+    ],
+    "open_p0_gap_final_status": [
+      "BLOCKED",
+      "READY_WITH_P0_GAPS",
+      "RUNNABLE_WITH_GAPS"
+    ]
+  },
+  "phase_gates": [
+    {
+      "phase": "K00",
+      "required_before_pass": [
+        "controller pack exists",
+        "manifest/input/output/handoff schemas exist",
+        "validate-config passes"
+      ]
+    },
+    {
+      "phase": "O00",
+      "required_before_pass": [
+        "run shape schema exists",
+        "CLI and real runner final_status contract aligned",
+        "legacy compatibility documented"
+      ]
+    },
+    {
+      "phase": "F00",
+      "required_before_pass": [
+        "six asset classes emitted",
+        "evidence_refs present",
+        "no fixed-template-only absorption claim"
+      ]
+    },
+    {
+      "phase": "V00",
+      "required_before_pass": [
+        "schema validation",
+        "field validation",
+        "status validation",
+        "handoff ref validation",
+        "forbidden claim scan"
+      ]
+    },
+    {
+      "phase": "A00",
+      "required_before_pass": [
+        "artifact manifest",
+        "phase status matrix",
+        "evidence bundle",
+        "gap propagation report"
+      ]
+    },
+    {
+      "phase": "H00/U00/G00",
+      "required_before_pass": [
+        "review-required patch proposals",
+        "candidate-only governance handoff",
+        "no production policy activation"
+      ]
+    }
+  ],
+  "per_task_acceptance": {
+    "TASK-P0-001": [
+      "K00 controller directory exists",
+      "all required files exist",
+      "registry/config reference K00 controller path",
+      "validate-config passes",
+      "asset test passes"
+    ],
+    "TASK-P0-002": [
+      "run-document outputs input/k00/f00/v00/a00/h00/u00/g00/o00/recovery/trace/audit/report",
+      "CLI and real runner expose same final_status contract",
+      "legacy path semantics documented"
+    ],
+    "TASK-P0-003": [
+      "six asset classes always present",
+      "plans generated from actual text/evidence refs",
+      "tests cover non-empty and empty extraction paths"
+    ],
+    "TASK-P1-004": [
+      "schema/field/status/ref validation artifacts emitted",
+      "open gaps preserved",
+      "tests fail on missing required fields"
+    ],
+    "TASK-P1-005": [
+      "artifact manifest covers G00/O00/K00/F00/V00/R00/A00/H00/U00",
+      "open gaps force RUNNABLE_WITH_GAPS or BLOCKED",
+      "tests cover false-ready guard"
+    ],
+    "TASK-P1-006": [
+      "each O00 run registers index entry",
+      "snapshot shows latest phase status and gap counts",
+      "tests cover append-only behavior"
+    ],
+    "TASK-P1-007": [
+      "READY_WITH_GAPS != ACCEPTED enforced",
+      "PRODUCTION_READY requires explicit evidence gates",
+      "tests cover forbidden transitions"
+    ],
+    "TASK-P1-008": [
+      "patch proposals reference source gaps and evidence",
+      "queue remains review-required",
+      "G00 candidates remain candidate-only"
+    ]
+  }
+}

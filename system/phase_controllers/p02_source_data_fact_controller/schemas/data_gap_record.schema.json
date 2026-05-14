@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "data_gap_record",
+  "type": "object",
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "candidate_id": {
+      "type": "string"
+    },
+    "source_trace": {
+      "type": "array"
+    },
+    "quality_status": {
+      "type": "string"
+    },
+    "downstream_usage_limit": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

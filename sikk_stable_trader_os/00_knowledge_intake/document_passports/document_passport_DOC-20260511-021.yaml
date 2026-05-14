@@ -1,0 +1,58 @@
+doc_id: DOC-20260511-021
+source_type: user_uploaded_markdown
+source_name: Governance Plane：治理平面专业机构化设计 v2.0.md
+received_at: '2026-05-11'
+ingested_at: '2026-05-11T16:07:09Z'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-021_governance_plane_v2_institutional_design.md
+checksum_sha256: 0d463e529dc665f436af4885bc09f47fa500d4b87ef01776908c3c31332ca6da
+document_role:
+  primary_role: Governance Plane v2.0 institutional design and landing taskbook
+  secondary_roles:
+  - stage authority model
+  - hard negative policy
+  - evidence language policy
+  - assumption control
+  - domain/data/control constraints
+  - readiness gate
+summary:
+  core_intent: 将 Governance Plane 从规则说明升级为系统权限与风险裁决平面，先于 Domain/Data 建立并阻断 P01 越权。
+  key_points:
+  - 治理平面不分析 token、不判断钱包、不产生交易信号、不运行 paper trade
+  - 覆盖 K00-P10 阶段 authority boundary 与 can/cannot 权限矩阵
+  - P0 硬否定包括真实交易、P01 绕过 Data Plane、paper runner 绕过 P06/P07、复盘直接改规则
+  - 限制确定性语言，禁止缺失字段靠推断补齐
+  - 输出 Governance→Domain/Data/Control 正式约束和 readiness gate
+  - 完成后仍不能进入 P01，下一步是 Domain/Data 等系统平面继续生成验收
+system_mapping:
+  planes:
+  - Knowledge Plane
+  - Governance Plane
+  - Control Plane
+  - Domain Plane
+  - Data Plane
+  - Trace Plane
+  - Acceptance Plane
+  - Handoff Plane
+  affected_phases:
+  - K00
+  - P00
+  - P01
+  - P02
+  - P03
+  - P04
+  - P05
+  - P06
+  - P07
+  - P08
+  - P09
+  - P10
+required_actions:
+- preserve_raw_input
+- create_governance_plane_files
+- create_governance_schemas
+- create_governance_handoffs
+- create_integrity_manifest
+- run_governance_readiness_gate
+- write_control_state_without_unblocking_p01
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

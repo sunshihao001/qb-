@@ -1,0 +1,55 @@
+p10_test_matrix:
+- test_id: P10_TEST_001
+  name: P09 handoff valid and multi-sample supported schema proposal
+  expected_status: P10_READY
+- test_id: P10_TEST_002
+  name: missing P09 handoff
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_003
+  name: no upgrade candidate
+  expected_status: P10_REJECTED
+- test_id: P10_TEST_004
+  name: single sample attempts global threshold change
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_005
+  name: safety critical single sample protective rule
+  expected_status: HUMAN_APPROVAL_REQUIRED
+- test_id: P10_TEST_006
+  name: no impact assessment
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_007
+  name: no overfit risk assessment
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_008
+  name: breaking contract without migration
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_009
+  name: compatibility unknown
+  expected_status: P10_READY_WITH_GAPS
+- test_id: P10_TEST_010
+  name: no regression test plan
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_011
+  name: no rollback plan
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_012
+  name: auto deploy requested
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_013
+  name: paper runtime requested
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_014
+  name: live execution requested
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_015
+  name: wallet signing requested
+  expected_status: P10_BLOCKED
+- test_id: P10_TEST_016
+  name: tool binding dry-run proposal only
+  expected_status: P10_READY_WITH_GAPS
+- test_id: P10_TEST_017
+  name: report explanation upgrade only
+  expected_status: P10_READY
+- test_id: P10_TEST_018
+  name: controlled upgrade package missing approval requirement
+  expected_status: P10_BLOCKED

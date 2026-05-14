@@ -1,0 +1,18 @@
+build_trace_record:
+  trace_id: string
+  build_controller_id: required
+  methodology_trace_id: required
+  build_task_id: required
+  compile_result: required
+  task_tree: required
+  output_artifacts: required
+  validation: required
+  required_trace_links:
+    - parent_trace_ids
+    - child_trace_ids
+    - related_artifact_trace_ids
+  validation_rules:
+    - trace_id_present
+    - source_present
+    - downstream_usage_declared
+    - forbidden_actions_respected

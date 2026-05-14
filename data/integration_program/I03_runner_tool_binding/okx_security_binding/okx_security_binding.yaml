@@ -1,0 +1,16 @@
+{
+  "okx_security_binding": {
+    "owner_stages": [
+      "P02_SOURCE_DATA_FACT",
+      "P08_EXECUTION_RISK"
+    ],
+    "canonical_outputs": [
+      "security_fact_record",
+      "security_recheck_record"
+    ],
+    "failure_policy": {
+      "security_risk_detected": "BLOCK",
+      "security_unknown_for_required_check": "PAUSE_OR_BLOCK"
+    }
+  }
+}

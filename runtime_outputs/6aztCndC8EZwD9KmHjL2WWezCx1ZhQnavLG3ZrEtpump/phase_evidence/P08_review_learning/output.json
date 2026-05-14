@@ -1,0 +1,32 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P08_review_learning",
+  "artifact_kind": "output",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "review_required": true,
+  "review_windows": [
+    "W1_0_60s",
+    "W2_1_5m",
+    "W3_5_30m",
+    "W4_30m_2h"
+  ],
+  "writeback_targets": [
+    "trade_journal",
+    "wallet_structure_decision",
+    "planbook_gap_register"
+  ],
+  "learning_candidates": [
+    "验证 funding_path_missing 对后续走势的影响",
+    "验证 chase_risk_level 与回撤/追高失败关系",
+    "验证 infra exclusion 与角色矩阵稳定性"
+  ],
+  "memory_policy": "token_specific_findings_do_not_enter_long_term_memory_directly"
+}

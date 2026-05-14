@@ -1,0 +1,15 @@
+report: i01_full_phase_consistency_audit_report
+sections:
+- summary
+- phase_inventory_summary
+- io_alignment_summary
+- handoff_summary
+- schema_contract_summary
+- status_code_summary
+- gap_forbidden_trace_summary
+- boundary_violation_summary
+- runtime_readiness_summary
+- review_upgrade_readiness_summary
+- fix_priority_summary
+- i02_handoff
+- compliance

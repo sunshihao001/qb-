@@ -1,0 +1,21 @@
+acceptance_gate: O00_full_pipeline_orchestrator
+required_checks:
+  g00_policy_bundle_required: true
+  controller_registry_required: true
+  pipeline_run_id_required: true
+  execution_plan_required: true
+  dependency_graph_required: true
+  stage_queue_required: true
+  transition_gates_required: true
+  gap_register_required: true
+  trace_audit_required: true
+  final_report_required: true
+  final_handoff_required: true
+false_pass_rules:
+  ready_with_gaps_must_carry_gap_refs: true
+  forbidden_actions_must_be_inherited: true
+  design_only_must_not_be_marked_implemented: true
+  test_plan_must_not_be_marked_tested: true
+  binding_plan_must_not_be_marked_runner_bound: true
+  final_report_must_output_true_pipeline_status: true
+blocking_conditions: [missing_g00_policy_bundle, missing_controller_registry, missing_pipeline_run_id, missing_required_handoff, missing_acceptance_evidence, blocking_gap, forbidden_action_attempted]

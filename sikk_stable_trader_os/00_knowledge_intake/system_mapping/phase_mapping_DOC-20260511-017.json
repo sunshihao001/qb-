@@ -1,0 +1,27 @@
+{
+  "doc_id": "DOC-20260511-017",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T14:25:39.844562+00:00",
+  "phase": "Data Plane",
+  "phase_target_data_path": "00_data/data_phase_target_data.yaml",
+  "raw_user_proposed_path": "00_data/data_phase_target_data.raw_user_proposed.yaml",
+  "downstream_consumers": [
+    "P01_data_fact_controller",
+    "P02_wallet_structure_controller",
+    "P03_chip_control_controller",
+    "P04_market_structure_controller"
+  ],
+  "handoff_outputs": [
+    "data_plane_handoff_packet",
+    "p01_data_fact_task_package",
+    "field_source_map",
+    "normalized_fact_model"
+  ],
+  "phase_links": {
+    "P01": "consumes normalized facts and input contract",
+    "P02": "consumes wallet/entity/funding fields",
+    "P03": "consumes chip/control evidence fields",
+    "P04": "consumes market structure fields"
+  },
+  "status_enum_reconciliation_required": true
+}

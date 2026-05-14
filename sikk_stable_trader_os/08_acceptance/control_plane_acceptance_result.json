@@ -1,0 +1,59 @@
+{
+  "acceptance_id": "P00_FULL_CONTROL_ACCEPTANCE_20260511",
+  "doc_id": "DOC-20260511-024",
+  "validated_at": "2026-05-11T16:52:06Z",
+  "control_root": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane",
+  "required_files_count": 30,
+  "missing_required_files": [],
+  "parse_errors": [],
+  "checks": {
+    "global_plane_registry_exists": true,
+    "phase_controller_registry_exists": true,
+    "dependency_graph_exists": true,
+    "contract_router_exists": true,
+    "input_output_contracts_exist": true,
+    "acceptance_gate_registry_exists": true,
+    "state_machine_exists": true,
+    "permission_matrix_exists": true,
+    "failure_handler_exists": true,
+    "gap_register_exists": true,
+    "audit_model_exists": true,
+    "handoff_exists": true,
+    "her_protocol_exists": true,
+    "legacy_policy_exists": true,
+    "safety_boundary_preserved": true
+  },
+  "file_level_passed": true,
+  "structure_level_passed": true,
+  "semantic_level_passed": true,
+  "safety_boundary_level_passed": true,
+  "forbidden_logic_detected": false,
+  "forbidden_hits": [],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "phase_controllers_not_all_code_implemented",
+    "acceptance_gates_not_all_automated",
+    "legacy_mapping_not_scanned",
+    "skill_tool_registry_not_runtime_verified",
+    "handoff_not_integration_tested",
+    "state_machine_not_attached_to_real_orchestrator",
+    "telegram_dashboard_not_connected",
+    "governance_domain_data_reverse_audit_not_yet_completed_after_full_control_landing"
+  ],
+  "acceptance_result": "CONTROL_READY_WITH_GAPS",
+  "verification_passed": true,
+  "readiness": {
+    "file_contract_control_plane_readiness": "CONTROL_READY_WITH_GAPS",
+    "system_production_readiness": "BLOCKED",
+    "reason": "Full Control Plane is a control/contract foundation; live production, P01 runtime, paper runtime, and real trade remain blocked until runtime collectors, replay fixtures, evidence plane, strategy gates, and execution risk acceptance pass."
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false,
+    "p01_runtime_connection_allowed": false,
+    "private_key_allowed": false,
+    "seed_phrase_allowed": false
+  },
+  "next_legal_stage": "FULL_CONTROL_REVERSE_AUDIT_GOVERNANCE_DOMAIN_DATA_THEN_P04_EVIDENCE_PLANE_DESIGN"
+}

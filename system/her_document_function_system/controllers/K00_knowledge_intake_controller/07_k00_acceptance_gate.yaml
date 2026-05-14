@@ -1,0 +1,20 @@
+acceptance_gate:
+  phase_id: K00
+  required_checks:
+    - handoff_packet_exists
+    - document_passport_refs_present
+    - corpus_index_refs_present
+    - system_mapping_refs_present
+    - gap_detection_refs_present
+    - execution_boundary_present
+    - write_policy_present
+    - repo_root_present
+  accepted_status:
+    - K00_HANDOFF_READY
+    - K00_READY_WITH_GAPS
+  blocked_status:
+    - K00_BLOCKED
+    - K00_DESIGN_ONLY
+  downstream_allowed_when:
+    - K00_HANDOFF_READY
+    - K00_READY_WITH_GAPS

@@ -1,0 +1,54 @@
+packet_id: i01_to_i02_handoff_001
+packet_type: I01_TO_I02_CONSISTENCY_AUDIT_HANDOFF
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+route:
+  from: I01_FULL_PHASE_CONSISTENCY_AUDIT
+  to: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+audit_scope:
+  audited_phases:
+  - P01
+  - P02
+  - P03
+  - P04
+  - P05
+  - P06
+  - P07
+  - P08
+  - P09
+  - P10
+audit_outputs:
+  phase_inventory_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/phase_inventory/phase_inventory.yaml
+  phase_io_alignment_matrix_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/io_alignment/phase_io_alignment_matrix.yaml
+  handoff_chain_integrity_report_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/handoff_chain/handoff_chain_integrity_report.yaml
+  schema_contract_coverage_report_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/schema_contract_coverage/schema_contract_coverage_report.yaml
+  status_code_consistency_report_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/status_code_consistency/status_code_consistency_report.yaml
+  gap_propagation_report_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/gap_propagation/gap_propagation_report.yaml
+  forbidden_use_inheritance_report_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/forbidden_use_inheritance/forbidden_use_inheritance_report.yaml
+  trace_coverage_report_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/trace_coverage/trace_coverage_report.yaml
+  acceptance_coverage_report_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/acceptance_coverage/acceptance_coverage_report.yaml
+  phase_boundary_violation_report_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/boundary_violations/phase_boundary_violation_report.yaml
+  fix_priority_list_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/fix_priority/fix_priority_list.yaml
+i02_required_tasks:
+- create_final_directory_constitution
+- create_contract_index
+- create_schema_index
+- create_handoff_contract_index
+- create_phase_controller_file_index
+- create_runtime_data_path_index
+- create_legacy_path_mapping
+- create_canonical_path_policy
+- resolve_missing_contract_paths
+- resolve_schema_index_gaps
+- standardize_phase_file_names
+- preserve_legacy_runtime_keep_in_place
+blocking_findings:
+  has_blocking_findings: false
+  blocking_finding_ids: []
+permission_to_enter_i02: ALLOWED_WITH_GAPS
+restrictions:
+- I01_AUDIT_ONLY
+- I02_MAY_INDEX_AND_STANDARDIZE
+- I02_MUST_NOT_CHANGE_BUSINESS_LOGIC
+- NO_RUNNER_BINDING_YET
+- NO_PAPER_RUNTIME
+- NO_LIVE_EXECUTION

@@ -1,0 +1,34 @@
+{
+  "record_count": 2,
+  "records": [
+    {
+      "evidence_label": "疑似同源执行组",
+      "evidence_level": "E3",
+      "group_wallets": [
+        "4yXYPyDmsd3DKBhdeTHfrk8QuwJ31ypBEkFXfXWeXXif",
+        "6Y1EjqD6ECKCpXdogo97AgjpR3ngWBusZvo18ksMPjgw",
+        "DMZDEbhzYo7YqLRuSUbhRb5b2BCDJwv1mV6iY8T3BBby",
+        "DVMkhiQe1D8yenuEgsW44NjRn9LfVQjGEpZcez5x7Mff",
+        "FALfx9KvffS1BVmAop1MBAB9HraQuyFSs5hMHAFYSA2q"
+      ],
+      "missing_fields": [],
+      "risk_level": "R2",
+      "same_source_group_id": "SSG-0001",
+      "shared_funding_source": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
+      "shared_token_source": null
+    },
+    {
+      "evidence_label": "疑似同源执行组",
+      "evidence_level": "E3",
+      "group_wallets": [
+        "4R8DQd8YwWjNhpwGkKBahcXTMRj4tgTh4JFpsM7Nh6Wq",
+        "BNEnz1YtUQWH3bRtGaGjipPxHagWLeR8YjFQWmtG3JhJ"
+      ],
+      "missing_fields": [],
+      "risk_level": "R2",
+      "same_source_group_id": "SSG-0002",
+      "shared_funding_source": "F7p3dFrjRTbtRp8FRF6qHLomXbKRBzpvBLjtQcfcgmNe",
+      "shared_token_source": null
+    }
+  ]
+}

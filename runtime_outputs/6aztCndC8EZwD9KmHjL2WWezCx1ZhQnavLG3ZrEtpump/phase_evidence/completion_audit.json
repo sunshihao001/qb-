@@ -1,0 +1,21 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "output_root": "/root/sikk-gmgn/runtime_outputs/6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump/phase_evidence",
+  "phase_count": 9,
+  "expected_phase_count": 9,
+  "missing_files": [],
+  "ca_consistency_passed": true,
+  "safety_boundary_passed": true,
+  "overall_passed": true,
+  "degraded_phases": [
+    "P01_data_fact",
+    "P02_wallet_structure",
+    "P04_scenario_recognition",
+    "P05_structure_position",
+    "P06_strategy_gate",
+    "P07_execution_risk"
+  ],
+  "blocked_phases": [],
+  "scope_note": "完成审计证明 P01-P09 证据展开产物齐全；不代表实盘授权。"
+}

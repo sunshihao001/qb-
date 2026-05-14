@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dry run evidence schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "dry_run_id",
+    "binding_id",
+    "command",
+    "started_at",
+    "ended_at",
+    "exit_code",
+    "stdout_path",
+    "stderr_path",
+    "generated_outputs",
+    "missing_outputs",
+    "trace_path",
+    "audit_path",
+    "status"
+  ],
+  "properties": {
+    "dry_run_id": {
+      "type": "string"
+    },
+    "binding_id": {
+      "type": "string"
+    },
+    "command": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "ended_at": {
+      "type": "string"
+    },
+    "exit_code": {
+      "type": "integer"
+    },
+    "stdout_path": {
+      "type": "string"
+    },
+    "stderr_path": {
+      "type": "string"
+    },
+    "generated_outputs": {
+      "type": "array"
+    },
+    "missing_outputs": {
+      "type": "array"
+    },
+    "trace_path": {
+      "type": "string"
+    },
+    "audit_path": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "BINDING_TESTED",
+        "BINDING_FAILED",
+        "DESIGN_ONLY",
+        "NOT_EXECUTED"
+      ]
+    }
+  }
+}

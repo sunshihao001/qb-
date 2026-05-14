@@ -1,0 +1,16 @@
+{
+  "stage_id": "K01",
+  "run_id": "TEST-KPP-RUNTIME-BINDING",
+  "status": "K01_ACCEPTED",
+  "started_at": "2026-05-14T05:19:22Z",
+  "ended_at": "2026-05-14T05:19:22Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K01/document_passport.json",
+    "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K01/document_type_classification.json",
+    "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K01/k01_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

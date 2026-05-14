@@ -1,0 +1,13 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+contract_id: P07_TO_P08_HANDOFF_CONTRACT
+packet_type: P07_TO_P08_STRATEGY_GATE_HANDOFF
+route: {from_controller: P07_STRATEGY_GATE_CONTROLLER, to_controller: P08_EXECUTION_RISK_CONTROLLER}
+required_sections: [upstream_control, candidate_scope, strategy_gate_package, p08_data_request, quality, limitations, downstream_permission, read_instruction]
+limitations: [STRATEGY_GATE_DECISION_ONLY, PAPER_CANDIDATE_NOT_PAPER_READY, P08_REQUIRED, NO_RUNTIME, LIVE_EXECUTION_FORBIDDEN]
+downstream_permission:
+  allowed: [P08_EXECUTION_RISK_CONTROLLER]
+  forbidden: [PAPER_ONLY_RUNTIME_WITHOUT_P08, LIVE_EXECUTION]
+read_instruction:
+  p08_must_read_first: [p07_to_p08_handoff_packet, p08_execution_risk_data_request_packet, strategy_gate_decision_records, strategy_candidate_records, invalidation_binding_records, strategy_usage_permission_records, hard_negative_evaluation_records]

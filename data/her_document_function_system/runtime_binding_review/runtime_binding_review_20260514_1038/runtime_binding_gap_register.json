@@ -1,0 +1,19 @@
+{
+  "review_id": "runtime_binding_review_20260514_1038",
+  "gap_count": 1,
+  "gaps": [
+    {
+      "gap_id": "RUNTIME_BINDING_GAP_K00",
+      "phase": "K00",
+      "status": "RUNNER_FILE_ONLY_NO_ACCEPTANCE_EVIDENCE",
+      "reason": "Runner file exists but acceptance/runtime evidence is missing.",
+      "required_next_evidence": [
+        "runner_binding_evidence",
+        "contract_test_result",
+        "semantic_replay_result",
+        "handoff_consumption_trace"
+      ],
+      "safety_policy": "Do not upgrade to live runtime; keep safe-mode until explicit acceptance."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "expected_v00_status": "V00_READY_WITH_GAPS",
+  "expected_validations": {
+    "function_mapping_validation": "PASSED",
+    "field_model_validation": "PASSED",
+    "rule_logic_validation": "PASSED",
+    "schema_validation": "PLANNED_OR_DESIGN_ONLY",
+    "contract_validation": "PLANNED_OR_DESIGN_ONLY",
+    "test_evidence": "NOT_EXECUTED_FOR_SAMPLE",
+    "replay_evidence": "REPLAY_DESIGN_READY"
+  },
+  "expected_gaps": [
+    {
+      "gap_type": "test_executor_not_implemented",
+      "gap_level": "MEDIUM_GAP",
+      "can_continue": true
+    }
+  ],
+  "expected_handoff": true,
+  "must_not_claim": [
+    "TESTED"
+  ]
+}

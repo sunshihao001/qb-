@@ -1,0 +1,13 @@
+{
+  "task_id": "hermes.task.20260506.135500.harness_professional_completion",
+  "checkpoint_id": "checkpoint.phase_05",
+  "completed_phase": "phase_05",
+  "verified": true,
+  "next_phase": "phase_06_archive",
+  "resume_command": "continue from phase_06_archive using active_task_state.json",
+  "required_context_files": [
+    "04_task_plans/active_task_context.md",
+    "04_task_plans/phase_plan.md",
+    "05_execution_runs/execution_loop_log.jsonl"
+  ]
+}

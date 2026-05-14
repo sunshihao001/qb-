@@ -1,0 +1,37 @@
+{
+  "queue_id": "u00_upgrade_queue_U00-P01-AUTO-FULL-20260514-004",
+  "queue_items": [
+    {
+      "queue_item_id": "u00_queue_001",
+      "upgrade_candidate_id": "uc_u00_real_001",
+      "target_controller": "U00_REAL",
+      "handoff_target": "U00_REAL",
+      "priority": "P2_MEDIUM",
+      "status": "QUEUED_FOR_DOWNSTREAM_REVIEW",
+      "allowed_actions": [
+        "read_evidence",
+        "validate_contract",
+        "plan_safe_upgrade",
+        "write_downstream_acceptance"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_downstream_task_directly",
+        "modify_production_rules_directly",
+        "drop_unresolved_gaps",
+        "convert_ready_with_gaps_to_ready"
+      ],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    }
+  ],
+  "priority_summary": {
+    "P2_MEDIUM": 1
+  },
+  "blocked_items": [],
+  "deferred_items": []
+}

@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "required": [
+    "packet_id",
+    "from",
+    "to",
+    "status",
+    "artifacts",
+    "restrictions"
+  ],
+  "properties": {
+    "packet_id": {
+      "type": "string"
+    },
+    "from": {
+      "const": "I02_directory_contract_index_unification"
+    },
+    "to": {
+      "const": "I03_runner_tool_binding"
+    },
+    "status": {
+      "type": "string"
+    },
+    "artifacts": {
+      "type": "object"
+    },
+    "restrictions": {
+      "type": "array"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+handoff_id: "P03_TO_P04_HANDOFF_PACKET"
+source: "P03"
+target: "P04"
+consumption_required: true
+included_assets:
+  - "wallet_entity_master"
+  - "entity_resolution"
+  - "funding_links"
+  - "behavior_features"
+  - "group_candidates"
+  - "role_candidates"
+  - "quality"
+  - "gaps"
+known_gaps_required: true

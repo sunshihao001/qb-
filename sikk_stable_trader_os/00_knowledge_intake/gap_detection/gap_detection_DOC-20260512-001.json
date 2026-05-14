@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-20260512-001",
+  "generated_at": "2026-05-12T01:42:26Z",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "P01 runner/tool binding not implemented",
+    "P01 acceptance validator not implemented",
+    "P01→P02 live联调 waits for P02 package",
+    "real GMGN/Telegram input adapters not bound"
+  ],
+  "status": "READY_FOR_PACKAGE_LANDING_WITH_RUNTIME_GAPS"
+}

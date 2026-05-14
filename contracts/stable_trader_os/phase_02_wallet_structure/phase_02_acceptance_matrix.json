@@ -1,0 +1,56 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_02_wallet_structure_controller",
+  "acceptance_items": [
+    {
+      "id": "P02_A01",
+      "name": "input_contract 存在",
+      "required": true,
+      "evidence_path": "contracts/stable_trader_os/phase_02_wallet_structure/phase_02_input_contract.json"
+    },
+    {
+      "id": "P02_A02",
+      "name": "output_contract 存在",
+      "required": true,
+      "evidence_path": "contracts/stable_trader_os/phase_02_wallet_structure/phase_02_output_contract.json"
+    },
+    {
+      "id": "P02_A03",
+      "name": "wallet_structure_decision schema 存在",
+      "required": true,
+      "evidence_path": "schemas/stable_trader_os/phase_02_wallet_structure/wallet_structure_decision.schema.json"
+    },
+    {
+      "id": "P02_A04",
+      "name": "handoff schema 存在",
+      "required": true,
+      "evidence_path": "schemas/stable_trader_os/phase_02_wallet_structure/phase_02_handoff_packet.schema.json"
+    },
+    {
+      "id": "P02_A05",
+      "name": "状态码/硬否决规则存在",
+      "required": true,
+      "evidence_path": "configs/stable_trader_os/phase_02_wallet_structure/"
+    },
+    {
+      "id": "P02_A06",
+      "name": "controller 文档覆盖 2.1-2.16",
+      "required": true,
+      "evidence_path": "skills/sikk_stable_trader_os/phase_controllers/phase_02_wallet_structure_controller.md"
+    },
+    {
+      "id": "P02_A07",
+      "name": "runner 生成 handoff/audit/validation/gaps",
+      "required": true,
+      "evidence_path": "modules/stable_trader_os/phase_02_wallet_structure_controller/runner.py"
+    },
+    {
+      "id": "P02_A08",
+      "name": "pytest 验收通过",
+      "required": true,
+      "evidence_path": "tests/stable_trader_os/phase_02_wallet_structure/"
+    }
+  ],
+  "completion_status_if_all_required_pass": "PHASE_02_WALLET_STRUCTURE_COMPLETE",
+  "completion_status_if_any_required_fail": "STAGE_INCOMPLETE"
+}

@@ -1,0 +1,16 @@
+acceptance_gate:
+  final_allowed_status:
+    - HER_DOC_FUNCTION_PIPELINE_READY
+    - HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS
+    - HER_DOC_FUNCTION_PIPELINE_BLOCKED
+    - HER_DOC_FUNCTION_PIPELINE_REJECTED
+  expected_default_status: HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS
+  required_phase_outputs:
+    K00: [document_passport.json, corpus_index.json, system_mapping.json, k00_handoff_packet.json]
+    F00: [function_mapping.json, required_system_assets.json, implementation_task_package.json, f00_handoff_packet.json]
+    V00: [validation_matrix.json, gap_register.json, evidence_report.json, v00_handoff_packet.json]
+    A00: [acceptance_matrix.json, readiness_certificate.json, a00_acceptance_result.json]
+    H00: [downstream_queue.json, routing_decision.json, h00_handoff_packets.json]
+    U00: [review_cases.json, root_cause_analysis.json, upgrade_queue.json, learning_index.json]
+    G00: [governance_candidates.json, policy_rules_update.json]
+    O00: [run_summary.json, final_report.md]

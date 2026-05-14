@@ -1,0 +1,38 @@
+{
+  "repo_scan_status": "SCANNED",
+  "repo_root": "/root/sikk-gmgn",
+  "controller_path": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller",
+  "existing_assets": [
+    "01_f00_manifest.yaml",
+    "02_f00_context_pack.md",
+    "03_f00_objective_tree.yaml",
+    "04_f00_input_contract.json",
+    "05_f00_output_contract.json",
+    "06_f00_execution_protocol.md",
+    "07_f00_acceptance_gate.yaml",
+    "08_f00_state.json",
+    "09_f00_handoff_packet.schema.json",
+    "10_concept_to_function_map.schema.json",
+    "11_function_asset_plan.schema.json",
+    "12_field_model.schema.json",
+    "13_rule_logic.schema.json",
+    "14_implementation_decision.schema.json",
+    "15_test_replay_evidence.schema.json",
+    "16_runner_binding.schema.json",
+    "17_recovery_policy.md",
+    "18_trace_audit_spec.yaml",
+    "19_f00_final_report_template.md"
+  ],
+  "missing_assets": [],
+  "write_safe_paths": [
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-001"
+  ],
+  "do_not_touch_paths": [
+    "raw inputs",
+    "legacy assets",
+    "production runtime",
+    "wallet/signing configs"
+  ],
+  "recommended_actions": []
+}

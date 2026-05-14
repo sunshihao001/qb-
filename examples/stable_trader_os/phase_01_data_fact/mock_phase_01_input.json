@@ -1,0 +1,20 @@
+{
+  "run_id": "mock_phase_01_run_001",
+  "token_address": "MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET",
+  "chain": "solana",
+  "run_mode": "mock",
+  "data_snapshot_time": "2026-05-09T00:00:00Z",
+  "sources": {
+    "gmgn_traders": "mock_raw_gmgn_traders.json",
+    "gmgn_holders": "mock_raw_gmgn_holders.json",
+    "kline": "mock_raw_kline.json"
+  },
+  "contains_mock_data": true,
+  "missing_fields_demo": [
+    "security_fact"
+  ],
+  "anomaly_demo": [
+    "future_time",
+    "invalid_address"
+  ]
+}

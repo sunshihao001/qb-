@@ -1,0 +1,28 @@
+{
+  "title": "Human Confirmation Policy",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "confirmation_rules",
+    "status"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "confirmation_rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PENDING",
+        "DEPRECATED"
+      ]
+    }
+  }
+}

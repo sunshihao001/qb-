@@ -1,0 +1,53 @@
+{
+  "audit_id": "p07_k00_route_recovery_audit_DOC-20260512-007",
+  "generated_at": "2026-05-12T04:35:52Z",
+  "doc_id": "DOC-20260512-007",
+  "purpose": "Ensure P07 document entered HER/K00 as system-building input before/alongside P07 package acceptance.",
+  "k00_chain_checks": {
+    "raw": true,
+    "source_registry": true,
+    "registry_jsonl": true,
+    "passport": true,
+    "corpus_index": true,
+    "plane_mapping": true,
+    "phase_mapping": true,
+    "gap_detection": true,
+    "task_package": true,
+    "phase_state": true,
+    "k00_acceptance": true,
+    "handoff": true,
+    "route_recovery_report": true
+  },
+  "k00_acceptance_status": "K00_ACCEPTED_WITH_RUNTIME_GAPS",
+  "k00_phase_state_status": "K00_ACCEPTANCE_READY_WITH_RUNTIME_GAPS",
+  "p07_existing_acceptance_status": "P07_PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "p07_package_validation_status": "P07_PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "route_recovery_verdict": "PASS_WITH_RUNTIME_BOUNDARY_PRESERVED",
+  "runtime_boundaries": {
+    "buy_signal_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false,
+    "wallet_signing_allowed": false,
+    "swap_or_broadcast_allowed": false,
+    "p08_required": true,
+    "paper_candidate_is_paper_ready": false
+  },
+  "non_overwrite_policy": "This audit supplements P07 acceptance route; it does not convert runtime-blocked design readiness into runtime readiness.",
+  "corrected_acceptance_route": [
+    "K00_SOURCE_PRESERVED",
+    "K00_REGISTERED",
+    "K00_PASSPORTED",
+    "K00_INDEXED",
+    "K00_MAPPED",
+    "K00_TASKIZED",
+    "K00_ACCEPTED_WITH_RUNTIME_GAPS",
+    "P07_PACKAGE_READY_WITH_RUNTIME_GAPS",
+    "P08_EXECUTION_RISK_CONTROLLER_PACKAGE_DESIGN_NEXT"
+  ],
+  "remaining_gaps": [
+    "P07 runtime/tool binding not approved",
+    "P08 controller package not yet landed",
+    "paper runtime blocked until P08 acceptance",
+    "live execution forbidden"
+  ]
+}

@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0287
+source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-005_p05_evidence_controller_v3.md
+phase_scores:
+  P01: 8
+  P02: 1
+  P03: 9
+  P04: 11
+  P05: 94
+  P06: 11
+  P07: 2
+  P08: 1
+  P09: 0
+  P10: 2
+primary_phase: P05
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

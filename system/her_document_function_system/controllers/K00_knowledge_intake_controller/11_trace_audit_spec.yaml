@@ -1,0 +1,10 @@
+trace_audit:
+  phase_id: K00
+  required_events:
+    - source_preserved
+    - passport_ref_created
+    - corpus_index_ref_created
+    - system_mapping_ref_created
+    - gap_detection_ref_created
+    - handoff_written
+    - acceptance_evaluated

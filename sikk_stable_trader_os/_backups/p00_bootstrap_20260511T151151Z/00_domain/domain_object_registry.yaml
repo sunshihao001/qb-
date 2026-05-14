@@ -1,0 +1,279 @@
+domain_object_registry:
+  version: '2.0'
+  system: SIKK Stable Trader OS
+  source_doc_id: DOC-20260511-005
+  objects:
+  - object_type: Token
+    primary_id: token_address
+    created_by_phase: P01_data_fact
+    updated_by_phases:
+    - P02_market_scene
+    - P03_wallet_structure
+    - P04_chip_control
+    - P05_strategy_gate
+    - P06_risk_control
+    - P07_execution
+    - P08_review
+    - P09_self_upgrade
+    usage_phases:
+    - ALL
+    required_fields:
+    - token_address
+  - object_type: Wallet
+    primary_id: wallet_address
+    created_by_phase: P01_data_fact
+    updated_by_phases:
+    - P03_wallet_structure
+    - P04_chip_control
+    - P08_review
+    usage_phases:
+    - P03_wallet_structure
+    - P04_chip_control
+    - P05_strategy_gate
+    - P08_review
+    - P09_self_upgrade
+    required_fields:
+    - wallet_address
+  - object_type: AddressGroup
+    primary_id: group_id
+    created_by_phase: P03_wallet_structure
+    updated_by_phases:
+    - P04_chip_control
+    - P08_review
+    usage_phases:
+    - P03_wallet_structure
+    - P04_chip_control
+    - P05_strategy_gate
+    required_fields:
+    - group_id
+  - object_type: TransactionEvent
+    primary_id: tx_hash
+    created_by_phase: P01_data_fact
+    updated_by_phases:
+    - P03_wallet_structure
+    - P04_chip_control
+    - P08_review
+    usage_phases:
+    - P03_wallet_structure
+    - P04_chip_control
+    - P08_review
+    required_fields:
+    - tx_hash
+  - object_type: MarketSnapshot
+    primary_id: snapshot_id
+    created_by_phase: P01_data_fact
+    updated_by_phases:
+    - P02_market_scene
+    - P06_risk_control
+    - P07_execution
+    - P08_review
+    usage_phases:
+    - P02_market_scene
+    - P05_strategy_gate
+    - P06_risk_control
+    - P07_execution
+    required_fields:
+    - snapshot_id
+  - object_type: MarketScene
+    primary_id: token_address+scene_time
+    created_by_phase: P02_market_scene
+    updated_by_phases:
+    - P08_review
+    - P09_self_upgrade
+    usage_phases:
+    - P05_strategy_gate
+    - P08_review
+    - P09_self_upgrade
+    required_fields:
+    - token_address+scene_time
+  - object_type: ChipState
+    primary_id: token_address
+    created_by_phase: P04_chip_control
+    updated_by_phases:
+    - P08_review
+    - P09_self_upgrade
+    usage_phases:
+    - P05_strategy_gate
+    - P08_review
+    - P09_self_upgrade
+    required_fields:
+    - token_address
+  - object_type: DominantSide
+    primary_id: token_address
+    created_by_phase: P04_chip_control
+    updated_by_phases:
+    - P08_review
+    - P09_self_upgrade
+    usage_phases:
+    - P05_strategy_gate
+    - P08_review
+    - P09_self_upgrade
+    required_fields:
+    - token_address
+  - object_type: Counterparty
+    primary_id: counterparty_id
+    created_by_phase: P04_chip_control
+    updated_by_phases:
+    - P08_review
+    - P09_self_upgrade
+    usage_phases:
+    - P04_chip_control
+    - P05_strategy_gate
+    - P08_review
+    required_fields:
+    - counterparty_id
+  - object_type: GateDecision
+    primary_id: decision_id
+    created_by_phase: P05_strategy_gate_or_P06_risk_control
+    updated_by_phases:
+    - P08_review
+    - P09_self_upgrade
+    usage_phases:
+    - P07_execution
+    - P08_review
+    - P09_self_upgrade
+    required_fields:
+    - decision_id
+  - object_type: RiskEvent
+    primary_id: risk_event_id
+    created_by_phase: P01_to_P06
+    updated_by_phases:
+    - P08_review
+    - P09_self_upgrade
+    usage_phases:
+    - P05_strategy_gate
+    - P06_risk_control
+    - P08_review
+    required_fields:
+    - risk_event_id
+  - object_type: ExecutionTicket
+    primary_id: ticket_id
+    created_by_phase: P07_execution
+    updated_by_phases:
+    - P08_review
+    usage_phases:
+    - P07_execution
+    - P08_review
+    required_fields:
+    - ticket_id
+  - object_type: PaperPosition
+    primary_id: paper_position_id
+    created_by_phase: P07_execution
+    updated_by_phases:
+    - P08_review
+    usage_phases:
+    - P08_review
+    - P09_self_upgrade
+    required_fields:
+    - paper_position_id
+  - object_type: ReviewCase
+    primary_id: review_case_id
+    created_by_phase: P08_review
+    updated_by_phases:
+    - P09_self_upgrade
+    usage_phases:
+    - P09_self_upgrade
+    required_fields:
+    - review_case_id
+  - object_type: RuleChange
+    primary_id: rule_change_id
+    created_by_phase: P09_self_upgrade
+    updated_by_phases:
+    - P09_self_upgrade
+    usage_phases:
+    - P09_self_upgrade
+    required_fields:
+    - rule_change_id
+  - object_type: SkillDecision
+    primary_id: skill_decision_id
+    created_by_phase: AtomicSkill_runtime
+    updated_by_phases:
+    - owning_phase
+    usage_phases:
+    - owning_phase
+    required_fields:
+    - skill_decision_id
+  - object_type: HandoffPacket
+    primary_id: handoff_id
+    created_by_phase: each_phase
+    updated_by_phases:
+    - target_phase
+    usage_phases:
+    - ALL
+    required_fields:
+    - handoff_id
+source_doc_id: DOC-20260511-016
+updated_at: '2026-05-11T14:20:47.457248+00:00'
+objects:
+- id: token
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: wallet
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: wallet_entity
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: same_source_group
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: funding_source
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: chip_cluster
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: early_wallet_group
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: dominant_side
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: counterparty_group
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: market_structure
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: scenario
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: strategy_candidate
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: paper_trade
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+- id: review_case
+  status: REGISTERED_FROM_METHODOLOGY
+  evidence_required: true
+  counterevidence_required: true
+  source_doc_id: DOC-20260511-016
+paper_only_required: true
+real_trade_allowed: false

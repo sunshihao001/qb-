@@ -1,0 +1,35 @@
+domain_handoff_packet_schema:
+  packet_id: string
+  token_address: string
+  generated_at: datetime
+  domain_plane_version: string
+  domain_context:
+    token_lifecycle_hypothesis: enum
+    primary_scenario_candidate: enum
+    secondary_scenario_candidates: list
+    dominant_side_status: enum
+    chip_control_status: enum
+    counterparty_pressure_status: enum
+    market_cap_context_status: enum
+  domain_objects:
+    wallet_roles_defined: boolean
+    wallet_groups_defined: boolean
+    chip_structure_defined: boolean
+    market_structure_defined: boolean
+    evidence_model_defined: boolean
+  evidence_requirements:
+    required_fields: list
+    missing_fields: list
+    critical_missing_fields: list
+  hard_negative_screen:
+    triggered_rules: list
+    blocked: boolean
+    pause_required: boolean
+  reasoning_boundary:
+    allowed_claims: list
+    forbidden_claims: list
+    uncertainty_tags: list
+  downstream_instruction:
+    next_plane: P03_DATA_PLANE
+    allowed_next_actions: [DATA_REQUIREMENT_GENERATION, EVIDENCE_COLLECTION, SCENARIO_PRECHECK]
+    forbidden_next_actions: [DIRECT_BUY_SIGNAL, EXECUTION_DECISION, UNVERIFIED_STRONG_CLAIM]

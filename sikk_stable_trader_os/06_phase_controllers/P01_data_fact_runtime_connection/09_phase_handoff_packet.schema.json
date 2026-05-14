@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "P01 handoff packet",
+  "type": "object",
+  "required": [
+    "from_phase",
+    "to_phase",
+    "status",
+    "artifact_paths",
+    "blocking_gaps",
+    "safety_boundary"
+  ],
+  "properties": {
+    "from_phase": {
+      "const": "P01"
+    },
+    "to_phase": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "artifact_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocking_gaps": {
+      "type": "array"
+    },
+    "safety_boundary": {
+      "type": "object"
+    }
+  }
+}

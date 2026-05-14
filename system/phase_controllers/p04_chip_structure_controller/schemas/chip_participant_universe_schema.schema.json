@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Chip Participant Universe Record",
+  "description": "P04 structure-state record. Candidate-only and trace-required.",
+  "type": "object",
+  "required": [
+    "record_id",
+    "token_address",
+    "included_entities",
+    "excluded_entities",
+    "trace_ids"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "token_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "snapshot_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cohort_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wallet_entity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "candidate_only": {
+      "const": true
+    },
+    "source_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "trace_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quality_level": {
+      "type": "string",
+      "enum": [
+        "BLOCKED",
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "UNKNOWN",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "included_entities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "excluded_entities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exclusion_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

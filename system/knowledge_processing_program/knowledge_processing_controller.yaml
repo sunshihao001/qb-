@@ -1,0 +1,29 @@
+program_id: KNOWLEDGE_PROCESSING_PROGRAM
+program_name: Knowledge Processing Program
+version: 1.0.0
+status: CONTROLLER_CANDIDATE_READY
+placement: upstream_of_P00_and_P01_P10
+purpose: Convert documents into HER-readable, schedulable, executable, acceptable, traceable knowledge-function objects.
+phase_order: [K00, K01, K02, K03, K04, K05, K06, K07, K08]
+required_global_outputs:
+  - document_passport.yaml
+  - document_type_classification.yaml
+  - semantic_chunk_index.yaml
+  - concept_registry.yaml
+  - functional_object_registry.yaml
+  - system_mapping_matrix.yaml
+  - controller_candidate_packet.yaml
+  - schema_contract_candidate_packet.yaml
+  - her_task_package.yaml
+  - knowledge_processing_acceptance_result.yaml
+  - knowledge_processing_handoff_packet.yaml
+safety_boundaries:
+  production_mutation_allowed: false
+  runtime_trading_allowed: false
+  paper_runtime_start_allowed: false
+  candidate_generation_allowed: true
+state_codes:
+  - KNOWLEDGE_PROCESSING_DRAFT
+  - KNOWLEDGE_PROCESSING_READY_WITH_GAPS
+  - KNOWLEDGE_PROCESSING_READY
+  - KNOWLEDGE_PROCESSING_BLOCKED

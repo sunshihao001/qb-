@@ -1,0 +1,15 @@
+schema_id: HER_DOC_SYSTEM_MAPPING_SCHEMA
+version: 1
+required_fields:
+  - mapping_id
+  - source_object_id
+  - mapped_system_layer
+  - mapped_phase
+  - mapped_file_path
+  - mapping_type
+  - mapping_confidence
+  - mapping_blocker
+field_enums:
+  mapped_system_layer: [K00_K08, SYSTEM_METHODOLOGY_BLUEPRINT, P00, BOOTSTRAP_PLANE, GOVERNANCE_PLANE, DOMAIN_PLANE, DATA_PLANE, FULL_CONTROL_PLANE, TRACE_PLANE, ACCEPTANCE_PLANE, HANDOFF_PLANE, P01_P10, I01_I05, R00, CPO, P09, P10, LEGACY]
+  mapping_type: [NEW_FILE_NEEDED, UPDATE_EXISTING_FILE, VALIDATE_EXISTING_FILE, BIND_RUNNER, ADD_TRACE, ADD_ACCEPTANCE, ADD_HANDOFF, ADD_REPLAY_FIELD, ARCHIVE_ONLY]
+  mapping_confidence: [HIGH, MEDIUM, LOW]

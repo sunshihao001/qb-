@@ -1,0 +1,27 @@
+contract_id: P09_OUTPUT_CONTRACT
+version: v3.0
+allowed_statuses:
+- REVIEW_CASE_READY
+- REPLAY_COMPLETED
+- ATTRIBUTION_COMPLETED
+- CALIBRATION_CANDIDATE
+- P10_HANDOFF_READY
+- REVIEW_REJECTED
+- REVIEW_BLOCKED
+required_outputs:
+- review_case_record
+- replay_input_snapshot_record
+- decision_chain_reconstruction_record
+- runtime_path_reconstruction_record
+- outcome_evaluation_record
+- failure_attribution_record
+- success_attribution_record
+- model_calibration_candidate_record
+- p10_upgrade_candidate_data_request_packet
+- p09_to_p10_handoff_packet
+forbidden_outputs:
+- direct_rule_change
+- threshold_change_applied
+- runtime_patch_applied
+- paper_runtime_started
+- live_execution_allowed

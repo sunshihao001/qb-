@@ -1,0 +1,38 @@
+{
+  "task_id": "TASK-DOC-20260511-017-DATA-PLANE-TARGET-DATA-LANDING",
+  "doc_id": "DOC-20260511-017",
+  "parent_doc_id": "DOC-20260511-006",
+  "created_at": "2026-05-11T14:25:39.844562+00:00",
+  "objective_tree": {
+    "root": "Append and materialize Data Plane target data",
+    "children": [
+      "raw preservation",
+      "canonical append",
+      "normalized executable YAML generation",
+      "data support assets creation if absent",
+      "JSON/YAML parse validation",
+      "P01 blocking rule writeback"
+    ]
+  },
+  "acceptance_gate": [
+    "raw_saved",
+    "canonical_contains_section_12",
+    "data_target_data_materialized",
+    "field_source_map_exists",
+    "normalized_fact_model_parseable",
+    "data_input_contract_parseable",
+    "data_handoff_packet_parseable",
+    "paper_only_required_true",
+    "real_trade_allowed_false"
+  ],
+  "status": "GENERATED",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

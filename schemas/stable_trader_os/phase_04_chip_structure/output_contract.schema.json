@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sikk://stable_trader_os/phase_04_chip_structure/output_contract.schema.json",
+  "title": "P04 Chip Structure output contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "packet_id",
+    "phase_id",
+    "domain",
+    "status",
+    "created_at",
+    "evidence_refs",
+    "quality_gates",
+    "safety_boundary"
+  ],
+  "properties": {
+    "packet_id": {
+      "type": "string"
+    },
+    "phase_id": {
+      "const": "P04"
+    },
+    "domain": {
+      "const": "chip_structure"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "READY",
+        "READY_WITH_GAPS",
+        "BLOCKED",
+        "REJECTED",
+        "CANDIDATE_ONLY",
+        "OBSERVE_ONLY"
+      ]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "upstream_packets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "downstream_allowed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quality_gates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "downgrade_reason": {
+      "type": "string"
+    },
+    "safety_boundary": {
+      "type": "object",
+      "required": [
+        "real_trade_enabled",
+        "signing_enabled",
+        "broadcast_enabled",
+        "swap_enabled"
+      ],
+      "properties": {
+        "real_trade_enabled": {
+          "const": false
+        },
+        "signing_enabled": {
+          "const": false
+        },
+        "broadcast_enabled": {
+          "const": false
+        },
+        "swap_enabled": {
+          "const": false
+        },
+        "runtime_mode": {
+          "enum": [
+            "OBSERVE_ONLY",
+            "PAPER_ONLY",
+            "OBSERVE_PAPER_ONLY"
+          ]
+        }
+      }
+    }
+  }
+}

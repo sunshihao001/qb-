@@ -1,0 +1,53 @@
+meta:
+  standard_id: S00_METHOD_WHEEL_REGISTRY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+methods:
+- method_id: MW_WALLET_CHIP_DOMINANT_SIDE_001
+  method_name: 钱包筹码主导侧生命周期判断
+  method_source: uploaded S00 v2.0 spec
+  method_purpose: convert wallet/chip behavior into staged evidence and counter-evidence
+  applies_to:
+  - P03_wallet_entity
+  - P04_chip_structure
+  - P05_evidence
+  - P06_scenario_recognition
+  phase_bindings:
+  - P03
+  - P04
+  - P05
+  - P06
+  input_fields:
+  - wallet_holding_delta
+  - same_source_group_id
+  - sync_sell_score
+  - counterparty_pressure_score
+  - market_cap_change_from_discovery_pct
+  derived_fields:
+  - dominant_side_status
+  - chip_control_retention
+  - distribution_progress
+  - reaccumulation_possibility
+  decision_outputs:
+  - scenario_candidate
+  - strategy_gate_input
+  counter_evidence_required:
+  - early_wallet_concentrated_exit
+  - quote_liquidity_inconsistency
+  - falling_obv
+  - negative_cmf
+  confidence_model: evidence + counter-evidence + data_quality_score
+  failure_conditions:
+  - missing lineage
+  - missing counter evidence
+  - schema validation fail
+  sample_cases: []
+  regression_tests: []

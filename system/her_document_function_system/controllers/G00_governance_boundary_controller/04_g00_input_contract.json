@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "G00 Input Contract",
+  "type": "object",
+  "required": [
+    "phase_id",
+    "u00_governance_candidates",
+    "a00_evidence_bundle",
+    "gap_reports",
+    "trace_refs",
+    "audit_refs",
+    "governance_policy",
+    "execution_boundary"
+  ],
+  "properties": {
+    "phase_id": {
+      "const": "G00"
+    },
+    "u00_governance_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "a00_evidence_bundle": {
+      "type": "object"
+    },
+    "h00_queue_state": {
+      "type": "object"
+    },
+    "gap_reports": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "failure_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "default": []
+    },
+    "trace_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "audit_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "current_governance_registry": {
+      "type": "object"
+    },
+    "governance_policy": {
+      "type": "object",
+      "required": [
+        "allow_policy_write",
+        "allow_handoff",
+        "allow_registry_write"
+      ],
+      "properties": {
+        "allow_policy_write": {
+          "type": "boolean"
+        },
+        "allow_handoff": {
+          "type": "boolean"
+        },
+        "allow_registry_write": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "execution_boundary": {
+      "type": "object",
+      "required": [
+        "allow_write",
+        "allow_live_runtime",
+        "allow_auto_deploy"
+      ],
+      "properties": {
+        "allow_write": {
+          "type": "boolean"
+        },
+        "allow_live_runtime": {
+          "type": "boolean"
+        },
+        "allow_auto_deploy": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "u00_governance_candidate_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "policy_version_seed": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

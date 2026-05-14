@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-05-06T03:25:36",
+  "deny_write_patterns": [
+    "/root/sikk-gmgn/*.json",
+    "/root/sikk-gmgn/*.csv",
+    "/root/sikk-gmgn/*.md",
+    "/root/sikk-gmgn/data/gmgn_candidates_live_run/**",
+    "/root/sikk-gmgn/outputs/**",
+    "/root/sikk-gmgn/结构分析/**",
+    "/root/sikk-gmgn/钱包数据分析/**",
+    "/root/sikk-gmgn/data/source_wallet_bot/*.json",
+    "/root/sikk-gmgn/data/*/*.json",
+    "/root/sikk-gmgn/reports/*.json",
+    "/root/sikk-gmgn/modules/*/*_runtime_output.json",
+    "/root/sikk-gmgn/config/**"
+  ],
+  "allowed_root_file_exceptions": [
+    "AGENTS.md",
+    "README.md",
+    "SIKK_*.md",
+    "sikk_*.py",
+    "run_sikk_gmgn_pipeline.py"
+  ],
+  "rules": [
+    "禁止删除旧文件",
+    "禁止移动旧文件",
+    "禁止在 legacy runtime 扩大新主输出",
+    "禁止从 paper/dashboard/report 反推 Source/Intel 事实",
+    "config 下敏感值不得输出"
+  ]
+}

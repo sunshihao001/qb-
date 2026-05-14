@@ -1,0 +1,31 @@
+i05_closed_loop_acceptance_result:
+  acceptance_id: I05_ACCEPTANCE_20260512_AUTO_01
+  generated_at: '2026-05-12T16:03:17Z'
+  mode: dry-run
+  status: I05_AUTOMATION_READY_WITH_GAPS
+  checks:
+    system_files_present: true
+    runtime_dirs_present: true
+    automation_task_package_created: true
+    priority_routing_created: true
+    runtime_state_created: true
+    p0_open_issues_zero: true
+    real_replay_cases_available: false
+    automated_runner_validation_available: true
+    safety_boundary_passed: true
+  restrictions:
+    live_execution_allowed: false
+    wallet_signing_allowed: false
+    auto_deploy_allowed: false
+    direct_rule_mutation_allowed: false
+    paper_runtime_mutation_allowed: false
+  final_gate:
+    status: I05_AUTOMATION_READY_WITH_GAPS
+    reason_cn: P0 自动化闭环已落位且 dry-run/tests 通过；P1 真实 replay fixture 与 P10 package fixture
+      仍未接入，因此不能升级为 I05_READY。
+    verified_commands:
+    - python3 -m modules.integration_program.i05_auto_closure_runner --root /root/sikk-gmgn
+      --mode dry-run
+    - python3 -m pytest tests/integration_program/test_i05_auto_closure_runner.py
+      -q
+    verified_at: '2026-05-12T16:05:45Z'

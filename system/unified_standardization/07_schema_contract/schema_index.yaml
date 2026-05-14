@@ -1,0 +1,53 @@
+meta:
+  standard_id: S00_SCHEMA_INDEX
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+schemas:
+- schema_id: P01_STANDARD_SCHEMA_SET
+  phase: P01
+  version: 0.1.0
+  status: defined_with_gaps
+- schema_id: P02_STANDARD_SCHEMA_SET
+  phase: P02
+  version: 0.1.0
+  status: defined_with_gaps
+- schema_id: P03_STANDARD_SCHEMA_SET
+  phase: P03
+  version: 0.1.0
+  status: defined_with_gaps
+- schema_id: P04_STANDARD_SCHEMA_SET
+  phase: P04
+  version: 0.1.0
+  status: defined_with_gaps
+- schema_id: P05_STANDARD_SCHEMA_SET
+  phase: P05
+  version: 0.1.0
+  status: defined_with_gaps
+- schema_id: P06_STANDARD_SCHEMA_SET
+  phase: P06
+  version: 0.1.0
+  status: defined_with_gaps
+- schema_id: P07_STANDARD_SCHEMA_SET
+  phase: P07
+  version: 0.1.0
+  status: defined_with_gaps
+- schema_id: P08_STANDARD_SCHEMA_SET
+  phase: P08
+  version: 0.1.0
+  status: defined_with_gaps
+- schema_id: P09_STANDARD_SCHEMA_SET
+  phase: P09
+  version: 0.1.0
+  status: defined_with_gaps
+- schema_id: P10_STANDARD_SCHEMA_SET
+  phase: P10
+  version: 0.1.0
+  status: defined_with_gaps

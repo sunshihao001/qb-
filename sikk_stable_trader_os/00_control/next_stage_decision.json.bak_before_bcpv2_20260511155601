@@ -1,0 +1,20 @@
+{
+  "decision_id": "NEXT_STAGE_DECISION_DOC-20260511-007",
+  "decided_at": "2026-05-11T15:46:58.346373+00:00",
+  "source_doc_id": "DOC-20260511-007",
+  "previous_next_legal_stage": "DATA_PLANE_ACCEPTANCE_REVIEW",
+  "next_legal_stage": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE",
+  "decision_reason": "v3 methodology supplement splits Control Plane into Bootstrap and Full layers; current Bootstrap exists, but Full Control / Trace / Acceptance / Handoff professional acceptance remains incomplete.",
+  "p01_allowed": false,
+  "p01_block_reasons": [
+    "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE_NOT_PASSED",
+    "DATA_PLANE_ACCEPTANCE_NOT_RUN",
+    "P01_PREFLIGHT_NOT_RUN"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false,
+    "p01_runtime_connection_allowed": false
+  }
+}

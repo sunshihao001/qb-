@@ -1,0 +1,27 @@
+package_id: S02_P10_upgrade_candidate_shadow_package
+generated_at: '2026-05-14T14:15:24Z'
+status: CANDIDATE_ONLY_NOT_APPLIED
+source_review: S01/S02 gaps
+upgrade_candidates:
+- candidate_id: P10_CANDIDATE_001
+  scope: runtime_control_binding
+  change: Require runner_registry + phase_binding + trace + acceptance + handoff before
+    ACCEPTED
+  status: candidate
+shadow_validation:
+  required: true
+  executed: false
+  status: PENDING
+regression_guard:
+  required: true
+  executed: false
+  status: PENDING
+rollback_plan:
+  required: true
+  available: true
+  plan: Remove/ignore S02 formal draft files and revert to S01 reports; no live runtime
+    mutation performed.
+approval:
+  manual_approval_required: true
+  approved: false
+forbidden: Do not directly mutate realtime rules from review output.

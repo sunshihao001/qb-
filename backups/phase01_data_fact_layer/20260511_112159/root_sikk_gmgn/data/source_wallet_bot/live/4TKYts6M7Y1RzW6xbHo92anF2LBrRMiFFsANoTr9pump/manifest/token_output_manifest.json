@@ -1,0 +1,222 @@
+{
+  "token_address": "4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump",
+  "generated_at": "2026-05-06T01:42:55Z",
+  "task_name": "输出目录治理",
+  "root_dir": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump",
+  "target_layout": {
+    "wallet_data": {
+      "raw": "wallet raw/API/input data",
+      "normalized": "wallet fact normalized data",
+      "summary": "wallet data summaries"
+    },
+    "structure_analysis": {
+      "wallet_fact": "legacy-style wallet_fact aggregate outputs",
+      "intelligence": "same-source and role candidate evidence",
+      "handoff": "Bot2/Intel Bot handoff packet",
+      "reports": "human-readable structure reports"
+    },
+    "manifest": "path mapping and layout docs"
+  },
+  "policy": {
+    "directory_governance_only": true,
+    "rewrite_wallet_logic": false,
+    "rewrite_structure_logic": false,
+    "delete_old_files": false,
+    "move_old_files": false,
+    "copy_or_reoutput_only": true,
+    "keep_old_path_compatibility": true,
+    "future_outputs_must_use_new_layout": true,
+    "no_trading": true,
+    "no_state_machine": true,
+    "no_paper_runner": true,
+    "no_private_key": true,
+    "no_signing": true,
+    "no_broadcast": true,
+    "no_swap": true
+  },
+  "path_mappings": [
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/gmgn_wallet_rows_raw.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/raw/gmgn_wallet_rows_raw.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 613143
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/gmgn_wallet_trade_input.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/raw/gmgn_wallet_trade_input.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 84241
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/gmgn_wallet_profile_input.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/raw/gmgn_wallet_profile_input.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 39677
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_trade_normalized.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/wallet_trade_normalized.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 117545
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_entity_profile_normalized.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/wallet_entity_profile_normalized.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 52790
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/summary_overview.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/summary/summary_overview.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 6995
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/summary_overview.md",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/summary/summary_overview.md",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 1558
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/same_source_evidence_normalized.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/intelligence/same_source_evidence_normalized.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 1938
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_intelligence_decision.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/intelligence/wallet_intelligence_decision.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 50400
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/bot2_handoff_packet.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/handoff/bot2_handoff_packet.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 4960
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/wallet_structure_normalized.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/wallet_structure_normalized.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 107216
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/chip_distribution_summary.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/chip_distribution_summary.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 908
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/same_source_groups.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/same_source_groups.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 2226
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/fund_flow_edges.csv",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/fund_flow_edges.csv",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 17317
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/address_history.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/address_history.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 66808
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/wallet_fact_report.md",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/reports/wallet_fact_report.md",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 1222
+    },
+    {
+      "old_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_fact/wallet_fact_package_manifest.json",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/structure_analysis/wallet_fact/wallet_fact_package_manifest.json",
+      "action": "copied",
+      "status": "ok",
+      "bytes": 898
+    },
+    {
+      "old_path": "missing",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/token_transfer_normalized.json",
+      "action": "created_placeholder",
+      "status": "ok",
+      "bytes": 284
+    },
+    {
+      "old_path": "missing",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/token_source_classification_base.json",
+      "action": "created_placeholder",
+      "status": "ok",
+      "bytes": 291
+    },
+    {
+      "old_path": "missing",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/funding_flow_normalized.json",
+      "action": "created_placeholder",
+      "status": "ok",
+      "bytes": 282
+    },
+    {
+      "old_path": "missing",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/funding_source_normalized.json",
+      "action": "created_placeholder",
+      "status": "ok",
+      "bytes": 284
+    },
+    {
+      "old_path": "missing",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/backflow_paths_normalized.json",
+      "action": "created_placeholder",
+      "status": "ok",
+      "bytes": 284
+    },
+    {
+      "old_path": "missing",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/gmgn_wallet_tags_normalized.json",
+      "action": "created_placeholder",
+      "status": "ok",
+      "bytes": 286
+    },
+    {
+      "old_path": "missing",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/wallet_snapshot_delta_source.json",
+      "action": "created_placeholder",
+      "status": "ok",
+      "bytes": 287
+    },
+    {
+      "old_path": "missing",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/holder_delta_normalized.json",
+      "action": "created_placeholder",
+      "status": "ok",
+      "bytes": 282
+    },
+    {
+      "old_path": "missing",
+      "new_path": "/root/sikk-gmgn/data/source_wallet_bot/live/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_data/normalized/quote_security_normalized.json",
+      "action": "created_placeholder",
+      "status": "ok",
+      "bytes": 284
+    }
+  ],
+  "missing_sources": []
+}

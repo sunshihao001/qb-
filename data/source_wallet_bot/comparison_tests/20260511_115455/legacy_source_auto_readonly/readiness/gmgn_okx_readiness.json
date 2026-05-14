@@ -1,0 +1,124 @@
+{
+  "checked_at": "2026-05-11T11:54:55Z",
+  "overall_status": "READY_FOR_READONLY_RUN",
+  "secret_policy": {
+    "env_files_read": false,
+    "private_keys_read": false,
+    "secrets_printed": false,
+    "note": "只执行 CLI help/probe；不读取 .env、私钥、助记词、连接串。"
+  },
+  "capability_map": {
+    "gmgn_market": {
+      "role": "candidate_discovery_and_kline",
+      "read_only": true,
+      "can_do": [
+        "trending",
+        "trenches",
+        "signal",
+        "kline"
+      ],
+      "stage_ids": [
+        "stage_01_candidate_discovery",
+        "stage_03_market_gate",
+        "stage_08_kline_structure_analyzer"
+      ]
+    },
+    "gmgn_token": {
+      "role": "token_wallet_behavior",
+      "read_only": true,
+      "can_do": [
+        "info",
+        "security",
+        "pool",
+        "holders",
+        "traders"
+      ],
+      "stage_ids": [
+        "stage_02_safety_gate",
+        "stage_05_early_wallet_analyzer",
+        "stage_06_wallet_role_classifier"
+      ]
+    },
+    "okx_dex_token": {
+      "role": "lp_cluster_toptrader_risk_metadata",
+      "read_only": true,
+      "can_do": [
+        "price-info",
+        "liquidity",
+        "advanced-info",
+        "holders",
+        "top-trader",
+        "trades",
+        "cluster-overview",
+        "cluster-top-holders",
+        "cluster-list"
+      ],
+      "stage_ids": [
+        "stage_03_market_gate",
+        "stage_04_lp_pool_dynamics",
+        "stage_07_holder_cluster",
+        "stage_09_chip_distribution_analyzer"
+      ]
+    },
+    "okx_dex_ws": {
+      "role": "realtime_watch_stream",
+      "read_only": true,
+      "can_do": [
+        "price",
+        "candle",
+        "price-info",
+        "trades",
+        "signals",
+        "smartmoney_tracker",
+        "address_tracker",
+        "memepump_new_token",
+        "memepump_update_metrics"
+      ],
+      "stage_ids": [
+        "stage_14_realtime_monitor",
+        "stage_15_review_ops"
+      ]
+    }
+  },
+  "tool_probes": {
+    "gmgn_cli": {
+      "command": "gmgn-cli",
+      "available": true,
+      "path": "/root/.hermes/node/bin/gmgn-cli",
+      "exit_code": 0,
+      "stdout_head": "Usage: gmgn-cli [options] [command]\n\nGMGN OpenAPI CLI — market data, token info, portfolio, track KOL/smart money\ntrades, and swap\n\nOptions:\n  -V, --version         output the version number\n  -h, --help            display help for command\n\nCommands:\n  token                 Token information commands\n  market                Market data commands\n  portfolio             Wallet portfolio commands\n  track                 On-chain tracking commands: follow-wallet trades, KOL\n                        t",
+      "stderr_head": ""
+    },
+    "onchainos": {
+      "command": "onchainos",
+      "available": true,
+      "path": "/root/.local/bin/onchainos",
+      "exit_code": 0,
+      "stdout_head": "onchainOS CLI - interact with OKX Web3 backend\n\nUsage: onchainos [OPTIONS] <COMMAND>\n\nCommands:\n  market       Market data: prices, charts, wallet PnL\n  signal       Smart money / whale / KOL signal tracking\n  memepump     Meme / pump.fun token scanning and analysis\n  leaderboard  Leaderboard (top traders ranked by PnL, win rate, or volume)\n  token        Token information\n  swap         DEX swap\n  cross-chain  Cross-chain bridge swap\n  gateway      On-chain gateway\n  portfolio    Wallet portfol",
+      "stderr_head": ""
+    },
+    "jq": {
+      "command": "jq",
+      "available": true,
+      "path": "/usr/bin/jq",
+      "exit_code": 0,
+      "stdout_head": "jq-1.7\n",
+      "stderr_head": ""
+    },
+    "python3": {
+      "command": "python3",
+      "available": true,
+      "path": "/usr/local/lib/hermes-agent/venv/bin/python3",
+      "exit_code": 0,
+      "stdout_head": "Python 3.11.15\n",
+      "stderr_head": ""
+    }
+  },
+  "missing_for_true_live_data": [
+    "真实候选 token 地址或允许调用 market/trenches/hot-tokens 的只读发现窗口",
+    "GMGN/OKX 返回 raw JSON 后的字段映射适配器",
+    "OKX security token-scan 接入安全硬门禁",
+    "GMGN holders/traders 与 OKX cluster/top-trader 的交叉验证器",
+    "WebSocket session 生命周期控制与限频/空闲停止策略"
+  ]
+}

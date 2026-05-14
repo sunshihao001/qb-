@@ -1,0 +1,19 @@
+{
+  "contract_id": "phase_execution_contract",
+  "steps": [
+    "load_context",
+    "validate_input_contract",
+    "execute_bound_skills",
+    "write_outputs",
+    "validate_acceptance",
+    "emit_handoff",
+    "write_audit"
+  ],
+  "required_evidence": [
+    "field_source_map",
+    "evidence_level",
+    "counter_evidence",
+    "hard_negative_hits",
+    "audit_ref"
+  ]
+}

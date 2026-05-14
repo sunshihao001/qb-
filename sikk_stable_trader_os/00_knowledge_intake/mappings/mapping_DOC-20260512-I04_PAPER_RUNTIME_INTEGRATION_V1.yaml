@@ -1,0 +1,9 @@
+k00_to_i04_mapping:
+  doc_id: DOC-20260512-I04_PAPER_RUNTIME_INTEGRATION_V1
+  raw: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I04_paper_runtime_integration_v1_0.md
+  system_dir: /root/sikk-gmgn/system/integration_program/I04_paper_runtime_integration/
+  runtime_dir: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/
+  canonical_paper_runtime_dir: /root/sikk-gmgn/data/paper_runtime/
+  system_files_expected: 43
+  handoff_target: I05_REVIEW_REPLAY_CONTROLLER
+  route_status: accepted

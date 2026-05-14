@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0319
+source_path: sikk_stable_trader_os/00_methodology/methodology_v3_bootstrap_full_control_plane_supplement.md
+phase_scores:
+  P01: 1
+  P02: 0
+  P03: 0
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 1
+  P08: 3
+  P09: 2
+  P10: 5
+primary_phase: P10
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

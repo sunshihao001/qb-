@@ -1,0 +1,30 @@
+controller_id: "P04_CHIP_STRUCTURE_CONTROLLER"
+phase_id: "P04"
+controller_name: "P04 Chip Structure Controller"
+controller_name_cn: "筹码结构会计与迁移状态控制器"
+version: "v3.0-professional-package"
+status: "PACKAGE_READY_WITH_RUNTIME_GAPS"
+created_from_doc_id: "DOC-20260512-004"
+primary_goal: "Convert P03 wallet entities/groups/role candidates and P02 facts into traceable chip structure, retention, migration, distribution-progress candidate and counterparty pressure records for P05 evidence conversion."
+non_goals:
+  - "confirm_market_maker"
+  - "confirm_dominant_side"
+  - "confirm_controller"
+  - "generate_evidence_object"
+  - "classify_scenario"
+  - "approve_strategy"
+  - "output_paper_ready"
+  - "enable_live_execution"
+upstream:
+  - "P03_WALLET_ENTITY_CONTROLLER"
+  - "P02_SOURCE_DATA_FACT_CONTROLLER"
+downstream_only:
+  - "P05_EVIDENCE_CONTROLLER"
+runtime_allowed: false
+paper_runtime_allowed: false
+live_runtime_allowed: false
+paper_only: true
+real_trade_enabled: false
+pattern_context_required: true
+scenario_confirmation_required_by_P06: true
+safety_anchor: "PACKAGE_ONLY_RUNTIME_BLOCKED"

@@ -1,0 +1,15 @@
+freshness_requirements:
+  quote: 15-30 seconds
+  liquidity: 30-60 seconds
+  kline: within current candle interval
+  wallet_transaction: 60-180 seconds
+  holder_snapshot: 180-600 seconds
+  security_scan: 600-3600 seconds
+  historical_address_library: versioned_long_lived
+  paper_trade_result: not_realtime_source
+freshness_status:
+  FRESH: 数据仍可用于实时判断
+  ACCEPTABLE: 可用于辅助判断，但不能作为强证据
+  STALE: 数据过期，只能做背景参考
+  EXPIRED: 禁止用于实时判断
+  UNKNOWN: 没有采集时间，必须降权

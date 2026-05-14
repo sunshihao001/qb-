@@ -1,0 +1,68 @@
+{
+  "task_id": "TASK-DOC-20260511-021-GOVERNANCE-PLANE-V2-LANDING",
+  "doc_id": "DOC-20260511-021",
+  "created_at": "2026-05-11T16:07:09Z",
+  "task_name": "GOVERNANCE_PLANE_V2_INSTITUTIONAL_LANDING_AND_ACCEPTANCE",
+  "objective": "落盘并验收 Governance Plane v2.0，作为 Domain/Data/Control 的上游治理约束，不解锁 P01。",
+  "source_refs": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-021_governance_plane_v2_institutional_design.md"
+  ],
+  "target_stage": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE",
+  "required_outputs": [
+    "00_governance/governance_plane.md",
+    "00_governance/authority_boundary.yaml",
+    "00_governance/stage_permission_matrix.yaml",
+    "00_governance/hard_negative_rules.yaml",
+    "00_governance/risk_boundary.yaml",
+    "00_governance/real_trade_forbidden_policy.yaml",
+    "00_governance/review_to_upgrade_policy.yaml",
+    "00_governance/evidence_language_policy.yaml",
+    "00_governance/assumption_control_policy.yaml",
+    "00_governance/exception_escalation_policy.yaml",
+    "00_governance/legacy_runtime_quarantine_policy.yaml",
+    "00_governance/runner_permission_policy.yaml",
+    "00_governance/governance_to_domain_constraints.yaml",
+    "00_governance/governance_to_data_constraints.yaml",
+    "00_governance/governance_to_control_constraints.yaml",
+    "00_governance/governance_readiness_gate.yaml",
+    "00_governance/governance_validation_rules.yaml",
+    "00_governance/governance_integrity_manifest.json",
+    "00_governance/governance_to_domain_handoff_packet.json",
+    "00_governance/governance_to_data_handoff_packet.json",
+    "00_governance/governance_event_log.jsonl",
+    "00_governance/schemas/authority_boundary.schema.json",
+    "00_governance/schemas/stage_permission_matrix.schema.json",
+    "00_governance/schemas/hard_negative_rules.schema.json",
+    "00_governance/schemas/risk_boundary.schema.json",
+    "00_governance/schemas/governance_handoff_packet.schema.json",
+    "00_governance/reports/governance_plane_acceptance_report.json"
+  ],
+  "constraints": [
+    "paper_only=true",
+    "real_trade_enabled=false",
+    "auto_order_allowed=false",
+    "p01_runtime_connection_allowed=false",
+    "backup_before_overwrite",
+    "no_P01_start",
+    "no_real_trade",
+    "no_secret_output"
+  ],
+  "acceptance_criteria": [
+    "Governance files exist and parse",
+    "authority_boundary covers K00-P10",
+    "stage_permission_matrix defines can/cannot for K00-P10",
+    "hard_negative_rules include P0 forbidden cases",
+    "evidence_language_policy limits deterministic claims",
+    "assumption_control_policy forbids inference-filled missing fields",
+    "governance constraints hand off to Domain/Data",
+    "readiness gate is GOVERNANCE_READY or GOVERNANCE_WITH_WARNINGS",
+    "current_system_state governance_plane_status updated",
+    "P01 remains blocked"
+  ],
+  "handoff_destination": [
+    "Domain Plane",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "status": "TASK_PACKAGE_READY"
+}

@@ -1,0 +1,131 @@
+{
+  "doc_id": "doc_HER_DOC_TASKLIST_TRADING_SYSTEM_20260514_070714",
+  "raw_path": "input/raw_document.md",
+  "sections": [
+    {
+      "section_id": "sec_001",
+      "level": 1,
+      "title": "HER_DOC-skill 文档处理任务清单：SIKK 交易结构系统落地场景",
+      "char_offset": 0
+    },
+    {
+      "section_id": "sec_002",
+      "level": 2,
+      "title": "0. 场景定义",
+      "char_offset": 42
+    },
+    {
+      "section_id": "sec_003",
+      "level": 2,
+      "title": "1. HER_DOC 系统体系流程",
+      "char_offset": 301
+    },
+    {
+      "section_id": "sec_004",
+      "level": 2,
+      "title": "2. 文档任务清单",
+      "char_offset": 744
+    },
+    {
+      "section_id": "sec_005",
+      "level": 3,
+      "title": "DOC-TASK-001：新增文档 intake",
+      "char_offset": 758
+    },
+    {
+      "section_id": "sec_006",
+      "level": 3,
+      "title": "DOC-TASK-002：六类资产拆解",
+      "char_offset": 1070
+    },
+    {
+      "section_id": "sec_007",
+      "level": 3,
+      "title": "DOC-TASK-003：系统平面映射",
+      "char_offset": 1333
+    },
+    {
+      "section_id": "sec_008",
+      "level": 3,
+      "title": "DOC-TASK-004：字段合约与数据缺口生成",
+      "char_offset": 1705
+    },
+    {
+      "section_id": "sec_009",
+      "level": 3,
+      "title": "DOC-TASK-005：规则模板与反证门禁",
+      "char_offset": 2014
+    },
+    {
+      "section_id": "sec_010",
+      "level": 3,
+      "title": "DOC-TASK-006：输出合约与报告模板",
+      "char_offset": 2276
+    },
+    {
+      "section_id": "sec_011",
+      "level": 3,
+      "title": "DOC-TASK-007：下游实现队列",
+      "char_offset": 2616
+    },
+    {
+      "section_id": "sec_012",
+      "level": 3,
+      "title": "DOC-TASK-008：复盘升级与治理沉淀",
+      "char_offset": 2950
+    },
+    {
+      "section_id": "sec_013",
+      "level": 2,
+      "title": "3. 实际应用场景落地：交易系统文档进入可执行闭环",
+      "char_offset": 3299
+    },
+    {
+      "section_id": "sec_014",
+      "level": 3,
+      "title": "场景 A：用户上传“钱包结构新方法论”",
+      "char_offset": 3329
+    },
+    {
+      "section_id": "sec_015",
+      "level": 3,
+      "title": "场景 B：用户上传“P01 数据事实控制器升级文档”",
+      "char_offset": 3554
+    },
+    {
+      "section_id": "sec_016",
+      "level": 3,
+      "title": "场景 C：用户要求“把运行时流程收编到 HER 总控”",
+      "char_offset": 3720
+    },
+    {
+      "section_id": "sec_017",
+      "level": 2,
+      "title": "4. 当前自动化执行目标",
+      "char_offset": 3973
+    }
+  ],
+  "key_points": [
+    "当前边界：safe-mode、paper-only、design/runtime document governance；不触发实盘、不签名、不 broadcast。",
+    "1. O00 Orchestrator：接收文档与 operator_goal，建立 pipeline run，执行安全边界检查。",
+    "2. K00 Knowledge Intake：文档摄取、文档护照、资产分类、系统映射、语料索引。",
+    "3. F00 Function Mapping：把文档要求映射到控制器、模块、runner、数据平面、验收平面。",
+    "4. V00 Validation Evidence：检查字段、文件、实现、测试、证据缺口，建立 gap register。",
+    "5. A00 Acceptance：区分 ACCEPTED / READY_WITH_GAPS / BLOCKED，禁止虚假完成声明。",
+    "6. H00 Handoff：把任务拆给下游控制器或实现模块。",
+    "7. U00 Review / Upgrade：把缺口转成升级队列和回归验证计划。",
+    "8. G00 Governance：把反复出现的问题沉淀为规则、模板、准入门禁候选。",
+    "HER_DOC 阶段：O00 → K00。",
+    "输入：K00 文档护照与原文。",
+    "HER_DOC 阶段：K00。",
+    "HER_DOC 阶段：F00。",
+    "HER_DOC 阶段：F00 → V00。",
+    "验收标准：缺字段必须标记 missing/degraded/blocked；不能用推断值冒充事实。",
+    "HER_DOC 阶段：F00 → V00。",
+    "验收标准：每个正向判断必须有至少一个反证路径。",
+    "HER_DOC 阶段：F00 → A00。",
+    "验收标准：输出必须包含状态、证据、缺口、下一步；不得只输出结论。",
+    "HER_DOC 阶段：H00。"
+  ],
+  "status": "CORPUS_INDEX_READY_WITH_GAPS"
+}

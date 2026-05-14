@@ -1,0 +1,35 @@
+{
+  "contract_name": "phase_04_scenario_recognition_output_contract",
+  "phase": "phase_04_scenario_recognition_controller",
+  "required_outputs": {
+    "market_lifecycle_context": "scenario_fact/market_lifecycle_context.json",
+    "price_structure_state": "scenario_fact/price_structure_state.json",
+    "price_structure_segments": "scenario_fact/price_structure_segments.csv",
+    "volume_quality_state": "scenario_fact/volume_quality_state.json",
+    "wallet_scenario_context": "scenario_fact/wallet_scenario_context.json",
+    "chip_scenario_context": "scenario_fact/chip_scenario_context.json",
+    "market_cap_scenario_context": "scenario_fact/market_cap_scenario_context.json",
+    "scenario_scores": "scenario_scores/scenario_scores.json",
+    "scenario_score_matrix": "scenario_scores/scenario_score_matrix.csv",
+    "risk_scenario_scores": "scenario_scores/risk_scenario_scores.json",
+    "positive_scenario_scores": "scenario_scores/positive_scenario_scores.json",
+    "primary_scenario": "scenario_decision/primary_scenario.json",
+    "secondary_scenario": "scenario_decision/secondary_scenario.json",
+    "scenario_counter_evidence": "scenario_decision/scenario_counter_evidence.json",
+    "scenario_hard_negative_checklist": "scenario_decision/scenario_hard_negative_checklist.json",
+    "scenario_transition_log": "scenario_decision/scenario_transition_log.json",
+    "phase_04_handoff_packet": "handoff/phase_04_handoff_packet.json",
+    "scenario_report": "reports/scenario_report.md"
+  },
+  "handoff_to": "phase_05_structure_position_controller",
+  "handoff_rule": {
+    "SCENARIO_ALLOW": "allow",
+    "SCENARIO_SECOND_STAGE_CANDIDATE": "allow_with_required_avwap_completion",
+    "SCENARIO_PAUSE": "allow_with_degrade",
+    "SCENARIO_UNKNOWN": "allow_weak_evidence_only",
+    "SCENARIO_DISTRIBUTION_RISK": "block_positive_position_confirmation",
+    "SCENARIO_TRAP_RISK": "review_only",
+    "SCENARIO_BLOCK": "block",
+    "SCENARIO_REVIEW_ONLY": "review_only"
+  }
+}

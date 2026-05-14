@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "same_source_group",
+  "type": "object",
+  "description": "疑似同源执行组证据 normalized contract，不输出最终控筹判断。",
+  "additionalProperties": false,
+  "required": [
+    "token_address",
+    "wallet_address",
+    "candidate_group_key",
+    "same_source_evidence_items",
+    "schema_version",
+    "source_level",
+    "source_name",
+    "normalized_at",
+    "missing_fields",
+    "fallback_used",
+    "fallback_source"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "source_level": {
+      "type": "string",
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "unknown"
+      ]
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "raw_snapshot_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wallet_snapshot_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retrieved_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "normalized_at": {
+      "type": "string"
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "fallback_used": {
+      "type": "boolean"
+    },
+    "fallback_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "unknown"
+      ]
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "unknown"
+      ]
+    },
+    "token_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wallet_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "candidate_group_key": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "same_source_evidence_items": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "funding_source_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "funding_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "buy_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "buy_amount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "gmgn_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sell_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "backflow_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "transaction_path_signature": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

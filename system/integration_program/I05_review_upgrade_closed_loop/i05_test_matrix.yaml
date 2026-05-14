@@ -1,0 +1,55 @@
+i05_test_matrix:
+  - test_id: I05_TEST_001
+    name_cn: I04 handoff + P09 input available
+    expected_status: I05_READY_WITH_GAPS_OR_READY
+  - test_id: I05_TEST_002
+    name_cn: missing I04 handoff
+    expected_status: I05_BLOCKED
+  - test_id: I05_TEST_003
+    name_cn: missing P09 review input
+    expected_status: I05_BLOCKED
+  - test_id: I05_TEST_004
+    name_cn: P09 cannot reconstruct decision chain
+    expected_status: I05_READY_WITH_GAPS
+  - test_id: I05_TEST_005
+    name_cn: P10 package lacks regression plan
+    expected_status: I05_BLOCKED
+  - test_id: I05_TEST_006
+    name_cn: P10 package lacks rollback plan
+    expected_status: I05_BLOCKED
+  - test_id: I05_TEST_007
+    name_cn: live execution detected
+    expected_status: I05_BLOCKED
+  - test_id: I05_TEST_008
+    name_cn: wallet signing detected
+    expected_status: I05_BLOCKED
+  - test_id: I05_TEST_009
+    name_cn: single case global upgrade requested
+    expected_status: I05_BLOCKED
+  - test_id: I05_TEST_010
+    name_cn: trace chain partial
+    expected_status: I05_READY_WITH_GAPS
+  - test_id: I05_TEST_011
+    name_cn: handoff chain complete
+    expected_status: I05_READY_WITH_GAPS_OR_READY
+  - test_id: I05_TEST_012
+    name_cn: acceptance chain partial
+    expected_status: I05_READY_WITH_GAPS
+  - test_id: I05_TEST_013
+    name_cn: calibration candidate exists but low sample support
+    expected_status: I05_READY_WITH_GAPS
+  - test_id: I05_TEST_014
+    name_cn: test-only upgrade candidate
+    expected_status: I05_READY_WITH_GAPS_OR_READY
+  - test_id: I05_TEST_015
+    name_cn: controlled package generated without direct mutation
+    expected_status: I05_READY_WITH_GAPS_OR_READY
+  - test_id: I05_TEST_016
+    name_cn: closed loop defects generated
+    expected_status: I05_READY_WITH_GAPS
+  - test_id: I05_TEST_017
+    name_cn: paper operation not yet continuous
+    expected_status: I05_READY_WITH_GAPS
+  - test_id: I05_TEST_018
+    name_cn: all replay artifacts and automated tests pass
+    expected_status: I05_READY

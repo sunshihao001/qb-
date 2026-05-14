@@ -1,0 +1,125 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "initial_state": "P01_INIT",
+  "states": [
+    {
+      "state": "P01_INIT",
+      "中文": "初始化",
+      "allowed_next": [
+        "P01_INPUT_LOADED"
+      ],
+      "terminal": false
+    },
+    {
+      "state": "P01_INPUT_LOADED",
+      "中文": "输入已读取",
+      "allowed_next": [
+        "P01_RAW_SNAPSHOT_WRITTEN",
+        "P01_BLOCKED"
+      ],
+      "terminal": false
+    },
+    {
+      "state": "P01_RAW_SNAPSHOT_WRITTEN",
+      "中文": "原始快照已保全",
+      "allowed_next": [
+        "P01_FIELDS_MAPPED",
+        "P01_BLOCKED"
+      ],
+      "terminal": false
+    },
+    {
+      "state": "P01_FIELDS_MAPPED",
+      "中文": "字段映射完成",
+      "allowed_next": [
+        "P01_NORMALIZED",
+        "P01_PAUSED",
+        "P01_BLOCKED"
+      ],
+      "terminal": false
+    },
+    {
+      "state": "P01_NORMALIZED",
+      "中文": "标准化完成",
+      "allowed_next": [
+        "P01_MISSING_CHECKED",
+        "P01_PAUSED",
+        "P01_BLOCKED"
+      ],
+      "terminal": false
+    },
+    {
+      "state": "P01_MISSING_CHECKED",
+      "中文": "缺失检查完成",
+      "allowed_next": [
+        "P01_QUALITY_SCORED",
+        "P01_PAUSED",
+        "P01_BLOCKED"
+      ],
+      "terminal": false
+    },
+    {
+      "state": "P01_QUALITY_SCORED",
+      "中文": "质量评分完成",
+      "allowed_next": [
+        "P01_HANDOFF_READY",
+        "P01_PAUSED",
+        "P01_BLOCKED"
+      ],
+      "terminal": false
+    },
+    {
+      "state": "P01_HANDOFF_READY",
+      "中文": "Phase 02 交接就绪",
+      "allowed_next": [
+        "P01_AUDITED"
+      ],
+      "terminal": false
+    },
+    {
+      "state": "P01_AUDITED",
+      "中文": "审计完成",
+      "allowed_next": [
+        "P01_COMPLETE"
+      ],
+      "terminal": false
+    },
+    {
+      "state": "P01_COMPLETE",
+      "中文": "阶段完成",
+      "allowed_next": [
+        "phase_02_wallet_structure_controller"
+      ],
+      "terminal": true
+    },
+    {
+      "state": "P01_PAUSED",
+      "中文": "暂停，需补数据或降级",
+      "allowed_next": [
+        "P01_INPUT_LOADED",
+        "P01_BLOCKED"
+      ],
+      "terminal": true
+    },
+    {
+      "state": "P01_BLOCKED",
+      "中文": "阻断，不允许下游",
+      "allowed_next": [],
+      "terminal": true
+    }
+  ],
+  "state_to_gate_status": {
+    "P01_COMPLETE": "PASS_OR_PASS_WITH_WARNING",
+    "P01_PAUSED": "PAUSE",
+    "P01_BLOCKED": "BLOCK"
+  },
+  "hard_rules": [
+    "任意 fatal_required missing -> P01_BLOCKED",
+    "source conflict on token_address/chain/run_id -> P01_BLOCKED",
+    "phase_01_to_phase_02_contract missing -> P01_BLOCKED",
+    "quality_score < 40 -> P01_BLOCKED",
+    "40 <= quality_score < 75 -> P01_PAUSED",
+    "forbidden judgement detected in non-contract output -> P01_BLOCKED"
+  ]
+}

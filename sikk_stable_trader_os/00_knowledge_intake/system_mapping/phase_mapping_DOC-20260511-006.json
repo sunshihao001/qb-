@@ -1,0 +1,63 @@
+{
+  "doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T13:49:31.471070+00:00",
+  "phases": {
+    "K00": {
+      "impact": "primary",
+      "reason": "defines document-to-system-asset method and anti-document-pile rules"
+    },
+    "P00": {
+      "impact": "primary",
+      "reason": "system context/control must enforce build order and consumption checks"
+    },
+    "P01": {
+      "impact": "primary",
+      "reason": "data model and facts before judgment"
+    },
+    "P02": {
+      "impact": "alignment",
+      "reason": "structure/entity restoration depends on facts"
+    },
+    "P03": {
+      "impact": "alignment",
+      "reason": "chip control judgment depends on evidence"
+    },
+    "P04": {
+      "impact": "alignment",
+      "reason": "scenario recognition after facts/structure"
+    },
+    "P05": {
+      "impact": "alignment",
+      "reason": "position structure after scenario"
+    },
+    "P06": {
+      "impact": "constraint",
+      "reason": "strategy gate after hard negatives"
+    },
+    "P07": {
+      "impact": "constraint",
+      "reason": "paper-only execution risk"
+    },
+    "P08": {
+      "impact": "primary",
+      "reason": "failure attribution/review"
+    },
+    "P09": {
+      "impact": "primary",
+      "reason": "rule correction/system upgrade"
+    }
+  },
+  "canonical_order": [
+    "K00",
+    "P00",
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09"
+  ]
+}

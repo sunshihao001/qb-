@@ -1,0 +1,42 @@
+p01_gap_policy:
+  BLOCKING_GAP:
+    result: P01_BLOCKED
+    examples:
+    - live_execution_requested
+    - unsupported_chain
+    - no_handoff_permission
+    - no_trace_allowed
+    - handoff_plane_bypassed
+  CRITICAL_GAP:
+    result: P01_REJECTED
+    examples:
+    - token_address_missing
+    - token_address_invalid
+    - source_type_missing
+    - candidate_id_generation_failed
+    - candidate_identity_conflict_unresolved
+  HIGH_GAP:
+    result: P01_READY_WITH_GAPS
+    downstream_permission: P02_ONLY
+    examples:
+    - pair_address_missing
+    - pool_address_missing
+    - discovery_time_uncertain
+    - raw_source_payload_missing
+    - source_trace_partial
+  MEDIUM_GAP:
+    result: P01_READY_WITH_GAPS
+    downstream_permission: P02_ONLY
+    examples:
+    - discovery_market_cap_missing
+    - discovery_liquidity_missing
+    - discovery_holder_count_missing
+    - token_age_missing
+    - source_rank_missing
+  LOW_GAP:
+    result: P01_READY_WITH_GAPS
+    downstream_permission: P02_ONLY
+    examples:
+    - token_symbol_missing
+    - token_name_missing
+    - source_reason_missing

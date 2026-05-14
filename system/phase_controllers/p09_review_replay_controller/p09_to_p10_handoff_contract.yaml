@@ -1,0 +1,38 @@
+schema_id: P09_TO_P10_HANDOFF_CONTRACT
+title: P09 to P10 Handoff Packet
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- packet_id
+- packet_type
+- candidate_scope
+- review_package
+- p10_data_request
+- limitations
+- downstream_permission
+fields:
+  packet_id: string
+  packet_type: P09_TO_P10_REVIEW_REPLAY_HANDOFF
+  candidate_scope: object
+  review_package: object
+  p10_data_request: object
+  limitations: list
+  downstream_permission: object
+enums: {}
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

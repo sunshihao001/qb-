@@ -1,0 +1,12 @@
+{
+  "required_inputs": [
+    "i02_to_i03_handoff_packet",
+    "i03_runner_tool_binding_prerequisite_packet",
+    "i02 indexes",
+    "P01-P10 controller assets"
+  ],
+  "forbidden_inputs": [
+    "private_key",
+    "live_trade_permission"
+  ]
+}

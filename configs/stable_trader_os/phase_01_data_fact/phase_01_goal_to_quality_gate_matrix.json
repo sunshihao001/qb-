@@ -1,0 +1,57 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "matrix": [
+    {
+      "stage_goal": "当前 token 数据是否齐全",
+      "check_files": [
+        "token_fact_schema.json",
+        "missing_field_policy.json"
+      ],
+      "pass_condition": "fatal_required 全部存在，phase_02_required 缺失可降级",
+      "gate_impact": "PASS / PASS_WITH_WARNING / PAUSE / BLOCK"
+    },
+    {
+      "stage_goal": "缺失字段影响哪个阶段",
+      "check_files": [
+        "missing_field_policy.json",
+        "phase_01_field_schema.json"
+      ],
+      "pass_condition": "每个 required_level 都映射 downstream_used_by",
+      "gate_impact": "restricted_models"
+    },
+    {
+      "stage_goal": "是否能进入 Phase 02",
+      "check_files": [
+        "phase_01_to_phase_02_contract.json",
+        "phase_01_quality_gate_schema.json"
+      ],
+      "pass_condition": "gate_status in PASS/PASS_WITH_WARNING and required_files exist",
+      "gate_impact": "allow_next_phase"
+    },
+    {
+      "stage_goal": "哪些模型必须禁用",
+      "check_files": [
+        "quality_gate_rules.json"
+      ],
+      "pass_condition": "forbidden_downstream_when_missing 非空且覆盖 security/transfer/kline",
+      "gate_impact": "restricted_models"
+    },
+    {
+      "stage_goal": "哪些旧数据可以读取",
+      "check_files": [
+        "legacy_bridge_registry.json"
+      ],
+      "pass_condition": "旧目录 policy=read_only_keep_in_place",
+      "gate_impact": "legacy_read_mode"
+    },
+    {
+      "stage_goal": "不得输出交易判断",
+      "check_files": [
+        "phase_01_forbidden_judgement_contract.md"
+      ],
+      "pass_condition": "expected outputs 与 runtime outputs 不包含 forbidden terms",
+      "gate_impact": "DATA_INVALID"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+registry_id: STRATEGY_POLICY_REGISTRY
+version: v3.0
+supported_strategy_profiles:
+  - strategy_profile_id: SIKK_B_CONTROL_BOX_BREAKOUT_PULLBACK
+    name_cn: 控盘箱体突破回踩纸面候选策略
+    allowed_scenario_inputs: [CONTROL_BOX_ACCUMULATION, CONTROL_BOX_BREAKOUT, SECOND_STAGE_EXPANSION, SHAKEOUT_BEFORE_EXPANSION]
+    hard_block_scenarios: [ACTIVE_DISTRIBUTION, EXIT_LIQUIDITY_TRAP, FINAL_PUMP_DISTRIBUTION]
+    required_supporting_bundles: [CHIP_RETENTION_BUNDLE, STRUCTURAL_GROUP_HOLDING_SUPPORT]
+    required_negative_checks: [high_counterparty_pressure_not_present, active_distribution_not_present, scenario_conflict_not_blocking]
+  - strategy_profile_id: SIKK_R_REACCUMULATION_REACTIVATION
+    name_cn: 再吸筹 / 再激活纸面候选策略
+    allowed_scenario_inputs: [REACCUMULATION, FAILED_DISTRIBUTION_REACCUMULATION, INTERNAL_ROTATION]
+    hard_block_scenarios: [LATE_DISTRIBUTION, DOWNWARD_DISTRIBUTION, EXIT_LIQUIDITY_TRAP]
+    required_supporting_bundles: [retention_or_reaccumulation_support, distribution_risk_not_dominant]
+  - strategy_profile_id: SIKK_OBSERVE_ONLY_HIGH_CONFLICT
+    name_cn: 高冲突观察策略
+    allowed_scenario_inputs: [SCENARIO_CONFLICTED, DATA_INSUFFICIENT, OBSERVE_ONLY]
+    output_decision_allowed: [OBSERVE, PAUSE, BLOCK]
+    paper_candidate_allowed: false
+global_strategy_constraints:
+  live_execution_allowed: false
+  paper_runtime_requires_p08: true
+  strategy_gate_not_execution_layer: true

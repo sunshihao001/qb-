@@ -1,0 +1,72 @@
+record_id: forbidden_use_inheritance_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+global_forbidden_uses:
+- LIVE_EXECUTION
+- WALLET_SIGNING
+- AUTO_ORDER
+- BYPASS_HANDOFF
+- BYPASS_ACCEPTANCE
+- BYPASS_TRACE
+- DIRECT_PAPER_RUNTIME_BEFORE_P08
+- DIRECT_RULE_MUTATION_BEFORE_P10
+- AUTO_DEPLOY
+inheritance_checks:
+- phase_id: P01
+  forbiddens_declared:
+  - LIVE_EXECUTION
+  - BYPASS_HANDOFF
+  missing_global_forbiddens: []
+  inheritance_status: COMPLETE
+- phase_id: P02
+  forbiddens_declared: []
+  missing_global_forbiddens: []
+  inheritance_status: COMPLETE
+- phase_id: P03
+  forbiddens_declared:
+  - LIVE_EXECUTION
+  missing_global_forbiddens: []
+  inheritance_status: COMPLETE
+- phase_id: P04
+  forbiddens_declared:
+  - LIVE_EXECUTION
+  missing_global_forbiddens: []
+  inheritance_status: COMPLETE
+- phase_id: P05
+  forbiddens_declared:
+  - LIVE_EXECUTION
+  missing_global_forbiddens: []
+  inheritance_status: COMPLETE
+- phase_id: P06
+  forbiddens_declared:
+  - LIVE_EXECUTION
+  missing_global_forbiddens: []
+  inheritance_status: COMPLETE
+- phase_id: P07
+  forbiddens_declared:
+  - LIVE_EXECUTION
+  - WALLET_SIGNING
+  - AUTO_ORDER
+  missing_global_forbiddens: []
+  inheritance_status: COMPLETE
+- phase_id: P08
+  forbiddens_declared:
+  - LIVE_EXECUTION
+  - WALLET_SIGNING
+  - AUTO_ORDER
+  missing_global_forbiddens: []
+  inheritance_status: COMPLETE
+- phase_id: P09
+  forbiddens_declared:
+  - LIVE_EXECUTION
+  - WALLET_SIGNING
+  missing_global_forbiddens: []
+  inheritance_status: COMPLETE
+- phase_id: P10
+  forbiddens_declared:
+  - LIVE_EXECUTION
+  - WALLET_SIGNING
+  - AUTO_ORDER
+  - AUTO_DEPLOY
+  missing_global_forbiddens: []
+  inheritance_status: COMPLETE
+critical_violations: []

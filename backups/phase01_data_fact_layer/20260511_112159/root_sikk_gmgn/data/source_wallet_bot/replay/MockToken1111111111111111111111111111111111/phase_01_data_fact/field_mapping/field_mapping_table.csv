@@ -1,0 +1,8 @@
+source_file,source_field,standard_field,chinese_name,required,allow_missing,missing_action,notes
+raw_token_basic.json,token_address,token_address,代币地址,True,False,BLOCK,P01 fact mapping only
+raw_wallet_trade.json,wallet_address,wallet_address,钱包地址,True,False,BLOCK,P01 fact mapping only
+raw_holder.json,holder_address,holder_address,持有人地址,True,False,BLOCK,P01 fact mapping only
+raw_kline.json,timestamp,timestamp,K线时间,True,False,BLOCK,P01 fact mapping only
+raw_quote_security.json,quote_time,quote_time,报价时间,True,False,BLOCK,P01 fact mapping only
+raw_top_trader.json,wallet_address,wallet_address,Top Trader 钱包,False,True,DEGRADE,P01 fact mapping only
+raw_transfer.json,from_address,from_address,转出地址,False,True,DEGRADE,P01 fact mapping only

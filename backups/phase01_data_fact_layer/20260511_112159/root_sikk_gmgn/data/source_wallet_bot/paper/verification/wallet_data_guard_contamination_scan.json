@@ -1,0 +1,1896 @@
+{
+  "overall_status": "PASS_WITH_LEGACY_QUARANTINE",
+  "checked_at": "2026-05-08T03:26:02Z",
+  "data_root": "/root/sikk-gmgn/data/source_wallet_bot",
+  "files_checked": 967,
+  "issues": [
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/_unknown_token/wallet_data/raw/53cda80fa3__candidate_wallet_structure_summary.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/34200c99e8__40d7f0a944__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_04_45Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/61696e6fd5__7a93e45c3b__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_46_33Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/b5236809b6__35e1e5f040__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_36_47Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/2bc702723a__6ddd018990__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_36_09Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/ac905899cc__1fb3f85ada__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T02_59_33Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/2671f039d8__07775b0c50__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_52_39Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump/wallet_data/raw/627f850589__33ea051e84__paper-5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump-2026-05-02T18_27_34Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump/wallet_data/raw/e291c1a4f0__2bffbbc521__paper-5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump-2026-05-02T17_44_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump/wallet_data/raw/e018105667__baefba379b__paper-5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump-2026-05-02T18_16_42Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump/wallet_data/raw/2d16d9511f__5b86414ce5__paper-5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump-2026-05-02T18_05_49Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump/wallet_data/raw/28bf4b9e9e__443fb114e5__paper-5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump-2026-05-02T17_54_54Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/260312ffcc__dd67fa88e4__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T06_29_49Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/de62a77c39__e3281665b1__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T08_14_11Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/cda15df3ef__8ffa8583a6__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T10_09_28Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/67b3cd7a4d__0f6bd54fd5__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T09_38_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/c23148de26__86e826a926__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T06_40_17Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/1e65d3fe74__30de941c7b__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T09_58_54Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/4c58864415__240cf817e8__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T07_01_15Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/278d7d6fbc__9880695d79__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T07_22_11Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/317e60b0ac__8db47b868b__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T07_11_43Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/cecaaf7b9c__ed787906ea__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T08_45_36Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/ab82cf62a1__c11f6608e9__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T08_03_44Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/d5a224a877__5bc924d332__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T06_50_46Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/6abda23a09__dcf2475aa7__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T08_24_44Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/f2c8c6c130__8587f7be42__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T06_19_20Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/82b9a5f88a__f29262f861__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T07_53_10Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/7ef6fea054__5aefd11133__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T19_20_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/54afabe4aa__8709f6066c__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T20_33_44Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/60918b8752__cc64ccaf86__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T09_17_00Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/856dee4bca__b09256f9f3__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T07_32_27Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/33553e6306__7b4ae4327a__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T03_19_42Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/41958cc434__b9ba398c0b__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_27_54Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/bfc92eebd9__ad93fcdc5f__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T07_42_44Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/b83a058a55__f270a07fe2__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T20_02_21Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/8f9f9bae36__6fb2a5d7d6__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T09_58_54Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/835406e955__fae2ef5d79__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T18_16_42Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/e52cee63f4__ebbd3f48e6__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T02_59_33Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/8a71ab8652__434a548136__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T07_22_11Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/eac125a57a__3484fd7312__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T21_36_25Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/d137cb4fc2__20fdfe0f6a__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T22_07_29Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/fe1ce63ab2__7b7161ee24__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T06_50_46Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/91f35981dc__d6bf8e882a__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T09_27_28Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/8cd66d0571__e685676ab8__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_38_11Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/1a774a29fa__af96753ea0__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T22_28_31Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/bf0ac65c26__b91c9ba116__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T09_48_25Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/55ba998abb__4cb8ddb0a7__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T21_57_08Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/3f515cdeaa__5a5d39c8ca__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_48_28Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/7307a2f5e2__172dcb6c67__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T20_54_40Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/611385a4da__e767e23c99__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T10_09_28Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/88c83b4b88__77bb77b5e2__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T04_57_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/939c75033f__2f5958af15__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T08_14_11Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/5436d63bdb__2a2da13de7__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T08_45_36Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/13332ab88c__bb803ec86b__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T04_04_45Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/7f0519c5ea__cbd18ab723__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T18_59_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/a98186d606__56ef6cdbca__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T21_26_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/c43584d117__edbcb4042a__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T08_24_44Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/7b17177287__8c0b20cf68__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T21_05_07Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/cb41a16915__58b72df658__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T13_54_47Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/3cc92eeb24__c40236da4b__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T18_38_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/77cf889049__0164f7190a__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_10_57Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/41cc268fc6__01e20c61ce__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T04_36_09Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/d2abc77a9c__74d6e78cac__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_17_38Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/7045d674e1__b7bf5ac84f__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T20_44_12Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/a371a712c4__2f79801057__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T04_59_46Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/5ab7d152fa__909db4b58a__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T04_52_01Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/5f93a56902__69c7bfd7df__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T07_37_58Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/268d146d16__763898ea61__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T08_09_00Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/d04a66cce9__b0cb85df83__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T07_56_08Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/c310ae621a__55d2faadac__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T01_23_21Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/4163ea988d__93519f9e59__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T04_55_43Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/f21c663211__b45d21eb93__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T07_29_02Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/6d507de015__888dde0a9d__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T04_52_48Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/8a98d79b4a__f31bec4eef__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T19_09_45Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/113c46b0b1__3b41659f33__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T18_38_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/ea76db604b__e8a321bcd1__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T18_59_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/535eae2a0c__88d2f3117e__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T17_33_17Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/8d80d8da1b__f3e7bbbe8e__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T17_54_54Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/90031aeb23__c9d3524891__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T18_05_49Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/cf4080878e__d232042f71__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T17_44_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/a06a1bc81b__8863393364__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T18_27_34Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/6eba911410__44ee8ae81d__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T18_48_46Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/78b4dfd2d9__356cb5d0ec__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_02_21Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/e157a2a907__6e3b641985__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T04_57_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/2adf1011dc__c8c5dffdf1__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T09_06_32Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/867a694465__2f73da0b51__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_12_49Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/fe92117789__78355273c4__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T07_11_43Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/e66e15a800__6cd7536e41__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_54_40Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/50010621bf__1ffbe32f66__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T09_38_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/a66a86eefd__b800607993__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T19_09_45Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/c3577455b8__ba68a9844c__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T18_59_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/2da5988348__e36cf9cbe2__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_23_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/714e613783__37b93e4f32__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T07_01_15Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/ed8f0921e4__1f566a1ba8__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_44_12Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/881092861f__0aa992b05a__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T06_50_46Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/249654a47e__8d47e90b51__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T17_22_43Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/2cab82a430__78803beb5b__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T17_44_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/1a0b1e79d4__505efe1262__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T08_35_14Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/b1c4ca9d26__151a7d9dc6__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T19_51_43Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/dea234192f__dcbed0498b__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T08_14_11Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/0b3bca2d83__5d25fff471__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T21_15_35Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/f4b85bd700__5e9b5a813a__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_33_44Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/24f622fac1__848d29db4f__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T19_20_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/b0e69331cd__74ee237874__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T10_09_28Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/28820915cf__c27ffdc7e2__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T21_05_07Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/3dd73a66fb__c3101131ff__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T08_56_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/4ec592780b__e56c792387__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T06_19_20Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/563e5e0778__0f3c7e7e66__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T07_53_10Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/f2b2112c01__312050f41d__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T09_27_28Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/20ed49f67b__995866c8da__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T19_30_40Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/caf46fcc37__d0354941da__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T17_54_54Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/5d116d7bfd__25342167b2__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T17_44_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/1cdcfe830d__54cb7988ec__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T18_38_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/dd66b44d9d__1fe0a93d1e__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T17_22_43Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/5c3459603a__7c09e6f668__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T18_05_49Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/6fc7aba2c1__77418acb0f__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T03_19_42Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/2175e3f418__671cea035b__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T18_16_42Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/6d2b3a74f6__ee86d420ca__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T13_54_47Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/e7253be36f__c0f4d2486b__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T13_54_47Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/b77a4da039__6a7d72bddf__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T03_19_42Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/b74ebe41f8__e4774ca18a__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T17_54_54Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/fe45806ffb__a07da7db44__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T17_44_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/f5ba84ad65__e7d5a45d76__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T17_22_43Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/fbcd935c0e__1aea10ae2f__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T18_05_49Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/a64acb214b__8533574498__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T17_33_17Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/a436bd4e13__360f086442__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T18_27_34Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/2881d0fa3d__543c6aee20__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T21_46_47Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/e1befa7681__4ac0f780ac__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T21_26_03Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/396705443d__cbced7119f__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T20_23_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/50a6b98837__701ee4cb6a__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T20_02_21Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/7775c7e033__f4a724419a__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T22_17_57Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/f81b009770__1e93bf3686__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T18_48_46Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/90f1a3fe9c__75287b592a__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T21_57_08Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/ad9f5cff2f__8c987b0652__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T18_16_42Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/327d1dc6dd__cce8975bbc__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T21_36_25Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/aa605dce39__03f3f95058__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T19_09_45Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/6d7c97e5a9__8c455294c5__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T22_07_29Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/6f67c56c7c__8ad8085b8a__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T18_38_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/c34fbcbe8f__8b9ee4a56d__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T18_59_16Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/8144d5d3c4__94130a7634__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T09_58_54Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/873826697c__3b65b78641__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T07_01_15Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/814fe0edef__b2ba2629bf__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_27_54Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/5c7c8d7e1a__15e41bef44__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T07_11_43Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/a44ecd8737__d23bacde17__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T06_08_52Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/3c4578221a__b0982e5acb__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T09_17_00Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/0d791f412c__22caa34d2a__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_10_57Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/b0cf95aaca__3be7f11be0__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_38_11Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/6735a58aa5__939ae26926__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_17_38Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/2e62d7f4a1__84f475b661__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_48_28Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/d45a8caa16__85a9432b18__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T07_42_44Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/e98efd4d07__7843405ac6__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T07_22_11Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/d957945386__3776a3aaf9__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T04_52_39Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/2fe9265365__0a1e6eabd0__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T08_03_44Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/3466892785__fb362d89eb__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T07_55_27Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/5ec99b2aa1__fd60afee48__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T06_29_49Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    },
+    {
+      "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+      "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/821916c335__e55234fc63__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_07_20Z.json",
+      "detail": "inference-like keys: ['wallet_structure_status']"
+    }
+  ],
+  "legacy_quarantine": {
+    "status": "ACTIVE_QUARANTINE",
+    "legacy_issues_count": 156,
+    "policy": {
+      "read_mode": "readonly",
+      "delete_old_files": false,
+      "move_old_files": false,
+      "contaminated_source_required": true,
+      "raw_fact_direct_use_allowed": false
+    },
+    "issues": [
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/_unknown_token/wallet_data/raw/53cda80fa3__candidate_wallet_structure_summary.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/34200c99e8__40d7f0a944__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_04_45Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/61696e6fd5__7a93e45c3b__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_46_33Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/b5236809b6__35e1e5f040__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_36_47Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/2bc702723a__6ddd018990__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_36_09Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/ac905899cc__1fb3f85ada__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T02_59_33Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/wallet_data/raw/2671f039d8__07775b0c50__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_52_39Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump/wallet_data/raw/627f850589__33ea051e84__paper-5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump-2026-05-02T18_27_34Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump/wallet_data/raw/e291c1a4f0__2bffbbc521__paper-5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump-2026-05-02T17_44_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump/wallet_data/raw/e018105667__baefba379b__paper-5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump-2026-05-02T18_16_42Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump/wallet_data/raw/2d16d9511f__5b86414ce5__paper-5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump-2026-05-02T18_05_49Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump/wallet_data/raw/28bf4b9e9e__443fb114e5__paper-5oNQP9NSRspWy2qrpJexuvkX8DqZUW6TLNTZbHKypump-2026-05-02T17_54_54Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/260312ffcc__dd67fa88e4__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T06_29_49Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/de62a77c39__e3281665b1__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T08_14_11Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/cda15df3ef__8ffa8583a6__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T10_09_28Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/67b3cd7a4d__0f6bd54fd5__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T09_38_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/c23148de26__86e826a926__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T06_40_17Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/1e65d3fe74__30de941c7b__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T09_58_54Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/4c58864415__240cf817e8__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T07_01_15Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/278d7d6fbc__9880695d79__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T07_22_11Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/317e60b0ac__8db47b868b__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T07_11_43Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/cecaaf7b9c__ed787906ea__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T08_45_36Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/ab82cf62a1__c11f6608e9__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T08_03_44Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/d5a224a877__5bc924d332__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T06_50_46Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/6abda23a09__dcf2475aa7__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T08_24_44Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/f2c8c6c130__8587f7be42__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T06_19_20Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump/wallet_data/raw/82b9a5f88a__f29262f861__paper-3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump-2026-05-03T07_53_10Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/7ef6fea054__5aefd11133__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T19_20_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/54afabe4aa__8709f6066c__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T20_33_44Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/60918b8752__cc64ccaf86__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T09_17_00Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/856dee4bca__b09256f9f3__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T07_32_27Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/33553e6306__7b4ae4327a__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T03_19_42Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/41958cc434__b9ba398c0b__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_27_54Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/bfc92eebd9__ad93fcdc5f__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T07_42_44Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/b83a058a55__f270a07fe2__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T20_02_21Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/8f9f9bae36__6fb2a5d7d6__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T09_58_54Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/835406e955__fae2ef5d79__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T18_16_42Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/e52cee63f4__ebbd3f48e6__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T02_59_33Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/8a71ab8652__434a548136__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T07_22_11Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/eac125a57a__3484fd7312__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T21_36_25Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/d137cb4fc2__20fdfe0f6a__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T22_07_29Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/fe1ce63ab2__7b7161ee24__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T06_50_46Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/91f35981dc__d6bf8e882a__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T09_27_28Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/8cd66d0571__e685676ab8__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_38_11Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/1a774a29fa__af96753ea0__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T22_28_31Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/bf0ac65c26__b91c9ba116__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T09_48_25Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/55ba998abb__4cb8ddb0a7__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T21_57_08Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/3f515cdeaa__5a5d39c8ca__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_48_28Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/7307a2f5e2__172dcb6c67__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T20_54_40Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/611385a4da__e767e23c99__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T10_09_28Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/88c83b4b88__77bb77b5e2__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T04_57_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/939c75033f__2f5958af15__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T08_14_11Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/5436d63bdb__2a2da13de7__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T08_45_36Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/13332ab88c__bb803ec86b__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T04_04_45Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/7f0519c5ea__cbd18ab723__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T18_59_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/a98186d606__56ef6cdbca__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T21_26_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/c43584d117__edbcb4042a__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T08_24_44Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/7b17177287__8c0b20cf68__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T21_05_07Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/cb41a16915__58b72df658__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T13_54_47Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/3cc92eeb24__c40236da4b__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T18_38_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/77cf889049__0164f7190a__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_10_57Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/41cc268fc6__01e20c61ce__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T04_36_09Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/d2abc77a9c__74d6e78cac__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T05_17_38Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/wallet_data/raw/7045d674e1__b7bf5ac84f__paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-02T20_44_12Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/a371a712c4__2f79801057__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T04_59_46Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/5ab7d152fa__909db4b58a__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T04_52_01Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/5f93a56902__69c7bfd7df__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T07_37_58Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/268d146d16__763898ea61__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T08_09_00Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/d04a66cce9__b0cb85df83__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T07_56_08Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/c310ae621a__55d2faadac__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T01_23_21Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/4163ea988d__93519f9e59__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T04_55_43Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/f21c663211__b45d21eb93__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T07_29_02Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump/wallet_data/raw/6d507de015__888dde0a9d__paper-3XwDQHMKcner1GhXRqLKojrWWwNdMaruQs7g7riDpump-2026-05-04T04_52_48Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/8a98d79b4a__f31bec4eef__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T19_09_45Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/113c46b0b1__3b41659f33__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T18_38_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/ea76db604b__e8a321bcd1__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T18_59_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/535eae2a0c__88d2f3117e__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T17_33_17Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/8d80d8da1b__f3e7bbbe8e__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T17_54_54Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/90031aeb23__c9d3524891__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T18_05_49Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/cf4080878e__d232042f71__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T17_44_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/a06a1bc81b__8863393364__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T18_27_34Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump/wallet_data/raw/6eba911410__44ee8ae81d__paper-EVrfnKXnX1XCT5ESvp6VJUwLFDU1Ajq1dpUrG5qUpump-2026-05-02T18_48_46Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/78b4dfd2d9__356cb5d0ec__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_02_21Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/e157a2a907__6e3b641985__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T04_57_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/2adf1011dc__c8c5dffdf1__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T09_06_32Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/867a694465__2f73da0b51__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_12_49Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/fe92117789__78355273c4__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T07_11_43Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/e66e15a800__6cd7536e41__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_54_40Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/50010621bf__1ffbe32f66__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T09_38_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/a66a86eefd__b800607993__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T19_09_45Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/c3577455b8__ba68a9844c__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T18_59_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/2da5988348__e36cf9cbe2__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_23_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/714e613783__37b93e4f32__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T07_01_15Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/ed8f0921e4__1f566a1ba8__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_44_12Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/881092861f__0aa992b05a__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T06_50_46Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/249654a47e__8d47e90b51__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T17_22_43Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/2cab82a430__78803beb5b__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T17_44_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/1a0b1e79d4__505efe1262__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T08_35_14Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/b1c4ca9d26__151a7d9dc6__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T19_51_43Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/dea234192f__dcbed0498b__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T08_14_11Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/0b3bca2d83__5d25fff471__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T21_15_35Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/f4b85bd700__5e9b5a813a__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T20_33_44Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/24f622fac1__848d29db4f__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T19_20_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/b0e69331cd__74ee237874__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T10_09_28Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/28820915cf__c27ffdc7e2__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T21_05_07Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/3dd73a66fb__c3101131ff__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T08_56_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/4ec592780b__e56c792387__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T06_19_20Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/563e5e0778__0f3c7e7e66__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T07_53_10Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/f2b2112c01__312050f41d__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-03T09_27_28Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump/wallet_data/raw/20ed49f67b__995866c8da__paper-7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump-2026-05-02T19_30_40Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/caf46fcc37__d0354941da__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T17_54_54Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/5d116d7bfd__25342167b2__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T17_44_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/1cdcfe830d__54cb7988ec__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T18_38_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/dd66b44d9d__1fe0a93d1e__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T17_22_43Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/5c3459603a__7c09e6f668__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T18_05_49Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/6fc7aba2c1__77418acb0f__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T03_19_42Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/2175e3f418__671cea035b__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T18_16_42Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump/wallet_data/raw/6d2b3a74f6__ee86d420ca__paper-F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump-2026-05-02T13_54_47Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/e7253be36f__c0f4d2486b__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T13_54_47Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/b77a4da039__6a7d72bddf__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T03_19_42Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/b74ebe41f8__e4774ca18a__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T17_54_54Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/fe45806ffb__a07da7db44__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T17_44_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/f5ba84ad65__e7d5a45d76__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T17_22_43Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/fbcd935c0e__1aea10ae2f__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T18_05_49Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/a64acb214b__8533574498__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T17_33_17Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump/wallet_data/raw/a436bd4e13__360f086442__paper-9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump-2026-05-02T18_27_34Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/2881d0fa3d__543c6aee20__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T21_46_47Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/e1befa7681__4ac0f780ac__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T21_26_03Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/396705443d__cbced7119f__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T20_23_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/50a6b98837__701ee4cb6a__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T20_02_21Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/7775c7e033__f4a724419a__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T22_17_57Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/f81b009770__1e93bf3686__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T18_48_46Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/90f1a3fe9c__75287b592a__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T21_57_08Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/ad9f5cff2f__8c987b0652__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T18_16_42Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/327d1dc6dd__cce8975bbc__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T21_36_25Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/aa605dce39__03f3f95058__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T19_09_45Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/6d7c97e5a9__8c455294c5__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T22_07_29Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/6f67c56c7c__8ad8085b8a__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T18_38_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump/wallet_data/raw/c34fbcbe8f__8b9ee4a56d__paper-GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump-2026-05-02T18_59_16Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/8144d5d3c4__94130a7634__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T09_58_54Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/873826697c__3b65b78641__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T07_01_15Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/814fe0edef__b2ba2629bf__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_27_54Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/5c7c8d7e1a__15e41bef44__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T07_11_43Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/a44ecd8737__d23bacde17__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T06_08_52Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/3c4578221a__b0982e5acb__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T09_17_00Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/0d791f412c__22caa34d2a__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_10_57Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/b0cf95aaca__3be7f11be0__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_38_11Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/6735a58aa5__939ae26926__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_17_38Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/2e62d7f4a1__84f475b661__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_48_28Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/d45a8caa16__85a9432b18__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T07_42_44Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/e98efd4d07__7843405ac6__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T07_22_11Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/d957945386__3776a3aaf9__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T04_52_39Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/2fe9265365__0a1e6eabd0__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T08_03_44Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/3466892785__fb362d89eb__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T07_55_27Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/5ec99b2aa1__fd60afee48__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T06_29_49Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      },
+      {
+        "code": "INFERENCE_FIELD_IN_LOWER_LAYER",
+        "path": "/root/sikk-gmgn/data/source_wallet_bot/legacy/6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump/wallet_data/raw/821916c335__e55234fc63__paper-6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump-2026-05-03T05_07_20Z.json",
+        "detail": "inference-like keys: ['wallet_structure_status']",
+        "quarantine_status": "LEGACY_QUARANTINED_READONLY",
+        "contaminated_source": true
+      }
+    ]
+  },
+  "active_issues_count": 0,
+  "legacy_issues_count": 156,
+  "active_issues": []
+}

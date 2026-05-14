@@ -1,0 +1,19 @@
+{
+  "handoff_id": "k00_handoff_HER-DOC-REAL-20260514-SYSTEM-RESCAN-002",
+  "from_phase": "K00",
+  "to_phase": "F00",
+  "status": "K00_HANDOFF_READY_WITH_GAPS",
+  "refs": {
+    "document_passport": "k00/document_passport.json",
+    "corpus_index": "k00/corpus_index.json",
+    "system_mapping": "k00/system_mapping.json"
+  },
+  "gaps": [
+    {
+      "gap_id": "gap_real_semantic_extraction_limited",
+      "gap_level": "MEDIUM_GAP",
+      "route_to": "U00",
+      "status": "OPEN"
+    }
+  ]
+}

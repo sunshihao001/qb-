@@ -1,0 +1,64 @@
+{
+  "task_id": "TASK-F00-REALIZE-20260513-001",
+  "doc_id": "DOC-20260513-F00-001",
+  "objective": "Use uploaded F00 controller blueprint to audit and complete canonical F00 controller package.",
+  "required_inputs": {
+    "k00_handoff_packet": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/handoff/k00_to_f00_handoff_packet.json",
+    "document_passport_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/passports/document_passport.yaml"
+    ],
+    "corpus_index_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/corpus_index/corpus_index.json"
+    ],
+    "system_mapping_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/system_mapping/system_mapping.json"
+    ],
+    "gap_detection_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/gaps/gap_detection.json"
+    ],
+    "kv_retrieval_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/kv/kv_retrieval_index.json"
+    ],
+    "target_phase_candidates": [
+      "F00",
+      "V01",
+      "V02",
+      "V03",
+      "R01",
+      "A01",
+      "H01"
+    ],
+    "execution_boundary": {
+      "allowed": [
+        "WRITE_SAFE_FILES",
+        "VALIDATE_JSON_YAML",
+        "DESIGN_FILES"
+      ],
+      "forbidden": [
+        "LIVE_RUNTIME",
+        "WALLET_SIGNING",
+        "AUTO_DEPLOY",
+        "PRODUCTION_RULE_DIRECT_CHANGE"
+      ]
+    },
+    "write_policy": {
+      "safe_file_write_allowed": true,
+      "patch_code_allowed": false,
+      "delete_legacy_assets": false
+    },
+    "repo_root": "/root/sikk-gmgn"
+  },
+  "acceptance_criteria": [
+    "all 19 controller files exist",
+    "JSON files parse",
+    "YAML files syntactically readable or plain YAML-safe",
+    "protocol covers F00.0-F00.12",
+    "acceptance gate distinguishes DESIGN_ONLY/PLANNED_NOT_WRITTEN/PATCH_APPLIED/TESTED/RUNNER_BOUND",
+    "handoff schema includes function/field/rule/asset/test/replay/runner/gap/acceptance refs"
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy"
+  ]
+}

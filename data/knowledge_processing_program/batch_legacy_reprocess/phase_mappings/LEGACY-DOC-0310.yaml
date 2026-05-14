@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0310
+source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/HER_K00_VERSION_UPDATE_13_14.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 0
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 3
+  P08: 6
+  P09: 5
+  P10: 5
+primary_phase: P08
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

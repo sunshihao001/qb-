@@ -1,0 +1,16 @@
+phase_id: V00_REAL_VALIDATION
+status_code: V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS
+owner_controller: V00_validation_evidence_controller
+mode: safe_real_validation_evidence
+upstream_required_status:
+  - O00_CLI_SAMPLE_REPLAY_READY_WITH_GAPS
+downstream_candidates:
+  - A00_acceptance_evidence_controller
+  - R00_runner_tool_binding_controller
+  - U00_review_upgrade_controller
+  - G00_governance_boundary_controller
+forbidden_actions:
+  - live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading

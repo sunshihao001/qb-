@@ -1,0 +1,101 @@
+{
+  "upgrade_candidates": [
+    {
+      "upgrade_candidate_id": "uc_u00_real_001",
+      "upgrade_type": "GOVERNANCE_UPGRADE",
+      "target_controller": "G00",
+      "target_asset": "g00_controller_or_runtime_assets",
+      "problem_statement": "policy_not_active -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "proposed_change": "Create or improve governance_upgrade evidence/control for G00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": true,
+      "handoff_target": "G00",
+      "source_root_cause_id": "rca_review_case_policy_not_active"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_002",
+      "upgrade_type": "CONTROLLER_UPGRADE",
+      "target_controller": "H00_REAL_DOWNSTREAM_QUEUE",
+      "target_asset": "h00_real_downstream_queue_controller_or_runtime_assets",
+      "problem_statement": "paper_runtime_not_enabled -> UNCLASSIFIED_REVIEW_GAP",
+      "proposed_change": "Create or improve controller_upgrade evidence/control for H00_REAL_DOWNSTREAM_QUEUE; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P2_MEDIUM",
+      "requires_governance": false,
+      "handoff_target": "H00_REAL_DOWNSTREAM_QUEUE",
+      "source_root_cause_id": "rca_review_case_paper_runtime_not_enabled"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_003",
+      "upgrade_type": "CONTROLLER_UPGRADE",
+      "target_controller": "H00_REAL_DOWNSTREAM_QUEUE",
+      "target_asset": "h00_real_downstream_queue_controller_or_runtime_assets",
+      "problem_statement": "live_runtime_forbidden -> UNCLASSIFIED_REVIEW_GAP",
+      "proposed_change": "Create or improve controller_upgrade evidence/control for H00_REAL_DOWNSTREAM_QUEUE; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P2_MEDIUM",
+      "requires_governance": false,
+      "handoff_target": "H00_REAL_DOWNSTREAM_QUEUE",
+      "source_root_cause_id": "rca_review_case_live_runtime_forbidden"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_004",
+      "upgrade_type": "CONTROLLER_UPGRADE",
+      "target_controller": "H00_REAL_DOWNSTREAM_QUEUE",
+      "target_asset": "h00_real_downstream_queue_controller_or_runtime_assets",
+      "problem_statement": "telegram_binding_design_only -> UNCLASSIFIED_REVIEW_GAP",
+      "proposed_change": "Create or improve controller_upgrade evidence/control for H00_REAL_DOWNSTREAM_QUEUE; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P2_MEDIUM",
+      "requires_governance": false,
+      "handoff_target": "H00_REAL_DOWNSTREAM_QUEUE",
+      "source_root_cause_id": "rca_review_case_telegram_binding_design_only"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_005",
+      "upgrade_type": "CONTROLLER_UPGRADE",
+      "target_controller": "H00_REAL_DOWNSTREAM_QUEUE",
+      "target_asset": "h00_real_downstream_queue_controller_or_runtime_assets",
+      "problem_statement": "V00_READY_WITH_GAPS -> UNCLASSIFIED_REVIEW_GAP",
+      "proposed_change": "Create or improve controller_upgrade evidence/control for H00_REAL_DOWNSTREAM_QUEUE; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P2_MEDIUM",
+      "requires_governance": false,
+      "handoff_target": "H00_REAL_DOWNSTREAM_QUEUE",
+      "source_root_cause_id": "rca_review_case_V00_READY_WITH_GAPS"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_006",
+      "upgrade_type": "RUNNER_BINDING_UPGRADE",
+      "target_controller": "R00",
+      "target_asset": "r00_controller_or_runtime_assets",
+      "problem_statement": "R00_READY_WITH_GAPS -> RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "proposed_change": "Create or improve runner_binding_upgrade evidence/control for R00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": false,
+      "handoff_target": "R00",
+      "source_root_cause_id": "rca_review_case_R00_READY_WITH_GAPS"
+    }
+  ],
+  "total_candidates": 6
+}

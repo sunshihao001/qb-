@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F00 Runner Binding Schema",
+  "type": "object",
+  "required": [
+    "binding_id",
+    "function_id",
+    "binding_type",
+    "target_entry",
+    "status",
+    "test_required",
+    "forbidden_runtime_modes"
+  ],
+  "properties": {
+    "binding_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "function_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "binding_type": {
+      "type": "string",
+      "enum": [
+        "CLI_COMMAND",
+        "ORCHESTRATOR_STEP",
+        "TELEGRAM_COMMAND",
+        "SCHEDULED_JOB",
+        "PAPER_ONLY_RUNTIME",
+        "REPORT_GENERATOR",
+        "DASHBOARD_FIELD"
+      ]
+    },
+    "target_entry": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "BINDING_DESIGNED",
+        "BINDING_WRITTEN",
+        "BINDING_TESTED",
+        "BINDING_FAILED",
+        "NOT_BOUND"
+      ]
+    },
+    "test_required": {
+      "type": "boolean"
+    },
+    "forbidden_runtime_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

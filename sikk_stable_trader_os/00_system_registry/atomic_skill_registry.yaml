@@ -1,0 +1,254 @@
+registry_id: atomic_skill_registry
+version: '2.0'
+rule: Atomic Skill 是可复用能力单元；不能决定最终交易状态，不能输出实盘授权。
+skills:
+- skill_id: time_context_skill
+  bound_phases:
+  - P01
+  - P04
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: token_lifecycle_skill
+  bound_phases:
+  - P01
+  - P04
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: market_scene_recognition_skill
+  bound_phases:
+  - P04
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: wallet_role_classification_skill
+  bound_phases:
+  - P02
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: same_source_group_skill
+  bound_phases:
+  - P02
+  - P03
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: chip_distribution_skill
+  bound_phases:
+  - P03
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: dominant_side_lifecycle_skill
+  bound_phases:
+  - P03
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: hard_negative_filter_skill
+  bound_phases:
+  - P02
+  - P03
+  - P04
+  - P05
+  - P06
+  - P07
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: avwap_completion_skill
+  bound_phases:
+  - P05
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: strategy_gate_skill
+  bound_phases:
+  - P06
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: paper_review_skill
+  bound_phases:
+  - P08
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state
+- skill_id: explanation_report_skill
+  bound_phases:
+  - P06
+  - P07
+  - P08
+  status: candidate_spec
+  allowed_outputs:
+  - facts
+  - evidence
+  - counter_evidence
+  - scores
+  - labels
+  - missing
+  - risk_flags
+  - handoff_suggestions
+  - audit
+  forbidden_outputs:
+  - buy_now
+  - sell_now
+  - auto_trade
+  - real_trade_allowed
+  - final_trade_state

@@ -1,0 +1,16 @@
+schema_id: HER_DOC_FUNCTIONAL_OBJECT_SCHEMA
+version: 1
+required_fields:
+  - object_id
+  - object_type
+  - object_name
+  - source_document_id
+  - target_phase
+  - target_file_candidate
+  - current_system_status
+  - evidence_refs
+  - required_next_action
+field_enums:
+  object_type: [GOAL, PHASE, CONTROLLER, DATA_FIELD, SCHEMA, CONTRACT, RUNNER, TRACE_REQUIREMENT, ACCEPTANCE_CRITERIA, HANDOFF_CONTRACT, EVIDENCE_RULE, COUNTER_EVIDENCE_RULE, RISK_RULE, GATE_RULE, REPLAY_FIELD, UPGRADE_RULE]
+  current_system_status: [EXISTS, PARTIAL, DOCUMENT_ONLY, MISSING, CONFLICTED, NOT_PROVEN]
+  required_next_action: [GPT_RESEARCH_FIRST, HER_BUILD_DIRECT, K00_ASSETIZATION, STAGE_COMPLETION, R00_BINDING, LEGACY_ABSORPTION, REJECT]

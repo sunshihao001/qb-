@@ -1,0 +1,34 @@
+semantic_chunk_index:
+  document_id: KPP-DOC-20260512-001
+  chunking_method: heading_based_with_semantic_overlap_target_20_percent
+  chunks:
+    - chunk_id: C00_CONCLUSION
+      source_section: "0. 先给结论"
+      system_object_potential: [control_rule, processing_route]
+    - chunk_id: C01_CORE_RECOGNITION
+      source_section: "1. 新认知：文档不应该直接给 HER 执行"
+      system_object_potential: [hard_negative, workflow_policy]
+    - chunk_id: C02_ARCHITECTURE
+      source_section: "2. 文档处理体系的总架构"
+      system_object_potential: [program_architecture, upstream_layer]
+    - chunk_id: C03_PHASE_TABLE
+      source_section: "3-4. K00-K08 阶段"
+      system_object_potential: [phase_controller_set]
+    - chunk_id: C04_CLASSIFICATION
+      source_section: "5. 文档类型分类体系"
+      system_object_potential: [classification_policy]
+    - chunk_id: C05_FORMULA
+      source_section: "6. 解释性文档转功能文档的标准公式"
+      system_object_potential: [functionalization_policy]
+    - chunk_id: C06_DIRECTORY
+      source_section: "7-8. 目录设计与标准输出包"
+      system_object_potential: [storage_constitution, output_contract]
+    - chunk_id: C07_HARD_NEGATIVE
+      source_section: "9. Hard Negative Rules"
+      system_object_potential: [hard_negative_rules]
+    - chunk_id: C08_PROTOCOL
+      source_section: "10-11. HER 指令方式与正式任务书"
+      system_object_potential: [task_package, execution_protocol]
+    - chunk_id: C09_NEXT_ORDER
+      source_section: "12-13. 认知更新与后续顺序"
+      system_object_potential: [backlog, reprocessing_plan]

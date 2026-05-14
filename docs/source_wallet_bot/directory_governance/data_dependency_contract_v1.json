@@ -1,0 +1,1194 @@
+{
+  "contract_name": "source_wallet_bot_data_dependency_contract_v1",
+  "version": "1.0.0",
+  "scope": "Source Wallet Bot 钱包结构分析前置数据依赖合同",
+  "principles": [
+    "先证据，后判断",
+    "先字段，后角色",
+    "字段缺失时先降级，不强判",
+    "事实层与推断层分离",
+    "原始数据、标准化字段、结构用途必须同时保留",
+    "接口能力清单先于采集脚本"
+  ],
+  "standard_layers": [
+    "judgment_target",
+    "required_fields",
+    "optional_fields",
+    "upstream_sources",
+    "raw_data_shape",
+    "normalized_fields",
+    "analysis_usage",
+    "degradation_rules",
+    "question_name",
+    "question_to_answer",
+    "question_group",
+    "evidence_level",
+    "interface_capability_inventory"
+  ],
+  "source_priority": [
+    "GMGN token info",
+    "GMGN security",
+    "GMGN pool / liquidity",
+    "GMGN holders",
+    "GMGN traders",
+    "GMGN wallet profile",
+    "GMGN activity",
+    "GMGN market kline",
+    "链上 tx / trace",
+    "内部历史库"
+  ],
+  "judgment_targets": [
+    {
+      "target_name": "疑似同源钱包",
+      "judgment_target": "多个钱包是否来自同一资金部署或同一执行组",
+      "required_fields": [
+        "资金来源地址",
+        "首次入金时间",
+        "入金金额",
+        "买入时间",
+        "买入 token",
+        "买入金额",
+        "交易路径"
+      ],
+      "optional_fields": [
+        "Gas 模式",
+        "交易频率",
+        "钱包创建时间",
+        "是否同步买入",
+        "是否同步卖出",
+        "是否共同接收资金",
+        "是否共享中转节点"
+      ],
+      "upstream_sources": [
+        "GMGN holders",
+        "GMGN traders",
+        "GMGN wallet profile",
+        "链上 tx / trace",
+        "内部 address edge history"
+      ],
+      "raw_data_shape": [
+        "入金 tx",
+        "转账事件",
+        "买入事件",
+        "钱包创建事件",
+        "边关系记录"
+      ],
+      "normalized_fields": [
+        "funding_source_address",
+        "first_funding_time",
+        "first_funding_amount",
+        "first_buy_time",
+        "first_buy_token",
+        "first_buy_amount",
+        "tx_path",
+        "gas_pattern",
+        "wallet_create_time",
+        "synchronous_buy_flag",
+        "synchronous_sell_flag",
+        "shared_funding_flag",
+        "shared_intermediate_node_flag"
+      ],
+      "analysis_usage": "生成同源执行组、同源候选组、资金待查组",
+      "degradation_rules": "缺少资金来源或链上路径时，只能写同步买入候选组或资金待查组，不得强判同源",
+      "group": "资金判断"
+    },
+    {
+      "target_name": "同步执行候选组",
+      "judgment_target": "是否存在同一时间窗口内的批量执行行为",
+      "required_fields": [
+        "买入时间",
+        "买入 token",
+        "买入金额",
+        "钱包创建时间",
+        "是否新钱包"
+      ],
+      "optional_fields": [
+        "资金来源",
+        "Gas 模式",
+        "转入金额",
+        "转入时间",
+        "GMGN bundler/sniper/fresh 标签"
+      ],
+      "upstream_sources": [
+        "GMGN traders",
+        "GMGN holders",
+        "GMGN tags",
+        "链上 tx"
+      ],
+      "raw_data_shape": [
+        "同窗口交易行",
+        "地址标签",
+        "资金边"
+      ],
+      "normalized_fields": [
+        "first_buy_time",
+        "buy_time_bucket",
+        "wallet_create_time",
+        "is_new_wallet",
+        "same_window_group_id",
+        "buy_amount_bucket",
+        "gmgn_tags"
+      ],
+      "analysis_usage": "识别批量执行、狙击批次、临时执行钱包",
+      "degradation_rules": "只能降级为时间接近候选组，不能写同源组",
+      "group": "基础判断"
+    },
+    {
+      "target_name": "疑似临时执行钱包",
+      "judgment_target": "钱包是否为临时创建、短期使用、完成买卖后退出",
+      "required_fields": [
+        "钱包创建时间",
+        "首次买入时间",
+        "持有时长",
+        "资金转入时间",
+        "资金转出时间"
+      ],
+      "optional_fields": [
+        "单 token 参与度",
+        "历史复现",
+        "是否仅服务单次事件",
+        "卖出后余额变化"
+      ],
+      "upstream_sources": [
+        "GMGN wallet profile",
+        "GMGN activity",
+        "链上 tx"
+      ],
+      "raw_data_shape": [
+        "钱包创建记录",
+        "买卖记录",
+        "转账记录"
+      ],
+      "normalized_fields": [
+        "wallet_create_time",
+        "first_buy_time",
+        "holding_duration_type",
+        "funding_before_buy_minutes",
+        "total_transfer_out",
+        "single_token_only_flag"
+      ],
+      "analysis_usage": "区分执行钱包与普通散户",
+      "degradation_rules": "缺少创建时间或转账路径时，只能写临时执行候选",
+      "group": "基础判断"
+    },
+    {
+      "target_name": "疑似新钱包狙击",
+      "judgment_target": "新钱包是否在早期窗口快速买入",
+      "required_fields": [
+        "钱包创建时间",
+        "首次买入时间",
+        "买入延迟",
+        "买入金额",
+        "买入市值阶段"
+      ],
+      "optional_fields": [
+        "bundler/sniper/fresh 标签",
+        "是否同批入场",
+        "是否高频短持"
+      ],
+      "upstream_sources": [
+        "GMGN traders",
+        "GMGN wallet profile",
+        "GMGN market kline"
+      ],
+      "raw_data_shape": [
+        "钱包画像",
+        "交易时间戳",
+        "K线阶段"
+      ],
+      "normalized_fields": [
+        "wallet_create_time",
+        "first_buy_time",
+        "first_buy_delay_minutes",
+        "entry_stage",
+        "is_new_wallet",
+        "is_sniper",
+        "gmgn_tags"
+      ],
+      "analysis_usage": "锁定 W1/W2 早期狙击钱包",
+      "degradation_rules": "没有创建时间时，只能写早期买入候选，不能直接写新狙击",
+      "group": "基础判断"
+    },
+    {
+      "target_name": "Token 接收钱包 / 被动接收钱包",
+      "judgment_target": "地址持有 token 是主动买入还是被动收到",
+      "required_fields": [
+        "Token 来源",
+        "转入时间",
+        "转入金额",
+        "是否有主动 swap 买入"
+      ],
+      "optional_fields": [
+        "空投标记",
+        "分发标记",
+        "LP/池交互",
+        "Token 去向"
+      ],
+      "upstream_sources": [
+        "GMGN activity",
+        "GMGN holders",
+        "链上 transfer trace"
+      ],
+      "raw_data_shape": [
+        "token transfer",
+        "holder 变动",
+        "交易事件"
+      ],
+      "normalized_fields": [
+        "token_source_type",
+        "token_source_address",
+        "token_source_time",
+        "token_source_amount",
+        "is_transferred_token",
+        "is_airdrop_token",
+        "is_distributed_token",
+        "is_market_buy_token"
+      ],
+      "analysis_usage": "区分主动买盘与被动接收噪音",
+      "degradation_rules": "无法确认主动买入时，只能写 Token 接收钱包或待查",
+      "group": "资金判断"
+    },
+    {
+      "target_name": "疑似分发接收 / 分发派发钱包",
+      "judgment_target": "钱包是否处于 token 分发链条的接收端或派发端",
+      "required_fields": [
+        "Token 来源",
+        "转入来源",
+        "后续卖出 / 转出",
+        "卖出时间",
+        "卖出数量"
+      ],
+      "optional_fields": [
+        "是否同一上游分发源",
+        "是否多地址接收",
+        "是否后续集中卖出",
+        "是否回流"
+      ],
+      "upstream_sources": [
+        "GMGN activity",
+        "GMGN holders",
+        "链上 trace"
+      ],
+      "raw_data_shape": [
+        "distribution tx",
+        "sell tx",
+        "转出边"
+      ],
+      "normalized_fields": [
+        "token_source_type",
+        "token_source_address",
+        "token_out_type",
+        "token_out_address",
+        "first_sell_time",
+        "is_partial_exit",
+        "is_full_exit"
+      ],
+      "analysis_usage": "识别早期分发、派发出货、接盘风险",
+      "degradation_rules": "只看到接收而无后续卖出时，只能写分发接收候选",
+      "group": "资金判断"
+    },
+    {
+      "target_name": "早期结构资金是否还没出完",
+      "judgment_target": "早期买入资金是否仍留在持仓中，还是已开始派发",
+      "required_fields": [
+        "早期买入钱包列表",
+        "初始买入数量",
+        "当前剩余持仓",
+        "已卖出数量"
+      ],
+      "optional_fields": [
+        "卖出时间",
+        "卖出价格",
+        "是否仍在 Top Holder",
+        "是否转移到新钱包",
+        "是否分发给接盘钱包"
+      ],
+      "upstream_sources": [
+        "GMGN holders",
+        "GMGN traders",
+        "GMGN wallet profile",
+        "历史边库"
+      ],
+      "raw_data_shape": [
+        "持仓快照",
+        "卖出事件",
+        "地址关系边",
+        "Top Holder 变动"
+      ],
+      "normalized_fields": [
+        "early_wallet_list",
+        "initial_buy_amount",
+        "current_position_remaining",
+        "sold_amount",
+        "last_sell_time",
+        "last_sell_price",
+        "is_top_holder_now",
+        "transferred_to_new_wallet_flag",
+        "distributed_to_bagholder_flag",
+        "holding_change_trend"
+      ],
+      "analysis_usage": "判断派发是否结束、是否仍有结构筹码未出完",
+      "degradation_rules": "缺少剩余持仓或卖出事件时，只能写早期结构资金待查",
+      "group": "资金判断"
+    },
+    {
+      "target_name": "结果钱包 / 高结果鲸鱼",
+      "judgment_target": "钱包是否具备稳定盈利结果，或属于高结果鲸鱼",
+      "required_fields": [
+        "已实现利润",
+        "未实现利润",
+        "总利润",
+        "胜率",
+        "样本数",
+        "历史复现"
+      ],
+      "optional_fields": [
+        "进入时间",
+        "退出质量",
+        "是否稳定复现",
+        "是否单次暴富"
+      ],
+      "upstream_sources": [
+        "GMGN wallet profile",
+        "GMGN traders",
+        "内部历史库"
+      ],
+      "raw_data_shape": [
+        "盈亏页",
+        "历史收益记录",
+        "持仓记录"
+      ],
+      "normalized_fields": [
+        "realized_profit",
+        "unrealized_profit",
+        "total_profit",
+        "winrate",
+        "sample_count",
+        "entry_time",
+        "exit_quality",
+        "historical_recurrence_flag"
+      ],
+      "analysis_usage": "区分结果钱包、高结果鲸鱼、单次暴富钱包",
+      "degradation_rules": "样本数不足时只能写结果钱包候选或单次暴富候选",
+      "group": "结果判断"
+    },
+    {
+      "target_name": "接盘鲸鱼 / 套牢鲸鱼",
+      "judgment_target": "是否高位接盘、浮亏、套牢、买在派发后段",
+      "required_fields": [
+        "买入市值",
+        "买入时间",
+        "持有时长",
+        "未实现利润",
+        "当前持仓占比"
+      ],
+      "optional_fields": [
+        "后续卖出情况",
+        "历史胜率",
+        "是否在早期钱包卖出后入场"
+      ],
+      "upstream_sources": [
+        "GMGN traders",
+        "GMGN holders",
+        "GMGN market kline"
+      ],
+      "raw_data_shape": [
+        "买入行",
+        "持仓快照",
+        "K线阶段"
+      ],
+      "normalized_fields": [
+        "entry_stage",
+        "avg_buy_market_cap",
+        "holding_duration_type",
+        "unrealized_profit",
+        "current_holding_pct",
+        "exit_status"
+      ],
+      "analysis_usage": "识别高位接盘、套牢、风险观察",
+      "degradation_rules": "没有持仓收益数据时，只能写接盘风险候选",
+      "group": "风险判断"
+    },
+    {
+      "target_name": "基础设施地址",
+      "judgment_target": "地址是否属于 CEX、LP、池子、路由、程序、可疑中转、回收节点、分发源",
+      "required_fields": [
+        "地址类型",
+        "出现代币数",
+        "对手方数",
+        "边关系数",
+        "路由 / 池交互数"
+      ],
+      "optional_fields": [
+        "回流次数",
+        "资金源次数",
+        "是否多 token 重复出现",
+        "是否连接执行组"
+      ],
+      "upstream_sources": [
+        "链上 trace",
+        "GMGN activity",
+        "内部边库"
+      ],
+      "raw_data_shape": [
+        "地址标签",
+        "交易路径",
+        "边关系",
+        "转账节点"
+      ],
+      "normalized_fields": [
+        "entity_type",
+        "entity_name",
+        "infrastructure_level",
+        "exclusion_reason",
+        "appeared_token_count",
+        "counterparty_count",
+        "funding_source_count",
+        "return_flow_count",
+        "router_interaction_count",
+        "lp_interaction_count",
+        "keep_edges"
+      ],
+      "analysis_usage": "排除普通钱包评分，只保留关系边和结构节点证据",
+      "degradation_rules": "类型未明确时，只能写可疑中转候选或待复查节点",
+      "group": "基础设施"
+    },
+    {
+      "target_name": "利润回收 / 核心资金源",
+      "judgment_target": "多个钱包卖出后是否回到同一地址，是否形成核心资金源",
+      "required_fields": [
+        "卖后回流边",
+        "回流地址",
+        "回流金额",
+        "回流时间",
+        "关联钱包数"
+      ],
+      "optional_fields": [
+        "多 token 复现",
+        "同源执行组",
+        "CEX 入口",
+        "重复回流模式"
+      ],
+      "upstream_sources": [
+        "链上 trace",
+        "内部边库",
+        "历史库"
+      ],
+      "raw_data_shape": [
+        "卖后转账",
+        "回流边",
+        "资金树"
+      ],
+      "normalized_fields": [
+        "return_flow_address",
+        "return_flow_amount",
+        "return_flow_count",
+        "is_return_flow",
+        "core_funding_source_flag"
+      ],
+      "analysis_usage": "识别利润归集、核心资金源、回收地址",
+      "degradation_rules": "若只有单次回流，写利润回流候选；不得直接写核心资金源",
+      "group": "资金判断"
+    }
+  ],
+  "unified_degradation_rules": [
+    {
+      "missing_condition": "没有资金来源",
+      "max_conclusion": "资金待查 / 同步候选",
+      "forbidden": [
+        "同源钱包",
+        "核心资金源"
+      ]
+    },
+    {
+      "missing_condition": "没有链上路径",
+      "max_conclusion": "时间接近候选",
+      "forbidden": [
+        "同源组",
+        "回流组"
+      ]
+    },
+    {
+      "missing_condition": "没有钱包创建时间",
+      "max_conclusion": "早期买入候选",
+      "forbidden": [
+        "新钱包狙击"
+      ]
+    },
+    {
+      "missing_condition": "没有持仓收益数据",
+      "max_conclusion": "结果候选",
+      "forbidden": [
+        "高结果鲸鱼",
+        "稳定结果"
+      ]
+    },
+    {
+      "missing_condition": "没有卖出事件",
+      "max_conclusion": "持有中 / 待查",
+      "forbidden": [
+        "清仓",
+        "分发结束"
+      ]
+    },
+    {
+      "missing_condition": "没有 Token 来源",
+      "max_conclusion": "事实待查",
+      "forbidden": [
+        "主动买入",
+        "Token 接收确认"
+      ]
+    },
+    {
+      "missing_condition": "没有边关系",
+      "max_conclusion": "单钱包记录",
+      "forbidden": [
+        "同源组",
+        "回收节点",
+        "结构网络节点"
+      ]
+    }
+  ],
+  "recommended_storage_paths": {
+    "human_readable": "docs/source_wallet_bot/directory_governance/data_dependency_map_v1.md",
+    "machine_readable": "docs/source_wallet_bot/directory_governance/data_dependency_contract_v1.json",
+    "future_field_map": "research_loop/methodology/field_maps/source_wallet_bot_data_dependency_map_v1.md"
+  },
+  "analysis_questions": [
+    {
+      "question_name": "早期钱包识别",
+      "question_to_answer": "谁最早买入？买了多少？还剩多少？",
+      "question_group": "基础判断",
+      "required_fields": [
+        "token_open_time",
+        "wallet_address",
+        "first_buy_time",
+        "first_buy_delay_seconds",
+        "first_buy_amount_token",
+        "first_buy_amount_sol",
+        "first_buy_market_cap",
+        "current_holding_amount",
+        "current_holding_pct",
+        "sold_amount"
+      ],
+      "optional_fields": [
+        "gmgn_tags",
+        "is_new_wallet",
+        "wallet_created_time",
+        "buy_tx_hash",
+        "top_holder_rank",
+        "raw_unit_refs"
+      ],
+      "upstream_sources": [
+        "GMGN traders",
+        "GMGN holders",
+        "GMGN market kline",
+        "GMGN wallet profile"
+      ],
+      "raw_data_shape": [
+        "交易者行",
+        "持仓快照",
+        "K线阶段",
+        "钱包画像"
+      ],
+      "normalized_fields": [
+        "wallet_address",
+        "token_open_time",
+        "first_buy_time",
+        "first_buy_delay_seconds",
+        "first_buy_amount_token",
+        "first_buy_amount_sol",
+        "first_buy_market_cap",
+        "current_holding_amount",
+        "current_holding_pct",
+        "sold_amount",
+        "early_window"
+      ],
+      "analysis_usage": "锁定 W1-W4 早期钱包原始表，作为后续角色分类、筹码控制、Top Holder 与策略门禁的基础样本。",
+      "degradation_rules": "缺少首次买入时间时不能进入早期钱包排序；缺少当前持仓时只能输出早期买入候选，不能判断还剩多少。",
+      "evidence_level": "E2-E4"
+    },
+    {
+      "question_name": "钱包角色分类",
+      "question_to_answer": "是新钱包、执行钱包、资金源、接盘钱包、派发钱包，还是利润回收钱包？",
+      "question_group": "基础判断",
+      "required_fields": [
+        "wallet_address",
+        "wallet_created_time",
+        "first_buy_time",
+        "token_source_type",
+        "funding_source_address",
+        "current_holding_pct",
+        "sell_amount",
+        "return_flow_address",
+        "gmgn_tags"
+      ],
+      "optional_fields": [
+        "wallet_age_days",
+        "historical_recurrence_flag",
+        "deployed_token_count",
+        "single_token_only_flag",
+        "profit_profile",
+        "infrastructure_level"
+      ],
+      "upstream_sources": [
+        "GMGN wallet profile",
+        "GMGN traders",
+        "GMGN holders",
+        "GMGN activity",
+        "链上 tx / trace",
+        "内部历史库"
+      ],
+      "raw_data_shape": [
+        "钱包画像",
+        "交易行",
+        "transfer 事件",
+        "资金边",
+        "历史地址画像"
+      ],
+      "normalized_fields": [
+        "wallet_role_candidate",
+        "is_new_wallet",
+        "is_executor_candidate",
+        "is_funding_source_candidate",
+        "is_bagholder_candidate",
+        "is_distribution_wallet_candidate",
+        "is_return_flow_wallet_candidate",
+        "role_evidence_refs"
+      ],
+      "analysis_usage": "将地址归入疑似角色矩阵，但只输出候选角色和证据，不输出强身份定性。",
+      "degradation_rules": "缺少资金/Token 来源时最多输出交易行为角色候选；基础设施地址必须排除普通钱包评分。",
+      "evidence_level": "E2-E4"
+    },
+    {
+      "question_name": "同源关系识别",
+      "question_to_answer": "多个钱包是否来自同一资金源或相同行为模板？",
+      "question_group": "资金判断",
+      "required_fields": [
+        "wallet_address",
+        "funding_source_address",
+        "first_funding_time",
+        "first_funding_amount",
+        "first_buy_time",
+        "first_buy_amount",
+        "tx_path"
+      ],
+      "optional_fields": [
+        "gas_pattern",
+        "shared_intermediate_node_flag",
+        "wallet_created_time",
+        "same_window_group_id",
+        "synchronous_buy_flag",
+        "synchronous_sell_flag"
+      ],
+      "upstream_sources": [
+        "链上 tx / trace",
+        "GMGN traders",
+        "GMGN wallet profile",
+        "内部 address edge history"
+      ],
+      "raw_data_shape": [
+        "入金 tx",
+        "资金边",
+        "买入事件",
+        "钱包创建事件",
+        "边关系记录"
+      ],
+      "normalized_fields": [
+        "funding_source_address",
+        "first_funding_time",
+        "first_funding_amount",
+        "tx_path",
+        "shared_funding_flag",
+        "shared_behavior_template_flag",
+        "same_source_group_id"
+      ],
+      "analysis_usage": "生成同源候选组、资金待查组、同步模板候选组。",
+      "degradation_rules": "缺少资金来源或链上路径时，不得写同源，只能写同步行为候选或资金待查。",
+      "evidence_level": "E3-E5"
+    },
+    {
+      "question_name": "同步行为识别",
+      "question_to_answer": "是否同步买入、同步卖出、同步转账、同步清仓？",
+      "question_group": "基础判断",
+      "required_fields": [
+        "wallet_address",
+        "event_time",
+        "event_type",
+        "event_amount",
+        "token_address",
+        "time_bucket",
+        "tx_hash"
+      ],
+      "optional_fields": [
+        "gas_pattern",
+        "funding_source_address",
+        "wallet_created_time",
+        "gmgn_bundler_tag",
+        "gmgn_sniper_tag",
+        "clearance_time"
+      ],
+      "upstream_sources": [
+        "GMGN traders",
+        "GMGN activity",
+        "GMGN holders",
+        "链上 tx / trace"
+      ],
+      "raw_data_shape": [
+        "同窗口交易行",
+        "转账事件",
+        "卖出事件",
+        "清仓事件"
+      ],
+      "normalized_fields": [
+        "same_window_group_id",
+        "synchronous_buy_flag",
+        "synchronous_sell_flag",
+        "synchronous_transfer_flag",
+        "synchronous_clearance_flag",
+        "event_time_bucket"
+      ],
+      "analysis_usage": "识别批量执行、同步出货、同步转账和同步清仓候选组。",
+      "degradation_rules": "只有时间接近但无资金/路径时，只能写同步候选组，不能写同源组。",
+      "evidence_level": "E2-E4"
+    },
+    {
+      "question_name": "筹码控制判断",
+      "question_to_answer": "结构侧是否仍持有足够筹码？是否已经派发？",
+      "question_group": "资金判断",
+      "required_fields": [
+        "early_wallet_list",
+        "initial_buy_amount",
+        "current_holding_amount",
+        "current_holding_pct",
+        "sold_amount",
+        "holding_change_trend"
+      ],
+      "optional_fields": [
+        "top_holder_rank",
+        "distribution_out_amount",
+        "transferred_to_new_wallet_flag",
+        "unrealized_profit",
+        "last_sell_time",
+        "last_sell_market_cap"
+      ],
+      "upstream_sources": [
+        "GMGN holders",
+        "GMGN traders",
+        "GMGN activity",
+        "GMGN market kline",
+        "内部历史库"
+      ],
+      "raw_data_shape": [
+        "持仓快照",
+        "买入事件",
+        "卖出事件",
+        "holder delta",
+        "K线阶段"
+      ],
+      "normalized_fields": [
+        "early_structure_holding_pct",
+        "current_position_remaining",
+        "sold_amount",
+        "distribution_progress_pct",
+        "holding_change_trend",
+        "control_retention_score"
+      ],
+      "analysis_usage": "判断早期结构筹码仍在、部分派发、基本派发完成或筹码待查。",
+      "degradation_rules": "缺少当前持仓时不能判断控筹留存；缺少卖出事件时只能写持仓待查/派发待查。",
+      "evidence_level": "E3-E5"
+    },
+    {
+      "question_name": "资金路径追踪",
+      "question_to_answer": "钱从哪里来？利润去了哪里？是否回流？",
+      "question_group": "资金判断",
+      "required_fields": [
+        "funding_source_address",
+        "funding_amount",
+        "funding_time",
+        "sell_tx_hash",
+        "return_flow_address",
+        "return_flow_amount",
+        "return_flow_time"
+      ],
+      "optional_fields": [
+        "cex_entry_flag",
+        "intermediate_node_address",
+        "multi_token_recurrence",
+        "associated_wallet_count",
+        "core_funding_source_flag"
+      ],
+      "upstream_sources": [
+        "链上 tx / trace",
+        "GMGN activity",
+        "内部边库",
+        "内部历史库"
+      ],
+      "raw_data_shape": [
+        "入金 tx",
+        "卖后转账",
+        "回流边",
+        "资金树"
+      ],
+      "normalized_fields": [
+        "funding_source_address",
+        "funding_amount",
+        "funding_time",
+        "return_flow_address",
+        "return_flow_amount",
+        "return_flow_count",
+        "is_return_flow",
+        "core_funding_source_candidate"
+      ],
+      "analysis_usage": "识别资金入口、利润回收候选、核心资金源候选和资金待查路径。",
+      "degradation_rules": "单次回流只能写回流候选；缺少卖后转账时不得判断利润回流。",
+      "evidence_level": "E3-E5"
+    },
+    {
+      "question_name": "Top Holder 判断",
+      "question_to_answer": "早期结构钱包是否仍在大户列表中？",
+      "question_group": "结果判断",
+      "required_fields": [
+        "wallet_address",
+        "top_holder_rank",
+        "current_holding_amount",
+        "current_holding_pct",
+        "early_wallet_flag",
+        "holder_snapshot_time"
+      ],
+      "optional_fields": [
+        "rank_change",
+        "initial_buy_amount",
+        "sold_amount",
+        "transfer_out_amount",
+        "top_trader_rank"
+      ],
+      "upstream_sources": [
+        "GMGN holders",
+        "GMGN traders",
+        "holder delta snapshots"
+      ],
+      "raw_data_shape": [
+        "Top Holder 快照",
+        "holder 变动",
+        "早期交易行"
+      ],
+      "normalized_fields": [
+        "is_top_holder_now",
+        "top_holder_rank",
+        "top_holder_holding_pct",
+        "early_wallet_top_holder_flag",
+        "top_holder_rank_change"
+      ],
+      "analysis_usage": "判断早期结构地址是否仍占据大户位置，支持控筹/抛压/门禁判断。",
+      "degradation_rules": "缺少 holder 快照时不能输出 Top Holder 判断，只能写大户状态待查。",
+      "evidence_level": "E3-E4"
+    },
+    {
+      "question_name": "分发路径判断",
+      "question_to_answer": "是否把筹码转给接盘地址、二级钱包或分发组？",
+      "question_group": "资金判断",
+      "required_fields": [
+        "token_source_address",
+        "token_out_address",
+        "token_out_amount",
+        "token_out_time",
+        "receiver_wallet_address",
+        "receiver_sell_amount"
+      ],
+      "optional_fields": [
+        "receiver_group_id",
+        "receiver_is_new_wallet",
+        "receiver_top_holder_rank",
+        "return_flow_address",
+        "multi_receiver_same_source_flag"
+      ],
+      "upstream_sources": [
+        "GMGN activity",
+        "GMGN holders",
+        "链上 transfer trace",
+        "内部边库"
+      ],
+      "raw_data_shape": [
+        "Token transfer",
+        "distribution tx",
+        "receiver sell tx",
+        "holder delta"
+      ],
+      "normalized_fields": [
+        "distribution_source_address",
+        "distribution_receiver_address",
+        "distribution_amount",
+        "distribution_group_id",
+        "distributed_to_bagholder_flag",
+        "receiver_exit_status"
+      ],
+      "analysis_usage": "识别分发源、二级接收钱包、分发卖出钱包和接盘风险路径。",
+      "degradation_rules": "只看到接收无后续卖出时，只能写分发接收候选；不能判断派发完成。",
+      "evidence_level": "E3-E5"
+    },
+    {
+      "question_name": "对手盘压力判断",
+      "question_to_answer": "是否出现接盘鲸鱼、散户接盘、结构侧出货给对手盘？",
+      "question_group": "风险判断",
+      "required_fields": [
+        "buyer_wallet_address",
+        "buyer_entry_time",
+        "buyer_entry_market_cap",
+        "buyer_buy_amount",
+        "buyer_current_holding_pct",
+        "buyer_unrealized_profit",
+        "early_wallet_sell_time"
+      ],
+      "optional_fields": [
+        "buyer_wallet_age",
+        "buyer_winrate",
+        "buyer_top_holder_rank",
+        "early_wallet_sold_amount",
+        "kline_stage",
+        "price_drawdown"
+      ],
+      "upstream_sources": [
+        "GMGN traders",
+        "GMGN holders",
+        "GMGN market kline",
+        "GMGN wallet profile"
+      ],
+      "raw_data_shape": [
+        "高位买入行",
+        "持仓快照",
+        "收益字段",
+        "早期钱包卖出事件",
+        "K线阶段"
+      ],
+      "normalized_fields": [
+        "counterparty_pressure_score",
+        "bagholder_candidate_flag",
+        "late_entry_whale_flag",
+        "buyer_unrealized_pnl",
+        "structure_to_counterparty_sell_flag"
+      ],
+      "analysis_usage": "识别高位接盘压力、套牢鲸鱼、散户接盘扩散和结构侧派发压力。",
+      "degradation_rules": "缺少买方收益/当前持仓时，只能写对手盘压力待查或高位买入候选。",
+      "evidence_level": "E2-E4"
+    },
+    {
+      "question_name": "主导侧生命周期",
+      "question_to_answer": "当前是吸筹、控盘、洗盘、拉升、派发、再吸筹还是撤退？",
+      "question_group": "结果判断",
+      "required_fields": [
+        "kline_stage",
+        "early_wallet_buy_trend",
+        "early_wallet_sell_trend",
+        "holding_change_trend",
+        "volume_trend",
+        "market_cap_change_pct"
+      ],
+      "optional_fields": [
+        "distribution_progress_pct",
+        "return_flow_count",
+        "top_holder_rank_change",
+        "counterparty_pressure_score",
+        "reaccumulation_buy_flag"
+      ],
+      "upstream_sources": [
+        "GMGN market kline",
+        "GMGN holders",
+        "GMGN traders",
+        "GMGN activity",
+        "内部历史库"
+      ],
+      "raw_data_shape": [
+        "K线序列",
+        "成交量序列",
+        "holder delta",
+        "买卖事件序列"
+      ],
+      "normalized_fields": [
+        "dominant_lifecycle_stage",
+        "accumulation_flag",
+        "control_flag",
+        "wash_flag",
+        "markup_flag",
+        "distribution_flag",
+        "reaccumulation_flag",
+        "retreat_flag"
+      ],
+      "analysis_usage": "给结构分析输出当前生命周期标签，辅助 WALLET_SUPPORT/PAUSE/BLOCK 门禁。",
+      "degradation_rules": "缺少 K线阶段或 holder delta 时，不输出生命周期结论，只写阶段待查。",
+      "evidence_level": "E3-E5"
+    },
+    {
+      "question_name": "市值上下文判断",
+      "question_to_answer": "当前市值相对发现时、买入时、结构判断时变化多少？",
+      "question_group": "结果判断",
+      "required_fields": [
+        "discovery_market_cap",
+        "first_buy_market_cap",
+        "current_market_cap",
+        "analysis_market_cap",
+        "market_cap_timestamp"
+      ],
+      "optional_fields": [
+        "ath_market_cap",
+        "drawdown_from_ath_pct",
+        "volume_usd",
+        "liquidity_usd",
+        "pool_age"
+      ],
+      "upstream_sources": [
+        "GMGN token info",
+        "GMGN pool / liquidity",
+        "GMGN market kline",
+        "OKX / 第二工具行情"
+      ],
+      "raw_data_shape": [
+        "token info JSON",
+        "pool/liquidity JSON",
+        "K线序列",
+        "外部行情快照"
+      ],
+      "normalized_fields": [
+        "discovery_market_cap",
+        "first_buy_market_cap",
+        "current_market_cap",
+        "analysis_market_cap",
+        "mcap_change_from_discovery_pct",
+        "mcap_change_from_buy_pct",
+        "drawdown_from_ath_pct"
+      ],
+      "analysis_usage": "把钱包行为放到市值阶段中理解，避免脱离价格上下文判断早期/高位/接盘。",
+      "degradation_rules": "缺少任一关键市值时间点时，必须标记市值上下文不完整，不能计算阶段变化。",
+      "evidence_level": "E2-E4"
+    },
+    {
+      "question_name": "策略门禁输出",
+      "question_to_answer": "WALLET_SUPPORT、WALLET_PAUSE、WALLET_BLOCK 的证据是什么？",
+      "question_group": "风险判断",
+      "required_fields": [
+        "wallet_structure_score",
+        "wallet_risk_score",
+        "evidence_level",
+        "missing_critical_fields",
+        "early_wallet_status",
+        "control_retention_score",
+        "counterparty_pressure_score"
+      ],
+      "optional_fields": [
+        "dominant_lifecycle_stage",
+        "return_flow_candidate",
+        "top_holder_status",
+        "security_gate",
+        "quote_gate",
+        "data_quality_score"
+      ],
+      "upstream_sources": [
+        "字段依赖合同",
+        "结构分析结果",
+        "GMGN security",
+        "GMGN market data",
+        "内部评分/门禁模块"
+      ],
+      "raw_data_shape": [
+        "结构评分 JSON",
+        "风险评分 JSON",
+        "缺失字段报告",
+        "security JSON",
+        "quote snapshot"
+      ],
+      "normalized_fields": [
+        "wallet_gate_decision",
+        "wallet_gate_reason",
+        "wallet_support_evidence",
+        "wallet_pause_evidence",
+        "wallet_block_evidence",
+        "missing_critical_fields",
+        "manual_review_required"
+      ],
+      "analysis_usage": "输出策略门禁证据链，只作为 paper/只读裁决依据，不执行真实交易。",
+      "degradation_rules": "证据不足时默认 WALLET_PAUSE 或 DATA_BACKFILL_REQUIRED；命中硬风险时 WALLET_BLOCK；不得因单点钱包信号直接 WALLET_SUPPORT。",
+      "evidence_level": "E3-E5"
+    }
+  ],
+  "interface_capability_inventory": {
+    "inventory_name": "source_wallet_bot_interface_capability_inventory_v1",
+    "path": "docs/source_wallet_bot/directory_governance/interface_capability_inventory_v1.md",
+    "purpose": "在编写采集脚本前审计上游平台/接口能力，确认接口能支撑哪些分析问题、字段和降级规则。",
+    "must_run_before": [
+      "采集脚本设计",
+      "API wrapper 编写",
+      "字段映射更新",
+      "结构判断自动化"
+    ],
+    "principles": [
+      "不要马上写采集脚本",
+      "先审计接口能力，再做字段映射，再做采集器",
+      "每个接口必须回指 12 类分析问题",
+      "接口字段缺失时必须降级"
+    ],
+    "interface_categories": [
+      {
+        "category": "Token 基础信息接口",
+        "usage": "获取 token 地址、名称、创建时间、市值、流动性",
+        "automation_dependency": "市值上下文判断、生命周期、策略门禁"
+      },
+      {
+        "category": "交易明细接口",
+        "usage": "获取买卖记录、成交金额、时间、价格",
+        "automation_dependency": "早期钱包识别、同步行为、对手盘压力"
+      },
+      {
+        "category": "钱包持仓接口",
+        "usage": "获取当前持仓、Top Holder、余额变化",
+        "automation_dependency": "Top Holder、筹码控制、分发路径"
+      },
+      {
+        "category": "钱包画像接口",
+        "usage": "获取钱包历史行为、胜率、PnL、交易偏好",
+        "automation_dependency": "钱包角色分类、结果质量、风险观察"
+      },
+      {
+        "category": "转账 / 资金流接口",
+        "usage": "获取资金来源、转移路径、利润回收",
+        "automation_dependency": "同源关系、资金路径、利润回收"
+      },
+      {
+        "category": "K线 / 价格接口",
+        "usage": "获取价格结构、市值变化、成交量",
+        "automation_dependency": "市值上下文、生命周期、对手盘压力"
+      },
+      {
+        "category": "安全 / 风险接口",
+        "usage": "检查黑名单、貔貅、权限、税费、合约风险",
+        "automation_dependency": "策略门禁、风险阻断"
+      },
+      {
+        "category": "集群 / 关联接口",
+        "usage": "获取前 300 集群、持仓关联、地址行为关系",
+        "automation_dependency": "同源候选、同步组、筹码关联"
+      }
+    ],
+    "audit_fields": [
+      "supports_token_query",
+      "supports_wallet_query",
+      "supports_historical_trades",
+      "supports_holder_snapshot",
+      "supports_fund_flow",
+      "supports_kline_marketcap_liquidity",
+      "supports_pagination",
+      "rate_limit",
+      "time_range_limit",
+      "known_missing_fields",
+      "raw_fields",
+      "supports_analysis_questions",
+      "automation_level",
+      "degradation_when_missing"
+    ],
+    "automation_levels": [
+      "full",
+      "partial",
+      "manual_required",
+      "blocked"
+    ]
+  }
+}

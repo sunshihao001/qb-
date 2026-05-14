@@ -1,0 +1,34 @@
+{
+  "phase": "phase_01_data_fact",
+  "data_quality_status": "DATA_PARTIAL",
+  "primary_status": "DATA_PARTIAL",
+  "phase_status": "DATA_PARTIAL",
+  "handoff_status": "HANDOFF_DEGRADED",
+  "critical_missing_fields": [],
+  "optional_missing_fields": [
+    "raw_top_trader.json",
+    "raw_transfer.json"
+  ],
+  "missing_required_raw": [],
+  "missing_optional_raw": [
+    "raw_top_trader.json",
+    "raw_transfer.json",
+    "legacy_candidate_snapshot.json"
+  ],
+  "degraded_fields": [
+    "missing_optional_raw:raw_top_trader.json",
+    "missing_optional_raw:raw_transfer.json",
+    "missing_optional_raw:legacy_candidate_snapshot.json",
+    "optional_missing_field:raw_top_trader.json",
+    "optional_missing_field:raw_transfer.json",
+    "transfer_missing_no_distribution_inference",
+    "transfer_missing_no_backflow_inference"
+  ],
+  "blocked_fields": [],
+  "hard_negative_triggered": false,
+  "hard_negative_reasons": [],
+  "warnings": [
+    "transfer_missing_no_distribution_inference",
+    "transfer_missing_no_backflow_inference"
+  ]
+}

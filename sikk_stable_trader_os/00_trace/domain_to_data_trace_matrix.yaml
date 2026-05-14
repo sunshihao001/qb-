@@ -1,0 +1,6 @@
+domain_to_data_trace_matrix:
+  token: [token_identity, market_cap_context, quote_security]
+  wallet: [wallet_identity, wallet_behavior, fund_flow]
+  chip_cluster: [chip_distribution, same_source_group]
+  market_structure: [kline_volume_structure]
+  scenario: [scenario_context, contradiction_trace]

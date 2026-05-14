@@ -1,0 +1,14 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+report_id: string
+generated_at: datetime
+controller_id: P07_STRATEGY_GATE_CONTROLLER
+summary: [candidate_count_received, candidate_count_processed, observe_count, pause_count, block_count, paper_candidate_count, human_confirmation_required_count, rejected_count, blocked_count]
+decision_distribution: [OBSERVE, PAUSE, BLOCK, PAPER_CANDIDATE, HUMAN_CONFIRMATION_REQUIRED, STRATEGY_GATE_REJECTED]
+summaries: [hard_negative_summary, scenario_gate_summary, evidence_gate_summary, chip_gate_summary, market_position_summary, p08_handoff_summary]
+compliance:
+  buy_signal_generated: false
+  paper_runtime_started: false
+  live_execution_path_detected: false
+  p08_bypassed: false

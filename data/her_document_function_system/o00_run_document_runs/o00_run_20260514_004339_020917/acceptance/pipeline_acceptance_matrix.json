@@ -1,0 +1,20 @@
+{
+  "pipeline_run_id": "o00_run_20260514_004339_020917",
+  "final_pipeline_status": "PIPELINE_READY_WITH_GAPS",
+  "system_status_code": "O00_RUN_DOCUMENT_READY_WITH_GAPS",
+  "forbidden_claims_blocked": [
+    "TESTED",
+    "RUNNER_BOUND",
+    "POLICY_ACTIVE",
+    "PIPELINE_ACCEPTED",
+    "SYSTEM_FULLY_IMPLEMENTED"
+  ],
+  "false_tested_blocked": true,
+  "false_runner_bound_blocked": true,
+  "false_policy_active_blocked": true,
+  "false_pipeline_accepted_blocked": true,
+  "false_system_fully_implemented_blocked": true,
+  "accepted": false,
+  "ready_with_gaps": true,
+  "blocking": false
+}

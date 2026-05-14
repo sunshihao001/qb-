@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": [
+    "validation_run_id",
+    "from_phase",
+    "to_phase",
+    "status",
+    "evidence_bundle_ref"
+  ],
+  "properties": {
+    "validation_run_id": {
+      "type": "string"
+    },
+    "from_phase": {
+      "type": "string"
+    },
+    "to_phase": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "evidence_bundle_ref": {
+      "type": "string"
+    }
+  }
+}

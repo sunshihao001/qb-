@@ -1,0 +1,95 @@
+{
+  "schema_version": "P01_DATA_SOURCE_INTELLIGENCE_V2_SCAFFOLD",
+  "phase_id": "P01",
+  "doc_id": "DOC-20260513-P01-DSIC-001",
+  "run_id": "20260513_070057",
+  "token_address": "SYSTEM_ARCHIVE",
+  "chain": "solana",
+  "data_fact_status": "DATA_REPLAY_ONLY",
+  "source_health": {
+    "gmgn": {
+      "source_id": "gmgn",
+      "source_reliability_score": 0.55,
+      "availability_score": 0.5,
+      "latency_score": 0.5,
+      "success_rate_score": 0.5,
+      "schema_stability_score": 0.5,
+      "freshness_score": 0.0,
+      "historical_failure_score": 0.5,
+      "source_consistency_score": 0.0,
+      "current_status": "SOURCE_REPLAY_ONLY",
+      "failure_risk": "UNKNOWN_UNTIL_LIVE_AUDIT",
+      "reason": "No live connector audit executed by this control-plane scaffold."
+    },
+    "okx": {
+      "source_id": "okx",
+      "source_reliability_score": 0.55,
+      "availability_score": 0.5,
+      "latency_score": 0.5,
+      "success_rate_score": 0.5,
+      "schema_stability_score": 0.5,
+      "freshness_score": 0.0,
+      "historical_failure_score": 0.5,
+      "source_consistency_score": 0.0,
+      "current_status": "SOURCE_REPLAY_ONLY",
+      "failure_risk": "UNKNOWN_UNTIL_LIVE_AUDIT",
+      "reason": "No live connector audit executed by this control-plane scaffold."
+    }
+  },
+  "normalized_files": {
+    "token_fact": "/root/sikk-gmgn/data/gmgn_candidates_live_run/p01_data_fact/normalized/SYSTEM_ARCHIVE/normalized_token_fact.json",
+    "market_fact": "/root/sikk-gmgn/data/gmgn_candidates_live_run/p01_data_fact/normalized/SYSTEM_ARCHIVE/normalized_market_fact.json",
+    "wallet_fact": "/root/sikk-gmgn/data/gmgn_candidates_live_run/p01_data_fact/normalized/SYSTEM_ARCHIVE/normalized_wallet_fact.json",
+    "quote_fact": "/root/sikk-gmgn/data/gmgn_candidates_live_run/p01_data_fact/normalized/SYSTEM_ARCHIVE/normalized_quote_fact.json"
+  },
+  "lineage_files": {
+    "field_lineage_graph": "/root/sikk-gmgn/data/gmgn_candidates_live_run/p01_data_fact/lineage/SYSTEM_ARCHIVE/field_lineage_graph.json",
+    "field_provenance_report": "/root/sikk-gmgn/data/gmgn_candidates_live_run/p01_data_fact/lineage/SYSTEM_ARCHIVE/field_provenance_report.json"
+  },
+  "temporal_files": {
+    "field_freshness_report": "/root/sikk-gmgn/data/gmgn_candidates_live_run/p01_data_fact/temporal/SYSTEM_ARCHIVE/field_freshness_report.json",
+    "multi_snapshot_delta_report": "/root/sikk-gmgn/data/gmgn_candidates_live_run/p01_data_fact/temporal/SYSTEM_ARCHIVE/multi_snapshot_delta_report.json"
+  },
+  "quality_brain": {
+    "completeness_probability": {
+      "for_p02_wallet_structure": 0.25,
+      "for_p03_market_structure": 0.2,
+      "for_p06_paper_trading": 0.0
+    },
+    "confidence_score": 0.2,
+    "source_conflict_level": "UNKNOWN",
+    "missing_critical_fields": [
+      "quote_price"
+    ],
+    "missing_limited_fields": [
+      "funding_relation_edges"
+    ],
+    "decision_reason": "Scaffold only; live source audit and replay fixtures required."
+  },
+  "downstream_permissions": {
+    "P02_wallet_chip_structure_controller": "ALLOW_LIMITED",
+    "P03_market_structure_controller": "PAUSE",
+    "P04_scenario_recognition_controller": "PAUSE",
+    "P05_strategy_gate_controller": "PAUSE",
+    "P06_paper_trading_controller": "PAUSE",
+    "P07_real_execution_controller": false
+  },
+  "handoff_constraints": {
+    "raw_direct_access_allowed": false,
+    "real_execution_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false,
+    "replay_only": true,
+    "requires_backfill": true,
+    "requires_human_review": false
+  },
+  "backfill_plan": {
+    "required": true,
+    "missing_fields": [
+      "quote_price",
+      "funding_relation_edges"
+    ],
+    "priority": "HIGH",
+    "impact": "P01 not ready for runtime/paper/live decisions"
+  }
+}

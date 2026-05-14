@@ -1,0 +1,8 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: trace_coverage_record
+fields:
+- record_id
+- required_trace_types
+- per_phase_trace_coverage
+- critical_trace_gaps

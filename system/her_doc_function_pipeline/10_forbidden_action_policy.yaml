@@ -1,0 +1,10 @@
+forbidden_actions:
+  - live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading
+  - scheduler_enable
+  - background_run
+  - paper_runtime
+safe_mode_required: true
+manual_trigger_only: true

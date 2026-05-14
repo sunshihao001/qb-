@@ -1,0 +1,11 @@
+{
+  "status": "REPLAY_TESTED",
+  "input_fixture": "/root/sikk-gmgn/tests/fixtures/her_document_function_system/f00_e2e_replay_fixture.json",
+  "output_ref": "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/replay_output.json",
+  "trace_ref": "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/replay_trace.jsonl",
+  "report_ref": "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/replay_report.md",
+  "covered_functions": [
+    "func_f00_module_runner_binding"
+  ],
+  "generated_at": "2026-05-13T14:53:53+00:00"
+}

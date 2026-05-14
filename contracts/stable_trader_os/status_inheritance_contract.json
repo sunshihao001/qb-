@@ -1,0 +1,10 @@
+{
+  "contract_id": "status_inheritance_contract",
+  "mapping": {
+    "PHASE_READY": "advance_allowed",
+    "PHASE_WITH_GAPS": "advance_if_policy_allows",
+    "PHASE_PAUSED": "wait_for_recovery",
+    "PHASE_REJECTED": "block_downstream",
+    "PHASE_ERROR": "block_until_repaired"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "doc_id": "DOC-20260511-008",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T13:53:23.296365+00:00",
+  "lightweight_institutionalization": {
+    "retained_capabilities": [
+      "unique_system_state_source",
+      "phase_registry",
+      "asset_index",
+      "domain_object_registry",
+      "field_source_map",
+      "phase_io_contracts",
+      "acceptance_gate",
+      "trace_matrix",
+      "handoff_packet",
+      "paper_only_risk_boundary"
+    ],
+    "not_required_initially": [
+      "large_multi_team_permission_system",
+      "live_auto_execution",
+      "high_frequency_matching",
+      "dashboard_first",
+      "multi_tenant_architecture",
+      "distributed_database",
+      "over_microservices"
+    ]
+  },
+  "planes": {
+    "Knowledge Plane": {
+      "impact": "canonical_definition",
+      "question": "哪些资料已经被摄取、保存、建档？"
+    },
+    "Methodology Plane": {
+      "impact": "canonical_definition",
+      "question": "系统应该按照什么方法建造？"
+    },
+    "Governance Plane": {
+      "impact": "canonical_definition",
+      "question": "什么允许做，什么禁止做，谁有权限裁决？"
+    },
+    "Domain Plane": {
+      "impact": "canonical_definition",
+      "question": "系统到底在判断哪些对象、关系、场景和问题？"
+    },
+    "Data Plane": {
+      "impact": "canonical_definition",
+      "question": "判断这些对象需要哪些字段、来源、质量等级？"
+    },
+    "Control Plane": {
+      "impact": "canonical_definition",
+      "question": "当前系统状态是什么，下一步谁合法？"
+    },
+    "Execution Plane": {
+      "impact": "canonical_definition",
+      "question": "哪个 runner 执行哪个任务？"
+    },
+    "Acceptance Plane": {
+      "impact": "canonical_definition",
+      "question": "什么条件才算阶段真正完成？"
+    },
+    "Trace Plane": {
+      "impact": "canonical_definition",
+      "question": "方法论、资产、字段、阶段是否被覆盖？"
+    },
+    "Handoff Plane": {
+      "impact": "canonical_definition",
+      "question": "上游如何把产物交给下游？"
+    },
+    "Review Plane": {
+      "impact": "canonical_definition",
+      "question": "纸面交易和错判如何复盘？"
+    },
+    "Upgrade Plane": {
+      "impact": "canonical_definition",
+      "question": "哪些规则允许被更新？"
+    }
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

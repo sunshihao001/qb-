@@ -1,0 +1,11 @@
+doc_id: DOC-20260513-O00-CLI-001
+source_type: user_uploaded_markdown
+source_name: 功能自动化落实系统0_.md
+received_at: 2026-05-13
+raw_path: /root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-O00-CLI-001/raw_inputs/功能自动化落实系统0_.md
+document_role: {"primary_role": "O00 CLI sample replay implementation task spec", "secondary_roles": ["controller_registry_config_sample_replay_contract", "READY_WITH_GAPS_status_gate", "CLI acceptance criteria"]}
+summary: {"core_intent": "把 O00 CLI / HER Command Entry 从设计蓝图推进到可运行的 design-level sample replay，并正确输出 PIPELINE_READY_WITH_GAPS。", "key_points": ["必须读取 controller_registry、pipeline_config、sample replay", "必须创建 cli_run_id 与 pipeline_run_id", "必须输出 trace/audit/gap_register/acceptance_matrix/final_report", "必须阻止 TESTED/RUNNER_BOUND/POLICY_ACTIVE/PIPELINE_ACCEPTED 伪状态", "最终阶段状态为 O00_CLI_SAMPLE_REPLAY_READY_WITH_GAPS"]}
+system_mapping: {"planes": ["runtime_entry", "controller_registry", "pipeline_config", "sample_replay", "trace_audit", "acceptance_handoff", "governance_review"], "affected_phases": ["K00", "O00", "V00", "R00", "A00", "H00", "U00", "G00"]}
+required_actions: ["create_cli_assets", "create_registry_and_config_assets", "create_sample_replay_fixture", "implement_validate_config", "implement_run_sample_design_replay", "verify_ready_with_gaps_outputs"]
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

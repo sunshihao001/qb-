@@ -1,0 +1,205 @@
+{
+  "doc_id": "DOC-20260511-005",
+  "object_phase_mapping": {
+    "Token": {
+      "created_by_phase": "P01_data_fact",
+      "updated_by_phases": [
+        "P02_market_scene",
+        "P03_wallet_structure",
+        "P04_chip_control",
+        "P05_strategy_gate",
+        "P06_risk_control",
+        "P07_execution",
+        "P08_review",
+        "P09_self_upgrade"
+      ],
+      "usage_phases": [
+        "ALL"
+      ]
+    },
+    "Wallet": {
+      "created_by_phase": "P01_data_fact",
+      "updated_by_phases": [
+        "P03_wallet_structure",
+        "P04_chip_control",
+        "P08_review"
+      ],
+      "usage_phases": [
+        "P03_wallet_structure",
+        "P04_chip_control",
+        "P05_strategy_gate",
+        "P08_review",
+        "P09_self_upgrade"
+      ]
+    },
+    "AddressGroup": {
+      "created_by_phase": "P03_wallet_structure",
+      "updated_by_phases": [
+        "P04_chip_control",
+        "P08_review"
+      ],
+      "usage_phases": [
+        "P03_wallet_structure",
+        "P04_chip_control",
+        "P05_strategy_gate"
+      ]
+    },
+    "TransactionEvent": {
+      "created_by_phase": "P01_data_fact",
+      "updated_by_phases": [
+        "P03_wallet_structure",
+        "P04_chip_control",
+        "P08_review"
+      ],
+      "usage_phases": [
+        "P03_wallet_structure",
+        "P04_chip_control",
+        "P08_review"
+      ]
+    },
+    "MarketSnapshot": {
+      "created_by_phase": "P01_data_fact",
+      "updated_by_phases": [
+        "P02_market_scene",
+        "P06_risk_control",
+        "P07_execution",
+        "P08_review"
+      ],
+      "usage_phases": [
+        "P02_market_scene",
+        "P05_strategy_gate",
+        "P06_risk_control",
+        "P07_execution"
+      ]
+    },
+    "MarketScene": {
+      "created_by_phase": "P02_market_scene",
+      "updated_by_phases": [
+        "P08_review",
+        "P09_self_upgrade"
+      ],
+      "usage_phases": [
+        "P05_strategy_gate",
+        "P08_review",
+        "P09_self_upgrade"
+      ]
+    },
+    "ChipState": {
+      "created_by_phase": "P04_chip_control",
+      "updated_by_phases": [
+        "P08_review",
+        "P09_self_upgrade"
+      ],
+      "usage_phases": [
+        "P05_strategy_gate",
+        "P08_review",
+        "P09_self_upgrade"
+      ]
+    },
+    "DominantSide": {
+      "created_by_phase": "P04_chip_control",
+      "updated_by_phases": [
+        "P08_review",
+        "P09_self_upgrade"
+      ],
+      "usage_phases": [
+        "P05_strategy_gate",
+        "P08_review",
+        "P09_self_upgrade"
+      ]
+    },
+    "Counterparty": {
+      "created_by_phase": "P04_chip_control",
+      "updated_by_phases": [
+        "P08_review",
+        "P09_self_upgrade"
+      ],
+      "usage_phases": [
+        "P04_chip_control",
+        "P05_strategy_gate",
+        "P08_review"
+      ]
+    },
+    "GateDecision": {
+      "created_by_phase": "P05_strategy_gate_or_P06_risk_control",
+      "updated_by_phases": [
+        "P08_review",
+        "P09_self_upgrade"
+      ],
+      "usage_phases": [
+        "P07_execution",
+        "P08_review",
+        "P09_self_upgrade"
+      ]
+    },
+    "RiskEvent": {
+      "created_by_phase": "P01_to_P06",
+      "updated_by_phases": [
+        "P08_review",
+        "P09_self_upgrade"
+      ],
+      "usage_phases": [
+        "P05_strategy_gate",
+        "P06_risk_control",
+        "P08_review"
+      ]
+    },
+    "ExecutionTicket": {
+      "created_by_phase": "P07_execution",
+      "updated_by_phases": [
+        "P08_review"
+      ],
+      "usage_phases": [
+        "P07_execution",
+        "P08_review"
+      ]
+    },
+    "PaperPosition": {
+      "created_by_phase": "P07_execution",
+      "updated_by_phases": [
+        "P08_review"
+      ],
+      "usage_phases": [
+        "P08_review",
+        "P09_self_upgrade"
+      ]
+    },
+    "ReviewCase": {
+      "created_by_phase": "P08_review",
+      "updated_by_phases": [
+        "P09_self_upgrade"
+      ],
+      "usage_phases": [
+        "P09_self_upgrade"
+      ]
+    },
+    "RuleChange": {
+      "created_by_phase": "P09_self_upgrade",
+      "updated_by_phases": [
+        "P09_self_upgrade"
+      ],
+      "usage_phases": [
+        "P09_self_upgrade"
+      ]
+    },
+    "SkillDecision": {
+      "created_by_phase": "AtomicSkill_runtime",
+      "updated_by_phases": [
+        "owning_phase"
+      ],
+      "usage_phases": [
+        "owning_phase"
+      ]
+    },
+    "HandoffPacket": {
+      "created_by_phase": "each_phase",
+      "updated_by_phases": [
+        "target_phase"
+      ],
+      "usage_phases": [
+        "ALL"
+      ]
+    }
+  },
+  "next": "data_plane_generation"
+}

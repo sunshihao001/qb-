@@ -1,0 +1,24 @@
+meta:
+  standard_id: S00_REGRESSION_RESULT_SCHEMA
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+required_fields:
+- regression_run_id
+- suite_id
+- rule_version_before
+- rule_version_after
+- passed_cases
+- failed_cases
+- false_positive_delta
+- false_negative_delta
+- p08_impact
+- paper_runner_impact
+- rollback_required

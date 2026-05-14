@@ -1,0 +1,17 @@
+{
+  "command": "validate-config",
+  "repo_root": "/root/sikk-gmgn",
+  "safe_mode": true,
+  "inputs": {
+    "command": "validate-config",
+    "repo_root": "/root/sikk-gmgn",
+    "safe_mode": true,
+    "registry": "system/her_document_function_system/registry/controller_registry.json",
+    "config": "system/her_document_function_system/config/pipeline_config.full_safe_replay.json",
+    "sample": null,
+    "document": null,
+    "goal": null,
+    "run_id": null,
+    "from_stage": null
+  }
+}

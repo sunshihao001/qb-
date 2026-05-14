@@ -1,0 +1,6 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: STRATEGY_GATE_INPUT_MANIFEST_SCHEMA
+required_fields: [manifest_id, candidate_id, token_address, generated_at, upstream_packets, input_availability, inherited_limitations, input_quality, trace]
+overall_gate_input_quality_enum: [GATE_INPUT_HIGH_CONFIDENCE, GATE_INPUT_USABLE, GATE_INPUT_USABLE_WITH_GAPS, GATE_INPUT_LOW_CONFIDENCE, GATE_INPUT_UNUSABLE]

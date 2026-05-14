@@ -1,0 +1,493 @@
+{
+  "version": "1.0.0",
+  "architecture": "thin_master_skill_plus_phase_controllers_plus_atomic_candidate_skills",
+  "skill_root": "skills/sikk_stable_trader_os",
+  "phase_controllers": [
+    {
+      "code": "P00",
+      "slug": "phase_00_system_constitution",
+      "name_cn": "系统宪法层",
+      "role": "system constitution / global rules / safety boundary",
+      "atomic_categories": []
+    },
+    {
+      "code": "P01",
+      "slug": "phase_01_data_fact",
+      "name_cn": "数据事实层",
+      "role": "fact normalization / field quality / freshness",
+      "atomic_categories": [
+        "data_fact"
+      ]
+    },
+    {
+      "code": "P02",
+      "slug": "phase_02_wallet_structure",
+      "name_cn": "结构地址层",
+      "role": "wallet roles / same-source / distribution / backflow / infra exclusion",
+      "atomic_categories": [
+        "wallet_structure"
+      ]
+    },
+    {
+      "code": "P03",
+      "slug": "phase_03_chip_control",
+      "name_cn": "筹码控制层",
+      "role": "retention / transfer / distribution pressure / dominant side",
+      "atomic_categories": [
+        "chip_control"
+      ]
+    },
+    {
+      "code": "P04",
+      "slug": "phase_04_scenario_recognition",
+      "name_cn": "场景盘型层",
+      "role": "risk-first scenario / counter-evidence / pattern classification",
+      "atomic_categories": [
+        "scenario_recognition"
+      ]
+    },
+    {
+      "code": "P05",
+      "slug": "phase_05_structure_position",
+      "name_cn": "结构位置层",
+      "role": "POC / AVWAP / failure / fatigue / overextension",
+      "atomic_categories": [
+        "structure_position"
+      ]
+    },
+    {
+      "code": "P06",
+      "slug": "phase_06_strategy_filter",
+      "name_cn": "策略门禁层",
+      "role": "hard-negative inheritance / A+P1 / evidence chain",
+      "atomic_categories": [
+        "strategy_gate"
+      ]
+    },
+    {
+      "code": "P07",
+      "slug": "phase_07_execution_risk",
+      "name_cn": "执行风控层",
+      "role": "quote / security / liquidity / slippage / paper-only",
+      "atomic_categories": [
+        "execution_risk"
+      ]
+    },
+    {
+      "code": "P08",
+      "slug": "phase_08_review_learning",
+      "name_cn": "复盘学习层",
+      "role": "failure attribution / case library / rule candidates",
+      "atomic_categories": [
+        "review_learning"
+      ]
+    },
+    {
+      "code": "P09",
+      "slug": "phase_09_system_upgrade",
+      "name_cn": "系统升级层",
+      "role": "review-only upgrade packages / regression / rollback / shadow",
+      "atomic_categories": [
+        "system_upgrade"
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "phase": "phase_01_data_fact",
+      "role": "input",
+      "path": "contracts/stable_trader_os/phase_01_data_fact/input_contract.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "role": "output",
+      "path": "contracts/stable_trader_os/phase_01_data_fact/output_contract.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "role": "acceptance",
+      "path": "contracts/stable_trader_os/phase_01_data_fact/phase_01_acceptance_matrix.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "role": "support",
+      "path": "contracts/stable_trader_os/phase_01_data_fact/phase_01_forbidden_judgement_contract.md"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "role": "support",
+      "path": "contracts/stable_trader_os/phase_01_data_fact/phase_01_goal_passport.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "role": "input",
+      "path": "contracts/stable_trader_os/phase_01_data_fact/phase_01_input_contract.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "role": "output",
+      "path": "contracts/stable_trader_os/phase_01_data_fact/phase_01_output_contract.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "role": "support",
+      "path": "contracts/stable_trader_os/phase_01_data_fact/phase_01_to_phase_02_contract.json"
+    },
+    {
+      "phase": "phase_02_wallet_structure",
+      "role": "acceptance",
+      "path": "contracts/stable_trader_os/phase_02_wallet_structure/phase_02_acceptance_matrix.json"
+    },
+    {
+      "phase": "phase_02_wallet_structure",
+      "role": "input",
+      "path": "contracts/stable_trader_os/phase_02_wallet_structure/phase_02_input_contract.json"
+    },
+    {
+      "phase": "phase_02_wallet_structure",
+      "role": "output",
+      "path": "contracts/stable_trader_os/phase_02_wallet_structure/phase_02_output_contract.json"
+    },
+    {
+      "phase": "phase_02_wallet_structure",
+      "role": "support",
+      "path": "contracts/stable_trader_os/phase_02_wallet_structure/phase_02_to_phase_03_contract.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "role": "handoff",
+      "path": "contracts/stable_trader_os/phase_03_chip_control/handoff_rules.md"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "role": "acceptance",
+      "path": "contracts/stable_trader_os/phase_03_chip_control/phase_03_acceptance_matrix.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "role": "input",
+      "path": "contracts/stable_trader_os/phase_03_chip_control/phase_03_input_contract.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "role": "output",
+      "path": "contracts/stable_trader_os/phase_03_chip_control/phase_03_output_contract.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "role": "required_fields",
+      "path": "contracts/stable_trader_os/phase_03_chip_control/required_fields.md"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "role": "handoff",
+      "path": "contracts/stable_trader_os/phase_04_scenario_recognition/handoff_rules.md"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "role": "acceptance",
+      "path": "contracts/stable_trader_os/phase_04_scenario_recognition/phase_04_acceptance_matrix.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "role": "input",
+      "path": "contracts/stable_trader_os/phase_04_scenario_recognition/phase_04_input_contract.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "role": "output",
+      "path": "contracts/stable_trader_os/phase_04_scenario_recognition/phase_04_output_contract.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "role": "required_fields",
+      "path": "contracts/stable_trader_os/phase_04_scenario_recognition/required_fields.md"
+    },
+    {
+      "phase": "phase_05_structure_position",
+      "role": "handoff",
+      "path": "contracts/stable_trader_os/phase_05_structure_position/handoff_rules.md"
+    },
+    {
+      "phase": "phase_05_structure_position",
+      "role": "acceptance",
+      "path": "contracts/stable_trader_os/phase_05_structure_position/phase_05_acceptance_matrix.json"
+    },
+    {
+      "phase": "phase_05_structure_position",
+      "role": "input",
+      "path": "contracts/stable_trader_os/phase_05_structure_position/phase_05_input_contract.json"
+    },
+    {
+      "phase": "phase_05_structure_position",
+      "role": "output",
+      "path": "contracts/stable_trader_os/phase_05_structure_position/phase_05_output_contract.json"
+    },
+    {
+      "phase": "phase_05_structure_position",
+      "role": "required_fields",
+      "path": "contracts/stable_trader_os/phase_05_structure_position/required_fields.md"
+    },
+    {
+      "phase": "phase_06_strategy_filter",
+      "role": "handoff",
+      "path": "contracts/stable_trader_os/phase_06_strategy_filter/handoff_rules.md"
+    },
+    {
+      "phase": "phase_06_strategy_filter",
+      "role": "input",
+      "path": "contracts/stable_trader_os/phase_06_strategy_filter/phase_06_input_contract.json"
+    },
+    {
+      "phase": "phase_06_strategy_filter",
+      "role": "output",
+      "path": "contracts/stable_trader_os/phase_06_strategy_filter/phase_06_output_contract.json"
+    },
+    {
+      "phase": "phase_06_strategy_filter",
+      "role": "required_fields",
+      "path": "contracts/stable_trader_os/phase_06_strategy_filter/required_fields.md"
+    },
+    {
+      "phase": "phase_07_execution_risk",
+      "role": "handoff",
+      "path": "contracts/stable_trader_os/phase_07_execution_risk/handoff_rules.md"
+    },
+    {
+      "phase": "phase_07_execution_risk",
+      "role": "input",
+      "path": "contracts/stable_trader_os/phase_07_execution_risk/phase_07_input_contract.json"
+    },
+    {
+      "phase": "phase_07_execution_risk",
+      "role": "output",
+      "path": "contracts/stable_trader_os/phase_07_execution_risk/phase_07_output_contract.json"
+    },
+    {
+      "phase": "phase_07_execution_risk",
+      "role": "required_fields",
+      "path": "contracts/stable_trader_os/phase_07_execution_risk/required_fields.md"
+    },
+    {
+      "phase": "phase_08_review_learning",
+      "role": "handoff",
+      "path": "contracts/stable_trader_os/phase_08_review_learning/handoff_rules.md"
+    },
+    {
+      "phase": "phase_08_review_learning",
+      "role": "input",
+      "path": "contracts/stable_trader_os/phase_08_review_learning/phase_08_input_contract.json"
+    },
+    {
+      "phase": "phase_08_review_learning",
+      "role": "output",
+      "path": "contracts/stable_trader_os/phase_08_review_learning/phase_08_output_contract.json"
+    },
+    {
+      "phase": "phase_08_review_learning",
+      "role": "required_fields",
+      "path": "contracts/stable_trader_os/phase_08_review_learning/required_fields.md"
+    },
+    {
+      "phase": "phase_09_system_upgrade",
+      "role": "handoff",
+      "path": "contracts/stable_trader_os/phase_09_system_upgrade/handoff_rules.md"
+    },
+    {
+      "phase": "phase_09_system_upgrade",
+      "role": "input",
+      "path": "contracts/stable_trader_os/phase_09_system_upgrade/phase_09_input_contract.json"
+    },
+    {
+      "phase": "phase_09_system_upgrade",
+      "role": "output",
+      "path": "contracts/stable_trader_os/phase_09_system_upgrade/phase_09_output_contract.json"
+    },
+    {
+      "phase": "phase_09_system_upgrade",
+      "role": "required_fields",
+      "path": "contracts/stable_trader_os/phase_09_system_upgrade/required_fields.md"
+    }
+  ],
+  "schemas": [
+    {
+      "phase": "phase_01_data_fact",
+      "path": "schemas/stable_trader_os/phase_01_data_fact/holder_fact_table_schema.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "path": "schemas/stable_trader_os/phase_01_data_fact/kline_fact_table_schema.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "path": "schemas/stable_trader_os/phase_01_data_fact/phase_01_field_schema.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "path": "schemas/stable_trader_os/phase_01_data_fact/phase_01_quality_gate_schema.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "path": "schemas/stable_trader_os/phase_01_data_fact/quote_fact_schema.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "path": "schemas/stable_trader_os/phase_01_data_fact/security_fact_schema.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "path": "schemas/stable_trader_os/phase_01_data_fact/token_fact_schema.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "path": "schemas/stable_trader_os/phase_01_data_fact/trade_fact_table_schema.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "path": "schemas/stable_trader_os/phase_01_data_fact/transfer_fact_table_schema.json"
+    },
+    {
+      "phase": "phase_01_data_fact",
+      "path": "schemas/stable_trader_os/phase_01_data_fact/wallet_fact_table_schema.json"
+    },
+    {
+      "phase": "phase_02_wallet_structure",
+      "path": "schemas/stable_trader_os/phase_02_wallet_structure/phase_02_handoff_packet.schema.json"
+    },
+    {
+      "phase": "phase_02_wallet_structure",
+      "path": "schemas/stable_trader_os/phase_02_wallet_structure/wallet_structure_decision.schema.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "path": "schemas/stable_trader_os/phase_03_chip_control/backflow_risk_state.schema.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "path": "schemas/stable_trader_os/phase_03_chip_control/chip_control_summary.schema.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "path": "schemas/stable_trader_os/phase_03_chip_control/chip_transfer_status.schema.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "path": "schemas/stable_trader_os/phase_03_chip_control/counterparty_pressure.schema.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "path": "schemas/stable_trader_os/phase_03_chip_control/distribution_sell_state.schema.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "path": "schemas/stable_trader_os/phase_03_chip_control/dominant_side_status.schema.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "path": "schemas/stable_trader_os/phase_03_chip_control/early_chip_state.schema.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "path": "schemas/stable_trader_os/phase_03_chip_control/phase_03_handoff_packet.schema.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "path": "schemas/stable_trader_os/phase_03_chip_control/same_source_group_chip_state.schema.json"
+    },
+    {
+      "phase": "phase_03_chip_control",
+      "path": "schemas/stable_trader_os/phase_03_chip_control/structure_wallet_sets.schema.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "path": "schemas/stable_trader_os/phase_04_scenario_recognition/chip_scenario_context.schema.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "path": "schemas/stable_trader_os/phase_04_scenario_recognition/market_cap_scenario_context.schema.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "path": "schemas/stable_trader_os/phase_04_scenario_recognition/market_lifecycle_context.schema.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "path": "schemas/stable_trader_os/phase_04_scenario_recognition/phase_04_handoff_packet.schema.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "path": "schemas/stable_trader_os/phase_04_scenario_recognition/price_structure_state.schema.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "path": "schemas/stable_trader_os/phase_04_scenario_recognition/primary_scenario.schema.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "path": "schemas/stable_trader_os/phase_04_scenario_recognition/scenario_counter_evidence.schema.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "path": "schemas/stable_trader_os/phase_04_scenario_recognition/scenario_scores.schema.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "path": "schemas/stable_trader_os/phase_04_scenario_recognition/volume_quality_state.schema.json"
+    },
+    {
+      "phase": "phase_04_scenario_recognition",
+      "path": "schemas/stable_trader_os/phase_04_scenario_recognition/wallet_scenario_context.schema.json"
+    },
+    {
+      "phase": "phase_05_structure_position",
+      "path": "schemas/stable_trader_os/phase_05_structure_position/phase_05_handoff_packet.schema.json"
+    },
+    {
+      "phase": "phase_05_structure_position",
+      "path": "schemas/stable_trader_os/phase_05_structure_position/structure_position_decision.schema.json"
+    },
+    {
+      "phase": "phase_06_strategy_filter",
+      "path": "schemas/stable_trader_os/phase_06_strategy_filter/phase_06_handoff_packet.schema.json"
+    },
+    {
+      "phase": "phase_06_strategy_filter",
+      "path": "schemas/stable_trader_os/phase_06_strategy_filter/strategy_gate_decision.schema.json"
+    },
+    {
+      "phase": "phase_07_execution_risk",
+      "path": "schemas/stable_trader_os/phase_07_execution_risk/execution_risk_decision.schema.json"
+    },
+    {
+      "phase": "phase_07_execution_risk",
+      "path": "schemas/stable_trader_os/phase_07_execution_risk/phase_07_handoff_packet.schema.json"
+    },
+    {
+      "phase": "phase_08_review_learning",
+      "path": "schemas/stable_trader_os/phase_08_review_learning/phase_08_handoff_packet.schema.json"
+    },
+    {
+      "phase": "phase_08_review_learning",
+      "path": "schemas/stable_trader_os/phase_08_review_learning/review_learning_summary.schema.json"
+    },
+    {
+      "phase": "phase_09_system_upgrade",
+      "path": "schemas/stable_trader_os/phase_09_system_upgrade/phase_09_handoff_packet.schema.json"
+    },
+    {
+      "phase": "phase_09_system_upgrade",
+      "path": "schemas/stable_trader_os/phase_09_system_upgrade/rule_update_package.schema.json"
+    },
+    {
+      "phase": "phase_09_system_upgrade",
+      "path": "schemas/stable_trader_os/phase_09_system_upgrade/upgrade_candidate_classification.schema.json"
+    }
+  ],
+  "safety_boundary": {
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_transaction": false,
+    "swap_enabled": false,
+    "max_real_position_sol": 0
+  }
+}

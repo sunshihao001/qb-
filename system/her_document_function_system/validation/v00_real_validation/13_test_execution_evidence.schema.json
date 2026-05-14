@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "validation_run_id",
+    "test_type",
+    "test_command",
+    "started_at",
+    "ended_at",
+    "exit_code",
+    "stdout_path",
+    "stderr_path",
+    "passed_count",
+    "failed_count",
+    "skipped_count",
+    "status"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "exit_code": {
+      "type": "integer"
+    }
+  }
+}

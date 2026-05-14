@@ -1,0 +1,36 @@
+{
+  "runtime_task_id": "CA-ORCHESTRATOR-P0-CONTROL-CLOSURE-V1",
+  "created_at": "2026-05-11T12:42:03Z",
+  "status": "P0_CONTROL_CLOSURE_VERIFIED",
+  "current_stage": "P01_DATA_FACT_RUNTIME_CONNECTION_READY",
+  "parent_task_package_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/task_execution_package.json",
+  "task_package_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/ca_orchestrator_p0_control_closure/task_execution_package.json",
+  "completed_steps": [
+    "parent_contracts_loaded",
+    "runtime_shell_inspected",
+    "p0_task_package_created",
+    "paper_runtime_replay_passed",
+    "pytest_regression_passed",
+    "closure_audit_written"
+  ],
+  "pending_steps": [
+    "P01_data_fact_runtime_connection",
+    "P02_P09_phase_evidence_connection",
+    "dashboard_status_connection"
+  ],
+  "blocking_gap_count": 0,
+  "degraded_gap_count": 2,
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "next_recommended_stage": "P01_data_fact_runtime_connection",
+  "updated_at": "2026-05-11T12:42:40Z",
+  "closure_audit_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/ca_orchestrator_p0_control_closure/closure_audit.json",
+  "replay_run_root": "P0REPLAY-20260511T124222Z"
+}

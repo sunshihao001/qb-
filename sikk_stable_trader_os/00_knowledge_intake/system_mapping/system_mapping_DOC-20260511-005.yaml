@@ -1,0 +1,12 @@
+doc_id: DOC-20260511-005
+material_role: p00_controller_build_spec
+primary_consumer: P00_system_bootstrap_controller
+canonical_target: /root/sikk-gmgn/sikk_stable_trader_os/06_phase_controllers/P00_system_bootstrap_controller
+phase_mapping:
+  K00: preserve_register_taskize
+  P00: build_and_execute_bootstrap
+  P01: blocked_by_data_plane
+must_not_trigger:
+  - P01_runtime
+  - paper_trading
+  - real_trade

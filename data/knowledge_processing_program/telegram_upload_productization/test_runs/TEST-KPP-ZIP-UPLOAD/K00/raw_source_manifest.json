@@ -1,0 +1,19 @@
+{
+  "run_id": "TEST-KPP-ZIP-UPLOAD",
+  "doc_id": "TEST-KPP-ZIP-DOC",
+  "source_path": "/root/sikk-gmgn/data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-ZIP-UPLOAD/K00/normalized_text.md",
+  "raw_path": "/root/sikk-gmgn/data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-ZIP-UPLOAD/K00/TEST-KPP-ZIP-DOC_efb14796f988_normalized_text.md",
+  "sha256": "efb14796f988423815e06139a895d1096fa412483655bc1f748ea2f58433e456",
+  "received_at": "2026-05-13T06:37:07Z",
+  "source_type": "telegram_upload",
+  "input_classification": "system_building_material",
+  "secret_policy": "redact_credentials_as_[REDACTED]_before_derived_outputs",
+  "original_source_path": "/tmp/pytest-of-root/pytest-370/test_zip_source_adapter_extrac0/docs.zip",
+  "staged_source_path": "/root/sikk-gmgn/data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-ZIP-UPLOAD/K00/uploaded_source/TEST-KPP-ZIP-DOC_e44d2d74ed88_docs.zip",
+  "normalized_text_path": "/root/sikk-gmgn/data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-ZIP-UPLOAD/K00/normalized_text.md",
+  "normalized_source_adapter": "zip_text_bundle",
+  "telegram_context": {
+    "chat_id": "TEST_CHAT",
+    "message_id": "MSGZIP"
+  }
+}

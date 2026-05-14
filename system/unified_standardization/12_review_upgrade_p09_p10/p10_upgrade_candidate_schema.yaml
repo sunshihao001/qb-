@@ -1,0 +1,25 @@
+meta:
+  standard_id: S00_P10_UPGRADE_CANDIDATE_SCHEMA
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+required_fields:
+- upgrade_candidate_id
+- source_review_case
+- affected_rule
+- affected_phase
+- change_proposal
+- expected_improvement
+- risk_of_change
+- shadow_test_required
+- regression_test_required
+- rollback_plan
+- approval_status
+- promotion_status

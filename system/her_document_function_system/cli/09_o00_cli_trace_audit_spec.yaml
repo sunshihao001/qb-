@@ -1,0 +1,27 @@
+trace_events:
+  - cli_started
+  - args_parsed
+  - safe_mode_checked
+  - forbidden_actions_checked
+  - registry_loaded
+  - config_loaded
+  - sample_loaded
+  - pipeline_run_created
+  - command_dispatched
+  - command_completed
+  - command_failed
+  - exit_code_written
+  - cli_report_written
+trace_fields:
+  - event_id
+  - timestamp
+  - cli_run_id
+  - pipeline_run_id
+  - command
+  - event_type
+  - status_before
+  - status_after
+  - input_refs
+  - output_refs
+  - gap_refs
+  - message

@@ -1,0 +1,3 @@
+# 执行风控层 schemas
+
+状态码：EXECUTION_BLOCK, PAPER_EXECUTED, REVIEW_ONLY

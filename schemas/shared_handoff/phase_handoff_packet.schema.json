@@ -1,0 +1,329 @@
+{
+  "schema_name": "phase_handoff_packet",
+  "phase": "shared_handoff",
+  "fields": [
+    {
+      "field_name": "phase",
+      "type": "string",
+      "chinese_name": "phase",
+      "description": "phase_01 field phase",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_phase"
+    },
+    {
+      "field_name": "token_address",
+      "type": "string",
+      "chinese_name": "token_address",
+      "description": "phase_01 field token_address",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_token_address"
+    },
+    {
+      "field_name": "token_symbol",
+      "type": "string",
+      "chinese_name": "token_symbol",
+      "description": "phase_01 field token_symbol",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_token_symbol"
+    },
+    {
+      "field_name": "chain",
+      "type": "string",
+      "chinese_name": "chain",
+      "description": "phase_01 field chain",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_chain"
+    },
+    {
+      "field_name": "snapshot_id",
+      "type": "string",
+      "chinese_name": "snapshot_id",
+      "description": "phase_01 field snapshot_id",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_snapshot_id"
+    },
+    {
+      "field_name": "snapshot_time",
+      "type": "string",
+      "chinese_name": "snapshot_time",
+      "description": "phase_01 field snapshot_time",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_snapshot_time"
+    },
+    {
+      "field_name": "phase_status",
+      "type": "string",
+      "chinese_name": "phase_status",
+      "description": "phase_01 field phase_status",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_phase_status"
+    },
+    {
+      "field_name": "primary_status",
+      "type": "string",
+      "chinese_name": "primary_status",
+      "description": "phase_01 field primary_status",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_primary_status"
+    },
+    {
+      "field_name": "handoff_status",
+      "type": "string",
+      "chinese_name": "handoff_status",
+      "description": "phase_01 field handoff_status",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_handoff_status"
+    },
+    {
+      "field_name": "allowed_next_stage",
+      "type": "string",
+      "chinese_name": "allowed_next_stage",
+      "description": "phase_01 field allowed_next_stage",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_allowed_next_stage"
+    },
+    {
+      "field_name": "handoff_files",
+      "type": "string",
+      "chinese_name": "handoff_files",
+      "description": "phase_01 field handoff_files",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_handoff_files"
+    },
+    {
+      "field_name": "required_context_for_next_stage",
+      "type": "string",
+      "chinese_name": "required_context_for_next_stage",
+      "description": "phase_01 field required_context_for_next_stage",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_required_context_for_next_stage"
+    },
+    {
+      "field_name": "missing_fields",
+      "type": "string",
+      "chinese_name": "missing_fields",
+      "description": "phase_01 field missing_fields",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_missing_fields"
+    },
+    {
+      "field_name": "degrade_reason",
+      "type": "string",
+      "chinese_name": "degrade_reason",
+      "description": "phase_01 field degrade_reason",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_degrade_reason"
+    },
+    {
+      "field_name": "block_reason",
+      "type": "string",
+      "chinese_name": "block_reason",
+      "description": "phase_01 field block_reason",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_block_reason"
+    },
+    {
+      "field_name": "hard_negative_triggered",
+      "type": "string",
+      "chinese_name": "hard_negative_triggered",
+      "description": "phase_01 field hard_negative_triggered",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_hard_negative_triggered"
+    },
+    {
+      "field_name": "hard_negative_reasons",
+      "type": "string",
+      "chinese_name": "hard_negative_reasons",
+      "description": "phase_01 field hard_negative_reasons",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_hard_negative_reasons"
+    },
+    {
+      "field_name": "audit_file",
+      "type": "string",
+      "chinese_name": "audit_file",
+      "description": "phase_01 field audit_file",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_audit_file"
+    },
+    {
+      "field_name": "created_at",
+      "type": "string",
+      "chinese_name": "created_at",
+      "description": "phase_01 field created_at",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_created_at"
+    }
+  ]
+}

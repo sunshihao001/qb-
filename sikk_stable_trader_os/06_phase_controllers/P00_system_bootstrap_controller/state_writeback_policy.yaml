@@ -1,0 +1,39 @@
+state_writeback_policy_id: P00_STATE_WRITEBACK_POLICY_001
+stage: P00_system_bootstrap_controller
+version: v1.0-institutional
+writeback_required: true
+writeback_targets:
+  - path: 00_control/current_system_state.json
+    required: true
+    write_mode: create_or_update
+    purpose: 记录当前唯一权威系统状态
+  - path: 00_control/phase_registry.yaml
+    required: true
+    write_mode: create_or_update
+    purpose: 注册 K00、P00、P01-P10 阶段状态
+  - path: 00_control/system_asset_index.json
+    required: true
+    write_mode: create_or_update
+    purpose: 登记系统资产与消费状态
+  - path: 00_control/task_consumption_log.json
+    required: true
+    write_mode: append_or_update
+    purpose: 标记 K00 产物被 P00 消费
+  - path: 00_control/next_stage_decision.json
+    required: true
+    write_mode: create_or_update
+    purpose: 裁决下一合法阶段
+forbidden_writeback_targets:
+  - real_trade_runtime_state
+  - exchange_account_state
+  - private_key_store
+  - live_order_queue
+required_state_after_p00:
+  current_authoritative_stage: P00_system_bootstrap_controller
+  k00_status: ASSETIZED_AND_CONSUMED_BY_P00
+  p00_status: BOOTSTRAP_PASSED
+  p01_status: BLOCKED_BY_DATA_PLANE
+  p01_runtime_connection_allowed: false
+  paper_only: true
+  real_trade_enabled: false
+  next_legal_stage: DATA_PLANE_ACCEPTANCE_REVIEW

@@ -1,0 +1,18 @@
+{
+  "stage_id": "K08",
+  "run_id": "MANUAL-KPP-AUTOCHAIN-REPLAY",
+  "status": "K08_ACCEPTED",
+  "started_at": "2026-05-13T06:15:39Z",
+  "ended_at": "2026-05-13T06:15:39Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K08/knowledge_memory_index.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K08/governance_queue_entry.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K08/telegram_status_panel.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K08/final_run_summary.md",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K08/k08_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

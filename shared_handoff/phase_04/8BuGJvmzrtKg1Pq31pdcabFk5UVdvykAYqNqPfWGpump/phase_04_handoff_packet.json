@@ -1,0 +1,81 @@
+{
+  "token_address": "8BuGJvmzrtKg1Pq31pdcabFk5UVdvykAYqNqPfWGpump",
+  "mode": "replay",
+  "current_phase": "phase_04_scenario_recognition_layer",
+  "previous_phase": "phase_03_chip_control_layer",
+  "next_phase": "phase_05_structure_position_layer",
+  "status_code": "SCENARIO_ALLOW",
+  "status_family": "ALLOW",
+  "positive_evidence": [
+    {
+      "field": "token_address",
+      "reason": "present"
+    },
+    {
+      "field": "run_id",
+      "reason": "present"
+    },
+    {
+      "field": "phase",
+      "reason": "present"
+    },
+    {
+      "field": "status_code",
+      "reason": "present"
+    },
+    {
+      "field": "positive_evidence",
+      "reason": "present"
+    },
+    {
+      "field": "negative_evidence",
+      "reason": "present"
+    },
+    {
+      "field": "counter_evidence",
+      "reason": "present"
+    },
+    {
+      "field": "hard_negative_trigger",
+      "reason": "present"
+    },
+    {
+      "field": "confidence_level",
+      "reason": "present"
+    },
+    {
+      "field": "missing_fields",
+      "reason": "present"
+    },
+    {
+      "field": "source_files",
+      "reason": "present"
+    },
+    {
+      "field": "handoff_to",
+      "reason": "present"
+    }
+  ],
+  "negative_evidence": [],
+  "counter_evidence": [],
+  "hard_negative_trigger": null,
+  "invalidation_condition": "counter_evidence_or_hard_negative_triggered",
+  "confidence_level": "medium",
+  "missing_fields": [],
+  "gaps": [],
+  "audit_refs": [
+    "/root/sikk-gmgn/reports/runtime/replay/8BuGJvmzrtKg1Pq31pdcabFk5UVdvykAYqNqPfWGpump/phase_04/audit_report.md"
+  ],
+  "source_refs": [
+    "/root/sikk-gmgn/data/runtime/replay/8BuGJvmzrtKg1Pq31pdcabFk5UVdvykAYqNqPfWGpump/replay_inputs/phase_04_input.json"
+  ],
+  "created_at": "2026-05-10T09:53:30.501434+00:00",
+  "updated_at": "2026-05-10T09:53:30.501442+00:00",
+  "rule_version": "runtime_state_core_v1",
+  "run_id": "replay_8BuGJvmzrtKg1Pq31pdcabFk5UVdvykAYqNqPfWGpump",
+  "phase": "phase_04",
+  "source_files": [
+    "/root/sikk-gmgn/data/runtime/replay/8BuGJvmzrtKg1Pq31pdcabFk5UVdvykAYqNqPfWGpump/replay_inputs/phase_04_input.json"
+  ],
+  "handoff_to": "phase_05_structure_position_layer"
+}

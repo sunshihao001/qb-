@@ -1,0 +1,123 @@
+record_id: trace_coverage_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+required_trace_types:
+- source_trace
+- field_trace
+- decision_trace
+- handoff_trace
+- acceptance_trace
+- runtime_trace
+- review_trace
+- upgrade_trace
+per_phase_trace_coverage:
+- phase_id: P01
+  required_trace_types:
+  - source_trace
+  - field_trace
+  - decision_trace
+  - handoff_trace
+  - acceptance_trace
+  declared_trace_types:
+  - trace_requirements
+  missing_trace_types: []
+  trace_coverage_status: TRACE_COMPLETE
+- phase_id: P02
+  required_trace_types:
+  - source_trace
+  - field_trace
+  - decision_trace
+  - handoff_trace
+  - acceptance_trace
+  declared_trace_types: []
+  missing_trace_types:
+  - trace_requirements
+  trace_coverage_status: TRACE_WITH_GAPS
+- phase_id: P03
+  required_trace_types:
+  - source_trace
+  - field_trace
+  - decision_trace
+  - handoff_trace
+  - acceptance_trace
+  declared_trace_types:
+  - trace_requirements
+  missing_trace_types: []
+  trace_coverage_status: TRACE_COMPLETE
+- phase_id: P04
+  required_trace_types:
+  - source_trace
+  - field_trace
+  - decision_trace
+  - handoff_trace
+  - acceptance_trace
+  declared_trace_types:
+  - trace_requirements
+  missing_trace_types: []
+  trace_coverage_status: TRACE_COMPLETE
+- phase_id: P05
+  required_trace_types:
+  - source_trace
+  - field_trace
+  - decision_trace
+  - handoff_trace
+  - acceptance_trace
+  declared_trace_types:
+  - trace_requirements
+  missing_trace_types: []
+  trace_coverage_status: TRACE_COMPLETE
+- phase_id: P06
+  required_trace_types:
+  - source_trace
+  - field_trace
+  - decision_trace
+  - handoff_trace
+  - acceptance_trace
+  declared_trace_types:
+  - trace_requirements
+  missing_trace_types: []
+  trace_coverage_status: TRACE_COMPLETE
+- phase_id: P07
+  required_trace_types:
+  - source_trace
+  - field_trace
+  - decision_trace
+  - handoff_trace
+  - acceptance_trace
+  declared_trace_types:
+  - trace_requirements
+  missing_trace_types: []
+  trace_coverage_status: TRACE_COMPLETE
+- phase_id: P08
+  required_trace_types:
+  - source_trace
+  - field_trace
+  - decision_trace
+  - handoff_trace
+  - acceptance_trace
+  declared_trace_types:
+  - trace_requirements
+  missing_trace_types: []
+  trace_coverage_status: TRACE_COMPLETE
+- phase_id: P09
+  required_trace_types:
+  - source_trace
+  - field_trace
+  - decision_trace
+  - handoff_trace
+  - acceptance_trace
+  declared_trace_types:
+  - trace_requirements
+  missing_trace_types: []
+  trace_coverage_status: TRACE_COMPLETE
+- phase_id: P10
+  required_trace_types:
+  - source_trace
+  - field_trace
+  - decision_trace
+  - handoff_trace
+  - acceptance_trace
+  declared_trace_types:
+  - trace_requirements
+  missing_trace_types: []
+  trace_coverage_status: TRACE_COMPLETE
+critical_trace_gaps: []

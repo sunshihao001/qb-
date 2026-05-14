@@ -1,0 +1,18 @@
+meta:
+  standard_id: S00_API_KEY_PERMISSION_POLICY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+api_keys: read-only or quote/data-only by default
+forbidden_permissions:
+- withdraw
+- trade_without_manual_confirmation
+- signing
+secret_storage: do_not_write_to_history_or_repo

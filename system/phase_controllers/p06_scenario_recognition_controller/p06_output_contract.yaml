@@ -1,0 +1,24 @@
+allowed_outputs:
+- scenario_input_manifest
+- scenario_candidate_record
+- primary_scenario_candidate_record
+- secondary_scenario_candidate_record
+- scenario_rejection_record
+- scenario_conflict_record
+- scenario_unknown_record
+- scenario_confidence_record
+- scenario_transition_record
+- scenario_watch_condition_record
+- scenario_invalidation_record
+- scenario_context_interpretation_record
+- scenario_risk_flag_record
+- p07_strategy_gate_data_request_packet
+- scenario_usage_permission_packet
+- p06_to_p07_handoff_packet
+forbidden_outputs:
+- strategy_signal
+- paper_ready
+- buy_signal
+- live_execution
+- runtime_start
+handoff_only_to: P07_STRATEGY_GATE_CONTROLLER

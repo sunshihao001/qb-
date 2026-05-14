@@ -1,0 +1,17 @@
+meta:
+  standard_id: S00_PAPER_RUNNER_BINDING
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+paper_boundary: P08 permission gate required before paper open; real trade forbidden
+paper_runners:
+- runner_id: RUNNER_SIKK_LIVE_RUN_LEGACY
+  requires_p08_permission: true
+  status: legacy_absorbed_with_p08_gap

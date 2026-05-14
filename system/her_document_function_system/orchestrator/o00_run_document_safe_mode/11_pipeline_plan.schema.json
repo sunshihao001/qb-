@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 pipeline execution plan",
+  "type": "object",
+  "required": [
+    "pipeline_run_id",
+    "mode",
+    "stage_plan",
+    "forbidden_actions"
+  ],
+  "properties": {
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "stage_plan": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stage_dependency_graph_ref": {
+      "type": "string"
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

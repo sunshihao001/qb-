@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0139
+source_path: docs/harness/trading_structure_control/AI_DRIVEN_TRADING_STRUCTURE_CONTROL_SYSTEM.md
+phase_scores:
+  P01: 5
+  P02: 2
+  P03: 26
+  P04: 5
+  P05: 7
+  P06: 0
+  P07: 21
+  P08: 5
+  P09: 0
+  P10: 1
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

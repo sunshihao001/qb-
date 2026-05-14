@@ -1,0 +1,21 @@
+gap_severity_policy:
+  BLOCKING_GAP:
+    meaning: 会导致误判、越权、不可复盘或执行风险
+    acceptance_result: ACCEPTANCE_BLOCKED
+    downstream_permission: BLOCK_ALL_DOWNSTREAM
+  CRITICAL_GAP:
+    meaning: 关键字段、合约、trace、状态缺失
+    acceptance_result: ACCEPTANCE_REJECTED
+    downstream_permission: BLOCK_HANDOFF
+  HIGH_GAP:
+    meaning: 影响阶段质量，但可返工修复
+    acceptance_result: ACCEPTANCE_NEEDS_REWORK
+    downstream_permission: BLOCK_HANDOFF_UNTIL_FIXED
+  MEDIUM_GAP:
+    meaning: 不阻断当前交接，但必须传递给下游
+    acceptance_result: ACCEPTANCE_READY_WITH_GAPS
+    downstream_permission: ALLOW_HANDOFF_WITH_LIMITATIONS
+  LOW_GAP:
+    meaning: 可登记，不影响当前阶段
+    acceptance_result: ACCEPTANCE_READY_WITH_GAPS
+    downstream_permission: ALLOW_HANDOFF_WITH_NOTE

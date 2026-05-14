@@ -1,0 +1,31 @@
+phase_id: H00
+required_events:
+  - h00_started
+  - a00_handoff_loaded
+  - readiness_certificate_interpreted
+  - downstream_targets_classified
+  - target_capability_checked
+  - routing_decision_made
+  - queue_item_created
+  - dependency_graph_created
+  - priority_assigned
+  - gap_risk_bound
+  - handoff_packet_written
+  - queue_state_written
+  - acceptance_checked
+  - h00_completed
+  - h00_blocked
+trace_fields:
+  - event_id
+  - timestamp
+  - phase_id
+  - run_id
+  - event_type
+  - queue_item_id
+  - target_phase
+  - routing_id
+  - status_before
+  - status_after
+  - evidence_refs
+  - gap_refs
+  - message

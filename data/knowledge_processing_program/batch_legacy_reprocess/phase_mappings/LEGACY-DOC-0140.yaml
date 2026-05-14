@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0140
+source_path: docs/hindsight_sikk_integration_plan.md
+phase_scores:
+  P01: 4
+  P02: 0
+  P03: 13
+  P04: 0
+  P05: 2
+  P06: 0
+  P07: 6
+  P08: 2
+  P09: 5
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

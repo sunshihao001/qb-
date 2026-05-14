@@ -1,0 +1,28 @@
+{
+  "doc_id": "DOC-20260511-006",
+  "generated_at": "2026-05-11T13:49:31.471070+00:00",
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-STAGE-TARGET-DATA-DETAILS",
+      "severity": "DEGRADED",
+      "description": "User says this version focuses on stage target data, but provided excerpt has not yet enumerated every phase target data object in detail."
+    },
+    {
+      "gap_id": "GAP-ANTI-DOC-PILE-EXPLICIT",
+      "severity": "DEGRADED",
+      "description": "Anti-document-piling is implied through consumption checks; explicit section may arrive in remaining content."
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "next_recommendation": "methodology_blueprint_continuation_or_P00_sync",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

@@ -1,0 +1,27 @@
+controller_id: P05_EVIDENCE_CONTROLLER
+version: v3.0-professional
+status: PACKAGE_SPEC_READY_WITH_RUNTIME_GAPS
+created_at: '2026-05-12T02:44:17Z'
+paper_only: true
+real_trade_enabled: false
+runtime_allowed: false
+paper_runtime_allowed: false
+live_execution_allowed: false
+no_single_total_policy: true
+dimensions:
+- source_reliability
+- trace_completeness
+- data_freshness
+- directness
+- relevance
+- consistency
+- uniqueness
+- repeatability
+- counter_pressure
+- alternative_pressure
+classes:
+- HIGH_WEIGHT
+- MEDIUM_WEIGHT
+- LOW_WEIGHT
+- UNKNOWN_WEIGHT
+- CONFLICTED_WEIGHT

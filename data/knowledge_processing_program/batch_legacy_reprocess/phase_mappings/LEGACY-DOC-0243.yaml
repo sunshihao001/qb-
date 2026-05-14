@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0243
+source_path: sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260512-I04_PAPER_RUNTIME_INTEGRATION_V1.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 1
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 0
+  P08: 1
+  P09: 0
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

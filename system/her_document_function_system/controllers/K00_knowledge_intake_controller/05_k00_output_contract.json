@@ -1,0 +1,39 @@
+{
+  "phase_id": "K00",
+  "required_outputs": {
+    "k00_handoff_packet": {
+      "required": true
+    },
+    "document_passport_refs": {
+      "required": true
+    },
+    "corpus_index_refs": {
+      "required": true
+    },
+    "system_mapping_refs": {
+      "required": true
+    },
+    "gap_detection_refs": {
+      "required": true
+    },
+    "target_phase_candidates": {
+      "required": true
+    },
+    "execution_boundary": {
+      "required": true
+    },
+    "write_policy": {
+      "required": true
+    },
+    "repo_root": {
+      "required": true
+    }
+  },
+  "optional_outputs": {
+    "kv_retrieval_refs": {
+      "required": false,
+      "missing_status": "KV_GAP"
+    }
+  },
+  "downstream_contract": "F00_function_realization_controller/04_f00_input_contract.json"
+}

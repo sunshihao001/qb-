@@ -1,0 +1,33 @@
+{
+  "doc_id": "DOC-20260511-012",
+  "parent_doc_id": "DOC-20260511-006",
+  "generated_at": "2026-05-11T13:59:07.724119+00:00",
+  "closed_parent_gaps": [
+    "GAP-STAGE-TARGET-DATA-DETAILS_FORMAT",
+    "GAP-PHASE-STATUS-ENUM"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-PER-PHASE-TARGET-DATA-INSTANCES",
+      "severity": "DEGRADED",
+      "description": "The standard schema is defined; concrete target data instances for K00/P00-P10 still need to be generated/validated."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "next_recommendation": "generate_concrete_phase_target_data_instances_and_reconcile_P10",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

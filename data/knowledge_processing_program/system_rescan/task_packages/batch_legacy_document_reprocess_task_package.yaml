@@ -1,0 +1,21 @@
+task_package_id: KPP_BATCH_LEGACY_DOCUMENT_REPROCESS_20260513
+status: READY_QUEUED_NOT_EXECUTED
+goal: 将旧解释性文档按 K00-K08 全链路重处理为 passport/chunks/mapping/candidates/task_packages/handoff，而不是仅保留说明文档。
+input_scope:
+- sikk_stable_trader_os/**/*.md
+- docs/**/*.md
+output_root: data/knowledge_processing_program/batch_legacy_reprocess/
+execution_steps:
+- discover_documents
+- deduplicate_by_hash
+- create_document_passport
+- chunk_and_extract_requirements
+- map_to_phase_controller_assets
+- generate_candidate_tasks
+- write_handoff_packets
+- run_acceptance
+safety_boundary:
+- read_only_document_processing
+- no_runtime_trading
+- no_file_deletion
+- candidate_only_until_governance_review

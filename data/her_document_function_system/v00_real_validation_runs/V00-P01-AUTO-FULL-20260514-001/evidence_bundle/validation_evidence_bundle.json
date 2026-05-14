@@ -1,0 +1,51 @@
+{
+  "bundle_id": "validation_evidence_bundle_V00-P01-AUTO-FULL-20260514-001",
+  "validation_run_id": "V00-P01-AUTO-FULL-20260514-001",
+  "source_pipeline_run_id": "o00_run_20260514_005235_104185",
+  "evidence_groups": {
+    "schema_validation": [
+      "schema_validation/schema_validation_result.json"
+    ],
+    "contract_validation": [
+      "contract_validation/contract_validation_result.json"
+    ],
+    "field_model_validation": [
+      "field_model_validation/field_model_validation_result.json"
+    ],
+    "rule_logic_validation": [
+      "rule_logic_validation/rule_logic_validation_result.json"
+    ],
+    "test_execution": [
+      "test_execution/test_execution_evidence.json",
+      "test_execution/test_stdout.log",
+      "test_execution/test_stderr.log"
+    ],
+    "replay_execution": [
+      "replay_execution/replay_execution_evidence.json",
+      "replay_execution/replay_input.json",
+      "replay_execution/replay_output.json",
+      "replay_execution/replay_trace.jsonl",
+      "replay_execution/replay_comparison.json"
+    ],
+    "failure_evidence": [
+      "failure_evidence/failure_evidence.json"
+    ],
+    "trace_audit": [
+      "trace/v00_real_validation_trace.jsonl",
+      "audit/v00_real_validation_audit.jsonl"
+    ]
+  },
+  "summary": {
+    "schema_status": "SCHEMA_VALIDATED",
+    "contract_status": "CONTRACT_READY_WITH_GAPS",
+    "field_model_status": "FIELD_MODEL_VALIDATED",
+    "rule_logic_status": "RULE_LOGIC_VALIDATED",
+    "test_status": "TESTED",
+    "replay_status": "REPLAY_TESTED",
+    "final_validation_status": "V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS"
+  },
+  "open_gaps": [],
+  "blocking_gaps": [],
+  "ready_for_a00": true,
+  "ready_for_r00": false
+}

@@ -1,0 +1,10 @@
+policy_id: i02_naming_policy
+file_rules:
+- lower_snake_case for system files
+- phase ids normalized as pXX_name or iXX_name
+- indexes use *_index.yaml/json
+- reports use *_report.md/json
+directory_rules:
+- system artifacts under /system
+- runtime artifacts under /data
+- legacy paths never become primary writes

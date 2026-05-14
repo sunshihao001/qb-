@@ -1,0 +1,437 @@
+{
+  "verification_id": "VERIFICATION-DOC-20260511-012",
+  "generated_at": "2026-05-11T13:59:07.724119+00:00",
+  "doc_id": "DOC-20260511-012",
+  "overall_passed": true,
+  "passed_count": 81,
+  "failed_count": 0,
+  "checks": [
+    {
+      "name": "exists:00_knowledge_intake/raw_inputs/DOC-20260511-012.md",
+      "passed": true,
+      "detail": "00_knowledge_intake/raw_inputs/DOC-20260511-012.md"
+    },
+    {
+      "name": "exists:00_methodology/system_methodology_blueprint.md",
+      "passed": true,
+      "detail": "00_methodology/system_methodology_blueprint.md"
+    },
+    {
+      "name": "exists:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/source_registry/source_registry.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/document_passports/document_passport_DOC-20260511-012.yaml",
+      "passed": true,
+      "detail": "00_knowledge_intake/document_passports/document_passport_DOC-20260511-012.yaml"
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-012.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-012.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-012.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-012.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-012.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-012.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-012.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-012.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-012.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-012.json"
+    },
+    {
+      "name": "exists:00_control/current_system_state.json",
+      "passed": true,
+      "detail": "00_control/current_system_state.json"
+    },
+    {
+      "name": "exists:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": "00_control/system_asset_index.json"
+    },
+    {
+      "name": "exists:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": "06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json"
+    },
+    {
+      "name": "exists:00_control/phase_registry.yaml",
+      "passed": true,
+      "detail": "00_control/phase_registry.yaml"
+    },
+    {
+      "name": "exists:00_control/phase_target_data.schema.json",
+      "passed": true,
+      "detail": "00_control/phase_target_data.schema.json"
+    },
+    {
+      "name": "exists:00_control/phase_status_enum.json",
+      "passed": true,
+      "detail": "00_control/phase_status_enum.json"
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-012.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-012.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-012.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-012.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-012.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/current_system_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/phase_target_data.schema.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/phase_status_enum.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_knowledge_intake/document_passports/document_passport_DOC-20260511-012.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_control/phase_registry.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical_anchor:## 7. 阶段目标数据标准",
+      "passed": true,
+      "detail": "## 7. 阶段目标数据标准"
+    },
+    {
+      "name": "canonical_anchor:### 7.1 阶段目标数据字段",
+      "passed": true,
+      "detail": "### 7.1 阶段目标数据字段"
+    },
+    {
+      "name": "canonical_anchor:### 7.2 阶段状态枚举",
+      "passed": true,
+      "detail": "### 7.2 阶段状态枚举"
+    },
+    {
+      "name": "canonical_anchor:phase_id",
+      "passed": true,
+      "detail": "phase_id"
+    },
+    {
+      "name": "canonical_anchor:phase_name_cn",
+      "passed": true,
+      "detail": "phase_name_cn"
+    },
+    {
+      "name": "canonical_anchor:phase_type",
+      "passed": true,
+      "detail": "phase_type"
+    },
+    {
+      "name": "canonical_anchor:phase_status",
+      "passed": true,
+      "detail": "phase_status"
+    },
+    {
+      "name": "canonical_anchor:authority_scope",
+      "passed": true,
+      "detail": "authority_scope"
+    },
+    {
+      "name": "canonical_anchor:primary_goal",
+      "passed": true,
+      "detail": "primary_goal"
+    },
+    {
+      "name": "canonical_anchor:non_goal",
+      "passed": true,
+      "detail": "non_goal"
+    },
+    {
+      "name": "canonical_anchor:upstream_dependencies",
+      "passed": true,
+      "detail": "upstream_dependencies"
+    },
+    {
+      "name": "canonical_anchor:required_inputs",
+      "passed": true,
+      "detail": "required_inputs"
+    },
+    {
+      "name": "canonical_anchor:optional_inputs",
+      "passed": true,
+      "detail": "optional_inputs"
+    },
+    {
+      "name": "canonical_anchor:forbidden_inputs",
+      "passed": true,
+      "detail": "forbidden_inputs"
+    },
+    {
+      "name": "canonical_anchor:core_objects",
+      "passed": true,
+      "detail": "core_objects"
+    },
+    {
+      "name": "canonical_anchor:core_questions",
+      "passed": true,
+      "detail": "core_questions"
+    },
+    {
+      "name": "canonical_anchor:required_outputs",
+      "passed": true,
+      "detail": "required_outputs"
+    },
+    {
+      "name": "canonical_anchor:handoff_outputs",
+      "passed": true,
+      "detail": "handoff_outputs"
+    },
+    {
+      "name": "canonical_anchor:acceptance_gate",
+      "passed": true,
+      "detail": "acceptance_gate"
+    },
+    {
+      "name": "canonical_anchor:blocking_conditions",
+      "passed": true,
+      "detail": "blocking_conditions"
+    },
+    {
+      "name": "canonical_anchor:downstream_consumers",
+      "passed": true,
+      "detail": "downstream_consumers"
+    },
+    {
+      "name": "canonical_anchor:runner_binding_status",
+      "passed": true,
+      "detail": "runner_binding_status"
+    },
+    {
+      "name": "canonical_anchor:state_writeback_required",
+      "passed": true,
+      "detail": "state_writeback_required"
+    },
+    {
+      "name": "canonical_anchor:paper_only_required",
+      "passed": true,
+      "detail": "paper_only_required"
+    },
+    {
+      "name": "canonical_anchor:real_trade_allowed",
+      "passed": true,
+      "detail": "real_trade_allowed"
+    },
+    {
+      "name": "canonical_anchor:NOT_CREATED",
+      "passed": true,
+      "detail": "NOT_CREATED"
+    },
+    {
+      "name": "canonical_anchor:STUB_REQUIRED",
+      "passed": true,
+      "detail": "STUB_REQUIRED"
+    },
+    {
+      "name": "canonical_anchor:WAITING_INPUT",
+      "passed": true,
+      "detail": "WAITING_INPUT"
+    },
+    {
+      "name": "canonical_anchor:READY_TO_BUILD",
+      "passed": true,
+      "detail": "READY_TO_BUILD"
+    },
+    {
+      "name": "canonical_anchor:READY_TO_EXECUTE",
+      "passed": true,
+      "detail": "READY_TO_EXECUTE"
+    },
+    {
+      "name": "canonical_anchor:BLOCKED",
+      "passed": true,
+      "detail": "BLOCKED"
+    },
+    {
+      "name": "canonical_anchor:BLOCKED_BY_DATA_PLANE",
+      "passed": true,
+      "detail": "BLOCKED_BY_DATA_PLANE"
+    },
+    {
+      "name": "canonical_anchor:BLOCKED_BY_CONTROL_PLANE",
+      "passed": true,
+      "detail": "BLOCKED_BY_CONTROL_PLANE"
+    },
+    {
+      "name": "canonical_anchor:BLOCKED_BY_ACCEPTANCE",
+      "passed": true,
+      "detail": "BLOCKED_BY_ACCEPTANCE"
+    },
+    {
+      "name": "canonical_anchor:RUNNING",
+      "passed": true,
+      "detail": "RUNNING"
+    },
+    {
+      "name": "canonical_anchor:OUTPUT_CREATED",
+      "passed": true,
+      "detail": "OUTPUT_CREATED"
+    },
+    {
+      "name": "canonical_anchor:ACCEPTANCE_PENDING",
+      "passed": true,
+      "detail": "ACCEPTANCE_PENDING"
+    },
+    {
+      "name": "canonical_anchor:ACCEPTANCE_PASSED",
+      "passed": true,
+      "detail": "ACCEPTANCE_PASSED"
+    },
+    {
+      "name": "canonical_anchor:ACCEPTANCE_FAILED",
+      "passed": true,
+      "detail": "ACCEPTANCE_FAILED"
+    },
+    {
+      "name": "canonical_anchor:HANDOFF_READY",
+      "passed": true,
+      "detail": "HANDOFF_READY"
+    },
+    {
+      "name": "canonical_anchor:CONSUMED_BY_DOWNSTREAM",
+      "passed": true,
+      "detail": "CONSUMED_BY_DOWNSTREAM"
+    },
+    {
+      "name": "canonical_anchor:DEPRECATED",
+      "passed": true,
+      "detail": "DEPRECATED"
+    },
+    {
+      "name": "canonical_anchor:done",
+      "passed": true,
+      "detail": "done"
+    },
+    {
+      "name": "canonical_anchor:finished",
+      "passed": true,
+      "detail": "finished"
+    },
+    {
+      "name": "canonical_anchor:ok",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "canonical_anchor:looks good",
+      "passed": true,
+      "detail": "looks good"
+    },
+    {
+      "name": "canonical_anchor:almost complete",
+      "passed": true,
+      "detail": "almost complete"
+    },
+    {
+      "name": "canonical_anchor:maybe ready",
+      "passed": true,
+      "detail": "maybe ready"
+    },
+    {
+      "name": "schema_has_22_required_fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema_forces_paper_only_true",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema_forces_real_trade_false",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "enum_has_17_legal_statuses",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "enum_has_6_forbidden_statuses",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "remaining_degraded_gaps": [
+    {
+      "gap_id": "GAP-PER-PHASE-TARGET-DATA-INSTANCES",
+      "severity": "DEGRADED",
+      "description": "The standard schema is defined; concrete target data instances for K00/P00-P10 still need to be generated/validated."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

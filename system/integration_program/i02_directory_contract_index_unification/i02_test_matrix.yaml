@@ -1,0 +1,55 @@
+tests:
+- test_id: I02_TEST_001
+  name: canonical root declaration exists
+  expected: I02_READY_OR_READY_WITH_GAPS
+- test_id: I02_TEST_002
+  name: P01-P10 controller directories indexed
+  expected: phase_controller_file_index
+- test_id: I02_TEST_003
+  name: runtime data paths indexed
+  expected: runtime_data_path_index
+- test_id: I02_TEST_004
+  name: schema files indexed
+  expected: schema_index
+- test_id: I02_TEST_005
+  name: contract files indexed
+  expected: contract_index
+- test_id: I02_TEST_006
+  name: handoff contracts indexed
+  expected: handoff_contract_index
+- test_id: I02_TEST_007
+  name: data request packet contracts indexed
+  expected: data_request_packet_index
+- test_id: I02_TEST_008
+  name: trace/acceptance/report models indexed
+  expected: control_artifact_index
+- test_id: I02_TEST_009
+  name: legacy paths mapped read-only
+  expected: legacy_path_mapping
+- test_id: I02_TEST_010
+  name: path conflicts reported
+  expected: path_conflict_report
+- test_id: I02_TEST_011
+  name: read order manifest generated
+  expected: read_order_manifest
+- test_id: I02_TEST_012
+  name: I03 prerequisite generated
+  expected: i03_runner_tool_binding_prerequisite_packet
+- test_id: I02_TEST_013
+  name: I02 handoff generated
+  expected: i02_to_i03_handoff_packet
+- test_id: I02_TEST_014
+  name: business logic mutation request blocked
+  expected: I02_BLOCKED
+- test_id: I02_TEST_015
+  name: paper/live execution request blocked
+  expected: I02_BLOCKED
+- test_id: I02_TEST_016
+  name: auto deploy blocked
+  expected: I02_BLOCKED
+- test_id: I02_TEST_017
+  name: legacy deletion blocked
+  expected: I02_BLOCKED
+- test_id: I02_TEST_018
+  name: partial optional reports produce ready with gaps
+  expected: I02_READY_WITH_GAPS

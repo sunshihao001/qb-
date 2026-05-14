@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Governance Candidate",
+  "type": "object",
+  "required": [
+    "governance_candidate_id",
+    "candidate_type",
+    "rule_statement",
+    "evidence_refs",
+    "recommended_policy_level",
+    "target_controller",
+    "priority"
+  ],
+  "properties": {
+    "governance_candidate_id": {
+      "type": "string"
+    },
+    "candidate_type": {
+      "type": "string",
+      "enum": [
+        "FORBIDDEN_ACTION_RULE",
+        "STATUS_RULE",
+        "GAP_RULE",
+        "EVIDENCE_RULE",
+        "DIRECTORY_RULE",
+        "CONTRACT_RULE",
+        "RUNNER_SAFETY_RULE",
+        "TRACE_AUDIT_RULE",
+        "HUMAN_CONFIRMATION_RULE",
+        "PRODUCTION_BOUNDARY_RULE"
+      ]
+    },
+    "rule_statement": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_policy_level": {
+      "type": "string",
+      "enum": [
+        "HARD_RULE",
+        "SOFT_RULE",
+        "GUIDANCE"
+      ]
+    },
+    "target_controller": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "P0_CRITICAL",
+        "P1_HIGH",
+        "P2_MEDIUM",
+        "P3_LOW",
+        "P4_BACKLOG"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

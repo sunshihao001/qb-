@@ -1,0 +1,22 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P03_chip_control",
+  "artifact_kind": "evidence",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "positive_evidence": [
+    "top holder / bundler / entrapment fields available"
+  ],
+  "missing_evidence": [],
+  "risk_evidence": [
+    "bundler_pressure_pct=0.0",
+    "entrapment_trader_pct=0.0"
+  ]
+}

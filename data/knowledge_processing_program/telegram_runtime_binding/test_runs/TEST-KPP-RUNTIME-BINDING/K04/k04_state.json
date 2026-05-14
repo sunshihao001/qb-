@@ -1,0 +1,17 @@
+{
+  "stage_id": "K04",
+  "run_id": "TEST-KPP-RUNTIME-BINDING",
+  "status": "K04_ACCEPTED",
+  "started_at": "2026-05-14T05:19:22Z",
+  "ended_at": "2026-05-14T05:19:22Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K04/system_mapping_matrix.json",
+    "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K04/phase_mapping_matrix.json",
+    "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K04/gap_detection_report.json",
+    "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K04/k04_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

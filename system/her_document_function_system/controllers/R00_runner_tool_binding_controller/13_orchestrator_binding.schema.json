@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Orchestrator binding schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "orchestrator_step_id",
+    "step_name",
+    "after",
+    "before",
+    "input",
+    "output",
+    "skip_conditions",
+    "failure_action",
+    "safe_mode"
+  ],
+  "properties": {
+    "orchestrator_step_id": {
+      "type": "string"
+    },
+    "step_name": {
+      "type": "string"
+    },
+    "after": {
+      "type": "string"
+    },
+    "before": {
+      "type": "string"
+    },
+    "input": {
+      "type": "string"
+    },
+    "output": {
+      "type": "string"
+    },
+    "skip_conditions": {
+      "type": "array"
+    },
+    "failure_action": {
+      "type": "string"
+    },
+    "safe_mode": {
+      "const": true
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "16_acceptance_decision.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "decision_id",
+    "final_status",
+    "ready_for_h00",
+    "ready_for_u00",
+    "ready_for_g00",
+    "ready_for_production",
+    "blocking_gaps",
+    "non_blocking_gaps",
+    "forbidden_claims_blocked"
+  ],
+  "properties": {
+    "decision_id": {},
+    "final_status": {},
+    "ready_for_h00": {},
+    "ready_for_u00": {},
+    "ready_for_g00": {},
+    "ready_for_production": {},
+    "blocking_gaps": {},
+    "non_blocking_gaps": {},
+    "forbidden_claims_blocked": {}
+  }
+}

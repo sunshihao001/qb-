@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 acceptance matrix",
+  "type": "object",
+  "required": [
+    "pipeline_run_id",
+    "dimensions",
+    "final_pipeline_status"
+  ],
+  "properties": {
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "dimension",
+          "required",
+          "status",
+          "evidence_refs",
+          "gap_refs",
+          "decision"
+        ],
+        "properties": {
+          "dimension": {
+            "enum": [
+              "Governance",
+              "Intake",
+              "Function",
+              "Validation",
+              "Binding",
+              "Acceptance",
+              "Handoff",
+              "Review",
+              "Audit",
+              "Risk"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "PASSED",
+              "PASSED_WITH_GAPS",
+              "FAILED",
+              "BLOCKED",
+              "NOT_REQUIRED"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array"
+          },
+          "gap_refs": {
+            "type": "array"
+          },
+          "decision": {
+            "enum": [
+              "ALLOW_NEXT",
+              "ALLOW_WITH_GAPS",
+              "BLOCK",
+              "ROUTE_TO_U00",
+              "ROUTE_TO_G00"
+            ]
+          }
+        }
+      }
+    },
+    "final_pipeline_status": {
+      "enum": [
+        "PIPELINE_ACCEPTED",
+        "PIPELINE_READY_WITH_GAPS",
+        "PIPELINE_BLOCKED",
+        "PIPELINE_REJECTED",
+        "PIPELINE_DESIGN_ONLY",
+        "PIPELINE_PARTIALLY_IMPLEMENTED",
+        "PIPELINE_VALIDATED_NOT_BOUND",
+        "PIPELINE_BOUND_NOT_ACCEPTED",
+        "PIPELINE_REVIEW_REQUIRED",
+        "PIPELINE_GOVERNANCE_REQUIRED"
+      ]
+    }
+  }
+}

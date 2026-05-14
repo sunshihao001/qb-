@@ -1,0 +1,11 @@
+policy_id: PAPER_UPDATE_POLICY
+controller_id: I04_PAPER_RUNTIME_INTEGRATION
+rules:
+- position updates require mark price
+- all updates trace-linked
+- stale quotes produce READY_WITH_GAPS or PAUSE based on policy
+safety_boundaries:
+  paper_only: true
+  no_live_execution: true
+  no_wallet_signing: true
+  no_auto_deploy: true

@@ -1,0 +1,25 @@
+{
+  "downstream_input_contract": "P05_STANDARD_STAGE_INPUT",
+  "fields": [
+    "phase_id",
+    "status",
+    "runtime_mode",
+    "trace_packet",
+    "semantic_acceptance",
+    "blocked_real_execution",
+    "next_phase_refs"
+  ],
+  "handoff_chain": {
+    "current_handoff": "P04_STANDARD_STAGE_HANDOFF",
+    "downstream_input_contract": "P05_STANDARD_STAGE_INPUT",
+    "previous_handoff": "P03_STANDARD_STAGE_HANDOFF"
+  },
+  "handoff_id": "P04_STANDARD_STAGE_HANDOFF",
+  "handoff_status": "READY_FOR_EXPLICIT_DOWNSTREAM_READ_WITH_PAPER_ONLY_BOUNDARY",
+  "next_phase_refs": [
+    "P05"
+  ],
+  "phase_id": "P04",
+  "required_downstream_policy": "read_standard_handoff_only; do_not_infer_from_legacy_or_chat",
+  "status": "BUSINESS_BOUND_HANDOFF_READY_PAPER_ONLY"
+}

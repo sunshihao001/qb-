@@ -1,0 +1,13 @@
+{
+  "packet_type": "P01_PACKAGE_DESIGN_HANDOFF",
+  "status": "DESIGN_READY_RUNTIME_NOT_STARTED",
+  "to_controller": "P02_SOURCE_DATA_FACT_CONTROLLER",
+  "limitations": [
+    "PACKAGE_ONLY",
+    "NO_RUNTIME_EXECUTION",
+    "NO_EVIDENCE",
+    "NO_SCENARIO",
+    "NO_STRATEGY",
+    "LIVE_EXECUTION_FORBIDDEN"
+  ]
+}

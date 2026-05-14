@@ -1,0 +1,63 @@
+record_id: status_code_consistency_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+global_status_classes:
+- READY
+- READY_WITH_GAPS
+- REJECTED
+- BLOCKED
+- PAUSED
+- OBSERVE
+- ALLOWED
+- ALLOWED_WITH_LIMITATIONS
+per_phase_status_check:
+- phase_id: P01
+  declared_statuses: []
+  unmapped_statuses: []
+  conflicting_statuses: []
+  status_consistency: CONSISTENT_WITH_GAPS
+- phase_id: P02
+  declared_statuses: []
+  unmapped_statuses: []
+  conflicting_statuses: []
+  status_consistency: CONSISTENT_WITH_GAPS
+- phase_id: P03
+  declared_statuses: []
+  unmapped_statuses: []
+  conflicting_statuses: []
+  status_consistency: CONSISTENT_WITH_GAPS
+- phase_id: P04
+  declared_statuses: []
+  unmapped_statuses: []
+  conflicting_statuses: []
+  status_consistency: CONSISTENT_WITH_GAPS
+- phase_id: P05
+  declared_statuses: []
+  unmapped_statuses: []
+  conflicting_statuses: []
+  status_consistency: CONSISTENT_WITH_GAPS
+- phase_id: P06
+  declared_statuses: []
+  unmapped_statuses: []
+  conflicting_statuses: []
+  status_consistency: CONSISTENT_WITH_GAPS
+- phase_id: P07
+  declared_statuses: []
+  unmapped_statuses: []
+  conflicting_statuses: []
+  status_consistency: CONSISTENT_WITH_GAPS
+- phase_id: P08
+  declared_statuses: []
+  unmapped_statuses: []
+  conflicting_statuses: []
+  status_consistency: CONSISTENT_WITH_GAPS
+- phase_id: P09
+  declared_statuses: []
+  unmapped_statuses: []
+  conflicting_statuses: []
+  status_consistency: CONSISTENT_WITH_GAPS
+- phase_id: P10
+  declared_statuses: []
+  unmapped_statuses: []
+  conflicting_statuses: []
+  status_consistency: CONSISTENT_WITH_GAPS
+status_mapping_required: []

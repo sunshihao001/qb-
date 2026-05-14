@@ -1,0 +1,21 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "legacy_root": "/root/sikk-gmgn/data/gmgn_candidates_live_run",
+  "policy": "read_only_keep_in_place",
+  "do_not_move": true,
+  "do_not_delete": true,
+  "allowed_reference_paths": {
+    "old_candidate_states": "state_machine/candidate_states.json",
+    "old_signal_summary": "candidate_signal_outputs/candidate_signal_summary.json",
+    "old_wallet_structure_summary": "wallet_structure/candidate_wallet_structure_summary.json",
+    "old_quote_security_summary": "quote_security/candidate_quote_security_summary.json",
+    "old_paper_live": "paper_live/"
+  },
+  "new_write_root": "/root/sikk-gmgn/data/stable_trader_os/runs",
+  "bridge_outputs": [
+    "legacy_source_reference.json",
+    "legacy_field_mapping_report.md"
+  ],
+  "rule": "旧目录只作为历史参考和字段迁移来源，新 Phase 01 输出必须写入 data/stable_trader_os/runs/<run_id>/01_data_fact/"
+}

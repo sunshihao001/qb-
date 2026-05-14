@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Retry recovery",
+  "type": "object",
+  "required": [
+    "failure_id",
+    "failure_type",
+    "affected_queue_item",
+    "target_phase",
+    "gap_level",
+    "failure_reason",
+    "required_fix",
+    "safe_next_action",
+    "forbidden_next_action",
+    "current_status"
+  ],
+  "properties": {
+    "failure_id": {
+      "type": "string"
+    },
+    "failure_type": {
+      "enum": [
+        "target_not_ready",
+        "missing_contract",
+        "blocking_gap",
+        "handoff_write_failed",
+        "queue_state_invalid",
+        "trace_missing"
+      ]
+    },
+    "affected_queue_item": {
+      "type": "string"
+    },
+    "target_phase": {
+      "type": "string"
+    },
+    "gap_level": {
+      "enum": [
+        "BLOCKING_GAP",
+        "CRITICAL_GAP",
+        "HIGH_GAP",
+        "MEDIUM_GAP",
+        "LOW_GAP"
+      ]
+    },
+    "failure_reason": {
+      "type": "string"
+    },
+    "required_fix": {
+      "type": "string"
+    },
+    "safe_next_action": {
+      "type": "string"
+    },
+    "forbidden_next_action": {
+      "type": "string"
+    },
+    "current_status": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

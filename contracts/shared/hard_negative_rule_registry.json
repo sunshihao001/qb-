@@ -1,0 +1,14 @@
+{
+  "version": "runtime_state_core_v1",
+  "rules": [
+    {"code": "DATA_INVALID", "match_status_codes": ["DATA_INVALID"], "block_status_family": "BLOCK", "reason": "数据事实无效"},
+    {"code": "SECURITY_RISK_BLOCK", "match_status_codes": ["SECURITY_RISK_BLOCK"], "block_status_family": "BLOCK", "reason": "安全风险硬否决"},
+    {"code": "ACTIVE_DISTRIBUTION", "match_status_codes": ["ACTIVE_DISTRIBUTION"], "block_status_family": "BLOCK", "reason": "主动派发硬否决"},
+    {"code": "STRUCTURE_COLLAPSE", "match_status_codes": ["STRUCTURE_COLLAPSE"], "block_status_family": "BLOCK", "reason": "结构坍塌硬否决"},
+    {"code": "SCENARIO_BLOCK", "match_status_codes": ["SCENARIO_BLOCK"], "block_status_family": "BLOCK", "reason": "场景否决"},
+    {"code": "COMPLETION_FAIL", "match_status_codes": ["COMPLETION_FAIL"], "block_status_family": "BLOCK", "reason": "结构位置失败"},
+    {"code": "FATIGUE_BLOCK", "match_status_codes": ["FATIGUE_BLOCK"], "block_status_family": "BLOCK", "reason": "疲劳拖延硬否决"},
+    {"code": "STRATEGY_BLOCK", "match_status_codes": ["STRATEGY_BLOCK"], "block_status_family": "BLOCK", "reason": "策略门禁否决"},
+    {"code": "EXECUTION_BLOCK", "match_status_codes": ["EXECUTION_BLOCK"], "block_status_family": "BLOCK", "reason": "执行风控否决"}
+  ]
+}

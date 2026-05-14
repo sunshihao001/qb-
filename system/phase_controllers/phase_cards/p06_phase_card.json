@@ -1,0 +1,61 @@
+{
+  "phase_id": "P06",
+  "controller_id": "P06_SCENARIO_RECOGNITION_CONTROLLER",
+  "controller_name_cn": "多模型交易场景识别控制器",
+  "primary_responsibility": "基于证据与反证识别当前代币处于何种交易场景，并输出场景候选、场景置信度、冲突场景和禁止误判。",
+  "required_handoff": [
+    "p05_evidence_handoff_packet",
+    "domain_scenario_taxonomy_handoff",
+    "trace_handoff_packet",
+    "acceptance_result_packet",
+    "limitation_transfer_packet"
+  ],
+  "outputs": [
+    "scenario_candidates.json",
+    "scenario_conflicts.json",
+    "scenario_invalidations.json",
+    "scenario_recognition_report.md",
+    "p06_scenario_handoff_packet.yaml"
+  ],
+  "required_trace": [
+    "PHASE_TRACE",
+    "TASK_TRACE",
+    "ARTIFACT_TRACE",
+    "CONTRACT_TRACE",
+    "EVIDENCE_REF_TRACE",
+    "DECISION_TRACE",
+    "STATE_TRACE"
+  ],
+  "acceptance_gate": "GATE_P06_SCENARIO_RECOGNITION_READY",
+  "tool_binding_policy": {
+    "allowed": true,
+    "mode": [
+      "READ_ONLY_ANALYSIS",
+      "TEST_ONLY"
+    ],
+    "allowed_tools": [
+      "scenario_classifier",
+      "scenario_conflict_detector",
+      "invalidation_checker"
+    ],
+    "forbidden_tools": [
+      "paper_trade_runner",
+      "live_trade_executor",
+      "wallet_signer"
+    ]
+  },
+  "paper_runtime_policy": {
+    "allowed": false,
+    "reason": "场景识别不是策略门控，不允许直接进入纸面运行。"
+  },
+  "forbidden": [
+    "output_paper_ready",
+    "output_buy_signal",
+    "output_execution_permission",
+    "ignore_counter_evidence",
+    "treat_scenario_candidate_as_strategy_approval",
+    "bypass_strategy_gate"
+  ],
+  "status": "INDEXED_NOT_EXPANDED",
+  "runtime_allowed": false
+}

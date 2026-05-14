@@ -1,0 +1,38 @@
+contract_dependency_rules:
+- contract_rule_id: ACONTRACT_001
+  target_stage: GOVERNANCE_PLANE
+  required_contracts:
+  - governance_handoff_contract
+  - authority_matrix
+  - forbidden_claims
+  missing_policy: ACCEPTANCE_REJECTED
+- contract_rule_id: ACONTRACT_002
+  target_stage: DOMAIN_PLANE
+  required_contracts:
+  - domain_handoff_contract
+  - domain_data_requirement_map
+  - reasoning_boundary
+  missing_policy: ACCEPTANCE_REJECTED
+- contract_rule_id: ACONTRACT_003
+  target_stage: DATA_PLANE
+  required_contracts:
+  - data_handoff_contract
+  - field_dictionary
+  - data_quality_model
+  - missing_policy
+  - conflict_policy
+  missing_policy: ACCEPTANCE_REJECTED
+- contract_rule_id: ACONTRACT_004
+  target_stage: TRACE_PLANE
+  required_contracts:
+  - trace_handoff_contract
+  - trace_id_policy
+  - trace_quality_model
+  missing_policy: ACCEPTANCE_REJECTED
+- contract_rule_id: ACONTRACT_005
+  target_stage: HANDOFF_PLANE
+  required_contracts:
+  - handoff_packet_contract
+  - downstream_permission_contract
+  - limitation_transfer_contract
+  missing_policy: BLOCK_HANDOFF

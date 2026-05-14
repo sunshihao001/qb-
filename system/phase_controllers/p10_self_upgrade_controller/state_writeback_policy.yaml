@@ -1,0 +1,13 @@
+policy_id: P10_self_upgrade_state_writeback_policy
+allowed_writebacks:
+- validation_status
+- gap_status
+- handoff_status
+- acceptance_result_path
+- trace_refs
+forbidden_writebacks:
+- live_trade_state
+- private_key_state
+- execution_position_state
+- paper_ready_without_p08_acceptance
+target_state_root: data/phase_controllers/p10_self_upgrade/

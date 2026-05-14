@@ -1,0 +1,31 @@
+{
+  "doc_id": "DOC-20260513-P01-DSIC-001",
+  "mapping_route": "K00_ACCEPTED_PENDING_PHASE_EXECUTION",
+  "material_classification": "system_building_material",
+  "target_subsystem": "sikk_stable_trader_os.phase_01_data_fact_controller",
+  "primary_phase": "P01",
+  "phase_role_update": "P01 becomes data source intelligence controller and fact authorization layer.",
+  "affected_planes": [
+    "knowledge_intake",
+    "data_plane",
+    "control_plane",
+    "contract_schema_plane",
+    "trace_audit_plane",
+    "replay_fixture_plane",
+    "downstream_permission_plane"
+  ],
+  "affected_phases": {
+    "K00": "source material intake and taskization accepted",
+    "P01": "requires package/code landing for DSIC controller",
+    "P02": "must consume P01-authorized facts; raw direct read blocked",
+    "P03_P06": "permissions derived from P01 handoff status",
+    "P07": "real execution remains false unless later explicitly authorized"
+  },
+  "must_not_directly_change": [
+    "paper_runtime",
+    "live_execution",
+    "private_key_handling",
+    "swap_or_broadcast_logic"
+  ],
+  "next_legal_stage": "P01_DATA_SOURCE_INTELLIGENCE_CONTROLLER_PACKAGE_OR_CODE_LANDING"
+}

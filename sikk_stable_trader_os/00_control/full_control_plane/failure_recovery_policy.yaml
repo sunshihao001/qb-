@@ -1,0 +1,13 @@
+failure_recovery_rules:
+  - failure_id: FAIL_MISSING_INPUT_CONTRACT
+    action: BLOCK_PHASE
+    next_status: PHASE_BLOCKED
+  - failure_id: FAIL_ACCEPTANCE_NOT_PASSED
+    action: MARK_NEEDS_REWORK
+    next_status: PHASE_NEEDS_REWORK
+  - failure_id: FAIL_PARTIAL_COMPLETION
+    action: MARK_READY_WITH_GAPS
+    next_status: PHASE_READY_WITH_GAPS
+  - failure_id: FAIL_LIVE_EXECUTION_REQUESTED
+    action: BLOCK_EXECUTION_AND_AUDIT
+    next_status: EXECUTION_BLOCKED

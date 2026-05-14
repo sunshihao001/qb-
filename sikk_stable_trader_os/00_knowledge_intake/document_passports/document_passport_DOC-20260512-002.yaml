@@ -1,0 +1,44 @@
+doc_id: "DOC-20260512-002"
+source_type: "user_uploaded_markdown"
+source_name: "P02 Source Data Fact Controller 专业版 v3.0"
+received_at: "2026-05-12"
+ingested_at: "2026-05-12T01:52:36Z"
+sha256: "948b7fd9ff8d731a03cdda468cdb6fba8dd646056f2afe67adcbece46001bf7c"
+raw_path: "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-002_p02_source_data_fact_controller_v3.md"
+document_role:
+  primary_role: "P02_SOURCE_DATA_FACT_CONTROLLER_SPEC"
+  secondary_roles:
+    - "source_data_fact_package_design"
+    - "data_quality_governance"
+    - "p02_to_p03_handoff_contract"
+    - "runtime_boundary_policy"
+summary:
+  core_intent: "将 P01 Candidate Master Record 与 P02 Data Request Packet 转化为可追踪、可校验、可标准化、可快照、可评分、可交接的 Source Data Fact Package。"
+  key_points:
+    - "P02 不是采集脚本或字段读取器"
+    - "P02 只输出事实、质量、缺口、冲突、新鲜度与 P03 交接"
+    - "P02 禁止 evidence/钱包角色/筹码结构/场景/策略准入/paper/runtime/实盘"
+    - "P02 必须分离 raw_data、normalized_fact、quality_report"
+    - "P02 下一跳只能是 P03 钱包实体层"
+system_mapping:
+  planes:
+    - "Knowledge Plane"
+    - "Data Plane"
+    - "Control Plane"
+    - "Trace Plane"
+    - "Acceptance Plane"
+    - "Handoff Plane"
+    - "Execution Plane"
+  affected_phases:
+    - "K00"
+    - "P01"
+    - "P02"
+    - "P03"
+required_actions:
+  - "preserve_raw_input"
+  - "generate_p02_controller_package"
+  - "create_p02_runtime_data_tree_design_only"
+  - "validate_yaml_json_safety"
+  - "update_control_state_without_runtime_unblock"
+evidence_level: "EVIDENCE_A_STRONG"
+status: "PASSPORT_READY"

@@ -1,0 +1,20 @@
+controller_id: P01_data_fact_controller
+controller_name_cn: 数据事实层
+phase_type: normalized_fact_runtime
+status: BLOCKED_BY_DATA_PLANE
+created_by: P00_system_bootstrap_controller
+primary_goal: 将 GMGN、OKX、K线、钱包、市值、quote、安全扫描、paper 数据转成统一事实模型
+paper_only: true
+real_trade_enabled: false
+p01_runtime_connection_allowed: false
+required_before_ready:
+  - upstream_handoff_consumed
+  - input_contract_valid
+  - output_contract_valid
+  - acceptance_gate_passed
+  - current_system_state_allows_stage
+forbidden:
+  - real_trade
+  - private_key
+  - seed_phrase
+  - exchange_write_order

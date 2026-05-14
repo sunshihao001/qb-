@@ -1,0 +1,84 @@
+{
+  "contract_id": "P00_INPUT_CONTRACT_001",
+  "stage": "P00_system_bootstrap_controller",
+  "version": "v1.0-institutional",
+  "purpose": "Define required inputs for P00 system bootstrap and methodology compilation.",
+  "required_inputs": [
+    {
+      "name": "system_methodology_blueprint",
+      "path": "00_methodology/system_methodology_blueprint.md",
+      "required": true,
+      "validation_rules": [
+        "file_exists",
+        "non_empty",
+        "contains_system_build_methodology",
+        "contains_phase_controller_definition"
+      ],
+      "missing_policy": "BLOCK_P00"
+    },
+    {
+      "name": "k00_to_p00_handoff_packet",
+      "path": "00_knowledge_intake/handoff_packets/",
+      "required": true,
+      "validation_rules": [
+        "directory_exists",
+        "at_least_one_json_file",
+        "target_stage_equals_P00_system_bootstrap_controller"
+      ],
+      "missing_policy": "BLOCK_P00"
+    },
+    {
+      "name": "phase_controller_candidate_spec",
+      "path": "00_knowledge_intake/phase_controller_candidates/",
+      "required": true,
+      "validation_rules": [
+        "directory_exists",
+        "at_least_one_yaml_file",
+        "candidate_status_ready_for_p00_compilation"
+      ],
+      "missing_policy": "BLOCK_P00"
+    }
+  ],
+  "optional_inputs": [
+    {
+      "name": "existing_governance_plane",
+      "path": "00_governance/governance_plane.md",
+      "usage": "read_and_reconcile_if_exists"
+    },
+    {
+      "name": "legacy_runtime_assets",
+      "path": "data/gmgn_candidates_live_run/",
+      "usage": "index_only_do_not_move_do_not_delete"
+    }
+  ],
+  "forbidden_inputs": [
+    "private_key",
+    "seed_phrase",
+    "real_trade_order",
+    "unverified_live_buy_signal",
+    "exchange_write_permission"
+  ],
+  "preflight_checks": [
+    {
+      "check_id": "P00_PREFLIGHT_001",
+      "description": "Methodology blueprint must exist.",
+      "failure_action": "STOP_AND_REPORT"
+    },
+    {
+      "check_id": "P00_PREFLIGHT_002",
+      "description": "K00 handoff packet must target P00.",
+      "failure_action": "STOP_AND_REPORT"
+    },
+    {
+      "check_id": "P00_PREFLIGHT_003",
+      "description": "No real trade instruction may be present.",
+      "failure_action": "STOP_AND_REPORT"
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false,
+    "private_key_allowed": false
+  }
+}

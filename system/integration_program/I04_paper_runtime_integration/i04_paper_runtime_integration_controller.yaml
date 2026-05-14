@@ -1,0 +1,40 @@
+controller_id: I04_PAPER_RUNTIME_INTEGRATION
+version: v1.0
+authority_doc_id: DOC-20260512-I04_PAPER_RUNTIME_INTEGRATION_V1
+identity: Integration Program I04 paper-only runtime integration controller
+stage_domain: INTEGRATION_PROGRAM
+mission: Integrate P08-allowed candidates into strict paper-only runtime and produce
+  traceable, reviewable, and replayable runtime evidence.
+responsibilities:
+- read I03 handoff and P08 permission
+- build paper runtime input manifest
+- gate paper-only entry
+- open/update/close paper positions
+- apply slippage and cost models
+- record trade, equity, risk, exit, and trace artifacts
+- produce P09 replay input and I04 to I05 handoff
+forbidden:
+- new business phase
+- P01-P10 logic mutation
+- paper runtime bypass
+- live execution
+- wallet signing
+- auto deploy
+- direct P07 input acceptance
+upstream:
+- I03_RUNNER_TOOL_BINDING
+- P08_EXECUTION_RISK_CONTROLLER
+downstream:
+- I05_REVIEW_REPLAY_CONTROLLER
+status_codes:
+- I04_UNINITIALIZED
+- I04_CONTEXT_LOADED
+- I04_HANDOFF_READ
+- I04_MANIFEST_BUILT
+- I04_PERMISSION_GATED
+- I04_RUNTIME_ACTIVE
+- I04_READY_FOR_ACCEPTANCE
+- I04_READY
+- I04_READY_WITH_GAPS
+- I04_REJECTED
+- I04_BLOCKED

@@ -1,0 +1,64 @@
+{
+  "doc_id": "DOC-20260514-HER-PIPELINE-RUNNABLE-WITH-GAPS",
+  "source_type": "user_uploaded_markdown",
+  "source_name": "HER_DOC__FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS.md",
+  "received_at": "2026-05-14T00:33:42Z",
+  "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS.md",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance",
+      "pipeline_runtime_blueprint"
+    ]
+  },
+  "summary": {
+    "core_intent": "建立 HER 文档到功能处理主链路：真实文档输入后按 K00→F00→V00→A00→H00→U00→G00→O00 safe-mode pipeline 生成完整输出并保留 gaps。",
+    "key_points": [
+      "只做主链路，不扩展 scheduler/manual enable/one-shot 等旁支",
+      "必须建立 system/her_doc_function_pipeline 与 tools 主链路文件",
+      "必须支持 o00_run_document_main.py 核心命令",
+      "必须输出 K00/F00/V00/A00/H00/U00/G00/O00/trace/audit/report",
+      "最终状态为 HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS，禁止生产/直播/交易等伪 READY"
+    ]
+  },
+  "system_mapping": {
+    "planes": [
+      "document_intake",
+      "function_realization",
+      "validation",
+      "acceptance",
+      "downstream_queue",
+      "review_upgrade",
+      "governance",
+      "orchestration"
+    ],
+    "affected_phases": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_doc_function_pipeline/*",
+      "tools/o00_run_document_main.py",
+      "data/her_document_function_system/runs/<run_id>/*",
+      "tests/her_doc_function_pipeline/*"
+    ]
+  },
+  "required_actions": [
+    "create_system_definition_files",
+    "create_pipeline_tools",
+    "create_tests",
+    "run_real_document_safe_mode",
+    "verify_outputs_and_gaps"
+  ],
+  "evidence_level": "EVIDENCE_A_STRONG",
+  "status": "PASSPORT_READY"
+}

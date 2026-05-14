@@ -1,0 +1,38 @@
+{
+  "phase_id": "K00",
+  "phase_key": "K00_knowledge_intake_taskization",
+  "current_status": "PHASE_NOT_STARTED",
+  "current_doc_id": null,
+  "current_task_id": null,
+  "completed_tasks": [],
+  "failed_tasks": [],
+  "generated_files": [],
+  "missing_files": [],
+  "gap_list": [],
+  "hard_negative_hits": [],
+  "affected_planes": [],
+  "affected_phases": [],
+  "next_phase_recommendation": null,
+  "last_error": null,
+  "next_action": "start_knowledge_intake",
+  "updated_at": null,
+  "long_task_runtime": {
+    "loop_mode": "AUTOMATED_LONG_TASK",
+    "last_loop_step": null,
+    "auto_continue_checks": [],
+    "stop_condition_hits": [],
+    "next_phase_input_ready": null,
+    "continue_allowed": null,
+    "auto_trigger_decision_required": true
+  },
+  "auto_trigger": {
+    "enabled": true,
+    "decision_status": "NOT_EVALUATED",
+    "next_phase_allowed": null,
+    "next_phase_recommendation": null,
+    "decision_artifact": null,
+    "stop_reason": null,
+    "gate_evidence": [],
+    "evaluated_at": null
+  }
+}

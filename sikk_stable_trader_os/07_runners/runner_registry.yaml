@@ -1,0 +1,58 @@
+registry_id: runtime_absorption_runner_registry_v1
+created_at: "2026-05-14T20:34:54Z"
+scope: "bind existing SIKK runtime outputs into HER phase replay; no new Plane; no dashboard/telegram/batch"
+safety_boundary:
+  paper_only: true
+  no_real_swap: true
+  no_private_key: true
+  no_signing: true
+  no_broadcast: true
+  runtime_first_document_follow: true
+runners:
+  runner_live_orchestrator:
+    script_path: sikk_live_run.py
+    runtime_chain: "sikk_live_run.py -> run_sikk_gmgn_pipeline.py -> candidate/kline/signal/state/wallet/quote/paper/failure/report"
+    allowed_phases: [P01, P02, P03, P04, P05, P06, P07, P08, P09]
+    mode_for_replay: readonly_absorption_existing_outputs
+    phase_controller_required: true
+    direct_invocation_for_replay: forbidden_except_readonly_trace_reconstruction
+  runner_gmgn_pipeline:
+    script_path: run_sikk_gmgn_pipeline.py
+    allowed_phases: [P01, P02, P03, P04, P05, P06, P07, P08]
+    mode_for_replay: existing_output_reader
+    phase_controller_required: true
+  runner_candidate_discovery:
+    script_path: sikk_gmgn_new_token_filter.py
+    allowed_phases: [P01]
+    primary_outputs: ["data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.json"]
+  runner_kline_pipeline:
+    script_path: sikk_candidate_kline_pipeline.py
+    allowed_phases: [P04, P05, P06]
+    primary_outputs: ["data/gmgn_candidates_live_run/kline_pipeline/candidate_kline_pipeline_summary.json"]
+  runner_signal_engine:
+    script_path: sikk_candidate_signal_pipeline.py
+    allowed_phases: [P05, P06, P07]
+    primary_outputs: ["data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json"]
+  runner_state_machine:
+    script_path: sikk_candidate_state_machine.py
+    allowed_phases: [P07]
+    primary_outputs: ["data/gmgn_candidates_live_run/state_machine/candidate_states.json"]
+  runner_wallet_structure_pipeline:
+    script_path: sikk_candidate_wallet_structure_pipeline.py
+    allowed_phases: [P02, P03, P04, P05, P07]
+    primary_outputs: ["data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/candidate_wallet_structure_summary.json", "data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/wallet_structure_decision.json"]
+  runner_quote_security:
+    script_path: sikk_candidate_quote_security_pipeline.py
+    allowed_phases: [P08]
+    primary_outputs: ["data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json", "data/gmgn_candidates_live_run/quote_security/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/quote_security_decision.json"]
+    readonly_only: true
+  runner_paper_live:
+    script_path: sikk_paper_live_runner.py
+    allowed_phases: [P08, P09]
+    primary_outputs: ["data/gmgn_candidates_live_run/paper_live/paper_positions_open.json", "data/gmgn_candidates_live_run/paper_live/paper_positions_closed.json", "data/gmgn_candidates_live_run/paper_live/failure_attribution.jsonl"]
+    requires_strategy_gate: [P07, P08]
+    forbidden_after_candidate_discovery_without_gate: true
+  runner_failure_attribution:
+    script_path: sikk_paper_live_runner.py::failure_attribution_jsonl
+    allowed_phases: [P09, P10]
+    rule: "review output may create P09/P10 issue/fix packages only; must not mutate realtime rules"

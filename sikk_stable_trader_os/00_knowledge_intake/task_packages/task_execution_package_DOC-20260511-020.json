@@ -1,0 +1,31 @@
+{
+  "task_id": "BOOTSTRAP_CONTROL_PLANE_V2_PROFESSIONAL_COMPLETION_DOC-20260511-020",
+  "doc_id": "DOC-20260511-020",
+  "source_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-020_bootstrap_control_plane_v2_professional_completion.md",
+  "target_stage": "P00_system_bootstrap_controller",
+  "target_output_root": "00_control",
+  "required_outputs": [
+    "core control files",
+    "schemas",
+    "rules",
+    "audit log",
+    "recovery policies",
+    "integrity manifest",
+    "handoff packet",
+    "validation report"
+  ],
+  "constraints": [
+    "do_not_start_P01",
+    "do_not_run_paper_trading",
+    "do_not_enable_real_trade",
+    "backup_before_overwrite"
+  ],
+  "acceptance": [
+    "JSON/YAML parse",
+    "P01 BLOCKED_BY_DATA_PLANE",
+    "p01_runtime_connection_allowed false",
+    "real_trade_enabled false",
+    "readiness BOOTSTRAP_READY or BOOTSTRAP_WITH_WARNINGS"
+  ],
+  "handoff_destination": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+}

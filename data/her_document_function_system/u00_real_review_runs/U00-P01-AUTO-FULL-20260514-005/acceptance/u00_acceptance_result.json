@@ -1,0 +1,26 @@
+{
+  "phase_id": "U00_REAL",
+  "run_id": "U00-P01-AUTO-FULL-20260514-005",
+  "status": "U00_REAL_READY_WITH_GAPS",
+  "review_cases_written": true,
+  "root_cause_written": true,
+  "upgrade_candidates_written": true,
+  "upgrade_queue_written": true,
+  "learning_index_written": true,
+  "handoff_written": true,
+  "trace_audit_written": true,
+  "schema_validation_status": "PASSED",
+  "accepted": false,
+  "ready_with_gaps": true,
+  "blocking": false,
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_downstream_task_directly",
+    "modify_production_rules_directly",
+    "drop_unresolved_gaps",
+    "convert_ready_with_gaps_to_ready"
+  ]
+}

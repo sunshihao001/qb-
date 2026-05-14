@@ -1,0 +1,6 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: PAUSE_CONDITION_SCHEMA
+required_fields: [pause_id, candidate_id, pause_reason, resume_conditions, expiry_policy]
+pause_reason_enum: [SCENARIO_CONFLICT_UNRESOLVED, COUNTER_EVIDENCE_PRESSURE_HIGH, DATA_REFRESH_REQUIRED, SECURITY_CONTEXT_STALE, MARKET_POSITION_EXTENDED, TRANSITION_UNCERTAIN, P08_PRECHECK_NOT_ALLOWED_YET]

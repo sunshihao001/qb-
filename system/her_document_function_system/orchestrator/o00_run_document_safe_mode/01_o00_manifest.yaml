@@ -1,0 +1,35 @@
+controller_name: O00_RUN_DOCUMENT_SAFE_MODE_ORCHESTRATOR
+controller_type: HER_ORCHESTRATOR
+phase_id: O00
+phase_name: Run Document Safe Mode Orchestrator
+status: READY_WITH_GAPS
+created_at: 2026-05-14T00:00:00Z
+repo_root: /root/sikk-gmgn
+controller_dir: /root/sikk-gmgn/system/her_document_function_system/orchestrator/o00_run_document_safe_mode
+run_data_dir: /root/sikk-gmgn/data/her_document_function_system/o00_run_document_runs
+upstream_inputs:
+  - operator_goal
+  - source_document
+  - controller_registry
+  - pipeline_config_safe_mode
+downstream_phases:
+  - K00
+  - F00
+  - V00
+  - R00
+  - A00
+  - H00
+  - U00
+  - G00
+allowed_modes:
+  - SAFE_MODE_RUN_DOCUMENT
+  - DESIGN_LEVEL_REPLAY
+  - CONFIG_VALIDATE
+  - STATUS_INSPECT
+forbidden_actions:
+  - live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading
+  - execute_real_order
+acceptance_status: O00_READY_WITH_GAPS

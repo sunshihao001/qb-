@@ -1,0 +1,25 @@
+{
+  "doc_id": "DOC-20260511-022",
+  "material_role": "DOMAIN_PLANE_EXECUTABLE_DESIGN",
+  "plane_mapping": {
+    "Domain Plane": "primary implementation target",
+    "Data Plane": "receives field requirements",
+    "Evidence Plane": "receives evidence and counter-evidence model",
+    "Scenario Plane": "receives scenario taxonomy",
+    "Strategy Gate Plane": "receives hard-negative and reasoning boundary constraints",
+    "Acceptance/Handoff/Trace": "receives validation and consumption records"
+  },
+  "phase_mapping": {
+    "K00": "raw preserved, passported, taskized",
+    "P00": "consumes task package for system plane generation",
+    "P02_domain_plane_professionalization": "creates 00_domain assets",
+    "P03_data_plane_generation": "next legal build target after domain acceptance"
+  },
+  "forbidden_routes": [
+    "P01 runtime start",
+    "paper trading runtime",
+    "real trade execution",
+    "direct buy signal"
+  ],
+  "created_at": "2026-05-11T16:25:42Z"
+}

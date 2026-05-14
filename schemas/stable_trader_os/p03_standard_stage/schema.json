@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "acceptance": {
+      "type": "object"
+    },
+    "handoff": {
+      "type": "object"
+    },
+    "phase_id": {
+      "const": "P03"
+    },
+    "runtime_mode": {
+      "const": "paper_only"
+    },
+    "status": {
+      "type": "string"
+    },
+    "trace_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "phase_id",
+    "status",
+    "runtime_mode",
+    "trace_refs",
+    "acceptance",
+    "handoff"
+  ],
+  "title": "P03 Standard Stage Packet",
+  "type": "object"
+}

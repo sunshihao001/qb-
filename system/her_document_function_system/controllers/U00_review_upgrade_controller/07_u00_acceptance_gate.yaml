@@ -1,0 +1,88 @@
+acceptance_gate:
+  phase_id: U00
+  required_checks:
+    - id: u00_0_preflight_gate
+      required: true
+      evidence: preflight_result
+    - id: u00_1_evidence_queue_loader
+      required: true
+      evidence: u00_subphase_outputs.U00.1
+    - id: u00_2_review_case_classifier
+      required: true
+      evidence: review_cases
+    - id: u00_3_failure_gap_normalizer
+      required: true
+      evidence: normalized_issues
+    - id: u00_4_root_cause_analysis_engine
+      required: true
+      evidence: root_cause_analysis
+    - id: u00_5_recurring_issue_detector
+      required: true
+      evidence: recurring_issue_report
+    - id: u00_6_anti_success_pattern_extractor
+      required: true
+      evidence: anti_pattern_index
+    - id: u00_6_success_pattern_index
+      required: true
+      evidence: success_pattern_index
+    - id: u00_7_upgrade_candidate_builder
+      required: true
+      evidence: upgrade_candidates
+    - id: u00_8_controller_upgrade_mapper
+      required: true
+      evidence: controller_upgrade_map
+    - id: u00_9_schema_contract_test_upgrade_mapper
+      required: true
+      evidence: schema_contract_test_upgrade_map
+    - id: u00_10_runner_tool_upgrade_mapper
+      required: true
+      evidence: runner_tool_upgrade_map
+    - id: u00_11_governance_candidate_extractor
+      required: true
+      evidence: governance_candidates
+    - id: u00_12_upgrade_queue_builder
+      required: true
+      evidence: upgrade_queue
+    - id: u00_13_learning_index_writer
+      required: true
+      evidence: learning_index
+    - id: u00_14_trace_audit_binder
+      required: true
+      evidence: u00_trace
+    - id: u00_14_audit_written
+      required: true
+      evidence: u00_audit
+    - id: u00_15_acceptance_gate
+      required: true
+      evidence: u00_acceptance_result
+    - id: u00_16_handoff_writer
+      required: true
+      evidence: u00_handoff_packets
+  pass_status: U00_ACCEPTED
+  gap_status: U00_READY_WITH_GAPS
+  fail_status: U00_BLOCKED
+  cannot_claim_without_evidence:
+    REVIEWED: review_cases
+    ROOT_CAUSE_ANALYZED: root_cause_analysis
+    UPGRADE_CANDIDATE_BUILT: upgrade_candidates
+    UPGRADE_QUEUE_READY: upgrade_queue
+    HANDOFF_READY: u00_handoff_packets
+    ACCEPTANCE_PASSED: u00_acceptance_result
+  subphase_coverage:
+    - U00.0
+    - U00.1
+    - U00.2
+    - U00.3
+    - U00.4
+    - U00.5
+    - U00.6
+    - U00.7
+    - U00.8
+    - U00.9
+    - U00.10
+    - U00.11
+    - U00.12
+    - U00.13
+    - U00.14
+    - U00.15
+    - U00.16

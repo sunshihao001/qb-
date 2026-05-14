@@ -1,0 +1,124 @@
+controller_id: P00_system_bootstrap_controller
+controller_name_cn: 系统建造与方法论编译控制器
+version: v1.0-institutional
+status: REQUIRED_BEFORE_ALL_BUSINESS_PHASES
+controller_type: system_bootstrap_and_methodology_compiler
+authority_scope:
+  can:
+    - 读取 system_methodology_blueprint.md
+    - 读取 K00 phase_controller_candidate_spec
+    - 读取 K00_to_P00_handoff_packet
+    - 扫描系统现有目录结构
+    - 建立 current_system_state.json
+    - 建立 phase_registry.yaml
+    - 建立 system_asset_index.json
+    - 建立 trace matrices
+    - 创建 Governance/Domain/Data/Control Plane 骨架
+    - 创建 P01-P10 controller stubs
+    - 裁决下一合法阶段
+    - 阻断非法阶段
+  cannot:
+    - 执行真实交易
+    - 生成买卖指令
+    - 直接启动 P01-P10 业务运行
+    - 绕过 Data Plane
+    - 绕过 Control Plane
+    - 把 K00 候选规格直接视为正式控制器
+primary_goal: 将 K00 资产、Phase Controller 候选规格和 system_methodology_blueprint.md 编译为正式系统结构。
+non_goals:
+  - 不执行交易
+  - 不判断 token 是否可以买
+  - 不运行 P01 数据事实层
+  - 不做真实交易
+upstream_dependencies:
+  required:
+    - K00_knowledge_intake_taskization
+    - 00_methodology/system_methodology_blueprint.md
+  optional:
+    - 00_knowledge_intake/phase_controller_candidates/
+    - 00_knowledge_intake/handoff_packets/
+required_inputs:
+  - input_name: methodology_blueprint
+    path: 00_methodology/system_methodology_blueprint.md
+    required: true
+  - input_name: k00_handoff_packet
+    path: 00_knowledge_intake/handoff_packets/
+    required: true
+  - input_name: phase_controller_candidate_spec
+    path: 00_knowledge_intake/phase_controller_candidates/
+    required: true
+forbidden_inputs:
+  - private_key
+  - seed_phrase
+  - direct_real_trade_instruction
+required_outputs:
+  - 00_control/current_system_state.json
+  - 00_control/phase_registry.yaml
+  - 00_control/system_asset_index.json
+  - 00_control/task_consumption_log.json
+  - 00_control/current_blockers.json
+  - 00_control/next_stage_decision.json
+  - 00_trace/methodology_implementation_trace_matrix.yaml
+  - 00_trace/asset_consumption_matrix.yaml
+  - 00_trace/domain_to_data_trace_matrix.yaml
+  - 00_trace/data_to_phase_trace_matrix.yaml
+  - 00_trace/acceptance_coverage_matrix.yaml
+  - 08_acceptance/global_acceptance_policy.yaml
+  - 09_handoff/handoff_packet_registry.yaml
+processing_pipeline:
+  - P00_STEP_01_read_methodology_blueprint
+  - P00_STEP_02_read_k00_handoff
+  - P00_STEP_03_read_candidate_spec
+  - P00_STEP_04_scan_existing_structure
+  - P00_STEP_05_reconcile_state
+  - P00_STEP_06_create_control_plane
+  - P00_STEP_07_create_governance_plane
+  - P00_STEP_08_create_domain_plane
+  - P00_STEP_09_create_data_plane_tasks
+  - P00_STEP_10_create_p01_p10_stubs
+  - P00_STEP_11_create_trace_matrices
+  - P00_STEP_12_create_handoff_registry
+  - P00_STEP_13_create_report
+acceptance_gate:
+  file_level:
+    - methodology_blueprint_exists
+    - k00_handoff_exists
+    - phase_controller_candidate_spec_exists
+    - current_system_state_created
+    - phase_registry_created
+  structure_level:
+    - phase_registry_contains_K00_P00_P01_to_P10
+    - p01_status_is_blocked_before_data_plane_acceptance
+  semantic_level:
+    - methodology_requirements_mapped_to_outputs
+    - governance_plane_defines_authority_boundary
+    - domain_plane_defines_domain_objects
+    - data_plane_defines_field_source_requirements
+  consumption_level:
+    - k00_handoff_consumed_by_P00
+    - task_consumption_log_updated
+  safety_level:
+    - paper_only_true
+    - real_trade_enabled_false
+    - p01_runtime_connection_allowed_false
+blocking_conditions:
+  - methodology_blueprint_missing
+  - k00_handoff_missing
+  - phase_controller_candidate_spec_missing
+  - p01_marked_READY_before_data_plane
+  - real_trade_enabled_true
+state_writeback:
+  required: true
+  writeback_targets:
+    - 00_control/current_system_state.json
+    - 00_control/task_consumption_log.json
+    - 00_control/next_stage_decision.json
+handoff:
+  source_stage: P00_system_bootstrap_controller
+  default_next_legal_stage: DATA_PLANE_ACCEPTANCE_REVIEW
+security_policy:
+  paper_only: true
+  real_trade_enabled: false
+  private_key_allowed: false
+  seed_phrase_allowed: false
+  auto_order_allowed: false

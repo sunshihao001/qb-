@@ -1,0 +1,51 @@
+{
+  "anchor": "9. 自动化长任务执行逻辑",
+  "purpose": "HER 需要执行多步骤长任务，不是单次回答；通过 phase_state 驱动 current_task_id、输出生成、验收、handoff 与跨阶段自动继续。",
+  "standard_loop": [
+    "读取 phase_state",
+    "找到 current_task_id",
+    "执行当前 task",
+    "生成对应输出",
+    "更新 phase_state",
+    "检查 acceptance_gate",
+    "如果未完成，继续下一个 task",
+    "如果完成，生成 handoff_packet",
+    "根据 next_phase_rules 进入下一阶段",
+    "重复执行"
+  ],
+  "auto_continue_decision_checks": [
+    "当前阶段是否 PHASE_READY",
+    "是否存在 BLOCKER gap",
+    "是否存在 next_phase_recommendation",
+    "下一个阶段是否有输入",
+    "是否允许继续"
+  ],
+  "auto_continue_rule": "每完成一个阶段，不允许自动停止；若当前阶段 PHASE_READY、无 BLOCKER gap、存在 next_phase_recommendation、下一阶段有输入且允许继续，HER 必须进入下一个阶段继续执行。",
+  "stop_conditions": [
+    "PHASE_REJECTED",
+    "PHASE_ERROR",
+    "缺少关键输入",
+    "命中 BLOCKER gap",
+    "用户明确要求停止",
+    "下一阶段不存在",
+    "下一阶段需要人工补充资料"
+  ],
+  "state_machine_requirements": {
+    "state_file": "08_phase_state.json",
+    "task_pointer": "current_task_id",
+    "completion_tracking": "completed_tasks",
+    "failure_tracking": "failed_tasks",
+    "gap_tracking": "gap_list",
+    "blocker_tracking": "hard_negative_hits",
+    "next_route_field": "next_phase_recommendation",
+    "next_action_field": "next_action"
+  },
+  "forbidden_behaviors": [
+    "单次回答后停止",
+    "未读取 phase_state 就继续",
+    "未更新 phase_state 就执行下一任务",
+    "未检查 acceptance_gate 就生成下一阶段结论",
+    "PHASE_READY 且允许继续时停止",
+    "命中 BLOCKER gap 仍继续"
+  ]
+}

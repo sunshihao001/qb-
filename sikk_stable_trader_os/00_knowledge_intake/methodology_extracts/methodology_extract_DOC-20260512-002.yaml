@@ -1,0 +1,15 @@
+doc_id: "DOC-20260512-002"
+methodology_requirements:
+  - "Source of Truth layered priority"
+  - "Raw/Normalized/Quality separation"
+  - "Fact not Evidence boundary"
+  - "multi-snapshot model"
+  - "P02 only hands off to P03"
+hard_boundaries:
+  - "no evidence"
+  - "no wallet role"
+  - "no chip structure"
+  - "no scenario"
+  - "no strategy"
+  - "no paper"
+  - "no live execution"

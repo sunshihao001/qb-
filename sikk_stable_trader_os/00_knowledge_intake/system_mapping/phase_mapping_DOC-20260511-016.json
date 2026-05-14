@@ -1,0 +1,25 @@
+{
+  "doc_id": "DOC-20260511-016",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T14:20:29.444644+00:00",
+  "phase": "Domain Plane",
+  "phase_target_data_path": "00_domain/domain_phase_target_data.yaml",
+  "raw_user_proposed_path": "00_domain/domain_phase_target_data.raw_user_proposed.yaml",
+  "downstream_consumers": [
+    "Data Plane",
+    "P01_data_fact_controller",
+    "P02_wallet_structure_controller",
+    "P05_scenario_classification_controller"
+  ],
+  "handoff_outputs": [
+    "domain_plane_handoff_packet",
+    "data_plane_generation_task",
+    "domain_to_data_demand_map"
+  ],
+  "phase_links": {
+    "P01": "wallet/token facts consumed from Data Plane",
+    "P02": "wallet entity and same-source group structure",
+    "P05": "scenario classification consumes taxonomy and counterevidence rules"
+  },
+  "status_enum_reconciliation_required": true
+}

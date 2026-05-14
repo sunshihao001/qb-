@@ -1,0 +1,25 @@
+{
+  "phase_id": "K00",
+  "contract_type": "input",
+  "required_inputs": [
+    "raw upload",
+    "source metadata",
+    "content hash"
+  ],
+  "allowed_inputs": [
+    "uploaded system construction prompt",
+    "methodology text",
+    "phase-control text"
+  ],
+  "forbidden_inputs": [
+    "live transaction instruction",
+    "wallet signing request"
+  ],
+  "validation_rules": [
+    "raw must be preserved",
+    "document must be classified before downstream routing"
+  ],
+  "recovery_policy": [
+    "if metadata is incomplete, mark gaps and continue only if non-blocking"
+  ]
+}

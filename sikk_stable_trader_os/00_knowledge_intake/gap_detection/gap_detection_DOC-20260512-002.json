@@ -1,0 +1,65 @@
+{
+  "doc_id": "DOC-20260512-002",
+  "status": "GAPS_IDENTIFIED",
+  "blocking_gaps": [
+    {
+      "gap_id": "P02_RUNNER_NOT_IMPLEMENTED",
+      "severity": "runtime_blocking",
+      "description": "P02 source pull runner / tool binding not implemented; package only."
+    },
+    {
+      "gap_id": "SOURCE_ADAPTERS_NOT_BOUND",
+      "severity": "runtime_blocking",
+      "description": "GMGN/OKX/onchain/K-line adapters and real field mapping not bound."
+    },
+    {
+      "gap_id": "P02_P03_HANDOFF_NOT_INTEGRATED",
+      "severity": "downstream_blocking",
+      "description": "P03 controller package not landed; P02 handoff cannot be consumed yet."
+    },
+    {
+      "gap_id": "QUALITY_WEIGHTS_UNCALIBRATED",
+      "severity": "non_blocking_design_gap",
+      "description": "data quality weights and reconciliation thresholds require P09/P10 calibration."
+    },
+    {
+      "gap_id": "RUNTIME_FORBIDDEN",
+      "severity": "safety_blocking",
+      "description": "P02 runtime, paper runtime and live execution remain forbidden."
+    }
+  ],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "QUALITY_WEIGHTS_UNCALIBRATED",
+      "severity": "non_blocking_design_gap",
+      "description": "data quality weights and reconciliation thresholds require P09/P10 calibration."
+    }
+  ],
+  "all_gaps": [
+    {
+      "gap_id": "P02_RUNNER_NOT_IMPLEMENTED",
+      "severity": "runtime_blocking",
+      "description": "P02 source pull runner / tool binding not implemented; package only."
+    },
+    {
+      "gap_id": "SOURCE_ADAPTERS_NOT_BOUND",
+      "severity": "runtime_blocking",
+      "description": "GMGN/OKX/onchain/K-line adapters and real field mapping not bound."
+    },
+    {
+      "gap_id": "P02_P03_HANDOFF_NOT_INTEGRATED",
+      "severity": "downstream_blocking",
+      "description": "P03 controller package not landed; P02 handoff cannot be consumed yet."
+    },
+    {
+      "gap_id": "QUALITY_WEIGHTS_UNCALIBRATED",
+      "severity": "non_blocking_design_gap",
+      "description": "data quality weights and reconciliation thresholds require P09/P10 calibration."
+    },
+    {
+      "gap_id": "RUNTIME_FORBIDDEN",
+      "severity": "safety_blocking",
+      "description": "P02 runtime, paper runtime and live execution remain forbidden."
+    }
+  ]
+}

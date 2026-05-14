@@ -1,0 +1,43 @@
+meta:
+  standard_id: S00_HANDOFF_CONTRACTS
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+handoff_contracts:
+- phase: P01
+  handoff_contract: P01_HANDOFF_PACKET
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+- phase: P02
+  handoff_contract: P02_HANDOFF_PACKET
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+- phase: P03
+  handoff_contract: P03_HANDOFF_PACKET
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+- phase: P04
+  handoff_contract: P04_HANDOFF_PACKET
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+- phase: P05
+  handoff_contract: P05_HANDOFF_PACKET
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+- phase: P06
+  handoff_contract: P06_HANDOFF_PACKET
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+- phase: P07
+  handoff_contract: P07_HANDOFF_PACKET
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+- phase: P08
+  handoff_contract: P08_HANDOFF_PACKET
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+- phase: P09
+  handoff_contract: P09_HANDOFF_PACKET
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+- phase: P10
+  handoff_contract: P10_HANDOFF_PACKET
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON

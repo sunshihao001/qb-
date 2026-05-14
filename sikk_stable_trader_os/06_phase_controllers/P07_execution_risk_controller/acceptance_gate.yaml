@@ -1,0 +1,12 @@
+acceptance_gate_id: P07_execution_risk_controller_ACCEPTANCE_GATE_STUB
+stage: P07_execution_risk_controller
+status: STUB_CREATED_BY_P00
+required_checks:
+  - file_level
+  - structure_level
+  - semantic_level
+  - consumption_level
+  - runtime_level
+safety_checks:
+  paper_only_true: true
+  real_trade_enabled_false: true

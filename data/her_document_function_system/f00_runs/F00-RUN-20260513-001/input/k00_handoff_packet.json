@@ -1,0 +1,67 @@
+{
+  "handoff_id": "K00_TO_F00_20260513_001",
+  "from_phase": "K00",
+  "to_phase": "F00",
+  "doc_id": "DOC-20260513-F00-001",
+  "k00_status": "K00_ACCEPTED",
+  "required_inputs": {
+    "k00_handoff_packet": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/handoff/k00_to_f00_handoff_packet.json",
+    "document_passport_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/passports/document_passport.yaml"
+    ],
+    "corpus_index_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/corpus_index/corpus_index.json"
+    ],
+    "system_mapping_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/system_mapping/system_mapping.json"
+    ],
+    "gap_detection_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/gaps/gap_detection.json"
+    ],
+    "kv_retrieval_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/kv/kv_retrieval_index.json"
+    ],
+    "target_phase_candidates": [
+      "F00",
+      "V01",
+      "V02",
+      "V03",
+      "R01",
+      "A01",
+      "H01"
+    ],
+    "execution_boundary": {
+      "allowed": [
+        "WRITE_SAFE_FILES",
+        "VALIDATE_JSON_YAML",
+        "DESIGN_FILES"
+      ],
+      "forbidden": [
+        "LIVE_RUNTIME",
+        "WALLET_SIGNING",
+        "AUTO_DEPLOY",
+        "PRODUCTION_RULE_DIRECT_CHANGE"
+      ]
+    },
+    "write_policy": {
+      "safe_file_write_allowed": true,
+      "patch_code_allowed": false,
+      "delete_legacy_assets": false
+    },
+    "repo_root": "/root/sikk-gmgn"
+  },
+  "allowed_next_actions": [
+    "F00_PREFLIGHT",
+    "REPO_SCAN",
+    "CONTROLLER_ASSET_AUDIT",
+    "WRITE_SAFE_CONTROLLER_FILES",
+    "VALIDATE_JSON_YAML"
+  ],
+  "forbidden_next_actions": [
+    "LIVE_RUNTIME",
+    "WALLET_SIGNING",
+    "AUTO_DEPLOY"
+  ],
+  "unresolved_gaps": [],
+  "handoff_status": "HANDOFF_READY"
+}

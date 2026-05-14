@@ -1,0 +1,81 @@
+automation_chain_spec:
+  {
+    "version": "1.0.0",
+    "task_id": "KPP-AUTOCHAIN-20260513-001",
+    "created_at": "2026-05-13T05:34:21Z",
+    "chain_name": "KPP_AUTO_EXECUTION_CHAIN",
+    "trigger_model": {
+      "accepted_sources": [
+        "telegram_upload",
+        "telegram_text",
+        "local_import_staging",
+        "api_upload",
+        "manual_file_path"
+      ],
+      "trigger_condition": "input_classification in [system_building_material, methodology_doc, phase_controller_doc, legacy_doc, gpt_share_ingestion, screenshot_ocr_transcript]",
+      "action": "create_run_request_and_enter_K00",
+      "dedupe_keys": [
+        "sha256",
+        "source_origin",
+        "source_name",
+        "received_at_day"
+      ],
+      "secret_policy": "redact_credentials_as_[REDACTED]_before_derived_outputs"
+    },
+    "runner_model": {
+      "entrypoint_candidate": "python3 -m modules.knowledge_processing_program.kpp_total_runner --run-request <run_request.json>",
+      "mode": "dry_run_candidate_until_implemented",
+      "phase_order": [
+        "K00",
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "K08"
+      ],
+      "stop_policy": "stop_on_blocker_or_contract_failure; continue_on_degraded_gap_only_if_acceptance_allows",
+      "resume_policy": "resume_from_runtime_state.current_stage and checkpoint_manifest",
+      "idempotency": "same doc_id + source checksum must not overwrite raw; create new run_id or versioned derived outputs"
+    },
+    "handoff_model": {
+      "candidate_only_until_governance_accepted": true,
+      "queue_target": "hermes_harness/03_task_runtime/input_governance_queue.jsonl",
+      "queue_entry_type": "KPP_CANDIDATE_READY_FOR_GOVERNANCE_OR_P00_REVIEW",
+      "required_gate": "K07_ACCEPTED and K08_INDEX_READY"
+    },
+    "telegram_model": {
+      "status_push_events": [
+        "RUN_CREATED",
+        "STAGE_ACCEPTED",
+        "STAGE_REJECTED",
+        "BLOCKER_FOUND",
+        "HANDOFF_WRITTEN",
+        "QUEUE_ENQUEUED",
+        "RUN_COMPLETED"
+      ],
+      "query_commands": [
+        "/kpp_status <run_id>",
+        "/kpp_stage <run_id>",
+        "/kpp_gaps <run_id>",
+        "/kpp_handoff <run_id>",
+        "/kpp_panel <run_id>"
+      ],
+      "panel_output": "telegram_status_panel.json plus concise markdown summary"
+    },
+    "e2e_model": {
+      "fixture_source": "tests/fixtures/kpp/sample_system_design_doc.md",
+      "expected_terminal": "KPP_READY_FOR_GOVERNANCE_QUEUE_WITH_CANDIDATES",
+      "must_assert": [
+        "raw_preserved",
+        "passport_exists",
+        "all_stage_states_exist",
+        "validators_pass",
+        "handoff_exists",
+        "queue_entry_exists",
+        "telegram_panel_exists"
+      ]
+    }
+  }

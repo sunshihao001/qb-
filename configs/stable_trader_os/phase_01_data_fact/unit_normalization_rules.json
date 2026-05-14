@@ -1,0 +1,21 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "rules": [
+    {
+      "field_pattern": "*_usd",
+      "target_unit": "USD",
+      "missing_value": "missing"
+    },
+    {
+      "field_pattern": "*_sol",
+      "target_unit": "SOL",
+      "missing_value": "missing"
+    },
+    {
+      "field_pattern": "token_amount",
+      "target_unit": "raw_token_or_decimal_normalized",
+      "missing_value": "missing"
+    }
+  ]
+}

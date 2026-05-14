@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0320
+source_path: sikk_stable_trader_os/00_methodology/system_methodology_blueprint.backup_before_DOC-20260511-003.md
+phase_scores:
+  P01: 6
+  P02: 1
+  P03: 10
+  P04: 8
+  P05: 15
+  P06: 6
+  P07: 15
+  P08: 15
+  P09: 13
+  P10: 13
+primary_phase: P05
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

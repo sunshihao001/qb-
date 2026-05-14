@@ -1,0 +1,28 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: PAPER_RUNTIME_PERMISSION_SCHEMA
+version: v3.0
+required_fields:
+  - permission_id
+  - candidate_id
+  - token_address
+  - generated_at
+  - final_permission
+  - decision_basis
+  - permission_reason_cn
+  - paper_runtime_allowed
+  - live_execution_allowed
+  - wallet_signing_allowed
+  - if_allowed
+  - if_blocked
+  - if_paused
+  - trace
+allowed_statuses:
+  - PAPER_RUNTIME_ALLOWED
+  - PAPER_RUNTIME_ALLOWED_WITH_LIMITATIONS
+  - PAPER_RUNTIME_PAUSED
+  - PAPER_RUNTIME_BLOCKED
+  - HUMAN_CONFIRMATION_REQUIRED
+  - EXECUTION_RISK_REJECTED
+no_live_execution_fields_allowed: true

@@ -1,0 +1,34 @@
+{
+  "doc_id": "doc_20260513_her_dfafs_rebuild_v1",
+  "status": "KV_INDEXED",
+  "kv_entries": [
+    {
+      "kv_type": "system_rule_kv",
+      "key": "HER_DFAFS_MISSION",
+      "value_summary": "文档不是摘要材料，而是潜在功能需求、字段、规则、schema/contract、runner、验收和 handoff 来源。",
+      "source_ref": "/root/sikk-gmgn/data/her_document_function_system/raw/doc_20260513_her_dfafs_rebuild_v1.md",
+      "accepted_status": "KV_CANDIDATE_ACCEPTED_FOR_THIS_RUN"
+    },
+    {
+      "kv_type": "phase_definition_kv",
+      "key": "K00_NOT_TERMINAL",
+      "value_summary": "K00 只代表资料已系统化接收，不能代表功能已实现。",
+      "source_ref": "/root/sikk-gmgn/data/her_document_function_system/raw/doc_20260513_her_dfafs_rebuild_v1.md",
+      "accepted_status": "KV_CANDIDATE_ACCEPTED_FOR_THIS_RUN"
+    },
+    {
+      "kv_type": "phase_definition_kv",
+      "key": "F00_FUNCTION_REALIZATION_CONTROLLER",
+      "value_summary": "F00 将 K00 handoff 编译为 required_function、field_model、rule_logic、schema/contract、资产计划、验证、runner binding、acceptance、handoff。",
+      "source_ref": "/root/sikk-gmgn/data/her_document_function_system/raw/doc_20260513_her_dfafs_rebuild_v1.md",
+      "accepted_status": "KV_CANDIDATE_ACCEPTED_FOR_THIS_RUN"
+    },
+    {
+      "kv_type": "forbidden_action_kv",
+      "key": "DFAFS_FORBIDDEN_SCOPE",
+      "value_summary": "禁止 live_runtime、wallet_signing、auto_deploy、production_rule_direct_change；不得把 KV 当 contract/state。",
+      "source_ref": "/root/sikk-gmgn/data/her_document_function_system/raw/doc_20260513_her_dfafs_rebuild_v1.md",
+      "accepted_status": "KV_CANDIDATE_ACCEPTED_FOR_THIS_RUN"
+    }
+  ]
+}

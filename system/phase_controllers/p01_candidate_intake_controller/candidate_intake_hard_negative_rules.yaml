@@ -1,0 +1,52 @@
+p01_hard_negative_rules:
+- rule_id: P01_BLOCK_001
+  name: token_address 缺失
+  condition: token_address is null
+  result: P01_REJECTED
+  reason: 无法建立候选主键
+- rule_id: P01_BLOCK_002
+  name: chain 缺失或不支持
+  condition: chain is null or chain not in supported_chains
+  result: P01_BLOCKED
+  reason: 系统无法处理该候选
+- rule_id: P01_BLOCK_003
+  name: 来源不可追踪
+  condition: source_type is null and source_trace_id is null
+  result: P01_REJECTED
+  reason: 无来源链无法审计
+- rule_id: P01_BLOCK_004
+  name: 候选身份冲突
+  condition: same_candidate_id_maps_to_multiple_token_addresses
+  result: P01_REJECTED
+  reason: 主键冲突不能进入 P02
+- rule_id: P01_BLOCK_005
+  name: 跳过 P02 请求
+  condition: requested_next_controller != P02_SOURCE_DATA_FACT_CONTROLLER
+  result: P01_BLOCKED
+  reason: P01 只能交接给 P02
+- rule_id: P01_BLOCK_006
+  name: 输出交易判断
+  condition: output_contains in [buy_signal, paper_ready, strategy_gate_decision,
+    scenario_claim]
+  result: P01_BLOCKED
+  reason: P01 越权
+- rule_id: P01_BLOCK_007
+  name: 自动实盘路径
+  condition: live_execution_requested == true or live_execution_allowed == true
+  result: P01_BLOCKED
+  reason: 当前系统保持 paper-only
+- rule_id: P01_BLOCK_008
+  name: 未经 Handoff 输入
+  condition: upstream_handoff_packet_missing == true
+  result: P01_BLOCKED
+  reason: P01 不能绕过 Handoff Plane 启动
+- rule_id: P01_BLOCK_009
+  name: 未经 Acceptance
+  condition: acceptance_result_packet_missing == true
+  result: P01_BLOCKED
+  reason: P01 必须受 Acceptance Plane 管控
+- rule_id: P01_BLOCK_010
+  name: 无 trace 建档
+  condition: candidate_trace_id is null
+  result: P01_BLOCKED
+  reason: 无 trace 不能进入主候选注册表

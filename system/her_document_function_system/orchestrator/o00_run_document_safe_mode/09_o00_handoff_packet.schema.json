@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 final handoff packet",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "pipeline_run_id",
+    "pipeline_status",
+    "evidence_refs",
+    "gap_refs",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "handoff_status"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "from_phase": {
+      "const": "O00"
+    },
+    "to_phase": {
+      "type": "string"
+    },
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "pipeline_status": {
+      "type": "string",
+      "enum": [
+        "PIPELINE_ACCEPTED",
+        "PIPELINE_READY_WITH_GAPS",
+        "PIPELINE_BLOCKED",
+        "PIPELINE_REJECTED",
+        "DESIGN_LEVEL_REPLAY_COMPLETED"
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gap_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "handoff_status": {
+      "type": "string",
+      "enum": [
+        "HANDOFF_READY",
+        "HANDOFF_READY_WITH_GAPS",
+        "HANDOFF_BLOCKED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

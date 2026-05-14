@@ -1,0 +1,109 @@
+document_index:
+  doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  headings:
+    - level: 1
+      title: "I05 Review / Upgrade Closed Loop 专业版 v1.0"
+    - level: 2
+      title: "P09 复盘回放、P10 受控升级、闭环验收、系统成熟度判定与下一轮运行任务包"
+    - level: 2
+      title: "0. I05 的核心定位"
+    - level: 1
+      title: "1. I05 不负责什么"
+    - level: 1
+      title: "2. I05 阶段目标"
+    - level: 1
+      title: "3. I05 的底层方法论"
+    - level: 2
+      title: "3.1 闭环不是“跑通一次”"
+    - level: 2
+      title: "3.2 I05 的核心不是收益，而是系统学习能力"
+    - level: 2
+      title: "3.3 P09/P10 必须分权"
+    - level: 2
+      title: "3.4 闭环输出必须服务下一轮运行"
+    - level: 1
+      title: "4. I05 输入范围"
+    - level: 1
+      title: "5. I05 必须建立的核心对象"
+    - level: 1
+      title: "6. I05 运行目录设计"
+    - level: 2
+      title: "6.1 系统目录"
+    - level: 2
+      title: "6.2 运行数据目录"
+    - level: 1
+      title: "7. I05 Closed Loop Input Manifest"
+    - level: 1
+      title: "8. I04 Runtime Output Ingestion Record"
+    - level: 1
+      title: "9. Review Case Selection Record"
+    - level: 1
+      title: "10. P09 Replay Execution Record"
+    - level: 1
+      title: "11. P09 Decision Chain Replay Validation Record"
+    - level: 1
+      title: "12. P09 Runtime Path Replay Validation Record"
+    - level: 1
+      title: "13. Attribution Validation Record"
+    - level: 1
+      title: "14. Calibration Candidate Validation Record"
+    - level: 1
+      title: "15. P09 to P10 Data Request Validation Record"
+    - level: 1
+      title: "16. P10 Upgrade Input Ingestion Record"
+    - level: 1
+      title: "17. Upgrade Candidate Review Validation Record"
+    - level: 1
+      title: "18. Sample Support / Overfit Validation Record"
+    - level: 1
+      title: "19. Controlled Upgrade Package Validation Record"
+    - level: 1
+      title: "20. Regression Plan Validation Record"
+    - level: 1
+      title: "21. Release / Rollback Validation Record"
+    - level: 1
+      title: "22. Upgrade Safety Boundary Validation Record"
+    - level: 1
+      title: "23. Closed Loop Trace / Handoff / Acceptance Integrity"
+    - level: 1
+      title: "24. Closed Loop Defect Record"
+    - level: 1
+      title: "25. System Maturity Scorecard"
+    - level: 1
+      title: "26. Paper Operation Readiness Record"
+    - level: 1
+      title: "27. Next Iteration Task Packet"
+    - level: 1
+      title: "28. I05 Closed Loop Acceptance Result"
+    - level: 1
+      title: "29. I05 Gap Policy"
+    - level: 1
+      title: "30. I05 Hard Negative Rules"
+    - level: 1
+      title: "31. I05 状态机"
+    - level: 1
+      title: "32. I05 Acceptance Criteria"
+    - level: 1
+      title: "33. I05 测试矩阵"
+    - level: 1
+      title: "34. I05 报告模型"
+    - level: 1
+      title: "35. HER I05 执行协议"
+    - level: 1
+      title: "36. 给 HER 的正式任务书"
+    - level: 1
+      title: "37. 当前是否达到专业化 I05 设计标准"
+    - level: 2
+      title: "判断"
+    - level: 1
+      title: "38. I05 完成后的正确下一步"
+    - level: 2
+      title: "情况 A：I05_READY"
+    - level: 2
+      title: "情况 B：I05_READY_WITH_GAPS"
+    - level: 2
+      title: "情况 C：I05_REJECTED / BLOCKED"
+    - level: 1
+      title: "尚未解决问题"
+    - level: 1
+      title: "本次认知升级点"

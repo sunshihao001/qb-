@@ -1,0 +1,35 @@
+{
+  "allow_next_stage": true,
+  "counter_evidence": [
+    "legacy_candidate_snapshot",
+    "raw_top_trader",
+    "raw_transfer",
+    "transfer_missing"
+  ],
+  "critical_missing_fields": [],
+  "evidence_level": "E3",
+  "handoff_status": "HANDOFF_DEGRADED",
+  "hard_negative_reasons": [],
+  "hard_negative_triggered": false,
+  "missing_fields": [
+    "legacy_candidate_snapshot",
+    "raw_top_trader",
+    "raw_transfer",
+    "transfer_missing"
+  ],
+  "negative_evidence": [],
+  "optional_missing_fields": [
+    "legacy_candidate_snapshot",
+    "raw_top_trader",
+    "raw_transfer",
+    "transfer_missing"
+  ],
+  "phase_status": "DATA_PARTIAL",
+  "positive_evidence": [
+    "raw snapshot retained",
+    "field mapping generated",
+    "normalization attempted"
+  ],
+  "primary_status": "DATA_PARTIAL",
+  "risk_level": "R_MEDIUM"
+}

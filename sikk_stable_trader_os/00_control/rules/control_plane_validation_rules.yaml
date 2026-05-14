@@ -1,0 +1,19 @@
+rule_id: CONTROL_PLANE_VALIDATION_RULES_BOOTSTRAP_001
+semantic_validation:
+  required_conditions:
+  - current_authoritative_stage_is_P00
+  - p01_status_is_BLOCKED_BY_DATA_PLANE
+  - p01_runtime_connection_allowed_is_false
+  - paper_only_is_true
+  - real_trade_enabled_is_false
+  - next_legal_stage_is_SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE
+  - K00_assets_consumed_by_P00
+  - methodology_blueprint_consumed_by_P00
+hard_fail_conditions:
+- p01_status_READY
+- p01_runtime_connection_allowed_true
+- real_trade_enabled_true
+- auto_order_allowed_true
+- current_system_state_missing
+- phase_registry_missing
+- next_stage_decision_missing

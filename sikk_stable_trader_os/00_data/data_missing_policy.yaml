@@ -1,0 +1,37 @@
+missing_levels:
+  CRITICAL_MISSING:
+    meaning: 关键字段缺失
+    handling: BLOCK
+  HIGH_IMPACT_MISSING:
+    meaning: 高影响字段缺失
+    handling: STRONG_DOWNGRADE
+  MEDIUM_IMPACT_MISSING:
+    meaning: 中等影响字段缺失
+    handling: ALLOW_WEAK_EVIDENCE
+  LOW_IMPACT_MISSING:
+    meaning: 低影响字段缺失
+    handling: RECORD
+  UNKNOWN_MISSING:
+    meaning: 不知道影响
+    handling: CONSERVATIVE_DOWNGRADE
+critical_missing_rules:
+- rule_id: DMISS_001
+  missing_field: token_address
+  result: DATA_REJECTED
+  reason: 无法确定代币主键
+- rule_id: DMISS_002
+  missing_field: current_market_cap_usd
+  result: DATA_READY_WITH_GAPS
+  reason: 市值上下文不完整
+- rule_id: DMISS_003
+  missing_field: early_wallet_remaining_pct
+  result: DATA_READY_WITH_GAPS
+  reason: 不能强判断结构侧筹码留存
+- rule_id: DMISS_004
+  missing_field: same_source_group_id
+  result: DATA_READY_WITH_GAPS
+  reason: 同源执行组风险无法确认
+- rule_id: DMISS_005
+  missing_field: security_scan_status
+  result: DATA_REJECTED
+  reason: 安全门未完成，不能进入下游强判断

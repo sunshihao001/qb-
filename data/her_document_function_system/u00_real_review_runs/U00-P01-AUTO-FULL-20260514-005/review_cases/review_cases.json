@@ -1,0 +1,137 @@
+{
+  "review_cases": [
+    {
+      "case_id": "review_case_policy_not_active",
+      "case_type": "GAP_CASE",
+      "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "policy_not_active",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "gap_refs": [
+        "policy_not_active"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "policy_not_active",
+        "reason": "policy_not_active",
+        "gap_level": "NON_BLOCKING_GAP",
+        "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      }
+    },
+    {
+      "case_id": "review_case_paper_runtime_not_enabled",
+      "case_type": "GAP_CASE",
+      "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "paper_runtime_not_enabled",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "gap_refs": [
+        "paper_runtime_not_enabled"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "paper_runtime_not_enabled",
+        "reason": "paper_runtime_not_enabled",
+        "gap_level": "NON_BLOCKING_GAP",
+        "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      }
+    },
+    {
+      "case_id": "review_case_live_runtime_forbidden",
+      "case_type": "GAP_CASE",
+      "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "live_runtime_forbidden",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "gap_refs": [
+        "live_runtime_forbidden"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "live_runtime_forbidden",
+        "reason": "live_runtime_forbidden",
+        "gap_level": "NON_BLOCKING_GAP",
+        "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      }
+    },
+    {
+      "case_id": "review_case_telegram_binding_design_only",
+      "case_type": "GAP_CASE",
+      "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "telegram_binding_design_only",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "gap_refs": [
+        "telegram_binding_design_only"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "telegram_binding_design_only",
+        "reason": "telegram_binding_design_only",
+        "gap_level": "NON_BLOCKING_GAP",
+        "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      }
+    },
+    {
+      "case_id": "review_case_V00_READY_WITH_GAPS",
+      "case_type": "GAP_CASE",
+      "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "V00_READY_WITH_GAPS",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "gap_refs": [
+        "V00_READY_WITH_GAPS"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "V00_READY_WITH_GAPS",
+        "reason": "V00_READY_WITH_GAPS",
+        "gap_level": "NON_BLOCKING_GAP",
+        "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      }
+    },
+    {
+      "case_id": "review_case_R00_READY_WITH_GAPS",
+      "case_type": "GAP_CASE",
+      "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+      "severity": "NON_BLOCKING_GAP",
+      "symptom": "R00_READY_WITH_GAPS",
+      "affected_assets": [],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ],
+      "gap_refs": [
+        "R00_READY_WITH_GAPS"
+      ],
+      "current_status": "OPEN",
+      "raw_gap": {
+        "gap_id": "R00_READY_WITH_GAPS",
+        "reason": "R00_READY_WITH_GAPS",
+        "gap_level": "NON_BLOCKING_GAP",
+        "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+        "_source_ref": "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      }
+    }
+  ],
+  "total_cases": 6
+}

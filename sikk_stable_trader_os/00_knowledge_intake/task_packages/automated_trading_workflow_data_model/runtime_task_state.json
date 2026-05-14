@@ -1,0 +1,35 @@
+{
+  "runtime_task_id": "AUTO-TRADING-WORKFLOW-DATA-MODEL-CLOSURE-V1",
+  "created_at": "2026-05-11T12:27:21.964160Z",
+  "status": "P0_CONTROL_CLOSURE_VERIFIED_READY_FOR_P01_RUNTIME_CONNECTION",
+  "current_stage": "P01_DATA_FACT_RUNTIME_CONNECTION_READY",
+  "completed_steps": [
+    "ca_orchestrator_contract_connection",
+    "p0_control_closure_verified",
+    "planbook_created",
+    "runtime_fixture_replay",
+    "schema_created",
+    "task_package_created"
+  ],
+  "pending_steps": [
+    "P01_data_fact_runtime_connection",
+    "dashboard_status_connection"
+  ],
+  "blocking_gap_count": 0,
+  "degraded_gap_count": 2,
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "task_package_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/task_execution_package.json",
+  "planbook_ref": "/root/sikk-gmgn/research_loop/plan_books/active/automated_trading_workflow_data_model_task_package_planbook.md",
+  "schema_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/automated_trading_workflow_task_package.schema.json",
+  "next_recommended_stage": "P01_data_fact_runtime_connection",
+  "updated_at": "2026-05-11T12:42:40Z",
+  "p0_control_closure_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/ca_orchestrator_p0_control_closure",
+  "p0_closure_audit_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/ca_orchestrator_p0_control_closure/closure_audit.json"
+}

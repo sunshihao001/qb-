@@ -1,0 +1,22 @@
+{
+  "task_id": "K00_TASK_DOC-20260512-004_P04_PACKAGE_LANDING",
+  "doc_id": "DOC-20260512-004",
+  "task_type": "PHASE_CONTROLLER_PACKAGE_DESIGN_LANDING",
+  "target_controller_dir": "/root/sikk-gmgn/system/phase_controllers/p04_chip_structure_controller",
+  "target_data_dir": "/root/sikk-gmgn/data/phase_controllers/p04_chip_structure",
+  "actions": [
+    "k00_assetization",
+    "create_p04_controller_package",
+    "create_p04_data_tree",
+    "update_control_state",
+    "validate_package"
+  ],
+  "explicit_non_actions": [
+    "do_not_start_p04_runtime",
+    "do_not_generate_evidence_object",
+    "do_not_run_paper_runtime",
+    "do_not_enable_live_execution",
+    "do_not_output_strategy_signal"
+  ],
+  "created_at": "2026-05-12T02:27:13Z"
+}

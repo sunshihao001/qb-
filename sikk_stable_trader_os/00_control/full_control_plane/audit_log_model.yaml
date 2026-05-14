@@ -1,0 +1,3 @@
+audit_log_record:
+  required_fields: [audit_id, timestamp, run_id, plane_id, controller_id, task_id, action, inputs, outputs, validation, traceability]
+  action_types: [PHASE_SELECTED, INPUT_VALIDATED, FILE_CREATED, CONTRACT_GENERATED, ACCEPTANCE_CHECKED, GAP_REGISTERED, STATUS_WRITTEN, HANDOFF_CREATED, BLOCKED, RECOVERY_TRIGGERED]

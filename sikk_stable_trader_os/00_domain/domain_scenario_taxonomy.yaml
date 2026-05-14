@@ -1,0 +1,113 @@
+scenario_taxonomy:
+  - scenario_id: S01
+    scenario_name: 开盘吸筹
+    definition: "开盘吸筹 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S02
+    scenario_name: 控盘箱体
+    definition: "控盘箱体 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S03
+    scenario_name: 箱体突破
+    definition: "箱体突破 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S04
+    scenario_name: 突破回踩完成
+    definition: "突破回踩完成 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S05
+    scenario_name: 二段扩张
+    definition: "二段扩张 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S06
+    scenario_name: 高位派发
+    definition: "高位派发 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S07
+    scenario_name: 下跌派发
+    definition: "下跌派发 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S08
+    scenario_name: 诱多反抽
+    definition: "诱多反抽 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S09
+    scenario_name: 接盘鲸鱼陷阱
+    definition: "接盘鲸鱼陷阱 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S10
+    scenario_name: 刷量假突破
+    definition: "刷量假突破 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S11
+    scenario_name: 假横盘
+    definition: "假横盘 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S12
+    scenario_name: 再吸筹
+    definition: "再吸筹 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S13
+    scenario_name: 老币再激活
+    definition: "老币再激活 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE
+  - scenario_id: S14
+    scenario_name: 崩塌后反抽
+    definition: "崩塌后反抽 的领域场景定义；仅描述结构语义，不代表交易许可。"
+    data_requirements: [wallet_role_evidence, chip_control_evidence, market_structure_fields, volume_fields, market_cap_context]
+    supporting_evidence: [multi_source_alignment, time_aligned_wallet_and_market_behavior]
+    counter_evidence: [hard_negative_rules, evidence_conflict, stale_or_missing_critical_fields]
+    forbidden_misread: "不得把场景候选直接解释为可以买或一定上涨。"
+    downstream_status_suggestion: DOMAIN_SCENARIO_CANDIDATE

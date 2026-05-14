@@ -1,0 +1,16 @@
+handoff_id: KPP_SYSTEM_RESCAN_HANDOFF_20260513
+from: KNOWLEDGE_PROCESSING_PROGRAM_SYSTEM_RESCAN
+to: P00_GOVERNANCE_P10_REVIEW_FOR_CONSUMPTION
+route_status: READY_FOR_AUTOFIX_WITH_GAPS
+artifacts:
+- data/knowledge_processing_program/system_rescan/inventory/system_rescan_file_inventory.json
+- data/knowledge_processing_program/system_rescan/gaps/system_rescan_gap_registry.yaml
+- data/knowledge_processing_program/system_rescan/task_packages/her_kpp_system_rescan_autofix_task_package.yaml
+constraints:
+- do_not_start_runtime_trading
+- do_not_start_paper_runtime
+- do_not_sign
+- do_not_broadcast
+- do_not_swap
+- do_not_delete_or_move_legacy_files
+- candidate_or_wrapper_assets_only_until_governance_review

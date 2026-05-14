@@ -1,0 +1,14 @@
+{
+  "doc_id": "DOC-20260513-002",
+  "target_phases": [
+    "P01_data_fact_controller"
+  ],
+  "secondary_phases": [
+    "P02_wallet_chip_structure_controller",
+    "P03_market_structure_controller",
+    "P04_scenario_recognition_controller",
+    "P05_strategy_gate_controller",
+    "P06_paper_trading_controller"
+  ],
+  "route_status": "K00_ACCEPTED"
+}

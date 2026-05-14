@@ -1,0 +1,33 @@
+{
+  "acceptance_id": "TRACE_PLANE_ACCEPTANCE_20260511",
+  "doc_id": "DOC-20260511-025",
+  "validated_at": "2026-05-11T17:13:34Z",
+  "trace_root": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane",
+  "required_files_count": 27,
+  "missing_required_files": [],
+  "parse_errors": [],
+  "file_level_passed": true,
+  "structure_level_passed": true,
+  "semantic_level_passed": true,
+  "safety_boundary_level_passed": true,
+  "forbidden_logic_detected": false,
+  "acceptance_result": "TRACE_READY_WITH_GAPS",
+  "verification_passed": true,
+  "trace_quality_status": "TRACE_USABLE_WITH_GAPS",
+  "system_production_readiness": "BLOCKED",
+  "p01_status": "BLOCKED_BY_DATA_PLANE",
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "auto_order_allowed": false,
+  "non_blocking_gaps": [
+    "legacy_files_without_trace",
+    "trace_id_generator_not_code_implemented",
+    "trace_validator_not_code_implemented",
+    "her_auto_trace_write_not_runtime_hooked",
+    "runner_tools_not_trace_bound",
+    "paper_runtime_trace_not_run",
+    "review_upgrade_trace_no_real_samples",
+    "acceptance_plane_not_yet_professionally_landed",
+    "handoff_plane_not_yet_professionally_landed"
+  ]
+}

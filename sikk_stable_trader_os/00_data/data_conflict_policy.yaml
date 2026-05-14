@@ -1,0 +1,22 @@
+conflict_policy: 多源冲突必须显式保留，禁止直接平均或静默覆盖。
+data_conflict_rules:
+- rule_id: DCONF_001
+  field: current_price
+  conflict_condition: source_deviation_pct > 5
+  result: QUOTE_CONFLICT_DETECTED
+  downstream_permission: WEAK_EVIDENCE_ONLY
+- rule_id: DCONF_002
+  field: current_market_cap_usd
+  conflict_condition: source_deviation_pct > 10
+  result: MARKET_CAP_CONFLICT_DETECTED
+  downstream_permission: NO_STRONG_MARKET_CAP_CLAIM
+- rule_id: DCONF_003
+  field: wallet_current_holding_pct
+  conflict_condition: snapshot_time_gap_seconds > freshness_requirement
+  result: WALLET_SNAPSHOT_CONFLICT
+  downstream_permission: REQUIRE_REFRESH
+- rule_id: DCONF_004
+  field: liquidity_usd
+  conflict_condition: liquidity_source_deviation_pct > 15
+  result: LIQUIDITY_CONFLICT
+  downstream_permission: EXECUTION_BLOCK_UNTIL_REFRESH

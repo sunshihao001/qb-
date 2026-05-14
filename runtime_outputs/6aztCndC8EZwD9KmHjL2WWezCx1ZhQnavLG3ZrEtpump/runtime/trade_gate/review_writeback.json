@@ -1,0 +1,15 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "review_required": true,
+  "review_windows": [
+    "W1_0_60s",
+    "W2_1_5m",
+    "W3_5_30m",
+    "W4_30m_2h"
+  ],
+  "writeback_targets": [
+    "trade_journal",
+    "wallet_structure_decision",
+    "planbook_gap_register"
+  ]
+}

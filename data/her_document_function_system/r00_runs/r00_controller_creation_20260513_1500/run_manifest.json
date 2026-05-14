@@ -1,0 +1,51 @@
+{
+  "system": "HER-DFAFS",
+  "phase_id": "R00",
+  "run_id": "r00_controller_creation_20260513_1500",
+  "run_root": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500",
+  "created_at": "2026-05-13T15:32:00Z",
+  "updated_at": "2026-05-13T15:32:00Z",
+  "scope": "runner_tool_binding_runtime_closure",
+  "source_v00_handoff_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/handoff/v00_to_r00_handoff_packet.json"
+  ],
+  "source_validation_evidence_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/schema_validation/schema_validation_result.json",
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/contract_validation/contract_validation_result.json",
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/test_execution/test_evidence.json"
+  ],
+  "outputs": {
+    "preflight_result": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/preflight/r00_preflight_result.json",
+    "binding_target_inventory": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/target_inventory/binding_target_inventory.json",
+    "binding_manifest": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/binding_specs/binding_manifest.json",
+    "command_contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/11_command_contract.schema.json",
+    "cli_binding": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/12_cli_binding.schema.json",
+    "orchestrator_binding": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/13_orchestrator_binding.schema.json",
+    "tool_binding": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/14_tool_binding.schema.json",
+    "telegram_binding": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/15_telegram_binding.schema.json",
+    "report_binding": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/16_report_binding.schema.json",
+    "dashboard_binding": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/17_dashboard_binding.schema.json",
+    "scheduler_binding": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/18_scheduler_binding.schema.json",
+    "dry_run_evidence": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/dry_run/dry_run_result.json",
+    "generated_outputs_manifest": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/dry_run/generated_outputs_manifest.json",
+    "gap_report": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/gaps/r00_gap_report.json",
+    "trace_log": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/trace/r00_trace.jsonl",
+    "audit_log": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/trace/r00_audit.jsonl",
+    "acceptance_result": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/acceptance/r00_acceptance_result.json",
+    "handoff_packet": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/handoff/r00_to_a00_handoff_packet.json",
+    "final_report": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/reports/r00_final_report.md"
+  },
+  "final_status": "R00_ACCEPTED",
+  "acceptance_ref": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/acceptance/r00_acceptance_result.json",
+  "handoff_ref": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/handoff/r00_to_a00_handoff_packet.json",
+  "runtime_index_ref": "/root/sikk-gmgn/data/her_document_function_system/runtime_index/her_dfafs_runtime_index.json",
+  "blocking_gaps": [],
+  "unresolved_gaps": [],
+  "execution_boundary": {
+    "safe_mode": true,
+    "allow_live_runtime": false,
+    "allow_wallet_signing": false,
+    "allow_auto_deploy": false,
+    "allow_production_trading": false
+  }
+}

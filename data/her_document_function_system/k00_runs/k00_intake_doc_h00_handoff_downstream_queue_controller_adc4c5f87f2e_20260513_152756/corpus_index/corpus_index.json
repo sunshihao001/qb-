@@ -1,0 +1,530 @@
+{
+  "doc_id": "doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e",
+  "section_index": [
+    {
+      "level": 1,
+      "title": "H00_handoff_downstream_queue_controller",
+      "line_hint": 1
+    },
+    {
+      "level": 2,
+      "title": "HER 专业化 Handoff / Downstream Queue 控制器 v1.0",
+      "line_hint": 3
+    },
+    {
+      "level": 1,
+      "title": "1. H00 总定义",
+      "line_hint": 36
+    },
+    {
+      "level": 1,
+      "title": "2. H00 核心使命",
+      "line_hint": 63
+    },
+    {
+      "level": 1,
+      "title": "3. H00 在系统中的位置",
+      "line_hint": 94
+    },
+    {
+      "level": 1,
+      "title": "4. H00 不是做什么",
+      "line_hint": 131
+    },
+    {
+      "level": 1,
+      "title": "5. H00 核心责任",
+      "line_hint": 146
+    },
+    {
+      "level": 1,
+      "title": "6. H00 权限边界",
+      "line_hint": 168
+    },
+    {
+      "level": 2,
+      "title": "6.1 允许行为",
+      "line_hint": 170
+    },
+    {
+      "level": 2,
+      "title": "6.2 禁止行为",
+      "line_hint": 197
+    },
+    {
+      "level": 1,
+      "title": "7. H00 标准阶段文件包",
+      "line_hint": 221
+    },
+    {
+      "level": 1,
+      "title": "8. H00 运行数据目录",
+      "line_hint": 257
+    },
+    {
+      "level": 1,
+      "title": "9. H00 输入合约",
+      "line_hint": 325
+    },
+    {
+      "level": 1,
+      "title": "10. H00 输入缺失处理",
+      "line_hint": 383
+    },
+    {
+      "level": 1,
+      "title": "11. H00 输出合约",
+      "line_hint": 400
+    },
+    {
+      "level": 1,
+      "title": "12. H00 内部分层",
+      "line_hint": 432
+    },
+    {
+      "level": 1,
+      "title": "13. H00.0 Preflight Gate",
+      "line_hint": 457
+    },
+    {
+      "level": 2,
+      "title": "13.1 目标",
+      "line_hint": 459
+    },
+    {
+      "level": 2,
+      "title": "13.2 检查项",
+      "line_hint": 463
+    },
+    {
+      "level": 2,
+      "title": "13.3 输出",
+      "line_hint": 476
+    },
+    {
+      "level": 1,
+      "title": "14. H00.1 A00 Handoff Loader",
+      "line_hint": 501
+    },
+    {
+      "level": 2,
+      "title": "14.1 目标",
+      "line_hint": 503
+    },
+    {
+      "level": 2,
+      "title": "14.2 必须加载",
+      "line_hint": 507
+    },
+    {
+      "level": 2,
+      "title": "14.3 输出",
+      "line_hint": 520
+    },
+    {
+      "level": 1,
+      "title": "15. H00.2 Readiness Certificate Interpreter",
+      "line_hint": 539
+    },
+    {
+      "level": 2,
+      "title": "15.1 目标",
+      "line_hint": 541
+    },
+    {
+      "level": 2,
+      "title": "15.2 需要解释的字段",
+      "line_hint": 545
+    },
+    {
+      "level": 2,
+      "title": "15.3 readiness_level 解释",
+      "line_hint": 559
+    },
+    {
+      "level": 1,
+      "title": "16. H00.3 Downstream Target Classifier",
+      "line_hint": 574
+    },
+    {
+      "level": 2,
+      "title": "16.1 目标",
+      "line_hint": 576
+    },
+    {
+      "level": 2,
+      "title": "16.2 下游目标类型",
+      "line_hint": 580
+    },
+    {
+      "level": 2,
+      "title": "16.3 分类规则",
+      "line_hint": 594
+    },
+    {
+      "level": 2,
+      "title": "16.4 输出",
+      "line_hint": 607
+    },
+    {
+      "level": 1,
+      "title": "17. H00.4 Target Capability Matrix Builder",
+      "line_hint": 628
+    },
+    {
+      "level": 2,
+      "title": "17.1 目标",
+      "line_hint": 630
+    },
+    {
+      "level": 2,
+      "title": "17.2 能力矩阵字段",
+      "line_hint": 636
+    },
+    {
+      "level": 2,
+      "title": "17.3 状态",
+      "line_hint": 652
+    },
+    {
+      "level": 1,
+      "title": "18. H00.5 Routing Decision Engine",
+      "line_hint": 664
+    },
+    {
+      "level": 2,
+      "title": "18.1 目标",
+      "line_hint": 666
+    },
+    {
+      "level": 2,
+      "title": "18.2 routing decision 状态",
+      "line_hint": 670
+    },
+    {
+      "level": 2,
+      "title": "18.3 routing_decision 结构",
+      "line_hint": 685
+    },
+    {
+      "level": 1,
+      "title": "19. H00.6 Queue Item Builder",
+      "line_hint": 704
+    },
+    {
+      "level": 2,
+      "title": "19.1 目标",
+      "line_hint": 706
+    },
+    {
+      "level": 2,
+      "title": "19.2 queue_item 结构",
+      "line_hint": 710
+    },
+    {
+      "level": 1,
+      "title": "20. H00.7 Dependency Graph Builder",
+      "line_hint": 753
+    },
+    {
+      "level": 2,
+      "title": "20.1 目标",
+      "line_hint": 755
+    },
+    {
+      "level": 2,
+      "title": "20.2 依赖类型",
+      "line_hint": 759
+    },
+    {
+      "level": 2,
+      "title": "20.3 dependency_graph",
+      "line_hint": 772
+    },
+    {
+      "level": 1,
+      "title": "21. H00.8 Priority / Urgency Model Builder",
+      "line_hint": 800
+    },
+    {
+      "level": 2,
+      "title": "21.1 目标",
+      "line_hint": 802
+    },
+    {
+      "level": 2,
+      "title": "21.2 优先级维度",
+      "line_hint": 806
+    },
+    {
+      "level": 2,
+      "title": "21.3 priority level",
+      "line_hint": 819
+    },
+    {
+      "level": 2,
+      "title": "21.4 输出",
+      "line_hint": 829
+    },
+    {
+      "level": 1,
+      "title": "22. H00.9 Risk / Gap Propagation Binder",
+      "line_hint": 847
+    },
+    {
+      "level": 2,
+      "title": "22.1 目标",
+      "line_hint": 849
+    },
+    {
+      "level": 2,
+      "title": "22.2 必须传递",
+      "line_hint": 853
+    },
+    {
+      "level": 2,
+      "title": "22.3 gap propagation binding",
+      "line_hint": 866
+    },
+    {
+      "level": 1,
+      "title": "23. H00.10 Downstream Handoff Packet Writer",
+      "line_hint": 889
+    },
+    {
+      "level": 2,
+      "title": "23.1 目标",
+      "line_hint": 891
+    },
+    {
+      "level": 2,
+      "title": "23.2 Handoff 类型",
+      "line_hint": 897
+    },
+    {
+      "level": 2,
+      "title": "23.3 通用 handoff_packet 结构",
+      "line_hint": 909
+    },
+    {
+      "level": 1,
+      "title": "24. H00.11 Queue State Writer",
+      "line_hint": 942
+    },
+    {
+      "level": 2,
+      "title": "24.1 目标",
+      "line_hint": 944
+    },
+    {
+      "level": 2,
+      "title": "24.2 queue_state 状态",
+      "line_hint": 948
+    },
+    {
+      "level": 2,
+      "title": "24.3 queue_state.json",
+      "line_hint": 967
+    },
+    {
+      "level": 1,
+      "title": "25. H00.12 Trace / Audit Binder",
+      "line_hint": 987
+    },
+    {
+      "level": 2,
+      "title": "25.1 必须 trace 的事件",
+      "line_hint": 989
+    },
+    {
+      "level": 2,
+      "title": "25.2 trace 字段",
+      "line_hint": 1009
+    },
+    {
+      "level": 1,
+      "title": "26. H00.13 Queue Recovery Policy Builder",
+      "line_hint": 1031
+    },
+    {
+      "level": 2,
+      "title": "26.1 目标",
+      "line_hint": 1033
+    },
+    {
+      "level": 2,
+      "title": "26.2 recovery 类型",
+      "line_hint": 1037
+    },
+    {
+      "level": 2,
+      "title": "26.3 recovery_report",
+      "line_hint": 1051
+    },
+    {
+      "level": 1,
+      "title": "27. H00.14 Acceptance Gate",
+      "line_hint": 1070
+    },
+    {
+      "level": 2,
+      "title": "27.1 H00 状态",
+      "line_hint": 1072
+    },
+    {
+      "level": 2,
+      "title": "27.2 验收项",
+      "line_hint": 1091
+    },
+    {
+      "level": 2,
+      "title": "27.3 不允许通过的情况",
+      "line_hint": 1110
+    },
+    {
+      "level": 1,
+      "title": "28. H00.15 Final Report Writer",
+      "line_hint": 1128
+    },
+    {
+      "level": 1,
+      "title": "29. H00 专业角色审计",
+      "line_hint": 1155
+    },
+    {
+      "level": 1,
+      "title": "30. H00 Handoff Packet 分类标准",
+      "line_hint": 1170
+    },
+    {
+      "level": 2,
+      "title": "30.1 交给 PXX 的包",
+      "line_hint": 1172
+    },
+    {
+      "level": 2,
+      "title": "30.2 交给 IXX 的包",
+      "line_hint": 1198
+    },
+    {
+      "level": 2,
+      "title": "30.3 交给 Runner 的包",
+      "line_hint": 1221
+    },
+    {
+      "level": 2,
+      "title": "30.4 交给 U00 的包",
+      "line_hint": 1243
+    },
+    {
+      "level": 2,
+      "title": "30.5 交给 G00 的包",
+      "line_hint": 1267
+    },
+    {
+      "level": 1,
+      "title": "31. H00 可直接给 HER 的执行任务书",
+      "line_hint": 1290
+    },
+    {
+      "level": 1,
+      "title": "32. 当前设计状态判断",
+      "line_hint": 1401
+    }
+  ],
+  "key_objects": [
+    "H00 controller",
+    "A00 handoff",
+    "readiness certificate",
+    "downstream target inventory",
+    "routing decision",
+    "downstream queue",
+    "queue item",
+    "dependency graph",
+    "priority model",
+    "gap/risk propagation",
+    "handoff bundle",
+    "queue state",
+    "trace/audit",
+    "recovery report",
+    "acceptance gate"
+  ],
+  "core_rules": [
+    "No A00 handoff -> H00_BLOCKED",
+    "No readiness certificate -> no downstream queue",
+    "A00_BLOCKED -> no execution queue",
+    "A00_READY_WITH_GAPS -> preserve unresolved gaps",
+    "Every downstream target requires routing decision",
+    "Every queue item requires target_phase, required_inputs, expected_outputs, allowed/forbidden actions",
+    "Do not delete forbidden_actions",
+    "Queue created is not task executed",
+    "No trace/audit -> no handoff acceptance"
+  ],
+  "critical_assertions": [
+    "H00 is a phase controller, not a report summarizer",
+    "H00 queues and hands off, but does not execute downstream business tasks",
+    "Different downstream targets require different handoff packets"
+  ],
+  "input_output_requirements": {
+    "required_inputs": [
+      "a00_handoff_packet",
+      "readiness_certificate",
+      "evidence_bundle",
+      "phase_status_matrix",
+      "artifact_manifest",
+      "gap_propagation_report",
+      "acceptance_scorecard",
+      "allowed_next_actions",
+      "forbidden_next_actions",
+      "execution_boundary"
+    ],
+    "required_outputs": [
+      "h00_preflight_result",
+      "downstream_target_inventory",
+      "target_capability_matrix",
+      "routing_decision",
+      "downstream_queue",
+      "queue_items",
+      "dependency_graph",
+      "priority_plan",
+      "gap_risk_binding",
+      "downstream_handoff_packets",
+      "queue_state",
+      "h00_trace",
+      "h00_audit",
+      "recovery_report",
+      "h00_acceptance_result",
+      "h00_final_report"
+    ]
+  },
+  "forbidden_actions": [
+    "bypass_a00",
+    "handoff_without_readiness_certificate",
+    "drop_unresolved_gaps",
+    "drop_accepted_risks",
+    "remove_forbidden_actions",
+    "convert_ready_with_gaps_to_ready",
+    "route_blocked_task_to_execution",
+    "execute_downstream_task_directly",
+    "start_live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "modify_production_rules_directly",
+    "overwrite_a00_decision",
+    "hide_failed_handoff",
+    "treat_queue_created_as_task_executed"
+  ],
+  "acceptance_requirements": [
+    "20 controller files exist",
+    "execution_protocol covers H00.0-H00.15",
+    "input contract requires A00 handoff/readiness certificate",
+    "output contract emits queue/items/dependency/handoff packets",
+    "schemas cover routing, queue item, dependency graph, priority, handoff bundle, queue state, recovery",
+    "trace spec covers key events"
+  ],
+  "handoff_requirements": [
+    "K00 to H00 handoff must include raw/passport/index/mapping/gap/task package refs",
+    "H00 downstream handoff must preserve gaps, risks, forbidden actions, evidence refs"
+  ]
+}

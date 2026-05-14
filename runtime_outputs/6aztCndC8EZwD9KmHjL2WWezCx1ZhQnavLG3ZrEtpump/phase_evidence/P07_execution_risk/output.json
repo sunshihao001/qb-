@@ -1,0 +1,22 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P07_execution_risk",
+  "artifact_kind": "output",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "execution_mode": "paper_only",
+  "execution_action": "OBSERVE",
+  "paper_trade_intent": false,
+  "real_order": false,
+  "broadcast_transaction": false,
+  "max_real_position_sol": 0.0,
+  "risk_profile_max_position_sol": 0.0,
+  "execution_status": "OBSERVE_OR_PAPER_ONLY"
+}

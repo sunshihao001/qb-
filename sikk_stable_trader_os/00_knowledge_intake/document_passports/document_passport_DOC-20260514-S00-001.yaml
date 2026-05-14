@@ -1,0 +1,55 @@
+doc_id: DOC-20260514-S00-001
+source_type: user_uploaded_markdown
+source_name: 全体系统一标准化模块 v2.0：专业级别统一化数据模型
+received_at: '2026-05-14'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260514-S00-001_unified_standardization_v2_0.md
+checksum_sha256: d55721f50170312160f9020be89dfeb4087bd2610f101b6ca793e5c0fd239d31
+document_role:
+  primary_role: S00 unified standardization control-layer specification
+  secondary_roles:
+  - schema_contract_governance
+  - runner_binding_governance
+  - trace_acceptance_handoff_governance
+  - P08_permission_boundary
+  - P09_P10_review_upgrade_boundary
+  - legacy_absorption
+  - regression_rollback_security_boundary
+summary:
+  core_intent: 建立 HER/SIKK 全体系统一标准控制层，服务真实 token 阶段化判断闭环，而非增加文档数量。
+  key_points:
+  - 任意判断可追溯目标/方法/输入/字段血缘/runner/trace/acceptance/handoff
+  - runner 必须绑定 Phase Controller
+  - paper-only 决策经过 P08 permission gate
+  - 复盘升级进入 P09/P10 shadow/regression/rollback，不直接改实时规则
+  - legacy runtime 通过 absorption map 收编
+  - schema/contract 必须有版本/消费者/验证/失败策略
+  - 默认禁止真实交易，paper-only 边界
+system_mapping:
+  planes:
+  - control_plane
+  - data_plane
+  - contract_plane
+  - runner_plane
+  - trace_plane
+  - acceptance_handoff_plane
+  - permission_plane
+  - review_upgrade_plane
+  - legacy_absorption_plane
+  - security_plane
+  affected_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  - I03
+  - I04
+required_actions:
+- create /system/unified_standardization/
+- create all listed standard files with producer/consumer/version/status/acceptance
+- bind existing legacy runtime into registry as WITH_GAPS
+- emit S00_ACCEPTANCE_REPORT.md
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

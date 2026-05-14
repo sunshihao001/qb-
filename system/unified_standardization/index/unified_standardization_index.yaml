@@ -1,0 +1,113 @@
+meta:
+  standard_id: S00_UNIFIED_STANDARDIZATION_INDEX
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+module_root: /root/sikk-gmgn/system/unified_standardization
+files:
+- 00_module_charter/s00_unified_standardization_charter.md
+- 00_module_charter/s00_scope_boundary.yaml
+- 00_module_charter/s00_standard_object_registry.yaml
+- 01_global_identity/global_id_standard.yaml
+- 01_global_identity/global_status_code_table.yaml
+- 01_global_identity/global_event_type_registry.yaml
+- 02_goal_mapping/system_goal_mapping.yaml
+- 02_goal_mapping/token_judgment_goal_map.yaml
+- 02_goal_mapping/phase_goal_alignment_matrix.yaml
+- 02_goal_mapping/goal_to_runner_consumption_map.yaml
+- 03_method_wheel_mapping/method_wheel_registry.yaml
+- 03_method_wheel_mapping/method_to_phase_map.yaml
+- 03_method_wheel_mapping/method_to_field_map.yaml
+- 03_method_wheel_mapping/method_to_decision_map.yaml
+- 03_method_wheel_mapping/method_to_counter_evidence_map.yaml
+- 04_domain_entity_model/canonical_entity_model.yaml
+- 04_domain_entity_model/token_entity_schema.yaml
+- 04_domain_entity_model/wallet_entity_schema.yaml
+- 04_domain_entity_model/cluster_entity_schema.yaml
+- 04_domain_entity_model/trade_event_schema.yaml
+- 04_domain_entity_model/signal_entity_schema.yaml
+- 04_domain_entity_model/decision_entity_schema.yaml
+- 04_domain_entity_model/paper_position_entity_schema.yaml
+- 05_data_lineage/data_source_registry.yaml
+- 05_data_lineage/field_lineage_registry.yaml
+- 05_data_lineage/file_lineage_map.yaml
+- 05_data_lineage/decision_lineage_map.yaml
+- 05_data_lineage/report_lineage_map.yaml
+- 06_field_governance/field_permission_matrix.yaml
+- 06_field_governance/field_mutation_policy.yaml
+- 06_field_governance/field_confidence_policy.yaml
+- 06_field_governance/field_manual_override_policy.yaml
+- 07_schema_contract/schema_index.yaml
+- 07_schema_contract/contract_index.yaml
+- 07_schema_contract/phase_input_contracts.yaml
+- 07_schema_contract/phase_output_contracts.yaml
+- 07_schema_contract/handoff_contracts.yaml
+- 07_schema_contract/report_contracts.yaml
+- 07_schema_contract/backward_compatibility_policy.yaml
+- 08_runner_binding/runner_registry.yaml
+- 08_runner_binding/phase_runner_binding.yaml
+- 08_runner_binding/validation_runner_registry.yaml
+- 08_runner_binding/replay_runner_registry.yaml
+- 08_runner_binding/paper_runner_binding.yaml
+- 08_runner_binding/runner_failure_policy.yaml
+- 08_runner_binding/runner_output_contract_map.yaml
+- 09_trace_acceptance_handoff/trace_event_schema.yaml
+- 09_trace_acceptance_handoff/process_trace_policy.yaml
+- 09_trace_acceptance_handoff/acceptance_gate_matrix.yaml
+- 09_trace_acceptance_handoff/acceptance_evidence_schema.yaml
+- 09_trace_acceptance_handoff/handoff_packet_standard.yaml
+- 09_trace_acceptance_handoff/downstream_consumption_matrix.yaml
+- 10_validation_r00/r00_validation_controller.md
+- 10_validation_r00/r00_validation_checklist.yaml
+- 10_validation_r00/r00_runner_dry_run_matrix.yaml
+- 10_validation_r00/r00_replay_validation_matrix.yaml
+- 10_validation_r00/r00_failure_report_schema.yaml
+- 11_permission_gate_p08/p08_permission_gate_policy.yaml
+- 11_permission_gate_p08/p08_action_permission_matrix.yaml
+- 11_permission_gate_p08/p08_paper_only_boundary.yaml
+- 11_permission_gate_p08/p08_real_trade_forbidden_policy.yaml
+- 11_permission_gate_p08/p08_risk_event_schema.yaml
+- 12_review_upgrade_p09_p10/p09_review_case_schema.yaml
+- 12_review_upgrade_p09_p10/p09_failure_attribution_schema.yaml
+- 12_review_upgrade_p09_p10/p09_replay_packet_schema.yaml
+- 12_review_upgrade_p09_p10/p10_upgrade_candidate_schema.yaml
+- 12_review_upgrade_p09_p10/p10_shadow_validation_policy.yaml
+- 12_review_upgrade_p09_p10/p10_rule_promotion_policy.yaml
+- 13_issue_task_registry/issue_registry.yaml
+- 13_issue_task_registry/issue_taxonomy.yaml
+- 13_issue_task_registry/task_packet_schema.yaml
+- 13_issue_task_registry/task_priority_policy.yaml
+- 13_issue_task_registry/task_acceptance_policy.yaml
+- 14_legacy_absorption/legacy_asset_inventory.yaml
+- 14_legacy_absorption/legacy_to_new_mapping.yaml
+- 14_legacy_absorption/legacy_runtime_absorption_plan.yaml
+- 14_legacy_absorption/legacy_keep_deprecate_migrate_policy.yaml
+- 14_legacy_absorption/legacy_readonly_boundary.yaml
+- 15_sample_regression_rollback/sample_library_index.yaml
+- 15_sample_regression_rollback/labeled_token_case_schema.yaml
+- 15_sample_regression_rollback/regression_suite_registry.yaml
+- 15_sample_regression_rollback/regression_result_schema.yaml
+- 15_sample_regression_rollback/rollback_policy.yaml
+- 15_sample_regression_rollback/rule_version_registry.yaml
+- 16_security_boundary/security_boundary_policy.yaml
+- 16_security_boundary/paper_only_execution_policy.yaml
+- 16_security_boundary/real_trade_forbidden_policy.yaml
+- 16_security_boundary/api_key_permission_policy.yaml
+- 16_security_boundary/manual_confirmation_policy.yaml
+- 16_security_boundary/emergency_stop_policy.yaml
+- index/unified_standardization_index.yaml
+- index/phase_consumption_matrix.yaml
+- index/file_to_runner_index.yaml
+- index/runner_to_phase_index.yaml
+- index/schema_to_contract_index.yaml
+- index/goal_to_phase_to_runner_index.yaml
+- index/report_to_lineage_index.yaml
+current_status: S00_TRACE_ACCEPTANCE_RUNNER_BOUND_READY_WITH_GAPS
+source_doc: DOC-20260514-S00-001

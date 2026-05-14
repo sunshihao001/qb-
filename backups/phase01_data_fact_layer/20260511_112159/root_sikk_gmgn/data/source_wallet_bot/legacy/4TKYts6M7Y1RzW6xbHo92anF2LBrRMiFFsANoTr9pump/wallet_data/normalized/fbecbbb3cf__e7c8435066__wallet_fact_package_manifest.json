@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-05-05T15:06:50Z",
+  "input_files": [
+    "wallet_trade_normalized.json",
+    "wallet_entity_profile_normalized.json",
+    "same_source_evidence_normalized.json",
+    "wallet_intelligence_decision.json"
+  ],
+  "module": "source_wallet_bot.wallet_fact",
+  "output_files": [
+    "wallet_structure_normalized.json",
+    "chip_distribution_summary.json",
+    "same_source_groups.json",
+    "fund_flow_edges.csv",
+    "address_history.json",
+    "wallet_fact_report.md"
+  ],
+  "record_counts": {
+    "address_history": 95,
+    "fund_flow_edges": 61,
+    "same_source_groups": 4,
+    "wallet_structure": 95
+  },
+  "safety_boundaries": [
+    "no_state_machine",
+    "no_paper_runner",
+    "no_real_execution",
+    "no_signing",
+    "no_broadcast",
+    "no_swap"
+  ],
+  "source_levels": [
+    "L1",
+    "L2"
+  ],
+  "token_address": "4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump"
+}

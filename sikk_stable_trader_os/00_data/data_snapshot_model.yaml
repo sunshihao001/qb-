@@ -1,0 +1,43 @@
+snapshot_types:
+- DISCOVERY_SNAPSHOT
+- WALLET_DECISION_SNAPSHOT
+- MARKET_STRUCTURE_SNAPSHOT
+- SIGNAL_SNAPSHOT
+- PAPER_ENTRY_SNAPSHOT
+- PAPER_EXIT_SNAPSHOT
+- REVIEW_SNAPSHOT
+data_snapshot:
+  snapshot_id: string
+  token_address: string
+  snapshot_type: string
+  snapshot_time: datetime
+  run_id: string
+  token_state:
+  - market_cap_usd
+  - liquidity_usd
+  - holder_count
+  - token_age_seconds
+  wallet_state:
+  - early_wallet_count
+  - structural_wallet_holding_pct
+  - early_wallet_remaining_pct
+  - same_source_group_count
+  - sync_sell_group_count
+  chip_state:
+  - chip_concentration_score
+  - chip_distribution_score
+  - chip_transfer_status
+  market_state:
+  - price
+  - volume
+  - box_status
+  - avwap_status
+  - poc_status
+  - breakout_status
+  - pullback_status
+  data_quality:
+  - required_fields_total
+  - required_fields_present
+  - missing_critical_fields
+  - data_quality_score
+  - freshness_status

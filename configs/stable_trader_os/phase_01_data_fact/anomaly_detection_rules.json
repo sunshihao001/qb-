@@ -1,0 +1,54 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "rules": [
+    {
+      "rule_id": "ADDR_001",
+      "field": "wallet_address",
+      "anomaly_type": "invalid_address",
+      "condition": "not_valid_solana_address",
+      "severity": "high",
+      "action": "exclude_from_downstream"
+    },
+    {
+      "rule_id": "TIME_001",
+      "field": "first_buy_time",
+      "anomaly_type": "future_time",
+      "condition": "first_buy_time > data_snapshot_time",
+      "severity": "high",
+      "action": "write_anomaly_and_pause"
+    },
+    {
+      "rule_id": "TIME_002",
+      "field": "first_buy_time",
+      "anomaly_type": "time_order_conflict",
+      "condition": "first_buy_time < token_create_time",
+      "severity": "high",
+      "action": "write_anomaly_and_pause"
+    },
+    {
+      "rule_id": "AMOUNT_001",
+      "field": "total_buy_amount_usd",
+      "anomaly_type": "negative_amount",
+      "condition": "value < 0",
+      "severity": "high",
+      "action": "write_anomaly_and_exclude"
+    },
+    {
+      "rule_id": "DUP_001",
+      "field": "wallet_address",
+      "anomaly_type": "duplicate_record",
+      "condition": "duplicate_wallet_same_token",
+      "severity": "medium",
+      "action": "deduplicate_and_log"
+    },
+    {
+      "rule_id": "SRC_001",
+      "field": "any_multi_source_field",
+      "anomaly_type": "source_conflict",
+      "condition": "same_field_value_conflict_between_sources",
+      "severity": "medium",
+      "action": "write_anomaly_fields_report"
+    }
+  ]
+}

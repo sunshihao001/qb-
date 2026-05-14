@@ -1,0 +1,297 @@
+{
+  "verification_id": "VERIFICATION-DOC-20260511-011",
+  "generated_at": "2026-05-11T13:57:35.735732+00:00",
+  "doc_id": "DOC-20260511-011",
+  "overall_passed": true,
+  "passed_count": 53,
+  "failed_count": 0,
+  "checks": [
+    {
+      "name": "exists:00_knowledge_intake/raw_inputs/DOC-20260511-011.md",
+      "passed": true,
+      "detail": "00_knowledge_intake/raw_inputs/DOC-20260511-011.md"
+    },
+    {
+      "name": "exists:00_methodology/system_methodology_blueprint.md",
+      "passed": true,
+      "detail": "00_methodology/system_methodology_blueprint.md"
+    },
+    {
+      "name": "exists:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/source_registry/source_registry.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/document_passports/document_passport_DOC-20260511-011.yaml",
+      "passed": true,
+      "detail": "00_knowledge_intake/document_passports/document_passport_DOC-20260511-011.yaml"
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-011.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-011.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-011.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-011.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-011.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-011.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-011.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-011.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-011.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-011.json"
+    },
+    {
+      "name": "exists:00_control/current_system_state.json",
+      "passed": true,
+      "detail": "00_control/current_system_state.json"
+    },
+    {
+      "name": "exists:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": "00_control/system_asset_index.json"
+    },
+    {
+      "name": "exists:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": "06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json"
+    },
+    {
+      "name": "exists:00_control/phase_registry.yaml",
+      "passed": true,
+      "detail": "00_control/phase_registry.yaml"
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-011.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-011.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-011.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-011.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-011.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/current_system_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_knowledge_intake/document_passports/document_passport_DOC-20260511-011.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_control/phase_registry.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical_anchor:## 6. 系统阶段总表",
+      "passed": true,
+      "detail": "## 6. 系统阶段总表"
+    },
+    {
+      "name": "canonical_anchor:### 6.1 阶段编号",
+      "passed": true,
+      "detail": "### 6.1 阶段编号"
+    },
+    {
+      "name": "canonical_anchor:K00",
+      "passed": true,
+      "detail": "K00"
+    },
+    {
+      "name": "canonical_anchor:P00",
+      "passed": true,
+      "detail": "P00"
+    },
+    {
+      "name": "canonical_anchor:P01",
+      "passed": true,
+      "detail": "P01"
+    },
+    {
+      "name": "canonical_anchor:P02",
+      "passed": true,
+      "detail": "P02"
+    },
+    {
+      "name": "canonical_anchor:P03",
+      "passed": true,
+      "detail": "P03"
+    },
+    {
+      "name": "canonical_anchor:P04",
+      "passed": true,
+      "detail": "P04"
+    },
+    {
+      "name": "canonical_anchor:P05",
+      "passed": true,
+      "detail": "P05"
+    },
+    {
+      "name": "canonical_anchor:P06",
+      "passed": true,
+      "detail": "P06"
+    },
+    {
+      "name": "canonical_anchor:P07",
+      "passed": true,
+      "detail": "P07"
+    },
+    {
+      "name": "canonical_anchor:P08",
+      "passed": true,
+      "detail": "P08"
+    },
+    {
+      "name": "canonical_anchor:P09",
+      "passed": true,
+      "detail": "P09"
+    },
+    {
+      "name": "canonical_anchor:P10",
+      "passed": true,
+      "detail": "P10"
+    },
+    {
+      "name": "canonical_anchor:知识摄取与任务化",
+      "passed": true,
+      "detail": "知识摄取与任务化"
+    },
+    {
+      "name": "canonical_anchor:系统建造与方法论编译",
+      "passed": true,
+      "detail": "系统建造与方法论编译"
+    },
+    {
+      "name": "canonical_anchor:数据事实层",
+      "passed": true,
+      "detail": "数据事实层"
+    },
+    {
+      "name": "canonical_anchor:钱包结构层",
+      "passed": true,
+      "detail": "钱包结构层"
+    },
+    {
+      "name": "canonical_anchor:筹码控制层",
+      "passed": true,
+      "detail": "筹码控制层"
+    },
+    {
+      "name": "canonical_anchor:市场结构层",
+      "passed": true,
+      "detail": "市场结构层"
+    },
+    {
+      "name": "canonical_anchor:场景识别层",
+      "passed": true,
+      "detail": "场景识别层"
+    },
+    {
+      "name": "canonical_anchor:策略门禁层",
+      "passed": true,
+      "detail": "策略门禁层"
+    },
+    {
+      "name": "canonical_anchor:执行风控层",
+      "passed": true,
+      "detail": "执行风控层"
+    },
+    {
+      "name": "canonical_anchor:纸面交易验证层",
+      "passed": true,
+      "detail": "纸面交易验证层"
+    },
+    {
+      "name": "canonical_anchor:复盘学习层",
+      "passed": true,
+      "detail": "复盘学习层"
+    },
+    {
+      "name": "canonical_anchor:系统升级层",
+      "passed": true,
+      "detail": "系统升级层"
+    },
+    {
+      "name": "control_state_has_12_phase_sequence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "phase_registry_has_P10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reconciliation_gap_recorded",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "remaining_degraded_gaps": [
+    {
+      "gap_id": "GAP-STAGE-TARGET-DATA-DETAILS",
+      "severity": "DEGRADED",
+      "description": "Phase names/positioning are defined; detailed target data objects, inputs, outputs, acceptance data for each phase still need explicit enumeration."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

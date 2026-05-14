@@ -1,0 +1,582 @@
+{
+  "schema_version": "1.0",
+  "bot_name": "SIKK Source & Wallet Intelligence Bot",
+  "normalized_files": [
+    {
+      "file_name": "candidates_normalized.json",
+      "purpose": "candidate discovery and factual prefilter",
+      "required_fields": [
+        "token_address",
+        "candidate_seen_time",
+        "candidate_source",
+        "pool_exists",
+        "price_exists",
+        "liquidity_exists",
+        "kline_exists",
+        "holder_exists",
+        "security_exists",
+        "is_obviously_invalid"
+      ],
+      "source_types": {
+        "token_address": [
+          "gmgn",
+          "okx",
+          "onchain",
+          "legacy_import"
+        ],
+        "candidate_seen_time": [
+          "gmgn",
+          "okx",
+          "onchain",
+          "legacy_import"
+        ],
+        "candidate_source": [
+          "gmgn",
+          "okx",
+          "onchain",
+          "legacy_import"
+        ],
+        "pool_exists": [
+          "gmgn",
+          "okx",
+          "onchain",
+          "explorer"
+        ],
+        "price_exists": [
+          "gmgn",
+          "okx",
+          "quote"
+        ],
+        "liquidity_exists": [
+          "gmgn",
+          "okx",
+          "quote",
+          "security"
+        ],
+        "kline_exists": [
+          "gmgn",
+          "okx"
+        ],
+        "holder_exists": [
+          "gmgn",
+          "onchain",
+          "explorer"
+        ],
+        "security_exists": [
+          "gmgn",
+          "security",
+          "okx"
+        ],
+        "is_obviously_invalid": [
+          "gmgn",
+          "onchain",
+          "legacy_import"
+        ]
+      },
+      "fallback": {
+        "candidate_seen_time": [
+          "token_first_seen_registry.json"
+        ],
+        "pool_exists": [
+          "market_snapshot"
+        ],
+        "price_exists": [
+          "quote_security_normalized.json"
+        ],
+        "liquidity_exists": [
+          "quote_security_normalized.json"
+        ],
+        "security_exists": [
+          "quote_security_normalized.json"
+        ]
+      },
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report",
+        "case file"
+      ]
+    },
+    {
+      "file_name": "kline_normalized.json",
+      "purpose": "kline standardization",
+      "required_fields": [
+        "token_address",
+        "timeframe",
+        "open_time",
+        "close_time",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "trade_count"
+      ],
+      "source_types": {
+        "token_address": [
+          "gmgn",
+          "okx",
+          "onchain",
+          "legacy_import"
+        ],
+        "timeframe": [
+          "gmgn",
+          "okx"
+        ],
+        "open_time": [
+          "gmgn",
+          "okx",
+          "onchain"
+        ],
+        "close_time": [
+          "gmgn",
+          "okx",
+          "onchain"
+        ],
+        "close": [
+          "gmgn",
+          "okx",
+          "onchain"
+        ]
+      },
+      "fallback": {
+        "open_time": [
+          "close_time_plus_interval"
+        ],
+        "close_time": [
+          "open_time_plus_interval"
+        ]
+      },
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report"
+      ]
+    },
+    {
+      "file_name": "quote_security_normalized.json",
+      "purpose": "quote, liquidity, security, pool risk",
+      "required_fields": [
+        "token_address",
+        "quote_source",
+        "quote_requested_at",
+        "quote_received_at",
+        "quote_time",
+        "quote_time_source",
+        "quote_price",
+        "liquidity_usd",
+        "estimated_buy_slippage_pct",
+        "estimated_sell_slippage_pct",
+        "security_source",
+        "security_scan_time",
+        "security_flags",
+        "pool_risk_flags"
+      ],
+      "source_types": {
+        "token_address": [
+          "gmgn",
+          "okx",
+          "quote",
+          "security",
+          "legacy_import"
+        ],
+        "quote_requested_at": [
+          "quote",
+          "gmgn",
+          "okx"
+        ],
+        "quote_received_at": [
+          "quote",
+          "gmgn",
+          "okx"
+        ],
+        "quote_time": [
+          "quote",
+          "gmgn",
+          "okx",
+          "onchain"
+        ],
+        "quote_price": [
+          "quote",
+          "gmgn",
+          "okx"
+        ],
+        "liquidity_usd": [
+          "quote",
+          "gmgn",
+          "okx",
+          "security"
+        ],
+        "security_scan_time": [
+          "security",
+          "gmgn",
+          "okx"
+        ]
+      },
+      "fallback": {
+        "quote_time": [
+          "quote_received_at"
+        ],
+        "quote_price": [
+          "market_snapshot"
+        ],
+        "liquidity_usd": [
+          "market_snapshot"
+        ],
+        "security_scan_time": [
+          "retrieved_at"
+        ]
+      },
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report"
+      ]
+    },
+    {
+      "file_name": "wallet_structure_normalized.json",
+      "purpose": "wallet behavior and structure snapshot",
+      "required_fields": [
+        "token_address",
+        "wallet_address",
+        "wallet_snapshot_time",
+        "first_buy_time",
+        "last_buy_time",
+        "last_sell_time",
+        "buy_count",
+        "sell_count",
+        "buy_amount_usd",
+        "buy_token_amount",
+        "sell_amount_usd",
+        "sell_token_amount",
+        "avg_buy_price",
+        "avg_sell_price",
+        "current_balance",
+        "sold_pct",
+        "remaining_pct",
+        "realized_profit",
+        "unrealized_profit",
+        "total_profit",
+        "pnl_multiple",
+        "holding_duration_seconds",
+        "is_full_exit",
+        "is_partial_exit"
+      ],
+      "source_types": {
+        "token_address": [
+          "gmgn",
+          "onchain",
+          "legacy_import"
+        ],
+        "wallet_address": [
+          "gmgn",
+          "onchain",
+          "legacy_import"
+        ],
+        "wallet_snapshot_time": [
+          "gmgn",
+          "onchain",
+          "holder",
+          "legacy_import"
+        ],
+        "first_buy_time": [
+          "gmgn",
+          "onchain",
+          "trade"
+        ],
+        "buy_amount_usd": [
+          "gmgn",
+          "onchain",
+          "quote"
+        ],
+        "avg_buy_price": [
+          "derived"
+        ]
+      },
+      "fallback": {
+        "wallet_snapshot_time": [
+          "retrieved_at"
+        ],
+        "first_buy_time": [
+          "wallet_trade_normalized"
+        ],
+        "buy_amount_usd": [
+          "quote_security_normalized.json"
+        ],
+        "avg_buy_price": [
+          "buy_amount_usd_plus_buy_token_amount"
+        ]
+      },
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report"
+      ]
+    },
+    {
+      "file_name": "source_manifest.json",
+      "purpose": "request and response registry",
+      "required_fields": [
+        "source_name",
+        "endpoint",
+        "request_started_at",
+        "response_received_at",
+        "provider_timestamp",
+        "raw_response_path",
+        "status",
+        "error_message",
+        "field_mapping_version"
+      ],
+      "source_types": {
+        "source_name": [
+          "gmgn",
+          "okx",
+          "onchain",
+          "quote",
+          "security",
+          "explorer",
+          "derived"
+        ],
+        "request_started_at": [
+          "system"
+        ],
+        "response_received_at": [
+          "system"
+        ],
+        "provider_timestamp": [
+          "gmgn",
+          "okx",
+          "onchain",
+          "quote",
+          "security",
+          "explorer"
+        ]
+      },
+      "fallback": {},
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report"
+      ]
+    },
+    {
+      "file_name": "token_first_seen_registry.json",
+      "purpose": "first-seen timestamp registry",
+      "required_fields": [
+        "token_address",
+        "first_seen_at",
+        "first_seen_source",
+        "first_seen_source_type",
+        "first_seen_endpoint",
+        "first_seen_run_id",
+        "first_seen_snapshot_id",
+        "first_seen_raw_path"
+      ],
+      "source_types": {
+        "first_seen_at": [
+          "gmgn",
+          "okx",
+          "onchain",
+          "legacy_import"
+        ]
+      },
+      "fallback": {},
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report"
+      ]
+    },
+    {
+      "file_name": "wallet_trade_normalized.json",
+      "purpose": "单钱包成本、买卖行为、派发进度、收益状态",
+      "required_fields": [
+        "token_address",
+        "wallet_address",
+        "first_buy_time",
+        "last_buy_time",
+        "last_sell_time",
+        "buy_count",
+        "sell_count",
+        "buy_amount_sol",
+        "buy_amount_usd",
+        "buy_token_amount",
+        "sell_amount_sol",
+        "sell_amount_usd",
+        "sell_token_amount",
+        "avg_buy_price",
+        "avg_sell_price",
+        "current_balance",
+        "sold_pct",
+        "remaining_pct",
+        "realized_profit",
+        "unrealized_profit",
+        "total_profit",
+        "pnl_multiple",
+        "holding_duration_seconds",
+        "is_full_exit",
+        "is_partial_exit"
+      ],
+      "source_types": {},
+      "fallback": {},
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report",
+        "case file",
+        "state_machine"
+      ]
+    },
+    {
+      "file_name": "wallet_profile_normalized.json",
+      "purpose": "钱包画像与 GMGN 标签标准化",
+      "required_fields": [
+        "token_address",
+        "wallet_address",
+        "gmgn_tags",
+        "wallet_age_days",
+        "wallet_first_seen_time",
+        "wallet_last_active_time",
+        "total_token_count",
+        "traded_token_count"
+      ],
+      "source_types": {},
+      "fallback": {},
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report",
+        "case file",
+        "state_machine"
+      ]
+    },
+    {
+      "file_name": "funding_flow_normalized.json",
+      "purpose": "资金来源路径",
+      "required_fields": [
+        "token_address",
+        "wallet_address",
+        "funding_source_address",
+        "funding_asset",
+        "funding_amount",
+        "funding_time"
+      ],
+      "source_types": {},
+      "fallback": {},
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report",
+        "case file",
+        "state_machine"
+      ]
+    },
+    {
+      "file_name": "token_source_normalized.json",
+      "purpose": "Token 来源与 transfer edges",
+      "required_fields": [
+        "token_address",
+        "wallet_address",
+        "token_transfer_edges"
+      ],
+      "source_types": {},
+      "fallback": {},
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report",
+        "case file",
+        "state_machine"
+      ]
+    },
+    {
+      "file_name": "same_source_evidence_normalized.json",
+      "purpose": "疑似同源执行组证据",
+      "required_fields": [
+        "token_address",
+        "wallet_address",
+        "candidate_group_key",
+        "same_source_evidence_items"
+      ],
+      "source_types": {},
+      "fallback": {},
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report",
+        "case file",
+        "state_machine"
+      ]
+    },
+    {
+      "file_name": "backflow_paths_normalized.json",
+      "purpose": "利润回流路径证据",
+      "required_fields": [
+        "token_address",
+        "wallet_address",
+        "has_backflow",
+        "backflow_address"
+      ],
+      "source_types": {},
+      "fallback": {},
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report",
+        "case file",
+        "state_machine"
+      ]
+    },
+    {
+      "file_name": "bot2_handoff_packet.json",
+      "purpose": "Bot1 到 Bot2 证据包",
+      "required_fields": [
+        "packet_id",
+        "token_address",
+        "wallet_trade_refs",
+        "wallet_intelligence_refs",
+        "evidence_language_only"
+      ],
+      "source_types": {},
+      "fallback": {},
+      "forbidden_sources": [
+        "dashboard",
+        "paper",
+        "report",
+        "case file",
+        "state_machine"
+      ]
+    }
+  ],
+  "global_rules": {
+    "time_fields_required": [
+      "source_time",
+      "retrieved_at",
+      "normalized_at"
+    ],
+    "missing_policy": "mark missing, do not fabricate; unknown fields use unknown",
+    "fallback_policy": "fallback must set fallback_used and fallback_source",
+    "fact_sources": [
+      "GMGN",
+      "OKX",
+      "onchain",
+      "explorer",
+      "RPC",
+      "legacy_import"
+    ],
+    "non_fact_sources": [
+      "dashboard",
+      "paper",
+      "report",
+      "case file"
+    ],
+    "state_machine_policy": "Source Bot does not modify state machine",
+    "forbidden_reverse_inference": [
+      "dashboard",
+      "paper",
+      "report",
+      "case file",
+      "state_machine"
+    ]
+  }
+}

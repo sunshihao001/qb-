@@ -1,0 +1,20 @@
+her_task_package_contract:
+  required_fields:
+    - task_id
+    - task_name
+    - task_type
+    - objective
+    - required_inputs
+    - execution_steps
+    - required_outputs
+    - acceptance_criteria
+    - forbidden_actions
+    - handoff_target
+    - trace_required
+  hard_blocks:
+    - missing_required_inputs
+    - missing_required_outputs
+    - missing_acceptance_criteria
+    - missing_forbidden_actions
+    - missing_handoff_target
+    - trace_required_not_true

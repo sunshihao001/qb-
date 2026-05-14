@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V00 Replay Evidence Schema",
+  "type": "object",
+  "required": [
+    "replay_id",
+    "status",
+    "input_sample",
+    "output_sample",
+    "trace_path",
+    "validated_steps",
+    "failed_steps",
+    "acceptance_result"
+  ],
+  "properties": {
+    "replay_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "PASSED",
+        "FAILED",
+        "BLOCKED",
+        "REPLAY_PLANNED",
+        "NOT_EXECUTED"
+      ]
+    },
+    "input_sample": {
+      "type": "string",
+      "minLength": 1
+    },
+    "output_sample": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trace_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "validated_steps": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "K00",
+          "F00",
+          "V00",
+          "R00",
+          "A00",
+          "H00"
+        ]
+      }
+    },
+    "failed_steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "acceptance_result": {
+      "enum": [
+        "REPLAY_PASSED",
+        "REPLAY_FAILED",
+        "REPLAY_BLOCKED",
+        "REPLAY_NOT_EXECUTED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

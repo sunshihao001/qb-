@@ -1,0 +1,38 @@
+{
+  "package_id": "U00_REVIEW_UPGRADE_CANDIDATE_PACKAGE_20260514",
+  "created_at": "2026-05-14T10:02:32+00:00",
+  "upgrade_candidates": [
+    {
+      "candidate_id": "U00-UPGRADE-001",
+      "source": "H00-RUNTIME-REPAIR-001",
+      "target": "wallet_structure_runtime_summary_connector",
+      "status": "CANDIDATE",
+      "policy_active": false,
+      "shadow_validation_required": true,
+      "rollback_plan": "remove connector output or mark wallet gate DEGRADED_OR_NOT_CONNECTED",
+      "manual_approval_required": true
+    },
+    {
+      "candidate_id": "U00-UPGRADE-002",
+      "source": "AUTO-REPAIR-001",
+      "target": "post-runtime V00 evidence refresh",
+      "status": "CANDIDATE",
+      "policy_active": false,
+      "shadow_validation_required": true,
+      "rollback_plan": "retain previous evidence bundle and mark stale",
+      "manual_approval_required": true
+    },
+    {
+      "candidate_id": "U00-UPGRADE-003",
+      "source": "AUTO-REPAIR-003",
+      "target": "sikk_live_run post-run HER stage acceptance writer",
+      "status": "CANDIDATE",
+      "policy_active": false,
+      "shadow_validation_required": true,
+      "rollback_plan": "disable post-run HER acceptance export only",
+      "manual_approval_required": true
+    }
+  ],
+  "forbidden": "no direct rule mutation; no production activation; no real trading",
+  "final_status": "U00_UPGRADE_CANDIDATES_READY_WITH_GAPS"
+}

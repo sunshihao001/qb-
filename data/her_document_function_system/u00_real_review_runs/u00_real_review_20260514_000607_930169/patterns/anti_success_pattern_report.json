@@ -1,0 +1,28 @@
+{
+  "anti_patterns": [
+    {
+      "pattern_id": "anti_governance_policy_not_active",
+      "pattern": "GOVERNANCE_POLICY_NOT_ACTIVE",
+      "frequency": 2
+    },
+    {
+      "pattern_id": "anti_missing_test_execution_evidence",
+      "pattern": "MISSING_TEST_EXECUTION_EVIDENCE",
+      "frequency": 2
+    },
+    {
+      "pattern_id": "anti_runner_binding_not_required_or_not_bound",
+      "pattern": "RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "frequency": 2
+    }
+  ],
+  "success_patterns": [
+    {
+      "pattern_id": "success_safe_mode_retained",
+      "pattern": "safe_mode_boundary_retained",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/u00_real_review_runs/u00_real_review_20260514_000607_930169/trace/u00_audit.jsonl"
+      ]
+    }
+  ]
+}

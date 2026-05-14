@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SIKK Stable Trader OS Phase 01 Input Contract",
+  "type": "object",
+  "required": [
+    "token_address",
+    "chain",
+    "run_mode",
+    "analysis_depth",
+    "created_at"
+  ],
+  "properties": {
+    "token_address": {
+      "type": "string",
+      "description": "Solana token mint address"
+    },
+    "chain": {
+      "type": "string",
+      "const": "solana"
+    },
+    "run_mode": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "live",
+        "replay",
+        "paper"
+      ]
+    },
+    "analysis_depth": {
+      "type": "string",
+      "enum": [
+        "basic",
+        "standard",
+        "deep"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "token_symbol": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "start_time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "end_time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "source_files": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "x_her_rules": [
+    "Do not infer missing fields",
+    "Do not output trade judgment in Phase 01",
+    "Raw source snapshots must be preserved"
+  ]
+}

@@ -1,0 +1,8 @@
+regression_plan_validation_record:
+  validation_id: I05_REGRESSION_20260512_01
+  generated_at: '2026-05-12T15:30:01Z'
+mode: SKELETON_VALIDATION
+source_doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  regression_plan_present: false
+  required_tests: [schema, contract, trace, handoff, replay, safety]
+  status: READY_WITH_GAPS

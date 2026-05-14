@@ -1,0 +1,142 @@
+{
+  "absorption_policy": "copy_only_index_no_delete_no_move",
+  "candidate_count": 22,
+  "candidates": [
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "scripts/migrate_intel_bot_legacy_data.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/a00_acceptance_status.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/g00_policy_status.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/kpp_batch_legacy_reprocess.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/o00_cli.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/o00_pipeline_orchestrator.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/stable_trader_os/a01_a02_a04_upgrade.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/stable_trader_os/second_pass_audit.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/stable_trader_os/standard_stage_closure.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/u00_real_review_executor.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "blocked_direct_execution",
+      "path": "tools/v00_real_validation_executor.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "BLOCK_DIRECT_CALL_REQUIRE_CANONICAL_ROUTER"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "modules/stable_trader_os/i05_standard_stage/runtime_entry.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "modules/stable_trader_os/r00_standard_stage/runtime_entry.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "modules/wallet_data_guard/legacy_quarantine.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/her_document_function_system/test_g00_policy_handoff_required_targets.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_her_dfafs_r00_runtime_closure.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_o00_cli_sample_replay.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_o00_full_pipeline_orchestrator.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_r00_runner_tool_binding_controller.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_standard_stage_a01_a02_a04_upgrade.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_standard_stage_closure_all_phases.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_wallet_data_guard_legacy_quarantine.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    }
+  ],
+  "canonical_route": "standard_stage_closure_manifest",
+  "generated_at": "2026-05-14T05:19:09.075414+00:00",
+  "registry_id": "SIKK_LEGACY_ABSORPTION_REGISTRY",
+  "status": "LEGACY_ABSORPTION_REGISTRY_READY"
+}

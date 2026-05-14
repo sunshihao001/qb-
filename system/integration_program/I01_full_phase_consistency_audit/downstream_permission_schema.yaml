@@ -1,0 +1,8 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: downstream_permission_record
+fields:
+- record_id
+- per_phase_downstream_permissions
+- unauthorized_jumps
+- permission_status

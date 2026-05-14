@@ -1,0 +1,82 @@
+domain_to_data_requirement_map:
+  required_wallet_fields:
+    - wallet_address
+    - first_buy_time
+    - first_buy_price
+    - first_buy_market_cap_usd
+    - first_buy_amount
+    - total_buy_amount
+    - total_sell_amount
+    - current_holding_amount
+    - current_holding_pct
+    - realized_profit
+    - unrealized_profit
+    - funding_source_address
+    - funding_source_type
+    - token_source
+    - wallet_age
+    - transaction_count
+    - historical_token_count
+    - historical_win_rate
+    - sync_buy_group_id
+    - sync_sell_group_id
+    - same_source_group_id
+    - distribution_path_id
+
+  required_market_structure_fields:
+    - open_time
+    - current_time
+    - candle_interval
+    - open
+    - high
+    - low
+    - close
+    - volume
+    - turnover
+    - buy_volume
+    - sell_volume
+    - volume_delta
+    - price_change_pct
+    - box_high
+    - box_low
+    - box_mid
+    - breakout_status
+    - pullback_status
+    - failure_test_status
+    - avwap_status
+    - poc_status
+    - obv_status
+    - cmf_status
+    - ao_status
+    - adx_noise_rejection_status
+
+  required_market_cap_liquidity_fields:
+    - discovery_market_cap_usd
+    - current_market_cap_usd
+    - market_cap_change_from_discovery_pct
+    - liquidity_usd
+    - liquidity_change_pct
+    - pool_age_seconds
+    - holder_count
+    - top_holder_pct
+    - top_10_holder_pct
+    - buy_sell_ratio
+    - slippage_estimate
+    - quote_source
+    - quote_deviation_pct
+
+  required_security_fields:
+    - contract_mutability
+    - freeze_authority
+    - mint_authority
+    - blacklist_risk
+    - tax_or_fee_risk
+    - honeypot_risk
+    - quote_security_report
+
+  required_history_fields:
+    - wallet_historical_token_count
+    - wallet_historical_win_rate
+    - prior_role_matches
+    - known_success_case_refs
+    - known_failure_case_refs

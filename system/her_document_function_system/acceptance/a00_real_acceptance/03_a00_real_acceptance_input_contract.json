@@ -1,0 +1,50 @@
+{
+  "phase_id": "A00_REAL_ACCEPTANCE",
+  "required_inputs": {
+    "o00_pipeline_run": {
+      "required": true
+    },
+    "o00_final_report": {
+      "required": false
+    },
+    "k00_handoff_packet": {
+      "required": false
+    },
+    "f00_handoff_packet": {
+      "required": false
+    },
+    "v00_validation_evidence_bundle": {
+      "required": true
+    },
+    "v00_handoff_packet": {
+      "required": false
+    },
+    "r00_binding_evidence_bundle": {
+      "required": true
+    },
+    "r00_handoff_packet": {
+      "required": false
+    },
+    "pipeline_gap_register": {
+      "required": false
+    },
+    "trace_refs": {
+      "required": false
+    },
+    "audit_refs": {
+      "required": false
+    },
+    "governance_policy_bundle": {
+      "required": false
+    },
+    "execution_boundary": {
+      "required": true
+    },
+    "repo_root": {
+      "required": true
+    },
+    "safe_mode": {
+      "required": true
+    }
+  }
+}

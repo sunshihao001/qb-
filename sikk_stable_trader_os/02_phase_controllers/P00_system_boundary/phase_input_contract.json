@@ -1,0 +1,79 @@
+{
+  "phase_id": "P00",
+  "contract_type": "phase_input_contract",
+  "version": "2.1",
+  "upstream_required": [],
+  "required_input_files": [
+    {
+      "name": "upstream_handoff_packet.json",
+      "required": false,
+      "source_phase": [],
+      "missing_action": "PHASE_WITH_GAPS"
+    },
+    {
+      "name": "runtime_context.json",
+      "required": true,
+      "purpose": "HER runtime context and task passport",
+      "missing_action": "PHASE_PAUSED"
+    }
+  ],
+  "required_fields": [
+    {
+      "field": "runtime_mode",
+      "type": "string_or_object",
+      "required": true,
+      "source": "upstream_or_runtime_context",
+      "missing_action": "PHASE_REJECTED"
+    },
+    {
+      "field": "forbidden_actions",
+      "type": "string_or_object",
+      "required": true,
+      "source": "upstream_or_runtime_context",
+      "missing_action": "PHASE_WITH_GAPS"
+    },
+    {
+      "field": "allowed_actions",
+      "type": "string_or_object",
+      "required": true,
+      "source": "upstream_or_runtime_context",
+      "missing_action": "PHASE_WITH_GAPS"
+    },
+    {
+      "field": "system_goal",
+      "type": "string_or_object",
+      "required": true,
+      "source": "upstream_or_runtime_context",
+      "missing_action": "PHASE_WITH_GAPS"
+    },
+    {
+      "field": "safety_boundary",
+      "type": "string_or_object",
+      "required": true,
+      "source": "upstream_or_runtime_context",
+      "missing_action": "PHASE_WITH_GAPS"
+    }
+  ],
+  "common_required_fields": [
+    {
+      "field": "field_source_map",
+      "required": true,
+      "missing_action": "PHASE_WITH_GAPS"
+    },
+    {
+      "field": "hard_negative_hits",
+      "required": true,
+      "missing_action": "PHASE_REJECTED"
+    },
+    {
+      "field": "counter_evidence",
+      "required": true,
+      "missing_action": "PHASE_WITH_GAPS"
+    }
+  ],
+  "forbidden_input_assumptions": [
+    "ai_inferred_missing_required_fact",
+    "markdown_report_as_machine_decision_source",
+    "downstream_inference_before_handoff"
+  ]
+}

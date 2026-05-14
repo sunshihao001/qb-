@@ -1,0 +1,17 @@
+{
+  "handoff_id": "P04_TO_P05_DESIGN_HANDOFF_DOC-20260512-004",
+  "source_stage": "P04_CHIP_STRUCTURE_CONTROLLER",
+  "target_stage": "P05_EVIDENCE_CONTROLLER",
+  "acceptance_status": "PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "runtime_consumption_required_later": true,
+  "known_gaps": [
+    "P04 runner/tool binding not implemented or accepted",
+    "P03 runtime handoff samples not consumed in runtime",
+    "supply denominator conflicts may require P05 weakening and P09/P10 calibration",
+    "early cohort thresholds not backtested",
+    "cost basis may lack entry price facts",
+    "internal rotation vs distribution requires later scenario/strategy context",
+    "P05 consumer controller package not yet landed in this flow"
+  ],
+  "created_at": "2026-05-12T02:27:13Z"
+}

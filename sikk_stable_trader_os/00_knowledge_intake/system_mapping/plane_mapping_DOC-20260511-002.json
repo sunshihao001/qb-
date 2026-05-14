@@ -1,0 +1,60 @@
+{
+  "doc_id": "DOC-20260511-002",
+  "created_at": "2026-05-11T12:06:52Z",
+  "planes": {
+    "governance_plane": {
+      "impact": "强制文档输入必须进入 K00；聊天上下文不是系统记忆。",
+      "actions": [
+        "确认总控 Skill 强制路由规则"
+      ]
+    },
+    "domain_plane": {
+      "impact": "定义 SIKK Stable Trader OS 的知识资料资产化边界。",
+      "actions": [
+        "保持交易安全边界，不直接生成买卖判断"
+      ]
+    },
+    "data_plane": {
+      "impact": "规定 raw_inputs/source_registry/passport/corpus_index/mapping/gap/task/handoff 的数据资产路径。",
+      "actions": [
+        "生成本次 doc_id 对应资产"
+      ]
+    },
+    "control_plane": {
+      "impact": "K00 是 pre_phase_controller，要求按 execution_protocol 和 acceptance_gate 运行。",
+      "actions": [
+        "更新 phase_state"
+      ]
+    },
+    "decision_plane": {
+      "impact": "仅决定下游阶段推荐，不做交易决策。",
+      "actions": [
+        "推荐 system_methodology_update/P00/P01/P09"
+      ]
+    },
+    "risk_plane": {
+      "impact": "禁止跳过 P00、禁止直接交易判断、禁止只总结。",
+      "actions": [
+        "记录禁止项"
+      ]
+    },
+    "execution_plane": {
+      "impact": "定义 Step 1-14 标准执行顺序。",
+      "actions": [
+        "按 K00 流程生成资产"
+      ]
+    },
+    "verification_plane": {
+      "impact": "最低验收与专业验收必须通过。",
+      "actions": [
+        "执行文件存在与 JSON/YAML parse 验证"
+      ]
+    },
+    "learning_plane": {
+      "impact": "资料本身是 K00 控制器标准的再确认与强化。",
+      "actions": [
+        "作为系统方法论更新输入保留"
+      ]
+    }
+  }
+}

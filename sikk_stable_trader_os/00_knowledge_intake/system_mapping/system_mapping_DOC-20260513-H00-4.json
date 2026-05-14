@@ -1,0 +1,13 @@
+{
+  "doc_id": "DOC-20260513-H00-4",
+  "target_subsystem": "HER-DFAFS handoff/downstream queue runtime",
+  "phase_target": "H00_REAL_DOWNSTREAM_QUEUE",
+  "must_not_directly_change": [
+    "production_runtime",
+    "live_trading",
+    "wallet_signing",
+    "policy_active_registry_without_g00"
+  ],
+  "required_assets_root": "system/her_document_function_system/handoff/h00_real_downstream_queue",
+  "run_output_root": "data/her_document_function_system/h00_real_queue_runs"
+}

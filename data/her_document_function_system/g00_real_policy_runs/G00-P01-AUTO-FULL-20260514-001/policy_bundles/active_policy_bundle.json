@@ -1,0 +1,30 @@
+{
+  "bundle_id": "active_policy_bundle_G00-P01-AUTO-FULL-20260514-001",
+  "bundle_status": "LOCAL_ACTIVE_WITH_GAPS",
+  "status": "LOCAL_ACTIVE_WITH_GAPS",
+  "scope": "G00_LOCAL_ACTIVE_NOT_SYSTEM_ENFORCED",
+  "included_policies": [
+    "forbidden_action_policy_v1",
+    "status_code_policy_v1",
+    "evidence_policy_v1",
+    "gap_policy_v1",
+    "runner_safety_policy_v1",
+    "human_confirmation_policy_v1",
+    "production_risk_policy_v1"
+  ],
+  "system_enforcement_status": "NOT_YET_VERIFIED",
+  "requires_downstream_consumption": [
+    "O00",
+    "K00",
+    "F00",
+    "V00",
+    "R00",
+    "A00",
+    "H00",
+    "U00"
+  ],
+  "open_gaps": [
+    "downstream_policy_consumption_not_verified",
+    "run_document_safe_mode_not_yet_validated"
+  ]
+}

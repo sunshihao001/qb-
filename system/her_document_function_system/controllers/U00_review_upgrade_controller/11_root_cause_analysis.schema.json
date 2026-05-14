@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Root Cause Analysis",
+  "type": "object",
+  "required": [
+    "root_cause_id",
+    "review_case_id",
+    "symptom",
+    "root_cause_type",
+    "root_cause_statement",
+    "evidence_refs",
+    "causal_chain",
+    "confidence",
+    "required_fix_type",
+    "recommended_owner"
+  ],
+  "properties": {
+    "root_cause_id": {
+      "type": "string"
+    },
+    "review_case_id": {
+      "type": "string"
+    },
+    "symptom": {
+      "type": "string"
+    },
+    "root_cause_type": {
+      "type": "string",
+      "enum": [
+        "SOURCE_DATA_ROOT_CAUSE",
+        "FIELD_MODEL_ROOT_CAUSE",
+        "SCHEMA_CONTRACT_ROOT_CAUSE",
+        "RULE_LOGIC_ROOT_CAUSE",
+        "CODE_IMPLEMENTATION_ROOT_CAUSE",
+        "TEST_DESIGN_ROOT_CAUSE",
+        "REPLAY_DESIGN_ROOT_CAUSE",
+        "RUNNER_BINDING_ROOT_CAUSE",
+        "TRACE_AUDIT_ROOT_CAUSE",
+        "HANDOFF_ROOT_CAUSE",
+        "GOVERNANCE_ROOT_CAUSE",
+        "PROCESS_ORDER_ROOT_CAUSE",
+        "HUMAN_CONFIRMATION_ROOT_CAUSE",
+        "UNKNOWN_ROOT_CAUSE"
+      ]
+    },
+    "root_cause_statement": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "causal_chain": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "required_fix_type": {
+      "type": "string"
+    },
+    "recommended_owner": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,353 @@
+{
+  "verification_id": "VERIFICATION-DOC-20260511-016",
+  "generated_at": "2026-05-11T14:20:29.444644+00:00",
+  "doc_id": "DOC-20260511-016",
+  "overall_passed": true,
+  "passed_count": 62,
+  "failed_count": 0,
+  "checks": [
+    {
+      "name": "exists:00_knowledge_intake/raw_inputs/DOC-20260511-016.md",
+      "passed": true,
+      "detail": "00_knowledge_intake/raw_inputs/DOC-20260511-016.md"
+    },
+    {
+      "name": "exists:00_methodology/system_methodology_blueprint.md",
+      "passed": true,
+      "detail": "00_methodology/system_methodology_blueprint.md"
+    },
+    {
+      "name": "exists:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/source_registry/source_registry.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/document_passports/document_passport_DOC-20260511-016.yaml",
+      "passed": true,
+      "detail": "00_knowledge_intake/document_passports/document_passport_DOC-20260511-016.yaml"
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-016.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-016.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-016.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-016.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-016.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-016.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-016.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-016.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-016.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-016.json"
+    },
+    {
+      "name": "exists:00_control/current_system_state.json",
+      "passed": true,
+      "detail": "00_control/current_system_state.json"
+    },
+    {
+      "name": "exists:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": "00_control/system_asset_index.json"
+    },
+    {
+      "name": "exists:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": "06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json"
+    },
+    {
+      "name": "exists:00_control/phase_registry.yaml",
+      "passed": true,
+      "detail": "00_control/phase_registry.yaml"
+    },
+    {
+      "name": "exists:00_domain/domain_phase_target_data.raw_user_proposed.yaml",
+      "passed": true,
+      "detail": "00_domain/domain_phase_target_data.raw_user_proposed.yaml"
+    },
+    {
+      "name": "exists:00_domain/domain_phase_target_data.yaml",
+      "passed": true,
+      "detail": "00_domain/domain_phase_target_data.yaml"
+    },
+    {
+      "name": "exists:00_domain/domain_plane.md",
+      "passed": true,
+      "detail": "00_domain/domain_plane.md"
+    },
+    {
+      "name": "exists:00_domain/domain_object_registry.yaml",
+      "passed": true,
+      "detail": "00_domain/domain_object_registry.yaml"
+    },
+    {
+      "name": "exists:00_domain/domain_relation_graph.yaml",
+      "passed": true,
+      "detail": "00_domain/domain_relation_graph.yaml"
+    },
+    {
+      "name": "exists:00_domain/domain_decision_question_tree.yaml",
+      "passed": true,
+      "detail": "00_domain/domain_decision_question_tree.yaml"
+    },
+    {
+      "name": "exists:00_domain/scenario_taxonomy.yaml",
+      "passed": true,
+      "detail": "00_domain/scenario_taxonomy.yaml"
+    },
+    {
+      "name": "exists:00_domain/wallet_role_taxonomy.yaml",
+      "passed": true,
+      "detail": "00_domain/wallet_role_taxonomy.yaml"
+    },
+    {
+      "name": "exists:00_domain/dominant_side_lifecycle_taxonomy.yaml",
+      "passed": true,
+      "detail": "00_domain/dominant_side_lifecycle_taxonomy.yaml"
+    },
+    {
+      "name": "exists:00_domain/domain_to_data_demand_map.yaml",
+      "passed": true,
+      "detail": "00_domain/domain_to_data_demand_map.yaml"
+    },
+    {
+      "name": "exists:00_domain/domain_to_phase_map.yaml",
+      "passed": true,
+      "detail": "00_domain/domain_to_phase_map.yaml"
+    },
+    {
+      "name": "exists:00_domain/domain_acceptance_gate.yaml",
+      "passed": true,
+      "detail": "00_domain/domain_acceptance_gate.yaml"
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-016.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-016.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-016.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-016.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-016.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/current_system_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_knowledge_intake/document_passports/document_passport_DOC-20260511-016.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_control/phase_registry.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/domain_phase_target_data.raw_user_proposed.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/domain_phase_target_data.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/domain_object_registry.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/domain_relation_graph.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/domain_decision_question_tree.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/scenario_taxonomy.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/wallet_role_taxonomy.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/dominant_side_lifecycle_taxonomy.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/domain_to_data_demand_map.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/domain_to_phase_map.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_domain/domain_acceptance_gate.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical_anchor:## 11. Domain Plane 阶段目标数据",
+      "passed": true,
+      "detail": "## 11. Domain Plane 阶段目标数据"
+    },
+    {
+      "name": "canonical_anchor:Domain Plane 不是领域说明文档",
+      "passed": true,
+      "detail": "Domain Plane 不是领域说明文档"
+    },
+    {
+      "name": "canonical_anchor:phase_id: DOMAIN_PLANE",
+      "passed": true,
+      "detail": "phase_id: DOMAIN_PLANE"
+    },
+    {
+      "name": "canonical_anchor:phase_status: REQUIRED_BEFORE_DATA_PLANE",
+      "passed": true,
+      "detail": "phase_status: REQUIRED_BEFORE_DATA_PLANE"
+    },
+    {
+      "name": "canonical_anchor:domain_to_data_demand_map.yaml",
+      "passed": true,
+      "detail": "domain_to_data_demand_map.yaml"
+    },
+    {
+      "name": "canonical_anchor:反证如何阻断下游？",
+      "passed": true,
+      "detail": "反证如何阻断下游？"
+    },
+    {
+      "name": "raw_missing_fields_detected",
+      "passed": true,
+      "detail": "upstream_dependencies,optional_inputs,forbidden_inputs,handoff_outputs,runner_binding_status,state_writeback_required,paper_only_required,real_trade_allowed"
+    },
+    {
+      "name": "normalized_has_all_22_fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "raw_phase_status_enum_valid_expected_false",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "normalized_phase_status_enum_valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "safety_flags_valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all_core_objects_registered",
+      "passed": true,
+      "detail": "registered=chip_cluster,counterparty_group,dominant_side,early_wallet_group,funding_source,market_structure,paper_trade,review_case,same_source_group,scenario,strategy_candidate,token,wallet,wallet_entity"
+    },
+    {
+      "name": "domain_to_data_map_exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "missing_fields_gap_recorded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "status_gap_recorded",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "remaining_degraded_gaps": [
+    {
+      "gap_id": "GAP-DOMAIN-TARGET-DATA-MISSING-SECTION7-FIELDS",
+      "severity": "DEGRADED",
+      "description": "User-proposed Domain Plane target data omits required section-7 fields: upstream_dependencies, optional_inputs, forbidden_inputs, handoff_outputs, runner_binding_status, state_writeback_required, paper_only_required, real_trade_allowed. Executable YAML fills explicit defaults."
+    },
+    {
+      "gap_id": "GAP-DOMAIN-PHASE-STATUS-ENUM-MISMATCH",
+      "severity": "DEGRADED",
+      "description": "User-proposed phase_status REQUIRED_BEFORE_DATA_PLANE is not in legal enum; executable YAML normalized to READY_TO_BUILD."
+    },
+    {
+      "gap_id": "GAP-PER-PHASE-TARGET-DATA-INSTANCES",
+      "severity": "DEGRADED",
+      "description": "K00/P00/Governance/Domain target instances are now generated; remaining Data Plane, P01-P10 and other planes still need concrete target data instances."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "reverified_at": "2026-05-11T14:20:47.457248+00:00"
+}

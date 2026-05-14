@@ -1,0 +1,35 @@
+{
+  "title": "Runner Safety Policy",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "allowed_modes",
+    "forbidden_modes",
+    "status"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "allowed_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PENDING",
+        "DEPRECATED"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "doc_id": "DOC-20260512-003",
+  "status": "PACKAGE_READY_EXPECTED_WITH_RUNTIME_GAPS",
+  "blocking_runtime_gaps": [
+    "P03 runner/tool binding not implemented or accepted",
+    "P02 real handoff sample not consumed in runtime",
+    "funding source/history address DB may be missing",
+    "entity resolution thresholds not backtested",
+    "same-source/sync scoring weights not calibrated",
+    "P04 consumer controller package not yet landed in this flow"
+  ],
+  "non_blocking_package_gaps": [
+    "Package stubs and contracts can be created before runtime implementation",
+    "P03 can be READY_WITH_GAPS because missing funding/history fields are transferred as limitations"
+  ],
+  "hard_forbidden": [
+    "confirm_market_maker",
+    "confirm_dominant_side",
+    "chip_control_claim",
+    "scenario_claim",
+    "strategy_signal",
+    "paper_ready",
+    "live_execution"
+  ],
+  "created_at": "2026-05-12T02:11:16Z"
+}

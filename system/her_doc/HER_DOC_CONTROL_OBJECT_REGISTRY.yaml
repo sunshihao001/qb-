@@ -1,0 +1,217 @@
+schema_id: HER_DOC_CONTROL_OBJECT_REGISTRY
+version: HER_DOC_PROFESSIONAL_CONTROL_V1
+status: REGISTRY_ACTIVE
+purpose: >
+  Canonical registry of HER_DOC control object classes. HER_DOC converts
+  source material into these file-backed objects before routing gaps to
+  research, build, runtime review, legacy absorption, K00 assetization,
+  stage completion, or handoff.
+
+object_classes:
+  - object_class: GOAL_OBJECT
+    description: Converts operator or document goals into scoped system goals.
+    required_fields:
+      - object_id
+      - source_ref
+      - goal_statement
+      - target_phase_or_plane
+      - final_decision_relevance
+      - evidence_level
+      - status
+    allowed_routes:
+      - SYSTEM_MAPPING
+      - GPT_RESEARCH_FIRST
+      - HER_BUILD_DIRECT
+    cannot_claim:
+      - implementation_complete
+      - runtime_ready
+
+  - object_class: FUNCTIONAL_OBJECT
+    description: Implementable or reviewable system function extracted from source material.
+    required_fields:
+      - object_id
+      - source_ref
+      - function_type
+      - functional_description
+      - target_system_location
+      - required_schema_or_contract
+      - evidence_level
+      - next_route
+    function_types:
+      - field
+      - rule
+      - calculation
+      - schema_candidate
+      - contract_candidate
+      - runner_candidate
+      - trace_requirement
+      - acceptance_rule
+      - handoff_rule
+      - evidence_rule
+      - counter_evidence_rule
+      - risk_rule
+      - replay_field
+      - upgrade_candidate
+    allowed_routes:
+      - GPT_RESEARCH_FIRST
+      - HER_BUILD_DIRECT
+      - RUNTIME_BINDING_REVIEW
+      - K00_ASSETIZATION
+      - STAGE_COMPLETION
+
+  - object_class: SYSTEM_ASSET_CANDIDATE
+    description: Candidate asset that may become a file-backed system component.
+    required_fields:
+      - candidate_id
+      - source_ref
+      - target_file_or_directory
+      - asset_type
+      - acceptance_required
+      - evidence_level
+      - status
+    asset_types:
+      - schema
+      - contract
+      - controller
+      - runner
+      - trace_template
+      - acceptance_gate
+      - handoff_packet
+      - validator
+      - test_fixture
+    cannot_claim:
+      - accepted_system_rule
+      - runtime_ready
+      - downstream_accepted
+
+  - object_class: EVIDENCE_REQUIREMENT
+    description: Proof required before a claim can be upgraded.
+    required_fields:
+      - evidence_id
+      - claim_ref
+      - required_evidence_level
+      - allowed_verification_methods
+      - forbidden_verification_methods
+      - evidence_path
+      - proof_status
+    evidence_levels:
+      - E0_NONE
+      - E1_DECLARED
+      - E2_FILE_EXISTS
+      - E3_FILE_READ_OR_SCHEMA_VALID
+      - E4_SAFE_RUNTIME_PROOF
+      - E5_ACCEPTED_HANDOFF
+
+  - object_class: GAP_OBJECT
+    description: Explicit missing preparation needed to reach target system function.
+    required_fields:
+      - gap_id
+      - source_object_ref
+      - missing_part
+      - why_it_matters
+      - target_phase_or_plane
+      - target_file_or_directory
+      - severity
+      - primary_route
+      - acceptance
+    severity_levels:
+      - BLOCKING
+      - HIGH
+      - MEDIUM
+      - LOW
+    primary_routes:
+      - GPT_RESEARCH_FIRST
+      - HER_BUILD_DIRECT
+      - RUNTIME_BINDING_REVIEW
+      - LEGACY_ABSORPTION
+      - K00_ASSETIZATION
+      - STAGE_COMPLETION
+      - BLOCKED_BY_SAFETY
+
+  - object_class: GPT_RESEARCH_TASK
+    description: Research task when method/logic/field semantics are not mature enough for direct build.
+    required_fields:
+      - research_id
+      - source_gap
+      - research_title
+      - research_question
+      - expected_gpt_output
+      - priority
+      - downstream_build_route
+    expected_outputs:
+      - methodology_summary
+      - field_model
+      - calculation_logic
+      - evidence_rules
+      - counter_evidence_rules
+      - hard_negative_rules
+      - schema_candidate
+      - contract_candidate
+      - acceptance_candidate
+      - runner_R00_binding_suggestion
+      - P09_review_fields
+      - P10_upgrade_candidate_fields
+      - HER_landing_taskbook
+
+  - object_class: HER_BUILD_TASK
+    description: Build task for clear schema/contract/runner/trace/acceptance/handoff work.
+    required_fields:
+      - task_id
+      - source_gap_or_research_id
+      - target_layer
+      - target_files
+      - build_action
+      - acceptance_command
+      - safety
+      - completion_evidence_required
+
+  - object_class: RUNTIME_BINDING_REVIEW_TASK
+    description: Safe review of callability, R00 orchestration, runner safety, paper-only invocation, and output routing.
+    required_fields:
+      - review_id
+      - target_runner_or_phase
+      - input_fixture
+      - command_or_entrypoint
+      - expected_output_paths
+      - trace_paths
+      - safety_mode
+      - forbidden_actions_checked
+      - blocker_status
+      - evidence_level
+
+  - object_class: LEGACY_ABSORPTION_TASK
+    description: Read-only conversion path for old scripts, data, reports, or GPT outputs.
+    required_fields:
+      - legacy_id
+      - legacy_path
+      - legacy_type
+      - absorption_decision
+      - target_route
+      - pollution_guard
+      - replay_or_fixture_use
+      - acceptance_required
+
+  - object_class: HANDOFF_PACKET
+    description: Downstream acceptance packet proving a HER_DOC output may be consumed.
+    required_fields:
+      - handoff_id
+      - producer
+      - consumer
+      - accepted_objects
+      - evidence_refs
+      - status
+      - limitations
+      - next_allowed_action
+    allowed_status:
+      - BLOCKED
+      - CANDIDATE_ONLY
+      - ACCEPTED_FOR_DOWNSTREAM
+      - REJECTED
+
+non_equivalence_rules:
+  - report_written_is_not_execution_complete
+  - queue_created_is_not_work_completed
+  - path_exists_is_not_runtime_binding
+  - dry_run_is_not_live_approval
+  - gpt_research_is_not_accepted_rule
+  - legacy_asset_is_not_current_capability

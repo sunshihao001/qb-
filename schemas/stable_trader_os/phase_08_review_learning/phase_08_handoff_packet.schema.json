@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "phase_status",
+    "allow_next_stage",
+    "next_stage",
+    "required_files_for_next_stage"
+  ],
+  "properties": {
+    "phase": {
+      "const": "phase_08_review_learning_controller"
+    },
+    "next_stage": {
+      "const": "phase_09_system_upgrade_controller"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "run_id": "MANUAL-KPP-AUTOCHAIN-REPLAY",
+  "doc_id": "MANUAL-KPP-DOC-001",
+  "source_type": "manual_file_path",
+  "source_path": "/root/sikk-gmgn/tests/fixtures/kpp/sample_system_design_doc.md",
+  "input_classification": "system_building_material",
+  "output_root": "/root/sikk-gmgn/data/knowledge_processing_program/automation_chain/manual_replay",
+  "queue_path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/input_governance_queue.jsonl",
+  "telegram_panel": true,
+  "candidate_only": true
+}

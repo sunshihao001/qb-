@@ -1,0 +1,21 @@
+{
+  "gap_register_id": "GAP-CA-ORCHESTRATOR-P0-CONTROL-CLOSURE-V1",
+  "generated_at": "2026-05-11T12:42:03Z",
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "P0-DG-001",
+      "severity": "DEGRADED",
+      "status": "OPEN",
+      "description": "P01-P09 phase evidence is not yet fully connected to the fixed-CA runtime runner; next stage must connect P01 data fact runtime contract."
+    },
+    {
+      "gap_id": "P0-DG-002",
+      "severity": "DEGRADED",
+      "status": "OPEN",
+      "description": "Dashboard status connection is pending; runtime artifacts exist but mobile operator dashboard wiring is not complete."
+    }
+  ],
+  "hard_negative_gaps": [],
+  "continue_allowed": true
+}

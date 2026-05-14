@@ -1,0 +1,42 @@
+document_passport:
+  doc_id: "DOC-20260511-001"
+  source_type: "user_uploaded_text"
+  source_name: "用户输入的系统设计更新要求"
+  received_at: "2026-05-11"
+  raw_path: "00_knowledge_intake/raw_inputs/DOC-20260511-001.md"
+  document_role:
+    primary_role: "system_design_instruction"
+    secondary_roles:
+      - "phase_controller_definition"
+      - "her_execution_protocol"
+      - "task_package_requirement"
+  summary:
+    core_intent: "要求 HER 不把文档当普通资料阅读，而是保存资料并生成自动化阶段任务执行包"
+    key_points:
+      - "HER 不能依赖上下文"
+      - "需要先保存上传资料"
+      - "需要生成任务执行包"
+      - "Phase Controller 必须是可调度运行单元"
+      - "每个阶段必须有 manifest、context、objective_tree、input/output contract、execution_protocol、acceptance_gate、state、handoff_schema"
+  system_mapping:
+    planes:
+      - "governance_plane"
+      - "control_plane"
+      - "data_plane"
+      - "execution_plane"
+      - "verification_plane"
+    affected_phases:
+      - "K00_knowledge_intake"
+      - "P00_system_boundary"
+      - "P01_data_fact"
+      - "P05_strategy_gate"
+      - "P08_review"
+      - "P09_self_upgrade"
+  required_actions:
+    - "创建 K00 知识摄取控制器"
+    - "建立阶段任务执行包标准"
+    - "更新总控 Skill"
+    - "建立自动续跑协议"
+    - "建立阶段完成后自动进入下一阶段的规则"
+  evidence_level: "EVIDENCE_A_STRONG"
+  status: "PASSPORT_READY"

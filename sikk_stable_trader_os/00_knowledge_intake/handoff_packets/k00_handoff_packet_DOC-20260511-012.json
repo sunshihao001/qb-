@@ -1,0 +1,36 @@
+{
+  "handoff_id": "K00-HANDOFF-DOC-20260511-012",
+  "doc_id": "DOC-20260511-012",
+  "parent_doc_id": "DOC-20260511-006",
+  "from_phase": "K00",
+  "to_phase": "P00_system_context_control",
+  "status": "PHASE_TARGET_DATA_STANDARD_CANONICALIZED",
+  "required_p00_checks": [
+    "validate every phase target data file against 00_control/phase_target_data.schema.json",
+    "reject vague statuses",
+    "enforce paper_only_required=true and real_trade_allowed=false",
+    "generate concrete K00/P00-P10 target data instances"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-PER-PHASE-TARGET-DATA-INSTANCES",
+      "severity": "DEGRADED",
+      "description": "The standard schema is defined; concrete target data instances for K00/P00-P10 still need to be generated/validated."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

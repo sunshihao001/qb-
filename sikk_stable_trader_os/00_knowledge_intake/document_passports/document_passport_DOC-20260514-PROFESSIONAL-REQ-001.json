@@ -1,0 +1,75 @@
+{
+  "doc_id": "DOC-20260514-PROFESSIONAL-REQ-001",
+  "source_type": "user_uploaded_markdown",
+  "source_name": "专业化水准需求清单 _1_.md",
+  "received_at": "2026-05-14",
+  "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260514-PROFESSIONAL-REQ-001_professional_requirements_checklist.md",
+  "sha256": "408514b6b93158090d893f50fb47e4d10cb8bf90f26ccbce3f809402665266b5",
+  "document_role": {
+    "primary_role": "professional_baseline_requirement_spec",
+    "secondary_roles": [
+      "goal_mapping_standard",
+      "data_contract_standard",
+      "trace_acceptance_handoff_standard",
+      "R00_runtime_readiness_standard",
+      "P08_P09_P10_closed_loop_standard",
+      "issue_task_packet_standard"
+    ]
+  },
+  "summary": {
+    "core_intent": "把 SIKK/HER 交易结构系统从文档体系推进到真实 token / candidate batch 可运行闭环，并定义轻量机构级专业化最低标准。",
+    "key_points": [
+      "统一目标/方法/数据/合约/状态/验收/运行/复盘/升级/风险边界",
+      "HER_DOC 产物必须是 issue registry 和 task packet，不是总结",
+      "字段必须有来源、质量、权限、用途、下游消费者",
+      "handoff 必须证明 downstream consumption",
+      "R00 必须输出最终判断标签并受 P07/P08/P09/P10 约束",
+      "P08 是 paper runtime 唯一入口",
+      "P09 复盘不改规则，P10 只生成受控升级候选"
+    ]
+  },
+  "system_mapping": {
+    "planes": [
+      "K00_knowledge_intake",
+      "methodology_blueprint",
+      "control_plane",
+      "data_plane",
+      "contract_schema_plane",
+      "trace_plane",
+      "acceptance_plane",
+      "handoff_plane",
+      "runner_tool_binding_plane",
+      "runtime_orchestration_R00",
+      "review_upgrade_plane",
+      "safety_governance_plane"
+    ],
+    "affected_phases": [
+      "K00",
+      "P00",
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P09",
+      "P10",
+      "I03",
+      "I04",
+      "I05",
+      "R00",
+      "CPO"
+    ]
+  },
+  "required_actions": [
+    "建立初步目标认知模型",
+    "生成专业化 gap matrix",
+    "生成 P0/P1 修复任务包",
+    "执行 HER_DOC_SYSTEM_REVIEW→HER_DOC_SYSTEM_AUDIT→HER_DOC_PIPELINE safe-mode",
+    "保留 RUNNABLE_WITH_GAPS 边界"
+  ],
+  "evidence_level": "EVIDENCE_A_STRONG",
+  "status": "PASSPORT_READY"
+}

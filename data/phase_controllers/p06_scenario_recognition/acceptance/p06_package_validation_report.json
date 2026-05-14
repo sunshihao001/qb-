@@ -1,0 +1,28 @@
+{
+  "report_id": "P06_DETERMINISTIC_VALIDATION_REPORT",
+  "generated_at": "2026-05-12T03:56:02Z",
+  "system_file_count": 40,
+  "expected_system_file_count": 40,
+  "missing_files": [],
+  "data_dir_count": 26,
+  "expected_data_dir_count_user": 25,
+  "expected_doc_dir_count": 26,
+  "missing_required_dirs": [],
+  "parse_errors": [],
+  "safety_checks": {
+    "controller_runtime_allowed_false": true,
+    "controller_paper_runtime_allowed_false": true,
+    "controller_live_runtime_allowed_false": true,
+    "controller_real_trade_enabled_false": true,
+    "state_real_trade_enabled_false": true,
+    "state_paper_runtime_allowed_false": true,
+    "state_live_runtime_allowed_false": true,
+    "next_stage_is_p07_package_design": true,
+    "handoff_only_to_p07": true,
+    "blockers_contain_p06_runtime": true,
+    "blockers_contain_paper_live": true
+  },
+  "positive_danger_anchor_detected": false,
+  "secret_leak_pattern_detected": false,
+  "status": "PASS_WITH_RUNTIME_GAPS"
+}

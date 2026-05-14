@@ -1,0 +1,20 @@
+controller_id: P09_review_learning_controller
+controller_name_cn: 复盘学习层
+phase_type: failure_attribution_and_rule_feedback
+status: NOT_READY
+created_by: P00_system_bootstrap_controller
+primary_goal: 将失败、错判、延迟样本转化为规则修正候选
+paper_only: true
+real_trade_enabled: false
+p01_runtime_connection_allowed: false
+required_before_ready:
+  - upstream_handoff_consumed
+  - input_contract_valid
+  - output_contract_valid
+  - acceptance_gate_passed
+  - current_system_state_allows_stage
+forbidden:
+  - real_trade
+  - private_key
+  - seed_phrase
+  - exchange_write_order

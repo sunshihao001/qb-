@@ -1,0 +1,39 @@
+her_task_package:
+  task_id: KPP-TASK-20260512-001
+  task_name: Knowledge Processing Program：文档知识功能化处理体系落地
+  task_type: KNOWLEDGE_INTAKE
+  objective: 建立 K00-K08 文档知识功能化处理体系，生成系统控制文件、运行数据目录和本上传文档的标准输出包。
+  required_inputs:
+    - /root/sikk-gmgn/data/knowledge_processing_program/raw_documents/KPP-DOC-20260512-001_文档处理工作体系重建_1_0.md
+  execution_steps:
+    - preserve_raw_document
+    - generate_passport_and_classification
+    - extract_semantic_and_functional_objects
+    - land_system_controller_assets
+    - validate_outputs_and_handoff
+  required_outputs:
+    - document_passport.yaml
+    - document_type_classification.yaml
+    - semantic_chunk_index.yaml
+    - functional_object_registry.yaml
+    - system_mapping_matrix.yaml
+    - controller_candidate_packet.yaml
+    - schema_contract_candidate_packet.yaml
+    - her_task_package.yaml
+    - knowledge_processing_acceptance_result.yaml
+    - knowledge_processing_handoff_packet.yaml
+  acceptance_criteria:
+    - required_system_files_exist
+    - required_data_directories_exist
+    - all_yaml_json_parse
+    - hard_negative_rules_present
+    - no_runtime_or_trading_unblock
+    - handoff_target_declared
+  forbidden_actions:
+    - direct_production_rule_activation
+    - runtime_trading_enablement
+    - paper_runtime_start
+    - signing_or_broadcasting
+    - deleting_or_moving_legacy_files
+  handoff_target: P00_OR_GOVERNANCE_REVIEW_FOR_SYSTEM_CONSUMPTION
+  trace_required: true

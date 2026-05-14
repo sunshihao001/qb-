@@ -1,0 +1,422 @@
+{
+  "task_package_id": "TASKPKG-AUTO-TRADING-WORKFLOW-DATA-MODEL-V1",
+  "source_doc_id": "PLANBOOK-automated_trading_workflow_data_model_task_package_planbook",
+  "package_type": "AUTOMATED_TRADING_WORKFLOW_DATA_MODEL_TASK_PACKAGE",
+  "workflow_type": "CA_FIRST_PAPER_ONLY_AUTOMATION",
+  "created_at": "2026-05-11T12:27:21.964160Z",
+  "created_for": "HER long-task execution and SIKK Stable Trader OS automated paper-only workflow closure",
+  "purpose": "Convert automated trading workflow design into system data, stage tasks, gates, handoff, and audit artifacts.",
+  "system_understanding": {
+    "is_plain_document": false,
+    "is_system_design_input": true,
+    "requires_taskization": true,
+    "requires_context_independent_execution": true,
+    "completion_is_audited_state_not_summary": true
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "phase_sequence": [
+    "K00_knowledge_intake_taskization",
+    "P00_system_boundary",
+    "P01_data_fact",
+    "P02_market_scenario",
+    "P03_wallet_structure",
+    "P04_chip_control",
+    "P05_strategy_gate",
+    "P06_risk_control",
+    "P07_paper_execution_human_confirmation",
+    "P08_review_attribution",
+    "P09_self_upgrade_proposal"
+  ],
+  "data_model_flow": [
+    {
+      "order": 0,
+      "object": "TaskPackage",
+      "writes": "task_package.json",
+      "purpose": "turn planbook into executable task graph"
+    },
+    {
+      "order": 1,
+      "object": "RuntimeContext",
+      "writes": "runtime_context.json",
+      "purpose": "create resumable task passport"
+    },
+    {
+      "order": 2,
+      "object": "PermissionManifest",
+      "writes": "permission_manifest.json",
+      "purpose": "enforce paper-only boundary"
+    },
+    {
+      "order": 3,
+      "object": "StageLedger",
+      "writes": "stage_ledger.jsonl",
+      "purpose": "record every stage execution"
+    },
+    {
+      "order": 4,
+      "object": "EvidenceManifest",
+      "writes": "evidence_manifest.json",
+      "purpose": "trace claims to source data"
+    },
+    {
+      "order": 5,
+      "object": "GapRegister",
+      "writes": "gap_register.json",
+      "purpose": "separate degraded/blocking/hard_negative"
+    },
+    {
+      "order": 6,
+      "object": "CheckpointState",
+      "writes": "checkpoint_state.json",
+      "purpose": "resume from last accepted stage"
+    },
+    {
+      "order": 7,
+      "object": "HandoffPacket",
+      "writes": "handoff/*.json",
+      "purpose": "feed next phase without chat context"
+    },
+    {
+      "order": 8,
+      "object": "CompletionAudit",
+      "writes": "completion_audit.json",
+      "purpose": "verify before claiming complete"
+    }
+  ],
+  "stage_tasks": [
+    {
+      "stage_id": "STAGE-00-K00_knowledge_intake_taskization",
+      "phase": "K00_knowledge_intake_taskization",
+      "objective": "Execute K00_knowledge_intake_taskization under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "P00_system_boundary",
+      "next_stage_on_degraded": "P00_system_boundary",
+      "handoff_output": "handoff/K00_knowledge_intake_taskization_handoff.json"
+    },
+    {
+      "stage_id": "STAGE-01-P00_system_boundary",
+      "phase": "P00_system_boundary",
+      "objective": "Execute P00_system_boundary under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "P01_data_fact",
+      "next_stage_on_degraded": "P01_data_fact",
+      "handoff_output": "handoff/P00_system_boundary_handoff.json"
+    },
+    {
+      "stage_id": "STAGE-02-P01_data_fact",
+      "phase": "P01_data_fact",
+      "objective": "Execute P01_data_fact under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "P02_market_scenario",
+      "next_stage_on_degraded": "P02_market_scenario",
+      "handoff_output": "handoff/P01_data_fact_handoff.json"
+    },
+    {
+      "stage_id": "STAGE-03-P02_market_scenario",
+      "phase": "P02_market_scenario",
+      "objective": "Execute P02_market_scenario under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "P03_wallet_structure",
+      "next_stage_on_degraded": "P03_wallet_structure",
+      "handoff_output": "handoff/P02_market_scenario_handoff.json"
+    },
+    {
+      "stage_id": "STAGE-04-P03_wallet_structure",
+      "phase": "P03_wallet_structure",
+      "objective": "Execute P03_wallet_structure under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "P04_chip_control",
+      "next_stage_on_degraded": "P04_chip_control",
+      "handoff_output": "handoff/P03_wallet_structure_handoff.json"
+    },
+    {
+      "stage_id": "STAGE-05-P04_chip_control",
+      "phase": "P04_chip_control",
+      "objective": "Execute P04_chip_control under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "P05_strategy_gate",
+      "next_stage_on_degraded": "P05_strategy_gate",
+      "handoff_output": "handoff/P04_chip_control_handoff.json"
+    },
+    {
+      "stage_id": "STAGE-06-P05_strategy_gate",
+      "phase": "P05_strategy_gate",
+      "objective": "Execute P05_strategy_gate under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "P06_risk_control",
+      "next_stage_on_degraded": "P08_review_attribution_or_RISK_MONITOR",
+      "handoff_output": "handoff/P05_strategy_gate_handoff.json"
+    },
+    {
+      "stage_id": "STAGE-07-P06_risk_control",
+      "phase": "P06_risk_control",
+      "objective": "Execute P06_risk_control under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "P07_paper_execution_human_confirmation",
+      "next_stage_on_degraded": "P08_review_attribution_or_RISK_MONITOR",
+      "handoff_output": "handoff/P06_risk_control_handoff.json"
+    },
+    {
+      "stage_id": "STAGE-08-P07_paper_execution_human_confirmation",
+      "phase": "P07_paper_execution_human_confirmation",
+      "objective": "Execute P07_paper_execution_human_confirmation under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "P08_review_attribution",
+      "next_stage_on_degraded": "P08_review_attribution",
+      "handoff_output": "handoff/P07_paper_execution_human_confirmation_handoff.json"
+    },
+    {
+      "stage_id": "STAGE-09-P08_review_attribution",
+      "phase": "P08_review_attribution",
+      "objective": "Execute P08_review_attribution under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "P09_self_upgrade_proposal",
+      "next_stage_on_degraded": "P09_self_upgrade_proposal",
+      "handoff_output": "handoff/P08_review_attribution_handoff.json"
+    },
+    {
+      "stage_id": "STAGE-10-P09_self_upgrade_proposal",
+      "phase": "P09_self_upgrade_proposal",
+      "objective": "Execute P09_self_upgrade_proposal under data-model-driven HER workflow",
+      "required_outputs": [
+        "stage_output.json",
+        "stage_handoff.json",
+        "stage_ledger_entry"
+      ],
+      "acceptance_checks": [
+        "required outputs exist",
+        "safety boundary not violated",
+        "gap status classified",
+        "next stage decision written"
+      ],
+      "stop_conditions": [
+        "permission_violation",
+        "token_overwrite_detected",
+        "blocker_gap",
+        "phase_error",
+        "human_input_required"
+      ],
+      "next_stage_on_pass": "COMPLETION_AUDIT",
+      "next_stage_on_degraded": "P08_review_attribution_or_RISK_MONITOR",
+      "handoff_output": "handoff/P09_self_upgrade_proposal_handoff.json"
+    }
+  ],
+  "execution_policy": {
+    "must_not_stop_after_one_stage": true,
+    "must_evaluate_stage_completion": true,
+    "must_continue_if_gate_passed": true,
+    "must_update_runtime_context_every_stage": true,
+    "must_write_stage_ledger_every_stage": true,
+    "must_generate_handoff_packet": true,
+    "must_run_completion_audit": true
+  },
+  "acceptance_policy": {
+    "completion_requires_outputs": true,
+    "completion_requires_state_update": true,
+    "completion_requires_handoff": true,
+    "completion_requires_next_phase_decision": true,
+    "completion_requires_safety_boundary_pass": true,
+    "completion_requires_planbook_repository_validation": true
+  },
+  "gap_policy": {
+    "degraded": "continue only to observe/paper with explicit missing evidence",
+    "blocking": "stop downstream promotion and write recovery route",
+    "hard_negative": "stop positive candidate path and set RISK_MONITOR/REJECTED"
+  },
+  "next_action": "validate_and_connect_to_ca_first_orchestrator_p0_control_closure",
+  "safety_boundary_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/automated_trading_workflow_safety_boundary.md",
+  "permission_manifest_template_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/permission_manifest.template.json",
+  "forbidden_final_statuses": [
+    "BUY_NOW",
+    "AUTO_BUY",
+    "REAL_TRADE_READY",
+    "SIGN_AND_SEND",
+    "BROADCAST_READY",
+    "EXECUTE_SWAP"
+  ],
+  "allowed_final_statuses": [
+    "OBSERVE_ONLY",
+    "RISK_MONITOR",
+    "REJECTED",
+    "PAPER_CANDIDATE",
+    "PAPER_INTENT_REQUIRES_HUMAN_CONFIRMATION"
+  ]
+}

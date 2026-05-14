@@ -1,0 +1,110 @@
+{
+  "doc_id": "DOC-20260511-015",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T14:15:02.799034+00:00",
+  "plane": "Governance Plane",
+  "phase_target_data": {
+    "phase_id": "GOVERNANCE_PLANE",
+    "phase_name_cn": "治理平面",
+    "phase_type": "authority_and_risk_boundary",
+    "phase_status": "REQUIRED_BEFORE_DOMAIN_AND_DATA",
+    "authority_scope": "定义系统权限、禁止事项、硬否定规则、安全边界",
+    "primary_goal": "建立系统运行边界，确保分析层、策略层、执行层、复盘层之间权限清晰，防止未验证逻辑进入真实交易。",
+    "non_goal": [
+      "不做领域对象推断",
+      "不定义数据字段细节",
+      "不执行 runner"
+    ],
+    "required_inputs": [
+      "system_methodology_blueprint.md",
+      "current_system_state.json"
+    ],
+    "required_outputs": [
+      "00_governance/governance_plane.md",
+      "00_governance/authority_boundary.yaml",
+      "00_governance/hard_negative_rules.yaml",
+      "00_governance/risk_boundary.yaml",
+      "00_governance/stage_permission_matrix.yaml",
+      "00_governance/real_trade_forbidden_policy.yaml"
+    ],
+    "core_questions": [
+      "什么阶段有裁决权？",
+      "什么阶段只能记录事实？",
+      "什么情况必须阻断？",
+      "什么情况禁止进入真实交易？",
+      "复盘数据如何进入升级层？"
+    ],
+    "acceptance_gate": [
+      "paper_only=true",
+      "real_trade_enabled=false",
+      "stage_permission_matrix 存在",
+      "hard_negative_rules 存在",
+      "P01-P10 权限边界明确"
+    ]
+  },
+  "derived_assets": {
+    "raw_user_proposed": "00_governance/governance_phase_target_data.raw_user_proposed.yaml",
+    "normalized_executable": "00_governance/governance_phase_target_data.yaml",
+    "support_assets_created": [
+      "00_governance/authority_boundary.yaml",
+      "00_governance/hard_negative_rules.yaml",
+      "00_governance/risk_boundary.yaml",
+      "00_governance/stage_permission_matrix.yaml",
+      "00_governance/real_trade_forbidden_policy.yaml"
+    ]
+  },
+  "validation": {
+    "missing_required_fields": [
+      "upstream_dependencies",
+      "optional_inputs",
+      "forbidden_inputs",
+      "core_objects",
+      "handoff_outputs",
+      "blocking_conditions",
+      "downstream_consumers",
+      "runner_binding_status",
+      "state_writeback_required",
+      "paper_only_required",
+      "real_trade_allowed"
+    ],
+    "raw_phase_status_valid": false,
+    "normalized_phase_status_valid": true,
+    "paper_only_safety_valid": true
+  },
+  "planes": {
+    "Governance Plane": {
+      "impact": "primary",
+      "required_outputs": [
+        "00_governance/governance_plane.md",
+        "00_governance/authority_boundary.yaml",
+        "00_governance/hard_negative_rules.yaml",
+        "00_governance/risk_boundary.yaml",
+        "00_governance/stage_permission_matrix.yaml",
+        "00_governance/real_trade_forbidden_policy.yaml"
+      ]
+    },
+    "Control Plane": {
+      "impact": "constraint",
+      "reason": "current_system_state must enforce paper-only and stage permission boundaries"
+    },
+    "Acceptance Plane": {
+      "impact": "primary",
+      "acceptance_gate": [
+        "paper_only=true",
+        "real_trade_enabled=false",
+        "stage_permission_matrix 存在",
+        "hard_negative_rules 存在",
+        "P01-P10 权限边界明确"
+      ]
+    }
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

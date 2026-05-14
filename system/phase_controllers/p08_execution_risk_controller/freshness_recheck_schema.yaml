@@ -1,0 +1,19 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: FRESHNESS_RECHECK_SCHEMA
+version: v3.0
+required_fields:
+  - freshness_recheck_id
+  - candidate_id
+  - checked_at
+  - freshness_checks
+  - stale_inputs
+  - freshness_status
+  - refresh_required
+allowed_statuses:
+  - FRESH_ENOUGH_FOR_PAPER_RUNTIME
+  - FRESH_WITH_LIMITATIONS
+  - REFRESH_REQUIRED
+  - STALE_BLOCK_RUNTIME
+no_live_execution_fields_allowed: true

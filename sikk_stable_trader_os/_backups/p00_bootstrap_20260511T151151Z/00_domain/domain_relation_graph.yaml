@@ -1,0 +1,21 @@
+source_doc_id: DOC-20260511-016
+relations:
+- from: wallet
+  to: wallet_entity
+  relation: entity_resolution
+- from: same_source_group
+  to: chip_cluster
+  relation: control_evidence
+- from: chip_cluster
+  to: dominant_side
+  relation: dominance_inference
+- from: dominant_side
+  to: scenario
+  relation: lifecycle_context
+- from: scenario
+  to: strategy_candidate
+  relation: gated_candidate_only
+- from: strategy_candidate
+  to: paper_trade
+  relation: paper_only_validation
+real_trade_allowed: false

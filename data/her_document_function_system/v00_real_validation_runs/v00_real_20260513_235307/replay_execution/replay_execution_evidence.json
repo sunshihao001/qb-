@@ -1,0 +1,19 @@
+{
+  "replay_id": "replay_v00_real_20260513_235307",
+  "validation_run_id": "v00_real_20260513_235307",
+  "replay_config": "/root/sikk-gmgn/system/her_document_function_system/replay/sample_cases/sample_001_document_to_function/run/replay_run_config.json",
+  "replay_input": "replay_execution/replay_input.json",
+  "replay_output": "replay_execution/replay_output.json",
+  "replay_expected": "replay_execution/replay_expected.json",
+  "replay_comparison": "replay_execution/replay_comparison.json",
+  "trace_path": "replay_execution/replay_trace.jsonl",
+  "status": "REPLAY_TESTED",
+  "matched_checks": [
+    "safe_mode_true",
+    "replay_input_output_present",
+    "forbidden_claims_absent"
+  ],
+  "failed_checks": [],
+  "warnings": [],
+  "safe_mode": true
+}

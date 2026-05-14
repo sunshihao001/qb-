@@ -1,0 +1,57 @@
+{
+  "task_id": "TASK-DOC-20260513-P01-DSIC-001-P01-DSIC-LANDING",
+  "doc_id": "DOC-20260513-P01-DSIC-001",
+  "task_status": "TASK_PACKAGE_READY",
+  "objective": "Land or reconcile P01_data_source_intelligence_controller as a professional data-source fact controller with raw-first evidence, schema/freshness/lineage/reconciliation/quality/handoff/replay/audit loops.",
+  "source_references": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DSIC-001_p01_data_source_intelligence_controller_upgrade.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260513-P01-DSIC-001.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260513-P01-DSIC-001.md"
+  ],
+  "target_phase": "P01_data_fact_controller",
+  "required_outputs": [
+    "phase_identity files",
+    "source_registry capability matrix",
+    "source_health reports",
+    "acquisition planner",
+    "raw snapshot manifest",
+    "schema monitor reports",
+    "normalized facts",
+    "field lineage graph",
+    "freshness reports",
+    "cross-source reconciliation",
+    "quality brain decisions",
+    "data_fact_handoff_packet.json",
+    "replay/backfill/audit reports"
+  ],
+  "constraints": {
+    "preserve_raw_source": true,
+    "raw_direct_access_allowed_for_downstream": false,
+    "real_execution_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false,
+    "no_private_key_no_sign_no_broadcast": true
+  },
+  "acceptance_criteria": [
+    "Every source has reliability score",
+    "Every normalized field has lineage/freshness/source/confidence/missing reason",
+    "Schema drift blocks downstream when detected",
+    "GMGN/OKX conflicts go to reconciliation",
+    "Every token gets data_quality_decision and handoff packet",
+    "Replay/backfill/audit artifacts exist",
+    "P02/P03/P06 read permissions come from P01 handoff only"
+  ],
+  "recommended_commands_from_source": [
+    "python3 controllers/p01_data_source_intelligence_controller.py --run-dir data/gmgn_candidates_live_run --mode init-phase",
+    "python3 controllers/p01_data_source_intelligence_controller.py --run-dir data/gmgn_candidates_live_run --mode source-health",
+    "python3 controllers/p01_data_source_intelligence_controller.py --run-dir data/gmgn_candidates_live_run --mode build-fetch-plan --limit 50",
+    "python3 controllers/p01_data_source_intelligence_controller.py --run-dir data/gmgn_candidates_live_run --mode fetch-candidates --limit 20",
+    "python3 controllers/p01_data_source_intelligence_controller.py --run-dir data/gmgn_candidates_live_run --mode normalize-and-lineage",
+    "python3 controllers/p01_data_source_intelligence_controller.py --run-dir data/gmgn_candidates_live_run --mode quality-brain",
+    "python3 controllers/p01_data_source_intelligence_controller.py --run-dir data/gmgn_candidates_live_run --mode build-handoff",
+    "python3 controllers/p01_data_source_intelligence_controller.py --run-dir data/gmgn_candidates_live_run --mode audit",
+    "python3 -m pytest tests/p01/ -q"
+  ],
+  "handoff_destination": "P01_DATA_SOURCE_INTELLIGENCE_CONTROLLER_PACKAGE_OR_CODE_LANDING",
+  "recovery_notes": "If P01 artifacts were created without K00 acceptance, classify as K00 route failure and backfill this doc_id artifacts before runtime claims."
+}

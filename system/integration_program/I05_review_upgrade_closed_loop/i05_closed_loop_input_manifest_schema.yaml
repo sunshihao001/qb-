@@ -1,0 +1,10 @@
+i05_closed_loop_input_manifest:
+  type: object
+  required:
+    - manifest_id
+    - i04_handoff_packet_path
+    - p09_review_input_packet_path
+    - runtime_output_paths
+    - restrictions
+    - trace
+  additional_properties_allowed: true

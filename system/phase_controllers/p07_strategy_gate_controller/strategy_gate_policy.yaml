@@ -1,0 +1,22 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+policy_id: P07_STRATEGY_GATE_POLICY
+version: v3.0
+evaluation_order:
+  - governance_hard_negative
+  - handoff_trace_acceptance
+  - p06_scenario_risk
+  - p05_evidence_sufficiency
+  - p04_chip_structure_risk
+  - p02_p03_data_quality
+  - strategy_template_fit
+  - market_position_context
+  - final_p07_decision
+decision_semantics:
+  OBSERVE: 当前不允许进入 P08，仅继续观察。
+  PAUSE: 样本可能有价值但需刷新、解决冲突或等待条件。
+  BLOCK: 触发硬否定或关键风险，停止下游。
+  PAPER_CANDIDATE: 只允许交给 P08 做执行前风控。
+  HUMAN_CONFIRMATION_REQUIRED: 仅允许人工确认是否进入 P08 检查，不允许绕过 P08。
+  STRATEGY_GATE_REJECTED: 不符合当前策略系统目标。

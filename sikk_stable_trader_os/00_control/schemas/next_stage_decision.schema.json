@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "next_legal_stage",
+    "p01_runtime_connection_allowed",
+    "paper_only",
+    "real_trade_enabled"
+  ],
+  "properties": {
+    "next_legal_stage": {
+      "const": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+    },
+    "p01_runtime_connection_allowed": {
+      "const": false
+    },
+    "paper_only": {
+      "const": true
+    },
+    "real_trade_enabled": {
+      "const": false
+    }
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "audit_id": "HER_DOC_SYSTEM_AUDIT_AUTO",
+  "created_at": "2026-05-14T10:28:00.910840+00:00",
+  "canonical_root": "/root/sikk-gmgn",
+  "system_status": "HER_DFAFS_SYSTEM_BLOCKED",
+  "fixed_commands": [
+    "HER_DOC_PIPELINE",
+    "HER_DOC_SYSTEM_AUDIT",
+    "HER_DOC_SYSTEM_REVIEW"
+  ],
+  "json_checks": {
+    "CANONICAL_ROUTE.json": "MISSING",
+    "registry/controller_registry.json": "MISSING"
+  },
+  "gap_count": 12,
+  "gaps": [
+    {
+      "gap_id": "GAP-MISSING-G00_governance_boundary_controller",
+      "severity": "MEDIUM",
+      "description": "Missing canonical controller directory: /root/sikk-gmgn/controllers/G00_governance_boundary_controller",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-MISSING-K00_knowledge_intake_controller",
+      "severity": "HIGH",
+      "description": "Missing canonical controller directory: /root/sikk-gmgn/controllers/K00_knowledge_intake_controller",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-MISSING-F00_function_realization_controller",
+      "severity": "MEDIUM",
+      "description": "Missing canonical controller directory: /root/sikk-gmgn/controllers/F00_function_realization_controller",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-MISSING-V00_validation_evidence_controller",
+      "severity": "MEDIUM",
+      "description": "Missing canonical controller directory: /root/sikk-gmgn/controllers/V00_validation_evidence_controller",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-MISSING-R00_runner_tool_binding_controller",
+      "severity": "MEDIUM",
+      "description": "Missing canonical controller directory: /root/sikk-gmgn/controllers/R00_runner_tool_binding_controller",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-MISSING-A00_acceptance_evidence_controller",
+      "severity": "MEDIUM",
+      "description": "Missing canonical controller directory: /root/sikk-gmgn/controllers/A00_acceptance_evidence_controller",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-MISSING-H00_handoff_downstream_queue_controller",
+      "severity": "MEDIUM",
+      "description": "Missing canonical controller directory: /root/sikk-gmgn/controllers/H00_handoff_downstream_queue_controller",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-MISSING-U00_review_upgrade_controller",
+      "severity": "MEDIUM",
+      "description": "Missing canonical controller directory: /root/sikk-gmgn/controllers/U00_review_upgrade_controller",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-MISSING-O00_full_pipeline_orchestrator",
+      "severity": "MEDIUM",
+      "description": "Missing canonical controller directory: /root/sikk-gmgn/controllers/O00_full_pipeline_orchestrator",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-MISSING-CANONICAL_ROUTE.json",
+      "severity": "HIGH",
+      "description": "Missing CANONICAL_ROUTE.json",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-MISSING-registry/controller_registry.json",
+      "severity": "HIGH",
+      "description": "Missing registry/controller_registry.json",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "GAP-SYSTEM-AUDIT-ENTRYPOINT",
+      "severity": "MEDIUM",
+      "description": "Missing system_audit directory",
+      "status": "OPEN"
+    }
+  ],
+  "controller_report": [
+    {
+      "controller": "G00_governance_boundary_controller",
+      "exists": false,
+      "status": "MISSING",
+      "missing_core_assets": [
+        "manifest",
+        "context_pack",
+        "input_contract",
+        "output_contract",
+        "execution_protocol",
+        "acceptance_gate",
+        "state",
+        "handoff_schema"
+      ]
+    },
+    {
+      "controller": "K00_knowledge_intake_controller",
+      "exists": false,
+      "status": "MISSING",
+      "missing_core_assets": [
+        "manifest",
+        "context_pack",
+        "input_contract",
+        "output_contract",
+        "execution_protocol",
+        "acceptance_gate",
+        "state",
+        "handoff_schema"
+      ]
+    },
+    {
+      "controller": "F00_function_realization_controller",
+      "exists": false,
+      "status": "MISSING",
+      "missing_core_assets": [
+        "manifest",
+        "context_pack",
+        "input_contract",
+        "output_contract",
+        "execution_protocol",
+        "acceptance_gate",
+        "state",
+        "handoff_schema"
+      ]
+    },
+    {
+      "controller": "V00_validation_evidence_controller",
+      "exists": false,
+      "status": "MISSING",
+      "missing_core_assets": [
+        "manifest",
+        "context_pack",
+        "input_contract",
+        "output_contract",
+        "execution_protocol",
+        "acceptance_gate",
+        "state",
+        "handoff_schema"
+      ]
+    },
+    {
+      "controller": "R00_runner_tool_binding_controller",
+      "exists": false,
+      "status": "MISSING",
+      "missing_core_assets": [
+        "manifest",
+        "context_pack",
+        "input_contract",
+        "output_contract",
+        "execution_protocol",
+        "acceptance_gate",
+        "state",
+        "handoff_schema"
+      ]
+    },
+    {
+      "controller": "A00_acceptance_evidence_controller",
+      "exists": false,
+      "status": "MISSING",
+      "missing_core_assets": [
+        "manifest",
+        "context_pack",
+        "input_contract",
+        "output_contract",
+        "execution_protocol",
+        "acceptance_gate",
+        "state",
+        "handoff_schema"
+      ]
+    },
+    {
+      "controller": "H00_handoff_downstream_queue_controller",
+      "exists": false,
+      "status": "MISSING",
+      "missing_core_assets": [
+        "manifest",
+        "context_pack",
+        "input_contract",
+        "output_contract",
+        "execution_protocol",
+        "acceptance_gate",
+        "state",
+        "handoff_schema"
+      ]
+    },
+    {
+      "controller": "U00_review_upgrade_controller",
+      "exists": false,
+      "status": "MISSING",
+      "missing_core_assets": [
+        "manifest",
+        "context_pack",
+        "input_contract",
+        "output_contract",
+        "execution_protocol",
+        "acceptance_gate",
+        "state",
+        "handoff_schema"
+      ]
+    },
+    {
+      "controller": "O00_full_pipeline_orchestrator",
+      "exists": false,
+      "status": "MISSING",
+      "missing_core_assets": [
+        "manifest",
+        "context_pack",
+        "input_contract",
+        "output_contract",
+        "execution_protocol",
+        "acceptance_gate",
+        "state",
+        "handoff_schema"
+      ]
+    }
+  ],
+  "status_policy": {
+    "missing_k00_handoff": "F00_BLOCKED",
+    "missing_document_passport": "F00_BLOCKED",
+    "missing_corpus_index": "F00_BLOCKED",
+    "missing_system_mapping": "F00_READY_WITH_GAPS_OR_BLOCKED",
+    "missing_gap_detection": "F00_BLOCKED",
+    "missing_kv": "KV_GAP_CONTINUE_ALLOWED",
+    "missing_repo_root": "DESIGN_ONLY",
+    "missing_write_policy": "DESIGN_ONLY_NO_FILE_WRITES",
+    "missing_execution_boundary": "F00_BLOCKED"
+  }
+}

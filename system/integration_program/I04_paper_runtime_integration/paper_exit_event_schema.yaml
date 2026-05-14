@@ -1,0 +1,16 @@
+record_type: paper_exit_event_record
+required_fields:
+- exit_event_id
+- position_id
+- exit_time
+- exit_price
+- exit_reason
+- trace_id
+required_safety:
+  paper_only: true
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+validation:
+- all required fields present
+- trace_id present
+- no live execution artifact

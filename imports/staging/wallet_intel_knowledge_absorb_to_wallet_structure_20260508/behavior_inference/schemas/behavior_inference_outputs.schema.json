@@ -1,0 +1,67 @@
+{
+  "module": "behavior_inference",
+  "allowed_status": [
+    "疑似吸筹",
+    "疑似控盘",
+    "疑似洗盘",
+    "疑似突破测试",
+    "疑似推进拉升",
+    "疑似二段扩张",
+    "疑似部分派发",
+    "疑似主动派发",
+    "疑似撤退",
+    "疑似再吸筹",
+    "疑似再激活",
+    "疑似放弃维护",
+    "INSUFFICIENT_DATA",
+    "STALE_INPUT"
+  ],
+  "standard_outputs": {
+    "dominant_behavior_inference.json": [
+      "token_address",
+      "inference_time",
+      "input_snapshot_time",
+      "dominant_behavior_status",
+      "dominant_intent",
+      "lifecycle_stage",
+      "evidence_level",
+      "confidence_score",
+      "contradiction_level",
+      "missing_fields",
+      "downgrade_reason",
+      "reason"
+    ],
+    "chip_control_status.json": [
+      "token_address",
+      "chip_control_status",
+      "early_wallet_control_retention",
+      "same_source_group_retention",
+      "distribution_progress",
+      "counterparty_pressure_score",
+      "chip_transfer_status",
+      "evidence_level",
+      "reason"
+    ],
+    "behavior_reasoning_report.md": [
+      "使用了哪些事实输入",
+      "支持证据",
+      "反证",
+      "缺失字段",
+      "替代假设",
+      "为什么不能更高置信度"
+    ]
+  },
+  "forbidden_outputs": [
+    "确定庄家",
+    "确定内幕",
+    "必拉",
+    "必砸",
+    "交易建议",
+    "PAPER_READY",
+    "BLOCKED",
+    "开仓",
+    "止盈",
+    "止损",
+    "真实交易"
+  ]
+}

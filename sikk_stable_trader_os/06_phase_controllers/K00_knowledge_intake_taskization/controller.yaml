@@ -1,0 +1,233 @@
+controller_id: K00_knowledge_intake_taskization
+controller_name_cn: 知识摄取与 Phase Controller 候选任务化控制器
+version: v2.0-light-institutional
+status: REQUIRED_BEFORE_P00
+controller_type: knowledge_assetization_and_phase_controller_candidate_extraction
+authority_scope:
+  can:
+  - 保存输入资料
+  - 生成 document passport
+  - 抽取方法论要求
+  - 抽取系统目标
+  - 抽取阶段目标候选
+  - 生成任务树候选
+  - 生成输入合约候选
+  - 生成输出合约候选
+  - 识别 Atomic Skill 需求
+  - 识别代码工具需求
+  - 生成验收门候选
+  - 生成状态回写候选
+  - 生成下游 handoff 候选
+  - 生成 phase_controller_candidate_spec
+  - 生成 k00_to_p00_handoff_packet
+  cannot:
+  - 修改真实交易系统
+  - 写入正式 phase_registry
+  - 启动 P01-P10 业务阶段
+  - 在 P00 正式编译前进入 P01-P10 可调度运行
+  - 执行交易
+  - 把 K00 handoff 当作 P00 已消费
+  - 正式注册 Phase Controller
+  - 生成真实买卖指令
+  - 绕过 P00_system_bootstrap_controller
+  - 裁决 P01 可以运行
+primary_goal: 将输入资料从普通文本或文件转化为可被 P00 系统建造控制器消费的结构化候选资产，包括系统目标、阶段目标、任务树、输入合约、输出合约、Atomic
+  Skill 需求、工具绑定需求、验收门、状态回写和下游 handoff。
+non_goals:
+- 不直接运行交易系统
+- 不直接生成交易判断
+- 不直接注册正式阶段控制器
+- 不直接进入 P01 数据事实层
+- 不以文件存在代表系统接入完成
+upstream_dependencies:
+- user_input
+- uploaded_documents
+- existing_project_files
+- methodology_notes
+- old_system_assets
+downstream_consumers:
+- P00_system_bootstrap_controller
+- 00_methodology
+- 00_governance
+- 00_domain
+- 00_data
+- 00_control
+- 00_trace
+required_inputs:
+- input_asset
+- source_metadata
+optional_inputs:
+- user_goal
+- target_stage_hint
+- existing_system_context
+- related_file_paths
+forbidden_inputs:
+- private_key
+- seed_phrase
+- direct_real_trade_instruction
+- unverified_live_buy_signal
+core_objects:
+- knowledge_asset
+- document_passport
+- methodology_requirement
+- phase_goal_candidate
+- task_tree_candidate
+- input_contract_candidate
+- output_contract_candidate
+- atomic_skill_candidate
+- tool_binding_candidate
+- acceptance_gate_candidate
+- state_writeback_candidate
+- handoff_packet_candidate
+- phase_controller_candidate_spec
+processing_steps:
+- step_id: K00_STEP_01
+  name_cn: 保存输入资料
+  output: raw_input_copy
+- step_id: K00_STEP_02
+  name_cn: 生成文档护照
+  output: document_passport
+- step_id: K00_STEP_03
+  name_cn: 识别资料类型
+  output: asset_type_classification
+- step_id: K00_STEP_04
+  name_cn: 抽取方法论要求
+  output: methodology_requirement_extract
+- step_id: K00_STEP_05
+  name_cn: 抽取系统目标
+  output: system_goal_extract
+- step_id: K00_STEP_06
+  name_cn: 抽取阶段目标候选
+  output: phase_goal_candidate
+- step_id: K00_STEP_07
+  name_cn: 生成任务树候选
+  output: task_tree_candidate
+- step_id: K00_STEP_08
+  name_cn: 生成输入输出合约候选
+  output: input_output_contract_candidates
+- step_id: K00_STEP_09
+  name_cn: 识别 Atomic Skill 与工具绑定需求
+  output: skill_and_tool_binding_candidates
+- step_id: K00_STEP_10
+  name_cn: 生成验收门候选
+  output: acceptance_gate_candidate
+- step_id: K00_STEP_11
+  name_cn: 生成状态回写候选
+  output: state_writeback_candidate
+- step_id: K00_STEP_12
+  name_cn: 生成下游交接候选
+  output: handoff_packet_candidate
+- step_id: K00_STEP_13
+  name_cn: 识别缺口
+  output: gap_report
+- step_id: K00_STEP_14
+  name_cn: 生成 Phase Controller 候选规格
+  output: phase_controller_candidate_spec
+- step_id: K00_STEP_15
+  name_cn: 生成 K00 到 P00 交接包
+  output: k00_to_p00_handoff_packet
+required_outputs:
+- raw_input_copy
+- document_passport
+- knowledge_asset_index_entry
+- methodology_requirement_extract
+- phase_controller_candidate_spec
+- task_tree_candidate
+- input_output_contract_candidates
+- acceptance_gate_candidate
+- gap_report
+- k00_to_p00_handoff_packet
+output_paths:
+  raw_inputs: 00_knowledge_intake/raw_inputs/
+  passports: 00_knowledge_intake/passports/
+  methodology_extracts: 00_knowledge_intake/methodology_extracts/
+  phase_controller_candidates: 00_knowledge_intake/phase_controller_candidates/
+  task_packages: 00_knowledge_intake/task_packages/
+  gap_reports: 00_knowledge_intake/gap_reports/
+  handoff_packets: 00_knowledge_intake/handoff_packets/
+  intake_reports: 00_knowledge_intake/intake_reports/
+acceptance_gate:
+  file_level:
+  - raw_input_copy_exists
+  - document_passport_exists
+  - phase_controller_candidate_spec_exists
+  - k00_to_p00_handoff_packet_exists
+  structure_level:
+  - candidate_spec_has_phase_goal
+  - candidate_spec_has_task_tree
+  - candidate_spec_has_input_contract
+  - candidate_spec_has_output_contract
+  - candidate_spec_has_acceptance_gate
+  - candidate_spec_has_state_writeback
+  - candidate_spec_has_downstream_handoff
+  semantic_level:
+  - system_goal_extracted
+  - phase_goal_extracted
+  - authority_boundary_defined
+  - non_goals_defined
+  - blocking_gaps_identified
+  - downstream_consumer_identified
+  consumption_level:
+  - handoff_target_is_P00
+  - candidate_status_is_READY_FOR_P00_COMPILATION
+  - registration_status_is_NOT_REGISTERED
+  safety_level:
+  - paper_only_true
+  - real_trade_enabled_false
+  - no_private_key_stored
+  - no_real_trade_instruction_executed
+blocking_conditions:
+- input_not_saved
+- passport_missing
+- asset_type_unknown
+- no_system_goal_extracted
+- no_phase_goal_candidate
+- no_acceptance_gate_candidate
+- no_downstream_handoff
+- candidate_spec_invalid
+- k00_attempted_formal_registration
+- p01_marked_ready_without_p00
+- real_trade_instruction_detected
+state_writeback:
+  required: true
+  allowed_targets:
+  - 00_knowledge_intake/runtime/k00_runtime_state.json
+  - 00_knowledge_intake/index/knowledge_asset_index.json
+  - 00_knowledge_intake/handoff_packets/
+  forbidden_targets:
+  - 00_control/current_system_state.json
+  - 00_control/phase_registry.yaml
+  - real_trade_runtime_state
+handoff:
+  source_stage: K00_knowledge_intake_taskization
+  target_stage: P00_system_bootstrap_controller
+  handoff_packet_required: true
+  handoff_status_after_success: HANDOFF_TO_P00_READY
+  target_stage_role_cn: 方法论编译与系统建造控制器
+security_policy:
+  paper_only: true
+  real_trade_enabled: false
+  private_key_allowed: false
+  seed_phrase_allowed: false
+  auto_order_allowed: false
+canonical_system_chain:
+  version: DOC-20260511-019
+  chain_text: "输入资料 / 用户目标 / 方法论 / 旧系统文件\n  ↓\nK00：知识摄取与 Phase Controller 候选任务化\n\
+    \  ↓\nphase_controller_candidate_spec.yaml\n  ↓\nk00_to_p00_handoff_packet.json\n\
+    \  ↓\nP00：方法论编译与系统建造控制器\n  ↓\n正式 controller.yaml\n  ↓\nphase_registry.yaml\n \
+    \ ↓\ncurrent_system_state.json\n  ↓\ninput_contract / output_contract / acceptance_gate\
+    \ / handoff_packet\n  ↓\nP01-P10 可调度运行"
+  k00_outputs:
+  - phase_controller_candidate_spec.yaml
+  - k00_to_p00_handoff_packet.json
+  p00_role: 方法论编译与系统建造控制器
+  p00_formal_outputs:
+  - 正式 controller.yaml
+  - phase_registry.yaml
+  - current_system_state.json
+  - input_contract
+  - output_contract
+  - acceptance_gate
+  - handoff_packet
+  business_phase_rule: P01-P10 may be scheduled only after P00 consumes and registers
+    the formal control assets.

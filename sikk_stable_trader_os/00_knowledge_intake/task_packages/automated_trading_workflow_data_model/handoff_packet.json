@@ -1,0 +1,30 @@
+{
+  "handoff_id": "HANDOFF-AUTO-TRADING-WORKFLOW-DATA-MODEL-V1",
+  "generated_at": "2026-05-11T12:27:21.964160Z",
+  "from": "K00/task_package_data_model_design",
+  "to": "P01_data_fact_runtime_connection",
+  "phase_status": "P0_CONTROL_CLOSURE_VERIFIED_READY_FOR_P01_RUNTIME_CONNECTION",
+  "next_phase_allowed": true,
+  "blocking_gap_count": 0,
+  "degraded_gap_count": 2,
+  "required_inputs": [
+    "/root/sikk-gmgn/research_loop/plan_books/active/automated_trading_workflow_data_model_task_package_planbook.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/task_execution_package.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/runtime_task_state.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/gap_register.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/automated_trading_workflow_safety_boundary.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/permission_manifest.template.json"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "next_action": "connect P01 data fact controller input/output contract to runtime_context, permission_gate, CA audit, and structural snapshot outputs",
+  "permission_manifest_template_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/permission_manifest.template.json",
+  "updated_at": "2026-05-11T12:42:40Z",
+  "p0_control_closure_handoff_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/ca_orchestrator_p0_control_closure/handoff_packet.json"
+}

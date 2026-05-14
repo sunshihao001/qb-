@@ -1,0 +1,16 @@
+phase_id: K00
+phase_name: Knowledge Intake & Taskization
+package_type: k00_intake_task_package
+status: K00_TASK_PACKAGE_READY_WITH_GAPS
+created_at: '2026-05-13T10:42:31Z'
+source_doc_id: DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001
+canonical_system_dir: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake
+authority_scope: design-only intake control
+restrictions:
+  - NO_PXX_DIRECT_ENTRY
+  - NO_IXX_DIRECT_ENTRY
+  - NO_RUNNER
+  - NO_PAPER_RUNTIME
+  - NO_LIVE_EXECUTION
+  - NO_WALLET_SIGNING
+  - NO_AUTO_DEPLOY

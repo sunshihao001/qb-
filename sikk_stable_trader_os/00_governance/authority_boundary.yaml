@@ -1,0 +1,115 @@
+version: '2.0'
+source_doc_id: DOC-20260511-021
+paper_only: true
+real_trade_enabled: false
+auto_order_allowed: false
+private_key_allowed: false
+seed_phrase_allowed: false
+stages:
+  K00:
+    phase_name: knowledge_intake_taskization
+    authority:
+    - preserve_raw_input
+    - create_document_passport
+    - create_task_package
+    - create_handoff_candidate
+    cannot:
+    - register_formal_phase_without_p00
+    - run_business_phase
+    - produce_trade_decision
+  P00:
+    phase_name: system_bootstrap_controller
+    authority:
+    - compile_system_planes
+    - register_phase_stubs
+    - write_control_state
+    - block_p01
+    cannot:
+    - trade_judgment
+    - wallet_judgment
+    - paper_trade_runtime
+    - real_trade
+  P01:
+    phase_name: data_fact_controller
+    authority:
+    - normalize_facts_only_after_data_plane_acceptance
+    cannot:
+    - infer_intent
+    - judge_scenario
+    - paper_permission
+    - runtime_before_preflight
+  P02:
+    phase_name: wallet_structure_controller
+    authority:
+    - produce_structural_or_market_judgment_after_upstream_handoff
+    cannot:
+    - paper_permission_final_decision
+    - real_trade
+    - modify_rules_directly
+  P03:
+    phase_name: chip_control_controller
+    authority:
+    - produce_structural_or_market_judgment_after_upstream_handoff
+    cannot:
+    - paper_permission_final_decision
+    - real_trade
+    - modify_rules_directly
+  P04:
+    phase_name: market_structure_controller
+    authority:
+    - produce_structural_or_market_judgment_after_upstream_handoff
+    cannot:
+    - paper_permission_final_decision
+    - real_trade
+    - modify_rules_directly
+  P05:
+    phase_name: scenario_classification_controller
+    authority:
+    - produce_structural_or_market_judgment_after_upstream_handoff
+    cannot:
+    - paper_permission_final_decision
+    - real_trade
+    - modify_rules_directly
+  P06:
+    phase_name: strategy_gate_controller
+    authority:
+    - reject_opportunity
+    - decide_paper_permission_candidate
+    cannot:
+    - execute_trade
+    - bypass_p07
+    - real_trade
+  P07:
+    phase_name: execution_risk_controller
+    authority:
+    - simulate_execution_risk
+    - block_paper_runtime_on_risk
+    cannot:
+    - sign_transaction
+    - broadcast_transaction
+    - real_order
+  P08:
+    phase_name: paper_trading_controller
+    authority:
+    - run_paper_only_validation_after_p06_p07
+    cannot:
+    - real_trade
+    - modify_live_rules
+    - paper_without_permission
+  P09:
+    phase_name: review_learning_controller
+    authority:
+    - review_failure
+    - create_rule_adjustment_candidates
+    cannot:
+    - modify_runtime_rules_directly
+    - real_trade
+  P10:
+    phase_name: system_upgrade_controller
+    authority:
+    - create_upgrade_proposal
+    - schema_migration_plan
+    - acceptance_update_plan
+    cannot:
+    - apply_runtime_without_manual_acceptance
+    - real_trade

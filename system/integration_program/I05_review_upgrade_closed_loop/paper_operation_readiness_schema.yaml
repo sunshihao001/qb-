@@ -1,0 +1,8 @@
+paper_operation_readiness:
+  type: object
+  required:
+    - readiness_id
+    - continuous_paper_operation_allowed
+    - required_before_ready
+    - status
+  additional_properties_allowed: true

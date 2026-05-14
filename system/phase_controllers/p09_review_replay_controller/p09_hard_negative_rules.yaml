@@ -1,0 +1,21 @@
+rules:
+- rule_id: P09_BLOCK_001
+  name: 历史快照缺失
+  condition: historical_snapshot_missing == true
+  result: P09_BLOCKED
+- rule_id: P09_BLOCK_002
+  name: 使用当前数据覆盖历史判断
+  condition: current_data_overlay_detected == true
+  result: P09_BLOCKED
+- rule_id: P09_BLOCK_003
+  name: 直接修改规则或阈值
+  condition: direct_rule_mutation_requested == true
+  result: P09_BLOCKED
+- rule_id: P09_BLOCK_004
+  name: 绕过 P10
+  condition: p10_handoff_bypassed == true
+  result: P09_BLOCKED
+- rule_id: P09_BLOCK_005
+  name: live execution requested
+  condition: live_execution_requested == true
+  result: P09_BLOCKED

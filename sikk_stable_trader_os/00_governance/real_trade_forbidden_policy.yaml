@@ -1,0 +1,15 @@
+version: '2.0'
+real_trade_enabled: false
+auto_order_allowed: false
+forbidden_actions:
+- swap
+- sign
+- broadcast
+- place_order
+- withdraw
+- bridge_execution
+allowed_actions:
+- read_only_research
+- paper_simulation_after_gate
+- review_package_generation
+on_violation: P0_HARD_BLOCK_AND_STATE_RESTORE

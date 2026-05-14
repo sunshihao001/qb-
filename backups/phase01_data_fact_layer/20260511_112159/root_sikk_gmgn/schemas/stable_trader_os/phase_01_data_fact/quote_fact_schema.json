@@ -1,0 +1,97 @@
+{
+  "schema_version": "quote_fact_schema_v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "file_role": "quote_fact",
+  "format": "json",
+  "fields": [
+    {
+      "field_name": "data_snapshot_time",
+      "field_chinese_name": "数据快照时间",
+      "field_group": "runtime",
+      "data_type": "datetime",
+      "required_level": "fatal_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "quote",
+        "gmgn",
+        "chain"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "all_downstream_phases"
+      ],
+      "description": "本次数据事实快照的时间，防止回测污染。"
+    },
+    {
+      "field_name": "current_market_cap_usd",
+      "field_chinese_name": "当前市值美元",
+      "field_group": "market_fact",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_04_scenario_recognition"
+      ],
+      "description": "快照时点的当前市值。"
+    },
+    {
+      "field_name": "current_liquidity_usd",
+      "field_chinese_name": "当前流动性美元",
+      "field_group": "market_fact",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_07_execution_risk"
+      ],
+      "description": "快照时点的流动性。"
+    },
+    {
+      "field_name": "quote_fact",
+      "field_chinese_name": "报价事实",
+      "field_group": "quote_fact",
+      "data_type": "object",
+      "required_level": "phase_05_required",
+      "unit": "json",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_05_structure_position",
+        "phase_07_execution_risk"
+      ],
+      "description": "报价快照事实，不作为买点判断。"
+    }
+  ]
+}

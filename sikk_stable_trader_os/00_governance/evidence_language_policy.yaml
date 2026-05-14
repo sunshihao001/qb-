@@ -1,0 +1,16 @@
+version: '2.0'
+forbidden_phrases:
+- 庄家一定
+- 必拉
+- 稳赚
+- 确定上涨
+- ' guaranteed'
+- 100%
+required_language:
+- 证据支持
+- 倾向于
+- 置信度
+- 反证
+- UNKNOWN
+- DEGRADED
+rule: market/intent claims must be probabilistic and evidence-backed

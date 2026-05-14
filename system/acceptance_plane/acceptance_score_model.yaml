@@ -1,0 +1,28 @@
+acceptance_score_model:
+  weights:
+    structural_completeness: 0.15
+    semantic_alignment: 0.15
+    contract_validity: 0.15
+    traceability: 0.15
+    governance_compliance: 0.15
+    gap_transparency: 0.1
+    downstream_readiness: 0.1
+    replayability: 0.05
+  score_thresholds:
+    ACCEPTANCE_READY:
+      min_score: 0.9
+      blocking_failures_allowed: 0
+      critical_gaps_allowed: 0
+    ACCEPTANCE_READY_WITH_GAPS:
+      min_score: 0.75
+      blocking_failures_allowed: 0
+      critical_gaps_allowed: 0
+      non_blocking_gaps_allowed: true
+    ACCEPTANCE_NEEDS_REWORK:
+      min_score: 0.5
+      blocking_failures_allowed: 0
+      rework_required: true
+    ACCEPTANCE_REJECTED:
+      min_score: 0.0
+      blocking_failures_allowed: true
+  override_rule: blocking rule has priority over score

@@ -1,0 +1,17 @@
+{
+  "preflight_status": "PASSED",
+  "safe_mode": true,
+  "loaded_inputs": [
+    "o00_pipeline_run",
+    "v00_validation_evidence_bundle",
+    "r00_binding_evidence_bundle"
+  ],
+  "forbidden_actions_checked": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ],
+  "blocking_gaps": []
+}

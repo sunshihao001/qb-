@@ -1,0 +1,34 @@
+doc_id: DOC-20260511-027
+plane: HANDOFF_PLANE
+version: v2.0
+position_in_build_order: after ACCEPTANCE_PLANE before P01-P10_PHASE_CONTROLLERS
+inputs_required:
+- acceptance_result_packet
+- trace_handoff_packet
+- full_control_task_tree
+- contract_routes
+- gap_register
+- limitation_tags
+- forbidden_actions
+- downstream_permission
+outputs_required:
+- handoff_packet
+- downstream_read_instruction
+- gap_propagation_packet
+- limitation_transfer_packet
+- forbidden_use_policy
+- field_usage_permission
+- handoff_audit_record
+non_goals:
+- scheduling
+- acceptance裁决
+- trace生成
+- business content generation
+- tool execution
+- trade decision
+hard_rules:
+- cannot override Acceptance Plane
+- cannot convert READY_WITH_GAPS to READY
+- no direct document reading by downstream when handoff exists
+- no Tool Binding/Paper Runtime/Live Runtime from this stage
+status_result: HANDOFF_PROFESSIONAL_DESIGN_READY_WITH_GAPS

@@ -1,0 +1,41 @@
+{
+  "handoff_id": "PHASE_CONTROLLER_INDEX_TO_CONTROLLER_PACKAGE_EXPANSION_DOC-20260511-028",
+  "generated_at": "2026-05-11T17:52:04Z",
+  "source_stage": "P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN",
+  "target_stage": "P01_P10_CONTROLLER_PACKAGE_EXPANSION",
+  "included_assets": [
+    "/root/sikk-gmgn/system/phase_controllers/phase_controller_index.yaml",
+    "/root/sikk-gmgn/system/phase_controllers/phase_controller_index_summary.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/08_acceptance/phase_controller_index_acceptance_result.json"
+  ],
+  "included_phase_cards": [
+    "/root/sikk-gmgn/system/phase_controllers/phase_cards/p01_phase_card.json",
+    "/root/sikk-gmgn/system/phase_controllers/phase_cards/p02_phase_card.json",
+    "/root/sikk-gmgn/system/phase_controllers/phase_cards/p03_phase_card.json",
+    "/root/sikk-gmgn/system/phase_controllers/phase_cards/p04_phase_card.json",
+    "/root/sikk-gmgn/system/phase_controllers/phase_cards/p05_phase_card.json",
+    "/root/sikk-gmgn/system/phase_controllers/phase_cards/p06_phase_card.json",
+    "/root/sikk-gmgn/system/phase_controllers/phase_cards/p07_phase_card.json",
+    "/root/sikk-gmgn/system/phase_controllers/phase_cards/p08_phase_card.json",
+    "/root/sikk-gmgn/system/phase_controllers/phase_cards/p09_phase_card.json",
+    "/root/sikk-gmgn/system/phase_controllers/phase_cards/p10_phase_card.json"
+  ],
+  "known_gaps": [
+    "P01-P10 controller.yaml/context.md/input_contract/output_contract packages not expanded yet",
+    "contract schema details are registered by name but not generated as full JSON Schema files",
+    "tool_binding remains permission-level only; no runner/tool scripts are bound",
+    "paper runtime remains blocked until P07/P08 acceptance and runtime_handoff exist",
+    "phase_controller_index_validator.py not standalone code-implemented"
+  ],
+  "blocking_gaps": [],
+  "acceptance_status": "PHASE_CONTROLLER_INDEX_READY_WITH_GAPS",
+  "next_legal_stage": "P01_P10_CONTROLLER_PACKAGE_EXPANSION",
+  "runtime_permissions": {
+    "phase_controller_package_expansion_allowed": true,
+    "p01_runtime_connection_allowed": false,
+    "tool_binding_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_runtime_allowed": false
+  },
+  "consumption_required": true
+}

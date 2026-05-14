@@ -1,0 +1,47 @@
+{
+  "handoff_id": "K00-HANDOFF-DOC-20260511-016",
+  "doc_id": "DOC-20260511-016",
+  "parent_doc_id": "DOC-20260511-006",
+  "from_phase": "K00",
+  "to_phase": "P00_system_context_control",
+  "status": "DOMAIN_PLANE_TARGET_DATA_MATERIALIZED_WITH_DEGRADED_GAPS",
+  "required_p00_checks": [
+    "consume domain_phase_target_data.yaml",
+    "decide whether REQUIRED_BEFORE_DATA_PLANE should be blocking rule or enum",
+    "verify domain_object_registry and domain_to_data_demand_map",
+    "ensure scenario taxonomy includes counterevidence rules before Data Plane/P05 acceptance",
+    "ensure wallet role taxonomy includes evidence requirements before P02 acceptance"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-DOMAIN-TARGET-DATA-MISSING-SECTION7-FIELDS",
+      "severity": "DEGRADED",
+      "description": "User-proposed Domain Plane target data omits required section-7 fields: upstream_dependencies, optional_inputs, forbidden_inputs, handoff_outputs, runner_binding_status, state_writeback_required, paper_only_required, real_trade_allowed. Executable YAML fills explicit defaults."
+    },
+    {
+      "gap_id": "GAP-DOMAIN-PHASE-STATUS-ENUM-MISMATCH",
+      "severity": "DEGRADED",
+      "description": "User-proposed phase_status REQUIRED_BEFORE_DATA_PLANE is not in legal enum; executable YAML normalized to READY_TO_BUILD."
+    },
+    {
+      "gap_id": "GAP-PER-PHASE-TARGET-DATA-INSTANCES",
+      "severity": "DEGRADED",
+      "description": "K00/P00/Governance/Domain target instances are now generated; remaining Data Plane, P01-P10 and other planes still need concrete target data instances."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

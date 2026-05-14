@@ -1,0 +1,17 @@
+integration_program: SIKK_POST_P10_INTEGRATION_PROGRAM
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+stages:
+- I01_full_phase_consistency_audit
+- I02_directory_contract_index_unification
+- I03_runner_tool_binding
+- I04_paper_runtime_integration
+- I05_review_upgrade_closed_loop
+not_business_phases: true
+restrictions:
+- NO_P11
+- NO_RUNNER_BEFORE_I01_I02
+- NO_PAPER_RUNTIME_BEFORE_I03
+- NO_LIVE_EXECUTION
+- NO_WALLET_SIGNING
+- NO_AUTO_DEPLOY
+current_stage: I05_review_upgrade_closed_loop

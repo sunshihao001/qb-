@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-20260512-005",
+  "blocking_gaps_for_package": [],
+  "runtime_gaps": [
+    "P05 runner/tool binding not implemented",
+    "P04 real handoff not runtime-consumed by P05",
+    "P06 controller package not yet landed",
+    "evidence weighting not backtested",
+    "conflict resolution thresholds not calibrated"
+  ],
+  "status": "PACKAGE_LANDING_ALLOWED_WITH_RUNTIME_GAPS"
+}

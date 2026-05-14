@@ -1,0 +1,31 @@
+acceptance_dimensions:
+- dimension_id: STRUCTURAL_COMPLETENESS
+  name_cn: 结构完整性
+  question: 是否包含必要文件、字段、模型、合约、状态码
+- dimension_id: SEMANTIC_ALIGNMENT
+  name_cn: 语义一致性
+  question: 是否符合系统目标、阶段定位和 HER 底层逻辑
+- dimension_id: CONTRACT_VALIDITY
+  name_cn: 合约有效性
+  question: 输入合约、输出合约、handoff packet 是否完整
+- dimension_id: TRACEABILITY
+  name_cn: 可追踪性
+  question: 是否具备 trace_id、父子关系、来源与下游引用
+- dimension_id: GOVERNANCE_COMPLIANCE
+  name_cn: 治理合规性
+  question: 是否违反权限边界、禁止事项、实盘限制
+- dimension_id: GAP_TRANSPARENCY
+  name_cn: 缺口透明度
+  question: 已知缺口是否登记、分级、传递
+- dimension_id: DOWNSTREAM_READINESS
+  name_cn: 下游可用性
+  question: 下游是否能读取、理解、使用输出
+- dimension_id: REPLAYABILITY
+  name_cn: 可回放性
+  question: 是否能重建输入、输出、判断和状态变化
+- dimension_id: TOOL_EXECUTABILITY
+  name_cn: 工具可执行性
+  question: 工具是否有输入、输出、权限、测试和 dry-run 记录
+- dimension_id: RUNTIME_SAFETY
+  name_cn: 运行安全性
+  question: 是否保持 paper-only，是否禁止自动实盘

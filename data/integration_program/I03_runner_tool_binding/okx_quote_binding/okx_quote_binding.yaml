@@ -1,0 +1,15 @@
+{
+  "okx_quote_binding": {
+    "owner_stage": [
+      "P08_EXECUTION_RISK"
+    ],
+    "canonical_outputs": [
+      "quote_snapshot_record",
+      "quote_consistency_record"
+    ],
+    "failure_policy": {
+      "quote_unavailable": "BLOCK_P08_RUNTIME_PERMISSION",
+      "quote_stale": "REQUIRE_REFRESH"
+    }
+  }
+}

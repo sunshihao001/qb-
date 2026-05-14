@@ -1,0 +1,14 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+policy: all upstream gaps must be copied into downstream context
+gap_classes:
+- blocking_gaps
+- non_blocking_gaps
+- known_gaps
+- weak_use_only
+- manual_review_required
+ready_with_gaps_rule: cannot upgrade to READY

@@ -1,0 +1,36 @@
+{
+  "doc_id": "DOC-20260514-HER-CLOSED-LOOP-001",
+  "gaps": [
+    {
+      "gap_id": "GAP-FULL-SYSTEM-COLLECTION",
+      "severity": "P0",
+      "title": "全体系收编证据不足",
+      "needed": "旧文档/脚本/数据/报告进入新体系registry和consumption map"
+    },
+    {
+      "gap_id": "GAP-CONTROL-CONSUMPTION",
+      "severity": "P0",
+      "title": "控制面被R00实际读取证据不足",
+      "needed": "R00 run manifest引用control/state/phase registry"
+    },
+    {
+      "gap_id": "GAP-PHASE-ACCEPTANCE",
+      "severity": "P0",
+      "title": "每阶段acceptance/handoff消费证据需要闭环验证",
+      "needed": "P01-P10每阶段acceptance+handoff+downstream consumed_by"
+    },
+    {
+      "gap_id": "GAP-PAPER-TO-P09-P10",
+      "severity": "P0",
+      "title": "paper结果进入P09/P10升级候选链路需要验证",
+      "needed": "I04 paper ledger→P09 replay→P10 candidate→shadow/regression→approval"
+    },
+    {
+      "gap_id": "GAP-HER-DOC-TRIGGERS",
+      "severity": "P1",
+      "title": "HER_DOC固定口令需落到系统路由/文档功能流水线",
+      "needed": "trigger registry + review/audit/pipeline issue pack route"
+    }
+  ],
+  "status": "GAPS_IDENTIFIED_TASK_PACKAGE_REQUIRED"
+}

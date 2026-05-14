@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "G00 Output Contract",
+  "type": "object",
+  "required": [
+    "preflight_result",
+    "governance_candidate_inventory",
+    "candidate_classification",
+    "policy_domain_mapping",
+    "forbidden_action_registry",
+    "status_code_table",
+    "execution_boundary_policy",
+    "evidence_policy",
+    "gap_policy",
+    "directory_policy",
+    "contract_policy",
+    "runner_safety_policy",
+    "human_confirmation_policy",
+    "production_risk_policy",
+    "policy_versioning",
+    "policy_conflict_report",
+    "governance_registry",
+    "active_policy_bundle",
+    "pending_policy_bundle",
+    "deprecated_policy_registry",
+    "g00_trace",
+    "g00_audit",
+    "g00_acceptance_result",
+    "g00_handoff_packet",
+    "g00_final_report"
+  ],
+  "properties": {
+    "preflight_result": {
+      "type": "object"
+    },
+    "governance_candidate_inventory": {
+      "type": "object"
+    },
+    "candidate_classification": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "policy_domain_mapping": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "forbidden_action_registry": {
+      "type": "object"
+    },
+    "status_code_table": {
+      "type": "object"
+    },
+    "execution_boundary_policy": {
+      "type": "object"
+    },
+    "evidence_policy": {
+      "type": "object"
+    },
+    "gap_policy": {
+      "type": "object"
+    },
+    "directory_policy": {
+      "type": "object"
+    },
+    "contract_policy": {
+      "type": "object"
+    },
+    "runner_safety_policy": {
+      "type": "object"
+    },
+    "human_confirmation_policy": {
+      "type": "object"
+    },
+    "production_risk_policy": {
+      "type": "object"
+    },
+    "policy_versioning": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "policy_conflict_report": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "governance_registry": {
+      "type": "object"
+    },
+    "active_policy_bundle": {
+      "type": "object"
+    },
+    "pending_policy_bundle": {
+      "type": "object"
+    },
+    "deprecated_policy_registry": {
+      "type": "object"
+    },
+    "g00_trace": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "g00_audit": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "g00_acceptance_result": {
+      "type": "object"
+    },
+    "g00_handoff_packet": {
+      "type": "object"
+    },
+    "g00_final_report": {
+      "type": "string"
+    },
+    "g00_subphase_outputs": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

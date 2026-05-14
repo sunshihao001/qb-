@@ -1,0 +1,33 @@
+{
+  "task_package_id": "TASK-PACKAGE-DOC-20260511-005",
+  "source_doc_id": "DOC-20260511-005",
+  "generated_at": "2026-05-11T13:18:52Z",
+  "objective": "Materialize Domain Plane v2.0 as canonical domain model and object/field/state data assets.",
+  "phase_target": "domain_plane_generation",
+  "required_outputs": [
+    "domain_plane.md",
+    "domain_object_registry.yaml",
+    "field_dictionary.yaml",
+    "state_dictionary.yaml",
+    "entity_relationship_map.md",
+    "domain_handoff_packet.json"
+  ],
+  "acceptance_criteria": [
+    "core domain objects defined",
+    "unique id per object",
+    "field classes defined",
+    "phase mapping generated",
+    "GateDecision not buy/sell",
+    "ExecutionTicket not live order",
+    "Report Field not used as machine input",
+    "data_plane.md identified next"
+  ],
+  "constraints": [
+    "obey governance plane",
+    "no buy/sell/live execution",
+    "facts before inference",
+    "objects before fields"
+  ],
+  "handoff_destination": "data_plane_generation",
+  "status": "TASK_PACKAGE_READY_WITH_DEGRADED_GAPS"
+}

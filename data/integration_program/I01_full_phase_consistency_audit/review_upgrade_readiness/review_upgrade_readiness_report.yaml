@@ -1,0 +1,21 @@
+record_id: review_upgrade_readiness_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+p09_readiness_checks:
+  p08_records_traceable: true
+  p07_decision_traceable: true
+  p06_scenario_traceable: true
+  p05_evidence_traceable: true
+  p04_chip_traceable: true
+  p03_wallet_traceable: true
+  p02_fact_traceable: true
+  p01_candidate_traceable: true
+  decision_time_snapshot_policy_defined: true
+p10_readiness_checks:
+  p09_generates_calibration_candidates: true
+  p09_generates_missed_negative_rules: false
+  p09_generates_new_test_cases: false
+  p10_reviews_candidates_before_change: true
+  p10_generates_regression_plan: true
+  p10_generates_rollback_plan: true
+  p10_blocks_auto_deploy: true
+readiness_status: REVIEW_UPGRADE_LOOP_NOT_READY

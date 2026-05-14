@@ -1,0 +1,62 @@
+packet_id: i03_runner_tool_binding_prerequisite_packet_20260512
+packet_type: I03_RUNNER_TOOL_BINDING_PREREQUISITE
+generated_at: '2026-05-12T13:12:00Z'
+from_controller: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION_CONTROLLER
+to_controller: I03_RUNNER_TOOL_BINDING
+purpose: Provide canonical read order, directory/contract/schema/handoff indexes,
+  path policies, and unresolved gaps before any runner/tool binding work starts.
+required_read_first:
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/read_order_manifest/read_order_manifest.yaml
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/canonical_root/canonical_root_declaration.yaml
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/phase_controller_file_index/phase_controller_file_index.yaml
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/runtime_data_path_index/runtime_data_path_index.yaml
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/schema_index/schema_index.yaml
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/contract_index/contract_index.yaml
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/handoff_contract_index/handoff_contract_index.yaml
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/data_request_packet_index/data_request_packet_index.yaml
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/control_artifact_index/control_artifact_index.yaml
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/index_gap_report/index_gap_report.yaml
+- /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/legacy_path_mapping/legacy_path_mapping.yaml
+canonical_roots:
+  repo_root: /root/sikk-gmgn
+  phase_controller_root: /root/sikk-gmgn/system/phase_controllers
+  phase_runtime_data_root: /root/sikk-gmgn/data/phase_controllers
+  i02_system_root: /root/sikk-gmgn/system/integration_program/i02_directory_contract_index_unification
+  i02_runtime_root: /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification
+  k00_root: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake
+index_summary:
+  phase_controller_dirs: 10
+  runtime_paths: 10
+  schema_files_indexed: 500
+  contract_files_indexed: 219
+  handoff_files_indexed: 188
+  data_request_files_indexed: 23
+  control_artifact_files_indexed: 500
+i03_entry_permissions:
+  allowed:
+  - read canonical indexes
+  - build tool-binding discovery plan
+  - build runner dry-run interface design
+  - build validation commands
+  - report missing adapters
+  forbidden:
+  - start paper runtime
+  - live execution
+  - wallet signing
+  - auto deploy
+  - direct mutation of P01-P10 rules
+  - legacy delete/move/overwrite
+prerequisite_status: I03_PREREQUISITE_READY_WITH_GAPS
+unresolved_items:
+- gap_id: LEGACY_ROOT_MISSING
+  severity: LOW
+  path: /root/sikk-gmgn/data/shared_handoff
+  source_index: legacy
+restrictions:
+- CONTROLLED_DRY_RUN_ONLY
+- NO_PAPER_RUNTIME_START
+- NO_LIVE_EXECUTION
+- NO_WALLET_SIGNING
+- NO_AUTO_DEPLOY
+- NO_DIRECT_RULE_MUTATION
+- LEGACY_READONLY

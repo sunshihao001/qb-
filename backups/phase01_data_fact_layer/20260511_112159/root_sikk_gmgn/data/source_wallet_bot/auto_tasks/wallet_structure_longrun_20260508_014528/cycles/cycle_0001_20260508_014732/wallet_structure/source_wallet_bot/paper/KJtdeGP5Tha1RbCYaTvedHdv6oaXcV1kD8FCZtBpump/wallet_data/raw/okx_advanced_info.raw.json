@@ -1,0 +1,48 @@
+{
+  "source": "okx",
+  "endpoint": "advanced_info",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "advanced-info",
+    "--address",
+    "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T01:47:41Z",
+  "finished_at": "2026-05-08T01:47:41Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": {
+      "bundleHoldingPercent": "0.596",
+      "chainIndex": "501",
+      "createTime": "1778202048000",
+      "creatorAddress": "F2QZGir6EofmdNw1w4hzuVjwoUoJZxHhcyJQhRYwUttb",
+      "devCreateTokenCount": "1",
+      "devHoldingPercent": "0",
+      "devLaunchedTokenCount": "1",
+      "devRugPullTokenCount": "0",
+      "isInternal": false,
+      "lpBurnedPercent": "99.1890942613790406684744258872",
+      "progress": "",
+      "protocolId": "120596",
+      "riskControlLevel": "1",
+      "sniperHoldingPercent": "0.1809",
+      "snipersClearAddressCount": "30",
+      "snipersTotal": "61",
+      "suspiciousHoldingPercent": "",
+      "tokenContractAddress": "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+      "tokenTags": [
+        "volumeChangeRateVolumeSurge",
+        "dsPaid"
+      ],
+      "top10HoldPercent": "4.8706",
+      "totalFee": "0.54207256"
+    }
+  }
+}

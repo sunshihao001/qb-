@@ -1,0 +1,16 @@
+policy_id: i02_gap_policy
+blocking_gaps:
+- live_execution_path_enabled
+- wallet_signing_enabled
+- business_logic_modified
+- auto_deploy_requested
+high_gaps:
+- missing_required_phase_controller_dir
+- missing_schema_or_contract_index
+- path_conflict_affects_runner_read_order
+medium_gaps:
+- legacy_mapping_partial
+- optional_report_missing
+- naming_inconsistency
+low_gaps:
+- minor_metadata_missing

@@ -1,0 +1,33 @@
+meta:
+  standard_id: S00_SCHEMA_TO_CONTRACT_INDEX
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+schema_to_contract:
+- schema_id: P01_STANDARD_SCHEMA_SET
+  contract_id: P01_STANDARD_CONTRACT_SET
+- schema_id: P02_STANDARD_SCHEMA_SET
+  contract_id: P02_STANDARD_CONTRACT_SET
+- schema_id: P03_STANDARD_SCHEMA_SET
+  contract_id: P03_STANDARD_CONTRACT_SET
+- schema_id: P04_STANDARD_SCHEMA_SET
+  contract_id: P04_STANDARD_CONTRACT_SET
+- schema_id: P05_STANDARD_SCHEMA_SET
+  contract_id: P05_STANDARD_CONTRACT_SET
+- schema_id: P06_STANDARD_SCHEMA_SET
+  contract_id: P06_STANDARD_CONTRACT_SET
+- schema_id: P07_STANDARD_SCHEMA_SET
+  contract_id: P07_STANDARD_CONTRACT_SET
+- schema_id: P08_STANDARD_SCHEMA_SET
+  contract_id: P08_STANDARD_CONTRACT_SET
+- schema_id: P09_STANDARD_SCHEMA_SET
+  contract_id: P09_STANDARD_CONTRACT_SET
+- schema_id: P10_STANDARD_SCHEMA_SET
+  contract_id: P10_STANDARD_CONTRACT_SET

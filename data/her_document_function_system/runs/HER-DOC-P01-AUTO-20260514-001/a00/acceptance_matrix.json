@@ -1,0 +1,18 @@
+{
+  "acceptance_id": "a00_matrix_HER-DOC-P01-AUTO-20260514-001",
+  "checks": [
+    {
+      "target": "K00/F00/V00",
+      "status": "PASSED_WITH_GAPS"
+    },
+    {
+      "target": "safe_mode_boundary",
+      "status": "PASSED"
+    },
+    {
+      "target": "forbidden_claims",
+      "status": "PASSED"
+    }
+  ],
+  "overall_status": "PASSED_WITH_GAPS"
+}

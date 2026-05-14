@@ -1,0 +1,53 @@
+controller_id: P09_REVIEW_REPLAY_CONTROLLER
+phase_id: P09
+version: v3.0
+status: PACKAGE_READY_WITH_RUNTIME_GAPS
+generated_at: '2026-05-12T08:16:13Z'
+source_doc_id: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+identity: 复盘回放、决策链重建、失败/成功归因、校准候选与 P10 升级交接控制器
+not_a:
+- paper_daily_report
+- failure_summary_script
+- automatic_rule_tuner
+- runtime_patch_engine
+- live_execution_controller
+responsibilities:
+- lock_historical_snapshots
+- reconstruct_p01_to_p08_decision_chain
+- reconstruct_paper_runtime_path
+- evaluate_outcome
+- attribute_failure_and_success
+- detect_false_positive_negative_and_missed_opportunity
+- create_calibration_candidates
+- handoff_upgrade_candidates_to_p10
+upstream:
+- P01
+- P02
+- P03
+- P04
+- P05
+- P06
+- P07
+- P08
+- PAPER_ONLY_RUNTIME
+downstream:
+- P10_SELF_UPGRADE_CONTROLLER
+allowed_outputs:
+- REVIEW_CASE_READY
+- REPLAY_COMPLETED
+- ATTRIBUTION_COMPLETED
+- CALIBRATION_CANDIDATE
+- P10_HANDOFF_READY
+- REVIEW_REJECTED
+- REVIEW_BLOCKED
+forbidden_outputs:
+- rule_changed
+- threshold_changed
+- runtime_patched
+- paper_runtime_started
+- live_execution_allowed
+- buy_signal
+runtime_allowed: false
+paper_runtime_allowed: false
+live_runtime_allowed: false
+acceptance_status: P09_PACKAGE_READY_WITH_RUNTIME_GAPS

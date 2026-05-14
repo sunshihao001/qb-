@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "source_plane",
+    "target_plane",
+    "included_assets",
+    "constraints",
+    "consumption_required"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "source_plane": {
+      "type": "string"
+    },
+    "target_plane": {
+      "type": "string"
+    },
+    "included_assets": {
+      "type": "array"
+    },
+    "constraints": {
+      "type": "array"
+    },
+    "consumption_required": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+objective_tree:
+  phase_id: I02_directory_contract_index_unification
+  level_1_goal: Create HER/Runner-readable unified indexes
+  level_2_sub_goals:
+  - id: G1
+    goal: canonical roots and path policies
+  - id: G2
+    goal: phase/controller/schema/contract/handoff indexes
+  - id: G3
+    goal: legacy readonly mapping and conflicts
+  - id: G4
+    goal: I03 prerequisite and handoff
+  level_3_tasks:
+  - id: T1
+    parent: G1
+    action: declare canonical roots
+    output: canonical_root_declaration
+  - id: T2
+    parent: G2
+    action: scan P01-P10 controllers
+    output: phase_controller_file_index
+  - id: T3
+    parent: G2
+    action: scan schemas/contracts/handoffs
+    output: schema_contract_handoff_indexes
+  - id: T4
+    parent: G3
+    action: map legacy paths readonly
+    output: legacy_path_mapping
+  - id: T5
+    parent: G4
+    action: build runner prerequisites
+    output: i03_runner_tool_binding_prerequisite_packet

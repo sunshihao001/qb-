@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "status",
+    "refs"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "from_phase": {
+      "type": "string"
+    },
+    "to_phase": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "refs": {
+      "type": "object"
+    },
+    "gaps": {
+      "type": "array"
+    }
+  }
+}

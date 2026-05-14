@@ -1,0 +1,25 @@
+{
+  "policy_id": "gap_policy_v1",
+  "version": "1.0.0",
+  "gap_rules": [
+    {
+      "gap_type": "policy_not_active",
+      "default_level": "HIGH_GAP",
+      "must_propagate": true,
+      "cannot_be_deleted": true,
+      "required_route": "G00"
+    },
+    {
+      "gap_type": "run_document_not_validated",
+      "default_level": "HIGH_GAP",
+      "must_propagate": true,
+      "required_route": "O00"
+    },
+    {
+      "gap_type": "upgrade_items_not_applied",
+      "default_level": "HIGH_GAP",
+      "must_propagate": true,
+      "required_route": "U00"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "phase_id": "P03",
+  "controller_id": "P03_WALLET_ENTITY_CONTROLLER",
+  "controller_name_cn": "钱包实体归并与角色初判控制器",
+  "primary_responsibility": "对钱包地址进行实体归并、资金来源识别、同源候选识别、钱包基础角色初判。",
+  "required_handoff": [
+    "p02_source_data_fact_handoff_packet",
+    "domain_wallet_role_taxonomy_handoff",
+    "trace_handoff_packet",
+    "field_usage_permission_packet"
+  ],
+  "outputs": [
+    "wallet_entities.json",
+    "wallet_role_initial_classification.csv",
+    "same_source_group_candidates.json",
+    "sync_group_candidates.json",
+    "p03_wallet_entity_handoff_packet.yaml"
+  ],
+  "required_trace": [
+    "PHASE_TRACE",
+    "TASK_TRACE",
+    "ARTIFACT_TRACE",
+    "CONTRACT_TRACE",
+    "FIELD_TRACE",
+    "ENTITY_TRACE",
+    "STATE_TRACE"
+  ],
+  "acceptance_gate": "GATE_P03_WALLET_ENTITY_READY",
+  "tool_binding_policy": {
+    "allowed": true,
+    "mode": [
+      "READ_ONLY_ANALYSIS",
+      "TEST_ONLY"
+    ],
+    "allowed_tools": [
+      "wallet_entity_resolver",
+      "same_source_group_detector",
+      "wallet_role_classifier"
+    ],
+    "forbidden_tools": [
+      "strategy_gate_runner",
+      "trade_executor",
+      "live_wallet_manager"
+    ]
+  },
+  "paper_runtime_policy": {
+    "allowed": false,
+    "reason": "钱包实体阶段只能产生结构事实和初判，不允许纸面交易。"
+  },
+  "forbidden": [
+    "claim_market_maker_identity",
+    "output_dominant_side_intent_as_fact",
+    "output_buy_signal",
+    "output_paper_ready",
+    "approve_runtime",
+    "ignore_wallet_entity_uncertainty"
+  ],
+  "status": "INDEXED_NOT_EXPANDED",
+  "runtime_allowed": false
+}

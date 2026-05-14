@@ -1,0 +1,49 @@
+tests:
+- test_id: I01_TEST_001
+  name: P01-P10 文件齐全，handoff 连续
+  expected_status: I01_READY
+- test_id: I01_TEST_002
+  name: phase_controller_index 缺失
+  expected_status: I01_BLOCKED
+- test_id: I01_TEST_003
+  name: P03_to_P04 handoff 缺失
+  expected_status: I01_BLOCKED
+- test_id: I01_TEST_004
+  name: P07 输出 PAPER_READY 而不是 PAPER_CANDIDATE
+  expected_status: I01_BLOCKED
+- test_id: I01_TEST_005
+  name: P08 输出 live_execution_allowed
+  expected_status: I01_BLOCKED
+- test_id: I01_TEST_006
+  name: P09 可直接修改规则
+  expected_status: I01_BLOCKED
+- test_id: I01_TEST_007
+  name: P10 缺回滚计划但允许发布
+  expected_status: I01_BLOCKED
+- test_id: I01_TEST_008
+  name: 状态码命名不一致但可映射
+  expected_status: I01_READY_WITH_GAPS
+- test_id: I01_TEST_009
+  name: schema 存在但 contract_index 未登记
+  expected_status: I01_READY_WITH_GAPS
+- test_id: I01_TEST_010
+  name: weak_use_only 在下游被升级为 full_use
+  expected_status: I01_BLOCKED_OR_HIGH_GAP
+- test_id: I01_TEST_011
+  name: P05 evidence 缺 counter_evidence 检查
+  expected_status: I01_READY_WITH_GAPS_OR_BLOCKED_DEPENDING_SEVERITY
+- test_id: I01_TEST_012
+  name: P08_to_Paper_Runtime handoff 定义存在但 Paper Runtime input contract 缺失
+  expected_status: I01_READY_WITH_GAPS
+- test_id: I01_TEST_013
+  name: P10 implementation handoff 存在但 auto_deploy 未阻断
+  expected_status: I01_BLOCKED
+- test_id: I01_TEST_014
+  name: Trace requirements 缺部分 object trace
+  expected_status: I01_READY_WITH_GAPS
+- test_id: I01_TEST_015
+  name: P09 无法读取 P08 quote snapshot
+  expected_status: I01_READY_WITH_GAPS
+- test_id: I01_TEST_016
+  name: 所有阶段禁止 live execution 且 handoff 连续
+  expected_status: I01_READY

@@ -1,0 +1,18 @@
+{
+  "packet_id": "K00_TO_P06_PACKAGE_HANDOFF_DOC-20260512-006",
+  "doc_id": "DOC-20260512-006",
+  "from_controller": "K00_KNOWLEDGE_INTAKE_TASKIZATION",
+  "to_controller": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_LANDING",
+  "generated_at": "2026-05-12T03:53:46Z",
+  "raw_input_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-006_p06_scenario_recognition_controller_v3.md",
+  "passport_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260512-006.yaml",
+  "task_package_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/task_execution_package_DOC-20260512-006.json",
+  "phase_candidate_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/phase_controller_candidates/phase_controller_candidate_spec_DOC-20260512-006.yaml",
+  "permission": "PACKAGE_DESIGN_ONLY",
+  "forbidden": [
+    "P06_RUNTIME",
+    "P07_RUNTIME",
+    "PAPER_RUNTIME",
+    "LIVE_EXECUTION"
+  ]
+}

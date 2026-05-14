@@ -1,0 +1,17 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: SELLABILITY_RISK_SCHEMA
+version: v3.0
+required_fields:
+  - sellability_id
+  - candidate_id
+  - sellability_checks
+  - sellability_status
+  - paper_runtime_effect
+allowed_statuses:
+  - SELLABILITY_ACCEPTABLE
+  - SELLABILITY_LIMITED
+  - SELLABILITY_UNKNOWN
+  - SELLABILITY_BLOCKED
+no_live_execution_fields_allowed: true

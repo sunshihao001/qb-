@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase05 Structure Position Decision",
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "snapshot_id",
+    "completion_status",
+    "structure_position_status",
+    "positive_evidence",
+    "counter_evidence",
+    "hard_negative_triggered",
+    "missing_fields",
+    "allowed_next_stage",
+    "handoff_status"
+  ],
+  "properties": {
+    "phase": {
+      "const": "phase_05_structure_position"
+    },
+    "completion_status": {
+      "type": "string"
+    },
+    "structure_position_status": {
+      "type": "string"
+    },
+    "hard_negative_triggered": {
+      "type": "boolean"
+    },
+    "positive_evidence": {
+      "type": "array"
+    },
+    "counter_evidence": {
+      "type": "array"
+    },
+    "missing_fields": {
+      "type": "array"
+    }
+  }
+}

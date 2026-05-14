@@ -1,0 +1,17 @@
+record_type: p09_review_replay_input_packet
+required_fields:
+- packet_id
+- source_runtime_ids
+- decision_snapshot_refs
+- entry_exit_refs
+- cost_slippage_refs
+- risk_event_refs
+- trace_id
+required_safety:
+  paper_only: true
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+validation:
+- all required fields present
+- trace_id present
+- no live execution artifact

@@ -1,0 +1,12 @@
+policy_id: controlled_release_policy
+allowed_release_modes:
+- PROPOSE_ONLY
+- DRY_RUN_ONLY
+- SHADOW_MODE
+- PAPER_ONLY_AFTER_APPROVAL
+forbidden:
+- AUTO_DEPLOY
+- LIVE_EXECUTION
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+controller_id: P10_SELF_UPGRADE_CONTROLLER

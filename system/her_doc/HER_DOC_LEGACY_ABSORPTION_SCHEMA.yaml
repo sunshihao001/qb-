@@ -1,0 +1,19 @@
+schema_id: HER_DOC_LEGACY_ABSORPTION_SCHEMA
+version: 1
+required_fields:
+  - asset_id
+  - asset_path
+  - asset_type
+  - current_usefulness
+  - target_phase
+  - useful_parts
+  - forbidden_parts
+  - required_action
+  - risk
+  - absorption_status
+field_enums:
+  asset_type: [OLD_SCRIPT, OLD_DATA, OLD_REPORT, OLD_GPT_RESEARCH, OLD_RUNTIME_OUTPUT]
+  current_usefulness: [ABSORB, REPLAY_USE, REFERENCE_ONLY, DEPRECATED, FORBIDDEN]
+  required_action: [FUNCTION_EXTRACTION, DATA_REPLAY_INDEXING, K00_ASSETIZATION, GPT_RESEARCH_REWRITE, HER_BUILD_BINDING, ARCHIVE_ONLY]
+  risk: [REAL_TRADE_RISK, OLD_SCHEMA_RISK, DATA_POLLUTION_RISK, UNVERIFIED_ASSUMPTION_RISK, NO_RISK]
+  absorption_status: [NOT_REVIEWED, CANDIDATE_ONLY, ABSORBED_WITH_EVIDENCE, REJECTED, ARCHIVED]

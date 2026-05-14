@@ -1,0 +1,73 @@
+{
+  "artifact_type": "reliability_calibration_state",
+  "version": "v1.7",
+  "route": "hermes_reliability_calibration_layer",
+  "calibration_run_id": "calibration.20260513_145933.我上传的是系统建设资料_不是普通阅读材料_也不是让你直接总结_请先按_H",
+  "created_at": "2026-05-13T14:59:33Z",
+  "problem": "我上传的是系统建设资料，不是普通阅读材料，也不是让你直接总结。\n\n请先按 HER 底层逻辑处理该文档。\n\n你必须理解：\n\n1. HER 不是聊天总结助手，而是一个受控运行系统。\n2. HER 的工作方式是：\n   目标识别 → 任务护照 → 路由 → Phase Controller → 输入合约 → 执行协议 → 输出合约 → 验收门 → 状态更新 → handoff → 下一阶段。\n3. Phase Controller 不是阶段说明文档，而是 HER 的最小可调节运行单元。\n4. 每个 Phase Controller 必须具备：\n   - phase_id\n   - controller_identity\n   - responsibilities\n   - permissions\n   - forbidden_actions\n   - input_contract\n   - output_contract\n   - execution_protocol\n   - state_machine\n   - acceptance_gate\n   - trace_requirements\n   - recovery_policy\n   - handoff_packet\n5. 上传文档不能直接进入 PXX / IXX / Runner / Tool Binding。\n6. 上传文档必须先进入 K00 Knowledge Intake & Taskization。\n7. K00 不是只做文档摄取，而是：\n   raw 保存 → source registry → document passport → corpus index → system mapping → gap detection → phase task package → phase state → K00 acceptance → K00 handoff。\n8. 只有 K00_ACCEPTED 或 K00_READY_WITH_GAPS，并且生成 handoff packet 后，才允许进入目标 Phase Controller。\n9. 目标 Phase Controller 执行后，也必须生成自己的 system files、runtime outputs、trace、acceptance、report、handoff。\n\n禁止事项：\n\n1. 不要直接总结文档。\n2. 不要直接给结论。\n3. 不要跳过 K00。\n4. 不要只做 raw 保存就宣称 K00 完成。\n5. 不要把聊天上下文当作系统状态。\n6. 不要在没有 K00 acceptance / handoff 的情况下进入 PXX / IXX / Controller 执行。\n7. 不要把 Phase Controller 当成普通说明文档。\n8. 不要无输入合约执行阶段。\n9. 不要无输出合约交接下游。\n10. 不要无验收门宣称 READY。\n11. 不要无 trace / audit 宣称完成。\n12. 不要直接修改生产规则。\n13. 不要启动 runner / paper runtime / live execution。\n14. 不要 wallet signing。\n15. 不要 auto deploy。\n\n请按以下完整流程执行：\n\n第一层：HER 任务入口识别\n\n- 判断该文档是否是系统建设资料。\n- 生成 task intent / goal passport。\n- 判断它影响哪些系统层：\n  - methodology\n  - control plane\n  - phase controller\n  - schema / contract\n  - data plane\n  - trace plane\n  - acceptance / handoff plane\n  - governance\n  - runner / tool binding\n  - paper-only runtime\n  - report / audit\n- 判断它应该进入哪个目标阶段：\n  - K00\n  - P00-P10\n  - I01-I05\n  - Governance\n  - Runner / Tool Binding\n  - Paper Runtime\n  - Review / Upgrade\n\n第二层：K00 Knowledge Intake & Taskization\n\n必须生成或更新以下资产：\n\n1. raw input\n   - 保存原始上传资料\n   - 不覆盖原文\n   - 记录 raw_path、source_name、source_type、received_at、doc_id\n\n2. source registry\n   - 登记 material_id / doc_id\n   - 记录来源、类型、标题、用途、目标阶段候选、处理状态\n\n3. document passport\n   - doc_id\n   - source_type\n   - source_name\n   - received_at\n   - raw_path\n   - document_role.primary_role\n   - document_role.secondary_roles\n   - summary.core_intent\n   - summary.key_points\n   - system_mapping.planes\n   - system_mapping.affected_phases\n   - required_actions\n   - evidence_level\n   - status\n\n4. corpus index\n   - 章节索引\n   - 关键对象\n   - 核心规则\n   - 关键断言\n   - 输入输出要求\n   - 禁止事项\n   - 验收要求\n   - handoff 要求\n\n5. system mapping\n   - 映射到 HER 系统层\n   - 映射到 PXX / IXX / Controller\n   - 明确可以影响什么\n   - 明确不能直接改变什么\n\n6. gap detection\n   - 识别缺失的上游资料、合约、schema、trace、acceptance、handoff、runner、test、index\n   - gap 必须分级：\n     - BLOCKING_GAP\n     - CRITICAL_GAP\n     - HIGH_GAP\n     - MEDIUM_GAP\n     - LOW_GAP\n\n7. phase task package\n   生成标准 9 文件：\n   - 01_phase_manifest.yaml\n   - 02_phase_context_pack.md\n   - 03_phase_objective_tree.yaml\n   - 04_phase_input_contract.json\n   - 05_phase_output_contract.json\n   - 06_phase_execution_protocol.md\n   - 07_phase_acceptance_gate.yaml\n   - 08_phase_state.json\n   - 09_phase_handoff_packet.schema.json\n\n8. phase state\n   写入 K00 / 目标阶段状态，不允许只存在聊天里。\n\n9. K00 acceptance\n   验收 raw / registry / passport / index / mapping / gap / task package / state / handoff 是否齐全。\n\n10. K00 handoff\n   生成 K00 → 目标 Phase Controller 的 handoff packet。\n\n第三层：目标 Phase Controller 执行\n\n只有 K00 acceptance 和 K00 handoff 通过后，才允许进入目标阶段。\n\n目标 Phase Controller 执行时必须遵守：\n\n1. 先读取 K00 handoff。\n2. 读取 phase task package。\n3. 校验 input contract。\n4. 按 execution protocol 执行。\n5. 生成 output contract 要求的文件。\n6. 写 phase_state。\n7. 写 trace。\n8. 执行 acceptance_gate。\n9. 生成 final report。\n10. 生成 downstream handoff。\n11. 如失败，写 recovery report，不允许假装 READY。\n\n第四层：验收判断\n\n最终状态只能从以下状态中选择：\n\nK00 层：\n- K00_ACCEPTED\n- K00_READY_WITH_GAPS\n- K00_BLOCKED\n- K00_REJECTED\n\n目标阶段层：\n- PXX_READY\n- PXX_READY_WITH_GAPS\n- PXX_BLOCKED\n- PXX_REJECTED\n- IXX_READY\n- IXX_READY_WITH_GAPS\n- IXX_BLOCKED\n- IXX_REJECTED\n\n如果存在 gap，必须保留 gap，不允许把 READY_WITH_GAPS 改写成 READY。\n\n第五层：最终回复格式\n\n完成后必须报告：\n\n1. doc_id\n2. raw_path",
+  "dry_run": true,
+  "expected_outcome": {
+    "statement": "runtime hook reduces false completion and improves next-run reliability",
+    "source": "argument_or_default",
+    "confidence": "intended"
+  },
+  "observed_outcome": {
+    "statement": "dry-run artifacts prove hook path is runnable but not real-world reliability improvement",
+    "source": "argument_or_default",
+    "evidence_class": "dry_run_or_reported"
+  },
+  "evidence_links": [
+    "no external evidence supplied",
+    "dry-run calibration artifact only"
+  ],
+  "calibration_delta": {
+    "delta_type": "false_completion_risk_identified",
+    "delta_score": 0.68,
+    "expected_observed_match": false,
+    "dry_run_boundary": true,
+    "interpretation": "需要真实运行/跨轮观察后才能声明可靠性提升"
+  },
+  "judgment_error_rate": {
+    "trend": "improved_if_bias_correction_applied",
+    "baseline": "unknown_without_history",
+    "current_signal": "false_completion_risk_identified",
+    "metric_status": "candidate_metric"
+  },
+  "benchmark_update": {
+    "benchmark_case_id": "calibration.20260513_145933.我上传的是系统建设资料_不是普通阅读材料_也不是让你直接总结_请先按_H",
+    "should_replay": true,
+    "replay_focus": [
+      "false_completion",
+      "dry_run_boundary",
+      "evidence_gap"
+    ],
+    "stored_under": "16_reliability_calibration/runs/calibration.20260513_145933.我上传的是系统建设资料_不是普通阅读材料_也不是让你直接总结_请先按_H"
+  },
+  "rule_adjustment_candidate": {
+    "candidate_rule": "Completion claims must include expected-vs-observed calibration when prior run only produced dry-run/control artifacts.",
+    "promotion_status": "candidate_only",
+    "requires_independent_revalidation": true
+  },
+  "memory_candidate_review": {
+    "memory_action": "queue_unverified",
+    "verified_memory_allowed": false,
+    "reason": "single dry-run calibration is not enough for stable memory",
+    "scope": "hermes_harness_reliability_calibration"
+  },
+  "revalidation_window": {
+    "trigger": "next comparable HER runtime task or explicit verification run",
+    "minimum_evidence": [
+      "real execution artifact",
+      "independent verification",
+      "expected-vs-observed comparison"
+    ],
+    "expires_when": "route/schema changes or after superseding V1.x layer"
+  },
+  "next_run_bias_correction": {
+    "primary_bias": "overclaiming reliability from process completion",
+    "next_run_instruction": "在声明更可靠之前，先比较 expected outcome 与 observed outcome，并标明 dry-run 边界。",
+    "forbidden_shortcut": "不要把治理产物存在当作可靠性提升证据。"
+  },
+  "calibration_decision": "improve",
+  "overall_passed": true
+}

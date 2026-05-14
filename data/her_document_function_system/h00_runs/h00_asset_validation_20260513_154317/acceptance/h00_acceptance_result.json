@@ -1,0 +1,21 @@
+{
+  "phase_id": "H00",
+  "run_id": "h00_asset_validation_20260513_154317",
+  "asset_validation_status": "H00_ASSET_VALIDATED",
+  "real_runtime_status": "H00_BLOCKED",
+  "queue_status": "QUEUE_BLOCKED",
+  "controller_files_validated": 20,
+  "test_evidence_ref": "/root/sikk-gmgn/data/her_document_function_system/h00_runs/h00_asset_validation_20260513_154317/test_execution/test_evidence.json",
+  "blocking_gaps_for_real_runtime": [
+    "missing_a00_handoff",
+    "missing_readiness_certificate",
+    "missing_evidence_bundle"
+  ],
+  "accepted_for": "controller_asset_existence_and_contract_static_validation",
+  "not_accepted_for": [
+    "real_downstream_queue_execution",
+    "downstream_task_execution",
+    "runner_execution"
+  ],
+  "final_status": "H00_ASSET_VALIDATED_REAL_RUNTIME_BLOCKED"
+}

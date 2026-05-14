@@ -1,0 +1,23 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "timezone": "UTC",
+  "rules": [
+    {
+      "input_formats": [
+        "unix_seconds",
+        "unix_milliseconds",
+        "iso8601"
+      ],
+      "output_format": "iso8601_utc"
+    },
+    {
+      "condition": "timestamp > data_snapshot_time",
+      "action": "write_anomaly_and_pause"
+    },
+    {
+      "condition": "missing_time_on_fatal_field",
+      "action": "BLOCK"
+    }
+  ]
+}

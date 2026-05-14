@@ -1,0 +1,19 @@
+{
+  "doc_id": "DOC-20260513-O00-CLI-001",
+  "gaps": [
+    {
+      "gap_id": "gap_o00_cli_assets_missing_or_unverified",
+      "level": "BLOCKING_GAP",
+      "status": "OPEN",
+      "route_to": "O00",
+      "reason": "CLI/registry/config/sample replay assets must exist and pass replay verification before status can be claimed"
+    },
+    {
+      "gap_id": "gap_v00_real_test_evidence_missing",
+      "level": "MEDIUM_GAP",
+      "status": "OPEN",
+      "route_to": "V01",
+      "reason": "design-level sample replay does not execute real pytest evidence"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+acceptance_result_packet:
+  packet_id: string
+  generated_at: datetime
+  acceptance_plane_version: v2.0
+  run_id: string
+  target:
+    target_stage: string
+    target_phase_id: string
+    target_artifacts: list
+    target_trace_ids: list
+  inputs:
+    trace_handoff_packet_id: string
+    full_control_task_tree_id: string
+    contract_trace_ids: list
+    state_trace_ids: list
+    gap_ids: list
+  acceptance_summary:
+    acceptance_status:
+    - ACCEPTANCE_READY
+    - ACCEPTANCE_READY_WITH_GAPS
+    - ACCEPTANCE_NEEDS_REWORK
+    - ACCEPTANCE_REJECTED
+    - ACCEPTANCE_BLOCKED
+    acceptance_score: number
+    blocking_failures: list
+    non_blocking_gaps: list
+    required_rework_tasks: list
+  dimension_results:
+    structural_completeness: PASS|WARN|FAIL
+    semantic_alignment: PASS|WARN|FAIL
+    contract_validity: PASS|WARN|FAIL
+    traceability: PASS|WARN|FAIL
+    governance_compliance: PASS|WARN|FAIL
+    gap_transparency: PASS|WARN|FAIL
+    downstream_readiness: PASS|WARN|FAIL
+    replayability: PASS|WARN|FAIL
+  downstream_permission:
+    handoff_allowed: boolean
+    handoff_mode:
+    - FULL_HANDOFF
+    - LIMITED_HANDOFF
+    - BLOCK_HANDOFF
+    phase_controller_build_allowed: boolean
+    tool_binding_allowed: boolean
+    paper_runtime_allowed: boolean
+    live_runtime_allowed: false
+  limitation_tags:
+  - GAP_PROPAGATION_REQUIRED
+  - WEAK_USE_ONLY
+  - MANUAL_REVIEW_REQUIRED
+  - RUNTIME_BLOCKED
+  - TOOL_BINDING_BLOCKED
+  forbidden_actions:
+  - HANDOFF_WITHOUT_ACCEPTANCE
+  - TOOL_BINDING_WITHOUT_ACCEPTANCE
+  - PAPER_RUNTIME_WITHOUT_ACCEPTANCE
+  - LIVE_EXECUTION

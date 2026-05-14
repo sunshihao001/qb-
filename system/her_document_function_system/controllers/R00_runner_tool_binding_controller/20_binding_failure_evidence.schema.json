@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Binding failure evidence schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "failure_id",
+    "failure_type",
+    "gap_level",
+    "affected_binding",
+    "failure_reason",
+    "evidence_path",
+    "required_fix",
+    "can_continue"
+  ],
+  "properties": {
+    "failure_id": {
+      "type": "string"
+    },
+    "failure_type": {
+      "enum": [
+        "missing_v00_handoff",
+        "validation_not_passed",
+        "missing_test_evidence",
+        "missing_replay_evidence",
+        "missing_binding_policy",
+        "missing_execution_boundary",
+        "interface_conflict",
+        "command_contract_gap",
+        "cli_binding_gap",
+        "tool_binding_gap",
+        "orchestrator_binding_gap",
+        "telegram_binding_gap",
+        "report_binding_gap",
+        "dashboard_binding_gap",
+        "scheduler_binding_gap",
+        "dry_run_failed",
+        "missing_trace",
+        "missing_audit",
+        "production_risk_detected",
+        "governance_violation"
+      ]
+    },
+    "gap_level": {
+      "enum": [
+        "BLOCKING_GAP",
+        "CRITICAL_GAP",
+        "HIGH_GAP",
+        "MEDIUM_GAP",
+        "LOW_GAP"
+      ]
+    },
+    "affected_binding": {
+      "type": "string"
+    },
+    "failure_reason": {
+      "type": "string"
+    },
+    "evidence_path": {
+      "type": "string"
+    },
+    "required_fix": {
+      "type": "string"
+    },
+    "can_continue": {
+      "type": "boolean"
+    }
+  }
+}

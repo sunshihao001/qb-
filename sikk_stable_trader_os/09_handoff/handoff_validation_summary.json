@@ -1,0 +1,19 @@
+{
+  "required_count": 26,
+  "packet_count": 8,
+  "missing": [],
+  "empty": [],
+  "yaml_errors": [],
+  "json_errors": [],
+  "anchor_fail": [],
+  "handoff_status": "HANDOFF_READY_WITH_GAPS",
+  "handoff_mode": "LIMITED_HANDOFF",
+  "current_authoritative_stage": "HANDOFF_PLANE",
+  "next_legal_stage": "P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN",
+  "p01_runtime_connection_allowed": false,
+  "tool_binding_allowed": false,
+  "paper_runtime_allowed": false,
+  "live_runtime_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false
+}

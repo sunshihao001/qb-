@@ -1,0 +1,60 @@
+{
+  "handoff_id": "",
+  "source_stage": "K00_knowledge_intake_taskization",
+  "target_stage": "P00_system_bootstrap_controller",
+  "source_asset_id": "",
+  "source_file_path": "",
+  "handoff_type": "phase_controller_candidate_compilation",
+  "included_assets": {
+    "raw_input_copy": "",
+    "document_passport": "",
+    "methodology_requirement_extract": "",
+    "phase_controller_candidate_spec": "",
+    "gap_report": ""
+  },
+  "extracted_requirements": {
+    "system_goal": "",
+    "phase_goal_candidates": [],
+    "task_tree_candidates": [],
+    "input_contract_candidates": [],
+    "output_contract_candidates": [],
+    "atomic_skill_candidates": [],
+    "tool_binding_candidates": [],
+    "acceptance_gate_candidates": [],
+    "state_writeback_candidates": [],
+    "handoff_candidates": []
+  },
+  "known_gaps": [],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [],
+  "k00_decision": {
+    "assetization_status": "COMPLETED",
+    "phase_controller_candidate_created": true,
+    "ready_for_p00_compilation": true,
+    "formal_registration_allowed_by_k00": false
+  },
+  "required_p00_actions": [
+    "review_phase_controller_candidate_spec",
+    "validate_authority_boundary",
+    "decide_existing_phase_or_new_phase",
+    "compile_formal_controller_yaml_if_approved",
+    "register_in_phase_registry_if_approved",
+    "update_current_system_state_if_approved",
+    "write_consumption_log"
+  ],
+  "next_recommended_stage": "P00_system_bootstrap_controller",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "private_key_included": false,
+    "seed_phrase_included": false,
+    "auto_order_allowed": false
+  },
+  "consumption_status": {
+    "consumed_by_p00": false,
+    "consumed_at": null,
+    "p00_decision": "PENDING"
+  },
+  "target_stage_role_cn": "方法论编译与系统建造控制器",
+  "canonical_system_chain": "输入资料 / 用户目标 / 方法论 / 旧系统文件\n  ↓\nK00：知识摄取与 Phase Controller 候选任务化\n  ↓\nphase_controller_candidate_spec.yaml\n  ↓\nk00_to_p00_handoff_packet.json\n  ↓\nP00：方法论编译与系统建造控制器\n  ↓\n正式 controller.yaml\n  ↓\nphase_registry.yaml\n  ↓\ncurrent_system_state.json\n  ↓\ninput_contract / output_contract / acceptance_gate / handoff_packet\n  ↓\nP01-P10 可调度运行"
+}

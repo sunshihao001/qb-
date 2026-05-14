@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 pipeline config",
+  "type": "object",
+  "required": [
+    "safe_mode",
+    "runner_binding_required",
+    "allowed_pipeline_modes",
+    "forbidden_modes"
+  ],
+  "properties": {
+    "safe_mode": {
+      "const": true
+    },
+    "runner_binding_required": {
+      "type": "boolean"
+    },
+    "allowed_pipeline_modes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "DOCUMENT_INTAKE",
+          "FUNCTION_REALIZATION",
+          "VALIDATION",
+          "SAFE_BINDING",
+          "ACCEPTANCE",
+          "HANDOFF",
+          "REVIEW",
+          "GOVERNANCE_UPDATE"
+        ]
+      }
+    },
+    "forbidden_modes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "LIVE_RUNTIME",
+          "WALLET_SIGNING",
+          "AUTO_DEPLOY",
+          "PRODUCTION_TRADING"
+        ]
+      }
+    }
+  }
+}

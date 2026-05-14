@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "K00 to F00 Handoff Packet",
+  "type": "object",
+  "required": [
+    "phase_id",
+    "status",
+    "k00_handoff_packet",
+    "document_passport_refs",
+    "corpus_index_refs",
+    "system_mapping_refs",
+    "gap_detection_refs",
+    "target_phase_candidates",
+    "execution_boundary",
+    "write_policy",
+    "repo_root"
+  ],
+  "properties": {
+    "phase_id": {
+      "const": "K00"
+    },
+    "status": {
+      "enum": [
+        "K00_HANDOFF_READY",
+        "K00_READY_WITH_GAPS",
+        "K00_BLOCKED",
+        "K00_DESIGN_ONLY"
+      ]
+    },
+    "k00_handoff_packet": {
+      "type": "object"
+    },
+    "document_passport_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "corpus_index_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "system_mapping_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "gap_detection_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "kv_retrieval_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "target_phase_candidates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "execution_boundary": {
+      "type": "object"
+    },
+    "write_policy": {
+      "type": "object"
+    },
+    "repo_root": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,45 @@
+{
+  "queue_id": "BOOTSTRAP_TASK_QUEUE_20260511",
+  "queue_type": "BOOTSTRAP_NEXT_TASK_QUEUE",
+  "created_at": "2026-05-11T15:56:01.156545Z",
+  "current_authoritative_stage": "P00_system_bootstrap_controller",
+  "queued_tasks": [
+    {
+      "task_id": "GOVERNANCE_PLANE_GENERATION",
+      "priority": "P0",
+      "status": "QUEUED",
+      "required_before": [
+        "P01_DATA_FACT_RUNTIME_CONNECTION"
+      ]
+    },
+    {
+      "task_id": "DOMAIN_PLANE_GENERATION",
+      "priority": "P0",
+      "status": "QUEUED",
+      "required_before": [
+        "DATA_PLANE_ACCEPTANCE_REVIEW"
+      ]
+    },
+    {
+      "task_id": "DATA_PLANE_GENERATION",
+      "priority": "P0",
+      "status": "QUEUED",
+      "required_before": [
+        "P01_PREFLIGHT"
+      ]
+    },
+    {
+      "task_id": "TRACE_ACCEPTANCE_HANDOFF_BOOTSTRAP_UPDATE",
+      "priority": "P1",
+      "status": "QUEUED",
+      "required_before": [
+        "P01_READY_FOR_PREFLIGHT"
+      ]
+    }
+  ],
+  "blocked_tasks": [
+    "P01_DATA_FACT_RUNTIME_CONNECTION",
+    "PAPER_TRADING_RUNTIME",
+    "REAL_TRADE_EXECUTION"
+  ]
+}

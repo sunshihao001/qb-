@@ -1,0 +1,146 @@
+{
+  "object": "[REDACTED_CA]",
+  "comparison_dir": "/root/sikk-gmgn/data/source_wallet_bot/comparison_tests/20260511_115455",
+  "legacy_source_output": {
+    "verification_status": "PASS",
+    "stage_outputs_checked": 6,
+    "state_outputs_checked": 1,
+    "candidate_count": 1,
+    "candidate_sample": {
+      "token_address": "[REDACTED_CA]",
+      "chain": "solana",
+      "symbol": "LOBSTER",
+      "market_cap": 501176.6401830906,
+      "liquidity_usd": 64207.5457356526,
+      "safety_block": false,
+      "market_block": false,
+      "wallet_structure_status": "WALLET_SUPPORT",
+      "kline_status": "RAW_KLINE_PENDING",
+      "strategy_status": "PAPER_READY_CANDIDATE",
+      "raw_stage_status": {
+        "stage_01_candidate_discovery": "PASS",
+        "stage_02_safety_gate": "PASS",
+        "stage_03_market_gate": "PASS",
+        "stage_05_early_wallet_analyzer": "PASS",
+        "stage_07_holder_cluster": "PASS",
+        "stage_09_chip_distribution_analyzer": "PASS"
+      },
+      "raw_inference": {
+        "market_reasons": [],
+        "holder_cluster_status": "OKX_CLUSTER_EVIDENCE",
+        "chip_distribution_status": "DUAL_SOURCE_AVAILABLE"
+      }
+    },
+    "stage_output_count": 6,
+    "state_count": 1,
+    "state_counts": {
+      "WATCHING": 1
+    },
+    "final_state_sample": {
+      "token_address": "[REDACTED_CA]",
+      "symbol": "LOBSTER",
+      "final_state": "WATCHING",
+      "transition_reason": "证据不足，保持观察。",
+      "live_disabled": true
+    },
+    "adapter_field_summary": {
+      "symbol": "LOBSTER",
+      "market_cap": 501176.6401830906,
+      "liquidity_usd": 64207.5457356526,
+      "price_usd": 0.00050119004,
+      "top10_holder_rate": 0.1916,
+      "rug_ratio": null,
+      "risk_level": "1",
+      "holders_count": 50,
+      "traders_count": 50,
+      "okx_top_trader_count": 50,
+      "okx_cluster_count": 1,
+      "required_failures_count": 0
+    },
+    "contains_strategy_or_state_fields": true,
+    "contains_wallet_trade_normalized": false,
+    "contains_wallet_profile_normalized": false,
+    "contains_wallet_intelligence_decision": false,
+    "contains_same_source_evidence": false,
+    "contains_bot2_handoff": false,
+    "contains_missing_field_contract": false
+  },
+  "current_router_output": {
+    "quality_status": "PASS",
+    "recommended_action": "analysis_allowed_read_standard_fact_assets",
+    "missing_required_assets_count": 0,
+    "missing_optional_assets_count": 0,
+    "token_stage_field_summary": {
+      "symbol": "LOBSTER",
+      "market_cap": 488879.6324018165,
+      "liquidity_usd": 62146.25503389308,
+      "price_usd": 0.00048889226,
+      "top10_holder_rate": 0.1966,
+      "rug_ratio": null,
+      "risk_level": "1",
+      "holders_count": 8,
+      "traders_count": 8,
+      "okx_top_trader_count": 8,
+      "okx_cluster_count": 1,
+      "required_failures_count": 0
+    },
+    "wallet_trade_records": 28,
+    "wallet_profile_records": 28,
+    "wallet_intelligence_records": 28,
+    "same_source_candidate_groups": 2,
+    "evidence_level_distribution": {
+      "E2": 10,
+      "E3": 17,
+      "E0": 1
+    },
+    "risk_level_distribution": {
+      "R2": 25,
+      "R1": 2,
+      "R0": 1
+    },
+    "role_candidate_distribution": {
+      "疑似接盘鲸鱼": 16,
+      "疑似结构执行钱包": 25,
+      "疑似结果钱包": 13,
+      "疑似同源执行组": 7,
+      "证据不足": 1
+    },
+    "same_source_evidence_level_distribution": {
+      "E3": 2
+    },
+    "same_source_risk_level_distribution": {
+      "R2": 2
+    },
+    "requires_followup_fields": [
+      "funding_source_address",
+      "wallet_first_seen_time"
+    ],
+    "missing_fields_summary_wallet_count": 2,
+    "contamination_status": "PASS",
+    "present_required_assets": [
+      "bot2_handoff_packet",
+      "raw_source_manifest",
+      "same_source_evidence_normalized",
+      "wallet_entity_profile_normalized",
+      "wallet_intelligence_decision",
+      "wallet_trade_normalized"
+    ]
+  },
+  "delta": {
+    "market_snapshot_diff_note": "两套都重新跑到了 market/stage 数据；价格/市值/流动性存在快照时间差，属于实时源变化，不是核心结构问题。",
+    "legacy_market_cap": 501176.6401830906,
+    "current_market_cap": 488879.6324018165,
+    "legacy_holders_count": 50,
+    "current_holders_count": 8,
+    "legacy_traders_count": 50,
+    "current_traders_count": 8,
+    "legacy_wallet_fact_records": 0,
+    "current_wallet_fact_records": 28,
+    "legacy_same_source_groups": 0,
+    "current_same_source_groups": 2,
+    "legacy_handoff_exists": false,
+    "current_handoff_exists": true,
+    "legacy_missing_required_gate": null,
+    "current_missing_required_gate": 0
+  }
+}

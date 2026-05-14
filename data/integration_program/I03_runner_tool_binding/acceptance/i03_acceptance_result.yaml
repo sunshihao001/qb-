@@ -1,0 +1,18 @@
+{
+  "i03_acceptance_result": {
+    "result": "I03_READY_WITH_GAPS",
+    "generated_at": "2026-05-12T14:32:32Z",
+    "blocking_gaps": [],
+    "runtime_gaps": [
+      "actual runner code may require implementation in future task",
+      "real readonly tool dry-run fixtures not executed"
+    ],
+    "permission_to_enter_i04": "ALLOWED_WITH_GAPS",
+    "safety": {
+      "no_live_execution_path": true,
+      "no_wallet_signing": true,
+      "no_auto_deploy": true,
+      "legacy_data_deleted_or_moved": false
+    }
+  }
+}

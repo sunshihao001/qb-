@@ -1,0 +1,20 @@
+doc_id: DOC-20260511-019
+task_name: K00_SYSTEM_CHAIN_PROFESSIONAL_UPDATE
+task_type: K00_P00_methodology_chain_update
+required_outputs:
+- /root/sikk-gmgn/sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/context.md
+- /root/sikk-gmgn/sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/controller.yaml
+- /root/sikk-gmgn/sikk_stable_trader_os/00_methodology/system_methodology_blueprint.md
+- /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/phase_controller_candidates/phase_controller_candidate_spec.template.yaml
+- /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet.template.json
+acceptance:
+- context_has_canonical_chain
+- controller_has_canonical_chain
+- blueprint_has_canonical_chain
+- handoff_target_p00
+- paper_only_true
+- real_trade_enabled_false
+- p01_not_allowed
+next_stage: P00_system_bootstrap_controller
+p01_allowed: false
+created_at: '2026-05-11T14:47:39+00:00'

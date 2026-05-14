@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0366
+source_path: sikk_stable_trader_os/09_reports/audit_reports/system_registry_audit_report.md
+phase_scores:
+  P01: 2
+  P02: 0
+  P03: 2
+  P04: 2
+  P05: 5
+  P06: 2
+  P07: 7
+  P08: 6
+  P09: 4
+  P10: 2
+primary_phase: P07
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

@@ -1,0 +1,16 @@
+record_type: paper_position_close_record
+required_fields:
+- close_id
+- position_id
+- close_time
+- close_price
+- realized_pnl
+- trace_id
+required_safety:
+  paper_only: true
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+validation:
+- all required fields present
+- trace_id present
+- no live execution artifact

@@ -1,0 +1,26 @@
+{
+  "policy_id": "human_confirmation_policy_v1",
+  "version": "1.0.0",
+  "confirmation_rules": [
+    {
+      "action_type": "policy_activation",
+      "requires_confirmation": false,
+      "requires_acceptance_evidence": true
+    },
+    {
+      "action_type": "paper_runtime_enable",
+      "requires_confirmation": true,
+      "without_confirmation": "BLOCK_ACTION"
+    },
+    {
+      "action_type": "scheduler_enable",
+      "requires_confirmation": true,
+      "without_confirmation": "BLOCK_ACTION"
+    },
+    {
+      "action_type": "data_deletion",
+      "requires_confirmation": true,
+      "without_confirmation": "BLOCK_ACTION"
+    }
+  ]
+}

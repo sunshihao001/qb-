@@ -1,0 +1,15 @@
+packet_id: handoff_DOC-20260512-I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION_V1_to_I02
+from: K00_knowledge_intake
+to: I02_directory_contract_index_unification
+generated_at: '2026-05-12T12:40:29Z'
+source_doc_id: DOC-20260512-I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION_V1
+task_package_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I02_directory_contract_index_unification
+status: K00_HANDOFF_READY
+restrictions:
+- NO_P11_P12
+- NO_BUSINESS_LOGIC_MUTATION
+- NO_RUNNER_BINDING_YET
+- NO_PAPER_RUNTIME
+- NO_LIVE_EXECUTION
+- NO_WALLET_SIGNING
+- NO_AUTO_DEPLOY

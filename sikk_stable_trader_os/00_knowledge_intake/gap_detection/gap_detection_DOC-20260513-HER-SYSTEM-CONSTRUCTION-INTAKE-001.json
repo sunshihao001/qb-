@@ -1,0 +1,18 @@
+{
+  "doc_id": "DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001",
+  "gap_status": "K00_READY_WITH_GAPS",
+  "gaps": [
+    {
+      "gap_id": "GAP-K00-001",
+      "gap_level": "LOW_GAP",
+      "gap_type": "downstream_routing_gap",
+      "description": "The uploaded document is a reusable intake template and does not itself specify a concrete downstream execution artifact beyond K00/P00 design-time routing.",
+      "affected_phase": "K00",
+      "affected_file_or_asset": "handoff packet / downstream phase package",
+      "blocking_reason": null,
+      "recommended_resolution": "Attach a concrete downstream source document or controller spec when a non-template intake target is available.",
+      "can_continue": true,
+      "resulting_status": "K00_READY_WITH_GAPS"
+    }
+  ]
+}

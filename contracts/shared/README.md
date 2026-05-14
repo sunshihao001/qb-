@@ -1,0 +1,5 @@
+# contracts/shared
+
+跨 Bot shared 合同目录。
+
+目录规则来源：`docs/system_directory_constitution.md` 与 `docs/system_directory_routes.json`。

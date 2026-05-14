@@ -1,0 +1,27 @@
+{
+  "evidence_depth": "INPUT_HASH_SOURCE_DECISION_DOWNGRADE_ACCEPTANCE",
+  "forbidden_action_check": {
+    "broadcast": false,
+    "private_key": false,
+    "real_trade": false,
+    "signing": false,
+    "swap": false
+  },
+  "phase_id": "K03",
+  "required_trace_fields": [
+    "acceptance_evidence",
+    "decision_reason",
+    "downgrade_reason",
+    "downgrade_reasons",
+    "forbidden_action_check",
+    "input_hash",
+    "input_refs",
+    "missing_fields",
+    "output_refs",
+    "phase_id",
+    "run_id",
+    "source_artifact"
+  ],
+  "status": "TRACE_EVIDENCE_TEMPLATE_READY",
+  "trace_id": "K03_STANDARD_STAGE_TRACE"
+}

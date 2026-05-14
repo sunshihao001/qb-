@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Input Contract",
+  "type": "object",
+  "required": [
+    "phase_id",
+    "h00_handoff_packet",
+    "a00_evidence_bundle",
+    "phase_status_matrix",
+    "gap_reports",
+    "queue_state",
+    "trace_refs",
+    "audit_refs",
+    "upgrade_policy"
+  ],
+  "properties": {
+    "phase_id": {
+      "const": "U00"
+    },
+    "h00_handoff_packet": {
+      "type": "object",
+      "required": [
+        "handoff_id",
+        "from_phase",
+        "to_phase",
+        "handoff_status"
+      ],
+      "properties": {
+        "from_phase": {
+          "const": "H00"
+        },
+        "to_phase": {
+          "const": "U00"
+        },
+        "handoff_status": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "a00_evidence_bundle": {
+      "type": "object"
+    },
+    "phase_status_matrix": {
+      "type": "object"
+    },
+    "gap_reports": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "failure_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "default": []
+    },
+    "queue_state": {
+      "type": "object"
+    },
+    "trace_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "audit_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "execution_boundary": {
+      "type": "object",
+      "required": [
+        "allow_write",
+        "allow_auto_execute",
+        "allow_production"
+      ],
+      "properties": {
+        "allow_write": {
+          "type": "boolean"
+        },
+        "allow_auto_execute": {
+          "type": "boolean"
+        },
+        "allow_production": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "upgrade_policy": {
+      "type": "object",
+      "required": [
+        "allow_gov_candidates",
+        "allow_backlog",
+        "allow_handoff"
+      ],
+      "properties": {
+        "allow_gov_candidates": {
+          "type": "boolean"
+        },
+        "allow_backlog": {
+          "type": "boolean"
+        },
+        "allow_handoff": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "u00_subphase_inputs": {
+      "type": "object",
+      "description": "Per-subphase input refs for U00.0-U00.16",
+      "properties": {
+        "U00.0": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.1": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.2": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.3": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.4": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.5": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.6": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.7": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.8": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.9": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.10": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.11": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.12": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.13": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.14": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.15": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "U00.16": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

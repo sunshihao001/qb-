@@ -1,0 +1,17 @@
+{
+  "dry_run_id": "dry_run_r00_controller_creation_20260513_1500",
+  "binding_id": "r00_controller_asset_test",
+  "command": "pytest tests/test_r00_runner_tool_binding_controller.py -q",
+  "started_at": "2026-05-13T15:00:00Z",
+  "ended_at": "2026-05-13T15:06:00.457729Z",
+  "exit_code": 0,
+  "stdout_path": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/dry_run/dry_run_stdout.log",
+  "stderr_path": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/dry_run/dry_run_stderr.log",
+  "generated_outputs": [
+    "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/dry_run/generated_outputs_manifest.json"
+  ],
+  "missing_outputs": [],
+  "trace_path": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/trace/r00_trace.jsonl",
+  "audit_path": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/trace/r00_audit.jsonl",
+  "status": "BINDING_TESTED"
+}

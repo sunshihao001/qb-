@@ -1,0 +1,275 @@
+{
+  "version": "2.0",
+  "system": "SIKK Stable Trader OS",
+  "source_doc_id": "DOC-20260511-005",
+  "field_classes": [
+    "fact_field",
+    "inference_field",
+    "state_field",
+    "report_field",
+    "control_field",
+    "risk_field",
+    "handoff_field"
+  ],
+  "rules": {
+    "fact_field": "must come from source/tool calculation; AI inference prohibited",
+    "report_field": "human-readable only; cannot feed machine judgment",
+    "control_field": "controls phase transition",
+    "risk_field": "can trigger hard negative or forced status"
+  },
+  "object_fields": {
+    "Token": {
+      "fact_fields": [
+        "token_address",
+        "chain",
+        "token_symbol",
+        "token_name",
+        "discovered_at",
+        "launch_time",
+        "pair_address",
+        "pool_address",
+        "creator_address",
+        "market_cap_usd",
+        "liquidity_usd",
+        "volume_5m",
+        "volume_1h",
+        "volume_24h",
+        "holders_count",
+        "top_holder_ratio",
+        "price_usd",
+        "price_change_5m",
+        "price_change_1h",
+        "price_change_24h"
+      ],
+      "inference_fields": [
+        "token_lifecycle_stage",
+        "market_scene",
+        "time_context_status",
+        "market_cap_context_status",
+        "scene_confidence"
+      ],
+      "state_fields": [
+        "token_state",
+        "phase_status",
+        "strategy_status",
+        "risk_status",
+        "paper_status",
+        "review_status"
+      ],
+      "report_fields": [
+        "token_summary",
+        "scene_explanation",
+        "risk_summary",
+        "review_notes"
+      ]
+    },
+    "Wallet": {
+      "fact_fields": [
+        "wallet_address",
+        "chain",
+        "token_address",
+        "first_seen_at",
+        "first_buy_time",
+        "first_buy_price",
+        "first_buy_amount",
+        "total_buy_amount",
+        "total_sell_amount",
+        "current_balance",
+        "current_position_ratio",
+        "holding_duration",
+        "funding_source",
+        "funding_time",
+        "funding_amount",
+        "realized_pnl",
+        "unrealized_pnl",
+        "transfer_in_count",
+        "transfer_out_count",
+        "buy_count",
+        "sell_count",
+        "last_activity_at"
+      ],
+      "inference_fields": [
+        "wallet_role",
+        "wallet_role_confidence",
+        "same_source_group_id",
+        "sell_sync_score",
+        "buy_sync_score",
+        "distribution_role_score",
+        "accumulation_role_score",
+        "counterparty_role_score",
+        "funding_relation_score"
+      ],
+      "state_fields": [
+        "wallet_status",
+        "wallet_structure_status",
+        "position_status",
+        "activity_status",
+        "risk_status"
+      ],
+      "report_fields": [
+        "wallet_reason",
+        "wallet_note",
+        "gmgn_note",
+        "classification_explanation"
+      ]
+    },
+    "GateDecision": {
+      "fact_fields": [
+        "decision_id",
+        "token_address",
+        "phase_id"
+      ],
+      "inference_fields": [
+        "decision",
+        "decision_reason",
+        "evidence_level",
+        "evidence_chain",
+        "counter_evidence",
+        "hard_negative_hits",
+        "invalidation_conditions",
+        "next_action"
+      ],
+      "control_fields": [
+        "next_phase_allowed"
+      ]
+    },
+    "ExecutionTicket": {
+      "fact_fields": [
+        "ticket_id",
+        "token_address",
+        "strategy_decision_id",
+        "risk_decision_id",
+        "created_at",
+        "expires_at"
+      ],
+      "control_fields": [
+        "execution_mode",
+        "paper_entry_allowed",
+        "human_confirmation_required",
+        "live_execution_allowed"
+      ],
+      "risk_fields": [
+        "max_loss_limit",
+        "slippage_limit",
+        "fee_model",
+        "invalidation_condition"
+      ]
+    },
+    "HandoffPacket": {
+      "handoff_fields": [
+        "handoff_id",
+        "source_phase",
+        "target_phase",
+        "phase_status",
+        "token_address",
+        "input_files",
+        "output_files",
+        "created_objects",
+        "updated_objects",
+        "decision",
+        "evidence_level",
+        "gap_list",
+        "hard_negative_hits",
+        "counter_evidence",
+        "next_phase_allowed",
+        "generated_at"
+      ]
+    },
+    "AddressGroup": {
+      "fact_fields": [
+        "group_id"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "TransactionEvent": {
+      "fact_fields": [
+        "tx_hash"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "MarketSnapshot": {
+      "fact_fields": [
+        "snapshot_id"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "MarketScene": {
+      "fact_fields": [
+        "token_address+scene_time"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "ChipState": {
+      "fact_fields": [
+        "token_address"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "DominantSide": {
+      "fact_fields": [
+        "token_address"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "Counterparty": {
+      "fact_fields": [
+        "counterparty_id"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "RiskEvent": {
+      "fact_fields": [
+        "risk_event_id"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "PaperPosition": {
+      "fact_fields": [
+        "paper_position_id"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "ReviewCase": {
+      "fact_fields": [
+        "review_case_id"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "RuleChange": {
+      "fact_fields": [
+        "rule_change_id"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    },
+    "SkillDecision": {
+      "fact_fields": [
+        "skill_decision_id"
+      ],
+      "inference_fields": [],
+      "state_fields": [],
+      "report_fields": []
+    }
+  }
+}

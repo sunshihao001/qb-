@@ -1,0 +1,22 @@
+{
+  "phase_id": "P01",
+  "required_inputs": [
+    "P00_handoff",
+    "data_input_contract",
+    "normalized_fact_model_schema"
+  ],
+  "forbidden_inputs": [
+    "secrets",
+    "private_keys",
+    "real_trade_instruction"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

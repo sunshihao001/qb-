@@ -1,0 +1,23 @@
+meta:
+  standard_id: S00_R00_FAILURE_REPORT_SCHEMA
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+required_fields:
+- failure_id
+- runner_id
+- phase_id
+- failure_type
+- symptom
+- root_cause_hypothesis
+- evidence_refs
+- blocking_status
+- recovery_action
+- next_validation

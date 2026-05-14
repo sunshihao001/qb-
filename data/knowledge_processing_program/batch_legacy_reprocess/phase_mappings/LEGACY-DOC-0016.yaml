@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0016
+source_path: docs/05_status_codes/global_status_code_table.md
+phase_scores:
+  P01: 1
+  P02: 1
+  P03: 3
+  P04: 1
+  P05: 0
+  P06: 4
+  P07: 3
+  P08: 3
+  P09: 3
+  P10: 4
+primary_phase: P06
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

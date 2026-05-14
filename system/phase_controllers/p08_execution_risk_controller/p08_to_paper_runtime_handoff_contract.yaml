@@ -1,0 +1,11 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+contract_id: P08_TO_PAPER_RUNTIME_HANDOFF_CONTRACT
+packet_type: P08_TO_PAPER_RUNTIME_HANDOFF
+route:
+  from_controller: P08_EXECUTION_RISK_CONTROLLER
+  to_runtime: PAPER_ONLY_RUNTIME
+required_sections: [upstream_control, candidate_scope, execution_risk_package, paper_runtime_request, quality, limitations, downstream_permission, read_instruction]
+limitations: [PAPER_ONLY_RUNTIME_PERMISSION, PAPER_RUNTIME_ALLOWED_IS_NOT_LIVE_PERMISSION, NO_WALLET_SIGNING, NO_LIVE_ORDER, LIVE_EXECUTION_FORBIDDEN]
+forbidden_downstream: [LIVE_EXECUTION, WALLET_SIGNING, AUTO_ORDER_ROUTER]

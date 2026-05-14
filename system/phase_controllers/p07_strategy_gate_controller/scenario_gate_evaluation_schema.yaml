@@ -1,0 +1,6 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: SCENARIO_GATE_EVALUATION_SCHEMA
+required_fields: [scenario_gate_eval_id, candidate_id, primary_scenario, secondary_scenarios, rejected_scenarios, scenario_eval, reasons, limitations, trace]
+scenario_effects: [allowed_for_strategy_gate, requires_pause, requires_observe, blocks_strategy]

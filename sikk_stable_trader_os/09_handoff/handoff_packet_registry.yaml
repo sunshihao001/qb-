@@ -1,0 +1,19 @@
+handoff_packet_registry:
+- handoff_id: P00_TO_DATA_PLANE_ACCEPTANCE_REVIEW
+  source_stage: P00_system_bootstrap_controller
+  target_stage: DATA_PLANE_ACCEPTANCE_REVIEW
+  packet_path: 09_handoff/p00_to_data_plane_acceptance_review_handoff_packet.json
+  status: HANDOFF_READY
+- handoff_id: DATA_PLANE_TO_P01_REQUIREMENTS
+  source_stage: P00_system_bootstrap_controller
+  target_stage: P01_data_fact_controller
+  packet_path: 00_data/data_handoff_packet.json
+  status: BLOCKED_UNTIL_DATA_PLANE_ACCEPTANCE
+handoff_packets:
+- packet_id: ACCEPTANCE_TO_HANDOFF_DOC-20260511-027
+  source_stage: ACCEPTANCE_PLANE
+  target_stage: HANDOFF_PLANE
+  path: /root/sikk-gmgn/sikk_stable_trader_os/09_handoff/acceptance_to_handoff_packet.json
+  mode: LIMITED_HANDOFF
+  status: HANDOFF_READY_WITH_GAPS
+  doc_id: DOC-20260511-027

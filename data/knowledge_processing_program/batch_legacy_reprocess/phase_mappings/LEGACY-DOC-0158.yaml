@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0158
+source_path: docs/intel_bot/wallet_intel_bottom_system_design_flow.md
+phase_scores:
+  P01: 2
+  P02: 2
+  P03: 52
+  P04: 1
+  P05: 5
+  P06: 4
+  P07: 0
+  P08: 2
+  P09: 0
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

@@ -1,0 +1,22 @@
+{
+  "preflight_status": "PASSED",
+  "safe_mode": true,
+  "missing_required_inputs": [],
+  "optional_context_missing": [],
+  "loaded_gap_items": 6,
+  "allowed_modes": [
+    "REVIEW_EVIDENCE",
+    "BUILD_UPGRADE_CANDIDATES",
+    "WRITE_HANDOFF"
+  ],
+  "forbidden_modes": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_downstream_task_directly",
+    "modify_production_rules_directly",
+    "drop_unresolved_gaps",
+    "convert_ready_with_gaps_to_ready"
+  ]
+}

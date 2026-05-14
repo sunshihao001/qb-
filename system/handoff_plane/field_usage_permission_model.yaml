@@ -1,0 +1,13 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+permission_levels:
+- ALLOW_STRONG_USE
+- WEAK_USE_ONLY
+- OBSERVE_ONLY
+- FORBIDDEN_USE
+default_for_with_gaps: WEAK_USE_ONLY
+runtime_fields: FORBIDDEN_USE_UNTIL_RUNTIME_ACCEPTED

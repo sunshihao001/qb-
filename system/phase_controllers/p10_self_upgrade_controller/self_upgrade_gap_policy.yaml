@@ -1,0 +1,22 @@
+policy_id: self_upgrade_gap_policy
+gaps:
+  BLOCKING_GAP:
+  - p09_handoff_missing
+  - auto_deploy_requested
+  - live_execution_requested
+  CRITICAL_GAP:
+  - no_upgrade_candidate
+  - no_regression_test_plan
+  - no_rollback_plan
+  HIGH_GAP:
+  - sample_support_weak
+  - overfit_risk_high
+  - compatibility_unknown
+  MEDIUM_GAP:
+  - migration_details_incomplete
+  - test_coverage_partial
+  LOW_GAP:
+  - documentation_metadata_missing
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+controller_id: P10_SELF_UPGRADE_CONTROLLER

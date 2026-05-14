@@ -1,0 +1,18 @@
+field_lineage_record:
+  trace_id: string
+  field_key: required
+  field_name_cn: required
+  domain_object: required
+  source: required
+  transformation: required
+  quality: required
+  downstream_usage: required
+  required_trace_links:
+    - parent_trace_ids
+    - child_trace_ids
+    - related_artifact_trace_ids
+  validation_rules:
+    - trace_id_present
+    - source_present
+    - downstream_usage_declared
+    - forbidden_actions_respected

@@ -1,0 +1,168 @@
+{
+  "doc_id": "doc_HER-DOC-REAL-20260514-SYSTEM-RESCAN-002",
+  "raw_path": "input/raw_document.md",
+  "sections": [
+    {
+      "section_id": "sec_001",
+      "level": 1,
+      "title": "交易系统体系再摄取与落地审计方案",
+      "char_offset": 0
+    },
+    {
+      "section_id": "sec_002",
+      "level": 2,
+      "title": "用刚建立的文档自动化处理系统，全面扫描 SIKK / HER / GPT 研究资料是否真正落地",
+      "char_offset": 20
+    },
+    {
+      "section_id": "sec_003",
+      "level": 2,
+      "title": "0. 初步判断",
+      "char_offset": 77
+    },
+    {
+      "section_id": "sec_004",
+      "level": 1,
+      "title": "1. 本次扫描的总目标",
+      "char_offset": 947
+    },
+    {
+      "section_id": "sec_005",
+      "level": 1,
+      "title": "2. 正确扫描框架",
+      "char_offset": 1275
+    },
+    {
+      "section_id": "sec_006",
+      "level": 1,
+      "title": "3. 本次全量扫描范围",
+      "char_offset": 1680
+    },
+    {
+      "section_id": "sec_007",
+      "level": 2,
+      "title": "A. 文档资料层",
+      "char_offset": 1695
+    },
+    {
+      "section_id": "sec_008",
+      "level": 2,
+      "title": "B. 代码与模块层",
+      "char_offset": 2038
+    },
+    {
+      "section_id": "sec_009",
+      "level": 2,
+      "title": "C. 数据与运行层",
+      "char_offset": 2604
+    },
+    {
+      "section_id": "sec_010",
+      "level": 1,
+      "title": "4. 这次扫描应该输出的核心矩阵",
+      "char_offset": 2968
+    },
+    {
+      "section_id": "sec_011",
+      "level": 2,
+      "title": "4.1 文档功能化矩阵",
+      "char_offset": 2988
+    },
+    {
+      "section_id": "sec_012",
+      "level": 2,
+      "title": "4.2 阶段落地矩阵",
+      "char_offset": 3732
+    },
+    {
+      "section_id": "sec_013",
+      "level": 2,
+      "title": "4.3 旧模块吸收矩阵",
+      "char_offset": 4302
+    },
+    {
+      "section_id": "sec_014",
+      "level": 2,
+      "title": "4.4 真实 Token 可运行缺口矩阵",
+      "char_offset": 4890
+    },
+    {
+      "section_id": "sec_015",
+      "level": 1,
+      "title": "5. 当前初步诊断",
+      "char_offset": 5470
+    },
+    {
+      "section_id": "sec_016",
+      "level": 1,
+      "title": "6. 应该怎么全面扫描",
+      "char_offset": 6068
+    },
+    {
+      "section_id": "sec_017",
+      "level": 2,
+      "title": "第 1 轮：文档再摄取",
+      "char_offset": 6107
+    },
+    {
+      "section_id": "sec_018",
+      "level": 2,
+      "title": "第 2 轮：功能对象抽取",
+      "char_offset": 6520
+    },
+    {
+      "section_id": "sec_019",
+      "level": 2,
+      "title": "第 3 轮：交易系统阶段映射",
+      "char_offset": 6903
+    },
+    {
+      "section_id": "sec_020",
+      "level": 2,
+      "title": "第 4 轮：代码 / 数据 / 目录落地审计",
+      "char_offset": 7256
+    },
+    {
+      "section_id": "sec_021",
+      "level": 2,
+      "title": "第 5 轮：R00 可运行链路生成",
+      "char_offset": 7617
+    },
+    {
+      "section_id": "sec_022",
+      "level": 1,
+      "title": "7. 这次扫描的最终报告结构",
+      "char_offset": 8004
+    },
+    {
+      "section_id": "sec_023",
+      "level": 1,
+      "title": "8. 给 HER 的正式任务书",
+      "char_offset": 8383
+    },
+    {
+      "section_id": "sec_024",
+      "level": 1,
+      "title": "9. 我对当前系统的重新判断",
+      "char_offset": 12895
+    },
+    {
+      "section_id": "sec_025",
+      "level": 1,
+      "title": "10. 本次认知升级点",
+      "char_offset": 13229
+    }
+  ],
+  "key_points": [
+    "K00 文档摄取与任务化",
+    "K00-K08 文档处理体系",
+    "|文档功能化体系|刚建立|需要落地成 K00-K08 runner|",
+    "|持续 paper 运行|不能直接启动|必须先有 R00 生成稳定 run/sample/metrics|",
+    "10. 所有结论必须附 source path。",
+    "11. 所有缺口必须给出 fix task。",
+    "12. 所有功能候选必须标记 owner layer / owner phase。",
+    "2. **之前 GPT 研究资料必须重新经过 K00-K08，转成 functional object。**",
+    "6. **控制平面必须被 R00 读取，否则只是设计文档。**"
+  ],
+  "status": "CORPUS_INDEX_READY_WITH_GAPS"
+}

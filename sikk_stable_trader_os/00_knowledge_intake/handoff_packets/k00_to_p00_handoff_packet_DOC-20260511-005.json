@@ -1,0 +1,41 @@
+{
+  "handoff_id": "K00_TO_P00_DOC-20260511-005",
+  "source_stage": "K00_knowledge_intake_taskization",
+  "target_stage": "P00_system_bootstrap_controller",
+  "included_assets": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005_p00_system_bootstrap_controller_institutional.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260511-005.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/phase_controller_candidates/phase_controller_candidate_spec_DOC-20260511-005_P00.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-005.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/system_mapping/system_mapping_DOC-20260511-005.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/gap_detection/gap_report_DOC-20260511-005.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_pack_DOC-20260511-005_P00_build.md"
+  ],
+  "known_gaps": [
+    {
+      "gap_id": "DATA_PLANE_ACCEPTANCE_PENDING",
+      "description": "P00 can bootstrap data plane tasks, but Data Plane acceptance remains next stage."
+    },
+    {
+      "gap_id": "P01_PREFLIGHT_PENDING",
+      "description": "P01 must remain blocked until Data Plane acceptance/preflight."
+    }
+  ],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "DATA_PLANE_ACCEPTANCE_PENDING",
+      "description": "P00 can bootstrap data plane tasks, but Data Plane acceptance remains next stage."
+    },
+    {
+      "gap_id": "P01_PREFLIGHT_PENDING",
+      "description": "P01 must remain blocked until Data Plane acceptance/preflight."
+    }
+  ],
+  "acceptance_status": "K00_P00_SPEC_TASKIZED_READY",
+  "next_legal_stage": "P00_system_bootstrap_controller",
+  "consumption_required": true,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "p01_runtime_connection_allowed": false
+}

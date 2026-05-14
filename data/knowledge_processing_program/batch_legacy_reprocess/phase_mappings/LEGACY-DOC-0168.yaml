@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0168
+source_path: docs/plans/2026-05-02-wallet-trade-adapter-observe-soft-hard.md
+phase_scores:
+  P01: 7
+  P02: 3
+  P03: 74
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 14
+  P08: 5
+  P09: 0
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

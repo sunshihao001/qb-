@@ -1,0 +1,19 @@
+{
+  "handoff_id": "f00_handoff_her_doc_pipeline_run_after_repairs",
+  "from_phase": "F00",
+  "to_phase": "V00",
+  "status": "F00_HANDOFF_READY_WITH_GAPS",
+  "refs": {
+    "function_mapping": "f00/function_mapping.json",
+    "required_system_assets": "f00/required_system_assets.json",
+    "implementation_task_package": "f00/implementation_task_package.json"
+  },
+  "gaps": [
+    {
+      "gap_id": "gap_mapping_not_production_implementation",
+      "gap_level": "HIGH_GAP",
+      "route_to": "V00",
+      "status": "OPEN"
+    }
+  ]
+}

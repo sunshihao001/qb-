@@ -1,0 +1,17 @@
+runner_binding_id: P02_source_data_fact_runner_binding
+mode: READ_ONLY_VALIDATOR_ONLY
+business_runtime: BLOCKED_UNTIL_EXPLICIT_MODULE_AND_FIXTURE_ACCEPTANCE
+interface_binding:
+  interface_id: GMGN_OKX_SKILL_DATA_INTERFACE_V1
+  interface_path: system/data_interfaces/gmgn_okx_skill_interface.yaml
+entrypoint:
+  command: python3 tools/stable_trader_os/validate_phase_controller_contracts.py --phase
+    P02
+  workdir: /root/sikk-gmgn
+forbidden_capabilities:
+- private_key_read
+- sign_transaction
+- broadcast_transaction
+- swap
+- live_order
+- paper_runtime_start

@@ -1,0 +1,20 @@
+{
+  "doc_id": "DOC-20260511-009",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T13:54:52.930598+00:00",
+  "phase_impact": {
+    "K00": {
+      "impact": "source_assetization",
+      "must_not_stop_here": true
+    },
+    "P00": {
+      "impact": "mandatory_next_controller",
+      "rule": "K00 完成后，必须由 P00 系统建造控制器继续处理。"
+    },
+    "P01-P09": {
+      "impact": "downstream_after_system_consumption",
+      "rule": "only after control/trace/handoff gates exist"
+    }
+  },
+  "canonical_next_phase": "P00_system_context_control"
+}

@@ -1,0 +1,18 @@
+meta:
+  standard_id: S00_ROLLBACK_POLICY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+rollback_required_if:
+- regression_fail
+- P08 permission degradation
+- paper_runner safety violation
+- increased false positives without approval
+requires_versioned_rule_registry: true

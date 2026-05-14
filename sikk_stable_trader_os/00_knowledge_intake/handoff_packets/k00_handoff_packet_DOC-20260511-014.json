@@ -1,0 +1,47 @@
+{
+  "handoff_id": "K00-HANDOFF-DOC-20260511-014",
+  "doc_id": "DOC-20260511-014",
+  "parent_doc_id": "DOC-20260511-006",
+  "from_phase": "K00",
+  "to_phase": "P00_system_context_control",
+  "status": "P00_PHASE_TARGET_DATA_MATERIALIZED_WITH_DEGRADED_GAPS",
+  "required_p00_checks": [
+    "consume P00 phase_target_data.yaml",
+    "decide whether REQUIRED_BEFORE_BUSINESS_PHASES should be blocking_condition/authority_scope or added to enum",
+    "decide canonical P00 id: P00_system_bootstrap_controller vs P00_system_context_control",
+    "generate trace matrices required by P00",
+    "keep P01 blocked until Data Plane and P00 acceptance are complete"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-P00-PHASE-STATUS-ENUM-MISMATCH",
+      "severity": "DEGRADED",
+      "description": "User-proposed P00 phase_status REQUIRED_BEFORE_BUSINESS_PHASES is not in legal phase status enum; raw proposal preserved and executable target normalized to READY_TO_BUILD."
+    },
+    {
+      "gap_id": "GAP-P00-CONTROLLER-ID-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "User-proposed P00 phase_id P00_system_bootstrap_controller differs from existing controller directory P00_system_context_control; raw proposal preserved and executable target normalized to existing controller id."
+    },
+    {
+      "gap_id": "GAP-PER-PHASE-TARGET-DATA-INSTANCES",
+      "severity": "DEGRADED",
+      "description": "K00 and P00 concrete instances are now generated; P01-P10 concrete target data instances still need to be generated/validated."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "phase_id": "P00",
+  "required_outputs": [
+    "phase_status",
+    "handoff_packet",
+    "acceptance_result",
+    "gap_register"
+  ],
+  "forbidden_outputs": [
+    "real_order",
+    "signed_tx",
+    "broadcast_tx",
+    "swap_instruction"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

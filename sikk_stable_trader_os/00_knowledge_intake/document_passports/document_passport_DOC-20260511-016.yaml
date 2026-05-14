@@ -1,0 +1,29 @@
+doc_id: DOC-20260511-016
+parent_doc_id: DOC-20260511-006
+document_type: system_methodology_blueprint_continuation
+section: 11. Domain Plane 阶段目标数据
+raw_input_path: 00_knowledge_intake/raw_inputs/DOC-20260511-016.md
+canonical_path: 00_methodology/system_methodology_blueprint.md
+derived_assets:
+- 00_domain/domain_phase_target_data.raw_user_proposed.yaml
+- 00_domain/domain_phase_target_data.yaml
+- 00_domain/domain_relation_graph.yaml
+- 00_domain/domain_decision_question_tree.yaml
+- 00_domain/scenario_taxonomy.yaml
+- 00_domain/wallet_role_taxonomy.yaml
+- 00_domain/dominant_side_lifecycle_taxonomy.yaml
+- 00_domain/domain_to_data_demand_map.yaml
+- 00_domain/domain_to_phase_map.yaml
+- 00_domain/domain_acceptance_gate.yaml
+sha256: 1ebc1e182825db647272f40294d3160792fe3e499c7812caabc7e91ce695761f
+canonical_sha256_after_update: cadc59bbd54b774c04c56a616ec5298a9c806ee42111d9ad8f3a076206a0365f
+intake_time: '2026-05-11T14:20:29.444644+00:00'
+status: CANONICAL_SECTION_APPENDED_WITH_RECONCILIATION_GAPS
+safety_boundary:
+  paper_only: true
+  read_only_research: true
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  auto_swap_enabled: false
+  secret_access: not_requested_not_used

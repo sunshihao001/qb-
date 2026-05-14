@@ -1,0 +1,108 @@
+controller_name: F00_function_realization_controller
+controller_type: HER_PHASE_CONTROLLER
+phase_id: F00
+phase_name: Function Realization Controller
+chinese_name: 功能落实控制器
+version: 1.0.0
+system: HER-DFAFS
+owner_layer: 04_function_realization
+purpose: >-
+  Convert K00 accepted document-intake outputs into explicit required functions,
+  field models, rule logic, schema/contract requirements, implementation assets,
+  validation requirements, replay requirements, runner binding requirements, and
+  downstream handoff evidence.
+positioning:
+  plain_text: F00 = K00 之后的功能落实控制器
+  k00_responsibility: 把 GPT 研究资料变成系统可接收、可索引、可交接的资料。
+  f00_responsibility: 把 K00 资料继续转化成功能需求、字段模型、判断逻辑、schema/contract、代码模块、测试、replay、runner binding、trace/audit、acceptance、handoff。
+  final_target: HER 可执行、可验证、可审计、可交接的系统功能资产。
+entry_status_required:
+  - K00_ACCEPTED
+  - K00_READY_WITH_GAPS
+allowed_inputs:
+  - k00_handoff_packet
+  - document_passport_refs
+  - corpus_index_refs
+  - system_mapping_refs
+  - gap_detection_refs
+  - kv_retrieval_refs
+  - target_phase_candidates
+  - execution_boundary
+  - write_policy
+  - repo_root
+permissions:
+  - read_k00_handoff
+  - read_document_passport
+  - read_corpus_index
+  - read_system_mapping
+  - read_gap_detection
+  - read_kv_index
+  - scan_repository
+  - design_function_mapping
+  - design_field_model
+  - design_rule_logic
+  - design_schema_contract
+  - plan_code_assets
+  - write_design_files
+  - write_schema_contract_files_if_allowed
+  - write_code_patch_if_allowed
+  - write_test_plan
+  - write_replay_plan
+  - write_trace_spec
+  - write_acceptance_result
+  - write_handoff_packet
+forbidden_actions:
+  - bypass_k00
+  - execute_without_handoff
+  - treat_document_as_summary_task
+  - declare_function_done_without_assets
+  - declare_implemented_without_patch
+  - declare_tested_without_test_evidence
+  - declare_runner_bound_without_binding_test
+  - start_live_runtime
+  - start_paper_runtime_without_explicit_safe_mode
+  - wallet_signing
+  - auto_deploy
+  - modify_production_rules_directly
+  - overwrite_raw_documents
+  - delete_legacy_assets
+  - treat_kv_as_contract
+  - treat_chat_context_as_state
+misuse_forbidden_roles:
+  - role: 文档摘要器
+    reason: F00 不做普通总结
+  - role: 任务包生成器
+    reason: 任务包不是功能完成
+  - role: 代码生成器
+    reason: F00 可以规划或触发代码落实，但不是无脑写代码
+  - role: runner 启动器
+    reason: F00 不直接启动 live / paper runtime
+  - role: 生产部署器
+    reason: F00 不做 auto deploy
+  - role: 钱包执行器
+    reason: F00 不触碰 wallet signing
+  - role: 聊天上下文记忆
+    reason: F00 必须依赖正式输入、状态和 handoff
+  - role: KV 替代器
+    reason: F00 可读取 KV，但不能把 KV 当正式系统状态
+outputs:
+  - concept_to_function_map
+  - implementation_decision
+  - repo_scan_result
+  - function_asset_plan
+  - field_model
+  - rule_logic
+  - schema_contract_plan
+  - patch_plan
+  - test_replay_plan
+  - runner_binding_plan
+  - f00_trace
+  - f00_audit
+  - f00_acceptance_result
+  - f00_handoff_packet
+  - f00_final_report
+completion_status:
+  success: F00_ACCEPTED
+  blocked: F00_BLOCKED
+  gaps: F00_READY_WITH_GAPS
+updated_at: "2026-05-13T14:20:08.977384+00:00"

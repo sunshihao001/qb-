@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 acceptance scorecard schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "scorecard_id",
+    "dimensions",
+    "overall_interpretation"
+  ],
+  "properties": {
+    "scorecard_id": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "dimension",
+          "status",
+          "score",
+          "evidence_refs",
+          "gaps",
+          "decision_weight"
+        ],
+        "properties": {
+          "dimension": {
+            "enum": [
+              "document_integrity",
+              "function_realization",
+              "data_model_quality",
+              "rule_logic_quality",
+              "schema_contract_quality",
+              "validation_quality",
+              "runner_binding_quality",
+              "trace_audit_quality",
+              "gap_management_quality",
+              "handoff_quality",
+              "governance_safety"
+            ]
+          },
+          "status": {
+            "enum": [
+              "PASSED",
+              "PASSED_WITH_GAPS",
+              "BLOCKED",
+              "REJECTED",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "evidence_refs": {
+            "type": "array"
+          },
+          "gaps": {
+            "type": "array"
+          },
+          "decision_weight": {
+            "enum": [
+              "LOW",
+              "MEDIUM",
+              "HIGH",
+              "CRITICAL"
+            ]
+          }
+        }
+      }
+    },
+    "overall_interpretation": {
+      "type": "string"
+    }
+  }
+}

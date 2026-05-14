@@ -1,0 +1,51 @@
+{
+  "doc_id": "doc_20260513_her_dfafs_rebuild_v1",
+  "source_name": "doc_80151ca2ad2c_k00认知重建😁专业自动化文档处 (1).md",
+  "source_type": "telegram_uploaded_markdown",
+  "raw_path": "/root/sikk-gmgn/data/her_document_function_system/raw/doc_20260513_her_dfafs_rebuild_v1.md",
+  "content_hash": "0256e8443b7f21c59d7e4bae3fb105754b806b71336ff353941852f4b3176b4e",
+  "document_role": "HER_DFAFS_SYSTEM_CONSTRUCTION_AND_F00_REQUIREMENT_DOC",
+  "core_intent": "把解释性研究资料从 K00 intake 继续编译为功能、字段、规则、schema/contract、代码资产、测试、replay、runner binding、验收与 handoff。",
+  "affected_planes": [
+    "governance plane",
+    "phase controller plane",
+    "KV memory plane",
+    "schema / contract plane",
+    "trace / audit plane",
+    "acceptance / handoff plane",
+    "runner / tool binding plane",
+    "report / review plane"
+  ],
+  "target_phase_candidates": [
+    "K00",
+    "KV",
+    "SYSTEM_MAPPING",
+    "GAP_DETECTION",
+    "F00",
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "V01",
+    "V02",
+    "V03",
+    "R02",
+    "A01",
+    "H01",
+    "U01"
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_rule_direct_change",
+    "private_keys",
+    "signing",
+    "broadcasting"
+  ],
+  "status": "K00_ACCEPTED",
+  "created_at": "2026-05-13T14:30:44.366397+00:00"
+}

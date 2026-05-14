@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 failure evidence",
+  "type": "object",
+  "required": [
+    "failure_id",
+    "pipeline_run_id",
+    "failed_stage",
+    "failure_type",
+    "failure_evidence_refs",
+    "recovery_decision",
+    "safe_next_action",
+    "forbidden_next_action"
+  ],
+  "properties": {
+    "failure_id": {
+      "type": "string"
+    },
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "failed_stage": {
+      "enum": [
+        "K00",
+        "F00",
+        "V00",
+        "R00",
+        "A00",
+        "H00",
+        "U00",
+        "G00",
+        "O00"
+      ]
+    },
+    "failure_type": {
+      "type": "string"
+    },
+    "failure_evidence_refs": {
+      "type": "array"
+    },
+    "recovery_decision": {
+      "enum": [
+        "RETRY_STAGE",
+        "RETURN_TO_PREVIOUS_STAGE",
+        "ROUTE_TO_U00",
+        "ROUTE_TO_G00",
+        "DEFER_TO_BACKLOG",
+        "BLOCK_PIPELINE",
+        "REJECT_INPUT",
+        "REQUIRE_HUMAN_CONFIRMATION"
+      ]
+    },
+    "safe_next_action": {
+      "type": "string"
+    },
+    "forbidden_next_action": {
+      "type": "string"
+    }
+  }
+}

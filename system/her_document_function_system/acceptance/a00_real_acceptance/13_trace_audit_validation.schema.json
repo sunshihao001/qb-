@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "13_trace_audit_validation.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "trace_audit_status",
+    "trace_files_checked",
+    "audit_files_checked",
+    "missing_trace_events",
+    "missing_audit_events",
+    "warnings"
+  ],
+  "properties": {
+    "trace_audit_status": {},
+    "trace_files_checked": {},
+    "audit_files_checked": {},
+    "missing_trace_events": {},
+    "missing_audit_events": {},
+    "warnings": {}
+  }
+}

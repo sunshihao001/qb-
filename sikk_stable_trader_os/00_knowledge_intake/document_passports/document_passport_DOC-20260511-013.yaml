@@ -1,0 +1,21 @@
+doc_id: DOC-20260511-013
+parent_doc_id: DOC-20260511-006
+document_type: system_methodology_blueprint_continuation
+section: 8. K00 阶段目标数据
+raw_input_path: 00_knowledge_intake/raw_inputs/DOC-20260511-013.md
+canonical_path: 00_methodology/system_methodology_blueprint.md
+derived_assets:
+- 06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.raw_user_proposed.yaml
+- 06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.yaml
+sha256: b9198e8426674077550ee8a344f9f721bcceba6308b8196f42ad2d94128e40d0
+canonical_sha256_after_update: 23cdf612ad102f41afadd570e93e1345f96de8fdf95cda96121cb1969c3fdf34
+intake_time: '2026-05-11T14:02:26.798325+00:00'
+status: CANONICAL_SECTION_APPENDED_WITH_SCHEMA_RECONCILIATION_GAP
+safety_boundary:
+  paper_only: true
+  read_only_research: true
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  auto_swap_enabled: false
+  secret_access: not_requested_not_used

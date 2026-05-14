@@ -1,0 +1,180 @@
+---
+name: sikk-stable-trader-os
+description: Use when routing SIKK Stable Trader OS work, enforcing phase order, system boundaries, evidence discipline, directory rules, missing-field handling, and handoff/audit requirements before any phase is mature enough to become a separate skill.
+version: 1.1.0
+author: Hermes Agent
+license: MIT
+metadata:
+  hermes:
+    tags: [sikk, stable-trader-os, thin-router, phase-boundary, evidence, audit]
+    related_skills: [sikk-runtime-architecture, sikk-gmgn-structural-intelligence]
+---
+
+# SIKK Stable Trader OS 总控 Skill 骨架
+
+## 1. 总控定位
+
+本 Skill 是很薄的总控骨架，只负责：
+
+- 统一系统总目标
+- 统一阶段顺序
+- 统一边界规则
+- 统一目录原则
+- 统一输出纪律
+- 统一证据链要求
+- 禁止越级判断
+- 路由到阶段信息文档
+
+本 Skill 不负责具体交易判断，不替代阶段文档，不把每个阶段细节塞进提示词，不把未成熟阶段强行 Skill 化。
+
+## 2. 系统总目标
+
+SIKK Stable Trader OS 不是寻找机会的系统，也不是一开始追求盈利的自动交易系统。
+
+它是 AI 驱动的交易结构判断系统：通过安全过滤、市场过滤、钱包结构、筹码状态、主导侧生命周期、K 线转强、策略门禁、纸面验证和失败归因，持续筛选更高质量的交易候选，减少错误参与，识别派发风险，并通过历史回放和纸面交易逐步校准规则。
+
+压缩目标：
+
+```text
+先建立一套能持续减少错误、提高判断质量、积累有效样本的系统。
+```
+
+## 3. 架构边界
+
+```text
+阶段 = 系统流程边界
+Skill = 可复用执行能力
+模块 = 某个阶段内部的代码单元
+Bot = 调度入口 / 交互入口
+```
+
+正确顺序：
+
+```text
+总控 Skill 骨架
+  ↓
+阶段信息完整化
+  ↓
+阶段输入 / 输出 / 证据 / 验收标准固定
+  ↓
+成熟阶段再升级成独立 Skill
+```
+
+禁止顺序：
+
+```text
+一开始创建 10 个阶段 Skill
+一开始大量创建 Atomic Skill
+用 Skill 名字替代阶段信息
+用提示词替代字段合约
+```
+
+## 4. 阶段总表
+
+当前阶段名称以阶段信息文档为准，先固定为：
+
+1. `phase_01_data_fact_controller.md`：数据事实层
+2. `phase_02_multi_model_scene_recognition.md`：多模型场景识别
+3. `phase_03_wallet_chip_structure.md`：钱包筹码结构
+4. `phase_04_dominant_side_lifecycle.md`：主导侧生命周期
+5. `phase_05_strategy_gate.md`：策略门禁
+6. `phase_06_execution_risk.md`：执行风控
+7. `phase_07_paper_trade_validation.md`：纸面交易验证
+8. `phase_08_review_attribution.md`：复盘归因
+9. `phase_09_explanation_audit.md`：解释审计
+10. `phase_10_system_calibration.md`：系统校准
+
+如旧目录存在 `phase_00` 到 `phase_09`，先保持兼容读取，不删除、不移动；新阶段信息文档作为专业化认知层继续补全。
+
+## 5. 调度规则
+
+HER 接到任务后必须先判断：
+
+```text
+用户目标属于哪个阶段？
+该阶段信息文档是否完整？
+输入文件是否存在？
+字段来源是否清楚？
+输出合约是否固定？
+验收标准是否存在？
+```
+
+如果阶段信息不完整：
+
+```text
+先补阶段文档，不进入代码实现，不创建正式 Skill。
+```
+
+如果阶段信息完整且重复执行稳定：
+
+```text
+再考虑升级成阶段 Skill 或 runtime module。
+```
+
+## 6. 输出纪律
+
+任何阶段输出必须包含：
+
+```text
+positive_evidence
+negative_evidence
+counter_evidence
+hard_negative_trigger
+invalidation_condition
+confidence_level
+missing_fields
+gaps
+status_code
+handoff_target
+audit_refs
+source_refs
+```
+
+缺失字段写 `missing_fields`。
+不确定写 `gaps`。
+HER 自动补全必须标注 `系统推导`。
+
+## 7. 禁止事项
+
+- 禁止跳过阶段信息文档直接写 Skill。
+- 禁止未固定输入输出就 Skill 化。
+- 禁止阶段边界不清时写代码。
+- 禁止 Atomic Skill 自己决定最终交易状态。
+- 禁止 Bot 绕过阶段文档直接输出判断。
+- 禁止只写“看起来不错”“可以观察”等自然语言结论。
+- 禁止直接输出“确定庄家”。只能输出疑似结构角色、字段证据、规则依据、证据等级、风险等级。
+- 禁止把指标当成买点生成器。
+- 禁止忽略反证、硬否决和验收。
+
+## 8. 当前优先级
+
+```text
+P0 总目标与系统边界
+P1 10 个阶段总表
+P2 每个阶段的信息结构
+P3 每个阶段的输入输出合约
+P4 每个阶段的验收标准
+P5 总控 Skill 骨架
+P6 成熟阶段 Skill 化
+P7 代码实现
+P8 自动运行与复盘
+```
+
+当前最优先动作：
+
+```text
+完整设计 phase_01_data_fact_controller.md
+```
+
+## 9. Skill 化判定
+
+某阶段只有满足以下条件，才允许升级成 Skill：
+
+- 任务会反复执行
+- 输入输出已经固定
+- 字段和规则已经清楚
+- 验收标准已经清楚
+- 需要 HER 自动调用
+- 输出可被下游稳定读取
+
+规则仍在变化时，只保留为阶段文档，不升级 Skill。

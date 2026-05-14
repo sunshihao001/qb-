@@ -1,0 +1,11 @@
+authority_boundary:
+  P00_system_bootstrap_controller:
+    can: [compile_methodology, create_control_plane, register_phases, create_plane_skeletons, block_business_phases]
+    cannot: [run_business_phase, trade, sign, broadcast, produce_buy_sell_decision]
+  P01_data_fact_controller:
+    can: [normalize_facts, produce_data_quality_report]
+    cannot: [judge_intent, strategy_gate, trade]
+  P06_strategy_gate_controller:
+    can: [paper_permission_decision]
+    cannot: [real_trade_execution, direct_exchange_write]
+global_forbidden: [private_key_access, seed_phrase_access, live_order_execution, auto_swap, bypass_acceptance_gate]

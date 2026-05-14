@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "10_phase_status_matrix.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "matrix_id",
+    "phases",
+    "matrix_status"
+  ],
+  "properties": {
+    "matrix_id": {},
+    "phases": {},
+    "matrix_status": {}
+  }
+}

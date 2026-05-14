@@ -1,0 +1,49 @@
+{
+  "phase_id": "F00",
+  "run_id": "F00-RUN-20260513-001",
+  "doc_id": "DOC-20260513-F00-001",
+  "k00_handoff_loaded": true,
+  "repo_scan_status": "SCANNED",
+  "function_mapping_status": "FUNCTION_MAPPED",
+  "implementation_decision_status": "IMPLEMENTATION_DECIDED",
+  "asset_plan_status": "ASSET_PLANNED",
+  "field_model_status": "FIELD_MODEL_READY",
+  "rule_logic_status": "RULE_LOGIC_READY",
+  "schema_contract_status": "SCHEMA_CONTRACT_PLANNED",
+  "patch_status": "PATCH_NOT_ALLOWED_FOR_CODE",
+  "test_replay_status": "TEST_REPLAY_PLANNED_NOT_EXECUTED",
+  "runner_binding_status": "RUNNER_BINDING_PLANNED_NOT_BOUND",
+  "trace_written": true,
+  "audit_written": true,
+  "gap_list": [
+    {
+      "gap_id": "gap_test_not_executed",
+      "gap_type": "test_gap",
+      "gap_level": "MEDIUM_GAP",
+      "blocking": false,
+      "reason": "No pytest suite executed in this F00 realization run."
+    },
+    {
+      "gap_id": "gap_replay_not_executed",
+      "gap_type": "replay_gap",
+      "gap_level": "MEDIUM_GAP",
+      "blocking": false,
+      "reason": "Replay cases planned but not executed."
+    },
+    {
+      "gap_id": "gap_runner_not_bound",
+      "gap_type": "runner_binding_gap",
+      "gap_level": "MEDIUM_GAP",
+      "blocking": false,
+      "reason": "Runner binding planned but not verified as RUNNER_BOUND."
+    }
+  ],
+  "acceptance_result": "F00_READY_WITH_GAPS",
+  "final_status": "F00_READY_WITH_GAPS",
+  "not_claimed": [
+    "FUNCTION_IMPLEMENTED",
+    "FUNCTION_TESTED",
+    "REPLAY_TESTED",
+    "RUNNER_BOUND"
+  ]
+}

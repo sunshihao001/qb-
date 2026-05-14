@@ -1,0 +1,46 @@
+doc_id: DOC-20260511-023
+source_type: user_uploaded_text
+source_name: Data 数据平面专业2.0⭐.md
+received_at: '2026-05-11'
+ingested_at: '2026-05-11T16:34:30Z'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-023_data_plane_professional_design.md
+source_sha256: 84343f4674147f62cca503934928fdcf287678e5bde9bcc20e9ecc45e21eecec
+document_role:
+  primary_role: P03_DATA_PLANE_PROFESSIONALIZATION_BLUEPRINT
+  secondary_roles:
+  - data_fact_production_layer
+  - field_dictionary_contract
+  - raw_normalized_snapshot_lineage_methodology
+  - evidence_plane_handoff_source
+summary:
+  core_intent: 把 Data Plane 从采集脚本认知升级为字段来源、质量、新鲜度、缺失、冲突、血缘、快照、交接齐全的数据事实生产平面。
+  key_points:
+  - Data Plane 不是抓数据脚本层，而是事实生产链。
+  - 字段字典是核心资产。
+  - raw 与 normalized 必须分离。
+  - 快照、质量、新鲜度、缺失、冲突、血缘决定 Evidence Plane 权限。
+  - Data Plane 不得输出买入信号或主导侧意图。
+system_mapping:
+  planes:
+  - Knowledge Plane
+  - Data Plane
+  - Trace Plane
+  - Acceptance Plane
+  - Handoff Plane
+  - Control Plane
+  affected_phases:
+  - K00
+  - P00
+  - P03_DATA_PLANE
+  - P04_EVIDENCE_PLANE
+  - P08_REVIEW_REPLAY
+  - P09_SELF_UPGRADE
+required_actions:
+- preserve_raw_input
+- create_data_plane_file_group
+- create_field_dictionary
+- create_data_handoff_contract
+- run_data_acceptance
+- update_current_system_state
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

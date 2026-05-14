@@ -1,0 +1,112 @@
+# Wallet File Passports
+
+## 概览
+- 数据集：Intel Bot legacy wallet intelligence passport
+- 来源包：SIKK-GMGN 保留数据包：截止 2026-04-30 10:22 +08:00
+- 分类：legacy_wallet_intelligence
+- 文件数：19
+
+## 标签统计
+- ANALYSIS_OUTPUT: 5
+- DECISION_OUTPUT: 4
+- GMGN_EXPORT: 2
+- REPORT_ONLY: 7
+- TRADE_ENGINE_MIXED: 1
+
+## 文件护照
+
+- `raw/sikk_gmgn_live_run_summary_package.zip`
+  - tag: `TRADE_ENGINE_MIXED`
+  - role: retained historical archive
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/raw/sikk_gmgn_live_run_summary_package.zip`
+  - notes: Original retained zip; keep as immutable provenance artifact.
+- `README.md`
+  - tag: `REPORT_ONLY`
+  - role: legacy archive policy note
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/README.md`
+  - notes: Read-only handling rules and traceability.
+- `manifest.json`
+  - tag: `REPORT_ONLY`
+  - role: legacy archive manifest
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/manifest.json`
+  - notes: Source hash, storage layout, and supported historical queries.
+- `standardized/legacy_snapshot/candidate_signal_outputs/candidate_signal_summary.csv`
+  - tag: `ANALYSIS_OUTPUT`
+  - role: signal summary csv
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/candidate_signal_outputs/candidate_signal_summary.csv`
+  - notes: aggregated signal output, read-only reference
+- `standardized/legacy_snapshot/candidate_signal_outputs/candidate_signal_summary.json`
+  - tag: `ANALYSIS_OUTPUT`
+  - role: signal summary json
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/candidate_signal_outputs/candidate_signal_summary.json`
+  - notes: aggregated signal output, read-only reference
+- `standardized/legacy_snapshot/gmgn_new_token_filter/token_candidates.csv`
+  - tag: `GMGN_EXPORT`
+  - role: token candidate export csv
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/gmgn_new_token_filter/token_candidates.csv`
+  - notes: upstream candidate export / fact carryover
+- `standardized/legacy_snapshot/gmgn_new_token_filter/token_candidates.json`
+  - tag: `GMGN_EXPORT`
+  - role: token candidate export json
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/gmgn_new_token_filter/token_candidates.json`
+  - notes: upstream candidate export / fact carryover
+- `standardized/legacy_snapshot/kline_pipeline/candidate_kline_pipeline_summary.json`
+  - tag: `ANALYSIS_OUTPUT`
+  - role: kline pipeline summary
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/kline_pipeline/candidate_kline_pipeline_summary.json`
+  - notes: technical analysis layer output
+- `standardized/legacy_snapshot/orchestrator/pipeline_manifest.json`
+  - tag: `REPORT_ONLY`
+  - role: orchestrator manifest
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/orchestrator/pipeline_manifest.json`
+  - notes: run metadata and file map
+- `standardized/legacy_snapshot/orchestrator/pipeline_report.md`
+  - tag: `REPORT_ONLY`
+  - role: orchestrator report
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/orchestrator/pipeline_report.md`
+  - notes: human-readable run summary
+- `standardized/legacy_snapshot/quote_security/candidate_quote_security_summary.csv`
+  - tag: `ANALYSIS_OUTPUT`
+  - role: quote/security summary csv
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/quote_security/candidate_quote_security_summary.csv`
+  - notes: paper-side security summary only
+- `standardized/legacy_snapshot/quote_security/candidate_quote_security_summary.json`
+  - tag: `ANALYSIS_OUTPUT`
+  - role: quote/security summary json
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/quote_security/candidate_quote_security_summary.json`
+  - notes: paper-side security summary only
+- `standardized/legacy_snapshot/quote_security/candidate_quote_security_summary.md`
+  - tag: `REPORT_ONLY`
+  - role: quote/security report md
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/quote_security/candidate_quote_security_summary.md`
+  - notes: human-readable security summary
+- `standardized/legacy_snapshot/state_machine/candidate_states.csv`
+  - tag: `DECISION_OUTPUT`
+  - role: state machine csv
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/state_machine/candidate_states.csv`
+  - notes: transaction-side decision output, but legacy only
+- `standardized/legacy_snapshot/state_machine/candidate_states.json`
+  - tag: `DECISION_OUTPUT`
+  - role: state machine json
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/state_machine/candidate_states.json`
+  - notes: transaction-side decision output, but legacy only
+- `standardized/legacy_snapshot/state_machine/state_summary.md`
+  - tag: `REPORT_ONLY`
+  - role: state summary md
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/state_machine/state_summary.md`
+  - notes: state machine report
+- `standardized/legacy_snapshot/wallet_structure/candidate_wallet_structure_summary.csv`
+  - tag: `DECISION_OUTPUT`
+  - role: wallet structure summary csv
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/wallet_structure/candidate_wallet_structure_summary.csv`
+  - notes: wallet-structure gate output; legacy decision artifact
+- `standardized/legacy_snapshot/wallet_structure/candidate_wallet_structure_summary.json`
+  - tag: `DECISION_OUTPUT`
+  - role: wallet structure summary json
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/wallet_structure/candidate_wallet_structure_summary.json`
+  - notes: wallet-structure gate output; legacy decision artifact
+- `standardized/legacy_snapshot/wallet_structure/candidate_wallet_structure_summary.md`
+  - tag: `REPORT_ONLY`
+  - role: wallet structure summary md
+  - path: `/root/sikk-gmgn/data/wallet_intelligence/legacy/sikk_gmgn_retention_2026-04-30_1022/standardized/legacy_snapshot/wallet_structure/candidate_wallet_structure_summary.md`
+  - notes: wallet-structure report

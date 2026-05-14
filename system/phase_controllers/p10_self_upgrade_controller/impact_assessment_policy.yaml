@@ -1,0 +1,13 @@
+policy_id: impact_assessment_policy
+required_dimensions:
+- affected_phases
+- contracts
+- schemas
+- policies
+- runners
+- reports
+- backward_compatibility
+- migration_required
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+controller_id: P10_SELF_UPGRADE_CONTROLLER

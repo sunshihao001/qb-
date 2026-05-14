@@ -1,0 +1,20 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P02_wallet_structure",
+  "artifact_kind": "output",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "wallet_structure_status": "WALLET_BLOCK",
+  "wallet_structure_score": 20.0,
+  "wallet_risk_score": 0.0,
+  "role_matrix": [],
+  "infra_excluded_count": 0,
+  "reason": "结构活跃但追高/资金证据不足，进入观察/纸面门控"
+}

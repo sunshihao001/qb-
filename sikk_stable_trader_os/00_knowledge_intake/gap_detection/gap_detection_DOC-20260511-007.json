@@ -1,0 +1,20 @@
+{
+  "doc_id": "DOC-20260511-007",
+  "status": "GAPS_IDENTIFIED_NEXT_STAGE_REQUIRED",
+  "blocking_gaps": [
+    {
+      "gap_id": "GAP-V3-VERIFY-SYSTEM-PLANES",
+      "description": "Need verify current Governance/Domain/Data/Trace/Acceptance/Handoff plane completeness against v3 required artifacts.",
+      "blocking_for": "P01",
+      "severity": "blocking_for_business_runtime"
+    },
+    {
+      "gap_id": "GAP-V3-FULL-CONTROL-UPDATE",
+      "description": "Need ensure Full Control Plane indexes data acceptance, runner status, phase outputs, handoff consumption.",
+      "blocking_for": "P01",
+      "severity": "blocking_for_business_runtime"
+    }
+  ],
+  "non_blocking_gaps": [],
+  "p01_allowed": false
+}

@@ -1,0 +1,9 @@
+calibration_candidate_validation:
+  type: object
+  required:
+    - validation_id
+    - calibration_candidates_detected
+    - missed_negative_candidates_detected
+    - test_case_candidates_detected
+    - status
+  additional_properties_allowed: true

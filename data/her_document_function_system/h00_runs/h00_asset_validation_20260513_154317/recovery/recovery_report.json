@@ -1,0 +1,12 @@
+{
+  "failure_id": "failure_h00_runtime_001",
+  "failure_type": "missing_a00_handoff",
+  "affected_queue_item": "ALL_REAL_QUEUE_ITEMS",
+  "target_phase": "H00",
+  "gap_level": "BLOCKING_GAP",
+  "failure_reason": "No A00 handoff/readiness certificate/evidence bundle was provided for real downstream queue routing.",
+  "required_fix": "Run or provide A00 acceptance outputs, then rerun H00 against that handoff.",
+  "safe_next_action": "request_a00_handoff_packet",
+  "forbidden_next_action": "build_real_downstream_execution_queue",
+  "current_status": "QUEUE_BLOCKED"
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V00 Function Mapping Validation Evidence Schema",
+  "type": "object",
+  "required": [
+    "validation_type",
+    "status",
+    "total_functions",
+    "valid_functions",
+    "invalid_functions",
+    "ready_with_gaps",
+    "errors"
+  ],
+  "properties": {
+    "validation_type": {
+      "const": "function_mapping_validation"
+    },
+    "status": {
+      "enum": [
+        "PASSED",
+        "FAILED",
+        "BLOCKED",
+        "READY_WITH_GAPS",
+        "REJECTED"
+      ]
+    },
+    "total_functions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "valid_functions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "invalid_functions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ready_with_gaps": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "required_function_keys": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "function_id",
+          "source_doc_id",
+          "source_concept",
+          "required_function",
+          "function_type",
+          "target_phase",
+          "input_fields",
+          "output_fields",
+          "required_logic",
+          "required_assets",
+          "status"
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}

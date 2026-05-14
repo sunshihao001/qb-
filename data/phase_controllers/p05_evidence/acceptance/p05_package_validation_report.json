@@ -1,0 +1,115 @@
+{
+  "validated_at": "2026-05-12T03:19:13Z",
+  "status": "PASS_FORMAL_PHASE_PACKAGE_WITH_RUNTIME_GAPS",
+  "classification": "P05_EVIDENCE_CONTROLLER_FORMAL_P05_PHASE_PACKAGE",
+  "checks": [
+    {
+      "check": "controller_dir_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/system/phase_controllers/p05_evidence_controller"
+    },
+    {
+      "check": "runtime_data_tree_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/data/phase_controllers/p05_evidence"
+    },
+    {
+      "check": "expected_39_files_exist",
+      "passed": true,
+      "detail": {
+        "missing": [],
+        "actual_count": 39,
+        "expected_count": 39
+      }
+    },
+    {
+      "check": "expected_25_runtime_dirs_exist",
+      "passed": true,
+      "detail": {
+        "missing": [],
+        "actual_count": 25,
+        "expected_count": 25
+      }
+    },
+    {
+      "check": "json_yaml_parse_clean",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "semantic_safety_anchors_present",
+      "passed": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "check": "state_next_legal_stage_p06_scenario_recognition_design",
+      "passed": true,
+      "detail": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN"
+    },
+    {
+      "check": "p05_evidence_is_formal_phase_package",
+      "passed": true,
+      "detail": {
+        "completed_stage": "P05_EVIDENCE_CONTROLLER_PACKAGE_LANDING",
+        "completed_status": "P05_PACKAGE_READY_WITH_RUNTIME_GAPS_FORMAL_PHASE_CONTROLLER"
+      }
+    },
+    {
+      "check": "p06_scenario_recognition_package_design_next",
+      "passed": true,
+      "detail": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN"
+    },
+    {
+      "check": "runtime_paper_live_blocked",
+      "passed": true,
+      "detail": {
+        "p05_runtime_blocked": true,
+        "p05_runtime_allowed": null,
+        "runtime_connection_allowed": false,
+        "paper_runtime_allowed": false,
+        "live_runtime_allowed": false,
+        "real_trade_enabled": false
+      }
+    },
+    {
+      "check": "blockers_include_p05_and_runtime_blocks",
+      "passed": true,
+      "detail": [
+        "LIVE_EXECUTION",
+        "P01_data_fact_controller",
+        "P02_wallet_structure_controller",
+        "P03_chip_control_controller",
+        "P04_market_structure_controller",
+        "P05_EVIDENCE_RUNTIME_EXECUTION",
+        "P05_TO_PAPER_OR_STRATEGY",
+        "P05_scenario_classification_controller",
+        "P06_strategy_gate_controller",
+        "P07_execution_risk_controller",
+        "P08_paper_trading_controller",
+        "P09_review_learning_controller",
+        "P10_system_upgrade_controller",
+        "PAPER_RUNTIME"
+      ]
+    }
+  ],
+  "summary": {
+    "files_expected": 39,
+    "files_actual": 39,
+    "runtime_dirs_expected": 25,
+    "runtime_dirs_actual": 25,
+    "next_legal_stage": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN",
+    "completed_stage": "P05_EVIDENCE_CONTROLLER_PACKAGE_LANDING",
+    "completed_status": "P05_PACKAGE_READY_WITH_RUNTIME_GAPS_FORMAL_PHASE_CONTROLLER",
+    "p05_formal_phase_status": "P05_EVIDENCE_CONTROLLER_PACKAGE_READY_WITH_RUNTIME_GAPS",
+    "p06_status": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN_NEXT",
+    "runtime_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_runtime_allowed": false,
+    "real_trade_enabled": false,
+    "old_invalid_next_stage": "P05_SCENARIO_CLASSIFICATION_CONTROLLER_PACKAGE_DESIGN",
+    "old_invalid_next_stage_status": "DEPRECATED_BY_P05_V3_FORMALIZATION"
+  },
+  "decision": "P05 Evidence Controller v3.0 is formal P05 package-ready with runtime gaps; continue to P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN. Do not run P05/P06 runtime, paper runtime, or live execution."
+}

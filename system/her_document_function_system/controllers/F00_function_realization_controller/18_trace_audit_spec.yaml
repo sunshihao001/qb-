@@ -1,0 +1,30 @@
+trace_audit_spec:
+  phase_id: F00
+  trace_required: true
+  trace_events:
+    - input_contract_validated
+    - k00_handoff_read
+    - document_passport_read
+    - corpus_index_read
+    - system_mapping_read
+    - gap_list_read
+    - kv_index_read
+    - concept_to_function_generated
+    - field_model_generated
+    - rule_logic_generated
+    - implementation_decision_generated
+    - asset_plan_generated
+    - test_replay_plan_generated
+    - runner_binding_plan_generated
+    - acceptance_gate_evaluated
+    - handoff_packet_written
+  audit_required_fields:
+    - run_id
+    - timestamp
+    - phase_id
+    - action
+    - input_refs
+    - output_refs
+    - status
+    - gap_refs
+    - forbidden_action_check

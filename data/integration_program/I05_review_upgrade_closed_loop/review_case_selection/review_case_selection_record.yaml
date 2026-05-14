@@ -1,0 +1,9 @@
+review_case_selection_record:
+  selection_id: I05_CASE_SELECT_20260512_01
+  generated_at: '2026-05-12T15:30:01Z'
+mode: SKELETON_VALIDATION
+source_doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  selected_case_ids: [SKELETON_CASE_001]
+  selection_policy: use available I04 skeleton handoff and P09 review input
+  coverage_scope: skeleton_only
+  limitations: [real_multi_case_replay_required]

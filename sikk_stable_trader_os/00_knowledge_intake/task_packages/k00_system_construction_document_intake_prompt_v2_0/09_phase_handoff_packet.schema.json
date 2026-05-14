@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "source_doc_ids",
+    "k00_status",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "unresolved_gaps",
+    "downstream_execution_scope"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "from_phase": {
+      "type": "string"
+    },
+    "to_phase": {
+      "type": "string"
+    },
+    "source_doc_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "k00_status": {
+      "type": "string"
+    },
+    "allowed_next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolved_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "downstream_execution_scope": {
+      "type": "string"
+    }
+  }
+}

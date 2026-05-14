@@ -1,0 +1,32 @@
+{
+  "acceptance_id": "DATA_ACCEPTANCE_DOC-20260511-023",
+  "plane_id": "P03_DATA_PLANE",
+  "accepted_at": "2026-05-11T16:34:30Z",
+  "acceptance_result": "DATA_READY_WITH_GAPS",
+  "file_level_passed": true,
+  "structure_level_passed": true,
+  "semantic_level_passed": true,
+  "consumption_level_passed": "PENDING_P04_CONSUMPTION",
+  "runtime_level_passed": false,
+  "required_file_count": 20,
+  "created_file_count": 31,
+  "field_dictionary_count": 141,
+  "data_source_count": 11,
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "真实 API 稳定性未验证",
+    "字段覆盖率未知",
+    "钱包归并准确度未知",
+    "多源报价偏差阈值未校准",
+    "K线指标计算口径未完全固定",
+    "安全扫描覆盖范围未确认",
+    "数据质量权重未回测",
+    "历史地址库还不成熟",
+    "legacy runtime 数据吸收映射待建"
+  ],
+  "forbidden_logic_detected": false,
+  "p01_runtime_connection_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "next_legal_stage": "P04_EVIDENCE_PLANE_DESIGN"
+}

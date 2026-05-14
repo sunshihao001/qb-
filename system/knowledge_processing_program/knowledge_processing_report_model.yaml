@@ -1,0 +1,14 @@
+report_model:
+  required_sections:
+    - source_summary
+    - route_status
+    - created_system_assets
+    - created_data_assets
+    - acceptance_result
+    - gaps
+    - handoff
+    - next_legal_stage
+  status_values:
+    - PASS
+    - PASS_WITH_GAPS
+    - BLOCKED

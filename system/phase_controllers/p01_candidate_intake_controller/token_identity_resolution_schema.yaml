@@ -1,0 +1,33 @@
+token_identity_resolution:
+  identity_resolution_id: string
+  candidate_id: string
+  input_identity:
+  - raw_chain
+  - raw_token_address
+  - raw_pair_address
+  - raw_pool_address
+  normalized_identity:
+  - chain
+  - token_address_normalized
+  - pair_address_normalized
+  - pool_address_normalized
+  validation:
+  - chain_supported
+  - token_address_format_valid
+  - token_address_checksum_valid
+  - pair_address_format_valid
+  - pool_address_format_valid
+  identity_conflict:
+  - symbol_collision_detected
+  - same_symbol_different_address
+  - same_address_multiple_pools
+  - identity_conflict_status
+  result:
+    identity_status:
+    - IDENTITY_VERIFIED
+    - IDENTITY_VERIFIED_WITH_GAPS
+    - IDENTITY_CONFLICTED
+    - IDENTITY_REJECTED
+    reason: string
+  trace:
+  - identity_trace_id

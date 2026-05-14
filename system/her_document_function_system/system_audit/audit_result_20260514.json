@@ -1,0 +1,400 @@
+{
+  "audit_id": "HER_DOC_SYSTEM_AUDIT_20260514_001",
+  "created_at": "2026-05-14T02:54:34.290700+00:00",
+  "canonical_root": "/root/sikk-gmgn/system/her_document_function_system",
+  "audit_scope": "HER-DFAFS document-to-function automation system self-audit",
+  "controller_count": 8,
+  "controllers": [
+    "A00_acceptance_evidence_controller",
+    "F00_function_realization_controller",
+    "G00_governance_boundary_controller",
+    "H00_handoff_downstream_queue_controller",
+    "O00_full_pipeline_orchestrator",
+    "R00_runner_tool_binding_controller",
+    "U00_review_upgrade_controller",
+    "V00_validation_evidence_controller"
+  ],
+  "system_status": "HER_DFAFS_SYSTEM_READY_WITH_GAPS",
+  "major_findings": [
+    "Canonical root is /root/sikk-gmgn/system/her_document_function_system; standalone /root/her_document_function_system is disabled pointer only.",
+    "O00/G00/F00/V00/R00/A00/H00/U00 controller families exist under canonical root.",
+    "K00 is required by pipeline semantics but no canonical controllers/K00_knowledge_intake_controller directory is present under controllers/. K00 may exist as upstream knowledge-intake system elsewhere and must be bridged explicitly.",
+    "Controller files use phase-prefixed names such as 01_f00_manifest.yaml rather than generic 01_manifest.yaml; audit rules must be semantic, not filename-literal only.",
+    "System now has a formal self-audit entrypoint under system_audit/."
+  ],
+  "blocking_gaps": [
+    {
+      "gap_id": "GAP-K00-CONTROLLER-BRIDGE",
+      "severity": "HIGH",
+      "description": "F00 requires K00 handoff as legal entry, but canonical HER-DFAFS controllers root lacks a K00 controller package or explicit bridge contract.",
+      "required_fix": "Create K00 bridge spec or canonical K00 controller package with handoff schema refs."
+    },
+    {
+      "gap_id": "GAP-NAMING-COMPATIBILITY",
+      "severity": "MEDIUM",
+      "description": "Generic required-file checks can falsely mark phase-prefixed assets as missing.",
+      "required_fix": "Use semantic asset detection registry."
+    },
+    {
+      "gap_id": "GAP-AUDIT-RUNNER",
+      "severity": "MEDIUM",
+      "description": "Self-audit package exists, but independent CLI audit runner is not yet bound.",
+      "required_fix": "Create tools/her_doc_system_audit.py."
+    }
+  ],
+  "controller_report": [
+    {
+      "controller": "A00_acceptance_evidence_controller",
+      "file_count": 21,
+      "semantic_assets": {
+        "manifest": [
+          "01_a00_manifest.yaml"
+        ],
+        "context_pack": [
+          "02_a00_context_pack.md"
+        ],
+        "objective_tree": [
+          "03_a00_objective_tree.yaml"
+        ],
+        "input_contract": [
+          "04_a00_input_contract.json"
+        ],
+        "output_contract": [
+          "05_a00_output_contract.json"
+        ],
+        "execution_protocol": [
+          "06_a00_execution_protocol.md"
+        ],
+        "acceptance_gate": [
+          "07_a00_acceptance_gate.yaml"
+        ],
+        "state": [
+          "08_a00_state.json"
+        ],
+        "handoff_schema": [
+          "09_a00_handoff_packet.schema.json"
+        ],
+        "trace_audit": [
+          "20_trace_audit_spec.yaml",
+          "14_trace_audit_validation.schema.json"
+        ],
+        "recovery_policy": [
+          "19_recovery_policy.md"
+        ],
+        "report_template": [
+          "21_a00_final_report_template.md"
+        ]
+      },
+      "blocking_missing_core_assets": [],
+      "status": "CORE_COMPLETE"
+    },
+    {
+      "controller": "F00_function_realization_controller",
+      "file_count": 20,
+      "semantic_assets": {
+        "manifest": [
+          "01_f00_manifest.yaml"
+        ],
+        "context_pack": [
+          "02_f00_context_pack.md"
+        ],
+        "objective_tree": [
+          "03_f00_objective_tree.yaml"
+        ],
+        "input_contract": [
+          "04_f00_input_contract.json"
+        ],
+        "output_contract": [
+          "05_f00_output_contract.json"
+        ],
+        "execution_protocol": [
+          "06_f00_execution_protocol.md"
+        ],
+        "acceptance_gate": [
+          "07_f00_acceptance_gate.yaml"
+        ],
+        "state": [
+          "08_f00_state.json"
+        ],
+        "handoff_schema": [
+          "09_f00_handoff_packet.schema.json"
+        ],
+        "trace_audit": [
+          "18_trace_audit_spec.yaml"
+        ],
+        "recovery_policy": [
+          "17_recovery_policy.md"
+        ],
+        "report_template": [
+          "19_f00_final_report_template.md"
+        ]
+      },
+      "blocking_missing_core_assets": [],
+      "status": "CORE_COMPLETE"
+    },
+    {
+      "controller": "G00_governance_boundary_controller",
+      "file_count": 26,
+      "semantic_assets": {
+        "manifest": [
+          "01_g00_manifest.yaml"
+        ],
+        "context_pack": [
+          "02_g00_context_pack.md"
+        ],
+        "objective_tree": [
+          "03_g00_objective_tree.yaml"
+        ],
+        "input_contract": [
+          "04_g00_input_contract.json"
+        ],
+        "output_contract": [
+          "05_g00_output_contract.json"
+        ],
+        "execution_protocol": [
+          "06_g00_execution_protocol.md"
+        ],
+        "acceptance_gate": [
+          "07_g00_acceptance_gate.yaml"
+        ],
+        "state": [
+          "08_g00_state.json"
+        ],
+        "handoff_schema": [
+          "09_g00_handoff_packet.schema.json"
+        ],
+        "trace_audit": [
+          "24_trace_audit_spec.yaml"
+        ],
+        "recovery_policy": [
+          "25_recovery_policy.md"
+        ],
+        "report_template": [
+          "26_g00_final_report_template.md"
+        ]
+      },
+      "blocking_missing_core_assets": [],
+      "status": "CORE_COMPLETE"
+    },
+    {
+      "controller": "H00_handoff_downstream_queue_controller",
+      "file_count": 21,
+      "semantic_assets": {
+        "manifest": [
+          "01_h00_manifest.yaml"
+        ],
+        "context_pack": [
+          "02_h00_context_pack.md"
+        ],
+        "objective_tree": [
+          "03_h00_objective_tree.yaml"
+        ],
+        "input_contract": [
+          "04_h00_input_contract.json"
+        ],
+        "output_contract": [
+          "05_h00_output_contract.json"
+        ],
+        "execution_protocol": [
+          "06_h00_execution_protocol.md"
+        ],
+        "acceptance_gate": [
+          "07_h00_acceptance_gate.yaml"
+        ],
+        "state": [
+          "08_h00_state.json"
+        ],
+        "handoff_schema": [
+          "09_h00_handoff_packet.schema.json"
+        ],
+        "trace_audit": [
+          "19_trace_audit_spec.yaml"
+        ],
+        "recovery_policy": [
+          "references_h00_recovery_policy.md"
+        ],
+        "report_template": [
+          "20_h00_final_report_template.md"
+        ]
+      },
+      "blocking_missing_core_assets": [],
+      "status": "CORE_COMPLETE"
+    },
+    {
+      "controller": "O00_full_pipeline_orchestrator",
+      "file_count": 25,
+      "semantic_assets": {
+        "manifest": [
+          "01_o00_manifest.yaml"
+        ],
+        "context_pack": [
+          "02_o00_context_pack.md"
+        ],
+        "objective_tree": [
+          "03_o00_objective_tree.yaml"
+        ],
+        "input_contract": [
+          "04_o00_input_contract.json"
+        ],
+        "output_contract": [
+          "05_o00_output_contract.json"
+        ],
+        "execution_protocol": [
+          "06_o00_execution_protocol.md"
+        ],
+        "acceptance_gate": [
+          "07_o00_acceptance_gate.yaml"
+        ],
+        "state": [
+          "08_o00_state.json"
+        ],
+        "handoff_schema": [
+          "09_o00_handoff_packet.schema.json"
+        ],
+        "trace_audit": [
+          "17_pipeline_trace_audit_spec.yaml"
+        ],
+        "recovery_policy": [
+          "16_pipeline_recovery_policy.schema.json"
+        ],
+        "report_template": [
+          "19_pipeline_report_template.md"
+        ]
+      },
+      "blocking_missing_core_assets": [],
+      "status": "CORE_COMPLETE"
+    },
+    {
+      "controller": "R00_runner_tool_binding_controller",
+      "file_count": 23,
+      "semantic_assets": {
+        "manifest": [
+          "01_r00_manifest.yaml"
+        ],
+        "context_pack": [
+          "02_r00_context_pack.md"
+        ],
+        "objective_tree": [
+          "03_r00_objective_tree.yaml"
+        ],
+        "input_contract": [
+          "04_r00_input_contract.json"
+        ],
+        "output_contract": [
+          "05_r00_output_contract.json"
+        ],
+        "execution_protocol": [
+          "06_r00_execution_protocol.md"
+        ],
+        "acceptance_gate": [
+          "07_r00_acceptance_gate.yaml"
+        ],
+        "state": [
+          "08_r00_state.json"
+        ],
+        "handoff_schema": [
+          "09_r00_handoff_packet.schema.json"
+        ],
+        "trace_audit": [
+          "21_trace_audit_spec.yaml"
+        ],
+        "recovery_policy": [
+          "22_recovery_policy.md"
+        ],
+        "report_template": [
+          "23_r00_final_report_template.md"
+        ]
+      },
+      "blocking_missing_core_assets": [],
+      "status": "CORE_COMPLETE"
+    },
+    {
+      "controller": "U00_review_upgrade_controller",
+      "file_count": 22,
+      "semantic_assets": {
+        "manifest": [
+          "01_u00_manifest.yaml"
+        ],
+        "context_pack": [
+          "02_u00_context_pack.md"
+        ],
+        "objective_tree": [
+          "03_u00_objective_tree.yaml"
+        ],
+        "input_contract": [
+          "04_u00_input_contract.json"
+        ],
+        "output_contract": [
+          "05_u00_output_contract.json"
+        ],
+        "execution_protocol": [
+          "06_u00_execution_protocol.md"
+        ],
+        "acceptance_gate": [
+          "07_u00_acceptance_gate.yaml"
+        ],
+        "state": [
+          "08_u00_state.json"
+        ],
+        "handoff_schema": [
+          "09_u00_handoff_packet.schema.json"
+        ],
+        "trace_audit": [
+          "20_trace_audit_spec.yaml"
+        ],
+        "recovery_policy": [
+          "19_recovery_policy.md"
+        ],
+        "report_template": [
+          "21_u00_final_report_template.md"
+        ]
+      },
+      "blocking_missing_core_assets": [],
+      "status": "CORE_COMPLETE"
+    },
+    {
+      "controller": "V00_validation_evidence_controller",
+      "file_count": 20,
+      "semantic_assets": {
+        "manifest": [
+          "01_v00_manifest.yaml"
+        ],
+        "context_pack": [
+          "02_v00_context_pack.md"
+        ],
+        "objective_tree": [
+          "03_v00_objective_tree.yaml"
+        ],
+        "input_contract": [
+          "04_v00_input_contract.json"
+        ],
+        "output_contract": [
+          "05_v00_output_contract.json"
+        ],
+        "execution_protocol": [
+          "06_v00_execution_protocol.md"
+        ],
+        "acceptance_gate": [
+          "07_v00_acceptance_gate.yaml"
+        ],
+        "state": [
+          "08_v00_state.json"
+        ],
+        "handoff_schema": [
+          "09_v00_handoff_packet.schema.json"
+        ],
+        "trace_audit": [
+          "18_trace_audit_spec.yaml"
+        ],
+        "recovery_policy": [
+          "19_recovery_policy.md"
+        ],
+        "report_template": [
+          "20_v00_final_report_template.md"
+        ]
+      },
+      "blocking_missing_core_assets": [],
+      "status": "CORE_COMPLETE"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "allowed_next_stage": "phase_02_wallet_structure",
+  "audit_file": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/audit/audit_report.md",
+  "block_reason": "none",
+  "chain": "solana",
+  "counter_evidence": [
+    "legacy_candidate_snapshot",
+    "raw_top_trader",
+    "raw_transfer",
+    "transfer_missing"
+  ],
+  "created_at": "2026-05-09T14:24:17Z",
+  "degrade_reason": "missing_optional_or_stale",
+  "handoff_files": {
+    "data_quality_summary": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/summary/data_quality_summary.json",
+    "holder_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/holder_normalized.csv",
+    "kline_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/kline_normalized.csv",
+    "quote_security_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/quote_security_normalized.json",
+    "token_basic_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/token_basic_normalized.json",
+    "token_market_context": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/token_market_context.json",
+    "top_trader_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/top_trader_normalized.csv",
+    "transfer_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/transfer_normalized.csv",
+    "wallet_trade_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/wallet_trade_normalized.csv"
+  },
+  "handoff_status": "HANDOFF_DEGRADED",
+  "hard_negative_reasons": [],
+  "hard_negative_triggered": false,
+  "missing_fields": [
+    "legacy_candidate_snapshot",
+    "raw_top_trader",
+    "raw_transfer",
+    "transfer_missing"
+  ],
+  "negative_evidence": [],
+  "next_stage": "phase_02_wallet_structure",
+  "phase": "phase_01_data_fact",
+  "phase_status": "DATA_PARTIAL",
+  "positive_evidence": [
+    "raw snapshot retained",
+    "field mapping generated",
+    "normalization attempted"
+  ],
+  "primary_status": "DATA_PARTIAL",
+  "required_context_for_next_stage": {
+    "data_quality_summary": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/summary/data_quality_summary.json",
+    "holder_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/holder_normalized.csv",
+    "kline_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/kline_normalized.csv",
+    "quote_security_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/quote_security_normalized.json",
+    "token_basic_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/token_basic_normalized.json",
+    "token_market_context": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/token_market_context.json",
+    "top_trader_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/top_trader_normalized.csv",
+    "transfer_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/transfer_normalized.csv",
+    "wallet_trade_normalized": "/root/sikk-gmgn/data/source_wallet_bot/replay/MockToken1111111111111111111111111111111111/phase_01_v2_replay/normalized/wallet_trade_normalized.csv"
+  },
+  "snapshot_id": "phase01_MockToken1111111111111111111111111111111111_20260509140000",
+  "snapshot_time": "2026-05-09T14:00:00Z",
+  "token_address": "MockToken1111111111111111111111111111111111",
+  "token_symbol": "MOCK"
+}

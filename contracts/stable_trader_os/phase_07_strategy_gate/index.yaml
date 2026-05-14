@@ -1,0 +1,17 @@
+asset_id: phase_07_strategy_gate_contracts_wrapper
+phase_id: P07
+domain: strategy_gate
+status: CURRENT_PHASE_WRAPPER_READY
+generated_by: HER-KPP-SYSTEM-RESCAN-AUTOFIX-20260513
+legacy_source_mapping:
+  legacy_dir: contracts/stable_trader_os/phase_06_strategy_filter
+  copy_or_delete_performed: false
+canonical_controller_assets:
+  input_contract: system/phase_controllers/p07_strategy_gate_controller/input_contract.json
+  output_contract: system/phase_controllers/p07_strategy_gate_controller/output_contract.json
+  handoff_schema: system/phase_controllers/p07_strategy_gate_controller/handoff_packet.schema.json
+safety_boundary:
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  swap_enabled: false

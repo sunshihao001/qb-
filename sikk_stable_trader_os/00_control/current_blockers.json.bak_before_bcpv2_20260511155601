@@ -1,0 +1,39 @@
+{
+  "updated_at": "2026-05-11T15:46:58.346373+00:00",
+  "blocking_gaps": [
+    {
+      "gap_id": "DATA_PLANE_ACCEPTANCE_NOT_RUN",
+      "blocks": [
+        "P01_data_fact_controller"
+      ],
+      "reason": "Data Plane created by P00 but not yet accepted."
+    },
+    {
+      "gap_id": "P01_PREFLIGHT_NOT_RUN",
+      "blocks": [
+        "P01_data_fact_controller"
+      ],
+      "reason": "P01 preflight must run after Data Plane acceptance."
+    }
+  ],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "PHASE_STUBS_NEED_DETAILED_SEMANTIC_EXPANSION",
+      "affects": [
+        "P02-P10"
+      ],
+      "reason": "P00 created controller stubs; detailed phase semantics can be expanded later through phase-specific work."
+    }
+  ],
+  "active_blockers": [
+    {
+      "stage": "P01_data_fact_controller",
+      "reasons": [
+        "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE_NOT_PASSED",
+        "DATA_PLANE_ACCEPTANCE_NOT_RUN",
+        "P01_PREFLIGHT_NOT_RUN"
+      ],
+      "blocking_until": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE_ACCEPTANCE_PASSED"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "doc_id": "DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001",
+  "checks": [
+    {
+      "name": "raw_input_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001_her_system_construction_document_intake_prompt_v2_0.md"
+    },
+    {
+      "name": "source_registry_written",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/source_registry/source_manifest_DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001.md"
+    },
+    {
+      "name": "passport_written",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001.yaml"
+    },
+    {
+      "name": "corpus_index_written",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001.md"
+    },
+    {
+      "name": "system_mapping_written",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/system_mapping/system_mapping_DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001.json"
+    },
+    {
+      "name": "gap_detection_written",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/gap_detection/gap_detection_DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001.json"
+    },
+    {
+      "name": "phase_task_package_written",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/k00_system_construction_document_intake_prompt_v2_0"
+    },
+    {
+      "name": "phase_state_written",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/phase_state/phase_state_DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001.json"
+    },
+    {
+      "name": "handoff_written",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/handoff_packets/handoff_packet_DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001.json"
+    },
+    {
+      "name": "trace_audit_written",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/acceptance_reports/verification_result_DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001.json"
+    }
+  ],
+  "acceptance_basis": "All mandatory K00 assets exist. No blocking gaps. One low routing gap remains visible.",
+  "result": "K00_READY_WITH_GAPS"
+}

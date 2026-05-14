@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0342
+source_path: sikk_stable_trader_os/02_phase_controllers/P04_scenario_recognition/phase_context_pack.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 0
+  P04: 0
+  P05: 3
+  P06: 4
+  P07: 1
+  P08: 0
+  P09: 1
+  P10: 0
+primary_phase: P06
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

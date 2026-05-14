@@ -1,0 +1,26 @@
+{
+  "handoff_id": "K00_TO_P00_DOC-20260511-004",
+  "source_stage": "K00_knowledge_intake_taskization",
+  "target_stage": "P00_system_bootstrap_controller",
+  "included_assets": [
+    "00_knowledge_intake/raw_inputs/DOC-20260511-004_system_methodology_blueprint_v2_institutional_upload.md",
+    "00_knowledge_intake/document_passports/document_passport_DOC-20260511-004.yaml",
+    "00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-004.md",
+    "00_knowledge_intake/system_mapping/system_mapping_DOC-20260511-004.json",
+    "00_knowledge_intake/gap_detection/gap_report_DOC-20260511-004.json",
+    "00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-004.json",
+    "00_methodology/system_methodology_blueprint.md"
+  ],
+  "canonical_target_path": "00_methodology/system_methodology_blueprint.md",
+  "known_gaps": [
+    "P01 remains blocked pending Data Plane Acceptance Review"
+  ],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "This upload duplicates the current canonical blueprint body"
+  ],
+  "acceptance_status": "K00_ACCEPTED_FOR_EXISTING_P00_CONSUMED_BLUEPRINT",
+  "next_legal_stage": "DATA_PLANE_ACCEPTANCE_REVIEW",
+  "consumption_required": false,
+  "note": "P00 has already consumed identical canonical blueprint; no downgrade to CREATED."
+}

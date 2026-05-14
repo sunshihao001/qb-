@@ -1,0 +1,14 @@
+{
+  "packet_id": "K00_TO_P08_HANDOFF_DOC-20260512-008",
+  "from": "K00_knowledge_intake_taskization",
+  "to": "P08_execution_risk_controller_package_landing",
+  "doc_id": "DOC-20260512-008",
+  "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-008_p08_execution_risk_controller_v3.md",
+  "requirements": [
+    "create P08 controller package",
+    "create runtime data directories",
+    "preserve paper-only boundary",
+    "block live execution and wallet signing"
+  ],
+  "status": "HANDOFF_READY"
+}

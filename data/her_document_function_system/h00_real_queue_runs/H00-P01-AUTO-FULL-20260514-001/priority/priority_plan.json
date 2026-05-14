@@ -1,0 +1,29 @@
+{
+  "priority_plan_id": "priority_plan_H00-P01-AUTO-FULL-20260514-001",
+  "items": [
+    {
+      "queue_item_id": "queue_h00_u00_review_gaps",
+      "priority": "P0_CRITICAL",
+      "reason": [
+        "ready_with_gaps_must_be_propagated",
+        "forbidden_actions_must_be_preserved"
+      ]
+    },
+    {
+      "queue_item_id": "queue_h00_g00_policy_review",
+      "priority": "P0_CRITICAL",
+      "reason": [
+        "ready_with_gaps_must_be_propagated",
+        "forbidden_actions_must_be_preserved"
+      ]
+    },
+    {
+      "queue_item_id": "queue_h00_o00_run_document_safe_mode",
+      "priority": "P2_MEDIUM",
+      "reason": [
+        "ready_with_gaps_must_be_propagated",
+        "forbidden_actions_must_be_preserved"
+      ]
+    }
+  ]
+}

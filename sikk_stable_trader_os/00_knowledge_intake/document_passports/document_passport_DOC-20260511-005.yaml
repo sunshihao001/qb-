@@ -1,0 +1,45 @@
+doc_id: DOC-20260511-005
+source_type: user_uploaded_markdown
+source_name: 未命名 4 (1).md
+received_at: 2026-05-11
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005_p00_system_bootstrap_controller_institutional.md
+document_role:
+  primary_role: P00_SYSTEM_BOOTSTRAP_CONTROLLER_SPEC
+  secondary_roles:
+    - PHASE_CONTROLLER_BUILD_SPEC
+    - CONTROL_PLANE_BOOTSTRAP_TASK
+    - P00_EXECUTION_REQUIREMENT
+summary:
+  core_intent: 建立 P00_system_bootstrap_controller 专业机构化 v1.0，并执行 P00 bootstrap 生成控制平面、阶段注册、资产索引、追踪矩阵、验收与交接体系。
+  key_points:
+    - P00 是系统建造与方法论编译控制器，不是业务/交易/文档整理阶段。
+    - 必须创建 P00 controller 文件、00_control、00_trace、08_acceptance、09_handoff。
+    - 必须消费 system_methodology_blueprint 与 K00 handoff，注册 K00/P00/P01-P10。
+    - P01 必须保持 BLOCKED_BY_DATA_PLANE，paper_only=true，real_trade_enabled=false。
+system_mapping:
+  planes:
+    - Control Plane
+    - Trace Plane
+    - Acceptance Plane
+    - Handoff Plane
+    - Governance Plane
+    - Domain Plane
+    - Data Plane
+  affected_phases:
+    - P00
+    - P01
+    - P02
+    - P03
+    - P04
+    - P05
+    - P06
+    - P07
+    - P08
+    - P09
+    - P10
+required_actions:
+  - Create P00 controller package.
+  - Execute P00 bootstrap outputs.
+  - Validate P01 blocked and safety boundary.
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

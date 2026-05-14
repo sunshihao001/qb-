@@ -1,0 +1,20 @@
+{
+  "doc_id": "DOC-20260512-007",
+  "target_phase": "P07_strategy_gate_controller",
+  "phase_role": "FORMAL_PHASE_CONTROLLER_PACKAGE_SPEC",
+  "upstream_phases": [
+    "P06_scenario_recognition_controller",
+    "P05_evidence_controller",
+    "P04_chip_structure_controller",
+    "P02_source_data_fact_controller"
+  ],
+  "downstream_phases": [
+    "P08_execution_risk_controller"
+  ],
+  "forbidden_phase_effects": [
+    "buy_signal",
+    "paper_runtime_started",
+    "live_execution_allowed",
+    "bypass_p08"
+  ]
+}

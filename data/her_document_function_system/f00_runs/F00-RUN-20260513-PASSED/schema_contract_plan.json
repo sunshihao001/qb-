@@ -1,0 +1,19 @@
+{
+  "phase_id": "F00",
+  "status": "SCHEMA_CONTRACT_READY",
+  "schemas": [
+    "09_f00_handoff_packet.schema.json",
+    "10_concept_to_function_map.schema.json",
+    "11_function_asset_plan.schema.json",
+    "12_field_model.schema.json",
+    "13_rule_logic.schema.json",
+    "14_implementation_decision.schema.json",
+    "15_test_replay_evidence.schema.json",
+    "16_runner_binding.schema.json"
+  ],
+  "contracts": [
+    "04_f00_input_contract.json",
+    "05_f00_output_contract.json"
+  ],
+  "generated_at": "2026-05-13T14:53:53+00:00"
+}

@@ -1,0 +1,10 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: audit_finding_record
+fields:
+- finding_id
+- finding_scope
+- finding_type
+- severity
+- evidence
+- recommended_fix

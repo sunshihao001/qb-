@@ -1,0 +1,283 @@
+meta:
+  standard_id: S00_CONTRACT_INDEX
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+contracts:
+- contract_id: P01_STANDARD_CONTRACT_SET
+  contract_name: P01 input/output/handoff/trace/acceptance/failure contracts
+  producer_phase: P01
+  consumer_phase: next_phase_or_control_plane
+  required_files:
+  - p01_input_contract
+  - p01_output_contract
+  - p01_handoff_contract
+  required_fields:
+  - token_id
+  - phase_run_id
+  - trace_refs
+  - acceptance_status
+  - handoff_status
+  optional_fields:
+  - known_gaps
+  - counter_evidence_refs
+  forbidden_fields:
+  - private_key
+  - signed_transaction
+  - broadcast_tx
+  - real_swap_order
+  schema_version: 0.1.0
+  validation_runner: R00_VALIDATION_CONTROLLER
+  acceptance_gate: P01_ACCEPTANCE_GATE
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+  handoff_packet: P01_HANDOFF_PACKET
+- contract_id: P02_STANDARD_CONTRACT_SET
+  contract_name: P02 input/output/handoff/trace/acceptance/failure contracts
+  producer_phase: P02
+  consumer_phase: next_phase_or_control_plane
+  required_files:
+  - p02_input_contract
+  - p02_output_contract
+  - p02_handoff_contract
+  required_fields:
+  - token_id
+  - phase_run_id
+  - trace_refs
+  - acceptance_status
+  - handoff_status
+  optional_fields:
+  - known_gaps
+  - counter_evidence_refs
+  forbidden_fields:
+  - private_key
+  - signed_transaction
+  - broadcast_tx
+  - real_swap_order
+  schema_version: 0.1.0
+  validation_runner: R00_VALIDATION_CONTROLLER
+  acceptance_gate: P02_ACCEPTANCE_GATE
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+  handoff_packet: P02_HANDOFF_PACKET
+- contract_id: P03_STANDARD_CONTRACT_SET
+  contract_name: P03 input/output/handoff/trace/acceptance/failure contracts
+  producer_phase: P03
+  consumer_phase: next_phase_or_control_plane
+  required_files:
+  - p03_input_contract
+  - p03_output_contract
+  - p03_handoff_contract
+  required_fields:
+  - token_id
+  - phase_run_id
+  - trace_refs
+  - acceptance_status
+  - handoff_status
+  optional_fields:
+  - known_gaps
+  - counter_evidence_refs
+  forbidden_fields:
+  - private_key
+  - signed_transaction
+  - broadcast_tx
+  - real_swap_order
+  schema_version: 0.1.0
+  validation_runner: R00_VALIDATION_CONTROLLER
+  acceptance_gate: P03_ACCEPTANCE_GATE
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+  handoff_packet: P03_HANDOFF_PACKET
+- contract_id: P04_STANDARD_CONTRACT_SET
+  contract_name: P04 input/output/handoff/trace/acceptance/failure contracts
+  producer_phase: P04
+  consumer_phase: next_phase_or_control_plane
+  required_files:
+  - p04_input_contract
+  - p04_output_contract
+  - p04_handoff_contract
+  required_fields:
+  - token_id
+  - phase_run_id
+  - trace_refs
+  - acceptance_status
+  - handoff_status
+  optional_fields:
+  - known_gaps
+  - counter_evidence_refs
+  forbidden_fields:
+  - private_key
+  - signed_transaction
+  - broadcast_tx
+  - real_swap_order
+  schema_version: 0.1.0
+  validation_runner: R00_VALIDATION_CONTROLLER
+  acceptance_gate: P04_ACCEPTANCE_GATE
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+  handoff_packet: P04_HANDOFF_PACKET
+- contract_id: P05_STANDARD_CONTRACT_SET
+  contract_name: P05 input/output/handoff/trace/acceptance/failure contracts
+  producer_phase: P05
+  consumer_phase: next_phase_or_control_plane
+  required_files:
+  - p05_input_contract
+  - p05_output_contract
+  - p05_handoff_contract
+  required_fields:
+  - token_id
+  - phase_run_id
+  - trace_refs
+  - acceptance_status
+  - handoff_status
+  optional_fields:
+  - known_gaps
+  - counter_evidence_refs
+  forbidden_fields:
+  - private_key
+  - signed_transaction
+  - broadcast_tx
+  - real_swap_order
+  schema_version: 0.1.0
+  validation_runner: R00_VALIDATION_CONTROLLER
+  acceptance_gate: P05_ACCEPTANCE_GATE
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+  handoff_packet: P05_HANDOFF_PACKET
+- contract_id: P06_STANDARD_CONTRACT_SET
+  contract_name: P06 input/output/handoff/trace/acceptance/failure contracts
+  producer_phase: P06
+  consumer_phase: next_phase_or_control_plane
+  required_files:
+  - p06_input_contract
+  - p06_output_contract
+  - p06_handoff_contract
+  required_fields:
+  - token_id
+  - phase_run_id
+  - trace_refs
+  - acceptance_status
+  - handoff_status
+  optional_fields:
+  - known_gaps
+  - counter_evidence_refs
+  forbidden_fields:
+  - private_key
+  - signed_transaction
+  - broadcast_tx
+  - real_swap_order
+  schema_version: 0.1.0
+  validation_runner: R00_VALIDATION_CONTROLLER
+  acceptance_gate: P06_ACCEPTANCE_GATE
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+  handoff_packet: P06_HANDOFF_PACKET
+- contract_id: P07_STANDARD_CONTRACT_SET
+  contract_name: P07 input/output/handoff/trace/acceptance/failure contracts
+  producer_phase: P07
+  consumer_phase: next_phase_or_control_plane
+  required_files:
+  - p07_input_contract
+  - p07_output_contract
+  - p07_handoff_contract
+  required_fields:
+  - token_id
+  - phase_run_id
+  - trace_refs
+  - acceptance_status
+  - handoff_status
+  optional_fields:
+  - known_gaps
+  - counter_evidence_refs
+  forbidden_fields:
+  - private_key
+  - signed_transaction
+  - broadcast_tx
+  - real_swap_order
+  schema_version: 0.1.0
+  validation_runner: R00_VALIDATION_CONTROLLER
+  acceptance_gate: P07_ACCEPTANCE_GATE
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+  handoff_packet: P07_HANDOFF_PACKET
+- contract_id: P08_STANDARD_CONTRACT_SET
+  contract_name: P08 input/output/handoff/trace/acceptance/failure contracts
+  producer_phase: P08
+  consumer_phase: next_phase_or_control_plane
+  required_files:
+  - p08_input_contract
+  - p08_output_contract
+  - p08_handoff_contract
+  required_fields:
+  - token_id
+  - phase_run_id
+  - trace_refs
+  - acceptance_status
+  - handoff_status
+  optional_fields:
+  - known_gaps
+  - counter_evidence_refs
+  forbidden_fields:
+  - private_key
+  - signed_transaction
+  - broadcast_tx
+  - real_swap_order
+  schema_version: 0.1.0
+  validation_runner: R00_VALIDATION_CONTROLLER
+  acceptance_gate: P08_ACCEPTANCE_GATE
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+  handoff_packet: P08_HANDOFF_PACKET
+- contract_id: P09_STANDARD_CONTRACT_SET
+  contract_name: P09 input/output/handoff/trace/acceptance/failure contracts
+  producer_phase: P09
+  consumer_phase: next_phase_or_control_plane
+  required_files:
+  - p09_input_contract
+  - p09_output_contract
+  - p09_handoff_contract
+  required_fields:
+  - token_id
+  - phase_run_id
+  - trace_refs
+  - acceptance_status
+  - handoff_status
+  optional_fields:
+  - known_gaps
+  - counter_evidence_refs
+  forbidden_fields:
+  - private_key
+  - signed_transaction
+  - broadcast_tx
+  - real_swap_order
+  schema_version: 0.1.0
+  validation_runner: R00_VALIDATION_CONTROLLER
+  acceptance_gate: P09_ACCEPTANCE_GATE
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+  handoff_packet: P09_HANDOFF_PACKET
+- contract_id: P10_STANDARD_CONTRACT_SET
+  contract_name: P10 input/output/handoff/trace/acceptance/failure contracts
+  producer_phase: P10
+  consumer_phase: next_phase_or_control_plane
+  required_files:
+  - p10_input_contract
+  - p10_output_contract
+  - p10_handoff_contract
+  required_fields:
+  - token_id
+  - phase_run_id
+  - trace_refs
+  - acceptance_status
+  - handoff_status
+  optional_fields:
+  - known_gaps
+  - counter_evidence_refs
+  forbidden_fields:
+  - private_key
+  - signed_transaction
+  - broadcast_tx
+  - real_swap_order
+  schema_version: 0.1.0
+  validation_runner: R00_VALIDATION_CONTROLLER
+  acceptance_gate: P10_ACCEPTANCE_GATE
+  failure_policy: BLOCK_OR_DEGRADE_WITH_EXPLICIT_REASON
+  handoff_packet: P10_HANDOFF_PACKET

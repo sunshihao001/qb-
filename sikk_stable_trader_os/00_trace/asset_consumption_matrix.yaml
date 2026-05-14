@@ -1,0 +1,145 @@
+asset_consumption_matrix:
+  - asset_path: 00_methodology/system_methodology_blueprint.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-005.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet.template.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-016.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-019.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-008.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-011.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-012.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-018.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-004.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-004.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-014.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-007.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-006.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-002.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-003.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-010.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-013.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-017.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-009.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-015.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-005.json
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/phase_controller_candidates/phase_controller_candidate_spec_DOC-20260511-005_P00.yaml
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/phase_controller_candidates/DOC-20260511-018_phase_controller_candidate_spec.yaml
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/phase_controller_candidates/phase_controller_candidate_spec.template.yaml
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-004_system_methodology_blueprint_v2_institutional_upload.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-004.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-010.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-002.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-012.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-005.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-007.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-011.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-003.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-008.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-017.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-016.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-003-DUP-001.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/.gitkeep
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-014.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-006.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-001.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-005_p00_system_bootstrap_controller_institutional.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-009.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-019_k00_system_chain_professional_update.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-013.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00
+  - asset_path: 00_knowledge_intake/raw_inputs/DOC-20260511-015.md
+    consumed_by: ['P00_system_bootstrap_controller']
+    status: CONSUMED_BY_P00

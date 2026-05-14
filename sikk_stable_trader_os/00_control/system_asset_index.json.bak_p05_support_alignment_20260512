@@ -1,0 +1,803 @@
+{
+  "system_id": "SIKK_STABLE_TRADER_OS",
+  "updated_at": "2026-05-12T02:45:36Z",
+  "assets": [
+    {
+      "asset_id": "system_methodology_blueprint",
+      "path": "00_methodology/system_methodology_blueprint.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_to_p00_handoff_packet_DOC_20260511_005",
+      "path": "00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-005.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_to_p00_handoff_packet_template",
+      "path": "00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet.template.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_016",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-016.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_to_p00_handoff_packet_DOC_20260511_019",
+      "path": "00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-019.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_008",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-008.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_011",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-011.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_012",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-012.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_to_p00_handoff_packet_DOC_20260511_018",
+      "path": "00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-018.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_to_p00_handoff_packet_DOC_20260511_004",
+      "path": "00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-004.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_004",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-004.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_014",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-014.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_007",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-007.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_006",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-006.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_002",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-002.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_003",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-003.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_010",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-010.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_013",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-013.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_017",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-017.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_009",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-009.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_015",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-015.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "k00_handoff_packet_DOC_20260511_005",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-005.json",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "phase_controller_candidate_spec_DOC_20260511_005_P00",
+      "path": "00_knowledge_intake/phase_controller_candidates/phase_controller_candidate_spec_DOC-20260511-005_P00.yaml",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_018_phase_controller_candidate_spec",
+      "path": "00_knowledge_intake/phase_controller_candidates/DOC-20260511-018_phase_controller_candidate_spec.yaml",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "phase_controller_candidate_spec_template",
+      "path": "00_knowledge_intake/phase_controller_candidates/phase_controller_candidate_spec.template.yaml",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_004_system_methodology_blueprint_v2_institutional_upload",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-004_system_methodology_blueprint_v2_institutional_upload.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_004",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-004.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_010",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-010.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_002",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-002.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_018_k00_professional_phase_controller_candidate_upgrade",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_012",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-012.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_005",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-005.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_007",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-007.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_011",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-011.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_003",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-003.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_008",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-008.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_017",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-017.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_016",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-016.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_003_DUP_001",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-003-DUP-001.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "_gitkeep",
+      "path": "00_knowledge_intake/raw_inputs/.gitkeep",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_014",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-014.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_006",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-006.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_001",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-001.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_005_p00_system_bootstrap_controller_institutional",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-005_p00_system_bootstrap_controller_institutional.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_009",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-009.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_019_k00_system_chain_professional_update",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-019_k00_system_chain_professional_update.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_013",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-013.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "DOC_20260511_015",
+      "path": "00_knowledge_intake/raw_inputs/DOC-20260511-015.md",
+      "asset_type": "methodology_or_k00_asset",
+      "registered_at": "2026-05-11T15:11:51Z",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "CONSUMED_BY_P00"
+    },
+    {
+      "asset_id": "METHODOLOGY_V3_SUPPLEMENT_DOC-20260511-007",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_methodology/methodology_v3_bootstrap_full_control_plane_supplement.md",
+      "status": "CREATED_AND_REGISTERED",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ]
+    },
+    {
+      "asset_id": "NEXT_STAGE_TASK_DOC-20260511-007",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/task_queue.json",
+      "status": "READY_TO_EXECUTE",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ]
+    },
+    {
+      "asset_id": "9935835e0fe2",
+      "path": "00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-020.json",
+      "semantic_role": "k00_task_execution_package",
+      "source_stage": "P00_system_bootstrap_controller",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "ACTIVE",
+      "trace_required": true
+    },
+    {
+      "asset_id": "240a3c3cd530",
+      "path": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-020.json",
+      "semantic_role": "k00_to_p00_handoff_packet",
+      "source_stage": "P00_system_bootstrap_controller",
+      "consumed_by": [
+        "P00_system_bootstrap_controller"
+      ],
+      "status": "ACTIVE",
+      "trace_required": true
+    },
+    {
+      "asset_id": "5ed4075c5332",
+      "path": "00_control/current_system_state.json",
+      "semantic_role": "highest_authority_state_source",
+      "source_stage": "P00_system_bootstrap_controller",
+      "consumed_by": [
+        "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+      ],
+      "status": "ACTIVE",
+      "trace_required": true
+    },
+    {
+      "asset_id": "7ca4fdee9e76",
+      "path": "00_control/phase_registry.yaml",
+      "semantic_role": "phase_registry",
+      "source_stage": "P00_system_bootstrap_controller",
+      "consumed_by": [
+        "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+      ],
+      "status": "ACTIVE",
+      "trace_required": true
+    },
+    {
+      "asset_id": "d68de67c074d",
+      "path": "00_control/current_blockers.json",
+      "semantic_role": "current_blockers",
+      "source_stage": "P00_system_bootstrap_controller",
+      "consumed_by": [
+        "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+      ],
+      "status": "ACTIVE",
+      "trace_required": true
+    },
+    {
+      "asset_id": "050968a2e5df",
+      "path": "00_control/next_stage_decision.json",
+      "semantic_role": "next_stage_decision",
+      "source_stage": "P00_system_bootstrap_controller",
+      "consumed_by": [
+        "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+      ],
+      "status": "ACTIVE",
+      "trace_required": true
+    },
+    {
+      "asset_id": "8a06e02fdd44",
+      "path": "00_control/bootstrap_control_plane_report.json",
+      "semantic_role": "bootstrap_report",
+      "source_stage": "P00_system_bootstrap_controller",
+      "consumed_by": [
+        "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+      ],
+      "status": "ACTIVE",
+      "trace_required": true
+    },
+    {
+      "asset_id": "37bc032b588b",
+      "path": "00_control/control_plane_integrity_manifest.json",
+      "semantic_role": "integrity_manifest",
+      "source_stage": "P00_system_bootstrap_controller",
+      "consumed_by": [
+        "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+      ],
+      "status": "ACTIVE",
+      "trace_required": true
+    },
+    {
+      "asset_id": "3e0d80a16945",
+      "path": "00_control/bootstrap_to_system_planes_handoff_packet.json",
+      "semantic_role": "bootstrap_to_system_planes_handoff",
+      "source_stage": "P00_system_bootstrap_controller",
+      "consumed_by": [
+        "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+      ],
+      "status": "ACTIVE",
+      "trace_required": true
+    },
+    {
+      "asset_id": "DOMAIN_PLANE_DOC-20260511-022",
+      "asset_type": "DOMAIN_PLANE_FILE_SET",
+      "root_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_domain",
+      "source_doc_id": "DOC-20260511-022",
+      "status": "DOMAIN_READY_WITH_GAPS",
+      "created_at": "2026-05-11T16:25:42Z",
+      "consumed_by": [
+        "P03_DATA_PLANE_FIELD_MODELING_PENDING"
+      ]
+    },
+    {
+      "asset_id": "P03_DATA_PLANE",
+      "asset_type": "system_plane",
+      "status": "DATA_READY_WITH_GAPS",
+      "root": "/root/sikk-gmgn/sikk_stable_trader_os/00_data",
+      "manifest": "/root/sikk-gmgn/sikk_stable_trader_os/00_data/data_manifest.json",
+      "acceptance": "/root/sikk-gmgn/sikk_stable_trader_os/08_acceptance/data_plane_acceptance_result.json",
+      "handoff": "/root/sikk-gmgn/sikk_stable_trader_os/09_handoff/data_to_evidence_handoff_packet.json",
+      "source_doc_id": "DOC-20260511-023",
+      "updated_at": "2026-05-11T16:34:30Z"
+    },
+    {
+      "asset_id": "P00_FULL_CONTROL_PLANE",
+      "doc_id": "DOC-20260511-024",
+      "status": "CONTROL_READY_WITH_GAPS",
+      "root": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane",
+      "manifest": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane/control_manifest.json",
+      "acceptance_result": "/root/sikk-gmgn/sikk_stable_trader_os/08_acceptance/control_plane_acceptance_result.json",
+      "handoff_packet": "/root/sikk-gmgn/sikk_stable_trader_os/09_handoff/control_to_system_planes_handoff_packet.json",
+      "updated_at": "2026-05-11T16:52:26Z",
+      "consumed_by": [
+        "SYSTEM_PLANES_REVERSE_AUDIT",
+        "P04_EVIDENCE_PLANE_DESIGN"
+      ],
+      "safety_boundary": {
+        "paper_only": true,
+        "real_trade_enabled": false,
+        "auto_order_allowed": false,
+        "p01_runtime_connection_allowed": false
+      }
+    },
+    {
+      "asset_id": "trace_plane_v2",
+      "doc_id": "DOC-20260511-025",
+      "status": "TRACE_READY_WITH_GAPS",
+      "root": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane",
+      "manifest": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_manifest.json",
+      "acceptance_result": "/root/sikk-gmgn/sikk_stable_trader_os/08_acceptance/trace_plane_acceptance_result.json",
+      "handoff_packet": "/root/sikk-gmgn/sikk_stable_trader_os/09_handoff/trace_handoff_packet.json",
+      "updated_at": "2026-05-11T17:13:34Z"
+    },
+    {
+      "asset_id": "trace_plane_DOC_20260511_025",
+      "doc_id": "DOC-20260511-025",
+      "path": "00_trace/trace_plane/trace_manifest.json",
+      "asset_type": "trace_plane_system_asset",
+      "registered_at": "2026-05-11T17:20:00Z",
+      "consumed_by": [
+        "TRACE_PLANE",
+        "ACCEPTANCE_PLANE_PROFESSIONAL_DESIGN"
+      ],
+      "status": "TRACE_READY_WITH_GAPS"
+    },
+    {
+      "asset_id": "trace_to_acceptance_handoff_packet",
+      "path": "09_handoff/trace_to_acceptance_handoff_packet.json",
+      "asset_type": "handoff_packet",
+      "registered_at": "2026-05-11T17:20:00Z",
+      "produced_by": "TRACE_PLANE",
+      "consumed_by": [
+        "ACCEPTANCE_PLANE_PROFESSIONAL_DESIGN"
+      ],
+      "status": "HANDOFF_READY_WITH_LIMITATIONS"
+    },
+    {
+      "asset_id": "P01_CANDIDATE_INTAKE_CONTROLLER_V3_PACKAGE",
+      "asset_type": "phase_controller_package",
+      "path": "/root/sikk-gmgn/system/phase_controllers/p01_candidate_intake_controller",
+      "created_from_doc_id": "DOC-20260512-001",
+      "status": "PACKAGE_READY_WITH_RUNTIME_GAPS",
+      "consumed_by": [
+        "P01_CONTROLLER_PACKAGE_EXPANSION"
+      ],
+      "safety": {
+        "paper_only": true,
+        "live_execution_allowed": false,
+        "real_trade_enabled": false,
+        "signing_enabled": false,
+        "broadcast_enabled": false,
+        "swap_enabled": false
+      }
+    },
+    {
+      "asset_id": "DOC-20260512-002",
+      "asset_type": "k00_document_asset",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-002_p02_source_data_fact_controller_v3.md",
+      "status": "K00_ASSETIZED",
+      "updated_at": "2026-05-12T01:52:36Z"
+    },
+    {
+      "asset_id": "P02_SOURCE_DATA_FACT_CONTROLLER_V3",
+      "asset_type": "phase_controller_package",
+      "path": "/root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller",
+      "status": "P02_PACKAGE_READY_WITH_RUNTIME_GAPS",
+      "updated_at": "2026-05-12T01:52:36Z"
+    },
+    {
+      "asset_id": "DOC-20260512-003",
+      "asset_type": "K00_DOCUMENT_ASSET",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-003_p03_wallet_entity_controller_v3.md",
+      "status": "ASSETIZED",
+      "target_phase": "P03_WALLET_ENTITY_CONTROLLER",
+      "created_at": "2026-05-12T02:11:16Z"
+    },
+    {
+      "asset_id": "P03_WALLET_ENTITY_CONTROLLER_PACKAGE",
+      "asset_type": "PHASE_CONTROLLER_PACKAGE",
+      "path": "/root/sikk-gmgn/system/phase_controllers/p03_wallet_entity_controller",
+      "status": "P03_PACKAGE_READY_WITH_RUNTIME_GAPS",
+      "validation_report": "/root/sikk-gmgn/data/phase_controllers/p03_wallet_entity/reports/p03_package_validation_summary.json",
+      "created_at": "2026-05-12T02:11:16Z"
+    },
+    {
+      "asset_id": "DOC-20260512-004",
+      "asset_type": "K00_DOCUMENT_ASSET",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-004_p04_chip_structure_controller_v3.md",
+      "status": "ASSETIZED",
+      "target_phase": "P04_CHIP_STRUCTURE_CONTROLLER",
+      "created_at": "2026-05-12T02:27:13Z"
+    },
+    {
+      "asset_id": "P04_CHIP_STRUCTURE_CONTROLLER_PACKAGE",
+      "asset_type": "PHASE_CONTROLLER_PACKAGE",
+      "path": "/root/sikk-gmgn/system/phase_controllers/p04_chip_structure_controller",
+      "status": "P04_PACKAGE_READY_WITH_RUNTIME_GAPS",
+      "validation_report": "/root/sikk-gmgn/data/phase_controllers/p04_chip_structure/reports/p04_package_validation_summary.json",
+      "created_at": "2026-05-12T02:27:13Z"
+    },
+    {
+      "asset_id": "p05_evidence_controller_package",
+      "path": "system/phase_controllers/p05_evidence_controller",
+      "asset_type": "phase_controller_package",
+      "phase_id": "P05_EVIDENCE_CONTROLLER",
+      "registered_at": "2026-05-12T02:45:36Z",
+      "source_stage": "K00_knowledge_intake_taskization",
+      "consumed_by": [
+        "P01_P10_CONTROLLER_PACKAGE_EXPANSION"
+      ],
+      "status": "PACKAGE_READY_WITH_RUNTIME_GAPS",
+      "runtime_allowed": false,
+      "paper_runtime_allowed": false,
+      "live_runtime_allowed": false,
+      "paper_only": true,
+      "real_trade_enabled": false,
+      "file_count": 39
+    },
+    {
+      "asset_id": "p05_evidence_runtime_data_tree",
+      "path": "data/phase_controllers/p05_evidence",
+      "asset_type": "phase_runtime_data_tree_skeleton",
+      "phase_id": "P05_EVIDENCE_CONTROLLER",
+      "registered_at": "2026-05-12T02:45:36Z",
+      "source_stage": "K00_knowledge_intake_taskization",
+      "consumed_by": [
+        "P01_P10_CONTROLLER_PACKAGE_EXPANSION"
+      ],
+      "status": "PACKAGE_READY_WITH_RUNTIME_GAPS",
+      "runtime_allowed": false,
+      "paper_runtime_allowed": false,
+      "live_runtime_allowed": false,
+      "paper_only": true,
+      "real_trade_enabled": false,
+      "dir_count": 25
+    },
+    {
+      "asset_id": "p05_evidence_acceptance_summary",
+      "path": "data/phase_controllers/p05_evidence/acceptance/p05_package_creation_summary.json",
+      "asset_type": "acceptance_artifact",
+      "phase_id": "P05_EVIDENCE_CONTROLLER",
+      "registered_at": "2026-05-12T02:45:36Z",
+      "source_stage": "K00_knowledge_intake_taskization",
+      "consumed_by": [
+        "P01_P10_CONTROLLER_PACKAGE_EXPANSION"
+      ],
+      "status": "PACKAGE_READY_WITH_RUNTIME_GAPS",
+      "runtime_allowed": false,
+      "paper_runtime_allowed": false,
+      "live_runtime_allowed": false,
+      "paper_only": true,
+      "real_trade_enabled": false
+    }
+  ],
+  "authority": "00_control/current_system_state.json",
+  "governance_assets": [
+    {
+      "doc_id": "DOC-20260511-021",
+      "status": "GOVERNANCE_READY",
+      "root": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance",
+      "accepted_at": "2026-05-11T16:08:37Z",
+      "readiness_report": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/reports/governance_plane_acceptance_report.json"
+    }
+  ]
+}

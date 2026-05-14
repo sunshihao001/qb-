@@ -1,0 +1,29 @@
+task_packet_id: S00_unified_system_standardization
+source_doc_id: DOC-20260514-S00-001
+task_goal: Create S00 unified standardization module as HER/SIKK standard control
+  layer.
+scope:
+- directory/files landing
+- initial registries
+- legacy runtime absorption map
+- P08/P09/P10/security boundaries
+- acceptance report
+non_goals:
+- real trading
+- secret handling
+- runtime rule promotion
+- moving/deleting legacy outputs
+files_to_create: all required S00 files listed in uploaded spec
+validation_steps:
+- YAML/JSON parse
+- required file count
+- producer/consumer/version/status/acceptance fields
+- safety anchors
+- acceptance report
+acceptance_criteria:
+- all directories exist
+- all required files exist
+- critical control YAML parse
+- S00_ACCEPTANCE_REPORT.md emitted
+- status no stronger than READY_WITH_GAPS until runner dry-run/replay exists
+handoff_target: S00 module + R00 validation controller

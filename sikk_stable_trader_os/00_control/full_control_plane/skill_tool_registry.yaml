@@ -1,0 +1,14 @@
+skill_tool_registry:
+  - tool_id: HER_FILE_WRITER
+    tool_type: HER_INTERNAL
+    allowed_planes: [P00_FULL_CONTROL_PLANE, P01_GOVERNANCE_PLANE, P02_DOMAIN_PLANE, P03_DATA_PLANE]
+    allowed_actions: [create_markdown, create_yaml, create_json, update_registry]
+    forbidden_actions: [delete_legacy_runtime, execute_live_trade]
+  - tool_id: VALIDATION_RUNNER
+    tool_type: PYTHON_SCRIPT
+    allowed_planes: [P00_FULL_CONTROL_PLANE]
+    allowed_actions: [file_check, yaml_json_parse_check, semantic_guard_check]
+  - tool_id: PAPER_RUNTIME_PLACEHOLDER
+    tool_type: NOT_ENABLED
+    allowed_planes: [P07_EXECUTION_RISK_PLANE, P08_REVIEW_REPLAY_PLANE]
+    forbidden_actions: [live_trade, auto_order]

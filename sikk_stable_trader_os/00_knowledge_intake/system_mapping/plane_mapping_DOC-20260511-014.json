@@ -1,0 +1,129 @@
+{
+  "doc_id": "DOC-20260511-014",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T14:12:21.903922+00:00",
+  "phase_target_data": {
+    "phase_id": "P00_system_bootstrap_controller",
+    "phase_name_cn": "系统建造与方法论编译",
+    "phase_type": "system_bootstrap_and_methodology_compilation",
+    "phase_status": "REQUIRED_BEFORE_BUSINESS_PHASES",
+    "authority_scope": "负责把方法论蓝图、治理要求、领域对象、K00 资产和任务包编译成系统平面、注册表、控制状态和阶段骨架。",
+    "primary_goal": "建立 SIKK Stable Trader OS 的轻量机构化运行骨架，使 K00 产物从资产化进入系统消费闭环。",
+    "non_goal": [
+      "不执行交易",
+      "不判断 token 是否可以买",
+      "不做钱包分类具体推断",
+      "不做纸面交易"
+    ],
+    "upstream_dependencies": [
+      "K00_knowledge_intake_taskization",
+      "system_methodology_blueprint"
+    ],
+    "required_inputs": [
+      "00_methodology/system_methodology_blueprint.md",
+      "00_knowledge_intake/task_packages/",
+      "00_knowledge_intake/intake_reports/"
+    ],
+    "optional_inputs": [
+      "governance_plane.md",
+      "domain_plane.md",
+      "legacy_runtime_files"
+    ],
+    "forbidden_inputs": [
+      "unverified_real_trade_signal"
+    ],
+    "core_objects": [
+      "methodology_requirement",
+      "system_plane",
+      "phase_registry",
+      "asset_index",
+      "current_system_state",
+      "trace_matrix"
+    ],
+    "core_questions": [
+      "当前系统要按照什么方法建？",
+      "哪些资产已经进入系统？",
+      "哪些资产只是保存但未消费？",
+      "哪些平面必须先生成？",
+      "哪些阶段被阻断？",
+      "当前唯一合法下一步是什么？"
+    ],
+    "required_outputs": [
+      "00_control/current_system_state.json",
+      "00_control/phase_registry.yaml",
+      "00_control/system_asset_index.json",
+      "00_trace/methodology_implementation_trace_matrix.yaml",
+      "00_trace/asset_consumption_matrix.yaml",
+      "06_phase_controllers/P01-P10 controller stubs"
+    ],
+    "handoff_outputs": [
+      "system_bootstrap_handoff_packet",
+      "data_plane_generation_task"
+    ],
+    "acceptance_gate": [
+      "current_system_state.json 存在且可解析",
+      "phase_registry.yaml 包含 K00、P00、P01-P10",
+      "system_asset_index.json 登记核心资产",
+      "trace matrix 能追踪方法论要求",
+      "P01 在 Data Plane 完成前必须保持 blocked"
+    ],
+    "blocking_conditions": [
+      "缺少 system_methodology_blueprint.md",
+      "缺少 current_system_state.json",
+      "缺少 phase_registry.yaml",
+      "P01 被错误标记为 READY"
+    ],
+    "downstream_consumers": [
+      "Governance Plane",
+      "Domain Plane",
+      "Data Plane",
+      "Control Plane",
+      "P01_data_fact_controller"
+    ],
+    "runner_binding_status": "required",
+    "state_writeback_required": true,
+    "paper_only_required": true,
+    "real_trade_allowed": false
+  },
+  "derived_assets": {
+    "raw_user_proposed": "06_phase_controllers/P00_system_context_control/phase_target_data.raw_user_proposed.yaml",
+    "normalized_executable": "06_phase_controllers/P00_system_context_control/phase_target_data.yaml"
+  },
+  "validation": {
+    "missing_required_fields": [],
+    "raw_phase_status_valid": false,
+    "normalized_phase_status_valid": true,
+    "phase_id_matches_existing_controller": false,
+    "paper_only_safety_valid": true
+  },
+  "planes": {
+    "Methodology Plane": {
+      "impact": "primary"
+    },
+    "Control Plane": {
+      "impact": "primary",
+      "reason": "P00 owns current_system_state/phase_registry/asset_index"
+    },
+    "Trace Plane": {
+      "impact": "primary",
+      "reason": "P00 requires methodology and asset consumption matrices"
+    },
+    "Acceptance Plane": {
+      "impact": "primary",
+      "reason": "P00 acceptance blocks business phases"
+    },
+    "Handoff Plane": {
+      "impact": "primary",
+      "reason": "P00 emits bootstrap handoff and data_plane_generation_task"
+    }
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

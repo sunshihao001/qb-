@@ -1,0 +1,11 @@
+{
+  "handoff_status": "HANDOFF_READY_WITH_GAPS",
+  "target": "Backlog_Upgrade_Queue",
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ]
+}

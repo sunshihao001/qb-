@@ -1,0 +1,41 @@
+field_name,chinese_name,data_type,source,required,example,description,used_for,missing_policy
+token_address,代币地址,string,input/gmgn,yes,So111...,被分析代币合约地址,join/output,reject if missing
+token_symbol,代币符号,string,input/gmgn,no,ABC,代币符号,gmgn_note/report,UNKNOWN
+chain,链,string,input,yes,sol,当前只支持 Solana,routing,reject if not sol
+analysis_time,分析时间,datetime,input/system,yes,2026-05-04T14:00:00Z,模块分析快照时间,snapshot/version,now if absent only in CLI wrapper
+wallet_address,钱包地址,string,gmgn/chain,yes,7abc...,钱包或基础设施地址,primary key,drop row if missing
+source_lists,来源列表,string[],gmgn,no,holders_top|holders_bundler,该钱包来自哪些 GMGN 列表,evidence,empty list
+gmgn_tags,GMGN标签,string[],gmgn,no,"smart_degen,bundler",GMGN 钱包标签,role auxiliary,empty list
+maker_token_tags,代币内标签,string[],gmgn,no,"top_holder,transfer_in",当前代币维度标签,role auxiliary,empty list
+addr_type,地址类型码,integer,gmgn,no,2,GMGN 地址类型；2 常见 LP/Pool,infra exclusion,UNKNOWN
+address_base_type,地址基础类型,string,normalized,yes,wallet|pool|router|cex|program|unknown,标准化基础类型,role/routing,unknown
+first_buy_time,首次买入时间,datetime,gmgn/chain,no,2026-05-04T10:01:00Z,当前代币首次买入,behavior,null
+last_active_time,最后活动时间,datetime,gmgn/chain,no,2026-05-04T10:30:00Z,钱包在当前代币最后活动,behavior/review,null
+first_seen_time,钱包首次出现时间,datetime,chain/history,no,2025-12-01T00:00:00Z,钱包全链或历史库首次出现,age/history,null
+wallet_age_days,钱包年龄天数,number,chain/history,no,18.5,钱包首次出现至分析时间,role confidence,null
+holding_amount,持仓数量,number,gmgn,no,1200000,当前持仓 token 数,behavior,null
+holding_pct,持仓占比,number,gmgn,no,0.018,当前持仓占供应比例,role/risk,null
+sold_pct,卖出占比,number,gmgn,no,0.75,已卖出占比,distribution/backflow,null
+buy_usd,买入金额USD,number,gmgn,no,15000,累计买入金额,whale/pressure,null
+sell_usd,卖出金额USD,number,gmgn,no,21000,累计卖出金额,sell pressure,null
+roi,收益率,number,gmgn,no,3.2,ROI 倍数或比例，需统一实现,result wallet,null
+pnl,盈亏USD,number,gmgn,no,8000,总利润,result/risk,null
+realized_pnl,已实现盈亏,number,gmgn,no,5000,已实现利润,backflow/result,null
+unrealized_pnl,未实现盈亏,number,gmgn,no,3000,未实现利润,holding pressure,null
+transfer_in,是否Token转入,boolean,gmgn,no,true,当前代币是否来自转入,token source,null
+token_source_address,Token来源地址,string,gmgn/chain,no,9src...,Token 转入来源,token_flow_edges,null
+token_destination_address,Token去向地址,string,gmgn/chain,no,8dst...,Token 转出目标,distribution/backflow,null
+funding_source_address,资金来源地址,string,gmgn/chain,no,5fund...,native/SOL 资金来源,funding_edges/same_source,null
+funding_source_type,资金来源类型,string,normalized,no,cex|router|wallet|unknown,资金来源基础类型,same_source,unknown
+same_source_group_id,同源组ID,string,derived,no,G1,同资金源/同 token 源/时序相近形成的疑似组,same_source,null
+distribution_path_id,分发路径ID,string,derived,no,D1,Token 分发路径编号,distribution,null
+backflow_path_id,回流路径ID,string,derived,no,B1,卖后资金回流路径编号,backflow,null
+role_name,角色名称,string,derived,yes,疑似分发接收钱包,角色识别输出,classification,普通交易钱包
+role_code,角色代码,string,derived,yes,DIST_RECV,机器可读角色,classification,NORMAL
+evidence_level,证据等级,string,derived,yes,E3,E0-E5,decision,E0
+risk_level,风险等级,string,derived,yes,R2,R0-R4,decision,R0
+tracking_level,追踪等级,string,derived,yes,A3,A0-A4,review/history,A0
+evidence_chain,证据链,json,derived,yes,"[{field,rule,value}]",解释每个角色/状态的证据,explain/audit,empty array
+gmgn_note,GMGN备注,string,derived,no,ABC-新狙-3.2x-捆绑-G1,短备注，不自动写回,gmgn_note_table,empty
+wallet_structure_status,钱包结构状态,enum,derived,yes,WALLET_PAUSE,主系统可读状态,decision,WALLET_UNKNOWN
+recommended_state_action,建议状态动作,enum,derived,yes,KEEP_WATCHING,主状态机建议，不是强制交易命令,handoff,REQUIRE_REVIEW

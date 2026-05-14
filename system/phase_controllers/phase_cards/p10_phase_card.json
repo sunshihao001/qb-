@@ -1,0 +1,30 @@
+{
+  "phase_id": "P10",
+  "controller_id": "P10_SELF_UPGRADE_CONTROLLER",
+  "status": "P10_PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "primary_responsibility": "受控自我升级审查与 Controlled Upgrade Package 生成。",
+  "required_handoff": [
+    "p09_to_p10_handoff_packet",
+    "p10_upgrade_candidate_data_request_packet"
+  ],
+  "outputs": [
+    "controlled_upgrade_package",
+    "controlled_upgrade_task_packet",
+    "p10_to_implementation_handoff_packet"
+  ],
+  "acceptance_gate": "GATE_P10_SELF_UPGRADE_READY",
+  "runtime_boundary": {
+    "runtime_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false,
+    "auto_deploy_allowed": false,
+    "wallet_signing_allowed": false
+  },
+  "forbidden": [
+    "direct_rule_mutation",
+    "auto_deploy",
+    "paper_runtime",
+    "live_execution",
+    "wallet_signing"
+  ]
+}

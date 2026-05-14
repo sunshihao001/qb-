@@ -1,0 +1,29 @@
+{
+  "token_address": "SYSTEM_ARCHIVE",
+  "lineage": [
+    {
+      "field": "token_address",
+      "steps": [
+        {
+          "step": "input",
+          "source": "controller argument"
+        },
+        {
+          "step": "normalized",
+          "target": "normalized_token_fact.token_address"
+        }
+      ],
+      "confidence": 0.6
+    },
+    {
+      "field": "quote_price",
+      "steps": [
+        {
+          "step": "missing",
+          "source": "okx.quote not fetched"
+        }
+      ],
+      "confidence": 0.0
+    }
+  ]
+}

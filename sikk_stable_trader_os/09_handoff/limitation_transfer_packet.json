@@ -1,0 +1,19 @@
+{
+  "packet_id": "LIMITATION_TRANSFER_DOC-20260511-027",
+  "generated_at": "2026-05-11T17:42:39Z",
+  "limitation_tags": [
+    "GAP_PROPAGATION_REQUIRED",
+    "MANUAL_REVIEW_REQUIRED",
+    "RUNTIME_BLOCKED",
+    "TOOL_BINDING_BLOCKED",
+    "HANDOFF_WITH_LIMITATIONS",
+    "no_runtime_handoff_without tool/runtime trace samples",
+    "WEAK_USE_ONLY",
+    "NO_STRONG_EVIDENCE",
+    "NO_PAPER_RUNTIME"
+  ],
+  "transfer_rule": "STRICT_INHERIT_NO_UPGRADE",
+  "tool_binding_allowed": false,
+  "paper_runtime_allowed": false,
+  "live_runtime_allowed": false
+}

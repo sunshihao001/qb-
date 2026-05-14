@@ -1,0 +1,64 @@
+manifest_id: i01_manifest_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+source_doc_id: I01_full_phase_consistency_audit_v1_0
+system_blueprint_inputs:
+  sikk_stable_trader_os/00_methodology/system_methodology_blueprint.md: true
+  system/phase_controllers/phase_controller_index.yaml: true
+  docs/04_status_codes/global_status_code_table.md: true
+  docs/05_hard_negative_rules/global_hard_negative_rules.md: true
+  docs/06_directory_constitution/directory_constitution.md: true
+  docs/07_contract_index/contract_index.md: true
+  docs/08_schema_index/schema_index.md: true
+phase_controller_inputs:
+- phase_id: P01
+  dir: /root/sikk-gmgn/system/phase_controllers/p01_candidate_intake_controller
+  exists: true
+  file_count: 26
+- phase_id: P02
+  dir: /root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller
+  exists: true
+  file_count: 18
+- phase_id: P03
+  dir: /root/sikk-gmgn/system/phase_controllers/p03_wallet_entity_controller
+  exists: true
+  file_count: 52
+- phase_id: P04
+  dir: /root/sikk-gmgn/system/phase_controllers/p04_chip_structure_controller
+  exists: true
+  file_count: 53
+- phase_id: P05
+  dir: /root/sikk-gmgn/system/phase_controllers/p05_evidence_controller
+  exists: true
+  file_count: 40
+- phase_id: P06
+  dir: /root/sikk-gmgn/system/phase_controllers/p06_scenario_recognition_controller
+  exists: true
+  file_count: 40
+- phase_id: P07
+  dir: /root/sikk-gmgn/system/phase_controllers/p07_strategy_gate_controller
+  exists: true
+  file_count: 41
+- phase_id: P08
+  dir: /root/sikk-gmgn/system/phase_controllers/p08_execution_risk_controller
+  exists: true
+  file_count: 45
+- phase_id: P09
+  dir: /root/sikk-gmgn/system/phase_controllers/p09_review_replay_controller
+  exists: true
+  file_count: 45
+- phase_id: P10
+  dir: /root/sikk-gmgn/system/phase_controllers/p10_self_upgrade_controller
+  exists: true
+  file_count: 46
+restrictions:
+- I01_AUDIT_ONLY
+- NO_P11
+- NO_BUSINESS_LOGIC_CHANGE
+- NO_RUNNER_BINDING_YET
+- NO_TOOL_BINDING_YET
+- NO_PAPER_RUNTIME
+- NO_LIVE_EXECUTION
+- NO_WALLET_SIGNING
+- NO_AUTO_DEPLOY
+trace:
+  source_sha256: ba11871fbe3e75bd96a1753854fd1e353ff187a6600c9b088b203406de8f2dda

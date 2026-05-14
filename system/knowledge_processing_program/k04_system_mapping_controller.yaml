@@ -1,0 +1,18 @@
+phase_id: K04
+phase_name: "System Mapping & Phase Alignment"
+program: KNOWLEDGE_PROCESSING_PROGRAM
+status: CONTROLLER_CANDIDATE_READY
+purpose: "map chunks/objects to K00/P00/Governance/Data/P01-P10/I01-I05/CPO"
+required_inputs:
+  - upstream_handoff_or_raw_document
+required_outputs:
+  - system_mapping_matrix.yaml
+acceptance:
+  - outputs_exist
+  - source_trace_present
+  - io_contract_declared
+  - handoff_declared
+forbidden:
+  - production_mutation_without_governance
+  - summary_only_completion
+  - untraced_claims

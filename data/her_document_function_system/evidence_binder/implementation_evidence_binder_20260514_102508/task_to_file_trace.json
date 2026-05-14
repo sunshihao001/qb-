@@ -1,0 +1,1063 @@
+{
+  "binder_id": "implementation_evidence_binder_20260514_102508",
+  "trace_type": "task_to_file_trace",
+  "source_task_package": "data/her_document_function_system/applied_runs/HER_DOC_CLOSURE_TRADING_SYSTEM_20260514_071635/f00/implementation_task_package.json",
+  "items": [
+    {
+      "task_id": "task_func_001",
+      "target_controller": "K00",
+      "required_outputs": [
+        "document_passport",
+        "corpus_index",
+        "system_mapping",
+        "k00_handoff_packet"
+      ],
+      "source_status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE",
+      "evidence_status": "BOUND_TO_IMPLEMENTATION_EVIDENCE",
+      "controller_asset_count": 13,
+      "module_file_count": 1,
+      "test_file_count": 2,
+      "controller_assets": [
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/01_k00_manifest.yaml",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/02_k00_context_pack.md",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/03_k00_objective_tree.yaml",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/04_k00_input_contract.json",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/05_k00_output_contract.json",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/06_k00_execution_protocol.md",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/07_k00_acceptance_gate.yaml",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/08_k00_state.json",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/09_k00_handoff_packet.schema.json",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/10_status_code_policy.yaml",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/11_trace_audit_spec.yaml",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/12_recovery_policy.md",
+        "system/her_document_function_system/controllers/K00_knowledge_intake_controller/13_k00_final_report_template.md"
+      ],
+      "module_files": [
+        "tools/k00_document_intake.py"
+      ],
+      "test_files": [
+        "tests/her_document_function_system/test_k00_safe_mode_writer.py",
+        "tests/test_k00_kv_full_auto_runner.py"
+      ]
+    },
+    {
+      "task_id": "task_func_002",
+      "target_controller": "F00",
+      "required_outputs": [
+        "function_mapping",
+        "required_system_assets",
+        "implementation_task_package",
+        "f00_handoff_packet"
+      ],
+      "source_status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE",
+      "evidence_status": "BOUND_TO_IMPLEMENTATION_EVIDENCE",
+      "controller_asset_count": 20,
+      "module_file_count": 2,
+      "test_file_count": 2,
+      "controller_assets": [
+        "system/her_document_function_system/controllers/F00_function_realization_controller/00_f00_controller_design_v1.md",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/01_f00_manifest.yaml",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/02_f00_context_pack.md",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/03_f00_objective_tree.yaml",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/04_f00_input_contract.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/05_f00_output_contract.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/06_f00_execution_protocol.md",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/07_f00_acceptance_gate.yaml",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/08_f00_state.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/09_f00_handoff_packet.schema.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/10_concept_to_function_map.schema.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/11_function_asset_plan.schema.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/12_field_model.schema.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/13_rule_logic.schema.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/14_implementation_decision.schema.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/15_test_replay_evidence.schema.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/16_runner_binding.schema.json",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/17_recovery_policy.md",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/18_trace_audit_spec.yaml",
+        "system/her_document_function_system/controllers/F00_function_realization_controller/19_f00_final_report_template.md"
+      ],
+      "module_files": [
+        "tools/f00_function_mapping.py",
+        "tools/her_document_function_system/f00_safe_runner.py"
+      ],
+      "test_files": [
+        "tests/test_f00_runner_binding.py",
+        "tests/test_f00_safe_runner.py"
+      ]
+    },
+    {
+      "task_id": "task_func_003",
+      "target_controller": "V00",
+      "required_outputs": [
+        "validation_matrix",
+        "gap_register",
+        "evidence_report",
+        "v00_handoff_packet"
+      ],
+      "source_status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE",
+      "evidence_status": "BOUND_TO_IMPLEMENTATION_EVIDENCE",
+      "controller_asset_count": 20,
+      "module_file_count": 10,
+      "test_file_count": 5,
+      "controller_assets": [
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/01_v00_manifest.yaml",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/02_v00_context_pack.md",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/03_v00_objective_tree.yaml",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/04_v00_input_contract.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/05_v00_output_contract.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/06_v00_execution_protocol.md",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/07_v00_acceptance_gate.yaml",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/08_v00_state.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/09_v00_handoff_packet.schema.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/10_schema_validation.schema.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/11_contract_validation.schema.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/12_field_model_validation.schema.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/13_rule_logic_test.schema.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/14_function_mapping_validation.schema.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/15_test_evidence.schema.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/16_replay_evidence.schema.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/17_failure_evidence.schema.json",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/18_trace_audit_spec.yaml",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/19_recovery_policy.md",
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/20_v00_final_report_template.md"
+      ],
+      "module_files": [
+        "tools/v00_contract_validator.py",
+        "tools/v00_evidence_bundle_builder.py",
+        "tools/v00_field_model_validator.py",
+        "tools/v00_real_validation_executor.py",
+        "tools/v00_replay_executor.py",
+        "tools/v00_rule_logic_validator.py",
+        "tools/v00_schema_validator.py",
+        "tools/v00_test_runner.py",
+        "tools/v00_validation_evidence.py",
+        "tools/v00_validation_status.py"
+      ],
+      "test_files": [
+        "tests/her_document_function_system/test_v00_rule_logic_required_fields.py",
+        "tests/her_document_function_system/test_v00_test_evidence_required_fields.py",
+        "tests/her_document_function_system/test_v00_test_plan_not_tested.py",
+        "tests/test_v00_real_validation_executor.py",
+        "tests/test_v00_validation_evidence_controller.py"
+      ]
+    },
+    {
+      "task_id": "task_func_004",
+      "target_controller": "A00",
+      "required_outputs": [
+        "acceptance_matrix",
+        "readiness_certificate",
+        "a00_acceptance_result"
+      ],
+      "source_status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE",
+      "evidence_status": "BOUND_TO_IMPLEMENTATION_EVIDENCE",
+      "controller_asset_count": 21,
+      "module_file_count": 11,
+      "test_file_count": 10,
+      "controller_assets": [
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/01_a00_manifest.yaml",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/02_a00_context_pack.md",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/03_a00_objective_tree.yaml",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/04_a00_input_contract.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/05_a00_output_contract.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/06_a00_execution_protocol.md",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/07_a00_acceptance_gate.yaml",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/08_a00_state.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/09_a00_handoff_packet.schema.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/10_evidence_bundle.schema.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/11_phase_status_matrix.schema.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/12_artifact_manifest.schema.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/13_gap_propagation.schema.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/14_trace_audit_validation.schema.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/15_acceptance_decision.schema.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/16_acceptance_scorecard.schema.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/17_failure_summary.schema.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/18_readiness_certificate.schema.json",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/19_recovery_policy.md",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/20_trace_audit_spec.yaml",
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/21_a00_final_report_template.md"
+      ],
+      "module_files": [
+        "tools/a00_acceptance.py",
+        "tools/a00_acceptance_scorecard_builder.py",
+        "tools/a00_acceptance_status.py",
+        "tools/a00_artifact_manifest_checker.py",
+        "tools/a00_evidence_bundle_loader.py",
+        "tools/a00_gap_propagation_validator.py",
+        "tools/a00_phase_status_matrix_builder.py",
+        "tools/a00_readiness_certificate_writer.py",
+        "tools/a00_real_acceptance_executor.py",
+        "tools/a00_status_consistency_validator.py",
+        "tools/a00_trace_audit_validator.py"
+      ],
+      "test_files": [
+        "tests/her_document_function_system/test_a00_artifact_manifest_required_assets.py",
+        "tests/her_document_function_system/test_a00_gap_propagation_preserves_open_gaps.py",
+        "tests/her_document_function_system/test_a00_no_pipeline_accepted_with_open_gaps.py",
+        "tests/her_document_function_system/test_a00_no_policy_active_without_g00.py",
+        "tests/her_document_function_system/test_a00_phase_status_matrix_required_phases.py",
+        "tests/her_document_function_system/test_a00_readiness_certificate_required_fields.py",
+        "tests/her_document_function_system/test_a00_real_evidence_bundle_required_groups.py",
+        "tests/her_document_function_system/test_a00_status_consistency.py",
+        "tests/her_document_function_system/test_a00_status_consistency_no_false_ready.py",
+        "tests/her_document_function_system/test_h00_requires_a00_handoff.py"
+      ]
+    },
+    {
+      "task_id": "task_func_005",
+      "target_controller": "H00",
+      "required_outputs": [
+        "downstream_queue",
+        "routing_decision",
+        "h00_handoff_packets"
+      ],
+      "source_status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE",
+      "evidence_status": "BOUND_TO_IMPLEMENTATION_EVIDENCE",
+      "controller_asset_count": 21,
+      "module_file_count": 13,
+      "test_file_count": 10,
+      "controller_assets": [
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/01_h00_manifest.yaml",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/02_h00_context_pack.md",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/03_h00_objective_tree.yaml",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/04_h00_input_contract.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/05_h00_output_contract.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/06_h00_execution_protocol.md",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/07_h00_acceptance_gate.yaml",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/08_h00_state.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/09_h00_handoff_packet.schema.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/10_downstream_target.schema.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/11_downstream_queue.schema.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/12_queue_item.schema.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/13_dependency_graph.schema.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/14_priority_model.schema.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/15_routing_decision.schema.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/16_handoff_bundle.schema.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/17_queue_state.schema.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/18_retry_recovery.schema.json",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/19_trace_audit_spec.yaml",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/20_h00_final_report_template.md",
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/references_h00_recovery_policy.md"
+      ],
+      "module_files": [
+        "tools/h00_a00_handoff_loader.py",
+        "tools/h00_dependency_graph_builder.py",
+        "tools/h00_downstream_handoff_writer.py",
+        "tools/h00_downstream_queue.py",
+        "tools/h00_gap_risk_binder.py",
+        "tools/h00_priority_plan_builder.py",
+        "tools/h00_queue_item_builder.py",
+        "tools/h00_queue_state_writer.py",
+        "tools/h00_queue_status.py",
+        "tools/h00_real_queue_executor.py",
+        "tools/h00_routing_decision_engine.py",
+        "tools/h00_target_capability_checker.py",
+        "tools/h00_target_classifier.py"
+      ],
+      "test_files": [
+        "tests/her_document_function_system/test_h00_controller_assets.py",
+        "tests/her_document_function_system/test_h00_forbidden_actions_inherited.py",
+        "tests/her_document_function_system/test_h00_gap_risk_binding_preserves_gaps.py",
+        "tests/her_document_function_system/test_h00_no_policy_active_claim.py",
+        "tests/her_document_function_system/test_h00_no_queue_completed_without_execution.py",
+        "tests/her_document_function_system/test_h00_queue_item_required_fields.py",
+        "tests/her_document_function_system/test_h00_queue_state_required_fields.py",
+        "tests/her_document_function_system/test_h00_requires_a00_handoff.py",
+        "tests/her_document_function_system/test_h00_routing_decision_targets.py",
+        "tests/test_h00_real_queue_executor.py"
+      ]
+    },
+    {
+      "task_id": "task_func_006",
+      "target_controller": "U00",
+      "required_outputs": [
+        "review_cases",
+        "root_cause_analysis",
+        "upgrade_queue",
+        "learning_index"
+      ],
+      "source_status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE",
+      "evidence_status": "BOUND_TO_IMPLEMENTATION_EVIDENCE",
+      "controller_asset_count": 22,
+      "module_file_count": 2,
+      "test_file_count": 2,
+      "controller_assets": [
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/01_u00_manifest.yaml",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/02_u00_context_pack.md",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/03_u00_objective_tree.yaml",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/04_u00_input_contract.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/05_u00_output_contract.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/06_u00_execution_protocol.md",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/07_u00_acceptance_gate.yaml",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/08_u00_state.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/09_u00_handoff_packet.schema.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/10_review_case.schema.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/11_root_cause_analysis.schema.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/12_recurring_issue.schema.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/13_upgrade_candidate.schema.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/14_upgrade_queue.schema.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/15_backlog_item.schema.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/16_governance_candidate.schema.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/17_learning_index.schema.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/18_review_scorecard.schema.json",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/19_recovery_policy.md",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/20_trace_audit_spec.yaml",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/21_u00_final_report_template.md",
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/22_u00_real_execution_result.schema.json"
+      ],
+      "module_files": [
+        "tools/u00_real_review_executor.py",
+        "tools/u00_review_upgrade.py"
+      ],
+      "test_files": [
+        "tests/her_document_function_system/test_g00_requires_u00_handoff.py",
+        "tests/test_u00_real_review_executor.py"
+      ]
+    },
+    {
+      "task_id": "task_func_007",
+      "target_controller": "G00",
+      "required_outputs": [
+        "governance_candidates",
+        "policy_rules_update"
+      ],
+      "source_status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE",
+      "evidence_status": "BOUND_TO_IMPLEMENTATION_EVIDENCE",
+      "controller_asset_count": 26,
+      "module_file_count": 12,
+      "test_file_count": 11,
+      "controller_assets": [
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/01_g00_manifest.yaml",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/02_g00_context_pack.md",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/03_g00_objective_tree.yaml",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/04_g00_input_contract.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/05_g00_output_contract.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/06_g00_execution_protocol.md",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/07_g00_acceptance_gate.yaml",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/08_g00_state.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/09_g00_handoff_packet.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/10_forbidden_action_registry.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/11_status_code_table.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/12_execution_boundary_policy.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/13_evidence_policy.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/14_gap_policy.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/15_directory_policy.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/16_contract_policy.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/17_runner_safety_policy.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/18_human_confirmation_policy.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/19_production_risk_policy.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/20_policy_versioning.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/21_policy_conflict.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/22_governance_candidate.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/23_governance_registry.schema.json",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/24_trace_audit_spec.yaml",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/25_recovery_policy.md",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/26_g00_final_report_template.md"
+      ],
+      "module_files": [
+        "tools/g00_governance_candidate_classifier.py",
+        "tools/g00_governance_registry_writer.py",
+        "tools/g00_governance_update.py",
+        "tools/g00_policy_bundle_builder.py",
+        "tools/g00_policy_conflict_checker.py",
+        "tools/g00_policy_domain_mapper.py",
+        "tools/g00_policy_handoff_writer.py",
+        "tools/g00_policy_rule_builder.py",
+        "tools/g00_policy_status.py",
+        "tools/g00_policy_versioning_manager.py",
+        "tools/g00_real_policy_registry_executor.py",
+        "tools/g00_u00_handoff_loader.py"
+      ],
+      "test_files": [
+        "tests/her_document_function_system/test_a00_no_policy_active_without_g00.py",
+        "tests/her_document_function_system/test_g00_evidence_policy_candidate.py",
+        "tests/her_document_function_system/test_g00_evidence_policy_rules.py",
+        "tests/her_document_function_system/test_g00_forbidden_actions_not_weakened.py",
+        "tests/her_document_function_system/test_g00_governance_candidate_required_fields.py",
+        "tests/her_document_function_system/test_g00_no_policy_active_without_registry.py",
+        "tests/her_document_function_system/test_g00_no_system_enforced_without_consumption.py",
+        "tests/her_document_function_system/test_g00_policy_conflict_checker.py",
+        "tests/her_document_function_system/test_g00_policy_handoff_required_targets.py",
+        "tests/her_document_function_system/test_g00_requires_u00_handoff.py",
+        "tests/her_document_function_system/test_g00_status_policy_rules.py"
+      ]
+    },
+    {
+      "task_id": "task_func_008",
+      "target_controller": "O00",
+      "required_outputs": [
+        "run_summary",
+        "final_report",
+        "trace",
+        "audit"
+      ],
+      "source_status": "TASK_REQUIRED_NOT_IMPLEMENTED_EVIDENCE",
+      "evidence_status": "BOUND_TO_IMPLEMENTATION_EVIDENCE",
+      "controller_asset_count": 25,
+      "module_file_count": 9,
+      "test_file_count": 5,
+      "controller_assets": [
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/01_o00_manifest.yaml",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/02_o00_context_pack.md",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/03_o00_objective_tree.yaml",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/04_o00_input_contract.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/05_o00_output_contract.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/06_o00_execution_protocol.md",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/07_o00_acceptance_gate.yaml",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/08_o00_state.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/09_o00_handoff_packet.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/10_pipeline_run.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/11_pipeline_state.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/12_stage_dependency_graph.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/13_stage_transition_rule.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/14_pipeline_queue.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/15_pipeline_execution_plan.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/16_pipeline_recovery_policy.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/17_pipeline_trace_audit_spec.yaml",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/18_pipeline_acceptance_matrix.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/19_pipeline_report_template.md",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/20_controller_registry.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/21_pipeline_config.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/22_pipeline_policy_binding.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/23_pipeline_gap_propagation.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/24_pipeline_failure_evidence.schema.json",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/25_pipeline_final_handoff.schema.json"
+      ],
+      "module_files": [
+        "tools/her_pipeline_lib.py",
+        "tools/her_pipeline_status.py",
+        "tools/o00_cli.py",
+        "tools/o00_pipeline_orchestrator.py",
+        "tools/o00_recovery.py",
+        "tools/o00_replay_runner.py",
+        "tools/o00_run_document_main.py",
+        "tools/o00_status.py",
+        "tools/o00_validate_config.py"
+      ],
+      "test_files": [
+        "tests/her_document_function_system/test_o00_sample_replay_expected_status.py",
+        "tests/test_o00_cli_entry.py",
+        "tests/test_o00_cli_sample_replay.py",
+        "tests/test_o00_full_pipeline_orchestrator.py",
+        "tests/test_o00_run_document_safe_mode.py"
+      ]
+    }
+  ],
+  "forbidden_scan": {
+    "forbidden_terms": [
+      "private_key",
+      "wallet_signing",
+      "broadcast_transaction",
+      "swap_execute",
+      "real_trading_enabled",
+      "FULL_RUNTIME_READY",
+      "POLICY_ACTIVE"
+    ],
+    "boundary_mentions_count": 29,
+    "boundary_mentions_sample": [
+      {
+        "file": "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/06_o00_execution_protocol.md",
+        "line": 13,
+        "term": "wallet_signing",
+        "line_excerpt": "- Forbidden modes remain forbidden: live_runtime, wallet_signing, auto_deploy, production_trading."
+      },
+      {
+        "file": "tests/her_document_function_system/test_a00_readiness_certificate_required_fields.py",
+        "line": 19,
+        "term": "wallet_signing",
+        "line_excerpt": "assert 'wallet_signing' in cert['forbidden_next_actions']"
+      },
+      {
+        "file": "tests/her_document_function_system/test_g00_evidence_policy_candidate.py",
+        "line": 1,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "def test_g00_policy_candidate_is_not_policy_active():"
+      },
+      {
+        "file": "tests/her_document_function_system/test_g00_no_policy_active_without_registry.py",
+        "line": 9,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "assert candidate['status'] != 'POLICY_ACTIVE'"
+      },
+      {
+        "file": "tests/her_document_function_system/test_g00_policy_conflict_checker.py",
+        "line": 12,
+        "term": "wallet_signing",
+        "line_excerpt": "assert 'wallet_signing' in weak['hard_forbidden_actions_preserved']"
+      },
+      {
+        "file": "tests/her_document_function_system/test_g00_policy_handoff_required_targets.py",
+        "line": 12,
+        "term": "wallet_signing",
+        "line_excerpt": "assert 'wallet_signing' in handoffs['all']['forbidden_next_actions']"
+      },
+      {
+        "file": "tests/her_document_function_system/test_h00_no_policy_active_claim.py",
+        "line": 6,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "handoff = {'to_phase': 'G00_GOVERNANCE_BOUNDARY', 'policy_status': 'POLICY_ACTIVE', 'governance_consumed': False}"
+      },
+      {
+        "file": "tests/test_f00_safe_runner.py",
+        "line": 67,
+        "term": "wallet_signing",
+        "line_excerpt": "assert {'live_runtime', 'wallet_signing', 'auto_deploy'} <= forbidden"
+      },
+      {
+        "file": "tests/test_f00_safe_runner.py",
+        "line": 70,
+        "term": "wallet_signing",
+        "line_excerpt": "assert 'wallet_signing' in runner_binding['forbidden_runtime_modes']"
+      },
+      {
+        "file": "tests/test_o00_cli_entry.py",
+        "line": 42,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "assert acceptance['false_policy_active_blocked'] is True"
+      },
+      {
+        "file": "tests/test_v00_real_validation_executor.py",
+        "line": 108,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "assert 'POLICY_ACTIVE' not in forbidden_text"
+      },
+      {
+        "file": "tools/a00_readiness_certificate_writer.py",
+        "line": 5,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "cert={\"certificate_id\": f\"readiness_certificate_{acceptance_run_id}\", \"acceptance_run_id\": acceptance_run_id, \"source_pipeline_run_id\": source_pipeline_run_id, \"final_status\": final_status, \"readiness_level\": \"HANDOFF_RE"
+      },
+      {
+        "file": "tools/a00_status_consistency_validator.py",
+        "line": 4,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "FALSE_CLAIMS=[\"TEST_PLAN_AS_TESTED\",\"REPLAY_PLAN_AS_REPLAY_TESTED\",\"BINDING_PLAN_AS_RUNNER_BOUND\",\"DRY_RUN_AS_LIVE_RUNTIME\",\"GOVERNANCE_CANDIDATE_AS_POLICY_ACTIVE\",\"READY_WITH_GAPS_AS_READY\",\"DESIGN_ONLY_AS_IMPLEMENTED\"]"
+      },
+      {
+        "file": "tools/g00_policy_rule_builder.py",
+        "line": 11,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "status={\"policy_id\":\"status_code_policy_v1\",\"version\":\"1.0.0\",\"status_rules\":[{\"status_code\":\"READY_WITH_GAPS\",\"definition\":\"可继续下游处理，但必须携带 gap_refs，不允许改写为 ACCEPTED。\",\"required_fields\":[\"gap_refs\",\"allowed_next_actions\",\""
+      },
+      {
+        "file": "tools/g00_policy_rule_builder.py",
+        "line": 12,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "evidence={\"policy_id\":\"evidence_policy_v1\",\"version\":\"1.0.0\",\"evidence_rules\":[{\"rule_id\":\"test_plan_not_tested\",\"claim\":\"TESTED\",\"minimum_required_evidence\":[\"test_command\",\"exit_code\",\"stdout_path\",\"stderr_path\",\"passe"
+      },
+      {
+        "file": "tools/h00_real_queue_executor.py",
+        "line": 136,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "write_json(out/'acceptance/h00_real_queue_acceptance.json', {\"acceptance_id\":\"h00_real_queue_acceptance_\"+queue_run_id,\"final_status\":READY_STATUS,\"queue_status\":\"QUEUE_READY_WITH_GAPS\",\"reason\":\"A00 evidence loaded and "
+      },
+      {
+        "file": "tools/her_document_function_system/f00_safe_runner.py",
+        "line": 27,
+        "term": "wallet_signing",
+        "line_excerpt": "FORBIDDEN_RUNTIME_MODES = [\"live_runtime\", \"wallet_signing\", \"auto_deploy\"]"
+      },
+      {
+        "file": "tools/her_document_function_system/f00_safe_runner.py",
+        "line": 203,
+        "term": "wallet_signing",
+        "line_excerpt": "\"do_not_touch_paths\": [\"live_runtime\", \"wallet_signing\", \"deployment\", \"production_rules\"],"
+      },
+      {
+        "file": "tools/o00_cli.py",
+        "line": 22,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "FALSE_SAMPLE_CLAIMS = [\"TESTED\", \"RUNNER_BOUND\", \"POLICY_ACTIVE\", \"PIPELINE_ACCEPTED\", \"SYSTEM_FULLY_IMPLEMENTED\"]"
+      },
+      {
+        "file": "tools/o00_cli.py",
+        "line": 193,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "write_json(root / \"preflight/governance_policy_check.json\", {\"status\": \"PASSED\", \"policy_active\": False, \"candidate_only\": True})"
+      },
+      {
+        "file": "tools/o00_cli.py",
+        "line": 203,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "\"G00\": {\"status\": \"G00_READY_WITH_GAPS\", \"policy_active\": False, \"real_runtime_executed\": False},"
+      },
+      {
+        "file": "tools/o00_cli.py",
+        "line": 231,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "acceptance = {\"pipeline_run_id\":pipeline_run_id, \"final_pipeline_status\":\"PIPELINE_READY_WITH_GAPS\", \"system_status_code\":\"O00_CLI_SAMPLE_REPLAY_READY_WITH_GAPS\" if command_name == \"run-sample\" else \"O00_RUN_DOCUMENT_REA"
+      },
+      {
+        "file": "tools/o00_replay_runner.py",
+        "line": 4,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "FALSE_CLAIMS = [\"TESTED\", \"RUNNER_BOUND\", \"POLICY_ACTIVE\", \"PIPELINE_ACCEPTED\", \"SYSTEM_FULLY_IMPLEMENTED\"]"
+      },
+      {
+        "file": "tools/o00_run_document_main.py",
+        "line": 51,
+        "term": "wallet_signing",
+        "line_excerpt": "audit(out, run_id, 'forbidden_action_check', 'PASSED', forbidden_actions=['live_runtime','wallet_signing','auto_deploy','production_trading'], violations=[])"
+      },
+      {
+        "file": "tools/u00_real_review_executor.py",
+        "line": 425,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing: forbidden"
+      },
+      {
+        "file": "tools/v00_real_validation_executor.py",
+        "line": 89,
+        "term": "wallet_signing",
+        "line_excerpt": "preflight = {\"preflight_status\": \"PASSED\" if not preflight_blockers and args.safe_mode else \"BLOCKED\", \"safe_mode\": bool(args.safe_mode), \"loaded_inputs\": [\"o00_pipeline_run\", \"f00_handoff\", \"function_mapping\", \"field_mo"
+      },
+      {
+        "file": "tools/v00_real_validation_executor.py",
+        "line": 119,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "acceptance = {\"validation_run_id\": validation_run_id, \"accepted_for_a00_review\": not failures, \"final_status\": final_status, \"ready_for_a00\": not failures, \"ready_for_r00\": False, \"forbidden_claims_blocked\": [\"RUNNER_BOU"
+      },
+      {
+        "file": "tools/v00_replay_executor.py",
+        "line": 20,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "replay_expected = {\"expected_status_family\": \"READY_WITH_GAPS\", \"must_not_claim\": [\"RUNNER_BOUND\", \"POLICY_ACTIVE\", \"PIPELINE_ACCEPTED\"], \"required_artifacts\": [\"replay_input\", \"replay_output\", \"replay_trace\", \"replay_co"
+      },
+      {
+        "file": "tools/v00_validation_status.py",
+        "line": 14,
+        "term": "wallet_signing",
+        "line_excerpt": "FORBIDDEN_ACTIONS = [\"live_runtime\", \"wallet_signing\", \"auto_deploy\", \"production_trading\"]"
+      }
+    ],
+    "violations": [
+      {
+        "file": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/01_a00_manifest.yaml",
+        "line": 23,
+        "term": "wallet_signing",
+        "line_excerpt": "- WALLET_SIGNING"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/04_a00_input_contract.json",
+        "line": 101,
+        "term": "wallet_signing",
+        "line_excerpt": "\"allow_wallet_signing\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/04_a00_input_contract.json",
+        "line": 109,
+        "term": "wallet_signing",
+        "line_excerpt": "\"allow_wallet_signing\": {"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/07_a00_acceptance_gate.yaml",
+        "line": 38,
+        "term": "wallet_signing",
+        "line_excerpt": "- WALLET_SIGNING"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/08_a00_state.json",
+        "line": 11,
+        "term": "wallet_signing",
+        "line_excerpt": "\"WALLET_SIGNING\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/09_a00_handoff_packet.schema.json",
+        "line": 81,
+        "term": "wallet_signing",
+        "line_excerpt": "\"wallet_signing\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/21_a00_final_report_template.md",
+        "line": 71,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/F00_function_realization_controller/00_f00_controller_design_v1.md",
+        "line": 302,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/F00_function_realization_controller/01_f00_manifest.yaml",
+        "line": 64,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/F00_function_realization_controller/05_f00_output_contract.json",
+        "line": 124,
+        "term": "wallet_signing",
+        "line_excerpt": "\"wallet_signing\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/F00_function_realization_controller/07_f00_acceptance_gate.yaml",
+        "line": 180,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/F00_function_realization_controller/08_f00_state.json",
+        "line": 36,
+        "term": "wallet_signing",
+        "line_excerpt": "\"wallet_signing\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/F00_function_realization_controller/19_f00_final_report_template.md",
+        "line": 43,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing:"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/G00_governance_boundary_controller/01_g00_manifest.yaml",
+        "line": 91,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "- mark_policy_active_without_acceptance"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/G00_governance_boundary_controller/01_g00_manifest.yaml",
+        "line": 94,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/G00_governance_boundary_controller/02_g00_context_pack.md",
+        "line": 48,
+        "term": "wallet_signing",
+        "line_excerpt": "- missing_v00_handoff, missing_a00_handoff, missing_input_contract, missing_output_contract, missing_trace_audit, hidden_gap_detected, production_risk_detected, wallet_signing_detected are BLOCKING_GAP examples."
+      },
+      {
+        "file": "system/her_document_function_system/controllers/G00_governance_boundary_controller/02_g00_context_pack.md",
+        "line": 56,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing, auto_deploy, execute_real_order, production_trading are hard-blocked."
+      },
+      {
+        "file": "system/her_document_function_system/controllers/G00_governance_boundary_controller/02_g00_context_pack.md",
+        "line": 66,
+        "term": "wallet_signing",
+        "line_excerpt": "- WALLET_SIGNING_RISK: HARD_BLOCK."
+      },
+      {
+        "file": "system/her_document_function_system/controllers/G00_governance_boundary_controller/06_g00_execution_protocol.md",
+        "line": 85,
+        "term": "wallet_signing",
+        "line_excerpt": "- Production risks `WALLET_SIGNING_RISK`, `AUTO_DEPLOY_RISK`, `LIVE_RUNTIME_RISK`, and `EXTERNAL_API_WRITE_RISK` must not be silently allowed."
+      },
+      {
+        "file": "system/her_document_function_system/controllers/G00_governance_boundary_controller/07_g00_acceptance_gate.yaml",
+        "line": 125,
+        "term": "wallet_signing",
+        "line_excerpt": "- WALLET_SIGNING_RISK HARD_BLOCK"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/G00_governance_boundary_controller/08_g00_state.json",
+        "line": 37,
+        "term": "wallet_signing",
+        "line_excerpt": "\"wallet_signing\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/G00_governance_boundary_controller/25_recovery_policy.md",
+        "line": 23,
+        "term": "wallet_signing",
+        "line_excerpt": "- WALLET_SIGNING_RISK / AUTO_DEPLOY_RISK / LIVE_RUNTIME_RISK => HARD_BLOCK."
+      },
+      {
+        "file": "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/01_h00_manifest.yaml",
+        "line": 56,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/04_h00_input_contract.json",
+        "line": 50,
+        "term": "wallet_signing",
+        "line_excerpt": "\"allow_wallet_signing\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/04_h00_input_contract.json",
+        "line": 58,
+        "term": "wallet_signing",
+        "line_excerpt": "\"allow_wallet_signing\": {"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/01_o00_manifest.yaml",
+        "line": 35,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/04_o00_input_contract.json",
+        "line": 43,
+        "term": "wallet_signing",
+        "line_excerpt": "\"allow_wallet_signing\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/04_o00_input_contract.json",
+        "line": 60,
+        "term": "wallet_signing",
+        "line_excerpt": "\"allow_wallet_signing\": {"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/21_pipeline_config.schema.json",
+        "line": 38,
+        "term": "wallet_signing",
+        "line_excerpt": "\"WALLET_SIGNING\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/U00_review_upgrade_controller/01_u00_manifest.yaml",
+        "line": 80,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/U00_review_upgrade_controller/08_u00_state.json",
+        "line": 37,
+        "term": "wallet_signing",
+        "line_excerpt": "\"wallet_signing\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/V00_validation_evidence_controller/01_v00_manifest.yaml",
+        "line": 63,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/V00_validation_evidence_controller/04_v00_input_contract.json",
+        "line": 163,
+        "term": "wallet_signing",
+        "line_excerpt": "\"allow_wallet_signing\": {"
+      },
+      {
+        "file": "system/her_document_function_system/controllers/V00_validation_evidence_controller/04_v00_input_contract.json",
+        "line": 184,
+        "term": "wallet_signing",
+        "line_excerpt": "\"wallet_signing\","
+      },
+      {
+        "file": "system/her_document_function_system/controllers/V00_validation_evidence_controller/07_v00_acceptance_gate.yaml",
+        "line": 33,
+        "term": "wallet_signing",
+        "line_excerpt": "- wallet_signing"
+      },
+      {
+        "file": "tests/her_document_function_system/test_a00_no_policy_active_without_g00.py",
+        "line": 14,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "def test_a00_no_policy_active_without_g00():"
+      },
+      {
+        "file": "tests/her_document_function_system/test_a00_no_policy_active_without_g00.py",
+        "line": 16,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "assert 'POLICY_ACTIVE' in decision['forbidden_claims_blocked']"
+      },
+      {
+        "file": "tests/her_document_function_system/test_a00_no_policy_active_without_g00.py",
+        "line": 18,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "assert 'mark_policy_active_without_g00_acceptance' in cert['forbidden_next_actions']"
+      },
+      {
+        "file": "tests/her_document_function_system/test_g00_evidence_policy_candidate.py",
+        "line": 7,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "assert governance['status'] != 'POLICY_ACTIVE'"
+      },
+      {
+        "file": "tests/her_document_function_system/test_g00_forbidden_actions_not_weakened.py",
+        "line": 11,
+        "term": "wallet_signing",
+        "line_excerpt": "for a in ['live_runtime','wallet_signing','auto_deploy','production_trading']:"
+      },
+      {
+        "file": "tests/her_document_function_system/test_h00_controller_assets.py",
+        "line": 19,
+        "term": "wallet_signing",
+        "line_excerpt": "assert boundary['allow_wallet_signing']['const'] is False"
+      },
+      {
+        "file": "tests/her_document_function_system/test_h00_forbidden_actions_inherited.py",
+        "line": 2,
+        "term": "wallet_signing",
+        "line_excerpt": "required = ['live_runtime', 'wallet_signing', 'auto_deploy', 'production_trading']"
+      },
+      {
+        "file": "tests/her_document_function_system/test_h00_no_policy_active_claim.py",
+        "line": 5,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "def test_h00_no_policy_active_claim():"
+      },
+      {
+        "file": "tests/her_document_function_system/test_h00_no_policy_active_claim.py",
+        "line": 7,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "assert handoff['policy_status'] != 'POLICY_ACTIVE' or handoff['governance_consumed'] is True"
+      },
+      {
+        "file": "tests/test_h00_real_queue_executor.py",
+        "line": 33,
+        "term": "wallet_signing",
+        "line_excerpt": "'forbidden_next_actions': ['live_runtime','wallet_signing','auto_deploy','production_trading','execute_real_order'],"
+      },
+      {
+        "file": "tests/test_o00_cli_sample_replay.py",
+        "line": 163,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "assert 'POLICY_ACTIVE' in acceptance['forbidden_claims_blocked']"
+      },
+      {
+        "file": "tests/test_o00_cli_sample_replay.py",
+        "line": 175,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "'POLICY_ACTIVE: true',"
+      },
+      {
+        "file": "tests/test_o00_cli_sample_replay.py",
+        "line": 200,
+        "term": "wallet_signing",
+        "line_excerpt": "'wallet_signing_requested',"
+      },
+      {
+        "file": "tests/test_o00_full_pipeline_orchestrator.py",
+        "line": 70,
+        "term": "wallet_signing",
+        "line_excerpt": "assert boundary['allow_wallet_signing']['const'] is False"
+      },
+      {
+        "file": "tests/test_o00_full_pipeline_orchestrator.py",
+        "line": 141,
+        "term": "wallet_signing",
+        "line_excerpt": "'wallet_signing',"
+      },
+      {
+        "file": "tests/test_v00_validation_evidence_controller.py",
+        "line": 46,
+        "term": "wallet_signing",
+        "line_excerpt": "assert input_contract['properties']['execution_boundary']['properties']['allow_wallet_signing']['const'] is False"
+      },
+      {
+        "file": "tools/a00_acceptance_status.py",
+        "line": 10,
+        "term": "wallet_signing",
+        "line_excerpt": "FORBIDDEN_ACTIONS = [\"live_runtime\", \"wallet_signing\", \"auto_deploy\", \"production_trading\", \"execute_real_order\"]"
+      },
+      {
+        "file": "tools/a00_acceptance_status.py",
+        "line": 11,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "FORBIDDEN_CLAIMS = [\"PIPELINE_ACCEPTED\", \"POLICY_ACTIVE\", \"PRODUCTION_READY\", \"LIVE_READY\"]"
+      },
+      {
+        "file": "tools/g00_policy_conflict_checker.py",
+        "line": 1,
+        "term": "wallet_signing",
+        "line_excerpt": "FORBIDDEN={\"live_runtime\",\"wallet_signing\",\"auto_deploy\",\"production_trading\",\"execute_real_order\",\"silent_policy_overwrite\"}"
+      },
+      {
+        "file": "tools/g00_policy_handoff_writer.py",
+        "line": 4,
+        "term": "wallet_signing",
+        "line_excerpt": "return {\"handoff_id\":f\"handoff_g00_to_{target}_{run_id}\",\"from_phase\":\"G00_REAL_GOVERNANCE_POLICY_REGISTRY\",\"to_phase\":to,\"handoff_type\":\"REAL_GOVERNANCE_POLICY_HANDOFF\",\"governance_registry_ref\":\"registry/governance_reg"
+      },
+      {
+        "file": "tools/g00_policy_rule_builder.py",
+        "line": 10,
+        "term": "wallet_signing",
+        "line_excerpt": "forbidden={\"policy_id\":\"forbidden_action_policy_v1\",\"policy_domain\":\"forbidden_action_policy\",\"version\":\"1.0.0\",\"rules\":[{\"rule_id\":f\"forbid_{a}\",\"action\":a,\"policy_level\":\"HARD_FORBIDDEN\",\"applies_to\":\"ALL_CONTROLLERS\","
+      },
+      {
+        "file": "tools/g00_policy_rule_builder.py",
+        "line": 16,
+        "term": "wallet_signing",
+        "line_excerpt": "prod={\"policy_id\":\"production_risk_policy_v1\",\"version\":\"1.0.0\",\"risk_rules\":[{\"risk_type\":\"LIVE_RUNTIME_RISK\",\"default_action\":\"HARD_BLOCK\",\"allowed_exception\":False},{\"risk_type\":\"WALLET_SIGNING_RISK\",\"default_action\":"
+      },
+      {
+        "file": "tools/g00_policy_status.py",
+        "line": 6,
+        "term": "wallet_signing",
+        "line_excerpt": "FORBIDDEN_ACTIONS=[\"live_runtime\",\"wallet_signing\",\"auto_deploy\",\"production_trading\",\"execute_real_order\",\"silent_policy_overwrite\",\"weaken_forbidden_actions\"]"
+      },
+      {
+        "file": "tools/h00_real_queue_executor.py",
+        "line": 6,
+        "term": "wallet_signing",
+        "line_excerpt": "FORBIDDEN_DEFAULT = [\"live_runtime\",\"wallet_signing\",\"auto_deploy\",\"production_trading\",\"execute_real_order\"]"
+      },
+      {
+        "file": "tools/o00_cli.py",
+        "line": 7,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "POLICY_ACTIVE, PIPELINE_ACCEPTED, or SYSTEM_FULLY_IMPLEMENTED."
+      },
+      {
+        "file": "tools/o00_cli.py",
+        "line": 20,
+        "term": "wallet_signing",
+        "line_excerpt": "FORBIDDEN_ACTIONS = [\"live_runtime\", \"wallet_signing\", \"auto_deploy\", \"production_trading\", \"execute_real_order\"]"
+      },
+      {
+        "file": "tools/o00_cli.py",
+        "line": 114,
+        "term": "wallet_signing",
+        "line_excerpt": "for key, action in [(\"allow_live_runtime\", \"live_runtime\"), (\"allow_wallet_signing\", \"wallet_signing\"), (\"allow_auto_deploy\", \"auto_deploy\"), (\"allow_production_trading\", \"production_trading\"), (\"allow_execute_real_order"
+      },
+      {
+        "file": "tools/o00_cli.py",
+        "line": 155,
+        "term": "wallet_signing",
+        "line_excerpt": "for key in [\"allow_live_runtime\", \"allow_wallet_signing\", \"allow_auto_deploy\", \"allow_production_trading\"]:"
+      },
+      {
+        "file": "tools/o00_cli.py",
+        "line": 239,
+        "term": "wallet_signing",
+        "line_excerpt": "report = f\"\"\"# O00 CLI / Pipeline Final Report\\n\\n## Run Info\\n- cli_run_id: `{ctx.cli_run_id}`\\n- pipeline_run_id: `{pipeline_run_id}`\\n- command: `{command_name}`\\n- safe_mode: `true`\\n- exit_code: `10`\\n\\n## Replay Re"
+      },
+      {
+        "file": "tools/o00_pipeline_orchestrator.py",
+        "line": 10,
+        "term": "wallet_signing",
+        "line_excerpt": "FORBIDDEN_ACTIONS = [\"live_runtime\", \"wallet_signing\", \"auto_deploy\", \"production_trading\", \"execute_real_order\"]"
+      },
+      {
+        "file": "tools/o00_pipeline_orchestrator.py",
+        "line": 22,
+        "term": "wallet_signing",
+        "line_excerpt": "(\"allow_wallet_signing\", \"wallet_signing\"),"
+      },
+      {
+        "file": "tools/o00_recovery.py",
+        "line": 4,
+        "term": "wallet_signing",
+        "line_excerpt": "FORBIDDEN_ACTIONS = [\"live_runtime\", \"wallet_signing\", \"auto_deploy\", \"production_trading\", \"execute_real_order\"]"
+      },
+      {
+        "file": "tools/u00_real_review_executor.py",
+        "line": 23,
+        "term": "wallet_signing",
+        "line_excerpt": "\"wallet_signing\","
+      },
+      {
+        "file": "tools/v00_real_validation_executor.py",
+        "line": 50,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "- POLICY_ACTIVE claim"
+      },
+      {
+        "file": "tools/v00_real_validation_executor.py",
+        "line": 52,
+        "term": "wallet_signing",
+        "line_excerpt": "- live_runtime / wallet_signing / auto_deploy / production_trading"
+      },
+      {
+        "file": "tools/v00_validation_status.py",
+        "line": 15,
+        "term": "POLICY_ACTIVE",
+        "line_excerpt": "FORBIDDEN_CLAIMS = [\"RUNNER_BOUND\", \"POLICY_ACTIVE\", \"PIPELINE_ACCEPTED\", \"PRODUCTION_READY\", \"LIVE_READY\"]"
+      }
+    ],
+    "status": "REVIEW_REQUIRED"
+  }
+}

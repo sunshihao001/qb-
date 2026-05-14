@@ -1,0 +1,20 @@
+type: object
+required:
+- record_id
+- candidate_id
+- generated_at
+- source_trace_ids
+properties:
+  record_id: string
+  candidate_id: string
+  generated_at: datetime
+  source_trace_ids: list
+  usage_permission: FULL_USE|WEAK_USE_ONLY|OBSERVE_ONLY|DO_NOT_USE
+runtime_allowed: false
+object: Scenario Usage Permission Record
+fields:
+- scenario_id
+- usage_permission
+- allowed_usage
+- forbidden_usage
+- reason_cn

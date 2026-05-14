@@ -1,0 +1,37 @@
+{
+  "contract_name": "phase_06_strategy_filter_output_contract",
+  "phase": "phase_06_strategy_gate_controller",
+  "required_outputs": {
+    "upstream_state_summary": "strategy_fact/upstream_state_summary.json",
+    "upstream_state_matrix": "strategy_fact/upstream_state_matrix.csv",
+    "hard_negative_checklist": "strategy_decision/hard_negative_checklist.json",
+    "structure_quality_assessment": "strategy_decision/structure_quality_assessment.json",
+    "position_quality_assessment": "strategy_decision/position_quality_assessment.json",
+    "strategy_template_match": "strategy_decision/strategy_template_match.json",
+    "risk_reward_check": "strategy_decision/risk_reward_check.json",
+    "evidence_chain_check": "strategy_decision/evidence_chain_check.json",
+    "multi_dimensional_strategy_scores": "strategy_decision/multi_dimensional_strategy_scores.json",
+    "a_plus_p1_result": "strategy_decision/a_plus_p1_result.json",
+    "strategy_gate_decision": "strategy_decision/strategy_gate_decision.json",
+    "phase_06_handoff_packet": "handoff/phase_06_handoff_packet.json",
+    "missing_fields_report": "audit/missing_fields_report.md",
+    "audit_report": "reports/system_audit/phase_06_strategy_gate_audit.md"
+  },
+  "handoff_to": "phase_07_execution_risk_controller",
+  "allowed_phase_status": [
+    "A_PLUS_P1_PASS",
+    "PAPER_READY",
+    "READY_FOR_CONFIRMATION",
+    "STRATEGY_PAUSE",
+    "STRATEGY_BLOCK",
+    "REVIEW_ONLY"
+  ],
+  "handoff_rule": {
+    "PAPER_READY": "allow_execution_risk_checks_only",
+    "READY_FOR_CONFIRMATION": "allow_execution_risk_checks_only",
+    "A_PLUS_P1_PASS": "allow_execution_risk_checks_only",
+    "STRATEGY_PAUSE": "pause",
+    "STRATEGY_BLOCK": "block",
+    "REVIEW_ONLY": "review_only"
+  }
+}

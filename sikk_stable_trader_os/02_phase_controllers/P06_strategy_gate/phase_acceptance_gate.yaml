@@ -1,0 +1,37 @@
+phase_id: P06
+acceptance_gate_id: P06-GATE
+version: '2.1'
+minimum_acceptance:
+  required:
+  - context_pack_read
+  - input_contract_checked
+  - required_fields_handled
+  - objective_tree_tasks_recorded
+  - required_outputs_written_or_gap_recorded
+  - phase_state_updated
+  - handoff_packet_schema_validated
+professional_acceptance:
+  required:
+  - field_source_map_present
+  - evidence_level_present
+  - counter_evidence_recorded
+  - hard_negative_checked
+  - decision_trace_written
+  - audit_ref_written
+  - no_ai_inferred_fact_field
+  - no_forbidden_execution_flag
+reject_conditions:
+- missing_required_identity_field
+- schema_validation_failed
+- report_json_conflict
+- inferred_missing_required_field
+- unsafe_execution_authorization
+- no_handoff_packet_when_downstream_required
+status_mapping:
+  all_professional_acceptance_passed: PHASE_READY
+  minimum_passed_with_non_critical_gaps: PHASE_WITH_GAPS
+  missing_recoverable_input: PHASE_PAUSED
+  critical_field_missing: PHASE_REJECTED
+  tool_or_runtime_error: PHASE_ERROR
+  unsafe_execution_authorization: PHASE_REJECTED
+next_phase_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates

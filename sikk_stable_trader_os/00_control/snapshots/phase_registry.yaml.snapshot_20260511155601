@@ -1,0 +1,103 @@
+phase_registry:
+  system_id: SIKK_STABLE_TRADER_OS
+  version: P00_BOOTSTRAP_V1
+  updated_at: "2026-05-11T15:11:51Z"
+  phase_count: 12
+  order:
+    - K00_knowledge_intake_taskization
+    - P00_system_bootstrap_controller
+    - P01_data_fact_controller
+    - P02_wallet_structure_controller
+    - P03_chip_control_controller
+    - P04_market_structure_controller
+    - P05_scenario_classification_controller
+    - P06_strategy_gate_controller
+    - P07_execution_risk_controller
+    - P08_paper_trading_controller
+    - P09_review_learning_controller
+    - P10_system_upgrade_controller
+  phases:
+    K00_knowledge_intake_taskization:
+      name_cn: 知识摄取与 Phase Controller 候选任务化
+      status: READY_OR_ASSETIZED
+      phase_type: pre_runtime_knowledge_governance
+      controller_path: 06_phase_controllers/K00_knowledge_intake_taskization/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P00_system_bootstrap_controller:
+      name_cn: 系统建造与方法论编译控制器
+      status: BOOTSTRAP_PASSED
+      phase_type: system_bootstrap_compiler
+      controller_path: 06_phase_controllers/P00_system_bootstrap_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P01_data_fact_controller:
+      name_cn: 数据事实层
+      status: BLOCKED_BY_DATA_PLANE
+      phase_type: normalized_fact_runtime
+      controller_path: 06_phase_controllers/P01_data_fact_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P02_wallet_structure_controller:
+      name_cn: 钱包结构层
+      status: NOT_READY
+      phase_type: wallet_entity_and_role_analysis
+      controller_path: 06_phase_controllers/P02_wallet_structure_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P03_chip_control_controller:
+      name_cn: 筹码控制层
+      status: NOT_READY
+      phase_type: chip_control_and_counterparty_pressure
+      controller_path: 06_phase_controllers/P03_chip_control_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P04_market_structure_controller:
+      name_cn: 市场结构层
+      status: NOT_READY
+      phase_type: kline_volume_avwap_structure
+      controller_path: 06_phase_controllers/P04_market_structure_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P05_scenario_classification_controller:
+      name_cn: 场景识别层
+      status: NOT_READY
+      phase_type: multi_model_scenario_classification
+      controller_path: 06_phase_controllers/P05_scenario_classification_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P06_strategy_gate_controller:
+      name_cn: 策略门禁层
+      status: NOT_READY
+      phase_type: opportunity_rejection_and_paper_permission
+      controller_path: 06_phase_controllers/P06_strategy_gate_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P07_execution_risk_controller:
+      name_cn: 执行风控层
+      status: NOT_READY
+      phase_type: paper_execution_risk_simulation
+      controller_path: 06_phase_controllers/P07_execution_risk_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P08_paper_trading_controller:
+      name_cn: 纸面交易验证层
+      status: NOT_READY
+      phase_type: paper_trade_validation
+      controller_path: 06_phase_controllers/P08_paper_trading_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P09_review_learning_controller:
+      name_cn: 复盘学习层
+      status: NOT_READY
+      phase_type: failure_attribution_and_rule_feedback
+      controller_path: 06_phase_controllers/P09_review_learning_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false
+    P10_system_upgrade_controller:
+      name_cn: 系统升级层
+      status: NOT_READY
+      phase_type: controlled_system_upgrade
+      controller_path: 06_phase_controllers/P10_system_upgrade_controller/controller.yaml
+      paper_only: true
+      real_trade_enabled: false

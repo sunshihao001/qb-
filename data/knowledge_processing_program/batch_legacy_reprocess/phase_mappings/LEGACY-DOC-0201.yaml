@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0201
+source_path: docs/system_split/sikk_system_split_audit.md
+phase_scores:
+  P01: 7
+  P02: 0
+  P03: 8
+  P04: 2
+  P05: 1
+  P06: 0
+  P07: 5
+  P08: 3
+  P09: 2
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

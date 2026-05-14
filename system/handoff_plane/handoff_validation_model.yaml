@@ -1,0 +1,14 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+validation_levels:
+- file_parse
+- contract_presence
+- permission_consistency
+- gap_propagation
+- safety_boundary
+- state_writeback
+expected_result: HANDOFF_READY_WITH_GAPS

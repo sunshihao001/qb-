@@ -1,0 +1,46 @@
+{
+  "matrix_id": "phase_status_matrix_A00-P01-AUTO-FULL-20260514-001",
+  "phases": [
+    {
+      "phase_id": "O00",
+      "reported_status": "O00_CLI_SAMPLE_REPLAY_READY_WITH_GAPS",
+      "evidence_status": "PRESENT",
+      "blocking_gaps": 0,
+      "non_blocking_gaps": 6,
+      "a00_interpretation": "READY_WITH_GAPS"
+    },
+    {
+      "phase_id": "K00",
+      "reported_status": "SIMULATED_HANDOFF_READY_WITH_GAPS",
+      "evidence_status": "PRESENT",
+      "blocking_gaps": 0,
+      "non_blocking_gaps": 6,
+      "a00_interpretation": "READY_WITH_GAPS"
+    },
+    {
+      "phase_id": "F00",
+      "reported_status": "SIMULATED_HANDOFF_READY_WITH_GAPS",
+      "evidence_status": "PRESENT",
+      "blocking_gaps": 0,
+      "non_blocking_gaps": 6,
+      "a00_interpretation": "READY_WITH_GAPS"
+    },
+    {
+      "phase_id": "V00",
+      "reported_status": "V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS",
+      "evidence_status": "PRESENT",
+      "blocking_gaps": 0,
+      "non_blocking_gaps": 6,
+      "a00_interpretation": "READY_WITH_GAPS"
+    },
+    {
+      "phase_id": "R00",
+      "reported_status": "R00_REAL_SAFE_DRY_RUN_BINDING_READY_WITH_GAPS",
+      "evidence_status": "PRESENT",
+      "blocking_gaps": 0,
+      "non_blocking_gaps": 6,
+      "a00_interpretation": "READY_WITH_GAPS"
+    }
+  ],
+  "matrix_status": "BUILT"
+}

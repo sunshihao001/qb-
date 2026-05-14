@@ -1,0 +1,36 @@
+{
+  "doc_id": "DOC-20260512-006",
+  "primary_plane": "Handoff Plane / Scenario Domain Model",
+  "plane_impacts": {
+    "Domain Plane": [
+      "scenario taxonomy",
+      "scenario feature map",
+      "context interpretation",
+      "risk flags"
+    ],
+    "Data Plane": [
+      "scenario schemas",
+      "usage permission schemas"
+    ],
+    "Trace Plane": [
+      "evidence bundle trace",
+      "scenario trace",
+      "handoff trace"
+    ],
+    "Acceptance Plane": [
+      "P06 acceptance criteria and hard negatives"
+    ],
+    "Handoff Plane": [
+      "P06_TO_P07_SCENARIO_RECOGNITION_HANDOFF"
+    ],
+    "Control Plane": [
+      "P06 package status and runtime blockers"
+    ]
+  },
+  "must_not_change": [
+    "real_trade_enabled",
+    "paper_runtime_allowed",
+    "live_runtime_allowed",
+    "P07 strategy gate boundary"
+  ]
+}

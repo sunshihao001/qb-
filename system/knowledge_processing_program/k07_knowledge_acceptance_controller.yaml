@@ -1,0 +1,21 @@
+phase_id: K07
+phase_name: "Validation / Gap / Acceptance Binding"
+program: KNOWLEDGE_PROCESSING_PROGRAM
+status: CONTROLLER_CANDIDATE_READY
+purpose: "validate completeness, trace, gaps, output contracts, forbidden actions, downstream handoff"
+required_inputs:
+  - upstream_handoff_or_raw_document
+required_outputs:
+  - knowledge_processing_acceptance_result.yaml
+  - knowledge_gap_report.yaml
+  - functionalization_quality_report.yaml
+  - task_package_validation_report.yaml
+acceptance:
+  - outputs_exist
+  - source_trace_present
+  - io_contract_declared
+  - handoff_declared
+forbidden:
+  - production_mutation_without_governance
+  - summary_only_completion
+  - untraced_claims

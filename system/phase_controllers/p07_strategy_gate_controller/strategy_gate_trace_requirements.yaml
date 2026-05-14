@@ -1,0 +1,10 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+trace_requirements:
+  gate_trace: [strategy_gate_input_trace_id, upstream_trace_ids, hard_negative_trace_id]
+  decision_trace: [strategy_gate_trace_id, source_trace_ids, decision_basis]
+  risk_flag_trace: [risk_eval_id, risk_flags_from_p06, evaluation]
+  handoff_trace: [handoff_trace_id, p06_handoff_packet_id, p07_acceptance_result_packet_id]
+required_trace_types: [PHASE_TRACE, TASK_TRACE, ARTIFACT_TRACE, CONTRACT_TRACE, DECISION_TRACE, RISK_TRACE, HANDOFF_TRACE, STATE_TRACE]
+forbidden: [untraced_decision, handoff_without_acceptance, p08_request_without_usage_permission]

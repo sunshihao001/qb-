@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "token_address",
+    "counterparty_pressure_score",
+    "counterparty_pressure_status"
+  ],
+  "properties": {
+    "token_address": {},
+    "counterparty_pressure_score": {},
+    "counterparty_pressure_status": {}
+  }
+}

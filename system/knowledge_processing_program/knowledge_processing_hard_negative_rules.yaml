@@ -1,0 +1,31 @@
+knowledge_processing_hard_negative_rules:
+  - rule_id: KP_BLOCK_001
+    name: 未分类文档直接执行
+    result: BLOCK
+  - rule_id: KP_BLOCK_002
+    name: 解释性文档直接当任务执行
+    result: BLOCK
+  - rule_id: KP_BLOCK_003
+    name: 方法论未映射系统阶段
+    result: BLOCK_OR_READY_WITH_GAPS
+  - rule_id: KP_BLOCK_004
+    name: 无输入输出对象
+    result: BLOCK
+  - rule_id: KP_BLOCK_005
+    name: 无验收标准
+    result: BLOCK
+  - rule_id: KP_BLOCK_006
+    name: 无 handoff
+    result: BLOCK
+  - rule_id: KP_BLOCK_007
+    name: 文档直接修改生产系统
+    result: BLOCK
+  - rule_id: KP_BLOCK_008
+    name: 单篇文档直接生成全局规则
+    result: BLOCK
+  - rule_id: KP_BLOCK_009
+    name: 忽略不确定性
+    result: BLOCK_OR_GAP
+  - rule_id: KP_BLOCK_010
+    name: 无 trace
+    result: BLOCK

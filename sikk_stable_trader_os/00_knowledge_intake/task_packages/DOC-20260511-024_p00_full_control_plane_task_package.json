@@ -1,0 +1,38 @@
+{
+  "package_id": "DOC-20260511-024_P00_FULL_CONTROL_PLANE_TASK_PACKAGE",
+  "target_plane": "P00_FULL_CONTROL_PLANE",
+  "target_directory": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane",
+  "created_at": "2026-05-11T16:47:53Z",
+  "tasks": [
+    {
+      "id": "ctrl-1",
+      "name": "K00 intake Full Control Plane source",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "ctrl-2",
+      "name": "Create Full Control Plane registries, routers, policies and protocols",
+      "status": "READY_TO_EXECUTE"
+    },
+    {
+      "id": "ctrl-3",
+      "name": "Run acceptance and update current_system_state with safety boundaries preserved",
+      "status": "PENDING"
+    },
+    {
+      "id": "ctrl-4",
+      "name": "Report CONTROL_READY_WITH_GAPS and next legal stage",
+      "status": "PENDING"
+    }
+  ],
+  "forbidden_actions": [
+    "direct_trade_judgment",
+    "direct_data_collection",
+    "direct_buy_signal",
+    "direct_order_execution",
+    "bypass_governance",
+    "bypass_acceptance",
+    "delete_or_move_legacy_runtime"
+  ],
+  "expected_status": "CONTROL_READY_WITH_GAPS"
+}

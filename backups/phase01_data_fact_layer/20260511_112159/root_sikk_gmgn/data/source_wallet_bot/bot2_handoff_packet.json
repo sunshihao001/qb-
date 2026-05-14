@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "packets": [],
+  "missing_reason": "字段缺失：尚未生成 live token evidence packet；contract 已定义。",
+  "forbidden_decision_fields": [
+    "PAPER_READY",
+    "BLOCKED",
+    "final_trade_gate",
+    "dominant_side_control",
+    "second_rally_motive",
+    "buyability",
+    "real_execution_action"
+  ],
+  "evidence_language_only": true,
+  "normalized_at": "2026-05-05T13:26:00Z"
+}

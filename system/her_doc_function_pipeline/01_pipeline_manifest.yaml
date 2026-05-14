@@ -1,0 +1,22 @@
+phase_id: HER_DOC_FUNCTION_PIPELINE_RUNNABLE
+status_code: HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS
+mode: SAFE_MODE_ONLY
+trigger: MANUAL_TRIGGER_ONLY
+main_goal: real_document_to_function_pipeline
+pipeline_sequence:
+  - K00
+  - F00
+  - V00
+  - A00
+  - H00
+  - U00
+  - G00
+  - O00
+forbidden_expansions:
+  - scheduler_manual_enable
+  - operator_confirmation_packet
+  - one_shot_trial
+  - long_run_scheduler
+  - paper_runtime
+  - live_runtime
+  - production_readiness

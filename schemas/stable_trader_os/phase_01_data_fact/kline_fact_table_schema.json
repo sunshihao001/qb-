@@ -1,0 +1,117 @@
+{
+  "schema_version": "kline_fact_table_schema_v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "format": "csv",
+  "fields": [
+    {
+      "field_name": "timestamp",
+      "field_chinese_name": "K线时间",
+      "data_type": "datetime",
+      "required_level": "phase_02_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn",
+        "chain"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_04_scenario_recognition",
+        "phase_05_structure_position"
+      ],
+      "description": "K线周期起始时间"
+    },
+    {
+      "field_name": "open",
+      "field_chinese_name": "开盘价",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_04_scenario_recognition"
+      ],
+      "description": "开盘价事实"
+    },
+    {
+      "field_name": "high",
+      "field_chinese_name": "最高价",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_04_scenario_recognition"
+      ],
+      "description": "最高价事实"
+    },
+    {
+      "field_name": "low",
+      "field_chinese_name": "最低价",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_04_scenario_recognition"
+      ],
+      "description": "最低价事实"
+    },
+    {
+      "field_name": "close",
+      "field_chinese_name": "收盘价",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_04_scenario_recognition"
+      ],
+      "description": "收盘价事实"
+    },
+    {
+      "field_name": "volume_usd",
+      "field_chinese_name": "成交额美元",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_04_scenario_recognition"
+      ],
+      "description": "成交额事实"
+    }
+  ]
+}

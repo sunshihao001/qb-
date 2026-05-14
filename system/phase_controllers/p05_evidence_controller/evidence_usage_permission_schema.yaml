@@ -1,0 +1,29 @@
+controller_id: P05_EVIDENCE_CONTROLLER
+version: v3.0-professional
+status: PACKAGE_SPEC_READY_WITH_RUNTIME_GAPS
+created_at: '2026-05-12T02:44:17Z'
+paper_only: true
+real_trade_enabled: false
+runtime_allowed: false
+paper_runtime_allowed: false
+live_execution_allowed: false
+schema_id: EVIDENCE_USAGE_PERMISSION_SCHEMA
+usage_permissions:
+- FULL_USE_IN_P06
+- WEAK_USE_ONLY_IN_P06
+- OBSERVE_ONLY
+- DO_NOT_USE
+- REQUIRE_REFRESH
+- REQUIRE_MANUAL_REVIEW
+allowed_usage:
+- scenario_input
+- scenario_counter_input
+- uncertainty_tag
+- conflict_tag
+- review_reference
+forbidden_usage:
+- strategy_gate_direct_input
+- paper_ready_decision
+- live_execution
+- confirmed_market_maker_claim
+- confirmed_dominant_side_claim

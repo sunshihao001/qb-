@@ -1,0 +1,171 @@
+{
+  "review_id": "HER-DFAFS-SYSTEM-SELF-REVIEW-20260514",
+  "system_root": "system/her_document_function_system/",
+  "data_root": "data/her_document_function_system/",
+  "overall_status": "SYSTEM_BLUEPRINT_AND_SAFE_MODE_RUNTIME_PARTIALLY_READY_WITH_GAPS",
+  "must_not_claim": [
+    "PRODUCTION_READY",
+    "PIPELINE_ACCEPTED",
+    "POLICY_ACTIVE",
+    "RUNNER_BOUND",
+    "SYSTEM_FULLY_IMPLEMENTED"
+  ],
+  "stage_chain": [
+    {
+      "stage_id": "G00",
+      "role": "governance_boundary_and_policy_candidate",
+      "current_status": "CANDIDATE_ONLY_WITH_GAPS",
+      "key_assets": [
+        "system/her_document_function_system/governance/g00_real_policy_registry/",
+        "system/her_document_function_system/controllers/G00_governance_boundary_controller/",
+        "tools/g00_governance_update.py"
+      ]
+    },
+    {
+      "stage_id": "O00",
+      "role": "full_pipeline_orchestrator_and_cli_entry",
+      "current_status": "SAFE_MODE_RUNNABLE_WITH_DUAL_TRACK_GAP",
+      "key_assets": [
+        "system/her_document_function_system/orchestrator/o00_run_document_safe_mode/",
+        "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/",
+        "tools/o00_cli.py",
+        "tools/o00_run_document_main.py"
+      ]
+    },
+    {
+      "stage_id": "K00",
+      "role": "document_intake_passport_corpus_mapping_handoff",
+      "current_status": "TOOL_EXISTS_CONTROLLER_PACK_GAP",
+      "key_assets": [
+        "tools/k00_document_intake.py",
+        "data/her_document_function_system/k00_runs/"
+      ]
+    },
+    {
+      "stage_id": "F00",
+      "role": "function_realization_mapping_and_task_package",
+      "current_status": "TEMPLATE_MAPPING_READY_WITH_GAPS",
+      "key_assets": [
+        "system/her_document_function_system/controllers/F00_function_realization_controller/",
+        "tools/f00_function_mapping.py",
+        "data/her_document_function_system/f00_runs/"
+      ]
+    },
+    {
+      "stage_id": "V00",
+      "role": "validation_evidence_and_gap_register",
+      "current_status": "FILE_EXISTENCE_VALIDATION_READY_WITH_GAPS",
+      "key_assets": [
+        "system/her_document_function_system/controllers/V00_validation_evidence_controller/",
+        "tools/v00_validation_evidence.py",
+        "data/her_document_function_system/v00_real_validation_runs/"
+      ]
+    },
+    {
+      "stage_id": "R00",
+      "role": "runner_tool_binding_design_or_safe_dry_run",
+      "current_status": "DESIGN_ONLY_OR_SKIPPED_WITH_GAPS",
+      "key_assets": [
+        "system/her_document_function_system/controllers/R00_runner_tool_binding_controller/",
+        "data/her_document_function_system/r00_real_binding_runs/"
+      ]
+    },
+    {
+      "stage_id": "A00",
+      "role": "global_acceptance_evidence_and_readiness_certificate",
+      "current_status": "SIMPLIFIED_ACCEPTANCE_READY_WITH_GAPS",
+      "key_assets": [
+        "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/",
+        "tools/a00_acceptance.py",
+        "data/her_document_function_system/a00_real_acceptance_runs/"
+      ]
+    },
+    {
+      "stage_id": "H00",
+      "role": "downstream_queue_and_handoff_routing",
+      "current_status": "QUEUE_WRITE_READY_WITH_GAPS",
+      "key_assets": [
+        "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/",
+        "tools/h00_downstream_queue.py",
+        "data/her_document_function_system/h00_real_queue_runs/"
+      ]
+    },
+    {
+      "stage_id": "U00",
+      "role": "review_upgrade_learning_index",
+      "current_status": "UPGRADE_QUEUE_READY_WITH_GAPS",
+      "key_assets": [
+        "system/her_document_function_system/controllers/U00_review_upgrade_controller/",
+        "tools/u00_review_upgrade.py",
+        "data/her_document_function_system/u00_real_review_runs/"
+      ]
+    }
+  ],
+  "critical_gaps": [
+    {
+      "gap_id": "GAP-001",
+      "title": "K00 controller file pack missing or not canonical",
+      "priority": "P0",
+      "route_to": "F00/U00",
+      "acceptance": "controllers/K00_document_intake_controller exists and registry/config reference it"
+    },
+    {
+      "gap_id": "GAP-002",
+      "title": "O00 dual run shape not unified",
+      "priority": "P0",
+      "route_to": "O00/F00/V00",
+      "acceptance": "run-document and real safe-mode runner share one run shape contract"
+    },
+    {
+      "gap_id": "GAP-003",
+      "title": "F00 fixed template mapping instead of six-class document asset extraction",
+      "priority": "P0",
+      "route_to": "F00",
+      "acceptance": "F00 outputs asset_classification and method/logic/field/module/rule/output/implementation plans"
+    },
+    {
+      "gap_id": "GAP-004",
+      "title": "V00 validation mostly checks file existence",
+      "priority": "P1",
+      "route_to": "V00",
+      "acceptance": "schema, field, status, handoff-ref and forbidden-claim validations are emitted"
+    },
+    {
+      "gap_id": "GAP-005",
+      "title": "A00 lacks full artifact manifest and evidence bundle",
+      "priority": "P1",
+      "route_to": "A00",
+      "acceptance": "artifact_manifest, phase_status_matrix, evidence_bundle and gap_propagation_report are emitted"
+    },
+    {
+      "gap_id": "GAP-006",
+      "title": "H00/U00/G00 queue/candidate outputs do not close loop automatically",
+      "priority": "P1",
+      "route_to": "H00/U00/G00",
+      "acceptance": "safe-mode upgrade executor plan produces patch proposals without activating production policy"
+    },
+    {
+      "gap_id": "GAP-007",
+      "title": "Runtime index is not a mandatory write path",
+      "priority": "P1",
+      "route_to": "O00/A00",
+      "acceptance": "every O00 run registers run_index and system_health_snapshot"
+    },
+    {
+      "gap_id": "GAP-008",
+      "title": "Status codes need canonical mapping",
+      "priority": "P1",
+      "route_to": "G00/A00/V00",
+      "acceptance": "status_code_mapping.json blocks READY_WITH_GAPS to ACCEPTED conversion"
+    }
+  ],
+  "recommended_next_tasks": [
+    "TASK-P0-001 create K00 controller file pack",
+    "TASK-P0-002 unify O00 run shape",
+    "TASK-P0-003 implement F00 six-class document asset extraction",
+    "TASK-P1-004 harden V00 validators",
+    "TASK-P1-005 generate A00 full evidence bundle",
+    "TASK-P1-006 mandatory runtime index and health snapshot"
+  ],
+  "report_path": "data/her_document_function_system/system_self_review/HER_DFAFS_SYSTEM_SELF_REVIEW_20260514.md"
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Command contract schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "command_id",
+    "command_name",
+    "entry_type",
+    "module",
+    "command_template",
+    "required_args",
+    "input_paths",
+    "output_paths",
+    "allowed_modes",
+    "forbidden_modes",
+    "expected_outputs",
+    "success_criteria",
+    "failure_policy"
+  ],
+  "properties": {
+    "command_id": {
+      "type": "string"
+    },
+    "command_name": {
+      "type": "string"
+    },
+    "entry_type": {
+      "enum": [
+        "CLI",
+        "HER_CONTROLLER_CALL",
+        "TOOL_BINDING",
+        "ORCHESTRATOR_STEP"
+      ]
+    },
+    "module": {
+      "type": "string"
+    },
+    "command_template": {
+      "type": "string"
+    },
+    "required_args": {
+      "type": "array"
+    },
+    "optional_args": {
+      "type": "array"
+    },
+    "input_paths": {
+      "type": "object"
+    },
+    "output_paths": {
+      "type": "object"
+    },
+    "allowed_modes": {
+      "type": "array"
+    },
+    "forbidden_modes": {
+      "type": "array",
+      "contains": {
+        "const": "live_runtime"
+      }
+    },
+    "expected_outputs": {
+      "type": "array"
+    },
+    "success_criteria": {
+      "type": "array"
+    },
+    "failure_policy": {
+      "type": "string"
+    }
+  }
+}

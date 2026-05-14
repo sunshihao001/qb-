@@ -1,0 +1,158 @@
+{
+  "audit_id": "K00_SYSTEM_INTEGRATION_ROOT_CAUSE_AUDIT_20260511",
+  "generated_at": "2026-05-11T13:28:39Z",
+  "question": "为什么用户感觉上传文档没有落实到系统体系里、不够专业化？",
+  "scan_summary": [
+    {
+      "path": "phase_registry.yaml",
+      "exists": false,
+      "size": 0
+    },
+    {
+      "path": "00_control/phase_registry.yaml",
+      "exists": false,
+      "size": 0
+    },
+    {
+      "path": "00_governance/governance_status.json",
+      "exists": true,
+      "size": 431
+    },
+    {
+      "path": "00_domain/domain_handoff_packet.json",
+      "exists": true,
+      "size": 653
+    },
+    {
+      "path": "00_domain/domain_object_registry.yaml",
+      "exists": true,
+      "size": 5753
+    },
+    {
+      "path": "00_domain/field_dictionary.yaml",
+      "exists": true,
+      "size": 6296
+    },
+    {
+      "path": "00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-005.json",
+      "exists": true,
+      "size": 1060
+    },
+    {
+      "path": "00_knowledge_intake/task_packages/automated_trading_workflow_data_model/runtime_task_state.json",
+      "exists": true,
+      "size": 1791
+    },
+    {
+      "path": "01_total_control_skill/SKILL.md",
+      "exists": true,
+      "size": 17619
+    }
+  ],
+  "root_cause_summary": {
+    "primary_root_cause": "K00 assetization succeeded, but downstream system integration/consumption layer is incomplete. 文档被保存和建模，但没有被统一 registry、phase controllers、data/control plane、runner、coverage matrix 消费。",
+    "not_the_problem": [
+      "不是完全没读取文档",
+      "不是没有生成文件",
+      "不是 K00 原始保存失败"
+    ],
+    "actual_problem": [
+      "资产化 ≠ 系统接入",
+      "锚点验收 ≠ 语义完整验收",
+      "任务包存在 ≠ 可执行/被消费",
+      "下游建议 ≠ 下游自动生成",
+      "局部状态通过 ≠ 全局状态一致"
+    ]
+  },
+  "findings": [
+    {
+      "id": "ROOT-001",
+      "severity": "P0",
+      "title": "系统平面链条只落到 Domain，Data Plane 尚未生成",
+      "evidence": "/00_data 不存在；K00 phase_state next_recommended_stage=data_plane_generation",
+      "root_cause": "K00 把上传文档资产化后停止在“下一步建议”，没有自动推进到下游系统平面落地",
+      "impact": "用户感觉“文档没接入系统体系”：因为语义对象没有进入数据来源、input_contract、field_source_map、normalized_fact_model",
+      "recommended_fix": "生成 data_plane.md 与 00_data/{field_source_map,normalized_fact_model,input_contract,data_handoff_packet}，并把 domain 输出作为上游输入"
+    },
+    {
+      "id": "ROOT-002",
+      "severity": "P0",
+      "title": "Phase Controller 层只有 K00，没有 P00-P09 控制器",
+      "evidence": "06_phase_controllers 当前 children=['K00_knowledge_intake_taskization']",
+      "root_cause": "文档进入 K00 后缺少被 P00-P09 消费的阶段控制面，因此“系统化接入”没有完成",
+      "impact": "自动化交易流程无法按阶段消化文档，只能停留在知识资产/任务包",
+      "recommended_fix": "按顺序补 P00-P09 或至少先补 P00/P01 控制器 stub + registry，使 domain/data plane 能被阶段引用"
+    },
+    {
+      "id": "ROOT-003",
+      "severity": "P0",
+      "title": "缺少全局 phase_registry / 系统入口注册",
+      "evidence": "未发现 phase_registry.yaml 或 00_control/phase_registry.yaml",
+      "root_cause": "K00 生成了 doc_id/asset/handoff，但没有一个总注册表声明 K00→P00→P01…的执行顺序和依赖",
+      "impact": "各资产彼此存在，但不像一个可执行系统；HER 没有稳定入口判断下一步该跑谁",
+      "recommended_fix": "建立 00_control/phase_registry.yaml、system_asset_index.json、current_system_state.json，将 K00/P00-P09/planes/task_packages 全部注册"
+    },
+    {
+      "id": "ROOT-004",
+      "severity": "P0",
+      "title": "系统存在两个互相竞争的 next stage",
+      "evidence": "K00 next=data_plane_generation；自动化 workflow next=P01_data_fact_runtime_connection",
+      "root_cause": "之前自动化交易 P0 提前推进，后续 governance/domain 又恢复方法论顺序，但缺少状态调和器",
+      "impact": "用户会感到“流程不循序”：一个状态说该做 Data Plane，一个任务包说该做 P01",
+      "recommended_fix": "新增 current_system_state.json 作为唯一系统状态源；将自动化 workflow 标记 WAITING_FOR_SYSTEM_PLANES_DATA_CONTROL，直到 Data/Control Plane 验收"
+    },
+    {
+      "id": "ROOT-005",
+      "severity": "P1",
+      "title": "K00 task_execution_package 还不是被 runner 消费的执行包",
+      "evidence": "task_execution_package_DOC-*.json 存在，但未发现统一 task runner / scheduler 消费记录",
+      "root_cause": "目前任务包偏“档案化”，不是“HER 可调度执行单元”",
+      "impact": "文档被保存/映射了，但未强制驱动下一阶段生成、验证和状态回写",
+      "recommended_fix": "建立 task_package_queue.json + k00_task_runner contract：status=pending/running/accepted/handoff_consumed，并让下游写 consumed_by"
+    },
+    {
+      "id": "ROOT-006",
+      "severity": "P1",
+      "title": "验收偏文件/锚点存在检查，缺少“内容完整度/字段覆盖率/下游消费”检查",
+      "evidence": "verification_DOC-20260511-005 为 68/68，但 field_dictionary 对部分对象仅有 primary_id 最小字段",
+      "root_cause": "验证器证明“文件存在/锚点存在”，没有证明“每个对象字段都完整抽取、可被 schema/contract 使用”",
+      "impact": "看起来通过，但专业化不足；文档内容没有完全转成机器可用数据模型",
+      "recommended_fix": "升级 acceptance gate：对象覆盖率、字段分类覆盖率、关系覆盖率、phase reader 覆盖率、downstream consumer 覆盖率"
+    },
+    {
+      "id": "ROOT-007",
+      "severity": "P2",
+      "title": "00_domain/field_dictionary.yaml 扩展名是 YAML 但内容是 JSON",
+      "evidence": "文件以 { 开头，虽然 JSON 是 YAML 子集，但不符合人工/系统约定",
+      "root_cause": "快速生成时用 JSON dump 到 .yaml，造成“像文件有了但不够正式”",
+      "impact": "降低专业感，也可能影响 YAML-only 工具链",
+      "recommended_fix": "改为真正 YAML 或改扩展名为 .json，并在 contract 中固定格式"
+    },
+    {
+      "id": "ROOT-008",
+      "severity": "P1",
+      "title": "上位方法论与派生文件之间缺少追踪矩阵",
+      "evidence": "未发现 methodology_to_plane_trace_matrix.json / coverage matrix",
+      "root_cause": "K00 为每份文档单独建档，但没有把“方法论条款→治理/领域/数据/控制资产”的覆盖状态统一展示",
+      "impact": "用户只能看到单个文档完成，看不到总纲是否真正被逐条落实",
+      "recommended_fix": "生成 methodology_implementation_trace_matrix.json，逐条标记 covered_by/missing/degraded/next_task"
+    }
+  ],
+  "recommended_repair_order": [
+    "P0-1 建立 current_system_state + phase_registry + system_asset_index，消除 competing next stage",
+    "P0-2 生成 Data Plane，因为 Domain handoff 已指向 data_plane.md",
+    "P0-3 补 P00/P01 controller registry stubs，使文档资产能被阶段引用",
+    "P1-1 建立 methodology implementation trace matrix",
+    "P1-2 升级 K00 acceptance gate，从文件锚点检查升级为 coverage/downstream-consumer 检查",
+    "P1-3 建立 task package queue/runner consumption 状态",
+    "P2-1 修正 YAML/JSON 格式一致性"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false
+  }
+}

@@ -1,0 +1,37 @@
+controller_id: I01_FULL_PHASE_CONSISTENCY_AUDIT
+version: '1.0'
+type: Integration Program audit task package
+positioning: P01-P10 进入 Runner/Tool Binding 之前的全链路一致性审计；不是 P11。
+responsibilities:
+- phase responsibility boundary audit
+- IO alignment audit
+- handoff/data request chain audit
+- schema/contract coverage audit
+- status/gap/forbidden/trace/acceptance audit
+- runtime readiness precheck
+- P09/P10 review-upgrade readiness audit
+- findings/fix priority/I02 handoff generation
+forbidden:
+- I01_AUDIT_ONLY
+- NO_P11
+- NO_BUSINESS_LOGIC_CHANGE
+- NO_RUNNER_BINDING_YET
+- NO_TOOL_BINDING_YET
+- NO_PAPER_RUNTIME
+- NO_LIVE_EXECUTION
+- NO_WALLET_SIGNING
+- NO_AUTO_DEPLOY
+upstream:
+- P01-P10 phase controller packages
+- control/index planes
+downstream_allowed:
+- I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+downstream_forbidden:
+- I03_RUNNER_TOOL_BINDING before I02
+- I04_PAPER_RUNTIME before I03
+- LIVE_EXECUTION
+status_codes:
+- I01_READY
+- I01_READY_WITH_GAPS
+- I01_REJECTED
+- I01_BLOCKED

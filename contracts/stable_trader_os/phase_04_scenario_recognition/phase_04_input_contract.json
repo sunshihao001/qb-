@@ -1,0 +1,61 @@
+{
+  "contract_name": "phase_04_scenario_recognition_input_contract",
+  "phase": "phase_04_scenario_recognition_controller",
+  "required_inputs": {
+    "phase_03_handoff_packet": {
+      "path": "03_chip_control/handoff/phase_03_handoff_packet.json",
+      "required": true
+    },
+    "chip_control_summary": {
+      "path": "03_chip_control/chip_control/chip_control_summary.json",
+      "required": true
+    },
+    "dominant_side_status": {
+      "path": "03_chip_control/chip_control/dominant_side_status.json",
+      "required": true
+    },
+    "chip_transfer_status": {
+      "path": "03_chip_control/chip_control/chip_transfer_status.json",
+      "required": true
+    },
+    "counterparty_pressure": {
+      "path": "03_chip_control/chip_control/counterparty_pressure.json",
+      "required": true
+    },
+    "kline_normalized": {
+      "path": "01_data_fact/normalized/kline_normalized.csv",
+      "required": true
+    },
+    "token_market_context": {
+      "path": "01_data_fact/normalized/token_market_context.json",
+      "required": true
+    }
+  },
+  "optional_inputs": {
+    "wallet_structure_decision": {
+      "required": false
+    },
+    "distribution_sell_state": {
+      "required": false
+    },
+    "backflow_risk_state": {
+      "required": false
+    },
+    "quote_security_normalized": {
+      "required": false
+    }
+  },
+  "block_if": [
+    "phase_03_handoff_packet missing",
+    "chip_control_summary missing",
+    "kline_normalized missing",
+    "token_market_context missing",
+    "token_address missing"
+  ],
+  "degrade_if": [
+    "chip_control_status == UNKNOWN_CONTROL",
+    "wallet_structure_decision missing",
+    "quote_security_normalized missing",
+    "kline timeframe insufficient"
+  ]
+}

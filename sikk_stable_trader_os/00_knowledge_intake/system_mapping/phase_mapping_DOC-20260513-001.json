@@ -1,0 +1,22 @@
+{
+  "doc_id": "DOC-20260513-001",
+  "status": "PHASE_MAPPING_READY",
+  "affected_phases": [
+    {
+      "phase": "K00_knowledge_intake_taskization",
+      "impact": "Primary implementation target for KV extraction, cache manifest, and acceptance gate."
+    },
+    {
+      "phase": "P00_system_bootstrap_controller",
+      "impact": "Consume KV methodology to compile control-plane/system-plane updates."
+    },
+    {
+      "phase": "P01_data_fact",
+      "impact": "Can consume field_requirement KV items as data contracts."
+    },
+    {
+      "phase": "P09_system_upgrade",
+      "impact": "Use KV keys for rule upgrade/supersession/replay tracking."
+    }
+  ]
+}

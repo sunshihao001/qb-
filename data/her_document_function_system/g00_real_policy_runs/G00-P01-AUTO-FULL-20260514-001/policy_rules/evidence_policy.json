@@ -1,0 +1,57 @@
+{
+  "policy_id": "evidence_policy_v1",
+  "version": "1.0.0",
+  "evidence_rules": [
+    {
+      "rule_id": "test_plan_not_tested",
+      "claim": "TESTED",
+      "minimum_required_evidence": [
+        "test_command",
+        "exit_code",
+        "stdout_path",
+        "stderr_path",
+        "passed_count",
+        "failed_count"
+      ],
+      "invalid_evidence": [
+        "test_plan",
+        "manual_claim",
+        "expected_output_only"
+      ],
+      "missing_policy": "DOWNGRADE_TO_TEST_PLANNED_ONLY"
+    },
+    {
+      "rule_id": "binding_plan_not_runner_bound",
+      "claim": "RUNNER_BOUND",
+      "minimum_required_evidence": [
+        "command_contract",
+        "safe_dry_run_evidence",
+        "exit_code",
+        "stdout_path",
+        "stderr_path"
+      ],
+      "invalid_evidence": [
+        "binding_plan",
+        "command_plan",
+        "manual_claim"
+      ],
+      "missing_policy": "DOWNGRADE_TO_BINDING_PLANNED_ONLY"
+    },
+    {
+      "rule_id": "policy_candidate_not_active",
+      "claim": "POLICY_ACTIVE",
+      "minimum_required_evidence": [
+        "policy_conflict_report",
+        "active_policy_bundle",
+        "governance_registry",
+        "g00_acceptance_result"
+      ],
+      "invalid_evidence": [
+        "governance_candidate",
+        "pending_policy_bundle",
+        "manual_claim"
+      ],
+      "missing_policy": "DOWNGRADE_TO_POLICY_PENDING"
+    }
+  ]
+}

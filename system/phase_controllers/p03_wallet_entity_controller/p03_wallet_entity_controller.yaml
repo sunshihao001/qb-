@@ -1,0 +1,28 @@
+controller_id: "P03_WALLET_ENTITY_CONTROLLER"
+phase_id: "P03"
+controller_name: "P03 Wallet Entity Controller"
+controller_name_cn: "钱包实体主数据治理控制器"
+version: "v3.0-professional-package"
+status: "PACKAGE_READY_WITH_RUNTIME_GAPS"
+created_from_doc_id: "DOC-20260512-003"
+primary_goal: "Convert P02 wallet fact seeds into wallet entities, relation candidates, behavior features, role candidates, quality/gap records, and P04 handoff packets."
+non_goals:
+  - "confirm_market_maker"
+  - "confirm_dominant_side"
+  - "judge_chip_control"
+  - "judge_distribution"
+  - "generate_evidence"
+  - "classify_scenario"
+  - "approve_strategy"
+  - "output_paper_ready"
+  - "enable_live_execution"
+upstream:
+  - "P02_SOURCE_DATA_FACT_CONTROLLER"
+downstream_only:
+  - "P04_CHIP_STRUCTURE_CONTROLLER"
+runtime_allowed: false
+paper_runtime_allowed: false
+live_runtime_allowed: false
+paper_only: true
+real_trade_enabled: false
+safety_anchor: "PACKAGE_ONLY_RUNTIME_BLOCKED"

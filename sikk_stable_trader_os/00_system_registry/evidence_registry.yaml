@@ -1,0 +1,41 @@
+registry_id: evidence_registry
+version: '2.0'
+updated_at: '2026-05-11T02:27:03Z'
+levels:
+- code: EVIDENCE_A_STRONG
+  rank: 1
+  meaning: machine-validated source + schema/contract pass + counter-evidence checked
+  can_support: strong positive or hard negative when acceptance gate also passes
+- code: EVIDENCE_B_MEDIUM
+  rank: 2
+  meaning: source present and normalized but partial validation or optional context
+    missing
+  can_support: degraded pass / observe / warning
+- code: EVIDENCE_C_WEAK
+  rank: 3
+  meaning: incomplete source or degraded derivation
+  can_support: gap only; cannot support strong positive decision
+- code: EVIDENCE_D_INSUFFICIENT
+  rank: 4
+  meaning: missing or conflicted source
+  can_support: pause/block; no positive interpretation
+- code: EVIDENCE_X_COUNTER
+  rank: 0
+  meaning: counter evidence or invalidation evidence
+  can_support: negative/hard-negative/rejection
+required_record_fields:
+- field_name
+- field_source
+- source_path_or_api
+- evidence_level
+- counter_evidence
+- missing
+- normalization_rule
+- acceptance_gate_ref
+- audit_ref
+global_evidence_policy:
+  all_judgements_require_field_source: true
+  counter_evidence_check_required: true
+  report_text_not_evidence_source: true
+  ai_inference_must_be_marked_non_fact: true
+  missing_required_field_must_not_be_filled_by_guess: true

@@ -1,0 +1,21 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P05_structure_position",
+  "artifact_kind": "output",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "price_usd": null,
+  "market_cap_usd": null,
+  "liquidity_usd": null,
+  "avwap_available": false,
+  "poc_available": false,
+  "overextension_check": "DEGRADED_POSITION_UNKNOWN",
+  "position_status": "DEGRADED"
+}

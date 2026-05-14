@@ -1,0 +1,14 @@
+{
+  "expected_status_family": "READY_WITH_GAPS",
+  "must_not_claim": [
+    "RUNNER_BOUND",
+    "POLICY_ACTIVE",
+    "PIPELINE_ACCEPTED"
+  ],
+  "required_artifacts": [
+    "replay_input",
+    "replay_output",
+    "replay_trace",
+    "replay_comparison"
+  ]
+}

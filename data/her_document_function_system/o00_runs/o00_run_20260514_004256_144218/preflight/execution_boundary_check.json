@@ -1,0 +1,10 @@
+{
+  "status": "PASSED",
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "doc_id": "DOC-20260513-P01-COGNITIVE-UPGRADE-001",
+  "created_at": "2026-05-13T05:27:17Z",
+  "handoff_status": "K00_HANDOFF_READY",
+  "from_phase": "K00",
+  "to_phase": "P01_data_fact_controller_package_or_code_landing",
+  "handoff_type": "semantic_authority_upgrade",
+  "authorized_next_actions": [
+    "patch_P01_contracts",
+    "patch_P01_schema",
+    "patch_P01_acceptance_gate",
+    "patch_downstream_read_policy"
+  ],
+  "blocked_actions": [
+    "P02_strategy_optimization",
+    "paper_runtime_start",
+    "live_runtime_start",
+    "direct_raw_api_consumption_by_downstream"
+  ],
+  "core_claims": {
+    "p01_core_output": "data_fact_handoff_packet.json",
+    "raw_data_role": "evidence_input_only_not_downstream_contract",
+    "connector_core_conditions": [
+      "GMGN_statusized_connector",
+      "OKX_statusized_connector"
+    ],
+    "downstream_read_policy": "downstream_must_read_P01_authorized_handoff_packet_not_raw_interface_outputs"
+  },
+  "required_p01_output": "data_fact_handoff_packet.json",
+  "gap_detection_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/gap_detection/gap_detection_DOC-20260513-P01-COGNITIVE-UPGRADE-001.json",
+  "task_package_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/task_execution_package_DOC-20260513-P01-COGNITIVE-UPGRADE-001.json"
+}

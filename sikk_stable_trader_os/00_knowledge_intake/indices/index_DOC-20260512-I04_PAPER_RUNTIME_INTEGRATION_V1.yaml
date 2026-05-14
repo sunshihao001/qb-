@@ -1,0 +1,17 @@
+document_index_record:
+  doc_id: DOC-20260512-I04_PAPER_RUNTIME_INTEGRATION_V1
+  controller: I04_PAPER_RUNTIME_INTEGRATION
+  system_files_expected: 43
+  runtime_dirs_expected: 26
+  paper_runtime_dirs_expected: 15
+  primary_topics:
+  - paper runtime
+  - P08 permission gate
+  - P09 replay input
+  - I04 to I05 handoff
+  - safety boundary
+  read_after:
+  - system_methodology_blueprint.md
+  - professional_build_order.md
+  - I03 handoff
+  - P08 handoff

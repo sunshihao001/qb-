@@ -1,0 +1,33 @@
+{
+  "doc_id": "DOC-20260511-002",
+  "created_at": "2026-05-11T12:06:52Z",
+  "affected_phases": [
+    {
+      "phase": "K00_knowledge_intake",
+      "impact_level": "PRIMARY",
+      "reason": "资料完整定义 K00 9 文件控制器包与运行逻辑。"
+    },
+    {
+      "phase": "P00_system_boundary",
+      "impact_level": "HIGH",
+      "reason": "资料规定不得跳过 P00，且系统边界/禁止事项受影响。"
+    },
+    {
+      "phase": "P01_data_fact",
+      "impact_level": "MEDIUM",
+      "reason": "资料规定知识输入文件化、登记、索引与合约输出。"
+    },
+    {
+      "phase": "P09_self_upgrade",
+      "impact_level": "HIGH",
+      "reason": "资料属于系统规则升级与控制器标准强化。"
+    },
+    {
+      "phase": "system_methodology_update",
+      "impact_level": "HIGH",
+      "reason": "资料影响 HER 执行协议、九大平面与 K00 方法论标准。"
+    }
+  ],
+  "next_phase_recommendation": "system_methodology_update",
+  "next_action": "verify_existing_K00_controller_and_total_control_skill_coverage"
+}

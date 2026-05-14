@@ -1,0 +1,12 @@
+doc_id: DOC-20260512-006
+mapping_type: phase_controller_package_design
+target_phase: P06_SCENARIO_RECOGNITION_CONTROLLER
+upstream_dependencies:
+- P05_EVIDENCE_CONTROLLER
+downstream_consumers:
+- P07_STRATEGY_GATE_CONTROLLER
+deprecated_or_blocked_paths:
+- P06_TO_PAPER_RUNTIME
+- P06_TO_LIVE_EXECUTION
+- P06_DIRECT_STRATEGY_GATE_DECISION
+status: MAPPING_READY

@@ -1,0 +1,113 @@
+candidate_id: ''
+source_asset_id: ''
+source_file_path: ''
+source_asset_type: ''
+created_by_stage: K00_knowledge_intake_taskization
+target_compiler_stage: P00_system_bootstrap_controller
+created_at: ''
+phase_controller_candidate:
+  proposed_phase_id: ''
+  proposed_phase_name_cn: ''
+  proposed_phase_type: ''
+  proposed_status: CANDIDATE_ONLY
+  proposed_authority_scope: ''
+  proposed_primary_goal: ''
+  proposed_non_goals: []
+system_goal_decomposition:
+  system_goal: ''
+  phase_goal: ''
+  sub_goals: []
+  decision_questions: []
+  expected_system_effect: ''
+task_tree_candidate:
+  root_task: ''
+  task_nodes:
+  - task_id: ''
+    task_name_cn: ''
+    task_type: ''
+    description: ''
+    required_inputs: []
+    required_outputs: []
+    depends_on: []
+    acceptance_gate: []
+    failure_policy: ''
+    downstream_handoff: ''
+input_contract_candidate:
+  required_inputs: []
+  optional_inputs: []
+  forbidden_inputs: []
+  missing_input_policy: ''
+  source_requirements: []
+output_contract_candidate:
+  required_outputs: []
+  optional_outputs: []
+  output_format_requirements: []
+  schema_required: true
+  validation_rules: []
+atomic_skill_requirements:
+  required_atomic_skills:
+  - skill_name_candidate: ''
+    skill_purpose: ''
+    input_needed: []
+    output_expected: []
+    can_be_stub: true
+    required_for_v1: false
+tool_binding_requirements:
+  code_tools_needed: []
+  runner_needed: false
+  cli_needed: false
+  validation_tool_needed: true
+  replay_needed: false
+acceptance_gate_candidate:
+  file_level_acceptance: []
+  structure_level_acceptance: []
+  semantic_level_acceptance: []
+  consumption_level_acceptance: []
+  runtime_level_acceptance: []
+  blocking_conditions: []
+state_writeback_candidate:
+  required: true
+  writeback_targets:
+  - 00_knowledge_intake/runtime/k00_runtime_state.json
+  - 00_knowledge_intake/index/knowledge_asset_index.json
+  forbidden_writeback_targets:
+  - 00_control/current_system_state.json
+  - 00_control/phase_registry.yaml
+handoff_packet_candidate:
+  source_stage: K00_knowledge_intake_taskization
+  target_stage: P00_system_bootstrap_controller
+  required_handoff_fields:
+  - handoff_id
+  - source_asset_id
+  - extracted_requirements
+  - phase_controller_candidate
+  - known_gaps
+  - blocking_gaps
+  - non_blocking_gaps
+  - next_recommended_stage
+  target_stage_role_cn: 方法论编译与系统建造控制器
+evidence_and_contradiction_requirements:
+  field_source_required: true
+  evidence_level_required: true
+  contradiction_record_required: true
+  failure_policy_required: true
+  review_path_required: true
+gap_assessment:
+  blocking_gaps: []
+  non_blocking_gaps: []
+  unresolved_questions: []
+  p00_review_required: true
+status:
+  candidate_status: READY_FOR_P00_COMPILATION
+  registration_status: NOT_REGISTERED
+  runner_binding_status: NOT_BOUND
+  downstream_consumption_status: WAITING_P00
+  paper_only: true
+  real_trade_enabled: false
+proposed_phase_id: ''
+proposed_phase_name_cn: ''
+proposed_authority_scope: ''
+registration_status: NOT_REGISTERED
+downstream_consumption_status: WAITING_P00
+paper_only: true
+real_trade_enabled: false

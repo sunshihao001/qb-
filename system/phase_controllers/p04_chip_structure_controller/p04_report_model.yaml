@@ -1,0 +1,18 @@
+report_sections:
+  - "input_manifest_summary"
+  - "chip_participant_universe_summary"
+  - "supply_denominator_summary"
+  - "chip_accounting_summary"
+  - "early_wallet_retention_summary"
+  - "structural_group_holding_summary"
+  - "chip_concentration_summary"
+  - "chip_transfer_status_summary"
+  - "distribution_progress_summary"
+  - "counterparty_pressure_summary"
+  - "chip_cost_basis_summary"
+  - "chip_structure_quality_summary"
+  - "p05_data_request_summary"
+  - "handoff_summary"
+  - "gap_summary"
+  - "blocked_paths"
+must_state_candidate_only: true

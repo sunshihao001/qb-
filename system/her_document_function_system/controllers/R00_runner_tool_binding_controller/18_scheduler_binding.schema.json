@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scheduler dry-run binding schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "scheduler_binding_id",
+    "job_type",
+    "schedule",
+    "enabled_by_default",
+    "input_source",
+    "output_dir",
+    "forbidden_actions"
+  ],
+  "properties": {
+    "scheduler_binding_id": {
+      "type": "string"
+    },
+    "job_type": {
+      "const": "SAFE_DRY_RUN_ONLY"
+    },
+    "schedule": {
+      "enum": [
+        "manual_or_disabled_by_default"
+      ]
+    },
+    "enabled_by_default": {
+      "const": false
+    },
+    "input_source": {
+      "type": "string"
+    },
+    "output_dir": {
+      "type": "string"
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "contains": {
+        "const": "live_runtime"
+      }
+    }
+  }
+}

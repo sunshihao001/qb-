@@ -1,0 +1,117 @@
+{
+  "task_package_id": "TASK-PKG-20260511-001",
+  "source_doc_id": "DOC-20260511-001",
+  "package_type": "phase_execution_package",
+  "created_for": "HER",
+  "purpose": "将用户输入的系统设计资料转化为可调度、可续跑、可验收的阶段任务",
+  "system_understanding": {
+    "is_plain_document": false,
+    "is_system_design_input": true,
+    "is_phase_controller_related": true,
+    "requires_taskization": true,
+    "requires_context_independent_execution": true
+  },
+  "affected_system_planes": [
+    "governance_plane",
+    "control_plane",
+    "data_plane",
+    "execution_plane",
+    "verification_plane"
+  ],
+  "affected_phases": [
+    "K00_knowledge_intake",
+    "P00_system_boundary",
+    "P01_data_fact",
+    "P09_self_upgrade"
+  ],
+  "main_objective": "更新 HER 文档输入处理方式，使其从普通阅读转为知识摄取、任务化、阶段执行包生成流程",
+  "objective_tree": {
+    "goal": "建立文档知识输入到自动化阶段任务执行包的闭环流程",
+    "sub_goals": [
+      "保存原始资料",
+      "建立资料登记",
+      "生成文档护照",
+      "生成系统映射",
+      "生成缺口列表",
+      "生成阶段任务包",
+      "生成验收门",
+      "生成状态文件",
+      "生成交接包",
+      "生成自动触发下一阶段决策",
+      "验收通过且无停止条件时自动进入下一阶段"
+    ]
+  },
+  "required_phase_package_files": [
+    "01_phase_manifest.yaml",
+    "02_phase_context_pack.md",
+    "03_phase_objective_tree.yaml",
+    "04_phase_input_contract.json",
+    "05_phase_output_contract.json",
+    "06_phase_execution_protocol.md",
+    "07_phase_acceptance_gate.yaml",
+    "08_phase_state.json",
+    "09_phase_handoff_packet.schema.json"
+  ],
+  "execution_policy": {
+    "must_not_stop_after_one_stage": true,
+    "must_evaluate_stage_completion": true,
+    "must_continue_if_gate_passed": true,
+    "must_update_phase_state_every_task": true,
+    "must_generate_handoff_packet": true,
+    "must_generate_auto_trigger_decision": true,
+    "must_persist_auto_trigger_state": true
+  },
+  "acceptance_policy": {
+    "completion_is_not_markdown_written": true,
+    "completion_requires_outputs": true,
+    "completion_requires_state_update": true,
+    "completion_requires_handoff": true,
+    "completion_requires_next_phase_decision": true,
+    "completion_requires_auto_trigger_decision": true
+  },
+  "next_action": "evaluate_auto_trigger_and_enter_next_phase_if_allowed",
+  "auto_trigger_policy": {
+    "enabled": true,
+    "decision_source": "acceptance_gate",
+    "requires_state_persistence": true,
+    "requires_handoff_packet": true,
+    "requires_next_phase_recommendation": true,
+    "stop_on_blocker": true,
+    "allowed_next_phases": [
+      "P00_system_boundary",
+      "P01_data_fact",
+      "P09_self_upgrade",
+      "HER_task_router",
+      "gap_closure_planner"
+    ],
+    "forbidden_next_phases": [
+      "direct_trade_execution",
+      "swap_execution",
+      "P07_real_execution"
+    ],
+    "decision_artifact": "auto_trigger_decisions/auto_trigger_decision_<doc_id>.json",
+    "state_fields": [
+      "auto_trigger.enabled",
+      "auto_trigger.decision_status",
+      "auto_trigger.next_phase_allowed",
+      "auto_trigger.next_phase_recommendation",
+      "auto_trigger.stop_reason",
+      "auto_trigger.decision_artifact"
+    ],
+    "continue_when": [
+      "phase_status in [PHASE_READY,K00_ACCEPTED]",
+      "acceptance_gate == PASS",
+      "no BLOCKER gap",
+      "next_phase_recommendation exists",
+      "handoff_packet schema valid"
+    ],
+    "stop_when": [
+      "PHASE_REJECTED",
+      "PHASE_ERROR",
+      "BLOCKER gap",
+      "missing critical input",
+      "next phase requires human input",
+      "next phase not allowed"
+    ]
+  }
+}

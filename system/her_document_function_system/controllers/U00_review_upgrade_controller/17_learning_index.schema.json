@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Learning Index",
+  "type": "object",
+  "required": [
+    "learning_entries",
+    "anti_patterns",
+    "success_patterns",
+    "recurring_gaps",
+    "controller_upgrade_rules",
+    "status"
+  ],
+  "properties": {
+    "learning_entries": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "anti_patterns": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "success_patterns": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "recurring_gaps": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "controller_upgrade_rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "INDEXED",
+        "PARTIAL",
+        "EMPTY"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

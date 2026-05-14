@@ -1,0 +1,8 @@
+version: '2.0'
+legacy_runtime_default: read_only_quarantine
+forbid:
+- legacy_script_as_formal_phase_without_contract
+- legacy_runner_write_control_state_directly
+allowed:
+- read_only_reference
+- compatibility_adapter_after_acceptance

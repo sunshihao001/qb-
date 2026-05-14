@@ -1,0 +1,16 @@
+{
+  "doc_id": "DOC-20260514-PROFESSIONAL-REQ-001",
+  "phase": "K00",
+  "status": "K00_ACCEPTED_WITH_DOWNSTREAM_GAPS",
+  "next_allowed_routes": [
+    "HER_DOC_SYSTEM_REVIEW",
+    "HER_DOC_SYSTEM_AUDIT",
+    "HER_DOC_PIPELINE_SAFE_MODE"
+  ],
+  "blocked_routes": [
+    "LIVE_RUNTIME",
+    "WALLET_SIGNING",
+    "AUTO_SWAP",
+    "PRODUCTION_READY_CLAIM"
+  ]
+}

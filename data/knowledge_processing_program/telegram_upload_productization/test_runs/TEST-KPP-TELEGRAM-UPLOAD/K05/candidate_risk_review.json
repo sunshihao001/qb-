@@ -1,0 +1,9 @@
+{
+  "risk_level": "LOW",
+  "production_mutation_allowed": false,
+  "blocked_actions": [
+    "trading",
+    "signing",
+    "broadcast"
+  ]
+}

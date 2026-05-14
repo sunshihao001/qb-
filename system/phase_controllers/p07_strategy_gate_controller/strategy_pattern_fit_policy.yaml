@@ -1,0 +1,17 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+policy_id: P07_STRATEGY_PATTERN_FIT_POLICY
+no_single_score_policy: true
+fit_dimensions: [scenario_fit_score, evidence_fit_score, chip_structure_fit_score, market_position_fit_score, risk_flag_penalty_score, data_quality_penalty_score]
+fit_requirements:
+  PAPER_CANDIDATE:
+    - no_hard_negative
+    - scenario_allowed
+    - evidence_supports_or_supports_with_limitations
+    - chip_supports_or_supports_with_limitations
+    - market_position_not_chasing
+    - p08_required_checks_generated
+  OBSERVE: [weak_scenario_or_evidence_without_hard_block]
+  PAUSE: [unresolved_conflict_or_refresh_required_or_security_stale]
+  BLOCK: [hard_negative_or_blocking_conflict_or_chasing_or_exit_liquidity_risk]

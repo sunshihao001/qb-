@@ -1,0 +1,13 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+policy_id: QUOTE_CONSISTENCY_POLICY
+thresholds:
+  minor_deviation_pct: 5
+  major_deviation_pct: 12
+  block_deviation_pct: 20
+actions:
+  QUOTE_CONSISTENT: SUPPORTS_RUNTIME
+  QUOTE_MINOR_DEVIATION: ALLOW_WITH_LIMITATION
+  QUOTE_MAJOR_DEVIATION: BLOCK_RUNTIME
+  QUOTE_UNUSABLE: BLOCK_RUNTIME

@@ -1,0 +1,88 @@
+generated_at: '2026-05-11T00:00:00Z'
+source_authority_order:
+- 00_domain/field_dictionary.yaml
+- 00_domain/domain_object_registry.yaml
+- 00_governance/governance_plane.md
+- 00_methodology/system_methodology_blueprint.md
+field_classes:
+  document_metadata:
+  - doc_id
+  - source_hash
+  - raw_input_path
+  - passport_path
+  - intake_status
+  system_control:
+  - current_step
+  - phase_status
+  - next_stage
+  - blocking_gaps
+  - degraded_gaps
+  - acceptance_status
+  token_identity:
+  - chain
+  - token_address
+  - symbol
+  - name
+  market_fact:
+  - price
+  - liquidity
+  - volume
+  - timestamp
+  wallet_fact:
+  - wallet_address
+  - role
+  - balance
+  - transfer_edges
+  - trade_edges
+  evidence:
+  - source_path
+  - evidence_type
+  - confidence
+  - counter_evidence
+  handoff:
+  - from_phase
+  - to_phase
+  - status
+  - artifact_paths
+  - gap_register
+forbidden_field_uses:
+- missing_as_zero_without_label
+- inference_as_fact
+- positive_signal_without_counter_evidence
+- trading_execution_fields_in_data_plane
+safety_boundary:
+  paper_only: true
+  read_only_research: true
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  auto_swap_enabled: false
+  secret_access: not_requested_not_used
+fields:
+- field: token_address
+  source: TO_BE_BOUND_BY_P01
+  missing_policy: BLOCK_IF_CORE_ELSE_DEGRADE
+- field: chain
+  source: TO_BE_BOUND_BY_P01
+  missing_policy: BLOCK_IF_CORE_ELSE_DEGRADE
+- field: wallet_address
+  source: TO_BE_BOUND_BY_P01
+  missing_policy: BLOCK_IF_CORE_ELSE_DEGRADE
+- field: tx_hash
+  source: TO_BE_BOUND_BY_P01
+  missing_policy: BLOCK_IF_CORE_ELSE_DEGRADE
+- field: block_time
+  source: TO_BE_BOUND_BY_P01
+  missing_policy: BLOCK_IF_CORE_ELSE_DEGRADE
+- field: amount
+  source: TO_BE_BOUND_BY_P01
+  missing_policy: BLOCK_IF_CORE_ELSE_DEGRADE
+- field: counterparty
+  source: TO_BE_BOUND_BY_P01
+  missing_policy: BLOCK_IF_CORE_ELSE_DEGRADE
+- field: evidence_level
+  source: TO_BE_BOUND_BY_P01
+  missing_policy: BLOCK_IF_CORE_ELSE_DEGRADE
+source_doc_id: DOC-20260511-017
+updated_at: '2026-05-11T14:26:07.280460+00:00'
+paper_only_required: true

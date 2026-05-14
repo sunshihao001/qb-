@@ -1,0 +1,21 @@
+{
+  "acceptance_id": "a00_acceptance_RUN-20260514-HER-CLOSED-LOOP-P0-SAFE",
+  "final_status": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS",
+  "k00_status": "PASSED",
+  "f00_status": "PASSED_WITH_GAPS",
+  "v00_status": "PASSED_WITH_GAPS",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "missing_implementation_evidence",
+    "real_tool_execution_limited_to_safe_mode",
+    "governance_candidate_not_applied"
+  ],
+  "ready_for_h00": true,
+  "ready_for_production": false,
+  "forbidden_claims_blocked": [
+    "PRODUCTION_READY",
+    "FULLY_AUTOMATED",
+    "LIVE_READY",
+    "IMPLEMENTED_WITHOUT_EVIDENCE"
+  ]
+}

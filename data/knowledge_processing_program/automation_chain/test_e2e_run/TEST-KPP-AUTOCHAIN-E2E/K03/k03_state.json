@@ -1,0 +1,18 @@
+{
+  "stage_id": "K03",
+  "run_id": "TEST-KPP-AUTOCHAIN-E2E",
+  "status": "K03_ACCEPTED",
+  "started_at": "2026-05-13T06:37:07Z",
+  "ended_at": "2026-05-13T06:37:07Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K03/functional_object_registry.json",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K03/assumption_registry.json",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K03/constraint_registry.json",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K03/unknown_gap_registry.json",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K03/k03_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

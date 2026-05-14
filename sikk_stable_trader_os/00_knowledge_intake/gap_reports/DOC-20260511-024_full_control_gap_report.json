@@ -1,0 +1,14 @@
+{
+  "doc_id": "DOC-20260511-024",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "phase_controllers_not_all_code_implemented",
+    "acceptance_gates_not_all_automated",
+    "legacy_mapping_not_scanned",
+    "skill_tool_registry_not_runtime_verified",
+    "handoff_not_integration_tested",
+    "state_machine_not_attached_to_real_orchestrator",
+    "telegram_dashboard_not_connected"
+  ],
+  "status": "READY_FOR_P00_FULL_CONTROL_PLANE_LANDING"
+}

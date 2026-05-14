@@ -1,0 +1,33 @@
+{
+  "candidates": [
+    {
+      "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+      "chain": "solana",
+      "symbol": "LOBSTER",
+      "market_cap": 501176.6401830906,
+      "liquidity_usd": 64207.5457356526,
+      "safety_block": false,
+      "market_block": false,
+      "wallet_structure_status": "WALLET_SUPPORT",
+      "kline_status": "RAW_KLINE_PENDING",
+      "strategy_status": "PAPER_READY_CANDIDATE",
+      "raw_stage_status": {
+        "stage_01_candidate_discovery": "PASS",
+        "stage_02_safety_gate": "PASS",
+        "stage_03_market_gate": "PASS",
+        "stage_05_early_wallet_analyzer": "PASS",
+        "stage_07_holder_cluster": "PASS",
+        "stage_09_chip_distribution_analyzer": "PASS"
+      },
+      "raw_inference": {
+        "market_reasons": [],
+        "holder_cluster_status": "OKX_CLUSTER_EVIDENCE",
+        "chip_distribution_status": "DUAL_SOURCE_AVAILABLE"
+      }
+    }
+  ],
+  "created_at": "2026-05-11T11:54:55Z",
+  "candidate_source": "gmgn_okx_readonly_raw_adapter",
+  "adapter_stage_outputs_path": "/root/sikk-gmgn/data/source_wallet_bot/comparison_tests/20260511_115455/legacy_source_auto_readonly/source_wallet_bot/paper/4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump/wallet_data/normalized/gmgn_okx_raw_stage_outputs.json",
+  "gmgn_okx_readiness": "READY_FOR_READONLY_RUN"
+}

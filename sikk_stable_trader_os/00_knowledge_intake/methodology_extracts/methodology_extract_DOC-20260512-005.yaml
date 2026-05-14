@@ -1,0 +1,15 @@
+doc_id: DOC-20260512-005
+methodology_requirements:
+- facts_are_not_evidence
+- evidence_must_bind_hypothesis
+- counter_evidence_required
+- conflicts_and_unknowns_must_propagate
+- no_single_score_policy
+- handoff_only_to_P06
+required_files_count: 39
+runtime_dirs_count: 24
+safety_invariants:
+- paper_only_true
+- real_trade_enabled_false
+- paper_runtime_blocked
+- live_execution_blocked

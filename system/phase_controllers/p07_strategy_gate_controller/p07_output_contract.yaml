@@ -1,0 +1,29 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+contract_id: P07_OUTPUT_CONTRACT
+version: v3.0
+allowed_decisions: [OBSERVE, PAUSE, BLOCK, PAPER_CANDIDATE, HUMAN_CONFIRMATION_REQUIRED, STRATEGY_GATE_REJECTED]
+required_outputs:
+  - strategy_gate_input_manifest
+  - hard_negative_evaluation_record
+  - scenario_gate_evaluation_record
+  - evidence_gate_evaluation_record
+  - chip_structure_gate_evaluation_record
+  - data_quality_gate_evaluation_record
+  - scenario_conflict_gate_record
+  - market_position_context_gate_record
+  - strategy_pattern_fit_record
+  - strategy_risk_flag_evaluation_record
+  - strategy_invalidation_binding_record
+  - observe_condition_record
+  - pause_condition_record
+  - strategy_block_reason_record
+  - strategy_candidate_record
+  - human_confirmation_requirement_record
+  - strategy_gate_decision_record
+  - strategy_usage_permission_record
+  - p08_execution_risk_data_request_packet
+  - p07_to_p08_handoff_packet
+forbidden_outputs: [buy_signal, paper_runtime_started, paper_runtime_allowed_without_p08, live_execution_allowed, auto_order, wallet_signing]
+downstream_only: P08_EXECUTION_RISK_CONTROLLER

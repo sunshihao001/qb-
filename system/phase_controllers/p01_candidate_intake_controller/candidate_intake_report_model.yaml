@@ -1,0 +1,34 @@
+candidate_intake_report:
+  summary:
+  - total_inputs_received
+  - total_candidates_created
+  - total_duplicates_merged
+  - total_ready_for_p02
+  - total_ready_with_gaps
+  - total_rejected
+  - total_blocked
+  source_breakdown:
+  - by_source_type
+  - source_quality_distribution
+  identity_breakdown:
+  - verified_count
+  - verified_with_gaps_count
+  - conflicted_count
+  - rejected_count
+  gap_summary:
+  - blocking_gaps
+  - critical_gaps
+  - high_gaps
+  - medium_gaps
+  - low_gaps
+  p02_request_summary:
+  - total_data_requests
+  - most_common_missing_fields
+  - high_priority_requests
+  compliance:
+  - p01_forbidden_outputs_detected
+  - live_execution_path_detected
+  - all_candidates_have_trace
+  - handoff_ready
+  next_stage:
+    allowed_next_controller: P02_SOURCE_DATA_FACT_CONTROLLER

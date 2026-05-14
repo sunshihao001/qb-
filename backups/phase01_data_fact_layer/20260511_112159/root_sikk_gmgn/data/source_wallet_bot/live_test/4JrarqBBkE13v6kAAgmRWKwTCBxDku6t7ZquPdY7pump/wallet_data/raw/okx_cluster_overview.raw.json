@@ -1,0 +1,30 @@
+{
+  "source": "okx",
+  "endpoint": "cluster_overview",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "cluster-overview",
+    "--address",
+    "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-11T10:29:13Z",
+  "finished_at": "2026-05-11T10:29:13Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": {
+      "clusterConcentration": "Low",
+      "holderNewAddressPercent": "0.05900",
+      "holderSameCreationTimePercent": "0.01300",
+      "holderSameFundSourcePercent": "0.53700",
+      "rugPullPercent": "--",
+      "top100HoldingsPercent": "0.69170"
+    }
+  }
+}

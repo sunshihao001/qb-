@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HER Document Function System Controller Registry",
+  "type": "object",
+  "required": [
+    "registry_id",
+    "registry_version",
+    "created_at",
+    "repo_root",
+    "controllers",
+    "global_forbidden_actions",
+    "governance_policy_ref"
+  ],
+  "properties": {
+    "registry_id": {
+      "type": "string"
+    },
+    "registry_version": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "repo_root": {
+      "type": "string"
+    },
+    "governance_policy_ref": {
+      "type": "string"
+    },
+    "global_forbidden_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "controllers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "controller_id",
+          "controller_name",
+          "controller_type",
+          "controller_path",
+          "phase_id",
+          "input_contract",
+          "output_contract",
+          "execution_protocol",
+          "acceptance_gate",
+          "state_file",
+          "handoff_schema",
+          "trace_spec",
+          "recovery_policy",
+          "default_mode",
+          "required_upstream",
+          "allowed_downstream",
+          "forbidden_actions",
+          "status"
+        ],
+        "properties": {
+          "controller_id": {
+            "type": "string"
+          },
+          "controller_name": {
+            "type": "string"
+          },
+          "controller_type": {
+            "type": "string"
+          },
+          "phase_id": {
+            "type": "string"
+          },
+          "controller_path": {
+            "type": "string"
+          },
+          "input_contract": {
+            "type": "string"
+          },
+          "output_contract": {
+            "type": "string"
+          },
+          "execution_protocol": {
+            "type": "string"
+          },
+          "acceptance_gate": {
+            "type": "string"
+          },
+          "state_file": {
+            "type": "string"
+          },
+          "handoff_schema": {
+            "type": "string"
+          },
+          "trace_spec": {
+            "type": "string"
+          },
+          "recovery_policy": {
+            "type": "string"
+          },
+          "default_mode": {
+            "type": "string",
+            "enum": [
+              "READ_ONLY",
+              "DESIGN_ONLY",
+              "SAFE_WRITE",
+              "SAFE_TEST",
+              "SAFE_REPLAY",
+              "SAFE_DRY_RUN",
+              "EVIDENCE_REVIEW",
+              "QUEUE_WRITE",
+              "POLICY_WRITE",
+              "ORCHESTRATE_ONLY"
+            ]
+          },
+          "required_upstream": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowed_downstream": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "required_inputs_summary": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "required_outputs_summary": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "forbidden_actions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "policy_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "REGISTERED",
+              "READY",
+              "READY_WITH_GAPS",
+              "DESIGN_ONLY",
+              "MISSING_FILES",
+              "BLOCKED",
+              "DEPRECATED"
+            ]
+          },
+          "gaps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

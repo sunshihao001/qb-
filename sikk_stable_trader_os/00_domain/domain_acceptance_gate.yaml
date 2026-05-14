@@ -1,0 +1,8 @@
+domain_acceptance_gate:
+  required_checks:
+    - domain_objects_registered
+    - relations_registered
+    - scenario_taxonomy_registered
+    - wallet_role_taxonomy_registered
+    - domain_to_data_demand_map_exists
+  status_after_p00: CREATED_NEEDS_DETAILED_SEMANTIC_EXPANSION

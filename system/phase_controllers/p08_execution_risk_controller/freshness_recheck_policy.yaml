@@ -1,0 +1,11 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+policy_id: FRESHNESS_RECHECK_POLICY
+required_fresh_inputs: [QUOTE, LIQUIDITY, SECURITY]
+conditional_fresh_inputs: [HOLDER_SNAPSHOT, WALLET_DELTA, SCENARIO_RERUN, EVIDENCE_RERUN]
+actions:
+  FRESH_ENOUGH_FOR_PAPER_RUNTIME: ALLOW
+  FRESH_WITH_LIMITATIONS: ALLOW_WITH_LIMITATIONS
+  REFRESH_REQUIRED: PAUSE_RUNTIME
+  STALE_BLOCK_RUNTIME: BLOCK_RUNTIME

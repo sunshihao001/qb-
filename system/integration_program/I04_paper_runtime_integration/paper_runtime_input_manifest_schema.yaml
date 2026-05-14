@@ -1,0 +1,13 @@
+record_type: paper_runtime_input_manifest
+fields:
+- manifest_id
+- generated_at
+- source_packets
+- permission_summary
+- candidate_summary
+- gap_summary
+- trace_id
+rules:
+- must reference I03 handoff
+- must reference P08 permission
+- must not reference live execution input

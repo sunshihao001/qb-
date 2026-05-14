@@ -1,0 +1,85 @@
+matrix_id: phase_io_alignment_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+links:
+- link_id: P01_TO_P02
+  upstream_phase: P01
+  downstream_phase: P02
+  handoff_contract_files:
+  - candidate_intake_handoff_contract.yaml
+  data_request_contract_files:
+  - p02_data_request_packet_contract.yaml
+  alignment_status: ALIGNED
+- link_id: P02_TO_P03
+  upstream_phase: P02
+  downstream_phase: P03
+  handoff_contract_files: []
+  data_request_contract_files: []
+  alignment_status: MISSING_OUTPUT
+- link_id: P03_TO_P04
+  upstream_phase: P03
+  downstream_phase: P04
+  handoff_contract_files:
+  - p03_to_p04_handoff_contract.yaml
+  data_request_contract_files:
+  - p04_chip_structure_data_request_packet_contract.yaml
+  alignment_status: ALIGNED
+- link_id: P04_TO_P05
+  upstream_phase: P04
+  downstream_phase: P05
+  handoff_contract_files:
+  - p04_to_p05_handoff_contract.yaml
+  data_request_contract_files:
+  - p05_evidence_data_request_packet_contract.yaml
+  alignment_status: ALIGNED
+- link_id: P05_TO_P06
+  upstream_phase: P05
+  downstream_phase: P06
+  handoff_contract_files:
+  - p05_to_p06_handoff_contract.yaml
+  data_request_contract_files:
+  - p06_scenario_data_request_packet_contract.yaml
+  alignment_status: ALIGNED
+- link_id: P06_TO_P07
+  upstream_phase: P06
+  downstream_phase: P07
+  handoff_contract_files:
+  - p06_to_p07_handoff_contract.yaml
+  data_request_contract_files:
+  - p07_strategy_gate_data_request_packet_contract.yaml
+  alignment_status: ALIGNED
+- link_id: P07_TO_P08
+  upstream_phase: P07
+  downstream_phase: P08
+  handoff_contract_files:
+  - p07_to_p08_handoff_contract.yaml
+  data_request_contract_files:
+  - p08_execution_risk_data_request_packet_contract.yaml
+  alignment_status: ALIGNED
+- link_id: P08_TO_PAPER_RUNTIME
+  upstream_phase: P08
+  downstream_phase: PAPER_ONLY_RUNTIME
+  handoff_contract_files:
+  - p08_to_paper_runtime_handoff_contract.yaml
+  data_request_contract_files:
+  - paper_runtime_data_request_packet_contract.yaml
+  alignment_status: ALIGNED
+- link_id: PAPER_RUNTIME_TO_P09
+  upstream_phase: PAPER_ONLY_RUNTIME
+  downstream_phase: P09
+  handoff_contract_files: []
+  data_request_contract_files: []
+  alignment_status: ALIGNED_WITH_GAPS
+- link_id: P09_TO_P10
+  upstream_phase: P09
+  downstream_phase: P10
+  handoff_contract_files:
+  - p09_to_p10_handoff_contract.yaml
+  data_request_contract_files:
+  - p10_upgrade_candidate_data_request_packet_contract.yaml
+  alignment_status: ALIGNED
+matrix_result:
+  aligned_links_count: 8
+  gap_links_count: 1
+  broken_links_count: 1
+  critical_broken_links:
+  - P02_TO_P03

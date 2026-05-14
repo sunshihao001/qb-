@@ -1,0 +1,9 @@
+{
+  "expected_r00_status": "SKIPPED_WITH_REASON",
+  "runner_binding_required": false,
+  "skip_reason": "sample rule is governance / evidence policy rule and does not require runner binding",
+  "must_not_claim": [
+    "RUNNER_BOUND",
+    "BINDING_TESTED"
+  ]
+}

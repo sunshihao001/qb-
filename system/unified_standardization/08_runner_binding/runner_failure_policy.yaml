@@ -1,0 +1,17 @@
+meta:
+  standard_id: S00_RUNNER_FAILURE_POLICY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+failure_policy:
+- missing script -> BLOCKED
+- schema mismatch -> BLOCKED or WITH_GAPS if non-decision optional
+- missing trace/acceptance/handoff -> WITH_GAPS until R00 wrapper exists
+- attempted live_swap/sign/broadcast -> SECURITY_BLOCKED

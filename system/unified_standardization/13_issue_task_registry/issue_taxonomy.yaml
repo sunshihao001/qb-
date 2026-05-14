@@ -1,0 +1,23 @@
+meta:
+  standard_id: S00_ISSUE_TAXONOMY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+issue_types:
+- schema_gap
+- contract_gap
+- runner_gap
+- trace_gap
+- acceptance_gap
+- handoff_gap
+- permission_gap
+- review_upgrade_gap
+- legacy_absorption_gap
+- security_violation

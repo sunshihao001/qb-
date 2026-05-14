@@ -1,0 +1,69 @@
+{
+  "contract_name": "phase_02_output_contract",
+  "version": "v1.0",
+  "phase_id": "phase_02_wallet_structure_controller",
+  "required_output_groups": {
+    "wallet_fact": [
+      "02_wallet_structure/wallet_fact/wallet_cleaning_result.csv",
+      "02_wallet_structure/wallet_fact/excluded_address_list.csv"
+    ],
+    "normalized": [
+      "02_wallet_structure/normalized/wallet_entity_profile.csv",
+      "02_wallet_structure/normalized/current_token_behavior.csv",
+      "02_wallet_structure/normalized/fund_flow_edges.csv",
+      "02_wallet_structure/normalized/same_source_groups.csv",
+      "02_wallet_structure/normalized/distribution_paths.csv",
+      "02_wallet_structure/normalized/backflow_paths.csv",
+      "02_wallet_structure/normalized/wallet_classification.csv",
+      "02_wallet_structure/normalized/gmgn_note_table.csv"
+    ],
+    "decision": [
+      "02_wallet_structure/wallet_structure_decision.json"
+    ],
+    "handoff": [
+      "02_wallet_structure/handoff/phase_02_handoff_packet.json"
+    ],
+    "audit": [
+      "02_wallet_structure/audit/audit_report.md",
+      "02_wallet_structure/audit/output_validation_report.json",
+      "02_wallet_structure/audit/handoff_validation_report.json",
+      "02_wallet_structure/audit/missing_fields_report.md",
+      "02_wallet_structure/audit/gaps.md"
+    ],
+    "report": [
+      "02_wallet_structure/reports/wallet_structure_report.md"
+    ]
+  },
+  "allowed_phase_status": [
+    "WALLET_SUPPORT",
+    "WALLET_PAUSE",
+    "WALLET_BLOCK",
+    "WALLET_UNKNOWN",
+    "WALLET_DATA_WEAK",
+    "WALLET_SAME_SOURCE_DETECTED",
+    "WALLET_DISTRIBUTION_DETECTED",
+    "WALLET_BACKFLOW_DETECTED",
+    "WALLET_COUNTERPARTY_PRESSURE"
+  ],
+  "handoff_status": [
+    "HANDOFF_READY",
+    "HANDOFF_BLOCKED"
+  ],
+  "forbidden_outputs": [
+    "certain_dealer_judgement",
+    "buy_signal",
+    "sell_signal",
+    "execute_now",
+    "trade_allowed",
+    "absolute_insider_claim"
+  ],
+  "downstream_phase": "phase_03_chip_control_controller",
+  "downstream_required_files": [
+    "wallet_structure_decision",
+    "wallet_classification",
+    "same_source_groups",
+    "distribution_paths",
+    "backflow_paths",
+    "gmgn_note_table"
+  ]
+}

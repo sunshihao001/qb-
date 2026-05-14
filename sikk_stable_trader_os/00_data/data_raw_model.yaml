@@ -1,0 +1,27 @@
+raw_principles:
+- 原始数据只保存，不解释
+- 原始数据不覆盖
+- 必须保留采集时间
+- 必须保留来源
+- 必须能回放
+raw_data_record:
+  raw_record_id: string
+  source_id: string
+  token_address: string
+  collected_at: datetime
+  collection_run_id: string
+  raw_payload_type:
+  - JSON
+  - CSV
+  - HTML
+  - API_RESPONSE
+  - AGENT_SKILL_OUTPUT
+  raw_payload_path: string
+  source_query:
+    query_type: string
+    query_params: object
+  source_response_status: string
+  source_latency_ms: number
+  checksum: string
+  parser_version: string
+  immutable: true

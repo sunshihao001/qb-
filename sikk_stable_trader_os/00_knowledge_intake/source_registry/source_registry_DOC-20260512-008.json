@@ -1,0 +1,14 @@
+{
+  "doc_id": "DOC-20260512-008",
+  "title": "P08 Execution Risk Controller 专业版 v3.0",
+  "source": "telegram_upload",
+  "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-008_p08_execution_risk_controller_v3.md",
+  "sha256": "18d3de3654a45bd0e58aa8bf59790f579c61199b6193b7b1c84ff0afc567a300",
+  "registered_at": "2026-05-12T05:47:29Z",
+  "material_type": "system_building_document",
+  "target_phase": "P08_execution_risk_controller",
+  "upstream_dependency": "P07_strategy_gate_controller",
+  "downstream_target": "PAPER_ONLY_RUNTIME",
+  "route": "K00 -> P08 package landing -> Paper-only Runtime design",
+  "status": "REGISTERED"
+}

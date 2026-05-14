@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 failure summary schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "failure_summary_id",
+    "failures",
+    "recovery_status"
+  ],
+  "properties": {
+    "failure_summary_id": {
+      "type": "string"
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "failure_id",
+          "failure_type",
+          "gap_level",
+          "affected_phase",
+          "failure_reason",
+          "required_fix",
+          "safe_next_action",
+          "forbidden_next_action",
+          "current_status"
+        ],
+        "properties": {
+          "failure_id": {
+            "type": "string"
+          },
+          "failure_type": {
+            "enum": [
+              "missing_handoff",
+              "missing_evidence",
+              "status_inconsistency",
+              "artifact_missing",
+              "schema_validation_missing",
+              "test_evidence_missing",
+              "replay_evidence_missing",
+              "binding_evidence_missing",
+              "trace_missing",
+              "gap_hidden",
+              "acceptance_gate_invalid",
+              "governance_violation",
+              "production_risk_detected"
+            ]
+          },
+          "gap_level": {
+            "enum": [
+              "BLOCKING_GAP",
+              "CRITICAL_GAP",
+              "HIGH_GAP",
+              "MEDIUM_GAP",
+              "LOW_GAP"
+            ]
+          },
+          "affected_phase": {
+            "type": "string"
+          },
+          "affected_asset": {
+            "type": "string"
+          },
+          "failure_reason": {
+            "type": "string"
+          },
+          "required_fix": {
+            "type": "string"
+          },
+          "safe_next_action": {
+            "type": "string"
+          },
+          "forbidden_next_action": {
+            "type": "string"
+          },
+          "current_status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "recovery_status": {
+      "enum": [
+        "NO_FAILURE",
+        "RECOVERY_REQUIRED",
+        "BLOCKED"
+      ]
+    }
+  }
+}

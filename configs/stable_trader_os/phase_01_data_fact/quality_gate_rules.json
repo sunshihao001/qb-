@@ -1,0 +1,55 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "quality_score_components": {
+    "config_completeness": 15,
+    "token_fact_completeness": 15,
+    "wallet_fact_completeness": 15,
+    "trade_fact_completeness": 20,
+    "holder_fact_completeness": 10,
+    "transfer_fact_completeness": 10,
+    "market_fact_completeness": 10,
+    "consistency_validation": 5
+  },
+  "gate_rules": [
+    {
+      "condition": "fatal_missing_count > 0",
+      "gate_status": "BLOCK",
+      "reason": "存在致命字段缺失"
+    },
+    {
+      "condition": "quality_score >= 90",
+      "gate_status": "PASS",
+      "reason": "数据质量良好"
+    },
+    {
+      "condition": "quality_score >= 75 and quality_score < 90",
+      "gate_status": "PASS_WITH_WARNING",
+      "reason": "数据可用，但存在警告"
+    },
+    {
+      "condition": "quality_score >= 40 and quality_score < 75",
+      "gate_status": "PAUSE",
+      "reason": "数据不完整，不建议进入强判断"
+    },
+    {
+      "condition": "quality_score < 40",
+      "gate_status": "BLOCK",
+      "reason": "数据质量过低"
+    }
+  ],
+  "forbidden_downstream_when_missing": {
+    "security_fact": [
+      "phase_06_strategy_gate",
+      "phase_07_execution_risk",
+      "real_trade_gate"
+    ],
+    "transfer_fact_table": [
+      "same_source_group_strong_judgement",
+      "fund_backflow_judgement"
+    ],
+    "kline_fact_table": [
+      "phase_04_scenario_recognition"
+    ]
+  }
+}

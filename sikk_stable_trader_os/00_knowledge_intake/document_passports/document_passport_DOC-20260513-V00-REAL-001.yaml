@@ -1,0 +1,29 @@
+doc_id: DOC-20260513-V00-REAL-001
+source_type: user_uploaded_markdown
+source_name: v00真实证据验证2_.md
+received_at: '2026-05-13'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-V00-REAL-001_v00_real_validation_evidence.md
+sha256: b2960d1304233d8062b91c32352e7c5fa64832a7996c9f8193e187ae6a84c63c
+document_role:
+  primary_role: V00_REAL_VALIDATION_EXECUTION_SPEC
+  secondary_roles:
+    - validation_contract
+    - toolchain_task_package
+    - acceptance_gate
+summary:
+  core_intent: 建立 V00 real validation executor，将 O00 design-level replay 推进到真实 schema/contract/field/rule/test/replay evidence。
+  key_points:
+    - V00 必须真实执行测试命令并记录 stdout/stderr/exit_code
+    - test_plan 不能等于 TESTED
+    - replay 必须产生 input/output/trace/comparison/evidence
+    - 最终只能是 V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS
+system_mapping:
+  planes: [validation_runtime, evidence_bundle, controller_handoff, governance_boundary]
+  affected_phases: [K00, O00, F00, V00, A00, R00, G00, U00]
+required_actions:
+  - create_v00_real_validation_system_files
+  - create_v00_validation_tools
+  - create_tests_first_and_verify_red
+  - execute_real_validation_and_collect_evidence
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

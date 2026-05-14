@@ -1,0 +1,13 @@
+{
+  "sample_id": null,
+  "status": "DESIGN_LEVEL_REPLAY_COMPLETED",
+  "final_status": "PIPELINE_READY_WITH_GAPS",
+  "expected_vs_actual_checked": true,
+  "forbidden_claims": {
+    "TESTED": "BLOCKED",
+    "RUNNER_BOUND": "BLOCKED",
+    "POLICY_ACTIVE": "BLOCKED",
+    "PIPELINE_ACCEPTED": "BLOCKED",
+    "SYSTEM_FULLY_IMPLEMENTED": "BLOCKED"
+  }
+}

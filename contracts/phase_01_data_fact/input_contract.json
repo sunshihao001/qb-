@@ -1,0 +1,171 @@
+{
+  "contract_name": "phase_01_data_fact_input_contract",
+  "contract_version": "2.1",
+  "phase": "phase_01_data_fact",
+  "phase_name_zh": "数据事实层",
+  "task_boundary": "stage_data_preparation_not_business_logic_code",
+  "upstream_phase": "phase_00_system_constitution",
+  "downstream_phase": "phase_02_wallet_structure",
+  "required_inputs": {
+    "token_address": {
+      "required": true,
+      "source_phase": "runtime_or_candidate_discovery",
+      "purpose": "代币唯一标识",
+      "missing_action": "BLOCK",
+      "missing_status": "DATA_INVALID"
+    },
+    "chain": {
+      "required": true,
+      "source_phase": "runtime_config",
+      "purpose": "链标识",
+      "missing_action": "BLOCK",
+      "missing_status": "DATA_INVALID"
+    },
+    "snapshot_time": {
+      "required": true,
+      "source_phase": "runtime",
+      "purpose": "快照时间 / 数据时点",
+      "missing_action": "BLOCK",
+      "missing_status": "DATA_INVALID"
+    },
+    "raw_token_basic": {
+      "required": true,
+      "source_phase": "gmgn_or_chain_source",
+      "purpose": "Token 基础事实",
+      "missing_action": "BLOCK",
+      "missing_status": "DATA_INVALID"
+    },
+    "raw_wallet_trade": {
+      "required": true,
+      "source_phase": "gmgn_or_chain_source",
+      "purpose": "钱包交易事实；P02 最小交接必需",
+      "missing_action": "BLOCK",
+      "missing_status": "DATA_INVALID"
+    },
+    "raw_holder": {
+      "required": true,
+      "source_phase": "gmgn_or_chain_source",
+      "purpose": "Holder 事实；P02 最小交接必需",
+      "missing_action": "BLOCK",
+      "missing_status": "DATA_INVALID"
+    },
+    "raw_kline": {
+      "required": true,
+      "source_phase": "kline_source",
+      "purpose": "K线事实；时间有效性与后续场景层基础事实",
+      "missing_action": "BLOCK",
+      "missing_status": "DATA_INVALID"
+    },
+    "raw_quote_security": {
+      "required": true,
+      "source_phase": "quote_security_source",
+      "purpose": "报价与安全事实；不用于 P01 交易判断",
+      "missing_action": "BLOCK",
+      "missing_status": "DATA_INVALID"
+    }
+  },
+  "required_fields": {
+    "raw_wallet_trade": [
+      "wallet_address",
+      "token_address",
+      "transaction_time",
+      "transaction_type",
+      "current_token_balance"
+    ],
+    "raw_kline": [
+      "timestamp",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "raw_quote_security": [
+      "quote_price_usd"
+    ],
+    "common": [
+      "token_address",
+      "chain",
+      "snapshot_time"
+    ]
+  },
+  "optional_inputs": {
+    "raw_top_trader": {
+      "required": false,
+      "source_phase": "gmgn_or_chain_source",
+      "purpose": "顶级交易者补充事实",
+      "missing_action": "DEGRADE",
+      "missing_status": "DATA_PARTIAL"
+    },
+    "raw_transfer": {
+      "required": false,
+      "source_phase": "chain_source",
+      "purpose": "转账事实补充；缺失时 P02 不得推断无分发/无转账",
+      "missing_action": "DEGRADE",
+      "missing_status": "DATA_PARTIAL"
+    },
+    "legacy_candidate_snapshot": {
+      "required": false,
+      "source_phase": "legacy_runtime_readonly_fallback",
+      "purpose": "旧运行区候选兼容读取；只读补查，不作为主事实写入",
+      "missing_action": "DEGRADE",
+      "missing_status": "DATA_PARTIAL"
+    }
+  },
+  "input_runtime_layers": [
+    "raw_snapshot",
+    "raw_inventory",
+    "field_mapping",
+    "normalized",
+    "quality",
+    "handoff",
+    "reports",
+    "audit",
+    "manifest"
+  ],
+  "block_if": [
+    "token_address missing",
+    "chain missing",
+    "snapshot_time missing",
+    "raw_token_basic missing",
+    "raw_wallet_trade missing",
+    "raw_holder missing",
+    "raw_kline missing",
+    "raw_quote_security missing",
+    "critical field mapping missing",
+    "required output schema missing",
+    "required output cannot be validated"
+  ],
+  "degrade_if": [
+    "raw_transfer missing",
+    "raw_top_trader missing",
+    "legacy_candidate_snapshot missing",
+    "holder partial",
+    "quote stale but refreshable",
+    "optional normalized output generated as explicit missing/degraded context"
+  ],
+  "missing_policy": {
+    "critical_missing": "BLOCK",
+    "optional_missing": "DEGRADE",
+    "unknown_missing": "BLOCK",
+    "forbidden_placeholders": [
+      0,
+      "",
+      null,
+      "AI_GUESSED_VALUE"
+    ],
+    "explicit_missing_literal": "missing"
+  },
+  "forbidden_in_phase_01": [
+    "wallet role classification",
+    "same source inference",
+    "distribution path inference",
+    "backflow inference",
+    "chip control judgment",
+    "scenario judgment",
+    "strategy judgment",
+    "PAPER_READY",
+    "buy signal",
+    "real trade execution"
+  ]
+}

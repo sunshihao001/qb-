@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0336
+source_path: sikk_stable_trader_os/02_phase_controllers/P01_data_fact/phase_replay_plan.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 1
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 0
+  P08: 0
+  P09: 3
+  P10: 0
+primary_phase: P09
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

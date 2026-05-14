@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0289
+source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-007_p07_strategy_gate_controller_v3.md
+phase_scores:
+  P01: 23
+  P02: 0
+  P03: 2
+  P04: 11
+  P05: 12
+  P06: 18
+  P07: 74
+  P08: 23
+  P09: 2
+  P10: 3
+primary_phase: P07
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

@@ -1,0 +1,8 @@
+p09_runtime_path_replay_validation_record:
+  validation_id: I05_RUNTIME_PATH_20260512_01
+  generated_at: '2026-05-12T15:30:01Z'
+mode: SKELETON_VALIDATION
+source_doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  paper_runtime_path_reconstructed: false
+  runtime_records_checked: [i04_handoff, p09_review_input, i04_acceptance, i04_trace]
+  status: READY_WITH_GAPS

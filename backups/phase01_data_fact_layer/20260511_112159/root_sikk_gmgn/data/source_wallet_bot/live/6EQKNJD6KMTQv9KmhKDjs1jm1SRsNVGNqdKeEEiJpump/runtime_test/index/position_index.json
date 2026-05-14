@@ -1,0 +1,16 @@
+{
+  "schema_version": "sikk.unified_view.v1",
+  "generated_at": "2026-05-10T17:35:47Z",
+  "boundary": "SIKK 统一索引层；只读展示、诊断、复盘和提醒；不执行真实 swap，不读取私钥，不签名，不自动 broadcast。",
+  "safety": {
+    "real_swap_enabled": false,
+    "broadcast_allowed": false,
+    "private_key_required": false,
+    "confirmation_enabled": false
+  },
+  "open_count": 0,
+  "closed_count": 0,
+  "open_positions": [],
+  "closed_positions": [],
+  "by_token_address": {}
+}

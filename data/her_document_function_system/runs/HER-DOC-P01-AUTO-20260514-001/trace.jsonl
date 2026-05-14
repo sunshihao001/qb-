@@ -1,0 +1,17 @@
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "O00", "event": "run_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "K00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "K00", "event": "phase_completed", "status": "K00_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "F00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "F00", "event": "function_mapping_written", "status": "WRITTEN", "output": "f00/function_mapping.json"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "F00", "event": "phase_completed", "status": "F00_FUNCTION_MAPPING_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "V00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "V00", "event": "phase_completed", "status": "V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "A00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "A00", "event": "phase_completed", "status": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "H00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "H00", "event": "phase_completed", "status": "QUEUE_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "U00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "U00", "event": "phase_completed", "status": "UPGRADE_QUEUE_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "G00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "G00", "event": "phase_completed", "status": "GOVERNANCE_CANDIDATES_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T04:23:28Z", "run_id": "HER-DOC-P01-AUTO-20260514-001", "phase": "O00", "event": "run_completed", "status": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS"}

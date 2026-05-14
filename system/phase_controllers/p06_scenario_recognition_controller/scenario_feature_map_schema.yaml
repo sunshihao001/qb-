@@ -1,0 +1,20 @@
+type: object
+required:
+- record_id
+- candidate_id
+- generated_at
+- source_trace_ids
+properties:
+  record_id: string
+  candidate_id: string
+  generated_at: datetime
+  source_trace_ids: list
+  usage_permission: FULL_USE|WEAK_USE_ONLY|OBSERVE_ONLY|DO_NOT_USE
+runtime_allowed: false
+object: Scenario Feature Map Record
+fields:
+- scenario_id
+- required_support_features
+- required_counter_checks
+- required_context
+- invalidating_features

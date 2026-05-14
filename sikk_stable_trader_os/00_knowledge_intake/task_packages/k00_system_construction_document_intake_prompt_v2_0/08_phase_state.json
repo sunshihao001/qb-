@@ -1,0 +1,43 @@
+{
+  "phase_id": "K00",
+  "controller_id": "K00_knowledge_intake_taskization",
+  "source_doc_ids": [
+    "DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001"
+  ],
+  "current_status": "K00_READY_WITH_GAPS",
+  "completed_assets": [
+    "raw input",
+    "source registry",
+    "document passport",
+    "corpus index",
+    "system mapping",
+    "gap detection",
+    "phase task package",
+    "phase state",
+    "K00 acceptance",
+    "K00 handoff packet",
+    "trace/audit"
+  ],
+  "missing_assets": [],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "GAP-K00-001"
+  ],
+  "acceptance_result": "K00_READY_WITH_GAPS",
+  "handoff_status": "K00_HANDOFF_READY",
+  "last_updated_at": "2026-05-13T10:42:31Z",
+  "next_allowed_actions": [
+    "route design-only downstream consumer",
+    "preserve source provenance",
+    "await a concrete downstream controller request"
+  ],
+  "forbidden_next_actions": [
+    "direct PXX execution",
+    "direct IXX execution",
+    "runner start",
+    "paper runtime start",
+    "live execution",
+    "wallet signing",
+    "auto deploy"
+  ]
+}

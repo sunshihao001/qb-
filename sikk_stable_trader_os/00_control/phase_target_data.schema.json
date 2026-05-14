@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sikk.phase_target_data.v1",
+  "title": "SIKK Phase Target Data Standard",
+  "type": "object",
+  "required": [
+    "phase_id",
+    "phase_name_cn",
+    "phase_type",
+    "phase_status",
+    "authority_scope",
+    "primary_goal",
+    "non_goal",
+    "upstream_dependencies",
+    "required_inputs",
+    "optional_inputs",
+    "forbidden_inputs",
+    "core_objects",
+    "core_questions",
+    "required_outputs",
+    "handoff_outputs",
+    "acceptance_gate",
+    "blocking_conditions",
+    "downstream_consumers",
+    "runner_binding_status",
+    "state_writeback_required",
+    "paper_only_required",
+    "real_trade_allowed"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "phase_id": {
+      "type": "string"
+    },
+    "phase_name_cn": {
+      "type": "string"
+    },
+    "phase_type": {
+      "type": "string"
+    },
+    "phase_status": {
+      "type": "string",
+      "enum": [
+        "NOT_CREATED",
+        "STUB_REQUIRED",
+        "WAITING_INPUT",
+        "READY_TO_BUILD",
+        "READY_TO_EXECUTE",
+        "BLOCKED",
+        "BLOCKED_BY_DATA_PLANE",
+        "BLOCKED_BY_CONTROL_PLANE",
+        "BLOCKED_BY_ACCEPTANCE",
+        "RUNNING",
+        "OUTPUT_CREATED",
+        "ACCEPTANCE_PENDING",
+        "ACCEPTANCE_PASSED",
+        "ACCEPTANCE_FAILED",
+        "HANDOFF_READY",
+        "CONSUMED_BY_DOWNSTREAM",
+        "DEPRECATED"
+      ]
+    },
+    "authority_scope": {
+      "type": "string"
+    },
+    "primary_goal": {
+      "type": "string"
+    },
+    "non_goal": {
+      "type": "array"
+    },
+    "upstream_dependencies": {
+      "type": "array"
+    },
+    "required_inputs": {
+      "type": "array"
+    },
+    "optional_inputs": {
+      "type": "array"
+    },
+    "forbidden_inputs": {
+      "type": "array"
+    },
+    "core_objects": {
+      "type": "array"
+    },
+    "core_questions": {
+      "type": "array"
+    },
+    "required_outputs": {
+      "type": "array"
+    },
+    "handoff_outputs": {
+      "type": "array"
+    },
+    "acceptance_gate": {
+      "type": "array"
+    },
+    "blocking_conditions": {
+      "type": "array"
+    },
+    "downstream_consumers": {
+      "type": "array"
+    },
+    "runner_binding_status": {
+      "type": "string"
+    },
+    "state_writeback_required": {
+      "type": "boolean"
+    },
+    "paper_only_required": {
+      "type": "boolean",
+      "const": true
+    },
+    "real_trade_allowed": {
+      "type": "boolean",
+      "const": false
+    }
+  }
+}

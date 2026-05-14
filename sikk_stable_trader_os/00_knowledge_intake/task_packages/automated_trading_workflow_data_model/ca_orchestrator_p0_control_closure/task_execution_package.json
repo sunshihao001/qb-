@@ -1,0 +1,241 @@
+{
+  "task_package_id": "TASKPKG-CA-ORCHESTRATOR-P0-CONTROL-CLOSURE-V1",
+  "parent_task_package_id": "TASKPKG-AUTO-TRADING-WORKFLOW-DATA-MODEL-V1",
+  "created_at": "2026-05-11T12:42:03Z",
+  "phase": "ca_orchestrator_p0_control_closure",
+  "package_type": "RUNTIME_CONTROL_CLOSURE_TASK_PACKAGE",
+  "objective": "Connect the automated trading workflow data model to a fixed-CA/no-discovery/paper-only runtime control closure and prove it with replayable artifacts.",
+  "professionalization_principles": [
+    "workflow is controlled by data contracts, not chat context",
+    "one stage completion must write acceptance decision and either stop on blocker or continue on degraded/pass",
+    "all claims require evidence artifacts and completion audit",
+    "real trading, signing, broadcasting, auto-swap and secret access are forbidden"
+  ],
+  "input_contract": {
+    "required_files": [
+      "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/task_execution_package.json",
+      "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/runtime_task_state.json",
+      "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/automated_trading_workflow_data_model/handoff_packet.json",
+      "/root/sikk-gmgn/sikk_ca_runtime_pipeline.py",
+      "/root/sikk-gmgn/tests/test_sikk_ca_runtime_pipeline.py"
+    ],
+    "required_modes": [
+      "fixed_ca_mode=true",
+      "no_discovery=true",
+      "paper_observe_only"
+    ],
+    "rejection_conditions": [
+      "missing parent task package",
+      "missing runtime pipeline",
+      "real_trade_enabled=true",
+      "signing_enabled=true",
+      "broadcast_enabled=true",
+      "auto_swap_enabled=true"
+    ]
+  },
+  "runtime_data_model_flow": [
+    {
+      "order": 0,
+      "object": "RuntimeContext",
+      "producer": "sikk_ca_runtime_pipeline._runtime_context",
+      "required_fields": [
+        "run_id",
+        "token_address",
+        "fixed_ca_mode",
+        "no_discovery",
+        "safety_boundary"
+      ],
+      "acceptance": "fixed_ca_mode and no_discovery are true"
+    },
+    {
+      "order": 1,
+      "object": "CAConsistencyAudit",
+      "producer": "sikk_ca_runtime_pipeline._audit_ca",
+      "required_fields": [
+        "checked_fields",
+        "mismatches",
+        "overall_passed"
+      ],
+      "acceptance": "mismatched CA blocks before downstream stages"
+    },
+    {
+      "order": 2,
+      "object": "PermissionGate",
+      "producer": "sikk_ca_runtime_pipeline._permission_manifest",
+      "required_fields": [
+        "permission_status",
+        "real_trade_enabled",
+        "signing_enabled",
+        "broadcast_transaction",
+        "secret_access"
+      ],
+      "acceptance": "paper observe only; no signing/broadcast/secret"
+    },
+    {
+      "order": 3,
+      "object": "TradeGateRuntimeSummary",
+      "producer": "sikk_gmgn_trade_gate_adapter + runtime summary",
+      "required_fields": [
+        "decision",
+        "final_status",
+        "real_trade_enabled"
+      ],
+      "acceptance": "decision is observe/block/review, never real execution"
+    },
+    {
+      "order": 4,
+      "object": "CandidateStateMachine",
+      "producer": "sikk_candidate_state_machine",
+      "required_fields": [
+        "states_json"
+      ],
+      "acceptance": "state transition recorded"
+    },
+    {
+      "order": 5,
+      "object": "LiveStateAndJournal",
+      "producer": "sikk_live_run",
+      "required_fields": [
+        "live_state_json",
+        "trade_gate_journal_jsonl"
+      ],
+      "acceptance": "runtime state and journal are written"
+    },
+    {
+      "order": 6,
+      "object": "ReviewWriteback",
+      "producer": "sikk_ca_runtime_pipeline",
+      "required_fields": [
+        "runtime_review_status",
+        "ca_pipeline_run_id"
+      ],
+      "acceptance": "review is pending human review, not auto trade"
+    },
+    {
+      "order": 7,
+      "object": "CompletionAudit",
+      "producer": "sikk_ca_runtime_pipeline._completion_audit",
+      "required_fields": [
+        "overall_passed",
+        "ca_consistency_passed",
+        "safety_boundary_passed",
+        "missing_outputs"
+      ],
+      "acceptance": "overall_passed true or degraded/blocker classified"
+    }
+  ],
+  "stage_tasks": [
+    {
+      "stage_id": "P0-01",
+      "name": "load_parent_contracts",
+      "action": "read parent task package/runtime state/handoff",
+      "acceptance_checks": [
+        "all required parent files exist",
+        "next stage matches ca_orchestrator_p0_control_closure"
+      ],
+      "next_on_pass": "P0-02",
+      "next_on_degraded": "P0-02",
+      "stop_on": [
+        "missing_required_parent_file"
+      ]
+    },
+    {
+      "stage_id": "P0-02",
+      "name": "verify_runtime_shell",
+      "action": "inspect sikk_ca_runtime_pipeline fixed-CA/no-discovery/paper-only controls",
+      "acceptance_checks": [
+        "fixed_ca_mode true",
+        "no_discovery true",
+        "permission gate writes real_trade_enabled false",
+        "CA mismatch blocks"
+      ],
+      "next_on_pass": "P0-03",
+      "next_on_degraded": "P0-03",
+      "stop_on": [
+        "real_trade_enabled true",
+        "signing or broadcast enabled"
+      ]
+    },
+    {
+      "stage_id": "P0-03",
+      "name": "build_replay_fixture",
+      "action": "use deterministic structural snapshot fixture from tests",
+      "acceptance_checks": [
+        "snapshot token_address equals requested CA",
+        "fixture contains enough structure fields"
+      ],
+      "next_on_pass": "P0-04",
+      "next_on_degraded": "P0-04",
+      "stop_on": [
+        "snapshot CA mismatch unless testing blocker path"
+      ]
+    },
+    {
+      "stage_id": "P0-04",
+      "name": "run_paper_runtime_replay",
+      "action": "execute sikk_ca_runtime_pipeline against fixture",
+      "acceptance_checks": [
+        "runtime_context exists",
+        "permission_gate exists",
+        "stage_ledger exists",
+        "completion_audit exists",
+        "final_report exists"
+      ],
+      "next_on_pass": "P0-05",
+      "next_on_degraded": "P0-05",
+      "stop_on": [
+        "pipeline crash",
+        "permission violation"
+      ]
+    },
+    {
+      "stage_id": "P0-05",
+      "name": "run_pytest_regression",
+      "action": "python3 -m pytest tests/test_sikk_ca_runtime_pipeline.py",
+      "acceptance_checks": [
+        "pytest passes",
+        "mismatch blocker test passes"
+      ],
+      "next_on_pass": "P0-06",
+      "next_on_degraded": "P0-06",
+      "stop_on": [
+        "test failure involving safety boundary"
+      ]
+    },
+    {
+      "stage_id": "P0-06",
+      "name": "write_closure_audit_and_handoff",
+      "action": "write runtime state, gap register, audit, handoff",
+      "acceptance_checks": [
+        "no blocking gap",
+        "paper-only boundary preserved",
+        "next phase decision written"
+      ],
+      "next_on_pass": "P01_data_fact_runtime_connection",
+      "next_on_degraded": "P01_data_fact_runtime_connection",
+      "stop_on": [
+        "blocking gap"
+      ]
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "acceptance_policy": {
+    "pass_status": "P0_CONTROL_CLOSURE_READY",
+    "degraded_status": "P0_CONTROL_CLOSURE_READY_WITH_DEGRADED_GAPS",
+    "stop_statuses": [
+      "P0_BLOCKED_PERMISSION_VIOLATION",
+      "P0_BLOCKED_CA_MISMATCH",
+      "P0_BLOCKED_RUNTIME_ERROR"
+    ],
+    "allow_continue_on_degraded": true,
+    "next_recommended_stage": "P01_data_fact_runtime_connection"
+  }
+}

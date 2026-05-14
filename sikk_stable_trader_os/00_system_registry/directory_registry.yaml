@@ -1,0 +1,55 @@
+registry_id: directory_registry
+version: '2.0'
+updated_at: '2026-05-11T02:27:03Z'
+root: /root/sikk-gmgn/sikk_stable_trader_os
+directories:
+- path: 00_system_registry
+  role: system data registry; source for HER global read order
+  design_or_runtime: design_data
+  boundary_rule: write only registry yaml/json; no runtime facts; no reports as judgement
+    source
+- path: 01_total_control_skill
+  role: thin master control entry mirror/reference
+  design_or_runtime: design_data
+  boundary_rule: route/control only; no detailed trading logic
+- path: 02_phase_controllers
+  role: phase runtime task packages
+  design_or_runtime: design_and_runtime_state
+  boundary_rule: each phase owns manifest/context/objective/contracts/protocol/gate/state/handoff_schema
+- path: 03_atomic_skills
+  role: atomic capability registrations/candidate specs
+  design_or_runtime: design_data
+  boundary_rule: candidate reusable capabilities only; cannot bypass phase controller
+- path: 04_schemas
+  role: local schema mirrors/indexes
+  design_or_runtime: design_data
+  boundary_rule: schema definitions only; no generated token reports
+- path: 05_contracts
+  role: local contract mirrors/indexes
+  design_or_runtime: design_data
+  boundary_rule: I/O and handoff contracts only
+- path: 06_tools
+  role: runners validators replay report builders
+  design_or_runtime: tooling
+  boundary_rule: deterministic tools only; no secret/sign/swap tool
+- path: 07_runtime_state
+  role: current status, active task, runtime logs, errors
+  design_or_runtime: runtime_state
+  boundary_rule: machine state source; JSON/JSONL preferred
+- path: 08_handoff_packets
+  role: phase/skill/final handoff outputs
+  design_or_runtime: runtime_output
+  boundary_rule: machine handoff packets only; schema validated before downstream
+- path: 09_reports
+  role: human-readable reports generated from JSON/audit
+  design_or_runtime: derived_report
+  boundary_rule: not allowed as machine judgement input
+- path: 10_tests
+  role: fixtures/unit/integration/replay validation
+  design_or_runtime: validation
+  boundary_rule: tests and fixtures only
+global_boundary_rules:
+- do_not_write_new_runtime_outputs_to_project_root
+- reports_are_human_readable_only
+- old_paths_are_read_only_fallback_unless_manifest_maps_copy_only
+- no_private_key_no_signing_no_broadcast_no_swap

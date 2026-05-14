@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SIKK wallet_structure output manifest schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "token_address",
+    "chain",
+    "analysis_time",
+    "files",
+    "wallet_structure_decision"
+  ],
+  "properties": {
+    "token_address": {
+      "type": "string"
+    },
+    "token_symbol": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "chain": {
+      "type": "string",
+      "enum": [
+        "sol"
+      ]
+    },
+    "analysis_time": {
+      "type": "string"
+    },
+    "files": {
+      "type": "object",
+      "required": [
+        "wallet_raw_snapshot.csv",
+        "wallet_normalized.csv",
+        "wallet_role_classification.csv",
+        "wallet_structure_decision.json"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "wallet_structure_decision": {
+      "type": "object",
+      "required": [
+        "token_address",
+        "token_symbol",
+        "chain",
+        "analysis_time",
+        "wallet_structure_status",
+        "wallet_structure_score",
+        "wallet_risk_score",
+        "wallet_structure_factor",
+        "dominant_side_status",
+        "chip_transfer_status",
+        "counterparty_pressure_score",
+        "same_source_group_count",
+        "distribution_risk_level",
+        "backflow_detected",
+        "core_wallet_candidates",
+        "high_risk_wallets",
+        "gmgn_note_file",
+        "evidence_chain",
+        "blocking_reasons",
+        "pause_reasons",
+        "supporting_reasons",
+        "recommended_state_action"
+      ],
+      "properties": {
+        "token_address": {
+          "type": "string"
+        },
+        "token_symbol": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "chain": {
+          "type": "string",
+          "enum": [
+            "sol"
+          ]
+        },
+        "analysis_time": {
+          "type": "string"
+        },
+        "wallet_structure_status": {
+          "type": "string",
+          "enum": [
+            "WALLET_SUPPORT",
+            "WALLET_PAUSE",
+            "WALLET_BLOCK",
+            "WALLET_UNKNOWN"
+          ]
+        },
+        "wallet_structure_score": {
+          "type": "number"
+        },
+        "wallet_risk_score": {
+          "type": "number"
+        },
+        "wallet_structure_factor": {
+          "type": "number"
+        },
+        "dominant_side_status": {
+          "type": "string"
+        },
+        "chip_transfer_status": {
+          "type": "string"
+        },
+        "counterparty_pressure_score": {
+          "type": "number"
+        },
+        "same_source_group_count": {
+          "type": "integer"
+        },
+        "distribution_risk_level": {
+          "type": "string"
+        },
+        "backflow_detected": {
+          "type": "boolean"
+        },
+        "core_wallet_candidates": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "high_risk_wallets": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "gmgn_note_file": {
+          "type": "string"
+        },
+        "evidence_chain": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "blocking_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "pause_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "supporting_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "recommended_state_action": {
+          "type": "string",
+          "enum": [
+            "ALLOW_PAPER_READY",
+            "KEEP_WATCHING",
+            "BLOCK_CANDIDATE",
+            "REQUIRE_REVIEW"
+          ]
+        }
+      }
+    }
+  }
+}

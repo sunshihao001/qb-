@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 pipeline run",
+  "type": "object",
+  "required": [
+    "pipeline_run_id",
+    "source_doc_refs",
+    "operator_goal",
+    "created_at",
+    "safe_mode",
+    "repo_root",
+    "governance_policy_bundle_ref",
+    "pipeline_status",
+    "current_stage",
+    "allowed_modes",
+    "forbidden_modes"
+  ],
+  "properties": {
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "source_doc_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "operator_goal": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "safe_mode": {
+      "const": true
+    },
+    "repo_root": {
+      "type": "string"
+    },
+    "governance_policy_bundle_ref": {
+      "type": "string"
+    },
+    "pipeline_status": {
+      "type": "string"
+    },
+    "current_stage": {
+      "type": "string"
+    },
+    "allowed_modes": {
+      "type": "array"
+    },
+    "forbidden_modes": {
+      "type": "array"
+    }
+  }
+}

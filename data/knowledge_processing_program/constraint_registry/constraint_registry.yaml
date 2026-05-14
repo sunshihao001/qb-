@@ -1,0 +1,8 @@
+constraint_registry:
+  document_id: KPP-DOC-20260512-001
+  constraints:
+    - 不得只总结文档。
+    - 不得直接修改生产系统规则。
+    - 不得无 document_type、I/O、acceptance、handoff、trace 输出任务。
+    - 不得把解释性内容直接当可执行规则。
+    - 不得绕过 K00 route status。

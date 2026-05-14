@@ -1,0 +1,11 @@
+manifest_id: o00_cli_manifest_v1
+module_name: O00_CLI_HER_Command_Entry
+belongs_to: O00_full_pipeline_orchestrator
+status: CLI_ASSET_CREATED
+safe_mode_default: true
+forbidden_actions:
+  - live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading
+  - execute_real_order

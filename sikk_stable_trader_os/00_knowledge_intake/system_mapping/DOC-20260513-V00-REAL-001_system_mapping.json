@@ -1,0 +1,23 @@
+{
+  "doc_id": "DOC-20260513-V00-REAL-001",
+  "target_subsystem": "HER_DFAFS V00 real validation evidence layer",
+  "system_root": "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation",
+  "data_root": "/root/sikk-gmgn/data/her_document_function_system/v00_real_validation_runs",
+  "phase_mapping": {
+    "upstream": "O00_CLI_SAMPLE_REPLAY_READY_WITH_GAPS",
+    "primary": "V00",
+    "downstream": [
+      "A00",
+      "R00",
+      "G00",
+      "U00"
+    ]
+  },
+  "allowed_write_policy": "repo-local system/tools/tests/data only, safe-mode required",
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ]
+}

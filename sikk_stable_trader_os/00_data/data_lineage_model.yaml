@@ -1,0 +1,19 @@
+data_lineage:
+  field_key: string
+  token_address: string
+  entity_id: string|null
+  source_id: string
+  source_record_id: string
+  raw_payload_path: string
+  raw_field_path: string
+  normalized_record_id: string
+  normalizer_version: string
+  collected_at: datetime
+  normalized_at: datetime
+  transformation_steps:
+  - step_name: string
+    step_version: string
+    description: string
+  quality_status: string
+  replay_available: boolean
+lineage_policy: 每个进入 Evidence Plane 的字段必须可追溯到 raw source 与 normalizer。

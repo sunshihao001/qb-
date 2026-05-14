@@ -1,0 +1,14 @@
+{
+  "doc_id": "DOC-20260512-008",
+  "task_name": "建立 P08 Execution Risk Controller 专业版 v3.0",
+  "target_system_dir": "/root/sikk-gmgn/system/phase_controllers/p08_execution_risk_controller",
+  "target_data_dir": "/root/sikk-gmgn/data/phase_controllers/p08_execution_risk",
+  "required_system_files_count": 45,
+  "required_runtime_dirs_count": 27,
+  "acceptance_focus": [
+    "P07 handoff boundary",
+    "quote/liquidity/slippage/security/freshness/risk-limit checks",
+    "paper runtime permission only",
+    "no live execution"
+  ]
+}

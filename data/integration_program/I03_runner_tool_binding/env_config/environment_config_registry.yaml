@@ -1,0 +1,15 @@
+{
+  "environment_config_registry": {
+    "required_env": {
+      "SIKK_ROOT": "/root/sikk-gmgn",
+      "SIKK_MODE": [
+        "dry_run",
+        "mock_tool",
+        "legacy_readonly",
+        "paper_only"
+      ],
+      "SIKK_LIVE_EXECUTION_ALLOWED": "false",
+      "SIKK_WALLET_SIGNING_ALLOWED": "false"
+    }
+  }
+}

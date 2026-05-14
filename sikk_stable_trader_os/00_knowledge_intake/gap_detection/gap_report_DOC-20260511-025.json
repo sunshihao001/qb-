@@ -1,0 +1,16 @@
+{
+  "doc_id": "DOC-20260511-025",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "legacy_files_without_trace",
+    "trace_id_generator_not_code_implemented",
+    "trace_validator_not_code_implemented",
+    "her_auto_trace_write_not_runtime_hooked",
+    "runner_tools_not_trace_bound",
+    "paper_runtime_trace_not_run",
+    "review_upgrade_trace_no_real_samples",
+    "acceptance_plane_not_yet_professionally_landed",
+    "handoff_plane_not_yet_professionally_landed"
+  ],
+  "status": "GAPS_REGISTERED_NON_BLOCKING_FOR_ACCEPTANCE_PLANE_DESIGN"
+}

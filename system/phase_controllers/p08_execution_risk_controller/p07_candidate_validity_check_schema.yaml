@@ -1,0 +1,19 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: P07_CANDIDATE_VALIDITY_CHECK_SCHEMA
+version: v3.0
+required_fields:
+  - validity_check_id
+  - candidate_id
+  - checks
+  - result
+  - invalidation_sources
+  - downstream_effect
+allowed_statuses:
+  - VALID_FOR_P08
+  - VALID_WITH_LIMITATIONS
+  - NEEDS_REFRESH
+  - INVALIDATED
+  - BLOCKED
+no_live_execution_fields_allowed: true

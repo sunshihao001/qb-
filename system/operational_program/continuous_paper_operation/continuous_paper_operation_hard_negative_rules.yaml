@@ -1,0 +1,13 @@
+continuous_paper_operation_hard_negative_rules:
+  - {rule_id: CPO_BLOCK_001, name: I05 未允许持续纸面运行, condition: i05_permission_not_allowed == true, result: OPERATION_BLOCKED}
+  - {rule_id: CPO_BLOCK_002, name: live execution 路径, condition: live_execution_detected == true, result: OPERATION_BLOCKED}
+  - {rule_id: CPO_BLOCK_003, name: 钱包签名路径, condition: wallet_signing_detected == true, result: OPERATION_BLOCKED}
+  - {rule_id: CPO_BLOCK_004, name: 自动下单路径, condition: auto_order_detected == true, result: OPERATION_BLOCKED}
+  - {rule_id: CPO_BLOCK_005, name: P07 绕过 P08, condition: p07_direct_to_paper_runtime_detected == true, result: OPERATION_BLOCKED}
+  - {rule_id: CPO_BLOCK_006, name: P08 handoff 缺失仍进入 Paper Runtime, condition: paper_runtime_started_without_p08_handoff == true, result: OPERATION_BLOCKED}
+  - {rule_id: CPO_BLOCK_007, name: Trace 链断裂, condition: trace_chain_unusable == true, result: OPERATION_PAUSED}
+  - {rule_id: CPO_BLOCK_008, name: Handoff 链断裂, condition: handoff_chain_unusable == true, result: OPERATION_PAUSED}
+  - {rule_id: CPO_BLOCK_009, name: P09 连续复盘失败, condition: p09_replay_failures_consecutive >= 3, result: OPERATION_PAUSED}
+  - {rule_id: CPO_BLOCK_010, name: P10 自动部署, condition: p10_auto_deploy_detected == true, result: OPERATION_BLOCKED}
+  - {rule_id: CPO_BLOCK_011, name: 单样本全局升级, condition: single_case_global_upgrade_detected == true, result: OPERATION_BLOCKED}
+  - {rule_id: CPO_BLOCK_012, name: 未登记路径写入, condition: unregistered_write_path_detected == true, result: OPERATION_BLOCKED}

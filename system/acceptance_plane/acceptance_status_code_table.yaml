@@ -1,0 +1,29 @@
+acceptance_status_codes:
+  ACCEPTANCE_READY:
+    meaning: 全部关键验收项通过，可进入 Handoff Plane
+    downstream_permission:
+    - ALLOW_HANDOFF
+    - ALLOW_PHASE_CONTROLLER_BUILD
+    - ALLOW_TOOL_BINDING_IF_APPLICABLE
+  ACCEPTANCE_READY_WITH_GAPS:
+    meaning: 关键验收项通过，但存在非阻断缺口
+    downstream_permission:
+    - ALLOW_HANDOFF_WITH_LIMITATIONS
+    - REQUIRE_GAP_PROPAGATION
+    - BLOCK_RUNTIME_IF_GAPS_AFFECT_EXECUTION
+  ACCEPTANCE_NEEDS_REWORK:
+    meaning: 存在可修复问题，需要返工后重新验收
+    downstream_permission:
+    - BLOCK_HANDOFF
+    - REQUIRE_REWORK_TASKS
+  ACCEPTANCE_REJECTED:
+    meaning: 阶段目标未达成，不能进入下游
+    downstream_permission:
+    - BLOCK_HANDOFF
+    - BLOCK_PHASE_CONTROLLER_BUILD
+    - REQUIRE_REDESIGN
+  ACCEPTANCE_BLOCKED:
+    meaning: 触发硬阻断规则
+    downstream_permission:
+    - BLOCK_ALL_DOWNSTREAM
+    - REQUIRE_FULL_CONTROL_REVIEW

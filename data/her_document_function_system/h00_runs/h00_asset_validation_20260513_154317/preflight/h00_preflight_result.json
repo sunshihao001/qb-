@@ -1,0 +1,26 @@
+{
+  "preflight_status": "PASSED_FOR_CONTROLLER_ASSET_VALIDATION",
+  "real_h00_runtime_status": "H00_BLOCKED_WITHOUT_A00_HANDOFF",
+  "a00_status": "NOT_PROVIDED",
+  "readiness_level": "NOT_PROVIDED",
+  "allowed_modes": [
+    "ASSET_VALIDATE",
+    "SCHEMA_PARSE",
+    "CONTRACT_STATIC_CHECK",
+    "SAFE_TEST",
+    "EVIDENCE_COLLECT"
+  ],
+  "forbidden_modes": [
+    "LIVE_RUNTIME",
+    "WALLET_SIGNING",
+    "AUTO_DEPLOY",
+    "PRODUCTION_TRADING",
+    "DOWNSTREAM_TASK_EXECUTION"
+  ],
+  "blocking_gaps_for_real_runtime": [
+    "missing_a00_handoff",
+    "missing_readiness_certificate",
+    "missing_evidence_bundle"
+  ],
+  "non_blocking_for_asset_creation": true
+}

@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    "gmgn",
+    "okx",
+    "manual",
+    "cache",
+    "replay"
+  ],
+  "edges": [
+    {
+      "from": "gmgn",
+      "to": "reconciliation"
+    },
+    {
+      "from": "okx",
+      "to": "reconciliation"
+    },
+    {
+      "from": "replay",
+      "to": "quality_brain"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+gmgn_field,sikk_field,chinese_name,source_type,required,missing_policy,used_for
+token_address,token_address,代币地址,GMGN token / chain,true,missing,token identity / joins
+symbol,token_symbol,代币符号,GMGN token,false,unknown,display / reports
+wallet_address,wallet_address,钱包地址,GMGN wallet / chain,true,missing,wallet identity / joins
+first_buy_time,first_buy_time,首次买入时间,GMGN wallet trade / DEX swap,true,missing,single wallet cost / early wallet detection
+buy_count,buy_count,买入次数,GMGN wallet trade / trader detail,true,missing,buy behavior
+sell_count,sell_count,卖出次数,GMGN wallet trade / trader detail,true,missing,sell behavior / exit status
+realized_profit,realized_profit,已实现利润,GMGN trader detail,false,unknown,result wallet / pnl
+unrealized_profit,unrealized_profit,未实现利润,GMGN trader detail,false,unknown,remaining position pnl
+total_profit,total_profit,总利润,GMGN trader detail,false,unknown,high result wallet
+pnl_multiple,pnl_multiple,盈亏倍数,GMGN trader detail,false,unknown,high result wallet
+tags,gmgn_tags,GMGN 标签,GMGN wallet profile,false,unknown,role hints / watchlist
+native_transfer.from_address,native_transfer.from_address,原生币转入来源地址,chain native transfer,false,missing,funding source evidence
+native_transfer.amount,native_transfer.amount,原生币转账数量,chain native transfer,false,missing,funding amount evidence
+native_transfer.time,native_transfer.time,原生币转账时间,chain native transfer,false,missing,funding time alignment
+sell_amount_percentage,sell_amount_percentage,卖出金额占比,GMGN trader detail / normalized,false,unknown,distribution / partial exit
+amount_percentage,amount_percentage,持仓/转账占比,GMGN holder / transfer normalized,false,unknown,concentration / transfer weight
+transfer_in.from_address,transfer_in.from_address,Token 转入来源地址,chain token transfer,false,missing,token source evidence
+transfer_out.to_address,transfer_out.to_address,Token 转出目标地址,chain token transfer,false,missing,distribution path evidence
+wallet_age_days,wallet_age_days,钱包年龄天数,wallet profile,false,unknown,fresh wallet / risk
+wallet_first_seen_time,wallet_first_seen_time,钱包首次出现时间,wallet profile / chain,false,missing,wallet age / recurrence
+wallet_last_active_time,wallet_last_active_time,钱包最后活跃时间,wallet profile / chain,false,missing,activity freshness
+total_token_count,total_token_count,历史持有代币总数,wallet profile,false,unknown,wallet profile
+traded_token_count,traded_token_count,历史交易代币数,wallet profile,false,unknown,wallet sophistication
+funding_source_address,funding_source_address,资金来源地址,funding flow normalized,false,missing,same-source / fund source
+token_transfer_edges,token_transfer_edges,Token 转账边,chain token transfer graph,false,missing,distribution / same-source graph
+backflow_address,backflow_address,利润回流地址,backflow path normalized,false,missing,疑似利润回收钱包
+cross_token_reappearance,cross_token_reappearance,跨币种复现,historical address registry,false,unknown,historical recurrence
+wallet_snapshot_time,wallet_snapshot_time,钱包快照时间,SIKK normalized,true,missing,time alignment / evidence packet
+raw_snapshot_time,raw_snapshot_time,原始快照时间,GMGN/raw response,true,missing,raw evidence traceability
+last_buy_time,last_buy_time,最后买入时间,GMGN wallet trade / DEX swap,true,missing,single wallet behavior / holding duration
+last_sell_time,last_sell_time,最后卖出时间,GMGN wallet trade / DEX swap,true,missing,exit status / holding duration
+buy_amount_sol,buy_amount_sol,买入金额 SOL,GMGN wallet trade / DEX swap,true,missing,single wallet cost
+buy_amount_usd,buy_amount_usd,买入金额 USD,GMGN wallet trade / trader detail,true,missing,single wallet cost / group cost
+buy_token_amount,buy_token_amount,买入 Token 数量,GMGN wallet trade / DEX swap,true,missing,position size
+sell_amount_sol,sell_amount_sol,卖出金额 SOL,GMGN wallet trade / DEX swap,true,missing,distribution progress
+sell_amount_usd,sell_amount_usd,卖出金额 USD,GMGN wallet trade / trader detail,true,missing,distribution progress / realized profit
+sell_token_amount,sell_token_amount,卖出 Token 数量,GMGN wallet trade / DEX swap,true,missing,distribution progress
+avg_buy_price,avg_buy_price,平均买入价,GMGN trader detail / derived,true,missing,single wallet cost
+avg_sell_price,avg_sell_price,平均卖出价,GMGN trader detail / derived,true,missing,exit quality
+current_balance,current_balance,当前余额,GMGN wallet trade / holder snapshot,true,missing,remaining position
+sold_pct,sold_pct,已卖出比例,GMGN trader detail / derived,true,missing,distribution progress
+remaining_pct,remaining_pct,剩余比例,GMGN trader detail / derived,true,missing,remaining position
+holding_duration_seconds,holding_duration_seconds,持仓时长秒,GMGN trader detail / derived,true,missing,wallet behavior / result wallet
+is_full_exit,is_full_exit,是否完全退出,GMGN trader detail / derived,true,missing,exit status
+is_partial_exit,is_partial_exit,是否部分退出,GMGN trader detail / derived,true,missing,partial exit status

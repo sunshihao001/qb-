@@ -1,0 +1,20 @@
+objective_tree:
+  phase_id: G00
+  root_objective: Convert governance candidates and evidence into active policy assets
+  branches:
+    - preflight_and_evidence_loading
+    - candidate_classification
+    - policy_domain_mapping
+    - forbidden_action_registry_building
+    - status_code_table_building
+    - execution_boundary_policy_building
+    - evidence_policy_building
+    - gap_policy_building
+    - directory_policy_building
+    - contract_schema_governance
+    - runner_safety_policy_building
+    - human_confirmation_policy_building
+    - production_risk_boundary_building
+    - policy_conflict_versioning
+    - governance_registry_writing
+    - acceptance_and_handoff

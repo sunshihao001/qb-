@@ -1,0 +1,19 @@
+{
+  "doc_id": "DOC-20260513-P01-DATA-FACT-CONTROLLER-002",
+  "gap_detection_status": "GAPS_IDENTIFIED",
+  "blocking_for_k00": [],
+  "blocking_for_p01_runtime_ready": [
+    "Need audit/reconciliation with existing Phase01 code/contracts/schemas in repository.",
+    "Need actual GMGN/OKX/chain/quote/security connector capability mapping.",
+    "Need phase_01_field_schema.md split from controller doc or equivalent schema assets.",
+    "Need mock fixture and replay command that emits raw/normalized/audit/handoff/report.",
+    "Need tests covering missing fields, invalid address, duplicate wallet, time conflict, amount anomaly, quality_score, handoff generation.",
+    "Need downstream reader migration so P02 reads P01 handoff instead of raw/legacy files."
+  ],
+  "runtime_permissions": {
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false,
+    "real_execution_allowed": false
+  },
+  "created_at": "2026-05-13T09:39:17Z"
+}

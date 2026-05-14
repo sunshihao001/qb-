@@ -1,0 +1,25 @@
+{
+  "status": "PREFLIGHT_PASSED",
+  "validation": {
+    "command": "validate-config",
+    "status": "CONFIG_VALIDATED",
+    "registry_loaded": true,
+    "config_loaded": true,
+    "registered_controllers": [
+      "G00",
+      "O00",
+      "K00",
+      "F00",
+      "V00",
+      "R00",
+      "A00",
+      "H00",
+      "U00"
+    ],
+    "safe_mode_checked": true,
+    "forbidden_actions_checked": true,
+    "blocking_gaps": [],
+    "repo_root": "/root/sikk-gmgn"
+  },
+  "sample_loaded": true
+}

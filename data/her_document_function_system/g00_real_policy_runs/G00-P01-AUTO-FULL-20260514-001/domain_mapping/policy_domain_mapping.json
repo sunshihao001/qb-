@@ -1,0 +1,19 @@
+{
+  "mapping_status": "MAPPED",
+  "mappings": [
+    {
+      "candidate_id": "uc_u00_real_002",
+      "policy_domain": "evidence_policy",
+      "target_policy_file": "policy_rules/evidence_policy.json",
+      "policy_level": "HARD_RULE",
+      "activation_mode": "PENDING_CONFLICT_CHECK"
+    },
+    {
+      "candidate_id": "uc_u00_real_005",
+      "policy_domain": "evidence_policy",
+      "target_policy_file": "policy_rules/evidence_policy.json",
+      "policy_level": "HARD_RULE",
+      "activation_mode": "PENDING_CONFLICT_CHECK"
+    }
+  ]
+}

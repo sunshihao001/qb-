@@ -1,0 +1,9 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: phase_boundary_violation_record
+fields:
+- violation_id
+- phase_id
+- violation_type
+- severity
+- required_fix

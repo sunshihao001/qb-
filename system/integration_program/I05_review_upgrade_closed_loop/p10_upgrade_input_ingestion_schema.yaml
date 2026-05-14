@@ -1,0 +1,8 @@
+p10_upgrade_input_ingestion:
+  type: object
+  required:
+    - ingestion_id
+    - p10_input_readable
+    - candidate_count
+    - status
+  additional_properties_allowed: true

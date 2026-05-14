@@ -1,0 +1,32 @@
+{
+  "routing_decision_id": "routing_h00_real_20260514_001821",
+  "routes": [
+    {
+      "route_id": "route_to_u00_gap_review",
+      "target_controller": "U00",
+      "decision": "ROUTE_TO_U00",
+      "reason": "A00 has open gaps and READY_WITH_GAPS status",
+      "priority": "P0_CRITICAL",
+      "required_handoff_packet": "handoff_packets/h00_to_u00_handoff_packet.json",
+      "execution_allowed": true
+    },
+    {
+      "route_id": "route_to_g00_policy_review",
+      "target_controller": "G00",
+      "decision": "ROUTE_TO_G00",
+      "reason": "policy/governance candidates require review",
+      "priority": "P0_CRITICAL",
+      "required_handoff_packet": "handoff_packets/h00_to_g00_handoff_packet.json",
+      "execution_allowed": true
+    },
+    {
+      "route_id": "route_to_o00_run_document_safe_mode",
+      "target_controller": "O00",
+      "decision": "ROUTE_TO_O00",
+      "reason": "prepare safe-mode next stage without production execution",
+      "priority": "P2_MEDIUM",
+      "required_handoff_packet": "handoff_packets/h00_to_o00_handoff_packet.json",
+      "execution_allowed": false
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "token_address": "MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET",
+  "chain": "solana",
+  "snapshot_time": "2026-05-11T08:57:57.838688+00:00",
+  "raw_token_basic": {
+    "symbol": "MOCK",
+    "name": "Mock Token"
+  },
+  "raw_wallet_trade": [
+    {
+      "wallet_address": "Wallet111",
+      "token_address": "MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET",
+      "transaction_time": "2026-05-11T08:57:57.838692+00:00",
+      "transaction_type": "buy",
+      "current_token_balance": "1000"
+    }
+  ],
+  "raw_holder": [
+    {
+      "wallet_address": "Wallet111",
+      "balance": "1000"
+    }
+  ],
+  "raw_kline": [
+    {
+      "timestamp": "2026-05-11T08:57:57.838695+00:00",
+      "open": 1,
+      "high": 1,
+      "low": 1,
+      "close": 1,
+      "volume": 1
+    }
+  ],
+  "raw_quote_security": {
+    "quote_price_usd": 0.001
+  },
+  "run_id": "replay_MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET",
+  "phase": "phase_01_data_fact",
+  "status_code": "DATA_OK",
+  "positive_evidence": [
+    "mock_replay_input_present"
+  ],
+  "negative_evidence": [],
+  "counter_evidence": [],
+  "hard_negative_trigger": null,
+  "confidence_level": "low",
+  "missing_fields": [],
+  "source_files": [],
+  "handoff_to": "phase_02",
+  "common": "SYSTEM_DERIVED_REPLAY_VALUE"
+}

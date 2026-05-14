@@ -1,0 +1,11 @@
+{
+  "path_guard_binding": {
+    "binding_id": "PATH_GUARD_BINDING",
+    "ready": true,
+    "failure_policy": "BLOCK_ON_REQUIRED_FAILURE",
+    "safety": {
+      "no_live_execution": true,
+      "no_wallet_signing": true
+    }
+  }
+}

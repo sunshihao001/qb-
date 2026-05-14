@@ -1,0 +1,55 @@
+doc_id: DOC-20260513-P01-DATA-FACT-001
+source_type: user_uploaded_markdown
+source_name: P01 数据事实层专业版阶段包
+received_at: 2026-05-13
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DATA-FACT-001_p01_data_fact_controller_professional_phase_pack.md
+checksum:
+  algorithm: sha256
+  value: bf61c250468b94da8b2fc7ef17758315e8c60be8463b387f86e933b8781be188
+document_role:
+  primary_role: phase_controller_professional_spec
+  secondary_roles:
+    - data_fact_layer_design
+    - gmgn_okx_source_integration_contract
+    - p01_runtime_taskbook_candidate
+    - downstream_handoff_governance
+summary:
+  core_intent: >
+    将 P01 数据事实层定义为 GMGN/OKX/手动输入/历史缓存/replay fixture 的事实入口控制器，
+    要求 raw-first、字段血缘、质量门、handoff packet、replay 与审计闭环，阻断下游直接读 raw 或使用不合格数据。
+  key_points:
+    - P01 是事实入口控制器，不是接口脚本集合或数据说明文档。
+    - GMGN/OKX 数据必须先 raw 保存，再标准化、质量审计、交接。
+    - 核心产物是 data_fact_handoff_packet.json，下游不得直接读取 GMGN/OKX raw。
+    - 缺失、过期、schema 变化、源失败必须状态化并 fail-closed。
+    - real_execution 在 P01 永久 false，replay 数据必须标记 DATA_REPLAY_ONLY。
+system_mapping:
+  planes:
+    - data_plane
+    - contract_schema_plane
+    - phase_controller_plane
+    - handoff_plane
+    - verification_acceptance_plane
+    - audit_replay_plane
+    - safety_permission_plane
+  affected_phases:
+    - K00_knowledge_intake_taskization
+    - P01_data_fact_controller
+    - P02_wallet_chip_structure_controller
+    - P03_market_structure_controller
+    - P04_scenario_recognition_controller
+    - P05_strategy_gate_controller
+    - P06_paper_trading_controller
+    - P07_execution_risk_controller
+required_actions:
+  - preserve_raw_source
+  - register_material
+  - generate_corpus_index
+  - generate_system_mapping
+  - generate_gap_detection
+  - generate_phase_task_execution_package
+  - prepare_handoff_to_P01_code_landing_or_package_landing
+  - keep_runtime_paper_live_blocked_until_acceptance
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY
+k00_route_status: K00_ACCEPTED_PENDING_PHASE_EXECUTION

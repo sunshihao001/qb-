@@ -1,0 +1,22 @@
+{
+  "doc_id": "DOC-20260512-005",
+  "source_phase": "K00",
+  "target_phase": "P05_EVIDENCE_CONTROLLER",
+  "next_phase": "P06_SCENARIO_RECOGNITION_CONTROLLER",
+  "phase_boundary": {
+    "P05_allowed": [
+      "evidence objects",
+      "counter evidence",
+      "unknowns",
+      "conflicts",
+      "bundles",
+      "P06 request"
+    ],
+    "P05_forbidden": [
+      "scenario classification",
+      "strategy gate",
+      "paper runtime",
+      "live execution"
+    ]
+  }
+}

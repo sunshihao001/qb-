@@ -1,0 +1,12 @@
+{
+  "packet_id": "FIELD_USAGE_PERMISSION_DOC-20260511-027",
+  "generated_at": "2026-05-11T17:42:39Z",
+  "permissions": {
+    "acceptance_design_artifacts": "WEAK_USE_ONLY",
+    "trace_indexes": "WEAK_USE_ONLY",
+    "legacy_artifacts": "OBSERVE_ONLY",
+    "runtime_outputs": "FORBIDDEN_USE_UNTIL_RUNTIME_ACCEPTED",
+    "trade_execution_fields": "FORBIDDEN_USE"
+  },
+  "default": "WEAK_USE_ONLY_FOR_WITH_GAPS"
+}

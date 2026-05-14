@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "17_failure_summary.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "failure_summary_id",
+    "acceptance_run_id",
+    "failures",
+    "blocking_failures",
+    "non_blocking_failures",
+    "recovery_required"
+  ],
+  "properties": {
+    "failure_summary_id": {},
+    "acceptance_run_id": {},
+    "failures": {},
+    "blocking_failures": {},
+    "non_blocking_failures": {},
+    "recovery_required": {}
+  }
+}

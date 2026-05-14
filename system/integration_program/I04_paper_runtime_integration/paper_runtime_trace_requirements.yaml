@@ -1,0 +1,19 @@
+trace_requirements:
+- source_document_id
+- i03_handoff_packet_id
+- p08_handoff_packet_id
+- permission_gate_id
+- candidate_id
+- position_id
+- trade_id
+- mtm_id
+- risk_event_id
+- exit_event_id
+- p09_input_packet_id
+- i05_handoff_packet_id
+must_preserve:
+- decision_time_snapshot
+- entry_reason
+- limitation_tags
+- cost_slippage_evidence
+- exit_reason

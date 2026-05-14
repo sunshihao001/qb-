@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "scenario_scores",
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "scenarios"
+  ],
+  "properties": {
+    "phase": {},
+    "token_address": {},
+    "scenarios": {}
+  },
+  "additionalProperties": true
+}

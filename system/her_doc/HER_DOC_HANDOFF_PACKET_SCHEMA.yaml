@@ -1,0 +1,64 @@
+schema_id: HER_DOC_HANDOFF_PACKET_SCHEMA
+version: HER_DOC_PROFESSIONAL_CONTROL_V1
+status: SCHEMA_ACTIVE
+purpose: >
+  Standard schema for downstream handoff from HER_DOC into K00 assetization,
+  stage completion, R00 validation, P09 replay, P10 upgrade, GPT research, or
+  HER build execution.
+
+required_fields:
+  - handoff_id
+  - producer
+  - consumer
+  - source_bundle
+  - accepted_objects
+  - blocked_objects
+  - evidence_refs
+  - status
+  - limitations
+  - next_allowed_action
+  - next_forbidden_action
+
+field_definitions:
+  handoff_id: Stable unique identifier for this handoff.
+  producer: HER_DOC run, scan, assetization, or review that produced the packet.
+  consumer: Target downstream program or module.
+  source_bundle: Directory or file bundle being handed off.
+  accepted_objects: Objects allowed for downstream consumption.
+  blocked_objects: Objects explicitly not accepted.
+  evidence_refs: File paths proving acceptance or blocker status.
+  status: BLOCKED, CANDIDATE_ONLY, ACCEPTED_FOR_DOWNSTREAM, or REJECTED.
+  limitations: Scope limits and overclaim guards.
+  next_allowed_action: What the consumer may do next.
+  next_forbidden_action: What the consumer must not do.
+
+allowed_consumers:
+  - GPT_RESEARCH_QUEUE
+  - HER_BUILD_QUEUE
+  - K00_ASSETIZATION
+  - STAGE_COMPLETION_PROGRAM
+  - R00_VALIDATION
+  - RUNTIME_BINDING_REVIEW
+  - LEGACY_ABSORPTION
+  - P09_REPLAY
+  - P10_CONTROLLED_UPGRADE
+
+allowed_status:
+  - BLOCKED
+  - CANDIDATE_ONLY
+  - ACCEPTED_FOR_DOWNSTREAM
+  - REJECTED
+
+minimum_evidence:
+  CANDIDATE_ONLY: E2_FILE_EXISTS
+  ACCEPTED_FOR_DOWNSTREAM: E5_ACCEPTED_HANDOFF
+  BLOCKED: E1_DECLARED_OR_HIGHER_WITH_REASON
+  REJECTED: E2_FILE_EXISTS_OR_HIGHER_WITH_CONTRADICTION
+
+handoff_rules:
+  - Downstream consumers may not treat HER_DOC reports as implementation.
+  - GPT research queue may consume candidate gaps without E5, but must label them research-only.
+  - HER build queue may consume clear build tasks without E5, but completion still requires build evidence.
+  - R00 validation may only consume runtime binding tasks after safety boundary is explicit.
+  - P09/P10 may only consume accepted replay/upgrade fields after evidence refs exist.
+  - No handoff may enable trading, signing, broadcasting, auto order, or auto deploy.

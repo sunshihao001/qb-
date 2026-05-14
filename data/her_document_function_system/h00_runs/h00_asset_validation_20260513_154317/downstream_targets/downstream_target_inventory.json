@@ -1,0 +1,16 @@
+{
+  "status": "STATIC_SCHEMA_READY",
+  "real_targets_classified": false,
+  "reason": "No A00 handoff/evidence bundle for real classification",
+  "supported_target_types": [
+    "PXX_PHASE_CONTROLLER",
+    "IXX_INTEGRATION_CONTROLLER",
+    "RUNNER_TOOL_BINDING",
+    "REPORT_AUDIT_SYSTEM",
+    "U00_REVIEW_UPGRADE",
+    "G00_GOVERNANCE_BOUNDARY",
+    "BACKLOG_QUEUE",
+    "RECOVERY_QUEUE",
+    "ARCHIVE_ONLY"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "task_package_id": "TASK-K00-SYSTEM-INTEGRATION-REPAIR-20260511",
+  "created_at": "2026-05-11T13:28:39Z",
+  "source_audit": "00_knowledge_intake/intake_reports/k00_system_integration_root_cause_audit_20260511.json",
+  "objective": "把 K00 处理后的文档从“已资产化”推进到“被系统注册、被阶段消费、被验收追踪”的专业化闭环。",
+  "priority_order": [
+    {
+      "step": "P0_state_reconciliation",
+      "outputs": [
+        "00_control/current_system_state.json",
+        "00_control/phase_registry.yaml",
+        "00_control/system_asset_index.json"
+      ],
+      "acceptance": [
+        "single_next_stage=data_plane_generation",
+        "automation_workflow waits for system planes"
+      ]
+    },
+    {
+      "step": "P0_data_plane_generation",
+      "outputs": [
+        "00_data/data_plane.md",
+        "00_data/field_source_map.yaml",
+        "00_data/normalized_fact_model.schema.json",
+        "00_data/data_input_contract.json",
+        "00_data/data_handoff_packet.json"
+      ],
+      "acceptance": [
+        "domain_handoff consumed",
+        "data_plane next control_plane_generation"
+      ]
+    },
+    {
+      "step": "P0_phase_controller_entry_stubs",
+      "outputs": [
+        "06_phase_controllers/P00_system_boundary/*",
+        "06_phase_controllers/P01_data_fact/*"
+      ],
+      "acceptance": [
+        "P00/P01 registered",
+        "domain/data assets referenced"
+      ]
+    },
+    {
+      "step": "P1_trace_matrix",
+      "outputs": [
+        "00_knowledge_intake/system_mapping/methodology_implementation_trace_matrix.json"
+      ],
+      "acceptance": [
+        "methodology claims mapped to governance/domain/data/control or gap"
+      ]
+    },
+    {
+      "step": "P1_acceptance_gate_upgrade",
+      "outputs": [
+        "06_phase_controllers/K00_knowledge_intake_taskization/acceptance_coverage_rules.json"
+      ],
+      "acceptance": [
+        "coverage checks include object/field/consumer/phase references"
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "BLOCKER gap",
+    "missing upstream canonical source",
+    "safety boundary violation"
+  ],
+  "continue_policy": "完成一个 step 后如果 blocking_gap_count=0，继续执行下一个 step；degraded gaps 登记但不停止。",
+  "status": "READY_TO_EXECUTE"
+}

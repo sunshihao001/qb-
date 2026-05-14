@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "K00 Task Execution Package Data Model",
+  "type": "object",
+  "required": [
+    "task_package_id",
+    "source_doc_id",
+    "package_type",
+    "created_for",
+    "purpose",
+    "system_understanding",
+    "affected_system_planes",
+    "affected_phases",
+    "main_objective",
+    "objective_tree",
+    "required_phase_package_files",
+    "execution_policy",
+    "acceptance_policy",
+    "auto_trigger_policy",
+    "next_action"
+  ],
+  "properties": {
+    "task_package_id": {
+      "type": "string"
+    },
+    "source_doc_id": {
+      "type": "string"
+    },
+    "package_type": {
+      "type": "string",
+      "const": "phase_execution_package"
+    },
+    "created_for": {
+      "type": "string",
+      "const": "HER"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "system_understanding": {
+      "type": "object",
+      "required": [
+        "is_plain_document",
+        "is_system_design_input",
+        "is_phase_controller_related",
+        "requires_taskization",
+        "requires_context_independent_execution"
+      ],
+      "properties": {
+        "is_plain_document": {
+          "type": "boolean"
+        },
+        "is_system_design_input": {
+          "type": "boolean"
+        },
+        "is_phase_controller_related": {
+          "type": "boolean"
+        },
+        "requires_taskization": {
+          "type": "boolean"
+        },
+        "requires_context_independent_execution": {
+          "type": "boolean"
+        }
+      }
+    },
+    "affected_system_planes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_phases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "main_objective": {
+      "type": "string"
+    },
+    "objective_tree": {
+      "type": "object",
+      "required": [
+        "goal",
+        "sub_goals"
+      ],
+      "properties": {
+        "goal": {
+          "type": "string"
+        },
+        "sub_goals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "required_phase_package_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "execution_policy": {
+      "type": "object",
+      "required": [
+        "must_not_stop_after_one_stage",
+        "must_evaluate_stage_completion",
+        "must_continue_if_gate_passed",
+        "must_update_phase_state_every_task",
+        "must_generate_handoff_packet"
+      ],
+      "properties": {
+        "must_not_stop_after_one_stage": {
+          "type": "boolean",
+          "const": true
+        },
+        "must_evaluate_stage_completion": {
+          "type": "boolean",
+          "const": true
+        },
+        "must_continue_if_gate_passed": {
+          "type": "boolean",
+          "const": true
+        },
+        "must_update_phase_state_every_task": {
+          "type": "boolean",
+          "const": true
+        },
+        "must_generate_handoff_packet": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "acceptance_policy": {
+      "type": "object",
+      "required": [
+        "completion_is_not_markdown_written",
+        "completion_requires_outputs",
+        "completion_requires_state_update",
+        "completion_requires_handoff",
+        "completion_requires_next_phase_decision"
+      ],
+      "properties": {
+        "completion_is_not_markdown_written": {
+          "type": "boolean",
+          "const": true
+        },
+        "completion_requires_outputs": {
+          "type": "boolean",
+          "const": true
+        },
+        "completion_requires_state_update": {
+          "type": "boolean",
+          "const": true
+        },
+        "completion_requires_handoff": {
+          "type": "boolean",
+          "const": true
+        },
+        "completion_requires_next_phase_decision": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "auto_trigger_policy": {
+      "type": "object",
+      "required": [
+        "enabled",
+        "decision_source",
+        "requires_state_persistence",
+        "requires_handoff_packet",
+        "requires_next_phase_recommendation",
+        "stop_on_blocker"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "const": true
+        },
+        "decision_source": {
+          "type": "string",
+          "const": "acceptance_gate"
+        },
+        "requires_state_persistence": {
+          "type": "boolean",
+          "const": true
+        },
+        "requires_handoff_packet": {
+          "type": "boolean",
+          "const": true
+        },
+        "requires_next_phase_recommendation": {
+          "type": "boolean",
+          "const": true
+        },
+        "stop_on_blocker": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "next_action": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
+

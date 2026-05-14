@@ -1,0 +1,19 @@
+{
+  "handoff_id": "K00-HANDOFF-DOC-20260511-004",
+  "from_phase": "K00_knowledge_intake_taskization",
+  "to_phase": "domain_plane_generation",
+  "source_doc_id": "DOC-20260511-004",
+  "handoff_status": "READY_WITH_NONBLOCKING_GAPS",
+  "canonical_artifact": "00_governance/governance_plane.md",
+  "machine_outputs": [
+    "00_governance/governance_status.json",
+    "00_governance/governance_boundary_summary.json",
+    "00_governance/governance_forbidden_actions.json",
+    "00_governance/governance_allowed_actions.json",
+    "00_governance/governance_gap_list.json",
+    "00_governance/governance_handoff_packet.json"
+  ],
+  "blocking_gap_count": 0,
+  "degraded_gap_count": 1,
+  "next_required_artifact": "00_domain/domain_plane.md"
+}

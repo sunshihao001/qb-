@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0166
+source_path: docs/plans/2026-05-01-sikk-paper-live-runner.md
+phase_scores:
+  P01: 9
+  P02: 0
+  P03: 0
+  P04: 0
+  P05: 1
+  P06: 0
+  P07: 6
+  P08: 10
+  P09: 1
+  P10: 0
+primary_phase: P08
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

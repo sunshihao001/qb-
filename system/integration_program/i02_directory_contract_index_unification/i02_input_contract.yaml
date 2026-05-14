@@ -1,0 +1,17 @@
+contract_id: i02_input_contract
+required_inputs:
+- K00 I02 passport and task package
+- I01 audit outputs if available
+- P01-P10 phase controller directories
+- runtime data roots
+- system indices
+- legacy paths
+optional_inputs:
+- phase cards
+- I01 fix priority list
+- existing contract/schema index files
+blocking_conditions:
+- business_logic_mutation_requested
+- paper_runtime_start_requested
+- live_execution_requested
+- auto_deploy_requested

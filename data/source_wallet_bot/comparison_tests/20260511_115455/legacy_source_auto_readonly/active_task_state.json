@@ -1,0 +1,30 @@
+{
+  "task": "sikk_sol_gmgn_okx_full_auto_workflow",
+  "mode": "auto-readonly",
+  "started_at": "2026-05-11T11:54:55Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_collectors": true,
+    "real_swap_enabled": false,
+    "private_key_required": false,
+    "secret_file_reading_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "live_disabled": true
+  },
+  "compatibility_route": {
+    "route_type": "legacy_compat_one_shot",
+    "canonical_wallet_system": [
+      "modules/source_wallet_bot",
+      "sikk_candidate_wallet_structure_pipeline.py",
+      "sikk_wallet_structure_gate.py",
+      "sikk_candidate_state_machine.py",
+      "sikk_live_run.py"
+    ],
+    "compat_policy": "保留旧 one-shot/readiness/sample 命令；新钱包结构能力必须优先接入 canonical source_wallet_bot + wallet_structure pipeline。",
+    "not_primary_entry": true
+  },
+  "state": "COMPLETED_WITH_VERIFICATION",
+  "finished_at": "2026-05-11T11:55:03Z",
+  "workflow_manifest_json": "/root/sikk-gmgn/data/source_wallet_bot/comparison_tests/20260511_115455/legacy_source_auto_readonly/workflow_manifest.json"
+}

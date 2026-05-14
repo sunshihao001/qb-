@@ -1,0 +1,7 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: STRATEGY_INVALIDATION_BINDING_SCHEMA
+required_fields: [binding_id, candidate_id, strategy_profile_id, bound_invalidation_conditions, strategy_specific_invalidations, downstream]
+severity_enum: [HARD_INVALIDATION, SOFT_INVALIDATION, WATCH_INVALIDATION]
+downstream: {p08_must_include_in_runtime_precheck: true, p09_must_use_for_failure_attribution: true}

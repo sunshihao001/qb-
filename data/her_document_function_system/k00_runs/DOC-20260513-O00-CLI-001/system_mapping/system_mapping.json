@@ -1,0 +1,23 @@
+{
+  "doc_id": "DOC-20260513-O00-CLI-001",
+  "target_subsystem": "HER-DFAFS O00 CLI / HER Command Entry",
+  "canonical_repo_root": "/root/sikk-gmgn",
+  "target_assets": [
+    "tools/o00_cli.py",
+    "tools/o00_pipeline_orchestrator.py",
+    "tools/o00_replay_runner.py",
+    "tools/o00_validate_config.py",
+    "tools/o00_status.py",
+    "tools/o00_recovery.py",
+    "system/her_document_function_system/registry",
+    "system/her_document_function_system/config",
+    "system/her_document_function_system/replay/sample_cases/sample_001_document_to_function"
+  ],
+  "must_not_change": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ],
+  "phase_transition": "K00_ACCEPTED -> O00_CLI_IMPLEMENTATION_TASK"
+}

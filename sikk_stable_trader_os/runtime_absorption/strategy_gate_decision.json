@@ -1,0 +1,55 @@
+{
+  "phase_id": "P07",
+  "token_address": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+  "consumed_handoffs": [
+    "data_fact_handoff_packet.json",
+    "wallet_chip_fact_handoff_packet.json",
+    "wallet_entity_handoff_packet.json",
+    "chip_structure_handoff_packet.json",
+    "evidence_control_packet.json",
+    "scenario_recognition_packet.json"
+  ],
+  "runtime_state": {
+    "代币地址": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+    "代币符号": "TROLLIEN",
+    "当前状态": "PAPER_READY",
+    "状态原因": "吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0",
+    "候选筛选等级": "S3_进入SIKK结构分析",
+    "吸筹窗口状态": "valid",
+    "T_start": "2026-05-04 11:41:00 UTC",
+    "T_end": "2026-05-04 11:55:00 UTC",
+    "信号等级": "S4_强确认信号",
+    "风险门禁": "ALLOW_PAPER_TRADE_允许纸面交易",
+    "建议纸面仓位SOL": 0.2,
+    "钱包结构结论": "WALLET_BLOCK",
+    "钱包结构系数": 0.0,
+    "钱包结构评分": 0.0,
+    "钱包风险评分": 100.0,
+    "对手盘压力评分": 72.0,
+    "数据质量评分": 100.0,
+    "钱包证据等级": "E3",
+    "钱包结构原因": "对手盘压力高，接盘/套牢筹码占比偏高；缺失字段：wallet_address, role, game_side, evidence_level；筹码控制状态机：CONTROL_MIGRATING_TO_COUNTERPARTY；筹码控制状态机：COUNTERPARTY_PRESSURE_HIGH",
+    "钱包门禁模式": "observe",
+    "钱包门禁效果": "OBSERVE_ONLY",
+    "would_block": true,
+    "would_pause": false,
+    "wallet_decision_stale": false,
+    "策略类型": "SIKK-B 控盘箱体突破回踩",
+    "更新时间": "2026-05-04T12:40:32Z",
+    "模式": "paper/readiness"
+  },
+  "decision": "PAPER_READY",
+  "normalized_gate": "PAPER_READY",
+  "evidence_level": "E3",
+  "counter_evidence": [
+    "wallet gate observe-only allowed PAPER_READY despite wallet would_block=true"
+  ],
+  "missing_fields": [
+    "wallet_address",
+    "role",
+    "game_side",
+    "evidence_level"
+  ],
+  "downstream_handoff": "P08",
+  "paper_runner_allowed_next": true
+}

@@ -1,0 +1,23 @@
+{
+  "doc_id": "DOC-20260513-V00-REAL-001",
+  "gaps": [
+    {
+      "gap_id": "K00_V00_REAL_IMPL_MISSING",
+      "status": "OPEN",
+      "blocking": false,
+      "required_fix": "create tools/tests/system files and execute V00 real validation"
+    },
+    {
+      "gap_id": "V00_RUNNER_BINDING_NOT_SCOPE",
+      "status": "READY_WITH_GAPS",
+      "blocking": false,
+      "route_to": "R00"
+    },
+    {
+      "gap_id": "G00_POLICY_NOT_ACTIVE",
+      "status": "READY_WITH_GAPS",
+      "blocking": false,
+      "route_to": "G00"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "boundary_id": "execution_boundary_default_v1",
+  "allow_read": true,
+  "allow_write_run_outputs": true,
+  "allow_write_system_files": true,
+  "allow_write_code_patch": false,
+  "allow_schema_validation": true,
+  "allow_contract_validation": true,
+  "allow_safe_tests": true,
+  "allow_safe_replay": true,
+  "allow_safe_dry_run": true,
+  "allow_runner_binding_design": true,
+  "allow_runner_binding_execution": false,
+  "allow_scheduler_enable": false,
+  "allow_paper_runtime": false,
+  "allow_live_runtime": false,
+  "allow_wallet_signing": false,
+  "allow_auto_deploy": false,
+  "allow_production_trading": false
+}

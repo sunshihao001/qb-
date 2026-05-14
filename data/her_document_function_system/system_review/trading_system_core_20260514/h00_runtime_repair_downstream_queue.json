@@ -1,0 +1,54 @@
+{
+  "queue_id": "H00_RUNTIME_REPAIR_DOWNSTREAM_QUEUE_20260514",
+  "created_at": "2026-05-14T10:02:32+00:00",
+  "queue_status": "QUEUE_READY_WITH_GAPS",
+  "items": [
+    {
+      "queue_item_id": "H00-RUNTIME-REPAIR-001",
+      "source_gap": "runtime_P3_wallet_structure_missing_or_invalid",
+      "owner_phase": "P02_wallet_structure/P03_chip_control",
+      "target_path": "data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json",
+      "task_type": "IMPLEMENT_RUNTIME_SUMMARY_OR_CONNECT_EXISTING_INTEL_BOT_OUTPUT",
+      "blocking_policy": "DEGRADED_OR_NOT_CONNECTED; must not be treated as WALLET_SUPPORT",
+      "required_fields": [
+        "token_address",
+        "wallet_structure_status",
+        "evidence_level",
+        "counter_evidence",
+        "dominant_side",
+        "same_source_groups",
+        "cost_zone",
+        "distribution_progress",
+        "decision_reason"
+      ],
+      "safe_apply_allowed": false,
+      "requires_code_or_runtime_run": true,
+      "status": "QUEUED_HIGH"
+    },
+    {
+      "queue_item_id": "H00-RUNTIME-REPAIR-002",
+      "source_gap": "gap_002_real_tool_execution_limited_to_safe_mode",
+      "owner_phase": "V00/A00",
+      "target_path": "data/her_document_function_system/system_review/trading_system_core_20260514/v00_runtime_evidence_bundle.json",
+      "task_type": "KEEP_EVIDENCE_BUNDLE_UPDATED_AFTER_EACH_RUNTIME_RUN",
+      "blocking_policy": "READY_WITH_GAPS until refreshed after actual sikk_live_run cycle",
+      "required_fields": [
+        "command",
+        "exit_code",
+        "artifact_exists",
+        "json_ok",
+        "sample_count",
+        "safe_boundary"
+      ],
+      "safe_apply_allowed": true,
+      "requires_code_or_runtime_run": false,
+      "status": "QUEUED_MEDIUM"
+    }
+  ],
+  "forbidden_actions": [
+    "real_swap",
+    "private_key_read",
+    "sign",
+    "broadcast"
+  ]
+}

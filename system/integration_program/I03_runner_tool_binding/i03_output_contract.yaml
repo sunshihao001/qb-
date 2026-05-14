@@ -1,0 +1,25 @@
+{
+  "controller_id": "I03_RUNNER_TOOL_BINDING",
+  "required_outputs": [
+    "i03_input_manifest",
+    "runner_capability_registry",
+    "phase_runner_binding_index",
+    "tool_binding_index",
+    "phase_runner_contract",
+    "global_runner_orchestrator_contract",
+    "runner_cli_command_registry",
+    "environment_config_registry",
+    "tool_credential_policy",
+    "validator_writer_bindings",
+    "path_guard_binding",
+    "dry_run_validation_report",
+    "i04_paper_runtime_prerequisite_packet",
+    "i03_to_i04_handoff_packet",
+    "i03_acceptance_result"
+  ],
+  "forbidden_outputs": [
+    "live execution command",
+    "wallet signing command",
+    "auto deploy command"
+  ]
+}

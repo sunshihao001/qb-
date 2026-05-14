@@ -1,0 +1,46 @@
+doc_id: DOC-20260511-007
+source_type: user_uploaded_text
+source_name: 未命名 4 _1_.md / bootstrap-full-control-plane-v3
+received_at: '2026-05-11'
+ingested_at: '2026-05-11T15:44:15.835396+00:00'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-007_bootstrap_full_control_plane_v3_system_planes_professional_generation.md
+sha256: 63de023524e39c3549f74b03538a395894bce21f4dfd435b344957f8ad36101a
+document_role:
+  primary_role: system_methodology_increment_and_next_stage_task_spec
+  secondary_roles:
+  - control_plane_split_correction
+  - system_planes_generation_taskbook
+  - p01_blocking_safety_rule
+summary:
+  core_intent: 将 Control Plane 拆为 Bootstrap Control Plane 与 Full Control Plane，并将下一阶段裁决为
+    SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE。
+  key_points:
+  - P00 必须先建立 Bootstrap Control Plane 以阻断 P01、注册阶段、裁决下一步。
+  - Governance/Domain/Data 生成后再补全 Full Control Plane。
+  - 当前下一步不是 P01，而是系统平面专业生成与验收。
+  - 继续保持 paper-only，禁止真实交易，P01 在 Data Plane 验收前阻断。
+system_mapping:
+  planes:
+  - Knowledge Plane
+  - Methodology Plane
+  - Control Plane
+  - Governance Plane
+  - Domain Plane
+  - Data Plane
+  - Trace Plane
+  - Acceptance Plane
+  - Handoff Plane
+  - Execution Plane
+  affected_phases:
+  - K00
+  - P00
+  - P01-P10
+required_actions:
+- preserve_raw_input
+- register_document
+- create_task_package
+- verify_current_planes
+- update_methodology_v3_supplement
+- generate_next_stage_task_package
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

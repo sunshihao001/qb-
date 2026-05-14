@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "P06_strategy_gate_controller handoff packet stub",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "source_stage",
+    "target_stage",
+    "included_assets",
+    "acceptance_status",
+    "next_legal_stage"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "source_stage": {
+      "type": "string"
+    },
+    "target_stage": {
+      "type": "string"
+    },
+    "included_assets": {
+      "type": "array"
+    },
+    "known_gaps": {
+      "type": "array"
+    },
+    "blocking_gaps": {
+      "type": "array"
+    },
+    "acceptance_status": {
+      "type": "string"
+    },
+    "next_legal_stage": {
+      "type": "string"
+    }
+  }
+}

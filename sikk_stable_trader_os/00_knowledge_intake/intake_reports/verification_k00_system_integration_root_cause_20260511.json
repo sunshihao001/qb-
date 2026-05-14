@@ -1,0 +1,38 @@
+{
+  "verification_id": "VERIFY-K00-SYSTEM-INTEGRATION-ROOT-CAUSE-20260511",
+  "checks": [
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/intake_reports/k00_system_integration_root_cause_audit_20260511.json",
+      "exists": true,
+      "json_ok": true,
+      "size": 7962,
+      "findings_count": 8,
+      "p0_count": 4
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/k00_system_integration_repair/task_execution_package.json",
+      "exists": true,
+      "json_ok": true,
+      "size": 2301,
+      "steps": 5,
+      "status": "READY_TO_EXECUTE"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/k00_system_integration_repair/runtime_task_state.json",
+      "exists": true,
+      "json_ok": true,
+      "size": 318,
+      "status": "READY_TO_EXECUTE"
+    }
+  ],
+  "acceptance": {
+    "all_files_exist": true,
+    "all_json_ok": true,
+    "has_primary_root_cause": true,
+    "has_p0_findings": true,
+    "has_repair_steps": true,
+    "state_ready": true,
+    "safety_preserved": true
+  },
+  "overall_passed": true
+}

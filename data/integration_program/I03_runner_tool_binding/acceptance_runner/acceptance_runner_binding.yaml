@@ -1,0 +1,11 @@
+{
+  "acceptance_runner_binding": {
+    "binding_id": "ACCEPTANCE_RUNNER_BINDING",
+    "ready": true,
+    "failure_policy": "BLOCK_ON_REQUIRED_FAILURE",
+    "safety": {
+      "no_live_execution": true,
+      "no_wallet_signing": true
+    }
+  }
+}

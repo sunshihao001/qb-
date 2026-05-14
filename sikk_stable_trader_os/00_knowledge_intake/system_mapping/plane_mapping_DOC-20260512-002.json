@@ -1,0 +1,19 @@
+{
+  "doc_id": "DOC-20260512-002",
+  "material_type": "phase_controller_design_spec",
+  "planes": {
+    "Knowledge Plane": "raw/passport/index/task/handoff assetization",
+    "Data Plane": "P02 normalized fact model, source reconciliation, quality/gap/conflict/freshness policies",
+    "Control Plane": "runtime blocked; package design only; next stage P03 package design",
+    "Trace Plane": "fact source trace and downstream field usage trace",
+    "Acceptance Plane": "file/structure/semantic/safety validation gates",
+    "Handoff Plane": "P02 to P03 wallet entity data request and handoff packet",
+    "Execution Plane": "runner/tool binding declared as gap; not executed"
+  },
+  "forbidden_interpretation": [
+    "trading_signal",
+    "paper_runtime_permission",
+    "wallet_role_judgment",
+    "evidence_generation"
+  ]
+}

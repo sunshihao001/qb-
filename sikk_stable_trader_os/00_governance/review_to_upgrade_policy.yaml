@@ -1,0 +1,6 @@
+version: '2.0'
+p09_outputs: candidates_only
+p10_outputs: upgrade_proposals_only
+requires_manual_acceptance: true
+shadow_mode_first: true
+allow_direct_runtime_rule_change: false

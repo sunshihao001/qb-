@@ -1,0 +1,42 @@
+{
+  "phase_id": "F00",
+  "phase_name": "F00_function_realization_controller",
+  "status": "ACCEPTANCE_PASSED",
+  "previous_status": "READY_WITH_GAPS",
+  "execution_status": "HANDOFF_READY",
+  "schema_validation_status": "PASSED",
+  "contract_validation_status": "PASSED",
+  "test_status": "TESTED",
+  "replay_status": "REPLAY_TESTED",
+  "runner_binding_status": "BINDING_TESTED",
+  "output_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/concept_to_function_map.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/implementation_decision.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/repo_scan_result.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/function_asset_plan.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/field_model.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/rule_logic.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/schema_contract_plan.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/patch_plan.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/test_replay_evidence.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/runner_binding_evidence.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/replay_output.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/replay_trace.jsonl",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/replay_report.md",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/replay_acceptance.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_trace.jsonl",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_audit.jsonl",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_acceptance_result.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_to_downstream_handoff_packet.json",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_final_report.md"
+  ],
+  "unresolved_gaps": [],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_rule_direct_change"
+  ],
+  "safe_mode": true,
+  "updated_at": "2026-05-13T14:53:53+00:00"
+}

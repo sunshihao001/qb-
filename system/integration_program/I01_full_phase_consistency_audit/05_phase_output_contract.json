@@ -1,0 +1,20 @@
+{
+  "phase_id": "I01_full_phase_consistency_audit",
+  "required_outputs": [
+    "full_phase_consistency_audit_report.md",
+    "phase_io_alignment_matrix.yaml",
+    "handoff_chain_integrity_report.yaml",
+    "status_code_consistency_report.yaml",
+    "forbidden_use_inheritance_report.yaml",
+    "gap_propagation_report.yaml",
+    "phase_boundary_violation_report.yaml",
+    "fix_priority_list.yaml",
+    "i01_to_i02_handoff_packet.yaml"
+  ],
+  "status_values": [
+    "I01_READY",
+    "I01_READY_WITH_GAPS",
+    "I01_BLOCKED"
+  ],
+  "handoff_destination": "I02_directory_contract_index_unification"
+}

@@ -1,0 +1,70 @@
+{
+  "phase_id": "H00",
+  "required": [
+    "a00_handoff_packet",
+    "readiness_certificate",
+    "evidence_bundle",
+    "phase_status_matrix",
+    "artifact_manifest",
+    "gap_propagation_report",
+    "acceptance_scorecard",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "execution_boundary"
+  ],
+  "properties": {
+    "a00_handoff_packet": {
+      "type": "object"
+    },
+    "readiness_certificate": {
+      "type": "object"
+    },
+    "evidence_bundle": {
+      "type": "object"
+    },
+    "phase_status_matrix": {
+      "type": "object"
+    },
+    "artifact_manifest": {
+      "type": "object"
+    },
+    "gap_propagation_report": {
+      "type": "object"
+    },
+    "acceptance_scorecard": {
+      "type": "object"
+    },
+    "allowed_next_actions": {
+      "type": "array"
+    },
+    "forbidden_next_actions": {
+      "type": "array"
+    },
+    "accepted_risks": {
+      "type": "array"
+    },
+    "execution_boundary": {
+      "type": "object",
+      "required": [
+        "allow_live_runtime",
+        "allow_wallet_signing",
+        "allow_auto_deploy",
+        "allow_production_trading"
+      ],
+      "properties": {
+        "allow_live_runtime": {
+          "const": false
+        },
+        "allow_wallet_signing": {
+          "const": false
+        },
+        "allow_auto_deploy": {
+          "const": false
+        },
+        "allow_production_trading": {
+          "const": false
+        }
+      }
+    }
+  }
+}

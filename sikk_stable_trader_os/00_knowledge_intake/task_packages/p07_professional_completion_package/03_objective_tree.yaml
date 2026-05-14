@@ -1,0 +1,42 @@
+objective_tree:
+  package_id: P07_PROFESSIONAL_COMPLETION_TASKBOOK_V1
+  doc_id: DOC-20260512-007
+  generated_at: '2026-05-12T05:14:28Z'
+  target_phase: P07_STRATEGY_GATE_CONTROLLER
+  level_1_goal: 把 P07 提升为专业化、轻量机构级、数据对象完整的 Strategy Gate 阶段包；明确仍非 runtime/paper/live。
+  level_2_sub_goals:
+  - id: G1
+    goal: 问题清单结构化与优先级分层
+  - id: G2
+    goal: P07 专业阶段角色模型与思维模型固化
+  - id: G3
+    goal: P07 全数据对象 ledger 与输出闭环补齐
+  - id: G4
+    goal: P07 阶段步骤、状态机、验收与 handoff 全面化
+  - id: G5
+    goal: 保持边界阻断并为 P08 建立专业 handoff 前置条件
+  level_3_tasks:
+  - id: T1
+    parent: G1
+    action: audit_problem_list
+    output: problem_backlog + severity + closure_policy
+  - id: T2
+    parent: G2
+    action: define_role_model
+    output: strategy_gate_role_brain_model
+  - id: T3
+    parent: G3
+    action: enumerate_data_outputs
+    output: p07_data_object_ledger
+  - id: T4
+    parent: G4
+    action: define_phase_steps
+    output: p07_professional_phase_step_map
+  - id: T5
+    parent: G4
+    action: define_acceptance
+    output: professional_acceptance_matrix
+  - id: T6
+    parent: G5
+    action: define_handoff_and_boundaries
+    output: p08_handoff_readiness_requirements + forbidden_use_policy

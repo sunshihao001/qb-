@@ -1,0 +1,51 @@
+{
+  "doc_id": "DOC-20260511-022",
+  "anchors": [
+    {
+      "section": "0",
+      "anchor": "Domain Plane 不是策略说明，也不是数据采集层",
+      "meaning": "权限边界"
+    },
+    {
+      "section": "5",
+      "anchor": "核心领域对象",
+      "meaning": "领域对象注册"
+    },
+    {
+      "section": "6",
+      "anchor": "钱包角色领域模型",
+      "meaning": "钱包角色分类"
+    },
+    {
+      "section": "7",
+      "anchor": "主导侧生命周期领域模型",
+      "meaning": "生命周期"
+    },
+    {
+      "section": "8",
+      "anchor": "场景识别领域模型",
+      "meaning": "场景分类"
+    },
+    {
+      "section": "9-11",
+      "anchor": "证据/反证/硬否定",
+      "meaning": "审计与风险优先"
+    },
+    {
+      "section": "15-16",
+      "anchor": "字段需求与输出合约",
+      "meaning": "Data Plane handoff"
+    }
+  ],
+  "key_terms": [
+    "疑似主导侧",
+    "结构侧",
+    "证据等级",
+    "反证对象",
+    "领域级硬否定",
+    "市值上下文",
+    "禁止强判断",
+    "DOMAIN_READY_WITH_GAPS"
+  ],
+  "created_at": "2026-05-11T16:25:42Z"
+}

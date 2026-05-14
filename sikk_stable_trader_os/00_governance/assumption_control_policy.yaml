@@ -1,0 +1,10 @@
+version: '2.0'
+missing_field_policy: explicit_missing_or_UNKNOWN_only
+forbid:
+- fill_missing_required_field_by_inference
+- mark_assumption_as_fact
+- hide_missing_data
+allowed:
+- record_assumption_as_assumption
+- degrade_confidence
+- block_if_required

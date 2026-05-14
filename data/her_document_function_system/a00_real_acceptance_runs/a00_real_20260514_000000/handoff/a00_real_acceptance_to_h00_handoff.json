@@ -1,0 +1,47 @@
+{
+  "handoff_id": "handoff_a00_real_20260514_000000_to_h00",
+  "from_phase": "A00_REAL_ACCEPTANCE",
+  "to_phase": "H00_HANDOFF_DOWNSTREAM_QUEUE",
+  "handoff_type": "REAL_ACCEPTANCE_TO_DOWNSTREAM_QUEUE",
+  "source_pipeline_run_id": "o00_run_20260513_183810",
+  "acceptance_run_id": "a00_real_20260514_000000",
+  "real_evidence_bundle_refs": [
+    "evidence_bundle/real_evidence_bundle.json"
+  ],
+  "phase_status_matrix_refs": [
+    "phase_status/phase_status_matrix.json"
+  ],
+  "artifact_manifest_refs": [
+    "artifact_manifest/artifact_manifest.json"
+  ],
+  "gap_propagation_refs": [
+    "gap_review/gap_propagation_report.json"
+  ],
+  "trace_audit_refs": [
+    "trace_audit/trace_audit_validation.json"
+  ],
+  "readiness_certificate_refs": [
+    "certificate/readiness_certificate.json"
+  ],
+  "allowed_next_actions": [
+    "build_downstream_queue",
+    "route_unresolved_gaps_to_u00",
+    "route_policy_candidates_to_g00"
+  ],
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ],
+  "unresolved_gaps": [
+    "policy_not_active",
+    "paper_runtime_not_enabled",
+    "live_runtime_forbidden",
+    "telegram_binding_design_only",
+    "V00_READY_WITH_GAPS",
+    "R00_READY_WITH_GAPS"
+  ],
+  "handoff_status": "HANDOFF_READY_WITH_GAPS"
+}

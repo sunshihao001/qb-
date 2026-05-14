@@ -1,0 +1,327 @@
+{
+  "audit_id": "runtime_data_integrity_audit_20260514",
+  "scope": "data/gmgn_candidates_live_run runtime artifacts, read-only integrity audit",
+  "safe_mode": true,
+  "paper_only": true,
+  "stages": [
+    {
+      "stage": "P0_candidate_discovery",
+      "path": "data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.json",
+      "file_exists": true,
+      "json_ok": true,
+      "sample_count": 5,
+      "key_fields_present": {
+        "token_address": true
+      },
+      "status": "PASS_WITH_GAPS",
+      "top_level_keys": [
+        "模块",
+        "配置名称",
+        "扫描时间",
+        "candidate_snapshot_at",
+        "candidate_batch_id",
+        "candidate_source",
+        "first_seen_registry",
+        "候选统计",
+        "候选列表",
+        "排除列表",
+        "说明"
+      ],
+      "sample_keys": [
+        "来源分类",
+        "代币地址",
+        "代币符号",
+        "代币名称",
+        "创建时间戳",
+        "开盘时间戳",
+        "token_open_time",
+        "pool_created_at",
+        "总供应量",
+        "发射平台",
+        "当前市值USD",
+        "流动性USD",
+        "24H成交额USD",
+        "24H净买入USD",
+        "24H交易数",
+        "24H买笔数",
+        "24H卖笔数",
+        "Top10持仓率",
+        "Dev持仓率",
+        "rat异常占比",
+        "bot占比",
+        "鲸鱼持仓率",
+        "Dev发币数",
+        "Smart钱包数",
+        "KOL人数",
+        "新钱包比例",
+        "狙击钱包数",
+        "捆绑交易占比",
+        "Rug风险",
+        "筛选等级",
+        "风险动作",
+        "是否进入候选池",
+        "结构加分",
+        "通过条件",
+        "软性不足",
+        "排除原因",
+        "下一步动作",
+        "扫描时间",
+        "token_address",
+        "token_symbol"
+      ]
+    },
+    {
+      "stage": "P1_signal",
+      "path": "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json",
+      "file_exists": true,
+      "json_ok": true,
+      "sample_count": 8,
+      "key_fields_present": {
+        "non_empty_json": true
+      },
+      "status": "PASS_WITH_GAPS",
+      "top_level_keys": [
+        "模块",
+        "扫描时间",
+        "K线管道来源",
+        "模式",
+        "处理统计",
+        "信号结果",
+        "跳过结果",
+        "说明"
+      ],
+      "sample_keys": [
+        "模块",
+        "扫描时间",
+        "K线管道来源",
+        "模式",
+        "处理统计",
+        "信号结果",
+        "跳过结果",
+        "说明"
+      ]
+    },
+    {
+      "stage": "P2_state_machine",
+      "path": "data/gmgn_candidates_live_run/state_machine/candidate_states.json",
+      "file_exists": true,
+      "json_ok": true,
+      "sample_count": 6,
+      "key_fields_present": {
+        "non_empty_json": true
+      },
+      "status": "PASS_WITH_GAPS",
+      "top_level_keys": [
+        "模块",
+        "更新时间",
+        "输入文件",
+        "状态统计",
+        "候选状态",
+        "说明"
+      ],
+      "sample_keys": [
+        "模块",
+        "更新时间",
+        "输入文件",
+        "状态统计",
+        "候选状态",
+        "说明"
+      ]
+    },
+    {
+      "stage": "P3_wallet_structure",
+      "path": "data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json",
+      "file_exists": false,
+      "json_ok": false,
+      "sample_count": 0,
+      "key_fields_present": {},
+      "status": "MISSING"
+    },
+    {
+      "stage": "P4_quote_security",
+      "path": "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json",
+      "file_exists": true,
+      "json_ok": true,
+      "sample_count": 8,
+      "key_fields_present": {
+        "non_empty_json": true
+      },
+      "status": "PASS_WITH_GAPS",
+      "top_level_keys": [
+        "模块",
+        "扫描时间",
+        "输入文件",
+        "处理统计",
+        "处理结果",
+        "跳过结果",
+        "失败结果",
+        "说明"
+      ],
+      "sample_keys": [
+        "模块",
+        "扫描时间",
+        "输入文件",
+        "处理统计",
+        "处理结果",
+        "跳过结果",
+        "失败结果",
+        "说明"
+      ]
+    },
+    {
+      "stage": "P5_paper_live_open",
+      "path": "data/gmgn_candidates_live_run/paper_live/paper_positions_open.json",
+      "file_exists": true,
+      "json_ok": true,
+      "sample_count": 5,
+      "key_fields_present": {
+        "non_empty_json": true
+      },
+      "status": "PASS_WITH_GAPS",
+      "top_level_keys": [
+        "snapshot_time",
+        "open_positions"
+      ],
+      "sample_keys": [
+        "position_id",
+        "代币地址",
+        "代币符号",
+        "entry_time",
+        "entry_price",
+        "entry_price_mode",
+        "signal_entry_price",
+        "live_entry_price",
+        "signal_pnl_pct",
+        "live_pnl_pct",
+        "entry_price_diff_pct",
+        "cost_model",
+        "cost_buffer_pct",
+        "position_sol",
+        "remaining_pct",
+        "stop_price",
+        "take_profit_rules",
+        "triggered_tps",
+        "max_price",
+        "min_price",
+        "last_price",
+        "last_update_time",
+        "signal_level",
+        "strategy_type",
+        "quote_security_state",
+        "wallet_structure_status",
+        "wallet_structure_factor",
+        "wallet_structure_score",
+        "wallet_risk_score",
+        "counterparty_pressure_score",
+        "wallet_structure_reason",
+        "wallet_evidence_level",
+        "status",
+        "scope_note",
+        "最大浮盈_pct",
+        "最大浮亏_pct",
+        "已触发止盈次数",
+        "当前收益率_pct",
+        "wallet_position_action",
+        "wallet_exit_monitor_reason"
+      ]
+    },
+    {
+      "stage": "P6_live_state",
+      "path": "data/gmgn_candidates_live_run/live_state.json",
+      "file_exists": true,
+      "json_ok": true,
+      "sample_count": 5,
+      "key_fields_present": {
+        "tokens": true
+      },
+      "status": "PASS_WITH_GAPS",
+      "top_level_keys": [
+        "last_update",
+        "token_count",
+        "tokens",
+        "scope_note"
+      ],
+      "sample_keys": [
+        "token_address",
+        "token_symbol",
+        "current_state",
+        "priority_level",
+        "last_update",
+        "latest_action",
+        "latest_reason",
+        "wallet_structure",
+        "lifecycle",
+        "chip_control",
+        "signal",
+        "quote",
+        "security",
+        "paper",
+        "scope_note",
+        "market_cap_context",
+        "discovery_market_cap_usd",
+        "signal_market_cap_usd",
+        "wallet_decision_market_cap_usd",
+        "paper_entry_market_cap_usd",
+        "current_market_cap_usd",
+        "exit_market_cap_usd",
+        "market_cap_change_from_discovery_pct",
+        "market_cap_change_from_signal_pct",
+        "market_cap_change_from_wallet_decision_pct",
+        "market_cap_context_quality",
+        "market_cap_missing_fields",
+        "operator_psychology",
+        "operator_lifecycle_stage",
+        "operator_psychology_label",
+        "paper_trade_alignment"
+      ]
+    },
+    {
+      "stage": "P7_manifest",
+      "path": "data/gmgn_candidates_live_run/live_run_manifest.json",
+      "file_exists": true,
+      "json_ok": true,
+      "sample_count": 9,
+      "key_fields_present": {
+        "non_empty_json": true
+      },
+      "status": "PASS_WITH_GAPS",
+      "top_level_keys": [
+        "模块",
+        "模式",
+        "运行时间",
+        "输出根目录",
+        "配置",
+        "分阶段流程",
+        "当前不足修正",
+        "阶段输出",
+        "说明"
+      ],
+      "sample_keys": [
+        "模块",
+        "模式",
+        "运行时间",
+        "输出根目录",
+        "配置",
+        "分阶段流程",
+        "当前不足修正",
+        "阶段输出",
+        "说明"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "gap_id": "runtime_P3_wallet_structure_missing_or_invalid",
+      "stage": "P3_wallet_structure",
+      "path": "data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json",
+      "severity": "HIGH",
+      "policy": "missing/degraded must not be treated as safe"
+    }
+  ],
+  "final_status": "RUNTIME_DATA_INTEGRITY_PASS_WITH_GAPS",
+  "acceptance_policy": {
+    "missing_quote_or_scan": "PAUSE_OR_BLOCK_NOT_SAFE",
+    "missing_wallet_structure": "DEGRADED_OR_NOT_CONNECTED",
+    "paper_ready": "PAPER_ONLY_NOT_REAL_AUTHORIZATION"
+  }
+}

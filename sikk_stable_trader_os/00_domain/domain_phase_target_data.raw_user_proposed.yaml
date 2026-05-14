@@ -1,0 +1,66 @@
+phase_id: DOMAIN_PLANE
+phase_name_cn: 领域平面
+phase_type: domain_object_and_decision_model
+phase_status: REQUIRED_BEFORE_DATA_PLANE
+authority_scope: 定义系统要判断的对象、关系、问题、场景、证据和反证
+primary_goal: 将 SIKK Stable Trader OS 的交易认知转化为可机读、可追踪、可被数据平面消费的领域模型。
+non_goal:
+- 不直接采集数据
+- 不直接执行交易
+- 不直接生成买入信号
+required_inputs:
+- system_methodology_blueprint.md
+- governance_plane.md
+- K00 task packages
+required_outputs:
+- 00_domain/domain_plane.md
+- 00_domain/domain_object_registry.yaml
+- 00_domain/domain_relation_graph.yaml
+- 00_domain/domain_decision_question_tree.yaml
+- 00_domain/scenario_taxonomy.yaml
+- 00_domain/wallet_role_taxonomy.yaml
+- 00_domain/dominant_side_lifecycle_taxonomy.yaml
+- 00_domain/domain_to_data_demand_map.yaml
+- 00_domain/domain_to_phase_map.yaml
+- 00_domain/domain_acceptance_gate.yaml
+core_objects:
+- token
+- wallet
+- wallet_entity
+- same_source_group
+- funding_source
+- chip_cluster
+- early_wallet_group
+- dominant_side
+- counterparty_group
+- market_structure
+- scenario
+- strategy_candidate
+- paper_trade
+- review_case
+core_questions:
+- 系统到底判断什么？
+- 钱包事实如何进入实体归并？
+- 同源组如何影响筹码控制权？
+- 筹码控制权如何影响主导侧生命周期？
+- 主导侧生命周期如何影响场景识别？
+- 场景识别如何约束策略门禁？
+- 反证如何阻断下游？
+acceptance_gate:
+- domain_object_registry.yaml 存在
+- domain_relation_graph.yaml 存在
+- domain_decision_question_tree.yaml 存在
+- scenario_taxonomy.yaml 存在
+- wallet_role_taxonomy.yaml 存在
+- dominant_side_lifecycle_taxonomy.yaml 存在
+- domain_to_data_demand_map.yaml 存在
+blocking_conditions:
+- 没有领域对象注册表
+- 没有领域到数据需求映射
+- 场景分类没有反证规则
+- 钱包角色没有证据要求
+downstream_consumers:
+- Data Plane
+- P01_data_fact_controller
+- P02_wallet_structure_controller
+- P05_scenario_classification_controller

@@ -1,0 +1,8 @@
+doc_id: DOC-20260512-008
+target_phase: P08_execution_risk_controller
+upstream:
+  - P07_strategy_gate_controller
+downstream:
+  - PAPER_ONLY_RUNTIME
+runtime_allowed: false
+live_execution_allowed: false

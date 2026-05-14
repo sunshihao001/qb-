@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase09 Handoff Packet",
+  "type": "object",
+  "required": ["phase", "system_upgrade_status", "regression_status", "package_status", "requires_manual_confirmation", "allow_apply_to_runtime", "recommended_apply_mode", "handoff_status"],
+  "properties": {
+    "phase": {"const": "phase_09_system_upgrade"},
+    "system_upgrade_status": {"enum": ["SYSTEM_UPGRADE_READY", "SYSTEM_UPGRADE_BLOCKED"]},
+    "regression_status": {"enum": ["REGRESSION_TEST_PASS", "REGRESSION_TEST_FAIL"]},
+    "package_status": {"enum": ["UPGRADE_PACKAGE_READY", "UPGRADE_PACKAGE_REJECTED"]},
+    "requires_manual_confirmation": {"const": true},
+    "allow_apply_to_runtime": {"const": false},
+    "recommended_apply_mode": {"const": "SHADOW_MODE_FIRST"},
+    "handoff_status": {"enum": ["HANDOFF_READY", "HANDOFF_BLOCKED"]}
+  }
+}

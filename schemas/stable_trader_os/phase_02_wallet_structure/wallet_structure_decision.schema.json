@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sikk.local/schemas/stable_trader_os/phase_02_wallet_structure/wallet_structure_decision.schema.json",
+  "title": "SIKK Stable Trader OS Phase02 Wallet Structure Decision",
+  "type": "object",
+  "required": [
+    "token_address",
+    "wallet_structure_status",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_triggered",
+    "hard_negative_reasons",
+    "missing_fields",
+    "confidence_level",
+    "risk_level",
+    "evidence_level",
+    "allowed_next_stage",
+    "blocked_next_stage_reason"
+  ],
+  "properties": {
+    "token_address": {
+      "type": "string"
+    },
+    "token_symbol": {
+      "type": "string"
+    },
+    "chain": {
+      "type": "string"
+    },
+    "wallet_structure_status": {
+      "type": "string",
+      "enum": [
+        "WALLET_SUPPORT",
+        "WALLET_PAUSE",
+        "WALLET_BLOCK",
+        "WALLET_UNKNOWN",
+        "WALLET_DATA_WEAK",
+        "WALLET_SAME_SOURCE_DETECTED",
+        "WALLET_DISTRIBUTION_DETECTED",
+        "WALLET_BACKFLOW_DETECTED",
+        "WALLET_COUNTERPARTY_PRESSURE"
+      ]
+    },
+    "positive_evidence": {
+      "type": "array",
+      "items": {}
+    },
+    "negative_evidence": {
+      "type": "array",
+      "items": {}
+    },
+    "counter_evidence": {
+      "type": "array",
+      "items": {}
+    },
+    "hard_negative_triggered": {
+      "type": "boolean"
+    },
+    "hard_negative_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence_level": {
+      "type": "string"
+    },
+    "risk_level": {
+      "type": "string"
+    },
+    "evidence_level": {
+      "type": "string"
+    },
+    "allowed_next_stage": {
+      "type": [
+        "boolean",
+        "string"
+      ]
+    },
+    "blocked_next_stage_reason": {
+      "type": "string"
+    },
+    "evidence_packet": {
+      "type": "object"
+    },
+    "wallet_role_summary": {
+      "type": "object"
+    },
+    "gmgn_note_file": {
+      "type": "string"
+    },
+    "decision_meta": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

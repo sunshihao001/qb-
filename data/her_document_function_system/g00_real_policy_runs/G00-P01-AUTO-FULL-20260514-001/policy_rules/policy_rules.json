@@ -1,0 +1,44 @@
+{
+  "policy_rules": [
+    {
+      "policy_rule_id": "evidence_policy_uc_u00_real_002_v1",
+      "policy_domain": "evidence_policy",
+      "rule_type": "HARD_RULE",
+      "rule_statement": "governance output is candidate only -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "applies_to": [
+        "G00",
+        "O00",
+        "A00",
+        "U00"
+      ],
+      "violation_effect": "STATUS_INVALID",
+      "required_recovery": "route_to_U00_or_G00",
+      "source_candidate_id": "uc_u00_real_002",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      ],
+      "version": "1.0.0",
+      "status": "PENDING_ACTIVE"
+    },
+    {
+      "policy_rule_id": "evidence_policy_uc_u00_real_005_v1",
+      "policy_domain": "evidence_policy",
+      "rule_type": "HARD_RULE",
+      "rule_statement": "governance output is candidate only -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "applies_to": [
+        "G00",
+        "O00",
+        "A00",
+        "U00"
+      ],
+      "violation_effect": "STATUS_INVALID",
+      "required_recovery": "route_to_U00_or_G00",
+      "source_candidate_id": "uc_u00_real_005",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      ],
+      "version": "1.0.0",
+      "status": "PENDING_ACTIVE"
+    }
+  ]
+}

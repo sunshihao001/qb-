@@ -1,0 +1,25 @@
+doc_id: DOC-20260512-007
+title: P07 Strategy Gate Controller 专业版 v3.0
+source_type: telegram_uploaded_markdown
+source_cache_path: /root/.hermes/cache/documents/doc_9c07377e89f4_P07 专业版 v3.0❤️.md
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-007_p07_strategy_gate_controller_v3.md
+sha256: 4433491d7e914d386826b75e406c37650d5cf15dbce5393577ae24e5f3513126
+ingested_at: '2026-05-12T04:03:49Z'
+material_role: P07_STRATEGY_GATE_CONTROLLER_V3_TASKBOOK
+status: K00_ASSETIZED
+target_phase: P07_strategy_gate_controller
+upstream_required: P06_scenario_recognition_controller
+downstream_target: P08_execution_risk_controller
+safety_boundary:
+  paper_only: true
+  real_trade_enabled: false
+  auto_order_allowed: false
+  private_key_allowed: false
+  seed_phrase_allowed: false
+core_boundary:
+- strategy_gate_only
+- no_buy_signal
+- no_direct_paper_runtime
+- no_live_execution
+- handoff_only_to_P08
+required_system_files_count: 41

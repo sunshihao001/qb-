@@ -1,0 +1,81 @@
+objective_tree:
+  phase_id: "K00"
+
+  level_1_goal:
+    id: "K00-GOAL-001"
+    name: "将输入资料转化为阶段任务执行包"
+    required: true
+
+  level_2_sub_goals:
+    - id: "K00-SUB-001"
+      name: "保存原始资料"
+      required: true
+
+    - id: "K00-SUB-002"
+      name: "生成资料登记表"
+      required: true
+
+    - id: "K00-SUB-003"
+      name: "生成文档护照"
+      required: true
+
+    - id: "K00-SUB-004"
+      name: "映射九大系统平面"
+      required: true
+
+    - id: "K00-SUB-005"
+      name: "映射 P00-P09 阶段"
+      required: true
+
+    - id: "K00-SUB-006"
+      name: "识别系统缺口"
+      required: true
+
+    - id: "K00-SUB-007"
+      name: "生成阶段任务执行包"
+      required: true
+
+    - id: "K00-SUB-008"
+      name: "生成 handoff_packet"
+      required: true
+
+  level_3_tasks:
+    - id: "K00-TASK-001"
+      parent: "K00-SUB-001"
+      action: "保存原始输入资料"
+      output: "raw_inputs/<doc_id>.md"
+
+    - id: "K00-TASK-002"
+      parent: "K00-SUB-002"
+      action: "登记资料来源、类型、用途"
+      output: "source_registry/source_registry.json"
+
+    - id: "K00-TASK-003"
+      parent: "K00-SUB-003"
+      action: "生成文档护照"
+      output: "document_passports/document_passport_<doc_id>.yaml"
+
+    - id: "K00-TASK-004"
+      parent: "K00-SUB-004"
+      action: "映射到九大系统平面"
+      output: "system_mapping/plane_mapping_<doc_id>.json"
+
+    - id: "K00-TASK-005"
+      parent: "K00-SUB-005"
+      action: "映射到 P00-P09 阶段"
+      output: "system_mapping/phase_mapping_<doc_id>.json"
+
+    - id: "K00-TASK-006"
+      parent: "K00-SUB-006"
+      action: "识别缺口"
+      output: "gap_detection/gap_detection_<doc_id>.json"
+
+    - id: "K00-TASK-007"
+      parent: "K00-SUB-007"
+      action: "生成阶段任务执行包"
+      output: "task_packages/task_execution_package_<doc_id>.json"
+
+    - id: "K00-TASK-008"
+      parent: "K00-SUB-008"
+      action: "生成 handoff_packet"
+      output: "handoff_packets/k00_handoff_packet_<doc_id>.json"

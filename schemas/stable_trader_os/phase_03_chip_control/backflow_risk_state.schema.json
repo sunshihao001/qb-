@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "token_address",
+    "backflow_risk_status",
+    "backflow_detected"
+  ],
+  "properties": {
+    "token_address": {},
+    "backflow_risk_status": {},
+    "backflow_detected": {}
+  }
+}

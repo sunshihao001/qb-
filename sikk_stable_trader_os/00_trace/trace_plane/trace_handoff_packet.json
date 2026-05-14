@@ -1,0 +1,121 @@
+{
+  "packet_id": "TRACE_TO_ACCEPTANCE_HANDOFF_20260511",
+  "generated_at": "2026-05-11T17:13:34Z",
+  "trace_plane_version": "v2.0",
+  "run_id": "TRACE_PLANE_LANDING_20260511",
+  "build_order_context": {
+    "current_build_stage": "TRACE_PLANE",
+    "previous_stage": "FULL_CONTROL_PLANE",
+    "next_stage": [
+      "ACCEPTANCE_PLANE",
+      "HANDOFF_PLANE"
+    ]
+  },
+  "trace_summary": {
+    "trace_quality_status": "TRACE_USABLE_WITH_GAPS",
+    "trace_quality_score": 0.78,
+    "trace_chain_complete": false,
+    "blocking_trace_errors": [],
+    "non_blocking_trace_gaps": [
+      "legacy_files_without_trace",
+      "trace_id_generator_not_code_implemented",
+      "trace_validator_not_code_implemented",
+      "her_auto_trace_write_not_runtime_hooked",
+      "runner_tools_not_trace_bound",
+      "paper_runtime_trace_not_run",
+      "review_upgrade_trace_no_real_samples",
+      "acceptance_plane_not_yet_professionally_landed",
+      "handoff_plane_not_yet_professionally_landed"
+    ]
+  },
+  "trace_indexes": {
+    "trace_plane_manifest_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_manifest.json",
+    "trace_data_index_path": "/root/sikk-gmgn/data/trace_plane/indexes/trace_plane_index.json",
+    "artifact_trace_index_path": "/root/sikk-gmgn/data/trace_plane/artifact_trace/trace_plane_artifact_index.json",
+    "phase_trace_id": "PHASE_TRACE_TRACE_PLANE_LANDING_20260511_ceff92bc"
+  },
+  "acceptance_input": {
+    "acceptance_allowed": true,
+    "acceptance_limitations": [
+      "ACCEPTANCE_WITH_GAPS_ONLY",
+      "must_check_trace_models_not_runtime_samples"
+    ],
+    "acceptance_required_checks": [
+      "required_trace_files",
+      "trace_id_policy",
+      "trace_object_registry",
+      "handoff_contract",
+      "HER_trace_protocol",
+      "safety_boundaries"
+    ]
+  },
+  "handoff_input": {
+    "handoff_allowed": true,
+    "handoff_limitations": [
+      "HANDOFF_WITH_LIMITATIONS",
+      "no_runtime_handoff_without tool/runtime trace samples"
+    ],
+    "required_handoff_trace_fields": [
+      "packet_id",
+      "trace_summary",
+      "trace_indexes",
+      "downstream_permission",
+      "forbidden_actions"
+    ]
+  },
+  "downstream_permission": {
+    "phase_controller_definition_allowed": true,
+    "runner_binding_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_runtime_allowed": false
+  },
+  "forbidden_actions": [
+    "ACCEPTANCE_WITHOUT_TRACE",
+    "HANDOFF_WITHOUT_TRACE",
+    "RUNNER_BINDING_WITHOUT_PHASE_TRACE",
+    "PAPER_RUNTIME_WITHOUT_TOOL_TRACE",
+    "LIVE_EXECUTION"
+  ],
+  "handoff_id": "TRACE_TO_ACCEPTANCE_HANDOFF_20260511",
+  "source_stage": "TRACE_PLANE",
+  "target_stage": "ACCEPTANCE_PLANE_PROFESSIONAL_DESIGN",
+  "included_assets": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_manifest.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_object_registry.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_handoff_contract.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/08_acceptance/trace_plane_acceptance_result.json"
+  ],
+  "included_schemas": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_handoff_contract.yaml"
+  ],
+  "known_gaps": [
+    "legacy_files_without_trace",
+    "trace_id_generator_not_code_implemented",
+    "trace_validator_not_code_implemented",
+    "her_auto_trace_write_not_runtime_hooked",
+    "runner_tools_not_trace_bound",
+    "paper_runtime_trace_not_run",
+    "review_upgrade_trace_no_real_samples",
+    "acceptance_plane_not_yet_professionally_landed",
+    "handoff_plane_not_yet_professionally_landed"
+  ],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "legacy_files_without_trace",
+    "trace_id_generator_not_code_implemented",
+    "trace_validator_not_code_implemented",
+    "her_auto_trace_write_not_runtime_hooked",
+    "runner_tools_not_trace_bound",
+    "paper_runtime_trace_not_run",
+    "review_upgrade_trace_no_real_samples",
+    "acceptance_plane_not_yet_professionally_landed",
+    "handoff_plane_not_yet_professionally_landed"
+  ],
+  "acceptance_status": "TRACE_READY_WITH_GAPS",
+  "handoff_status": "HANDOFF_READY_WITH_LIMITATIONS",
+  "next_legal_stage": "ACCEPTANCE_PLANE_PROFESSIONAL_DESIGN",
+  "consumption_required": true,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "auto_order_allowed": false
+}

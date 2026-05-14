@@ -1,0 +1,21 @@
+{
+  "sample_id": "sample_001_document_to_function",
+  "expected_routing": {
+    "entry_stage": "K00",
+    "target_phases": [
+      "V00",
+      "A00",
+      "G00"
+    ],
+    "primary_function_type": "GOVERNANCE_RULE",
+    "secondary_function_types": [
+      "EVIDENCE_RULE",
+      "STATUS_RULE",
+      "VALIDATION_RULE"
+    ],
+    "runner_binding_required": false,
+    "r00_expected": "SKIPPED_WITH_REASON",
+    "u00_expected": "REVIEW_REQUIRED",
+    "g00_expected": "GOVERNANCE_CANDIDATE_CREATED"
+  }
+}

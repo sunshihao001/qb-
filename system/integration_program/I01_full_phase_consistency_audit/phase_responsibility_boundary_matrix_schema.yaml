@@ -1,0 +1,8 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: phase_responsibility_boundary_matrix
+fields:
+- matrix_id
+- boundary_checks
+- boundary_violation_count
+- boundary_violation_records_path

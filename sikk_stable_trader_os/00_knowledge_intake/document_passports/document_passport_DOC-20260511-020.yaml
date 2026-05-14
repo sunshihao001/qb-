@@ -1,0 +1,39 @@
+doc_id: DOC-20260511-020
+source_type: user_uploaded_markdown
+source_name: 未命名 4 _1_.md / Bootstrap Control Plane 专业机构级别完善版 v2.0
+received_at: '2026-05-11'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-020_bootstrap_control_plane_v2_professional_completion.md
+document_role:
+  primary_role: BOOTSTRAP_CONTROL_PLANE_V2_PROFESSIONAL_COMPLETION_TASKBOOK
+  secondary_roles:
+  - control_plane_schema_rules_spec
+  - audit_recovery_manifest_spec
+  - handoff_to_system_planes_spec
+summary:
+  core_intent: 将 Bootstrap Control Plane 从启动控制文件组升级为可验证、可恢复、可审计、可裁决、可交接的启动控制数据模型。
+  key_points:
+  - current_system_state 是最高权威状态源
+  - 补齐 schema/rules/audit/recovery/manifest/handoff
+  - P01 继续 BLOCKED_BY_DATA_PLANE
+  - next_legal_stage 仍为 SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE
+  - 禁止 P01/paper trading/real trade
+system_mapping:
+  planes:
+  - Knowledge Plane
+  - Control Plane
+  - Trace Plane
+  - Acceptance Plane
+  - Handoff Plane
+  affected_phases:
+  - K00
+  - P00
+  - P01-P10 gated
+  - SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE
+required_actions:
+- preserve_raw_input
+- generate_k00_artifacts
+- upgrade_bootstrap_control_plane_v2
+- create_schema_rule_audit_recovery_files
+- validate_readiness_gate
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

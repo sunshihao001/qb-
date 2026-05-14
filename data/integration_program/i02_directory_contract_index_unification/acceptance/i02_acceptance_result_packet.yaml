@@ -1,0 +1,28 @@
+packet_id: i02_acceptance_result_packet_20260512
+generated_at: '2026-05-12T13:12:00Z'
+controller_id: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION_CONTROLLER
+acceptance_status: I02_READY_WITH_GAPS
+checks:
+  system_package_36_files_created: true
+  runtime_directory_tree_created: true
+  all_18_required_outputs_created: true
+  i03_prerequisite_created: true
+  i02_to_i03_handoff_created: true
+  high_or_blocking_gaps_present: false
+  safety_forbidden_actions_detected: false
+  legacy_readonly_preserved: true
+gap_summary:
+  total_gaps: 1
+  high: 0
+  medium: 0
+  low: 1
+decision_reason_cn: I02 已生成目录/合约/索引统一所需核心产物；存在低级 legacy/root 可选缺口，因此标记 READY_WITH_GAPS
+  而非无缺口 READY。
+restrictions:
+- CONTROLLED_DRY_RUN_ONLY
+- NO_PAPER_RUNTIME_START
+- NO_LIVE_EXECUTION
+- NO_WALLET_SIGNING
+- NO_AUTO_DEPLOY
+- NO_DIRECT_RULE_MUTATION
+- LEGACY_READONLY

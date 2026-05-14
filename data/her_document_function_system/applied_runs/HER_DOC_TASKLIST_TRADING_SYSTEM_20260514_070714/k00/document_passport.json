@@ -1,0 +1,74 @@
+{
+  "doc_id": "doc_HER_DOC_TASKLIST_TRADING_SYSTEM_20260514_070714",
+  "source_name": "HER_DOC_TASKLIST_TRADING_SYSTEM.md",
+  "source_type": "SYSTEM_CONSTRUCTION_MATERIAL",
+  "received_at": "2026-05-14T07:07:14Z",
+  "raw_path": "input/raw_document.md",
+  "sha256": "cd02c24018d6c34095c4bf184b2b99b54c62cf0ebc717d024b0efeccd2d6e046",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance"
+    ]
+  },
+  "summary": {
+    "core_intent": "让真实 GPT 研究资料 / 系统建设资料进入 HER，按主链路跑完，生成完整文件输出，保留 gap。",
+    "key_points": [
+      "当前边界：safe-mode、paper-only、design/runtime document governance；不触发实盘、不签名、不 broadcast。",
+      "1. O00 Orchestrator：接收文档与 operator_goal，建立 pipeline run，执行安全边界检查。",
+      "2. K00 Knowledge Intake：文档摄取、文档护照、资产分类、系统映射、语料索引。",
+      "3. F00 Function Mapping：把文档要求映射到控制器、模块、runner、数据平面、验收平面。",
+      "4. V00 Validation Evidence：检查字段、文件、实现、测试、证据缺口，建立 gap register。",
+      "5. A00 Acceptance：区分 ACCEPTED / READY_WITH_GAPS / BLOCKED，禁止虚假完成声明。",
+      "6. H00 Handoff：把任务拆给下游控制器或实现模块。",
+      "7. U00 Review / Upgrade：把缺口转成升级队列和回归验证计划。",
+      "8. G00 Governance：把反复出现的问题沉淀为规则、模板、准入门禁候选。",
+      "HER_DOC 阶段：O00 → K00。",
+      "输入：K00 文档护照与原文。",
+      "HER_DOC 阶段：K00。",
+      "HER_DOC 阶段：F00。",
+      "HER_DOC 阶段：F00 → V00。",
+      "验收标准：缺字段必须标记 missing/degraded/blocked；不能用推断值冒充事实。",
+      "HER_DOC 阶段：F00 → V00。",
+      "验收标准：每个正向判断必须有至少一个反证路径。",
+      "HER_DOC 阶段：F00 → A00。",
+      "验收标准：输出必须包含状态、证据、缺口、下一步；不得只输出结论。",
+      "HER_DOC 阶段：H00。"
+    ]
+  },
+  "system_mapping": {
+    "affected_planes": [
+      "input",
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00",
+      "trace",
+      "audit"
+    ],
+    "affected_controllers": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_document_function_system",
+      "tools",
+      "tests/her_document_function_system",
+      "data/her_document_function_system/runs"
+    ]
+  },
+  "status": "K00_READY_WITH_GAPS"
+}

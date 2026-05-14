@@ -1,0 +1,44 @@
+{
+  "doc_id": "DOC-20260511-021",
+  "target_plane": "00_governance",
+  "target_files": [
+    "00_governance/governance_plane.md",
+    "00_governance/authority_boundary.yaml",
+    "00_governance/stage_permission_matrix.yaml",
+    "00_governance/hard_negative_rules.yaml",
+    "00_governance/risk_boundary.yaml",
+    "00_governance/real_trade_forbidden_policy.yaml",
+    "00_governance/review_to_upgrade_policy.yaml",
+    "00_governance/evidence_language_policy.yaml",
+    "00_governance/assumption_control_policy.yaml",
+    "00_governance/exception_escalation_policy.yaml",
+    "00_governance/legacy_runtime_quarantine_policy.yaml",
+    "00_governance/runner_permission_policy.yaml",
+    "00_governance/governance_to_domain_constraints.yaml",
+    "00_governance/governance_to_data_constraints.yaml",
+    "00_governance/governance_to_control_constraints.yaml",
+    "00_governance/governance_readiness_gate.yaml",
+    "00_governance/governance_validation_rules.yaml",
+    "00_governance/governance_integrity_manifest.json",
+    "00_governance/governance_to_domain_handoff_packet.json",
+    "00_governance/governance_to_data_handoff_packet.json",
+    "00_governance/governance_event_log.jsonl",
+    "00_governance/schemas/authority_boundary.schema.json",
+    "00_governance/schemas/stage_permission_matrix.schema.json",
+    "00_governance/schemas/hard_negative_rules.schema.json",
+    "00_governance/schemas/risk_boundary.schema.json",
+    "00_governance/schemas/governance_handoff_packet.schema.json",
+    "00_governance/reports/governance_plane_acceptance_report.json"
+  ],
+  "phase_mapping": {
+    "K00": "assetization",
+    "P00": "system plane landing control",
+    "P01-P10": "governance constrained only; no execution unlock"
+  },
+  "forbidden_outcomes": [
+    "P01_READY",
+    "REAL_TRADE_ENABLED",
+    "AUTO_ORDER_ALLOWED",
+    "PAPER_RUNTIME_WITHOUT_P06_P07"
+  ]
+}

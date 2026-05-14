@@ -1,0 +1,21 @@
+document_passport:
+  doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  title: "I05 Review / Upgrade Closed Loop 专业版 v1.0"
+  version: v1.0
+  intake_status: K00_ACCEPTED
+  route:
+    from: K00_RAW_INPUT
+    to: INTEGRATION_PROGRAM/I05_review_upgrade_closed_loop
+  source_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I05_review_upgrade_closed_loop_v1_0.md
+  authority_scope:
+    - integration_program
+    - closed_loop_validation
+    - p09_p10_replay_upgrade_validation
+  not_authorized_for:
+    - business_phase_creation
+    - production_rule_mutation
+    - auto_deploy
+    - live_execution
+    - wallet_signing
+  heading_count: 53
+  created_at: '2026-05-12T15:30:01Z'

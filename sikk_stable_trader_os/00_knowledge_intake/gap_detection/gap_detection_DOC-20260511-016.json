@@ -1,0 +1,39 @@
+{
+  "doc_id": "DOC-20260511-016",
+  "parent_doc_id": "DOC-20260511-006",
+  "generated_at": "2026-05-11T14:20:29.444644+00:00",
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-DOMAIN-TARGET-DATA-MISSING-SECTION7-FIELDS",
+      "severity": "DEGRADED",
+      "description": "User-proposed Domain Plane target data omits required section-7 fields: upstream_dependencies, optional_inputs, forbidden_inputs, handoff_outputs, runner_binding_status, state_writeback_required, paper_only_required, real_trade_allowed. Executable YAML fills explicit defaults."
+    },
+    {
+      "gap_id": "GAP-DOMAIN-PHASE-STATUS-ENUM-MISMATCH",
+      "severity": "DEGRADED",
+      "description": "User-proposed phase_status REQUIRED_BEFORE_DATA_PLANE is not in legal enum; executable YAML normalized to READY_TO_BUILD."
+    },
+    {
+      "gap_id": "GAP-PER-PHASE-TARGET-DATA-INSTANCES",
+      "severity": "DEGRADED",
+      "description": "K00/P00/Governance/Domain target instances are now generated; remaining Data Plane, P01-P10 and other planes still need concrete target data instances."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "next_recommendation": "continue_Data_Plane_target_data_and_resolve_domain_status_enum_in_P00",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

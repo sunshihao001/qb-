@@ -1,0 +1,52 @@
+meta:
+  standard_id: S00_CANONICAL_ENTITY_MODEL
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+entities:
+- entity: token
+  id_field: token_id
+  evidence_required: false
+- entity: wallet
+  id_field: wallet_id
+  evidence_required: false
+- entity: cluster
+  id_field: cluster_id
+  evidence_required: false
+- entity: trade_event
+  id_field: trade_event_id
+  evidence_required: false
+- entity: market_snapshot
+  id_field: market_snapshot_id
+  evidence_required: false
+- entity: signal
+  id_field: signal_id
+  evidence_required: true
+- entity: evidence
+  id_field: evidence_id
+  evidence_required: false
+- entity: counter_evidence
+  id_field: counter_evidence_id
+  evidence_required: false
+- entity: decision
+  id_field: decision_id
+  evidence_required: true
+- entity: handoff_packet
+  id_field: handoff_packet_id
+  evidence_required: false
+- entity: paper_position
+  id_field: paper_position_id
+  evidence_required: true
+- entity: review_case
+  id_field: review_case_id
+  evidence_required: true
+- entity: upgrade_candidate
+  id_field: upgrade_candidate_id
+  evidence_required: true

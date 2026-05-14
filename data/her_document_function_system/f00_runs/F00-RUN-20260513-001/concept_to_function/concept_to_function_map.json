@@ -1,0 +1,158 @@
+{
+  "doc_id": "DOC-20260513-F00-001",
+  "required_functions": [
+    {
+      "function_id": "func_f00_001",
+      "source_concept": "F00 must start only from K00 handoff and not chat context",
+      "required_function": "Enforce F00 input contract preflight requiring K00 handoff, passport, corpus index, system mapping, gap detection, execution boundary, write policy, and repo root.",
+      "function_type": "HARD_BLOCK_RULE",
+      "target_phase": "F00",
+      "input_fields": [
+        "k00_handoff_packet",
+        "document_passport_refs",
+        "corpus_index_refs",
+        "system_mapping_refs",
+        "gap_detection_refs",
+        "execution_boundary",
+        "write_policy",
+        "repo_root"
+      ],
+      "field_sources": [
+        {
+          "field": "k00_handoff_packet",
+          "source_ref": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/handoff/k00_to_f00_handoff_packet.json",
+          "source_type": "K00_HANDOFF"
+        }
+      ],
+      "output_fields": [
+        "preflight_status",
+        "blocking_gaps",
+        "allowed_modes",
+        "forbidden_modes"
+      ],
+      "judgement_logic": {
+        "logic_type": "boolean_gate",
+        "description": "Missing legal K00 entry or boundary blocks F00; missing KV is non-blocking KV_GAP.",
+        "input_fields": [
+          "k00_handoff_packet",
+          "execution_boundary",
+          "write_policy"
+        ],
+        "output_status": "F00_BLOCKED_OR_PREFLIGHT_PASSED",
+        "failure_condition": "missing required handoff/boundary/write policy/repo root",
+        "trace_required": true
+      },
+      "schema": "04_f00_input_contract.json",
+      "contract": "04_f00_input_contract.json",
+      "code_module": "DESIGN_ONLY_CONTROLLER_ASSET",
+      "tests": "schema_validation_test_planned",
+      "replay": "preflight_missing_handoff_case_planned",
+      "trace": "f00_started/preflight_passed/f00_blocked",
+      "report": "f00_final_report_template.md",
+      "kv": "KV_GAP_ALLOWED",
+      "handoff": "09_f00_handoff_packet.schema.json",
+      "runner_binding": "PLAN_ONLY",
+      "acceptance_criteria": "F00 cannot proceed without K00 handoff and required refs.",
+      "implementation_status": "ASSET_REGISTERED"
+    },
+    {
+      "function_id": "func_f00_002",
+      "source_concept": "Every explanatory concept must compile to required_function or explicit NOT_FUNCTIONAL gap",
+      "required_function": "Define concept-to-function compiler schema and output contract fields for required_function records.",
+      "function_type": "NEW_FUNCTION",
+      "target_phase": "F00",
+      "input_fields": [
+        "source_concept",
+        "document_role",
+        "system_mapping",
+        "gap_refs"
+      ],
+      "field_sources": [
+        {
+          "field": "source_concept",
+          "source_ref": "corpus_index",
+          "source_type": "K00_CORPUS_INDEX"
+        }
+      ],
+      "output_fields": [
+        "required_function",
+        "function_type",
+        "target_phase",
+        "required_assets",
+        "implementation_status"
+      ],
+      "judgement_logic": {
+        "logic_type": "mapping_rule",
+        "description": "Each core concept maps to at least one function object with type, fields, assets, validation and handoff obligations.",
+        "input_fields": [
+          "source_concept"
+        ],
+        "output_status": "FUNCTION_MAPPED",
+        "failure_condition": "concept has no function mapping and no explicit NOT_FUNCTIONAL reason",
+        "trace_required": true
+      },
+      "schema": "10_concept_to_function_map.schema.json",
+      "contract": "05_f00_output_contract.json",
+      "code_module": "DESIGN_ONLY_CONTROLLER_ASSET",
+      "tests": "function_mapping_schema_validation_planned",
+      "replay": "sample_document_to_function_replay_planned",
+      "trace": "concept_compiled_to_function",
+      "report": "function_mapping_summary",
+      "kv": "F00_CONTROLLER_STANDARD",
+      "handoff": "function_mapping_refs",
+      "runner_binding": "PLAN_ONLY",
+      "acceptance_criteria": "required_functions array includes minimum fields and type enum.",
+      "implementation_status": "ASSET_REGISTERED"
+    },
+    {
+      "function_id": "func_f00_003",
+      "source_concept": "No repo scan/write_policy/test evidence/runner verification means no patch/tested/bound claims",
+      "required_function": "Acceptance gate must distinguish DESIGN_ONLY, PLANNED_NOT_WRITTEN, PATCH_APPLIED, TESTED, RUNNER_BOUND and forbid status substitution.",
+      "function_type": "GOVERNANCE_RULE",
+      "target_phase": "F00/A01",
+      "input_fields": [
+        "repo_scan_result",
+        "write_policy",
+        "patch_refs",
+        "test_refs",
+        "runner_binding_refs"
+      ],
+      "field_sources": [
+        {
+          "field": "write_policy",
+          "source_ref": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/handoff/k00_to_f00_handoff_packet.json",
+          "source_type": "K00_HANDOFF"
+        }
+      ],
+      "output_fields": [
+        "acceptance_result",
+        "final_status",
+        "gap_list"
+      ],
+      "judgement_logic": {
+        "logic_type": "status_gate",
+        "description": "Only evidence refs can upgrade status; plans cannot masquerade as execution evidence.",
+        "input_fields": [
+          "patch_refs",
+          "test_refs",
+          "runner_binding_refs"
+        ],
+        "output_status": "F00_ACCEPTED_OR_READY_WITH_GAPS_OR_BLOCKED",
+        "failure_condition": "claim exceeds evidence",
+        "trace_required": true
+      },
+      "schema": "07_f00_acceptance_gate.yaml",
+      "contract": "05_f00_output_contract.json",
+      "code_module": "DESIGN_ONLY_CONTROLLER_ASSET",
+      "tests": "acceptance_gate_validation_planned",
+      "replay": "status_substitution_negative_cases_planned",
+      "trace": "acceptance_checked",
+      "report": "acceptance_result",
+      "kv": "F00_FORBIDDEN_STATUS_SUBSTITUTION",
+      "handoff": "allowed_next_actions/forbidden_next_actions",
+      "runner_binding": "PLAN_ONLY",
+      "acceptance_criteria": "No READY/RUNNABLE/TESTED without corresponding evidence.",
+      "implementation_status": "ASSET_REGISTERED"
+    }
+  ]
+}

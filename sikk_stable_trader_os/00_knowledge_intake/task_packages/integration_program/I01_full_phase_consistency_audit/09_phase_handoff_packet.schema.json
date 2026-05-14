@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "packet_id",
+    "packet_type",
+    "route",
+    "audit_outputs",
+    "permission_to_enter_i02",
+    "restrictions"
+  ],
+  "properties": {
+    "packet_id": {
+      "type": "string"
+    },
+    "packet_type": {
+      "const": "I01_TO_I02_CONSISTENCY_AUDIT_HANDOFF"
+    }
+  }
+}

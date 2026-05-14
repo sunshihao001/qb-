@@ -1,0 +1,33 @@
+{
+  "upgrade_queue_id": "u00_upgrade_queue_her_dfafs_auto_20260514T034050Z",
+  "queue_status": "UPGRADE_QUEUE_READY_WITH_GAPS",
+  "items": [
+    {
+      "upgrade_item_id": "upgrade_001",
+      "source_gap": "gap_001",
+      "target_controller": "F00",
+      "upgrade_type": "FUNCTION_MAPPING_HARDENING",
+      "description": "Improve real-run evidence separation and downstream closure.",
+      "priority": "P1_HIGH",
+      "status": "QUEUED"
+    },
+    {
+      "upgrade_item_id": "upgrade_002",
+      "source_gap": "gap_002",
+      "target_controller": "H00",
+      "upgrade_type": "PIPELINE_GAP_HARDENING",
+      "description": "Improve real-run evidence separation and downstream closure.",
+      "priority": "P2_MEDIUM",
+      "status": "QUEUED"
+    },
+    {
+      "upgrade_item_id": "upgrade_003",
+      "source_gap": "gap_003",
+      "target_controller": "G00",
+      "upgrade_type": "PIPELINE_GAP_HARDENING",
+      "description": "Improve real-run evidence separation and downstream closure.",
+      "priority": "P2_MEDIUM",
+      "status": "QUEUED"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Governance Candidate",
+  "type": "object",
+  "required": [
+    "governance_candidate_id",
+    "candidate_type",
+    "rule_statement",
+    "evidence_refs",
+    "recommended_policy_level"
+  ],
+  "properties": {
+    "governance_candidate_id": {
+      "type": "string"
+    },
+    "candidate_type": {
+      "type": "string"
+    },
+    "rule_statement": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_policy_level": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "phase": "phase_08_review_learning",
+  "required_inputs": [
+    "phase_07_handoff_packet",
+    "execution_risk_decision",
+    "paper_trade_decision",
+    "paper_positions_open",
+    "paper_positions_closed",
+    "paper_trades",
+    "risk_events"
+  ],
+  "evidence_chain_inputs": [
+    "strategy_gate_decision",
+    "structure_position_decision",
+    "primary_scenario",
+    "chip_control_summary",
+    "wallet_structure_decision",
+    "data_quality_summary"
+  ],
+  "optional_inputs": [
+    "paper_equity_curve",
+    "manual_confirmation_ticket"
+  ]
+}

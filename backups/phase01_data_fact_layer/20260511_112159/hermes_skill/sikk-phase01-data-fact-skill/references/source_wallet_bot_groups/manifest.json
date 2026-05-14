@@ -1,0 +1,393 @@
+{
+  "mode": "copy_only_no_source_delete",
+  "skill_root": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill",
+  "source_root": "/root/sikk-gmgn/modules/source_wallet_bot",
+  "groups_root": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups",
+  "groups": [
+    {
+      "group_id": "01_skill_solidification_layer",
+      "title": "Skill 固化层",
+      "description": "HER skill 自身的能力入口、数据资产矩阵、运行检查清单；用于把 Phase 01 数据事实层固定成可调用、可审计、可复用的子能力。",
+      "copied_count": 3,
+      "missing_count": 0,
+      "copied": [
+        {
+          "file": "SKILL.md",
+          "source": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/SKILL.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/01_skill_solidification_layer/SKILL.md"
+        },
+        {
+          "file": "data_asset_matrix.md",
+          "source": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/data_asset_matrix.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/01_skill_solidification_layer/data_asset_matrix.md"
+        },
+        {
+          "file": "run_checklist.md",
+          "source": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/run_checklist.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/01_skill_solidification_layer/run_checklist.md"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "group_id": "02_runtime_orchestration_layer",
+      "title": "运行入口层",
+      "description": "Source Wallet Bot 的执行入口、配置、数据模型、IO、错误处理和任务状态文件；负责把多个事实处理步骤串成一次稳定运行。",
+      "copied_count": 7,
+      "missing_count": 0,
+      "copied": [
+        {
+          "file": "runner.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/runner.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/02_runtime_orchestration_layer/runner.py"
+        },
+        {
+          "file": "config.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/config.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/02_runtime_orchestration_layer/config.py"
+        },
+        {
+          "file": "models.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/models.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/02_runtime_orchestration_layer/models.py"
+        },
+        {
+          "file": "io_utils.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/io_utils.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/02_runtime_orchestration_layer/io_utils.py"
+        },
+        {
+          "file": "errors.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/errors.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/02_runtime_orchestration_layer/errors.py"
+        },
+        {
+          "file": "__init__.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/__init__.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/02_runtime_orchestration_layer/__init__.py"
+        },
+        {
+          "file": "kanban_task_board.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/kanban_task_board.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/02_runtime_orchestration_layer/kanban_task_board.md"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "group_id": "03_directory_governance_layer",
+      "title": "目录治理层",
+      "description": "路径解析、目录宪法执行、文件归属和 legacy 映射；确保新增事实/报告/契约/运行产物不污染根目录或错误工作区。",
+      "copied_count": 6,
+      "missing_count": 0,
+      "copied": [
+        {
+          "file": "path_resolver.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/path_resolver.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/03_directory_governance_layer/path_resolver.py"
+        },
+        {
+          "file": "directory_governance.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/directory_governance.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/03_directory_governance_layer/directory_governance.py"
+        },
+        {
+          "file": "package_file_passport.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/package_file_passport.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/03_directory_governance_layer/package_file_passport.md"
+        },
+        {
+          "file": "package_file_passport.json",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/package_file_passport.json",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/03_directory_governance_layer/package_file_passport.json"
+        },
+        {
+          "file": "legacy_mapping.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/legacy_mapping.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/03_directory_governance_layer/legacy_mapping.md"
+        },
+        {
+          "file": "old_system_inventory.json",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/old_system_inventory.json",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/03_directory_governance_layer/old_system_inventory.json"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "group_id": "04_data_adapter_layer",
+      "title": "数据适配层",
+      "description": "GMGN/OKX/read-only runtime 数据源适配、source registry、source reliability、gap scanner；负责把外部数据源接入标准事实层。",
+      "copied_count": 8,
+      "missing_count": 0,
+      "copied": [
+        {
+          "file": "gmgn_live_adapter.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/gmgn_live_adapter.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/04_data_adapter_layer/gmgn_live_adapter.py"
+        },
+        {
+          "file": "gmgn_okx_readonly_adapter.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/gmgn_okx_readonly_adapter.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/04_data_adapter_layer/gmgn_okx_readonly_adapter.py"
+        },
+        {
+          "file": "runtime_adapter_registry.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/runtime_adapter_registry.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/04_data_adapter_layer/runtime_adapter_registry.py"
+        },
+        {
+          "file": "system_gap_runtime_adapters.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/system_gap_runtime_adapters.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/04_data_adapter_layer/system_gap_runtime_adapters.py"
+        },
+        {
+          "file": "system_gap_scanner.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/system_gap_scanner.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/04_data_adapter_layer/system_gap_scanner.py"
+        },
+        {
+          "file": "source_registry.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/source_registry.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/04_data_adapter_layer/source_registry.md"
+        },
+        {
+          "file": "source_registry_schema.json",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/source_registry_schema.json",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/04_data_adapter_layer/source_registry_schema.json"
+        },
+        {
+          "file": "source_reliability_matrix.csv",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/source_reliability_matrix.csv",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/04_data_adapter_layer/source_reliability_matrix.csv"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "group_id": "05_fact_normalization_layer",
+      "title": "事实标准化层",
+      "description": "交易、钱包画像、wallet_fact 聚合、同源候选、角色候选分类、字段映射和 GMGN 标签字典；负责 raw → normalized facts。",
+      "copied_count": 8,
+      "missing_count": 0,
+      "copied": [
+        {
+          "file": "wallet_trade_normalizer.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_trade_normalizer.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/05_fact_normalization_layer/wallet_trade_normalizer.py"
+        },
+        {
+          "file": "wallet_profile_normalizer.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_profile_normalizer.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/05_fact_normalization_layer/wallet_profile_normalizer.py"
+        },
+        {
+          "file": "wallet_fact_builder.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_fact_builder.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/05_fact_normalization_layer/wallet_fact_builder.py"
+        },
+        {
+          "file": "source_group_engine.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/source_group_engine.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/05_fact_normalization_layer/source_group_engine.py"
+        },
+        {
+          "file": "role_classifier.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/role_classifier.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/05_fact_normalization_layer/role_classifier.py"
+        },
+        {
+          "file": "gmgn_to_sikk_field_mapping.csv",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/gmgn_to_sikk_field_mapping.csv",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/05_fact_normalization_layer/gmgn_to_sikk_field_mapping.csv"
+        },
+        {
+          "file": "field_dictionary.csv",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/field_dictionary.csv",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/05_fact_normalization_layer/field_dictionary.csv"
+        },
+        {
+          "file": "gmgn_note_dictionary.csv",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/gmgn_note_dictionary.csv",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/05_fact_normalization_layer/gmgn_note_dictionary.csv"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "group_id": "06_schema_contract_layer",
+      "title": "Schema / Contract 层",
+      "description": "schema 校验器、各类 JSON schema、wallet/source/group/manifest 合同和架构文档；负责约束输入输出形状和边界。",
+      "copied_count": 16,
+      "missing_count": 0,
+      "copied": [
+        {
+          "file": "schema_validator.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/schema_validator.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/schema_validator.py"
+        },
+        {
+          "file": "wallet_fact_schema_index.json",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_fact_schema_index.json",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/wallet_fact_schema_index.json"
+        },
+        {
+          "file": "wallet_raw_normalized_schema.json",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_raw_normalized_schema.json",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/wallet_raw_normalized_schema.json"
+        },
+        {
+          "file": "wallet_entity_profile_schema.json",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_entity_profile_schema.json",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/wallet_entity_profile_schema.json"
+        },
+        {
+          "file": "same_source_group_schema.json",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/same_source_group_schema.json",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/same_source_group_schema.json"
+        },
+        {
+          "file": "wallet_intelligence_decision_schema.json",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_intelligence_decision_schema.json",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/wallet_intelligence_decision_schema.json"
+        },
+        {
+          "file": "current_token_behavior_schema.json",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/current_token_behavior_schema.json",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/current_token_behavior_schema.json"
+        },
+        {
+          "file": "wallet_fact_architecture.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_fact_architecture.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/wallet_fact_architecture.md"
+        },
+        {
+          "file": "wallet_fact_output_contract.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_fact_output_contract.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/wallet_fact_output_contract.md"
+        },
+        {
+          "file": "wallet_trade_contract.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_trade_contract.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/wallet_trade_contract.md"
+        },
+        {
+          "file": "wallet_intelligence_contracts.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_intelligence_contracts.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/wallet_intelligence_contracts.md"
+        },
+        {
+          "file": "source_group_contract.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/source_group_contract.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/source_group_contract.md"
+        },
+        {
+          "file": "source_and_group_models.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/source_and_group_models.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/source_and_group_models.md"
+        },
+        {
+          "file": "source_manifest_contract.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/source_manifest_contract.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/source_manifest_contract.md"
+        },
+        {
+          "file": "field_mapping_dictionary.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/field_mapping_dictionary.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/field_mapping_dictionary.md"
+        },
+        {
+          "file": "quantitative_structure_field_addendum.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/quantitative_structure_field_addendum.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/06_schema_contract_layer/quantitative_structure_field_addendum.md"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "group_id": "07_handoff_layer",
+      "title": "Handoff 层",
+      "description": "Phase 01 → Phase 02 / Bot2 / behavior inference 的交接导出、交接契约、交接 schema 与补充协议；确保下游只读标准事实。",
+      "copied_count": 4,
+      "missing_count": 0,
+      "copied": [
+        {
+          "file": "handoff_exporter.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/handoff_exporter.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/07_handoff_layer/handoff_exporter.py"
+        },
+        {
+          "file": "bot2_handoff_contract.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/bot2_handoff_contract.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/07_handoff_layer/bot2_handoff_contract.md"
+        },
+        {
+          "file": "bot2_handoff_packet_schema.json",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/bot2_handoff_packet_schema.json",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/07_handoff_layer/bot2_handoff_packet_schema.json"
+        },
+        {
+          "file": "wallet_intel_behavior_handoff_addendum.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_intel_behavior_handoff_addendum.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/07_handoff_layer/wallet_intel_behavior_handoff_addendum.md"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "group_id": "08_rules_acceptance_layer",
+      "title": "规则矩阵 / 字典 / 验收层",
+      "description": "证据等级、钱包角色、GMGN note/watchlist、分发/回收/鲸鱼候选规则、缺失字段报告、验收脚本与扫描报告；负责规则治理与验收闭环。",
+      "copied_count": 9,
+      "missing_count": 0,
+      "copied": [
+        {
+          "file": "evidence_level_matrix.csv",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/evidence_level_matrix.csv",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/08_rules_acceptance_layer/evidence_level_matrix.csv"
+        },
+        {
+          "file": "wallet_role_rule_matrix.csv",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/wallet_role_rule_matrix.csv",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/08_rules_acceptance_layer/wallet_role_rule_matrix.csv"
+        },
+        {
+          "file": "gmgn_note_watchlist_rules.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/gmgn_note_watchlist_rules.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/08_rules_acceptance_layer/gmgn_note_watchlist_rules.md"
+        },
+        {
+          "file": "evidence_note_rules.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/evidence_note_rules.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/08_rules_acceptance_layer/evidence_note_rules.md"
+        },
+        {
+          "file": "distribution_recovery_whale_rules.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/distribution_recovery_whale_rules.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/08_rules_acceptance_layer/distribution_recovery_whale_rules.md"
+        },
+        {
+          "file": "validate_acceptance.py",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/validate_acceptance.py",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/08_rules_acceptance_layer/validate_acceptance.py"
+        },
+        {
+          "file": "missing_fields_report.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/missing_fields_report.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/08_rules_acceptance_layer/missing_fields_report.md"
+        },
+        {
+          "file": "codebase_inspection_report.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/codebase_inspection_report.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/08_rules_acceptance_layer/codebase_inspection_report.md"
+        },
+        {
+          "file": "final_module_package.md",
+          "source": "/root/sikk-gmgn/modules/source_wallet_bot/final_module_package.md",
+          "copy": "/root/.hermes/profiles/sunqbfemxbot/skills/software-development/sikk-phase01-data-fact-skill/references/source_wallet_bot_groups/08_rules_acceptance_layer/final_module_package.md"
+        }
+      ],
+      "missing": []
+    }
+  ]
+}

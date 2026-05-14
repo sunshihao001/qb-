@@ -1,0 +1,31 @@
+i04_to_i05_handoff_packet:
+  packet_id: I04_TO_I05_HANDOFF_20260512_01
+  packet_type: I04_TO_I05_PAPER_RUNTIME_HANDOFF
+  generated_at: '2026-05-12T15:30:00Z'
+  from_controller: I04_PAPER_RUNTIME_INTEGRATION
+  to_controller: I05_REVIEW_REPLAY_CONTROLLER
+  upstream_control:
+    i03_handoff_packet_id: I03_TO_I04_HANDOFF_V1
+    p08_handoff_packet_id: P08_TO_PAPER_RUNTIME_HANDOFF_V1
+    trace_id: I04_TRACE_20260512_01
+    acceptance_result_id: I04_ACCEPTANCE_20260512_01
+  handoff_payload:
+    acceptance_result_path: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/acceptance/i04_acceptance_result.yaml
+    report_path: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/reports/i04_paper_runtime_integration_report.md
+    trace_path: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/trace/i04_runtime_trace.yaml
+    p09_review_input_path: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/p09_review_inputs/i04_p09_review_input_packet.yaml
+  downstream_permission:
+    allowed:
+    - I05_REVIEW_REPLAY
+    - P09_REVIEW_INPUT_CONSUMPTION
+    forbidden:
+    - LIVE_EXECUTION
+    - WALLET_SIGNING
+    - AUTO_DEPLOY
+    - DIRECT_RULE_MUTATION_BLOCKED
+  restrictions:
+  - PAPER_ONLY
+  - NO_LIVE_EXECUTION
+  - NO_WALLET_SIGNING
+  - NO_AUTO_DEPLOY
+  - NO_DIRECT_P07_INPUT

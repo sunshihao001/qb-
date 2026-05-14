@@ -1,0 +1,44 @@
+{
+  "phase_id": "H00_REAL_DOWNSTREAM_QUEUE",
+  "required_inputs": {
+    "a00_handoff_packet": {
+      "required": true
+    },
+    "readiness_certificate": {
+      "required": true
+    },
+    "real_evidence_bundle": {
+      "required": true
+    },
+    "phase_status_matrix": {
+      "required": true
+    },
+    "artifact_manifest": {
+      "required": true
+    },
+    "gap_propagation_report": {
+      "required": true
+    },
+    "acceptance_decision": {
+      "required": true
+    },
+    "allowed_next_actions": {
+      "required": true
+    },
+    "forbidden_next_actions": {
+      "required": true
+    },
+    "execution_boundary": {
+      "required": true
+    },
+    "controller_registry": {
+      "required": true
+    },
+    "repo_root": {
+      "required": true
+    },
+    "safe_mode": {
+      "required": true
+    }
+  }
+}

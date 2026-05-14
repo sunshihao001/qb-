@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e",
+  "is_system_build_material": true,
+  "task_intent": "BUILD_PHASE_CONTROLLER_ASSET",
+  "goal_passport": {
+    "goal": "Create H00_handoff_downstream_queue_controller as HER controlled phase unit after K00 intake",
+    "target_phase": "H00_handoff_downstream_queue_controller",
+    "entry_phase": "K00_knowledge_intake",
+    "execution_allowed_after_k00": true
+  },
+  "planes": [
+    "methodology",
+    "control_plane",
+    "phase_controller",
+    "schema_contract",
+    "data_plane",
+    "trace_plane",
+    "acceptance_handoff_plane",
+    "governance",
+    "runner_tool_binding",
+    "report_audit"
+  ],
+  "phase_mapping": {
+    "entry": "K00",
+    "target": "H00",
+    "related_upstream": [
+      "A00",
+      "K00",
+      "F00",
+      "V00",
+      "R00"
+    ],
+    "related_downstream": [
+      "PXX",
+      "IXX",
+      "Runner_Tool_Binding",
+      "U00",
+      "G00",
+      "Report_Audit_System"
+    ]
+  },
+  "can_affect": [
+    "H00 controller assets",
+    "H00 schemas/contracts/protocols",
+    "H00 data directory conventions",
+    "H00 tests and evidence templates"
+  ],
+  "cannot_directly_change": [
+    "production runtime",
+    "live runner",
+    "wallet signing",
+    "auto deploy",
+    "production trading",
+    "A00 decisions",
+    "downstream phase execution state without handoff acceptance"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SIKK Normalized Fact Model",
+  "type": "object",
+  "required": [
+    "system_context",
+    "token_fact",
+    "evidence_trace",
+    "contradiction_trace",
+    "handoff_context"
+  ],
+  "properties": {
+    "system_context": {
+      "type": "object"
+    },
+    "token_fact": {
+      "type": "object"
+    },
+    "wallet_fact": {
+      "type": "object"
+    },
+    "wallet_entity_fact": {
+      "type": "object"
+    },
+    "same_source_group_fact": {
+      "type": "object"
+    },
+    "chip_distribution_fact": {
+      "type": "object"
+    },
+    "fund_flow_fact": {
+      "type": "object"
+    },
+    "market_structure_fact": {
+      "type": "object"
+    },
+    "scenario_fact": {
+      "type": "object"
+    },
+    "strategy_gate_fact": {
+      "type": "object"
+    },
+    "execution_risk_fact": {
+      "type": "object"
+    },
+    "paper_trade_fact": {
+      "type": "object"
+    },
+    "review_fact": {
+      "type": "object"
+    },
+    "evidence_trace": {
+      "type": "object"
+    },
+    "contradiction_trace": {
+      "type": "object"
+    },
+    "handoff_context": {
+      "type": "object"
+    }
+  }
+}

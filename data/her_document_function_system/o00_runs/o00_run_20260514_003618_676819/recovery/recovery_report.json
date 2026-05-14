@@ -1,0 +1,12 @@
+{
+  "status": "RECOVERY_REPORT_GENERATED",
+  "run_id": "o00_run_20260514_003618_676819",
+  "decision": "RUN_VALIDATE_CONFIG_OR_RERUN_SAMPLE_IN_SAFE_MODE",
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ]
+}

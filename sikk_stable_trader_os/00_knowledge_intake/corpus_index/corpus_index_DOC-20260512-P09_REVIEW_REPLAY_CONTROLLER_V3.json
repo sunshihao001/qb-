@@ -1,0 +1,273 @@
+{
+  "doc_id": "DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3",
+  "title": "P09 Review Replay Controller 专业版 v3.0",
+  "generated_at": "2026-05-12T08:06:11Z",
+  "sha256": "364857538d03d5386f9637eadf6ddcc69c91f95b643c0b82c3d4a6af09e08f62",
+  "section_count": 50,
+  "sections": [
+    {
+      "level": 1,
+      "title": "P09 Review Replay Controller 专业版 v3.0",
+      "char_offset": 0
+    },
+    {
+      "level": 2,
+      "title": "复盘回放、决策链重建、失败归因、样本校准与 P10 升级候选交接控制器",
+      "char_offset": 41
+    },
+    {
+      "level": 2,
+      "title": "0. 先修正 P09 的定位",
+      "char_offset": 86
+    },
+    {
+      "level": 1,
+      "title": "1. P09 阶段核心目标",
+      "char_offset": 783
+    },
+    {
+      "level": 1,
+      "title": "2. P09 的专业角色模型",
+      "char_offset": 1772
+    },
+    {
+      "level": 1,
+      "title": "3. P09 底层方法论",
+      "char_offset": 2279
+    },
+    {
+      "level": 2,
+      "title": "3.1 复盘不是总结，是重建",
+      "char_offset": 2295
+    },
+    {
+      "level": 2,
+      "title": "3.2 归因必须分阶段",
+      "char_offset": 2486
+    },
+    {
+      "level": 2,
+      "title": "3.3 复盘不能直接改规则",
+      "char_offset": 2710
+    },
+    {
+      "level": 2,
+      "title": "3.4 成功也要归因",
+      "char_offset": 2967
+    },
+    {
+      "level": 2,
+      "title": "3.5 Replay 必须锁定历史快照",
+      "char_offset": 3095
+    },
+    {
+      "level": 1,
+      "title": "4. P09 支持的复盘类型",
+      "char_offset": 3269
+    },
+    {
+      "level": 1,
+      "title": "5. P09 必须建立的核心对象",
+      "char_offset": 4270
+    },
+    {
+      "level": 1,
+      "title": "6. P09 输入：必须读取什么",
+      "char_offset": 5358
+    },
+    {
+      "level": 1,
+      "title": "7. Review Case Record",
+      "char_offset": 8384
+    },
+    {
+      "level": 1,
+      "title": "8. Replay Input Snapshot Record",
+      "char_offset": 9892
+    },
+    {
+      "level": 1,
+      "title": "9. Decision Chain Reconstruction Record",
+      "char_offset": 11090
+    },
+    {
+      "level": 1,
+      "title": "10. Runtime Path Reconstruction Record",
+      "char_offset": 12467
+    },
+    {
+      "level": 1,
+      "title": "11. Paper Result Record",
+      "char_offset": 13815
+    },
+    {
+      "level": 1,
+      "title": "12. Entry Decision Review Record",
+      "char_offset": 14938
+    },
+    {
+      "level": 1,
+      "title": "13. Exit Decision Review Record",
+      "char_offset": 16066
+    },
+    {
+      "level": 1,
+      "title": "14. Invalidation Trigger Review Record",
+      "char_offset": 16899
+    },
+    {
+      "level": 1,
+      "title": "15. Failure Attribution Record",
+      "char_offset": 17829
+    },
+    {
+      "level": 1,
+      "title": "16. Success Attribution Record",
+      "char_offset": 20011
+    },
+    {
+      "level": 1,
+      "title": "17. Misclassification Review Record",
+      "char_offset": 21323
+    },
+    {
+      "level": 1,
+      "title": "18. Gate Error Review Record",
+      "char_offset": 22326
+    },
+    {
+      "level": 1,
+      "title": "19. Runtime Simulation Quality Record",
+      "char_offset": 23341
+    },
+    {
+      "level": 1,
+      "title": "20. Data Gap Impact Record",
+      "char_offset": 24328
+    },
+    {
+      "level": 1,
+      "title": "21. Trace / Handoff / Acceptance Integrity Reviews",
+      "char_offset": 25246
+    },
+    {
+      "level": 1,
+      "title": "22. Calibration Candidate Record",
+      "char_offset": 26932
+    },
+    {
+      "level": 1,
+      "title": "23. Missed Negative Rule Record",
+      "char_offset": 28330
+    },
+    {
+      "level": 1,
+      "title": "24. New Test Case Candidate Record",
+      "char_offset": 29200
+    },
+    {
+      "level": 1,
+      "title": "25. Review Case Library Record",
+      "char_offset": 29789
+    },
+    {
+      "level": 1,
+      "title": "26. P10 Upgrade Candidate Data Request Packet",
+      "char_offset": 30753
+    },
+    {
+      "level": 1,
+      "title": "27. P09 to P10 Handoff Packet",
+      "char_offset": 32499
+    },
+    {
+      "level": 1,
+      "title": "28. P09 Gap Policy",
+      "char_offset": 35184
+    },
+    {
+      "level": 1,
+      "title": "29. P09 Hard Negative Rules",
+      "char_offset": 36437
+    },
+    {
+      "level": 1,
+      "title": "30. P09 状态机专业版",
+      "char_offset": 37893
+    },
+    {
+      "level": 1,
+      "title": "31. P09 文件体系",
+      "char_offset": 41572
+    },
+    {
+      "level": 2,
+      "title": "31.1 系统目录",
+      "char_offset": 41588
+    },
+    {
+      "level": 2,
+      "title": "31.2 运行数据目录",
+      "char_offset": 43126
+    },
+    {
+      "level": 1,
+      "title": "32. P09 测试矩阵",
+      "char_offset": 43842
+    },
+    {
+      "level": 1,
+      "title": "33. P09 报告模型",
+      "char_offset": 46215
+    },
+    {
+      "level": 1,
+      "title": "34. HER P09 执行协议",
+      "char_offset": 48387
+    },
+    {
+      "level": 1,
+      "title": "35. 给 HER 的专业化任务书",
+      "char_offset": 49832
+    },
+    {
+      "level": 1,
+      "title": "36. 当前是否达到专业化标准",
+      "char_offset": 56903
+    },
+    {
+      "level": 2,
+      "title": "判断",
+      "char_offset": 56922
+    },
+    {
+      "level": 1,
+      "title": "37. 本版补齐的关键能力",
+      "char_offset": 57117
+    },
+    {
+      "level": 1,
+      "title": "38. 尚未解决问题",
+      "char_offset": 57861
+    },
+    {
+      "level": 1,
+      "title": "本次认知升级点",
+      "char_offset": 58215
+    }
+  ],
+  "key_terms": [
+    "Review Case Record",
+    "Replay Input Snapshot",
+    "Decision Chain Reconstruction",
+    "Runtime Path Reconstruction",
+    "Failure Attribution",
+    "Success Attribution",
+    "Calibration Candidate",
+    "P10 Upgrade Candidate Data Request Packet",
+    "P09 to P10 Handoff Packet",
+    "NO_DIRECT_RULE_MUTATION",
+    "NO_RUNTIME_ACTION",
+    "LIVE_EXECUTION_FORBIDDEN"
+  ]
+}

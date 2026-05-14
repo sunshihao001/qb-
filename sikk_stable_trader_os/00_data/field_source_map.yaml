@@ -1,0 +1,144 @@
+field_source_map:
+  - field_name: token_identity
+    field_name_cn: token_identity
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: market_cap_context
+    field_name_cn: market_cap_context
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: kline_volume_structure
+    field_name_cn: kline_volume_structure
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: wallet_identity
+    field_name_cn: wallet_identity
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: wallet_behavior
+    field_name_cn: wallet_behavior
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: chip_distribution
+    field_name_cn: chip_distribution
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: same_source_group
+    field_name_cn: same_source_group
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: fund_flow
+    field_name_cn: fund_flow
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: quote_security
+    field_name_cn: quote_security
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: scenario_context
+    field_name_cn: scenario_context
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: paper_trade_result
+    field_name_cn: paper_trade_result
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: review_feedback
+    field_name_cn: review_feedback
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB
+  - field_name: system_state
+    field_name_cn: system_state
+    source_asset: TO_BE_BOUND_BY_P01
+    source_module: TO_BE_BOUND
+    required_by_phase: P01_data_fact_controller
+    consumer_controller: TBD
+    evidence_level: UNKNOWN
+    quality_level: UNKNOWN
+    missing_policy: DEGRADE_OR_BLOCK_BY_FIELD
+    blocking_if_missing: false
+    status: REGISTERED_STUB

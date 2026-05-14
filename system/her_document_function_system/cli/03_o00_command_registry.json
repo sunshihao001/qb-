@@ -1,0 +1,65 @@
+{
+  "registry_id": "o00_command_registry_v1",
+  "commands": [
+    {
+      "command": "init",
+      "description": "Initialize O00 CLI directories and baseline files",
+      "mode": "SAFE_WRITE",
+      "requires_safe_mode": true
+    },
+    {
+      "command": "validate-config",
+      "description": "Validate controller registry and pipeline config",
+      "mode": "READ_ONLY",
+      "requires_safe_mode": true
+    },
+    {
+      "command": "run-sample",
+      "description": "Run design-level sample replay",
+      "mode": "SAFE_REPLAY",
+      "requires_safe_mode": true
+    },
+    {
+      "command": "run-document",
+      "description": "Run document-to-function pipeline in safe mode",
+      "mode": "SAFE_PIPELINE",
+      "requires_safe_mode": true
+    },
+    {
+      "command": "status",
+      "description": "Show pipeline run status",
+      "mode": "READ_ONLY",
+      "requires_safe_mode": false
+    },
+    {
+      "command": "resume",
+      "description": "Resume a pipeline run from selected stage",
+      "mode": "SAFE_RESUME",
+      "requires_safe_mode": true
+    },
+    {
+      "command": "recover",
+      "description": "Generate recovery plan for failed run",
+      "mode": "RECOVERY_PLAN",
+      "requires_safe_mode": true
+    },
+    {
+      "command": "show-report",
+      "description": "Show final report path and summary",
+      "mode": "READ_ONLY",
+      "requires_safe_mode": false
+    },
+    {
+      "command": "show-gaps",
+      "description": "Show pipeline gap register",
+      "mode": "READ_ONLY",
+      "requires_safe_mode": false
+    },
+    {
+      "command": "show-trace",
+      "description": "Show trace summary",
+      "mode": "READ_ONLY",
+      "requires_safe_mode": false
+    }
+  ]
+}

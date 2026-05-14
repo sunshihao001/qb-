@@ -1,0 +1,22 @@
+p06_scenario_recognition_report:
+  report_id: string
+  generated_at: datetime
+  controller_id: P06_SCENARIO_RECOGNITION_CONTROLLER
+  summary:
+  - candidate_count_received
+  - candidate_count_processed
+  - scenario_ready_count
+  - ready_with_gaps_count
+  - rejected_count
+  - blocked_count
+  scenario_summary:
+  - primary_scenario_distribution
+  - secondary_scenario_distribution
+  - rejected_scenario_count
+  - conflict_scenario_count
+  - unknown_scenario_count
+  compliance:
+    strategy_signal_generated: false
+    paper_runtime_started: false
+    live_execution_path_detected: false
+    direct_buy_signal_generated: false

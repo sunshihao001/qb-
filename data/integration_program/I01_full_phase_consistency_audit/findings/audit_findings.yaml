@@ -1,0 +1,152 @@
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+findings:
+- finding_id: FIND_P02_handoff_contract_exists
+  generated_at: '2026-05-12T12:09:20.376839+00:00'
+  finding_scope:
+    affected_phase: P02
+    affected_artifact: handoff_contract_exists
+  finding_type: MISSING_FILE
+  severity: HIGH
+  finding_summary_cn: P02 缺少或命名未匹配 handoff_contract_exists
+  evidence:
+    source_files:
+    - /root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller
+    observed_issue_cn: 按 I01 命名规则未检出该类文件
+  recommended_fix:
+    fix_summary_cn: I02 统一索引/命名或补登记；必要时回到 Pxx 设计补丁。
+    target_i_stage: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+    priority: FIX_IN_I02
+- finding_id: FIND_P02_data_request_packet_contract_exists
+  generated_at: '2026-05-12T12:09:20.376839+00:00'
+  finding_scope:
+    affected_phase: P02
+    affected_artifact: data_request_packet_contract_exists
+  finding_type: MISSING_FILE
+  severity: MEDIUM
+  finding_summary_cn: P02 缺少或命名未匹配 data_request_packet_contract_exists
+  evidence:
+    source_files:
+    - /root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller
+    observed_issue_cn: 按 I01 命名规则未检出该类文件
+  recommended_fix:
+    fix_summary_cn: I02 统一索引/命名或补登记；必要时回到 Pxx 设计补丁。
+    target_i_stage: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+    priority: FIX_IN_I02
+- finding_id: FIND_P02_state_machine_exists
+  generated_at: '2026-05-12T12:09:20.376839+00:00'
+  finding_scope:
+    affected_phase: P02
+    affected_artifact: state_machine_exists
+  finding_type: MISSING_FILE
+  severity: MEDIUM
+  finding_summary_cn: P02 缺少或命名未匹配 state_machine_exists
+  evidence:
+    source_files:
+    - /root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller
+    observed_issue_cn: 按 I01 命名规则未检出该类文件
+  recommended_fix:
+    fix_summary_cn: I02 统一索引/命名或补登记；必要时回到 Pxx 设计补丁。
+    target_i_stage: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+    priority: FIX_IN_I02
+- finding_id: FIND_P02_acceptance_criteria_exists
+  generated_at: '2026-05-12T12:09:20.376839+00:00'
+  finding_scope:
+    affected_phase: P02
+    affected_artifact: acceptance_criteria_exists
+  finding_type: MISSING_FILE
+  severity: MEDIUM
+  finding_summary_cn: P02 缺少或命名未匹配 acceptance_criteria_exists
+  evidence:
+    source_files:
+    - /root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller
+    observed_issue_cn: 按 I01 命名规则未检出该类文件
+  recommended_fix:
+    fix_summary_cn: I02 统一索引/命名或补登记；必要时回到 Pxx 设计补丁。
+    target_i_stage: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+    priority: FIX_IN_I02
+- finding_id: FIND_P02_trace_requirements_exists
+  generated_at: '2026-05-12T12:09:20.376839+00:00'
+  finding_scope:
+    affected_phase: P02
+    affected_artifact: trace_requirements_exists
+  finding_type: MISSING_FILE
+  severity: MEDIUM
+  finding_summary_cn: P02 缺少或命名未匹配 trace_requirements_exists
+  evidence:
+    source_files:
+    - /root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller
+    observed_issue_cn: 按 I01 命名规则未检出该类文件
+  recommended_fix:
+    fix_summary_cn: I02 统一索引/命名或补登记；必要时回到 Pxx 设计补丁。
+    target_i_stage: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+    priority: FIX_IN_I02
+- finding_id: FIND_P02_gap_policy_exists
+  generated_at: '2026-05-12T12:09:20.376839+00:00'
+  finding_scope:
+    affected_phase: P02
+    affected_artifact: gap_policy_exists
+  finding_type: MISSING_FILE
+  severity: MEDIUM
+  finding_summary_cn: P02 缺少或命名未匹配 gap_policy_exists
+  evidence:
+    source_files:
+    - /root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller
+    observed_issue_cn: 按 I01 命名规则未检出该类文件
+  recommended_fix:
+    fix_summary_cn: I02 统一索引/命名或补登记；必要时回到 Pxx 设计补丁。
+    target_i_stage: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+    priority: FIX_IN_I02
+- finding_id: FIND_P02_hard_negative_rules_exists
+  generated_at: '2026-05-12T12:09:20.376839+00:00'
+  finding_scope:
+    affected_phase: P02
+    affected_artifact: hard_negative_rules_exists
+  finding_type: MISSING_FILE
+  severity: MEDIUM
+  finding_summary_cn: P02 缺少或命名未匹配 hard_negative_rules_exists
+  evidence:
+    source_files:
+    - /root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller
+    observed_issue_cn: 按 I01 命名规则未检出该类文件
+  recommended_fix:
+    fix_summary_cn: I02 统一索引/命名或补登记；必要时回到 Pxx 设计补丁。
+    target_i_stage: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+    priority: FIX_IN_I02
+- finding_id: FIND_P10_data_request_packet_contract_exists
+  generated_at: '2026-05-12T12:09:20.376839+00:00'
+  finding_scope:
+    affected_phase: P10
+    affected_artifact: data_request_packet_contract_exists
+  finding_type: MISSING_FILE
+  severity: MEDIUM
+  finding_summary_cn: P10 缺少或命名未匹配 data_request_packet_contract_exists
+  evidence:
+    source_files:
+    - /root/sikk-gmgn/system/phase_controllers/p10_self_upgrade_controller
+    observed_issue_cn: 按 I01 命名规则未检出该类文件
+  recommended_fix:
+    fix_summary_cn: I02 统一索引/命名或补登记；必要时回到 Pxx 设计补丁。
+    target_i_stage: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+    priority: FIX_IN_I02
+- finding_id: FIND_P02_TO_P03_HANDOFF
+  generated_at: '2026-05-12T12:09:20.376839+00:00'
+  finding_scope:
+    affected_link: P02_TO_P03
+  finding_type: HANDOFF_GAP
+  severity: HIGH
+  finding_summary_cn: P02_TO_P03 handoff contract 未按 I01 规则检出
+  evidence:
+    source_files:
+    - /root/sikk-gmgn/system/phase_controllers/p02_source_data_fact_controller
+    observed_issue_cn: handoff contract 缺失或命名不统一
+  recommended_fix:
+    fix_summary_cn: I02 建 handoff_contract_index 并补齐关键 handoff 路径。
+    target_i_stage: I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION
+    priority: FIX_IN_I02
+summary:
+  total: 9
+  blocking: 0
+  critical: 0
+  high: 2
+  medium: 7
+  low: 0

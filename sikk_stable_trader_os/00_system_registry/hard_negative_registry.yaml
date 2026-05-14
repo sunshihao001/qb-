@@ -1,0 +1,174 @@
+registry_id: hard_negative_registry
+version: '2.0'
+updated_at: '2026-05-11T02:27:03Z'
+inheritance_rule: hard negatives are inherited downstream and cannot be erased by
+  narrative scores
+hard_negatives:
+- code: DATA_INVALID
+  phase_scope: P01+
+  trigger_definition: 关键事实无效、冲突或无法解析
+  severity: BLOCK
+  action: write_gap_and_stop_downstream
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: WALLET_BLOCK
+  phase_scope: P02+
+  trigger_definition: 钱包结构出现不可接受风险实体/黑名单/伪造结构
+  severity: BLOCK
+  action: inherit_and_recheck_downstream
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: ACTIVE_DISTRIBUTION
+  phase_scope: P03+
+  trigger_definition: 活跃派发/出货结构成立
+  severity: BLOCK_OR_RISK
+  action: inherit_as_negative
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: TRANSFER_TO_COUNTERPARTY
+  phase_scope: P02+
+  trigger_definition: 关键地址向对手盘/可疑归集转移
+  severity: BLOCK_OR_RISK
+  action: inherit_as_negative
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: STRUCTURE_COLLAPSE
+  phase_scope: P05+
+  trigger_definition: 结构支撑崩塌
+  severity: BLOCK
+  action: stop_strategy_gate
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: SCENARIO_BLOCK
+  phase_scope: P04+
+  trigger_definition: 盘型场景触发阻断
+  severity: BLOCK
+  action: stop_downstream
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: SCENARIO_TRAP_RISK
+  phase_scope: P04+
+  trigger_definition: 陷阱/诱多风险
+  severity: RISK
+  action: observe_only
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: SCENARIO_DISTRIBUTION_RISK
+  phase_scope: P04+
+  trigger_definition: 派发风险场景
+  severity: RISK
+  action: observe_only_or_block
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: COMPLETION_FAIL
+  phase_scope: P08+
+  trigger_definition: 复盘目标失败且不可解释
+  severity: BLOCK_UPGRADE
+  action: requires_review
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: FATIGUE_BLOCK
+  phase_scope: P07+
+  trigger_definition: 连续执行疲劳或风险预算耗尽
+  severity: BLOCK
+  action: stop_execution
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: POSITION_OVEREXTENDED
+  phase_scope: P07+
+  trigger_definition: 仓位/暴露超界
+  severity: BLOCK
+  action: stop_execution
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: STRATEGY_BLOCK
+  phase_scope: P06+
+  trigger_definition: 策略门禁拒绝
+  severity: BLOCK
+  action: no_execution
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: EXECUTION_BLOCK
+  phase_scope: P07+
+  trigger_definition: 执行安全条件不满足
+  severity: BLOCK
+  action: no_execution
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record
+- code: REGRESSION_TEST_FAIL
+  phase_scope: P09
+  trigger_definition: 系统升级/回归测试失败
+  severity: BLOCK_UPGRADE
+  action: do_not_promote
+  requires_evidence:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - audit_ref
+  clearance_policy: may only be cleared by explicit downstream recheck with stronger
+    evidence and audit record

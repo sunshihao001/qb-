@@ -1,0 +1,20 @@
+{
+  "policy_rules_update": [
+    {
+      "rule_id": "gov_no_ready_without_evidence",
+      "operation": "CANDIDATE_ONLY_NOT_APPLIED",
+      "status": "QUEUED_FOR_REVIEW"
+    },
+    {
+      "rule_id": "gov_no_raw_only_k00_completion",
+      "operation": "CANDIDATE_ONLY_NOT_APPLIED",
+      "status": "QUEUED_FOR_REVIEW"
+    },
+    {
+      "rule_id": "gov_safe_mode_not_production",
+      "operation": "CANDIDATE_ONLY_NOT_APPLIED",
+      "status": "QUEUED_FOR_REVIEW"
+    }
+  ],
+  "status": "POLICY_RULES_UPDATE_CANDIDATE_WITH_GAPS"
+}

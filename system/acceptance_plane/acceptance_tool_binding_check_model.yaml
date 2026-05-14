@@ -1,0 +1,26 @@
+tool_binding_acceptance_check:
+  tool_id: string
+  tool_name: string
+  binding_phase: string
+  required_inputs:
+  - phase_controller_acceptance_status
+  - tool_trace
+  - input_contract
+  - output_contract
+  - forbidden_actions
+  - dry_run_result
+  - test_result
+  checks:
+    tool_exists: boolean
+    input_contract_valid: boolean
+    output_contract_valid: boolean
+    tool_trace_exists: boolean
+    dry_run_passed: boolean
+    tests_passed: boolean
+    live_execution_disabled: boolean
+  result:
+    acceptance_status:
+    - TOOL_BINDING_READY
+    - TOOL_BINDING_READY_WITH_GAPS
+    - TOOL_BINDING_REJECTED
+    - TOOL_BINDING_BLOCKED

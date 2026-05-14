@@ -1,0 +1,28 @@
+{
+  "doc_id": "DOC-20260512-004",
+  "status": "PACKAGE_READY_EXPECTED_WITH_RUNTIME_GAPS",
+  "blocking_runtime_gaps": [
+    "P04 runner/tool binding not implemented or accepted",
+    "P03 runtime handoff samples not consumed in runtime",
+    "supply denominator conflicts may require P05 weakening and P09/P10 calibration",
+    "early cohort thresholds not backtested",
+    "cost basis may lack entry price facts",
+    "internal rotation vs distribution requires later scenario/strategy context",
+    "P05 consumer controller package not yet landed in this flow"
+  ],
+  "non_blocking_package_gaps": [
+    "Controller package/contracts/schemas can be created before runtime implementation",
+    "P04 can be package-ready with runtime gaps because unresolved thresholds are transferred as limitations to P05"
+  ],
+  "hard_forbidden": [
+    "confirm_market_maker",
+    "confirm_dominant_side",
+    "confirm_controller",
+    "scenario_claim",
+    "evidence_object",
+    "strategy_signal",
+    "paper_ready",
+    "live_execution"
+  ],
+  "created_at": "2026-05-12T02:27:13Z"
+}

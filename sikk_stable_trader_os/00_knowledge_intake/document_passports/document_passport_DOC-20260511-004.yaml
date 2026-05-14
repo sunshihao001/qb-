@@ -1,0 +1,31 @@
+doc_id: DOC-20260511-004
+source_type: user_uploaded_text
+source_name: 未命名 4 _1_.md
+received_at: 2026-05-11T15:19:49Z
+raw_path: 00_knowledge_intake/raw_inputs/DOC-20260511-004_system_methodology_blueprint_v2_institutional_upload.md
+canonical_target_path: 00_methodology/system_methodology_blueprint.md
+source_sha256: 21b709caa6d52b80c35ee41c4100774d4b4f1717090fc08bbfc5456a027dae99
+canonical_body_sha256: a5a29ae7b69d97e8c6c98a40ff381ea27f236270571a298c636c9302ff978858
+document_role:
+  primary_role: AUTHORITATIVE_SYSTEM_BUILD_BLUEPRINT
+  secondary_roles:
+    - METHODOLOGY_PLANE_AUTHORITY
+    - P00_BOOTSTRAP_INPUT
+    - PHASE_CONTROLLER_CONSTITUTION
+summary:
+  core_intent: 将 system_methodology_blueprint.md v2.0 专业机构化版本作为 SIKK Stable Trader OS 的系统建造方法论总宪法，并要求 P00 消费后生成控制平面与验收体系。
+  key_points:
+    - P00 是系统编译器，不是交易阶段。
+    - K00 是 Phase Controller 候选任务化入口。
+    - P01 在 Data Plane 验收前必须阻断。
+    - paper_only=true 且 real_trade_enabled=false。
+system_mapping:
+  planes: ["Knowledge Plane", "Methodology Plane", "Governance Plane", "Domain Plane", "Data Plane", "Control Plane", "Trace Plane", "Acceptance Plane", "Handoff Plane", "Execution Plane", "Review Plane", "Upgrade Plane"]
+  affected_phases: ["K00_knowledge_intake_taskization", "P00_system_bootstrap_controller", "P01_data_fact_controller", "P02_wallet_structure_controller", "P03_chip_control_controller", "P04_market_structure_controller", "P05_scenario_classification_controller", "P06_strategy_gate_controller", "P07_execution_risk_controller", "P08_paper_trading_controller", "P09_review_learning_controller", "P10_system_upgrade_controller"]
+required_actions:
+  - preserve_raw_upload
+  - verify_canonical_blueprint_sync
+  - ensure_p00_consumption_record
+  - keep_p01_blocked_until_data_plane_acceptance
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

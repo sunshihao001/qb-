@@ -1,0 +1,18 @@
+{
+  "validation_type": "schema_validation",
+  "status": "PASSED",
+  "schemas_checked": [
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/12_field_model_validation.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/09_v00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/15_test_evidence.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/13_rule_logic_test.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/11_contract_validation.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/10_schema_validation.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/14_function_mapping_validation.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/16_replay_evidence.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/17_failure_evidence.schema.json"
+  ],
+  "valid_schemas": "all parsed and meta-validated in creation check",
+  "invalid_schemas": [],
+  "errors": []
+}

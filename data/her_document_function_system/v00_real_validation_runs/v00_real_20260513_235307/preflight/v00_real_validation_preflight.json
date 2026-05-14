@@ -1,0 +1,25 @@
+{
+  "preflight_status": "PASSED",
+  "safe_mode": true,
+  "loaded_inputs": [
+    "o00_pipeline_run",
+    "f00_handoff",
+    "function_mapping",
+    "field_model",
+    "rule_logic",
+    "schema_refs",
+    "contract_refs",
+    "test_plan",
+    "replay_plan"
+  ],
+  "forbidden_actions_checked": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ],
+  "blocking_gaps": [],
+  "pipeline_run_ref": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_183923_827542/state/pipeline_state.json",
+  "f00_handoff_ref": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260513_183923_827542/handoffs/f00_to_v00_ref.json",
+  "f00_handoff_status": "HANDOFF_READY"
+}

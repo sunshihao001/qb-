@@ -1,0 +1,3 @@
+trace_events: [g00_real_started, u00_handoff_loaded, candidate_inventory_built, candidate_classified, policy_domain_mapped, policy_conflict_checked, policy_rules_built, policy_bundles_built, governance_registry_written, policy_handoff_written, g00_real_completed]
+audit_events: [safe_mode_asserted, forbidden_actions_checked, false_claims_blocked, final_decision_written]
+append_only: true

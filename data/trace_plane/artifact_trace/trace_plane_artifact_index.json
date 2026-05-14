@@ -1,0 +1,167 @@
+{
+  "generated_at": "2026-05-11T17:13:34Z",
+  "artifact_traces": [
+    {
+      "file": "trace_plane.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_plane.yaml",
+      "sha256": "522b38134e4d338e9cfd4380425c5dfc89e5cc8405c4b5e40f8767f1d10d40df",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "trace_context.md",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_context.md",
+      "sha256": "ef877b9983bf872672332df712c7f0fc2bb828747bb9a3eb1ed8699728aac847",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "trace_id_policy.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_id_policy.yaml",
+      "sha256": "8820ea14ff22ca6008d6a6812c2ecd44223a5ad5e919b2d720b373d00bafd03e",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "trace_object_registry.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_object_registry.yaml",
+      "sha256": "2f9f91da2344d705fca3e0616a5a2a005ca17fe125620bcc36914ed69e2b900d",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "knowledge_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/knowledge_trace_model.yaml",
+      "sha256": "dc7bfdba27787af431a9b43875c4d93d43d9eea59dd54d98ace1d60fcc89f3cc",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "methodology_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/methodology_trace_model.yaml",
+      "sha256": "318afa6053cb804cf28a068733e92a74d61673e59afbc88540f42fd0e781d839",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "build_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/build_trace_model.yaml",
+      "sha256": "498e4c3222ca168e61fd89c9195825f2f8c1c732b03e695a58d5e58930b4fe0c",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "phase_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/phase_trace_model.yaml",
+      "sha256": "124516bc515228e555a7d94f018108a47422bc3a04881763faf3673aa461fc77",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "task_tree_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/task_tree_trace_model.yaml",
+      "sha256": "58eedefeab5cbed8066a72c78e51f0bdb8e132d55cab043a7f88c1099dcfb1a8",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "artifact_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/artifact_trace_model.yaml",
+      "sha256": "4a5f8d1e95b151f34cf3ca80b42d4b00235ba37a353ed6f934b0d77ca181977d",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "field_lineage_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/field_lineage_model.yaml",
+      "sha256": "339412d70f8135b9044e237b0e715629c63056ce39c79ee92125f99956787c09",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "contract_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/contract_trace_model.yaml",
+      "sha256": "8e8a5648f4f4fc98310adc253c0366addea148cf6325086b6f1d2e558a042551",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "state_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/state_trace_model.yaml",
+      "sha256": "e74c57d040ef9e02594b07b6707ad2b0612676f2999bac793252badddef61621",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "acceptance_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/acceptance_trace_model.yaml",
+      "sha256": "eb7bb77eb9d5aba39f85d4ea5b74d67b4d33f7e2e39cdd5401b371240d69f31b",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "handoff_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/handoff_trace_model.yaml",
+      "sha256": "3a45cedadb257e6ea4b51ecee9bde6b20189df2363f304bbc2ab542cbe958061",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "tool_binding_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/tool_binding_trace_model.yaml",
+      "sha256": "47a0e198334563e3dc99f177cf922e4c155b546a0391acf26bb89cf637a9d315",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "runtime_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/runtime_trace_model.yaml",
+      "sha256": "4add76505e40254edb2c86cc1e2b95956ad8ed6c41f97d07a0a14e92b185a96d",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "review_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/review_trace_model.yaml",
+      "sha256": "03a201510bc941ccc35636f61cea8ac6059d2fd40da5d837e3ebf112e58f1271",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "upgrade_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/upgrade_trace_model.yaml",
+      "sha256": "3c66c941628515d3d3abc5dee3620636d3f0a7caa3ab183b92de7a877e52c4cf",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "error_trace_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/error_trace_model.yaml",
+      "sha256": "54efc95f26dff15ec87b73fd73406f3ce28776dfa2800fb255da2b3fe7607e28",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "trace_quality_model.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_quality_model.yaml",
+      "sha256": "5f8c73becdccbf6914bbb403ac953aff43343a1695bf336cf38a011074b36f1e",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "trace_storage_constitution.md",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_storage_constitution.md",
+      "sha256": "d9442124730085485d9e3d696fce8de08646af169040f4169e08fa2c93ec8ce8",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "trace_handoff_contract.yaml",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_handoff_contract.yaml",
+      "sha256": "76d1b8566ece2616dc0b4b81e39da44b5808b2d7b05dbc968d12cc80fc5462d0",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "trace_acceptance_criteria.md",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_acceptance_criteria.md",
+      "sha256": "12a318d93796ae39131bb6b47ccee3abc1d6127a2fb0fdae7ccebe69ecb670ca",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "trace_gap_register.md",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_gap_register.md",
+      "sha256": "2dc7ebc4da574b9b0ff2f279de7228f3be013c2977e526089f6b0033bcf97c35",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "trace_review_checklist.md",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/trace_review_checklist.md",
+      "sha256": "893efb76cb6078411ac08e4004f982889de74b0beefe4f5058a4363da99c7c11",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    },
+    {
+      "file": "her_trace_execution_protocol.md",
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_trace/trace_plane/her_trace_execution_protocol.md",
+      "sha256": "2afd31ca859384bc12ce580b2fd53c1602444bdf4b95e92e498b1a4de4692c49",
+      "role": "TRACE_PLANE_CORE_ASSET"
+    }
+  ]
+}

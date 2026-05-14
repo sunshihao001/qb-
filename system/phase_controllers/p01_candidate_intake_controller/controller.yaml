@@ -1,0 +1,28 @@
+controller_id: P01_CANDIDATE_INTAKE_CONTROLLER
+phase_id: P01
+name: Candidate Intake
+domain: candidate_intake
+status: STANDARD_WRAPPER_READY_WITH_RUNTIME_BLOCKED
+generated_by: HER-KPP-SYSTEM-RESCAN-AUTOFIX-20260513
+purpose: Convert docs-only phase material into standard controller assets with contracts,
+  acceptance, handoff, and read-only validation binding.
+upstream_required:
+- K00_KNOWLEDGE_INTAKE
+- P00_SYSTEM_BOOTSTRAP
+downstream_allowed:
+- P02_SOURCE_DATA_FACT_CONTROLLER
+runtime_boundary:
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  swap_enabled: false
+  business_runtime_allowed: false
+  validator_only: true
+forbidden:
+- live_execution
+- wallet_signing
+- transaction_broadcast
+- swap
+- auto_order
+- treat_priority_level_as_buy_signal
+- skip_acceptance_gate

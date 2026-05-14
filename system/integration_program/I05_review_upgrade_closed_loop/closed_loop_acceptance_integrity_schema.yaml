@@ -1,0 +1,8 @@
+closed_loop_acceptance_integrity:
+  type: object
+  required:
+    - validation_id
+    - acceptance_chain_complete
+    - missing_acceptance
+    - status
+  additional_properties_allowed: true

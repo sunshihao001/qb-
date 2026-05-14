@@ -1,0 +1,75 @@
+record_id: downstream_permission_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+per_phase_downstream_permissions:
+- phase_id: P01
+  allowed_next: next declared phase only
+  forbidden:
+  - unauthorized_jump
+  - live_execution
+  - auto_deploy
+  status: CONSISTENT_WITH_GAPS
+- phase_id: P02
+  allowed_next: next declared phase only
+  forbidden:
+  - unauthorized_jump
+  - live_execution
+  - auto_deploy
+  status: CONSISTENT_WITH_GAPS
+- phase_id: P03
+  allowed_next: next declared phase only
+  forbidden:
+  - unauthorized_jump
+  - live_execution
+  - auto_deploy
+  status: CONSISTENT_WITH_GAPS
+- phase_id: P04
+  allowed_next: next declared phase only
+  forbidden:
+  - unauthorized_jump
+  - live_execution
+  - auto_deploy
+  status: CONSISTENT_WITH_GAPS
+- phase_id: P05
+  allowed_next: next declared phase only
+  forbidden:
+  - unauthorized_jump
+  - live_execution
+  - auto_deploy
+  status: CONSISTENT_WITH_GAPS
+- phase_id: P06
+  allowed_next: next declared phase only
+  forbidden:
+  - unauthorized_jump
+  - live_execution
+  - auto_deploy
+  status: CONSISTENT_WITH_GAPS
+- phase_id: P07
+  allowed_next: next declared phase only
+  forbidden:
+  - unauthorized_jump
+  - live_execution
+  - auto_deploy
+  status: CONSISTENT_WITH_GAPS
+- phase_id: P08
+  allowed_next: next declared phase only
+  forbidden:
+  - unauthorized_jump
+  - live_execution
+  - auto_deploy
+  status: CONSISTENT_WITH_GAPS
+- phase_id: P09
+  allowed_next: next declared phase only
+  forbidden:
+  - unauthorized_jump
+  - live_execution
+  - auto_deploy
+  status: CONSISTENT_WITH_GAPS
+- phase_id: P10
+  allowed_next: next declared phase only
+  forbidden:
+  - unauthorized_jump
+  - live_execution
+  - auto_deploy
+  status: CONSISTENT_WITH_GAPS
+unauthorized_jumps: []
+permission_status: DOWNSTREAM_PERMISSION_WITH_GAPS

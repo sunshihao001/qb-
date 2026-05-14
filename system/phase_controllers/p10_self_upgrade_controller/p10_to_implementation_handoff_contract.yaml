@@ -1,0 +1,23 @@
+contract_id: p10_to_implementation_handoff_contract
+packet_type: P10_TO_IMPLEMENTATION_HANDOFF
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+route:
+  from_controller: P10_SELF_UPGRADE_CONTROLLER
+  to_allowed:
+  - GOVERNANCE_REVIEW
+  - IMPLEMENTATION_TASK_QUEUE
+  - RUNNER_TOOL_BINDING_DRY_RUN
+must_include:
+- controlled_upgrade_package_records_path
+- controlled_upgrade_task_packets_path
+- regression_test_plan_records_path
+- release_and_rollback_plan_records_path
+- approval_requirement_records_path
+- version_change_records_path
+forbidden:
+- direct_production_mutation
+- auto_deploy
+- paper_runtime
+- live_execution
+- wallet_signing

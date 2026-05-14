@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0179
+source_path: docs/source_wallet_bot/directory_governance/interface_capability_inventory_v1.md
+phase_scores:
+  P01: 7
+  P02: 3
+  P03: 34
+  P04: 2
+  P05: 0
+  P06: 0
+  P07: 10
+  P08: 0
+  P09: 0
+  P10: 1
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

@@ -1,0 +1,19 @@
+{
+  "handoff_id": "handoff_k00_to_o00_cli_20260513_155754",
+  "from_phase": "K00",
+  "to_phase": "O00_CLI_HER_Command_Entry",
+  "doc_id": "doc_o00_cli_her_command_entry_8947b1a11011",
+  "raw_path": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_o00_cli_her_command_entry_8947b1a11011_20260513_155754/raw/doc_o00_cli_her_command_entry_8947b1a11011.md",
+  "allowed_next_actions": [
+    "create_o00_cli_assets",
+    "implement_safe_cli",
+    "run_sample_replay"
+  ],
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ],
+  "handoff_status": "HANDOFF_READY_WITH_GAPS"
+}

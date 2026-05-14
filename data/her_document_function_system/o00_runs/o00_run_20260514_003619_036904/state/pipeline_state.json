@@ -1,0 +1,35 @@
+{
+  "pipeline_run_id": "o00_run_20260514_003619_036904",
+  "current_status": "PIPELINE_READY_WITH_GAPS",
+  "final_status": "PIPELINE_READY_WITH_GAPS",
+  "system_status_code": "O00_CLI_SAMPLE_REPLAY_READY_WITH_GAPS",
+  "current_stage": "H00",
+  "completed_stages": [
+    "K00",
+    "F00",
+    "V00",
+    "A00",
+    "H00"
+  ],
+  "skipped_stages": [
+    "R00"
+  ],
+  "ready_with_gaps": [
+    "PIPELINE",
+    "V00",
+    "G00"
+  ],
+  "open_gaps": [
+    "gap_sample_001_v00_test_not_executed",
+    "gap_sample_001_g00_policy_not_active",
+    "gap_sample_001_r00_not_required"
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ],
+  "final_report_path": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_003619_036904/reports/o00_final_report.md"
+}

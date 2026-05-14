@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0167
+source_path: docs/plans/2026-05-02-dominant-side-lifecycle-intent-v12.md
+phase_scores:
+  P01: 5
+  P02: 0
+  P03: 20
+  P04: 5
+  P05: 3
+  P06: 6
+  P07: 7
+  P08: 5
+  P09: 5
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

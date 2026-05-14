@@ -1,0 +1,8 @@
+signals:
+  - "shared_funding_source"
+  - "funding_time_proximity"
+  - "amount_pattern_similarity"
+  - "transfer_edges"
+  - "behavior_similarity"
+output: "same_source_group_candidate_record"
+must_include_counter_evidence: true

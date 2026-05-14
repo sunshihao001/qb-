@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Upgrade Candidate",
+  "type": "object",
+  "required": [
+    "upgrade_candidate_id",
+    "upgrade_type",
+    "target_controller",
+    "target_asset",
+    "problem_statement",
+    "proposed_change",
+    "evidence_refs",
+    "expected_impact",
+    "priority",
+    "handoff_target"
+  ],
+  "properties": {
+    "upgrade_candidate_id": {
+      "type": "string"
+    },
+    "upgrade_type": {
+      "type": "string",
+      "enum": [
+        "CONTROLLER_UPGRADE",
+        "SCHEMA_UPGRADE",
+        "CONTRACT_UPGRADE",
+        "FIELD_MODEL_UPGRADE",
+        "RULE_LOGIC_UPGRADE",
+        "TEST_UPGRADE",
+        "REPLAY_UPGRADE",
+        "RUNNER_BINDING_UPGRADE",
+        "TRACE_AUDIT_UPGRADE",
+        "HANDOFF_UPGRADE",
+        "GOVERNANCE_UPGRADE",
+        "DOCUMENT_INTAKE_UPGRADE",
+        "KV_INDEX_UPGRADE"
+      ]
+    },
+    "target_controller": {
+      "type": "string"
+    },
+    "target_asset": {
+      "type": "string"
+    },
+    "problem_statement": {
+      "type": "string"
+    },
+    "proposed_change": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_impact": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "P0_CRITICAL",
+        "P1_HIGH",
+        "P2_MEDIUM",
+        "P3_LOW",
+        "P4_BACKLOG"
+      ]
+    },
+    "requires_governance": {
+      "type": "boolean",
+      "default": false
+    },
+    "handoff_target": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

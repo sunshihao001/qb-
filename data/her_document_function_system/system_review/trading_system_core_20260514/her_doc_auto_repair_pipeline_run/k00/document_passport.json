@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc_her_doc_auto_repair_pipeline_run",
+  "source_name": "HER_DOC_AUTO_REPAIR_TASK_PACKAGE_20260514.md",
+  "source_type": "SYSTEM_CONSTRUCTION_MATERIAL",
+  "received_at": "2026-05-14T10:00:15Z",
+  "raw_path": "input/raw_document.md",
+  "sha256": "e7169c0bf19f56fa8811312094fa9a485594de44028dc785fd933df3ddf58849",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance"
+    ]
+  },
+  "summary": {
+    "core_intent": "让真实 GPT 研究资料 / 系统建设资料进入 HER，按主链路跑完，生成完整文件输出，保留 gap。",
+    "key_points": [
+      "safety_boundary: safe-mode / paper-only / no real swap / no private key / no signature / no broadcast",
+      "根据“HER 总控 + 已运行 paper runtime 不是两套系统，而是一套系统的控制层与执行层”的目标，建立自动修复任务包，并通过 HER_DOC O00→K00→F00→V00→A00→H00→U00→G00 流程处理，落到实际应用场景：",
+      "真实代币数据 → runtime artifact → HER 阶段验收 → V00 evidence bundle → H00 downstream queue → U00 review/upgrade candidate",
+      "p02_p03_mapping: `P02_P03_MAPPING_READY_WITH_GAPS",
+      "### AUTO-REPAIR-001 — V00 实现证据包绑定",
+      "problem: safe-mode HER_DOC 管线已有执行证据，但 F00/V00/H00 仍缺生产实现证据或 live/paper runtime 证据闭环。",
+      "HER_DOC_stage: `F00 → V00 → A00",
+      "automation_action: 生成 `v00_runtime_evidence_bundle.json/md`，把命令、输入、输出、退出码、runtime 文件存在性、安全边界、READY_WITH_GAPS 规则绑定成一个可验证证据包。",
+      "acceptance: 文件存在、JSON 可读、列出每个 runtime artifact 的 file_exists/json_ok/sample_count；A00 不把 safe-mode 等同生产 ACCEPTED。",
+      "HER_DOC_stage: `V00 → H00 → U00",
+      "HER_DOC_stage: `F00 → V00 → A00 → H00",
+      "application_scenario: 每轮 `sikk_live_run.py` 后，HER_DOC 可读取该索引决定哪些阶段 PASS_WITH_GAPS、哪些进入 H00。",
+      "HER_DOC_stage: `U00 → G00",
+      "O00/K00/F00/V00/A00/H00/U00/G00 可生成 safe-mode 处理产物。"
+    ]
+  },
+  "system_mapping": {
+    "affected_planes": [
+      "input",
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00",
+      "trace",
+      "audit"
+    ],
+    "affected_controllers": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_document_function_system",
+      "tools",
+      "tests/her_document_function_system",
+      "data/her_document_function_system/runs"
+    ]
+  },
+  "status": "K00_READY_WITH_GAPS"
+}

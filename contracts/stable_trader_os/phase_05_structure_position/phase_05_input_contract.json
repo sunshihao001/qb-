@@ -1,0 +1,29 @@
+{
+  "contract_name": "phase_05_structure_position_input_contract",
+  "phase": "phase_05_structure_position_controller",
+  "upstream_phase": "phase_04_scenario_recognition_controller",
+  "required_handoff_fields": [
+    "phase",
+    "token_address",
+    "snapshot_id",
+    "scenario_status",
+    "primary_scenario",
+    "handoff_files",
+    "phase_05_required_context",
+    "allowed_next_stage",
+    "handoff_status"
+  ],
+  "required_handoff_files": [
+    "primary_scenario",
+    "scenario_counter_evidence",
+    "scenario_hard_negative_checklist",
+    "kline_normalized",
+    "token_market_context"
+  ],
+  "optional_handoff_files": [
+    "scenario_scores",
+    "chip_control_summary",
+    "wallet_structure_decision"
+  ],
+  "hard_boundary": "Phase05 cannot override Phase04 SCENARIO_BLOCK / SCENARIO_REVIEW_ONLY / SCENARIO_DISTRIBUTION_RISK / SCENARIO_TRAP_RISK into a positive position pass."
+}

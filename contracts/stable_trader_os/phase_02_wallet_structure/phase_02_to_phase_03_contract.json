@@ -1,0 +1,44 @@
+{
+  "contract_name": "phase_02_to_phase_03_contract",
+  "version": "v1.0",
+  "from_phase": "phase_02_wallet_structure_controller",
+  "to_phase": "phase_03_chip_control_controller",
+  "minimum_status_to_continue": [
+    "WALLET_SUPPORT",
+    "WALLET_SAME_SOURCE_DETECTED"
+  ],
+  "pause_status": [
+    "WALLET_PAUSE",
+    "WALLET_UNKNOWN",
+    "WALLET_DATA_WEAK",
+    "WALLET_COUNTERPARTY_PRESSURE"
+  ],
+  "blocking_status": [
+    "WALLET_BLOCK",
+    "WALLET_DISTRIBUTION_DETECTED",
+    "WALLET_BACKFLOW_DETECTED"
+  ],
+  "required_files": [
+    "02_wallet_structure/wallet_structure_decision.json",
+    "02_wallet_structure/normalized/wallet_classification.csv",
+    "02_wallet_structure/normalized/same_source_groups.csv",
+    "02_wallet_structure/normalized/distribution_paths.csv",
+    "02_wallet_structure/normalized/backflow_paths.csv",
+    "02_wallet_structure/normalized/gmgn_note_table.csv",
+    "02_wallet_structure/handoff/phase_02_handoff_packet.json"
+  ],
+  "phase_03_must_carry_forward": [
+    "token_address",
+    "snapshot_id",
+    "phase_status",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_triggered",
+    "hard_negative_reasons",
+    "missing_fields",
+    "evidence_level",
+    "risk_level"
+  ],
+  "hard_negative_precedence": "Phase02 hard_negative_triggered=true 时 Phase03 不得覆盖为 CONTROL_RETAINED。"
+}

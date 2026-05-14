@@ -1,0 +1,25 @@
+{
+  "paper_only": true,
+  "read_only_research": true,
+  "real_trade_enabled": false,
+  "signing_enabled": false,
+  "broadcast_enabled": false,
+  "auto_swap_enabled": false,
+  "secret_access": "not_requested_not_used",
+  "forbidden_final_statuses": [
+    "BUY_NOW",
+    "AUTO_BUY",
+    "REAL_TRADE_READY",
+    "SIGN_AND_SEND",
+    "BROADCAST_READY",
+    "EXECUTE_SWAP"
+  ],
+  "allowed_final_statuses": [
+    "OBSERVE_ONLY",
+    "RISK_MONITOR",
+    "REJECTED",
+    "PAPER_CANDIDATE",
+    "PAPER_INTENT_REQUIRES_HUMAN_CONFIRMATION"
+  ],
+  "updated_at": "2026-05-11T12:27:50.411792Z"
+}

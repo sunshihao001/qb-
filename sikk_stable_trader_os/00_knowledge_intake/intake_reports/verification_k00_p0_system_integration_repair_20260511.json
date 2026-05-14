@@ -1,0 +1,256 @@
+{
+  "verification_id": "VERIFICATION-K00-P0-SYSTEM-INTEGRATION-REPAIR-20260511",
+  "generated_at": "2026-05-11T13:39:27.716072+00:00",
+  "overall_passed": true,
+  "passed_count": 46,
+  "failed_count": 0,
+  "checks": [
+    {
+      "name": "exists:00_control/current_system_state.json",
+      "passed": true,
+      "detail": "00_control/current_system_state.json"
+    },
+    {
+      "name": "exists:00_control/phase_registry.yaml",
+      "passed": true,
+      "detail": "00_control/phase_registry.yaml"
+    },
+    {
+      "name": "exists:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": "00_control/system_asset_index.json"
+    },
+    {
+      "name": "exists:00_data/data_plane.md",
+      "passed": true,
+      "detail": "00_data/data_plane.md"
+    },
+    {
+      "name": "exists:00_data/field_source_map.yaml",
+      "passed": true,
+      "detail": "00_data/field_source_map.yaml"
+    },
+    {
+      "name": "exists:00_data/normalized_fact_model.schema.json",
+      "passed": true,
+      "detail": "00_data/normalized_fact_model.schema.json"
+    },
+    {
+      "name": "exists:00_data/data_input_contract.json",
+      "passed": true,
+      "detail": "00_data/data_input_contract.json"
+    },
+    {
+      "name": "exists:00_data/data_handoff_packet.json",
+      "passed": true,
+      "detail": "00_data/data_handoff_packet.json"
+    },
+    {
+      "name": "exists:06_phase_controllers/P00_system_context_control/01_phase_manifest.yaml",
+      "passed": true,
+      "detail": "06_phase_controllers/P00_system_context_control/01_phase_manifest.yaml"
+    },
+    {
+      "name": "exists:06_phase_controllers/P00_system_context_control/08_phase_state.json",
+      "passed": true,
+      "detail": "06_phase_controllers/P00_system_context_control/08_phase_state.json"
+    },
+    {
+      "name": "exists:06_phase_controllers/P01_data_fact_runtime_connection/01_phase_manifest.yaml",
+      "passed": true,
+      "detail": "06_phase_controllers/P01_data_fact_runtime_connection/01_phase_manifest.yaml"
+    },
+    {
+      "name": "exists:06_phase_controllers/P01_data_fact_runtime_connection/08_phase_state.json",
+      "passed": true,
+      "detail": "06_phase_controllers/P01_data_fact_runtime_connection/08_phase_state.json"
+    },
+    {
+      "name": "exists:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": "06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/task_packages/k00_system_integration_repair/runtime_task_state.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/task_packages/k00_system_integration_repair/runtime_task_state.json"
+    },
+    {
+      "name": "json_parse:00_control/current_system_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_data/normalized_fact_model.schema.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_data/data_input_contract.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_data/data_handoff_packet.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:06_phase_controllers/P00_system_context_control/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:06_phase_controllers/P01_data_fact_runtime_connection/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/task_packages/k00_system_integration_repair/runtime_task_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_control/phase_registry.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_data/field_source_map.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:06_phase_controllers/P00_system_context_control/01_phase_manifest.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:06_phase_controllers/P01_data_fact_runtime_connection/01_phase_manifest.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "current_state_p0_completed",
+      "passed": true,
+      "detail": "COMPLETED"
+    },
+    {
+      "name": "competing_next_stage_resolved",
+      "passed": true,
+      "detail": "{'k00_handoff_previous': 'data_plane_generation', 'automation_workflow_previous': 'P01_data_fact_runtime_connection', 'ruling': 'Data Plane generated; P00/P01 stubs registered; automation P01 may only proceed after P00 acceptance, still paper-only/read-only.', 'resolved_competing_next_stage': True}"
+    },
+    {
+      "name": "canonical_next_stage_order",
+      "passed": true,
+      "detail": "P00_system_context_control_then_P01_data_fact_runtime_connection"
+    },
+    {
+      "name": "safety:paper_only",
+      "passed": true,
+      "detail": "True"
+    },
+    {
+      "name": "safety:read_only_research",
+      "passed": true,
+      "detail": "True"
+    },
+    {
+      "name": "safety:real_trade_enabled",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "safety:signing_enabled",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "safety:broadcast_enabled",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "safety:auto_swap_enabled",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "safety:secret_access",
+      "passed": true,
+      "detail": "not_requested_not_used"
+    },
+    {
+      "name": "phase_count_11",
+      "passed": true,
+      "detail": "11"
+    },
+    {
+      "name": "phase_order_starts_k00",
+      "passed": true,
+      "detail": "['K00', 'P00', 'P01']"
+    },
+    {
+      "name": "repair_status_p0_completed",
+      "passed": true,
+      "detail": "P0_COMPLETED"
+    },
+    {
+      "name": "asset_index_has:data_plane",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "asset_index_has:field_source_map",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "asset_index_has:normalized_fact_model_schema",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "asset_index_has:p00_phase_controller",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "asset_index_has:p01_phase_controller",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "asset_index_has:current_system_state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "asset_index_has:phase_registry",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "summary": {
+    "p0_status": "P0_COMPLETED",
+    "blocking_gaps": [],
+    "degraded_gaps": [
+      "P00/P01 are repair stubs; full semantic controller expansion remains next work"
+    ],
+    "next_step": "expand P00 system_context_control or continue Data Plane full semantic landing"
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P04_scenario_recognition",
+  "artifact_kind": "output",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "scenario_candidates": [
+    "EARLY_STRUCTURE_ACTIVE",
+    "FUNDING_PENDING"
+  ],
+  "early_execution_strength": "LOW",
+  "chase_risk_level": "LOW",
+  "scenario_status": "DEGRADED"
+}

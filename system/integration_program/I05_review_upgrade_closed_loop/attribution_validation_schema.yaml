@@ -1,0 +1,9 @@
+attribution_validation:
+  type: object
+  required:
+    - validation_id
+    - failure_attribution_available
+    - success_attribution_available
+    - confidence
+    - status
+  additional_properties_allowed: true

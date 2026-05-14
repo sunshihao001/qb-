@@ -1,0 +1,16 @@
+{
+  "phase": "phase_04_scenario_recognition_controller",
+  "acceptance": [
+    "phase_directory_exists",
+    "input_contract_exists",
+    "output_contract_exists",
+    "schemas_exist",
+    "required_fields_exist",
+    "runtime_controller_exists",
+    "tests_passed",
+    "handoff_packet_exists",
+    "audit_report_generated",
+    "risk_priority_enforced",
+    "counter_evidence_checked"
+  ]
+}

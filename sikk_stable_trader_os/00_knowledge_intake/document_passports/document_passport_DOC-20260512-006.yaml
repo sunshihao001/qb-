@@ -1,0 +1,49 @@
+doc_id: DOC-20260512-006
+source_type: user_uploaded_markdown
+source_name: P06 专业版 v3.0❤️.md
+received_at: '2026-05-12'
+ingested_at: '2026-05-12T03:53:46Z'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-006_p06_scenario_recognition_controller_v3.md
+sha256: 2d8a2aecfd737c7a9731d17731b2da90d8de1d070f4b37e2d7c614ead454ace8
+document_role:
+  primary_role: P06 Scenario Recognition Controller professional package specification
+  secondary_roles:
+  - scenario recognition system
+  - scenario conflict and rejection model
+  - P06 to P07 handoff contract
+  - phase controller candidate spec
+summary:
+  core_intent: 将 P06 定义为由 P05 证据束驱动的场景识别控制器，输出场景候选、冲突、否定、未知、置信度、观察/失效条件与 P07 策略门控数据请求，但不做策略准入或
+    runtime。
+  key_points:
+  - P06 只识别场景候选，不输出买卖、paper_ready、执行许可或实盘确认
+  - P06 必须读取 P05 handoff、evidence bundle、反证、未知、冲突、替代解释与 usage permission
+  - 每个场景必须包含成立条件、否定条件、冲突条件、失效条件、观察条件、替代场景
+  - UNKNOWN / CONFLICTED / OBSERVE_ONLY 是合法输出
+  - P06 只能 handoff 给 P07 Strategy Gate Controller
+system_mapping:
+  planes:
+  - Knowledge Plane
+  - Control Plane
+  - Trace Plane
+  - Acceptance Plane
+  - Handoff Plane
+  - Domain Plane
+  - Data Plane
+  affected_phases:
+  - K00
+  - P05
+  - P06
+  - P07
+  - P08
+  - P09
+  - P10
+required_actions:
+- assetize_source
+- land_p06_controller_package
+- create_p06_runtime_data_tree
+- update_control_state
+- register_asset_index
+- validate_safety_boundaries
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

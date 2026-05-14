@@ -1,0 +1,42 @@
+schema_id: OUTCOME_EVALUATION_SCHEMA
+title: Outcome Evaluation
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- outcome_eval_id
+- review_case_id
+- outcome_type
+- pnl_or_proxy_metrics
+- risk_metrics
+- review_window_seconds
+fields:
+  outcome_eval_id: string
+  review_case_id: string
+  outcome_type: enum
+  pnl_or_proxy_metrics: object
+  risk_metrics: object
+  review_window_seconds: integer
+enums:
+  outcome_type:
+  - SUCCESS
+  - FAILURE
+  - NEUTRAL
+  - INCOMPLETE
+  - UNKNOWN
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

@@ -1,0 +1,16 @@
+packet_id: "P04_CHIP_STRUCTURE_DATA_REQUEST_PACKET"
+requested_by: "P03"
+target: "P04_CHIP_STRUCTURE_CONTROLLER"
+includes:
+  - "wallet_entities"
+  - "position_facts"
+  - "funding_links"
+  - "same_source_candidates"
+  - "sync_behavior_candidates"
+  - "role_candidates"
+  - "quality_records"
+  - "limitations"
+excludes:
+  - "strategy_signal"
+  - "paper_permission"
+  - "live_execution"

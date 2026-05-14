@@ -1,0 +1,38 @@
+{
+  "report_id": "P07_PACKAGE_VALIDATION_REPORT_FINAL",
+  "generated_at": "2026-05-12T04:16:25Z",
+  "status": "P07_PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "system_files_expected": 41,
+  "system_files_found": 41,
+  "missing_files": [],
+  "runtime_dirs_expected": 29,
+  "runtime_dirs_found": 29,
+  "missing_dirs": [],
+  "yaml_errors": [],
+  "json_errors": [],
+  "anchor_checks": {
+    "buy_signal_forbidden": true,
+    "paper_runtime_forbidden": true,
+    "live_execution_forbidden": true,
+    "p08_required": true,
+    "paper_candidate_not_ready": true
+  },
+  "control_plane_checks": {
+    "state_p07_status": true,
+    "state_next_stage": true,
+    "state_runtime_blocked": true,
+    "phase_registry_p07_ready": true,
+    "phase_index_p07_ready": true,
+    "asset_index_p07_registered": true,
+    "blockers_registered": true
+  },
+  "runtime_gaps": [
+    "runner/tool binding not implemented",
+    "real P06 handoff execution not run",
+    "P08 package not yet landed",
+    "paper runtime remains blocked",
+    "live execution globally forbidden"
+  ],
+  "next_legal_stage": "P08_EXECUTION_RISK_CONTROLLER_PACKAGE_DESIGN",
+  "light_institutional_p07_v3_design_ready": true
+}

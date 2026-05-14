@@ -1,0 +1,5 @@
+risk_boundary:
+  paper_only: true
+  real_trade_enabled: false
+  max_runtime_mode: PAPER_OR_REVIEW_ONLY
+  forbidden_actions: [sign_transaction, broadcast_transaction, submit_order, swap, transfer_funds]

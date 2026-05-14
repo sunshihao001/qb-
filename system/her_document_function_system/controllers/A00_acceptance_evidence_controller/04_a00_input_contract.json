@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 input contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "k00_handoff_packet",
+    "f00_handoff_packet",
+    "v00_handoff_packet",
+    "phase_state_refs",
+    "gap_report_refs",
+    "trace_refs",
+    "audit_refs",
+    "artifact_refs",
+    "execution_boundary",
+    "acceptance_policy"
+  ],
+  "properties": {
+    "phase_id": {
+      "const": "A00"
+    },
+    "k00_handoff_packet": {
+      "type": [
+        "object",
+        "string"
+      ]
+    },
+    "f00_handoff_packet": {
+      "type": [
+        "object",
+        "string"
+      ]
+    },
+    "v00_handoff_packet": {
+      "type": [
+        "object",
+        "string"
+      ]
+    },
+    "r00_handoff_packet": {
+      "type": [
+        "object",
+        "string",
+        "null"
+      ],
+      "description": "Required when runner_binding_required is true"
+    },
+    "runner_binding_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "phase_state_refs": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "object"
+        ]
+      }
+    },
+    "gap_report_refs": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "object"
+        ]
+      }
+    },
+    "trace_refs": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "object"
+        ]
+      }
+    },
+    "audit_refs": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "object"
+        ]
+      }
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "object"
+        ]
+      }
+    },
+    "execution_boundary": {
+      "type": "object",
+      "required": [
+        "allow_live_runtime",
+        "allow_wallet_signing",
+        "allow_auto_deploy",
+        "allow_production_trading"
+      ],
+      "properties": {
+        "allow_live_runtime": {
+          "const": false
+        },
+        "allow_wallet_signing": {
+          "const": false
+        },
+        "allow_auto_deploy": {
+          "const": false
+        },
+        "allow_production_trading": {
+          "const": false
+        }
+      }
+    },
+    "acceptance_policy": {
+      "type": "object",
+      "required": [
+        "no_false_ready",
+        "preserve_gaps",
+        "evidence_required"
+      ],
+      "properties": {
+        "no_false_ready": {
+          "const": true
+        },
+        "preserve_gaps": {
+          "const": true
+        },
+        "evidence_required": {
+          "const": true
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "runner_binding_required": {
+            "const": true
+          }
+        },
+        "required": [
+          "runner_binding_required"
+        ]
+      },
+      "then": {
+        "required": [
+          "r00_handoff_packet"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "acceptance_evidence": [
+    "P05:schema_validation_replay",
+    "P05:happy_path_sample_replay",
+    "P05:missing_field_downgrade_replay",
+    "P05:conflict_input_blocker_replay",
+    "P05:dirty_data_quality_replay",
+    "P05:forbidden_action_replay_scan",
+    "P05:handoff_contract_field_alignment",
+    "P05:trace_evidence_completeness"
+  ],
+  "decision_reason": "standard context loaded and semantic replay checks evaluated in paper-only mode",
+  "downgrade_reason": "none",
+  "forbidden_action_scan": {
+    "blocked_actions": [
+      "swap",
+      "private_key",
+      "signing",
+      "broadcast",
+      "real_trade"
+    ],
+    "real_execution_allowed": false,
+    "status": "PASS"
+  },
+  "generated_at": "2026-05-14T05:19:09.075414+00:00",
+  "input_hash": "6f6eb33b4545337c0ac31d00d16143a08146aa1f7e61357e553ec7b917d59373",
+  "missing_fields": [],
+  "output_hash": "8f4e063173eb2591eda380fd47ddc12d27a9ef3e0608c5ed20d921135f33721f",
+  "packet_id": "P05_REPLAY_EVIDENCE_PACKET_A03_A06_A08_20260514",
+  "phase_id": "P05",
+  "runtime_mode": "paper_only",
+  "runtime_result_hash_only": true,
+  "semantic_replay_cases": [
+    {
+      "mode": "paper_only",
+      "name": "schema_validation_replay",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "happy_path_sample_replay",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "missing_field_downgrade_replay",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "conflict_input_blocker_replay",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "dirty_data_quality_replay",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "forbidden_action_replay_scan",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "handoff_contract_field_alignment",
+      "status": "PASS"
+    },
+    {
+      "mode": "paper_only",
+      "name": "trace_evidence_completeness",
+      "status": "PASS"
+    }
+  ],
+  "source_artifact": "system/stable_trader_os/standard_stage_closure/manifest.json#P05",
+  "status": "REPLAY_EVIDENCE_PACKET_PERSISTED",
+  "trace_id": "P05_BUSINESS_BOUND_TRACE"
+}

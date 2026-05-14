@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 output contract",
+  "type": "object",
+  "required": [
+    "preflight_result",
+    "pipeline_run",
+    "pipeline_execution_plan",
+    "stage_dependency_graph",
+    "pipeline_state",
+    "stage_state_matrix",
+    "pipeline_queue",
+    "pipeline_gap_register",
+    "gap_propagation_matrix",
+    "phase_evidence_refs",
+    "pipeline_evidence_bundle",
+    "pipeline_acceptance_matrix",
+    "recovery_report",
+    "trace_log",
+    "audit_log",
+    "final_handoff",
+    "final_report"
+  ],
+  "properties": {
+    "preflight_result": {
+      "type": "string"
+    },
+    "pipeline_run": {
+      "type": "string"
+    },
+    "pipeline_execution_plan": {
+      "type": "string"
+    },
+    "stage_dependency_graph": {
+      "type": "string"
+    },
+    "pipeline_state": {
+      "type": "string"
+    },
+    "stage_state_matrix": {
+      "type": "string"
+    },
+    "pipeline_queue": {
+      "type": "string"
+    },
+    "pipeline_gap_register": {
+      "type": "string"
+    },
+    "gap_propagation_matrix": {
+      "type": "string"
+    },
+    "phase_evidence_refs": {
+      "type": "string"
+    },
+    "pipeline_evidence_bundle": {
+      "type": "string"
+    },
+    "pipeline_acceptance_matrix": {
+      "type": "string"
+    },
+    "recovery_report": {
+      "type": "string"
+    },
+    "trace_log": {
+      "type": "string"
+    },
+    "audit_log": {
+      "type": "string"
+    },
+    "final_handoff": {
+      "type": "string"
+    },
+    "final_report": {
+      "type": "string"
+    }
+  }
+}

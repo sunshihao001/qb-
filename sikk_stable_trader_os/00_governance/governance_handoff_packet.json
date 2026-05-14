@@ -1,0 +1,13 @@
+{
+  "from": "governance_plane",
+  "to": "domain_plane_generation",
+  "source_doc_id": "DOC-20260511-004",
+  "handoff_status": "READY_WITH_NONBLOCKING_GAPS",
+  "required_next_artifact": "domain_plane.md",
+  "constraints": [
+    "define objects before judgments",
+    "facts must not be AI-inferred",
+    "risk hard negatives cannot be bypassed",
+    "no live trading during SYSTEM_BUILDING"
+  ]
+}

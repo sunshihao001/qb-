@@ -1,0 +1,5 @@
+gap_record:
+  required_fields: [gap_id, detected_at, detected_by_plane, affected_plane, gap_type, severity, description, impact, required_fix, owner_controller, status, downstream_permission]
+  gap_types: [MISSING_FILE, MISSING_FIELD, CONTRACT_INCOMPLETE, DATA_SOURCE_UNVERIFIED, THRESHOLD_NOT_CALIBRATED, TOOL_NOT_IMPLEMENTED, TEST_NOT_RUN, REPLAY_SAMPLE_INSUFFICIENT, GOVERNANCE_UNCLEAR, PATH_CONFLICT]
+  severity: [BLOCKING, HIGH, MEDIUM, LOW]
+  downstream_permission: [BLOCK_DOWNSTREAM, ALLOW_WITH_GAPS, WEAK_EVIDENCE_ONLY, OBSERVE_ONLY]

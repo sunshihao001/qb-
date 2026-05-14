@@ -1,0 +1,45 @@
+policy_id: P10_RELATED_ISSUE_AUTO_FLOW_POLICY
+version: v1.0
+generated_at: "2026-05-12T16:46:18Z"
+purpose: >-
+  将 P10 专业版 v3.0 的尚未解决问题、后续处理项、自动化落地缺口，转化为 HER 可调度的问题清单与全自动流程规划任务包。
+scope:
+  allowed:
+    - problem_inventory
+    - controlled_task_packet
+    - upgrade_backlog_record
+    - gap_register
+    - governance_or_implementation_handoff
+    - dry_run_validation_plan
+  forbidden:
+    - direct_production_rule_mutation
+    - auto_deploy
+    - live_execution
+    - wallet_signing
+    - paper_runtime_trigger_without_gate
+    - single_sample_global_rule_change
+route:
+  upstream: P10_SELF_UPGRADE_CONTROLLER
+  downstream_allowed:
+    - GOVERNANCE_REVIEW
+    - CONTROLLED_IMPLEMENTATION_TASK_QUEUE
+    - RUNNER_TOOL_BINDING_DRY_RUN
+    - I01_FULL_PHASE_CONSISTENCY_AUDIT
+status_codes:
+  ready_with_gaps: P10_RELATED_ISSUE_AUTO_FLOW_READY_WITH_GAPS
+  blocked: P10_RELATED_ISSUE_AUTO_FLOW_BLOCKED
+acceptance:
+  required_artifacts:
+    - task_manifest.json
+    - problem_inventory.json
+    - auto_flow_plan.md
+    - controlled_task_packet.json
+    - upgrade_backlog_record.json
+    - gap_register.json
+    - handoff_packet.json
+    - acceptance_result.json
+  safety_flags_required:
+    no_auto_deploy: true
+    no_live_execution: true
+    no_wallet_signing: true
+    no_direct_rule_mutation: true

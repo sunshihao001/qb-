@@ -1,0 +1,50 @@
+{
+  "status": "PASS_READY_WITH_GAPS_HIGHEST_COGNITION_PATCHED",
+  "ready_for_production": false,
+  "files": {
+    "full_trading_system_gap_matrix.json": {
+      "exists": true,
+      "size": 19596,
+      "json_ok": true
+    },
+    "stage_goal_preparation_gap_report.json": {
+      "exists": true,
+      "size": 13833,
+      "json_ok": true,
+      "items": 10
+    },
+    "gpt_research_request_pack.json": {
+      "exists": true,
+      "size": 17112,
+      "json_ok": true,
+      "items": 24
+    },
+    "methodology_total_goal_gap_summary.json": {
+      "exists": true,
+      "size": 1604,
+      "json_ok": true
+    },
+    "full_gap_scan_report.md": {
+      "exists": true,
+      "size": 14525
+    }
+  },
+  "json_parse_ok": true,
+  "no_real_trade_side_effects": true,
+  "forbidden_claims_blocked": [
+    "PRODUCTION_READY",
+    "LIVE_READY",
+    "FULLY_ACCEPTED",
+    "POLICY_ACTIVE",
+    "REAL_TRADE_AUTHORIZED"
+  ],
+  "notes": [
+    "HER_DOC safe-mode returned exit code 10 with HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS; treated as intentional READY_WITH_GAPS.",
+    "sikk_stable_trader_os/07_runners missing; runner binding is a P0 blocker.",
+    "data/gmgn_candidates_live_run/wallet_structure missing; P03/P04 runtime evidence high gap."
+  ],
+  "highest_cognition_present": true,
+  "highest_cognition": "最高认知： SIKK 交易结构系统的目标不是生成流程图，也不是把每个阶段文档写漂亮。 最终目标是： 让真实 token / candidate batch 在 HER 总控闭环下， 按 P01-P10 完成事实采集、钱包结构推理、筹码结构推理、证据与反证控制、场景识别、策略门禁、paper-only 执行风控、P09 复盘回放、P10 受控升级。 所以当前正确选择不是直接分阶段补全， 而是先使用 HER_DOC-skill 对全体系做目标差距扫描， 找出总目标还差什么、每个阶段还差什么、R00 为什么还不能跑真实 token、哪些缺口需要 GPT 深研、哪些缺口可以 HER 直接落地。 流程不是目的。 流程是为了让代币判断不跳步、不硬猜、可反证、可验收、可回放、可升级。",
+  "patched_at": "2026-05-14T11:21:46.927750+00:00",
+  "auto_repair_task_package": "/root/sikk-gmgn/data/her_document_function_system/system_review/trading_system_full_gap_scan_20260514/her_doc_auto_repair_task_package_with_highest_cognition.json"
+}

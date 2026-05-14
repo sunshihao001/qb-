@@ -1,0 +1,23 @@
+{
+  "handoff_id": "GOVERNANCE_TO_DATA_DOC-20260511-021",
+  "source_plane": "Governance Plane",
+  "target_plane": "Data Plane",
+  "included_assets": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/authority_boundary.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/stage_permission_matrix.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/hard_negative_rules.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/evidence_language_policy.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/assumption_control_policy.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_to_data_constraints.yaml"
+  ],
+  "constraints": [
+    "Data fields require source/quality/evidence/missing policy",
+    "Missing required facts cannot be inferred",
+    "Blocking fields must be explicit"
+  ],
+  "known_gaps": [
+    "Data Plane acceptance not yet run"
+  ],
+  "consumption_required": true,
+  "acceptance_status": "HANDOFF_READY"
+}

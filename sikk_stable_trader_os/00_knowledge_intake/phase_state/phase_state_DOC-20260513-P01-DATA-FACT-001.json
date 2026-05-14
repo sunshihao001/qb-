@@ -1,0 +1,51 @@
+{
+  "phase_id": "K00",
+  "doc_id": "DOC-20260513-P01-DATA-FACT-001",
+  "phase_status": "K00_ACCEPTED",
+  "next_phase": "P01_data_fact_controller_package_or_code_landing",
+  "updated_at_utc": "2026-05-13T05:21:57.257287+00:00",
+  "acceptance_gate": "PASS",
+  "artifacts_root": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake",
+  "auto_trigger": {
+    "enabled": true,
+    "decision_status": "AUTO_TRIGGER_ALLOWED",
+    "next_phase_allowed": true,
+    "next_phase_recommendation": "P01_data_fact_controller_package_or_code_landing",
+    "decision_artifact": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/auto_trigger_decisions/auto_trigger_decision_DOC-20260513-P01-DATA-FACT-001.json",
+    "stop_reason": null,
+    "gate_evidence": [
+      {
+        "check": "phase_status_allows_continue",
+        "value": "K00_ACCEPTED",
+        "passed": true
+      },
+      {
+        "check": "acceptance_gate_pass",
+        "value": "PASS",
+        "passed": true
+      },
+      {
+        "check": "no_blocker_gap",
+        "value": 0,
+        "passed": true
+      },
+      {
+        "check": "handoff_packet_exists",
+        "value": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/handoff_packets/handoff_packet_DOC-20260513-P01-DATA-FACT-001.json",
+        "passed": true
+      },
+      {
+        "check": "next_phase_recommendation_exists",
+        "value": "P01_data_fact_controller_package_or_code_landing",
+        "passed": true
+      },
+      {
+        "check": "direct_trade_execution_forbidden",
+        "value": "P01_data_fact_controller_package_or_code_landing",
+        "passed": true
+      }
+    ],
+    "evaluated_at": "2026-05-13T05:21:57.257287+00:00"
+  },
+  "next_action": "enter_next_phase:P01_data_fact_controller_package_or_code_landing"
+}

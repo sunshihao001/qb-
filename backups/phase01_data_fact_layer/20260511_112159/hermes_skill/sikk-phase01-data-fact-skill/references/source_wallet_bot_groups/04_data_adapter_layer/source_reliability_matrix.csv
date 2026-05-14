@@ -1,0 +1,10 @@
+source_name,source_level,reliability,notes,allowed_usage,forbidden_reverse_inference
+onchain_rpc,L0,高,链上原始事件。事实可信度最高。,可直接作为事实源,不允许反推展示层时间
+gmgn_api,L1,高,GMGN 返回的数据，保留 provider_timestamp 后可作为强事实。,可作为事实源,不能由 paper/report 反推
+okx_api,L1,高,OKX 返回的数据，保留 provider_timestamp 后可作为强事实。,可作为事实源,不能由 dashboard 反推
+wallet_api,L1,中高,钱包/地址接口返回。,可作为事实源,不能由 case file 反推
+sikk_normalized,L2,高,标准化后的 SIKK 产物。,标准事实层,必须保留 source_time/retrieved_at/normalized_at
+legacy_zip,L3,中,旧系统压缩包与历史 summary。,历史样本,不能覆盖实时事实源
+dashboard_view,L4,低,展示层/控制台页面。,展示/复盘,不能反向生成事实字段
+paper_report,L4,低,纸面/日报/报告产物。,展示/复盘,不能反向生成事实字段
+case_file,L4,低,案例归档。,展示/审计,不能反向生成事实字段

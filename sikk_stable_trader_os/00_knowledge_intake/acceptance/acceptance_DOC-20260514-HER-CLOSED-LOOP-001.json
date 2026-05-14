@@ -1,0 +1,16 @@
+{
+  "doc_id": "DOC-20260514-HER-CLOSED-LOOP-001",
+  "phase": "K00",
+  "checks": {
+    "raw_preserved": true,
+    "registry_entry": true,
+    "passport_ready": true,
+    "corpus_index_ready": true,
+    "system_mapping_ready": true,
+    "gap_register_ready": true,
+    "handoff_ready": true
+  },
+  "accepted": true,
+  "accepted_with_gaps": true,
+  "status": "K00_ACCEPTED_WITH_GAPS"
+}

@@ -1,0 +1,7 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: STRATEGY_PATTERN_FIT_SCHEMA
+required_fields: [pattern_fit_id, candidate_id, evaluated_strategy_profiles, selected_strategy_profile, fit_dimensions, no_single_score_policy, downstream]
+fit_status_enum: [FIT, FIT_WITH_LIMITATIONS, PARTIAL_FIT, NOT_FIT, BLOCKED_BY_RISK]
+selection_confidence_enum: [HIGH, MEDIUM, LOW, NONE]

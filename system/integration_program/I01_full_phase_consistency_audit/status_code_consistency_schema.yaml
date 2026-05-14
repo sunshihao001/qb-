@@ -1,0 +1,8 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: status_code_consistency_record
+fields:
+- record_id
+- global_status_classes
+- per_phase_status_check
+- status_mapping_required

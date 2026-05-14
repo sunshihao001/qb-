@@ -1,0 +1,193 @@
+{
+  "schema_name": "kline_normalized",
+  "phase": "phase_01_data_fact",
+  "fields": [
+    {
+      "field_name": "timestamp",
+      "type": "string",
+      "chinese_name": "timestamp",
+      "description": "phase_01 field timestamp",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_timestamp"
+    },
+    {
+      "field_name": "token_address",
+      "type": "string",
+      "chinese_name": "token_address",
+      "description": "phase_01 field token_address",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_token_address"
+    },
+    {
+      "field_name": "timeframe",
+      "type": "string",
+      "chinese_name": "timeframe",
+      "description": "phase_01 field timeframe",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_timeframe"
+    },
+    {
+      "field_name": "open",
+      "type": "string",
+      "chinese_name": "open",
+      "description": "phase_01 field open",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_open"
+    },
+    {
+      "field_name": "high",
+      "type": "string",
+      "chinese_name": "high",
+      "description": "phase_01 field high",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_high"
+    },
+    {
+      "field_name": "low",
+      "type": "string",
+      "chinese_name": "low",
+      "description": "phase_01 field low",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_low"
+    },
+    {
+      "field_name": "close",
+      "type": "string",
+      "chinese_name": "close",
+      "description": "phase_01 field close",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_close"
+    },
+    {
+      "field_name": "volume",
+      "type": "string",
+      "chinese_name": "volume",
+      "description": "phase_01 field volume",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_volume"
+    },
+    {
+      "field_name": "volume_usd",
+      "type": "string",
+      "chinese_name": "volume_usd",
+      "description": "phase_01 field volume_usd",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_volume_usd"
+    },
+    {
+      "field_name": "trade_count",
+      "type": "string",
+      "chinese_name": "trade_count",
+      "description": "phase_01 field trade_count",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_trade_count"
+    },
+    {
+      "field_name": "source_file",
+      "type": "string",
+      "chinese_name": "source_file",
+      "description": "phase_01 field source_file",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_source_file"
+    }
+  ]
+}

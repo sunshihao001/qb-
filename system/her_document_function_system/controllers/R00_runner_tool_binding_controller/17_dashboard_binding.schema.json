@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dashboard binding schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "dashboard_binding_id",
+    "fields",
+    "output_path"
+  ],
+  "properties": {
+    "dashboard_binding_id": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "array"
+    },
+    "output_path": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "handoff_id": "K00-HANDOFF-DOC-20260511-009",
+  "doc_id": "DOC-20260511-009",
+  "parent_doc_id": "DOC-20260511-006",
+  "from_phase": "K00",
+  "to_phase": "P00_system_context_control",
+  "status": "SYSTEM_COMPILATION_CHAIN_CANONICALIZED",
+  "critical_breakpoint": "K00 资产化 != 系统消费",
+  "required_p00_checks": [
+    "P00 must consume K00 assets",
+    "P00 must verify methodology blueprint read",
+    "P00 must generate or validate governance/domain/data/control/phase/runner/acceptance/trace/handoff chain"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-STAGE-TARGET-DATA-DETAILS",
+      "severity": "DEGRADED",
+      "description": "Every phase target data object still needs explicit enumeration in later sections."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

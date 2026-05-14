@@ -1,0 +1,2240 @@
+summary:
+  run_id: KPP_BATCH_LEGACY_REPROCESS_20260513
+  status: PASS
+  created_at: '2026-05-13T01:25:59.654892+00:00'
+  unique_documents_processed: 371
+  duplicate_documents_skipped: 0
+  output_root: data/knowledge_processing_program/batch_legacy_reprocess
+  safety_boundary:
+    real_trade_enabled: false
+    signing_enabled: false
+    broadcast_enabled: false
+    swap_enabled: false
+tasks:
+- task_id: KPP_TASK_LEGACY-DOC-0001
+  source_document_id: LEGACY-DOC-0001
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0002
+  source_document_id: LEGACY-DOC-0002
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0003
+  source_document_id: LEGACY-DOC-0003
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0004
+  source_document_id: LEGACY-DOC-0004
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0005
+  source_document_id: LEGACY-DOC-0005
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0006
+  source_document_id: LEGACY-DOC-0006
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0007
+  source_document_id: LEGACY-DOC-0007
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0008
+  source_document_id: LEGACY-DOC-0008
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0009
+  source_document_id: LEGACY-DOC-0009
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0010
+  source_document_id: LEGACY-DOC-0010
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0011
+  source_document_id: LEGACY-DOC-0011
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0012
+  source_document_id: LEGACY-DOC-0012
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0013
+  source_document_id: LEGACY-DOC-0013
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0014
+  source_document_id: LEGACY-DOC-0014
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0015
+  source_document_id: LEGACY-DOC-0015
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0016
+  source_document_id: LEGACY-DOC-0016
+  target_phase: P06
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0017
+  source_document_id: LEGACY-DOC-0017
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0018
+  source_document_id: LEGACY-DOC-0018
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0019
+  source_document_id: LEGACY-DOC-0019
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0020
+  source_document_id: LEGACY-DOC-0020
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0021
+  source_document_id: LEGACY-DOC-0021
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0022
+  source_document_id: LEGACY-DOC-0022
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0023
+  source_document_id: LEGACY-DOC-0023
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0024
+  source_document_id: LEGACY-DOC-0024
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0025
+  source_document_id: LEGACY-DOC-0025
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0026
+  source_document_id: LEGACY-DOC-0026
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0027
+  source_document_id: LEGACY-DOC-0027
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0028
+  source_document_id: LEGACY-DOC-0028
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0029
+  source_document_id: LEGACY-DOC-0029
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0030
+  source_document_id: LEGACY-DOC-0030
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0031
+  source_document_id: LEGACY-DOC-0031
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0032
+  source_document_id: LEGACY-DOC-0032
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0033
+  source_document_id: LEGACY-DOC-0033
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0034
+  source_document_id: LEGACY-DOC-0034
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0035
+  source_document_id: LEGACY-DOC-0035
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0036
+  source_document_id: LEGACY-DOC-0036
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0037
+  source_document_id: LEGACY-DOC-0037
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0038
+  source_document_id: LEGACY-DOC-0038
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0039
+  source_document_id: LEGACY-DOC-0039
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0040
+  source_document_id: LEGACY-DOC-0040
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0041
+  source_document_id: LEGACY-DOC-0041
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0042
+  source_document_id: LEGACY-DOC-0042
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0043
+  source_document_id: LEGACY-DOC-0043
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0044
+  source_document_id: LEGACY-DOC-0044
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0045
+  source_document_id: LEGACY-DOC-0045
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0046
+  source_document_id: LEGACY-DOC-0046
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0047
+  source_document_id: LEGACY-DOC-0047
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0048
+  source_document_id: LEGACY-DOC-0048
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0049
+  source_document_id: LEGACY-DOC-0049
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0050
+  source_document_id: LEGACY-DOC-0050
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0051
+  source_document_id: LEGACY-DOC-0051
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0052
+  source_document_id: LEGACY-DOC-0052
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0053
+  source_document_id: LEGACY-DOC-0053
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0054
+  source_document_id: LEGACY-DOC-0054
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0055
+  source_document_id: LEGACY-DOC-0055
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0056
+  source_document_id: LEGACY-DOC-0056
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0057
+  source_document_id: LEGACY-DOC-0057
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0058
+  source_document_id: LEGACY-DOC-0058
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0059
+  source_document_id: LEGACY-DOC-0059
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0060
+  source_document_id: LEGACY-DOC-0060
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0061
+  source_document_id: LEGACY-DOC-0061
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0062
+  source_document_id: LEGACY-DOC-0062
+  target_phase: P06
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0063
+  source_document_id: LEGACY-DOC-0063
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0064
+  source_document_id: LEGACY-DOC-0064
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0065
+  source_document_id: LEGACY-DOC-0065
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0066
+  source_document_id: LEGACY-DOC-0066
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0067
+  source_document_id: LEGACY-DOC-0067
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0068
+  source_document_id: LEGACY-DOC-0068
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0069
+  source_document_id: LEGACY-DOC-0069
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0070
+  source_document_id: LEGACY-DOC-0070
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0071
+  source_document_id: LEGACY-DOC-0071
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0072
+  source_document_id: LEGACY-DOC-0072
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0073
+  source_document_id: LEGACY-DOC-0073
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0074
+  source_document_id: LEGACY-DOC-0074
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0075
+  source_document_id: LEGACY-DOC-0075
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0076
+  source_document_id: LEGACY-DOC-0076
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0077
+  source_document_id: LEGACY-DOC-0077
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0078
+  source_document_id: LEGACY-DOC-0078
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0079
+  source_document_id: LEGACY-DOC-0079
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0080
+  source_document_id: LEGACY-DOC-0080
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0081
+  source_document_id: LEGACY-DOC-0081
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0082
+  source_document_id: LEGACY-DOC-0082
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0083
+  source_document_id: LEGACY-DOC-0083
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0084
+  source_document_id: LEGACY-DOC-0084
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0085
+  source_document_id: LEGACY-DOC-0085
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0086
+  source_document_id: LEGACY-DOC-0086
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0087
+  source_document_id: LEGACY-DOC-0087
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0088
+  source_document_id: LEGACY-DOC-0088
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0089
+  source_document_id: LEGACY-DOC-0089
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0090
+  source_document_id: LEGACY-DOC-0090
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0091
+  source_document_id: LEGACY-DOC-0091
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0092
+  source_document_id: LEGACY-DOC-0092
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0093
+  source_document_id: LEGACY-DOC-0093
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0094
+  source_document_id: LEGACY-DOC-0094
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0095
+  source_document_id: LEGACY-DOC-0095
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0096
+  source_document_id: LEGACY-DOC-0096
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0097
+  source_document_id: LEGACY-DOC-0097
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0098
+  source_document_id: LEGACY-DOC-0098
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0099
+  source_document_id: LEGACY-DOC-0099
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0100
+  source_document_id: LEGACY-DOC-0100
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0101
+  source_document_id: LEGACY-DOC-0101
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0102
+  source_document_id: LEGACY-DOC-0102
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0103
+  source_document_id: LEGACY-DOC-0103
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0104
+  source_document_id: LEGACY-DOC-0104
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0105
+  source_document_id: LEGACY-DOC-0105
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0106
+  source_document_id: LEGACY-DOC-0106
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0107
+  source_document_id: LEGACY-DOC-0107
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0108
+  source_document_id: LEGACY-DOC-0108
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0109
+  source_document_id: LEGACY-DOC-0109
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0110
+  source_document_id: LEGACY-DOC-0110
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0111
+  source_document_id: LEGACY-DOC-0111
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0112
+  source_document_id: LEGACY-DOC-0112
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0113
+  source_document_id: LEGACY-DOC-0113
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0114
+  source_document_id: LEGACY-DOC-0114
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0115
+  source_document_id: LEGACY-DOC-0115
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0116
+  source_document_id: LEGACY-DOC-0116
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0117
+  source_document_id: LEGACY-DOC-0117
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0118
+  source_document_id: LEGACY-DOC-0118
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0119
+  source_document_id: LEGACY-DOC-0119
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0120
+  source_document_id: LEGACY-DOC-0120
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0121
+  source_document_id: LEGACY-DOC-0121
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0122
+  source_document_id: LEGACY-DOC-0122
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0123
+  source_document_id: LEGACY-DOC-0123
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0124
+  source_document_id: LEGACY-DOC-0124
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0125
+  source_document_id: LEGACY-DOC-0125
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0126
+  source_document_id: LEGACY-DOC-0126
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0127
+  source_document_id: LEGACY-DOC-0127
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0128
+  source_document_id: LEGACY-DOC-0128
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0129
+  source_document_id: LEGACY-DOC-0129
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0130
+  source_document_id: LEGACY-DOC-0130
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0131
+  source_document_id: LEGACY-DOC-0131
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0132
+  source_document_id: LEGACY-DOC-0132
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0133
+  source_document_id: LEGACY-DOC-0133
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0134
+  source_document_id: LEGACY-DOC-0134
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0135
+  source_document_id: LEGACY-DOC-0135
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0136
+  source_document_id: LEGACY-DOC-0136
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0137
+  source_document_id: LEGACY-DOC-0137
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0138
+  source_document_id: LEGACY-DOC-0138
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0139
+  source_document_id: LEGACY-DOC-0139
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0140
+  source_document_id: LEGACY-DOC-0140
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0141
+  source_document_id: LEGACY-DOC-0141
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0142
+  source_document_id: LEGACY-DOC-0142
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0143
+  source_document_id: LEGACY-DOC-0143
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0144
+  source_document_id: LEGACY-DOC-0144
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0145
+  source_document_id: LEGACY-DOC-0145
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0146
+  source_document_id: LEGACY-DOC-0146
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0147
+  source_document_id: LEGACY-DOC-0147
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0148
+  source_document_id: LEGACY-DOC-0148
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0149
+  source_document_id: LEGACY-DOC-0149
+  target_phase: P06
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0150
+  source_document_id: LEGACY-DOC-0150
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0151
+  source_document_id: LEGACY-DOC-0151
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0152
+  source_document_id: LEGACY-DOC-0152
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0153
+  source_document_id: LEGACY-DOC-0153
+  target_phase: P06
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0154
+  source_document_id: LEGACY-DOC-0154
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0155
+  source_document_id: LEGACY-DOC-0155
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0156
+  source_document_id: LEGACY-DOC-0156
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0157
+  source_document_id: LEGACY-DOC-0157
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0158
+  source_document_id: LEGACY-DOC-0158
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0159
+  source_document_id: LEGACY-DOC-0159
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0160
+  source_document_id: LEGACY-DOC-0160
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0161
+  source_document_id: LEGACY-DOC-0161
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0162
+  source_document_id: LEGACY-DOC-0162
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0163
+  source_document_id: LEGACY-DOC-0163
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0164
+  source_document_id: LEGACY-DOC-0164
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0165
+  source_document_id: LEGACY-DOC-0165
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0166
+  source_document_id: LEGACY-DOC-0166
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0167
+  source_document_id: LEGACY-DOC-0167
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0168
+  source_document_id: LEGACY-DOC-0168
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0169
+  source_document_id: LEGACY-DOC-0169
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0170
+  source_document_id: LEGACY-DOC-0170
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0171
+  source_document_id: LEGACY-DOC-0171
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0172
+  source_document_id: LEGACY-DOC-0172
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0173
+  source_document_id: LEGACY-DOC-0173
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0174
+  source_document_id: LEGACY-DOC-0174
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0175
+  source_document_id: LEGACY-DOC-0175
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0176
+  source_document_id: LEGACY-DOC-0176
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0177
+  source_document_id: LEGACY-DOC-0177
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0178
+  source_document_id: LEGACY-DOC-0178
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0179
+  source_document_id: LEGACY-DOC-0179
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0180
+  source_document_id: LEGACY-DOC-0180
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0181
+  source_document_id: LEGACY-DOC-0181
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0182
+  source_document_id: LEGACY-DOC-0182
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0183
+  source_document_id: LEGACY-DOC-0183
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0184
+  source_document_id: LEGACY-DOC-0184
+  target_phase: P06
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0185
+  source_document_id: LEGACY-DOC-0185
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0186
+  source_document_id: LEGACY-DOC-0186
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0187
+  source_document_id: LEGACY-DOC-0187
+  target_phase: P06
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0188
+  source_document_id: LEGACY-DOC-0188
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0189
+  source_document_id: LEGACY-DOC-0189
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0190
+  source_document_id: LEGACY-DOC-0190
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0191
+  source_document_id: LEGACY-DOC-0191
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0192
+  source_document_id: LEGACY-DOC-0192
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0193
+  source_document_id: LEGACY-DOC-0193
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0194
+  source_document_id: LEGACY-DOC-0194
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0195
+  source_document_id: LEGACY-DOC-0195
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0196
+  source_document_id: LEGACY-DOC-0196
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0197
+  source_document_id: LEGACY-DOC-0197
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0198
+  source_document_id: LEGACY-DOC-0198
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0199
+  source_document_id: LEGACY-DOC-0199
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0200
+  source_document_id: LEGACY-DOC-0200
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0201
+  source_document_id: LEGACY-DOC-0201
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0202
+  source_document_id: LEGACY-DOC-0202
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0203
+  source_document_id: LEGACY-DOC-0203
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0204
+  source_document_id: LEGACY-DOC-0204
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0205
+  source_document_id: LEGACY-DOC-0205
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0206
+  source_document_id: LEGACY-DOC-0206
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0207
+  source_document_id: LEGACY-DOC-0207
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0208
+  source_document_id: LEGACY-DOC-0208
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0209
+  source_document_id: LEGACY-DOC-0209
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0210
+  source_document_id: LEGACY-DOC-0210
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0211
+  source_document_id: LEGACY-DOC-0211
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0212
+  source_document_id: LEGACY-DOC-0212
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0213
+  source_document_id: LEGACY-DOC-0213
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0214
+  source_document_id: LEGACY-DOC-0214
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0215
+  source_document_id: LEGACY-DOC-0215
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0216
+  source_document_id: LEGACY-DOC-0216
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0217
+  source_document_id: LEGACY-DOC-0217
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0218
+  source_document_id: LEGACY-DOC-0218
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0219
+  source_document_id: LEGACY-DOC-0219
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0220
+  source_document_id: LEGACY-DOC-0220
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0221
+  source_document_id: LEGACY-DOC-0221
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0222
+  source_document_id: LEGACY-DOC-0222
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0223
+  source_document_id: LEGACY-DOC-0223
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0224
+  source_document_id: LEGACY-DOC-0224
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0225
+  source_document_id: LEGACY-DOC-0225
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0226
+  source_document_id: LEGACY-DOC-0226
+  target_phase: P06
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0227
+  source_document_id: LEGACY-DOC-0227
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0228
+  source_document_id: LEGACY-DOC-0228
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0229
+  source_document_id: LEGACY-DOC-0229
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0230
+  source_document_id: LEGACY-DOC-0230
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0231
+  source_document_id: LEGACY-DOC-0231
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0232
+  source_document_id: LEGACY-DOC-0232
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0233
+  source_document_id: LEGACY-DOC-0233
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0234
+  source_document_id: LEGACY-DOC-0234
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0235
+  source_document_id: LEGACY-DOC-0235
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0236
+  source_document_id: LEGACY-DOC-0236
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0237
+  source_document_id: LEGACY-DOC-0237
+  target_phase: P04
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0238
+  source_document_id: LEGACY-DOC-0238
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0239
+  source_document_id: LEGACY-DOC-0239
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0240
+  source_document_id: LEGACY-DOC-0240
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0241
+  source_document_id: LEGACY-DOC-0241
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0242
+  source_document_id: LEGACY-DOC-0242
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0243
+  source_document_id: LEGACY-DOC-0243
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0244
+  source_document_id: LEGACY-DOC-0244
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0245
+  source_document_id: LEGACY-DOC-0245
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0246
+  source_document_id: LEGACY-DOC-0246
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0247
+  source_document_id: LEGACY-DOC-0247
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0248
+  source_document_id: LEGACY-DOC-0248
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0249
+  source_document_id: LEGACY-DOC-0249
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0250
+  source_document_id: LEGACY-DOC-0250
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0251
+  source_document_id: LEGACY-DOC-0251
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0252
+  source_document_id: LEGACY-DOC-0252
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0253
+  source_document_id: LEGACY-DOC-0253
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0254
+  source_document_id: LEGACY-DOC-0254
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0255
+  source_document_id: LEGACY-DOC-0255
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0256
+  source_document_id: LEGACY-DOC-0256
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0257
+  source_document_id: LEGACY-DOC-0257
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0258
+  source_document_id: LEGACY-DOC-0258
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0259
+  source_document_id: LEGACY-DOC-0259
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0260
+  source_document_id: LEGACY-DOC-0260
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0261
+  source_document_id: LEGACY-DOC-0261
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0262
+  source_document_id: LEGACY-DOC-0262
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0263
+  source_document_id: LEGACY-DOC-0263
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0264
+  source_document_id: LEGACY-DOC-0264
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0265
+  source_document_id: LEGACY-DOC-0265
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0266
+  source_document_id: LEGACY-DOC-0266
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0267
+  source_document_id: LEGACY-DOC-0267
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0268
+  source_document_id: LEGACY-DOC-0268
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0269
+  source_document_id: LEGACY-DOC-0269
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0270
+  source_document_id: LEGACY-DOC-0270
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0271
+  source_document_id: LEGACY-DOC-0271
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0272
+  source_document_id: LEGACY-DOC-0272
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0273
+  source_document_id: LEGACY-DOC-0273
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0274
+  source_document_id: LEGACY-DOC-0274
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0275
+  source_document_id: LEGACY-DOC-0275
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0276
+  source_document_id: LEGACY-DOC-0276
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0277
+  source_document_id: LEGACY-DOC-0277
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0278
+  source_document_id: LEGACY-DOC-0278
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0279
+  source_document_id: LEGACY-DOC-0279
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0280
+  source_document_id: LEGACY-DOC-0280
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0281
+  source_document_id: LEGACY-DOC-0281
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0282
+  source_document_id: LEGACY-DOC-0282
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0283
+  source_document_id: LEGACY-DOC-0283
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0284
+  source_document_id: LEGACY-DOC-0284
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0285
+  source_document_id: LEGACY-DOC-0285
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0286
+  source_document_id: LEGACY-DOC-0286
+  target_phase: P04
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0287
+  source_document_id: LEGACY-DOC-0287
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0288
+  source_document_id: LEGACY-DOC-0288
+  target_phase: P06
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0289
+  source_document_id: LEGACY-DOC-0289
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0290
+  source_document_id: LEGACY-DOC-0290
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0291
+  source_document_id: LEGACY-DOC-0291
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0292
+  source_document_id: LEGACY-DOC-0292
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0293
+  source_document_id: LEGACY-DOC-0293
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0294
+  source_document_id: LEGACY-DOC-0294
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0295
+  source_document_id: LEGACY-DOC-0295
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0296
+  source_document_id: LEGACY-DOC-0296
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0297
+  source_document_id: LEGACY-DOC-0297
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0298
+  source_document_id: LEGACY-DOC-0298
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0299
+  source_document_id: LEGACY-DOC-0299
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0300
+  source_document_id: LEGACY-DOC-0300
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0301
+  source_document_id: LEGACY-DOC-0301
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0302
+  source_document_id: LEGACY-DOC-0302
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0303
+  source_document_id: LEGACY-DOC-0303
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0304
+  source_document_id: LEGACY-DOC-0304
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0305
+  source_document_id: LEGACY-DOC-0305
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0306
+  source_document_id: LEGACY-DOC-0306
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0307
+  source_document_id: LEGACY-DOC-0307
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0308
+  source_document_id: LEGACY-DOC-0308
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0309
+  source_document_id: LEGACY-DOC-0309
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0310
+  source_document_id: LEGACY-DOC-0310
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0311
+  source_document_id: LEGACY-DOC-0311
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0312
+  source_document_id: LEGACY-DOC-0312
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0313
+  source_document_id: LEGACY-DOC-0313
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0314
+  source_document_id: LEGACY-DOC-0314
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0315
+  source_document_id: LEGACY-DOC-0315
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0316
+  source_document_id: LEGACY-DOC-0316
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0317
+  source_document_id: LEGACY-DOC-0317
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0318
+  source_document_id: LEGACY-DOC-0318
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0319
+  source_document_id: LEGACY-DOC-0319
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0320
+  source_document_id: LEGACY-DOC-0320
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0321
+  source_document_id: LEGACY-DOC-0321
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0322
+  source_document_id: LEGACY-DOC-0322
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0323
+  source_document_id: LEGACY-DOC-0323
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0324
+  source_document_id: LEGACY-DOC-0324
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0325
+  source_document_id: LEGACY-DOC-0325
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0326
+  source_document_id: LEGACY-DOC-0326
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0327
+  source_document_id: LEGACY-DOC-0327
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0328
+  source_document_id: LEGACY-DOC-0328
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0329
+  source_document_id: LEGACY-DOC-0329
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0330
+  source_document_id: LEGACY-DOC-0330
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0331
+  source_document_id: LEGACY-DOC-0331
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0332
+  source_document_id: LEGACY-DOC-0332
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0333
+  source_document_id: LEGACY-DOC-0333
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0334
+  source_document_id: LEGACY-DOC-0334
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0335
+  source_document_id: LEGACY-DOC-0335
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0336
+  source_document_id: LEGACY-DOC-0336
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0337
+  source_document_id: LEGACY-DOC-0337
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0338
+  source_document_id: LEGACY-DOC-0338
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0339
+  source_document_id: LEGACY-DOC-0339
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0340
+  source_document_id: LEGACY-DOC-0340
+  target_phase: P04
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0341
+  source_document_id: LEGACY-DOC-0341
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0342
+  source_document_id: LEGACY-DOC-0342
+  target_phase: P06
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0343
+  source_document_id: LEGACY-DOC-0343
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0344
+  source_document_id: LEGACY-DOC-0344
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0345
+  source_document_id: LEGACY-DOC-0345
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0346
+  source_document_id: LEGACY-DOC-0346
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0347
+  source_document_id: LEGACY-DOC-0347
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0348
+  source_document_id: LEGACY-DOC-0348
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0349
+  source_document_id: LEGACY-DOC-0349
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0350
+  source_document_id: LEGACY-DOC-0350
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0351
+  source_document_id: LEGACY-DOC-0351
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0352
+  source_document_id: LEGACY-DOC-0352
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0353
+  source_document_id: LEGACY-DOC-0353
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0354
+  source_document_id: LEGACY-DOC-0354
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0355
+  source_document_id: LEGACY-DOC-0355
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0356
+  source_document_id: LEGACY-DOC-0356
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0357
+  source_document_id: LEGACY-DOC-0357
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0358
+  source_document_id: LEGACY-DOC-0358
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0359
+  source_document_id: LEGACY-DOC-0359
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0360
+  source_document_id: LEGACY-DOC-0360
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0361
+  source_document_id: LEGACY-DOC-0361
+  target_phase: P08
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0362
+  source_document_id: LEGACY-DOC-0362
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0363
+  source_document_id: LEGACY-DOC-0363
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0364
+  source_document_id: LEGACY-DOC-0364
+  target_phase: P09
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0365
+  source_document_id: LEGACY-DOC-0365
+  target_phase: P05
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0366
+  source_document_id: LEGACY-DOC-0366
+  target_phase: P07
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0367
+  source_document_id: LEGACY-DOC-0367
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0368
+  source_document_id: LEGACY-DOC-0368
+  target_phase: K00
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0369
+  source_document_id: LEGACY-DOC-0369
+  target_phase: P01
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0370
+  source_document_id: LEGACY-DOC-0370
+  target_phase: P03
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+- task_id: KPP_TASK_LEGACY-DOC-0371
+  source_document_id: LEGACY-DOC-0371
+  target_phase: P10
+  status: CANDIDATE_TASK_READY
+  required_review: P00/P10 governance consumption before implementation
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+

@@ -1,0 +1,43 @@
+{
+  "phase": "phase_09_system_upgrade",
+  "controller": "phase_09_system_upgrade_controller",
+  "purpose": "Validate Phase08 review-learning outputs and convert upgrade candidates into a controlled, versioned, regression-gated, rollback-ready upgrade package without applying runtime changes.",
+  "required_inputs": {
+    "phase_08_handoff_packet": {
+      "path_key": "phase08_handoff_file",
+      "required": true,
+      "block_if_missing": true
+    },
+    "review_learning_summary": {
+      "handoff_key": "review_learning_summary",
+      "required": true,
+      "block_if_missing": true
+    },
+    "failure_attribution": {
+      "handoff_key": "failure_attribution",
+      "required": true,
+      "block_if_missing": true
+    },
+    "rule_update_candidates": {
+      "handoff_key": "rule_update_candidates",
+      "required": true,
+      "block_if_missing_unless_no_update_required": true
+    }
+  },
+  "optional_inputs": {
+    "success_attribution": {"handoff_key": "success_attribution"},
+    "threshold_review_candidates": {"handoff_key": "threshold_review_candidates"},
+    "model_recalibration_candidates": {"handoff_key": "model_recalibration_candidates"},
+    "scenario_case_library": {"handoff_key": "scenario_case_library"},
+    "address_history_update": {"handoff_key": "address_history_update"},
+    "strategy_performance_summary": {"handoff_key": "strategy_performance_summary"}
+  },
+  "forbidden_actions": [
+    "directly_modify_runtime_rules",
+    "directly_modify_thresholds",
+    "directly_modify_model_weights",
+    "overwrite_production_contracts",
+    "apply_without_regression_pass",
+    "apply_without_manual_confirmation"
+  ]
+}

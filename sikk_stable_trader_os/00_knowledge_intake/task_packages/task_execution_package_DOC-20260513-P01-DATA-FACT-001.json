@@ -1,0 +1,151 @@
+{
+  "task_id": "TASK-P01-DATA-FACT-CONTROLLER-LANDING-20260513",
+  "doc_id": "DOC-20260513-P01-DATA-FACT-001",
+  "task_name": "P01_data_fact_controller 专业版阶段包建设任务",
+  "objective": "将上传的 P01 专业版阶段包转为 HER 可调度的 P01 数据事实层建设任务，优先形成控制器包/代码落地合约、contracts、schemas、tests、replay、handoff、audit。",
+  "phase_target": "P01_data_fact_controller",
+  "source_references": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DATA-FACT-001_p01_data_fact_controller_professional_phase_pack.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260513-P01-DATA-FACT-001.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260513-P01-DATA-FACT-001.md"
+  ],
+  "required_outputs": [
+    "P01 phase identity and context files",
+    "Source registry and capability matrix",
+    "GMGN/OKX connectivity classified reports",
+    "Raw snapshot persistence and manifest",
+    "Normalized token/market/wallet/quote facts",
+    "Coverage/freshness/provenance/schema/cross-source quality reports",
+    "data_quality_decision.json",
+    "data_fact_handoff_packet.json",
+    "Replay fixture and audit reports",
+    "pytest result"
+  ],
+  "constraints": [
+    "raw-first",
+    "no synthetic data",
+    "missing must be stateful",
+    "real_execution=false",
+    "downstream reads handoff only",
+    "K00 accepted before P01 execution claim"
+  ],
+  "acceptance_criteria": [
+    "K00 artifacts complete",
+    "P01 implementation/package landing must pass contracts + tests before runtime readiness",
+    "Missing source fields must have explicit missing_reason",
+    "Key fields must have provenance and freshness checks"
+  ],
+  "handoff_destination": "P01_data_fact_controller_package_or_code_landing",
+  "status": "TASK_PACKAGE_READY",
+  "task_package_id": "TASK-P01-DATA-FACT-CONTROLLER-LANDING-20260513",
+  "source_doc_id": "DOC-20260513-P01-DATA-FACT-001",
+  "package_type": "phase_execution_package",
+  "created_for": "HER",
+  "purpose": "将上传的 P01 专业版阶段包转为 HER 可调度的 P01 数据事实层建设任务，优先形成控制器包/代码落地合约、contracts、schemas、tests、replay、handoff、audit。",
+  "system_understanding": {
+    "is_plain_document": false,
+    "is_system_design_input": true,
+    "is_phase_controller_related": true,
+    "requires_taskization": true,
+    "requires_context_independent_execution": true
+  },
+  "affected_system_planes": [
+    "data_plane",
+    "control_plane",
+    "verification_plane",
+    "execution_plane"
+  ],
+  "affected_phases": [
+    "P01_data_fact"
+  ],
+  "main_objective": "将上传的 P01 专业版阶段包转为 HER 可调度的 P01 数据事实层建设任务，优先形成控制器包/代码落地合约、contracts、schemas、tests、replay、handoff、audit。",
+  "objective_tree": {
+    "goal": "将上传的 P01 专业版阶段包转为 HER 可调度的 P01 数据事实层建设任务，优先形成控制器包/代码落地合约、contracts、schemas、tests、replay、handoff、audit。",
+    "sub_goals": [
+      "P01 phase identity and context files",
+      "Source registry and capability matrix",
+      "GMGN/OKX connectivity classified reports",
+      "Raw snapshot persistence and manifest",
+      "Normalized token/market/wallet/quote facts",
+      "Coverage/freshness/provenance/schema/cross-source quality reports",
+      "data_quality_decision.json",
+      "data_fact_handoff_packet.json",
+      "Replay fixture and audit reports",
+      "pytest result"
+    ]
+  },
+  "required_phase_package_files": [
+    "01_phase_manifest.yaml",
+    "02_phase_context_pack.md",
+    "03_phase_objective_tree.yaml",
+    "04_phase_input_contract.json",
+    "05_phase_output_contract.json",
+    "06_phase_execution_protocol.md",
+    "07_phase_acceptance_gate.yaml",
+    "08_phase_state.json",
+    "09_phase_handoff_packet.schema.json"
+  ],
+  "execution_policy": {
+    "must_not_stop_after_one_stage": true,
+    "must_evaluate_stage_completion": true,
+    "must_continue_if_gate_passed": true,
+    "must_update_phase_state_every_task": true,
+    "must_generate_handoff_packet": true,
+    "must_generate_auto_trigger_decision": true,
+    "must_persist_auto_trigger_state": true
+  },
+  "acceptance_policy": {
+    "completion_is_not_markdown_written": true,
+    "completion_requires_outputs": true,
+    "completion_requires_state_update": true,
+    "completion_requires_handoff": true,
+    "completion_requires_next_phase_decision": true,
+    "completion_requires_auto_trigger_decision": true
+  },
+  "auto_trigger_policy": {
+    "enabled": true,
+    "decision_source": "acceptance_gate",
+    "requires_state_persistence": true,
+    "requires_handoff_packet": true,
+    "requires_next_phase_recommendation": true,
+    "stop_on_blocker": true,
+    "allowed_next_phases": [
+      "P00_system_boundary",
+      "P01_data_fact",
+      "P09_self_upgrade",
+      "HER_task_router",
+      "gap_closure_planner",
+      "P01_data_fact_controller_package_or_code_landing"
+    ],
+    "forbidden_next_phases": [
+      "direct_trade_execution",
+      "swap_execution",
+      "P07_real_execution"
+    ],
+    "decision_artifact": "auto_trigger_decisions/auto_trigger_decision_DOC-20260513-P01-DATA-FACT-001.json",
+    "state_fields": [
+      "auto_trigger.enabled",
+      "auto_trigger.decision_status",
+      "auto_trigger.next_phase_allowed",
+      "auto_trigger.next_phase_recommendation",
+      "auto_trigger.stop_reason",
+      "auto_trigger.decision_artifact"
+    ],
+    "continue_when": [
+      "phase_status in [PHASE_READY,K00_ACCEPTED]",
+      "acceptance_gate == PASS",
+      "no BLOCKER gap",
+      "next_phase_recommendation exists",
+      "handoff_packet exists"
+    ],
+    "stop_when": [
+      "PHASE_REJECTED",
+      "PHASE_ERROR",
+      "BLOCKER gap",
+      "missing critical input",
+      "next phase requires human input",
+      "next phase not allowed"
+    ]
+  },
+  "next_action": "evaluate_auto_trigger_and_enter_P01_package_or_code_landing"
+}

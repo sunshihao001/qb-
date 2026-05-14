@@ -1,0 +1,17 @@
+{
+  "request_id": "PIPELINE-ISSUEPACK-S00-HERDOC-20260514-001",
+  "created_at": "2026-05-14T13:40:44Z",
+  "route": "HER_DOC_PIPELINE",
+  "operator_goal": "Turn S00 static standardization into safe-mode runtime validation task chain and application scenario landing plan.",
+  "repo_root": "/root/sikk-gmgn",
+  "safe_mode": true,
+  "source_issue_pack": "issue_pack.yaml",
+  "expected_run_status": "RUNNABLE_WITH_GAPS",
+  "forbidden": [
+    "live_swap",
+    "sign",
+    "broadcast",
+    "private_key_access",
+    "production_trading"
+  ]
+}

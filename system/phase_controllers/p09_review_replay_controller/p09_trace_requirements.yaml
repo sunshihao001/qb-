@@ -1,0 +1,15 @@
+trace_id: P09_TRACE_REQUIREMENTS
+required_trace:
+- review_case_trace
+- snapshot_trace
+- decision_chain_trace
+- runtime_path_trace
+- outcome_trace
+- attribution_trace
+- calibration_trace
+- p10_handoff_trace
+must_reference:
+- source_artifact_path
+- source_phase_id
+- source_trace_id
+- historical_visibility_time

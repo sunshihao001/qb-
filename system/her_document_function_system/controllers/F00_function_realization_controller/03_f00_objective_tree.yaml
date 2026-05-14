@@ -1,0 +1,47 @@
+objective_tree:
+  phase_id: F00
+  level_1_goal: Convert K00 accepted documents into functional realization assets.
+  level_2_sub_goals:
+    - id: F00_G1
+      name: Read and validate K00 handoff inputs
+    - id: F00_G2
+      name: Compile source concepts into required functions
+    - id: F00_G3
+      name: Build field and rule requirements
+    - id: F00_G4
+      name: Decide implementation paths and plan assets
+    - id: F00_G5
+      name: Prepare validation, replay, acceptance, and handoff evidence
+  level_3_tasks:
+    - id: F00_T1
+      parent: F00_G1
+      action: validate_input_contract
+      output: f00_input_validation_result
+    - id: F00_T2
+      parent: F00_G2
+      action: generate_concept_to_function_map
+      output: concept_to_function_map
+    - id: F00_T3
+      parent: F00_G3
+      action: generate_field_model_candidates
+      output: field_model_candidates
+    - id: F00_T4
+      parent: F00_G3
+      action: generate_rule_logic_candidates
+      output: rule_logic_candidates
+    - id: F00_T5
+      parent: F00_G4
+      action: generate_implementation_decisions
+      output: implementation_decisions
+    - id: F00_T6
+      parent: F00_G4
+      action: generate_function_asset_plan
+      output: function_asset_plan
+    - id: F00_T7
+      parent: F00_G5
+      action: generate_test_replay_evidence_requirements
+      output: test_replay_evidence_requirements
+    - id: F00_T8
+      parent: F00_G5
+      action: generate_handoff_packet
+      output: f00_handoff_packet

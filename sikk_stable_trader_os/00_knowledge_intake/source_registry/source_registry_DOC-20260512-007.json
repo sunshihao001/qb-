@@ -1,0 +1,27 @@
+{
+  "doc_id": "DOC-20260512-007",
+  "source_type": "user_uploaded_markdown",
+  "source_name": "P07 Strategy Gate Controller 专业版 v3.0",
+  "source_cache_path": "/root/.hermes/cache/documents/doc_9c07377e89f4_P07 专业版 v3.0❤️.md",
+  "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-007_p07_strategy_gate_controller_v3.md",
+  "sha256": "4433491d7e914d386826b75e406c37650d5cf15dbce5393577ae24e5f3513126",
+  "ingested_at": "2026-05-12T04:35:27Z",
+  "material_role": "P07_STRATEGY_GATE_CONTROLLER_PACKAGE_DESIGN_AUTHORITY",
+  "ingestion_status": "K00_ACCEPTED_AND_TASKIZED",
+  "target_plane": "Strategy Gate / Phase Controller / Handoff Plane / Governance Plane",
+  "target_stage": "P07_STRATEGY_GATE_CONTROLLER_PACKAGE_DESIGN",
+  "safety_boundary": {
+    "buy_signal_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false,
+    "p08_required": true,
+    "wallet_signing_allowed": false,
+    "swap_or_broadcast_allowed": false
+  },
+  "related_phase_candidates": [
+    "K00",
+    "P07",
+    "P08"
+  ],
+  "retention_policy": "preserve_raw_input_immutable"
+}

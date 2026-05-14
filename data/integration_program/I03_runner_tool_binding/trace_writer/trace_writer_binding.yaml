@@ -1,0 +1,11 @@
+{
+  "trace_writer_binding": {
+    "binding_id": "TRACE_WRITER_BINDING",
+    "ready": true,
+    "failure_policy": "BLOCK_ON_REQUIRED_FAILURE",
+    "safety": {
+      "no_live_execution": true,
+      "no_wallet_signing": true
+    }
+  }
+}

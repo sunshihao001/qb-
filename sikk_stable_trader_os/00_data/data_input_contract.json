@@ -1,0 +1,24 @@
+{
+  "contract_id": "DATA_INPUT_CONTRACT_001",
+  "status": "CREATED_BY_P00_NEEDS_ACCEPTANCE",
+  "required_sources": [
+    "token_identity",
+    "market_cap_context",
+    "kline_volume_structure",
+    "wallet_identity",
+    "wallet_behavior",
+    "chip_distribution",
+    "same_source_group",
+    "fund_flow",
+    "quote_security",
+    "scenario_context",
+    "paper_trade_result",
+    "review_feedback",
+    "system_state"
+  ],
+  "blocking_rule": "Data Plane acceptance required before P01 READY_TO_EXECUTE",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false
+  }
+}

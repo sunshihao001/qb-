@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase09 Rule Update Package",
+  "type": "object",
+  "required": ["package_version", "package_status", "regression_status", "requires_manual_confirmation", "allow_apply_to_runtime", "approved_rule_updates", "rollback_plan"],
+  "properties": {
+    "package_version": {"type": "string"},
+    "package_status": {"enum": ["UPGRADE_PACKAGE_READY", "UPGRADE_PACKAGE_REJECTED"]},
+    "regression_status": {"enum": ["REGRESSION_TEST_PASS", "REGRESSION_TEST_FAIL"]},
+    "requires_manual_confirmation": {"const": true},
+    "allow_apply_to_runtime": {"const": false},
+    "approved_rule_updates": {"type": "array"},
+    "rollback_plan": {"type": "string"}
+  }
+}

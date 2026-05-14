@@ -1,0 +1,53 @@
+{
+  "module": "source_wallet_bot.wallet_fact",
+  "version": "1.0.0",
+  "purpose": "systematic wallet fact evidence package for Intel Bot",
+  "classes": {
+    "class_04_wallet_trade": {
+      "output": "wallet_trade_normalized.json",
+      "status": "implemented",
+      "sources": ["GMGN wallet trade", "GMGN trader detail", "on-chain DEX swap records"]
+    },
+    "class_05_token_transfer_source": {
+      "outputs": ["token_transfer_normalized.json", "token_source_classification_base.json"],
+      "status": "contract_placeholder",
+      "missing_policy": "missing / unknown / need_onchain_followup"
+    },
+    "class_06_funding_source": {
+      "outputs": ["funding_flow_normalized.json", "funding_source_normalized.json"],
+      "status": "partial_from_GMGN_native_transfer",
+      "missing_policy": "CEX-only is weak evidence; no deterministic same-source claim"
+    },
+    "class_07_backflow": {
+      "output": "backflow_paths_normalized.json",
+      "status": "contract_placeholder",
+      "missing_policy": "need_onchain_followup"
+    },
+    "class_08_gmgn_wallet_profile": {
+      "outputs": ["gmgn_wallet_tags_normalized.json", "wallet_profile_normalized.json"],
+      "status": "implemented_from_GMGN_tags"
+    },
+    "class_09_same_source_evidence": {
+      "output": "same_source_evidence_normalized.json",
+      "status": "implemented_candidate_groups"
+    },
+    "class_10_snapshot_delta": {
+      "outputs": ["wallet_snapshot_delta_source.json", "holder_delta_normalized.json"],
+      "status": "contract_placeholder"
+    },
+    "class_11_quote_security": {
+      "output": "quote_security_normalized.json",
+      "status": "contract_placeholder_OKX_quote_scan_allowed"
+    }
+  },
+  "aggregate_outputs": [
+    "wallet_structure_normalized.json",
+    "chip_distribution_summary.json",
+    "same_source_groups.json",
+    "fund_flow_edges.csv",
+    "address_history.json",
+    "wallet_fact_report.md",
+    "wallet_fact_package_manifest.json"
+  ],
+  "forbidden_output_policy": "禁止绝对化庄家/内幕/老鼠仓表述；禁止交易许可、买卖信号和执行动作字段"
+}

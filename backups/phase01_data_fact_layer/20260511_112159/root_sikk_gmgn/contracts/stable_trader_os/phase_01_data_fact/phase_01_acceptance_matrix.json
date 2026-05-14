@@ -1,0 +1,68 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "acceptance_items": [
+    {
+      "id": "A01",
+      "name": "目录存在",
+      "required": true,
+      "evidence_path": "schemas/configs/contracts/examples/tests stable_trader_os/phase_01_data_fact"
+    },
+    {
+      "id": "A02",
+      "name": "schema 存在且中文化",
+      "required": true,
+      "evidence_path": "schemas/stable_trader_os/phase_01_data_fact/*.json"
+    },
+    {
+      "id": "A03",
+      "name": "config 存在且覆盖来源/缺失/质量/异常/旧目录",
+      "required": true,
+      "evidence_path": "configs/stable_trader_os/phase_01_data_fact/*.json"
+    },
+    {
+      "id": "A04",
+      "name": "contract 存在且 handoff 到 Phase 02 结构地址层",
+      "required": true,
+      "evidence_path": "contracts/stable_trader_os/phase_01_data_fact/phase_01_to_phase_02_contract.json"
+    },
+    {
+      "id": "A05",
+      "name": "Quality Gate 状态合法",
+      "required": true,
+      "evidence_path": "schemas/stable_trader_os/phase_01_data_fact/phase_01_quality_gate_schema.json"
+    },
+    {
+      "id": "A06",
+      "name": "禁止判断契约存在",
+      "required": true,
+      "evidence_path": "contracts/stable_trader_os/phase_01_data_fact/phase_01_forbidden_judgement_contract.md"
+    },
+    {
+      "id": "A07",
+      "name": "mock example 可用于测试",
+      "required": true,
+      "evidence_path": "examples/stable_trader_os/phase_01_data_fact/"
+    },
+    {
+      "id": "A08",
+      "name": "pytest 验收通过",
+      "required": true,
+      "evidence_path": "tests/stable_trader_os/phase_01_data_fact/"
+    },
+    {
+      "id": "A09",
+      "name": "runtime trace 格式存在",
+      "required": true,
+      "evidence_path": "data/stable_trader_os/runs/mock_phase_01_run_001/01_data_fact/audit/phase_01_runtime_trace.jsonl"
+    },
+    {
+      "id": "A10",
+      "name": "总目标对齐文件存在",
+      "required": true,
+      "evidence_path": "contracts/stable_trader_os/phase_01_data_fact/phase_01_goal_passport.json"
+    }
+  ],
+  "completion_status_if_all_required_pass": "PHASE_01_SYSTEM_DATA_COMPLETE",
+  "completion_status_if_any_required_fail": "STAGE_INCOMPLETE"
+}

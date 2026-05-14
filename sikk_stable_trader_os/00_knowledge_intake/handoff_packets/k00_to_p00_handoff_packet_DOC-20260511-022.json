@@ -1,0 +1,21 @@
+{
+  "handoff_id": "K00_TO_P00_DOMAIN_DOC-20260511-022",
+  "doc_id": "DOC-20260511-022",
+  "source_stage": "K00_knowledge_intake_taskization",
+  "target_stage": "P00_system_bootstrap_controller",
+  "included_assets": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-022_domain_plane_professional_design.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260511-022.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-022.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_manifest.json"
+  ],
+  "created_assets": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain"
+  ],
+  "acceptance_status": "K00_ASSETIZED_AND_DOMAIN_PLANE_LANDED_WITH_GAPS",
+  "next_legal_stage": "P03_DATA_PLANE_FIELD_MODELING",
+  "p01_runtime_connection_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "created_at": "2026-05-11T16:25:42Z"
+}

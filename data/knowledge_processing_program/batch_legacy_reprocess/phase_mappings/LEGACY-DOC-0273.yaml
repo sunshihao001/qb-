@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0273
+source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-019_k00_system_chain_professional_update.md
+phase_scores:
+  P01: 3
+  P02: 0
+  P03: 0
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 1
+  P08: 0
+  P09: 0
+  P10: 1
+primary_phase: P01
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

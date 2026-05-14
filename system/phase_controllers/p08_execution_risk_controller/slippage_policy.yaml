@@ -1,0 +1,11 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+policy_id: SLIPPAGE_POLICY
+max_allowed_slippage_pct: 3
+max_allowed_price_impact_pct: 2
+actions:
+  SLIPPAGE_ACCEPTABLE: SUPPORTS_RUNTIME
+  SLIPPAGE_HIGH_LIMIT_SIZE: LIMIT_POSITION_SIZE
+  SLIPPAGE_TOO_HIGH: BLOCK_RUNTIME
+  SLIPPAGE_UNKNOWN: REQUIRE_REFRESH

@@ -1,0 +1,9 @@
+{
+  "source_id": "local_cache",
+  "source_type": "local_readonly_cache",
+  "live_fetch_enabled": false,
+  "capabilities": [
+    "replay",
+    "fallback_read"
+  ]
+}

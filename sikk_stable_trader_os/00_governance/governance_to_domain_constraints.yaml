@@ -1,0 +1,7 @@
+version: '2.0'
+handoff_role: input_constraint_for_domain_plane
+constraints:
+- domain taxonomy must include hard negative and counter-evidence fields
+- domain claims cannot use deterministic intent language
+- wallet roles cannot be forced when evidence missing
+- scenario definitions must include forbidden/paper conditions

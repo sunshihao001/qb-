@@ -1,0 +1,8 @@
+regression_plan_validation:
+  type: object
+  required:
+    - validation_id
+    - regression_plan_present
+    - required_tests
+    - status
+  additional_properties_allowed: true

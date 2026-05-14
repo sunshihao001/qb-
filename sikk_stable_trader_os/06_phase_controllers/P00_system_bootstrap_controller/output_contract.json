@@ -1,0 +1,103 @@
+{
+  "contract_id": "P00_OUTPUT_CONTRACT_001",
+  "stage": "P00_system_bootstrap_controller",
+  "version": "v1.0-institutional",
+  "purpose": "Define P00 outputs for bootstrap, phase registration, trace coverage, and handoff.",
+  "required_outputs": [
+    {
+      "name": "current_system_state",
+      "path": "00_control/current_system_state.json",
+      "format": "json",
+      "required_fields": [
+        "system_id",
+        "state_version",
+        "current_authoritative_stage",
+        "blocked_stages",
+        "next_legal_stage",
+        "paper_only",
+        "real_trade_enabled"
+      ]
+    },
+    {
+      "name": "phase_registry",
+      "path": "00_control/phase_registry.yaml",
+      "format": "yaml",
+      "required_content": [
+        "K00_knowledge_intake_taskization",
+        "P00_system_bootstrap_controller",
+        "P01_data_fact_controller",
+        "P02_wallet_structure_controller",
+        "P03_chip_control_controller",
+        "P04_market_structure_controller",
+        "P05_scenario_classification_controller",
+        "P06_strategy_gate_controller",
+        "P07_execution_risk_controller",
+        "P08_paper_trading_controller",
+        "P09_review_learning_controller",
+        "P10_system_upgrade_controller"
+      ]
+    },
+    {
+      "name": "system_asset_index",
+      "path": "00_control/system_asset_index.json",
+      "format": "json"
+    },
+    {
+      "name": "task_consumption_log",
+      "path": "00_control/task_consumption_log.json",
+      "format": "json"
+    },
+    {
+      "name": "current_blockers",
+      "path": "00_control/current_blockers.json",
+      "format": "json"
+    },
+    {
+      "name": "next_stage_decision",
+      "path": "00_control/next_stage_decision.json",
+      "format": "json"
+    },
+    {
+      "name": "methodology_implementation_trace_matrix",
+      "path": "00_trace/methodology_implementation_trace_matrix.yaml",
+      "format": "yaml"
+    },
+    {
+      "name": "asset_consumption_matrix",
+      "path": "00_trace/asset_consumption_matrix.yaml",
+      "format": "yaml"
+    },
+    {
+      "name": "acceptance_coverage_matrix",
+      "path": "00_trace/acceptance_coverage_matrix.yaml",
+      "format": "yaml"
+    },
+    {
+      "name": "global_acceptance_policy",
+      "path": "08_acceptance/global_acceptance_policy.yaml",
+      "format": "yaml"
+    },
+    {
+      "name": "handoff_packet_registry",
+      "path": "09_handoff/handoff_packet_registry.yaml",
+      "format": "yaml"
+    },
+    {
+      "name": "p00_bootstrap_report",
+      "path": "06_phase_controllers/P00_system_bootstrap_controller/reports/p00_bootstrap_report.json",
+      "format": "json"
+    }
+  ],
+  "required_controller_stubs": [],
+  "output_invariants": [
+    "P01 must not be READY before Data Plane acceptance.",
+    "paper_only must be true.",
+    "real_trade_enabled must be false.",
+    "K00 assets must be marked as consumed_by P00 if used."
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "p01_runtime_connection_allowed": false
+  }
+}

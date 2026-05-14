@@ -1,0 +1,8 @@
+controlled_upgrade_package_validation:
+  type: object
+  required:
+    - validation_id
+    - controlled_package_created
+    - no_direct_mutation
+    - status
+  additional_properties_allowed: true

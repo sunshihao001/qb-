@@ -1,0 +1,31 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P01_data_fact",
+  "artifact_kind": "audit",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "status": "DEGRADED",
+  "ca_consistency_passed": true,
+  "safety_boundary_passed": true,
+  "files_required": [
+    "input.json",
+    "output.json",
+    "evidence.json",
+    "handoff_packet.json",
+    "audit.json"
+  ],
+  "degraded_reason": [
+    "missing_snapshot_field:token_symbol",
+    "missing_snapshot_field:liquidity_usd",
+    "missing_snapshot_field:sample_wallets",
+    "P01_FUNDING_PATH_MISSING"
+  ],
+  "block_reason": []
+}

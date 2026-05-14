@@ -1,0 +1,22 @@
+knowledge_processing_acceptance_result:
+  document_id: KPP-DOC-20260512-001
+  status: KNOWLEDGE_PROCESSING_READY_WITH_GAPS
+  checks:
+    raw_document_preserved: PASS
+    document_passport_generated: PASS
+    document_type_classification_generated: PASS
+    semantic_chunk_index_generated: PASS
+    concept_method_assumption_constraint_gap_generated: PASS
+    functional_object_registry_generated: PASS
+    system_mapping_matrix_generated: PASS
+    candidate_packets_generated: PASS
+    her_task_package_generated: PASS
+    system_controller_assets_created: PASS
+    required_data_directories_created: PASS
+    source_trace_present: PASS
+    production_mutation_blocked: PASS
+  degraded_gaps:
+    - KPP_GAP_001
+    - KPP_GAP_002
+    - KPP_GAP_003
+  next_legal_stage: P00_OR_GOVERNANCE_REVIEW_FOR_SYSTEM_CONSUMPTION

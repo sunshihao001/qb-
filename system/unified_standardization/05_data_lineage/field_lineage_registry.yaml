@@ -1,0 +1,100 @@
+meta:
+  standard_id: S00_FIELD_LINEAGE_REGISTRY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+field_lineage:
+- field_name: dominant_side_status
+  entity: decision
+  source_type: inferred
+  source_file: TBD_BY_PHASE_RUNNER
+  source_api: null
+  source_runner: TBD_BOUND_RUNNER
+  source_phase: TBD
+  transform_function: TBD
+  depends_on_fields: []
+  generated_at: null
+  schema_version: 0.1.0
+  confidence_level: WITH_GAPS
+  data_quality_score: null
+  consumed_by:
+  - phase_id: P05/P06/P09
+    runner_id: TBD
+    decision_field: dominant_side_status
+- field_name: chip_control_retention
+  entity: signal
+  source_type: derived
+  source_file: TBD_BY_PHASE_RUNNER
+  source_api: null
+  source_runner: TBD_BOUND_RUNNER
+  source_phase: TBD
+  transform_function: TBD
+  depends_on_fields: []
+  generated_at: null
+  schema_version: 0.1.0
+  confidence_level: WITH_GAPS
+  data_quality_score: null
+  consumed_by:
+  - phase_id: P05/P06/P09
+    runner_id: TBD
+    decision_field: chip_control_retention
+- field_name: distribution_progress
+  entity: signal
+  source_type: derived
+  source_file: TBD_BY_PHASE_RUNNER
+  source_api: null
+  source_runner: TBD_BOUND_RUNNER
+  source_phase: TBD
+  transform_function: TBD
+  depends_on_fields: []
+  generated_at: null
+  schema_version: 0.1.0
+  confidence_level: WITH_GAPS
+  data_quality_score: null
+  consumed_by:
+  - phase_id: P05/P06/P09
+    runner_id: TBD
+    decision_field: distribution_progress
+- field_name: permission_status
+  entity: paper_position
+  source_type: decision
+  source_file: TBD_BY_PHASE_RUNNER
+  source_api: null
+  source_runner: TBD_BOUND_RUNNER
+  source_phase: TBD
+  transform_function: TBD
+  depends_on_fields: []
+  generated_at: null
+  schema_version: 0.1.0
+  confidence_level: WITH_GAPS
+  data_quality_score: null
+  consumed_by:
+  - phase_id: P08
+    runner_id: TBD
+    decision_field: permission_status
+- field_name: review_case_id
+  entity: review_case
+  source_type: decision
+  source_file: TBD_BY_PHASE_RUNNER
+  source_api: null
+  source_runner: TBD_BOUND_RUNNER
+  source_phase: TBD
+  transform_function: TBD
+  depends_on_fields: []
+  generated_at: null
+  schema_version: 0.1.0
+  confidence_level: WITH_GAPS
+  data_quality_score: null
+  consumed_by:
+  - phase_id: P05/P06/P09
+    runner_id: TBD
+    decision_field: review_case_id
+blocking_rule: Unlineaged decision fields cannot enter P07/P08/paper runner except
+  as observe-only.

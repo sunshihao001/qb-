@@ -1,0 +1,19 @@
+meta:
+  standard_id: S00_METHOD_TO_FIELD_MAP
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+method_id: MW_WALLET_CHIP_DOMINANT_SIDE_001
+input_fields:
+- wallet_holding_delta
+- same_source_group_id
+- sync_sell_score
+- counterparty_pressure_score
+- market_cap_change_from_discovery_pct

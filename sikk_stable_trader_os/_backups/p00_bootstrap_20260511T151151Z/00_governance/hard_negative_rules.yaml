@@ -1,0 +1,7 @@
+source_doc_id: DOC-20260511-015
+hard_negative_rules:
+- real_trade_instruction
+- paper_only_false
+- real_trade_enabled_true
+- missing_permission_boundary
+- unverified_execution_permission

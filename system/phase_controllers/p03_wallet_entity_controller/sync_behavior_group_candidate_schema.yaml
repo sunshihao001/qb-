@@ -1,0 +1,71 @@
+schema_id: "sync_behavior_group_candidate_schema"
+json_schema:
+  $schema: "https://json-schema.org/draft/2020-12/schema"
+  title: "Sync Behavior Group Candidate Record"
+  description: "P03 candidate-only record. Must include trace and limitations."
+  type: "object"
+  required:
+    - "record_id"
+    - "sync_group_candidate_id"
+    - "member_wallets"
+    - "trace_ids"
+  properties:
+    record_id:
+      type: "string"
+    candidate_id:
+      type:
+        - "string"
+        - "null"
+    token_address:
+      type:
+        - "string"
+        - "null"
+    wallet_address:
+      type:
+        - "string"
+        - "null"
+    wallet_entity_id:
+      type:
+        - "string"
+        - "null"
+    confidence_level:
+      type: "string"
+      enum:
+        - "UNKNOWN"
+        - "LOW"
+        - "MEDIUM"
+        - "HIGH"
+        - "NOT_APPLICABLE"
+    confidence_score:
+      type:
+        - "number"
+        - "null"
+      minimum: 0
+      maximum: 1
+    source_record_ids:
+      type: "array"
+      items:
+        type: "string"
+    counter_evidence:
+      type: "array"
+      items:
+        type: "string"
+    limitations:
+      type: "array"
+      items:
+        type: "string"
+    trace_ids:
+      type: "array"
+      items:
+        type: "string"
+    created_at:
+      type: "string"
+    sync_group_candidate_id:
+      type: "string"
+    member_wallets:
+      type: "array"
+      items:
+        type: "string"
+    sync_behavior_candidate:
+      type: "boolean"
+  additionalProperties: true

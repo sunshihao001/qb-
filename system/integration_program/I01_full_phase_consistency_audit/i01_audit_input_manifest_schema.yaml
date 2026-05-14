@@ -1,0 +1,11 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: i01_audit_input_manifest
+fields:
+- manifest_id
+- generated_at
+- system_blueprint_inputs
+- phase_controller_inputs
+- input_quality
+- restrictions
+- trace

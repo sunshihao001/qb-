@@ -1,0 +1,94 @@
+{
+  "gap_propagation_status": "PASSED",
+  "total_gaps": 7,
+  "open_gaps": 7,
+  "accepted_risk_gaps": 2,
+  "blocking_gaps": [],
+  "hidden_gaps": [],
+  "propagation_paths": [
+    {
+      "gap_id": "policy_not_active",
+      "origin_phase": "A00",
+      "propagated_to": [
+        "A00",
+        "H00",
+        "U00",
+        "G00"
+      ],
+      "status": "OPEN",
+      "must_preserve": true
+    },
+    {
+      "gap_id": "paper_runtime_not_enabled",
+      "origin_phase": "A00",
+      "propagated_to": [
+        "A00",
+        "H00",
+        "U00",
+        "G00"
+      ],
+      "status": "OPEN",
+      "must_preserve": true
+    },
+    {
+      "gap_id": "live_runtime_forbidden",
+      "origin_phase": "A00",
+      "propagated_to": [
+        "A00",
+        "H00",
+        "U00",
+        "G00"
+      ],
+      "status": "OPEN",
+      "must_preserve": true
+    },
+    {
+      "gap_id": "telegram_binding_design_only",
+      "origin_phase": "A00",
+      "propagated_to": [
+        "A00",
+        "H00",
+        "U00",
+        "G00"
+      ],
+      "status": "OPEN",
+      "must_preserve": true
+    },
+    {
+      "gap_id": "V00_READY_WITH_GAPS",
+      "origin_phase": "A00",
+      "propagated_to": [
+        "A00",
+        "H00",
+        "U00",
+        "G00"
+      ],
+      "status": "OPEN",
+      "must_preserve": true
+    },
+    {
+      "gap_id": "R00_READY_WITH_GAPS",
+      "origin_phase": "A00",
+      "propagated_to": [
+        "A00",
+        "H00",
+        "U00",
+        "G00"
+      ],
+      "status": "OPEN",
+      "must_preserve": true
+    },
+    {
+      "gap_id": "scheduler_disabled",
+      "origin_phase": "A00",
+      "propagated_to": [
+        "A00",
+        "H00",
+        "U00",
+        "G00"
+      ],
+      "status": "OPEN",
+      "must_preserve": true
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+phase_id: R00
+accepted_statuses:
+  - R00_ACCEPTED
+  - R00_READY_WITH_GAPS
+blocked_statuses:
+  - R00_BLOCKED
+  - R00_REJECTED
+  - BINDING_FAILED
+  - DESIGN_ONLY
+  - NOT_EXECUTED
+required_gates:
+  v00_handoff_loaded: true
+  validation_evidence_loaded: true
+  binding_target_inventory_created: true
+  existing_interface_scan_completed: true
+  binding_decision_completed: true
+  command_contract_created: true
+  at_least_one_binding_spec_created: true
+  safe_mode_locked: true
+  dry_run_evidence_generated: true
+  generated_outputs_manifest_exists: true
+  trace_written: true
+  audit_written: true
+  gap_failure_classified: true
+  acceptance_result_written: true
+  handoff_packet_written: true
+false_pass_rules:
+  binding_plan_only_is_BINDING_DESIGNED_not_RUNNER_BOUND: true
+  missing_exit_code_is_not_BINDING_TESTED: true
+  missing_stdout_or_stderr_is_not_BINDING_TESTED: true
+  missing_generated_outputs_manifest_blocks_R00_ACCEPTED: true
+  missing_trace_or_audit_blocks_R00_ACCEPTED: true
+  telegram_design_is_not_telegram_enabled: true
+  scheduler_design_is_not_scheduler_enabled: true
+  failed_binding_must_remain_failed: true
+  blocking_gap_blocks_HANDOFF_READY: true
+forbidden_modes:
+  - live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading

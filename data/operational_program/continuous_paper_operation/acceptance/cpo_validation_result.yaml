@@ -1,0 +1,30 @@
+validation_id: CPO-VALIDATION-20260512-001
+generated_at: '2026-05-12T16:31:15Z'
+status: CPO_READY_WITH_GAPS
+checks:
+  system_files_expected: 41
+  system_files_present: 41
+  missing_system_files: []
+  runtime_outputs_expected: 29
+  runtime_outputs_present: 29
+  missing_runtime_outputs: []
+  k00_artifacts_expected: 8
+  k00_missing: []
+  yaml_files_checked: 69
+  yaml_errors: []
+  runtime_dirs_missing: []
+  safety_boundary_violations: []
+non_blocking_gaps:
+- I05 readiness not live-verified
+- scheduler runner not enabled
+- sample library has zero real cycles
+downstream_permission:
+- GOVERNANCE_REVIEW
+- RUNNER_TOOL_BINDING_DRY_RUN
+- MANUAL_SINGLE_CYCLE_PAPER_ONLY
+forbidden:
+- LIVE_EXECUTION
+- WALLET_SIGNING
+- AUTO_ORDER
+- AUTO_DEPLOY
+- DIRECT_RULE_MUTATION

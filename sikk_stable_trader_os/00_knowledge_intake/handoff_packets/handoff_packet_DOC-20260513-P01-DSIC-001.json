@@ -1,0 +1,35 @@
+{
+  "doc_id": "DOC-20260513-P01-DSIC-001",
+  "handoff_status": "K00_HANDOFF_READY",
+  "from_phase": "K00_knowledge_intake_taskization",
+  "to_phase": "P01_data_fact_controller_package_or_code_landing",
+  "mapping_route": "K00_ACCEPTED_PENDING_PHASE_EXECUTION",
+  "source_artifacts": {
+    "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DSIC-001_p01_data_source_intelligence_controller_upgrade.md",
+    "registry": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/source_registry/material_registry.jsonl",
+    "passport": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260513-P01-DSIC-001.yaml",
+    "corpus_index": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260513-P01-DSIC-001.md",
+    "system_mapping": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/system_mapping/system_mapping_DOC-20260513-P01-DSIC-001.json",
+    "gap_detection": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/gap_detection/gap_detection_DOC-20260513-P01-DSIC-001.json",
+    "task_execution_package": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/task_execution_package_DOC-20260513-P01-DSIC-001.json"
+  },
+  "required_next_actions": [
+    "audit current repo P01 state",
+    "land/reconcile controller/contracts/schemas/tests",
+    "build replay fixtures",
+    "migrate downstream readers to P01 handoff"
+  ],
+  "blocked_claims": [
+    "DATA_READY",
+    "P01_RUNTIME_READY",
+    "PAPER_READY",
+    "LIVE_READY",
+    "REAL_EXECUTION_READY"
+  ],
+  "permissions": {
+    "real_execution_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false,
+    "raw_direct_access_allowed": false
+  }
+}

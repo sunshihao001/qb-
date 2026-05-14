@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "group_id",
+    "group_chip_state",
+    "group_risk_level"
+  ],
+  "properties": {
+    "group_id": {},
+    "group_chip_state": {},
+    "group_risk_level": {}
+  }
+}

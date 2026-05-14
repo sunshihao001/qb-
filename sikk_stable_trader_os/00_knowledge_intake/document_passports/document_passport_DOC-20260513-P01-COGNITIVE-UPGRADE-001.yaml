@@ -1,0 +1,47 @@
+doc_id: DOC-20260513-P01-COGNITIVE-UPGRADE-001
+source_type: user_pasted_text
+source_name: P01 cognitive upgrade / fact-entry controller correction
+received_at: "2026-05-13T05:27:17Z"
+raw_path: "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-COGNITIVE-UPGRADE-001_p01_cognitive_upgrade.md"
+document_role:
+  primary_role: phase_semantics_correction
+  secondary_roles:
+    - p01_authority_upgrade
+    - data_contract_governance
+    - downstream_permission_boundary
+summary:
+  core_intent: "Reclassify P01 as the authoritative fact-entry controller whose core output is data_fact_handoff_packet.json, not raw data."
+  key_points:
+    - "P01 is not a data document; it is a fact-entry controller."
+    - "GMGN and OKX connectors are core P01 establishment conditions."
+    - "P01's primary product is data_fact_handoff_packet.json."
+    - "Downstream phases must read only P01-authorized handoff packets, not interface raw outputs."
+    - "Missing fields, legacy fields, empty returns, and interface failures must be stateful facts."
+    - "Every field needs source, timestamp, confidence, missing reason, and downstream permission."
+    - "Strategy-layer optimization is not meaningful before P01 completion."
+system_mapping:
+  planes:
+    - data_plane
+    - contract_plane
+    - handoff_plane
+    - permission_plane
+    - verification_plane
+  affected_phases:
+    - K00
+    - P01
+    - P02
+    - P03
+    - P04
+    - P05
+    - P06
+    - P07
+    - P08
+    - P09
+required_actions:
+  - "Update P01 task package semantics."
+  - "Create P01 fact-entry controller upgrade task package."
+  - "Define data_fact_handoff_packet.json as authoritative output."
+  - "Require GMGN/OKX connector status as P01 core acceptance."
+  - "Block downstream direct reads of raw API outputs unless P01 authorizes them."
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

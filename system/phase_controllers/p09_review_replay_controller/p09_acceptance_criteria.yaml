@@ -1,0 +1,21 @@
+acceptance_id: P09_ACCEPTANCE_CRITERIA
+P09_READY:
+- all_required_files_present
+- snapshot_lock_schema_ready
+- decision_chain_reconstruction_ready
+- attribution_outputs_ready
+- p10_handoff_ready
+- safety_boundaries_pass
+P09_READY_WITH_GAPS:
+- package_ready
+- runtime_runner_missing
+- p10_not_landed
+- real_cases_missing
+P09_REJECTED:
+- no_review_case_model
+- no_snapshot_policy
+- no_p10_handoff_contract
+P09_BLOCKED:
+- current_data_overlay
+- direct_rule_mutation
+- live_execution_path

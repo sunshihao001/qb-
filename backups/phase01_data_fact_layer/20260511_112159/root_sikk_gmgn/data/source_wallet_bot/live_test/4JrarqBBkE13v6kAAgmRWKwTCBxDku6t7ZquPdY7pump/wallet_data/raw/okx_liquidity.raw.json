@@ -1,0 +1,114 @@
+{
+  "source": "okx",
+  "endpoint": "liquidity",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "liquidity",
+    "--address",
+    "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-11T10:29:12Z",
+  "finished_at": "2026-05-11T10:29:12Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "63578702.553791",
+            "tokenSymbol": "LOBSTER"
+          },
+          {
+            "tokenAmount": "328.442017061",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "0.25%",
+        "liquidityUsd": "61435.6807020613938837003186745968481594624612291",
+        "pool": "LOBSTER/SOL",
+        "poolAddress": "TiUk63PHr5xXhT36wttTTssJVExiMDSyoDKRpZf8iFP",
+        "poolCreator": "6oToeVcQS1DU5zmbCHgCyy6tGgkchZpJrLhrsYAq82bG",
+        "protocolName": "PumpSwap"
+      },
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "1094791.409502",
+            "tokenSymbol": "LOBSTER"
+          },
+          {
+            "tokenAmount": "164.653938362",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "2.00%",
+        "liquidityUsd": "16253.1401523274450916998726250794847059887403918",
+        "pool": "LOBSTER/SOL",
+        "poolAddress": "96WV5GStmYg9wKPfbQufmu2DPJae5Q38o5aSkUZx6eLj",
+        "poolCreator": "GkuzpE5NGqizj4Fgw1XN1JysETq26zMArsgqWGAwK5V",
+        "protocolName": "Meteora"
+      },
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "1064355.998538",
+            "tokenSymbol": "LOBSTER"
+          },
+          {
+            "tokenAmount": "35.148484722",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "5.00%",
+        "liquidityUsd": "3868.2365883422649318679118645353107004877387856",
+        "pool": "LOBSTER/SOL",
+        "poolAddress": "5XAimEzJ8xWyyzU2CiH2KV7kpAXJTvM9KWCkgswb3TZc",
+        "poolCreator": "66JvDU8h66DPne6MoDRvSzrDoN4x8Ui1u3BWLivm6gDh",
+        "protocolName": "Meteora"
+      },
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "13057.733854",
+            "tokenSymbol": "LOBSTER"
+          },
+          {
+            "tokenAmount": "0.040218773",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "5.00%",
+        "liquidityUsd": "8.6996941792661149085613255589283904993755584",
+        "pool": "LOBSTER/SOL",
+        "poolAddress": "GtEytS8AV1GBQxrcM4XCAiq3Rn4LfM6HVmhn2KZxWFT",
+        "poolCreator": "8tN6TQAHb8q8NcQsjFtupBY4kCNvumtwcPm6U5jkZEKo",
+        "protocolName": "Meteora"
+      },
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "5603.71093",
+            "tokenSymbol": "LOBSTER"
+          },
+          {
+            "tokenAmount": "0.020890827",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "50.00%",
+        "liquidityUsd": "3.649942239804380173270906262606722739226719",
+        "pool": "LOBSTER/SOL",
+        "poolAddress": "71TuCkTRrYa4zv9sjvTfPGXTcMNfAXpotqzkBjjhrkdk",
+        "poolCreator": "HC2687Y9mBgYj2uE97wSbgLgFTPhUTd8NJgp47BwfMHc",
+        "protocolName": "Meteora"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+binding_id: runtime_absorption_phase_runner_binding_v1
+created_at: "2026-05-14T20:34:54Z"
+rule: "all replay decisions are reconstructed through phase trace; no runner may bypass phase controller; paper runner requires P07/P08 gate"
+phase_runner_binding:
+  - phase_id: P01
+    phase_name: Candidate Intake / Source Data Fact
+    runners: [runner_candidate_discovery, runner_gmgn_pipeline, runner_live_orchestrator]
+    consumed_outputs: ["data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.json"]
+    required_handoff: data_fact_handoff_packet.json
+  - phase_id: P02
+    phase_name: Wallet / Chip Source Fact
+    runners: [runner_wallet_structure_pipeline]
+    consumed_outputs: ["data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/wallet_structure_decision.json", "data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/candidate_wallet_structure_summary.json"]
+    required_handoff: wallet_chip_fact_handoff_packet.json
+  - phase_id: P03
+    phase_name: Wallet Entity / Structure Reasoning
+    runners: [runner_wallet_structure_pipeline]
+    consumed_outputs: ["data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/wallet_structure_decision.json"]
+    required_handoff: wallet_entity_handoff_packet.json
+  - phase_id: P04
+    phase_name: Chip Structure
+    runners: [runner_kline_pipeline, runner_wallet_structure_pipeline]
+    consumed_outputs: ["data/gmgn_candidates_live_run/kline_pipeline/candidate_kline_pipeline_summary.json", "data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/wallet_structure_decision.json"]
+    required_handoff: chip_structure_handoff_packet.json
+  - phase_id: P05
+    phase_name: Evidence / Counter Evidence
+    runners: [runner_signal_engine, runner_kline_pipeline, runner_wallet_structure_pipeline]
+    consumed_outputs: ["data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json", "data/gmgn_candidates_live_run/kline_pipeline/candidate_kline_pipeline_summary.json", "data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/wallet_structure_decision.json"]
+    required_handoff: evidence_control_packet.json
+  - phase_id: P06
+    phase_name: Scenario Recognition
+    runners: [runner_signal_engine, runner_kline_pipeline]
+    consumed_outputs: ["data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json", "data/gmgn_candidates_live_run/kline_pipeline/candidate_kline_pipeline_summary.json"]
+    required_handoff: scenario_recognition_packet.json
+  - phase_id: P07
+    phase_name: Strategy Gate
+    runners: [runner_state_machine, runner_signal_engine, runner_wallet_structure_pipeline]
+    consumed_outputs: ["data/gmgn_candidates_live_run/state_machine/candidate_states.json", "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json", "data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/wallet_structure_decision.json"]
+    required_handoff: strategy_gate_decision.json
+  - phase_id: P08
+    phase_name: Execution Risk / Paper-only Gate
+    runners: [runner_quote_security, runner_paper_live]
+    consumed_outputs: ["data/gmgn_candidates_live_run/quote_security/ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump/quote_security_decision.json", "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json"]
+    required_handoff: paper_only_execution_gate.json
+    precondition: "P07 decision in PAPER_READY/READY_FOR_CONFIRMATION and P08 quote/security allows confirmation"
+  - phase_id: P09
+    phase_name: Review / Failure Attribution
+    runners: [runner_paper_live, runner_failure_attribution]
+    consumed_outputs: ["data/gmgn_candidates_live_run/paper_live/paper_positions_closed.json", "data/gmgn_candidates_live_run/paper_live/failure_attribution.jsonl"]
+    required_handoff: failure_attribution_packet.json
+    mutation_rule: "no realtime rule mutation; handoff to P09/P10 issue package only"

@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0308
+source_path: sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/06_phase_execution_protocol_TEMPLATE.md
+phase_scores:
+  P01: 1
+  P02: 1
+  P03: 0
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 1
+  P08: 7
+  P09: 0
+  P10: 3
+primary_phase: P08
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

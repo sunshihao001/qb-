@@ -1,0 +1,35 @@
+{
+  "title": "Contract Policy",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "input_required_fields",
+    "output_required_fields",
+    "status"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "input_required_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output_required_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PENDING",
+        "DEPRECATED"
+      ]
+    }
+  }
+}

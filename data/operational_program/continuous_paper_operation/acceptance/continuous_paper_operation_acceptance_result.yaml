@@ -1,0 +1,15 @@
+continuous_paper_operation_acceptance_result:
+  acceptance_id: CPO-ACCEPTANCE-20260512-001
+  generated_at: 2026-05-12T16:29:31Z
+  status: CPO_READY_WITH_GAPS
+  file_backed_assets_ready: true
+  system_files_expected: 41
+  runtime_outputs_expected: 29
+  safety_boundary_intact: true
+  blocking_gaps: []
+  non_blocking_gaps:
+    - I05 readiness not live-verified in this task
+    - scheduler runner not enabled
+    - sample library has zero real cycles
+  downstream_permission: [GOVERNANCE_REVIEW, RUNNER_TOOL_BINDING_DRY_RUN, MANUAL_SINGLE_CYCLE_PAPER_ONLY]
+  forbidden: [LIVE_EXECUTION, WALLET_SIGNING, AUTO_ORDER, AUTO_DEPLOY]

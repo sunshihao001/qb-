@@ -1,0 +1,172 @@
+{
+  "fields": [
+    {
+      "field_name": "doc_id",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "source_concept",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "required_function",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "function_type",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "target_phase",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "input_fields",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "field_sources",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "output_fields",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "judgement_logic",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "schema",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "contract",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "code_module",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "tests",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "replay",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "trace",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "report",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "kv",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "handoff",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "runner_binding",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "acceptance_criteria",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    },
+    {
+      "field_name": "implementation_status",
+      "field_type": "object_or_string_or_array",
+      "source": "concept_to_function_compiler",
+      "required": true,
+      "missing_policy": "BLOCK_FUNCTION_MAPPING",
+      "trace_required": true
+    }
+  ]
+}

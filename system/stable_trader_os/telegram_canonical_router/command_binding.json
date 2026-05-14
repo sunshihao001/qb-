@@ -1,0 +1,28 @@
+{
+  "binding_id": "SIKK_TELEGRAM_CANONICAL_COMMAND_BINDING",
+  "canonical_command": "/sikk_stage_run",
+  "entry_function": "route_telegram_command",
+  "generated_at": "2026-05-14T05:19:09.075414+00:00",
+  "manifest_path": "system/stable_trader_os/standard_stage_closure/manifest.json",
+  "route_chain": [
+    "telegram_command",
+    "canonical_router",
+    "standard_stage_closure_manifest",
+    "runtime_entry",
+    "acceptance_gate",
+    "reply_panel"
+  ],
+  "router_module": "modules.stable_trader_os.telegram_canonical_router",
+  "safety": {
+    "forbidden_real_execution": [
+      "swap",
+      "private_key",
+      "signing",
+      "broadcast",
+      "real_trade"
+    ],
+    "paper_only": true
+  },
+  "sample_reply_panel_path": "data/stable_trader_os/telegram_canonical_router/A08_TELEGRAM_CANONICAL_ACCEPTANCE/K00/reply_panel.json",
+  "status": "TELEGRAM_CANONICAL_COMMAND_BOUND_PAPER_ONLY"
+}

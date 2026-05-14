@@ -1,0 +1,26 @@
+{
+  "policy_id": "production_risk_policy_v1",
+  "version": "1.0.0",
+  "risk_rules": [
+    {
+      "risk_type": "LIVE_RUNTIME_RISK",
+      "default_action": "HARD_BLOCK",
+      "allowed_exception": false
+    },
+    {
+      "risk_type": "WALLET_SIGNING_RISK",
+      "default_action": "HARD_BLOCK",
+      "allowed_exception": false
+    },
+    {
+      "risk_type": "AUTO_DEPLOY_RISK",
+      "default_action": "HARD_BLOCK",
+      "allowed_exception": false
+    },
+    {
+      "risk_type": "PRODUCTION_TRADING_RISK",
+      "default_action": "HARD_BLOCK",
+      "allowed_exception": false
+    }
+  ]
+}

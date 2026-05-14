@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V00 Schema Validation Evidence Schema",
+  "type": "object",
+  "required": [
+    "validation_type",
+    "status",
+    "schemas_checked",
+    "valid_schemas",
+    "invalid_schemas",
+    "errors"
+  ],
+  "properties": {
+    "validation_type": {
+      "const": "schema_validation"
+    },
+    "status": {
+      "enum": [
+        "PASSED",
+        "FAILED",
+        "BLOCKED",
+        "READY_WITH_GAPS"
+      ]
+    },
+    "schemas_checked": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "valid_schemas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "invalid_schemas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "command": {
+      "type": "string"
+    },
+    "exit_code": {
+      "type": "integer"
+    },
+    "stdout_path": {
+      "type": "string"
+    },
+    "stderr_path": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

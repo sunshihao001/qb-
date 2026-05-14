@@ -1,0 +1,75 @@
+{
+  "doc_id": "DOC-20260514-PROFESSIONAL-REQ-001",
+  "model_id": "SIKK_TRADING_STRUCTURE_INITIAL_COGNITION_V1",
+  "status": "INITIAL_COGNITION_ESTABLISHED_WITH_GAPS",
+  "highest_goal": "真实 token / candidate batch 在 HER 总控闭环下完成阶段化分析判断、paper-only 风控、复盘与受控升级。",
+  "not_goal": [
+    "不是生成更多流程图",
+    "不是只完善文档格式",
+    "不是把旧脚本直接并入主链",
+    "不是自动实盘交易"
+  ],
+  "final_decision_labels": [
+    "EXCLUDE",
+    "RECORD",
+    "RISK_MONITOR",
+    "WATCH",
+    "PAPER_READY",
+    "READY_FOR_CONFIRMATION"
+  ],
+  "method_loop": [
+    "目标定义",
+    "结构拆解",
+    "机制抽取",
+    "阶段映射",
+    "数据对象化",
+    "系统实现",
+    "验收反馈",
+    "复盘升级"
+  ],
+  "actual_application_scenarios": [
+    {
+      "scenario": "单 token dry-run",
+      "required_chain": "K00/P01 facts -> P02/P03 wallet/chip -> P04/P05 evidence -> P06 scenario -> P07 gate -> P08 permission -> report",
+      "current_permission": "allowed_safe_mode_only"
+    },
+    {
+      "scenario": "candidate batch ranking",
+      "required_chain": "R00 batch manifest -> phase execution records -> final decision labels -> gap propagation",
+      "current_permission": "blocked_until_R00_runner_binding"
+    },
+    {
+      "scenario": "paper-only cycle",
+      "required_chain": "P07 PAPER_READY -> P08 permission -> I04 ledger -> P09 review -> P10 upgrade candidate",
+      "current_permission": "blocked_until_P08_I04_P09_chain_verified"
+    },
+    {
+      "scenario": "system self-upgrade",
+      "required_chain": "P09 attribution -> P10 candidate -> shadow/regression/approval/rollback",
+      "current_permission": "package_only_no_runtime_mutation"
+    }
+  ],
+  "professional_baseline_axes": [
+    "goal_mapping",
+    "method_loop",
+    "data_lineage_permission",
+    "schema_contract",
+    "trace_acceptance_handoff",
+    "runner_tool_binding",
+    "R00_runtime",
+    "P08_paper_gate",
+    "P09_P10_review_upgrade",
+    "issue_task_packet",
+    "legacy_absorption",
+    "regression_approval_rollback",
+    "safety_boundary"
+  ],
+  "safety_boundary": {
+    "no_live_execution": true,
+    "no_wallet_signing": true,
+    "no_auto_order": true,
+    "no_auto_deploy": true,
+    "no_direct_rule_mutation": true,
+    "paper_only_enforced": true
+  }
+}

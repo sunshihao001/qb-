@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 acceptance decision schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "decision_id",
+    "a00_status",
+    "system_status",
+    "readiness_class",
+    "decision_reason",
+    "forbidden_next_actions"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string"
+    },
+    "a00_status": {
+      "enum": [
+        "A00_ACCEPTED",
+        "A00_READY_WITH_GAPS",
+        "A00_BLOCKED",
+        "A00_REJECTED"
+      ]
+    },
+    "system_status": {
+      "enum": [
+        "SYSTEM_READY_FOR_HANDOFF",
+        "SYSTEM_READY_WITH_GAPS",
+        "SYSTEM_BLOCKED",
+        "SYSTEM_REJECTED"
+      ]
+    },
+    "readiness_class": {
+      "enum": [
+        "DESIGN_ONLY",
+        "PARTIALLY_IMPLEMENTED",
+        "VALIDATED_NOT_BOUND",
+        "BOUND_NOT_FULLY_ACCEPTED",
+        "NOT_EXECUTED",
+        "HANDOFF_READY",
+        "HANDOFF_READY_WITH_NON_BLOCKING_GAPS"
+      ]
+    },
+    "decision_reason": {
+      "type": "string"
+    },
+    "blocking_gaps": {
+      "type": "array"
+    },
+    "non_blocking_gaps": {
+      "type": "array"
+    },
+    "allowed_next_actions": {
+      "type": "array"
+    },
+    "forbidden_next_actions": {
+      "type": "array"
+    }
+  }
+}

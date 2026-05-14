@@ -1,0 +1,10 @@
+k00_gap_report:
+  doc_id: DOC-20260512-I04_PAPER_RUNTIME_INTEGRATION_V1
+  route_status: accepted
+  blocking_gaps: []
+  high_gaps:
+  - No live P08 candidate data executed; skeleton/controller build only.
+  - I05 downstream controller not yet implemented in this task scope.
+  medium_gaps:
+  - Runtime runner code not implemented; contracts and skeleton output only.
+  result: READY_WITH_GAPS_FOR_SYSTEM_BUILD

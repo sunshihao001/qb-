@@ -1,0 +1,11 @@
+{
+  "write_policy_id": "write_policy_default_v1",
+  "raw_documents": "APPEND_ONLY",
+  "registry": "VERSIONED_UPDATE",
+  "controller_system_files": "WRITE_IF_MISSING_OR_VERSIONED",
+  "run_outputs": "RUN_ID_SCOPED_WRITE",
+  "trace_audit": "APPEND_ONLY",
+  "legacy_runtime": "READ_ONLY",
+  "production_rules": "NO_DIRECT_WRITE",
+  "code_patch": "PLAN_ONLY"
+}

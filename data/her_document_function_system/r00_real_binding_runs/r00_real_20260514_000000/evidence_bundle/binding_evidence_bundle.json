@@ -1,0 +1,35 @@
+{
+  "bundle_id": "binding_evidence_bundle_r00_real_20260514_000000",
+  "binding_run_id": "r00_real_20260514_000000",
+  "phase_id": "R00_REAL_BINDING",
+  "summary": {
+    "final_binding_status": "R00_REAL_SAFE_DRY_RUN_BINDING_READY_WITH_GAPS",
+    "safe_mode": true,
+    "live_runtime": false
+  },
+  "evidence_groups": {
+    "command_contract": [
+      "dry_run/command_contract.json"
+    ],
+    "safe_dry_run": [
+      "dry_run/safe_dry_run_evidence.json"
+    ],
+    "generated_outputs": [
+      "dry_run/generated_outputs_manifest.json"
+    ]
+  },
+  "forbidden_actions_checked": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ],
+  "open_gaps": [
+    "paper_runtime_not_enabled",
+    "live_runtime_forbidden",
+    "scheduler_disabled",
+    "telegram_binding_design_only"
+  ],
+  "bundle_status": "BUILT"
+}

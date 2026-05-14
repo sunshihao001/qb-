@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 controller registry",
+  "type": "object",
+  "required": [
+    "registered_controllers"
+  ],
+  "properties": {
+    "registered_controllers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "controller_id",
+          "controller_name",
+          "controller_path",
+          "input_contract",
+          "output_contract",
+          "acceptance_gate",
+          "handoff_schema",
+          "default_mode",
+          "requires_upstream",
+          "forbidden_actions"
+        ],
+        "properties": {
+          "controller_id": {
+            "enum": [
+              "G00",
+              "K00",
+              "F00",
+              "V00",
+              "R00",
+              "A00",
+              "H00",
+              "U00"
+            ]
+          },
+          "controller_name": {
+            "type": "string"
+          },
+          "controller_path": {
+            "type": "string"
+          },
+          "input_contract": {
+            "type": "string"
+          },
+          "output_contract": {
+            "type": "string"
+          },
+          "acceptance_gate": {
+            "type": "string"
+          },
+          "handoff_schema": {
+            "type": "string"
+          },
+          "default_mode": {
+            "type": "string"
+          },
+          "requires_upstream": {
+            "type": "array"
+          },
+          "forbidden_actions": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  }
+}

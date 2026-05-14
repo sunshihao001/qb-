@@ -1,0 +1,17 @@
+policy_id: P09_CALIBRATION_POLICY
+allowed:
+- create_candidate
+- rank_evidence
+- request_p10_review
+forbidden:
+- apply_rule_change
+- apply_threshold_change
+- patch_runtime
+- bypass_p10
+candidate_statuses:
+- NO_CHANGE
+- CALIBRATION_CANDIDATE
+- RULE_REVIEW_CANDIDATE
+- THRESHOLD_REVIEW_CANDIDATE
+- DOCUMENTATION_ONLY
+- P10_REVIEW_REQUIRED

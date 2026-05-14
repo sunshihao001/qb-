@@ -1,0 +1,656 @@
+{
+  "highest_cognition": "最高认知： SIKK 交易结构系统的目标不是生成流程图，也不是把每个阶段文档写漂亮。 最终目标是： 让真实 token / candidate batch 在 HER 总控闭环下， 按 P01-P10 完成事实采集、钱包结构推理、筹码结构推理、证据与反证控制、场景识别、策略门禁、paper-only 执行风控、P09 复盘回放、P10 受控升级。 所以当前正确选择不是直接分阶段补全， 而是先使用 HER_DOC-skill 对全体系做目标差距扫描， 找出总目标还差什么、每个阶段还差什么、R00 为什么还不能跑真实 token、哪些缺口需要 GPT 深研、哪些缺口可以 HER 直接落地。 流程不是目的。 流程是为了让代币判断不跳步、不硬猜、可反证、可验收、可回放、可升级。",
+  "generated_or_patched_at": "2026-05-14T11:21:46.927750+00:00",
+  "operating_principle": "先 HER_DOC 全体系目标差距扫描，再区分 GPT 深研 / HER 直接落地 / 数据未完善项；不直接分阶段堆文档。",
+  "auto_repair_task_package": [
+    {
+      "task_id": "AUTO_REPAIR_001_RUNTIME_RUNNER_REGISTRY",
+      "title": "建立 R00/07_runners 运行器注册与 P01-P10 phase_runner_binding",
+      "her_doc_stage": "F00→V00→A00→H00",
+      "application_scenario": "每轮 sikk_live_run.py 或 fixed candidate batch 运行前，总控可根据 phase_runner_binding 判断哪个 runner 可合法执行。",
+      "can_her_directly_land": true,
+      "needs_gpt_deep_research": false,
+      "target_files": [
+        "sikk_stable_trader_os/07_runners/runner_registry.yaml",
+        "sikk_stable_trader_os/07_runners/phase_runner_binding.yaml",
+        "sikk_stable_trader_os/07_runners/runner_failure_policy.yaml",
+        "sikk_stable_trader_os/07_runners/validation_runner_registry.yaml"
+      ],
+      "acceptance": [
+        "文件级 PASS",
+        "结构级 PASS",
+        "runner 不得绕过 Phase Controller",
+        "仍为 paper-only"
+      ],
+      "still_missing_data_to_judge_complete": [
+        "真实 token batch 下每个 phase runner 的运行证据",
+        "runner 输出与 phase_output_index 的消费证据"
+      ],
+      "priority": "P0_BLOCKING"
+    },
+    {
+      "task_id": "AUTO_REPAIR_002_GOAL_CONTEXT_LOADING",
+      "title": "补 runtime goal context loading 与 goal consumption report",
+      "her_doc_stage": "F00→V00→A00",
+      "application_scenario": "每轮 runtime 读取 operator_goal、phase_goal、methodology_goal、acceptance_goal、forbidden_action_policy，并写 consumption report。",
+      "can_her_directly_land": true,
+      "needs_gpt_deep_research": false,
+      "target_files": [
+        "sikk_stable_trader_os/00_control/runtime_goal_context.schema.json",
+        "sikk_stable_trader_os/00_trace/goal_consumption_report.schema.json",
+        "modules/her_runtime_bridge/goal_context_loader.py"
+      ],
+      "acceptance": [
+        "goal→phase→runner→artifact→acceptance 可追踪",
+        "缺 goal 时降级 READY_WITH_GAPS，不假装 ACCEPTED"
+      ],
+      "still_missing_data_to_judge_complete": [
+        "runtime 实际调用记录",
+        "每轮 token/candidate run_id 的 goal consumption JSON"
+      ],
+      "priority": "P0_BLOCKING"
+    },
+    {
+      "task_id": "AUTO_REPAIR_003_PHASE_OUTPUT_INDEX_TRACE",
+      "title": "补 phase_output_index 与 runner_execution_trace 自动写入",
+      "her_doc_stage": "F00→V00→A00→H00",
+      "application_scenario": "每个 P01-P10 阶段输出后写入统一索引和 trace，dashboard/验收/复盘都读这一层。",
+      "can_her_directly_land": true,
+      "needs_gpt_deep_research": false,
+      "target_files": [
+        "sikk_stable_trader_os/00_control/phase_output_index.json",
+        "sikk_stable_trader_os/00_trace/runner_execution_trace.yaml",
+        "modules/her_runtime_bridge/phase_output_indexer.py"
+      ],
+      "acceptance": [
+        "每个 token/run_id 有 phase_id、runner_id、input_ref、output_ref、status、evidence_level",
+        "索引失败不得影响 paper-only 主流程"
+      ],
+      "still_missing_data_to_judge_complete": [
+        "真实 runtime 输出路径覆盖率",
+        "失败重试/恢复 trace"
+      ],
+      "priority": "P0_BLOCKING"
+    },
+    {
+      "task_id": "AUTO_REPAIR_004_WALLET_STRUCTURE_RUNTIME_EVIDENCE",
+      "title": "修复/接通 P03-P04 钱包结构与筹码结构 runtime evidence",
+      "her_doc_stage": "F00→V00→A00",
+      "application_scenario": "真实 token/candidate batch 必须有钱包实体、同源组、资金路径、筹码库存、派发进度、主导侧成本区 evidence。",
+      "can_her_directly_land": true,
+      "needs_gpt_deep_research": true,
+      "gpt_research_needed_for": [
+        "钱包角色字段全集",
+        "同源组/资金路径反证规则",
+        "主导侧成本区与派发进度计算模型",
+        "筹码库存可信度等级"
+      ],
+      "target_files": [
+        "data/gmgn_candidates_live_run/wallet_structure/",
+        "data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/",
+        "modules/wallet_structure/",
+        "sikk_stable_trader_os/00_data/wallet_structure_field_contract.yaml"
+      ],
+      "acceptance": [
+        "P03/P04 不能只靠空目录或摘要",
+        "WALLET_SUPPORT 不等于买入信号",
+        "缺钱包事实时 P07 不得 PAPER_READY"
+      ],
+      "still_missing_data_to_judge_complete": [
+        "最新 live run 的 wallet_structure summary 是否存在",
+        "GMGN wallet facts 原始来源质量",
+        "筹码字段覆盖率"
+      ],
+      "priority": "P0_BLOCKING"
+    },
+    {
+      "task_id": "AUTO_REPAIR_005_HANDOFF_CONSUMPTION_ACCEPTANCE",
+      "title": "补 P01-P10 handoff consumption status 与消费级/运行级 acceptance runner",
+      "her_doc_stage": "V00→A00→H00",
+      "application_scenario": "上游阶段输出只有被下游正式读取并产出消费证据后，才允许从 READY_WITH_GAPS 升级。",
+      "can_her_directly_land": true,
+      "needs_gpt_deep_research": false,
+      "target_files": [
+        "sikk_stable_trader_os/09_handoff/handoff_consumption_status.json",
+        "sikk_stable_trader_os/08_acceptance/runtime_acceptance_rules.yaml",
+        "modules/her_runtime_bridge/runtime_acceptance_runner.py"
+      ],
+      "acceptance": [
+        "五级验收完整输出：文件/结构/语义/消费/运行",
+        "禁止把 READY_WITH_GAPS 说成 ACCEPTED"
+      ],
+      "still_missing_data_to_judge_complete": [
+        "downstream_executed=true 的实际证据",
+        "每阶段消费失败原因"
+      ],
+      "priority": "P0_BLOCKING"
+    },
+    {
+      "task_id": "AUTO_REPAIR_006_REVIEW_TO_P10_UPGRADE_LOOP",
+      "title": "绑定 P09 复盘回放 → P10 受控升级候选 → shadow validation → approval package",
+      "her_doc_stage": "U00→G00→A00",
+      "application_scenario": "paper failure attribution 不直接改规则，而是生成升级候选、回滚计划、shadow 验证和人工审批包。",
+      "can_her_directly_land": true,
+      "needs_gpt_deep_research": true,
+      "gpt_research_needed_for": [
+        "失败归因分类标准",
+        "shadow validation 样本设计",
+        "规则升级收益/风险评估模型"
+      ],
+      "target_files": [
+        "sikk_stable_trader_os/02_phase_controllers/P10_self_upgrade/",
+        "sikk_stable_trader_os/00_governance/review_to_upgrade_policy.yaml",
+        "data/gmgn_candidates_live_run/paper_live/failure_attribution.jsonl"
+      ],
+      "acceptance": [
+        "review result 不得直接 mutate live rules",
+        "P10 只产出候选/审批/回滚/shadow 证据"
+      ],
+      "still_missing_data_to_judge_complete": [
+        "足够 paper closed cases",
+        "失败样本 replay 结果",
+        "shadow validation 通过率"
+      ],
+      "priority": "P1_HIGH"
+    }
+  ],
+  "data_completeness_judgement": {
+    "overall_status": "NOT_COMPLETE_READY_WITH_GAPS",
+    "professional_light_institution_standard": {
+      "required": [
+        "真实 token/candidate batch 每轮 P01-P10 分阶段输出",
+        "每阶段 required fields + source + evidence_level + missing_policy",
+        "钱包结构与筹码结构原始事实、推理证据、反证证据",
+        "策略门禁与 paper-only 执行风控的可追踪 ticket",
+        "P09/P10 review-upgrade 闭环证据"
+      ],
+      "currently_missing_or_partial": [
+        "R00/07_runners 未完整建立",
+        "runtime goal context loading 未完整接入",
+        "phase_output_index / runner_execution_trace 未自动化",
+        "P01-P10 handoff consumption 未完整证明",
+        "wallet_structure runtime evidence 缺失/未接通",
+        "消费级/运行级 acceptance runner 缺失或未落地"
+      ],
+      "judgement": "现在不能称为专业化完成，只能称为已具备系统骨架与 paper runtime，正在进入 R00 收编和数据完整性补全阶段。"
+    }
+  },
+  "items": [
+    {
+      "stage_id": "HER_TOTAL_CONTROL",
+      "stage_name": "HER 总控",
+      "stage_goal": "把用户目标路由到 K00/P00/P01-P10/runtime/review，禁止跳步与越权。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "总控任务分类器",
+        "目标→阶段→runner 的合法路径判定",
+        "非法绕过检测",
+        "总目标消费证据"
+      ],
+      "missing_research_materials_for_gpt": [
+        "HER 总控如何把自然语言目标转成阶段控制指令、状态机和追踪事件？",
+        "设计目标消费报告 schema：goal→phase→runner→artifact→acceptance。"
+      ],
+      "suggested_gpt_research_prompt": "HER 总控如何把自然语言目标转成阶段控制指令、状态机和追踪事件？",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P1_HIGH",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "K00_KV_INTAKE",
+      "stage_name": "K00 知识摄取 / KV Cache",
+      "stage_goal": "把文档变成可复用资产、KV、映射、缺口、任务包和 handoff。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "批量文档 KV 抽取器运行证据",
+        "KV→字段合约/规则库自动落地映射",
+        "source_registry 与 material_registry 统一",
+        "K00 输出被 P00/phase runner 消费证据"
+      ],
+      "missing_research_materials_for_gpt": [
+        "如何把交易方法论文档拆成 judgment/field/counter-evidence/quant/model/template 六类资产？",
+        "给 K00 KV item 设计去重、冲突、版本、消费追踪规则。"
+      ],
+      "suggested_gpt_research_prompt": "如何把交易方法论文档拆成 judgment/field/counter-evidence/quant/model/template 六类资产？",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P1_HIGH",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "METHODOLOGY_PLANE",
+      "stage_name": "Methodology Plane",
+      "stage_goal": "定义总目标、方法护照、逻辑库、字段合约、模块地图、规则模板、输出合约。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "方法论总目标→P01-P10阶段目标完整矩阵",
+        "方法论资产到 runtime 输出字段的 trace",
+        "逻辑库/规则模板机器可读化",
+        "总目标验收指标"
+      ],
+      "missing_research_materials_for_gpt": [
+        "交易结构系统总目标应如何拆成可量化验收指标？",
+        "设计方法论资产到代码/runner 的 trace matrix。"
+      ],
+      "suggested_gpt_research_prompt": "交易结构系统总目标应如何拆成可量化验收指标？",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P1_HIGH",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "P00_SYSTEM_BUILD",
+      "stage_name": "P00 系统建造 / 方法论编译",
+      "stage_goal": "把 K00/方法论编译成系统平面、控制器、runner 绑定与验收。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "P00 对所有平面的一键编译/验证 runner",
+        "P00→runner_registry 编译产物",
+        "P00 handoff 被下游消费证据"
+      ],
+      "missing_research_materials_for_gpt": [
+        "如何设计 P00 编译器：从方法论/KV 到 plane/controller/contract/runner binding？"
+      ],
+      "suggested_gpt_research_prompt": "如何设计 P00 编译器：从方法论/KV 到 plane/controller/contract/runner binding？",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P1_HIGH",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "GOVERNANCE_PLANE",
+      "stage_name": "Governance Plane",
+      "stage_goal": "权限、禁区、硬负面、paper-only、review-to-upgrade 政策。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "候选治理规则正式审批/激活流程",
+        "治理候选 shadow 验证",
+        "策略门禁与实盘禁区的机器 enforce"
+      ],
+      "missing_research_materials_for_gpt": [
+        "交易系统中 paper-only、人工确认、真实交易禁区应如何形式化为 policy-as-code？"
+      ],
+      "suggested_gpt_research_prompt": "交易系统中 paper-only、人工确认、真实交易禁区应如何形式化为 policy-as-code？",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P1_HIGH",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "DOMAIN_PLANE",
+      "stage_name": "Domain Plane",
+      "stage_goal": "定义 token/wallet/chip/scenario/strategy/review 等对象和关系。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "对象关系与 P01-P10 输出 schema 完全对齐",
+        "钱包/筹码/场景 taxonomy 版本治理",
+        "domain question tree 被 runner 读取"
+      ],
+      "missing_research_materials_for_gpt": [
+        "新币交易结构系统应包含哪些领域对象、关系、生命周期和反证问题树？"
+      ],
+      "suggested_gpt_research_prompt": "新币交易结构系统应包含哪些领域对象、关系、生命周期和反证问题树？",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P1_HIGH",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "DATA_PLANE",
+      "stage_name": "Data Plane",
+      "stage_goal": "字段、来源、证据等级、缺失策略、标准事实模型。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "每阶段 required field 全量清单",
+        "字段来源实时质量评分",
+        "缺字段阻断/降级策略 runner enforce",
+        "normalized fact model 与 runtime 输出对齐"
+      ],
+      "missing_research_materials_for_gpt": [
+        "为 GMGN/OKX/钱包结构新币分析设计字段合约、证据等级和缺失策略。"
+      ],
+      "suggested_gpt_research_prompt": "为 GMGN/OKX/钱包结构新币分析设计字段合约、证据等级和缺失策略。",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P0_BLOCKING",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "FULL_CONTROL_PLANE",
+      "stage_name": "Full Control Plane",
+      "stage_goal": "任务队列、runner 状态、phase output index、handoff consumption。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "runner_status_index/phase_output_index 运行写入",
+        "任务队列消费器",
+        "控制面读取 live runtime manifest",
+        "失败恢复策略实际执行证据"
+      ],
+      "missing_research_materials_for_gpt": [
+        "如何设计交易结构系统控制面 task queue、runner status、phase output index 和恢复策略？"
+      ],
+      "suggested_gpt_research_prompt": "如何设计交易结构系统控制面 task queue、runner status、phase output index 和恢复策略？",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P0_BLOCKING",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "TRACE_PLANE",
+      "stage_name": "Trace Plane",
+      "stage_goal": "证明资产/字段/runner/输出被消费，可追踪可回放。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "runtime_trace_model 实际写事件",
+        "methodology→data→phase→runner→artifact trace 自动更新",
+        "每 token process_trace 接入 HER trace"
+      ],
+      "missing_research_materials_for_gpt": [
+        "设计 token 分析全链路 trace：methodology asset 到 phase decision 到 paper outcome。"
+      ],
+      "suggested_gpt_research_prompt": "设计 token 分析全链路 trace：methodology asset 到 phase decision 到 paper outcome。",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P0_BLOCKING",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "ACCEPTANCE_PLANE",
+      "stage_name": "Acceptance Plane",
+      "stage_goal": "五级验收：文件/结构/语义/消费/运行。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "每阶段 acceptance runner",
+        "消费级/运行级自动检查",
+        "READY_WITH_GAPS 与 ACCEPTED 自动区分",
+        "runtime acceptance report"
+      ],
+      "missing_research_materials_for_gpt": [
+        "如何定义 P01-P10 的五级验收规则和自动验收脚本？"
+      ],
+      "suggested_gpt_research_prompt": "如何定义 P01-P10 的五级验收规则和自动验收脚本？",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P0_BLOCKING",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "HANDOFF_PLANE",
+      "stage_name": "Handoff Plane",
+      "stage_goal": "把上游输出变成下游正式输入与权限转移。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "P01→P02...P10 handoff packet 实际生成/消费",
+        "handoff_consumption_status",
+        "缺口传播包自动路由"
+      ],
+      "missing_research_materials_for_gpt": [
+        "为 P01-P10 设计 handoff packet schema、消费确认和缺口传播机制。"
+      ],
+      "suggested_gpt_research_prompt": "为 P01-P10 设计 handoff packet schema、消费确认和缺口传播机制。",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P1_HIGH",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "RUNNER_TOOL_BINDING",
+      "stage_name": "Runner / Tool Binding",
+      "stage_goal": "把 controller 绑定到实际脚本、工具、验证器和 replay。",
+      "current_assets_found": "PARTIAL_OR_MISSING",
+      "acceptance_status": {
+        "file_level": "MISSING",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "/sikk_stable_trader_os/07_runners 缺失",
+        "runner_registry.yaml",
+        "phase_runner_binding.yaml",
+        "validation/replay runner registry",
+        "runner 不绕过 controller 的 enforce"
+      ],
+      "missing_research_materials_for_gpt": [
+        "如何把现有 sikk_live_run.py/GMGN/Kline/Wallet/Quote/Paper runner 映射到 P01-P10 phase runner binding？"
+      ],
+      "suggested_gpt_research_prompt": "如何把现有 sikk_live_run.py/GMGN/Kline/Wallet/Quote/Paper runner 映射到 P01-P10 phase runner binding？",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P0_BLOCKING",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "PAPER_RUNTIME",
+      "stage_name": "Paper-only Runtime",
+      "stage_goal": "当前实际运行链，产生候选、信号、quote/security、paper 仓位、dashboard。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "PARTIAL_RUNTIME_EVIDENCE"
+      },
+      "missing_preparations": [
+        "wallet_structure runtime 输出目录缺失或未接通",
+        "runtime 输出未完全写入 HER phase_output_index",
+        "runtime goal context loading 缺失",
+        "runtime acceptance evidence bundle"
+      ],
+      "missing_research_materials_for_gpt": [
+        "如何把现有 paper runtime 输出改造成 HER 控制面可消费的 phase outputs 和 evidence bundle？"
+      ],
+      "suggested_gpt_research_prompt": "如何把现有 paper runtime 输出改造成 HER 控制面可消费的 phase outputs 和 evidence bundle？",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P1_HIGH",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    },
+    {
+      "stage_id": "REVIEW_UPGRADE_LOOP",
+      "stage_name": "Review / Upgrade Loop",
+      "stage_goal": "paper 结果→失败归因→升级候选→shadow→人工审批→受控发布。",
+      "current_assets_found": "FOUND",
+      "acceptance_status": {
+        "file_level": "PASS",
+        "structure_level": "PASS",
+        "semantic_level": "READY_WITH_GAPS",
+        "consumption_level": "READY_WITH_GAPS",
+        "runtime_level": "READY_WITH_GAPS"
+      },
+      "missing_preparations": [
+        "review case 到 upgrade candidate 的标准 schema",
+        "shadow validation runner",
+        "rollback plan",
+        "人工审批包",
+        "禁止直接改 live rule 的 enforce"
+      ],
+      "missing_research_materials_for_gpt": [
+        "设计 paper trading 失败归因到规则升级候选的安全闭环：shadow validation、rollback、approval。"
+      ],
+      "suggested_gpt_research_prompt": "设计 paper trading 失败归因到规则升级候选的安全闭环：shadow validation、rollback、approval。",
+      "where_to_apply_returned_materials": [
+        "sikk_stable_trader_os/00_methodology",
+        "sikk_stable_trader_os/00_data",
+        "sikk_stable_trader_os/02_phase_controllers",
+        "sikk_stable_trader_os/07_runners",
+        "sikk_stable_trader_os/00_trace",
+        "sikk_stable_trader_os/08_acceptance",
+        "sikk_stable_trader_os/09_handoff"
+      ],
+      "priority": "P1_HIGH",
+      "blocking_policy": "READY_WITH_GAPS_NOT_ACCEPTED"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+domain_objects:
+  - object_id: token
+    name_cn: 代币对象
+    definition: 当前被分析的交易标的
+    system_use: 所有判断的根对象
+  - object_id: wallet
+    name_cn: 钱包对象
+    definition: 单个链上地址或归并实体
+    system_use: 判断结构资金行为
+  - object_id: wallet_group
+    name_cn: 钱包群组对象
+    definition: 疑似同源/协同/资金关联集合
+    system_use: 判断主导侧、对手盘、派发路径
+  - object_id: dominant_side
+    name_cn: 主导侧对象
+    definition: 疑似掌握筹码控制权的一方，不等同真实庄家
+    system_use: 生命周期与意图推断
+  - object_id: counterparty
+    name_cn: 对手盘对象
+    definition: 接收筹码、追涨、承接、被动流动性一方
+    system_use: 判断派发风险
+  - object_id: chip
+    name_cn: 筹码对象
+    definition: 持仓、迁移、集中、分散、清仓、再吸筹状态
+    system_use: 判断控制权
+  - object_id: market_cap
+    name_cn: 市值对象
+    definition: 发现至当前的市值变化上下文
+    system_use: 判断早期/追高/退出流动性
+  - object_id: price_structure
+    name_cn: 价格结构对象
+    definition: K线、趋势、箱体、突破、回踩、失败结构
+    system_use: 场景识别
+  - object_id: volume_structure
+    name_cn: 成交结构对象
+    definition: 成交量、换手、刷量、异常成交
+    system_use: 判断真实推进与假动作
+  - object_id: liquidity
+    name_cn: 流动性对象
+    definition: 池子、深度、滑点、可成交性
+    system_use: 风控和执行前置
+  - object_id: security
+    name_cn: 安全对象
+    definition: 合约、权限、黑名单、税、冻结、钓鱼风险
+    system_use: 硬门禁
+  - object_id: scenario
+    name_cn: 场景对象
+    definition: 当前代币所处结构场景
+    system_use: 策略适配
+  - object_id: evidence
+    name_cn: 证据对象
+    definition: 支撑判断的数据来源与可信度
+    system_use: 可审计推理
+  - object_id: counter_evidence
+    name_cn: 反证对象
+    definition: 否定当前假设的证据
+    system_use: 防止解释污染
+  - object_id: state
+    name_cn: 状态对象
+    definition: 系统内部处理状态
+    system_use: 状态机调用
+  - object_id: review
+    name_cn: 复盘对象
+    definition: 历史运行与结果反馈
+    system_use: 自我升级
+relations:
+  - token -> has -> wallet
+  - wallet -> may_belong_to -> wallet_group
+  - wallet_group -> may_control -> chip
+  - chip -> affects -> dominant_side
+  - dominant_side -> affects -> scenario
+  - scenario -> constrains -> strategy_gate
+  - evidence -> supports_or_contradicts -> domain_hypothesis
+  - review -> proposes -> upgrade_candidate

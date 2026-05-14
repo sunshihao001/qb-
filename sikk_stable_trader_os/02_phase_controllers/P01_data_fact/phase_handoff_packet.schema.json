@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "P01 Phase Handoff Packet",
+  "type": "object",
+  "required": [
+    "phase_id",
+    "phase_status",
+    "runtime_boundary",
+    "input_files",
+    "output_files",
+    "decision",
+    "evidence_level",
+    "field_source_map",
+    "gap_list",
+    "hard_negative_hits",
+    "counter_evidence",
+    "next_phase_allowed",
+    "next_phase_id",
+    "generated_at",
+    "audit_ref"
+  ],
+  "properties": {
+    "phase_id": {
+      "const": "P01"
+    },
+    "phase_status": {
+      "type": "string"
+    },
+    "runtime_boundary": {
+      "const": "OBSERVE_PAPER_ONLY"
+    },
+    "input_files": {
+      "type": "array"
+    },
+    "output_files": {
+      "type": "array"
+    },
+    "decision": {
+      "type": [
+        "string",
+        "object",
+        "null"
+      ]
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "MISSING",
+        "DEGRADED"
+      ]
+    },
+    "field_source_map": {
+      "type": [
+        "object",
+        "array"
+      ]
+    },
+    "gap_list": {
+      "type": "array"
+    },
+    "hard_negative_hits": {
+      "type": "array"
+    },
+    "counter_evidence": {
+      "type": [
+        "array",
+        "object"
+      ]
+    },
+    "next_phase_allowed": {
+      "type": "boolean"
+    },
+    "next_phase_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "audit_ref": {
+      "type": [
+        "string",
+        "object"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "forbidden_semantics": [
+    "real_trade_allowed",
+    "private_key",
+    "signed_transaction",
+    "broadcast_transaction",
+    "swap_execution"
+  ]
+}

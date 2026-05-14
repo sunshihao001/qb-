@@ -1,0 +1,54 @@
+record_id: data_request_chain_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+data_request_packets:
+- packet_id: p01_to_p02_data_request_packet
+  from_phase: P01
+  to_phase: P02
+  exists: true
+  requested_outputs_clear: true
+- packet_id: p02_to_p03_data_request_packet
+  from_phase: P02
+  to_phase: P03
+  exists: false
+  requested_outputs_clear: false
+- packet_id: p03_to_p04_data_request_packet
+  from_phase: P03
+  to_phase: P04
+  exists: true
+  requested_outputs_clear: true
+- packet_id: p04_to_p05_data_request_packet
+  from_phase: P04
+  to_phase: P05
+  exists: true
+  requested_outputs_clear: true
+- packet_id: p05_to_p06_data_request_packet
+  from_phase: P05
+  to_phase: P06
+  exists: true
+  requested_outputs_clear: true
+- packet_id: p06_to_p07_data_request_packet
+  from_phase: P06
+  to_phase: P07
+  exists: true
+  requested_outputs_clear: true
+- packet_id: p07_to_p08_data_request_packet
+  from_phase: P07
+  to_phase: P08
+  exists: true
+  requested_outputs_clear: true
+- packet_id: p08_to_paper_runtime_data_request_packet
+  from_phase: P08
+  to_phase: PAPER_ONLY_RUNTIME
+  exists: true
+  requested_outputs_clear: true
+- packet_id: paper_runtime_to_p09_data_request_packet
+  from_phase: PAPER_ONLY_RUNTIME
+  to_phase: P09
+  exists: false
+  requested_outputs_clear: false
+- packet_id: p09_to_p10_data_request_packet
+  from_phase: P09
+  to_phase: P10
+  exists: true
+  requested_outputs_clear: true
+request_chain_status: DATA_REQUEST_CHAIN_WITH_GAPS

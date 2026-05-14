@@ -1,0 +1,23 @@
+{
+  "doc_id": "DOC-20260511-014",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T14:12:21.903922+00:00",
+  "phase": "P00",
+  "raw_phase_id": "P00_system_bootstrap_controller",
+  "normalized_phase_id": "P00_system_context_control",
+  "phase_target_data_path": "06_phase_controllers/P00_system_context_control/phase_target_data.yaml",
+  "raw_user_proposed_path": "06_phase_controllers/P00_system_context_control/phase_target_data.raw_user_proposed.yaml",
+  "downstream_consumers": [
+    "Governance Plane",
+    "Domain Plane",
+    "Data Plane",
+    "Control Plane",
+    "P01_data_fact_controller"
+  ],
+  "handoff_outputs": [
+    "system_bootstrap_handoff_packet",
+    "data_plane_generation_task"
+  ],
+  "status_enum_reconciliation_required": true,
+  "controller_id_reconciliation_required": true
+}

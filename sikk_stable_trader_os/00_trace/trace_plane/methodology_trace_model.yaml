@@ -1,0 +1,18 @@
+methodology_trace_record:
+  trace_id: string
+  blueprint_id: required
+  blueprint_file_path: required
+  created_at: required
+  source_knowledge_trace_ids: required
+  methodology_sections: required
+  assumptions: required
+  downstream: required
+  required_trace_links:
+    - parent_trace_ids
+    - child_trace_ids
+    - related_artifact_trace_ids
+  validation_rules:
+    - trace_id_present
+    - source_present
+    - downstream_usage_declared
+    - forbidden_actions_respected

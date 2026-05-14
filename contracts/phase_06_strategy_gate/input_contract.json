@@ -1,0 +1,28 @@
+{
+  "phase": 6,
+  "name": "策略过滤层",
+  "goal": "判断是否达到 A+P1 且未被证据链否决",
+  "output_file": "strategy_gate_decision.json",
+  "required_fields": [
+    "token_address",
+    "run_id",
+    "phase",
+    "status_code",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_trigger",
+    "confidence_level",
+    "missing_fields",
+    "source_files",
+    "handoff_to"
+  ],
+  "allowed_status_codes": [
+    "STRATEGY_BLOCK",
+    "STRATEGY_PAUSE",
+    "PAPER_READY",
+    "READY_FOR_CONFIRMATION"
+  ],
+  "missing_policy": "缺失字段必须写 missing；自动推导写 系统推导",
+  "downstream": "执行风控层"
+}

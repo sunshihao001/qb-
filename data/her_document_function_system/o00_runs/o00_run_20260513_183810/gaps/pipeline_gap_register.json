@@ -1,0 +1,22 @@
+{
+  "pipeline_run_id": "o00_run_20260513_183810",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "gap_design_level_only",
+      "reason": "run-sample simulates expected stage outputs only"
+    },
+    {
+      "gap_id": "gap_no_real_pytest",
+      "reason": "real tests are not executed by sample replay"
+    },
+    {
+      "gap_id": "gap_no_runner_bound",
+      "reason": "R00 is skipped"
+    },
+    {
+      "gap_id": "gap_policy_not_active",
+      "reason": "G00 output is candidate only"
+    }
+  ]
+}

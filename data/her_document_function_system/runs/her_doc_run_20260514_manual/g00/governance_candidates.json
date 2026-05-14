@@ -1,0 +1,26 @@
+{
+  "governance_candidates": [
+    {
+      "candidate_id": "gov_no_ready_without_evidence",
+      "rule_type": "STATUS_RULE",
+      "rule_statement": "READY must not be claimed when only task package or mapping exists without execution evidence.",
+      "priority": "P1_HIGH",
+      "source_gap": "gap_001",
+      "status": "CANDIDATE"
+    },
+    {
+      "candidate_id": "gov_no_raw_only_k00_completion",
+      "rule_type": "PROCESS_RULE",
+      "rule_statement": "K00 cannot be marked complete when only raw document is saved.",
+      "priority": "P1_HIGH",
+      "status": "CANDIDATE"
+    },
+    {
+      "candidate_id": "gov_safe_mode_not_production",
+      "rule_type": "SAFETY_RULE",
+      "rule_statement": "SAFE_MODE output must never be labeled production ready.",
+      "priority": "P1_HIGH",
+      "status": "CANDIDATE"
+    }
+  ]
+}

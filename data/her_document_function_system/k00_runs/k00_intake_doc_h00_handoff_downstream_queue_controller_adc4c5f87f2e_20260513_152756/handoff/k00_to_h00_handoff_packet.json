@@ -1,0 +1,28 @@
+{
+  "handoff_id": "k00_to_h00_adc4c5f87f2e",
+  "from_phase": "K00",
+  "to_phase": "H00",
+  "source_doc_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/raw/doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e.md"
+  ],
+  "document_passport_ref": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/document_passport/document_passport.json",
+  "corpus_index_ref": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/corpus_index/corpus_index.json",
+  "system_mapping_ref": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/system_mapping/system_mapping.json",
+  "gap_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/gaps/gap_report.json"
+  ],
+  "phase_task_package_ref": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/phase_task_package/H00_handoff_downstream_queue_controller",
+  "allowed_next_actions": [
+    "create_h00_controller_assets",
+    "create_h00_tests",
+    "run_h00_asset_validation"
+  ],
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "downstream_task_execution_without_a00_handoff"
+  ],
+  "handoff_status": "HANDOFF_READY_WITH_GAPS"
+}

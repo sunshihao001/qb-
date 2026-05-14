@@ -1,0 +1,8 @@
+policy_id: STATE_SNAPSHOT_POLICY_BOOTSTRAP_001
+snapshot_before_modifying:
+- 00_control/current_system_state.json
+- 00_control/phase_registry.yaml
+- 00_control/system_asset_index.json
+- 00_control/next_stage_decision.json
+snapshot_directory: 00_control/snapshots
+retention: keep_until_full_control_plane_acceptance

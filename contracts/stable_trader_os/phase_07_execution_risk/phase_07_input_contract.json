@@ -1,0 +1,18 @@
+{
+  "phase": "phase_07_execution_risk_controller",
+  "required_files": [
+    "phase_06_handoff_packet.json",
+    "strategy_gate_decision.json",
+    "hard_negative_checklist.json",
+    "a_plus_p1_result.json",
+    "risk_reward_check.json",
+    "quote_security_normalized.json",
+    "risk_config.json",
+    "paper_positions_open.json",
+    "paper_positions_closed.json",
+    "risk_events.jsonl"
+  ],
+  "optional_files": ["token_market_context.json"],
+  "allowed_strategy_status": ["PAPER_READY", "READY_FOR_CONFIRMATION"],
+  "forbidden_execution": ["REAL_ORDER_EXECUTED", "SIGN_TRANSACTION", "BROADCAST_TRANSACTION"]
+}

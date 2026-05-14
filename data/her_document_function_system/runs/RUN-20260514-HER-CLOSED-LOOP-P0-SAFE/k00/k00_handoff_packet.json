@@ -1,0 +1,66 @@
+{
+  "handoff_id": "k00_handoff_RUN-20260514-HER-CLOSED-LOOP-P0-SAFE",
+  "from_phase": "K00",
+  "to_phase": "F00",
+  "k00_status": "K00_READY_WITH_GAPS",
+  "status": "K00_HANDOFF_READY_WITH_GAPS",
+  "artifact_refs": {
+    "document_passport": "k00/document_passport.json",
+    "corpus_index": "k00/corpus_index.json",
+    "system_mapping": "k00/system_mapping.json",
+    "gap_detection": "k00/gap_detection.json"
+  },
+  "refs": {
+    "document_passport": "k00/document_passport.json",
+    "corpus_index": "k00/corpus_index.json",
+    "system_mapping": "k00/system_mapping.json",
+    "gap_detection": "k00/gap_detection.json"
+  },
+  "document_passport_refs": [
+    "k00/document_passport.json"
+  ],
+  "corpus_index_refs": [
+    "k00/corpus_index.json"
+  ],
+  "system_mapping_refs": [
+    "k00/system_mapping.json"
+  ],
+  "gap_detection_refs": [
+    "k00/gap_detection.json"
+  ],
+  "target_phase_candidates": [
+    "K00",
+    "F00",
+    "V00",
+    "A00",
+    "H00",
+    "U00",
+    "G00",
+    "O00"
+  ],
+  "execution_boundary": {
+    "allow_file_write": true,
+    "allow_code_write": false,
+    "allow_tests": true,
+    "allow_runner_binding": false,
+    "allowed_modes": [
+      "SAFE_MODE_LOCAL_FILES_ONLY"
+    ]
+  },
+  "write_policy": {
+    "raw_documents": "APPEND_ONLY",
+    "run_outputs": "RUN_ID_SCOPED_WRITE",
+    "trace_audit": "APPEND_ONLY",
+    "code_patch": "PLAN_ONLY"
+  },
+  "repo_root": "/root/sikk-gmgn",
+  "gaps": [
+    {
+      "gap_id": "gap_real_semantic_extraction_limited",
+      "gap_level": "MEDIUM_GAP",
+      "route_to": "U00",
+      "status": "OPEN",
+      "description": "K00 safe-mode writer preserves document facts but does not claim complete semantic absorption."
+    }
+  ]
+}

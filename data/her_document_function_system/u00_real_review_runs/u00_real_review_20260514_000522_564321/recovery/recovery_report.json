@@ -1,0 +1,17 @@
+{
+  "status": "RECOVERY_READY_WITH_GAPS",
+  "safe_next_actions": [
+    "dispatch_upgrade_queue_to_backlog_or_g00_after acceptance",
+    "do_not_execute_live_runtime"
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_downstream_task_directly",
+    "modify_production_rules_directly",
+    "drop_unresolved_gaps",
+    "convert_ready_with_gaps_to_ready"
+  ]
+}

@@ -1,0 +1,100 @@
+meta:
+  standard_id: S00_RUNNER_REGISTRY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+runners:
+- runner_id: RUNNER_SIKK_LIVE_RUN_LEGACY
+  runner_name: sikk_live_run.py
+  runner_type: ingestion_analysis_paper_legacy
+  script_path: /root/sikk-gmgn/sikk_live_run.py
+  entry_command: python3 sikk_live_run.py --output-root data/gmgn_candidates_live_run
+    --limit 50 --quote-sources okx --default-quote-amount-sol 0.01 --mode once
+  bound_phase: LEGACY_RUNTIME_COMPAT_TO_P01_P08_REVIEW
+  input_contract: legacy_runtime_input_contract
+  output_contract: legacy_runtime_output_contract
+  writes_trace: WITH_GAPS
+  writes_acceptance: WITH_GAPS
+  writes_handoff: WITH_GAPS
+  allowed_modes:
+  - dry_run
+  - replay
+  - paper_only
+  forbidden_modes:
+  - live_swap
+  - sign
+  - broadcast
+  failure_policy: legacy failure recorded in R00 failure report
+  timeout_policy: TBD_R00
+  rollback_policy: no mutation; keep outputs versioned
+- runner_id: RUNNER_GMGN_PIPELINE_LEGACY
+  runner_name: run_sikk_gmgn_pipeline.py
+  runner_type: analysis_legacy
+  script_path: /root/sikk-gmgn/run_sikk_gmgn_pipeline.py
+  entry_command: python3 run_sikk_gmgn_pipeline.py --help
+  bound_phase: LEGACY_RUNTIME_COMPAT
+  input_contract: legacy_runtime_input_contract
+  output_contract: legacy_runtime_output_contract
+  writes_trace: WITH_GAPS
+  writes_acceptance: WITH_GAPS
+  writes_handoff: WITH_GAPS
+  allowed_modes:
+  - dry_run
+  - replay
+  forbidden_modes:
+  - live_swap
+  - sign
+  - broadcast
+  failure_policy: R00_WRAP_REQUIRED
+  timeout_policy: TBD_R00
+  rollback_policy: no mutation
+- runner_id: RUNNER_FULL_SYSTEM_RUNNER
+  runner_name: modules.runtime.full_system_runner
+  runner_type: replay_validation
+  script_path: /root/sikk-gmgn/modules/runtime/full_system_runner.py
+  entry_command: python3 -m modules.runtime.full_system_runner --help
+  bound_phase: P01_P10_REPLAY
+  input_contract: full_system_replay_input_contract
+  output_contract: full_system_replay_output_contract
+  writes_trace: expected
+  writes_acceptance: expected
+  writes_handoff: expected
+  allowed_modes:
+  - dry_run
+  - replay
+  - paper_only
+  forbidden_modes:
+  - live_swap
+  - sign
+  - broadcast
+  failure_policy: READY_WITH_GAPS if degraded only; BLOCKED if safety missing
+  timeout_policy: TBD_R00
+  rollback_policy: checkpoint rollback only
+- runner_id: RUNNER_PHASE_RUNNER
+  runner_name: modules.runtime.phase_runner
+  runner_type: phase_replay
+  script_path: /root/sikk-gmgn/modules/runtime/phase_runner.py
+  entry_command: python3 -m modules.runtime.phase_runner --help
+  bound_phase: P01_P10
+  input_contract: phase_input_contract
+  output_contract: phase_output_contract
+  writes_trace: expected
+  writes_acceptance: expected
+  writes_handoff: expected
+  allowed_modes:
+  - dry_run
+  - replay
+  forbidden_modes:
+  - live_swap
+  - sign
+  - broadcast
+  failure_policy: phase-specific block/degrade
+  timeout_policy: TBD_R00
+  rollback_policy: replay artifact rollback

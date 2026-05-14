@@ -1,0 +1,26 @@
+meta:
+  standard_id: S00_HANDOFF_PACKET_STANDARD
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+required_fields:
+- handoff_id
+- source_phase
+- target_phase
+- token_id
+- handoff_status
+- required_payload
+- payload_files
+- decision_summary
+- evidence_summary
+- counter_evidence_summary
+- data_quality_summary
+- known_gaps
+- next_phase_permissions

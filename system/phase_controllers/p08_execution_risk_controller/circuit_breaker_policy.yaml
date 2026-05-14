@@ -1,0 +1,11 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+policy_id: CIRCUIT_BREAKER_POLICY
+breakers:
+  consecutive_failures: {enabled: true, threshold: 3}
+  daily_failed_trades: {enabled: true, threshold: 5}
+  daily_loss: {enabled: true, threshold_sol: null}
+  data_failure_rate: {enabled: true, threshold_pct: 50}
+triggered_action: BLOCK_RUNTIME
+warning_action: ALLOW_WITH_LIMITATIONS

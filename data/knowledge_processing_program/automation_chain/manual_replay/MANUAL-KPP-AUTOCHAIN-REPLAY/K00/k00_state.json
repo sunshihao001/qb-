@@ -1,0 +1,17 @@
+{
+  "stage_id": "K00",
+  "run_id": "MANUAL-KPP-AUTOCHAIN-REPLAY",
+  "status": "K00_ACCEPTED",
+  "started_at": "2026-05-13T06:15:39Z",
+  "ended_at": "2026-05-13T06:15:39Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K00/run_request.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K00/raw_source_manifest.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K00/source_registry_entry.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K00/k00_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

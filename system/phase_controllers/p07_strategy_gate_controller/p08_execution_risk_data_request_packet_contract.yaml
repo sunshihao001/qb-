@@ -1,0 +1,16 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+contract_id: P08_EXECUTION_RISK_DATA_REQUEST_PACKET_CONTRACT
+packet_type: P07_TO_P08_EXECUTION_RISK_DATA_REQUEST
+from_controller: P07_STRATEGY_GATE_CONTROLLER
+to_controller: P08_EXECUTION_RISK_CONTROLLER
+required_sections: [candidate_scope, p07_decisions, required_p08_checks, inherited_invalidations, limitations, output_required_from_p08]
+required_p08_checks:
+  quote_checks: [current_quote_available, quote_deviation_check, current_price_vs_gate_context, liquidity_depth_check]
+  security_checks: [okx_security_recheck, mint_freeze_authority_recheck, blacklist_or_transfer_restriction_recheck, honeypot_or_sellability_recheck]
+  execution_cost_checks: [slippage_estimation, fee_model, minimum_liquidity_threshold, max_price_impact_threshold]
+  runtime_safety_checks: [paper_only_flag, no_live_execution, no_wallet_signing, daily_loss_limit, consecutive_failure_limit, one_token_one_position_rule]
+  freshness_checks: [market_data_refresh, wallet_delta_refresh_if_required, holder_snapshot_refresh_if_required, scenario_invalidation_refresh_if_required]
+limitations: [STRATEGY_GATE_ONLY, P08_MUST_APPROVE_BEFORE_PAPER_RUNTIME, NO_DIRECT_PAPER_RUNTIME, LIVE_EXECUTION_FORBIDDEN]
+output_required_from_p08: [execution_risk_decision_record, quote_security_decision_record, paper_runtime_permission_record, p08_to_paper_runtime_handoff_packet]

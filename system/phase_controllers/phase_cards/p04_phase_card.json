@@ -1,0 +1,63 @@
+{
+  "phase_id": "P04",
+  "controller_id": "P04_CHIP_STRUCTURE_CONTROLLER",
+  "controller_name_cn": "筹码结构与迁移状态控制器",
+  "primary_responsibility": "基于钱包实体、持仓变化、转账路径和市值上下文，判断筹码集中、留存、迁移、派发、对手盘压力等结构状态。",
+  "required_handoff": [
+    "p03_wallet_entity_handoff_packet",
+    "p02_source_data_fact_handoff_packet",
+    "domain_chip_structure_model_handoff",
+    "market_cap_context_handoff",
+    "field_usage_permission_packet"
+  ],
+  "outputs": [
+    "chip_structure_summary.json",
+    "chip_migration_events.json",
+    "counterparty_pressure_summary.json",
+    "chip_structure_report.md",
+    "p04_chip_structure_handoff_packet.yaml"
+  ],
+  "required_trace": [
+    "PHASE_TRACE",
+    "TASK_TRACE",
+    "ARTIFACT_TRACE",
+    "CONTRACT_TRACE",
+    "FIELD_TRACE",
+    "ENTITY_TRACE",
+    "EVENT_TRACE",
+    "SNAPSHOT_TRACE",
+    "STATE_TRACE"
+  ],
+  "acceptance_gate": "GATE_P04_CHIP_STRUCTURE_READY",
+  "tool_binding_policy": {
+    "allowed": true,
+    "mode": [
+      "READ_ONLY_ANALYSIS",
+      "TEST_ONLY"
+    ],
+    "allowed_tools": [
+      "chip_structure_calculator",
+      "wallet_delta_snapshot_analyzer",
+      "counterparty_pressure_calculator"
+    ],
+    "forbidden_tools": [
+      "strategy_gate_runner",
+      "paper_trade_runner",
+      "live_trade_executor"
+    ]
+  },
+  "paper_runtime_policy": {
+    "allowed": false,
+    "reason": "P04 是结构分析阶段，不允许直接触发纸面交易。"
+  },
+  "forbidden": [
+    "output_paper_ready",
+    "output_buy_signal",
+    "output_execution_permission",
+    "treat_partial_selling_as_auto_distribution_without_context",
+    "ignore_market_cap_context",
+    "ignore_trace_limitations"
+  ],
+  "status": "INDEXED_NOT_EXPANDED",
+  "runtime_allowed": false
+}

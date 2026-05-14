@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "P10 system files",
+      "ok": true,
+      "detail": "45/45 present; missing=[]"
+    },
+    {
+      "check": "P10 runtime dirs",
+      "ok": true,
+      "detail": "33/33 present; missing=[]"
+    },
+    {
+      "check": "P10 YAML/JSON parse",
+      "ok": true,
+      "detail": "parsed=41; errors=[]"
+    },
+    {
+      "check": "K00 route artifacts",
+      "ok": true,
+      "detail": "10/10 present; missing=[]"
+    },
+    {
+      "check": "phase_controller_index P10 entry",
+      "ok": true,
+      "detail": "found=1"
+    },
+    {
+      "check": "current state P10 accepted with gaps",
+      "ok": true,
+      "detail": "P10_PACKAGE_READY_WITH_RUNTIME_GAPS"
+    },
+    {
+      "check": "execution safety boundaries false",
+      "ok": true,
+      "detail": {
+        "paper_runtime_allowed": false,
+        "real_trade_enabled": false,
+        "auto_order_allowed": false,
+        "tool_binding_allowed": false,
+        "p10_runtime_connection_allowed": false,
+        "wallet_signing_allowed": false,
+        "auto_deploy_allowed": false
+      }
+    },
+    {
+      "check": "existing p10 validation PASS",
+      "ok": true,
+      "detail": {
+        "status": "PASS",
+        "errors": [],
+        "warnings": [],
+        "parsed_count": 45,
+        "system_file_count": 46,
+        "runtime_dir_count": 33,
+        "required_system_files": 46,
+        "required_runtime_dirs": 33,
+        "k00_artifact_count": 10,
+        "safety_boundary_verified": true
+      }
+    }
+  ]
+}

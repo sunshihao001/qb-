@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 execution plan",
+  "type": "object",
+  "required": [
+    "execution_plan_id",
+    "pipeline_run_id",
+    "stages",
+    "skip_rules",
+    "stop_rules",
+    "review_rules",
+    "governance_rules"
+  ],
+  "properties": {
+    "execution_plan_id": {
+      "type": "string"
+    },
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stage_id",
+          "required",
+          "mode",
+          "entry_condition",
+          "exit_condition",
+          "on_failure"
+        ],
+        "properties": {
+          "stage_id": {
+            "enum": [
+              "K00",
+              "F00",
+              "V00",
+              "R00",
+              "A00",
+              "H00",
+              "U00",
+              "G00"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "mode": {
+            "type": "string"
+          },
+          "entry_condition": {
+            "type": "string"
+          },
+          "exit_condition": {
+            "type": "string"
+          },
+          "on_failure": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "skip_rules": {
+      "type": "array"
+    },
+    "stop_rules": {
+      "type": "array"
+    },
+    "review_rules": {
+      "type": "array"
+    },
+    "governance_rules": {
+      "type": "array"
+    }
+  }
+}

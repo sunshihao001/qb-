@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "P00 Handoff Packet Schema",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "source_stage",
+    "target_stage",
+    "handoff_type",
+    "included_assets",
+    "known_gaps",
+    "blocking_gaps",
+    "next_legal_stage",
+    "safety_boundary"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "source_stage": {
+      "type": "string",
+      "const": "P00_system_bootstrap_controller"
+    },
+    "target_stage": {
+      "type": "string"
+    },
+    "handoff_type": {
+      "type": "string",
+      "enum": [
+        "governance_plane_generation",
+        "domain_plane_generation",
+        "data_plane_generation",
+        "control_plane_generation",
+        "phase_controller_stub_registration",
+        "trace_matrix_generation",
+        "acceptance_review",
+        "p01_preflight"
+      ]
+    },
+    "included_assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "asset_id",
+          "file_path",
+          "asset_type",
+          "consumption_status"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string"
+          },
+          "file_path": {
+            "type": "string"
+          },
+          "asset_type": {
+            "type": "string"
+          },
+          "consumption_status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "known_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocking_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "non_blocking_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_legal_stage": {
+      "type": "string"
+    },
+    "p01_runtime_connection_allowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "safety_boundary": {
+      "type": "object",
+      "required": [
+        "paper_only",
+        "real_trade_enabled",
+        "auto_order_allowed"
+      ],
+      "properties": {
+        "paper_only": {
+          "type": "boolean",
+          "const": true
+        },
+        "real_trade_enabled": {
+          "type": "boolean",
+          "const": false
+        },
+        "auto_order_allowed": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    }
+  }
+}

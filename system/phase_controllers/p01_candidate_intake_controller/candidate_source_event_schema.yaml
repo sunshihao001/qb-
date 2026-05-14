@@ -1,0 +1,32 @@
+candidate_source_event:
+  source_event_id: string
+  candidate_id: string
+  event_time: datetime
+  received_at: datetime
+  source:
+    source_type:
+    - GMGN_TRENDING
+    - GMGN_NEW_TOKEN
+    - GMGN_SMART_MONEY
+    - GMGN_KOL_SIGNAL
+    - MANUAL_INPUT
+    - TELEGRAM_COMMAND
+    - LEGACY_RUNTIME
+    - REPLAY_SAMPLE
+    - WATCHLIST_IMPORT
+    - EXTERNAL_CSV_IMPORT
+    - SYSTEM_REDISCOVERY
+    source_id: string
+    source_name: string
+    source_payload_path: string|null
+  raw_input:
+  - raw_token_address
+  - raw_chain
+  - raw_pair_address
+  - raw_pool_address
+  - raw_symbol
+  - raw_note
+  downstream_usage:
+    may_support_candidate_intake: true
+    may_support_evidence: false
+    may_support_strategy: false

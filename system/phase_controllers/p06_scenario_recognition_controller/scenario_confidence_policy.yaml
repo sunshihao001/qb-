@@ -1,0 +1,9 @@
+policy: scenario_confidence_policy
+dimensions:
+- support_pressure
+- counter_pressure
+- conflict_pressure
+- unknown_pressure
+- trace_quality
+- context_fit
+no_single_total_policy: true

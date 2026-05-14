@@ -1,0 +1,18 @@
+schema_id: HER_DOC_RUNTIME_BINDING_REVIEW_SCHEMA
+version: 1
+required_fields:
+  - binding_id
+  - controller_id
+  - runner_path
+  - callable_by
+  - allowed_execution_mode
+  - forbidden_execution_mode
+  - proof_command
+  - proof_output_path
+  - proof_status
+  - blocker
+field_enums:
+  callable_by: [P00, R00, I01, I02, I03, I04, I05, CPO, P09, P10]
+  allowed_execution_mode: [STATIC_ONLY, IMPORT_CHECK, DRY_RUN, PAPER_ONLY, REPLAY_ONLY]
+  forbidden_execution_mode: [REAL_TRADE, SIGNING, BROADCAST, AUTO_ORDER, AUTO_DEPLOY, PRIVATE_KEY_ACCESS]
+  proof_status: [PASS, PASS_WITH_GAPS, FAIL, NOT_RUN, BLOCKED]

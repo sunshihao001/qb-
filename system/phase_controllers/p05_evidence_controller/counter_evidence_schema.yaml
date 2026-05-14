@@ -1,0 +1,26 @@
+controller_id: P05_EVIDENCE_CONTROLLER
+version: v3.0-professional
+status: PACKAGE_SPEC_READY_WITH_RUNTIME_GAPS
+created_at: '2026-05-12T02:44:17Z'
+paper_only: true
+real_trade_enabled: false
+runtime_allowed: false
+paper_runtime_allowed: false
+live_execution_allowed: false
+schema_id: COUNTER_EVIDENCE_SCHEMA
+counter_categories:
+- EARLY_WALLET_EXIT_COUNTER
+- STRUCTURAL_GROUP_EXIT_COUNTER
+- ACTIVE_DISTRIBUTION_COUNTER
+- UNKNOWN_TRANSFER_COUNTER
+- HIGH_COUNTERPARTY_PRESSURE_COUNTER
+- COST_BASIS_UNUSABLE_COUNTER
+- STALE_DATA_COUNTER
+- SECURITY_RISK_COUNTER
+required:
+- counter_evidence_id
+- evidence_id
+- counters_hypothesis
+- counter_basis
+- counter_strength
+- downstream_effect

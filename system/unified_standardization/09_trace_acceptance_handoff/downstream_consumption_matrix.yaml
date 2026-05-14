@@ -1,0 +1,25 @@
+meta:
+  standard_id: S00_DOWNSTREAM_CONSUMPTION_MATRIX
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+consumption:
+- producer: P01
+  consumer: P02/P08
+  artifact: data_fact_handoff_packet
+- producer: P07
+  consumer: P08
+  artifact: strategy_gate_decision
+- producer: P08
+  consumer: paper runner/P09
+  artifact: permission_gate_result
+- producer: P09
+  consumer: P10
+  artifact: review_case

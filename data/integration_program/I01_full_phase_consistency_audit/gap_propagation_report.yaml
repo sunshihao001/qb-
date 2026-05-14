@@ -1,0 +1,70 @@
+record_id: gap_propagation_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+gap_classes:
+- BLOCKING_GAP
+- CRITICAL_GAP
+- HIGH_GAP
+- MEDIUM_GAP
+- LOW_GAP
+propagation_checks:
+- source_phase: P01
+  downstream_phase: P02
+  inherited_gap_tags_preserved: NEEDS_RUNTIME_VERIFICATION
+  weak_use_only_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  do_not_use_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  gap_downgrade_without_reason: false
+- source_phase: P02
+  downstream_phase: P03
+  inherited_gap_tags_preserved: NEEDS_RUNTIME_VERIFICATION
+  weak_use_only_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  do_not_use_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  gap_downgrade_without_reason: false
+- source_phase: P03
+  downstream_phase: P04
+  inherited_gap_tags_preserved: NEEDS_RUNTIME_VERIFICATION
+  weak_use_only_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  do_not_use_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  gap_downgrade_without_reason: false
+- source_phase: P04
+  downstream_phase: P05
+  inherited_gap_tags_preserved: NEEDS_RUNTIME_VERIFICATION
+  weak_use_only_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  do_not_use_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  gap_downgrade_without_reason: false
+- source_phase: P05
+  downstream_phase: P06
+  inherited_gap_tags_preserved: NEEDS_RUNTIME_VERIFICATION
+  weak_use_only_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  do_not_use_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  gap_downgrade_without_reason: false
+- source_phase: P06
+  downstream_phase: P07
+  inherited_gap_tags_preserved: NEEDS_RUNTIME_VERIFICATION
+  weak_use_only_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  do_not_use_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  gap_downgrade_without_reason: false
+- source_phase: P07
+  downstream_phase: P08
+  inherited_gap_tags_preserved: NEEDS_RUNTIME_VERIFICATION
+  weak_use_only_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  do_not_use_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  gap_downgrade_without_reason: false
+- source_phase: P08
+  downstream_phase: PAPER_ONLY_RUNTIME
+  inherited_gap_tags_preserved: NEEDS_RUNTIME_VERIFICATION
+  weak_use_only_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  do_not_use_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  gap_downgrade_without_reason: false
+- source_phase: PAPER_ONLY_RUNTIME
+  downstream_phase: P09
+  inherited_gap_tags_preserved: NEEDS_RUNTIME_VERIFICATION
+  weak_use_only_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  do_not_use_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  gap_downgrade_without_reason: false
+- source_phase: P09
+  downstream_phase: P10
+  inherited_gap_tags_preserved: NEEDS_RUNTIME_VERIFICATION
+  weak_use_only_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  do_not_use_fields_preserved: NEEDS_RUNTIME_VERIFICATION
+  gap_downgrade_without_reason: false
+violations: []

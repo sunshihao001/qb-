@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V00 Output Contract",
+  "type": "object",
+  "required": [
+    "phase_id",
+    "run_id",
+    "required_outputs"
+  ],
+  "properties": {
+    "phase_id": {
+      "const": "V00"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "required_outputs": {
+      "type": "object",
+      "required": [
+        "preflight_result",
+        "schema_validation_result",
+        "contract_validation_result",
+        "field_model_validation_result",
+        "rule_logic_test_result",
+        "function_mapping_validation_result",
+        "test_evidence",
+        "replay_evidence",
+        "failure_evidence",
+        "gap_report",
+        "trace_log",
+        "audit_log",
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ],
+      "properties": {
+        "preflight_result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schema_validation_result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contract_validation_result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "field_model_validation_result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rule_logic_test_result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "function_mapping_validation_result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "test_evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "replay_evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "failure_evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "gap_report": {
+          "type": "string",
+          "minLength": 1
+        },
+        "trace_log": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audit_log": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptance_result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "handoff_packet": {
+          "type": "string",
+          "minLength": 1
+        },
+        "final_report": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "final_status": {
+      "enum": [
+        "V00_ACCEPTED",
+        "V00_READY_WITH_GAPS",
+        "V00_BLOCKED",
+        "V00_REJECTED"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "x_rule": "Output paths are evidence references only; planned tests/replays cannot populate TESTED or REPLAY_TESTED statuses without command output and trace."
+}

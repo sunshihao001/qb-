@@ -1,0 +1,38 @@
+schema_id: P10_UPGRADE_CANDIDATE_DATA_REQUEST_PACKET_CONTRACT
+title: P10 Upgrade Candidate Data Request Packet
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- packet_id
+- from_controller
+- to_controller
+- upgrade_candidate_records_path
+- review_case_records_path
+- evidence_required_by_p10
+- limitations
+fields:
+  packet_id: string
+  from_controller: P09_REVIEW_REPLAY_CONTROLLER
+  to_controller: P10_SELF_UPGRADE_CONTROLLER
+  upgrade_candidate_records_path: string
+  review_case_records_path: string
+  evidence_required_by_p10: list
+  limitations: list
+enums: {}
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

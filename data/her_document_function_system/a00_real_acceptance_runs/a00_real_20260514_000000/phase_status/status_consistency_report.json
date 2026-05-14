@@ -1,0 +1,15 @@
+{
+  "status_consistency": "PASSED",
+  "blocked_false_claims": [
+    "TEST_PLAN_AS_TESTED",
+    "REPLAY_PLAN_AS_REPLAY_TESTED",
+    "BINDING_PLAN_AS_RUNNER_BOUND",
+    "DRY_RUN_AS_LIVE_RUNTIME",
+    "GOVERNANCE_CANDIDATE_AS_POLICY_ACTIVE",
+    "READY_WITH_GAPS_AS_READY",
+    "DESIGN_ONLY_AS_IMPLEMENTED"
+  ],
+  "inconsistencies": [],
+  "downgraded_statuses": [],
+  "required_corrections": []
+}

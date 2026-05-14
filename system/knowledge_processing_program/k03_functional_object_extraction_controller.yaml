@@ -1,0 +1,24 @@
+phase_id: K03
+phase_name: "Functional Object Extraction"
+program: KNOWLEDGE_PROCESSING_PROGRAM
+status: CONTROLLER_CANDIDATE_READY
+purpose: "convert explanations into functional candidates"
+required_inputs:
+  - upstream_handoff_or_raw_document
+required_outputs:
+  - functional_object_registry.yaml
+  - control_rule_candidate_registry.yaml
+  - field_candidate_registry.yaml
+  - schema_candidate_registry.yaml
+  - contract_candidate_registry.yaml
+  - acceptance_candidate_registry.yaml
+  - tool_binding_candidate_registry.yaml
+acceptance:
+  - outputs_exist
+  - source_trace_present
+  - io_contract_declared
+  - handoff_declared
+forbidden:
+  - production_mutation_without_governance
+  - summary_only_completion
+  - untraced_claims

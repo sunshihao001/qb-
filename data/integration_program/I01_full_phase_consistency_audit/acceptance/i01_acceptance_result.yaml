@@ -1,0 +1,32 @@
+acceptance_id: i01_acceptance_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+status: I01_READY_WITH_GAPS
+permission_to_enter_i02: ALLOWED_WITH_GAPS
+checks:
+  phase_inventory_built: true
+  responsibility_boundary_audited: true
+  io_alignment_audited: true
+  handoff_chain_audited: true
+  data_request_chain_audited: true
+  schema_contract_coverage_audited: true
+  status_code_consistency_audited: true
+  gap_propagation_audited: true
+  forbidden_use_inheritance_audited: true
+  trace_coverage_audited: true
+  acceptance_coverage_audited: true
+  runtime_readiness_checked: true
+  review_upgrade_readiness_checked: true
+  findings_created: true
+  fix_priority_created: true
+  i01_to_i02_handoff_created: true
+  live_execution_path_detected: false
+restrictions_preserved:
+- I01_AUDIT_ONLY
+- NO_P11
+- NO_BUSINESS_LOGIC_CHANGE
+- NO_RUNNER_BINDING_YET
+- NO_TOOL_BINDING_YET
+- NO_PAPER_RUNTIME
+- NO_LIVE_EXECUTION
+- NO_WALLET_SIGNING
+- NO_AUTO_DEPLOY

@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "schema_name": "source_registry_schema",
+  "description_zh": "Source Registry schema，用于登记数据源名称、等级、端点、时间、原始响应路径、状态、fallback 与数据质量备注。",
+  "fields": [
+    {
+      "name": "source_name",
+      "type": "string",
+      "required": true,
+      "description_zh": "数据源名称"
+    },
+    {
+      "name": "source_level",
+      "type": "string",
+      "required": true,
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "description_zh": "数据源等级"
+    },
+    {
+      "name": "source_endpoint",
+      "type": "string",
+      "required": true,
+      "description_zh": "来源接口或端点"
+    },
+    {
+      "name": "request_started_at",
+      "type": "string",
+      "required": true,
+      "description_zh": "请求开始时间，ISO 8601 UTC"
+    },
+    {
+      "name": "response_received_at",
+      "type": "string",
+      "required": true,
+      "description_zh": "响应接收时间，ISO 8601 UTC"
+    },
+    {
+      "name": "provider_timestamp",
+      "type": "string|null",
+      "required": false,
+      "description_zh": "提供方返回的时间戳，如有则保留"
+    },
+    {
+      "name": "raw_response_path",
+      "type": "string",
+      "required": true,
+      "description_zh": "原始响应保存路径"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": true,
+      "enum": [
+        "success",
+        "partial",
+        "failed",
+        "skipped",
+        "missing",
+        "parse_error"
+      ],
+      "description_zh": "调用状态"
+    },
+    {
+      "name": "error",
+      "type": "string|null",
+      "required": false,
+      "description_zh": "错误信息"
+    },
+    {
+      "name": "fallback_allowed",
+      "type": "boolean",
+      "required": true,
+      "description_zh": "是否允许 fallback"
+    },
+    {
+      "name": "fallback_used",
+      "type": "boolean",
+      "required": true,
+      "description_zh": "是否实际使用 fallback"
+    },
+    {
+      "name": "fallback_source",
+      "type": "string|null",
+      "required": false,
+      "description_zh": "fallback 来源"
+    },
+    {
+      "name": "data_quality_note",
+      "type": "string",
+      "required": false,
+      "description_zh": "数据质量备注"
+    }
+  ],
+  "source_levels": {
+    "L0": "链上原始事件",
+    "L1": "GMGN / OKX / 钱包接口返回",
+    "L2": "SIKK normalized 标准产物",
+    "L3": "旧系统压缩包 / 历史 summary",
+    "L4": "dashboard / paper / report / case file"
+  },
+  "forbidden_reverse_inference": [
+    "dashboard 不能反推 discovered_at",
+    "paper entry_time 不能反推 token_open_time",
+    "report 不能反推 quote_time",
+    "case file 不能反推 wallet_snapshot_time",
+    "旧 state_machine 不能进入新状态机",
+    "旧 paper/report 结果不能覆盖实时数据"
+  ],
+  "time_rules": [
+    "request_started_at <= response_received_at",
+    "provider_timestamp 仅在提供方返回时填写",
+    "source_time / retrieved_at / normalized_at 仍在 normalized 层独立保留，不可由展示层替代"
+  ]
+}

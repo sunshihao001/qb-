@@ -1,0 +1,26 @@
+{
+  "acceptance_id": "h00_real_queue_acceptance_h00_real_20260514_001821",
+  "final_status": "H00_REAL_DOWNSTREAM_QUEUE_READY_WITH_GAPS",
+  "queue_status": "QUEUE_READY_WITH_GAPS",
+  "reason": "A00 evidence loaded and downstream queue/handoff packets generated, but downstream targets have not consumed or completed queue items.",
+  "ready_for_u00": true,
+  "ready_for_g00": true,
+  "ready_for_pxx": false,
+  "ready_for_production": false,
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "downstream_items_not_executed",
+    "policy_not_active",
+    "paper_runtime_not_enabled",
+    "live_runtime_forbidden",
+    "telegram_binding_design_only",
+    "V00_READY_WITH_GAPS",
+    "R00_READY_WITH_GAPS"
+  ],
+  "forbidden_claims_blocked": [
+    "DOWNSTREAM_EXECUTED",
+    "QUEUE_COMPLETED",
+    "POLICY_ACTIVE",
+    "PRODUCTION_READY"
+  ]
+}

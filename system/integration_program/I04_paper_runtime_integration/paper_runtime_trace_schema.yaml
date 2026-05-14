@@ -1,0 +1,17 @@
+record_type: paper_runtime_trace_record
+required_fields:
+- trace_id
+- source_packet_ids
+- permission_gate_ids
+- position_ids
+- trade_ids
+- exit_event_ids
+- handoff_ids
+required_safety:
+  paper_only: true
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+validation:
+- all required fields present
+- trace_id present
+- no live execution artifact

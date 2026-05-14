@@ -1,0 +1,34 @@
+report_id: p10_self_upgrade_report_model
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+summary_fields:
+- candidate_count_received
+- candidate_count_reviewed
+- approved_package_count
+- rejected_count
+- blocked_count
+- manual_review_count
+sections:
+- input_manifest
+- candidate_review
+- sample_support
+- classification
+- impact_assessment
+- overfit_risk
+- compatibility
+- proposals
+- upgrade_decisions
+- regression_plan
+- release_rollback_plan
+- approval_requirements
+- controlled_package
+- task_packet
+- handoff
+- gaps
+- compliance
+compliance:
+  direct_rule_mutation: false
+  auto_deploy: false
+  paper_runtime_started: false
+  live_execution_path_detected: false
+  wallet_signing_requested: false

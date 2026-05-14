@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "required": [
+    "failure_evidence_id",
+    "validation_run_id",
+    "failures"
+  ],
+  "properties": {
+    "failures": {
+      "type": "array"
+    }
+  }
+}

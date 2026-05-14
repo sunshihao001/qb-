@@ -1,0 +1,16 @@
+source_doc_id: DOC-20260511-016
+acceptance_gate:
+- domain_object_registry.yaml 存在
+- domain_relation_graph.yaml 存在
+- domain_decision_question_tree.yaml 存在
+- scenario_taxonomy.yaml 存在
+- wallet_role_taxonomy.yaml 存在
+- dominant_side_lifecycle_taxonomy.yaml 存在
+- domain_to_data_demand_map.yaml 存在
+blocking_conditions:
+- 没有领域对象注册表
+- 没有领域到数据需求映射
+- 场景分类没有反证规则
+- 钱包角色没有证据要求
+paper_only_required: true
+real_trade_allowed: false

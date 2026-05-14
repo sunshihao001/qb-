@@ -1,0 +1,33 @@
+packet_type: P06_TO_P07_SCENARIO_RECOGNITION_HANDOFF
+route:
+  from_controller: P06_SCENARIO_RECOGNITION_CONTROLLER
+  to_controller: P07_STRATEGY_GATE_CONTROLLER
+scenario_package:
+- scenario_input_manifest_path
+- scenario_taxonomy_path
+- scenario_feature_map_records_path
+- scenario_candidate_records_path
+- primary_scenario_candidate_records_path
+- secondary_scenario_candidate_records_path
+- scenario_rejection_records_path
+- scenario_conflict_records_path
+- scenario_unknown_records_path
+- scenario_confidence_records_path
+- scenario_transition_records_path
+- scenario_context_interpretation_records_path
+- scenario_invalidation_records_path
+- scenario_watch_condition_records_path
+- scenario_risk_flag_records_path
+- scenario_usage_permission_records_path
+limitations:
+- SCENARIO_RECOGNITION_ONLY
+- NO_STRATEGY_DECISION
+- NO_DIRECT_PAPER_READY
+- NO_RUNTIME
+- LIVE_EXECUTION_FORBIDDEN
+downstream_permission:
+  allowed:
+  - P07_STRATEGY_GATE_CONTROLLER
+  forbidden:
+  - PAPER_ONLY_RUNTIME
+  - LIVE_EXECUTION

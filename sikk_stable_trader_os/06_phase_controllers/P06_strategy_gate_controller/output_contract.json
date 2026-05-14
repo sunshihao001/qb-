@@ -1,0 +1,12 @@
+{
+  "contract_id": "P06_strategy_gate_controller_OUTPUT_CONTRACT_STUB",
+  "stage": "P06_strategy_gate_controller",
+  "status": "STUB_CREATED_BY_P00",
+  "required_outputs": [],
+  "forbidden_outputs": [
+    "real_trade_order",
+    "signed_transaction",
+    "broadcast_transaction"
+  ],
+  "paper_only": true
+}

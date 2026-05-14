@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "version",
+    "paper_only",
+    "real_trade_enabled"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "source_doc_id": {
+      "type": "string"
+    },
+    "paper_only": {
+      "type": "boolean"
+    },
+    "real_trade_enabled": {
+      "type": "boolean"
+    }
+  }
+}

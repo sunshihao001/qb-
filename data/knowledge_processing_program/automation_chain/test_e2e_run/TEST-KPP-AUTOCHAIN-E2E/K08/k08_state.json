@@ -1,0 +1,18 @@
+{
+  "stage_id": "K08",
+  "run_id": "TEST-KPP-AUTOCHAIN-E2E",
+  "status": "K08_ACCEPTED",
+  "started_at": "2026-05-13T06:37:07Z",
+  "ended_at": "2026-05-13T06:37:07Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K08/knowledge_memory_index.json",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K08/governance_queue_entry.json",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K08/telegram_status_panel.json",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K08/final_run_summary.md",
+    "data/knowledge_processing_program/automation_chain/test_e2e_run/TEST-KPP-AUTOCHAIN-E2E/K08/k08_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

@@ -1,0 +1,27 @@
+{
+  "pipeline_run_id": "o00_run_20260514_003618_612058",
+  "stage_plan": [
+    "K00",
+    "F00",
+    "V00",
+    "R00",
+    "A00",
+    "H00",
+    "U00",
+    "G00"
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ],
+  "false_claims_blocked": [
+    "TESTED",
+    "RUNNER_BOUND",
+    "POLICY_ACTIVE",
+    "PIPELINE_ACCEPTED",
+    "SYSTEM_FULLY_IMPLEMENTED"
+  ]
+}

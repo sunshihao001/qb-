@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0202
+source_path: docs/templates/source_wallet_bot_token_directory_template.md
+phase_scores:
+  P01: 1
+  P02: 2
+  P03: 26
+  P04: 1
+  P05: 2
+  P06: 0
+  P07: 0
+  P08: 0
+  P09: 0
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

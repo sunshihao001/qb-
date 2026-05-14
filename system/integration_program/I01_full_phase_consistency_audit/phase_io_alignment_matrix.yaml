@@ -1,0 +1,11 @@
+phase_io_alignment_matrix:
+  status: PENDING_EXECUTION
+  scope: P01-P10
+  rows: []
+  required_columns:
+    - phase_id
+    - input_contract
+    - output_contract
+    - downstream_reader
+    - missing_fields
+    - incompatible_fields

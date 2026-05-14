@@ -1,0 +1,101 @@
+{
+  "upgrade_candidates": [
+    {
+      "upgrade_candidate_id": "uc_u00_real_001",
+      "upgrade_type": "TEST_UPGRADE",
+      "target_controller": "V00",
+      "target_asset": "v00_controller_or_runtime_assets",
+      "problem_statement": "sample replay does not execute real tests -> MISSING_TEST_EXECUTION_EVIDENCE",
+      "proposed_change": "Create or improve test_upgrade evidence/control for V00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": false,
+      "handoff_target": "V00",
+      "source_root_cause_id": "rca_review_case_gap_sample_001_v00_test_not_executed"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_002",
+      "upgrade_type": "GOVERNANCE_UPGRADE",
+      "target_controller": "G00",
+      "target_asset": "g00_controller_or_runtime_assets",
+      "problem_statement": "governance output is candidate only -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "proposed_change": "Create or improve governance_upgrade evidence/control for G00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": true,
+      "handoff_target": "G00",
+      "source_root_cause_id": "rca_review_case_gap_sample_001_g00_policy_not_active"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_003",
+      "upgrade_type": "RUNNER_BINDING_UPGRADE",
+      "target_controller": "R00",
+      "target_asset": "r00_controller_or_runtime_assets",
+      "problem_statement": "runner binding skipped in sample replay -> RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "proposed_change": "Create or improve runner_binding_upgrade evidence/control for R00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/pipeline_gap_register.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": false,
+      "handoff_target": "R00",
+      "source_root_cause_id": "rca_review_case_gap_sample_001_r00_not_required"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_004",
+      "upgrade_type": "TEST_UPGRADE",
+      "target_controller": "V00",
+      "target_asset": "v00_controller_or_runtime_assets",
+      "problem_statement": "sample replay does not execute real tests -> MISSING_TEST_EXECUTION_EVIDENCE",
+      "proposed_change": "Create or improve test_upgrade evidence/control for V00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": false,
+      "handoff_target": "V00",
+      "source_root_cause_id": "rca_review_case_gap_sample_001_v00_test_not_executed"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_005",
+      "upgrade_type": "GOVERNANCE_UPGRADE",
+      "target_controller": "G00",
+      "target_asset": "g00_controller_or_runtime_assets",
+      "problem_statement": "governance output is candidate only -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "proposed_change": "Create or improve governance_upgrade evidence/control for G00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": true,
+      "handoff_target": "G00",
+      "source_root_cause_id": "rca_review_case_gap_sample_001_g00_policy_not_active"
+    },
+    {
+      "upgrade_candidate_id": "uc_u00_real_006",
+      "upgrade_type": "RUNNER_BINDING_UPGRADE",
+      "target_controller": "R00",
+      "target_asset": "r00_controller_or_runtime_assets",
+      "problem_statement": "runner binding skipped in sample replay -> RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "proposed_change": "Create or improve runner_binding_upgrade evidence/control for R00; keep existing gap until verified by downstream acceptance.",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_run_20260514_005235_104185/gaps/unresolved_gaps.json"
+      ],
+      "expected_impact": "Moves recurring READY_WITH_GAPS item toward executable, auditable evidence without bypassing safe-mode boundaries.",
+      "priority": "P1_HIGH",
+      "requires_governance": false,
+      "handoff_target": "R00",
+      "source_root_cause_id": "rca_review_case_gap_sample_001_r00_not_required"
+    }
+  ],
+  "total_candidates": 6
+}

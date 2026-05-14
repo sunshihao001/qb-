@@ -1,0 +1,90 @@
+{
+  "summary": {
+    "bootstrap_control_plane": {
+      "required": 6,
+      "exists": 6,
+      "missing": [],
+      "all_exist": true
+    },
+    "governance_plane": {
+      "required": 7,
+      "exists": 7,
+      "missing": [],
+      "all_exist": true
+    },
+    "domain_plane": {
+      "required": 10,
+      "exists": 10,
+      "missing": [],
+      "all_exist": true
+    },
+    "data_plane": {
+      "required": 9,
+      "exists": 9,
+      "missing": [],
+      "all_exist": true
+    },
+    "full_control_plane": {
+      "required": 6,
+      "exists": 2,
+      "missing": [
+        "00_control/runner_status_index.json",
+        "00_control/phase_output_index.json",
+        "00_control/handoff_consumption_status.json",
+        "00_control/data_plane_acceptance_status.json"
+      ],
+      "all_exist": false
+    },
+    "trace_plane": {
+      "required": 7,
+      "exists": 6,
+      "missing": [
+        "00_trace/runner_execution_trace.yaml"
+      ],
+      "all_exist": false
+    },
+    "acceptance_plane": {
+      "required": 5,
+      "exists": 1,
+      "missing": [
+        "08_acceptance/phase_acceptance_gate_index.yaml",
+        "08_acceptance/semantic_acceptance_rules.yaml",
+        "08_acceptance/consumption_acceptance_rules.yaml",
+        "08_acceptance/runtime_acceptance_rules.yaml"
+      ],
+      "all_exist": false
+    },
+    "handoff_plane": {
+      "required": 8,
+      "exists": 1,
+      "missing": [
+        "09_handoff/handoff_packet.schema.json",
+        "09_handoff/k00_to_p00",
+        "09_handoff/p00_to_governance",
+        "09_handoff/p00_to_domain",
+        "09_handoff/p00_to_data",
+        "09_handoff/data_to_p01",
+        "09_handoff/p01_to_p02_p03_p04"
+      ],
+      "all_exist": false
+    },
+    "p00_controller": {
+      "required": 9,
+      "exists": 9,
+      "missing": [],
+      "all_exist": true
+    }
+  },
+  "parse_errors": [],
+  "checks": {
+    "bootstrap_control_plane_exists": true,
+    "p00_status": "BOOTSTRAP_PASSED",
+    "current_authoritative_stage": "P00_system_bootstrap_controller",
+    "p01_status": null,
+    "p01_runtime_connection_allowed_false": true,
+    "paper_only_true": true,
+    "real_trade_enabled_false": true,
+    "next_legal_stage": "DATA_PLANE_ACCEPTANCE_REVIEW"
+  },
+  "overall_parse_ok": true
+}

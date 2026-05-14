@@ -1,0 +1,74 @@
+{
+  "doc_id": "doc_her_doc_full_gap_scan_run",
+  "raw_path": "input/raw_document.md",
+  "sections": [
+    {
+      "section_id": "sec_001",
+      "level": 1,
+      "title": "HER_DOC Full Trading System Gap Scan — 总目标 / 阶段目标准备工作扫描",
+      "char_offset": 0
+    },
+    {
+      "section_id": "sec_002",
+      "level": 2,
+      "title": "用户目标",
+      "char_offset": 336
+    },
+    {
+      "section_id": "sec_003",
+      "level": 2,
+      "title": "总目标定义",
+      "char_offset": 524
+    },
+    {
+      "section_id": "sec_004",
+      "level": 2,
+      "title": "扫描对象",
+      "char_offset": 749
+    },
+    {
+      "section_id": "sec_005",
+      "level": 3,
+      "title": "系统层",
+      "char_offset": 758
+    },
+    {
+      "section_id": "sec_006",
+      "level": 3,
+      "title": "业务阶段",
+      "char_offset": 1024
+    },
+    {
+      "section_id": "sec_007",
+      "level": 3,
+      "title": "当前 runtime 流程",
+      "char_offset": 1324
+    },
+    {
+      "section_id": "sec_008",
+      "level": 2,
+      "title": "必须输出的扫描结论",
+      "char_offset": 1595
+    },
+    {
+      "section_id": "sec_009",
+      "level": 2,
+      "title": "不允许的结论",
+      "char_offset": 1953
+    },
+    {
+      "section_id": "sec_010",
+      "level": 2,
+      "title": "预期最终产物",
+      "char_offset": 2094
+    }
+  ],
+  "key_points": [
+    "mode: HER_DOC safe-mode audit/gap mode",
+    "K00 知识摄取 / KV cache",
+    "## 必须输出的扫描结论",
+    "每个系统层和业务阶段都必须输出：",
+    "不允许把 READY_WITH_GAPS 说成 ACCEPTED"
+  ],
+  "status": "CORPUS_INDEX_READY_WITH_GAPS"
+}

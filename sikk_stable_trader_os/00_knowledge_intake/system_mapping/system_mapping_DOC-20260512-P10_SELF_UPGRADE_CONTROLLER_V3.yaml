@@ -1,0 +1,21 @@
+doc_id: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+maps_to: system/phase_controllers/p10_self_upgrade_controller
+runtime_data_tree: data/phase_controllers/p10_self_upgrade
+required_system_files_count: 45
+required_runtime_dirs_count: 32
+system_layers:
+- phase_controller
+- contract
+- schema
+- policy
+- state_machine
+- trace
+- acceptance
+- handoff
+forbidden_routes:
+- DIRECT_RULE_MUTATION
+- AUTO_DEPLOY
+- PAPER_RUNTIME
+- LIVE_EXECUTION
+- WALLET_SIGNING
+status: MAPPED_TO_P10

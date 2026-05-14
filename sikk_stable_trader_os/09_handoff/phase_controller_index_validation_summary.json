@@ -1,0 +1,41 @@
+{
+  "validated_at": "2026-05-11T17:54:24Z",
+  "status": "PHASE_CONTROLLER_INDEX_READY_WITH_GAPS",
+  "required_file_count": 8,
+  "missing": [],
+  "empty": [],
+  "yaml_errors": [],
+  "json_errors": [],
+  "phase_count": 10,
+  "phase_ids": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10"
+  ],
+  "coverage_missing": [],
+  "anchor_fail": [],
+  "safety_fail": [],
+  "blocking_failures": [],
+  "non_blocking_gaps": [
+    "P01-P10 full controller packages not expanded yet",
+    "per-controller JSON Schemas are registered by contract name but not generated",
+    "tool binding is declaration-only; global tool binding runtime remains blocked",
+    "paper runtime is declaration-only; global paper runtime remains blocked",
+    "standalone validator script not yet installed"
+  ],
+  "current_authoritative_stage": "P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN",
+  "next_legal_stage": "P01_P10_CONTROLLER_PACKAGE_EXPANSION",
+  "p01_runtime_connection_allowed": false,
+  "tool_binding_allowed": false,
+  "paper_runtime_allowed": false,
+  "live_runtime_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false
+}

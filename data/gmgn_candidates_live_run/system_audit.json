@@ -1,23 +1,23 @@
 {
-  "audit_time": "2026-05-03T08:34:51Z",
-  "live_run_dir": "data/gmgn_candidates_live_run",
+  "audit_time": "2026-05-14T05:36:03Z",
+  "live_run_dir": "/root/sikk-gmgn/data/gmgn_candidates_live_run",
   "paper_only": true,
   "readonly_note": "只读系统审计；不采集、不交易、不调用 gmgn_swap/gmgn_cooking、不广播、不 yolo。",
   "input_paths": {
-    "candidates": "data/gmgn_candidates_live_run/candidate_pool/token_candidates.json",
-    "kline": "data/gmgn_candidates_live_run/kline/candidate_kline_pipeline_summary.json",
-    "signals": "data/gmgn_candidates_live_run/signals/candidate_signal_summary.json",
-    "quote_security": "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json",
-    "state_machine": "data/gmgn_candidates_live_run/state_machine/candidate_states.json",
-    "wallet_structure": "data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json",
-    "live_state": "data/gmgn_candidates_live_run/live_state.json",
-    "dashboard_html": "data/gmgn_candidates_live_run/live_dashboard.html",
-    "paper_open": "data/gmgn_candidates_live_run/paper_live/paper_positions_open.json",
-    "paper_closed": "data/gmgn_candidates_live_run/paper_live/paper_positions_closed.json",
-    "paper_metrics": "data/gmgn_candidates_live_run/paper_live/strategy_metrics.json",
-    "failure_attribution": "data/gmgn_candidates_live_run/paper_live/failure_attribution.jsonl"
+    "candidates": "/root/sikk-gmgn/data/gmgn_candidates_live_run/candidate_pool/token_candidates.json",
+    "kline": "/root/sikk-gmgn/data/gmgn_candidates_live_run/kline/candidate_kline_pipeline_summary.json",
+    "signals": "/root/sikk-gmgn/data/gmgn_candidates_live_run/signals/candidate_signal_summary.json",
+    "quote_security": "/root/sikk-gmgn/data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json",
+    "state_machine": "/root/sikk-gmgn/data/gmgn_candidates_live_run/state_machine/candidate_states.json",
+    "wallet_structure": "/root/sikk-gmgn/data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json",
+    "live_state": "/root/sikk-gmgn/data/gmgn_candidates_live_run/live_state.json",
+    "dashboard_html": "/root/sikk-gmgn/data/gmgn_candidates_live_run/live_dashboard.html",
+    "paper_open": "/root/sikk-gmgn/data/gmgn_candidates_live_run/paper_live/paper_positions_open.json",
+    "paper_closed": "/root/sikk-gmgn/data/gmgn_candidates_live_run/paper_live/paper_positions_closed.json",
+    "paper_metrics": "/root/sikk-gmgn/data/gmgn_candidates_live_run/paper_live/strategy_metrics.json",
+    "failure_attribution": "/root/sikk-gmgn/data/gmgn_candidates_live_run/paper_live/failure_attribution.jsonl"
   },
-  "candidate_count": 50,
+  "candidate_count": 5,
   "module_counts": {
     "candidates": {
       "success": 0,
@@ -35,671 +35,142 @@
       "skipped": 0
     },
     "quote_security": {
-      "success": 5,
+      "success": 1,
       "failed": 0,
       "skipped": 0
     },
     "state_machine": {
-      "success": 50,
-      "failed": 0,
+      "success": 3,
+      "failed": 2,
       "skipped": 0
     },
     "wallet_structure": {
-      "success": 5,
+      "success": 0,
       "failed": 0,
       "skipped": 0
     },
     "paper_runner": {
-      "读取候选数": 50,
-      "新增纸面入场数": 2,
-      "纸面退出数": 3,
+      "读取候选数": 5,
+      "新增纸面入场数": 1,
+      "纸面退出数": 1,
       "阻断候选数": 0,
       "重复持仓跳过数": 0,
-      "当前开放仓位数": 3,
-      "累计关闭仓位数": 157,
-      "已关闭胜率_pct": 31.8471,
-      "已关闭平均收益率_pct": 6.9856
+      "当前开放仓位数": 5,
+      "累计关闭仓位数": 201,
+      "已关闭胜率_pct": 28.3582,
+      "已关闭平均收益率_pct": 1.5444
     }
   },
   "missing_files": [
-    "data/gmgn_candidates_live_run/candidate_pool/token_candidates.json",
-    "data/gmgn_candidates_live_run/kline/candidate_kline_pipeline_summary.json",
-    "data/gmgn_candidates_live_run/signals/candidate_signal_summary.json"
+    "/root/sikk-gmgn/data/gmgn_candidates_live_run/candidate_pool/token_candidates.json",
+    "/root/sikk-gmgn/data/gmgn_candidates_live_run/kline/candidate_kline_pipeline_summary.json",
+    "/root/sikk-gmgn/data/gmgn_candidates_live_run/signals/candidate_signal_summary.json",
+    "/root/sikk-gmgn/data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json"
   ],
-  "missing_fields": [
-    {
-      "scope": "wallet_structure",
-      "token": "ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1",
-      "missing_fields": [
-        "token_address",
-        "wallet_gate_result",
-        "paper_gate_effect",
-        "reason_codes",
-        "data_quality_status"
-      ]
-    },
-    {
-      "scope": "wallet_structure",
-      "token": "7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump",
-      "missing_fields": [
-        "token_address",
-        "wallet_gate_result",
-        "paper_gate_effect",
-        "reason_codes",
-        "data_quality_status"
-      ]
-    },
-    {
-      "scope": "wallet_structure",
-      "token": "LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA",
-      "missing_fields": [
-        "token_address",
-        "wallet_gate_result",
-        "paper_gate_effect",
-        "reason_codes",
-        "data_quality_status"
-      ]
-    },
-    {
-      "scope": "wallet_structure",
-      "token": "6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump",
-      "missing_fields": [
-        "token_address",
-        "wallet_gate_result",
-        "paper_gate_effect",
-        "reason_codes",
-        "data_quality_status"
-      ]
-    },
-    {
-      "scope": "wallet_structure",
-      "token": "3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump",
-      "missing_fields": [
-        "token_address",
-        "wallet_gate_result",
-        "paper_gate_effect",
-        "reason_codes",
-        "data_quality_status"
-      ]
-    }
-  ],
+  "missing_fields": [],
   "stuck_tokens": [
     {
-      "token": "4y874got9bZ2sR42qHYdnfoL6UcdfMaa1SjcP7Ucpump",
-      "symbol": "NORMIE",
+      "token": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+      "symbol": "TROLLIEN",
+      "state": "PAPER_READY",
+      "reason": "吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0"
+    },
+    {
+      "token": "7CR3CBpivSMzBEet3cvUckjeSLdbCKaxRB1yNNm6pump",
+      "symbol": "trolls",
       "state": "WATCHING",
       "reason": "SIKK 信号仍为观察/预备层"
     },
     {
-      "token": "ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1",
-      "symbol": "AALIEN",
-      "state": "PAPER_READY",
-      "reason": "吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0"
-    },
-    {
-      "token": "7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump",
-      "symbol": "WOLVERINE",
-      "state": "PAPER_READY",
-      "reason": "吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0"
-    },
-    {
-      "token": "LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA",
-      "symbol": "UNITED",
-      "state": "PAPER_READY",
-      "reason": "吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0"
-    },
-    {
-      "token": "6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump",
-      "symbol": "MILF",
-      "state": "PAPER_READY",
-      "reason": "吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0"
-    },
-    {
-      "token": "3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump",
-      "symbol": "GOP",
-      "state": "PAPER_READY",
-      "reason": "吸筹窗口 valid + SIKK S3/S4 + 允许纸面交易 + 仓位大于0"
-    },
-    {
-      "token": "3wL2KuTsaDUX33VvpwCn7st7yxGhY6KKqPkZtMQzpump",
-      "symbol": "TEMPO",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "2Fiut5a3s7vBkGFKXd7kH2v8W1idJ9g7CWAvMEdVpump",
-      "symbol": "GAY",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "5zA1r2LyA9UcShFoZ4DNVJXq1V5pSD4gmibDh5Zxpump",
-      "symbol": "memeoids",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "BhCuLLN38Ru7qBkXBmGzNeG6ipiAcqvywpvNjQW7pump",
-      "symbol": "GA",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "2wQq3MrFFHPQnapMt1wnZ2vGkVZDv5ENDCrdLCqFpump",
-      "symbol": "rice",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "yrKmZe5x2YBp1P6ufKLUCNifPbqxwHiwsbfDRWBpump",
-      "symbol": "ELIENUS",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "DcSLSZkhxBECsJF4Jny57c1xTaMwKo9HQMKiyXYbpump",
-      "symbol": "Butt",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "4R1Vcbp15UiXJxdmwtgSjp7wFVgqb5keXejW8qA3pump",
-      "symbol": "DickButt",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "4mLUpStfvutSZP27m397WmArEbS8xt5HKTzFL8Depump",
-      "symbol": "WCINU",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "HXzqEEUjQ6JevbrJiMBAwoiCVikZb93XHmYtde4iCA3G",
-      "symbol": "Spirit",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "4D7UFHc6dDc5eKFdbMqdaBC8Sri8V56sE9zSkW53pump",
-      "symbol": "CLAUDE",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "J1UpPrMTEv2sNPFtB8ecyc4YScvrYoZJ7iriWJnwpump",
-      "symbol": "小丫头",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump",
-      "symbol": "PEPX",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "8MjmLaX4q7xJqHSqLrt2v6sXBgJe97muaXmi7qdepump",
-      "symbol": "OMOGGLE",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "G7Tg9KsfQce1HZvBjXfv5ZcdKpuKzPTajhMf51nRpump",
-      "symbol": "RETArd",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "79ogrGd2bhRS455phmsJo8iHYzBusqgLeyxF9Tf5pump",
-      "symbol": "RC",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "7WddhpM5mLMTyS16Dqeru1mUcoHetVVkh92zU8Tppump",
-      "symbol": "PEPTA",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "B85ta9Qp7EgoVXaMka9BQYrFogSmC3PRjsxNM6HaHF41",
-      "symbol": "AMC",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk",
-      "symbol": "HIIE",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "CFRX4w9w2mvhwZAxCPnyTY3PhHTJ9vQgninuXZfH5Wwn",
-      "symbol": "FIT",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump",
-      "symbol": "1000x",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "Bvh8xqP2nkzZBBEywAFqNAc7Mek7QiUofeTmTbKRpump",
-      "symbol": "CHUDBOB",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump",
-      "symbol": "lolcat",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "ByqipPbSHxzLi6ga5LNrnE229vsLuSrCfHMaDbe1TRND",
-      "symbol": "SIGHT ",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
-      "symbol": "UNIPUMP",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "9gBzMZ1oJ9wDTvzVrhaA7tKMmtWqg9SEmc1UuBPbpump",
-      "symbol": "MOGMAN",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "HDG8Ng6YLpiYXzBASD1Zd5Wh7T8DHRYFcbf4YGuvpump",
-      "symbol": "Octopus",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "GH6MV3UVLjSbY2WaMUZqEECkDFnt7W4Z7Jrij43gpump",
-      "symbol": "monk ",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "HdRFFy6Sm42rDAPLGRAZ1YymtpLukziwBrE9QGs4pump",
-      "symbol": "CRACKROCK",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "6ixv7h9LQ8Vz4S9F4Ta8BWM7USaDapihZroDWSRBpump",
-      "symbol": "Shrek",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "DQa4mxFws6WsXMwn8gpEBXqMsGfDn4Uopi8W2Zvopump",
-      "symbol": "ELUENT",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump",
-      "symbol": "three",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "2CKp88BFyPzr7gEuQKXMJ9cqa24AFXUNC41FR7udpump",
-      "symbol": "Walter",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "hpvoUYjKkvy2hyqC7444mU6eXFD3ETZW4tLd6Dapump",
-      "symbol": "RJGN",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "E8syR4zsgQG2zo9YyiyfX4ujubByR4z6qj9stjASpump",
-      "symbol": "STJUDE",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "JAxMg5ErnK6ji37TnUh89yA2mouDkFVpiKGaEi1mpump",
-      "symbol": "WINNING",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "3QQQxazHaMb72d7N9iftT26vuk6A4Re31fYmkwA2pump",
-      "symbol": "PETS",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "8c3JdTcEqy9XdUJ36NAns7XVDfh356nWxvwcMYKNpump",
-      "symbol": "Scribbli",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "2ssMotVbTUfRJev2UnibHzHsoeszPzgwbfsTZPSHpump",
-      "symbol": "Wish",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "GBvoABT1MH7CogLm46JEy15h3qiKqnmgKZq69BTdpump",
-      "symbol": "TrumpCoin",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "F3iV4HCdr4rBCHmLZPEEFiLxBwznSVwPYx2AoQy5pump",
-      "symbol": "VIGIL",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "4ne9SgdsLE2P2FJEjxDxUnpwS3fLGCPpHFzYeuDCpump",
-      "symbol": "ROAF",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "74CQjPmRd5A7MGc7Dnp1kgUNdPsYtB8FNbtak2Padpce",
-      "symbol": "CLUTCH",
-      "state": "WATCHING",
-      "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
-    },
-    {
-      "token": "5ByEYVGSKtTzcQRhY8QkWRqKdhweXMHvHnacRznYnhUY",
-      "symbol": "ROAF",
+      "token": "D5GpuB8FAWAc6Qex1p3B1vT9DJKvjPNuBzQgX5y3bonk",
+      "symbol": "jestin ",
       "state": "WATCHING",
       "reason": "候选筛选等级为观察层，等待更多 K线/结构证据"
     }
   ],
   "wallet_bypass_or_degraded": [
     {
-      "token": "4y874got9bZ2sR42qHYdnfoL6UcdfMaa1SjcP7Ucpump",
+      "token": "Y4vtfnvGSTe2exSm94SXUq3684MGWwWEhXzASkupump",
       "status": "未接入",
       "effect": "NO_WALLET_INPUT",
       "reason": ""
     },
     {
-      "token": "3wL2KuTsaDUX33VvpwCn7st7yxGhY6KKqPkZtMQzpump",
+      "token": "ziffq43QSCC95DUjVc7cULKYttEHyA1pops25gDpump",
       "status": "未接入",
       "effect": "NO_WALLET_INPUT",
       "reason": ""
     },
     {
-      "token": "2Fiut5a3s7vBkGFKXd7kH2v8W1idJ9g7CWAvMEdVpump",
+      "token": "7CR3CBpivSMzBEet3cvUckjeSLdbCKaxRB1yNNm6pump",
       "status": "未接入",
       "effect": "NO_WALLET_INPUT",
       "reason": ""
     },
     {
-      "token": "5zA1r2LyA9UcShFoZ4DNVJXq1V5pSD4gmibDh5Zxpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "BhCuLLN38Ru7qBkXBmGzNeG6ipiAcqvywpvNjQW7pump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "2wQq3MrFFHPQnapMt1wnZ2vGkVZDv5ENDCrdLCqFpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "yrKmZe5x2YBp1P6ufKLUCNifPbqxwHiwsbfDRWBpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "DcSLSZkhxBECsJF4Jny57c1xTaMwKo9HQMKiyXYbpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "4R1Vcbp15UiXJxdmwtgSjp7wFVgqb5keXejW8qA3pump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "4mLUpStfvutSZP27m397WmArEbS8xt5HKTzFL8Depump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "HXzqEEUjQ6JevbrJiMBAwoiCVikZb93XHmYtde4iCA3G",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "4D7UFHc6dDc5eKFdbMqdaBC8Sri8V56sE9zSkW53pump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "J1UpPrMTEv2sNPFtB8ecyc4YScvrYoZJ7iriWJnwpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "8MjmLaX4q7xJqHSqLrt2v6sXBgJe97muaXmi7qdepump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "G7Tg9KsfQce1HZvBjXfv5ZcdKpuKzPTajhMf51nRpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "79ogrGd2bhRS455phmsJo8iHYzBusqgLeyxF9Tf5pump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "7WddhpM5mLMTyS16Dqeru1mUcoHetVVkh92zU8Tppump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "B85ta9Qp7EgoVXaMka9BQYrFogSmC3PRjsxNM6HaHF41",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "CFRX4w9w2mvhwZAxCPnyTY3PhHTJ9vQgninuXZfH5Wwn",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "Bvh8xqP2nkzZBBEywAFqNAc7Mek7QiUofeTmTbKRpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "ByqipPbSHxzLi6ga5LNrnE229vsLuSrCfHMaDbe1TRND",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "9gBzMZ1oJ9wDTvzVrhaA7tKMmtWqg9SEmc1UuBPbpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "HDG8Ng6YLpiYXzBASD1Zd5Wh7T8DHRYFcbf4YGuvpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "GH6MV3UVLjSbY2WaMUZqEECkDFnt7W4Z7Jrij43gpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "HdRFFy6Sm42rDAPLGRAZ1YymtpLukziwBrE9QGs4pump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "6ixv7h9LQ8Vz4S9F4Ta8BWM7USaDapihZroDWSRBpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "DQa4mxFws6WsXMwn8gpEBXqMsGfDn4Uopi8W2Zvopump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "2CKp88BFyPzr7gEuQKXMJ9cqa24AFXUNC41FR7udpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "hpvoUYjKkvy2hyqC7444mU6eXFD3ETZW4tLd6Dapump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "E8syR4zsgQG2zo9YyiyfX4ujubByR4z6qj9stjASpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "JAxMg5ErnK6ji37TnUh89yA2mouDkFVpiKGaEi1mpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "3QQQxazHaMb72d7N9iftT26vuk6A4Re31fYmkwA2pump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "8c3JdTcEqy9XdUJ36NAns7XVDfh356nWxvwcMYKNpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "2ssMotVbTUfRJev2UnibHzHsoeszPzgwbfsTZPSHpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "GBvoABT1MH7CogLm46JEy15h3qiKqnmgKZq69BTdpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "F3iV4HCdr4rBCHmLZPEEFiLxBwznSVwPYx2AoQy5pump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "4ne9SgdsLE2P2FJEjxDxUnpwS3fLGCPpHFzYeuDCpump",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "74CQjPmRd5A7MGc7Dnp1kgUNdPsYtB8FNbtak2Padpce",
-      "status": "未接入",
-      "effect": "NO_WALLET_INPUT",
-      "reason": ""
-    },
-    {
-      "token": "5ByEYVGSKtTzcQRhY8QkWRqKdhweXMHvHnacRznYnhUY",
+      "token": "D5GpuB8FAWAc6Qex1p3B1vT9DJKvjPNuBzQgX5y3bonk",
       "status": "未接入",
       "effect": "NO_WALLET_INPUT",
       "reason": ""
     }
   ],
+  "wallet_coverage_diagnostics": {
+    "coverage_level": "P0_CRITICAL",
+    "candidate_count": 5,
+    "wallet_covered_count": 1,
+    "wallet_missing_count": 4,
+    "wallet_coverage_pct": 20.0,
+    "wallet_missing_pct": 80.0,
+    "top_missing_reasons": [
+      {
+        "reason": "NO_WALLET_INPUT",
+        "count": 4
+      }
+    ],
+    "sample_missing_tokens": [
+      {
+        "token": "7CR3CBpivSMzBEet3cvUckjeSLdbCKaxRB1yNNm6pump",
+        "symbol": "trolls",
+        "status": "未接入",
+        "reason": "NO_WALLET_INPUT",
+        "state": "WATCHING"
+      },
+      {
+        "token": "D5GpuB8FAWAc6Qex1p3B1vT9DJKvjPNuBzQgX5y3bonk",
+        "symbol": "jestin ",
+        "status": "未接入",
+        "reason": "NO_WALLET_INPUT",
+        "state": "WATCHING"
+      },
+      {
+        "token": "Y4vtfnvGSTe2exSm94SXUq3684MGWwWEhXzASkupump",
+        "symbol": "trollina",
+        "status": "未接入",
+        "reason": "NO_WALLET_INPUT",
+        "state": "BLOCKED"
+      },
+      {
+        "token": "ziffq43QSCC95DUjVc7cULKYttEHyA1pops25gDpump",
+        "symbol": "CARDS",
+        "status": "未接入",
+        "reason": "NO_WALLET_INPUT",
+        "state": "BLOCKED"
+      }
+    ],
+    "repair_plan": [
+      "检查 wallet_structure/candidate_wallet_structure_summary.json 是否由 sikk_live_run.py 单入口生成，禁止用空 summary 覆盖旧结果。",
+      "逐 token 核对 wallet_structure/<token>/wallet_structure_decision.json、early_wallet_raw.csv、wallet_classification.csv、candidate_groups.csv 是否存在。",
+      "缺数据时显式写 data_quality_status=MISSING/DEGRADED、reason_codes、missing_fields，不允许空白绕过。",
+      "MISSING 只进入 OBSERVE/FIX_DATA_SOURCE，不放宽纸面入场或真实交易确认。"
+    ]
+  },
   "state_machine_conflicts": [
     {
       "token": "3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump",
+      "conflict": "token_in_open_and_closed_positions"
+    },
+    {
+      "token": "7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump",
       "conflict": "token_in_open_and_closed_positions"
     },
     {
@@ -708,39 +179,39 @@
     }
   ],
   "dashboard_missing_fields": {
-    "token_count": 50,
+    "token_count": 5,
     "missing_field_counts": {
-      "discovered_at": 50,
-      "discovery_market_cap_usd": 50,
-      "first_signal_at": 50,
-      "wallet_decision_at": 50,
-      "paper_entry_at": 50,
-      "paper_entry_market_cap_usd": 50,
-      "current_market_cap_usd": 50,
-      "current_price": 50,
-      "exit_monitor_at": 50,
-      "paper_exit_at": 50,
-      "exit_reason": 50,
-      "failure_attribution_type": 50,
-      "chip_control_state": 50,
-      "chip_control_action": 50,
-      "dominant_side_lifecycle": 50,
-      "dominant_side_intent": 50,
-      "counterparty_state": 50,
-      "okx_cluster_status": 50,
-      "okx_cluster_score": 50,
-      "okx_cluster_risk_score": 50,
-      "okx_cluster_distribution_score": 50,
-      "okx_cluster_control_retention_score": 50,
-      "largest_cluster_holding_pct": 50,
-      "top300_total_holding_pct": 50,
-      "cluster_holding_pct_delta": 50,
-      "largest_cluster_holding_pct_delta": 50
+      "discovered_at": 5,
+      "discovery_market_cap_usd": 5,
+      "first_signal_at": 5,
+      "wallet_decision_at": 5,
+      "paper_entry_at": 5,
+      "paper_entry_market_cap_usd": 5,
+      "current_market_cap_usd": 5,
+      "current_price": 5,
+      "exit_monitor_at": 5,
+      "paper_exit_at": 5,
+      "exit_reason": 5,
+      "failure_attribution_type": 5,
+      "chip_control_state": 5,
+      "chip_control_action": 5,
+      "dominant_side_lifecycle": 5,
+      "dominant_side_intent": 5,
+      "counterparty_state": 5,
+      "okx_cluster_status": 5,
+      "okx_cluster_score": 5,
+      "okx_cluster_risk_score": 5,
+      "okx_cluster_distribution_score": 5,
+      "okx_cluster_control_retention_score": 5,
+      "largest_cluster_holding_pct": 5,
+      "top300_total_holding_pct": 5,
+      "cluster_holding_pct_delta": 5,
+      "largest_cluster_holding_pct_delta": 5
     },
     "tokens_with_missing_fields": [
       {
-        "token": "4y874got9bZ2sR42qHYdnfoL6UcdfMaa1SjcP7Ucpump",
-        "symbol": "NORMIE",
+        "token": "Y4vtfnvGSTe2exSm94SXUq3684MGWwWEhXzASkupump",
+        "symbol": "trollina",
         "missing_fields": [
           "discovered_at",
           "discovery_market_cap_usd",
@@ -771,8 +242,8 @@
         ]
       },
       {
-        "token": "ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1",
-        "symbol": "AALIEN",
+        "token": "ziffq43QSCC95DUjVc7cULKYttEHyA1pops25gDpump",
+        "symbol": "CARDS",
         "missing_fields": [
           "discovered_at",
           "discovery_market_cap_usd",
@@ -803,8 +274,8 @@
         ]
       },
       {
-        "token": "7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump",
-        "symbol": "WOLVERINE",
+        "token": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+        "symbol": "TROLLIEN",
         "missing_fields": [
           "discovered_at",
           "discovery_market_cap_usd",
@@ -835,8 +306,8 @@
         ]
       },
       {
-        "token": "LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA",
-        "symbol": "UNITED",
+        "token": "7CR3CBpivSMzBEet3cvUckjeSLdbCKaxRB1yNNm6pump",
+        "symbol": "trolls",
         "missing_fields": [
           "discovered_at",
           "discovery_market_cap_usd",
@@ -867,1448 +338,8 @@
         ]
       },
       {
-        "token": "6Xipib7UavxaXvWDhepFpU4NzypozVBPvNNjxTdXpump",
-        "symbol": "MILF",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump",
-        "symbol": "GOP",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "3wL2KuTsaDUX33VvpwCn7st7yxGhY6KKqPkZtMQzpump",
-        "symbol": "TEMPO",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "2Fiut5a3s7vBkGFKXd7kH2v8W1idJ9g7CWAvMEdVpump",
-        "symbol": "GAY",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "5zA1r2LyA9UcShFoZ4DNVJXq1V5pSD4gmibDh5Zxpump",
-        "symbol": "memeoids",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "BhCuLLN38Ru7qBkXBmGzNeG6ipiAcqvywpvNjQW7pump",
-        "symbol": "GA",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "2wQq3MrFFHPQnapMt1wnZ2vGkVZDv5ENDCrdLCqFpump",
-        "symbol": "rice",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "yrKmZe5x2YBp1P6ufKLUCNifPbqxwHiwsbfDRWBpump",
-        "symbol": "ELIENUS",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "DcSLSZkhxBECsJF4Jny57c1xTaMwKo9HQMKiyXYbpump",
-        "symbol": "Butt",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "4R1Vcbp15UiXJxdmwtgSjp7wFVgqb5keXejW8qA3pump",
-        "symbol": "DickButt",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "4mLUpStfvutSZP27m397WmArEbS8xt5HKTzFL8Depump",
-        "symbol": "WCINU",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "HXzqEEUjQ6JevbrJiMBAwoiCVikZb93XHmYtde4iCA3G",
-        "symbol": "Spirit",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "4D7UFHc6dDc5eKFdbMqdaBC8Sri8V56sE9zSkW53pump",
-        "symbol": "CLAUDE",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "J1UpPrMTEv2sNPFtB8ecyc4YScvrYoZJ7iriWJnwpump",
-        "symbol": "小丫头",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump",
-        "symbol": "PEPX",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "8MjmLaX4q7xJqHSqLrt2v6sXBgJe97muaXmi7qdepump",
-        "symbol": "OMOGGLE",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "G7Tg9KsfQce1HZvBjXfv5ZcdKpuKzPTajhMf51nRpump",
-        "symbol": "RETArd",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "79ogrGd2bhRS455phmsJo8iHYzBusqgLeyxF9Tf5pump",
-        "symbol": "RC",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "7WddhpM5mLMTyS16Dqeru1mUcoHetVVkh92zU8Tppump",
-        "symbol": "PEPTA",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "B85ta9Qp7EgoVXaMka9BQYrFogSmC3PRjsxNM6HaHF41",
-        "symbol": "AMC",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "AKKAPZBnJnzfE83DspsBSoqGSMwa2haFvoEJj1qzdrmk",
-        "symbol": "HIIE",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "CFRX4w9w2mvhwZAxCPnyTY3PhHTJ9vQgninuXZfH5Wwn",
-        "symbol": "FIT",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "C1FjBybKVyatJcJ8JDd7VunSjVkmsb3m1p6q3qvHpump",
-        "symbol": "1000x",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "Bvh8xqP2nkzZBBEywAFqNAc7Mek7QiUofeTmTbKRpump",
-        "symbol": "CHUDBOB",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "F8R8VWgiKHvpEh13DFtKsk5PSN7vMzzvP5mmLLUspump",
-        "symbol": "lolcat",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "ByqipPbSHxzLi6ga5LNrnE229vsLuSrCfHMaDbe1TRND",
-        "symbol": "SIGHT ",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
-        "symbol": "UNIPUMP",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "9gBzMZ1oJ9wDTvzVrhaA7tKMmtWqg9SEmc1UuBPbpump",
-        "symbol": "MOGMAN",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "HDG8Ng6YLpiYXzBASD1Zd5Wh7T8DHRYFcbf4YGuvpump",
-        "symbol": "Octopus",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "GH6MV3UVLjSbY2WaMUZqEECkDFnt7W4Z7Jrij43gpump",
-        "symbol": "monk ",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "HdRFFy6Sm42rDAPLGRAZ1YymtpLukziwBrE9QGs4pump",
-        "symbol": "CRACKROCK",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "6ixv7h9LQ8Vz4S9F4Ta8BWM7USaDapihZroDWSRBpump",
-        "symbol": "Shrek",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "DQa4mxFws6WsXMwn8gpEBXqMsGfDn4Uopi8W2Zvopump",
-        "symbol": "ELUENT",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump",
-        "symbol": "three",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "2CKp88BFyPzr7gEuQKXMJ9cqa24AFXUNC41FR7udpump",
-        "symbol": "Walter",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "hpvoUYjKkvy2hyqC7444mU6eXFD3ETZW4tLd6Dapump",
-        "symbol": "RJGN",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "E8syR4zsgQG2zo9YyiyfX4ujubByR4z6qj9stjASpump",
-        "symbol": "STJUDE",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "JAxMg5ErnK6ji37TnUh89yA2mouDkFVpiKGaEi1mpump",
-        "symbol": "WINNING",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "3QQQxazHaMb72d7N9iftT26vuk6A4Re31fYmkwA2pump",
-        "symbol": "PETS",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "8c3JdTcEqy9XdUJ36NAns7XVDfh356nWxvwcMYKNpump",
-        "symbol": "Scribbli",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "2ssMotVbTUfRJev2UnibHzHsoeszPzgwbfsTZPSHpump",
-        "symbol": "Wish",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "GBvoABT1MH7CogLm46JEy15h3qiKqnmgKZq69BTdpump",
-        "symbol": "TrumpCoin",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "F3iV4HCdr4rBCHmLZPEEFiLxBwznSVwPYx2AoQy5pump",
-        "symbol": "VIGIL",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "4ne9SgdsLE2P2FJEjxDxUnpwS3fLGCPpHFzYeuDCpump",
-        "symbol": "ROAF",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "74CQjPmRd5A7MGc7Dnp1kgUNdPsYtB8FNbtak2Padpce",
-        "symbol": "CLUTCH",
-        "missing_fields": [
-          "discovered_at",
-          "discovery_market_cap_usd",
-          "first_signal_at",
-          "wallet_decision_at",
-          "paper_entry_at",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "current_price",
-          "exit_monitor_at",
-          "paper_exit_at",
-          "exit_reason",
-          "failure_attribution_type",
-          "chip_control_state",
-          "chip_control_action",
-          "dominant_side_lifecycle",
-          "dominant_side_intent",
-          "counterparty_state",
-          "okx_cluster_status",
-          "okx_cluster_score",
-          "okx_cluster_risk_score",
-          "okx_cluster_distribution_score",
-          "okx_cluster_control_retention_score",
-          "largest_cluster_holding_pct",
-          "top300_total_holding_pct",
-          "cluster_holding_pct_delta",
-          "largest_cluster_holding_pct_delta"
-        ]
-      },
-      {
-        "token": "5ByEYVGSKtTzcQRhY8QkWRqKdhweXMHvHnacRznYnhUY",
-        "symbol": "ROAF",
+        "token": "D5GpuB8FAWAc6Qex1p3B1vT9DJKvjPNuBzQgX5y3bonk",
+        "symbol": "jestin ",
         "missing_fields": [
           "discovered_at",
           "discovery_market_cap_usd",
@@ -2342,28 +373,15 @@
   },
   "replay_unavailable_fields": {
     "missing_field_counts": {
-      "exit_time": 3,
-      "exit_price": 3,
-      "exit_reason": 3,
-      "paper_entry_market_cap_usd": 160,
-      "current_market_cap_usd": 160,
-      "failure_type": 23,
-      "failure_reason": 23
+      "exit_time": 5,
+      "exit_price": 5,
+      "exit_reason": 5,
+      "paper_entry_market_cap_usd": 206,
+      "current_market_cap_usd": 206,
+      "failure_type": 48,
+      "failure_reason": 48
     },
     "positions_with_unavailable_replay_fields": [
-      {
-        "token": "GC3T8XboCofhBPs5U48DJgp6cxxMeu1CBZXgB2dopump",
-        "symbol": "LITH",
-        "missing_fields": [
-          "exit_time",
-          "exit_price",
-          "exit_reason",
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "failure_type",
-          "failure_reason"
-        ]
-      },
       {
         "token": "ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1",
         "symbol": "AALIEN",
@@ -2378,8 +396,47 @@
         ]
       },
       {
+        "token": "7soYuSPe1LaJ9V37W7ZGDB5Xwxi41LUWjRT3AEQGpump",
+        "symbol": "WOLVERINE",
+        "missing_fields": [
+          "exit_time",
+          "exit_price",
+          "exit_reason",
+          "paper_entry_market_cap_usd",
+          "current_market_cap_usd",
+          "failure_type",
+          "failure_reason"
+        ]
+      },
+      {
         "token": "3pCyU31quPpsVYaC5TxtXpe6sR1KXSLzk5TkZgXGpump",
         "symbol": "GOP",
+        "missing_fields": [
+          "exit_time",
+          "exit_price",
+          "exit_reason",
+          "paper_entry_market_cap_usd",
+          "current_market_cap_usd",
+          "failure_type",
+          "failure_reason"
+        ]
+      },
+      {
+        "token": "4pzuXZwn4N2oGzrjnTv57FkD31eSqwnhx4w96uH1pump",
+        "symbol": "dood",
+        "missing_fields": [
+          "exit_time",
+          "exit_price",
+          "exit_reason",
+          "paper_entry_market_cap_usd",
+          "current_market_cap_usd",
+          "failure_type",
+          "failure_reason"
+        ]
+      },
+      {
+        "token": "FcqVeXBc4S3YoVjTJGUDZrLcErtXzPPSspHiuDKpump",
+        "symbol": "SPEEDRUN",
         "missing_fields": [
           "exit_time",
           "exit_price",
@@ -2763,31 +820,49 @@
           "paper_entry_market_cap_usd",
           "current_market_cap_usd"
         ]
-      },
-      {
-        "token": "GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump",
-        "symbol": "MSTRUMP",
-        "missing_fields": [
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd"
-        ]
-      },
-      {
-        "token": "GnqRKyQfcna6XbkoJMKkvUZUBQdtMb8oy5rH2ocpump",
-        "symbol": "MSTRUMP",
-        "missing_fields": [
-          "paper_entry_market_cap_usd",
-          "current_market_cap_usd",
-          "failure_type",
-          "failure_reason"
-        ]
       }
     ],
-    "failure_attribution_event_count": 161
+    "failure_attribution_event_count": 305
   },
+  "ranked_gaps": [
+    {
+      "priority": "P0",
+      "title": "钱包结构大面积未接入",
+      "impact": "阻断纸面入场质量与退出归因；不能靠放宽门禁解决。",
+      "evidence": "覆盖率 20.0%，缺失 4/5",
+      "fix": "先修 wallet_structure 输出与 token join，再刷新 live_state/dashboard。"
+    },
+    {
+      "priority": "P1",
+      "title": "live_state/dashboard 事件级字段缺失",
+      "impact": "Visual Console 无法回答发现→信号→钱包→入场→退出链路。",
+      "evidence": "discovered_at=5, discovery_market_cap_usd=5, first_signal_at=5, wallet_decision_at=5, paper_entry_at=5",
+      "fix": "补齐 discovery/signal/wallet/paper/market_cap/chip_control 字段并同步 site/dashboard_data.json。"
+    },
+    {
+      "priority": "P1",
+      "title": "paper/case file 复盘字段缺失",
+      "impact": "纸面仓位只能作为 PnL 记录，不能作为高质量策略复盘样本。",
+      "evidence": "paper_entry_market_cap_usd=206, current_market_cap_usd=206, failure_type=48, failure_reason=48, exit_time=5",
+      "fix": "补 Paper Entry Snapshot、退出证据、failure_type/failure_reason、case file 质量等级。"
+    },
+    {
+      "priority": "P2",
+      "title": "状态机与纸面仓位冲突",
+      "impact": "OPEN/CLOSED/blocked 状态不一致会污染 dashboard 与日报统计。",
+      "evidence": "冲突 3 条",
+      "fix": "统一 open/closed 索引，开放仓位不得同时处于终态。"
+    },
+    {
+      "priority": "SAFETY",
+      "title": "真实交易默认关闭",
+      "impact": "所有修复必须保持 paper-only；live/real 仅进入确认层。",
+      "evidence": "只读系统审计；不采集、不交易、不调用 gmgn_swap/gmgn_cooking、不广播、不 yolo。",
+      "fix": "不新增 swap/签名/broadcast/私钥读取路径。"
+    }
+  ],
   "recommendations": [
     "补齐 live run 标准输出目录：候选池、K线、信号、状态机、钱包结构、quote/security、paper_live、live_state/dashboard。",
-    "按审计列出的 missing_fields 修补上游输出合约，字段缺失时显式写 DEGRADED/MISSING 而不是空值。",
     "优先排查卡住 token：确认其 K线/信号/quote/security/wallet 决策是否缺失或被跳过。",
     "修复钱包结构旁路/降级：标准化 wallet_structure_decision.json 并保留 reason_codes/data_quality_status。",
     "处理状态机冲突：开放纸面仓位不得同时处于 BLOCKED/FAILED/EXITED，关闭与开放仓位索引需去重。",

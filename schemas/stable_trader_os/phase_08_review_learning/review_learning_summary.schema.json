@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "required": [
+    "phase",
+    "input_status",
+    "review_status",
+    "direct_rule_change_allowed",
+    "missing_fields",
+    "block_reasons"
+  ],
+  "properties": {
+    "phase": {
+      "const": "phase_08_review_learning_controller"
+    },
+    "input_status": {
+      "enum": [
+        "PHASE_08_INPUT_READY",
+        "PHASE_08_INPUT_DEGRADED",
+        "PHASE_08_INPUT_BLOCKED"
+      ]
+    },
+    "review_status": {
+      "enum": [
+        "REVIEW_COMPLETE",
+        "REVIEW_INCOMPLETE",
+        "FAILURE_ATTRIBUTED",
+        "SUCCESS_ATTRIBUTED",
+        "RULE_UPDATE_REQUIRED",
+        "THRESHOLD_REVIEW_REQUIRED",
+        "CASE_LIBRARY_UPDATED",
+        "ADDRESS_HISTORY_UPDATED"
+      ]
+    },
+    "direct_rule_change_allowed": {
+      "const": false
+    }
+  }
+}

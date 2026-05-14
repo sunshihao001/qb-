@@ -1,0 +1,66 @@
+{
+  "doc_id": "DOC-20260513-P01-DSIC-001",
+  "gap_status": "RUNTIME_GAPS_IDENTIFIED",
+  "blocking_for_p01_runtime_ready": true,
+  "gaps": [
+    {
+      "id": "GAP-P01-DSIC-001",
+      "severity": "P0",
+      "title": "Actual GMGN available fields and endpoint/skill contract need repo audit",
+      "blocks": [
+        "DATA_READY",
+        "P01_RUNTIME_READY"
+      ]
+    },
+    {
+      "id": "GAP-P01-DSIC-002",
+      "severity": "P0",
+      "title": "Actual OKX quote/liquidity/route/security capability needs live/tool audit",
+      "blocks": [
+        "DATA_READY",
+        "P01_RUNTIME_READY"
+      ]
+    },
+    {
+      "id": "GAP-P01-DSIC-003",
+      "severity": "P0",
+      "title": "P01 controller/contracts/schemas/tests must be reconciled with current repo state",
+      "blocks": [
+        "P01_CODE_READY"
+      ]
+    },
+    {
+      "id": "GAP-P01-DSIC-004",
+      "severity": "P1",
+      "title": "At least 3-5 replay fixture token samples required for stable offline validation",
+      "blocks": [
+        "REPLAY_CONFIDENCE"
+      ]
+    },
+    {
+      "id": "GAP-P01-DSIC-005",
+      "severity": "P0",
+      "title": "Downstream P02/P03/P06 readers must be migrated to P01 handoff packet and blocked from raw reads",
+      "blocks": [
+        "DOWNSTREAM_AUTHORIZATION_CLOSURE"
+      ]
+    },
+    {
+      "id": "GAP-P01-DSIC-006",
+      "severity": "P1",
+      "title": "Source reliability and data-quality-brain weights require runtime log calibration",
+      "blocks": [
+        "CALIBRATED_RELIABILITY_CLAIM"
+      ]
+    }
+  ],
+  "non_gaps": [
+    "K00 raw preservation complete",
+    "K00 passport/index/mapping/task package/handoff generated"
+  ],
+  "safety": {
+    "real_execution_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false
+  }
+}

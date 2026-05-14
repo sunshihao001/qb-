@@ -1,0 +1,34 @@
+p06_hard_negative_rules:
+- rule_id: P06_BLOCK_001
+  name: 未读取 P05 handoff
+  condition: p05_to_p06_handoff_packet_missing == true
+  result: P06_BLOCKED
+- rule_id: P06_BLOCK_002
+  name: 无证据束输入
+  condition: evidence_bundle_records_missing == true
+  result: P06_REJECTED
+- rule_id: P06_BLOCK_003
+  name: 无场景分类体系
+  condition: scenario_taxonomy_missing == true
+  result: P06_REJECTED
+- rule_id: P06_BLOCK_004
+  name: 弱证据生成强场景
+  condition: weak_evidence_used_for_high_confidence_scenario == true
+  result: P06_BLOCKED
+- rule_id: P06_BLOCK_005
+  name: 忽略冲突场景
+  condition: scenario_conflict_detected == true and scenario_conflict_record_missing
+    == true
+  result: P06_BLOCKED
+- rule_id: P06_BLOCK_006
+  name: 忽略否定条件
+  condition: scenario_candidate_created == true and rejection_check_missing == true
+  result: P06_BLOCKED
+- rule_id: P06_BLOCK_007
+  name: 输出策略或纸面准入
+  condition: output_contains in [strategy_signal, paper_ready, buy_signal]
+  result: P06_BLOCKED
+- rule_id: P06_BLOCK_008
+  name: 自动实盘路径
+  condition: live_execution_requested == true or live_execution_allowed == true
+  result: P06_BLOCKED

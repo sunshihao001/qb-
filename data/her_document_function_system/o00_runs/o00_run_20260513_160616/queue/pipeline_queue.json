@@ -1,0 +1,38 @@
+{
+  "pipeline_run_id": "o00_run_20260513_160616",
+  "queue_status": "QUEUE_READY_WITH_GAPS",
+  "queue_items": [
+    {
+      "stage": "K00",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "F00",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "V00",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "R00",
+      "status": "SKIPPED"
+    },
+    {
+      "stage": "A00",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "H00",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "U00",
+      "status": "QUEUED_REVIEW"
+    },
+    {
+      "stage": "G00",
+      "status": "QUEUED_GOVERNANCE_CANDIDATE"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0153
+source_path: docs/intel_bot/source_bot_upstream_layer_02_kline_market_structure.md
+phase_scores:
+  P01: 2
+  P02: 1
+  P03: 5
+  P04: 0
+  P05: 3
+  P06: 8
+  P07: 0
+  P08: 0
+  P09: 0
+  P10: 0
+primary_phase: P06
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

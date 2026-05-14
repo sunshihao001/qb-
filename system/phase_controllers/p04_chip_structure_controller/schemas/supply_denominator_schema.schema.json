@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Supply Denominator Record",
+  "description": "P04 structure-state record. Candidate-only and trace-required.",
+  "type": "object",
+  "required": [
+    "record_id",
+    "token_address",
+    "denominator_type",
+    "denominator_value",
+    "quality_level",
+    "trace_ids"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "token_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "snapshot_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cohort_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wallet_entity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "candidate_only": {
+      "const": true
+    },
+    "source_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "trace_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quality_level": {
+      "type": "string",
+      "enum": [
+        "BLOCKED",
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "UNKNOWN",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "denominator_type": {
+      "type": "string",
+      "enum": [
+        "TOTAL_SUPPLY",
+        "CIRCULATING_SUPPLY",
+        "HOLDER_SNAPSHOT_SUPPLY",
+        "UNKNOWN"
+      ]
+    },
+    "denominator_value": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "denominator_conflict": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

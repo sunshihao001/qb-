@@ -1,0 +1,52 @@
+meta:
+  standard_id: S00_PHASE_GOAL_ALIGNMENT_MATRIX
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+phase_alignment:
+- phase_id: K00
+  required_goal_refs:
+  - S00_GOAL_SYSTEM_CONTROL
+- phase_id: P00
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: P01
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: P02
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: P03
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: P04
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: P05
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: P06
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: P07
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: P08
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: P09
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: P10
+  required_goal_refs:
+  - S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+- phase_id: R00
+  required_goal_refs:
+  - S00_GOAL_SYSTEM_CONTROL

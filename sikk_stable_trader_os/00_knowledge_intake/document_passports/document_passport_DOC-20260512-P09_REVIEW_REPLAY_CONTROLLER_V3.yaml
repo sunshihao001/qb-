@@ -1,0 +1,59 @@
+doc_id: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+source_type: user_uploaded_text
+source_name: P09专业版 v3.0__.md
+received_at: '2026-05-12'
+ingested_at: '2026-05-12T08:06:11Z'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3.md
+sha256: 364857538d03d5386f9637eadf6ddcc69c91f95b643c0b82c3d4a6af09e08f62
+document_role:
+  primary_role: P09 Review Replay Controller professional package-design authority
+  secondary_roles:
+  - review_replay_methodology
+  - decision_chain_reconstruction_contract
+  - failure_success_attribution_contract
+  - p10_upgrade_candidate_handoff_contract
+summary:
+  core_intent: 建立 P09 复盘回放、决策链重建、失败/成功归因、校准候选与 P10 升级交接控制器。
+  key_points:
+  - P09 不是纸面日报或失败总结脚本
+  - 必须锁定历史快照，禁止用当前数据覆盖当时判断
+  - 必须重建 P01-P08 决策链与 Paper Runtime 路径
+  - 失败和成功都必须分阶段归因
+  - P09 只能提出升级候选，不能直接改规则/阈值/runtime
+  - 只能 handoff 给 P10 Self Upgrade Controller
+system_mapping:
+  planes:
+  - knowledge_intake
+  - phase_controller
+  - trace_plane
+  - acceptance_plane
+  - handoff_plane
+  - review_replay_plane
+  - governance_plane
+  affected_phases:
+  - K00
+  - P09
+  - P10
+  upstream_phases:
+  - P01
+  - P02
+  - P03
+  - P04
+  - P05
+  - P06
+  - P07
+  - P08
+  - Paper-only Runtime
+  downstream_phases:
+  - P10_self_upgrade_controller
+required_actions:
+- preserve_raw
+- register_material
+- build_corpus_index
+- map_to_p09
+- create_p09_controller_package
+- create_runtime_data_skeleton
+- update_control_state
+- verify_safety_boundaries
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

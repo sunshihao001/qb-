@@ -1,0 +1,142 @@
+{
+  "schema_name": "holder_normalized",
+  "phase": "phase_01_data_fact",
+  "fields": [
+    {
+      "field_name": "holder_address",
+      "type": "string",
+      "chinese_name": "holder_address",
+      "description": "phase_01 field holder_address",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_holder_address"
+    },
+    {
+      "field_name": "token_address",
+      "type": "string",
+      "chinese_name": "token_address",
+      "description": "phase_01 field token_address",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_token_address"
+    },
+    {
+      "field_name": "token_balance",
+      "type": "string",
+      "chinese_name": "token_balance",
+      "description": "phase_01 field token_balance",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_token_balance"
+    },
+    {
+      "field_name": "holding_pct",
+      "type": "string",
+      "chinese_name": "holding_pct",
+      "description": "phase_01 field holding_pct",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_holding_pct"
+    },
+    {
+      "field_name": "rank",
+      "type": "string",
+      "chinese_name": "rank",
+      "description": "phase_01 field rank",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_rank"
+    },
+    {
+      "field_name": "holder_type",
+      "type": "string",
+      "chinese_name": "holder_type",
+      "description": "phase_01 field holder_type",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_holder_type"
+    },
+    {
+      "field_name": "snapshot_time",
+      "type": "string",
+      "chinese_name": "snapshot_time",
+      "description": "phase_01 field snapshot_time",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_snapshot_time"
+    },
+    {
+      "field_name": "source_file",
+      "type": "string",
+      "chinese_name": "source_file",
+      "description": "phase_01 field source_file",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_source_file"
+    }
+  ]
+}

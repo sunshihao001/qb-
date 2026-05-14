@@ -1,0 +1,38 @@
+{
+  "validation_id": "v00_validation_her_doc_pipeline_run",
+  "checks": [
+    {
+      "check_id": "check_k00_outputs",
+      "target": "K00",
+      "required_outputs": [
+        "k00/document_passport.json",
+        "k00/corpus_index.json",
+        "k00/system_mapping.json",
+        "k00/gap_detection.json",
+        "k00/k00_handoff_packet.json"
+      ],
+      "status": "PASSED"
+    },
+    {
+      "check_id": "check_f00_function_mapping",
+      "target": "F00",
+      "required_outputs": [
+        "f00/function_mapping.json",
+        "f00/required_system_assets.json",
+        "f00/implementation_task_package.json",
+        "f00/f00_handoff_packet.json"
+      ],
+      "status": "PASSED"
+    },
+    {
+      "check_id": "check_trace_audit_started",
+      "target": "O00",
+      "required_outputs": [
+        "trace.jsonl",
+        "audit.jsonl"
+      ],
+      "status": "PASSED"
+    }
+  ],
+  "overall_status": "V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS"
+}

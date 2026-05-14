@@ -1,0 +1,43 @@
+trace_id_policy:
+  format: "{trace_type}_{scope}_{object_short}_{timestamp}_{hash}"
+  trace_types:
+    - KNOWLEDGE_TRACE
+    - METHODOLOGY_TRACE
+    - BUILD_TRACE
+    - BOOTSTRAP_TRACE
+    - GOVERNANCE_TRACE
+    - DOMAIN_TRACE
+    - DATA_TRACE
+    - FULL_CONTROL_TRACE
+    - PHASE_TRACE
+    - TASK_TRACE
+    - ARTIFACT_TRACE
+    - FIELD_TRACE
+    - CONTRACT_TRACE
+    - STATE_TRACE
+    - ACCEPTANCE_TRACE
+    - HANDOFF_TRACE
+    - TOOL_TRACE
+    - RUNTIME_TRACE
+    - REVIEW_TRACE
+    - UPGRADE_TRACE
+    - ERROR_TRACE
+    - AUDIT_TRACE
+  requirements:
+    global_unique: true
+    deterministic_when_possible: true
+    timestamp_required: true
+    hash_required: true
+    parent_trace_supported: true
+    child_trace_supported: true
+  relation_types:
+    - CREATED_FROM
+    - DEPENDS_ON
+    - PRODUCES
+    - CONSUMES
+    - VALIDATES
+    - REJECTS
+    - HANDS_OFF_TO
+    - TRIGGERS
+    - BLOCKS
+    - UPGRADES

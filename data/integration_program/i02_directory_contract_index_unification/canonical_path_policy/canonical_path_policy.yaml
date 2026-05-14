@@ -1,0 +1,15 @@
+record_id: canonical_path_policy_20260512
+generated_at: '2026-05-12T13:05:00Z'
+status: BUILT
+read_priority:
+- system/integration_program/i02_directory_contract_index_unification
+- data/integration_program/i02_directory_contract_index_unification
+- system/phase_controllers
+- data/phase_controllers
+- sikk_stable_trader_os/00_knowledge_intake
+- docs (fallback)
+- research_loop (legacy fallback)
+write_policy:
+- I02 writes only to I02 system/runtime roots
+- no direct writes to P01-P10 except later approved implementation package
+gaps: []

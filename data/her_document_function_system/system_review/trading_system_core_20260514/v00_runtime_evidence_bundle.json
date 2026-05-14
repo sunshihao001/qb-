@@ -1,0 +1,94 @@
+{
+  "bundle_id": "V00_RUNTIME_EVIDENCE_BUNDLE_TRADING_SYSTEM_20260514",
+  "created_at": "2026-05-14T10:02:32+00:00",
+  "source": "HER_DOC_AUTO_REPAIR_TASK_PACKAGE_20260514",
+  "safety_boundary": "SAFE_MODE_PAPER_ONLY_NO_REAL_SWAP_NO_PRIVATE_KEY_NO_SIGNATURE_NO_BROADCAST",
+  "runtime_root": "data/gmgn_candidates_live_run",
+  "artifacts": [
+    {
+      "path": "data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.json",
+      "exists": true,
+      "json_ok": true,
+      "sample_count": 11,
+      "status": "PRESENT_JSON_OK",
+      "phase": "P01_candidate_discovery",
+      "missing_policy": "PASS_REQUIRED"
+    },
+    {
+      "path": "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json",
+      "exists": true,
+      "json_ok": true,
+      "sample_count": 8,
+      "status": "PRESENT_JSON_OK",
+      "phase": "P04_P05_signal",
+      "missing_policy": "PASS_REQUIRED"
+    },
+    {
+      "path": "data/gmgn_candidates_live_run/state_machine/candidate_states.json",
+      "exists": true,
+      "json_ok": true,
+      "sample_count": 6,
+      "status": "PRESENT_JSON_OK",
+      "phase": "P06_state_machine",
+      "missing_policy": "PASS_REQUIRED"
+    },
+    {
+      "path": "data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json",
+      "exists": false,
+      "json_ok": false,
+      "sample_count": null,
+      "status": "MISSING",
+      "phase": "P02_P03_wallet_structure",
+      "missing_policy": "DEGRADED_NOT_SAFE"
+    },
+    {
+      "path": "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json",
+      "exists": true,
+      "json_ok": true,
+      "sample_count": 8,
+      "status": "PRESENT_JSON_OK",
+      "phase": "P07_quote_security",
+      "missing_policy": "PAUSE_IF_MISSING"
+    },
+    {
+      "path": "data/gmgn_candidates_live_run/paper_live/paper_positions_open.json",
+      "exists": true,
+      "json_ok": true,
+      "sample_count": 5,
+      "status": "PRESENT_JSON_OK",
+      "phase": "P07_paper_live_open",
+      "missing_policy": "PAPER_ONLY"
+    },
+    {
+      "path": "data/gmgn_candidates_live_run/reports",
+      "exists": true,
+      "json_ok": false,
+      "sample_count": 10,
+      "status": "PRESENT_DIR",
+      "phase": "P08_reports",
+      "missing_policy": "PASS_WITH_GAPS"
+    },
+    {
+      "path": "data/gmgn_candidates_live_run/live_run_manifest.json",
+      "exists": true,
+      "json_ok": true,
+      "sample_count": 9,
+      "status": "PRESENT_JSON_OK",
+      "phase": "runtime_manifest",
+      "missing_policy": "BOUNDARY_EVIDENCE"
+    }
+  ],
+  "her_doc_run": {
+    "run_dir": "data/her_document_function_system/system_review/trading_system_core_20260514/her_doc_auto_repair_pipeline_run",
+    "final_status": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS",
+    "ready_for_production": false
+  },
+  "acceptance_policy": {
+    "safe_mode_not_equal_production_accepted": true,
+    "wallet_structure_missing_not_safe": true,
+    "quote_scan_missing_pause_or_block": true,
+    "paper_ready_not_real_trade_authorization": true,
+    "review_output_candidate_only": true
+  },
+  "final_status": "V00_RUNTIME_EVIDENCE_READY_WITH_GAPS"
+}

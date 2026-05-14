@@ -1,0 +1,10 @@
+{
+  "contract_id": "handoff_contract",
+  "rules": [
+    "schema_validated",
+    "downstream_reads_handoff_only",
+    "hard_negative_inherited",
+    "degraded_gap_inherited",
+    "no_markdown_as_state"
+  ]
+}

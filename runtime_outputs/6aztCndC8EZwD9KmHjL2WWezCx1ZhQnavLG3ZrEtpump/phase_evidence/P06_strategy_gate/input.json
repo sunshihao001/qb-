@@ -1,0 +1,27 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P06_strategy_gate",
+  "artifact_kind": "input",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "source_snapshot_token": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "converted_refs": [
+    "token_intake",
+    "structural_intel",
+    "evidence_bundle",
+    "trade_gate_decision",
+    "risk_control_profile",
+    "execution_intent",
+    "review_writeback",
+    "wallet_decision"
+  ],
+  "permission_status": "PAPER_OBSERVE_ONLY",
+  "input_contract": "fixed_ca_phase_evidence_v1"
+}

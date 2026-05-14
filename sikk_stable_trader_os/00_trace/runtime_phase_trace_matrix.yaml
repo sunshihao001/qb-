@@ -1,0 +1,196 @@
+trace_matrix_id: S02_runtime_phase_trace_matrix
+generated_at: '2026-05-14T14:15:24Z'
+source: S01_single_token_replay_result.yaml
+status: TRACE_MATRIX_READY_WITH_GAPS
+replay_case:
+  replay_case_id: S01_REPLAY_ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  token_address: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  source_dirs:
+  - data/gmgn_candidates_live_run/paper_live/paper_positions_closed.json
+  - data/gmgn_candidates_live_run/paper_live/paper_positions_open.json
+  - data/gmgn_candidates_live_run/tokens/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  available_outputs:
+  - name: P01_candidate_pool
+    path: data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.json
+  - name: P02_kline_summary
+    path: data/gmgn_candidates_live_run/kline_pipeline/candidate_kline_pipeline_summary.json
+  - name: P06_signal_summary
+    path: data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json
+  - name: P07_state_machine
+    path: data/gmgn_candidates_live_run/state_machine/candidate_states.json
+  - name: P08_quote_security
+    path: data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json
+  - name: P08_P09_paper_open
+    path: data/gmgn_candidates_live_run/paper_live/paper_positions_open.json
+  - name: P09_paper_closed
+    path: data/gmgn_candidates_live_run/paper_live/paper_positions_closed.json
+  - name: R00_live_state
+    path: data/gmgn_candidates_live_run/live_state.json
+  - name: R00_events
+    path: data/gmgn_candidates_live_run/events/live_events.jsonl
+  - name: R00_token_status_json
+    path: data/gmgn_candidates_live_run/tokens/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/token_status.json
+  - name: R00_token_trace
+    path: data/gmgn_candidates_live_run/tokens/ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1/process_trace.jsonl
+  missing_outputs:
+  - name: P03_P04_wallet_summary
+    path: data/gmgn_candidates_live_run/wallet_structure/candidate_wallet_structure_summary.json
+  selected_reason: highest evidence score across existing runtime outputs
+  expected_phase_path:
+  - P01
+  - P02
+  - P03
+  - P04
+  - P05
+  - P06
+  - P07
+  - P08
+  - P09
+  - P10
+  expected_decision_path: P01→P02→P03/P04→P05→P06→P07→P08→P09→P10
+  replay_mode: output_reconstruction
+  safety_mode: paper_only
+  status: WITH_GAPS
+phase_trace:
+- phase_id: P01
+  runner_id:
+  - runner_live_orchestrator
+  - runner_gmgn_pipeline
+  - runner_candidate_discovery
+  - runner_ca_runtime
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  input_found: true
+  output_found: true
+  trace_check: PASS
+  status: PASS
+  blocking_gaps: []
+  consumption_evidence_level: historical_output_reconstruction
+  needs_live_phase_controller_replay: false
+- phase_id: P02
+  runner_id:
+  - runner_live_orchestrator
+  - runner_gmgn_pipeline
+  - runner_kline_pipeline
+  - runner_ca_runtime
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  input_found: true
+  output_found: true
+  trace_check: PASS
+  status: PASS
+  blocking_gaps: []
+  consumption_evidence_level: historical_output_reconstruction
+  needs_live_phase_controller_replay: false
+- phase_id: P03
+  runner_id:
+  - runner_live_orchestrator
+  - runner_gmgn_pipeline
+  - runner_wallet_structure_pipeline
+  - runner_wallet_gate
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  input_found: false
+  output_found: false
+  trace_check: PASS
+  status: WITH_GAPS
+  blocking_gaps:
+  - missing_or_unconfirmed_runtime_output
+  consumption_evidence_level: historical_output_reconstruction
+  needs_live_phase_controller_replay: true
+- phase_id: P04
+  runner_id:
+  - runner_live_orchestrator
+  - runner_gmgn_pipeline
+  - runner_wallet_structure_pipeline
+  - runner_wallet_gate
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  input_found: false
+  output_found: false
+  trace_check: PASS
+  status: WITH_GAPS
+  blocking_gaps:
+  - missing_or_unconfirmed_runtime_output
+  consumption_evidence_level: historical_output_reconstruction
+  needs_live_phase_controller_replay: true
+- phase_id: P05
+  runner_id:
+  - runner_live_orchestrator
+  - runner_gmgn_pipeline
+  - runner_wallet_structure_pipeline
+  - runner_wallet_gate
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  input_found: false
+  output_found: false
+  trace_check: PASS
+  status: WITH_GAPS
+  blocking_gaps:
+  - missing_or_unconfirmed_runtime_output
+  consumption_evidence_level: historical_output_reconstruction
+  needs_live_phase_controller_replay: true
+- phase_id: P06
+  runner_id:
+  - runner_live_orchestrator
+  - runner_gmgn_pipeline
+  - runner_signal_engine
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  input_found: true
+  output_found: true
+  trace_check: PASS
+  status: PASS
+  blocking_gaps: []
+  consumption_evidence_level: historical_output_reconstruction
+  needs_live_phase_controller_replay: false
+- phase_id: P07
+  runner_id:
+  - runner_live_orchestrator
+  - runner_gmgn_pipeline
+  - runner_signal_engine
+  - runner_state_machine
+  - runner_ca_runtime
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  input_found: true
+  output_found: true
+  trace_check: PASS
+  status: PASS
+  blocking_gaps: []
+  consumption_evidence_level: historical_output_reconstruction
+  needs_live_phase_controller_replay: false
+- phase_id: P08
+  runner_id:
+  - runner_live_orchestrator
+  - runner_gmgn_pipeline
+  - runner_quote_security
+  - runner_paper_live
+  - runner_ca_runtime
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  input_found: true
+  output_found: true
+  trace_check: PASS
+  status: WITH_GAPS
+  blocking_gaps: []
+  consumption_evidence_level: historical_output_reconstruction
+  needs_live_phase_controller_replay: true
+- phase_id: P09
+  runner_id:
+  - runner_live_orchestrator
+  - runner_paper_live
+  - runner_failure_attribution
+  - runner_daily_report
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  input_found: true
+  output_found: true
+  trace_check: PASS
+  status: WITH_GAPS
+  blocking_gaps: []
+  consumption_evidence_level: historical_output_reconstruction
+  needs_live_phase_controller_replay: true
+- phase_id: P10
+  runner_id:
+  - runner_failure_attribution
+  token_id: ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1
+  input_found: true
+  output_found: true
+  trace_check: PASS
+  status: WITH_GAPS
+  blocking_gaps: []
+  consumption_evidence_level: historical_output_reconstruction
+  needs_live_phase_controller_replay: true

@@ -1,0 +1,97 @@
+{
+  "packet_id": "ACCEPTANCE_RESULT_DOC-20260511-026",
+  "generated_at": "2026-05-11T17:29:03Z",
+  "acceptance_plane_version": "v2.0",
+  "run_id": "RUN_DOC-20260511-026",
+  "target": {
+    "target_stage": "ACCEPTANCE_PLANE",
+    "target_phase_id": "ACCEPTANCE_PLANE_PROFESSIONAL_DESIGN",
+    "target_artifacts": [
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_artifact_check_model.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_blocking_rules.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_context.md",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_contract_dependency.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_dimension_model.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_gap_policy.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_gap_register.md",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_gate_registry.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_object_registry.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_permission_check_model.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_plane.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_report_model.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_result_packet_contract.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_review_checklist.md",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_review_upgrade_check_model.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_runtime_check_model.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_score_model.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_semantic_check_model.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_status_code_table.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_storage_constitution.md",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_tool_binding_check_model.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/acceptance_trace_dependency.yaml",
+      "/root/sikk-gmgn/system/acceptance_plane/her_acceptance_execution_protocol.md"
+    ],
+    "target_trace_ids": [
+      "TRACE_PLANE_READY_WITH_GAPS_DOC-20260511-025",
+      "K00_TRACE_DOC-20260511-026"
+    ]
+  },
+  "inputs": {
+    "trace_handoff_packet_id": "trace_handoff_packet.json",
+    "full_control_task_tree_id": "phase_execution_order.yaml",
+    "contract_trace_ids": [
+      "contract_router.yaml"
+    ],
+    "state_trace_ids": [
+      "current_system_state.json"
+    ],
+    "gap_ids": [
+      "gap_report_DOC-20260511-026"
+    ]
+  },
+  "acceptance_summary": {
+    "acceptance_status": "ACCEPTANCE_READY_WITH_GAPS",
+    "acceptance_score": 0.86,
+    "blocking_failures": [],
+    "non_blocking_gaps": [
+      "acceptance validator not yet code-implemented",
+      "score weights not backtested",
+      "legacy files may lack complete trace and must be legacy_with_gaps",
+      "Tool Binding/Paper Runtime/Review samples not yet available"
+    ],
+    "required_rework_tasks": [
+      "future: implement acceptance_validator.py",
+      "future: calibrate score weights with samples"
+    ]
+  },
+  "dimension_results": {
+    "structural_completeness": "PASS",
+    "semantic_alignment": "PASS",
+    "contract_validity": "PASS",
+    "traceability": "PASS",
+    "governance_compliance": "PASS",
+    "gap_transparency": "PASS",
+    "downstream_readiness": "PASS",
+    "replayability": "PASS"
+  },
+  "downstream_permission": {
+    "handoff_allowed": true,
+    "handoff_mode": "LIMITED_HANDOFF",
+    "phase_controller_build_allowed": true,
+    "tool_binding_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_runtime_allowed": false
+  },
+  "limitation_tags": [
+    "GAP_PROPAGATION_REQUIRED",
+    "MANUAL_REVIEW_REQUIRED",
+    "RUNTIME_BLOCKED",
+    "TOOL_BINDING_BLOCKED"
+  ],
+  "forbidden_actions": [
+    "HANDOFF_WITHOUT_ACCEPTANCE",
+    "TOOL_BINDING_WITHOUT_ACCEPTANCE",
+    "PAPER_RUNTIME_WITHOUT_ACCEPTANCE",
+    "LIVE_EXECUTION"
+  ]
+}

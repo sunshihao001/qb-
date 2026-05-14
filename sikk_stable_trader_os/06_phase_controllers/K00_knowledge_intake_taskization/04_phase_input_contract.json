@@ -1,0 +1,34 @@
+{
+  "phase_id": "K00",
+  "required_inputs": [
+    {
+      "name": "user_input_content",
+      "type": "text",
+      "required": true,
+      "description": "用户输入的文档、知识资料或系统设计文本",
+      "missing_action": "PHASE_REJECTED"
+    }
+  ],
+  "optional_inputs": [
+    {
+      "name": "uploaded_file_paths",
+      "type": "array",
+      "required": false,
+      "description": "用户上传文件路径",
+      "missing_action": "CONTINUE_WITH_TEXT_ONLY"
+    },
+    {
+      "name": "legacy_system_paths",
+      "type": "array",
+      "required": false,
+      "description": "旧系统资料路径",
+      "missing_action": "MARK_AS_GAP"
+    }
+  ],
+  "input_rules": [
+    "所有输入必须先保存，不允许只在上下文中引用",
+    "所有输入必须生成 doc_id",
+    "所有输入必须进入 source_registry",
+    "未保存的资料不能作为长期判断依据"
+  ]
+}

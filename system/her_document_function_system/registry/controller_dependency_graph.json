@@ -1,0 +1,101 @@
+{
+  "graph_id": "controller_dependency_graph_v1",
+  "nodes": [
+    "G00",
+    "O00",
+    "K00",
+    "F00",
+    "V00",
+    "R00",
+    "A00",
+    "H00",
+    "U00"
+  ],
+  "edges": [
+    {
+      "from": "G00",
+      "to": "O00",
+      "dependency_type": "REQUIRES_ACTIVE_POLICY_BUNDLE"
+    },
+    {
+      "from": "O00",
+      "to": "K00",
+      "dependency_type": "DISPATCHES"
+    },
+    {
+      "from": "K00",
+      "to": "F00",
+      "dependency_type": "REQUIRES_K00_HANDOFF"
+    },
+    {
+      "from": "F00",
+      "to": "V00",
+      "dependency_type": "REQUIRES_F00_HANDOFF"
+    },
+    {
+      "from": "V00",
+      "to": "R00",
+      "dependency_type": "REQUIRES_V00_HANDOFF_IF_BINDING_REQUIRED"
+    },
+    {
+      "from": "V00",
+      "to": "A00",
+      "dependency_type": "REQUIRES_VALIDATION_EVIDENCE"
+    },
+    {
+      "from": "R00",
+      "to": "A00",
+      "dependency_type": "REQUIRES_R00_HANDOFF_IF_BINDING_REQUIRED"
+    },
+    {
+      "from": "A00",
+      "to": "H00",
+      "dependency_type": "REQUIRES_READINESS_CERTIFICATE"
+    },
+    {
+      "from": "H00",
+      "to": "U00",
+      "dependency_type": "REQUIRES_REVIEW_IF_GAPS_OR_FAILURES"
+    },
+    {
+      "from": "U00",
+      "to": "G00",
+      "dependency_type": "REQUIRES_GOVERNANCE_CANDIDATES"
+    },
+    {
+      "from": "G00",
+      "to": "K00",
+      "dependency_type": "POLICY_HANDOFF"
+    },
+    {
+      "from": "G00",
+      "to": "F00",
+      "dependency_type": "POLICY_HANDOFF"
+    },
+    {
+      "from": "G00",
+      "to": "V00",
+      "dependency_type": "POLICY_HANDOFF"
+    },
+    {
+      "from": "G00",
+      "to": "R00",
+      "dependency_type": "POLICY_HANDOFF"
+    },
+    {
+      "from": "G00",
+      "to": "A00",
+      "dependency_type": "POLICY_HANDOFF"
+    },
+    {
+      "from": "G00",
+      "to": "H00",
+      "dependency_type": "POLICY_HANDOFF"
+    },
+    {
+      "from": "G00",
+      "to": "U00",
+      "dependency_type": "POLICY_HANDOFF"
+    }
+  ]
+}

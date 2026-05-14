@@ -1,0 +1,93 @@
+{
+  "backlog_id": "p10_related_issue_auto_flow_20260512_164618_upgrade_backlog",
+  "generated_at": "2026-05-12T16:46:18Z",
+  "backlog_items": [
+    {
+      "backlog_item_id": "BACKLOG_P10_ISSUE_001",
+      "upgrade_candidate_id": "P10_ISSUE_001",
+      "priority": "CRITICAL",
+      "status": "IN_TASK_PACKET",
+      "target_stage": "P10_SELF_UPGRADE_CONTROLLER",
+      "reason_cn": "P10规格已落包但需形成可调度问题清单与自动流程任务包"
+    },
+    {
+      "backlog_item_id": "BACKLOG_P10_ISSUE_002",
+      "upgrade_candidate_id": "P10_ISSUE_002",
+      "priority": "CRITICAL",
+      "status": "IN_TASK_PACKET",
+      "target_stage": "SAFETY_BOUNDARY",
+      "reason_cn": "P10后续自动化必须禁止直接改生产规则/自动部署/实盘/签名"
+    },
+    {
+      "backlog_item_id": "BACKLOG_P10_ISSUE_003",
+      "upgrade_candidate_id": "P10_ISSUE_003",
+      "priority": "CRITICAL",
+      "status": "NEW",
+      "target_stage": "I03_RUNNER_TOOL_BINDING",
+      "reason_cn": "Runner / Tool Binding 尚未把P10升级包执行为dry-run任务"
+    },
+    {
+      "backlog_item_id": "BACKLOG_P10_ISSUE_004",
+      "upgrade_candidate_id": "P10_ISSUE_004",
+      "priority": "CRITICAL",
+      "status": "NEW",
+      "target_stage": "INTEGRATION_PROGRAM",
+      "reason_cn": "P10后不新增业务阶段，应进入I01-I05整合程序"
+    },
+    {
+      "backlog_item_id": "BACKLOG_P10_ISSUE_005",
+      "upgrade_candidate_id": "P10_ISSUE_005",
+      "priority": "HIGH",
+      "status": "NEW",
+      "target_stage": "P09_P10_REPLAY_FIXTURES",
+      "reason_cn": "P09/P10闭环回放需要真实/可重放回归样例库"
+    },
+    {
+      "backlog_item_id": "BACKLOG_P10_ISSUE_006",
+      "upgrade_candidate_id": "P10_ISSUE_006",
+      "priority": "HIGH",
+      "status": "NEW",
+      "target_stage": "GOVERNANCE_REVIEW_OPS",
+      "reason_cn": "Governance审批与Telegram/Review Ops面板尚未接通"
+    },
+    {
+      "backlog_item_id": "BACKLOG_P10_ISSUE_007",
+      "upgrade_candidate_id": "P10_ISSUE_007",
+      "priority": "HIGH",
+      "status": "NEW",
+      "target_stage": "CI_DRY_RUN_VALIDATION",
+      "reason_cn": "升级包尚未连接CI/dry-run验证器"
+    },
+    {
+      "backlog_item_id": "BACKLOG_P10_ISSUE_008",
+      "upgrade_candidate_id": "P10_ISSUE_008",
+      "priority": "HIGH",
+      "status": "IN_TASK_PACKET",
+      "target_stage": "P09_REVIEW_CASE_LIBRARY",
+      "reason_cn": "样本支持度需要长期积累，单样本只能候选/测试/人工审查"
+    },
+    {
+      "backlog_item_id": "BACKLOG_P10_ISSUE_009",
+      "upgrade_candidate_id": "P10_ISSUE_009",
+      "priority": "MEDIUM",
+      "status": "NEW",
+      "target_stage": "REPORTING_LAYER",
+      "reason_cn": "报告解释字段、反证、限制、trace引用需持续补全"
+    },
+    {
+      "backlog_item_id": "BACKLOG_P10_ISSUE_010",
+      "upgrade_candidate_id": "P10_ISSUE_010",
+      "priority": "MEDIUM",
+      "status": "NEW",
+      "target_stage": "SYSTEM_INDICES",
+      "reason_cn": "版本索引/合约索引需在每次升级包后同步"
+    }
+  ],
+  "backlog_summary": {
+    "critical_count": 4,
+    "high_count": 4,
+    "medium_count": 2,
+    "low_count": 0,
+    "deferred_count": 0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC-20260511-005",
+  "generated_at": "2026-05-11T13:18:52Z",
+  "title": "SIKK Stable Trader OS｜Domain Plane v2.0",
+  "core_objects": [
+    "Token",
+    "Wallet",
+    "AddressGroup",
+    "TransactionEvent",
+    "MarketSnapshot",
+    "MarketScene",
+    "ChipState",
+    "DominantSide",
+    "Counterparty",
+    "GateDecision",
+    "RiskEvent",
+    "ExecutionTicket",
+    "PaperPosition",
+    "ReviewCase",
+    "RuleChange",
+    "SkillDecision",
+    "HandoffPacket"
+  ],
+  "field_classes": [
+    "fact_field",
+    "inference_field",
+    "state_field",
+    "report_field",
+    "control_field",
+    "risk_field",
+    "handoff_field"
+  ],
+  "acceptance_anchors": [
+    "核心领域对象已定义",
+    "每个对象有唯一 ID",
+    "事实字段、推理字段、状态字段、报告字段分类",
+    "创建阶段、更新阶段、使用阶段",
+    "GateDecision 不等于买卖指令",
+    "ExecutionTicket 不等于实盘订单",
+    "DominantSide 不被定义为确定庄家",
+    "Report Field 不得反向污染机器判断",
+    "data_plane.md"
+  ],
+  "next_required_artifact": "data_plane.md"
+}

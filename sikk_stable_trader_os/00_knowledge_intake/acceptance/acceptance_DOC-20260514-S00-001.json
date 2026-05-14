@@ -1,0 +1,34 @@
+{
+  "doc_id": "DOC-20260514-S00-001",
+  "acceptance_status": "PASS_WITH_GAPS",
+  "required_outputs": [
+    "raw",
+    "registry",
+    "passport",
+    "corpus_index",
+    "system_mapping",
+    "gap_detection",
+    "task_package",
+    "handoff",
+    "phase_state"
+  ],
+  "missing_outputs": [],
+  "gaps": [
+    {
+      "gap_id": "S00_GAP_001",
+      "description": "Existing runners discovered only partially; full runner scan/dry-run remains R00 work."
+    },
+    {
+      "gap_id": "S00_GAP_002",
+      "description": "P01-P10 contract diff not yet executed."
+    },
+    {
+      "gap_id": "S00_GAP_003",
+      "description": "sample library lacks labeled real token cases."
+    },
+    {
+      "gap_id": "S00_GAP_004",
+      "description": "P08 permission gate policy defined but not yet connected to live paper runner replay."
+    }
+  ]
+}

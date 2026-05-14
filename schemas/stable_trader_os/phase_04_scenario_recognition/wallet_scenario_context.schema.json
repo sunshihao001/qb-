@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "wallet_scenario_context",
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "wallet_context_status",
+    "positive_evidence",
+    "negative_evidence",
+    "missing_fields"
+  ],
+  "properties": {
+    "phase": {},
+    "token_address": {},
+    "wallet_context_status": {},
+    "positive_evidence": {},
+    "negative_evidence": {},
+    "missing_fields": {}
+  },
+  "additionalProperties": true
+}

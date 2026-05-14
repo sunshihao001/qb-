@@ -1,0 +1,414 @@
+{
+  "doc_id": "DOC-20260513-H00-4",
+  "section_count": 79,
+  "sections": [
+    {
+      "level": 1,
+      "title": "H00_REAL_DOWNSTREAM_QUEUE_READY_WITH_GAPS",
+      "offset": 0
+    },
+    {
+      "level": 2,
+      "title": "HER 文档到功能自动化落实系统：真实下游队列与交接证据层 v1.0",
+      "offset": 45
+    },
+    {
+      "level": 1,
+      "title": "1. 阶段总定义",
+      "offset": 655
+    },
+    {
+      "level": 1,
+      "title": "2. H00 真实队列阶段解决的问题",
+      "offset": 1674
+    },
+    {
+      "level": 1,
+      "title": "3. 本阶段不是做什么",
+      "offset": 2062
+    },
+    {
+      "level": 1,
+      "title": "4. 阶段核心目标",
+      "offset": 2380
+    },
+    {
+      "level": 1,
+      "title": "5. 必须建立的系统目录",
+      "offset": 2842
+    },
+    {
+      "level": 1,
+      "title": "6. 必须建立的工具文件",
+      "offset": 4123
+    },
+    {
+      "level": 1,
+      "title": "7. 输入合约",
+      "offset": 5165
+    },
+    {
+      "level": 2,
+      "title": "`03_h00_real_queue_input_contract.json`",
+      "offset": 5176
+    },
+    {
+      "level": 1,
+      "title": "8. 输出合约",
+      "offset": 6552
+    },
+    {
+      "level": 2,
+      "title": "`04_h00_real_queue_output_contract.json`",
+      "offset": 6563
+    },
+    {
+      "level": 1,
+      "title": "9. H00 真实队列内部流程",
+      "offset": 7736
+    },
+    {
+      "level": 1,
+      "title": "10. H00_REAL.0 Preflight Gate",
+      "offset": 8314
+    },
+    {
+      "level": 2,
+      "title": "10.1 检查项",
+      "offset": 8347
+    },
+    {
+      "level": 2,
+      "title": "10.2 输出",
+      "offset": 8689
+    },
+    {
+      "level": 1,
+      "title": "11. H00_REAL.1 A00 Evidence Loader",
+      "offset": 9212
+    },
+    {
+      "level": 1,
+      "title": "12. H00_REAL.2 Readiness Certificate Interpreter",
+      "offset": 9762
+    },
+    {
+      "level": 2,
+      "title": "12.1 必须解释字段",
+      "offset": 9814
+    },
+    {
+      "level": 2,
+      "title": "12.2 解释输出",
+      "offset": 10020
+    },
+    {
+      "level": 1,
+      "title": "13. H00_REAL.3 Downstream Target Classifier",
+      "offset": 10545
+    },
+    {
+      "level": 2,
+      "title": "13.1 目标分类",
+      "offset": 10592
+    },
+    {
+      "level": 2,
+      "title": "13.2 `downstream_target_inventory.json`",
+      "offset": 10960
+    },
+    {
+      "level": 1,
+      "title": "14. H00_REAL.4 Target Capability Matrix Builder",
+      "offset": 11970
+    },
+    {
+      "level": 2,
+      "title": "14.1 能力检查",
+      "offset": 12021
+    },
+    {
+      "level": 2,
+      "title": "14.2 `target_capability_matrix.json`",
+      "offset": 12239
+    },
+    {
+      "level": 1,
+      "title": "15. H00_REAL.5 Routing Decision Engine",
+      "offset": 13098
+    },
+    {
+      "level": 2,
+      "title": "15.1 路由状态",
+      "offset": 13140
+    },
+    {
+      "level": 2,
+      "title": "15.2 `routing_decision.json`",
+      "offset": 13308
+    },
+    {
+      "level": 1,
+      "title": "16. H00_REAL.6 Queue Item Builder",
+      "offset": 14543
+    },
+    {
+      "level": 2,
+      "title": "16.1 queue item 必须字段",
+      "offset": 14580
+    },
+    {
+      "level": 2,
+      "title": "16.2 `queue_items.json`",
+      "offset": 14843
+    },
+    {
+      "level": 1,
+      "title": "17. H00_REAL.7 Dependency Graph Builder",
+      "offset": 17123
+    },
+    {
+      "level": 2,
+      "title": "`dependency_graph.json`",
+      "offset": 17166
+    },
+    {
+      "level": 1,
+      "title": "18. H00_REAL.8 Priority Plan Builder",
+      "offset": 18091
+    },
+    {
+      "level": 2,
+      "title": "18.1 优先级规则",
+      "offset": 18131
+    },
+    {
+      "level": 2,
+      "title": "18.2 `priority_plan.json`",
+      "offset": 18274
+    },
+    {
+      "level": 1,
+      "title": "19. H00_REAL.9 Gap / Risk / Forbidden Action Binder",
+      "offset": 19079
+    },
+    {
+      "level": 2,
+      "title": "19.1 必须绑定的对象",
+      "offset": 19134
+    },
+    {
+      "level": 2,
+      "title": "19.2 `gap_risk_binding.json`",
+      "offset": 19310
+    },
+    {
+      "level": 1,
+      "title": "20. H00_REAL.10 Downstream Handoff Packet Writer",
+      "offset": 20265
+    },
+    {
+      "level": 2,
+      "title": "20.1 U00 handoff 示例",
+      "offset": 20610
+    },
+    {
+      "level": 2,
+      "title": "20.2 G00 handoff 示例",
+      "offset": 21640
+    },
+    {
+      "level": 1,
+      "title": "21. H00_REAL.11 Queue State Writer",
+      "offset": 22497
+    },
+    {
+      "level": 2,
+      "title": "`queue_state.json`",
+      "offset": 22535
+    },
+    {
+      "level": 2,
+      "title": "队列状态定义",
+      "offset": 23148
+    },
+    {
+      "level": 1,
+      "title": "22. H00_REAL.12 Failure Evidence Builder",
+      "offset": 23412
+    },
+    {
+      "level": 1,
+      "title": "23. H00_REAL.13 Acceptance Gate",
+      "offset": 23985
+    },
+    {
+      "level": 2,
+      "title": "23.1 最终状态",
+      "offset": 24020
+    },
+    {
+      "level": 2,
+      "title": "23.2 acceptance result",
+      "offset": 24227
+    },
+    {
+      "level": 1,
+      "title": "24. 为什么仍然是 READY_WITH_GAPS",
+      "offset": 25010
+    },
+    {
+      "level": 1,
+      "title": "25. 阶段验收门",
+      "offset": 25515
+    },
+    {
+      "level": 2,
+      "title": "25.1 必须通过项",
+      "offset": 25528
+    },
+    {
+      "level": 2,
+      "title": "25.2 不允许通过的情况",
+      "offset": 26065
+    },
+    {
+      "level": 1,
+      "title": "26. 推荐测试目录",
+      "offset": 26403
+    },
+    {
+      "level": 1,
+      "title": "27. 关键测试用例",
+      "offset": 26820
+    },
+    {
+      "level": 2,
+      "title": "27.1 没有 A00 handoff 不能生成队列",
+      "offset": 26834
+    },
+    {
+      "level": 2,
+      "title": "27.2 queue_created 不能等于 completed",
+      "offset": 27143
+    },
+    {
+      "level": 2,
+      "title": "27.3 forbidden actions 必须继承",
+      "offset": 27534
+    },
+    {
+      "level": 1,
+      "title": "28. Final Report 模板",
+      "offset": 28050
+    },
+    {
+      "level": 1,
+      "title": "H00 Real Downstream Queue Report",
+      "offset": 28085
+    },
+    {
+      "level": 2,
+      "title": "1. Run Info",
+      "offset": 28121
+    },
+    {
+      "level": 2,
+      "title": "2. Loaded A00 Evidence",
+      "offset": 28280
+    },
+    {
+      "level": 2,
+      "title": "3. Readiness Interpretation",
+      "offset": 28444
+    },
+    {
+      "level": 2,
+      "title": "4. Downstream Targets",
+      "offset": 28586
+    },
+    {
+      "level": 2,
+      "title": "5. Target Capability Matrix",
+      "offset": 28667
+    },
+    {
+      "level": 2,
+      "title": "6. Routing Decisions",
+      "offset": 28699
+    },
+    {
+      "level": 2,
+      "title": "7. Queue Items",
+      "offset": 28724
+    },
+    {
+      "level": 2,
+      "title": "8. Dependency Graph",
+      "offset": 28806
+    },
+    {
+      "level": 2,
+      "title": "9. Priority Plan",
+      "offset": 28830
+    },
+    {
+      "level": 2,
+      "title": "10. Gap / Risk / Forbidden Action Binding",
+      "offset": 28851
+    },
+    {
+      "level": 2,
+      "title": "11. Handoff Packets",
+      "offset": 28897
+    },
+    {
+      "level": 2,
+      "title": "12. Queue State",
+      "offset": 28921
+    },
+    {
+      "level": 2,
+      "title": "13. Failure Evidence",
+      "offset": 28941
+    },
+    {
+      "level": 2,
+      "title": "14. Trace / Audit",
+      "offset": 28966
+    },
+    {
+      "level": 2,
+      "title": "15. Final Decision",
+      "offset": 28988
+    },
+    {
+      "level": 1,
+      "title": "29. 可直接给 HER 的执行任务书",
+      "offset": 29020
+    },
+    {
+      "level": 1,
+      "title": "30. 当前设计状态判断",
+      "offset": 34209
+    },
+    {
+      "level": 1,
+      "title": "31. 下一步",
+      "offset": 34713
+    }
+  ],
+  "key_terms": [
+    "H00_REAL_DOWNSTREAM_QUEUE_READY_WITH_GAPS",
+    "downstream_target_inventory",
+    "target_capability_matrix",
+    "routing_decision",
+    "queue_items",
+    "dependency_graph",
+    "priority_plan",
+    "gap_risk_binding",
+    "handoff_packets",
+    "QUEUE_READY_WITH_GAPS"
+  ],
+  "source_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-H00-4_H00_REAL_DOWNSTREAM_QUEUE_READY_WITH_GAPS.md"
+}

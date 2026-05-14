@@ -1,0 +1,35 @@
+{
+  "phase_id": "F00",
+  "status": "RULE_LOGIC_READY",
+  "rules": [
+    {
+      "rule_id": "rule_f00_acceptance_requires_all_evidence",
+      "rule_type": "HARD_BLOCK_RULE",
+      "input_fields": [
+        "schema_validation_status",
+        "contract_validation_status",
+        "test_status",
+        "replay_status",
+        "runner_binding_status"
+      ],
+      "calculation_method": "all_required_statuses_equal_passed",
+      "threshold_or_condition": "schema=PASSED and contract=PASSED and test=TESTED and replay=REPLAY_TESTED and runner_binding=BINDING_TESTED",
+      "positive_evidence": [
+        "schema validation result",
+        "contract validation result",
+        "replay acceptance",
+        "runner binding evidence"
+      ],
+      "counter_evidence": [
+        "missing output",
+        "safe mode disabled",
+        "validation error"
+      ],
+      "confidence_logic": "deterministic evidence gate",
+      "failure_condition": "any required evidence missing or failed",
+      "output_status": "ACCEPTANCE_PASSED_OR_BLOCKED",
+      "trace_required": true
+    }
+  ],
+  "generated_at": "2026-05-13T14:53:53+00:00"
+}

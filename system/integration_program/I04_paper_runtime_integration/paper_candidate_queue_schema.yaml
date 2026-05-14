@@ -1,0 +1,7 @@
+record_type: paper_candidate_queue
+fields:
+- queue_id
+- candidate_ids
+- queue_order
+- dedup_status
+- trace_id

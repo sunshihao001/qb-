@@ -1,0 +1,10 @@
+{
+  "status": "PASSED",
+  "forbidden_actions_blocked": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ],
+  "policy_activation": "NOT_ACTIVE_CANDIDATE_ONLY"
+}

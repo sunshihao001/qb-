@@ -1,0 +1,10 @@
+{
+  "runner_cli_command_registry": {
+    "dry_run_all": "python3 tools/runners/sikk_phase_orchestrator.py --mode dry-run",
+    "restrictions": {
+      "live_execution_commands_registered": false,
+      "wallet_signing_commands_registered": false,
+      "auto_deploy_commands_registered": false
+    }
+  }
+}

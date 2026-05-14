@@ -1,0 +1,20 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+tests:
+  - {test_id: P07_TEST_001, name: 二段扩张候选，证据充分，筹码支持，无硬否定, expected_decision: PAPER_CANDIDATE, expected_next_step: P08_EXECUTION_RISK_CHECK}
+  - {test_id: P07_TEST_002, name: 缺 P06 handoff, expected_status: P07_BLOCKED}
+  - {test_id: P07_TEST_003, name: 无策略政策注册, expected_status: P07_REJECTED}
+  - {test_id: P07_TEST_004, name: 主场景为 ACTIVE_DISTRIBUTION, expected_decision: BLOCK}
+  - {test_id: P07_TEST_005, name: 场景冲突为 SECOND_STAGE_EXPANSION vs FINAL_PUMP_DISTRIBUTION, expected_decision: PAUSE_OR_BLOCK_DEPENDING_SEVERITY}
+  - {test_id: P07_TEST_006, name: 证据支持但强反证存在, expected_decision: BLOCK_OR_PAUSE}
+  - {test_id: P07_TEST_007, name: 筹码结构高留存但数据新鲜度不足, expected_decision: PAUSE, expected_required_refresh: HOLDER_SNAPSHOT_OR_WALLET_DELTA}
+  - {test_id: P07_TEST_008, name: 市值从发现时已大幅扩张，进入追高上下文, expected_decision: BLOCK_AS_CHASING}
+  - {test_id: P07_TEST_009, name: 场景弱但无重大风险, expected_decision: OBSERVE}
+  - {test_id: P07_TEST_010, name: 高价值候选但存在关键 UNKNOWN, expected_decision: HUMAN_CONFIRMATION_REQUIRED}
+  - {test_id: P07_TEST_011, name: P07 输出 buy_signal, expected_status: P07_BLOCKED}
+  - {test_id: P07_TEST_012, name: P07 启动 paper runtime, expected_status: P07_BLOCKED}
+  - {test_id: P07_TEST_013, name: live execution requested, expected_status: P07_BLOCKED}
+  - {test_id: P07_TEST_014, name: PAPER_CANDIDATE 但未生成 P08 request, expected_status: P07_BLOCKED}
+  - {test_id: P07_TEST_015, name: 弱场景被当成强策略适配, expected_status: P07_BLOCKED}
+  - {test_id: P07_TEST_016, name: P08 required security recheck missing, expected_status: P07_READY_WITH_GAPS_OR_BLOCKED}

@@ -1,0 +1,20 @@
+tool_binding_trace_record:
+  trace_id: string
+  tool_id: required
+  tool_name: required
+  tool_type: required
+  binding_phase: required
+  bound_at: required
+  input_contracts: required
+  outputs: required
+  permissions: required
+  validation: required
+  required_trace_links:
+    - parent_trace_ids
+    - child_trace_ids
+    - related_artifact_trace_ids
+  validation_rules:
+    - trace_id_present
+    - source_present
+    - downstream_usage_declared
+    - forbidden_actions_respected

@@ -1,0 +1,10 @@
+version: '2.0'
+handoff_role: input_constraint_for_control_plane
+constraints:
+- current_system_state is authoritative
+- K00 route status must be explicit before any Phase Controller or Integration Program READY conclusion
+- valid K00 route status for READY is K00_INTAKE_ACCEPTED or K00_ROUTE_RECOVERY_DOCUMENTED
+- missing K00 route status is route failure and requires route recovery before acceptance
+- P01 cannot be READY until Data Plane acceptance + P01 preflight
+- paper_only and real_trade_enabled_false are invariant
+- conflicts resolved by governance hard negatives then current_system_state

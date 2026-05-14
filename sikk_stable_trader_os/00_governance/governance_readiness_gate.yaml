@@ -1,0 +1,17 @@
+version: '2.0'
+gate_id: governance_readiness_gate
+pass_states:
+- GOVERNANCE_READY
+- GOVERNANCE_WITH_WARNINGS
+hard_fail_conditions:
+- missing_required_governance_file
+- parse_error
+- P01_unblocked
+- real_trade_enabled_true
+- authority_boundary_missing_K00_P10
+- hard_negative_p0_missing
+warning_conditions:
+- Domain Plane not yet accepted
+- Data Plane not yet accepted
+- Full Control Plane not yet accepted
+current_expected_result: GOVERNANCE_READY_OR_WITH_WARNINGS

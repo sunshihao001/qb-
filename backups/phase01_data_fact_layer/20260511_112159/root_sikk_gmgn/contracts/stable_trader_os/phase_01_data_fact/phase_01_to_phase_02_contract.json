@@ -1,0 +1,36 @@
+{
+  "contract_name": "phase_01_to_phase_02_contract",
+  "version": "v1.0",
+  "from_phase": "phase_01_data_fact_controller",
+  "to_phase": "phase_02_wallet_structure_controller",
+  "required_files": [
+    "01_data_fact/normalized/token_fact.json",
+    "01_data_fact/normalized/kline_fact_table.csv",
+    "01_data_fact/normalized/trade_fact_table.csv",
+    "01_data_fact/normalized/holder_fact_table.csv",
+    "01_data_fact/normalized/quote_fact.json",
+    "01_data_fact/audit/phase_01_quality_gate.json"
+  ],
+  "optional_files": [
+    "01_data_fact/normalized/security_fact.json",
+    "01_data_fact/normalized/transfer_fact_table.csv",
+    "01_data_fact/audit/field_quality_report.json"
+  ],
+  "minimum_gate_status": [
+    "PASS",
+    "PASS_WITH_WARNING"
+  ],
+  "phase_02_must_carry_forward": [
+    "quality_score",
+    "phase_01_gate_status",
+    "missing_fields",
+    "restricted_models",
+    "data_snapshot_time"
+  ],
+  "forbidden": [
+    "Phase 02 不得忽略 Phase 01 的 missing 字段",
+    "Phase 02 不得把缺失 security 的样本判定为强通过",
+    "Phase 02 不得使用 Phase 01 未输出的字段进行判断",
+    "Phase 02 不得覆盖 Phase 01 的 BLOCK 状态"
+  ]
+}

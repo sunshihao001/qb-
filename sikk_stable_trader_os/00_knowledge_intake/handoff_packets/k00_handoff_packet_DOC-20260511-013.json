@@ -1,0 +1,41 @@
+{
+  "handoff_id": "K00-HANDOFF-DOC-20260511-013",
+  "doc_id": "DOC-20260511-013",
+  "parent_doc_id": "DOC-20260511-006",
+  "from_phase": "K00",
+  "to_phase": "P00_system_context_control",
+  "status": "K00_PHASE_TARGET_DATA_MATERIALIZED_WITH_DEGRADED_GAP",
+  "required_p00_checks": [
+    "consume K00 phase_target_data.yaml",
+    "decide whether ASSETIZATION_LAYER should become phase_type/authority_scope or be added to enum",
+    "continue P00-P10 phase target instances",
+    "verify downstream_consumer naming P00_system_bootstrap_controller vs P00_system_context_control"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-K00-PHASE-STATUS-ENUM-MISMATCH",
+      "severity": "DEGRADED",
+      "description": "User-proposed K00 phase_status ASSETIZATION_LAYER is not in legal phase status enum from section 7. Raw proposal preserved; executable phase_target_data.yaml normalized to READY_TO_EXECUTE."
+    },
+    {
+      "gap_id": "GAP-PER-PHASE-TARGET-DATA-INSTANCES",
+      "severity": "DEGRADED",
+      "description": "K00 concrete instance is now generated; P00-P10 concrete target data instances still need to be generated/validated."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

@@ -1,0 +1,20 @@
+meta:
+  standard_id: S00_P08_REAL_TRADE_FORBIDDEN_POLICY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+real_trade_default: FORBIDDEN
+forbidden_actions:
+- swap
+- sign
+- broadcast
+- private_key_access
+- unreviewed_api_key_trade_permission
+manual_confirmation_required_for_any_future_real_trade: true

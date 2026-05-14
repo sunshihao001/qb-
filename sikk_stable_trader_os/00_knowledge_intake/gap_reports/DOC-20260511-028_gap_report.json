@@ -1,0 +1,15 @@
+{
+  "doc_id": "DOC-20260511-028",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "controller.yaml/context.md/contracts for each P01-P10 controller not expanded yet",
+    "input/output contract schemas named but not fully defined",
+    "tool binding remains permission-only and not script-bound",
+    "paper runtime not launched and remains gated through P08/runtime handoff",
+    "phase_controller_index validator not yet standalone code-implemented"
+  ],
+  "runtime_blocked": true,
+  "tool_binding_allowed": false,
+  "paper_runtime_allowed": false,
+  "live_runtime_allowed": false
+}

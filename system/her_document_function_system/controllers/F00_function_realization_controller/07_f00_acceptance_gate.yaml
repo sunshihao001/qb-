@@ -1,0 +1,182 @@
+acceptance_gate:
+  phase_id: F00
+  required_checks:
+    - id: k00_handoff_loaded
+      required: true
+      evidence: k00_handoff_packet
+    - id: input_contract_valid
+      required: true
+      evidence: input_validation_result
+    - id: repo_scan_done_or_design_only
+      required: true
+      evidence: repo_scan_result_or_design_only_reason
+    - id: concept_to_function_map_exists
+      required: true
+      evidence: concept_to_function_map
+    - id: implementation_decisions_exist
+      required: true
+      evidence: implementation_decision
+    - id: asset_plan_exists
+      required: true
+      evidence: function_asset_plan
+    - id: field_model_exists
+      required: true
+      evidence: field_model
+    - id: rule_logic_exists
+      required: true
+      evidence: rule_logic
+    - id: schema_contract_plan_exists
+      required: true
+      evidence: schema_contract_plan
+    - id: test_replay_plan_exists
+      required: true
+      evidence: test_replay_plan
+    - id: trace_written
+      required: true
+      evidence: f00_trace
+    - id: audit_written
+      required: true
+      evidence: f00_audit
+    - id: blocked_items_have_gap_refs
+      required: true
+      evidence: gap_refs
+    - id: forbidden_actions_preserved
+      required: true
+      evidence: handoff_packet
+    - id: downstream_handoff_schema_valid
+      required: true
+      evidence: handoff_packet_validation_result
+  pass_status: F00_ACCEPTED
+  gap_status: F00_READY_WITH_GAPS
+  fail_status: F00_BLOCKED
+  cannot_claim_without_evidence:
+    PATCH_APPLIED: patch_refs
+    TESTED: test_execution_refs
+    REPLAY_TESTED: replay_execution_refs
+    RUNNER_BOUND: runner_binding_test_refs
+    ACCEPTANCE_PASSED: all_required_evidence_refs
+
+output_contract_gate:
+  contract_file: "05_f00_output_contract.json"
+  required_output_dir: "outputs"
+  missing_required_output_status: "F00_OUTPUT_BLOCKED"
+  placeholder_statuses_not_accepted:
+    - "NOT_GENERATED"
+    - "NOT_ACCEPTED"
+    - "NOT_READY"
+  required_outputs:
+    - "concept_to_function_map.json"
+    - "implementation_decision.json"
+    - "repo_scan_result.json"
+    - "function_asset_plan.json"
+    - "field_model.json"
+    - "rule_logic.json"
+    - "schema_contract_plan.json"
+    - "patch_plan.json"
+    - "test_replay_plan.json"
+    - "runner_binding_plan.json"
+    - "f00_trace.jsonl"
+    - "f00_audit.jsonl"
+    - "f00_acceptance_result.json"
+    - "f00_to_downstream_handoff_packet.json"
+    - "f00_final_report.md"
+
+document_to_function_completeness_gate:
+  required: true
+  method_wheel_required_order:
+    - entry_recognition
+    - k00_intake
+    - system_position_mapping
+    - function_requirement_mapping
+    - function_asset_breakdown
+    - field_model
+    - rule_logic
+    - schema_contract
+    - code_module
+    - test_replay
+    - runner_binding
+    - function_completeness_audit
+    - acceptance
+    - handoff
+  required_function_core_types:
+    - NEW_FUNCTION
+    - MODIFY_FUNCTION
+    - ENHANCE_FUNCTION
+    - HARD_BLOCK_RULE
+    - SOFT_SCORE_RULE
+    - STATE_MACHINE_RULE
+    - SCHEMA_UPDATE
+    - CONTRACT_UPDATE
+    - TRACE_REQUIREMENT
+    - REPORT_REQUIREMENT
+    - TEST_REQUIREMENT
+    - RUNNER_BINDING
+    - GOVERNANCE_RULE
+    - REVIEW_RULE
+  each_required_function_must_include:
+    - input_fields
+    - field_sources
+    - output_fields
+    - judgement_logic
+    - schema
+    - contract
+    - code_module
+    - tests
+    - replay
+    - trace
+    - report
+    - kv
+    - handoff
+    - runner_binding
+    - acceptance_criteria
+  missing_function_audit_required_items:
+    - data_intake
+    - field_standardization
+    - schema
+    - contract
+    - controller
+    - judgement_logic
+    - scoring
+    - hard_gate
+    - state_machine
+    - trace
+    - audit
+    - report
+    - kv
+    - handoff
+    - test
+    - replay
+    - runner_binding
+    - recovery
+    - governance
+  final_output_required_fields:
+    - doc_id
+    - target_phase
+    - system_mapping
+    - function_mapping
+    - required_functions
+    - implementation_assets
+    - field_model
+    - rule_logic
+    - schema_contract_changes
+    - code_modules
+    - test_replay_plan
+    - runner_binding_plan
+    - missing_function_audit
+    - gap_list
+    - acceptance_result
+    - handoff_result
+    - final_status
+  forbidden_claims:
+    - direct_summary_completed
+    - k00_task_package_only_completed
+    - K00_ACCEPTED_as_function_completed
+    - DESIGN_ONLY_as_IMPLEMENTED
+    - PLANNED_NOT_WRITTEN_as_WRITTEN
+    - READY_without_tests
+    - RUNNABLE_without_runner_binding
+    - downstream_without_handoff
+    - live_runtime
+    - wallet_signing
+    - auto_deploy
+  updated_at: "2026-05-13T14:20:08.977384+00:00"

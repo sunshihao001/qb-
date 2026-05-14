@@ -1,0 +1,39 @@
+phase_id: V00
+trace_audit_spec_name: v00_trace_audit_spec
+required_events:
+  - v00_started
+  - f00_handoff_loaded
+  - preflight_passed
+  - input_evidence_loaded
+  - function_mapping_validated
+  - field_model_validated
+  - rule_logic_validated
+  - schema_validated
+  - contract_validated
+  - patch_evidence_validated
+  - test_executed
+  - replay_executed
+  - failure_evidence_written
+  - acceptance_checked
+  - handoff_written
+  - v00_completed
+  - v00_blocked
+trace_record_schema:
+  event_id: string
+  timestamp: iso8601
+  phase_id: V00
+  run_id: string
+  event_type: string
+  source_doc_id: string_or_empty
+  function_id: string_or_empty
+  validation_id: string_or_empty
+  status_before: string_or_empty
+  status_after: string_or_empty
+  evidence_refs: array
+  gap_refs: array
+  message: string
+audit_rules:
+  - failed_events_must_remain_visible
+  - no_failed_to_passed_rewrite
+  - evidence_refs_must_point_to_files
+  - missing_trace_blocks_V00_ACCEPTED

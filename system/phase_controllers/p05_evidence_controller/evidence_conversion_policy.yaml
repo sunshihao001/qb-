@@ -1,0 +1,26 @@
+controller_id: P05_EVIDENCE_CONTROLLER
+version: v3.0-professional
+status: PACKAGE_SPEC_READY_WITH_RUNTIME_GAPS
+created_at: '2026-05-12T02:44:17Z'
+paper_only: true
+real_trade_enabled: false
+runtime_allowed: false
+paper_runtime_allowed: false
+live_execution_allowed: false
+principles:
+- fact_is_not_evidence
+- structure_state_is_input_not_conclusion
+- evidence_requires_hypothesis_link
+- source_trace_required
+- field_trace_required
+conversion_steps:
+- qualify_source_material
+- bind_subject
+- bind_hypothesis
+- classify_support_counter_weak_unknown_conflict
+- assign_usage_permission
+- write_chain_trace
+block_if:
+- no_hypothesis_link
+- missing_source_trace
+- fact_promoted_to_scenario

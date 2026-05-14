@@ -1,0 +1,112 @@
+{
+  "matrix_id": "controller_capability_matrix_v1",
+  "capabilities": [
+    {
+      "capability": "document_intake",
+      "primary_controller": "K00",
+      "supporting_controllers": [
+        "G00",
+        "O00"
+      ],
+      "required_outputs": [
+        "document_passport",
+        "corpus_index",
+        "k00_handoff_packet"
+      ]
+    },
+    {
+      "capability": "concept_to_function_mapping",
+      "primary_controller": "F00",
+      "supporting_controllers": [
+        "K00",
+        "V00",
+        "G00"
+      ],
+      "required_outputs": [
+        "function_mapping",
+        "field_model",
+        "rule_logic",
+        "asset_plan"
+      ]
+    },
+    {
+      "capability": "validation_evidence",
+      "primary_controller": "V00",
+      "supporting_controllers": [
+        "F00",
+        "A00"
+      ],
+      "required_outputs": [
+        "test_evidence",
+        "replay_evidence",
+        "schema_validation_result",
+        "contract_validation_result"
+      ]
+    },
+    {
+      "capability": "runner_binding",
+      "primary_controller": "R00",
+      "supporting_controllers": [
+        "V00",
+        "G00"
+      ],
+      "required_outputs": [
+        "command_contract",
+        "binding_spec",
+        "dry_run_evidence"
+      ]
+    },
+    {
+      "capability": "global_acceptance",
+      "primary_controller": "A00",
+      "supporting_controllers": [
+        "K00",
+        "F00",
+        "V00",
+        "R00"
+      ],
+      "required_outputs": [
+        "evidence_bundle",
+        "readiness_certificate",
+        "acceptance_decision"
+      ]
+    },
+    {
+      "capability": "downstream_queue",
+      "primary_controller": "H00",
+      "supporting_controllers": [
+        "A00"
+      ],
+      "required_outputs": [
+        "downstream_queue",
+        "queue_items",
+        "handoff_packets"
+      ]
+    },
+    {
+      "capability": "review_upgrade",
+      "primary_controller": "U00",
+      "supporting_controllers": [
+        "A00",
+        "H00"
+      ],
+      "required_outputs": [
+        "review_cases",
+        "root_cause_analysis",
+        "upgrade_queue"
+      ]
+    },
+    {
+      "capability": "governance_policy",
+      "primary_controller": "G00",
+      "supporting_controllers": [
+        "U00",
+        "A00"
+      ],
+      "required_outputs": [
+        "active_policy_bundle",
+        "governance_registry"
+      ]
+    }
+  ]
+}

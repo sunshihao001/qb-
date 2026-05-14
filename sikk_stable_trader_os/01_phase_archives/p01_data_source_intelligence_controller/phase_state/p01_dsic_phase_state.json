@@ -1,0 +1,19 @@
+{
+  "phase_id": "P01_data_source_intelligence_controller",
+  "doc_id": "DOC-20260513-P01-DSIC-001",
+  "state": "SYSTEM_ARCHIVE_READY_MIN_CONTROLLER_LANDED",
+  "k00_route_status": "K00_ACCEPTED",
+  "implementation_status": "MIN_AUTOMATION_SCAFFOLD_READY_WITH_GAPS",
+  "permissions": {
+    "real_execution_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false,
+    "raw_direct_access_allowed": false
+  },
+  "required_before_p01_ready": [
+    "GMGN live field audit",
+    "OKX capability audit",
+    "3-5 replay fixture tokens",
+    "downstream P02/P03/P06 reader migration"
+  ]
+}

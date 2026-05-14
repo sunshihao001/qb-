@@ -1,0 +1,32 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "final_status": "RISK_MONITOR",
+  "signal_level": "SX",
+  "decision": "BLOCK",
+  "permission": "BLOCK_REAL_TRADE",
+  "contract_permission": "BLOCK_BUY_禁止买入",
+  "allowed_modes": [
+    "observe"
+  ],
+  "forbidden_modes": [
+    "real_auto",
+    "buy_now",
+    "auto_trade",
+    "sell_now"
+  ],
+  "block_reasons": [
+    "SECURITY_OR_LIQUIDITY_BLOCK"
+  ],
+  "pause_reasons": [
+    "STRUCTURAL_PAUSE",
+    "FUNDING_PENDING"
+  ],
+  "allow_reasons": [],
+  "reason_codes": [
+    "SECURITY_OR_LIQUIDITY_BLOCK",
+    "STRUCTURAL_PAUSE",
+    "FUNDING_PENDING"
+  ],
+  "human_confirmation_required": false,
+  "real_trade_enabled": false
+}

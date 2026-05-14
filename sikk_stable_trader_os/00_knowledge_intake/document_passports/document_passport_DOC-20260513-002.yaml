@@ -1,0 +1,46 @@
+doc_id: "DOC-20260513-002"
+title: "P01 数据事实层专业版阶段包"
+source_type: "user_uploaded_markdown"
+source_name: "未命名 (2).md"
+received_at: "2026-05-13T03:11:34Z"
+raw_path: "00_knowledge_intake/raw_inputs/DOC-20260513-002_p01_data_fact_controller_professional.md"
+original_cache_path: "/root/.hermes/cache/documents/doc_a8cb2fc45d8d_未命名 (2).md"
+sha256: "bf61c250468b94da8b2fc7ef17758315e8c60be8463b387f86e933b8781be188"
+content_type: "markdown"
+processing_status: "K00_ACCEPTED"
+document_role:
+  primary_role: "P01_data_fact_controller professional phase package"
+  secondary_roles:
+    - "GMGN_OKX_data_source_fact_contract"
+    - "downstream_data_handoff_contract"
+summary:
+  core_intent: "将 GMGN / OKX / 手动输入 / 历史缓存 / replay fixture 转化为可追溯、可审计、可质量判断、可交接给下游的标准事实数据包。"
+  key_points:
+    - "P01 is fact controller, not strategy layer."
+    - "P01 core output is data_fact_handoff_packet.json."
+    - "GMGN provides token/wallet/chip/behavior facts."
+    - "OKX provides quote/liquidity/execution-feasibility/safety cross-check facts."
+    - "Missing or stale data must become explicit state."
+system_mapping:
+  planes:
+    - data_plane
+    - control_plane
+    - handoff_plane
+    - acceptance_plane
+    - audit_plane
+  affected_phases:
+    - K00_knowledge_intake_taskization
+    - P01_data_fact_controller
+    - P02_wallet_chip_structure_controller
+    - P03_market_structure_controller
+    - P04_scenario_recognition_controller
+    - P05_strategy_gate_controller
+    - P06_paper_trading_controller
+required_actions:
+  - "Audit current P01 implementation and connector binding."
+  - "Establish or use fixed CA read-only run entry."
+  - "Run once for concrete token data after user provides CA."
+  - "Output missing function list based on actual run gaps."
+evidence_level: "EVIDENCE_A_STRONG"
+status: "PASSPORT_READY"
+route_status: "K00_ACCEPTED"

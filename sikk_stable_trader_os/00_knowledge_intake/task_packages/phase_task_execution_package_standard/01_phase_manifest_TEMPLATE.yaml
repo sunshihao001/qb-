@@ -1,0 +1,42 @@
+phase_manifest:
+  phase_id: "K00"
+  phase_key: "K00_knowledge_intake_taskization"
+  phase_name: "知识资料摄取与任务化控制器"
+  phase_type: "pre_phase_controller"
+  mission:
+    primary: "将用户输入的文档、知识资料、方法论文本转化为 HER 可执行的阶段任务执行包"
+    secondary:
+      - "保存原始资料"
+      - "生成文档护照"
+      - "建立语料索引"
+      - "映射系统平面"
+      - "识别系统缺口"
+      - "生成任务执行包"
+      - "输出 handoff_packet"
+  authority:
+    can_do:
+      - "读取用户输入资料"
+      - "保存资料"
+      - "生成资料登记"
+      - "建立任务包"
+      - "识别系统影响"
+      - "生成下一阶段建议"
+    cannot_do:
+      - "不能直接输出交易判断"
+      - "不能直接改写实时规则"
+      - "不能跳过 P00"
+      - "不能把资料当普通文档总结后结束"
+      - "不能依赖聊天上下文作为唯一依据"
+  upstream:
+    required:
+      - "user_input"
+    optional:
+      - "uploaded_files"
+      - "previous_system_docs"
+      - "legacy_runtime_outputs"
+  downstream:
+    next_phase_candidates:
+      - "P00_system_boundary"
+      - "P01_data_fact"
+      - "P09_self_upgrade"
+    handoff_required: true

@@ -1,0 +1,56 @@
+document_passport:
+  doc_id: DOC-20260511-003
+  source_type: user_uploaded_text_document
+  source_name: r OS 的系统方法论总纲_.md
+  received_at: '2026-05-11T12:15:53Z'
+  raw_path: 00_knowledge_intake/raw_inputs/DOC-20260511-003.md
+  canonical_target_path: 00_methodology/system_methodology_blueprint.md
+  document_role:
+    primary_role: SIKK Stable Trader OS system methodology blueprint v2.0
+    secondary_roles:
+    - upper_source_of_total_control_skill
+    - phase_controller_design_source
+    - atomic_skill_extraction_source
+    - schema_contract_tool_runtime_handoff_replay_review_rule_upgrade_source
+  summary:
+    core_intent: 固定 SIKK Stable Trader OS 的系统方法论总纲，作为总控 Skill、P00-P09、Atomic Skill、Schema、Contract、Tool、Runtime
+      State、Handoff、Replay、Review、Rule Upgrade 的上位来源。
+    key_points:
+    - 系统不是预测器，而是由 HER 调度的结构化交易研究操作系统。
+    - 系统目标不是多买，而是少犯错；AI 不直接判断买卖，而是在受控系统中执行可验证判断链。
+    - 固定 9 个底层方法论模型：控制论、OODA、V-Model、STAMP/STPA、数据血缘、DDD、状态机、决策情报、闭环学习。
+    - 固定 9 大系统平面：治理、领域、数据、控制、决策、风险、执行、验证、学习。
+    - 固定 P00-P09 阶段职责、硬否定规则、HER 执行协议与派生文件顺序。
+    - 下一份应继续生成 governance_plane.md。
+  system_mapping:
+    planes:
+    - governance_plane
+    - domain_plane
+    - data_plane
+    - control_plane
+    - decision_plane
+    - risk_plane
+    - execution_plane
+    - verification_plane
+    - learning_plane
+    affected_phases:
+    - K00_knowledge_intake
+    - P00_system_boundary
+    - P01_data_fact
+    - P02_market_scene
+    - P03_wallet_structure
+    - P04_chip_control
+    - P05_strategy_gate
+    - P06_risk_control
+    - P07_execution
+    - P08_review
+    - P09_self_upgrade
+    - system_methodology_update
+  required_actions:
+  - 保存原始资料与登记来源
+  - 同步 canonical system_methodology_blueprint.md
+  - 生成系统平面/阶段映射与缺口识别
+  - 生成任务执行包与 handoff
+  - 后续按派生顺序生成 governance_plane.md
+  evidence_level: EVIDENCE_A_STRONG
+  status: PASSPORT_READY

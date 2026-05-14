@@ -1,0 +1,8 @@
+record_type: p08_permission_ingestion_record
+fields:
+- ingestion_id
+- permission_source
+- permission_state
+- permission_level
+- reason
+- trace_id

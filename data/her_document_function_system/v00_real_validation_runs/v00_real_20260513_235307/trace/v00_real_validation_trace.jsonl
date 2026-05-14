@@ -1,0 +1,6 @@
+{"ts": "2026-05-13T23:53:07.278053+00:00", "event": "v00_started", "validation_run_id": "v00_real_20260513_235307"}
+{"ts": "2026-05-13T23:53:07.288985+00:00", "event": "schema_validation_done", "status": "SCHEMA_VALIDATED"}
+{"ts": "2026-05-13T23:53:07.293844+00:00", "event": "contract_validation_done", "status": "CONTRACT_READY_WITH_GAPS"}
+{"ts": "2026-05-13T23:53:07.563007+00:00", "event": "test_command_executed", "exit_code": 0, "status": "TESTED"}
+{"ts": "2026-05-13T23:53:07.564023+00:00", "event": "replay_tested", "status": "REPLAY_TESTED"}
+{"ts": "2026-05-13T23:53:07.565110+00:00", "event": "bundle_built", "final_status": "V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS"}

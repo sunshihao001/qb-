@@ -1,0 +1,35 @@
+{
+  "doc_id": "DOC-20260511-004",
+  "generated_at": "2026-05-11T13:11:13Z",
+  "material_type": "governance_plane",
+  "plane": "Governance Plane",
+  "position": "highest_constraint_layer",
+  "constrains": [
+    "all phases",
+    "skills",
+    "tools",
+    "schemas",
+    "contracts",
+    "reports",
+    "replays",
+    "reviews"
+  ],
+  "nine_planes_declared": [
+    "治理平面 Governance Plane",
+    "领域平面 Domain Plane",
+    "数据平面 Data Plane",
+    "控制平面 Control Plane",
+    "决策平面 Decision Plane",
+    "风险平面 Risk Plane",
+    "执行平面 Execution Plane",
+    "验证平面 Verification Plane",
+    "学习平面 Learning Plane"
+  ],
+  "next_required_plane": "domain_plane.md",
+  "hard_boundaries": {
+    "runtime_mode": "SYSTEM_BUILDING",
+    "live_trading_allowed": false,
+    "automated_execution_allowed": false,
+    "paper_trading_allowed": true
+  }
+}

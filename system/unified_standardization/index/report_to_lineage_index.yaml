@@ -1,0 +1,23 @@
+meta:
+  standard_id: S00_REPORT_TO_LINEAGE_INDEX
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+reports:
+- report: S00_ACCEPTANCE_REPORT.md
+  lineage_refs:
+  - DOC-20260514-S00-001
+  - K00 handoff
+  - S00 index
+- report: token_judgment_case_file
+  lineage_refs:
+  - field_lineage_registry
+  - decision_lineage_map
+  - report_lineage_map

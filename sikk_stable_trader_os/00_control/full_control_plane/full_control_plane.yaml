@@ -1,0 +1,81 @@
+plane_id: P00_FULL_CONTROL_PLANE
+plane_name: 完整控制面
+plane_level: light_institutional_v1
+version: v1.0
+status: CONTROL_READY_WITH_GAPS
+created_from_doc_id: DOC-20260511-024
+created_at: 2026-05-11T16:50:12Z
+canonical_root: /root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane
+compatibility_pointer: /root/sikk-gmgn/system/full_control_plane -> /root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane
+mission:
+  primary: 建立 SIKK Stable Trader OS 的全阶段调度、验收、状态回写和交接控制系统
+  secondary:
+    - 把系统总目标编译成阶段任务树
+    - 把阶段任务绑定到 Phase Controller
+    - 管理输入合约、输出合约、验收门和状态码
+    - 防止阶段越权
+    - 管理失败处理和缺口登记
+    - 支持 HER 长时间阶段化执行
+    - 支持后续审计、复盘和受控升级
+authority:
+  can_do:
+    - 读取系统总目标
+    - 读取阶段上下文
+    - 判断当前应进入哪个阶段
+    - 生成阶段任务树
+    - 调用对应 Phase Controller
+    - 检查阶段输入合约
+    - 检查阶段输出合约
+    - 执行验收门
+    - 写入全局状态码
+    - 生成下游交接包
+    - 登记缺口和失败原因
+    - 暂停或阻断不合格阶段
+  cannot_do:
+    - 直接生成交易信号
+    - 直接执行交易
+    - 直接伪造数据
+    - 直接越过 Governance Plane
+    - 直接用缺失字段强判断
+    - 直接把未验收阶段标记为完成
+    - 直接覆盖 raw 数据
+    - 直接删除 legacy 数据
+upstream_inputs:
+  - user_goal
+  - governance_rules
+  - domain_models
+  - data_models
+  - existing_runtime_outputs
+  - phase_handoff_packets
+downstream_outputs:
+  - phase_task_tree
+  - phase_execution_plan
+  - phase_status_update
+  - acceptance_report
+  - gap_register_update
+  - next_phase_handoff_packet
+  - audit_log
+global_status_codes:
+  - CONTROL_UNINITIALIZED
+  - CONTROL_CONTEXT_READY
+  - CONTROL_READY
+  - CONTROL_READY_WITH_GAPS
+  - CONTROL_REJECTED
+  - PHASE_SELECTED
+  - TASK_TREE_COMPILED
+  - INPUT_CONTRACT_VALIDATED
+  - PHASE_OUTPUT_GENERATED
+  - ACCEPTANCE_CHECK_RUNNING
+  - PHASE_READY
+  - PHASE_READY_WITH_GAPS
+  - PHASE_REJECTED
+  - PHASE_BLOCKED
+  - PHASE_NEEDS_REWORK
+  - HANDOFF_READY
+  - SYSTEM_PAUSED
+  - SYSTEM_RECOVERY_REQUIRED
+safety_boundary:
+  paper_only: true
+  real_trade_enabled: false
+  auto_order_allowed: false
+  p01_runtime_connection_allowed: false

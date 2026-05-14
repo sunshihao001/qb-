@@ -1,0 +1,15 @@
+phase_id: I01
+phase_name: Full Phase Consistency Audit
+package_type: integration_task_package
+status: I01_TASK_PACKAGE_READY_FOR_EXECUTION
+created_at: '2026-05-12T12:09:20.376839+00:00'
+source_doc_id: I01_full_phase_consistency_audit_v1_0
+canonical_system_dir: /root/sikk-gmgn/system/integration_program/I01_full_phase_consistency_audit
+canonical_data_dir: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit
+restrictions:
+- NO_P11
+- NO_RUNNER_BINDING_YET
+- NO_PAPER_RUNTIME
+- NO_LIVE_EXECUTION
+- NO_WALLET_SIGNING
+- NO_AUTO_DEPLOY

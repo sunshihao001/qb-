@@ -1,0 +1,45 @@
+doc_id: DOC-20260511-026
+source_type: user_uploaded_markdown
+source_name: Accep验收平面 v2.0⭐.md
+received_at: '2026-05-11'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-026_acceptance_plane_v2.md
+sha256: eeae51689eaa3b41271a4f29e38f3b4ed47d8cc98e7f4c277824d7b010653d3e
+document_role:
+  primary_role: ACCEPTANCE_PLANE_PROFESSIONAL_DESIGN
+  secondary_roles:
+  - acceptance_status_model
+  - blocking_rules
+  - trace_dependency
+  - handoff_permission_control
+  - tool_runtime_gate
+summary:
+  core_intent: 将 Acceptance Plane 从检查清单升级为系统验收裁决平面，落地对象注册、验收门、维度、状态码、阻断规则、缺口分级、Trace/Contract
+    依赖、结果包、报告与 HER 执行协议。
+  key_points:
+  - Trace Plane 之后、Handoff Plane 之前
+  - 无 trace 不通过验收
+  - Blocking Rule 高于评分
+  - Handoff/Tool Binding/Paper Runtime 不得绕过 Acceptance
+  - 自动实盘保持阻断
+system_mapping:
+  planes:
+  - Acceptance Plane
+  - Trace Plane
+  - Handoff Plane
+  - Full Control Plane
+  - Governance Plane
+  affected_phases:
+  - K00
+  - P00
+  - P01-P10
+  - Runner/Tool Binding
+  - Paper-only Runtime
+  - Review/Upgrade
+required_actions:
+- create_acceptance_plane_files
+- sync_full_control_plane_routes
+- register_acceptance_gates
+- write_acceptance_result_packet_contract
+- keep_p01_and_runtime_blocked
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

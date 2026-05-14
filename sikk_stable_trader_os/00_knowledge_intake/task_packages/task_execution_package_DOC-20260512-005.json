@@ -1,0 +1,33 @@
+{
+  "task_id": "TASK_DOC-20260512-005_P05_PACKAGE_LANDING",
+  "doc_id": "DOC-20260512-005",
+  "task_type": "phase_controller_package_landing",
+  "target_controller": "P05_EVIDENCE_CONTROLLER",
+  "objective": "Land formal P05 Evidence Controller v3.0 package and runtime data skeleton while keeping runtime/paper/live blocked.",
+  "required_outputs": [
+    "39 controller files",
+    "25 runtime data directories",
+    "validation report",
+    "control state update",
+    "asset index formal registration"
+  ],
+  "acceptance": [
+    "all expected files exist",
+    "yaml/json parse ok",
+    "safety anchors pass",
+    "evidence controller classified as formal P05 package with runtime gaps",
+    "next legal stage P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN"
+  ],
+  "constraints": [
+    "no scenario claim",
+    "no strategy signal",
+    "no paper runtime",
+    "no live execution"
+  ],
+  "alignment_correction": {
+    "applied_at": "2026-05-12T03:19:13Z",
+    "reason": "P05 v3.0 authority correction: Evidence Controller is formal P05 phase; old P05 scenario classification is deprecated/migrated to P06 scenario recognition.",
+    "deprecated_next_stage": "P05_SCENARIO_CLASSIFICATION_CONTROLLER_PACKAGE_DESIGN",
+    "correct_next_stage": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN"
+  }
+}

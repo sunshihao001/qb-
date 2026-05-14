@@ -1,0 +1,15 @@
+unknown_gap_registry:
+  document_id: KPP-DOC-20260512-001
+  gaps:
+    - gap_id: KPP_GAP_001
+      description: 既有旧文档尚未批量重处理为 K00-K08 输出包。
+      severity: DEGRADED
+      owner: Knowledge Processing Program
+    - gap_id: KPP_GAP_002
+      description: KPP 与现有 sikk_stable_trader_os/00_knowledge_intake 的兼容/索引同步规则需后续统一。
+      severity: DEGRADED
+      owner: K00 / Governance
+    - gap_id: KPP_GAP_003
+      description: KPP 自动化 runner/validator 尚未实现，本次先落地控制与合约资产。
+      severity: DEGRADED
+      owner: I03 Runner Binding

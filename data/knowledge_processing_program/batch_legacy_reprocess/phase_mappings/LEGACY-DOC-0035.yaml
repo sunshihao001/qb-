@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0035
+source_path: docs/directory_zh_mapping.md
+phase_scores:
+  P01: 1
+  P02: 1
+  P03: 6
+  P04: 1
+  P05: 0
+  P06: 0
+  P07: 21
+  P08: 0
+  P09: 0
+  P10: 0
+primary_phase: P07
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

@@ -1,0 +1,16 @@
+{
+  "handoff_id": "P03_TO_P04_DESIGN_HANDOFF_DOC-20260512-003",
+  "source_stage": "P03_WALLET_ENTITY_CONTROLLER",
+  "target_stage": "P04_CHIP_STRUCTURE_CONTROLLER",
+  "acceptance_status": "PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "runtime_consumption_required_later": true,
+  "known_gaps": [
+    "P03 runner/tool binding not implemented or accepted",
+    "P02 real handoff sample not consumed in runtime",
+    "funding source/history address DB may be missing",
+    "entity resolution thresholds not backtested",
+    "same-source/sync scoring weights not calibrated",
+    "P04 consumer controller package not yet landed in this flow"
+  ],
+  "created_at": "2026-05-12T02:11:16Z"
+}

@@ -1,0 +1,18 @@
+allowed_role_candidates:
+  - "new_wallet_candidate"
+  - "early_buyer_candidate"
+  - "same_source_member_candidate"
+  - "sync_buyer_candidate"
+  - "distribution_receiver_candidate"
+  - "profit_collection_candidate"
+  - "counterparty_candidate"
+  - "temp_executor_candidate"
+  - "normal_holder_candidate"
+  - "unknown_candidate"
+forbidden_confirmed_roles:
+  - "market_maker"
+  - "dominant_side"
+  - "controller"
+  - "confirmed_same_source"
+  - "confirmed_distributor"
+candidate_language_required: true

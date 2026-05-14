@@ -1,0 +1,71 @@
+global_hard_negative_rules:
+- rule_id: GHN_001
+  name: 阶段越权输出交易信号
+  result: PHASE_REJECTED
+- rule_id: GHN_002
+  name: 未通过上游验收却进入下游
+  result: SYSTEM_PAUSED
+- rule_id: GHN_003
+  name: 缺少输入合约仍继续执行
+  result: PHASE_BLOCKED
+- rule_id: GHN_004
+  name: 输出合约缺失
+  result: PHASE_NEEDS_REWORK
+- rule_id: GHN_005
+  name: 缺口未登记
+  result: PHASE_NEEDS_REWORK
+- rule_id: GHN_006
+  name: 直接覆盖 raw 数据
+  result: SYSTEM_PAUSED
+- rule_id: GHN_007
+  name: 实盘执行越权
+  result: EXECUTION_BLOCKED
+acceptance_hard_negative_rules:
+- Handoff without Acceptance is blocked
+- Tool Binding without Acceptance is blocked
+- Paper Runtime without Acceptance is blocked
+- Live execution remains blocked
+handoff_hard_negative_rules:
+- rule_id: HANDOFF_WITHOUT_ACCEPTANCE
+  description: Handoff without an acceptance_result_packet is blocked
+  action: BLOCK
+  doc_id: DOC-20260511-027
+- rule_id: HANDOFF_WITHOUT_TRACE
+  description: Handoff without trace_handoff_packet is blocked
+  action: BLOCK
+  doc_id: DOC-20260511-027
+- rule_id: READY_WITH_GAPS_UPGRADED_TO_READY
+  description: READY_WITH_GAPS cannot be upgraded by handoff/downstream
+  action: BLOCK
+  doc_id: DOC-20260511-027
+- rule_id: DOWNSTREAM_DIRECT_READ_WITHOUT_HANDOFF
+  description: Downstream phase cannot directly read upstream business docs when handoff
+    is required
+  action: BLOCK
+  doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:54:04Z'
+hard_negative_rules:
+- rule_id: PHASE_CONTROLLER_RUNTIME_FROM_INDEX_ONLY
+  description: phase_controller_index.yaml registration does not authorize runtime
+    execution
+  blocks:
+  - P01_RUNTIME_CONNECTION
+  - PHASE_RUNTIME_EXECUTION
+- rule_id: TOOL_BINDING_DECLARATION_NOT_RUNTIME_PERMISSION
+  description: tool_binding.allowed in index is a future policy declaration only and
+    cannot override global tool_binding_allowed=false
+  blocks:
+  - RUNNER_TOOL_BINDING
+  - TOOL_BINDING_RUNTIME
+- rule_id: PAPER_RUNTIME_DECLARATION_NOT_RUNTIME_PERMISSION
+  description: paper_runtime.allowed in index is a future boundary only and cannot
+    start Paper Runtime without P07/P08 acceptance and runtime handoff
+  blocks:
+  - PAPER_RUNTIME
+- rule_id: LIVE_EXECUTION_FORBIDDEN_FROM_PHASE_CONTROLLER
+  description: No phase controller may generate live execution signals or enable auto
+    live trade
+  blocks:
+  - LIVE_EXECUTION
+  - AUTO_ORDER_EXECUTION
+  - REAL_TRADE_EXECUTION

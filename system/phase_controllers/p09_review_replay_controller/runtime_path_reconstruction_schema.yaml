@@ -1,0 +1,38 @@
+schema_id: RUNTIME_PATH_RECONSTRUCTION_SCHEMA
+title: Paper Runtime Path Reconstruction
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- runtime_path_id
+- review_case_id
+- p07_decision_id
+- p08_decision_id
+- paper_permission_id
+- runtime_events
+- invalidation_events
+fields:
+  runtime_path_id: string
+  review_case_id: string
+  p07_decision_id: string
+  p08_decision_id: string
+  paper_permission_id: string
+  runtime_events: list
+  invalidation_events: list
+enums: {}
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

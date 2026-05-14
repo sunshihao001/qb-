@@ -1,0 +1,19 @@
+phase_id: K01
+phase_name: "Document Passport & Source Registry"
+program: KNOWLEDGE_PROCESSING_PROGRAM
+status: CONTROLLER_CANDIDATE_READY
+purpose: "document identity, source, use permission, confidence, processing route"
+required_inputs:
+  - upstream_handoff_or_raw_document
+required_outputs:
+  - document_passport.yaml
+  - source_registry_record.yaml
+acceptance:
+  - outputs_exist
+  - source_trace_present
+  - io_contract_declared
+  - handoff_declared
+forbidden:
+  - production_mutation_without_governance
+  - summary_only_completion
+  - untraced_claims

@@ -1,0 +1,8 @@
+system_maturity_scorecard:
+  type: object
+  required:
+    - scorecard_id
+    - dimensions
+    - overall_score
+    - readiness_level
+  additional_properties_allowed: true

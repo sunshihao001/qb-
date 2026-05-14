@@ -1,0 +1,42 @@
+{
+  "phase_id": "U00",
+  "phase_name": "U00_review_upgrade_controller",
+  "status": "U00_READY_WITH_GAPS",
+  "previous_status": "DESIGN_BLUEPRINT_READY",
+  "execution_status": "NOT_EXECUTED",
+  "subphase_status_map": {
+    "U00.0": "PENDING",
+    "U00.1": "PENDING",
+    "U00.2": "PENDING",
+    "U00.3": "PENDING",
+    "U00.4": "PENDING",
+    "U00.5": "PENDING",
+    "U00.6": "PENDING",
+    "U00.7": "PENDING",
+    "U00.8": "PENDING",
+    "U00.9": "PENDING",
+    "U00.10": "PENDING",
+    "U00.11": "PENDING",
+    "U00.12": "PENDING",
+    "U00.13": "PENDING",
+    "U00.14": "PENDING",
+    "U00.15": "PENDING",
+    "U00.16": "PENDING"
+  },
+  "preflight_status": "PENDING",
+  "review_status": "PENDING",
+  "root_cause_status": "PENDING",
+  "upgrade_queue_status": "PENDING",
+  "handoff_status": "PENDING",
+  "safe_mode": true,
+  "unresolved_gaps": [
+    "runtime implementation not yet executed"
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ],
+  "updated_at": "2026-05-13T15:05:00+00:00"
+}

@@ -1,0 +1,56 @@
+task_tree_id: P00_SYSTEM_BOOTSTRAP_TASK_TREE_001
+stage: P00_system_bootstrap_controller
+version: v1.0-institutional
+root_task:
+  task_id: P00_ROOT
+  name_cn: 系统建造与方法论编译
+  goal: 将 K00 资产和方法论蓝图编译成正式系统运行骨架
+tasks:
+  - task_id: P00_T01
+    name_cn: 读取系统方法论蓝图
+    type: methodology_read
+    required_inputs: [00_methodology/system_methodology_blueprint.md]
+    acceptance: [blueprint_exists, blueprint_contains_phase_controller_definition]
+  - task_id: P00_T02
+    name_cn: 读取 K00 交接包
+    type: upstream_handoff_read
+    required_inputs: [00_knowledge_intake/handoff_packets/]
+    acceptance: [handoff_exists, target_stage_is_P00]
+  - task_id: P00_T03
+    name_cn: 读取 Phase Controller 候选规格
+    type: candidate_spec_read
+    required_inputs: [00_knowledge_intake/phase_controller_candidates/]
+    acceptance: [candidate_spec_exists, registration_status_is_NOT_REGISTERED]
+  - task_id: P00_T04
+    name_cn: 扫描系统现有结构
+    type: filesystem_scan
+    acceptance: [root_scanned, missing_core_dirs_identified]
+  - task_id: P00_T05
+    name_cn: 识别系统状态分裂
+    type: state_reconciliation
+    required_outputs: [00_control/current_blockers.json]
+  - task_id: P00_T06
+    name_cn: 建立控制平面
+    type: control_plane_generation
+    required_outputs: [00_control/current_system_state.json, 00_control/phase_registry.yaml, 00_control/system_asset_index.json, 00_control/task_consumption_log.json, 00_control/next_stage_decision.json]
+  - task_id: P00_T07
+    name_cn: 建立治理平面
+    type: governance_plane_generation
+  - task_id: P00_T08
+    name_cn: 建立领域平面
+    type: domain_plane_generation
+  - task_id: P00_T09
+    name_cn: 建立数据平面任务
+    type: data_plane_generation
+  - task_id: P00_T10
+    name_cn: 创建 P01-P10 控制器骨架
+    type: phase_controller_stub_generation
+  - task_id: P00_T11
+    name_cn: 建立追踪矩阵
+    type: trace_matrix_generation
+  - task_id: P00_T12
+    name_cn: 建立交接注册表
+    type: handoff_registry_generation
+  - task_id: P00_T13
+    name_cn: 生成 P00 启动报告
+    type: bootstrap_report_generation

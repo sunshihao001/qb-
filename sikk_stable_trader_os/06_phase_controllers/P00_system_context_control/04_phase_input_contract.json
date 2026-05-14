@@ -1,0 +1,23 @@
+{
+  "phase_id": "P00",
+  "required_inputs": [
+    "control_state",
+    "phase_registry",
+    "asset_index",
+    "data_plane"
+  ],
+  "forbidden_inputs": [
+    "secrets",
+    "private_keys",
+    "real_trade_instruction"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

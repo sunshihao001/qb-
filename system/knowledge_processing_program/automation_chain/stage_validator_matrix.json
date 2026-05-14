@@ -1,0 +1,373 @@
+{
+  "task_id": "KPP-AUTOCHAIN-20260513-001",
+  "created_at": "2026-05-13T05:34:21Z",
+  "stage_contracts": [
+    {
+      "stage_id": "K00",
+      "stage_name": "upload_intake_and_raw_preservation",
+      "order": 0,
+      "input_contract_required": true,
+      "output_contract_required": true,
+      "schema_validator_required": true,
+      "acceptance_gate_required": true,
+      "handoff_required": true,
+      "state_update_required": true,
+      "trace_required": true,
+      "minimum_outputs": [
+        "run_request.json",
+        "raw_source_manifest.json",
+        "source_registry_entry.json",
+        "k00_state.json"
+      ],
+      "block_if_missing": [
+        "input_contract",
+        "output_contract",
+        "schema_validator_result",
+        "source_trace",
+        "acceptance_result"
+      ],
+      "status_codes": [
+        "K00_PENDING",
+        "K00_RUNNING",
+        "K00_ACCEPTED",
+        "K00_REJECTED",
+        "K00_BLOCKED",
+        "K00_READY_WITH_GAPS"
+      ]
+    },
+    {
+      "stage_id": "K01",
+      "stage_name": "document_passport_and_type_classification",
+      "order": 1,
+      "input_contract_required": true,
+      "output_contract_required": true,
+      "schema_validator_required": true,
+      "acceptance_gate_required": true,
+      "handoff_required": true,
+      "state_update_required": true,
+      "trace_required": true,
+      "minimum_outputs": [
+        "document_passport.yaml",
+        "document_type_classification.yaml",
+        "k01_state.json"
+      ],
+      "block_if_missing": [
+        "input_contract",
+        "output_contract",
+        "schema_validator_result",
+        "source_trace",
+        "acceptance_result"
+      ],
+      "status_codes": [
+        "K01_PENDING",
+        "K01_RUNNING",
+        "K01_ACCEPTED",
+        "K01_REJECTED",
+        "K01_BLOCKED",
+        "K01_READY_WITH_GAPS"
+      ]
+    },
+    {
+      "stage_id": "K02",
+      "stage_name": "semantic_chunking_and_concept_index",
+      "order": 2,
+      "input_contract_required": true,
+      "output_contract_required": true,
+      "schema_validator_required": true,
+      "acceptance_gate_required": true,
+      "handoff_required": true,
+      "state_update_required": true,
+      "trace_required": true,
+      "minimum_outputs": [
+        "semantic_chunk_index.json",
+        "concept_registry.json",
+        "method_principle_registry.json",
+        "k02_state.json"
+      ],
+      "block_if_missing": [
+        "input_contract",
+        "output_contract",
+        "schema_validator_result",
+        "source_trace",
+        "acceptance_result"
+      ],
+      "status_codes": [
+        "K02_PENDING",
+        "K02_RUNNING",
+        "K02_ACCEPTED",
+        "K02_REJECTED",
+        "K02_BLOCKED",
+        "K02_READY_WITH_GAPS"
+      ]
+    },
+    {
+      "stage_id": "K03",
+      "stage_name": "functional_object_extraction",
+      "order": 3,
+      "input_contract_required": true,
+      "output_contract_required": true,
+      "schema_validator_required": true,
+      "acceptance_gate_required": true,
+      "handoff_required": true,
+      "state_update_required": true,
+      "trace_required": true,
+      "minimum_outputs": [
+        "functional_object_registry.json",
+        "assumption_registry.json",
+        "constraint_registry.json",
+        "unknown_gap_registry.json",
+        "k03_state.json"
+      ],
+      "block_if_missing": [
+        "input_contract",
+        "output_contract",
+        "schema_validator_result",
+        "source_trace",
+        "acceptance_result"
+      ],
+      "status_codes": [
+        "K03_PENDING",
+        "K03_RUNNING",
+        "K03_ACCEPTED",
+        "K03_REJECTED",
+        "K03_BLOCKED",
+        "K03_READY_WITH_GAPS"
+      ]
+    },
+    {
+      "stage_id": "K04",
+      "stage_name": "system_mapping_and_gap_detection",
+      "order": 4,
+      "input_contract_required": true,
+      "output_contract_required": true,
+      "schema_validator_required": true,
+      "acceptance_gate_required": true,
+      "handoff_required": true,
+      "state_update_required": true,
+      "trace_required": true,
+      "minimum_outputs": [
+        "system_mapping_matrix.json",
+        "phase_mapping_matrix.json",
+        "gap_detection_report.json",
+        "k04_state.json"
+      ],
+      "block_if_missing": [
+        "input_contract",
+        "output_contract",
+        "schema_validator_result",
+        "source_trace",
+        "acceptance_result"
+      ],
+      "status_codes": [
+        "K04_PENDING",
+        "K04_RUNNING",
+        "K04_ACCEPTED",
+        "K04_REJECTED",
+        "K04_BLOCKED",
+        "K04_READY_WITH_GAPS"
+      ]
+    },
+    {
+      "stage_id": "K05",
+      "stage_name": "controller_schema_contract_candidate_generation",
+      "order": 5,
+      "input_contract_required": true,
+      "output_contract_required": true,
+      "schema_validator_required": true,
+      "acceptance_gate_required": true,
+      "handoff_required": true,
+      "state_update_required": true,
+      "trace_required": true,
+      "minimum_outputs": [
+        "controller_candidate_packet.json",
+        "schema_contract_candidate_packet.json",
+        "candidate_risk_review.json",
+        "k05_state.json"
+      ],
+      "block_if_missing": [
+        "input_contract",
+        "output_contract",
+        "schema_validator_result",
+        "source_trace",
+        "acceptance_result"
+      ],
+      "status_codes": [
+        "K05_PENDING",
+        "K05_RUNNING",
+        "K05_ACCEPTED",
+        "K05_REJECTED",
+        "K05_BLOCKED",
+        "K05_READY_WITH_GAPS"
+      ]
+    },
+    {
+      "stage_id": "K06",
+      "stage_name": "her_task_package_compilation",
+      "order": 6,
+      "input_contract_required": true,
+      "output_contract_required": true,
+      "schema_validator_required": true,
+      "acceptance_gate_required": true,
+      "handoff_required": true,
+      "state_update_required": true,
+      "trace_required": true,
+      "minimum_outputs": [
+        "her_task_package.yaml",
+        "execution_plan.json",
+        "runner_binding_spec.json",
+        "k06_state.json"
+      ],
+      "block_if_missing": [
+        "input_contract",
+        "output_contract",
+        "schema_validator_result",
+        "source_trace",
+        "acceptance_result"
+      ],
+      "status_codes": [
+        "K06_PENDING",
+        "K06_RUNNING",
+        "K06_ACCEPTED",
+        "K06_REJECTED",
+        "K06_BLOCKED",
+        "K06_READY_WITH_GAPS"
+      ]
+    },
+    {
+      "stage_id": "K07",
+      "stage_name": "acceptance_gate_and_handoff_validation",
+      "order": 7,
+      "input_contract_required": true,
+      "output_contract_required": true,
+      "schema_validator_required": true,
+      "acceptance_gate_required": true,
+      "handoff_required": true,
+      "state_update_required": true,
+      "trace_required": true,
+      "minimum_outputs": [
+        "knowledge_processing_acceptance_result.json",
+        "validation_report.json",
+        "handoff_packet.json",
+        "k07_state.json"
+      ],
+      "block_if_missing": [
+        "input_contract",
+        "output_contract",
+        "schema_validator_result",
+        "source_trace",
+        "acceptance_result"
+      ],
+      "status_codes": [
+        "K07_PENDING",
+        "K07_RUNNING",
+        "K07_ACCEPTED",
+        "K07_REJECTED",
+        "K07_BLOCKED",
+        "K07_READY_WITH_GAPS"
+      ]
+    },
+    {
+      "stage_id": "K08",
+      "stage_name": "knowledge_memory_index_and_governance_enqueue",
+      "order": 8,
+      "input_contract_required": true,
+      "output_contract_required": true,
+      "schema_validator_required": true,
+      "acceptance_gate_required": true,
+      "handoff_required": false,
+      "state_update_required": true,
+      "trace_required": true,
+      "minimum_outputs": [
+        "knowledge_memory_index.json",
+        "governance_queue_entry.json",
+        "telegram_status_panel.json",
+        "final_run_summary.md",
+        "k08_state.json"
+      ],
+      "block_if_missing": [
+        "input_contract",
+        "output_contract",
+        "schema_validator_result",
+        "source_trace",
+        "acceptance_result"
+      ],
+      "status_codes": [
+        "K08_PENDING",
+        "K08_RUNNING",
+        "K08_ACCEPTED",
+        "K08_REJECTED",
+        "K08_BLOCKED",
+        "K08_READY_WITH_GAPS"
+      ]
+    }
+  ],
+  "global_validators": [
+    {
+      "validator_id": "V-PARSE",
+      "checks": [
+        "json_parse",
+        "yaml_parse",
+        "markdown_required_headings"
+      ]
+    },
+    {
+      "validator_id": "V-PATH",
+      "checks": [
+        "required_paths_exist",
+        "raw_path_immutable",
+        "no_root_scatter_outputs"
+      ]
+    },
+    {
+      "validator_id": "V-CONTRACT",
+      "checks": [
+        "required_fields_present",
+        "status_code_allowed",
+        "handoff_schema_match"
+      ]
+    },
+    {
+      "validator_id": "V-TRACE",
+      "checks": [
+        "source_trace_present",
+        "derived_output_links_source",
+        "candidate_has_origin_doc"
+      ]
+    },
+    {
+      "validator_id": "V-SAFETY",
+      "checks": [
+        "candidate_only",
+        "no_trading",
+        "no_signing",
+        "no_broadcast",
+        "no_secret_leak"
+      ]
+    },
+    {
+      "validator_id": "V-GOVERNANCE",
+      "checks": [
+        "queue_entry_has_candidate_refs",
+        "p00_handoff_target_declared",
+        "manual_review_policy_present"
+      ]
+    },
+    {
+      "validator_id": "V-TELEGRAM",
+      "checks": [
+        "panel_has_run_status",
+        "panel_has_stage_status",
+        "panel_has_gaps",
+        "panel_has_handoff",
+        "panel_has_next_action"
+      ]
+    },
+    {
+      "validator_id": "V-E2E",
+      "checks": [
+        "sample_upload_to_queue_replay_passes",
+        "acceptance_report_written"
+      ]
+    }
+  ]
+}

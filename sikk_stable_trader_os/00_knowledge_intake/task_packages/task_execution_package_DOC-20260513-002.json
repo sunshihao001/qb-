@@ -1,0 +1,40 @@
+{
+  "doc_id": "DOC-20260513-002",
+  "package_id": "task_execution_package_DOC-20260513-002",
+  "route_status": "K00_ACCEPTED",
+  "target_stage": "P01_data_fact_controller",
+  "execution_mode": "run_first_readonly_token_data",
+  "user_intent": "Use trading-system full-flow as application harness to output concrete token data, then discover missing functions; do not only describe system process.",
+  "prerequisites": [
+    "user_provides_token_CA",
+    "read_only_GMGN_OKX_connectors_available_or_degraded_recorded"
+  ],
+  "tasks": [
+    {
+      "id": "P01-AUDIT-CURRENT",
+      "action": "audit current P01 implementation and GMGN/OKX connectors"
+    },
+    {
+      "id": "P01-RUN-FIRST-CA",
+      "action": "create/use fixed CA read-only entry to fetch token concrete data"
+    },
+    {
+      "id": "P01-GAP-REPORT",
+      "action": "output token data facts and missing function list"
+    }
+  ],
+  "forbidden": [
+    "real_trade_execution",
+    "swap_execute",
+    "private_key_or_seed_handling"
+  ],
+  "inputs": [
+    "00_knowledge_intake/raw_inputs/DOC-20260513-002_p01_data_fact_controller_professional.md"
+  ],
+  "outputs_expected": [
+    "data_fact_handoff_packet.json",
+    "normalized_token_fact.json",
+    "data_quality_decision.json",
+    "missing_function_list.md"
+  ]
+}

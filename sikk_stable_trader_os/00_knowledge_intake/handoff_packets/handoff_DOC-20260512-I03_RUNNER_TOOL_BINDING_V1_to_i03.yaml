@@ -1,0 +1,15 @@
+{
+  "packet_id": "K00_TO_I03_DOC-20260512-I03_RUNNER_TOOL_BINDING_V1",
+  "from": "K00_KNOWLEDGE_INTAKE",
+  "to": "I03_RUNNER_TOOL_BINDING",
+  "doc_id": "DOC-20260512-I03_RUNNER_TOOL_BINDING_V1",
+  "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I03_runner_tool_binding_v1_0.md",
+  "task_package_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I03_runner_tool_binding",
+  "permission": "LAND_I03_PACKAGE_ONLY",
+  "restrictions": [
+    "NO_PAPER_RUNTIME",
+    "NO_LIVE_EXECUTION",
+    "NO_WALLET_SIGNING",
+    "NO_AUTO_DEPLOY"
+  ]
+}

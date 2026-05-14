@@ -1,0 +1,36 @@
+{
+  "task_id": "TASK-DOC-20260511-010-HER-STATE-LOGIC-LANDING",
+  "doc_id": "DOC-20260511-010",
+  "parent_doc_id": "DOC-20260511-006",
+  "created_at": "2026-05-11T13:56:09.172903+00:00",
+  "objective_tree": {
+    "root": "Append HER runtime and authoritative state-source rules",
+    "children": [
+      "raw preservation",
+      "canonical append",
+      "register 13 HER execution steps",
+      "register forbidden shortcuts",
+      "register completion-state distinctions",
+      "enforce current_system_state as sole authority"
+    ]
+  },
+  "acceptance_gate": [
+    "raw_saved",
+    "canonical_contains_sections_4_5",
+    "state_source_rule_recorded",
+    "blocking_gap_rule_recorded",
+    "completion_distinctions_recorded",
+    "control_state_updated",
+    "phase_registry_exists_checked"
+  ],
+  "status": "GENERATED",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "phase_id": "O00",
+  "required_outputs": {
+    "preflight_result": "preflight/o00_preflight_result.json",
+    "pipeline_execution_plan": "plan/pipeline_execution_plan.json",
+    "stage_dependency_graph": "plan/stage_dependency_graph.json",
+    "pipeline_state": "state/pipeline_state.json",
+    "stage_state_matrix": "state/stage_state_matrix.json",
+    "pipeline_queue": "queue/pipeline_queue.json",
+    "stage_refs": "stage_refs/",
+    "handoffs": "handoffs/",
+    "pipeline_gap_register": "gaps/pipeline_gap_register.json",
+    "evidence_bundle": "evidence/pipeline_evidence_bundle.json",
+    "trace_log": "trace/o00_trace.jsonl",
+    "audit_log": "trace/o00_audit.jsonl",
+    "acceptance_result": "acceptance/o00_acceptance_result.json",
+    "final_handoff": "handoffs/o00_final_handoff.json",
+    "final_report": "reports/o00_final_report.md"
+  }
+}

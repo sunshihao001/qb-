@@ -1,0 +1,25 @@
+{
+  "issue_pack_id": "ISSUEPACK-20260514-HER-CLOSED-LOOP-P0",
+  "run_id": "RUN-20260514-HER-CLOSED-LOOP-P0-SAFE",
+  "ts": "2026-05-14T11:19:10Z",
+  "runner_exit_code": 10,
+  "runner_exit_acceptable": true,
+  "status_tool_exit_code": 0,
+  "missing_issue_outputs": [],
+  "run_dir_exists": true,
+  "run_dir_status": {
+    "input": true,
+    "k00": true,
+    "f00": true,
+    "v00": true,
+    "a00": true,
+    "h00": true,
+    "u00": true,
+    "g00": true,
+    "o00": true
+  },
+  "parse_error_count": 0,
+  "parse_errors": [],
+  "ready_for_production": false,
+  "final_status": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS"
+}

@@ -1,0 +1,63 @@
+plane_id: TRACE_PLANE
+plane_name: 追踪平面
+plane_level: light_institutional
+version: v2.0
+status: TRACE_READY_WITH_GAPS
+doc_id: DOC-20260511-025
+position_in_build_order:
+  previous: FULL_CONTROL_PLANE
+  next:
+    - ACCEPTANCE_PLANE
+    - HANDOFF_PLANE
+    - P01_P10_PHASE_CONTROLLERS
+mission:
+  primary: 建立 SIKK Stable Trader OS 的全系统追踪链路
+  secondary:
+    - 追踪知识摄取到方法论蓝图来源
+    - 追踪每个 Plane/Phase 的输入输出状态合约验收交接
+    - 为 Acceptance/Handoff/Review 提供可追溯依据
+authority:
+  can_define:
+    - trace_id_policy
+    - trace_object_registry
+    - task_trace
+    - artifact_trace
+    - field_lineage_trace
+    - contract_trace
+    - state_trace
+    - acceptance_trace
+    - handoff_trace
+    - tool_trace
+    - runtime_trace
+    - review_trace
+    - upgrade_trace
+    - error_trace
+    - trace_quality
+  cannot_do:
+    - schedule_phase
+    - accept_or_reject_phase
+    - execute_handoff
+    - collect_raw_data
+    - generate_strategy_signal
+    - execute_trade
+    - modify_raw_data
+    - bypass_acceptance
+    - bypass_governance
+safety_boundary:
+  paper_only: true
+  real_trade_enabled: false
+  auto_order_allowed: false
+  live_runtime_allowed: false
+status_codes:
+  - TRACE_UNINITIALIZED
+  - TRACE_CONTEXT_READY
+  - TRACE_ID_POLICY_READY
+  - TRACE_OBJECTS_REGISTERED
+  - TRACE_MODELS_READY
+  - TRACE_CHAIN_READY
+  - TRACE_READY
+  - TRACE_READY_WITH_GAPS
+  - TRACE_REJECTED
+  - TRACE_INCOMPLETE
+  - TRACE_BROKEN
+  - TRACE_REPLAY_READY

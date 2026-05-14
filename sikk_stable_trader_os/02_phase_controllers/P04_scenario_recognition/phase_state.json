@@ -1,0 +1,24 @@
+{
+  "phase_id": "P04",
+  "phase_name": "场景盘型层",
+  "current_status": "PHASE_NOT_STARTED",
+  "runtime_boundary": "OBSERVE_PAPER_ONLY",
+  "last_updated": "2026-05-11T08:23:00Z",
+  "state_type": "runtime_state_not_design_doc",
+  "completed_tasks": [],
+  "pending_tasks": [
+    "P04-T-001",
+    "P04-T-002",
+    "P04-T-003",
+    "P04-T-004",
+    "P04-T-005"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [],
+  "hard_negative_hits": [],
+  "last_acceptance_result": null,
+  "next_phase_id": "P05_structure_position",
+  "next_phase_allowed": false,
+  "audit_refs": [],
+  "handoff_packet_path": null
+}

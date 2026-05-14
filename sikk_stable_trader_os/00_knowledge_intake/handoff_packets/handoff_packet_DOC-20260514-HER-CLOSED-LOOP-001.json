@@ -1,0 +1,23 @@
+{
+  "doc_id": "DOC-20260514-HER-CLOSED-LOOP-001",
+  "from": "K00",
+  "to": "HER_DOC_SYSTEM_REVIEW",
+  "handoff_status": "K00_ACCEPTED_WITH_SYSTEM_REPAIR_REQUIRED",
+  "raw_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260514-HER-CLOSED-LOOP-001_sikk_her_closed_loop.md",
+  "passport_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260514-HER-CLOSED-LOOP-001.json",
+  "index_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260514-HER-CLOSED-LOOP-001.json",
+  "mapping_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/system_mapping/system_mapping_DOC-20260514-HER-CLOSED-LOOP-001.json",
+  "gap_ref": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/gap_detection/gap_register_DOC-20260514-HER-CLOSED-LOOP-001.json",
+  "allowed_next_routes": [
+    "HER_DOC_SYSTEM_REVIEW",
+    "HER_DOC_SYSTEM_AUDIT",
+    "HER_DOC_PIPELINE"
+  ],
+  "blocked_routes": [
+    "live_runtime",
+    "wallet_signing",
+    "broadcast",
+    "auto_swap",
+    "production_trading"
+  ]
+}

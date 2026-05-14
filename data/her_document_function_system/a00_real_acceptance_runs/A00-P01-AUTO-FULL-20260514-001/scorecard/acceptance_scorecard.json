@@ -1,0 +1,97 @@
+{
+  "scorecard_id": "acceptance_scorecard_A00-P01-AUTO-FULL-20260514-001",
+  "dimensions": [
+    {
+      "dimension": "source_intake",
+      "status": "PASSED_WITH_GAPS",
+      "evidence_refs": [],
+      "gaps": [],
+      "decision_weight": "HIGH"
+    },
+    {
+      "dimension": "function_realization",
+      "status": "PASSED_WITH_GAPS",
+      "evidence_refs": [],
+      "gaps": [],
+      "decision_weight": "HIGH"
+    },
+    {
+      "dimension": "validation_quality",
+      "status": "PASSED_WITH_GAPS",
+      "evidence_refs": [],
+      "gaps": [],
+      "decision_weight": "HIGH"
+    },
+    {
+      "dimension": "binding_quality",
+      "status": "PASSED_WITH_GAPS",
+      "evidence_refs": [],
+      "gaps": [],
+      "decision_weight": "HIGH"
+    },
+    {
+      "dimension": "status_integrity",
+      "status": "PASSED_WITH_GAPS",
+      "evidence_refs": [],
+      "gaps": [],
+      "decision_weight": "HIGH"
+    },
+    {
+      "dimension": "artifact_integrity",
+      "status": "PASSED_WITH_GAPS",
+      "evidence_refs": [],
+      "gaps": [],
+      "decision_weight": "HIGH"
+    },
+    {
+      "dimension": "gap_management",
+      "status": "PASSED_WITH_GAPS",
+      "evidence_refs": [],
+      "gaps": [
+        "policy_not_active",
+        "paper_runtime_not_enabled",
+        "live_runtime_forbidden",
+        "telegram_binding_design_only",
+        "V00_READY_WITH_GAPS",
+        "R00_READY_WITH_GAPS"
+      ],
+      "decision_weight": "HIGH"
+    },
+    {
+      "dimension": "trace_audit_quality",
+      "status": "PASSED_WITH_GAPS",
+      "evidence_refs": [],
+      "gaps": [],
+      "decision_weight": "HIGH"
+    },
+    {
+      "dimension": "governance_safety",
+      "status": "PASSED_WITH_GAPS",
+      "evidence_refs": [],
+      "gaps": [
+        "policy_not_active",
+        "paper_runtime_not_enabled",
+        "live_runtime_forbidden",
+        "telegram_binding_design_only",
+        "V00_READY_WITH_GAPS",
+        "R00_READY_WITH_GAPS"
+      ],
+      "decision_weight": "HIGH"
+    },
+    {
+      "dimension": "downstream_readiness",
+      "status": "PASSED_WITH_GAPS",
+      "evidence_refs": [],
+      "gaps": [
+        "policy_not_active",
+        "paper_runtime_not_enabled",
+        "live_runtime_forbidden",
+        "telegram_binding_design_only",
+        "V00_READY_WITH_GAPS",
+        "R00_READY_WITH_GAPS"
+      ],
+      "decision_weight": "HIGH"
+    }
+  ],
+  "overall_recommendation": "A00_REAL_ACCEPTANCE_EVIDENCE_READY_WITH_GAPS"
+}

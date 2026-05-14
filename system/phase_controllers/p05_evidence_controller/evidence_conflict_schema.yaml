@@ -1,0 +1,25 @@
+controller_id: P05_EVIDENCE_CONTROLLER
+version: v3.0-professional
+status: PACKAGE_SPEC_READY_WITH_RUNTIME_GAPS
+created_at: '2026-05-12T02:44:17Z'
+paper_only: true
+real_trade_enabled: false
+runtime_allowed: false
+paper_runtime_allowed: false
+live_execution_allowed: false
+schema_id: EVIDENCE_CONFLICT_SCHEMA
+conflict_types:
+- SUPPORT_COUNTER_CONFLICT
+- SOURCE_VALUE_CONFLICT
+- TIME_CONTEXT_CONFLICT
+- WALLET_ENTITY_CONFLICT
+- CHIP_ACCOUNTING_CONFLICT
+- QUALITY_CONFLICT
+required:
+- conflict_id
+- candidate_id
+- conflict_type
+- conflicting_evidence_ids
+- conflict_severity
+- resolution_status
+- downstream_effect

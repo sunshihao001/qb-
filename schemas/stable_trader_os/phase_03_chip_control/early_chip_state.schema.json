@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "token_address",
+    "early_wallet_count",
+    "early_wallet_retention_ratio",
+    "early_wallet_exit_ratio",
+    "early_chip_state",
+    "evidence_level",
+    "risk_level"
+  ],
+  "properties": {
+    "token_address": {},
+    "early_wallet_count": {},
+    "early_wallet_retention_ratio": {},
+    "early_wallet_exit_ratio": {},
+    "early_chip_state": {},
+    "evidence_level": {},
+    "risk_level": {}
+  }
+}

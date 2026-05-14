@@ -1,0 +1,29 @@
+{
+  "phase_id": "P03",
+  "token_address": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+  "roles": {
+    "RETAIL_NOISE": 12,
+    "EARLY_BUYER": 45,
+    "BAGHOLDER_WHALE": 3
+  },
+  "game_side": {
+    "NOISE_SIDE": 12,
+    "STRUCTURE_SIDE": 45,
+    "COUNTERPARTY_SIDE": 3
+  },
+  "same_source_group_hypothesis": "not_detected_or_not_exported",
+  "synchronous_behavior": {
+    "highest_sync_buy": 0,
+    "highest_sync_sell": 0
+  },
+  "chip_control_hypothesis": "CONTROL_MIGRATING_TO_COUNTERPARTY",
+  "decision": "COUNTERPARTY_PRESSURE_HIGH_STRUCTURE_RISK",
+  "evidence_level": "E3",
+  "missing_fields": [
+    "wallet_address",
+    "role",
+    "game_side",
+    "evidence_level"
+  ],
+  "downstream_handoff": "P04"
+}

@@ -1,0 +1,29 @@
+acceptance_report:
+  report_id: string
+  target_stage: string
+  generated_at: datetime
+  executive_summary:
+    final_status: string
+    main_reason: string
+    can_move_to_next_stage: boolean
+  passed_checks:
+  - check_id: string
+    check_name: string
+    evidence_trace_ids: list
+  failed_checks:
+  - check_id: string
+    check_name: string
+    severity: string
+    reason: string
+    required_fix: string
+  gaps:
+    blocking_gaps: list
+    non_blocking_gaps: list
+  downstream_permission:
+    handoff: string
+    phase_controller: string
+    tool_binding: string
+    paper_runtime: string
+  next_actions:
+    required_rework: list
+    optional_improvements: list

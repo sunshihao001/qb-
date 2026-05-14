@@ -1,0 +1,17 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: EXECUTION_RISK_REFRESH_REQUEST_SCHEMA
+version: v3.0
+required_fields:
+  - refresh_request_id
+  - candidate_id
+  - refresh_reason
+  - required_refresh_tasks
+  - after_refresh_action
+allowed_statuses:
+  - RERUN_P08
+  - RERUN_P07_THEN_P08
+  - KEEP_PAUSED
+  - BLOCK_IF_EXPIRED
+no_live_execution_fields_allowed: true

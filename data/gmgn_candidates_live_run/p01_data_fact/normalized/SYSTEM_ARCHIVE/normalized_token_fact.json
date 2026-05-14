@@ -1,0 +1,24 @@
+{
+  "schema_version": "P01_DATA_SOURCE_INTELLIGENCE_V2_SCAFFOLD",
+  "token_address": "SYSTEM_ARCHIVE",
+  "fields": {
+    "token_address": {
+      "value": "SYSTEM_ARCHIVE",
+      "source": "system_scaffold",
+      "fetched_at": "2026-05-13T07:00:57Z",
+      "confidence": 0.6,
+      "freshness_status": "REPLAY_ONLY",
+      "field_status": "FIELD_PRESENT",
+      "missing_reason": null
+    },
+    "chain": {
+      "value": "solana",
+      "source": "system_scaffold",
+      "fetched_at": "2026-05-13T07:00:57Z",
+      "confidence": 0.6,
+      "freshness_status": "REPLAY_ONLY",
+      "field_status": "FIELD_PRESENT",
+      "missing_reason": null
+    }
+  }
+}

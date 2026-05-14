@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0365
+source_path: sikk_stable_trader_os/09_reports/audit_reports/next_step_plan.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 3
+  P04: 0
+  P05: 5
+  P06: 3
+  P07: 3
+  P08: 2
+  P09: 0
+  P10: 0
+primary_phase: P05
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

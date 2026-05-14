@@ -1,0 +1,72 @@
+{
+  "doc_id": "DOC-F00-SAFE-REPLAY-001",
+  "target_phase": "F00",
+  "system_mapping": {
+    "planes": [
+      "HER-DFAFS",
+      "F00_function_realization_controller"
+    ],
+    "affected_phases": [
+      "K00",
+      "F00",
+      "Review"
+    ]
+  },
+  "function_mapping": [],
+  "required_functions": [
+    {
+      "function_id": "func_f00_contract_hard_gate",
+      "source_concept": "F00 cannot start without K00 handoff and execution boundary.",
+      "required_function": "Enforce F00 preflight hard gate from K00 handoff, passport, corpus index, mapping, gap detection, boundary, write policy, and repo root.",
+      "function_type": "HARD_BLOCK_RULE",
+      "target_phase": "F00",
+      "input_fields": [
+        "k00_handoff_packet",
+        "document_passport_refs",
+        "corpus_index_refs",
+        "system_mapping_refs",
+        "gap_detection_refs",
+        "execution_boundary",
+        "write_policy",
+        "repo_root"
+      ],
+      "field_sources": [
+        {
+          "field": "k00_handoff_packet",
+          "source_ref": "K00 handoff",
+          "source_type": "file_ref",
+          "missing_policy": "F00_BLOCKED"
+        }
+      ],
+      "output_fields": [
+        "preflight_status",
+        "allowed_modes",
+        "forbidden_modes",
+        "gap_refs"
+      ],
+      "judgement_logic": {
+        "logic_type": "boolean_gate",
+        "description": "Required refs must exist before non-design execution.",
+        "input_fields": [
+          "k00_handoff_packet",
+          "execution_boundary"
+        ],
+        "output_status": "F00_BLOCKED_OR_PASSED",
+        "failure_condition": "missing hard input",
+        "trace_required": true
+      },
+      "schema": "04_f00_input_contract.json",
+      "contract": "F00 input/output contracts",
+      "code_module": "tools/her_document_function_system/f00_safe_runner.py",
+      "tests": "tests/test_f00_safe_runner.py",
+      "replay": "data/her_document_function_system/f00_replay/f00_safe_replay_fixture.json",
+      "trace": "outputs/f00_trace.jsonl",
+      "report": "outputs/f00_final_report.md",
+      "kv": "optional KV_GAP allowed",
+      "handoff": "f00_to_downstream_handoff_packet.json",
+      "runner_binding": "CLI safe validation runner",
+      "acceptance_criteria": "schema and safe replay pass; no forbidden runtime scope used",
+      "implementation_status": "IMPLEMENT_NOW"
+    }
+  ]
+}

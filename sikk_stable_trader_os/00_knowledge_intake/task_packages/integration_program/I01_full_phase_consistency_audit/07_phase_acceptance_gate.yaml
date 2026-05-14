@@ -1,0 +1,15 @@
+ready_requires:
+- all_audit_objects_built
+- findings_created
+- fix_priority_created
+- i02_handoff_created
+- no_live_execution_path
+- no_p07_bypass_p08
+- no_p08_wallet_signing
+- no_p09_direct_rule_mutation
+- no_p10_auto_deploy
+ready_with_gaps_allowed:
+- noncritical_schema_missing
+- status_mapping_needed
+- trace_partial
+- directory_needs_i02

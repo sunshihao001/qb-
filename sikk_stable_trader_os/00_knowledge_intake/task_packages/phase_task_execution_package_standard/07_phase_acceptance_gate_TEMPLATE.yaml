@@ -1,0 +1,181 @@
+acceptance_gate:
+  phase_id: K00
+  gate_id: K00-ACCEPTANCE-GATE
+  minimum_acceptance:
+    required:
+    - raw_input_saved
+    - doc_id_generated
+    - source_registry_updated
+    - document_passport_generated
+    - plane_mapping_generated
+    - phase_mapping_generated
+    - task_execution_package_generated
+    - handoff_packet_generated
+    - phase_state_updated
+  professional_acceptance:
+    required:
+    - system_gap_detected_or_marked_none
+    - affected_phases_identified
+    - next_phase_recommendation_generated
+    - no_context_only_dependency
+    - not_treated_as_plain_document
+    - task_package_has_objective_tree
+    - task_package_has_acceptance_gate
+    - task_package_has_state_update_rule
+    - task_package_schema_valid
+    - task_package_has_system_understanding
+    - task_package_has_execution_policy
+    - task_package_has_next_action
+  reject_conditions:
+  - raw_input_not_saved
+  - no_doc_id
+  - no_document_passport
+  - no_task_execution_package
+  - only_summary_without_system_mapping
+  - handoff_packet_missing
+  - used_chat_context_as_only_memory
+  - task_package_schema_invalid
+  - task_package_missing_objective_tree
+  - task_package_missing_execution_policy
+  - task_package_missing_acceptance_policy
+  status_mapping:
+    all_professional_acceptance_passed: PHASE_READY
+    minimum_passed_with_minor_gaps: PHASE_WITH_GAPS
+    recoverable_missing_output: PHASE_PAUSED
+    critical_missing_output: PHASE_REJECTED
+    runtime_error: PHASE_ERROR
+  next_phase_rules:
+  - condition: phase_status == PHASE_READY and affected_phase includes P00_system_boundary
+    next_phase: P00_system_boundary
+  - condition: phase_status == PHASE_READY and affected_phase includes P01_data_fact
+    next_phase: P01_data_fact
+  - condition: phase_status == PHASE_READY and affected_phase includes P09_self_upgrade
+    next_phase: P09_self_upgrade
+  phase_state_runtime_acceptance:
+    required_writeback_events:
+    - doc_id_started
+    - task_id_started_or_completed
+    - required_output_generated
+    - missing_file_detected
+    - gap_detected
+    - hard_negative_hit
+    - runtime_error_recorded
+    - next_phase_recommendation_generated
+    - handoff_judged
+    reject_if:
+    - phase_state_not_updated_after_task
+    - phase_state_missing_current_status
+    - phase_state_missing_next_action
+    - interrupted_without_state_resume
+  handoff_packet_schema_acceptance:
+    required_schema_file: 09_phase_handoff_packet.schema.json
+    required_handoff_fields:
+    - phase_id
+    - phase_status
+    - doc_id
+    - raw_input_path
+    - document_passport_path
+    - task_execution_package_path
+    - affected_planes
+    - affected_phases
+    - gap_list
+    - next_phase_allowed
+    - next_phase_recommendation
+    - generated_at
+    reject_if:
+    - handoff_packet_not_schema_valid
+    - handoff_packet_missing_required_field
+    - phase_status_not_from_acceptance_gate
+    - next_phase_allowed_not_gate_derived
+    - next_phase_recommendation_not_consistent_with_affected_phases
+  task_execution_package_model_acceptance:
+    required_schema_file: 00_knowledge_intake/task_packages/phase_task_execution_package_standard/task_execution_package.schema.json
+    required_artifact: task_packages/task_execution_package_<doc_id>.json
+    required_root_fields:
+    - task_package_id
+    - source_doc_id
+    - package_type
+    - created_for
+    - purpose
+    - system_understanding
+    - affected_system_planes
+    - affected_phases
+    - main_objective
+    - objective_tree
+    - required_phase_package_files
+    - execution_policy
+    - acceptance_policy
+    - next_action
+    required_phase_package_files:
+    - 01_phase_manifest.yaml
+    - 02_phase_context_pack.md
+    - 03_phase_objective_tree.yaml
+    - 04_phase_input_contract.json
+    - 05_phase_output_contract.json
+    - 06_phase_execution_protocol.md
+    - 07_phase_acceptance_gate.yaml
+    - 08_phase_state.json
+    - 09_phase_handoff_packet.schema.json
+    reject_if:
+    - task_package_schema_invalid
+    - task_package_missing_required_field
+    - task_package_treated_as_summary
+    - task_package_missing_next_action
+  automated_long_task_execution_acceptance:
+    required_loop_steps:
+    - 读取 phase_state
+    - 找到 current_task_id
+    - 执行当前 task
+    - 生成对应输出
+    - 更新 phase_state
+    - 检查 acceptance_gate
+    - 如果未完成，继续下一个 task
+    - 如果完成，生成 handoff_packet
+    - 根据 next_phase_rules 进入下一阶段
+    - 重复执行
+    auto_continue_decision_checks:
+    - 当前阶段是否 PHASE_READY
+    - 是否存在 BLOCKER gap
+    - 是否存在 next_phase_recommendation
+    - 下一个阶段是否有输入
+    - 是否允许继续
+    stop_conditions:
+    - PHASE_REJECTED
+    - PHASE_ERROR
+    - 缺少关键输入
+    - 命中 BLOCKER gap
+    - 用户明确要求停止
+    - 下一阶段不存在
+    - 下一阶段需要人工补充资料
+    reject_if:
+    - stopped_after_single_response
+    - phase_state_not_read_before_task
+    - phase_state_not_updated_after_task
+    - acceptance_gate_not_checked
+    - phase_ready_but_not_continued_without_stop_condition
+    - continued_despite_blocker_gap
+  automated_trading_workflow_integration_acceptance:
+    required_confirmations:
+    - knowledge_input_not_direct_trade_automation
+    - k00_outputs_are_system_assets
+    - workflow_order_declared
+    - P00_boundary_not_skipped
+    - P05_P06_P07_gates_not_skipped
+    required_workflow_order:
+    - K00_knowledge_intake
+    - P00_system_boundary
+    - P01_data_fact
+    - P02_market_scenario
+    - P03_wallet_structure
+    - P04_chip_control
+    - P05_strategy_gate
+    - P06_risk_control
+    - P07_paper_execution_human_confirmation
+    - P08_review_attribution
+    - P09_self_upgrade_proposal
+    reject_if:
+    - k00_generates_real_trade_action
+    - k00_skips_system_boundary
+    - k00_routes_directly_to_execution
+    - new_material_left_only_in_chat_context
+    - trading_workflow_modified_without_acceptance

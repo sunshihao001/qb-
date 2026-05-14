@@ -1,0 +1,21 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: QUOTE_SNAPSHOT_SCHEMA
+version: v3.0
+required_fields:
+  - quote_snapshot_id
+  - candidate_id
+  - token_address
+  - collected_at
+  - quote_sources
+  - selected_quote
+  - freshness
+  - trace
+allowed_statuses:
+  - FRESH
+  - ACCEPTABLE
+  - STALE
+  - EXPIRED
+  - UNKNOWN
+no_live_execution_fields_allowed: true

@@ -1,0 +1,16 @@
+controlled_task_package:
+  task_packet_id: K00_TO_I04_TASK_PACKAGE_V1
+  doc_id: DOC-20260512-I04_PAPER_RUNTIME_INTEGRATION_V1
+  task_name: 建立 I04 Paper Runtime Integration 专业版 v1.0
+  target_system_dir: /root/sikk-gmgn/system/integration_program/I04_paper_runtime_integration/
+  target_data_dir: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/
+  required_system_files: 43
+  required_runtime_dirs: 26
+  required_paper_runtime_dirs: 15
+  acceptance: I04_READY_WITH_GAPS allowed for skeleton build; I04_READY requires live
+    runtime replay cases later
+  restrictions:
+  - NO_LIVE_EXECUTION
+  - NO_WALLET_SIGNING
+  - NO_AUTO_DEPLOY
+  - NO_DIRECT_P07_INPUT

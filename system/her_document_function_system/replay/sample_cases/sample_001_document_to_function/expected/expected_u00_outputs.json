@@ -1,0 +1,33 @@
+{
+  "expected_u00_status": "U00_ACCEPTED",
+  "expected_review_cases": [
+    {
+      "case_type": "READY_WITH_GAPS_CASE",
+      "source_phase": "V00",
+      "case_summary": "Sample replay did not execute real test; must not claim TESTED"
+    },
+    {
+      "case_type": "GOVERNANCE_RISK_CASE",
+      "source_phase": "A00",
+      "case_summary": "Evidence policy must prevent plan-as-evidence"
+    }
+  ],
+  "expected_upgrade_candidates": [
+    {
+      "upgrade_type": "GOVERNANCE_UPGRADE",
+      "target_controller": "G00",
+      "proposed_change": "Add evidence rule: test_plan cannot satisfy TESTED"
+    },
+    {
+      "upgrade_type": "SCHEMA_UPGRADE",
+      "target_controller": "V00",
+      "proposed_change": "Require test_command, exit_code, stdout_path, stderr_path in test_evidence schema"
+    }
+  ],
+  "expected_governance_candidates": [
+    {
+      "candidate_type": "EVIDENCE_RULE",
+      "rule_statement": "test_plan must never satisfy TESTED status"
+    }
+  ]
+}

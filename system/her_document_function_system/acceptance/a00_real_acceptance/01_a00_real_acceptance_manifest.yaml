@@ -1,0 +1,20 @@
+phase_id: A00_REAL_ACCEPTANCE
+controller_name: A00_real_acceptance_evidence_executor
+status_code: A00_REAL_ACCEPTANCE_BLUEPRINT_READY
+owner_controller: A00_acceptance_evidence_controller
+execution_boundary: SAFE_MODE_ONLY
+forbidden_actions:
+  - live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading
+  - execute_real_order
+upstream_required_status:
+  - O00_CLI_SAMPLE_REPLAY_READY_WITH_GAPS
+  - V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS
+  - R00_REAL_SAFE_DRY_RUN_BINDING_READY_WITH_GAPS
+downstream_candidates:
+  - H00_handoff_downstream_queue_controller
+  - U00_review_upgrade_controller
+  - G00_governance_boundary_controller
+required_final_status: A00_REAL_ACCEPTANCE_EVIDENCE_READY_WITH_GAPS

@@ -1,0 +1,56 @@
+{
+  "packet_id": "P07_PACKAGE_TO_P08_DESIGN_HANDOFF_PACKET",
+  "packet_type": "P07_TO_P08_STRATEGY_GATE_HANDOFF_DESIGN_ONLY",
+  "generated_at": "2026-05-12T04:08:53Z",
+  "route": {
+    "from_controller": "P07_STRATEGY_GATE_CONTROLLER",
+    "to_controller": "P08_EXECUTION_RISK_CONTROLLER"
+  },
+  "candidate_scope": {
+    "candidate_count_total": 0,
+    "paper_candidate_count": 0,
+    "observe_count": 0,
+    "pause_count": 0,
+    "block_count": 0,
+    "human_confirmation_required_count": 0,
+    "rejected_count": 0
+  },
+  "strategy_gate_package": {
+    "system_dir": "/root/sikk-gmgn/system/phase_controllers/p07_strategy_gate_controller",
+    "data_dir": "/root/sikk-gmgn/data/phase_controllers/p07_strategy_gate",
+    "contracts": [
+      "p07_input_contract.yaml",
+      "p07_output_contract.yaml",
+      "p08_execution_risk_data_request_packet_contract.yaml",
+      "p07_to_p08_handoff_contract.yaml"
+    ]
+  },
+  "limitations": [
+    "DESIGN_PACKAGE_ONLY",
+    "STRATEGY_GATE_DECISION_ONLY",
+    "PAPER_CANDIDATE_NOT_PAPER_READY",
+    "P08_REQUIRED",
+    "NO_RUNTIME",
+    "LIVE_EXECUTION_FORBIDDEN"
+  ],
+  "downstream_permission": {
+    "allowed": [
+      "P08_EXECUTION_RISK_CONTROLLER_PACKAGE_DESIGN"
+    ],
+    "forbidden": [
+      "PAPER_ONLY_RUNTIME_WITHOUT_P08",
+      "LIVE_EXECUTION",
+      "AUTO_ORDER"
+    ]
+  },
+  "read_instruction": {
+    "p08_must_read_first": [
+      "p07_to_p08_handoff_contract.yaml",
+      "p08_execution_risk_data_request_packet_contract.yaml",
+      "strategy_gate_decision_schema.yaml",
+      "strategy_candidate_schema.yaml",
+      "strategy_usage_permission_schema.yaml",
+      "hard_negative_evaluation_schema.yaml"
+    ]
+  }
+}

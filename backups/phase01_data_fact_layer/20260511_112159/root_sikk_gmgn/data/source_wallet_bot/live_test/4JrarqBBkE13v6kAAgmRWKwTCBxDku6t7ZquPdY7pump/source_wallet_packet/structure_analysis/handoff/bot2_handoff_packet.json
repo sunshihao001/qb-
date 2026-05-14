@@ -1,0 +1,39 @@
+{
+  "backflow_path_refs": [],
+  "created_at": "2026-05-11T10:29:25Z",
+  "evidence_language_only": true,
+  "forbidden_decision_fields": [],
+  "funding_flow_refs": [],
+  "missing_fields_summary": {
+    "4GKdEk3g4yD8ETRz6iN3qQngMbT1hEXZ5ADF2yS24wUB": [
+      "funding_source_address",
+      "wallet_first_seen_time"
+    ],
+    "TiUk63PHr5xXhT36wttTTssJVExiMDSyoDKRpZf8iFP": [
+      "funding_source_address",
+      "wallet_first_seen_time"
+    ]
+  },
+  "packet_id": "source-wallet-4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump-2026-05-11T10:29:25Z",
+  "requires_followup_fields": [
+    "funding_source_address",
+    "wallet_first_seen_time"
+  ],
+  "same_source_evidence_refs": [
+    "data/source_wallet_bot/same_source_evidence_normalized.json"
+  ],
+  "source_manifest_refs": [
+    "modules/source_wallet_bot/source_registry.md"
+  ],
+  "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+  "token_source_refs": [],
+  "wallet_intelligence_decision_refs": [
+    "data/source_wallet_bot/wallet_intelligence_decision.json"
+  ],
+  "wallet_profile_refs": [
+    "data/source_wallet_bot/wallet_entity_profile_normalized.json"
+  ],
+  "wallet_trade_refs": [
+    "data/source_wallet_bot/wallet_trade_normalized.json"
+  ]
+}

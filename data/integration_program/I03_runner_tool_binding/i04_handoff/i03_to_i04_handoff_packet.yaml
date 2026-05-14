@@ -1,0 +1,19 @@
+{
+  "i03_to_i04_handoff_packet": {
+    "packet_id": "I03_TO_I04_HANDOFF_V1",
+    "packet_type": "I03_TO_I04_RUNNER_TOOL_BINDING_HANDOFF",
+    "generated_at": "2026-05-12T14:32:32Z",
+    "route": {
+      "from": "I03_RUNNER_TOOL_BINDING",
+      "to": "I04_PAPER_RUNTIME_INTEGRATION"
+    },
+    "permission_to_enter_i04": "ALLOWED_WITH_GAPS",
+    "restrictions": [
+      "I03_BINDING_ONLY",
+      "I04_PAPER_ONLY_RUNTIME_INTEGRATION_ALLOWED",
+      "LIVE_EXECUTION_FORBIDDEN",
+      "WALLET_SIGNING_FORBIDDEN",
+      "AUTO_ORDER_FORBIDDEN"
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "doc_id": "DOC-20260511-011",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T13:57:35.735732+00:00",
+  "phase_table": {
+    "K00": {
+      "name": "知识摄取与任务化",
+      "positioning": "把文档、资料、旧系统资产化"
+    },
+    "P00": {
+      "name": "系统建造与方法论编译",
+      "positioning": "把方法论编译成系统平面"
+    },
+    "P01": {
+      "name": "数据事实层",
+      "positioning": "统一事实模型与字段标准化"
+    },
+    "P02": {
+      "name": "钱包结构层",
+      "positioning": "钱包角色、同源组、资金路径"
+    },
+    "P03": {
+      "name": "筹码控制层",
+      "positioning": "控制权、筹码迁移、对手盘压力"
+    },
+    "P04": {
+      "name": "市场结构层",
+      "positioning": "K线、成交量、箱体、AVWAP、POC"
+    },
+    "P05": {
+      "name": "场景识别层",
+      "positioning": "识别吸筹、派发、二段、陷阱等盘型"
+    },
+    "P06": {
+      "name": "策略门禁层",
+      "positioning": "剔除低质量样本，裁决 paper 资格"
+    },
+    "P07": {
+      "name": "执行风控层",
+      "positioning": "模拟成交、滑点、手续费、熔断"
+    },
+    "P08": {
+      "name": "纸面交易验证层",
+      "positioning": "纸面持仓、交易、收益曲线、统计"
+    },
+    "P09": {
+      "name": "复盘学习层",
+      "positioning": "错判归因、规则修正候选"
+    },
+    "P10": {
+      "name": "系统升级层",
+      "positioning": "经过复盘证据后升级字段、规则、阶段"
+    }
+  },
+  "planes": {
+    "Control Plane": {
+      "impact": "primary",
+      "requires": "phase registry update with K00/P00-P10"
+    },
+    "Phase Controller Plane": {
+      "impact": "primary",
+      "requires": "controllers for K00 and P00-P10"
+    },
+    "Trace Plane": {
+      "impact": "alignment",
+      "requires": "phase coverage tracking"
+    },
+    "Acceptance Plane": {
+      "impact": "alignment",
+      "requires": "each phase acceptance gate"
+    }
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

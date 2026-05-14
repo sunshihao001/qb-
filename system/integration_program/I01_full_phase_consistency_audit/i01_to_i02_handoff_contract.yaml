@@ -1,0 +1,12 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: i01_to_i02_handoff_packet
+packet_type: I01_TO_I02_CONSISTENCY_AUDIT_HANDOFF
+required:
+- route
+- audit_scope
+- audit_outputs
+- i02_required_tasks
+- blocking_findings
+- permission_to_enter_i02
+- restrictions

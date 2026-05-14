@@ -1,0 +1,84 @@
+acceptance_gates:
+- gate_id: GATE_CONTROL_READY
+  plane_id: P00_FULL_CONTROL_PLANE
+  pass_status:
+  - CONTROL_READY
+  with_gaps_status:
+  - CONTROL_READY_WITH_GAPS
+  fail_status:
+  - CONTROL_REJECTED
+  required_checks:
+  - global_plane_registry_exists
+  - phase_controller_registry_exists
+  - task_tree_schema_exists
+  - contract_router_exists
+  - acceptance_gate_registry_exists
+  - phase_state_machine_exists
+  - failure_recovery_policy_exists
+  - audit_log_model_exists
+  - handoff_packet_registry_exists
+  - safety_boundary_preserved
+- gate_id: GATE_DOMAIN_READY
+  plane_id: P02_DOMAIN_PLANE
+  pass_status:
+  - DOMAIN_READY
+  with_gaps_status:
+  - DOMAIN_READY_WITH_GAPS
+  fail_status:
+  - DOMAIN_REJECTED
+- gate_id: GATE_DATA_READY
+  plane_id: P03_DATA_PLANE
+  pass_status:
+  - DATA_READY
+  with_gaps_status:
+  - DATA_READY_WITH_GAPS
+  fail_status:
+  - DATA_REJECTED
+GATE_TRACE_READY:
+  target_plane: TRACE_PLANE
+  acceptance_file: /root/sikk-gmgn/sikk_stable_trader_os/08_acceptance/trace_plane_acceptance_result.json
+  allowed_results:
+  - TRACE_READY
+  - TRACE_READY_WITH_GAPS
+  - TRACE_REJECTED
+acceptance_plane_gate_registry:
+- GATE_ACCEPTANCE_READY
+- GATE_ACCEPTANCE_RESULT_PACKET_READY
+- GATE_ACCEPTANCE_HANDOFF_PERMISSION_READY
+- GATE_ACCEPTANCE_TOOL_BINDING_CONTROL_READY
+- GATE_ACCEPTANCE_PAPER_RUNTIME_CONTROL_READY
+handoff_gates:
+- gate_id: ACCEPTANCE_TO_HANDOFF_GATE
+  requires:
+  - acceptance_result_packet
+  - trace_handoff_packet
+  - handoff_allowed_true
+  - paper_only_true
+  - real_trade_enabled_false
+  expected_result: HANDOFF_READY_WITH_GAPS
+  doc_id: DOC-20260511-027
+- gate_id: HANDOFF_TO_PHASE_CONTROLLER_GATE
+  requires:
+  - handoff_packet
+  - downstream_read_instruction
+  - gap_propagation_packet
+  - limitation_transfer_packet
+  runtime_allowed: false
+  doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:54:04Z'
+gates:
+  GATE_PHASE_CONTROLLER_INDEX_READY:
+    stage: P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN
+    required_checks:
+    - yaml_parseable
+    - P01_P10_coverage
+    - handoff_fields_present
+    - trace_acceptance_handoff_policy_present
+    - runtime_safety_false
+    accepted_status:
+    - PHASE_CONTROLLER_INDEX_READY_WITH_GAPS
+    does_not_authorize:
+    - P01_RUNTIME_CONNECTION
+    - TOOL_BINDING_RUNTIME
+    - PAPER_RUNTIME
+    - LIVE_RUNTIME

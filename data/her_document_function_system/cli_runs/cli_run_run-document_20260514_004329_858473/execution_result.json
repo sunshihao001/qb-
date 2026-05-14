@@ -1,0 +1,13 @@
+{
+  "status": "CLI_BLOCKED",
+  "reason": "missing_required_run_document_inputs",
+  "missing_inputs": [
+    "--document",
+    "--goal"
+  ],
+  "required_inputs": [
+    "--document",
+    "--goal"
+  ],
+  "safe_next_action": "rerun run-document --safe-mode with document and goal refs"
+}

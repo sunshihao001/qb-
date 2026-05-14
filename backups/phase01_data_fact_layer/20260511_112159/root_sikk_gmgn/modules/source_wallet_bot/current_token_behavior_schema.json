@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "current_token_behavior",
+  "type": "object",
+  "description": "Current token wallet behavior normalized from GMGN wallet trade, GMGN trader detail, and chain DEX swaps.",
+  "required": [
+    "token_address",
+    "wallet_address",
+    "source_level",
+    "behavior_fields"
+  ],
+  "properties": {
+    "token_address": {
+      "type": "string"
+    },
+    "wallet_address": {
+      "type": "string"
+    },
+    "source_level": {
+      "type": "string",
+      "enum": [
+        "L0",
+        "L1",
+        "L2"
+      ]
+    },
+    "behavior_fields": {
+      "type": "object",
+      "properties": {
+        "first_buy_time": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "last_buy_time": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "last_sell_time": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "buy_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sell_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sold_pct": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "remaining_pct": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "is_full_exit": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "is_partial_exit": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

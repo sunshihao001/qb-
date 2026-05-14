@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V00 Rule Logic Test Evidence Schema",
+  "type": "object",
+  "required": [
+    "validation_type",
+    "status",
+    "total_rules",
+    "valid_rules",
+    "invalid_rules",
+    "blocked_rules",
+    "warnings"
+  ],
+  "properties": {
+    "validation_type": {
+      "const": "rule_logic_validation"
+    },
+    "status": {
+      "enum": [
+        "PASSED",
+        "FAILED",
+        "BLOCKED",
+        "READY_WITH_GAPS"
+      ]
+    },
+    "total_rules": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "valid_rules": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "invalid_rules": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "blocked_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_rule_keys": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "rule_id",
+          "rule_type",
+          "input_fields",
+          "calculation_method",
+          "threshold_or_condition",
+          "positive_evidence",
+          "counter_evidence",
+          "confidence_logic",
+          "failure_condition",
+          "output_status",
+          "trace_required"
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}

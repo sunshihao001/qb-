@@ -1,0 +1,23 @@
+review_upgrade_acceptance_check:
+  review_case_id: string
+  upgrade_id: string|null
+  required_inputs:
+  - review_trace
+  - runtime_trace
+  - state_trace
+  - failure_attribution
+  - proposed_upgrade
+  - governance_review_status
+  checks:
+    review_trace_exists: boolean
+    failure_attribution_supported: boolean
+    upgrade_has_source_evidence: boolean
+    governance_approval_required: boolean
+    rollback_plan_exists: boolean
+    no_direct_runtime_rule_mutation: boolean
+  result:
+    acceptance_status:
+    - REVIEW_READY
+    - UPGRADE_READY_FOR_GOVERNANCE
+    - UPGRADE_REJECTED
+    - UPGRADE_BLOCKED

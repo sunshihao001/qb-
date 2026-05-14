@@ -1,0 +1,9 @@
+closed_loop_acceptance_integrity_record:
+  validation_id: I05_ACCEPTANCE_INTEGRITY_20260512_01
+  generated_at: '2026-05-12T15:30:01Z'
+mode: SKELETON_VALIDATION
+source_doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  acceptance_chain_complete: false
+  available_acceptance: [/root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/acceptance/i04_acceptance_result.yaml]
+  missing_acceptance: [p09_acceptance_result, p10_acceptance_result]
+  status: READY_WITH_GAPS

@@ -1,0 +1,131 @@
+doc_id: DOC-20260512-I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION_V1
+generated_at: '2026-05-12T12:40:29Z'
+source_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I02_directory_contract_index_unification_v1_0.md
+section_count: 50
+sections:
+- line: 1
+  heading: '# I02 Directory & Contract Index Unification 专业版 v1.0'
+- line: 3
+  heading: '## 目录、合约、Schema、Handoff、运行数据路径与 Legacy 映射统一任务包'
+- line: 7
+  heading: '## 0. I02 的核心定位'
+- line: 30
+  heading: '# 1. I02 不负责什么'
+- line: 66
+  heading: '# 2. I02 的阶段目标'
+- line: 93
+  heading: '# 3. I02 的底层方法论'
+- line: 95
+  heading: '## 3.1 目录不是文件夹，是系统寻址协议'
+- line: 123
+  heading: '## 3.2 Contract 是阶段之间的法律文本'
+- line: 144
+  heading: '## 3.3 Schema Index 不是清单，是字段治理入口'
+- line: 159
+  heading: '## 3.4 Legacy 目录必须保留但不能污染 canonical path'
+- line: 187
+  heading: '## 3.5 I02 可以建立索引，但不能伪造真实存在'
+- line: 209
+  heading: '# 4. I02 的输入范围'
+- line: 271
+  heading: '# 5. I02 必须建立的核心对象'
+- line: 299
+  heading: '# 6. I02 运行目录设计'
+- line: 301
+  heading: '## 6.1 系统目录'
+- line: 350
+  heading: '## 6.2 运行数据目录'
+- line: 383
+  heading: '# 7. Canonical Root Declaration'
+- line: 423
+  heading: '# 8. Final Directory Constitution'
+- line: 513
+  heading: '# 9. Artifact Type Registry'
+- line: 622
+  heading: '# 10. Phase Controller File Index'
+- line: 720
+  heading: '# 11. Runtime Data Path Index'
+- line: 807
+  heading: '# 12. Schema Index'
+- line: 897
+  heading: '# 13. Contract Index'
+- line: 968
+  heading: '# 14. Handoff Contract Index'
+- line: 1043
+  heading: '# 15. Data Request Packet Index'
+- line: 1096
+  heading: '# 16. Trace / Acceptance / Report Index'
+- line: 1098
+  heading: '## 16.1 Trace Artifact Index'
+- line: 1131
+  heading: '## 16.2 Acceptance Artifact Index'
+- line: 1159
+  heading: '## 16.3 Report Model Index'
+- line: 1201
+  heading: '# 17. Read Order Manifest'
+- line: 1260
+  heading: '# 18. Write Permission Matrix'
+- line: 1342
+  heading: '# 19. Legacy Path Mapping'
+- line: 1408
+  heading: '# 20. Canonical Path Policy'
+- line: 1454
+  heading: '# 21. Path Conflict Report'
+- line: 1489
+  heading: '# 22. Index Gap Report'
+- line: 1542
+  heading: '# 23. I03 Runner Tool Binding Prerequisite Packet'
+- line: 1617
+  heading: '# 24. I02 to I03 Handoff Packet'
+- line: 1685
+  heading: '# 25. I02 Gap Policy'
+- line: 1738
+  heading: '# 26. I02 Hard Negative Rules'
+- line: 1805
+  heading: '# 27. I02 状态机'
+- line: 1918
+  heading: '# 28. I02 Acceptance Criteria'
+- line: 1981
+  heading: '# 29. I02 测试矩阵'
+- line: 2061
+  heading: '# 30. I02 报告模型'
+- line: 2130
+  heading: '# 31. HER I02 执行协议'
+- line: 2191
+  heading: '# 32. 给 HER 的正式任务书'
+- line: 2386
+  heading: '# 33. 当前是否达到专业化 I02 设计标准'
+- line: 2388
+  heading: '## 判断'
+- line: 2418
+  heading: '# 34. I02 完成后下一步'
+- line: 2447
+  heading: '# 尚未解决问题'
+- line: 2460
+  heading: '# 本次认知升级点'
+key_terms:
+- canonical_path_policy
+- canonical_root_declaration
+- contract_index
+- control_artifact_index
+- data_request_packet_index
+- directory_naming_policy
+- file_naming_policy
+- handoff_contract_index
+- i02_to_i03_handoff_packet
+- i03_runner_tool_binding_prerequisite_packet
+- index_gap_report
+- legacy_path_mapping
+- legacy_readonly_absorption_policy
+- path_conflict_report
+- phase_controller_file_index
+- read_order_manifest
+- runtime_data_path_index
+- schema_index
+anchors:
+- I02 不是新的业务阶段，也不是 P12
+- I02 不修改 P01-P10 业务判断逻辑
+- I02 不直接写 Runner
+- I02 不启动 Paper Runtime
+- I02 不允许 live execution
+- i02_to_i03_handoff_packet

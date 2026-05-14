@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Test Replay Evidence Schema",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "function_id",
+    "test_types",
+    "replay_required",
+    "test_command",
+    "expected_status",
+    "covered_functions",
+    "covered_rules",
+    "failure_cases_required"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "function_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "test_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "unit_test",
+          "schema_validation_test",
+          "contract_test",
+          "rule_logic_test",
+          "gap_detection_test",
+          "KV_index_test",
+          "handoff_test",
+          "failure_case_test"
+        ]
+      }
+    },
+    "replay_required": {
+      "type": "boolean"
+    },
+    "test_command": {
+      "type": "string"
+    },
+    "expected_status": {
+      "type": "string",
+      "enum": [
+        "PASSED",
+        "FAILED",
+        "PARTIAL_PASSED",
+        "BLOCKED",
+        "NOT_RUN"
+      ]
+    },
+    "covered_functions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "covered_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "failure_cases_required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,10 @@
+record_id: legacy_readonly_absorption_policy_20260512
+generated_at: '2026-05-12T13:05:00Z'
+status: BUILT
+items:
+- scan allowed
+- map allowed
+- copy-only migration requires separate approved task
+- delete/move/overwrite forbidden in I02
+- canonical reader fallback only after canonical miss
+gaps: []

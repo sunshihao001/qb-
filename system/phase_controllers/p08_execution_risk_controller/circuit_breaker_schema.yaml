@@ -1,0 +1,17 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: CIRCUIT_BREAKER_SCHEMA
+version: v3.0
+required_fields:
+  - circuit_breaker_id
+  - checked_at
+  - breakers
+  - circuit_status
+  - downstream_effect
+allowed_statuses:
+  - CIRCUIT_CLEAR
+  - CIRCUIT_WARNING
+  - CIRCUIT_TRIGGERED_PAUSE
+  - CIRCUIT_TRIGGERED_BLOCK
+no_live_execution_fields_allowed: true

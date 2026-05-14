@@ -1,0 +1,131 @@
+controller_name: G00_governance_boundary_controller
+controller_type: HER_PHASE_CONTROLLER
+phase_id: G00
+phase_name: Governance Boundary Controller
+中文名称: 治理边界控制器
+version: 1.0.0
+system: HER-DFAFS
+owner_layer: 10_review_upgrade
+purpose: >-
+  Convert U00 governance candidates, A00 evidence bundles, gap/failure/trace/audit evidence,
+  and current policy state into versioned governance assets that define forbidden actions,
+  status codes, evidence rules, gap rules, directory boundaries, contract policies,
+  runner safety, human confirmation, production risk, versioning, conflict resolution,
+  registry updates, trace/audit, and downstream policy handoff.
+subphase_coverage:
+  - G00.0 Preflight Gate
+  - G00.1 Governance Evidence Loader
+  - G00.2 Governance Candidate Classifier
+  - G00.3 Policy Domain Mapper
+  - G00.4 Forbidden Action Registry Builder
+  - G00.5 Status Code Table Builder
+  - G00.6 Execution Boundary Policy Builder
+  - G00.7 Evidence Policy Builder
+  - G00.8 Gap Policy Builder
+  - G00.9 Directory / Write Boundary Policy Builder
+  - G00.10 Contract / Schema Governance Builder
+  - G00.11 Runner Safety Policy Builder
+  - G00.12 Human Confirmation Policy Builder
+  - G00.13 Production Risk Boundary Builder
+  - G00.14 Policy Conflict / Versioning Manager
+  - G00.15 Governance Registry Writer
+  - G00.16 Acceptance Gate
+  - G00.17 Handoff Writer
+positioning:
+  plain_text: G00 = 治理边界控制器，不是规则说明文档。
+upstream_phases:
+  - U00_review_upgrade
+  - A00_acceptance_evidence
+  - H00_handoff_downstream_queue
+  - F00_function_realization
+  - V00_validation_evidence
+  - R00_runner_tool_binding
+  - K00_knowledge_intake
+downstream_phases:
+  - K00_knowledge_intake
+  - F00_function_realization
+  - V00_validation_evidence
+  - R00_runner_tool_binding
+  - A00_acceptance_evidence
+  - H00_handoff_downstream_queue
+  - U00_review_upgrade
+  - all_PXX_controllers
+  - all_IXX_controllers
+  - runner_tool_binding
+entry_status_required:
+  - U00_GOVERNANCE_CANDIDATES_AVAILABLE
+  - A00_EVIDENCE_BUNDLE_AVAILABLE
+  - GAP_REPORTS_AVAILABLE
+  - TRACE_AUDIT_AVAILABLE
+permissions:
+  - read_u00_governance_candidates
+  - read_a00_evidence_bundle
+  - read_h00_handoff_queue
+  - read_failure_evidence
+  - read_gap_reports
+  - read_trace_audit_logs
+  - classify_governance_rules
+  - build_forbidden_action_registry
+  - build_status_code_table
+  - build_execution_boundary_policy
+  - build_evidence_policy
+  - build_gap_policy
+  - build_directory_policy
+  - build_contract_policy
+  - build_runner_safety_policy
+  - build_human_confirmation_policy
+  - build_production_risk_policy
+  - build_versioning_policy
+  - write_governance_registry
+  - write_policy_bundle
+  - write_policy_handoff
+  - write_governance_trace
+  - write_governance_audit
+forbidden_actions:
+  - bypass_u00_or_a00_evidence
+  - create_rule_without_evidence_ref
+  - overwrite_existing_policy_without_versioning
+  - delete_old_policy_without_deprecation_record
+  - silently_change_status_meaning
+  - weaken_forbidden_actions_without_approval
+  - mark_policy_active_without_acceptance
+  - directly_modify_production_runtime
+  - start_live_runtime
+  - wallet_signing
+  - auto_deploy
+  - production_trading
+  - treat_governance_candidate_as_active_policy
+  - ignore_conflicting_policy
+  - hide_policy_conflict
+  - remove_trace_or_audit_history
+outputs:
+  - preflight_result
+  - governance_candidate_inventory
+  - candidate_classification
+  - policy_domain_mapping
+  - forbidden_action_registry
+  - status_code_table
+  - execution_boundary_policy
+  - evidence_policy
+  - gap_policy
+  - directory_policy
+  - contract_policy
+  - runner_safety_policy
+  - human_confirmation_policy
+  - production_risk_policy
+  - policy_versioning
+  - policy_conflict_report
+  - governance_registry
+  - active_policy_bundle
+  - pending_policy_bundle
+  - deprecated_policy_registry
+  - g00_trace
+  - g00_audit
+  - g00_acceptance_result
+  - g00_handoff_packet
+  - g00_final_report
+completion_status:
+  success: G00_ACCEPTED
+  blocked: G00_BLOCKED
+  gaps: G00_READY_WITH_GAPS
+updated_at: "2026-05-13T15:10:00+00:00"

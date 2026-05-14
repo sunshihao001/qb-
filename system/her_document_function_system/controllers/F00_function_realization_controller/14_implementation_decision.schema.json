@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F00 Implementation Decision Schema",
+  "type": "object",
+  "required": [
+    "function_id",
+    "decision",
+    "reason",
+    "required_inputs",
+    "blocked_by",
+    "next_action"
+  ],
+  "properties": {
+    "function_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "IMPLEMENT_NOW",
+        "DESIGN_ONLY",
+        "EXTEND_EXISTING",
+        "UPDATE_SCHEMA_ONLY",
+        "UPDATE_CONTRACT_ONLY",
+        "ADD_TEST_ONLY",
+        "ADD_REPORT_ONLY",
+        "ADD_KV_ONLY",
+        "ADD_TRACE_ONLY",
+        "BLOCKED_BY_MISSING_DATA",
+        "BLOCKED_BY_PRODUCTION_RISK",
+        "BLOCKED_BY_UNKNOWN_CODEBASE",
+        "DEFER_TO_DOWNSTREAM_PHASE"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "required_inputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocked_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_action": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

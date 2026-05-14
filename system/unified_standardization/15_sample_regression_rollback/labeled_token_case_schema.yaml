@@ -1,0 +1,22 @@
+meta:
+  standard_id: S00_LABELED_TOKEN_CASE_SCHEMA
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+required_fields:
+- case_id
+- token_id
+- sample_type
+- label_source
+- phase_outputs
+- expected_decision
+- actual_decision
+- evidence_refs
+- counter_evidence_refs

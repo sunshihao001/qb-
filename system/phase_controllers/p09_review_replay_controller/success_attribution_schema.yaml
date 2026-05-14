@@ -1,0 +1,36 @@
+schema_id: SUCCESS_ATTRIBUTION_SCHEMA
+title: Success Attribution
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- success_attr_id
+- review_case_id
+- success_phase
+- supporting_factors
+- preserve_rule_candidates
+- evidence_refs
+fields:
+  success_attr_id: string
+  review_case_id: string
+  success_phase: enum
+  supporting_factors: list
+  preserve_rule_candidates: list
+  evidence_refs: list
+enums: {}
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

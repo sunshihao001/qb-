@@ -1,0 +1,13 @@
+objectives:
+  - id: H00_OBJ_001
+    name: load_a00_acceptance_handoff
+  - id: H00_OBJ_002
+    name: classify_downstream_targets
+  - id: H00_OBJ_003
+    name: build_routing_decisions_and_queue
+  - id: H00_OBJ_004
+    name: bind_gap_risk_forbidden_actions
+  - id: H00_OBJ_005
+    name: write_downstream_handoff_packets
+  - id: H00_OBJ_006
+    name: write_trace_audit_recovery_acceptance

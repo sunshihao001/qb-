@@ -1,0 +1,8 @@
+p09_decision_chain_replay_validation:
+  type: object
+  required:
+    - validation_id
+    - p01_to_p08_chain_reconstructed
+    - missing_links
+    - status
+  additional_properties_allowed: true

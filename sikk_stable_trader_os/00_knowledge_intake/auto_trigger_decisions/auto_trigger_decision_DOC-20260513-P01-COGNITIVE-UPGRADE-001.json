@@ -1,0 +1,24 @@
+{
+  "doc_id": "DOC-20260513-P01-COGNITIVE-UPGRADE-001",
+  "created_at": "2026-05-13T05:27:17Z",
+  "decision": "AUTO_TRIGGER_ALLOWED",
+  "next_phase_allowed": true,
+  "next_phase_recommendation": "P01_data_fact_controller_package_or_code_landing",
+  "scope_limit": "P01_PACKAGE_OR_CODE_LANDING_ONLY",
+  "forbidden": [
+    "P02_strategy_optimization",
+    "paper_runtime",
+    "live_runtime",
+    "swap",
+    "broadcast"
+  ],
+  "verification": [
+    "raw_exists",
+    "passport_exists",
+    "mapping_exists",
+    "gap_exists",
+    "task_package_exists",
+    "handoff_exists",
+    "phase_state_exists"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Review Scorecard",
+  "type": "object",
+  "required": [
+    "scorecard_id",
+    "case_counts",
+    "root_cause_counts",
+    "upgrade_counts",
+    "governance_counts",
+    "overall_status"
+  ],
+  "properties": {
+    "scorecard_id": {
+      "type": "string"
+    },
+    "case_counts": {
+      "type": "object"
+    },
+    "root_cause_counts": {
+      "type": "object"
+    },
+    "upgrade_counts": {
+      "type": "object"
+    },
+    "governance_counts": {
+      "type": "object"
+    },
+    "overall_status": {
+      "type": "string",
+      "enum": [
+        "U00_ACCEPTED",
+        "U00_READY_WITH_GAPS",
+        "U00_BLOCKED",
+        "U00_REJECTED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

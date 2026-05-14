@@ -1,0 +1,179 @@
+{
+  "verification_id": "VERIFICATION-DOC-20260511-006",
+  "generated_at": "2026-05-11T13:49:31.471070+00:00",
+  "doc_id": "DOC-20260511-006",
+  "overall_passed": true,
+  "passed_count": 29,
+  "failed_count": 0,
+  "checks": [
+    {
+      "name": "exists:00_knowledge_intake/raw_inputs/DOC-20260511-006.md",
+      "passed": true,
+      "detail": "00_knowledge_intake/raw_inputs/DOC-20260511-006.md"
+    },
+    {
+      "name": "exists:00_methodology/system_methodology_blueprint.md",
+      "passed": true,
+      "detail": "00_methodology/system_methodology_blueprint.md"
+    },
+    {
+      "name": "exists:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/source_registry/source_registry.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/document_passports/document_passport_DOC-20260511-006.yaml",
+      "passed": true,
+      "detail": "00_knowledge_intake/document_passports/document_passport_DOC-20260511-006.yaml"
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-006.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-006.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-006.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-006.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-006.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-006.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-006.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-006.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-006.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-006.json"
+    },
+    {
+      "name": "exists:00_control/current_system_state.json",
+      "passed": true,
+      "detail": "00_control/current_system_state.json"
+    },
+    {
+      "name": "exists:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": "00_control/system_asset_index.json"
+    },
+    {
+      "name": "exists:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": "06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json"
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-006.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-006.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-006.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-006.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-006.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/current_system_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:passport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "anchor:不是普通说明文档",
+      "passed": true,
+      "detail": "不是普通说明文档"
+    },
+    {
+      "name": "anchor:文件存在不等于系统接入",
+      "passed": true,
+      "detail": "文件存在不等于系统接入"
+    },
+    {
+      "name": "anchor:任务包存在不等于 runner 执行",
+      "passed": true,
+      "detail": "任务包存在不等于 runner 执行"
+    },
+    {
+      "name": "anchor:paper-only",
+      "passed": true,
+      "detail": "paper-only"
+    },
+    {
+      "name": "anchor:禁止真实交易自动执行",
+      "passed": true,
+      "detail": "禁止真实交易自动执行"
+    },
+    {
+      "name": "anchor:不允许依靠聊天上下文直接进入判断",
+      "passed": true,
+      "detail": "不允许依靠聊天上下文直接进入判断"
+    },
+    {
+      "name": "canonical_hash_matches_input",
+      "passed": true,
+      "detail": "66430be1f3a8649f3d09191e16442720379e351fb8c2aa4d1e894eba465499dc"
+    }
+  ],
+  "canonical_path": "00_methodology/system_methodology_blueprint.md",
+  "status": "PHASE_WITH_GAPS",
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-STAGE-TARGET-DATA-DETAILS",
+      "severity": "DEGRADED",
+      "description": "User says this version focuses on stage target data, but provided excerpt has not yet enumerated every phase target data object in detail."
+    },
+    {
+      "gap_id": "GAP-ANTI-DOC-PILE-EXPLICIT",
+      "severity": "DEGRADED",
+      "description": "Anti-document-piling is implied through consumption checks; explicit section may arrive in remaining content."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

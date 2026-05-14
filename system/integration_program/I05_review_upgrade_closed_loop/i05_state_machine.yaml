@@ -1,0 +1,23 @@
+i05_state_machine:
+  states:
+    - I05_UNINITIALIZED
+    - I05_CONTEXT_LOADED
+    - I05_HANDOFF_READ
+    - I05_INPUT_MANIFEST_BUILT
+    - I05_P09_REPLAY_VALIDATED
+    - I05_P10_UPGRADE_VALIDATED
+    - I05_TRACE_HANDOFF_ACCEPTANCE_VALIDATED
+    - I05_READY
+    - I05_READY_WITH_GAPS
+    - I05_REJECTED
+    - I05_BLOCKED
+  critical_transitions:
+    - from: I05_HANDOFF_READ
+      to: I05_INPUT_MANIFEST_BUILT
+      condition: i04_handoff_valid == true and p09_review_input_available == true
+    - from: I05_INPUT_MANIFEST_BUILT
+      to: I05_P09_REPLAY_VALIDATED
+      condition: p09_validation_records_created == true
+    - from: I05_P09_REPLAY_VALIDATED
+      to: I05_P10_UPGRADE_VALIDATED
+      condition: p10_validation_records_created == true

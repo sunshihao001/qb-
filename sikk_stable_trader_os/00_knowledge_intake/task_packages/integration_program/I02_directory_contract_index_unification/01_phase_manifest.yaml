@@ -1,0 +1,15 @@
+phase_id: I02_directory_contract_index_unification
+program: Integration Program
+not_business_phase: true
+objective: Unify directory, contract, schema, handoff, runtime data and legacy path
+  indexes for P01-P10/I01
+status: TASK_PACKAGE_READY_FOR_EXECUTION
+source_doc_id: DOC-20260512-I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION_V1
+forbidden:
+- P11/P12 creation
+- business logic mutation
+- runner/tool binding implementation
+- paper runtime start
+- live execution
+- wallet signing
+- auto deploy

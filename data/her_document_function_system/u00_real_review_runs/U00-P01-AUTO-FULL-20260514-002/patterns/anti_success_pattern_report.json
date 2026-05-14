@@ -1,0 +1,18 @@
+{
+  "anti_patterns": [
+    {
+      "pattern_id": "anti_unclassified_review_gap",
+      "pattern": "UNCLASSIFIED_REVIEW_GAP",
+      "frequency": 1
+    }
+  ],
+  "success_patterns": [
+    {
+      "pattern_id": "success_safe_mode_retained",
+      "pattern": "safe_mode_boundary_retained",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/u00_real_review_runs/U00-P01-AUTO-FULL-20260514-002/trace/u00_audit.jsonl"
+      ]
+    }
+  ]
+}

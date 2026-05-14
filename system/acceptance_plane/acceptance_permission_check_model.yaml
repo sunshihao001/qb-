@@ -1,0 +1,29 @@
+permission_acceptance_check:
+  target_phase: string
+  forbidden_outputs_by_phase:
+    GOVERNANCE_PLANE:
+    - buy_signal
+    - execution_order
+    DOMAIN_PLANE:
+    - buy_signal
+    - paper_ready
+    - live_trade_permission
+    DATA_PLANE:
+    - dominant_side_intent_claim
+    - strategy_signal
+    - execution_permission
+    TRACE_PLANE:
+    - acceptance_decision
+    - handoff_execution
+    - trade_signal
+    ACCEPTANCE_PLANE:
+    - phase_scheduling
+    - handoff_execution
+    - tool_execution
+    - live_trade_permission
+    HANDOFF_PLANE:
+    - content_generation
+    - acceptance_override
+    - trade_signal
+    RUNNER_TOOL_BINDING:
+    - live_trade_without_governance

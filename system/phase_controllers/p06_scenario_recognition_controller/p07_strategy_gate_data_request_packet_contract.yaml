@@ -1,0 +1,17 @@
+packet_type: P07_STRATEGY_GATE_DATA_REQUEST_PACKET
+from_controller: P06_SCENARIO_RECOGNITION_CONTROLLER
+to_controller: P07_STRATEGY_GATE_CONTROLLER
+required_sections:
+- candidate_scope
+- scenario_inputs_available
+- p07_required_gate_tasks
+- usage_limitations
+- scenario_usage_permissions
+- risk_flags_to_apply
+- invalidation_conditions_to_apply
+usage_limitations:
+- SCENARIO_ONLY
+- NO_DIRECT_PAPER_READY
+- NO_DIRECT_BUY_SIGNAL
+- NO_RUNTIME
+- LIVE_EXECUTION_FORBIDDEN

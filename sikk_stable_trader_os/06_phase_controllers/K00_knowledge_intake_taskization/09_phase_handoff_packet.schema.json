@@ -1,0 +1,128 @@
+{
+  "type": "object",
+  "required": [
+    "phase_id",
+    "phase_status",
+    "doc_id",
+    "raw_input_path",
+    "document_passport_path",
+    "task_execution_package_path",
+    "affected_planes",
+    "affected_phases",
+    "gap_list",
+    "next_phase_allowed",
+    "next_phase_recommendation",
+    "generated_at"
+  ],
+  "properties": {
+    "phase_id": {
+      "type": "string"
+    },
+    "phase_status": {
+      "type": "string",
+      "enum": [
+        "PHASE_READY",
+        "PHASE_WITH_GAPS",
+        "PHASE_PAUSED",
+        "PHASE_REJECTED",
+        "PHASE_ERROR"
+      ]
+    },
+    "doc_id": {
+      "type": "string"
+    },
+    "raw_input_path": {
+      "type": "string"
+    },
+    "document_passport_path": {
+      "type": "string"
+    },
+    "task_execution_package_path": {
+      "type": "string",
+      "description": "必须指向符合 task_execution_package.schema.json 的 task_packages/task_execution_package_<doc_id>.json"
+    },
+    "affected_planes": {
+      "type": "array"
+    },
+    "affected_phases": {
+      "type": "array"
+    },
+    "gap_list": {
+      "type": "array"
+    },
+    "next_phase_allowed": {
+      "type": "boolean"
+    },
+    "next_phase_recommendation": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "total_control_routing_rule_ref": {
+      "type": "object",
+      "description": "Optional metadata proving K00 handoff was generated under total-control K00 input routing rule 11.",
+      "properties": {
+        "anchor": {
+          "type": "string"
+        },
+        "controller": {
+          "type": "string"
+        },
+        "chat_context_is_not_system_memory": {
+          "type": "boolean"
+        },
+        "summary_or_advice_only_forbidden": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "task_execution_package_schema_ref": "00_knowledge_intake/task_packages/phase_task_execution_package_standard/task_execution_package.schema.json",
+  "workflow_integration_boundary_ref": {
+    "not_direct_trade_automation": true,
+    "allowed_next_phase_recommendations": [
+      "P00_system_boundary",
+      "P01_data_fact",
+      "P09_self_upgrade",
+      "HER_task_router",
+      "gap_closure_planner"
+    ],
+    "forbidden_next_phase_recommendations": [
+      "P07_real_execution",
+      "direct_trade_execution",
+      "swap_execution"
+    ],
+    "final_trading_workflow": [
+      "K00_knowledge_intake",
+      "P00_system_boundary",
+      "P01_data_fact",
+      "P02_market_scenario",
+      "P03_wallet_structure",
+      "P04_chip_control",
+      "P05_strategy_gate",
+      "P06_risk_control",
+      "P07_paper_execution_human_confirmation",
+      "P08_review_attribution",
+      "P09_self_upgrade_proposal"
+    ]
+  },
+  "total_control_skill_k00_input_routing_handoff_ref": {
+    "anchor": "11. 总控 Skill：K00 文档知识输入强制路由核心规则",
+    "handoff_required_after_route": true,
+    "handoff_packet_is_required_for_downstream": true,
+    "next_phase_must_derive_from_acceptance_gate": true
+  },
+  "her_formal_task_book_handoff_ref": {
+    "anchor": "12. 给 HER 的正式任务书",
+    "handoff_after_acceptance_gate_required": true,
+    "allowed_next_phase_values": [
+      "P00_system_boundary",
+      "P01_data_fact",
+      "P09_self_upgrade"
+    ],
+    "next_phase_must_be_gate_derived": true,
+    "continue_until_stop_condition": true,
+    "forbidden_direct_trade_judgment": true
+  }
+}

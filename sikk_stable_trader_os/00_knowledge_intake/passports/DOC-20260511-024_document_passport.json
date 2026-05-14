@@ -1,0 +1,28 @@
+{
+  "doc_id": "DOC-20260511-024",
+  "title": "Full Control Plane：完整控制面专业化设计",
+  "source_file": "/root/.hermes/cache/documents/doc_48c0c7db2618_Full Contr：完整控制面2.0⭐ (1).md",
+  "raw_input_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-024_full_control_plane_professional_design.md",
+  "sha256": "280bea2b565472d250f7096a3dc21aad1f33ec1e89c0b6eec1fa44f839eae656",
+  "received_at": "2026-05-11T16:47:53Z",
+  "document_type": "SYSTEM_BUILD_CONTROL_PLANE_BLUEPRINT",
+  "authority_level": "P00_FULL_CONTROL_PLANE_DESIGN_SOURCE",
+  "primary_consumer": "P00_FULL_CONTROL_PLANE",
+  "secondary_consumers": [
+    "Governance Plane",
+    "Domain Plane",
+    "Data Plane",
+    "Evidence Plane",
+    "Scenario Plane",
+    "Strategy Gate Plane",
+    "Execution Risk Plane",
+    "Review Replay Plane",
+    "Self Upgrade Plane"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false
+  },
+  "status": "ASSETIZED_FOR_P00_FULL_CONTROL_PLANE_CONSUMPTION"
+}

@@ -1,0 +1,40 @@
+{
+  "doc_id": "DOC-20260513-O00-CLI-001",
+  "anchors": [
+    {
+      "section": "1",
+      "claim": "status_code O00_CLI_SAMPLE_REPLAY_READY_WITH_GAPS"
+    },
+    {
+      "section": "4",
+      "claim": "requires registry/config/sample/CLI assets"
+    },
+    {
+      "section": "5",
+      "claim": "validate-config and run-sample command contracts"
+    },
+    {
+      "section": "6",
+      "claim": "run-sample has 31 internal steps"
+    },
+    {
+      "section": "7",
+      "claim": "must generate cli_runs and o00_runs output directories"
+    },
+    {
+      "section": "9-15",
+      "claim": "final status must be PIPELINE_READY_WITH_GAPS and false closure blocked"
+    }
+  ],
+  "key_terms": [
+    "O00_CLI_SAMPLE_REPLAY_READY_WITH_GAPS",
+    "PIPELINE_READY_WITH_GAPS",
+    "CONFIG_VALIDATED",
+    "CLI_SAMPLE_REPLAY_COMPLETED_WITH_GAPS",
+    "READY_WITH_GAPS",
+    "TESTED",
+    "RUNNER_BOUND",
+    "POLICY_ACTIVE",
+    "PIPELINE_ACCEPTED"
+  ]
+}

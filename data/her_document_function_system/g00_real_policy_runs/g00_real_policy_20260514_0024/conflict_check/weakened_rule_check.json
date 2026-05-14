@@ -1,0 +1,12 @@
+{
+  "weakened_rule_check_status": "PASSED",
+  "weakened_rules_detected": [],
+  "hard_forbidden_actions_preserved": [
+    "auto_deploy",
+    "execute_real_order",
+    "live_runtime",
+    "production_trading",
+    "silent_policy_overwrite",
+    "wallet_signing"
+  ]
+}

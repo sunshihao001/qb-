@@ -1,0 +1,11 @@
+required_trace:
+  - "participant_trace"
+  - "accounting_trace"
+  - "cohort_trace"
+  - "retention_trace"
+  - "transfer_trace"
+  - "distribution_trace"
+  - "counterparty_trace"
+  - "quality_trace"
+  - "handoff_trace"
+trace_missing_result: "P04_BLOCKED"

@@ -1,0 +1,32 @@
+{
+  "doc_id": "DOC-20260513-P01-DATA-FACT-001",
+  "from_phase": "K00_knowledge_intake_taskization",
+  "to_phase": "P01_data_fact_controller_package_or_code_landing",
+  "handoff_status": "K00_HANDOFF_READY",
+  "accepted_artifacts": {
+    "raw": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DATA-FACT-001_p01_data_fact_controller_professional_phase_pack.md",
+    "registry": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/source_registry/material_registry.jsonl",
+    "passport": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260513-P01-DATA-FACT-001.yaml",
+    "corpus_index": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260513-P01-DATA-FACT-001.md",
+    "system_mapping": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/system_mapping/system_mapping_DOC-20260513-P01-DATA-FACT-001.json",
+    "gap_detection": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/gap_detection/gap_detection_DOC-20260513-P01-DATA-FACT-001.json",
+    "task_package": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/task_execution_package_DOC-20260513-P01-DATA-FACT-001.json"
+  },
+  "next_required_action": "Run P01 package/code landing audit against actual /root/sikk-gmgn repo state before implementation.",
+  "runtime_permissions": {
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false,
+    "real_execution_allowed": false
+  },
+  "constraints": [
+    "no summary-only closure",
+    "no direct P02/P03/P06 unblock",
+    "no raw direct downstream read"
+  ],
+  "auto_trigger_decision_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/auto_trigger_decisions/auto_trigger_decision_DOC-20260513-P01-DATA-FACT-001.json",
+  "auto_trigger_decision_status": "AUTO_TRIGGER_ALLOWED",
+  "next_phase_allowed": true,
+  "next_phase_recommendation": "P01_data_fact_controller_package_or_code_landing",
+  "phase_status": "K00_ACCEPTED",
+  "generated_at": "2026-05-13T05:21:57.257287+00:00"
+}

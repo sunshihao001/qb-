@@ -1,0 +1,25 @@
+{
+  "phase_id": "I01_full_phase_consistency_audit",
+  "required_inputs": [
+    "P01-P10 phase controller directories",
+    "phase_controller_index.yaml",
+    "contract_index.md",
+    "schema_index.md",
+    "global_status_code_table.md",
+    "global_hard_negative_rules.md",
+    "handoff/acceptance/trace plane artifacts",
+    "system_methodology_blueprint.md"
+  ],
+  "block_if_missing": [
+    "phase_controller_index.yaml",
+    "P01-P10 controller artifacts"
+  ],
+  "degrade_if_missing": [
+    "optional report models",
+    "legacy path maps"
+  ],
+  "forbidden_inputs_as_authority": [
+    "chat context only",
+    "unregistered document snippets"
+  ]
+}

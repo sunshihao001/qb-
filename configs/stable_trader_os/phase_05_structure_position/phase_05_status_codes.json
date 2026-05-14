@@ -1,0 +1,21 @@
+{
+  "phase": "phase_05_structure_position_controller",
+  "completion_status": [
+    "COMPLETION_PASS",
+    "COMPLETION_WAIT",
+    "COMPLETION_FAIL",
+    "COMPLETION_BLOCKED",
+    "FATIGUE_BLOCK",
+    "TRANSITION_TIMEOUT"
+  ],
+  "position_status": [
+    "POSITION_VALID",
+    "POSITION_OVEREXTENDED",
+    "POSITION_UNKNOWN",
+    "POSITION_CHASING_RISK"
+  ],
+  "handoff_status": [
+    "HANDOFF_READY",
+    "HANDOFF_BLOCKED"
+  ]
+}

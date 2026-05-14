@@ -1,0 +1,267 @@
+{
+  "phase_id": "F00",
+  "status": "FIELD_MODEL_READY",
+  "fields": [
+    {
+      "field_name": "k00_handoff_packet",
+      "field_type": "object",
+      "source": "F00 replay fixture / K00 handoff",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": false,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "document_passport_refs",
+      "field_type": "array",
+      "source": "F00 replay fixture / K00 handoff",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": false,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "corpus_index_refs",
+      "field_type": "array",
+      "source": "F00 replay fixture / K00 handoff",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": false,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "system_mapping_refs",
+      "field_type": "array",
+      "source": "F00 replay fixture / K00 handoff",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": false,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "gap_detection_refs",
+      "field_type": "array",
+      "source": "F00 replay fixture / K00 handoff",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": false,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "execution_boundary",
+      "field_type": "object",
+      "source": "F00 runner evidence",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": false,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "write_policy",
+      "field_type": "object",
+      "source": "F00 runner evidence",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": false,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "repo_root",
+      "field_type": "string",
+      "source": "F00 runner evidence",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": false,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "schema_validation_status",
+      "field_type": "string",
+      "source": "F00 runner evidence",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": true,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "contract_validation_status",
+      "field_type": "string",
+      "source": "F00 runner evidence",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": true,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "replay_status",
+      "field_type": "string",
+      "source": "F00 runner evidence",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": true,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "runner_binding_status",
+      "field_type": "string",
+      "source": "F00 runner evidence",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": true,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    },
+    {
+      "field_name": "acceptance_status",
+      "field_type": "string",
+      "source": "F00 runner evidence",
+      "required": true,
+      "missing_policy": "F00_BLOCKED",
+      "evidence_level": "REQUIRED",
+      "confidence_required": true,
+      "counter_evidence_required": true,
+      "used_by": [
+        "schema_contract_validation",
+        "e2e_replay",
+        "acceptance_gate"
+      ],
+      "output_to": [
+        "acceptance_result",
+        "handoff_packet",
+        "final_report"
+      ]
+    }
+  ],
+  "generated_at": "2026-05-13T14:53:53+00:00"
+}

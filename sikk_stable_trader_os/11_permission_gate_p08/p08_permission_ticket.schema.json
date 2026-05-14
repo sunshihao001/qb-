@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "P08 Permission Ticket",
+  "type": "object",
+  "required": [
+    "ticket_id",
+    "token_address",
+    "source_phase",
+    "target_runner",
+    "permission_status",
+    "paper_only",
+    "no_real_swap",
+    "no_signing",
+    "no_broadcast",
+    "issued_at"
+  ],
+  "properties": {
+    "ticket_id": {
+      "type": "string"
+    },
+    "token_address": {
+      "type": "string"
+    },
+    "source_phase": {
+      "enum": [
+        "P07"
+      ]
+    },
+    "target_runner": {
+      "type": "string"
+    },
+    "permission_status": {
+      "enum": [
+        "PAPER_ONLY_ALLOWED",
+        "PAUSE",
+        "BLOCK"
+      ]
+    },
+    "paper_only": {
+      "const": true
+    },
+    "no_real_swap": {
+      "const": true
+    },
+    "no_signing": {
+      "const": true
+    },
+    "no_broadcast": {
+      "const": true
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "task_package_id": "runtime_binding_review_20260514_1038_task_package",
+  "status": "READY_WITH_GAPS",
+  "tasks": [
+    {
+      "task_id": "RB-001",
+      "title": "Bind K00 intake runner evidence or explicitly keep K00 as document-intake only",
+      "phase": "K00",
+      "priority": "P1",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "RB-002",
+      "title": "Create R00 replay/runtime boundary evidence without enabling live runtime",
+      "phase": "R00",
+      "priority": "P0",
+      "status": "DESIGN_LEVEL_ONLY"
+    },
+    {
+      "task_id": "RB-003",
+      "title": "Add semantic replay/contract tests for all safe-bound executors",
+      "phase": "ALL",
+      "priority": "P1",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "RB-004",
+      "title": "Produce phase-to-phase handoff consumption trace for bound runners",
+      "phase": "H00/O00",
+      "priority": "P1",
+      "status": "OPEN"
+    }
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order",
+    "broadcast",
+    "private_key",
+    "policy_active"
+  ]
+}

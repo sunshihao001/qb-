@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "dry_run": false,
+  "cutover_bj": "2026-05-05T13:30:00+08:00",
+  "cutover_commit": "e91828c",
+  "run_time_utc": "2026-05-05T12:46:37.522462+00:00",
+  "targets": [
+    "结构分析/jiegoufenxibot",
+    "data/gmgn_candidates_live_run/intel-bot",
+    "data/gmgn_candidates_live_run/intel_bot",
+    "data/gmgn_candidates_live_run/wallet_structure",
+    "data/wallet_intelligence"
+  ],
+  "actions": [
+    {
+      "action": "remove_working_path",
+      "path": "结构分析/jiegoufenxibot",
+      "files": 18
+    },
+    {
+      "action": "restore_from_commit",
+      "path": "结构分析/jiegoufenxibot",
+      "commit": "e91828c",
+      "files": 18
+    },
+    {
+      "action": "summary",
+      "path": "结构分析/jiegoufenxibot",
+      "working_files_before": 18,
+      "commit_files": 18
+    },
+    {
+      "action": "remove_working_path",
+      "path": "data/gmgn_candidates_live_run/intel-bot",
+      "files": 1465
+    },
+    {
+      "action": "no_commit_snapshot",
+      "path": "data/gmgn_candidates_live_run/intel-bot",
+      "commit": "e91828c"
+    },
+    {
+      "action": "summary",
+      "path": "data/gmgn_candidates_live_run/intel-bot",
+      "working_files_before": 1465,
+      "commit_files": 0
+    },
+    {
+      "action": "no_commit_snapshot",
+      "path": "data/gmgn_candidates_live_run/intel_bot",
+      "commit": "e91828c"
+    },
+    {
+      "action": "summary",
+      "path": "data/gmgn_candidates_live_run/intel_bot",
+      "working_files_before": 0,
+      "commit_files": 0
+    },
+    {
+      "action": "no_commit_snapshot",
+      "path": "data/gmgn_candidates_live_run/wallet_structure",
+      "commit": "e91828c"
+    },
+    {
+      "action": "summary",
+      "path": "data/gmgn_candidates_live_run/wallet_structure",
+      "working_files_before": 0,
+      "commit_files": 0
+    },
+    {
+      "action": "no_commit_snapshot",
+      "path": "data/wallet_intelligence",
+      "commit": "e91828c"
+    },
+    {
+      "action": "summary",
+      "path": "data/wallet_intelligence",
+      "working_files_before": 0,
+      "commit_files": 0
+    }
+  ]
+}

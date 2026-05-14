@@ -1,0 +1,16 @@
+{
+  "phase_id": "F00",
+  "patch_status": "PATCH_APPLIED",
+  "modified_or_created_assets": [
+    "modules/her_document_function_system/f00_runner.py",
+    "tests/test_f00_runner_binding.py",
+    "tests/fixtures/her_document_function_system/f00_e2e_replay_fixture.json"
+  ],
+  "forbidden_scope_preserved": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_rule_direct_change"
+  ],
+  "generated_at": "2026-05-13T14:53:53+00:00"
+}

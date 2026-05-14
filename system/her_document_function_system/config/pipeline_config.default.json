@@ -1,0 +1,179 @@
+{
+  "config_id": "pipeline_config_safe_mode_v1",
+  "config_version": "1.0.0",
+  "pipeline_name": "document_to_function_safe_mode",
+  "safe_mode": true,
+  "repo_root": "/root/sikk-gmgn",
+  "controller_registry_ref": "system/her_document_function_system/registry/controller_registry.json",
+  "governance_policy_ref": "system/her_document_function_system/controllers/G00_governance_boundary_controller/active_policy_bundle.json",
+  "execution_boundary": {
+    "allow_read": true,
+    "allow_write_run_outputs": true,
+    "allow_write_system_files": true,
+    "allow_write_code_patch": false,
+    "allow_schema_validation": true,
+    "allow_contract_validation": true,
+    "allow_safe_tests": true,
+    "allow_safe_replay": true,
+    "allow_safe_dry_run": false,
+    "allow_runner_binding_design": true,
+    "allow_runner_binding_execution": false,
+    "allow_scheduler_enable": false,
+    "allow_paper_runtime": false,
+    "allow_live_runtime": false,
+    "allow_wallet_signing": false,
+    "allow_auto_deploy": false,
+    "allow_production_trading": false
+  },
+  "write_policy": {
+    "raw_documents": "APPEND_ONLY",
+    "registry": "VERSIONED_UPDATE",
+    "controller_system_files": "WRITE_IF_MISSING_OR_VERSIONED",
+    "run_outputs": "RUN_ID_SCOPED_WRITE",
+    "trace_audit": "APPEND_ONLY",
+    "legacy_runtime": "READ_ONLY",
+    "production_rules": "NO_DIRECT_WRITE",
+    "code_patch": "PLAN_ONLY"
+  },
+  "stage_plan": [
+    {
+      "stage_id": "G00",
+      "required": true,
+      "mode": "POLICY_LOAD_ONLY",
+      "entry_condition": "governance_policy_ref_exists_or_bootstrap_policy_available",
+      "exit_condition": "active_policy_bundle_loaded",
+      "on_success": "continue_to_O00_preflight",
+      "on_failure": "block_pipeline"
+    },
+    {
+      "stage_id": "K00",
+      "required": true,
+      "mode": "INTAKE_AND_TASKIZATION",
+      "entry_condition": "source_document_exists_and_policy_loaded",
+      "exit_condition": "K00_ACCEPTED or K00_READY_WITH_GAPS",
+      "on_success": "continue_to_F00",
+      "on_failure": "route_to_U00_or_block"
+    },
+    {
+      "stage_id": "F00",
+      "required": true,
+      "mode": "FUNCTION_REALIZATION_DESIGN",
+      "entry_condition": "k00_handoff_exists",
+      "exit_condition": "FUNCTION_MAPPED and FIELD_MODEL_READY and RULE_LOGIC_READY",
+      "on_success": "continue_to_V00",
+      "on_failure": "route_to_U00"
+    },
+    {
+      "stage_id": "V00",
+      "required": true,
+      "mode": "VALIDATION_SAFE_REPLAY",
+      "entry_condition": "f00_handoff_exists",
+      "exit_condition": "V00_ACCEPTED or V00_READY_WITH_GAPS",
+      "on_success": "continue_to_R00_or_A00",
+      "on_failure": "route_to_U00"
+    },
+    {
+      "stage_id": "R00",
+      "required": false,
+      "mode": "BINDING_DESIGN_AND_SAFE_DRY_RUN_PLAN",
+      "entry_condition": "v00_handoff_exists_and_runner_binding_required",
+      "exit_condition": "R00_ACCEPTED or R00_READY_WITH_GAPS or DESIGN_ONLY",
+      "skip_condition": "runner_binding_required == false",
+      "on_success": "continue_to_A00",
+      "on_failure": "route_to_U00"
+    },
+    {
+      "stage_id": "A00",
+      "required": true,
+      "mode": "GLOBAL_ACCEPTANCE_REVIEW",
+      "entry_condition": "k00_f00_v00_handoffs_exist",
+      "exit_condition": "A00_ACCEPTED or A00_READY_WITH_GAPS or A00_BLOCKED",
+      "on_success": "continue_to_H00",
+      "on_failure": "route_to_U00"
+    },
+    {
+      "stage_id": "H00",
+      "required": true,
+      "mode": "DOWNSTREAM_QUEUE_WRITE",
+      "entry_condition": "a00_handoff_and_readiness_certificate_exist",
+      "exit_condition": "H00_ACCEPTED or H00_READY_WITH_GAPS",
+      "on_success": "continue_to_U00_if_needed",
+      "on_failure": "route_to_U00"
+    },
+    {
+      "stage_id": "U00",
+      "required": true,
+      "mode": "REVIEW_UPGRADE_IF_GAPS_OR_FAILURES",
+      "entry_condition": "any_gap_or_failure_or_design_only_or_not_executed",
+      "exit_condition": "U00_ACCEPTED or U00_READY_WITH_GAPS or NOT_REQUIRED",
+      "on_success": "continue_to_G00_if_governance_candidates_exist",
+      "on_failure": "write_recovery_report"
+    },
+    {
+      "stage_id": "G00",
+      "required": false,
+      "mode": "GOVERNANCE_UPDATE_IF_REQUIRED",
+      "entry_condition": "u00_governance_candidates_exist",
+      "exit_condition": "G00_ACCEPTED or G00_READY_WITH_GAPS or NOT_REQUIRED",
+      "on_success": "write_policy_handoff",
+      "on_failure": "write_governance_recovery_report"
+    }
+  ],
+  "failure_policy": {
+    "K00_BLOCKED": "STOP_OR_ROUTE_TO_U00",
+    "F00_BLOCKED": "ROUTE_TO_U00",
+    "V00_TEST_FAILED": "ROUTE_TO_U00",
+    "V00_REPLAY_FAILED": "ROUTE_TO_U00",
+    "R00_BINDING_FAILED": "ROUTE_TO_U00",
+    "A00_BLOCKED": "ROUTE_TO_U00",
+    "H00_BLOCKED": "ROUTE_TO_U00",
+    "G00_BLOCKED": "BLOCK_POLICY_UPDATE",
+    "BLOCKING_GAP": "BLOCK_NEXT_EXECUTION_STAGE"
+  },
+  "gap_policy": {
+    "preserve_all_gaps": true,
+    "allow_ready_with_gaps": true,
+    "allow_blocking_gap_to_continue": false,
+    "hidden_gap_action": "ROUTE_TO_G00",
+    "gap_status_allowed": [
+      "OPEN",
+      "RESOLVED",
+      "ACCEPTED_RISK",
+      "DEFERRED",
+      "BLOCKING",
+      "SUPERSEDED",
+      "INVALIDATED"
+    ]
+  },
+  "acceptance_policy": {
+    "require_k00": true,
+    "require_f00": true,
+    "require_v00": true,
+    "require_a00": true,
+    "require_h00": true,
+    "require_trace_audit": true,
+    "require_handoff_chain": true,
+    "require_r00_if_runner_binding_required": true,
+    "final_status_allowed": [
+      "PIPELINE_ACCEPTED",
+      "PIPELINE_READY_WITH_GAPS",
+      "PIPELINE_BLOCKED",
+      "PIPELINE_REJECTED",
+      "PIPELINE_DESIGN_ONLY",
+      "PIPELINE_PARTIALLY_IMPLEMENTED",
+      "PIPELINE_VALIDATED_NOT_BOUND",
+      "PIPELINE_REVIEW_REQUIRED",
+      "PIPELINE_GOVERNANCE_REQUIRED"
+    ]
+  },
+  "stage_mode": {
+    "K00": "SAFE_WRITE",
+    "F00": "DESIGN_ONLY",
+    "V00": "SAFE_REPLAY",
+    "R00": "DESIGN_ONLY",
+    "A00": "EVIDENCE_REVIEW",
+    "H00": "QUEUE_WRITE",
+    "U00": "REVIEW_UPGRADE",
+    "G00": "POLICY_CANDIDATE_ONLY"
+  }
+}

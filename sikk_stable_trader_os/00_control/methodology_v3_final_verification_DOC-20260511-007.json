@@ -1,0 +1,44 @@
+{
+  "files": {
+    "00_methodology/methodology_v3_bootstrap_full_control_plane_supplement.md": true,
+    "00_methodology/system_methodology_blueprint.md": true,
+    "00_control/current_system_state.json": true,
+    "00_control/next_stage_decision.json": true,
+    "00_control/task_queue.json": true,
+    "00_control/current_blockers.json": true,
+    "00_control/task_consumption_log.json": true,
+    "00_control/system_asset_index.json": true,
+    "00_control/methodology_v3_reconciliation_DOC-20260511-007.json": true,
+    "00_control/plane_reality_check_DOC-20260511-007.json": true
+  },
+  "parse_errors": [],
+  "checks": {
+    "all_files_exist": true,
+    "parse_ok": true,
+    "blueprint_has_v3_anchor": true,
+    "supplement_has_bootstrap_full": true,
+    "next_stage_updated": true,
+    "decision_next_stage_matches": true,
+    "p01_not_allowed_state": true,
+    "paper_only_true": true,
+    "real_trade_enabled_false": true,
+    "auto_order_allowed_false": true,
+    "p01_status_blocked": true
+  },
+  "overall_passed": true,
+  "state_snapshot": {
+    "current_authoritative_stage": "P00_system_bootstrap_controller",
+    "p00_status": "BOOTSTRAP_PASSED",
+    "methodology_v3_supplement_status": "CREATED_AND_REGISTERED",
+    "control_plane_model": "BOOTSTRAP_CONTROL_PLANE_PLUS_FULL_CONTROL_PLANE",
+    "bootstrap_control_plane_status": "EXISTS_AND_ACTIVE",
+    "full_control_plane_status": "REQUIRED_FOR_SYSTEM_PLANES_ACCEPTANCE",
+    "next_legal_stage": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE",
+    "previous_next_legal_stage": "DATA_PLANE_ACCEPTANCE_REVIEW",
+    "p01_status": "BLOCKED_BY_SYSTEM_PLANES_ACCEPTANCE",
+    "p01_runtime_connection_allowed": false,
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false
+  }
+}

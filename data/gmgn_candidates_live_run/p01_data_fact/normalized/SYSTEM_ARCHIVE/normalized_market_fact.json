@@ -1,0 +1,15 @@
+{
+  "schema_version": "P01_DATA_SOURCE_INTELLIGENCE_V2_SCAFFOLD",
+  "token_address": "SYSTEM_ARCHIVE",
+  "fields": {
+    "market_cap_usd": {
+      "value": null,
+      "source": "system_scaffold",
+      "fetched_at": "2026-05-13T07:00:57Z",
+      "confidence": 0.2,
+      "freshness_status": "REPLAY_ONLY",
+      "field_status": "FIELD_MISSING_OPTIONAL",
+      "missing_reason": "LIVE_SOURCE_NOT_AUDITED"
+    }
+  }
+}

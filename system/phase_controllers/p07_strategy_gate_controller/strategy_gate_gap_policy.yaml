@@ -1,0 +1,22 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+policy_id: P07_GAP_POLICY
+BLOCKING_GAP:
+  result: P07_BLOCKED
+  examples: [p06_handoff_missing, trace_missing, acceptance_missing, live_execution_requested, handoff_plane_bypassed]
+CRITICAL_GAP:
+  result: P07_REJECTED
+  examples: [no_primary_scenario, all_scenarios_do_not_use, no_strategy_policy_registry, no_strategy_gate_decision_contract, output_contract_missing]
+HIGH_GAP:
+  result: P07_READY_WITH_GAPS
+  downstream_permission: P08_LIMITED_OR_PAUSE
+  examples: [blocking_scenario_conflict, evidence_conflict_unresolved, chip_structure_risk_high, market_position_chasing_context, security_context_stale, scenario_confidence_low]
+MEDIUM_GAP:
+  result: P07_READY_WITH_GAPS
+  downstream_permission: P08_ALLOWED_WITH_RECHECK
+  examples: [cost_basis_low_confidence, counterparty_pressure_moderate, market_data_needs_refresh, transition_state_uncertain]
+LOW_GAP:
+  result: P07_READY_WITH_GAPS
+  downstream_permission: P08_ALLOWED_WITH_NOTE
+  examples: [optional_historical_context_missing, minor_data_freshness_gap, noncritical_strategy_metadata_missing]

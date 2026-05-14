@@ -1,0 +1,107 @@
+{
+  "root_cause_items": [
+    {
+      "root_cause_id": "rca_review_case_policy_not_active",
+      "review_case_id": "review_case_policy_not_active",
+      "root_cause_type": "GOVERNANCE_POLICY_NOT_ACTIVE",
+      "root_cause_statement": "policy_not_active -> GOVERNANCE_POLICY_NOT_ACTIVE",
+      "causal_chain": [
+        "H00_REAL_DOWNSTREAM_QUEUE",
+        "GOVERNANCE_POLICY_NOT_ACTIVE",
+        "GOVERNANCE_UPGRADE"
+      ],
+      "confidence": "HIGH",
+      "required_fix_type": "GOVERNANCE_UPGRADE",
+      "recommended_owner": "G00",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    },
+    {
+      "root_cause_id": "rca_review_case_paper_runtime_not_enabled",
+      "review_case_id": "review_case_paper_runtime_not_enabled",
+      "root_cause_type": "UNCLASSIFIED_REVIEW_GAP",
+      "root_cause_statement": "paper_runtime_not_enabled -> UNCLASSIFIED_REVIEW_GAP",
+      "causal_chain": [
+        "H00_REAL_DOWNSTREAM_QUEUE",
+        "UNCLASSIFIED_REVIEW_GAP",
+        "CONTROLLER_UPGRADE"
+      ],
+      "confidence": "MEDIUM",
+      "required_fix_type": "CONTROLLER_UPGRADE",
+      "recommended_owner": "H00_REAL_DOWNSTREAM_QUEUE",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    },
+    {
+      "root_cause_id": "rca_review_case_live_runtime_forbidden",
+      "review_case_id": "review_case_live_runtime_forbidden",
+      "root_cause_type": "UNCLASSIFIED_REVIEW_GAP",
+      "root_cause_statement": "live_runtime_forbidden -> UNCLASSIFIED_REVIEW_GAP",
+      "causal_chain": [
+        "H00_REAL_DOWNSTREAM_QUEUE",
+        "UNCLASSIFIED_REVIEW_GAP",
+        "CONTROLLER_UPGRADE"
+      ],
+      "confidence": "MEDIUM",
+      "required_fix_type": "CONTROLLER_UPGRADE",
+      "recommended_owner": "H00_REAL_DOWNSTREAM_QUEUE",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    },
+    {
+      "root_cause_id": "rca_review_case_telegram_binding_design_only",
+      "review_case_id": "review_case_telegram_binding_design_only",
+      "root_cause_type": "UNCLASSIFIED_REVIEW_GAP",
+      "root_cause_statement": "telegram_binding_design_only -> UNCLASSIFIED_REVIEW_GAP",
+      "causal_chain": [
+        "H00_REAL_DOWNSTREAM_QUEUE",
+        "UNCLASSIFIED_REVIEW_GAP",
+        "CONTROLLER_UPGRADE"
+      ],
+      "confidence": "MEDIUM",
+      "required_fix_type": "CONTROLLER_UPGRADE",
+      "recommended_owner": "H00_REAL_DOWNSTREAM_QUEUE",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    },
+    {
+      "root_cause_id": "rca_review_case_V00_READY_WITH_GAPS",
+      "review_case_id": "review_case_V00_READY_WITH_GAPS",
+      "root_cause_type": "UNCLASSIFIED_REVIEW_GAP",
+      "root_cause_statement": "V00_READY_WITH_GAPS -> UNCLASSIFIED_REVIEW_GAP",
+      "causal_chain": [
+        "H00_REAL_DOWNSTREAM_QUEUE",
+        "UNCLASSIFIED_REVIEW_GAP",
+        "CONTROLLER_UPGRADE"
+      ],
+      "confidence": "MEDIUM",
+      "required_fix_type": "CONTROLLER_UPGRADE",
+      "recommended_owner": "H00_REAL_DOWNSTREAM_QUEUE",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    },
+    {
+      "root_cause_id": "rca_review_case_R00_READY_WITH_GAPS",
+      "review_case_id": "review_case_R00_READY_WITH_GAPS",
+      "root_cause_type": "RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "root_cause_statement": "R00_READY_WITH_GAPS -> RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+      "causal_chain": [
+        "H00_REAL_DOWNSTREAM_QUEUE",
+        "RUNNER_BINDING_NOT_REQUIRED_OR_NOT_BOUND",
+        "RUNNER_BINDING_UPGRADE"
+      ],
+      "confidence": "HIGH",
+      "required_fix_type": "RUNNER_BINDING_UPGRADE",
+      "recommended_owner": "R00",
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    }
+  ],
+  "total_items": 6
+}

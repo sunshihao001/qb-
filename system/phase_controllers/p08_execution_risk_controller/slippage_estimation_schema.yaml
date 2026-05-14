@@ -1,0 +1,19 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: SLIPPAGE_ESTIMATION_SCHEMA
+version: v3.0
+required_fields:
+  - slippage_id
+  - candidate_id
+  - simulated_order
+  - estimates
+  - thresholds
+  - slippage_status
+  - downstream
+allowed_statuses:
+  - SLIPPAGE_ACCEPTABLE
+  - SLIPPAGE_HIGH_LIMIT_SIZE
+  - SLIPPAGE_TOO_HIGH
+  - SLIPPAGE_UNKNOWN
+no_live_execution_fields_allowed: true

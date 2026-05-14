@@ -1,0 +1,23 @@
+doc_id: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+title: P10 Self Upgrade Controller 专业版 v3.0
+material_type: user_uploaded_markdown
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3.md
+sha256: b1d8fd060b8f3d5ab5c438a3c0a89747a6d7448d54ca1e16e195030b8a3f52f0
+received_at: '2026-05-12T09:42:18Z'
+language: zh-CN
+phase_mapping:
+  primary_phase: P10_self_upgrade_controller
+  controller_id: P10_SELF_UPGRADE_CONTROLLER
+  upstream_required:
+  - P09_REVIEW_REPLAY_CONTROLLER
+  downstream_allowed:
+  - GOVERNANCE_REVIEW
+  - IMPLEMENTATION_TASK_QUEUE
+  - RUNNER_TOOL_BINDING_DRY_RUN
+  runtime_boundary:
+    runtime_allowed: false
+    paper_runtime_allowed: false
+    live_execution_allowed: false
+    wallet_signing_allowed: false
+    auto_deploy_allowed: false
+intake_status: ASSETIZED_AND_ROUTED

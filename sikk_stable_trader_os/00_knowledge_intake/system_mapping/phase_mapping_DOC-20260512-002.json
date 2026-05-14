@@ -1,0 +1,26 @@
+{
+  "doc_id": "DOC-20260512-002",
+  "source_phase": "K00",
+  "target_phase": "P02_source_data_fact_controller",
+  "upstream_phase": "P01_candidate_intake_controller",
+  "downstream_phase": "P03_wallet_entity_controller",
+  "phase_boundary": {
+    "allowed": [
+      "receive P01 handoff",
+      "preserve raw facts",
+      "normalize facts",
+      "report quality/gaps/conflicts/freshness",
+      "handoff to P03"
+    ],
+    "forbidden": [
+      "generate evidence",
+      "classify wallet roles",
+      "judge chip structure",
+      "classify scenario",
+      "strategy admission",
+      "paper runtime",
+      "live execution"
+    ]
+  },
+  "next_legal_stage_after_landing": "P03_WALLET_ENTITY_CONTROLLER_PACKAGE_DESIGN"
+}

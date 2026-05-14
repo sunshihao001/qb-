@@ -1,0 +1,36 @@
+schema_id: RISK_RULE_EFFECTIVENESS_SCHEMA
+title: Risk Rule Effectiveness Record
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- effectiveness_id
+- risk_rule_id
+- blocked_cases
+- allowed_cases
+- false_positive_count
+- false_negative_count
+fields:
+  effectiveness_id: string
+  risk_rule_id: string
+  blocked_cases: list
+  allowed_cases: list
+  false_positive_count: integer
+  false_negative_count: integer
+enums: {}
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

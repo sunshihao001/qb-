@@ -1,0 +1,70 @@
+{
+  "phase_id": "P08",
+  "controller_id": "P08_EXECUTION_RISK_CONTROLLER",
+  "controller_name_cn": "执行风控与纸面运行前门控控制器",
+  "primary_responsibility": "对 P07 输出的 PAPER_CANDIDATE 进行报价、安全、滑点、流动性、仓位、风险限制和 paper-only 门控检查。",
+  "required_handoff": [
+    "p07_strategy_gate_handoff_packet",
+    "quote_security_handoff_packet",
+    "governance_execution_risk_rules",
+    "runtime_handoff_policy",
+    "limitation_transfer_packet"
+  ],
+  "outputs": [
+    "execution_risk_decisions.json",
+    "quote_security_decisions.json",
+    "paper_runtime_permissions.json",
+    "execution_risk_report.md",
+    "p08_execution_risk_handoff_packet.yaml"
+  ],
+  "required_trace": [
+    "PHASE_TRACE",
+    "TASK_TRACE",
+    "ARTIFACT_TRACE",
+    "CONTRACT_TRACE",
+    "DECISION_TRACE",
+    "STATE_TRACE",
+    "ERROR_TRACE"
+  ],
+  "acceptance_gate": "GATE_P08_EXECUTION_RISK_READY",
+  "tool_binding_policy": {
+    "allowed": true,
+    "mode": [
+      "READ_ONLY_RISK_CHECK",
+      "TEST_ONLY",
+      "PAPER_ONLY_PRECHECK"
+    ],
+    "allowed_tools": [
+      "okx_quote_checker",
+      "okx_security_checker",
+      "slippage_estimator",
+      "paper_runtime_precheck",
+      "risk_event_logger"
+    ],
+    "forbidden_tools": [
+      "live_trade_executor",
+      "wallet_signer",
+      "auto_order_router"
+    ]
+  },
+  "paper_runtime_policy": {
+    "allowed": "conditional",
+    "condition": [
+      "execution_risk_acceptance_ready",
+      "runtime_handoff_exists",
+      "paper_only_flag_true",
+      "live_execution_forbidden"
+    ],
+    "reason": "P08 可以允许进入 Paper-only Runtime，但不能允许自动实盘。"
+  },
+  "forbidden": [
+    "approve_live_execution",
+    "bypass_paper_only_flag",
+    "ignore_security_risk",
+    "ignore_quote_deviation",
+    "ignore_slippage",
+    "run_without_runtime_trace"
+  ],
+  "status": "INDEXED_NOT_EXPANDED",
+  "runtime_allowed": false
+}

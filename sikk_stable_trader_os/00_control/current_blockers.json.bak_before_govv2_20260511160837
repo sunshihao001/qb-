@@ -1,0 +1,58 @@
+{
+  "blocker_set_id": "CURRENT_BLOCKERS_BOOTSTRAP_V2",
+  "updated_at": "2026-05-11T15:56:01.156545Z",
+  "authority": "00_control/current_system_state.json",
+  "blocked_stages": [
+    "P01_data_fact_controller",
+    "P02_wallet_structure_controller",
+    "P03_chip_control_controller",
+    "P04_market_structure_controller",
+    "P05_scenario_classification_controller",
+    "P06_strategy_gate_controller",
+    "P07_execution_risk_controller",
+    "P08_paper_trading_controller",
+    "P09_review_learning_controller",
+    "P10_system_upgrade_controller"
+  ],
+  "stage_block_reasons": {
+    "P01_data_fact_controller": "Data Plane has not been generated and accepted; P01 preflight has not passed; P01 I/O contracts have not been validated.",
+    "P02_wallet_structure_controller": "P01 normalized wallet facts are not available.",
+    "P03_chip_control_controller": "P02 wallet structure outputs are not available.",
+    "P04_market_structure_controller": "P01 normalized market facts are not available.",
+    "P05_scenario_classification_controller": "P02/P03/P04 upstream evidence is not available.",
+    "P06_strategy_gate_controller": "Scenario classification and contradiction report are not available.",
+    "P07_execution_risk_controller": "Strategy gate paper permission is not available.",
+    "P08_paper_trading_controller": "Execution risk report is not available.",
+    "P09_review_learning_controller": "Paper trading closed samples are not available.",
+    "P10_system_upgrade_controller": "Review learning outputs are not available."
+  },
+  "blocked_tasks": {
+    "P01_DATA_FACT_RUNTIME_CONNECTION": [
+      "Data Plane not generated/accepted",
+      "P01 preflight not passed",
+      "P01 I/O contracts not validated"
+    ],
+    "P02_WALLET_STRUCTURE_RUNTIME": [
+      "P01 unavailable"
+    ],
+    "PAPER_TRADING_RUNTIME": [
+      "Strategy gate/execution risk/paper permissions unavailable"
+    ],
+    "REAL_TRADE_EXECUTION": [
+      "Global safety boundary forbids real trade"
+    ]
+  },
+  "hard_blocks": [
+    "P01_READY",
+    "p01_runtime_connection_allowed_true",
+    "real_trade_enabled_true",
+    "auto_order_allowed_true"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false,
+    "private_key_allowed": false,
+    "seed_phrase_allowed": false
+  }
+}

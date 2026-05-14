@@ -1,0 +1,288 @@
+meta:
+  standard_id: S00_STANDARD_OBJECT_REGISTRY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+standard_objects:
+- standard_id: S00_GOAL_STANDARD
+  standard_name: Goal mapping
+  standard_type: goal
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: medium
+- standard_id: S00_METHOD_STANDARD
+  standard_name: Method wheel mapping
+  standard_type: method
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: medium
+- standard_id: S00_SCHEMA_STANDARD
+  standard_name: Schema index
+  standard_type: schema
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: medium
+- standard_id: S00_CONTRACT_STANDARD
+  standard_name: Contract index
+  standard_type: contract
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: medium
+- standard_id: S00_RUNNER_STANDARD
+  standard_name: Runner binding
+  standard_type: runner
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: medium
+- standard_id: S00_TRACE_STANDARD
+  standard_name: Trace event
+  standard_type: trace
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: medium
+- standard_id: S00_ACCEPTANCE_STANDARD
+  standard_name: Acceptance gate
+  standard_type: acceptance
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: medium
+- standard_id: S00_HANDOFF_STANDARD
+  standard_name: Handoff packet
+  standard_type: handoff
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: medium
+- standard_id: S00_GATE_STANDARD
+  standard_name: P08 permission gate
+  standard_type: gate
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: medium
+- standard_id: S00_REVIEW_STANDARD
+  standard_name: P09/P10 review upgrade
+  standard_type: review
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: medium
+- standard_id: S00_SECURITY_STANDARD
+  standard_name: Security boundary
+  standard_type: security
+  owner_plane: S00
+  applies_to_phases:
+  - K00
+  - P00
+  - P01-P10
+  - R00
+  - P08
+  - P09
+  - P10
+  producer: S00
+  consumer:
+  - Phase Controllers
+  - R00
+  - paper runtime
+  source_files:
+  - DOC-20260514-S00-001
+  output_files: []
+  version: 0.1.0
+  status: active_with_gaps
+  acceptance_required: true
+  last_reviewed_at: '2026-05-14T12:50:47Z'
+  risk_level: high

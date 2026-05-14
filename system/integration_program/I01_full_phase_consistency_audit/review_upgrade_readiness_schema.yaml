@@ -1,0 +1,8 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: review_upgrade_readiness_record
+fields:
+- record_id
+- p09_readiness_checks
+- p10_readiness_checks
+- readiness_status

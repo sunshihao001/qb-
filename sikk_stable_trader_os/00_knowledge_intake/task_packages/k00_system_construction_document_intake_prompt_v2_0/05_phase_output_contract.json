@@ -1,0 +1,29 @@
+{
+  "phase_id": "K00",
+  "contract_type": "output",
+  "required_outputs": [
+    "raw input copy",
+    "source registry record",
+    "document passport",
+    "corpus index",
+    "system mapping",
+    "gap detection report",
+    "phase task package",
+    "phase state",
+    "acceptance record",
+    "handoff packet",
+    "trace/audit record"
+  ],
+  "forbidden_outputs": [
+    "summary-only response",
+    "untracked downstream execution",
+    "runner start"
+  ],
+  "validation_rules": [
+    "each artifact must have a file path",
+    "gaps must remain visible"
+  ],
+  "recovery_policy": [
+    "missing artifact => PLANNED_NOT_WRITTEN only if not created; otherwise write correction and re-verify"
+  ]
+}

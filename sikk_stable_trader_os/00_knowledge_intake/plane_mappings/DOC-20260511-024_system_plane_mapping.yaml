@@ -1,0 +1,22 @@
+document_id: DOC-20260511-024
+source: Full Control Plane Professional Design
+mapped_planes:
+  - plane_id: P00_FULL_CONTROL_PLANE
+    relationship: primary_target
+    consumption_required: true
+  - plane_id: P01_GOVERNANCE_PLANE
+    relationship: controlled_plane
+    reverse_audit_required: true
+  - plane_id: P02_DOMAIN_PLANE
+    relationship: controlled_plane
+    reverse_audit_required: true
+  - plane_id: P03_DATA_PLANE
+    relationship: controlled_plane
+    reverse_audit_required: true
+  - plane_id: P04_EVIDENCE_PLANE
+    relationship: next_design_candidate
+    reverse_audit_required: false
+safety:
+  paper_only: true
+  real_trade_enabled: false
+  auto_order_allowed: false

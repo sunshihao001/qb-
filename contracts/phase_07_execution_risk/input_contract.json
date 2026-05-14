@@ -1,0 +1,27 @@
+{
+  "phase": 7,
+  "name": "执行风控层",
+  "goal": "检查 quote、安全、滑点、流动性与纸面交易资格；默认 paper-only",
+  "output_file": "paper_trade_decision.json",
+  "required_fields": [
+    "token_address",
+    "run_id",
+    "phase",
+    "status_code",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_trigger",
+    "confidence_level",
+    "missing_fields",
+    "source_files",
+    "handoff_to"
+  ],
+  "allowed_status_codes": [
+    "EXECUTION_BLOCK",
+    "PAPER_EXECUTED",
+    "REVIEW_ONLY"
+  ],
+  "missing_policy": "缺失字段必须写 missing；自动推导写 系统推导",
+  "downstream": "复盘学习层"
+}

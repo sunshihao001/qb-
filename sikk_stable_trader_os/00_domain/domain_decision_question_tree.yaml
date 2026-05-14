@@ -1,0 +1,21 @@
+question_tree:
+  root: token_structure_quality
+  questions:
+    - id: Q01_FACTS
+      question_cn: 基础事实是否可被标准化读取？
+      required_phase: P01_data_fact_controller
+    - id: Q02_WALLET_STRUCTURE
+      question_cn: 钱包角色、实体、同源组和资金路径是否可判定？
+      required_phase: P02_wallet_structure_controller
+    - id: Q03_CHIP_CONTROL
+      question_cn: 早期筹码控制权是否仍然存在？
+      required_phase: P03_chip_control_controller
+    - id: Q04_MARKET_STRUCTURE
+      question_cn: 市场结构是否支持场景判断？
+      required_phase: P04_market_structure_controller
+    - id: Q05_SCENARIO
+      question_cn: 当前属于哪种盘型，反证是什么？
+      required_phase: P05_scenario_classification_controller
+    - id: Q06_GATE
+      question_cn: 是否允许进入 paper-only？
+      required_phase: P06_strategy_gate_controller

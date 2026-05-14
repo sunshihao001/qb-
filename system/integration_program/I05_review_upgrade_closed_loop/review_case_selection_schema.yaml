@@ -1,0 +1,9 @@
+review_case_selection:
+  type: object
+  required:
+    - selection_id
+    - selected_case_ids
+    - selection_policy
+    - coverage_scope
+    - limitations
+  additional_properties_allowed: true

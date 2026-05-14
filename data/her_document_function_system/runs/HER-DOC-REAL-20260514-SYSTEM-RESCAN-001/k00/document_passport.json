@@ -1,0 +1,63 @@
+{
+  "doc_id": "doc_HER-DOC-REAL-20260514-SYSTEM-RESCAN-001",
+  "source_name": "doc_1f4e0c6d02a6_交易系统体系再摄取与落地审计方案 (1).md",
+  "source_type": "SYSTEM_CONSTRUCTION_MATERIAL",
+  "received_at": "2026-05-14T02:50:49Z",
+  "raw_path": "input/raw_document.md",
+  "sha256": "d756996d308c669d74d0debcebb2546ffaa52321440946e23dbb67b2dc5a34cf",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance"
+    ]
+  },
+  "summary": {
+    "core_intent": "让真实 GPT 研究资料 / 系统建设资料进入 HER，按主链路跑完，生成完整文件输出，保留 gap。",
+    "key_points": [
+      "K00 文档摄取与任务化",
+      "K00-K08 文档处理体系",
+      "|文档功能化体系|刚建立|需要落地成 K00-K08 runner|",
+      "|持续 paper 运行|不能直接启动|必须先有 R00 生成稳定 run/sample/metrics|",
+      "10. 所有结论必须附 source path。",
+      "11. 所有缺口必须给出 fix task。",
+      "12. 所有功能候选必须标记 owner layer / owner phase。",
+      "2. **之前 GPT 研究资料必须重新经过 K00-K08，转成 functional object。**",
+      "6. **控制平面必须被 R00 读取，否则只是设计文档。**"
+    ]
+  },
+  "system_mapping": {
+    "affected_planes": [
+      "input",
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00",
+      "trace",
+      "audit"
+    ],
+    "affected_controllers": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_doc_function_pipeline",
+      "tools",
+      "tests/her_doc_function_pipeline",
+      "data/her_document_function_system/runs"
+    ]
+  },
+  "status": "K00_READY_WITH_GAPS"
+}

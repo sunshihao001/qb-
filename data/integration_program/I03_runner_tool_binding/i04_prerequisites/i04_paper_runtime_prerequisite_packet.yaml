@@ -1,0 +1,24 @@
+{
+  "i04_paper_runtime_prerequisite_packet": {
+    "packet_id": "I04_PREREQ_FROM_I03_V1",
+    "packet_type": "I04_PAPER_RUNTIME_PREREQUISITE_PACKET",
+    "generated_at": "2026-05-12T14:32:32Z",
+    "prerequisites": {
+      "p08_runner_bound": true,
+      "p08_to_paper_runtime_handoff_writer_bound": true,
+      "quote_binding_ready": true,
+      "security_binding_ready": true,
+      "trace_writer_ready": true,
+      "acceptance_runner_ready": true,
+      "path_guard_ready": true,
+      "dry_run_passed": true
+    },
+    "permission_to_enter_i04": "ALLOWED_WITH_GAPS",
+    "restrictions": [
+      "PAPER_ONLY",
+      "NO_LIVE_EXECUTION",
+      "NO_WALLET_SIGNING",
+      "NO_AUTO_ORDER"
+    ]
+  }
+}

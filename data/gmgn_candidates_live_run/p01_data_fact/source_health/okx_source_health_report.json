@@ -1,0 +1,14 @@
+{
+  "source_id": "okx",
+  "source_reliability_score": 0.55,
+  "availability_score": 0.5,
+  "latency_score": 0.5,
+  "success_rate_score": 0.5,
+  "schema_stability_score": 0.5,
+  "freshness_score": 0.0,
+  "historical_failure_score": 0.5,
+  "source_consistency_score": 0.0,
+  "current_status": "SOURCE_REPLAY_ONLY",
+  "failure_risk": "UNKNOWN_UNTIL_LIVE_AUDIT",
+  "reason": "No live connector audit executed by this control-plane scaffold."
+}

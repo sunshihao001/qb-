@@ -1,0 +1,38 @@
+{
+  "pipeline_run_id": "o00_run_20260514_102849_788851",
+  "gaps": [
+    {
+      "gap_id": "gap_sample_001_v00_test_not_executed",
+      "gap_level": "NON_BLOCKING_GAP",
+      "reason": "sample replay does not execute real tests"
+    },
+    {
+      "gap_id": "gap_sample_001_g00_policy_not_active",
+      "gap_level": "NON_BLOCKING_GAP",
+      "reason": "governance output is candidate only"
+    },
+    {
+      "gap_id": "gap_sample_001_r00_not_required",
+      "gap_level": "NON_BLOCKING_GAP",
+      "reason": "runner binding skipped in sample replay"
+    }
+  ],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "gap_sample_001_v00_test_not_executed",
+      "gap_level": "NON_BLOCKING_GAP",
+      "reason": "sample replay does not execute real tests"
+    },
+    {
+      "gap_id": "gap_sample_001_g00_policy_not_active",
+      "gap_level": "NON_BLOCKING_GAP",
+      "reason": "governance output is candidate only"
+    },
+    {
+      "gap_id": "gap_sample_001_r00_not_required",
+      "gap_level": "NON_BLOCKING_GAP",
+      "reason": "runner binding skipped in sample replay"
+    }
+  ]
+}

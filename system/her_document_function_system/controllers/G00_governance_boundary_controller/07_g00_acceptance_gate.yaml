@@ -1,0 +1,128 @@
+acceptance_gate:
+  phase_id: G00
+  required_checks:
+    - id: u00_governance_candidates_loaded
+      required: true
+      evidence: u00_governance_candidates
+    - id: a00_evidence_bundle_loaded
+      required: true
+      evidence: a00_evidence_bundle
+    - id: gap_reports_loaded
+      required: true
+      evidence: gap_reports
+    - id: trace_refs_loaded
+      required: true
+      evidence: trace_refs
+    - id: audit_refs_loaded
+      required: true
+      evidence: audit_refs
+    - id: candidate_classification_done
+      required: true
+      evidence: candidate_classification
+    - id: forbidden_action_registry_built
+      required: true
+      evidence: forbidden_action_registry
+    - id: status_code_table_built
+      required: true
+      evidence: status_code_table
+    - id: execution_boundary_policy_built
+      required: true
+      evidence: execution_boundary_policy
+    - id: evidence_policy_built
+      required: true
+      evidence: evidence_policy
+    - id: gap_policy_built
+      required: true
+      evidence: gap_policy
+    - id: directory_policy_built
+      required: true
+      evidence: directory_policy
+    - id: contract_policy_built
+      required: true
+      evidence: contract_policy
+    - id: runner_safety_policy_built
+      required: true
+      evidence: runner_safety_policy
+    - id: human_confirmation_policy_built
+      required: true
+      evidence: human_confirmation_policy
+    - id: production_risk_policy_built
+      required: true
+      evidence: production_risk_policy
+    - id: conflict_check_done
+      required: true
+      evidence: policy_conflict_report
+    - id: governance_registry_written
+      required: true
+      evidence: governance_registry
+    - id: trace_written
+      required: true
+      evidence: g00_trace
+    - id: audit_written
+      required: true
+      evidence: g00_audit
+    - id: handoff_written
+      required: true
+      evidence: g00_handoff_packet
+  pass_status: G00_ACCEPTED
+  gap_status: G00_READY_WITH_GAPS
+  fail_status: G00_BLOCKED
+  cannot_claim_without_evidence:
+    ACTIVE_POLICY: governance_registry
+    TESTED_POLICY: evidence_policy
+    RUNNER_SAFE: runner_safety_policy
+    HANDOFF_READY: g00_handoff_packet
+    ACCEPTED: g00_acceptance_result
+  subphase_coverage:
+    - G00.0
+    - G00.1
+    - G00.2
+    - G00.3
+    - G00.4
+    - G00.5
+    - G00.6
+    - G00.7
+    - G00.8
+    - G00.9
+    - G00.10
+    - G00.11
+    - G00.12
+    - G00.13
+    - G00.14
+    - G00.15
+    - G00.16
+    - G00.17
+
+prompt_required_atoms:
+    status_codes:
+      - DESIGN_ONLY
+      - PLANNED_NOT_WRITTEN
+      - IMPLEMENTED
+      - TESTED
+      - REPLAY_TESTED
+      - RUNNER_BOUND
+      - READY_WITH_GAPS
+      - ACCEPTED
+    anti_substitution_rules:
+      - test_plan cannot satisfy TESTED
+      - replay_plan cannot satisfy REPLAY_TESTED
+      - binding_plan cannot satisfy RUNNER_BOUND
+      - design_doc cannot satisfy IMPLEMENTED
+    blocking_gap_rules:
+      - BLOCKING_GAP uses effect BLOCK_NEXT_PHASE
+      - BLOCKING_GAP uses must_propagate true
+    runner_safety_rules:
+      - SAFE_DRY_RUN allowed by default
+      - scheduler disabled by default
+      - LIVE_RUNTIME forbidden by default
+    human_confirmation_rules:
+      - production_rule_change
+      - runner_scheduler_enable
+      - paper_runtime_enable
+      - legacy_path_migration
+      - external_api_write
+    production_risk_rules:
+      - WALLET_SIGNING_RISK HARD_BLOCK
+      - AUTO_DEPLOY_RISK HARD_BLOCK
+      - LIVE_RUNTIME_RISK HARD_BLOCK
+      - EXTERNAL_API_WRITE_RISK BLOCK_WITH_HUMAN_CONFIRMATION

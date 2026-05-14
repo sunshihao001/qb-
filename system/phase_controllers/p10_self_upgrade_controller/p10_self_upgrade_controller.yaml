@@ -1,0 +1,48 @@
+controller_id: P10_SELF_UPGRADE_CONTROLLER
+phase_id: P10
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+identity: 受控自我升级审查、规则校准、合约演进、测试扩展、版本发布与回滚控制器
+not_a:
+- automatic_rule_mutator
+- automatic_deployer
+- paper_runtime_starter
+- live_execution_enabler
+responsibilities:
+- read P09 review/replay outputs
+- review upgrade candidates
+- assess sample support and overfit risk
+- assess impact and compatibility
+- generate controlled upgrade package
+- generate implementation task packet
+- generate regression test and rollback plan
+- handoff only to governance/implementation/dry-run
+upstream_required:
+- P09_REVIEW_REPLAY_CONTROLLER
+- p09_to_p10_handoff_packet
+- p10_upgrade_candidate_data_request_packet
+downstream_allowed:
+- GOVERNANCE_REVIEW
+- IMPLEMENTATION_TASK_QUEUE
+- RUNNER_TOOL_BINDING_DRY_RUN
+status_codes:
+- P10_READY
+- P10_READY_WITH_GAPS
+- P10_REJECTED
+- P10_BLOCKED
+forbidden:
+- directly_modify_production_rules
+- auto_deploy
+- trigger_paper_runtime
+- live_execution
+- wallet_signing
+- bypass_governance_approval
+- bypass_regression_test
+- publish_without_rollback_plan
+runtime_boundary:
+  runtime_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+  auto_order_allowed: false
+  auto_deploy_allowed: false

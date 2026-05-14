@@ -1,0 +1,49 @@
+doc_id: DOC-20260513-F00-001
+source_type: user_uploaded_markdown
+source_name: 未命名 7.md
+received_at: 2026-05-13
+raw_path: /root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-F00-001/raw/F00_function_realization_controller_v1.md
+sha256: b7f145210b3654ac763f0d8905e683b9a1d01bf5778b16a4fa65686424a9f64a
+document_role:
+  primary_role: PHASE_CONTROLLER_DOC
+  secondary_roles:
+    - SYSTEM_CONSTRUCTION_DOC
+    - SCHEMA_CONTRACT_DOC
+    - TRACE_AUDIT_DOC
+    - RUNNER_BINDING_DOC
+    - GOVERNANCE_DOC
+summary:
+  core_intent: 建立 F00_function_realization_controller，将 K00 handoff 后的解释性资料落实为 required_function、字段模型、规则逻辑、schema/contract、资产计划、测试/replay、runner binding、trace/audit、acceptance 与 handoff。
+  key_points:
+    - F00 是 K00 之后的功能落实控制器，不是摘要器或普通任务包生成器。
+    - F00 必须以 K00 handoff 为唯一合法入口，不能直接读取聊天上下文。
+    - F00 标准包包含 01-19 控制器文件，并要求 f00_runs 运行目录。
+    - F00 内部拆成 F00.0-F00.12 子阶段。
+    - 无 repo scan 不允许 patch；无 write_policy 不允许 patch；无 test evidence 不允许 FUNCTION_TESTED；无 runner binding 验证不允许 RUNNER_BOUND。
+    - 禁止 live runtime、wallet signing、auto deploy、伪装 DESIGN_ONLY/PLANNED_NOT_WRITTEN。
+system_mapping:
+  planes:
+    - phase controller plane
+    - schema / contract plane
+    - trace / audit plane
+    - acceptance / handoff plane
+    - runner / tool binding plane
+    - governance plane
+  affected_phases:
+    - K00
+    - F00
+    - V01
+    - V02
+    - V03
+    - R01
+    - A01
+    - H01
+required_actions:
+  - preserve_raw_source
+  - generate_corpus_index
+  - map_to_existing_f00_controller_package
+  - audit_existing_assets_against_19_file_standard
+  - patch_missing_or_incomplete_F00_controller_assets_if_write_policy_allows
+  - validate_json_yaml_and_status_boundaries
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

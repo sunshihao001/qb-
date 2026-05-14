@@ -1,0 +1,20 @@
+controller_id: P06_strategy_gate_controller
+controller_name_cn: 策略门禁层
+phase_type: opportunity_rejection_and_paper_permission
+status: NOT_READY
+created_by: P00_system_bootstrap_controller
+primary_goal: 剔除低质量样本，只允许证据链未被否定样本进入 paper
+paper_only: true
+real_trade_enabled: false
+p01_runtime_connection_allowed: false
+required_before_ready:
+  - upstream_handoff_consumed
+  - input_contract_valid
+  - output_contract_valid
+  - acceptance_gate_passed
+  - current_system_state_allows_stage
+forbidden:
+  - real_trade
+  - private_key
+  - seed_phrase
+  - exchange_write_order

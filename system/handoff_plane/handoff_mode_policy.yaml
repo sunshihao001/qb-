@@ -1,0 +1,12 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+modes:
+  FULL_HANDOFF: requires acceptance ready without gaps and trace complete
+  LIMITED_HANDOFF: allowed when acceptance ready with gaps and no blocking failures
+  OBSERVE_ONLY_HANDOFF: legacy/incomplete artifacts
+  BLOCKED_HANDOFF: acceptance or trace blocking gaps
+current_mode: LIMITED_HANDOFF

@@ -1,0 +1,3 @@
+# 结构地址层 schemas
+
+状态码：WALLET_SUPPORT, WALLET_PAUSE, WALLET_BLOCK

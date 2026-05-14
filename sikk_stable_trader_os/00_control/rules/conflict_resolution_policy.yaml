@@ -1,0 +1,34 @@
+policy_id: CONFLICT_RESOLUTION_POLICY_BOOTSTRAP_001
+authority_priority:
+- priority: 1
+  source: 00_control/current_system_state.json
+  authority: highest
+- priority: 2
+  source: 00_control/phase_registry.yaml
+  authority: high
+- priority: 3
+  source: 00_control/next_stage_decision.json
+  authority: high
+- priority: 4
+  source: 00_control/current_blockers.json
+  authority: high_for_blocking
+- priority: 5
+  source: 00_control/task_consumption_log.json
+  authority: medium_for_consumption
+- priority: 6
+  source: task_packages
+  authority: low_until_consumed
+- priority: 7
+  source: chat_context
+  authority: non_authoritative
+conflict_rules:
+- conflict_type: next_stage_conflict
+  resolution: current_system_state_wins
+- conflict_type: p01_status_conflict
+  resolution: blocked_status_wins_until_data_plane_acceptance
+- conflict_type: real_trade_permission_conflict
+  resolution: force_false_and_raise_hard_blocker
+- conflict_type: asset_consumption_conflict
+  resolution: treat_as_not_consumed
+- conflict_type: report_vs_state_conflict
+  resolution: current_system_state_wins

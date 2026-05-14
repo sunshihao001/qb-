@@ -1,0 +1,49 @@
+p06_required_inputs:
+  from_p05:
+  - p05_to_p06_handoff_packet
+  - p06_scenario_data_request_packet
+  - evidence_bundle_records
+  - supporting_evidence_records
+  - counter_evidence_records
+  - weak_evidence_records
+  - unknown_evidence_records
+  - evidence_conflict_records
+  - alternative_explanation_records
+  - evidence_sufficiency_records
+  - evidence_usage_permission_records
+  from_p04:
+  - chip_structure_quality_records
+  - chip_structure_score_records
+  - distribution_progress_records
+  - counterparty_pressure_records
+  - chip_transfer_status_records
+  from_p02:
+  - market_structure_fact_seed
+  - market_fact_records
+  - security_fact_records
+  - data_quality_report
+  from_control_planes:
+  - trace_handoff_packet
+  - acceptance_result_packet
+  - handoff_packet
+  - downstream_read_instruction
+  - limitation_transfer_packet
+  - forbidden_use_policy
+  - governance_handoff_packet
+  - domain_scenario_taxonomy_handoff
+  required_contracts:
+  - p06_input_contract
+  - p06_output_contract
+  - scenario_taxonomy_contract
+  - scenario_candidate_contract
+  - p07_strategy_gate_input_contract
+startup_gates:
+- p05_accepted
+- p05_handoff_generated
+- handoff_authorized_fields_only
+- p05_outputs_are_evidence_not_scenario
+- weak_evidence_not_strong_scenario
+- conflict_path_required
+runtime_allowed: false
+paper_runtime_allowed: false
+live_runtime_allowed: false

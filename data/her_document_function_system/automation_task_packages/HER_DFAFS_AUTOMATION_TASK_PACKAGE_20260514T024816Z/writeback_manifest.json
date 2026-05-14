@@ -1,0 +1,15 @@
+{
+  "writeback_manifest_id": "HER_DFAFS_AUTOMATION_TASK_PACKAGE_20260514T024816Z_WRITEBACK",
+  "status": "PENDING_EXECUTION",
+  "writeback_targets": [
+    "data/her_document_function_system/runtime_index/run_index.json",
+    "data/her_document_function_system/runtime_index/system_health_snapshot.json",
+    "data/her_document_function_system/automation_task_packages/HER_DFAFS_AUTOMATION_TASK_PACKAGE_20260514T024816Z/verification_report.json",
+    "data/her_document_function_system/automation_task_packages/HER_DFAFS_AUTOMATION_TASK_PACKAGE_20260514T024816Z/next_task_manifest.json"
+  ],
+  "writeback_rules": [
+    "append-only for runtime indexes",
+    "never delete historical run dirs",
+    "record task_id/gap_id/source_ref/evidence_ref for every completed action"
+  ]
+}

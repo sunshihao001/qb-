@@ -1,0 +1,19 @@
+knowledge_trace_record:
+  trace_id: string
+  source_id: required
+  source_type: required
+  source_title: required
+  source_location: required
+  received_at: required
+  extraction: required
+  taskization: required
+  downstream: required
+  required_trace_links:
+    - parent_trace_ids
+    - child_trace_ids
+    - related_artifact_trace_ids
+  validation_rules:
+    - trace_id_present
+    - source_present
+    - downstream_usage_declared
+    - forbidden_actions_respected

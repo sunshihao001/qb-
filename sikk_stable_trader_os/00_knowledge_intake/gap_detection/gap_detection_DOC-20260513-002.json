@@ -1,0 +1,30 @@
+{
+  "doc_id": "DOC-20260513-002",
+  "target": "P01_data_fact_controller",
+  "route_status": "K00_ACCEPTED",
+  "blocking_gaps": [
+    {
+      "gap_id": "FIXED_CA_RUN_ENTRY_MISSING",
+      "severity": "runtime_blocker_for_token_specific_run",
+      "description": "Need verified canonical one-command CA entry that fetches/normalizes GMGN/OKX for provided token address."
+    },
+    {
+      "gap_id": "LIVE_SOURCE_CONNECTOR_BINDING_UNVERIFIED",
+      "severity": "runtime_blocker_for_live_data",
+      "description": "GMGN/OKX read-only connector availability/auth and field mapping not yet verified."
+    }
+  ],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "FULL_PROFESSIONAL_OUTPUT_SET_PARTIAL",
+      "severity": "implementation_gap",
+      "description": "Existing runtime may not emit every professional output: source health, cross-source consistency, replay fixtures, daily source report."
+    },
+    {
+      "gap_id": "DOWNSTREAM_HANDOFF_CONSUMPTION_PARTIAL",
+      "severity": "integration_gap",
+      "description": "P02/P03/P04 handoff consumption not verified as end-to-end live token analysis."
+    }
+  ],
+  "run_first_ruling": "Can run after user provides CA and connectors work/degrade explicitly; first run must produce concrete token data plus missing-function list."
+}

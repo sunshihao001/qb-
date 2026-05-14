@@ -1,0 +1,137 @@
+{
+  "doc_id": "doc_HER_DOC_CLOSURE_TRADING_SYSTEM_20260514_071635",
+  "raw_path": "input/raw_document.md",
+  "sections": [
+    {
+      "section_id": "sec_001",
+      "level": 1,
+      "title": "HER_DOC-skill 闭环推进任务包：SIKK 交易结构系统文档处理落地",
+      "char_offset": 0
+    },
+    {
+      "section_id": "sec_002",
+      "level": 2,
+      "title": "0. 本轮闭环目标",
+      "char_offset": 43
+    },
+    {
+      "section_id": "sec_003",
+      "level": 2,
+      "title": "1. 输入证据",
+      "char_offset": 376
+    },
+    {
+      "section_id": "sec_004",
+      "level": 2,
+      "title": "2. HER_DOC 闭环处理流程",
+      "char_offset": 988
+    },
+    {
+      "section_id": "sec_005",
+      "level": 3,
+      "title": "O00：闭环编排",
+      "char_offset": 1010
+    },
+    {
+      "section_id": "sec_006",
+      "level": 3,
+      "title": "K00：闭环文档摄取",
+      "char_offset": 1196
+    },
+    {
+      "section_id": "sec_007",
+      "level": 3,
+      "title": "F00：功能实现映射",
+      "char_offset": 1367
+    },
+    {
+      "section_id": "sec_008",
+      "level": 3,
+      "title": "V00：验证证据",
+      "char_offset": 1743
+    },
+    {
+      "section_id": "sec_009",
+      "level": 3,
+      "title": "A00：验收判断",
+      "char_offset": 1965
+    },
+    {
+      "section_id": "sec_010",
+      "level": 3,
+      "title": "H00：下游交接",
+      "char_offset": 2140
+    },
+    {
+      "section_id": "sec_011",
+      "level": 3,
+      "title": "U00：复盘升级",
+      "char_offset": 2301
+    },
+    {
+      "section_id": "sec_012",
+      "level": 3,
+      "title": "G00：治理沉淀",
+      "char_offset": 2471
+    },
+    {
+      "section_id": "sec_013",
+      "level": 2,
+      "title": "3. 实际应用场景闭环",
+      "char_offset": 2592
+    },
+    {
+      "section_id": "sec_014",
+      "level": 3,
+      "title": "应用场景 1：钱包结构方法论文档自动入库闭环",
+      "char_offset": 2608
+    },
+    {
+      "section_id": "sec_015",
+      "level": 3,
+      "title": "应用场景 2：运行时流程收编到 HER 总控闭环",
+      "char_offset": 2813
+    },
+    {
+      "section_id": "sec_016",
+      "level": 3,
+      "title": "应用场景 3：HER_DOC 自身任务治理闭环",
+      "char_offset": 3150
+    },
+    {
+      "section_id": "sec_017",
+      "level": 2,
+      "title": "4. 本轮输出要求",
+      "char_offset": 3367
+    },
+    {
+      "section_id": "sec_018",
+      "level": 2,
+      "title": "5. 预期状态",
+      "char_offset": 3585
+    }
+  ],
+  "key_points": [
+    "source: 上一轮 `HER_DOC_TASKLIST_TRADING_SYSTEM` 的 A00/H00/V00/F00 输出",
+    "主目标：继续按照 HER_DOC-skill 的系统体系流程自动化处理任务，把文档任务从“清单 + READY_WITH_GAPS”推进到“下游缺口闭环任务包 + 可验收应用场景”。",
+    "边界：safe-mode、paper-only、document-governance only；不触发真实交易、不签名、不 broadcast、不声明 production ready。",
+    "### O00：闭环编排",
+    "禁止把上一轮 READY_WITH_GAPS 误标为 ACCEPTED。",
+    "### K00：闭环文档摄取",
+    "### F00：功能实现映射",
+    "每条实现链必须有 input_contract、output_contract、acceptance_gate、forbidden_claims。",
+    "### V00：验证证据",
+    "若没有真实实现代码或测试证据，继续保留 READY_WITH_GAPS。",
+    "### A00：验收判断",
+    "结构级：O00/K00/F00/V00/A00/H00/U00/G00 均有输出。",
+    "运行级：只允许 safe-mode run 证据，不允许生产运行声明。",
+    "### H00：下游交接",
+    "H00-CLOSE-001：实现证据索引器/绑定器。",
+    "H00-CLOSE-002：批量文档 safe-mode runner。",
+    "H00-CLOSE-003：治理候选审批包生成器。",
+    "队列状态：`QUEUE_READY_WITH_GAPS`。",
+    "### U00：复盘升级",
+    "safe-mode 能跑单文档，但缺少批处理/统一索引。"
+  ],
+  "status": "CORPUS_INDEX_READY_WITH_GAPS"
+}

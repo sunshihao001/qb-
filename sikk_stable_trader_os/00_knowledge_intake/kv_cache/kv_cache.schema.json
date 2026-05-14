@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sikk-stable-trader-os/k00/kv_cache.schema.json",
+  "title": "K00 KV Cache Item",
+  "type": "object",
+  "required": [
+    "key",
+    "doc_id",
+    "source_span",
+    "asset_class",
+    "value",
+    "mappings",
+    "reuse_policy",
+    "evidence",
+    "governance"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "key": {
+      "type": "string",
+      "pattern": "^KV::.+"
+    },
+    "doc_id": {
+      "type": "string"
+    },
+    "source_span": {
+      "type": "object",
+      "required": [
+        "raw_path",
+        "section"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "raw_path": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "line_start": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "line_end": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "asset_class": {
+      "type": "string",
+      "enum": [
+        "judgement_logic",
+        "field_requirement",
+        "counter_evidence_rule",
+        "quantitative_model",
+        "behavior_inference",
+        "output_template",
+        "phase_contract",
+        "task_node",
+        "glossary",
+        "directory_rule",
+        "runner_binding"
+      ]
+    },
+    "value": {
+      "type": "object",
+      "required": [
+        "summary",
+        "normalized_form"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "normalized_form": {
+          "type": "string"
+        },
+        "code_facing_interpretation": {
+          "type": "string"
+        }
+      }
+    },
+    "mappings": {
+      "type": "object",
+      "required": [
+        "planes",
+        "phases"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "planes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "phases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "contracts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "schemas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "reuse_policy": {
+      "type": "object",
+      "required": [
+        "cache_status",
+        "dedupe_key",
+        "version"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "cache_status": {
+          "type": "string",
+          "enum": [
+            "ACTIVE",
+            "SUPERSEDED",
+            "CONFLICT",
+            "DRAFT"
+          ]
+        },
+        "dedupe_key": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "evidence_level",
+        "source_doc_hash"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "evidence_level": {
+          "type": "string"
+        },
+        "source_doc_hash": {
+          "type": "string"
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "required": [
+        "allowed_consumers",
+        "forbidden_uses"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "allowed_consumers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "forbidden_uses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

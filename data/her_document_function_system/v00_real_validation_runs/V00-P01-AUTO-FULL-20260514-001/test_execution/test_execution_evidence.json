@@ -1,0 +1,26 @@
+{
+  "evidence_id": "test_evidence_V00-P01-AUTO-FULL-20260514-001",
+  "validation_run_id": "V00-P01-AUTO-FULL-20260514-001",
+  "test_type": "pytest",
+  "test_command": "python3 -m pytest /root/sikk-gmgn/tests/her_document_function_system -q",
+  "started_at": "2026-05-14T05:12:27.311428+00:00",
+  "ended_at": "2026-05-14T05:12:27.700712+00:00",
+  "exit_code": 0,
+  "stdout_path": "test_execution/test_stdout.log",
+  "stderr_path": "test_execution/test_stderr.log",
+  "passed_count": 37,
+  "failed_count": 0,
+  "skipped_count": 0,
+  "covered_functions": [
+    "V00_REAL_VALIDATION_EXECUTOR",
+    "V00_STATUS_INTEGRITY"
+  ],
+  "covered_rules": [
+    "TESTED_REQUIRES_EXIT_CODE",
+    "TEST_PLAN_NOT_TESTED",
+    "NO_RUNNER_BOUND_WITHOUT_R00"
+  ],
+  "status": "TESTED",
+  "failure_reason": null,
+  "safe_mode": true
+}

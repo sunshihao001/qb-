@@ -1,0 +1,17 @@
+i05_priority_routing:
+  routing_id: I05_PRIORITY_ROUTING_20260512_01
+  generated_at: '2026-05-12T16:03:17Z'
+  status: I05_DRY_RUN_AND_TASK_QUEUE_ONLY
+  routes:
+  - priority: P0
+    route_to: I05_AUTO_CLOSURE_RUNNER
+    condition: missing files / invalid yaml / safety violation
+    auto_execute: true
+  - priority: P1
+    route_to: REPLAY_FIXTURE_TASK_QUEUE
+    condition: real replay/candidate fixture missing
+    auto_execute: false
+  - priority: P2
+    route_to: CI_PANEL_INTEGRATION_BACKLOG
+    condition: dry-run exists but not scheduled/panelized
+    auto_execute: false

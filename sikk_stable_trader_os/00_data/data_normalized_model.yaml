@@ -1,0 +1,34 @@
+normalization_principles:
+- 字段统一
+- 单位统一
+- 时间统一
+- 地址格式统一
+- 空值统一
+- 来源绑定
+- 质量标记
+normalized_record:
+  normalized_record_id: string
+  raw_record_id: string
+  token_address: string
+  entity_type:
+  - TOKEN
+  - WALLET
+  - WALLET_GROUP
+  - TRANSACTION
+  - CANDLE
+  - LIQUIDITY
+  - SECURITY
+  - HOLDER
+  normalized_at: datetime
+  normalizer_version: string
+  fields:
+    field_key: any
+  source_lineage:
+    source_id: string
+    raw_payload_path: string
+    raw_field_path: string
+  quality:
+    completeness_score: number
+    consistency_score: number
+    freshness_status: string
+    traceability_score: number

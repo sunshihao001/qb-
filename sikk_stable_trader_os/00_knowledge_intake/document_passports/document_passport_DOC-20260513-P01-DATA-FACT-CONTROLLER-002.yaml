@@ -1,0 +1,44 @@
+doc_id: DOC-20260513-P01-DATA-FACT-CONTROLLER-002
+source_type: user_uploaded_markdown
+source_name: "Phase 01 数据事实层控制器 v1.0"
+received_at: 2026-05-13
+raw_path: "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DATA-FACT-CONTROLLER-002_phase_01_data_fact_controller_v1.md"
+canonical_doc_path: "/root/sikk-gmgn/docs/stable_trader_os/phases/phase_01_data_fact_controller.md"
+document_role:
+  primary_role: "P01_data_fact_controller_authoritative_phase_spec"
+  secondary_roles:
+    - "field_schema_seed"
+    - "quality_gate_contract_seed"
+    - "phase_02_handoff_contract_seed"
+summary:
+  core_intent: "将 Phase 01 定义为事实接收、字段标准化、质量审计、下游交接控制器，而不是交易分析阶段。"
+  key_points:
+    - "Phase 01 只保留事实，不判断吸筹/派发/买卖点/庄家意图。"
+    - "必须输出 raw、normalized、audit、handoff、report 五类资产。"
+    - "所有字段需要来源、类型、单位、缺失状态、可信度/质量状态。"
+    - "phase_01_quality_gate.json 输出 PASS/PASS_WITH_WARNING/PAUSE/BLOCK。"
+    - "Phase 02 只能读取 P01 授权 handoff，不得绕过事实层。"
+system_mapping:
+  planes:
+    - "Data Plane"
+    - "Acceptance Plane"
+    - "Handoff Plane"
+    - "Trace Plane"
+    - "Runtime Control Plane"
+  affected_phases:
+    - "K00"
+    - "P00"
+    - "P01_data_fact_controller"
+    - "P02_multi_model_scene_recognition"
+    - "P03_wallet_chip_structure_analysis"
+required_actions:
+  - "Preserve raw document in K00."
+  - "Register material and canonical phase doc path."
+  - "Split controller logic from field schema in follow-up work."
+  - "Implement/verify P01 controller, mock fixture, quality gate, handoff packet, and tests before claiming P01 runtime readiness."
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY
+safety_boundary:
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  real_execution_allowed: false

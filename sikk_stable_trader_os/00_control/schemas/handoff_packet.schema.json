@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "source_stage",
+    "target_stage",
+    "included_assets",
+    "consumption_required"
+  ],
+  "properties": {
+    "target_stage": {
+      "const": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE"
+    },
+    "consumption_required": {
+      "const": true
+    }
+  }
+}

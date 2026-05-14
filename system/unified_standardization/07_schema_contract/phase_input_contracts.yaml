@@ -1,0 +1,73 @@
+meta:
+  standard_id: S00_PHASE_INPUT_CONTRACTS
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+phase_input_contracts:
+- phase: P01
+  input_contract: p01_input_contract
+  required_refs:
+  - upstream_handoff
+  - token_id
+  - source_refs
+- phase: P02
+  input_contract: p02_input_contract
+  required_refs:
+  - upstream_handoff
+  - token_id
+  - source_refs
+- phase: P03
+  input_contract: p03_input_contract
+  required_refs:
+  - upstream_handoff
+  - token_id
+  - source_refs
+- phase: P04
+  input_contract: p04_input_contract
+  required_refs:
+  - upstream_handoff
+  - token_id
+  - source_refs
+- phase: P05
+  input_contract: p05_input_contract
+  required_refs:
+  - upstream_handoff
+  - token_id
+  - source_refs
+- phase: P06
+  input_contract: p06_input_contract
+  required_refs:
+  - upstream_handoff
+  - token_id
+  - source_refs
+- phase: P07
+  input_contract: p07_input_contract
+  required_refs:
+  - upstream_handoff
+  - token_id
+  - source_refs
+- phase: P08
+  input_contract: p08_input_contract
+  required_refs:
+  - upstream_handoff
+  - token_id
+  - source_refs
+- phase: P09
+  input_contract: p09_input_contract
+  required_refs:
+  - upstream_handoff
+  - token_id
+  - source_refs
+- phase: P10
+  input_contract: p10_input_contract
+  required_refs:
+  - upstream_handoff
+  - token_id
+  - source_refs

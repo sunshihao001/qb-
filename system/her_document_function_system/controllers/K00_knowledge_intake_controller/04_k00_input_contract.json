@@ -1,0 +1,42 @@
+{
+  "phase_id": "K00",
+  "required_inputs": {
+    "source_material": {
+      "required": true,
+      "description": "raw uploaded/pasted/system document material or path/ref"
+    },
+    "operator_goal": {
+      "required": true,
+      "description": "why the material enters HER-DFAFS"
+    },
+    "repo_root": {
+      "required": true,
+      "description": "target repository root"
+    },
+    "execution_boundary": {
+      "required": true,
+      "description": "whether write/code/test/replay are allowed"
+    },
+    "write_policy": {
+      "required": true,
+      "description": "file write permission boundary"
+    }
+  },
+  "optional_inputs": {
+    "kv_retrieval_refs": {
+      "required": false,
+      "description": "optional KV/memory retrieval refs"
+    },
+    "target_phase_candidates": {
+      "required": false,
+      "description": "candidate affected downstream phases"
+    }
+  },
+  "missing_input_policy": {
+    "missing_source_material": "K00_BLOCKED",
+    "missing_operator_goal": "K00_BLOCKED",
+    "missing_repo_root": "K00_DESIGN_ONLY",
+    "missing_execution_boundary": "K00_BLOCKED",
+    "missing_write_policy": "K00_DESIGN_ONLY"
+  }
+}

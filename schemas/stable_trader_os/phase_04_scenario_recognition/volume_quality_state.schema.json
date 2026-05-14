@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "volume_quality_state",
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "volume_quality_status",
+    "positive_evidence",
+    "negative_evidence",
+    "missing_fields"
+  ],
+  "properties": {
+    "phase": {},
+    "token_address": {},
+    "volume_quality_status": {},
+    "positive_evidence": {},
+    "negative_evidence": {},
+    "missing_fields": {}
+  },
+  "additionalProperties": true
+}

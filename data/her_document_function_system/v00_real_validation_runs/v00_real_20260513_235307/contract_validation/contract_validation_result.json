@@ -1,0 +1,1339 @@
+{
+  "validation_type": "contract_validation",
+  "status": "CONTRACT_READY_WITH_GAPS",
+  "safe_mode": true,
+  "contracts_checked": [
+    "/root/sikk-gmgn/system/her_document_function_system/cli/02_o00_command_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.default.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.design_only.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.full_safe_replay.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.safe_mode.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.validation_only.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/04_a00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/05_a00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/09_a00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/04_f00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/05_f00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/09_f00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/outputs/f00_to_downstream_handoff_packet.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/outputs/schema_contract_plan.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/04_g00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/05_g00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/09_g00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/16_contract_policy.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/04_h00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/05_h00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/09_h00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/16_handoff_bundle.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/04_o00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/05_o00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/09_o00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/21_pipeline_config.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/25_pipeline_final_handoff.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/04_r00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/05_r00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/09_r00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/11_command_contract.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/04_u00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/05_u00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/09_u00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/04_v00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/05_v00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/09_v00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/11_contract_validation.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/registry/controller_contract_index.json",
+    "/root/sikk-gmgn/system/her_document_function_system/registry/controller_handoff_index.json",
+    "/root/sikk-gmgn/system/her_document_function_system/replay/sample_cases/sample_001_document_to_function/run/replay_run_config.json",
+    "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/03_v00_real_validation_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/04_v00_real_validation_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/08_v00_real_validation_handoff.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/10_contract_validation_spec.schema.json"
+  ],
+  "valid_contracts": [
+    "/root/sikk-gmgn/system/her_document_function_system/cli/02_o00_command_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.default.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.design_only.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.full_safe_replay.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.safe_mode.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.validation_only.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/04_a00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/05_a00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/09_a00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/04_f00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/05_f00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/09_f00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/outputs/f00_to_downstream_handoff_packet.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/outputs/schema_contract_plan.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/04_g00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/05_g00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/09_g00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/16_contract_policy.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/04_h00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/05_h00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/09_h00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/16_handoff_bundle.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/04_o00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/05_o00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/09_o00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/21_pipeline_config.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/25_pipeline_final_handoff.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/04_r00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/05_r00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/09_r00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/11_command_contract.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/04_u00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/05_u00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/09_u00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/04_v00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/05_v00_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/09_v00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/11_contract_validation.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/registry/controller_contract_index.json",
+    "/root/sikk-gmgn/system/her_document_function_system/registry/controller_handoff_index.json",
+    "/root/sikk-gmgn/system/her_document_function_system/replay/sample_cases/sample_001_document_to_function/run/replay_run_config.json",
+    "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/03_v00_real_validation_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/04_v00_real_validation_output_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/08_v00_real_validation_handoff.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/10_contract_validation_spec.schema.json"
+  ],
+  "invalid_contracts": [],
+  "missing_required_fields": [
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/cli/02_o00_command_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.default.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.design_only.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.full_safe_replay.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.safe_mode.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.validation_only.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/04_a00_input_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/05_a00_output_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/09_a00_handoff_packet.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/04_f00_input_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/05_f00_output_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/09_f00_handoff_packet.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/outputs/f00_to_downstream_handoff_packet.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/outputs/schema_contract_plan.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/04_g00_input_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/05_g00_output_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/09_g00_handoff_packet.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/16_contract_policy.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/04_h00_input_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/05_h00_output_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/09_h00_handoff_packet.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/16_handoff_bundle.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/04_o00_input_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/05_o00_output_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/09_o00_handoff_packet.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/21_pipeline_config.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/25_pipeline_final_handoff.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/04_r00_input_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/05_r00_output_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/09_r00_handoff_packet.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/11_command_contract.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/04_u00_input_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/05_u00_output_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/09_u00_handoff_packet.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/04_v00_input_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/05_v00_output_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/09_v00_handoff_packet.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/11_contract_validation.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/registry/controller_contract_index.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/registry/controller_handoff_index.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/replay/sample_cases/sample_001_document_to_function/run/replay_run_config.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/03_v00_real_validation_input_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/04_v00_real_validation_output_contract.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/08_v00_real_validation_handoff.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/10_contract_validation_spec.schema.json",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/cli/02_o00_command_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.default.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.design_only.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.full_safe_replay.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.safe_mode.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/config/pipeline_config.validation_only.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/04_a00_input_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/05_a00_output_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller/09_a00_handoff_packet.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/04_f00_input_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/05_f00_output_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/09_f00_handoff_packet.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/outputs/f00_to_downstream_handoff_packet.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/outputs/schema_contract_plan.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/04_g00_input_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/05_g00_output_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/09_g00_handoff_packet.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/G00_governance_boundary_controller/16_contract_policy.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/04_h00_input_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/05_h00_output_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/09_h00_handoff_packet.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/16_handoff_bundle.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/04_o00_input_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/05_o00_output_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/09_o00_handoff_packet.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/21_pipeline_config.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/25_pipeline_final_handoff.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/04_r00_input_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/05_r00_output_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/09_r00_handoff_packet.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller/11_command_contract.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/04_u00_input_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/05_u00_output_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/U00_review_upgrade_controller/09_u00_handoff_packet.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/04_v00_input_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/05_v00_output_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/09_v00_handoff_packet.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller/11_contract_validation.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/registry/controller_contract_index.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/registry/controller_handoff_index.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/replay/sample_cases/sample_001_document_to_function/run/replay_run_config.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/03_v00_real_validation_input_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/04_v00_real_validation_output_contract.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/08_v00_real_validation_handoff.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    },
+    {
+      "contract": "/root/sikk-gmgn/system/her_document_function_system/validation/v00_real_validation/10_contract_validation_spec.schema.json",
+      "warning": "contract governance markers incomplete",
+      "missing": [
+        "acceptance_result",
+        "forbidden_actions",
+        "gap_refs",
+        "handoff_refs",
+        "missing_policy",
+        "required_inputs",
+        "required_outputs",
+        "trace_refs"
+      ]
+    }
+  ]
+}

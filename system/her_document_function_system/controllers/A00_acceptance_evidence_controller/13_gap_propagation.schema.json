@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 gap propagation schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "gap_propagation_status",
+    "total_gaps",
+    "open_gaps",
+    "resolved_gaps",
+    "hidden_gaps",
+    "blocking_gaps"
+  ],
+  "properties": {
+    "gap_propagation_status": {
+      "enum": [
+        "PASSED",
+        "PASSED_WITH_GAPS",
+        "BLOCKED"
+      ]
+    },
+    "total_gaps": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "open_gaps": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "resolved_gaps": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "accepted_risk_gaps": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "hidden_gaps": {
+      "type": "array"
+    },
+    "blocking_gaps": {
+      "type": "array"
+    },
+    "gap_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "gap_id": {
+            "type": "string"
+          },
+          "source_phase": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "RESOLVED",
+              "ACCEPTED_RISK",
+              "DEFERRED",
+              "BLOCKING",
+              "SUPERSEDED",
+              "INVALIDATED"
+            ]
+          },
+          "propagated_to": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  }
+}

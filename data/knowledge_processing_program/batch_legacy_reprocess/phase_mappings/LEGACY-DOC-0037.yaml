@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0037
+source_path: docs/harness/HER_HARNESS_MINIMAL_V0.md
+phase_scores:
+  P01: 0
+  P02: 1
+  P03: 26
+  P04: 2
+  P05: 0
+  P06: 0
+  P07: 1
+  P08: 3
+  P09: 0
+  P10: 0
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

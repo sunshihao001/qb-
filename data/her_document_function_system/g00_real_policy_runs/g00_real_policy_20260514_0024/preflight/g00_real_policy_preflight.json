@@ -1,0 +1,17 @@
+{
+  "preflight_status": "PASSED",
+  "safe_mode": true,
+  "loaded_inputs": [
+    "u00_to_g00_handoff_packet"
+  ],
+  "forbidden_actions_checked": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order",
+    "silent_policy_overwrite",
+    "weaken_forbidden_actions"
+  ],
+  "blocking_gaps": []
+}

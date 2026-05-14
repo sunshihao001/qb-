@@ -1,0 +1,61 @@
+{
+  "doc_id": "DOC-20260511-004",
+  "acceptance_scope": "K00 intake + canonical methodology blueprint sync",
+  "file_level": {
+    "status": "PASSED",
+    "checked_assets": [
+      "canonical",
+      "raw",
+      "registry",
+      "passport",
+      "corpus_index",
+      "system_mapping",
+      "gap_report",
+      "task_package",
+      "handoff_packet",
+      "runtime_state"
+    ]
+  },
+  "parse_level": {
+    "status": "PASSED",
+    "json_assets": [
+      "source_registry",
+      "gap_report",
+      "handoff_packet",
+      "k00_runtime_state"
+    ],
+    "yaml_assets": [
+      "document_passport",
+      "system_mapping"
+    ]
+  },
+  "semantic_level": {
+    "status": "PASSED",
+    "anchors": [
+      "Phase Controller 核心定义",
+      "K00 / P00 职责边界",
+      "Governance / Domain / Data / Control Plane",
+      "P01-P10 阶段目标数据",
+      "P01 当前不得启动",
+      "next legal stage 是 P00_system_bootstrap_controller",
+      "paper_only=true",
+      "real_trade_enabled=false"
+    ]
+  },
+  "consumption_level": {
+    "status": "PENDING_P00",
+    "reason": "K00 has produced P00 handoff, but P00 has not yet consumed the blueprint or written task_consumption_log."
+  },
+  "runtime_level": {
+    "status": "PHASE_WITH_GAPS",
+    "blocking_gaps": [],
+    "non_blocking_gaps": [
+      "P00_CONSUMPTION_PENDING",
+      "CONTROL_PLANE_STATUS_UNKNOWN"
+    ]
+  },
+  "next_legal_stage": "P00_system_bootstrap_controller",
+  "p01_runtime_connection_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false
+}

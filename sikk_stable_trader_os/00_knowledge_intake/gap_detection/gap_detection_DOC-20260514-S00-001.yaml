@@ -1,0 +1,15 @@
+doc_id: DOC-20260514-S00-001
+status: GAPS_IDENTIFIED
+blocking_gaps: []
+degraded_gaps:
+- gap_id: S00_GAP_001
+  description: Existing runners discovered only partially; full runner scan/dry-run
+    remains R00 work.
+- gap_id: S00_GAP_002
+  description: P01-P10 contract diff not yet executed.
+- gap_id: S00_GAP_003
+  description: sample library lacks labeled real token cases.
+- gap_id: S00_GAP_004
+  description: P08 permission gate policy defined but not yet connected to live paper
+    runner replay.
+next_task: S00_unified_system_standardization

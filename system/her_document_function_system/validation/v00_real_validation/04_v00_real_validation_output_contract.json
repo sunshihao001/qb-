@@ -1,0 +1,21 @@
+{
+  "phase_id": "V00_REAL_VALIDATION",
+  "required_outputs": {
+    "preflight_result": "preflight/v00_real_validation_preflight.json",
+    "schema_validation_result": "schema_validation/schema_validation_result.json",
+    "contract_validation_result": "contract_validation/contract_validation_result.json",
+    "field_model_validation_result": "field_model_validation/field_model_validation_result.json",
+    "rule_logic_validation_result": "rule_logic_validation/rule_logic_validation_result.json",
+    "test_execution_evidence": "test_execution/test_execution_evidence.json",
+    "test_stdout": "test_execution/test_stdout.log",
+    "test_stderr": "test_execution/test_stderr.log",
+    "replay_execution_evidence": "replay_execution/replay_execution_evidence.json",
+    "failure_evidence": "failure_evidence/failure_evidence.json",
+    "validation_evidence_bundle": "evidence_bundle/validation_evidence_bundle.json",
+    "trace_log": "trace/v00_real_validation_trace.jsonl",
+    "audit_log": "audit/v00_real_validation_audit.jsonl",
+    "acceptance_result": "acceptance/v00_real_validation_acceptance.json",
+    "handoff_packet": "handoff/v00_real_validation_to_a00_handoff.json",
+    "final_report": "reports/v00_real_validation_report.md"
+  }
+}

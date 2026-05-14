@@ -1,0 +1,21 @@
+type: object
+required:
+- record_id
+- candidate_id
+- generated_at
+- source_trace_ids
+properties:
+  record_id: string
+  candidate_id: string
+  generated_at: datetime
+  source_trace_ids: list
+  usage_permission: FULL_USE|WEAK_USE_ONLY|OBSERVE_ONLY|DO_NOT_USE
+runtime_allowed: false
+object: Scenario Candidate Record
+fields:
+- scenario_family
+- scenario_type
+- supporting_bundle_ids
+- counter_bundle_ids
+- rejection_checked
+- conflict_checked

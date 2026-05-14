@@ -1,0 +1,23 @@
+discovery_context:
+  candidate_id: string
+  time:
+  - discovery_time
+  - first_seen_by_system_at
+  - source_observed_time
+  - ingestion_delay_seconds
+  market_snapshot_at_discovery:
+  - discovery_market_cap_usd
+  - discovery_liquidity_usd
+  - discovery_price_usd
+  - discovery_volume_5m_usd
+  - discovery_volume_1h_usd
+  - discovery_holder_count
+  - discovery_token_age_seconds
+  freshness:
+  - FRESH
+  - ACCEPTABLE
+  - STALE
+  - UNKNOWN
+  gaps:
+  - missing_discovery_fields
+  - data_to_request_from_p02

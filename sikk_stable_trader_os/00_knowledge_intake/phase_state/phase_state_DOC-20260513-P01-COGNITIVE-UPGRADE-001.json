@@ -1,0 +1,15 @@
+{
+  "doc_id": "DOC-20260513-P01-COGNITIVE-UPGRADE-001",
+  "updated_at": "2026-05-13T05:27:17Z",
+  "phase": "K00_knowledge_intake_taskization",
+  "phase_status": "K00_ACCEPTED",
+  "acceptance_status": "ACCEPTED_WITH_P01_BLOCKING_UPGRADE_TASK",
+  "next_legal_stage": "P01_data_fact_controller_package_or_code_landing",
+  "runtime_unlocked": false,
+  "paper_unlocked": false,
+  "live_unlocked": false,
+  "auto_trigger": {
+    "decision": "AUTO_TRIGGER_ALLOWED_TO_P01_ONLY",
+    "reason": "Knowledge input is accepted and maps to P01 controller/package/code landing only."
+  }
+}

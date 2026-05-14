@@ -1,0 +1,41 @@
+{
+  "queue_entry_id": "GOVQ-TEST-KPP-RUNTIME-BINDING",
+  "entry_type": "KPP_CANDIDATE_READY_FOR_GOVERNANCE_OR_P00_REVIEW",
+  "created_at": "2026-05-14T05:19:22Z",
+  "run_id": "TEST-KPP-RUNTIME-BINDING",
+  "doc_id": "TEST-KPP-RUNTIME-DOC",
+  "source_refs": {
+    "raw_path": "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K00/TEST-KPP-RUNTIME-DOC_8f72ae51ba73_normalized_text.md",
+    "passport_path": "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K01/document_passport.json",
+    "semantic_index_path": "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K02/semantic_chunk_index.json"
+  },
+  "candidate_refs": {
+    "controller_candidate_packet": "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K05/controller_candidate_packet.json",
+    "schema_contract_candidate_packet": "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K05/schema_contract_candidate_packet.json",
+    "her_task_package": "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K06/her_task_package.json"
+  },
+  "acceptance_refs": {
+    "knowledge_processing_acceptance_result": "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K07/knowledge_processing_acceptance_result.json",
+    "validation_report": "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K07/validation_report.json"
+  },
+  "handoff_refs": {
+    "knowledge_processing_handoff_packet": "data/knowledge_processing_program/telegram_runtime_binding/test_runs/TEST-KPP-RUNTIME-BINDING/K07/handoff_packet.json"
+  },
+  "governance_policy": {
+    "candidate_only": true,
+    "manual_review_required": true,
+    "production_mutation_allowed": false
+  },
+  "p00_routing": {
+    "allowed": true,
+    "target": "P00_SYSTEM_BOUNDARY_OR_GOVERNANCE_REVIEW",
+    "blocked_targets": [
+      "P01_RUNTIME",
+      "PAPER_RUNTIME",
+      "LIVE_RUNTIME",
+      "SWAP",
+      "BROADCAST"
+    ]
+  },
+  "status": "QUEUED_FOR_GOVERNANCE_REVIEW"
+}

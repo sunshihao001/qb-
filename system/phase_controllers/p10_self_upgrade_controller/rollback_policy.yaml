@@ -1,0 +1,10 @@
+policy_id: rollback_policy
+required_for_all_upgrade_packages: true
+must_include:
+- restore_point
+- rollback_steps
+- verification_after_rollback
+- owner
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+controller_id: P10_SELF_UPGRADE_CONTROLLER

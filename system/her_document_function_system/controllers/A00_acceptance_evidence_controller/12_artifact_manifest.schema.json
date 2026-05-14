@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 artifact manifest schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "manifest_id",
+    "artifacts",
+    "manifest_status"
+  ],
+  "properties": {
+    "manifest_id": {
+      "type": "string"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "artifact_id",
+          "phase",
+          "artifact_type",
+          "path",
+          "exists",
+          "required",
+          "validation_status"
+        ],
+        "properties": {
+          "artifact_id": {
+            "type": "string"
+          },
+          "phase": {
+            "type": "string"
+          },
+          "artifact_type": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "exists": {
+            "type": "boolean"
+          },
+          "hash": {
+            "type": "string"
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "validation_status": {
+            "enum": [
+              "PRESENT",
+              "MISSING",
+              "OPTIONAL_MISSING",
+              "INVALID",
+              "HASHED"
+            ]
+          }
+        }
+      }
+    },
+    "manifest_status": {
+      "enum": [
+        "PASSED",
+        "PASSED_WITH_GAPS",
+        "BLOCKED"
+      ]
+    }
+  }
+}

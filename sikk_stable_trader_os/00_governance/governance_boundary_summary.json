@@ -1,0 +1,20 @@
+{
+  "live_boundary": "LIVE_DISABLED",
+  "automatic_judgment_outputs_allowed": [
+    "STRATEGY_BLOCK",
+    "STRATEGY_PAUSE",
+    "STRATEGY_WATCH",
+    "PAPER_READY",
+    "READY_FOR_CONFIRMATION"
+  ],
+  "automatic_judgment_outputs_forbidden": [
+    "BUY",
+    "SELL",
+    "ALL_IN",
+    "MARKET_BUY",
+    "MARKET_SELL",
+    "LIVE_EXECUTE"
+  ],
+  "ai_fact_inference_allowed": false,
+  "review_can_change_live_rules_directly": false
+}

@@ -1,0 +1,24 @@
+{
+  "registry_id": "governance_registry_g00_real_v1",
+  "registry_version": "1.0.0",
+  "registry_status": "REGISTRY_READY_WITH_GAPS",
+  "active_local_policies": [
+    "forbidden_action_policy_v1",
+    "status_code_policy_v1",
+    "evidence_policy_v1",
+    "gap_policy_v1",
+    "runner_safety_policy_v1",
+    "human_confirmation_policy_v1",
+    "production_risk_policy_v1"
+  ],
+  "pending_policies": [],
+  "rejected_policies": [],
+  "deprecated_policies": [],
+  "policy_conflict_report_ref": "conflict_check/policy_conflict_report.json",
+  "policy_versioning_ref": "versioning/policy_versioning.json",
+  "active_policy_bundle_ref": "policy_bundles/active_policy_bundle.json",
+  "system_enforcement_status": "NOT_YET_VERIFIED",
+  "last_updated_at": "2026-05-14T00:24:19+00:00",
+  "trace_ref": "trace/g00_real_policy_trace.jsonl",
+  "audit_ref": "audit/g00_real_policy_audit.jsonl"
+}

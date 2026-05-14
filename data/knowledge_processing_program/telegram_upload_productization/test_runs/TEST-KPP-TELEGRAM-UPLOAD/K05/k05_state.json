@@ -1,0 +1,17 @@
+{
+  "stage_id": "K05",
+  "run_id": "TEST-KPP-TELEGRAM-UPLOAD",
+  "status": "K05_ACCEPTED",
+  "started_at": "2026-05-13T06:37:07Z",
+  "ended_at": "2026-05-13T06:37:07Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K05/controller_candidate_packet.json",
+    "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K05/schema_contract_candidate_packet.json",
+    "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K05/candidate_risk_review.json",
+    "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K05/k05_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

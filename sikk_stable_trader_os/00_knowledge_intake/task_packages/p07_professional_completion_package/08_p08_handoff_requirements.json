@@ -1,0 +1,35 @@
+{
+  "handoff_requirement_id": "P07_TO_P08_PROFESSIONAL_HANDOFF_REQUIREMENTS_V1",
+  "generated_at": "2026-05-12T05:14:28Z",
+  "p08_must_receive": [
+    "p07_to_p08_handoff_packet",
+    "p08_execution_risk_data_request_packet",
+    "strategy_gate_decision_records",
+    "strategy_candidate_records",
+    "strategy_usage_permission_records",
+    "hard_negative_evaluation_records",
+    "invalidation_binding_records",
+    "observe_pause_block_reason_records",
+    "trace/audit/report paths"
+  ],
+  "p08_must_check": [
+    "quote freshness",
+    "security recheck",
+    "mint/freeze/blacklist/sellability",
+    "liquidity depth",
+    "slippage/price impact",
+    "paper-only flag",
+    "no wallet signing",
+    "risk limits",
+    "holder/wallet delta refresh if required",
+    "scenario invalidation refresh"
+  ],
+  "p07_forbidden_to_handoff": [
+    "buy_signal",
+    "paper_runtime_started",
+    "live_execution_allowed",
+    "signed transaction",
+    "swap/broadcast instruction"
+  ],
+  "next_stage_policy": "P08 must itself enter through K00/HER route if introduced by a new document/spec."
+}

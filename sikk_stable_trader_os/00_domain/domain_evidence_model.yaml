@@ -1,0 +1,26 @@
+evidence_levels:
+  A: 多源一致、字段完整、时间对齐、可复盘；可以用于强判断但仍需反证检查
+  B: 单源强证据或多源弱一致；可辅助
+  C: 有迹象但缺字段或缺时间对齐；仅观察
+  D: 噪音、解释空间大、不可复验；不可用于决策
+  UNKNOWN: 数据缺失或无法判断；必须标记未知
+evidence_object_schema:
+  evidence_id: string
+  evidence_type: enum
+  source_module: string
+  source_file: string
+  source_field: string
+  observed_value: any
+  observed_time: datetime
+  related_entity_id: string
+  related_domain_object: enum
+  supports_hypothesis: list
+  contradicts_hypothesis: list
+  evidence_level: A|B|C|D|UNKNOWN
+  confidence_score: 0.0-1.0
+  freshness_status: FRESH|STALE|EXPIRED|UNKNOWN
+  replay_available: boolean
+conflict_policy:
+  - evidence_conflict_must_create_counter_evidence_record
+  - no_hard_positive_without_counter_evidence_screen
+  - missing_critical_field_forces_UNKNOWN_or_DOMAIN_PAUSE

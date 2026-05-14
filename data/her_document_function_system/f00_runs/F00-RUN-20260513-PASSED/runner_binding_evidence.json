@@ -1,0 +1,31 @@
+{
+  "binding_id": "binding_f00_module_cli_001",
+  "function_id": "func_f00_module_runner_binding",
+  "binding_type": "MODULE_CLI",
+  "target_entry": "python -m modules.her_document_function_system.f00_runner",
+  "validated_command": [
+    "/usr/local/lib/hermes-agent/venv/bin/python3",
+    "-m",
+    "modules.her_document_function_system.f00_runner",
+    "--controller-dir",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller",
+    "--repo-root",
+    "/root/sikk-gmgn",
+    "--replay-fixture",
+    "/root/sikk-gmgn/tests/fixtures/her_document_function_system/f00_e2e_replay_fixture.json",
+    "--output-dir",
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED",
+    "--safe-mode",
+    "--upgrade-acceptance"
+  ],
+  "status": "BINDING_TESTED",
+  "test_required": true,
+  "forbidden_runtime_modes": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_rule_direct_change"
+  ],
+  "safe_mode": true,
+  "generated_at": "2026-05-13T14:53:53+00:00"
+}

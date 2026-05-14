@@ -1,0 +1,336 @@
+registry_id: PHASE_REGISTRY-20260511-P0
+generated_at: '2026-05-11T13:36:48.521060+00:00'
+phase_count: 11
+canonical_phase_order:
+- K00
+- P00
+- P01
+- P02
+- P03
+- P04
+- P05
+- P06
+- P07
+- P08
+- P09
+phase_order_rule: K00 is pre-P00 knowledge intake/taskization and must complete acceptance/handoff
+  before P00. P00-P09 are runtime/system phases.
+safety_boundary:
+  paper_only: true
+  read_only_research: true
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  auto_swap_enabled: false
+  secret_access: not_requested_not_used
+phases:
+  K00:
+    name: knowledge_intake_taskization
+    placement: before_P00
+    controller_path: 06_phase_controllers/K00_knowledge_intake_taskization
+    status: READY_WITH_DEGRADED_SYSTEM_INTEGRATION_REPAIR_IN_PROGRESS
+    depends_on: []
+    required_assets:
+    - methodology_blueprint
+    - governance_plane
+    - domain_plane
+    handoff_to: P00
+    non_trading: true
+  P00:
+    name: system_context_control
+    placement: runtime_entry
+    controller_path: 06_phase_controllers/P00_system_context_control
+    status: STUB_CREATED_PENDING_FULL_CONTROLLER
+    depends_on:
+    - K00
+    required_assets:
+    - methodology_blueprint
+    - governance_plane
+    - domain_plane
+    - data_plane
+    - current_system_state
+    - phase_registry
+    - system_asset_index
+    handoff_to: P01
+    non_trading: true
+  P01:
+    name: data_fact_runtime_connection
+    placement: runtime_phase
+    controller_path: 06_phase_controllers/P01_data_fact_runtime_connection
+    status: STUB_CREATED_WAITING_FOR_DATA_PLANE
+    depends_on:
+    - P00
+    required_assets:
+    - governance_plane
+    - domain_plane
+    - data_plane
+    - data_input_contract
+    - normalized_fact_model_schema
+    handoff_to: P02
+    non_trading: true
+  P02:
+    name: pending_controller_landing
+    placement: runtime_phase
+    controller_path: 06_phase_controllers/P02_pending
+    status: PENDING_CONTROLLER_GENERATION
+    depends_on:
+    - P01
+    required_assets:
+    - methodology_blueprint
+    - governance_plane
+    - domain_plane
+    handoff_to: P03
+    non_trading: true
+  P03:
+    name: pending_controller_landing
+    placement: runtime_phase
+    controller_path: 06_phase_controllers/P03_pending
+    status: PENDING_CONTROLLER_GENERATION
+    depends_on:
+    - P02
+    required_assets:
+    - methodology_blueprint
+    - governance_plane
+    - domain_plane
+    handoff_to: P04
+    non_trading: true
+  P04:
+    name: pending_controller_landing
+    placement: runtime_phase
+    controller_path: 06_phase_controllers/P04_pending
+    status: PENDING_CONTROLLER_GENERATION
+    depends_on:
+    - P03
+    required_assets:
+    - methodology_blueprint
+    - governance_plane
+    - domain_plane
+    handoff_to: P05
+    non_trading: true
+  P05:
+    name: pending_controller_landing
+    placement: runtime_phase
+    controller_path: 06_phase_controllers/P05_pending
+    status: PENDING_CONTROLLER_GENERATION
+    depends_on:
+    - P04
+    required_assets:
+    - methodology_blueprint
+    - governance_plane
+    - domain_plane
+    handoff_to: P06
+    non_trading: true
+  P06:
+    name: pending_controller_landing
+    placement: runtime_phase
+    controller_path: 06_phase_controllers/P06_pending
+    status: PENDING_CONTROLLER_GENERATION
+    depends_on:
+    - P05
+    required_assets:
+    - methodology_blueprint
+    - governance_plane
+    - domain_plane
+    handoff_to: P07
+    non_trading: true
+  P07:
+    name: pending_controller_landing
+    placement: runtime_phase
+    controller_path: 06_phase_controllers/P07_pending
+    status: PENDING_CONTROLLER_GENERATION
+    depends_on:
+    - P06
+    required_assets:
+    - methodology_blueprint
+    - governance_plane
+    - domain_plane
+    handoff_to: P08
+    non_trading: false
+  P08:
+    name: pending_controller_landing
+    placement: runtime_phase
+    controller_path: 06_phase_controllers/P08_pending
+    status: PENDING_CONTROLLER_GENERATION
+    depends_on:
+    - P07
+    required_assets:
+    - methodology_blueprint
+    - governance_plane
+    - domain_plane
+    handoff_to: P09
+    non_trading: false
+  P09:
+    name: pending_controller_landing
+    placement: runtime_phase
+    controller_path: 06_phase_controllers/P09_pending
+    status: PENDING_CONTROLLER_GENERATION
+    depends_on:
+    - P08
+    required_assets:
+    - methodology_blueprint
+    - governance_plane
+    - domain_plane
+    handoff_to: review_upgrade_cycle
+    non_trading: false
+runtime_prerequisites:
+  before_any_phase:
+  - read_00_control/current_system_state.json
+  - read_00_control/phase_registry.yaml
+  - validate_phase_legality
+  - check_input_asset_registered
+  - check_downstream_consumption_requirements
+blocking_rules:
+  missing_current_system_state: SYSTEM_CONTROL_PLANE_MISSING__BLOCK_P01_P10
+forbidden_shortcuts:
+- chat_context_bypasses_system_state
+- user_continue_bypasses_blocking_gaps
+- file_generation_equals_phase_completion
+updated_at: '2026-05-11T14:25:39.844562+00:00'
+canonical_phase_sequence:
+- K00
+- P00
+- P01
+- P02
+- P03
+- P04
+- P05
+- P06
+- P07
+- P08
+- P09
+- P10
+phase_definitions:
+  K00:
+    name: 知识摄取与任务化
+    positioning: 把文档、资料、旧系统资产化
+  P00:
+    name: 系统建造与方法论编译
+    positioning: 把方法论编译成系统平面
+  P01:
+    name: 数据事实层
+    positioning: 统一事实模型与字段标准化
+  P02:
+    name: 钱包结构层
+    positioning: 钱包角色、同源组、资金路径
+  P03:
+    name: 筹码控制层
+    positioning: 控制权、筹码迁移、对手盘压力
+  P04:
+    name: 市场结构层
+    positioning: K线、成交量、箱体、AVWAP、POC
+  P05:
+    name: 场景识别层
+    positioning: 识别吸筹、派发、二段、陷阱等盘型
+  P06:
+    name: 策略门禁层
+    positioning: 剔除低质量样本，裁决 paper 资格
+  P07:
+    name: 执行风控层
+    positioning: 模拟成交、滑点、手续费、熔断
+  P08:
+    name: 纸面交易验证层
+    positioning: 纸面持仓、交易、收益曲线、统计
+  P09:
+    name: 复盘学习层
+    positioning: 错判归因、规则修正候选
+  P10:
+    name: 系统升级层
+    positioning: 经过复盘证据后升级字段、规则、阶段
+reconciliation_required:
+  P09_P10_upgrade_split: Methodology DOC-20260511-011 defines P09=review learning
+    and P10=system upgrade; reconcile previous P09 self-upgrade references.
+  K00_phase_status_ASSETIZATION_LAYER: Raw user status is not legal enum; normalized
+    executable value is READY_TO_EXECUTE.
+  P00_phase_status_REQUIRED_BEFORE_BUSINESS_PHASES: Raw user status is not legal enum;
+    normalized executable value is READY_TO_BUILD.
+  P00_id_bootstrap_vs_context_control: Raw user id differs from existing controller
+    path; normalized executable id is P00_system_context_control.
+  GOVERNANCE_phase_status_REQUIRED_BEFORE_DOMAIN_AND_DATA: Raw status is not legal
+    enum; normalized executable value is READY_TO_BUILD and prerequisite semantics
+    retained in blocking conditions/authority scope.
+  DOMAIN_phase_status_REQUIRED_BEFORE_DATA_PLANE: Raw status is not legal enum; normalized
+    executable value is READY_TO_BUILD and prerequisite semantics retained in blocking
+    conditions/authority scope.
+  DATA_phase_status_REQUIRED_BEFORE_P01_RUNTIME: Raw status is not legal enum; normalized
+    executable value is READY_TO_BUILD and prerequisite semantics retained in blocking
+    conditions/authority scope.
+phase_target_data_standard:
+  schema_path: 00_control/phase_target_data.schema.json
+  required_fields:
+  - phase_id
+  - phase_name_cn
+  - phase_type
+  - phase_status
+  - authority_scope
+  - primary_goal
+  - non_goal
+  - upstream_dependencies
+  - required_inputs
+  - optional_inputs
+  - forbidden_inputs
+  - core_objects
+  - core_questions
+  - required_outputs
+  - handoff_outputs
+  - acceptance_gate
+  - blocking_conditions
+  - downstream_consumers
+  - runner_binding_status
+  - state_writeback_required
+  - paper_only_required
+  - real_trade_allowed
+  state_writeback_required: true
+  paper_only_required: true
+  real_trade_allowed: false
+phase_status_enum:
+  legal:
+  - NOT_CREATED
+  - STUB_REQUIRED
+  - WAITING_INPUT
+  - READY_TO_BUILD
+  - READY_TO_EXECUTE
+  - BLOCKED
+  - BLOCKED_BY_DATA_PLANE
+  - BLOCKED_BY_CONTROL_PLANE
+  - BLOCKED_BY_ACCEPTANCE
+  - RUNNING
+  - OUTPUT_CREATED
+  - ACCEPTANCE_PENDING
+  - ACCEPTANCE_PASSED
+  - ACCEPTANCE_FAILED
+  - HANDOFF_READY
+  - CONSUMED_BY_DOWNSTREAM
+  - DEPRECATED
+  forbidden:
+  - done
+  - finished
+  - ok
+  - looks good
+  - almost complete
+  - maybe ready
+phase_target_data_instances:
+  K00:
+    path: 06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.yaml
+    raw_user_proposed_path: 06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.raw_user_proposed.yaml
+    validation_status: VALID_NORMALIZED_WITH_RAW_ENUM_MISMATCH
+    source_doc_id: DOC-20260511-013
+  P00:
+    path: 06_phase_controllers/P00_system_context_control/phase_target_data.yaml
+    raw_user_proposed_path: 06_phase_controllers/P00_system_context_control/phase_target_data.raw_user_proposed.yaml
+    validation_status: VALID_NORMALIZED_WITH_RAW_ENUM_AND_ID_MISMATCH
+    source_doc_id: DOC-20260511-014
+  GOVERNANCE_PLANE:
+    path: 00_governance/governance_phase_target_data.yaml
+    raw_user_proposed_path: 00_governance/governance_phase_target_data.raw_user_proposed.yaml
+    validation_status: VALID_NORMALIZED_WITH_RAW_ENUM_AND_SCHEMA_COMPLETION_GAPS
+    source_doc_id: DOC-20260511-015
+  DOMAIN_PLANE:
+    path: 00_domain/domain_phase_target_data.yaml
+    raw_user_proposed_path: 00_domain/domain_phase_target_data.raw_user_proposed.yaml
+    validation_status: VALID_NORMALIZED_WITH_RAW_ENUM_AND_SCHEMA_COMPLETION_GAPS
+    source_doc_id: DOC-20260511-016
+  DATA_PLANE:
+    path: 00_data/data_phase_target_data.yaml
+    raw_user_proposed_path: 00_data/data_phase_target_data.raw_user_proposed.yaml
+    validation_status: VALID_NORMALIZED_WITH_RAW_ENUM_AND_SCHEMA_COMPLETION_GAPS
+    source_doc_id: DOC-20260511-017

@@ -1,0 +1,72 @@
+{
+  "report_id": "P00_BOOTSTRAP_REPORT_TEMPLATE",
+  "stage": "P00_system_bootstrap_controller",
+  "version": "v1.0-institutional",
+  "generated_at": "",
+  "summary": {
+    "p00_bootstrap_passed": false,
+    "system_integration_repaired": false,
+    "p01_runtime_connection_allowed": false,
+    "next_legal_stage": "",
+    "paper_only": true,
+    "real_trade_enabled": false
+  },
+  "input_consumption": {
+    "methodology_blueprint_consumed": false,
+    "k00_handoff_consumed": false,
+    "phase_controller_candidate_consumed": false,
+    "consumed_assets": [],
+    "unconsumed_assets": []
+  },
+  "generated_outputs": {
+    "current_system_state_created": false,
+    "phase_registry_created": false,
+    "system_asset_index_created": false,
+    "task_consumption_log_created": false,
+    "next_stage_decision_created": false,
+    "trace_matrix_created": false,
+    "handoff_registry_created": false,
+    "p01_to_p10_controller_stubs_created": false
+  },
+  "plane_status": {
+    "governance_plane_status": "PENDING",
+    "domain_plane_status": "PENDING",
+    "data_plane_status": "PENDING",
+    "control_plane_status": "PENDING",
+    "trace_plane_status": "PENDING",
+    "acceptance_plane_status": "PENDING",
+    "handoff_plane_status": "PENDING"
+  },
+  "phase_status": {
+    "K00_knowledge_intake_taskization": "UNKNOWN",
+    "P00_system_bootstrap_controller": "UNKNOWN",
+    "P01_data_fact_controller": "BLOCKED_BY_DATA_PLANE",
+    "P02_wallet_structure_controller": "NOT_READY",
+    "P03_chip_control_controller": "NOT_READY",
+    "P04_market_structure_controller": "NOT_READY",
+    "P05_scenario_classification_controller": "NOT_READY",
+    "P06_strategy_gate_controller": "NOT_READY",
+    "P07_execution_risk_controller": "NOT_READY",
+    "P08_paper_trading_controller": "NOT_READY",
+    "P09_review_learning_controller": "NOT_READY",
+    "P10_system_upgrade_controller": "NOT_READY"
+  },
+  "acceptance_results": {
+    "file_level_passed": false,
+    "structure_level_passed": false,
+    "semantic_level_passed": false,
+    "consumption_level_passed": false,
+    "runtime_level_passed": false,
+    "safety_level_passed": false
+  },
+  "blocking_gaps": [],
+  "non_blocking_gaps": [],
+  "next_actions": [],
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false,
+    "private_key_included": false,
+    "seed_phrase_included": false
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "report_id": "BOOTSTRAP_CONTROL_PLANE_REPORT_V2",
+  "created_at": "2026-05-11T15:56:01.156545Z",
+  "doc_id": "DOC-20260511-020",
+  "status": "BOOTSTRAP_CONTROL_PLANE_V2_CREATED_PENDING_VALIDATION",
+  "control_plane_type": "BOOTSTRAP_CONTROL_PLANE",
+  "current_authoritative_stage": "P00_system_bootstrap_controller",
+  "next_legal_stage": "SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE",
+  "p01_status": "BLOCKED_BY_DATA_PLANE",
+  "p01_runtime_connection_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "auto_order_allowed": false,
+  "created_files": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/snapshots/current_system_state.json.snapshot_20260511155601",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/snapshots/phase_registry.yaml.snapshot_20260511155601",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/snapshots/system_asset_index.json.snapshot_20260511155601",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/snapshots/next_stage_decision.json.snapshot_20260511155601",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/task_queue.bootstrap.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/bootstrap_to_system_planes_handoff_packet.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/schemas/current_system_state.schema.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/schemas/phase_registry.schema.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/schemas/system_asset_index.schema.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/schemas/current_blockers.schema.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/schemas/next_stage_decision.schema.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/schemas/task_queue_bootstrap.schema.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/schemas/handoff_packet.schema.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/rules/stage_transition_rules.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/rules/conflict_resolution_policy.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/rules/control_plane_validation_rules.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/rules/bootstrap_readiness_gate.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/rules/forbidden_transition_rules.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/recovery/state_snapshot_policy.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/recovery/recovery_policy.yaml"
+  ],
+  "updated_files": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/current_system_state.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/phase_registry.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/next_stage_decision.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/current_blockers.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/task_consumption_log.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/system_asset_index.json"
+  ],
+  "backup_files": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/current_system_state.json.bak_before_bcpv2_20260511155601",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/phase_registry.yaml.bak_before_bcpv2_20260511155601",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/next_stage_decision.json.bak_before_bcpv2_20260511155601",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/current_blockers.json.bak_before_bcpv2_20260511155601",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/task_consumption_log.json.bak_before_bcpv2_20260511155601",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/system_asset_index.json.bak_before_bcpv2_20260511155601"
+  ]
+}

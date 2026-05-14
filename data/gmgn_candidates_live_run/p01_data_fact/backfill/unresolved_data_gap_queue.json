@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "items": [
+    {
+      "field": "quote_price",
+      "source": "okx",
+      "priority": "HIGH"
+    },
+    {
+      "field": "funding_relation_edges",
+      "source": "gmgn_or_behavior_model",
+      "priority": "HIGH"
+    }
+  ]
+}

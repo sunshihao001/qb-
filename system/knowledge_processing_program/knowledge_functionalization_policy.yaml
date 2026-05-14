@@ -1,0 +1,14 @@
+knowledge_functionalization_policy:
+  standard_formula:
+    - explanation_content
+    - core_mechanism
+    - executable_action
+    - input_objects
+    - output_objects
+    - judgment_conditions
+    - constraints
+    - acceptance_criteria
+    - system_mapping
+    - her_task_package
+  candidate_only: true
+  production_rule_activation_requires: [P10_REVIEW, GOVERNANCE_ACCEPTANCE]

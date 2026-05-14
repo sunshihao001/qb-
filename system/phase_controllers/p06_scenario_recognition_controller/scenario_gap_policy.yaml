@@ -1,0 +1,41 @@
+p06_gap_policy:
+  BLOCKING_GAP:
+    result: P06_BLOCKED
+    examples:
+    - p05_handoff_missing
+    - trace_missing
+    - acceptance_missing
+    - live_execution_requested
+    - handoff_plane_bypassed
+  CRITICAL_GAP:
+    result: P06_REJECTED
+    examples:
+    - no_evidence_bundles
+    - no_scenario_taxonomy
+    - no_scenario_feature_map
+    - all_evidence_do_not_use
+    - output_contract_missing
+  HIGH_GAP:
+    result: P06_READY_WITH_GAPS
+    downstream_permission: P07_LIMITED
+    examples:
+    - blocking_scenario_conflict
+    - missing_market_structure_context
+    - unresolved_distribution_vs_expansion_conflict
+    - major_unknown_evidence_present
+    - scenario_confidence_low
+  MEDIUM_GAP:
+    result: P06_READY_WITH_GAPS
+    downstream_permission: P07_ALLOWED_WITH_LIMITATIONS
+    examples:
+    - weak_cost_basis_bundle
+    - partial_counterparty_pressure
+    - stale_security_context
+    - transition_state_uncertain
+  LOW_GAP:
+    result: P06_READY_WITH_GAPS
+    downstream_permission: P07_ALLOWED_WITH_NOTE
+    examples:
+    - optional_historical_scenario_missing
+    - minor_evidence_conflict
+    - noncritical_context_missing

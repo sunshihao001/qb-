@@ -1,0 +1,185 @@
+{
+  "schema_version": "token_fact_schema_v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "file_role": "token_fact",
+  "format": "json",
+  "fields": [
+    {
+      "field_name": "run_id",
+      "field_chinese_name": "运行编号",
+      "field_group": "runtime",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_01_audit",
+        "phase_02_wallet_structure"
+      ],
+      "description": "本次 Phase 01 运行的唯一编号。"
+    },
+    {
+      "field_name": "token_address",
+      "field_chinese_name": "代币地址",
+      "field_group": "token_fact",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control",
+        "phase_04_scenario_recognition"
+      ],
+      "description": "Solana 代币 mint 地址，是本次分析对象的唯一标识。"
+    },
+    {
+      "field_name": "chain",
+      "field_chinese_name": "链",
+      "field_group": "token_fact",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "all_downstream_phases"
+      ],
+      "description": "链名称，Phase 01 首版固定为 solana。"
+    },
+    {
+      "field_name": "data_snapshot_time",
+      "field_chinese_name": "数据快照时间",
+      "field_group": "runtime",
+      "data_type": "datetime",
+      "required_level": "fatal_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "quote",
+        "gmgn",
+        "chain"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "all_downstream_phases"
+      ],
+      "description": "本次数据事实快照的时间，防止回测污染。"
+    },
+    {
+      "field_name": "token_symbol",
+      "field_chinese_name": "代币符号",
+      "field_group": "token_fact",
+      "data_type": "string",
+      "required_level": "warning_allowed",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "gmgn",
+        "chain",
+        "manual_config"
+      ],
+      "preferred_source": "gmgn",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "telegram_panel"
+      ],
+      "description": "代币符号，仅用于展示和辅助索引。"
+    },
+    {
+      "field_name": "token_create_time",
+      "field_chinese_name": "开盘/创建时间",
+      "field_group": "token_fact",
+      "data_type": "datetime",
+      "required_level": "phase_02_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "代币创建或首个有效交易时间，用于时间窗口划分。"
+    },
+    {
+      "field_name": "current_market_cap_usd",
+      "field_chinese_name": "当前市值美元",
+      "field_group": "market_fact",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_04_scenario_recognition"
+      ],
+      "description": "快照时点的当前市值。"
+    },
+    {
+      "field_name": "current_liquidity_usd",
+      "field_chinese_name": "当前流动性美元",
+      "field_group": "market_fact",
+      "data_type": "number",
+      "required_level": "phase_02_required",
+      "unit": "USD",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "quote",
+        "gmgn"
+      ],
+      "preferred_source": "quote",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_07_execution_risk"
+      ],
+      "description": "快照时点的流动性。"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "doc_id": "DOC-20260511-010",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T13:56:09.172903+00:00",
+  "her_runtime_logic": {
+    "ordered_steps": [
+      "identify_system_phase",
+      "read_current_system_state_json",
+      "read_phase_registry_yaml",
+      "validate_phase_legality",
+      "check_input_asset_exists",
+      "check_input_asset_registered",
+      "check_downstream_consumption",
+      "execute_phase_objective",
+      "write_output_files",
+      "write_acceptance_result",
+      "write_state_back",
+      "generate_handoff_packet",
+      "decide_next_legal_phase"
+    ],
+    "forbidden_shortcuts": [
+      "skip_system_state_source_based_on_chat_context",
+      "continue_despite_blocking_gaps",
+      "file_generated_equals_phase_complete"
+    ],
+    "completion_state_distinctions": [
+      "diagnostic_artifact_passed",
+      "system_integration_repaired",
+      "phase_acceptance_passed",
+      "downstream_consumption_verified",
+      "runtime_execution_completed"
+    ]
+  },
+  "authoritative_state_source": {
+    "path": "00_control/current_system_state.json",
+    "missing_state": "SYSTEM_CONTROL_PLANE_MISSING",
+    "forbidden_when_missing": "P01-P10 business phases",
+    "required_questions": [
+      "current_authoritative_phase",
+      "blocked_phases",
+      "blocking_reasons",
+      "registered_assets",
+      "consumed_assets",
+      "currently_allowed_actions",
+      "currently_forbidden_actions",
+      "next_legal_phase",
+      "paper_only_status",
+      "real_trade_allowed_status"
+    ]
+  },
+  "planes": {
+    "Control Plane": {
+      "impact": "primary",
+      "assets": [
+        "00_control/current_system_state.json",
+        "00_control/phase_registry.yaml"
+      ]
+    },
+    "Acceptance Plane": {
+      "impact": "primary",
+      "distinctions": [
+        "diagnostic_artifact_passed",
+        "system_integration_repaired",
+        "phase_acceptance_passed",
+        "downstream_consumption_verified",
+        "runtime_execution_completed"
+      ]
+    },
+    "Trace Plane": {
+      "impact": "primary",
+      "checks": [
+        "asset_registered",
+        "downstream_consumed"
+      ]
+    },
+    "Handoff Plane": {
+      "impact": "primary",
+      "step": "generate_handoff_packet"
+    }
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

@@ -1,0 +1,24 @@
+controller_id: P05_EVIDENCE_CONTROLLER
+version: v3.0-professional
+status: PACKAGE_SPEC_READY_WITH_RUNTIME_GAPS
+created_at: '2026-05-12T02:44:17Z'
+paper_only: true
+real_trade_enabled: false
+runtime_allowed: false
+paper_runtime_allowed: false
+live_execution_allowed: false
+required_trace_ids:
+- source_trace_ids
+- field_trace_ids
+- evidence_trace_id
+- bundle_trace_id
+- handoff_trace_id
+trace_relations:
+- source_record->field_trace->evidence_object
+- evidence_object->bundle
+- bundle->p06_request
+- p06_request->handoff_packet
+block_if:
+- evidence_created_without_source_trace
+- bundle_created_without_evidence_ids
+- handoff_created_without_trace

@@ -1,0 +1,76 @@
+{
+  "assets": [
+    {
+      "asset_id": "asset_001",
+      "asset_type": "tool",
+      "path": "tools/k00_document_intake.py",
+      "purpose": "Save raw document and generate passport/index/mapping/handoff",
+      "required_by": "func_001",
+      "status": "CREATED_OR_UPDATED_WITH_GAPS"
+    },
+    {
+      "asset_id": "asset_002",
+      "asset_type": "tool",
+      "path": "tools/f00_function_mapping.py",
+      "purpose": "Convert explanatory document into functional items/assets/task package",
+      "required_by": "func_002",
+      "status": "CREATED_OR_UPDATED_WITH_GAPS"
+    },
+    {
+      "asset_id": "asset_003",
+      "asset_type": "tool",
+      "path": "tools/v00_validation_evidence.py",
+      "purpose": "Validate required outputs and preserve gaps",
+      "required_by": "func_003",
+      "status": "CREATED_OR_UPDATED_WITH_GAPS"
+    },
+    {
+      "asset_id": "asset_004",
+      "asset_type": "tool",
+      "path": "tools/a00_acceptance.py",
+      "purpose": "Decide READY_WITH_GAPS vs BLOCKED and block false claims",
+      "required_by": "func_004",
+      "status": "CREATED_OR_UPDATED_WITH_GAPS"
+    },
+    {
+      "asset_id": "asset_005",
+      "asset_type": "tool",
+      "path": "tools/h00_downstream_queue.py",
+      "purpose": "Route gaps and task refinements to downstream queue",
+      "required_by": "func_005",
+      "status": "CREATED_OR_UPDATED_WITH_GAPS"
+    },
+    {
+      "asset_id": "asset_006",
+      "asset_type": "tool",
+      "path": "tools/u00_review_upgrade.py",
+      "purpose": "Turn gaps into review cases/root causes/upgrade queue/learning index",
+      "required_by": "func_006",
+      "status": "CREATED_OR_UPDATED_WITH_GAPS"
+    },
+    {
+      "asset_id": "asset_007",
+      "asset_type": "tool",
+      "path": "tools/g00_governance_update.py",
+      "purpose": "Extract status/process/forbidden action governance candidates",
+      "required_by": "func_007",
+      "status": "CREATED_OR_UPDATED_WITH_GAPS"
+    },
+    {
+      "asset_id": "asset_008",
+      "asset_type": "tool",
+      "path": "tools/o00_run_document_main.py",
+      "purpose": "Orchestrate full safe-mode manual run and write final report",
+      "required_by": "func_008",
+      "status": "CREATED_OR_UPDATED_WITH_GAPS"
+    },
+    {
+      "asset_id": "asset_009",
+      "asset_type": "tool",
+      "path": "tools/her_pipeline_status.py",
+      "purpose": "Orchestrate full safe-mode manual run and write final report",
+      "required_by": "func_008",
+      "status": "CREATED_OR_UPDATED_WITH_GAPS"
+    }
+  ]
+}

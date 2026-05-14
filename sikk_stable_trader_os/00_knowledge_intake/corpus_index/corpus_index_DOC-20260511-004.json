@@ -1,0 +1,62 @@
+{
+  "doc_id": "DOC-20260511-004",
+  "source_name": "治理平面 _1_.md",
+  "generated_at": "2026-05-11T13:11:13Z",
+  "title": "SIKK Stable Trader OS｜Governance Plane v2.0",
+  "anchors": {
+    "file_positioning": [
+      "最高约束层",
+      "不是交易策略",
+      "不是阶段执行文档",
+      "不是 Atomic Skill",
+      "上位治理约束"
+    ],
+    "system_planes": [
+      "治理平面 Governance Plane",
+      "领域平面 Domain Plane",
+      "数据平面 Data Plane",
+      "控制平面 Control Plane",
+      "决策平面 Decision Plane",
+      "风险平面 Risk Plane",
+      "执行平面 Execution Plane",
+      "验证平面 Verification Plane",
+      "学习平面 Learning Plane"
+    ],
+    "runtime_mode": [
+      "SYSTEM_BUILDING",
+      "SYSTEM_READY",
+      "SYSTEM_WITH_GAPS",
+      "SYSTEM_BLOCKED",
+      "SYSTEM_RUNNING",
+      "SYSTEM_REVIEWING",
+      "SYSTEM_UPGRADING"
+    ],
+    "allowed_outputs": [
+      "governance_status.json",
+      "governance_boundary_summary.json",
+      "governance_forbidden_actions.json",
+      "governance_allowed_actions.json",
+      "governance_gap_list.json",
+      "governance_handoff_packet.json"
+    ],
+    "forbidden": [
+      "LIVE_EXECUTE",
+      "BUY",
+      "SELL",
+      "AI_INFER_FACT_FIELD",
+      "SKIP_ACCEPTANCE_GATE",
+      "SKIP_HANDOFF_PACKET"
+    ],
+    "next": [
+      "domain_plane.md"
+    ]
+  },
+  "key_claims": [
+    "Governance Plane is the highest constraint layer.",
+    "Current default runtime mode is SYSTEM_BUILDING.",
+    "LIVE_DISABLED is the default execution boundary.",
+    "AI cannot infer missing fact fields.",
+    "No schema/contract/replay/acceptance gate means not formal/complete/stable.",
+    "Governance completion allows Domain Plane design next."
+  ]
+}

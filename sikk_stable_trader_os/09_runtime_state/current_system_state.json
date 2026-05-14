@@ -1,0 +1,56 @@
+{
+  "system": "SIKK_STABLE_TRADER_OS",
+  "task_id": "phase_controller_data_model_workflow_v1",
+  "runtime_boundary": "OBSERVE_PAPER_ONLY",
+  "active_workflow": "phase_controller_data_model_landing",
+  "status": "PHASE_CONTROLLER_DATA_MODEL_READY",
+  "updated_at": "2026-05-11T08:58:03.504519+00:00",
+  "completed_steps": [
+    "planbook_created",
+    "task_manifest_created",
+    "phase_packages_patched",
+    "thin_total_control_skill_written",
+    "phase_controller_data_model_validation_passed",
+    "system_registry_validation_passed"
+  ],
+  "active_step": "complete",
+  "next_step": "live_input_adapter_or_business_logic_integration",
+  "phase_package_root": "02_phase_controllers",
+  "total_control_skill": "01_total_control_skill/SKILL.md",
+  "blocking_gaps": [],
+  "degraded_gaps": [],
+  "safety": {
+    "private_key": false,
+    "signing": false,
+    "broadcast": false,
+    "swap": false,
+    "real_trade": false
+  },
+  "validation_refs": [
+    "09_reports/acceptance_reports/phase_controller_data_model_acceptance_result.json",
+    "06_tools/validators/validate_system_registry.py"
+  ],
+  "system_status": "TOTAL_CONTROL_READY",
+  "current_layer": "system_planes_definition_landing",
+  "phase_controller_data_model_status": "PHASE_CONTROLLER_DATA_MODEL_READY",
+  "total_control_landing_status": "TOTAL_CONTROL_READY",
+  "full_validation": {
+    "validate_total_control_landing": "PASS",
+    "validate_phase_controller_data_model": "PASS",
+    "validate_system_registry": "PASS"
+  },
+  "accepted_gaps": [
+    "Phase00 为系统宪法层，当前由 docs 与总控 Skill 承载，不作为业务 runtime controller。"
+  ],
+  "hard_negative_hits": [],
+  "secret_hits": {
+    "openrouter_key": 0,
+    "generic_openai_key": 0,
+    "telegram_bot_token": 0
+  },
+  "advance_allowed": true,
+  "runtime_automation_status": "FULL_SYSTEM_AUTOMATION_READY_WITH_GAPS",
+  "full_system_automation_result": "reports/system_audit/full_system_automation_result.json",
+  "full_system_automation_acceptance": "reports/system_audit/full_system_automation_acceptance.json",
+  "full_system_runtime_handoff": "handoffs/stable_trader_os/full_system_runtime_handoff.json"
+}

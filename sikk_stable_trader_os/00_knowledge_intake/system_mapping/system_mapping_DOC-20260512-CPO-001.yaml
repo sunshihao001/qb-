@@ -1,0 +1,8 @@
+mapping_id: MAP-DOC-20260512-CPO-001
+generated_at: 2026-05-12T16:29:31Z
+material_id: MAT-CPO-v1-001
+target_subsystem: system/operational_program/continuous_paper_operation
+canonical_system_dir: /root/sikk-gmgn/system/operational_program/continuous_paper_operation
+canonical_data_dir: /root/sikk-gmgn/data/operational_program/continuous_paper_operation
+route_status: K00_ACCEPTED_FOR_TASKIZATION
+must_not_change_directly: [production_trading_rules, live_execution_state, wallet_signing_capability]

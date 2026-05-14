@@ -1,0 +1,10 @@
+{
+  "packet_type": "P08_TO_PAPER_RUNTIME_HANDOFF",
+  "status": "CONTRACT_READY_RUNTIME_NOT_STARTED",
+  "allowed_downstream": "PAPER_ONLY_RUNTIME",
+  "forbidden": [
+    "LIVE_EXECUTION",
+    "WALLET_SIGNING",
+    "AUTO_ORDER_ROUTER"
+  ]
+}

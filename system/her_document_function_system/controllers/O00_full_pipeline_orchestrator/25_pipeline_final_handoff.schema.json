@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 final handoff",
+  "type": "object",
+  "required": [
+    "pipeline_run_id",
+    "final_pipeline_status",
+    "stage_state_matrix",
+    "acceptance_matrix_ref",
+    "evidence_bundle_refs",
+    "handoff_refs",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "gap_refs",
+    "report_ref"
+  ],
+  "properties": {
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "final_pipeline_status": {
+      "type": "string"
+    },
+    "stage_state_matrix": {
+      "type": "object"
+    },
+    "acceptance_matrix_ref": {
+      "type": "string"
+    },
+    "evidence_bundle_refs": {
+      "type": "array"
+    },
+    "handoff_refs": {
+      "type": "array"
+    },
+    "allowed_next_actions": {
+      "type": "array"
+    },
+    "forbidden_next_actions": {
+      "type": "array"
+    },
+    "gap_refs": {
+      "type": "array"
+    },
+    "report_ref": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "phase_id": "A00",
+  "controller_name": "A00_acceptance_evidence_controller",
+  "status": "DESIGN_BLUEPRINT_IMPLEMENTED_AS_CONTROLLER_FILES",
+  "current_state": "A00_INIT",
+  "controller_root": "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller",
+  "run_root": "/root/sikk-gmgn/data/her_document_function_system/a00_runs",
+  "required_files_count": 21,
+  "forbidden_modes": [
+    "LIVE_RUNTIME",
+    "WALLET_SIGNING",
+    "AUTO_DEPLOY",
+    "PRODUCTION_TRADING",
+    "MODIFY_PRODUCTION_RULES_DIRECTLY"
+  ],
+  "state_machine": [
+    "A00_INIT",
+    "PREFLIGHT_CHECKED",
+    "UPSTREAM_HANDOFFS_LOADED",
+    "EVIDENCE_BUNDLE_BUILT",
+    "EVIDENCE_INTEGRITY_CHECKED",
+    "PHASE_STATUS_MATRIX_BUILT",
+    "STATUS_CONSISTENCY_VALIDATED",
+    "ARTIFACT_MANIFEST_VALIDATED",
+    "GAP_PROPAGATION_VALIDATED",
+    "TRACE_AUDIT_VALIDATED",
+    "ACCEPTANCE_GATE_REPLAYED",
+    "ACCEPTANCE_SCORECARD_BUILT",
+    "READINESS_DECIDED",
+    "RECOVERY_CLASSIFIED",
+    "READINESS_CERTIFICATE_WRITTEN",
+    "HANDOFF_READY"
+  ],
+  "exception_states": [
+    "A00_BLOCKED",
+    "A00_REJECTED",
+    "MISSING_HANDOFF",
+    "MISSING_EVIDENCE",
+    "STATUS_INCONSISTENT",
+    "ARTIFACT_MISSING",
+    "GAP_HIDDEN",
+    "TRACE_MISSING",
+    "ACCEPTANCE_GATE_INVALID",
+    "READINESS_REJECTED",
+    "DESIGN_ONLY",
+    "NOT_EXECUTED"
+  ]
+}

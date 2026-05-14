@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Routing decision",
+  "type": "object",
+  "required": [
+    "routing_id",
+    "source_bundle",
+    "target",
+    "routing_decision",
+    "reason",
+    "required_handoff_packet",
+    "unresolved_gaps",
+    "accepted_risks",
+    "execution_allowed",
+    "priority"
+  ],
+  "properties": {
+    "routing_id": {
+      "type": "string"
+    },
+    "source_bundle": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "routing_decision": {
+      "enum": [
+        "ROUTE_TO_PXX",
+        "ROUTE_TO_IXX",
+        "ROUTE_TO_RUNNER",
+        "ROUTE_TO_REPORT",
+        "ROUTE_TO_U00",
+        "ROUTE_TO_G00",
+        "ROUTE_TO_RECOVERY",
+        "ROUTE_TO_BACKLOG",
+        "ROUTE_TO_ARCHIVE",
+        "BLOCK_ROUTE"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "required_handoff_packet": {
+      "type": "string"
+    },
+    "unresolved_gaps": {
+      "type": "array"
+    },
+    "accepted_risks": {
+      "type": "array"
+    },
+    "execution_allowed": {
+      "type": "boolean"
+    },
+    "priority": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

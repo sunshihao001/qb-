@@ -1,0 +1,91 @@
+{
+  "schema_name": "top_trader_normalized",
+  "phase": "phase_01_data_fact",
+  "fields": [
+    {
+      "field_name": "wallet_address",
+      "type": "string",
+      "chinese_name": "wallet_address",
+      "description": "phase_01 field wallet_address",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_wallet_address"
+    },
+    {
+      "field_name": "token_address",
+      "type": "string",
+      "chinese_name": "token_address",
+      "description": "phase_01 field token_address",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_token_address"
+    },
+    {
+      "field_name": "realized_pnl_usd",
+      "type": "string",
+      "chinese_name": "realized_pnl_usd",
+      "description": "phase_01 field realized_pnl_usd",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_realized_pnl_usd"
+    },
+    {
+      "field_name": "trade_count",
+      "type": "string",
+      "chinese_name": "trade_count",
+      "description": "phase_01 field trade_count",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_trade_count"
+    },
+    {
+      "field_name": "source_file",
+      "type": "string",
+      "chinese_name": "source_file",
+      "description": "phase_01 field source_file",
+      "unit": "",
+      "source_phase": "phase_01_data_fact",
+      "source_file": "raw or normalized phase_01 artifact",
+      "required": true,
+      "allow_missing": false,
+      "missing_action": "BLOCK",
+      "downstream_readers": [
+        "phase_02_wallet_structure",
+        "audit"
+      ],
+      "example": "example_source_file"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+plane_id: ACCEPTANCE_PLANE
+plane_name: 验收平面
+plane_level: light_institutional
+version: v2.0
+status: ACCEPTANCE_READY_WITH_GAPS
+doc_id: DOC-20260511-026
+position_in_build_order:
+  previous: TRACE_PLANE
+  next: HANDOFF_PLANE
+mission:
+  primary: 对系统阶段、文件、合约、trace、工具、运行与复盘结果执行专业验收裁决
+  secondary:
+  - 判断 READY / READY_WITH_GAPS / REJECTED / BLOCKED / NEEDS_REWORK
+  - 判断是否允许进入 Handoff Plane
+  - 阻断无 trace、无合约、越权、缺口未登记、自动实盘路径
+authority:
+  can_define:
+  - acceptance_gates
+  - acceptance_objects
+  - acceptance_dimensions
+  - acceptance_status_codes
+  - acceptance_scores
+  - blocking_rules
+  - gap_policy
+  - downstream_permission
+  - acceptance_result_packet
+  can_decide:
+  - READY
+  - READY_WITH_GAPS
+  - REJECTED
+  - BLOCKED
+  - NEEDS_REWORK
+  cannot_do:
+  - schedule_phase
+  - create_phase_content
+  - write_trace
+  - execute_handoff
+  - collect_data
+  - generate_strategy_signal
+  - run_tools
+  - run_paper_runtime
+  - approve_live_execution
+upstream_inputs:
+- trace_handoff_packet
+- full_control_task_tree
+- phase_artifact_traces
+- contract_traces
+- state_traces
+- gap_registers
+- governance_rules
+downstream_outputs:
+- acceptance_result_packet
+- acceptance_report
+- acceptance_gap_register
+- downstream_permission_matrix
+- handoff_permission
+status_codes:
+- ACCEPTANCE_UNINITIALIZED
+- ACCEPTANCE_CONTEXT_READY
+- ACCEPTANCE_OBJECTS_REGISTERED
+- ACCEPTANCE_GATES_READY
+- ACCEPTANCE_RUNNING
+- ACCEPTANCE_READY
+- ACCEPTANCE_READY_WITH_GAPS
+- ACCEPTANCE_REJECTED
+- ACCEPTANCE_BLOCKED
+- ACCEPTANCE_NEEDS_REWORK

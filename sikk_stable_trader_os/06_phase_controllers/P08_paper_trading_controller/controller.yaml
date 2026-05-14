@@ -1,0 +1,20 @@
+controller_id: P08_paper_trading_controller
+controller_name_cn: 纸面交易验证层
+phase_type: paper_trade_validation
+status: NOT_READY
+created_by: P00_system_bootstrap_controller
+primary_goal: 运行纸面交易，验证策略门禁统计价值
+paper_only: true
+real_trade_enabled: false
+p01_runtime_connection_allowed: false
+required_before_ready:
+  - upstream_handoff_consumed
+  - input_contract_valid
+  - output_contract_valid
+  - acceptance_gate_passed
+  - current_system_state_allows_stage
+forbidden:
+  - real_trade
+  - private_key
+  - seed_phrase
+  - exchange_write_order

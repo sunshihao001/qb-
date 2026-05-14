@@ -1,0 +1,24 @@
+objective_tree:
+  phase_id: O00
+  root_objective: safely run a document through HER phases with evidence-backed status
+  objectives:
+    - id: O00.0
+      name: Safe-mode preflight
+    - id: O00.1
+      name: Input document and goal loader
+    - id: O00.2
+      name: Registry and config validator
+    - id: O00.3
+      name: Pipeline execution plan builder
+    - id: O00.4
+      name: Stage dependency graph builder
+    - id: O00.5
+      name: Safe stage dispatch simulator / binder
+    - id: O00.6
+      name: Evidence bundle collector
+    - id: O00.7
+      name: Gap register and false-claim blocker
+    - id: O00.8
+      name: Acceptance status calculator
+    - id: O00.9
+      name: Final handoff and report writer

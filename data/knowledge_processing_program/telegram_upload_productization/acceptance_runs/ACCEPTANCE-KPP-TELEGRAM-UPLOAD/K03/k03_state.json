@@ -1,0 +1,18 @@
+{
+  "stage_id": "K03",
+  "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+  "status": "K03_ACCEPTED",
+  "started_at": "2026-05-13T06:30:56Z",
+  "ended_at": "2026-05-13T06:30:56Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/functional_object_registry.json",
+    "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/assumption_registry.json",
+    "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/constraint_registry.json",
+    "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/unknown_gap_registry.json",
+    "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K03/k03_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

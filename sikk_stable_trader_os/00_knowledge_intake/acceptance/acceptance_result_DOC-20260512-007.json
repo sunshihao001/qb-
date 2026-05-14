@@ -1,0 +1,41 @@
+{
+  "acceptance_id": "k00_acceptance_DOC-20260512-007",
+  "doc_id": "DOC-20260512-007",
+  "evaluated_at": "2026-05-12T04:35:27Z",
+  "status": "K00_ACCEPTED_WITH_RUNTIME_GAPS",
+  "checks": {
+    "raw": true,
+    "passport": true,
+    "corpus_index": true,
+    "plane_mapping": true,
+    "phase_mapping": true,
+    "gap_detection": true,
+    "task_package": true,
+    "handoff": true,
+    "intake_report": true,
+    "source_registry_jsonl_contains_doc": true,
+    "standalone_source_registry_exists": true,
+    "phase_state_exists": true
+  },
+  "parse_checks": {
+    "passport": "PASS",
+    "corpus_index": "PASS",
+    "plane_mapping": "PASS",
+    "phase_mapping": "PASS",
+    "gap_detection": "PASS",
+    "task_package": "PASS",
+    "handoff": "PASS",
+    "phase_state": "PASS"
+  },
+  "accepted_for": "P07_STRATEGY_GATE_CONTROLLER_PACKAGE_DESIGN",
+  "not_accepted_for": [
+    "P07_RUNTIME_EXECUTION",
+    "PAPER_RUNTIME",
+    "LIVE_EXECUTION",
+    "BUY_SIGNAL_GENERATION"
+  ],
+  "runtime_gap_policy": "Design package may be ready while runtime/tool binding remains blocked.",
+  "handoff_packet_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/handoff_packets/k00_to_p07_handoff_packet_DOC-20260512-007.json",
+  "phase_state_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/phase_state/phase_state_DOC-20260512-007.json",
+  "next_legal_stage": "P08_EXECUTION_RISK_CONTROLLER_PACKAGE_DESIGN"
+}

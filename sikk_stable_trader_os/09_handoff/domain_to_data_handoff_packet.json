@@ -1,0 +1,107 @@
+{
+  "handoff_id": "DOMAIN_TO_DATA_DOC-20260511-022",
+  "source_stage": "P02_DOMAIN_PLANE",
+  "target_stage": "P03_DATA_PLANE",
+  "included_assets": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_acceptance_criteria.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_acceptance_gate.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_context.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_counter_evidence_model.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_data_requirement_map.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_decision_question_tree.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_evidence_model.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_gap_register.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_handoff_contract.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_handoff_packet.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_hard_negative_rules.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_lifecycle_model.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_market_cap_context_model.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_object_model.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_object_registry.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_phase_target_data.raw_user_proposed.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_phase_target_data.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_plane.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_plane.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_reasoning_boundary.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_relation_graph.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_review_checklist.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_scenario_taxonomy.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_to_data_demand_map.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_to_phase_map.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/domain_wallet_role_taxonomy.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/dominant_side_lifecycle_taxonomy.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/entity_relationship_map.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/field_dictionary.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/scenario_taxonomy.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/state_dictionary.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_domain/wallet_role_taxonomy.yaml"
+  ],
+  "included_schemas": [
+    "domain_handoff_contract.yaml"
+  ],
+  "included_field_maps": [
+    "domain_data_requirement_map.yaml"
+  ],
+  "known_gaps": [
+    {
+      "gap_id": "DOMAIN-GAP-001",
+      "name": "wallet role thresholds not quantified",
+      "route": "P03/P04/Replay calibration"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-002",
+      "name": "dominant-side lifecycle needs sample calibration",
+      "route": "P08 review/replay"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-003",
+      "name": "wash-volume identification requires real data verification",
+      "route": "Data/Evidence Plane"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-004",
+      "name": "market-cap stage boundaries not statistically fixed",
+      "route": "Replay Plane"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-005",
+      "name": "same-source wallet attribution uncertainty remains",
+      "route": "Evidence confidence scoring"
+    }
+  ],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "DOMAIN-GAP-001",
+      "name": "wallet role thresholds not quantified",
+      "route": "P03/P04/Replay calibration"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-002",
+      "name": "dominant-side lifecycle needs sample calibration",
+      "route": "P08 review/replay"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-003",
+      "name": "wash-volume identification requires real data verification",
+      "route": "Data/Evidence Plane"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-004",
+      "name": "market-cap stage boundaries not statistically fixed",
+      "route": "Replay Plane"
+    },
+    {
+      "gap_id": "DOMAIN-GAP-005",
+      "name": "same-source wallet attribution uncertainty remains",
+      "route": "Evidence confidence scoring"
+    }
+  ],
+  "acceptance_status": "DOMAIN_READY_WITH_GAPS",
+  "next_legal_stage": "P03_DATA_PLANE_FIELD_MODELING",
+  "consumption_required": true,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "p01_runtime_connection_allowed": false,
+  "created_at": "2026-05-11T16:25:42Z"
+}

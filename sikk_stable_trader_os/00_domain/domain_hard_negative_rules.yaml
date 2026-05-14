@@ -1,0 +1,31 @@
+domain_hard_negative_rules:
+  - rule_id: DHN_001
+    name: 同源执行组同步退出
+    condition: same_source_group_sync_sell_score >= high_threshold
+    result: DOMAIN_BLOCK
+    reason: 结构侧存在同步退出，不能解释为健康换手
+  - rule_id: DHN_002
+    name: 关键早期钱包集中清仓
+    condition: early_structural_wallet_remaining_pct <= critical_threshold
+    result: DOMAIN_BLOCK
+    reason: 早期结构筹码控制权显著消失
+  - rule_id: DHN_003
+    name: 高位接盘鲸鱼成为主要承接方
+    condition: counterparty_whale_absorption_score >= high_threshold
+    result: DOMAIN_PAUSE_OR_BLOCK
+    reason: 当前价格可能主要依赖对手盘承接
+  - rule_id: DHN_004
+    name: 刷量假突破
+    condition: volume_expansion == true and real_chip_transfer_support == false
+    result: DOMAIN_REJECT_BREAKOUT
+    reason: 成交结构缺少真实筹码支持
+  - rule_id: DHN_005
+    name: 回踩完成证据不足
+    condition: avwap_acceptance == true and failure_test_confirmed == false and adx_noise_rejection == false
+    result: DOMAIN_TRANSITION_ONLY
+    reason: 不能把未完成回踩解释为完成结构
+  - rule_id: DHN_006
+    name: 关键字段缺失仍试图强判断
+    condition: required_evidence_missing == true and decision_strength in [STRONG_ALLOW, BUY_READY]
+    result: DOMAIN_REJECTED
+    reason: 数据不足不能强推理

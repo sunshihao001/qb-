@@ -1,0 +1,10 @@
+{
+  "doc_id": "DOC-20260512-I03_RUNNER_TOOL_BINDING_V1",
+  "blocking_gaps": [],
+  "runtime_gaps": [
+    "actual runner implementation may remain dry-run stub",
+    "real readonly GMGN/OKX/Kline fixture validation deferred",
+    "I04 paper runtime integration not executed by I03"
+  ],
+  "status": "K00_READY_WITH_RUNTIME_GAPS"
+}

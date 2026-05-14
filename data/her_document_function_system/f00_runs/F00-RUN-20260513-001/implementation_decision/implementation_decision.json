@@ -1,0 +1,25 @@
+{
+  "decisions": [
+    {
+      "function_id": "func_f00_001",
+      "decision": "EXTEND_EXISTING",
+      "reason": "Canonical F00 package exists; update/validate safe controller files only, no live runtime/signing/deploy.",
+      "blocked_by": [],
+      "next_action": "validate_assets"
+    },
+    {
+      "function_id": "func_f00_002",
+      "decision": "EXTEND_EXISTING",
+      "reason": "Canonical F00 package exists; update/validate safe controller files only, no live runtime/signing/deploy.",
+      "blocked_by": [],
+      "next_action": "validate_assets"
+    },
+    {
+      "function_id": "func_f00_003",
+      "decision": "EXTEND_EXISTING",
+      "reason": "Canonical F00 package exists; update/validate safe controller files only, no live runtime/signing/deploy.",
+      "blocked_by": [],
+      "next_action": "validate_assets"
+    }
+  ]
+}

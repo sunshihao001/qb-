@@ -1,0 +1,8 @@
+real_trade_forbidden_policy:
+  real_trade_enabled: false
+  private_key_allowed: false
+  seed_phrase_allowed: false
+  signing_allowed: false
+  broadcast_allowed: false
+  exchange_write_allowed: false
+  violation_action: HARD_BLOCK_AND_REPORT

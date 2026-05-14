@@ -1,0 +1,9 @@
+i05_final_integration_report:
+  type: object
+  required:
+    - report_id
+    - summary
+    - validation_results
+    - gaps
+    - next_steps
+  additional_properties_allowed: true

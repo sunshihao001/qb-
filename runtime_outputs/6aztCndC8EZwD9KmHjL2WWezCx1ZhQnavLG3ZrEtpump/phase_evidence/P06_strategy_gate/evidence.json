@@ -1,0 +1,28 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "phase_id": "P06_strategy_gate",
+  "artifact_kind": "evidence",
+  "generated_at": "2026-05-13T01:21:44Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "positive_evidence": [],
+  "missing_evidence": [
+    "资金层跳过",
+    "funding_path_missing"
+  ],
+  "risk_evidence": [
+    "SECURITY_OR_LIQUIDITY_BLOCK",
+    "STRUCTURAL_PAUSE",
+    "FUNDING_PENDING",
+    "追高风险=LOW",
+    "chase_risk_score=0.0",
+    "资金层跳过",
+    "funding_path_missing"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "queue_id": "h00_asset_validation_20260513_154317",
+  "queue_status": "QUEUE_BLOCKED",
+  "queue_items": [],
+  "dependency_graph_ref": "/root/sikk-gmgn/data/her_document_function_system/h00_runs/h00_asset_validation_20260513_154317/queue/dependency_graph.json",
+  "priority_plan_ref": "/root/sikk-gmgn/data/her_document_function_system/h00_runs/h00_asset_validation_20260513_154317/queue/queue_priority_plan.json",
+  "created_at": "2026-05-13T15:43:17.674910+00:00",
+  "reason": "Controller asset validation only; no A00 readiness certificate"
+}

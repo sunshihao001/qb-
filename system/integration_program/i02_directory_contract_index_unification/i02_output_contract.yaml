@@ -1,0 +1,25 @@
+contract_id: i02_output_contract
+required_outputs:
+- canonical_root_declaration
+- phase_controller_file_index
+- runtime_data_path_index
+- schema_index
+- contract_index
+- handoff_contract_index
+- data_request_packet_index
+- control_artifact_index
+- file_naming_policy
+- directory_naming_policy
+- canonical_path_policy
+- legacy_path_mapping
+- legacy_readonly_absorption_policy
+- index_gap_report
+- path_conflict_report
+- read_order_manifest
+- i03_runner_tool_binding_prerequisite_packet
+- i02_to_i03_handoff_packet
+acceptance_statuses:
+- I02_READY
+- I02_READY_WITH_GAPS
+- I02_BLOCKED
+- I02_REJECTED

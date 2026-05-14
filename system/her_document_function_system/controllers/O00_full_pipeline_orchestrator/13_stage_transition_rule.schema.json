@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 transition rule",
+  "type": "object",
+  "required": [
+    "transition_id",
+    "from_stage",
+    "to_stage",
+    "decision",
+    "reason",
+    "carried_gaps",
+    "carried_forbidden_actions",
+    "required_next_inputs",
+    "blocked_by"
+  ],
+  "properties": {
+    "transition_id": {
+      "type": "string"
+    },
+    "from_stage": {
+      "type": "string"
+    },
+    "to_stage": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "ALLOW",
+        "ALLOW_WITH_GAPS",
+        "BLOCK",
+        "RETRY",
+        "DEFER",
+        "ROUTE_TO_U00",
+        "ROUTE_TO_G00",
+        "REJECT"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "carried_gaps": {
+      "type": "array"
+    },
+    "carried_forbidden_actions": {
+      "type": "array"
+    },
+    "required_next_inputs": {
+      "type": "array"
+    },
+    "blocked_by": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "missing_handoff",
+          "missing_evidence",
+          "missing_acceptance",
+          "blocking_gap",
+          "policy_violation",
+          "missing_controller_registry",
+          "safe_mode_false",
+          "forbidden_action_attempted"
+        ]
+      }
+    }
+  }
+}

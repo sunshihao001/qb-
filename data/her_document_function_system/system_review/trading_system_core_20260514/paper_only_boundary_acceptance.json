@@ -1,0 +1,22 @@
+{
+  "boundary_id": "paper_only_boundary_acceptance_20260514",
+  "safe_mode": true,
+  "a00_checks": {
+    "no_real_swap": true,
+    "no_private_key": true,
+    "no_signature": true,
+    "no_broadcast": true,
+    "paper_ready_not_real_authorization": true,
+    "wallet_support_not_buy_signal": true,
+    "review_no_direct_rule_mutation": true
+  },
+  "forbidden_actions": [
+    "real_swap",
+    "private_key_read_write_store",
+    "signature",
+    "broadcast",
+    "auto_production_trading",
+    "review_direct_rule_mutation"
+  ],
+  "final_status": "PAPER_ONLY_BOUNDARY_ACCEPTANCE_READY"
+}

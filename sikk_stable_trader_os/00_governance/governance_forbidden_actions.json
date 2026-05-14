@@ -1,0 +1,15 @@
+{
+  "forbidden_actions": [
+    "LIVE_EXECUTE",
+    "AUTO_BUY",
+    "AUTO_SELL",
+    "AI_INFER_FACT_FIELD",
+    "SKIP_P00",
+    "SKIP_P01",
+    "SKIP_ACCEPTANCE_GATE",
+    "SKIP_HANDOFF_PACKET",
+    "BYPASS_RISK_CONTROL",
+    "UNREGISTERED_ATOMIC_SKILL_CALL",
+    "REVIEW_DIRECT_RULE_MUTATION"
+  ]
+}

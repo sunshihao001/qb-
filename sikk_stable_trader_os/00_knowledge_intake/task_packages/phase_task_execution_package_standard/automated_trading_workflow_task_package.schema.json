@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Automated Trading Workflow Data Model Task Package v1",
+  "type": "object",
+  "required": [
+    "task_package_id",
+    "package_type",
+    "workflow_type",
+    "safety_boundary",
+    "phase_sequence",
+    "data_model_flow",
+    "stage_tasks",
+    "execution_policy",
+    "acceptance_policy",
+    "gap_policy",
+    "next_action"
+  ],
+  "properties": {
+    "task_package_id": {
+      "type": "string"
+    },
+    "package_type": {
+      "const": "AUTOMATED_TRADING_WORKFLOW_DATA_MODEL_TASK_PACKAGE"
+    },
+    "workflow_type": {
+      "const": "CA_FIRST_PAPER_ONLY_AUTOMATION"
+    },
+    "safety_boundary": {
+      "type": "object",
+      "required": [
+        "paper_only",
+        "real_trade_enabled",
+        "signing_enabled",
+        "broadcast_enabled",
+        "auto_swap_enabled",
+        "secret_access"
+      ],
+      "properties": {
+        "paper_only": {
+          "const": true
+        },
+        "real_trade_enabled": {
+          "const": false
+        },
+        "signing_enabled": {
+          "const": false
+        },
+        "broadcast_enabled": {
+          "const": false
+        },
+        "auto_swap_enabled": {
+          "const": false
+        },
+        "secret_access": {
+          "const": "not_requested_not_used"
+        }
+      }
+    },
+    "phase_sequence": {
+      "type": "array",
+      "minItems": 11,
+      "items": {
+        "type": "string"
+      }
+    },
+    "data_model_flow": {
+      "type": "array",
+      "minItems": 9
+    },
+    "stage_tasks": {
+      "type": "array",
+      "minItems": 11,
+      "items": {
+        "type": "object",
+        "required": [
+          "stage_id",
+          "phase",
+          "objective",
+          "required_outputs",
+          "acceptance_checks",
+          "stop_conditions",
+          "next_stage_on_pass",
+          "handoff_output"
+        ]
+      }
+    },
+    "execution_policy": {
+      "type": "object"
+    },
+    "acceptance_policy": {
+      "type": "object"
+    },
+    "gap_policy": {
+      "type": "object"
+    },
+    "next_action": {
+      "type": "string"
+    }
+  }
+}

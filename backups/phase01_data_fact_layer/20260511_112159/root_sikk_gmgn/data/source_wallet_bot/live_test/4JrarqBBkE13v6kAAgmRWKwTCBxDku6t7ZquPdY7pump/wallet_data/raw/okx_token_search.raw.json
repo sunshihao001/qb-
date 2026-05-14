@@ -1,0 +1,42 @@
+{
+  "source": "okx",
+  "endpoint": "token_search",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "search",
+    "--query",
+    "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+    "--chains",
+    "501"
+  ],
+  "started_at": "2026-05-11T10:29:11Z",
+  "finished_at": "2026-05-11T10:29:12Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "chainIndex": "501",
+        "change": "17513.1",
+        "cursor": "0",
+        "decimal": "6",
+        "explorerUrl": "https://web3.okx.com/explorer/solana/token/4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+        "holders": "1654",
+        "liquidity": "82949.8433700872235969178525559810491204930198141",
+        "marketCap": "485531.658089955858671492",
+        "price": "0.0004855441992090034687472651469561984",
+        "tagList": {
+          "communityRecognized": false
+        },
+        "tokenContractAddress": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+        "tokenLogoUrl": "https://static.oklink.com/cdn/web3/currency/token/large/501-4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump-109/type=default_90_0?v=1778486707278",
+        "tokenName": "LobsterCoin",
+        "tokenSymbol": "LOBSTER"
+      }
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "contract_name": "phase_01_data_fact_output_contract",
+  "contract_version": "2.1",
+  "phase": "phase_01_data_fact",
+  "required_outputs": {
+    "snapshot_manifest": {
+      "path": "raw_snapshot/snapshot_manifest.json",
+      "purpose": "原始快照记录；保留原始输入来源、哈希、时间与缺失 raw",
+      "downstream_reader": "phase_08_review_learning,audit"
+    },
+    "raw_file_inventory": {
+      "path": "raw_inventory/raw_file_inventory.csv",
+      "purpose": "原始文件清单；记录存在/缺失/大小/来源",
+      "downstream_reader": "audit,phase_02_wallet_structure"
+    },
+    "field_mapping_table": {
+      "path": "field_mapping/field_mapping_table.csv",
+      "purpose": "字段映射表；raw 字段到 normalized 字段的证据链",
+      "downstream_reader": "phase_02_wallet_structure,audit"
+    },
+    "token_basic_normalized": {
+      "path": "normalized/token_basic_normalized.json",
+      "purpose": "Token 基础标准事实",
+      "schema": "schemas/data_fact/token_basic_normalized.schema.json",
+      "downstream_reader": "phase_02_wallet_structure"
+    },
+    "token_market_context": {
+      "path": "normalized/token_market_context.json",
+      "purpose": "市值、流动性与基础市场上下文事实",
+      "schema": "schemas/data_fact/token_market_context.schema.json",
+      "downstream_reader": "phase_02_wallet_structure"
+    },
+    "wallet_trade_normalized": {
+      "path": "normalized/wallet_trade_normalized.csv",
+      "purpose": "钱包交易标准事实",
+      "schema": "schemas/data_fact/wallet_trade_normalized.schema.json",
+      "downstream_reader": "phase_02_wallet_structure"
+    },
+    "holder_normalized": {
+      "path": "normalized/holder_normalized.csv",
+      "purpose": "Holder 标准事实",
+      "schema": "schemas/data_fact/holder_normalized.schema.json",
+      "downstream_reader": "phase_02_wallet_structure"
+    },
+    "top_trader_normalized": {
+      "path": "normalized/top_trader_normalized.csv",
+      "purpose": "Top trader 补充事实；可 missing/degraded",
+      "schema": "schemas/data_fact/top_trader_normalized.schema.json",
+      "downstream_reader": "phase_02_wallet_structure",
+      "optional_for_p02": true
+    },
+    "transfer_normalized": {
+      "path": "normalized/transfer_normalized.csv",
+      "purpose": "Transfer 补充事实；缺失不得推断无分发",
+      "schema": "schemas/data_fact/transfer_normalized.schema.json",
+      "downstream_reader": "phase_02_wallet_structure",
+      "optional_for_p02": true
+    },
+    "kline_normalized": {
+      "path": "normalized/kline_normalized.csv",
+      "purpose": "K线标准事实",
+      "schema": "schemas/data_fact/kline_normalized.schema.json",
+      "downstream_reader": "phase_04_scenario_recognition"
+    },
+    "quote_security_normalized": {
+      "path": "normalized/quote_security_normalized.json",
+      "purpose": "报价与安全标准事实；后续执行风险使用，不在 P01 输出交易判断",
+      "schema": "schemas/data_fact/quote_security_normalized.schema.json",
+      "downstream_reader": "phase_07_execution_risk"
+    },
+    "data_quality_summary": {
+      "path": "quality/data_quality_summary.json",
+      "purpose": "数据质量状态、降级/阻断原因、missing 汇总",
+      "schema": "schemas/data_fact/data_quality_summary.schema.json",
+      "downstream_reader": "phase_02_wallet_structure"
+    },
+    "time_validity_report": {
+      "path": "quality/time_validity_report.json",
+      "purpose": "时间有效性检查；DATA_STALE/HANDOFF_REFRESH_REQUIRED 判定依据",
+      "downstream_reader": "phase_02_wallet_structure"
+    },
+    "missing_fields_report": {
+      "path": "reports/missing_fields_report.md",
+      "purpose": "缺失字段报告；required/optional 区分与阻断/降级动作",
+      "downstream_reader": "audit,phase_02_wallet_structure"
+    },
+    "phase_01_handoff_packet": {
+      "path": "handoff/phase_01_handoff_packet.json",
+      "purpose": "交接给 phase_02 的唯一阶段包",
+      "schema": "schemas/shared_handoff/phase_handoff_packet.schema.json",
+      "downstream_reader": "phase_02_wallet_structure"
+    },
+    "audit_report": {
+      "path": "audit/audit_report.md",
+      "purpose": "阶段执行审计；回答读取/缺失/输出/反证/硬否决/下游交接",
+      "downstream_reader": "phase_00_system_constitution,phase_08_review_learning"
+    },
+    "run_manifest": {
+      "path": "manifest/run_manifest.json",
+      "purpose": "运行清单；记录输出文件、hash、状态、gaps",
+      "downstream_reader": "audit"
+    }
+  },
+  "p02_minimum_handoff_required_files": [
+    "handoff/phase_01_handoff_packet.json",
+    "quality/data_quality_summary.json",
+    "normalized/token_basic_normalized.json",
+    "normalized/token_market_context.json",
+    "normalized/wallet_trade_normalized.csv",
+    "normalized/holder_normalized.csv"
+  ],
+  "p02_optional_handoff_files": [
+    "normalized/top_trader_normalized.csv",
+    "normalized/transfer_normalized.csv"
+  ],
+  "handoff_to": "phase_02_wallet_structure",
+  "shared_handoff_path": "data/shared_handoff/data_fact/<token>/phase_01_handoff_packet.json",
+  "orphan_output_policy": "REJECT",
+  "forbidden_outputs": [
+    "wallet_role_classification",
+    "same_source_groups",
+    "distribution_paths",
+    "backflow_paths",
+    "chip_control_decision",
+    "scenario_decision",
+    "strategy_gate_decision",
+    "PAPER_READY",
+    "buy_signal"
+  ]
+}

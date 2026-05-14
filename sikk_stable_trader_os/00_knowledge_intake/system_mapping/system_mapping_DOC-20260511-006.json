@@ -1,0 +1,24 @@
+{
+  "doc_id": "DOC-20260511-006",
+  "material_type": "P00 landing and acceptance task spec",
+  "target_controller": "P00_system_bootstrap_controller",
+  "affected_planes": [
+    "Control Plane",
+    "Trace Plane",
+    "Acceptance Plane",
+    "Handoff Plane",
+    "Execution Plane"
+  ],
+  "affected_phases": [
+    "K00",
+    "P00",
+    "P01"
+  ],
+  "must_not": [
+    "start_P01",
+    "run_auto_trading",
+    "enable_real_trade",
+    "downgrade_bootstrap_passed_state"
+  ],
+  "status": "SYSTEM_MAPPING_READY"
+}

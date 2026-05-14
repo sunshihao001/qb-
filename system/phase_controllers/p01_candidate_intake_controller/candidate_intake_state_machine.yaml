@@ -1,0 +1,36 @@
+p01_candidate_intake_state_machine:
+  states:
+  - P01_UNINITIALIZED
+  - P01_CONTEXT_LOADED
+  - P01_HANDOFF_READ
+  - P01_INPUT_RECEIVED
+  - P01_SOURCE_REGISTERED
+  - P01_RAW_INPUT_SAVED
+  - P01_IDENTITY_NORMALIZED
+  - P01_IDENTITY_VERIFIED
+  - P01_IDENTITY_CONFLICTED
+  - P01_DEDUP_RUNNING
+  - P01_DEDUP_COMPLETED
+  - P01_DISCOVERY_CONTEXT_BUILT
+  - P01_GAP_ANALYZED
+  - P01_QUALITY_SCORED
+  - P01_P02_DATA_REQUEST_BUILT
+  - P01_READY_FOR_ACCEPTANCE
+  - P01_ACCEPTANCE_READY
+  - P01_READY_FOR_P02_HANDOFF
+  - P01_READY_WITH_GAPS
+  - P01_REJECTED
+  - P01_BLOCKED
+  transitions:
+  - from: P01_INPUT_RECEIVED
+    to: P01_SOURCE_REGISTERED
+    condition: source_type_present == true
+  - from: P01_IDENTITY_VERIFIED
+    to: P01_DEDUP_RUNNING
+    condition: candidate_id_generated == true
+  - from: P01_QUALITY_SCORED
+    to: P01_P02_DATA_REQUEST_BUILT
+    condition: p02_data_request_packet_created == true
+  - from: P01_ACCEPTANCE_READY
+    to: P01_READY_FOR_P02_HANDOFF
+    condition: p01_to_p02_handoff_packet_created == true

@@ -1,0 +1,7 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+trace_id: P08_TRACE_REQUIREMENTS
+required_traces: [execution_input_trace, quote_trace, quote_consistency_trace, liquidity_trace, slippage_trace, cost_model_trace, security_trace, sellability_trace, freshness_trace, invalidation_trace, runtime_risk_limit_trace, position_uniqueness_trace, circuit_breaker_trace, permission_trace, handoff_trace]
+each_record_must_include: [record_id, candidate_id, generated_at_or_checked_at, source_trace_ids]
+forbidden_trace_gap: handoff_without_acceptance

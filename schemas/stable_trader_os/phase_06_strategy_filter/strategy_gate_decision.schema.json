@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase06StrategyGateDecision",
+  "type": "object",
+  "required": [
+    "phase",
+    "input_status",
+    "strategy_gate_status",
+    "a_plus_structure_pass",
+    "p1_position_pass",
+    "hard_negative_triggered",
+    "hard_negative_reasons",
+    "missing_fields",
+    "invalidation_conditions",
+    "required_execution_checks",
+    "allowed_next_stage",
+    "block_reason"
+  ],
+  "properties": {
+    "phase": {"const": "phase_06_strategy_gate_controller"},
+    "input_status": {"enum": ["PHASE_06_INPUT_READY", "PHASE_06_INPUT_DEGRADED", "PHASE_06_INPUT_BLOCKED"]},
+    "strategy_gate_status": {"enum": ["A_PLUS_P1_PASS", "PAPER_READY", "READY_FOR_CONFIRMATION", "STRATEGY_PAUSE", "STRATEGY_BLOCK", "REVIEW_ONLY"]},
+    "a_plus_structure_pass": {"type": "boolean"},
+    "p1_position_pass": {"type": "boolean"},
+    "hard_negative_triggered": {"type": "boolean"},
+    "hard_negative_reasons": {"type": "array", "items": {"type": "string"}},
+    "missing_fields": {"type": "array", "items": {"type": "string"}},
+    "invalidation_conditions": {"type": "array", "items": {"type": "string"}},
+    "required_execution_checks": {"type": "array", "items": {"type": "string"}},
+    "allowed_next_stage": {"type": "string"},
+    "block_reason": {"type": "string"}
+  }
+}

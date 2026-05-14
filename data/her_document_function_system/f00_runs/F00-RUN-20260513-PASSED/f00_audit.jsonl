@@ -1,0 +1,2 @@
+{"timestamp": "2026-05-13T14:53:53+00:00", "audit_type": "safe_mode_guard", "safe_mode": true, "forbidden_runtime_modes": ["live_runtime", "wallet_signing", "auto_deploy", "production_rule_direct_change"]}
+{"timestamp": "2026-05-13T14:53:53+00:00", "audit_type": "safe_scope_and_acceptance_gate", "result": "PASSED", "errors": [], "forbidden_runtime_modes": ["live_runtime", "wallet_signing", "auto_deploy", "production_rule_direct_change"]}

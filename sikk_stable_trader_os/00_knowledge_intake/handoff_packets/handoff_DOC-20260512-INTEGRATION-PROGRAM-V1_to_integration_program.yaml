@@ -1,0 +1,10 @@
+packet_id: K00_TO_INTEGRATION_PROGRAM_DOC-20260512-INTEGRATION-PROGRAM-V1
+generated_at: 2026-05-12T11:16:47+00:00
+from: K00_knowledge_intake_taskization
+to: Integration Program / I01_full_phase_consistency_audit
+source_doc_id: DOC-20260512-INTEGRATION-PROGRAM-V1
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-INTEGRATION-PROGRAM-V1_系统集成落地阶段.md
+passport_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260512-INTEGRATION-PROGRAM-V1.yaml
+task_package_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/integration_program/I01_full_phase_consistency_audit
+recommended_next_action: Execute I01 audit, do not start I03 runner/tool binding before I01/I02 acceptance.
+restrictions: ["NO_P11_P12_P13_BUSINESS_PHASE_CREATION", "NO_RUNNER_BINDING_BEFORE_I01_I02", "NO_PAPER_RUNTIME_TRIGGER", "NO_LIVE_EXECUTION", "NO_WALLET_SIGNING", "NO_AUTO_DEPLOY"]

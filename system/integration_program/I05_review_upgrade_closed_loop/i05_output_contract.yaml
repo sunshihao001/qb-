@@ -1,0 +1,27 @@
+i05_output_contract:
+  required_runtime_outputs:
+    - i05_closed_loop_input_manifest
+    - i04_runtime_output_ingestion_record
+    - review_case_selection_record
+    - p09_replay_execution_record
+    - p09_decision_chain_replay_validation_record
+    - p09_runtime_path_replay_validation_record
+    - attribution_validation_record
+    - calibration_candidate_validation_record
+    - p09_to_p10_data_request_validation_record
+    - p10_upgrade_input_ingestion_record
+    - upgrade_candidate_review_validation_record
+    - sample_support_overfit_validation_record
+    - controlled_upgrade_package_validation_record
+    - regression_plan_validation_record
+    - release_rollback_validation_record
+    - upgrade_safety_boundary_validation_record
+    - closed_loop_trace_integrity_record
+    - closed_loop_handoff_integrity_record
+    - closed_loop_acceptance_integrity_record
+    - closed_loop_defect_records
+    - system_maturity_scorecard
+    - paper_operation_readiness_record
+    - next_iteration_task_packet
+    - i05_final_integration_report
+    - i05_closed_loop_acceptance_result

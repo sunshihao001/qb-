@@ -1,0 +1,12 @@
+{
+  "phase_id": "A00_REAL_ACCEPTANCE",
+  "state": "DESIGN_BLUEPRINT_READY",
+  "real_execution_status": "NOT_EXECUTED",
+  "last_acceptance_run_id": null,
+  "forbidden_claims_blocked": [
+    "PIPELINE_ACCEPTED",
+    "POLICY_ACTIVE",
+    "PRODUCTION_READY",
+    "LIVE_READY"
+  ]
+}

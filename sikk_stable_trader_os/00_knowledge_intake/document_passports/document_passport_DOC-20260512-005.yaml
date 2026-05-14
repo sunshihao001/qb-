@@ -1,0 +1,48 @@
+doc_id: DOC-20260512-005
+source_type: user_uploaded_markdown
+source_name: P05专业版 v3.0❤️.md
+received_at: '2026-05-12'
+ingested_at: '2026-05-12T02:42:52Z'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-005_p05_evidence_controller_v3.md
+sha256: 7e3f4bd0e8210f27dfb19622320c3b08a93aba9b94bbf2d037274ea9ef862860
+document_role:
+  primary_role: P05 Evidence Controller professional package specification
+  secondary_roles:
+  - evidence object system
+  - counter evidence and conflict model
+  - P05 to P06 handoff contract
+  - phase controller candidate spec
+summary:
+  core_intent: 将 P05 从证据摘要模块升级为证据对象、反证、冲突、未知、替代解释、证据束与 P06 场景识别交接控制器。
+  key_points:
+  - P05 只生成 evidence objects，不识别 scenario
+  - 每条证据必须绑定 hypothesis frame、source trace 与 field trace
+  - 支持证据必须检查反证，冲突与 UNKNOWN 必须显式登记
+  - P05 生成 P06 Scenario Data Request Packet 与 P05→P06 Handoff Packet
+  - 禁止 strategy signal、paper_ready、paper runtime、live execution
+system_mapping:
+  planes:
+  - Knowledge Plane
+  - Control Plane
+  - Trace Plane
+  - Acceptance Plane
+  - Handoff Plane
+  - Domain Plane
+  - Data Plane
+  affected_phases:
+  - K00
+  - P05
+  - P06
+  - P07
+  - P08
+  - P09
+  - P10
+required_actions:
+- assetize_source
+- land_p05_controller_package
+- create_p05_runtime_data_tree
+- update_control_state
+- register_asset_index
+- validate_safety_boundaries
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

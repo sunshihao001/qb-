@@ -1,0 +1,63 @@
+{
+  "phase_id": "P05",
+  "controller_id": "P05_EVIDENCE_CONTROLLER",
+  "controller_name_cn": "证据与反证生成控制器",
+  "primary_responsibility": "将可追踪、已交接的数据事实、钱包实体、筹码状态、市场结构转化为证据、反证、未知和冲突对象。",
+  "required_handoff": [
+    "p04_chip_structure_handoff_packet",
+    "p03_wallet_entity_handoff_packet",
+    "p02_source_data_fact_handoff_packet",
+    "trace_handoff_packet",
+    "field_usage_permission_packet",
+    "limitation_transfer_packet"
+  ],
+  "outputs": [
+    "evidence_objects.json",
+    "counter_evidence_objects.json",
+    "evidence_summary.json",
+    "uncertainty_tags.json",
+    "p05_evidence_handoff_packet.yaml"
+  ],
+  "required_trace": [
+    "PHASE_TRACE",
+    "TASK_TRACE",
+    "ARTIFACT_TRACE",
+    "CONTRACT_TRACE",
+    "FIELD_TRACE",
+    "EVENT_TRACE",
+    "EVIDENCE_REF_TRACE",
+    "STATE_TRACE"
+  ],
+  "acceptance_gate": "GATE_P05_EVIDENCE_CONTROLLER_READY",
+  "tool_binding_policy": {
+    "allowed": true,
+    "mode": [
+      "READ_ONLY_ANALYSIS",
+      "TEST_ONLY"
+    ],
+    "allowed_tools": [
+      "evidence_builder",
+      "counter_evidence_builder",
+      "uncertainty_tagger"
+    ],
+    "forbidden_tools": [
+      "strategy_gate_runner",
+      "paper_trade_runner",
+      "trade_executor"
+    ]
+  },
+  "paper_runtime_policy": {
+    "allowed": false,
+    "reason": "证据阶段只生成证据对象，不能进入纸面运行。"
+  },
+  "forbidden": [
+    "classify_final_scenario_without_scenario_controller",
+    "output_strategy_gate_decision",
+    "output_paper_ready",
+    "upgrade_weak_evidence_to_strong_without_permission",
+    "ignore_counter_evidence",
+    "use_untraced_fields"
+  ],
+  "status": "INDEXED_NOT_EXPANDED",
+  "runtime_allowed": false
+}

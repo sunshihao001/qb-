@@ -1,0 +1,23 @@
+phase_id: K02
+phase_name: "Semantic Chunking & Concept Extraction"
+program: KNOWLEDGE_PROCESSING_PROGRAM
+status: CONTROLLER_CANDIDATE_READY
+purpose: "semantic chunks, concepts, methods, assumptions, constraints, gaps"
+required_inputs:
+  - upstream_handoff_or_raw_document
+required_outputs:
+  - semantic_chunk_index.yaml
+  - concept_registry.yaml
+  - method_principle_registry.yaml
+  - assumption_registry.yaml
+  - constraint_registry.yaml
+  - unknown_gap_registry.yaml
+acceptance:
+  - outputs_exist
+  - source_trace_present
+  - io_contract_declared
+  - handoff_declared
+forbidden:
+  - production_mutation_without_governance
+  - summary_only_completion
+  - untraced_claims

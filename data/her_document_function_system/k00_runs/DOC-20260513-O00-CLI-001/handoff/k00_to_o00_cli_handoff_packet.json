@@ -1,0 +1,47 @@
+{
+  "from_phase": "K00",
+  "to_phase": "O00",
+  "doc_id": "DOC-20260513-O00-CLI-001",
+  "status": "K00_ACCEPTED",
+  "handoff_status": "HANDOFF_READY",
+  "required_inputs": {
+    "document_passport_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-O00-CLI-001/document_passports/document_passport_DOC-20260513-O00-CLI-001.yaml"
+    ],
+    "corpus_index_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-O00-CLI-001/corpus_index/corpus_index.json"
+    ],
+    "system_mapping_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-O00-CLI-001/system_mapping/system_mapping.json"
+    ],
+    "gap_detection_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-O00-CLI-001/gap_detection/gap_detection.json"
+    ],
+    "task_package_refs": [
+      "/root/sikk-gmgn/data/her_document_function_system/k00_runs/DOC-20260513-O00-CLI-001/task_packages/o00_cli_sample_replay_task_package.md"
+    ]
+  },
+  "execution_boundary": {
+    "allow_write_files": true,
+    "allow_run_tests": true,
+    "allow_safe_dry_run": true,
+    "allow_live_runtime": false,
+    "allow_wallet_signing": false,
+    "allow_auto_deploy": false,
+    "allow_production_trading": false
+  },
+  "write_policy": {
+    "allowed_roots": [
+      "/root/sikk-gmgn/system/her_document_function_system",
+      "/root/sikk-gmgn/data/her_document_function_system",
+      "/root/sikk-gmgn/tools",
+      "/root/sikk-gmgn/tests"
+    ],
+    "forbidden_roots": [
+      "production",
+      "wallet",
+      "live_runtime"
+    ]
+  },
+  "repo_root": "/root/sikk-gmgn"
+}

@@ -1,0 +1,50 @@
+{
+  "mode": "read_only_plan",
+  "chain": "sol",
+  "token_address_placeholder": "<token_address>",
+  "commands": [
+    {
+      "source": "gmgn-market",
+      "purpose": "候选发现/新币池",
+      "cmd": "gmgn-cli market trenches --chain sol --type new_creation --type near_completion --type completed --filter-preset safe --limit 80 --raw"
+    },
+    {
+      "source": "gmgn-market",
+      "purpose": "趋势发现",
+      "cmd": "gmgn-cli market trending --chain sol --interval 5m --order-by volume --limit 50 --raw"
+    },
+    {
+      "source": "gmgn-token",
+      "purpose": "token 基础/安全/池子",
+      "cmd": "gmgn-cli token info --chain sol --address <token_address> --raw && gmgn-cli token security --chain sol --address <token_address> --raw && gmgn-cli token pool --chain sol --address <token_address> --raw"
+    },
+    {
+      "source": "gmgn-token",
+      "purpose": "holder/trader 行为",
+      "cmd": "gmgn-cli token holders --chain sol --address <token_address> --limit 100 --raw && gmgn-cli token traders --chain sol --address <token_address> --limit 100 --raw"
+    },
+    {
+      "source": "okx-dex-token",
+      "purpose": "价格/LP/风险元数据",
+      "cmd": "onchainos token price-info --address <token_address> && onchainos token liquidity --address <token_address> && onchainos token advanced-info --address <token_address>"
+    },
+    {
+      "source": "okx-dex-token",
+      "purpose": "holder cluster/top trader",
+      "cmd": "onchainos token cluster-overview --address <token_address> && onchainos token cluster-top-holders --address <token_address> --range-filter 1 && onchainos token top-trader --address <token_address>"
+    },
+    {
+      "source": "okx-dex-ws",
+      "purpose": "实时流准备，不默认启动长连接",
+      "cmd": "onchainos ws channels && onchainos ws channel-info --channel dex-market-memepump-new-token-openapi"
+    }
+  ],
+  "blocked_commands": [
+    "gmgn-cli swap",
+    "onchainos swap",
+    "broadcast",
+    "sign",
+    "send transaction"
+  ],
+  "handoff_rule": "所有 collector raw 输出必须先转 StageOutput，再经 shared_verification PASS，才能进入状态机。"
+}

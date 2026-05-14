@@ -1,0 +1,16 @@
+{
+  "doc_id": "DOC-20260512-INTEGRATION-PROGRAM-V1",
+  "gap_status": "GAPS_IDENTIFIED_FOR_INTEGRATION_LANDING",
+  "blocking_gaps": [],
+  "high_priority_gaps": [
+    "Integration Program control root not yet fully established before this intake",
+    "I01 task package needs to be created and accepted before I02-I05",
+    "P01-P10 consistency audit has not yet been executed against actual artifacts"
+  ],
+  "deferred_gaps": [
+    "Runner/tool binding implementation deferred until I01/I02 acceptance",
+    "Paper-only runtime integration deferred until I03 binding acceptance",
+    "P09/P10 closed-loop replay deferred until paper runtime outputs exist"
+  ],
+  "recommended_next_task": "CREATE_I01_FULL_PHASE_CONSISTENCY_AUDIT_TASK_PACKAGE"
+}

@@ -1,0 +1,145 @@
+{
+  "task_package_id": "TASKPACK-20260514-PROFESSIONAL-BASELINE-P0",
+  "source_doc_id": "DOC-20260514-PROFESSIONAL-REQ-001",
+  "trigger_route": [
+    "HER_DOC_SYSTEM_REVIEW",
+    "HER_DOC_SYSTEM_AUDIT",
+    "HER_DOC_PIPELINE"
+  ],
+  "objective": "把专业化需求清单转换为 SIKK 交易结构系统的目标认知、gap matrix、P0 修复任务队列和安全落地证据。",
+  "execution_order": [
+    "K00_assetization",
+    "system_review",
+    "system_audit",
+    "safe_mode_pipeline",
+    "verification",
+    "handoff_to_R00_I03_I04_repair_queue"
+  ],
+  "tasks": [
+    {
+      "task_id": "TASK-GOAL_MAPPING",
+      "priority": "P0",
+      "title": "create goal mapping registries and hard negative rules",
+      "target_axis": "GOAL_MAPPING",
+      "route": "HER_AUTO_REPAIR",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-METHOD_LOOP_MAPPING",
+      "priority": "P0",
+      "title": "create method_loop_gap_matrix and acceptance gate",
+      "target_axis": "METHOD_LOOP_MAPPING",
+      "route": "HER_AUTO_REPAIR",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-DATA_STANDARD",
+      "priority": "P0",
+      "title": "create data source/field lineage/quality/permission/freshness policies",
+      "target_axis": "DATA_STANDARD",
+      "route": "HER_AUTO_REPAIR",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-SCHEMA_CONTRACT",
+      "priority": "P0",
+      "title": "create contract index and missing schema queue",
+      "target_axis": "SCHEMA_CONTRACT",
+      "route": "HER_AUTO_REPAIR",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-TRACE_ACCEPTANCE_HANDOFF",
+      "priority": "P0",
+      "title": "create handoff consumption check + runtime acceptance runner",
+      "target_axis": "TRACE_ACCEPTANCE_HANDOFF",
+      "route": "HER_AUTO_REPAIR",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-RUNNER_TOOL_BINDING",
+      "priority": "P0",
+      "title": "create 07_runners registry/binding/failure policies",
+      "target_axis": "RUNNER_TOOL_BINDING",
+      "route": "HER_AUTO_REPAIR",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-R00_RUNTIME",
+      "priority": "P0",
+      "title": "create runtime blocker matrix/run manifest/token case schema",
+      "target_axis": "R00_RUNTIME",
+      "route": "HER_AUTO_REPAIR",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-P08_PAPER_GATE",
+      "priority": "P0",
+      "title": "create P08 permission schema and enforcement checks",
+      "target_axis": "P08_PAPER_GATE",
+      "route": "HER_AUTO_REPAIR",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-P09_P10_LOOP",
+      "priority": "P1",
+      "title": "create P09/P10 handoff and upgrade candidate package",
+      "target_axis": "P09_P10_LOOP",
+      "route": "HER_BUILD_TASK",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-ISSUE_TASK_PACKET",
+      "priority": "P0",
+      "title": "create issue registry schema and auto repair packet",
+      "target_axis": "ISSUE_TASK_PACKET",
+      "route": "HER_AUTO_REPAIR",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-LEGACY_ABSORPTION",
+      "priority": "P1",
+      "title": "create legacy absorption matrix",
+      "target_axis": "LEGACY_ABSORPTION",
+      "route": "HER_BUILD_TASK",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-TEST_REGRESSION",
+      "priority": "P1",
+      "title": "create runtime/regression/shadow test matrices",
+      "target_axis": "TEST_REGRESSION",
+      "route": "HER_BUILD_TASK",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "TASK-SAFETY_BOUNDARY",
+      "priority": "P0",
+      "title": "create/verify no-live/no-sign/no-broadcast policies",
+      "target_axis": "SAFETY_BOUNDARY",
+      "route": "HER_AUTO_REPAIR",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    }
+  ],
+  "safety_boundaries": {
+    "no_live_execution": true,
+    "no_wallet_signing": true,
+    "no_auto_order": true,
+    "no_auto_deploy": true,
+    "no_direct_rule_mutation": true,
+    "paper_only_enforced": true
+  }
+}

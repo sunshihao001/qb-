@@ -1,0 +1,26 @@
+{
+  "acceptance_id": "g00_real_policy_acceptance_g00_real_policy_20260514_0024",
+  "final_status": "G00_REAL_GOVERNANCE_POLICY_REGISTRY_READY_WITH_GAPS",
+  "candidate_status": "GOVERNANCE_CANDIDATES_CLASSIFIED",
+  "conflict_status": "POLICY_CONFLICT_CHECK_PASSED_WITH_GAPS",
+  "registry_status": "REGISTRY_READY_WITH_GAPS",
+  "policy_bundle_status": "LOCAL_ACTIVE_WITH_GAPS",
+  "system_enforcement_status": "NOT_YET_VERIFIED",
+  "reason": "U00 governance candidates were converted into versioned governance policies and registry. Policies are locally active for G00 handoff, but downstream controller consumption and run-document validation are not yet verified.",
+  "ready_for_o00": true,
+  "ready_for_all_controller_policy_handoff": true,
+  "ready_for_production": false,
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "downstream_policy_consumption_not_verified",
+    "run_document_safe_mode_not_validated_with_active_policy",
+    "multi_run_policy_stability_not_verified"
+  ],
+  "forbidden_claims_blocked": [
+    "SYSTEM_GOVERNANCE_ENFORCED",
+    "PIPELINE_ACCEPTED",
+    "PRODUCTION_READY",
+    "LIVE_READY",
+    "SYSTEM_FULLY_IMPLEMENTED"
+  ]
+}

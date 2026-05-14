@@ -1,0 +1,40 @@
+{
+  "handoff_id": "handoff_H00-P01-AUTO-FULL-20260514-001_to_u00",
+  "from_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+  "to_phase": "U00_REVIEW_UPGRADE",
+  "handoff_type": "QUEUE_TO_U00",
+  "source_acceptance_run_id": "A00-P01-AUTO-FULL-20260514-001",
+  "readiness_certificate_refs": [
+    "certificate/readiness_certificate.json"
+  ],
+  "real_evidence_bundle_refs": [
+    "evidence_bundle/real_evidence_bundle.json"
+  ],
+  "gap_refs": [
+    "policy_not_active",
+    "paper_runtime_not_enabled",
+    "live_runtime_forbidden",
+    "telegram_binding_design_only",
+    "V00_READY_WITH_GAPS",
+    "R00_READY_WITH_GAPS"
+  ],
+  "queue_item_refs": [
+    "queue_h00_u00_review_gaps"
+  ],
+  "required_next_action": "build_review_cases_and_upgrade_queue",
+  "allowed_next_actions": [
+    "load_handoff",
+    "classify_inputs",
+    "write_target_outputs"
+  ],
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ],
+  "handoff_status": "HANDOFF_READY_WITH_GAPS",
+  "policy_status": null,
+  "downstream_executed": false
+}

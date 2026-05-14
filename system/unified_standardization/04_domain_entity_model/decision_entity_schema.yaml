@@ -1,0 +1,23 @@
+meta:
+  standard_id: S00_DECISION_ENTITY_SCHEMA
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+entity: decision
+required_fields:
+- decision_id
+- phase_id
+- token_id
+- decision_status
+- evidence_refs
+- counter_evidence_refs
+- acceptance_ref
+schema_version: 0.1.0
+validation: R00 schema validation pending

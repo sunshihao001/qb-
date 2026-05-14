@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "phase",
+    "token_address",
+    "snapshot_id",
+    "chip_control_status",
+    "dominant_side_status",
+    "chip_transfer_status",
+    "handoff_files",
+    "phase_04_required_context",
+    "allowed_next_stage",
+    "handoff_status",
+    "block_reason",
+    "degrade_reason"
+  ],
+  "properties": {
+    "phase": {},
+    "token_address": {},
+    "snapshot_id": {},
+    "chip_control_status": {},
+    "dominant_side_status": {},
+    "chip_transfer_status": {},
+    "handoff_files": {},
+    "phase_04_required_context": {},
+    "allowed_next_stage": {},
+    "handoff_status": {},
+    "block_reason": {},
+    "degrade_reason": {}
+  }
+}

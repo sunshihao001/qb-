@@ -1,0 +1,25 @@
+{
+  "phase": "phase_07_execution_risk_controller",
+  "required_outputs": [
+    "execution_fact/strategy_execution_context.json",
+    "execution_check/signal_freshness_check.json",
+    "execution_check/quote_check_result.json",
+    "execution_check/security_check_result.json",
+    "execution_check/liquidity_check_result.json",
+    "execution_check/slippage_check_result.json",
+    "execution_check/duplicate_entry_check.json",
+    "execution_check/risk_limit_check_result.json",
+    "execution_decision/execution_risk_decision.json",
+    "execution_decision/paper_trade_decision.json",
+    "state/paper_positions_open.json",
+    "state/paper_trades.csv",
+    "state/risk_events.jsonl",
+    "handoff/phase_07_handoff_packet.json",
+    "audit/audit_report.md",
+    "audit/output_validation_report.json",
+    "audit/handoff_validation_report.json",
+    "audit/missing_fields_report.md",
+    "audit/gaps.md"
+  ],
+  "downstream_phase": "phase_08_review_learning_controller"
+}

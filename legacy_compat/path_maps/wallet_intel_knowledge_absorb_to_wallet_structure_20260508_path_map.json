@@ -1,0 +1,634 @@
+{
+  "task_id": "wallet_intel_knowledge_absorb_to_wallet_structure_20260508",
+  "created_at": "2026-05-08T02:12:36.071610+00:00",
+  "path_map": [
+    {
+      "source_relpath": "docs/intel_bot/wallet_intel_bottom_system_design_flow.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/docs/intel_bot/absorbed_from_wallet_intel/wallet_intel_bottom_system_design_flow.md",
+      "target_status": "new_target",
+      "source_sha256": "67e6595337ce58faccf7d547cc4e6bf1a202384aaf51712e05256c4b5e155fd3",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "docs/intel_bot/quantitative_structure_schema_contract.md",
+      "asset_class": "字段需求资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/docs/intel_bot/absorbed_from_wallet_intel/quantitative_structure_schema_contract.md",
+      "target_status": "new_target",
+      "source_sha256": "ce6018ea77d4ad9dc986ab8161df59cc6576e2805479d8b277dc50b98652a895",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "docs/intel_bot/wallet_intel_module_map.md",
+      "asset_class": "模块地图资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/docs/intel_bot/absorbed_from_wallet_intel/wallet_intel_module_map.md",
+      "target_status": "new_target",
+      "source_sha256": "35daaa60a57c81cf59971986598088254efb2ad40c5590dd3241f073842d0c3d",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "ACTIVE_WORKSPACE.md",
+      "asset_class": "系统边界资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/ACTIVE_WORKSPACE.md",
+      "target_status": "new_target",
+      "source_sha256": "124ac573ecb82f762a75041a377b7ad4c7380407b3d89de8df48a324e02af067",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/passports/pasted_content (5)_passport.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__passports__pasted_content (5)_passport.md",
+      "target_status": "new_target",
+      "source_sha256": "bd369655c720e0bb34fbdedc7858bc2a07e4c5a7ed5c11aa60d1c905f298c0de",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/passports/SIKK 结构地址监控工具_passport.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__passports__SIKK 结构地址监控工具_passport.md",
+      "target_status": "new_target",
+      "source_sha256": "a801472d2fab13a4ba57ae34da37b60283b58b23c30a64d92917a0277f70ab2e",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/passports/结构分析判断3_passport.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__passports__结构分析判断3_passport.md",
+      "target_status": "new_target",
+      "source_sha256": "e3f5da19dd94d5499a86da9894ed97a6e336e5b511d138be65999a189563e863",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/passports/任务说明_passport.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__passports__任务说明_passport.md",
+      "target_status": "new_target",
+      "source_sha256": "de8447b33ffdb5bf3915bb9c6fd517dd860766daa89806bffab9b4fc43967406",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/passports/结构分析判断2_passport.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__passports__结构分析判断2_passport.md",
+      "target_status": "new_target",
+      "source_sha256": "dd0bc17e2152fbeb04b18ee9c9ad166f3920c2595217f80c7fef02529743627f",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/passports/结构分析判断1_passport.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__passports__结构分析判断1_passport.md",
+      "target_status": "new_target",
+      "source_sha256": "cc11b0da88cbf05f51a2eda797016f2df5c161e859a12ba2dd8cafb652f6f453",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/passports/SIKK结构地址监控工具_替代来源_passport.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__passports__SIKK结构地址监控工具_替代来源_passport.md",
+      "target_status": "new_target",
+      "source_sha256": "783e98a1b182d376d9c6400f1c69b0b9819904b04f6b9ae2e51d748ca8957760",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/method_library/unresolved_logic.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__method_library__unresolved_logic.md",
+      "target_status": "new_target",
+      "source_sha256": "9469a55aab0ffc2c69047d654cfff4539bd97aced0538cc83c601c997b634564",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/method_library/behavior_inference_method_map.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__method_library__behavior_inference_method_map.md",
+      "target_status": "new_target",
+      "source_sha256": "3a738a31cc98584d2feb0f7e38d93f8b93b0b1f2d24703e0d4fbbe309dba9621",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/method_library/structure_judgment_logic_library.json",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__method_library__structure_judgment_logic_library.json",
+      "target_status": "new_target",
+      "source_sha256": "6c28db2380abafc017ac28158a1b80ef384ed87ed57e03cdaf36719378f60308",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/method_library/structure_judgment_logic_library.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__method_library__structure_judgment_logic_library.md",
+      "target_status": "new_target",
+      "source_sha256": "19e723d14c8f8149ceb394fb7e87e8d58a93b0edbd649c0f8a8918bd0d9049e6",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/method_library/wallet_fact_method_map.md",
+      "asset_class": "判断逻辑资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__method_library__wallet_fact_method_map.md",
+      "target_status": "new_target",
+      "source_sha256": "b7808b917e2623faaca8201f9dce62b8acddb7b9990da1763fb2fe4ef8409043",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/field_contracts/structure_analysis_field_dictionary.md",
+      "asset_class": "字段需求资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__field_contracts__structure_analysis_field_dictionary.md",
+      "target_status": "new_target",
+      "source_sha256": "d480c1552976a13cc8571094030704999a579f620b304e57f3f4360d3504ac42",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/field_contracts/structure_analysis_field_dictionary.json",
+      "asset_class": "字段需求资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__field_contracts__structure_analysis_field_dictionary.json",
+      "target_status": "new_target",
+      "source_sha256": "335bddba2d7f656c9b003c4ec01b01fe5e61fc15ac2ddb539f3c9d2890c7e6aa",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/counter_evidence/structure_counter_evidence_framework.md",
+      "asset_class": "反证规则资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__counter_evidence__structure_counter_evidence_framework.md",
+      "target_status": "new_target",
+      "source_sha256": "b9e54712644c0526a19a1de9e9f06f272d1a827ed88109594946bb8bb9d039e5",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/counter_evidence/structure_counter_evidence_rules.json",
+      "asset_class": "反证规则资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__counter_evidence__structure_counter_evidence_rules.json",
+      "target_status": "new_target",
+      "source_sha256": "537a88f38bf5f770f4b1e89e70fc53ba163abeb24dc81f9b24f0e12e8936f236",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/quant_models/dominant_cost_zone_model.md",
+      "asset_class": "量化模型资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__quant_models__dominant_cost_zone_model.md",
+      "target_status": "new_target",
+      "source_sha256": "34742edfbdb0e5d5d2fe0f928e276f4a97b3b7f48c5127d963e6182a3dfe0e70",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/quant_models/quant_model_field_contract.json",
+      "asset_class": "量化模型资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__quant_models__quant_model_field_contract.json",
+      "target_status": "new_target",
+      "source_sha256": "d3b3e544e0216780f92dee4dee7be375c1b79db6daf32c6fa64ecbac47d126a2",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/quant_models/counterparty_pressure_model.md",
+      "asset_class": "量化模型资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__quant_models__counterparty_pressure_model.md",
+      "target_status": "new_target",
+      "source_sha256": "abe3b88398b957b0a3f1cc2012c693a7a09507832c2ab5a17fedd8610be3f1da",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/quant_models/distribution_progress_model.md",
+      "asset_class": "量化模型资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__quant_models__distribution_progress_model.md",
+      "target_status": "new_target",
+      "source_sha256": "cdf39ed4f888dc348b1f63ca199dea12b95734a969edeb3370a176bc8803096d",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/quant_models/chip_inventory_model.md",
+      "asset_class": "量化模型资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__quant_models__chip_inventory_model.md",
+      "target_status": "new_target",
+      "source_sha256": "69d1959c5d447af35bd3d944410e79e596ec60b379de0d4d0edda05ddac8a049",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/quant_models/markup_motivation_model.md",
+      "asset_class": "量化模型资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__quant_models__markup_motivation_model.md",
+      "target_status": "new_target",
+      "source_sha256": "6e6680932aba014edfdfbc6213a897c2576a717cd468d77363fb666d17aa805f",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/behavior_inference/dominant_behavior_inference_template.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__behavior_inference__dominant_behavior_inference_template.md",
+      "target_status": "new_target",
+      "source_sha256": "2b597f65eab63e2cff9baff0f969830fcd2fc8f93e4c38ebaddab4e45a3023f6",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/behavior_inference/dominant_behavior_inference_rules.json",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__behavior_inference__dominant_behavior_inference_rules.json",
+      "target_status": "new_target",
+      "source_sha256": "543f570f89522c39f2902220f1d9d4f92da3f53fd6f6997718e3e890414aaaee",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/behavior_inference/behavior_reasoning_report_template.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__behavior_inference__behavior_reasoning_report_template.md",
+      "target_status": "new_target",
+      "source_sha256": "c38693387ed4c988505de06e968f67d0d85321a28288caac098c4766ce7c1908",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/output_contracts/structure_analysis_output_contract.md",
+      "asset_class": "输出模板资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__output_contracts__structure_analysis_output_contract.md",
+      "target_status": "new_target",
+      "source_sha256": "9c1ac551f490e3b8cc482042d91e787ef31e65b061f49b4a8de34d6c0a8bf639",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "research_loop/structure_analysis/output_contracts/structure_analysis_output_manifest_schema.json",
+      "asset_class": "输出模板资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/research_loop__structure_analysis__output_contracts__structure_analysis_output_manifest_schema.json",
+      "target_status": "new_target",
+      "source_sha256": "0d09707baae2f6f6973a82aedaf9767d136f9c6c665364a06a0b2049ce827441",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/constants.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/constants.py",
+      "target_status": "same_content",
+      "source_sha256": "552dfb3e6c88effe2534c00ba847ec77b0d1b22db395ec909a3b7a1a450ffd37",
+      "target_sha256": "552dfb3e6c88effe2534c00ba847ec77b0d1b22db395ec909a3b7a1a450ffd37"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/normalizer.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/normalizer.py",
+      "target_status": "same_content",
+      "source_sha256": "e0a044fdf57942c58077614300b20c2b674383017863bfe3489b1d1b3a42a254",
+      "target_sha256": "e0a044fdf57942c58077614300b20c2b674383017863bfe3489b1d1b3a42a254"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/role_classifier.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/role_classifier.py",
+      "target_status": "same_content",
+      "source_sha256": "76ba40e17d2d590b85409c9e5e07e5959c4aadea83bc0f72551829f4b2fc2b15",
+      "target_sha256": "76ba40e17d2d590b85409c9e5e07e5959c4aadea83bc0f72551829f4b2fc2b15"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/structure_inventory_calculator.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/structure_inventory_calculator.py",
+      "target_status": "same_content",
+      "source_sha256": "e0ed5339675b4406f28a815bebb51bc6374470b2a68c13713315f78f533830c6",
+      "target_sha256": "e0ed5339675b4406f28a815bebb51bc6374470b2a68c13713315f78f533830c6"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/edge_builder.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/edge_builder.py",
+      "target_status": "same_content",
+      "source_sha256": "96fe036d18c88691521c9303e133400e092bc00b975ee9bb80581a9c99625c64",
+      "target_sha256": "96fe036d18c88691521c9303e133400e092bc00b975ee9bb80581a9c99625c64"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/history_store.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/history_store.py",
+      "target_status": "same_content",
+      "source_sha256": "137f94f8eab09133cbe0b2c08efb5ae8aa6d5ef49b9b3a5fad244f3aaf2388c6",
+      "target_sha256": "137f94f8eab09133cbe0b2c08efb5ae8aa6d5ef49b9b3a5fad244f3aaf2388c6"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/dominant_cost_zone_calculator.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/dominant_cost_zone_calculator.py",
+      "target_status": "same_content",
+      "source_sha256": "06140725a49da564e9677ea421848cf323ae87c58140101abdcef839ef662305",
+      "target_sha256": "06140725a49da564e9677ea421848cf323ae87c58140101abdcef839ef662305"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/__init__.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/__init__.py",
+      "target_status": "same_content",
+      "source_sha256": "18c1191e6550f167f80c6101604d5d1dc3f2bbfc9a53ca087b288fcaf4884a00",
+      "target_sha256": "18c1191e6550f167f80c6101604d5d1dc3f2bbfc9a53ca087b288fcaf4884a00"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/models.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/models.py",
+      "target_status": "same_content",
+      "source_sha256": "202975b3ae3e04101ea60e4301212652e0689b77f2c18b93a5814277198f0887",
+      "target_sha256": "202975b3ae3e04101ea60e4301212652e0689b77f2c18b93a5814277198f0887"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/markup_motivation_calculator.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/markup_motivation_calculator.py",
+      "target_status": "same_content",
+      "source_sha256": "d8521082cc0b342652a2c779cc8900a027ed196ffa633417b90d6b3486c55a8c",
+      "target_sha256": "d8521082cc0b342652a2c779cc8900a027ed196ffa633417b90d6b3486c55a8c"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/quantitative_structure_models.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/quantitative_structure_models.py",
+      "target_status": "same_content",
+      "source_sha256": "0f60b2ba737994993f640e2840bd9633eaa543c505d7cf41bd43a9fa7fd6f2f2",
+      "target_sha256": "0f60b2ba737994993f640e2840bd9633eaa543c505d7cf41bd43a9fa7fd6f2f2"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/distribution_progress_calculator.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/distribution_progress_calculator.py",
+      "target_status": "same_content",
+      "source_sha256": "db686af712aa35fc0f04bf90c9f1ff5d97e252e06dfa2ae3f008ba960058f88c",
+      "target_sha256": "db686af712aa35fc0f04bf90c9f1ff5d97e252e06dfa2ae3f008ba960058f88c"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/source_reader.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/source_reader.py",
+      "target_status": "same_content",
+      "source_sha256": "2ce06b7431eb413a0106ed3c29ffc18ae7f9f574d3f4678bba66310224fb5c9a",
+      "target_sha256": "2ce06b7431eb413a0106ed3c29ffc18ae7f9f574d3f4678bba66310224fb5c9a"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/token_cluster_analyzer.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/token_cluster_analyzer.py",
+      "target_status": "same_content",
+      "source_sha256": "aea11d95f3b001671baacee8273d3a3a73497404aa60e9b2e604afeb4d8d6c91",
+      "target_sha256": "aea11d95f3b001671baacee8273d3a3a73497404aa60e9b2e604afeb4d8d6c91"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/decision_builder.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/decision_builder.py",
+      "target_status": "same_content",
+      "source_sha256": "31733f68a92de6e4698b15f61a5248749178ee085c7db9ca926bf0ebdd1e6b6a",
+      "target_sha256": "31733f68a92de6e4698b15f61a5248749178ee085c7db9ca926bf0ebdd1e6b6a"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/run.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/run.py",
+      "target_status": "same_content",
+      "source_sha256": "a801e6ec06fae40a9cd58d86ff103d6c65ecb2b329491355194c5f589aff884d",
+      "target_sha256": "a801e6ec06fae40a9cd58d86ff103d6c65ecb2b329491355194c5f589aff884d"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/counterparty_pressure_calculator.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/counterparty_pressure_calculator.py",
+      "target_status": "same_content",
+      "source_sha256": "1f971a84c4e406adf2fe49f1bf8a341e3642a3f6da0723a57a5eaad1cccd614c",
+      "target_sha256": "1f971a84c4e406adf2fe49f1bf8a341e3642a3f6da0723a57a5eaad1cccd614c"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/quantitative_aggregator.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/quantitative_aggregator.py",
+      "target_status": "same_content",
+      "source_sha256": "247a1e18dc90923be983976e793c8d97dbdbf537fcdb391dafea0706c8b8aa1c",
+      "target_sha256": "247a1e18dc90923be983976e793c8d97dbdbf537fcdb391dafea0706c8b8aa1c"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/chinese_judgement.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/chinese_judgement.py",
+      "target_status": "same_content",
+      "source_sha256": "c2aea9a61c93e352f7817cae30e8b0473c40bc4c2cf7290f33b1ed0415bdbe62",
+      "target_sha256": "c2aea9a61c93e352f7817cae30e8b0473c40bc4c2cf7290f33b1ed0415bdbe62"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/note_generator.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/note_generator.py",
+      "target_status": "same_content",
+      "source_sha256": "37340cbe9a4ad4d500c58df5331d907f57e16f2cc7d0dc7d7ca86a27a79638d4",
+      "target_sha256": "37340cbe9a4ad4d500c58df5331d907f57e16f2cc7d0dc7d7ca86a27a79638d4"
+    },
+    {
+      "source_relpath": "behavior_inference/modules/wallet_structure/wallet_pattern_cost_alignment_calculator.py",
+      "asset_class": "量化模型代码资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/modules/wallet_structure/wallet_pattern_cost_alignment_calculator.py",
+      "target_status": "same_content",
+      "source_sha256": "5f1cf83bf2d2f6544b1165c1a280871e7abcc468d300f4280906254ee5fe5114",
+      "target_sha256": "5f1cf83bf2d2f6544b1165c1a280871e7abcc468d300f4280906254ee5fe5114"
+    },
+    {
+      "source_relpath": "behavior_inference/tests/test_quantitative_aggregator.py",
+      "asset_class": "验收测试资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/tests/wallet_intel_absorbed/test_quantitative_aggregator.py",
+      "target_status": "new_target",
+      "source_sha256": "01018e5e3c3f973010d147f6719bf4b5eb385d64a99c0243744d960beeb13dc1",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/tests/test_dominant_cost_zone_calculator.py",
+      "asset_class": "验收测试资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/tests/wallet_intel_absorbed/test_dominant_cost_zone_calculator.py",
+      "target_status": "new_target",
+      "source_sha256": "92f4e31e664fd747c1140cdec12aa6c5a8095b67a08e4180f0001030c5a88f42",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/tests/test_counterparty_pressure_calculator.py",
+      "asset_class": "验收测试资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/tests/wallet_intel_absorbed/test_counterparty_pressure_calculator.py",
+      "target_status": "new_target",
+      "source_sha256": "8747a551dbbad77f2eaaa82720e5fff8dec8b63e4dd1181458a072cdb33af001",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/tests/test_token_cluster_analyzer.py",
+      "asset_class": "验收测试资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/tests/wallet_intel_absorbed/test_token_cluster_analyzer.py",
+      "target_status": "new_target",
+      "source_sha256": "a743095e05d67b3bdebde216a144ab9c670eb2dbc7bb343e735aab58ae324930",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/tests/test_markup_motivation_calculator.py",
+      "asset_class": "验收测试资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/tests/wallet_intel_absorbed/test_markup_motivation_calculator.py",
+      "target_status": "new_target",
+      "source_sha256": "4cb4e7f42998e2cdc5c2c6d4ff350c8bf8e26b3fe56183783b35665638acc68a",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/schemas/behavior_inference_outputs.schema.json",
+      "asset_class": "字段需求资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__schemas__behavior_inference_outputs.schema.json",
+      "target_status": "new_target",
+      "source_sha256": "09abe4ef2ddbbf35bb56aabff046aed327768d2414c968a2718e6b32958152fc",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/source_bot_upstream_layer_02_kline_market_structure.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__source_bot_upstream_layer_02_kline_market_structure.md",
+      "target_status": "new_target",
+      "source_sha256": "0added03c1adb8b0d075f3db9760ef37c28d44f63e6db88b3b5016096969e7af",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/dominant_cost_zone_framework.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__dominant_cost_zone_framework.md",
+      "target_status": "new_target",
+      "source_sha256": "57eb7cc142421e979255e3211998375dd56f3e52e221b5f0d453e2731963fd30",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/wallet_intel_layer_reconstruction.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__wallet_intel_layer_reconstruction.md",
+      "target_status": "new_target",
+      "source_sha256": "0691dcebdb48a17debfcb5a0d1510305a2390d752ced82943333768ff4e63a08",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/wallet_intel_2h_workflow_report.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__wallet_intel_2h_workflow_report.md",
+      "target_status": "new_target",
+      "source_sha256": "fa7a8cbae926569552f03b77d900110f5f93c02e6b353af80cc5f07cbb4b6698",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/source_bot_upstream_layer_01_candidate_token_data.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__source_bot_upstream_layer_01_candidate_token_data.md",
+      "target_status": "new_target",
+      "source_sha256": "f9bda00c641dc8bf5bb29a52d016cf03b2a2cee393e3c97a34310c4b16860b3d",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/counterparty_pressure_quant_model.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__counterparty_pressure_quant_model.md",
+      "target_status": "new_target",
+      "source_sha256": "396071e83afbf29bea482ac956758b4b566423668a64841d7f5d1738a5665b6c",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/wallet_research_scope.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__wallet_research_scope.md",
+      "target_status": "new_target",
+      "source_sha256": "4c60d41af3fc2d8d8555b6924eabc87f46321b529b619e6baad429ae6ad9b07c",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/quantitative_structure_schema_contract.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__quantitative_structure_schema_contract.md",
+      "target_status": "new_target",
+      "source_sha256": "0a0c069b8002f4e13e19abfe977c7669e0c126709d3aea734f15d5696578af18",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/wallet_intel_module_map.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__wallet_intel_module_map.md",
+      "target_status": "new_target",
+      "source_sha256": "4056f7bd8e1dd614caec57b77167f2c402427f8d2b1ee142d8408bd2a7b05813",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/wallet_intel_execution_plan.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__wallet_intel_execution_plan.md",
+      "target_status": "new_target",
+      "source_sha256": "25b808b1725d7205e5eef8a43548a0609100037a74746c9832702004f54ddcc7",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/source_bot_upstream_layer_03_holder_snapshot.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__source_bot_upstream_layer_03_holder_snapshot.md",
+      "target_status": "new_target",
+      "source_sha256": "9226a3657b46dc96cb1a35e7704b1cd347502b783c1fc8e3d523afcd4ce8339b",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/wallet_file_passports.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__wallet_file_passports.md",
+      "target_status": "new_target",
+      "source_sha256": "a58b0d62681f78182857872c2e9b8e4dcaf2bee50e620e3c6116bfa7cebe6b94",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/quantitative_structure_models.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__quantitative_structure_models.md",
+      "target_status": "new_target",
+      "source_sha256": "5a75488b8625b86f4728ad31d0f2cacda952bde6ee2bf3ec3b89257656faed5d",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/distribution_progress_model.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__distribution_progress_model.md",
+      "target_status": "new_target",
+      "source_sha256": "66d78c267ee1e5a968390c8f62339c481859cd4baf5a24205dcdd3de0e363613",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/chinese_judgement_dictionary.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__chinese_judgement_dictionary.md",
+      "target_status": "new_target",
+      "source_sha256": "334f8d7846b60fb8d458f62adb623ba55bfe5fc6d69f184fc84808d7cffe5e6e",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/theory_to_code_rules.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__theory_to_code_rules.md",
+      "target_status": "new_target",
+      "source_sha256": "03f9df5b27d9e8cf7e466591c1c4d9259a261235f1acf6671b363af41d62d49b",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/markup_motivation_model.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__markup_motivation_model.md",
+      "target_status": "new_target",
+      "source_sha256": "ec84ef2dd9ef87cdbaa914d3fadb712d13f6dc45ecdd17c0627091369d49fe0f",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/intel_structure_bot_index.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__intel_structure_bot_index.md",
+      "target_status": "new_target",
+      "source_sha256": "408be8ddd8ffb758751073e343912583dfece5d5b9a1e11839e6d701feef0de9",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/wallet_intel_command_lens.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__wallet_intel_command_lens.md",
+      "target_status": "new_target",
+      "source_sha256": "d96b23eb117f8a987ce78ce47a91895c87c1befb1d991abdaa03f7a5dc84ff4b",
+      "target_sha256": null
+    },
+    {
+      "source_relpath": "behavior_inference/reports/legacy_intel_bot_docs/intel_structure_bot_delivery_checklist.md",
+      "asset_class": "行为推断资产",
+      "suggested_absorption_path": "/root/sikk-gmgn/research_loop/methodology/wallet_intel_absorbed/behavior_inference__reports__legacy_intel_bot_docs__intel_structure_bot_delivery_checklist.md",
+      "target_status": "new_target",
+      "source_sha256": "c48a39aa7d7a4dbf3dfa18c4cedf17f51a72dceebcfe7b66bdcb9c6df06596ba",
+      "target_sha256": null
+    }
+  ],
+  "conflict_counts": {
+    "new_target": 57,
+    "same_content": 21
+  }
+}

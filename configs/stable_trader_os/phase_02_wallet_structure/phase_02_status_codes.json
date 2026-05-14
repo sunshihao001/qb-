@@ -1,0 +1,23 @@
+{
+  "phase_id": "phase_02_wallet_structure_controller",
+  "input_status_codes": {
+    "PHASE_02_INPUT_READY": "上游 handoff 可用且必需钱包事实文件存在",
+    "PHASE_02_INPUT_DEGRADED": "上游允许进入但存在可降级 missing/弱字段",
+    "PHASE_02_INPUT_BLOCKED": "上游硬否决、禁止进入或关键钱包事实缺失"
+  },
+  "decision_status_codes": {
+    "WALLET_SUPPORT": "结构地址证据支持进入筹码控制层继续验证",
+    "WALLET_PAUSE": "结构证据不足或存在反证，需要暂停复核",
+    "WALLET_BLOCK": "结构地址层触发硬否决",
+    "WALLET_UNKNOWN": "当前证据无法形成有效结构判断",
+    "WALLET_DATA_WEAK": "钱包数据质量不足以支持结构归因",
+    "WALLET_SAME_SOURCE_DETECTED": "检测到疑似同源执行组，允许作为证据进入下游验证",
+    "WALLET_DISTRIBUTION_DETECTED": "检测到疑似分发/派发路径，默认阻断或复核",
+    "WALLET_BACKFLOW_DETECTED": "检测到疑似卖后回流路径，默认阻断或复核",
+    "WALLET_COUNTERPARTY_PRESSURE": "检测到高位承接/接盘压力，暂停进入正向策略链"
+  },
+  "handoff_status_codes": {
+    "HANDOFF_READY": "交接包、必需文件、审计报告均存在且状态合法",
+    "HANDOFF_BLOCKED": "交接包缺失、必需文件缺失、状态非法或硬否决触发"
+  }
+}

@@ -1,0 +1,7 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: STRATEGY_CANDIDATE_SCHEMA
+required_fields: [strategy_candidate_id, candidate_id, token_address, generated_at, candidate_type, selected_strategy_profile, basis, required_next_step, not_allowed, limitations, trace]
+candidate_type_enum: [PAPER_CANDIDATE, HUMAN_CONFIRMATION_REQUIRED_CANDIDATE, OBSERVE_CANDIDATE, PAUSE_CANDIDATE]
+not_allowed: [direct_paper_runtime, direct_buy_signal, live_execution]

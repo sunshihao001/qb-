@@ -1,0 +1,54 @@
+phase_id: A00
+root_objective: prove whether document-to-function realization is accepted, ready with gaps, blocked, rejected, design-only, or partially implemented based on auditable evidence
+objectives:
+  - id: A00.0
+    name: Preflight Gate
+    output: a00_preflight_result.json
+  - id: A00.1
+    name: Upstream Handoff Loader
+    output: loaded_handoff_refs
+  - id: A00.2
+    name: Evidence Bundle Builder
+    output: evidence_bundle.json
+  - id: A00.3
+    name: Evidence Integrity Checker
+    output: evidence_integrity_check.json
+  - id: A00.4
+    name: Phase Status Matrix Builder
+    output: phase_status_matrix.json
+  - id: A00.5
+    name: Status Consistency Validator
+    output: phase_status_consistency_report.json
+  - id: A00.6
+    name: Artifact Manifest Validator
+    output: artifact_existence_check.json
+  - id: A00.7
+    name: Gap Propagation Validator
+    output: gap_propagation_report.json
+  - id: A00.8
+    name: Trace / Audit Integrity Validator
+    output: trace_audit_validation.json
+  - id: A00.9
+    name: Acceptance Gate Replay
+    output: acceptance_gate_replay_result
+  - id: A00.10
+    name: Acceptance Scorecard Builder
+    output: acceptance_scorecard.json
+  - id: A00.11
+    name: Readiness Decision Engine
+    output: acceptance_decision.json
+  - id: A00.12
+    name: Failure / Recovery Classifier
+    output: recovery_report.json
+  - id: A00.13
+    name: Readiness Certificate Writer
+    output: readiness_certificate.json
+  - id: A00.14
+    name: Handoff Writer
+    output: a00_to_downstream_handoff_packet.json
+acceptance_priority:
+  - no_false_ready
+  - evidence_integrity
+  - gap_preservation
+  - trace_audit_integrity
+  - safe_downstream_handoff

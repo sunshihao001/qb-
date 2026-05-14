@@ -1,0 +1,85 @@
+contract_routes:
+- route_id: ROUTE_CONTROL_TO_ALL
+  from_plane: P00_FULL_CONTROL_PLANE
+  to_plane: ALL_PHASE_CONTROLLERS
+  required_output_contract: control_handoff_contract
+  missing_contract_policy: BLOCK_TARGET_PLANE
+- route_id: ROUTE_GOVERNANCE_TO_DOMAIN
+  from_plane: P01_GOVERNANCE_PLANE
+  to_plane: P02_DOMAIN_PLANE
+  required_output_contract: governance_handoff_contract
+  missing_contract_policy: BLOCK_DOMAIN_PLANE
+- route_id: ROUTE_DOMAIN_TO_DATA
+  from_plane: P02_DOMAIN_PLANE
+  to_plane: P03_DATA_PLANE
+  required_output_contract: domain_handoff_contract
+  missing_contract_policy: BLOCK_DATA_PLANE
+- route_id: ROUTE_DATA_TO_EVIDENCE
+  from_plane: P03_DATA_PLANE
+  to_plane: P04_EVIDENCE_PLANE
+  required_output_contract: data_handoff_contract
+  missing_contract_policy: BLOCK_EVIDENCE_PLANE
+trace_plane_routes:
+  FULL_CONTROL_TO_TRACE:
+    from: FULL_CONTROL_PLANE
+    to: TRACE_PLANE
+    contract: trace_context
+  TRACE_TO_ACCEPTANCE:
+    from: TRACE_PLANE
+    to: ACCEPTANCE_PLANE
+    contract: trace_handoff_contract
+  TRACE_TO_HANDOFF:
+    from: TRACE_PLANE
+    to: HANDOFF_PLANE
+    contract: trace_handoff_contract
+acceptance_plane_routes:
+- route_id: ROUTE_TRACE_TO_ACCEPTANCE
+  from_stage: TRACE_PLANE
+  to_stage: ACCEPTANCE_PLANE
+  required_packet: trace_handoff_packet
+  missing_policy: BLOCK_ACCEPTANCE
+- route_id: ROUTE_ACCEPTANCE_TO_HANDOFF
+  from_stage: ACCEPTANCE_PLANE
+  to_stage: HANDOFF_PLANE
+  required_packet: acceptance_result_packet
+  missing_policy: BLOCK_HANDOFF
+handoff_plane_routes:
+- route_id: ROUTE_ACCEPTANCE_TO_HANDOFF_PROFESSIONAL
+  from_stage: ACCEPTANCE_PLANE
+  to_stage: HANDOFF_PLANE
+  required_packet: acceptance_result_packet
+  required_trace_packet: trace_handoff_packet
+  handoff_mode: LIMITED_HANDOFF
+  missing_policy: BLOCK_HANDOFF
+  doc_id: DOC-20260511-027
+- route_id: ROUTE_HANDOFF_TO_PHASE_CONTROLLER_DESIGN
+  from_stage: HANDOFF_PLANE
+  to_stage: P01_P10_PHASE_CONTROLLER_STUBS
+  required_packet: handoff_packet
+  required_instruction: downstream_read_instruction
+  runtime_allowed: false
+  doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:54:04Z'
+routes:
+  handoff_to_phase_controller_index:
+    source: HANDOFF_PLANE
+    target: P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN
+    required_inputs:
+    - trace_handoff_packet
+    - acceptance_result_packet
+    - handoff_packet
+    - downstream_read_instruction
+    - gap_propagation_packet
+    - limitation_transfer_packet
+    - field_usage_permission_packet
+    output: /root/sikk-gmgn/system/phase_controllers/phase_controller_index.yaml
+    acceptance_result: /root/sikk-gmgn/sikk_stable_trader_os/08_acceptance/phase_controller_index_acceptance_result.json
+    runtime_permission: DESIGN_ONLY_RUNTIME_BLOCKED
+  phase_controller_index_to_package_expansion:
+    source: P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN
+    target: P01_P10_CONTROLLER_PACKAGE_EXPANSION
+    required_inputs:
+    - phase_controller_index.yaml
+    - phase_controller_index_acceptance_result.json
+    - phase_controller_index_handoff_packet.json
+    runtime_permission: PACKAGE_DESIGN_ONLY_RUNTIME_BLOCKED

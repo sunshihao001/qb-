@@ -1,0 +1,19 @@
+meta:
+  standard_id: S00_FIELD_MANUAL_OVERRIDE_POLICY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+manual_override_allowed_for:
+- manual_note
+manual_override_forbidden_for:
+- raw_fact
+- permission_field
+- upgrade_field
+trace_required: true

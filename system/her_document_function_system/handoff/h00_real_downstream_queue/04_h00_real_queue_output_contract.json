@@ -1,0 +1,22 @@
+{
+  "phase_id": "H00_REAL_DOWNSTREAM_QUEUE",
+  "required_outputs": {
+    "preflight_result": "preflight/h00_real_queue_preflight.json",
+    "downstream_target_inventory": "downstream_targets/downstream_target_inventory.json",
+    "target_capability_matrix": "capability_matrix/target_capability_matrix.json",
+    "routing_decision": "routing/routing_decision.json",
+    "downstream_queue": "queue/downstream_queue.json",
+    "queue_items": "queue/queue_items.json",
+    "dependency_graph": "dependency/dependency_graph.json",
+    "priority_plan": "priority/priority_plan.json",
+    "gap_risk_binding": "gap_risk/gap_risk_binding.json",
+    "downstream_handoff_packets": "handoff_packets/",
+    "queue_state": "queue_state/queue_state.json",
+    "failure_evidence": "failure_evidence/h00_queue_failure_evidence.json",
+    "trace_log": "trace/h00_real_queue_trace.jsonl",
+    "audit_log": "audit/h00_real_queue_audit.jsonl",
+    "acceptance_result": "acceptance/h00_real_queue_acceptance.json",
+    "recovery_report": "recovery/recovery_report.json",
+    "final_report": "reports/h00_real_queue_report.md"
+  }
+}

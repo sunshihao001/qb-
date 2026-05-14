@@ -1,0 +1,123 @@
+registry_id: PHASE_REGISTRY_BOOTSTRAP_V2
+updated_at: '2026-05-12T02:45:36Z'
+authority: 00_control/current_system_state.json
+phases:
+- phase_id: K00_knowledge_intake_taskization
+  status: ASSETIZED_AND_CONSUMED_BY_P00
+  runnable: true
+  runner_bound: false
+  acceptance_passed: true
+  upstream_dependencies: []
+  downstream_consumers:
+  - P00_system_bootstrap_controller
+- phase_id: P00_system_bootstrap_controller
+  status: BOOTSTRAP_EXECUTED
+  runnable: true
+  runner_bound: false
+  acceptance_passed: true
+  upstream_dependencies:
+  - K00_knowledge_intake_taskization
+  downstream_consumers:
+  - SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE
+- phase_id: P01_data_fact_controller
+  status: BLOCKED_BY_DATA_PLANE
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  upstream_dependencies:
+  - DATA_PLANE_ACCEPTANCE_REVIEW
+  downstream_consumers: []
+- phase_id: P02_wallet_structure_controller
+  status: NOT_READY
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  upstream_dependencies:
+  - UPSTREAM_PHASES
+  downstream_consumers: []
+- phase_id: P03_chip_control_controller
+  status: NOT_READY
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  upstream_dependencies:
+  - UPSTREAM_PHASES
+  downstream_consumers: []
+- phase_id: P04_market_structure_controller
+  status: NOT_READY
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  upstream_dependencies:
+  - UPSTREAM_PHASES
+  downstream_consumers: []
+- phase_id: P05_scenario_classification_controller
+  status: NOT_READY
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  upstream_dependencies:
+  - UPSTREAM_PHASES
+  downstream_consumers: []
+- phase_id: P06_strategy_gate_controller
+  status: NOT_READY
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  upstream_dependencies:
+  - UPSTREAM_PHASES
+  downstream_consumers: []
+- phase_id: P07_execution_risk_controller
+  status: NOT_READY
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  upstream_dependencies:
+  - UPSTREAM_PHASES
+  downstream_consumers: []
+- phase_id: P08_paper_trading_controller
+  status: NOT_READY
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  upstream_dependencies:
+  - UPSTREAM_PHASES
+  downstream_consumers: []
+- phase_id: P09_review_learning_controller
+  status: NOT_READY
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  upstream_dependencies:
+  - UPSTREAM_PHASES
+  downstream_consumers: []
+- phase_id: P10_system_upgrade_controller
+  status: NOT_READY
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  upstream_dependencies:
+  - UPSTREAM_PHASES
+  downstream_consumers: []
+- phase_id: P05_EVIDENCE_CONTROLLER_PACKAGE_DESIGN
+  canonical_controller_id: P05_EVIDENCE_CONTROLLER
+  status: PACKAGE_READY_WITH_RUNTIME_GAPS
+  runnable: false
+  runner_bound: false
+  acceptance_passed: false
+  package_acceptance_passed: true
+  runtime_allowed: false
+  paper_runtime_allowed: false
+  live_runtime_allowed: false
+  upstream_dependencies:
+  - P04_CHIP_STRUCTURE_CONTROLLER_PACKAGE_DESIGN
+  downstream_consumers:
+  - P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN
+  controller_package: system/phase_controllers/p05_evidence_controller
+  runtime_data_tree: data/phase_controllers/p05_evidence
+safety_boundary:
+  paper_only: true
+  real_trade_enabled: false
+  auto_order_allowed: false
+  private_key_allowed: false
+  seed_phrase_allowed: false

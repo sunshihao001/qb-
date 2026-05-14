@@ -1,0 +1,12 @@
+{
+  "source_id": "okx",
+  "source_type": "quote_liquidity_security_route",
+  "live_fetch_enabled": false,
+  "capabilities": [
+    "quote",
+    "liquidity",
+    "route",
+    "security"
+  ],
+  "requires_live_audit": true
+}

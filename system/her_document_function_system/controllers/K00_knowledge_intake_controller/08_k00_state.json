@@ -1,0 +1,11 @@
+{
+  "phase_id": "K00",
+  "phase_name": "K00_knowledge_intake_controller",
+  "status": "K00_CONTROLLER_BRIDGE_DEFINED",
+  "ready_for_f00": false,
+  "reason": "Controller bridge exists; concrete run handoff required per document input.",
+  "forbidden_claims": [
+    "F00_READY_WITHOUT_K00_HANDOFF",
+    "CHAT_CONTEXT_AS_SOURCE_OF_TRUTH"
+  ]
+}

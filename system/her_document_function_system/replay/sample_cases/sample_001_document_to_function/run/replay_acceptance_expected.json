@@ -1,0 +1,44 @@
+{
+  "acceptance_checks": [
+    {
+      "check_id": "registry_exists",
+      "description": "controller_registry exists and includes K00/F00/V00/R00/A00/H00/U00/G00/O00",
+      "required": true
+    },
+    {
+      "check_id": "pipeline_config_exists",
+      "description": "pipeline_config.full_safe_replay exists and enforces safe_mode",
+      "required": true
+    },
+    {
+      "check_id": "sample_document_exists",
+      "description": "sample document exists",
+      "required": true
+    },
+    {
+      "check_id": "function_mapping_expected",
+      "description": "sample concept maps to governance/evidence/status rule",
+      "required": true
+    },
+    {
+      "check_id": "no_false_tested_status",
+      "description": "sample replay must not claim TESTED without test evidence",
+      "required": true
+    },
+    {
+      "check_id": "r00_skipped_with_reason",
+      "description": "R00 skipped because runner binding is not required",
+      "required": true
+    },
+    {
+      "check_id": "g00_candidate_created",
+      "description": "G00 governance candidate created for evidence policy",
+      "required": true
+    },
+    {
+      "check_id": "final_status_ready_with_gaps",
+      "description": "final status is PIPELINE_READY_WITH_GAPS, not PIPELINE_ACCEPTED",
+      "required": true
+    }
+  ]
+}

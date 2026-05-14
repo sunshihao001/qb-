@@ -1,0 +1,257 @@
+{
+  "mapping_id": "f00_mapping_RUN-S00-HERDOC-20260514-001",
+  "source_doc_id": "doc_RUN-S00-HERDOC-20260514-001",
+  "functional_intent": "real_document_to_function_pipeline",
+  "mapped_functions": [
+    {
+      "function_id": "func_001",
+      "function_name": "K00 document intake",
+      "description": "Save raw document and generate passport/index/mapping/handoff",
+      "target_controller": "K00",
+      "required_inputs": [
+        "document",
+        "operator_goal"
+      ],
+      "required_outputs": [
+        "document_passport",
+        "corpus_index",
+        "system_mapping",
+        "k00_handoff_packet"
+      ],
+      "required_fields": [
+        "status",
+        "refs",
+        "gap_policy",
+        "evidence_path"
+      ],
+      "required_files": [
+        "tools/k00_document_intake.py"
+      ],
+      "required_tools": [
+        "tools/k00_document_intake.py"
+      ],
+      "validation_needed": true,
+      "implementation_status": "TASK_REQUIRED"
+    },
+    {
+      "function_id": "func_002",
+      "function_name": "F00 function realization mapping",
+      "description": "Convert explanatory document into functional items/assets/task package",
+      "target_controller": "F00",
+      "required_inputs": [
+        "k00_handoff_packet",
+        "document_passport_refs",
+        "corpus_index_refs",
+        "system_mapping_refs",
+        "gap_detection_refs"
+      ],
+      "required_outputs": [
+        "function_mapping",
+        "required_system_assets",
+        "implementation_task_package",
+        "f00_handoff_packet"
+      ],
+      "required_fields": [
+        "status",
+        "refs",
+        "gap_policy",
+        "evidence_path"
+      ],
+      "required_files": [
+        "tools/f00_function_mapping.py"
+      ],
+      "required_tools": [
+        "tools/f00_function_mapping.py"
+      ],
+      "validation_needed": true,
+      "implementation_status": "TASK_REQUIRED"
+    },
+    {
+      "function_id": "func_003",
+      "function_name": "V00 validation evidence",
+      "description": "Validate required outputs and preserve gaps",
+      "target_controller": "V00",
+      "required_inputs": [
+        "k00_outputs",
+        "f00_outputs"
+      ],
+      "required_outputs": [
+        "validation_matrix",
+        "gap_register",
+        "evidence_report",
+        "v00_handoff_packet"
+      ],
+      "required_fields": [
+        "status",
+        "refs",
+        "gap_policy",
+        "evidence_path"
+      ],
+      "required_files": [
+        "tools/v00_validation_evidence.py"
+      ],
+      "required_tools": [
+        "tools/v00_validation_evidence.py"
+      ],
+      "validation_needed": true,
+      "implementation_status": "TASK_REQUIRED"
+    },
+    {
+      "function_id": "func_004",
+      "function_name": "A00 acceptance decision",
+      "description": "Decide READY_WITH_GAPS vs BLOCKED and block false claims",
+      "target_controller": "A00",
+      "required_inputs": [
+        "validation_matrix",
+        "gap_register"
+      ],
+      "required_outputs": [
+        "acceptance_matrix",
+        "readiness_certificate",
+        "a00_acceptance_result"
+      ],
+      "required_fields": [
+        "status",
+        "refs",
+        "gap_policy",
+        "evidence_path"
+      ],
+      "required_files": [
+        "tools/a00_acceptance.py"
+      ],
+      "required_tools": [
+        "tools/a00_acceptance.py"
+      ],
+      "validation_needed": true,
+      "implementation_status": "TASK_REQUIRED"
+    },
+    {
+      "function_id": "func_005",
+      "function_name": "H00 downstream queue",
+      "description": "Route gaps and task refinements to downstream queue",
+      "target_controller": "H00",
+      "required_inputs": [
+        "acceptance_result",
+        "gap_register",
+        "function_mapping"
+      ],
+      "required_outputs": [
+        "downstream_queue",
+        "routing_decision",
+        "h00_handoff_packets"
+      ],
+      "required_fields": [
+        "status",
+        "refs",
+        "gap_policy",
+        "evidence_path"
+      ],
+      "required_files": [
+        "tools/h00_downstream_queue.py"
+      ],
+      "required_tools": [
+        "tools/h00_downstream_queue.py"
+      ],
+      "validation_needed": true,
+      "implementation_status": "TASK_REQUIRED"
+    },
+    {
+      "function_id": "func_006",
+      "function_name": "U00 review upgrade",
+      "description": "Turn gaps into review cases/root causes/upgrade queue/learning index",
+      "target_controller": "U00",
+      "required_inputs": [
+        "gap_register",
+        "downstream_queue"
+      ],
+      "required_outputs": [
+        "review_cases",
+        "root_cause_analysis",
+        "upgrade_queue",
+        "learning_index"
+      ],
+      "required_fields": [
+        "status",
+        "refs",
+        "gap_policy",
+        "evidence_path"
+      ],
+      "required_files": [
+        "tools/u00_review_upgrade.py"
+      ],
+      "required_tools": [
+        "tools/u00_review_upgrade.py"
+      ],
+      "validation_needed": true,
+      "implementation_status": "TASK_REQUIRED"
+    },
+    {
+      "function_id": "func_007",
+      "function_name": "G00 governance candidates",
+      "description": "Extract status/process/forbidden action governance candidates",
+      "target_controller": "G00",
+      "required_inputs": [
+        "gap_register",
+        "acceptance_result"
+      ],
+      "required_outputs": [
+        "governance_candidates",
+        "policy_rules_update"
+      ],
+      "required_fields": [
+        "status",
+        "refs",
+        "gap_policy",
+        "evidence_path"
+      ],
+      "required_files": [
+        "tools/g00_governance_update.py"
+      ],
+      "required_tools": [
+        "tools/g00_governance_update.py"
+      ],
+      "validation_needed": true,
+      "implementation_status": "TASK_REQUIRED"
+    },
+    {
+      "function_id": "func_008",
+      "function_name": "O00 orchestration report",
+      "description": "Orchestrate full safe-mode manual run and write final report",
+      "target_controller": "O00",
+      "required_inputs": [
+        "document",
+        "goal",
+        "safe_mode"
+      ],
+      "required_outputs": [
+        "run_summary",
+        "final_report",
+        "trace",
+        "audit"
+      ],
+      "required_fields": [
+        "status",
+        "refs",
+        "gap_policy",
+        "evidence_path"
+      ],
+      "required_files": [
+        "tools/o00_run_document_main.py",
+        "tools/her_pipeline_status.py"
+      ],
+      "required_tools": [
+        "tools/o00_run_document_main.py",
+        "tools/her_pipeline_status.py"
+      ],
+      "validation_needed": true,
+      "implementation_status": "TASK_REQUIRED"
+    }
+  ],
+  "unmapped_items": [
+    "scheduler manual enable paused",
+    "operator confirmation packet paused",
+    "one-shot trial paused",
+    "paper/live runtime paused"
+  ],
+  "status": "F00_FUNCTION_MAPPING_READY_WITH_GAPS"
+}

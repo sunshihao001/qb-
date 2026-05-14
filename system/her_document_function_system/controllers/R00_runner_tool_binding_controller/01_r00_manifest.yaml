@@ -1,0 +1,24 @@
+controller_name: R00_runner_tool_binding_controller
+controller_type: HER_PHASE_CONTROLLER
+phase_id: R00
+phase_name: Runner / Tool Binding Controller
+中文名称: 运行入口与工具绑定控制器
+version: 1.0
+upstream_phase:
+  - K00_knowledge_intake
+  - F00_function_realization
+  - V00_validation_evidence
+downstream_phase:
+  - A00_acceptance_evidence_controller
+  - H00_handoff_controller
+  - U00_review_upgrade_controller
+  - G00_governance_boundary_controller
+controller_root: /root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller
+run_root: /root/sikk-gmgn/data/her_document_function_system/r00_runs
+legal_entry: v00_handoff_packet
+mission: bind validated assets to safe callable entries with dry-run evidence, trace, audit, acceptance, and handoff
+forbidden_modes:
+  - LIVE_RUNTIME
+  - WALLET_SIGNING
+  - AUTO_DEPLOY
+  - PRODUCTION_TRADING

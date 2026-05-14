@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0032
+source_path: docs/11_phase_01_data_fact_landing/phase_01_data_fact_her_taskbook.md
+phase_scores:
+  P01: 1
+  P02: 1
+  P03: 3
+  P04: 0
+  P05: 2
+  P06: 0
+  P07: 0
+  P08: 4
+  P09: 0
+  P10: 0
+primary_phase: P08
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

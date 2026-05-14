@@ -1,0 +1,9 @@
+operation_control_decision_record:
+  decision_id: CPO-DECISION-20260512-001
+  generated_at: 2026-05-12T16:29:31Z
+  decision: RUN_SINGLE_CYCLE_ONLY
+  reason_cn: CPO 控制资产与初始运行记录已落地，但 I05 readiness、scheduler 与真实多轮样本未在本次任务内实证；只允许 dry-run / manual single-cycle。
+  restrictions:
+    live_execution_allowed: false
+    wallet_signing_allowed: false
+    auto_deploy_allowed: false

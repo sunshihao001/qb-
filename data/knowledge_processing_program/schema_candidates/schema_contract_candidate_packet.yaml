@@ -1,0 +1,14 @@
+schema_contract_candidate_packet:
+  document_id: KPP-DOC-20260512-001
+  schema_candidates:
+    - document_passport.schema
+    - semantic_chunk_index.schema
+    - functional_object_registry.schema
+    - system_mapping_matrix.schema
+    - her_task_package.schema
+    - knowledge_processing_acceptance_result.schema
+  contract_candidates:
+    - her_task_package_contract
+    - knowledge_processing_output_contract
+    - knowledge_processing_handoff_contract
+  owner_stage: K00_K08_KNOWLEDGE_PROCESSING_PROGRAM

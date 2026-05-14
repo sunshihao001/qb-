@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Recurring Issue",
+  "type": "object",
+  "required": [
+    "recurring_issue_id",
+    "issue_type",
+    "frequency",
+    "affected_phases",
+    "severity_trend",
+    "systemic",
+    "recommended_upgrade",
+    "target_controller"
+  ],
+  "properties": {
+    "recurring_issue_id": {
+      "type": "string"
+    },
+    "issue_type": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "affected_phases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_assets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "severity_trend": {
+      "type": "string",
+      "enum": [
+        "INCREASING",
+        "STABLE",
+        "DECREASING"
+      ]
+    },
+    "systemic": {
+      "type": "boolean"
+    },
+    "recommended_upgrade": {
+      "type": "string"
+    },
+    "target_controller": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,33 @@
+{
+  "controller_id": "I03_RUNNER_TOOL_BINDING",
+  "required_inputs": {
+    "from_i02": [
+      "i02_to_i03_handoff_packet",
+      "i03_runner_tool_binding_prerequisite_packet",
+      "directory_constitution_final",
+      "schema_index",
+      "contract_index",
+      "runtime_data_path_index",
+      "write_permission_matrix",
+      "legacy_path_mapping"
+    ],
+    "from_phase_controllers": [
+      "P01 controller/contracts/schemas/policies",
+      "P02 controller/contracts/schemas/policies",
+      "P03 controller/contracts/schemas/policies",
+      "P04 controller/contracts/schemas/policies",
+      "P05 controller/contracts/schemas/policies",
+      "P06 controller/contracts/schemas/policies",
+      "P07 controller/contracts/schemas/policies",
+      "P08 controller/contracts/schemas/policies",
+      "P09 controller/contracts/schemas/policies",
+      "P10 controller/contracts/schemas/policies"
+    ]
+  },
+  "forbidden_inputs": [
+    "private_key",
+    "seed_phrase",
+    "wallet_signing_permission",
+    "live_execution_permission"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "wallet_raw_normalized",
+  "type": "object",
+  "description": "Raw wallet evidence envelope for Source Wallet Intelligence Bot. L0/L1 fields only; L3/L4 cannot backfill facts.",
+  "required": [
+    "source_level",
+    "source_name",
+    "wallet_address",
+    "raw_snapshot_time",
+    "records"
+  ],
+  "properties": {
+    "source_level": {
+      "type": "string",
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ]
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "token_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wallet_address": {
+      "type": "string"
+    },
+    "raw_snapshot_time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "missing when not present; never inferred from dashboard/paper/report/case file"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Directory Policy",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "write_rules",
+    "read_only_rules",
+    "status"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "write_rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "read_only_rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PENDING",
+        "DEPRECATED"
+      ]
+    }
+  }
+}

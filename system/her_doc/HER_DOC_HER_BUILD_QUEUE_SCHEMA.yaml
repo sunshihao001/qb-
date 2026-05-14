@@ -1,0 +1,24 @@
+schema_id: HER_DOC_HER_BUILD_QUEUE_SCHEMA
+version: 1
+required_fields:
+  - task_id
+  - source_gap_id
+  - source_research_id
+  - target_layer
+  - target_files
+  - allowed_actions
+  - forbidden_actions
+  - acceptance_commands
+  - acceptance_artifacts
+route_to_her_when:
+  - schema_candidate_clear
+  - contract_candidate_clear
+  - runner_exists_but_unbound
+  - trace_defined_but_not_output
+  - handoff_defined_but_not_standardized
+  - validator_missing_for_known_schema
+forbidden_without_research:
+  - create_strategy_semantics
+  - infer_market_behavior_rules
+  - enable_runtime_gate
+  - alter_real_trading_logic

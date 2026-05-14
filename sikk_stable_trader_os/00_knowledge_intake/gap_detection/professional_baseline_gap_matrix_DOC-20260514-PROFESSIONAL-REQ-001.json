@@ -1,0 +1,138 @@
+{
+  "doc_id": "DOC-20260514-PROFESSIONAL-REQ-001",
+  "gap_matrix_id": "PROFESSIONAL_BASELINE_GAP_MATRIX_20260514",
+  "status": "OPEN_GAPS_IDENTIFIED",
+  "gap_count": 13,
+  "gaps": [
+    {
+      "gap_id": "PROF-GOAL_MAPPING",
+      "axis": "GOAL_MAPPING",
+      "severity": "P0",
+      "evidence": "goal_to_* matrices missing/partial",
+      "fix_route": "HER_AUTO_REPAIR",
+      "required_fix": "create goal mapping registries and hard negative rules",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-METHOD_LOOP_MAPPING",
+      "axis": "METHOD_LOOP_MAPPING",
+      "severity": "P0",
+      "evidence": "method loop not enforced as machine gate",
+      "fix_route": "HER_AUTO_REPAIR",
+      "required_fix": "create method_loop_gap_matrix and acceptance gate",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-DATA_STANDARD",
+      "axis": "DATA_STANDARD",
+      "severity": "P0",
+      "evidence": "field lineage/quality/permission/downstream consumer incomplete",
+      "fix_route": "HER_AUTO_REPAIR",
+      "required_fix": "create data source/field lineage/quality/permission/freshness policies",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-SCHEMA_CONTRACT",
+      "axis": "SCHEMA_CONTRACT",
+      "severity": "P0",
+      "evidence": "per-phase input/output contracts not fully consumption-verified",
+      "fix_route": "HER_AUTO_REPAIR",
+      "required_fix": "create contract index and missing schema queue",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-TRACE_ACCEPTANCE_HANDOFF",
+      "axis": "TRACE_ACCEPTANCE_HANDOFF",
+      "severity": "P0",
+      "evidence": "handoff_created not equal consumed; consumption proof missing",
+      "fix_route": "HER_AUTO_REPAIR",
+      "required_fix": "create handoff consumption check + runtime acceptance runner",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-RUNNER_TOOL_BINDING",
+      "axis": "RUNNER_TOOL_BINDING",
+      "severity": "P0",
+      "evidence": "R00 runner binding previously identified missing",
+      "fix_route": "HER_AUTO_REPAIR",
+      "required_fix": "create 07_runners registry/binding/failure policies",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-R00_RUNTIME",
+      "axis": "R00_RUNTIME",
+      "severity": "P0",
+      "evidence": "R00 not yet proven as real token closed-loop orchestrator",
+      "fix_route": "HER_AUTO_REPAIR",
+      "required_fix": "create runtime blocker matrix/run manifest/token case schema",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-P08_PAPER_GATE",
+      "axis": "P08_PAPER_GATE",
+      "severity": "P0",
+      "evidence": "paper runtime must only enter through P08 permission",
+      "fix_route": "HER_AUTO_REPAIR",
+      "required_fix": "create P08 permission schema and enforcement checks",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-P09_P10_LOOP",
+      "axis": "P09_P10_LOOP",
+      "severity": "P1",
+      "evidence": "review-to-upgrade evidence chain incomplete",
+      "fix_route": "HER_BUILD_TASK",
+      "required_fix": "create P09/P10 handoff and upgrade candidate package",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-ISSUE_TASK_PACKET",
+      "axis": "ISSUE_TASK_PACKET",
+      "severity": "P0",
+      "evidence": "scan must produce machine issue/task queue",
+      "fix_route": "HER_AUTO_REPAIR",
+      "required_fix": "create issue registry schema and auto repair packet",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-LEGACY_ABSORPTION",
+      "axis": "LEGACY_ABSORPTION",
+      "severity": "P1",
+      "evidence": "legacy assets not classified by use",
+      "fix_route": "HER_BUILD_TASK",
+      "required_fix": "create legacy absorption matrix",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-TEST_REGRESSION",
+      "axis": "TEST_REGRESSION",
+      "severity": "P1",
+      "evidence": "professional tests missing for blockers",
+      "fix_route": "HER_BUILD_TASK",
+      "required_fix": "create runtime/regression/shadow test matrices",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "PROF-SAFETY_BOUNDARY",
+      "axis": "SAFETY_BOUNDARY",
+      "severity": "P0",
+      "evidence": "must be system-level forbidden policy",
+      "fix_route": "HER_AUTO_REPAIR",
+      "required_fix": "create/verify no-live/no-sign/no-broadcast policies",
+      "acceptance": "file-backed asset exists, parseable, referenced by issue pack, no false READY claim",
+      "status": "OPEN"
+    }
+  ]
+}

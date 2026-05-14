@@ -1,0 +1,14 @@
+document_id: DOC-20260511-024
+phase_mapping:
+  target_phase: P00_FULL_CONTROL_PLANE
+  phase_type: top_level_runtime_control_plane
+  replaces: none
+  augments:
+    - P00_system_bootstrap_controller
+  does_not_unlock:
+    - P01_DATA_FACT_RUNTIME_CONNECTION
+    - PAPER_TRADING_RUNTIME
+    - REAL_TRADE_EXECUTION
+next_after_acceptance:
+  - FULL_CONTROL_REVERSE_AUDIT_GOVERNANCE_DOMAIN_DATA
+  - P04_EVIDENCE_PLANE_DESIGN

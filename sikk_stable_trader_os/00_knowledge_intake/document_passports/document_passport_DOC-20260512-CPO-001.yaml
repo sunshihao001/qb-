@@ -1,0 +1,23 @@
+doc_id: DOC-20260512-CPO-001
+material_id: MAT-CPO-v1-001
+source_type: user_uploaded_markdown_system_spec
+source_name: Continuous Paper-only Operation 专业版 v1.0
+received_at: 2026-05-12
+ingested_at: 2026-05-12T16:29:31Z
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-CPO-001_continuous_paper_operation_v1.md
+source_sha256: 80b0c93ef2dbe7cd5289c869b5807cc0f16519e5e42f0dbb2e5e1285ff6441a7
+document_role:
+  primary_role: operational_program_specification
+  secondary_roles: [continuous_paper_operation_controller_design, paper_only_runtime_governance, p09_p10_closed_loop_trigger_design]
+summary:
+  core_intent: 建立非实盘、可审计、可暂停、可复盘、可升级候选审查的持续纸面验证运行任务包。
+  key_points:
+    - CPO 不是 P11/I06，不新增业务判断阶段。
+    - CPO 只能 paper-only，禁止 live execution、wallet signing、auto order、auto deploy。
+    - CPO 以 readiness gate、schedule、cycle、sample library、health/risk、P09/P10 trigger、decision 为核心。
+system_mapping:
+  planes: [operational_program, runner_orchestration, trace_handoff_acceptance, paper_runtime, review_upgrade_closed_loop]
+  affected_phases: [K00, I05, P01-P08, PAPER_ONLY_RUNTIME, P09, P10]
+required_actions: [create_system_operational_program_files, create_data_operational_program_outputs, validate_yaml_directory_safety_boundary, generate_acceptance_audit_report]
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

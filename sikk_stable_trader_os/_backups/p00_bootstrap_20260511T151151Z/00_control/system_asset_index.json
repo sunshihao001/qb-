@@ -1,0 +1,687 @@
+{
+  "asset_index_id": "SYSTEM_ASSET_INDEX-20260511-P0",
+  "generated_at": "2026-05-11T13:36:48.521060+00:00",
+  "root": "/root/sikk-gmgn/sikk_stable_trader_os",
+  "canonical_sources": {
+    "methodology_doc_id": "DOC-20260511-003",
+    "governance_doc_id": "DOC-20260511-004",
+    "domain_doc_id": "DOC-20260511-005"
+  },
+  "assets": [
+    {
+      "asset_id": "methodology_blueprint",
+      "path": "00_methodology/system_methodology_blueprint.md",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-017",
+      "asset_type": "canonical_methodology",
+      "status": "READY_WITH_SECTION_12_DATA_TARGET_DATA",
+      "sha256": "243327a1ded9488f3b8cc9972cb7276e9747b3daa46703a31ab8e91191d5942f",
+      "consumed_by": [
+        "K00",
+        "P00",
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09"
+      ]
+    },
+    {
+      "asset_id": "governance_plane",
+      "path": "00_governance/governance_plane.md",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-004",
+      "asset_type": "system_plane",
+      "status": "READY",
+      "sha256": "fa7e31d234fae7783ba4929c57db1210dc3b9200e8e9e4529423d9c7e7ef92a8",
+      "consumed_by": []
+    },
+    {
+      "asset_id": "domain_plane",
+      "path": "00_domain/domain_plane.md",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-005",
+      "asset_type": "system_plane",
+      "status": "READY",
+      "sha256": "d7c349c0092812bb2f437298178ecbb30402c864225f4bfef5c384fc9a6984ed",
+      "consumed_by": []
+    },
+    {
+      "asset_id": "domain_object_registry",
+      "path": "00_domain/domain_object_registry.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "domain_support_asset",
+      "status": "READY_PATCHED_CORE_OBJECTS_COMPLETE",
+      "sha256": "f3b09d51a8960ed137d7cfe54c3822c3f2969496b1fd477075280d2aa77634df",
+      "consumed_by": []
+    },
+    {
+      "asset_id": "field_dictionary",
+      "path": "00_domain/field_dictionary.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-005",
+      "asset_type": "domain_contract",
+      "status": "READY",
+      "sha256": "acec4b3c5f060e7f78de013796824d9b98de6fc5f801629dc479e7cca470b9c1",
+      "consumed_by": []
+    },
+    {
+      "asset_id": "state_dictionary",
+      "path": "00_domain/state_dictionary.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-005",
+      "asset_type": "domain_contract",
+      "status": "READY",
+      "sha256": "e8e4bbb4164fbc5ee1b395ad0a01bf641aa07d288bdc25f1a323c4193f6ccbaf",
+      "consumed_by": []
+    },
+    {
+      "asset_id": "k00_phase_controller",
+      "path": "06_phase_controllers/K00_knowledge_intake_taskization/01_phase_manifest.yaml",
+      "exists": true,
+      "source_doc_id": "SYSTEM",
+      "asset_type": "phase_controller",
+      "status": "READY",
+      "sha256": "429b6bd8492ebd8cce868ffce7858f50d8f3838242d5cdad7764e42ed0ea8148",
+      "consumed_by": []
+    },
+    {
+      "asset_id": "current_system_state",
+      "path": "00_control/current_system_state.json",
+      "exists": true,
+      "source_doc_id": "SYSTEM",
+      "asset_type": "control_state",
+      "status": "READY",
+      "sha256": "249f3028eae6a0c995fbc7ea01e6f0fca1a9d87cc82887dd003dc9556bd171ac",
+      "consumed_by": [
+        "P00",
+        "P01"
+      ]
+    },
+    {
+      "asset_id": "phase_registry",
+      "path": "00_control/phase_registry.yaml",
+      "exists": true,
+      "source_doc_id": "SYSTEM",
+      "asset_type": "phase_registry",
+      "status": "READY",
+      "sha256": "11787d91cb10e96d508151b51002435a62e9588f4b2687578eb52a7500acff63",
+      "consumed_by": [
+        "P00",
+        "P01"
+      ]
+    },
+    {
+      "asset_id": "system_asset_index",
+      "path": "00_control/system_asset_index.json",
+      "exists": true,
+      "source_doc_id": "P0_REPAIR",
+      "asset_type": "control_registry",
+      "status": "READY",
+      "sha256": "bb0f651fa525cae2104f4ec091070fa5466fb28d61d079222a4d3c01eec0b984",
+      "consumed_by": [
+        "K00",
+        "P00",
+        "P01"
+      ]
+    },
+    {
+      "asset_id": "data_plane",
+      "path": "00_data/data_plane.md",
+      "exists": true,
+      "source_doc_id": "P0_REPAIR",
+      "asset_type": "system_plane",
+      "status": "READY",
+      "sha256": "dd7b4ca7e9450a51fa7edb952597d09f3c2cde1a918bc85af4e13c53f20070c3",
+      "consumed_by": [
+        "P00",
+        "P01"
+      ]
+    },
+    {
+      "asset_id": "field_source_map",
+      "path": "00_data/field_source_map.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-017",
+      "asset_type": "data_support_asset",
+      "status": "READY_PATCHED_ACCEPTANCE_FIELDS",
+      "sha256": "d2ed20a0d79181851782987de50a603a4ae152513e5e87f3636eb267e21d07a4",
+      "consumed_by": [
+        "P01"
+      ]
+    },
+    {
+      "asset_id": "normalized_fact_model_schema",
+      "path": "00_data/normalized_fact_model.schema.json",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-017",
+      "asset_type": "data_support_asset",
+      "status": "READY_PATCHED_ACCEPTANCE_FIELDS",
+      "sha256": "1d150da79112d2daa9f0af14eff3c3363be4ee8d5c986a7cfd3436e7292813c6",
+      "consumed_by": [
+        "P01"
+      ]
+    },
+    {
+      "asset_id": "data_input_contract",
+      "path": "00_data/data_input_contract.json",
+      "exists": true,
+      "source_doc_id": "P0_REPAIR",
+      "asset_type": "contract",
+      "status": "READY",
+      "sha256": "4d073117f219ffc7641045b165304de495720e147703e8be9968ab4e4efbbb57",
+      "consumed_by": [
+        "P01"
+      ]
+    },
+    {
+      "asset_id": "data_handoff_packet",
+      "path": "00_data/data_handoff_packet.json",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-017",
+      "asset_type": "data_support_asset",
+      "status": "READY_PATCHED_ACCEPTANCE_FIELDS",
+      "sha256": "1e78a5c6587938afd0ab76ba09ca0777437550e48e70bd3643b56744bcc003e3",
+      "consumed_by": [
+        "P00"
+      ]
+    },
+    {
+      "asset_id": "p00_phase_controller",
+      "path": "06_phase_controllers/P00_system_context_control/01_phase_manifest.yaml",
+      "exists": true,
+      "source_doc_id": "P0_REPAIR",
+      "asset_type": "phase_controller",
+      "status": "READY",
+      "sha256": "ec74d22a95fe596db5266f048f134f7bc3a662152627eedf26492724e0f83e58",
+      "consumed_by": [
+        "P00"
+      ]
+    },
+    {
+      "asset_id": "p01_phase_controller",
+      "path": "06_phase_controllers/P01_data_fact_runtime_connection/01_phase_manifest.yaml",
+      "exists": true,
+      "source_doc_id": "P0_REPAIR",
+      "asset_type": "phase_controller",
+      "status": "READY",
+      "sha256": "5b97c9fe727662ff7a267cc4f5ad67bdd14ab0cd537492132262083e787534ba",
+      "consumed_by": [
+        "P01"
+      ]
+    },
+    {
+      "asset_id": "phase_target_data_schema",
+      "path": "00_control/phase_target_data.schema.json",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-012",
+      "asset_type": "control_schema",
+      "sha256": "71e053487b2d3384803e936a83281e58080ea35216bb27c052f0af70af5591fc",
+      "status": "READY"
+    },
+    {
+      "asset_id": "phase_status_enum",
+      "path": "00_control/phase_status_enum.json",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-012",
+      "asset_type": "control_enum",
+      "sha256": "70fa742e0610af136ed3ddb5cbf3d129cff125384e26f269626cffd6b79fbd97",
+      "status": "READY"
+    },
+    {
+      "asset_id": "k00_phase_target_data_raw_user_proposed",
+      "path": "06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.raw_user_proposed.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-013",
+      "asset_type": "phase_target_data_raw",
+      "sha256": "2196150d7fe047a8d302d99f09567c2e50a1551abe5975c5e54806ecc75c6181",
+      "status": "PRESERVED_WITH_ENUM_MISMATCH"
+    },
+    {
+      "asset_id": "k00_phase_target_data",
+      "path": "06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-013",
+      "asset_type": "phase_target_data",
+      "sha256": "fff81496a40042897ac8e868d7da4d0a1fb19618da2ffe329476acb0659b3ad2",
+      "status": "READY_NORMALIZED"
+    },
+    {
+      "asset_id": "p00_phase_target_data_raw_user_proposed",
+      "path": "06_phase_controllers/P00_system_context_control/phase_target_data.raw_user_proposed.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-014",
+      "asset_type": "phase_target_data_raw",
+      "sha256": "72a46b018a2be57e08432e472554cce9278e2efef19d23edeff0803c061fa18c",
+      "status": "PRESERVED_WITH_ENUM_AND_ID_MISMATCH"
+    },
+    {
+      "asset_id": "p00_phase_target_data",
+      "path": "06_phase_controllers/P00_system_context_control/phase_target_data.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-014",
+      "asset_type": "phase_target_data",
+      "sha256": "907ff54169300f5c45b3613ce54385d8eac639364b869976bcd3e3baad509840",
+      "status": "READY_NORMALIZED"
+    },
+    {
+      "asset_id": "governance_phase_target_data_raw_user_proposed",
+      "path": "00_governance/governance_phase_target_data.raw_user_proposed.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-015",
+      "asset_type": "phase_target_data_raw",
+      "sha256": "50636ccf4fb769ae5b5cfc394fd963c4f75da349a295c4907338efc9879ff107",
+      "status": "PRESERVED_WITH_SCHEMA_AND_ENUM_GAPS"
+    },
+    {
+      "asset_id": "governance_phase_target_data",
+      "path": "00_governance/governance_phase_target_data.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-015",
+      "asset_type": "phase_target_data",
+      "sha256": "c2849bf7fc4f12c6264f148bc5b9a6e105ddc6a36495618d74e4415ac5dc5286",
+      "status": "READY_NORMALIZED"
+    },
+    {
+      "asset_id": "authority_boundary",
+      "path": "00_governance/authority_boundary.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-015",
+      "asset_type": "governance_support_asset",
+      "sha256": "25dedd7a5f07b4b330fc87dbcdda57c949200579191807139f46f331ab9fc4b9",
+      "status": "READY"
+    },
+    {
+      "asset_id": "hard_negative_rules",
+      "path": "00_governance/hard_negative_rules.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-015",
+      "asset_type": "governance_support_asset",
+      "sha256": "695dabf0e987bef67370f5935a2fb9c331c1f79f1d80916663b72ca8dbcb0fdc",
+      "status": "READY"
+    },
+    {
+      "asset_id": "risk_boundary",
+      "path": "00_governance/risk_boundary.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-015",
+      "asset_type": "governance_support_asset",
+      "sha256": "58bd536482ba647706a77d8bebc34164d6a869678ae990d4057c7b0d0749afdc",
+      "status": "READY"
+    },
+    {
+      "asset_id": "stage_permission_matrix",
+      "path": "00_governance/stage_permission_matrix.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-015",
+      "asset_type": "governance_support_asset",
+      "sha256": "deed2f3e511a3d65a3dca62fa5fdd694e509e1111c1ffcb896735b7c40640411",
+      "status": "READY"
+    },
+    {
+      "asset_id": "real_trade_forbidden_policy",
+      "path": "00_governance/real_trade_forbidden_policy.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-015",
+      "asset_type": "governance_support_asset",
+      "sha256": "aaaab3f88a7cd4757228aef80884b3de6ff32e48f9a9ea5b2d0483c78f87a9a2",
+      "status": "READY"
+    },
+    {
+      "asset_id": "domain_phase_target_data_raw_user_proposed",
+      "path": "00_domain/domain_phase_target_data.raw_user_proposed.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "phase_target_data_raw",
+      "sha256": "561a0bae1bd63583b116b214b6a9cae8d8fa1be545289bb939ced73d4fb46282",
+      "status": "PRESERVED_WITH_SCHEMA_AND_ENUM_GAPS"
+    },
+    {
+      "asset_id": "domain_phase_target_data",
+      "path": "00_domain/domain_phase_target_data.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "phase_target_data",
+      "sha256": "4444bbd35727fb1b85683019940fa9771b8ed83f2b27ff0bf0d292f3c076871a",
+      "status": "READY_NORMALIZED"
+    },
+    {
+      "asset_id": "domain_relation_graph",
+      "path": "00_domain/domain_relation_graph.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "domain_support_asset",
+      "sha256": "5ff1370725081afa4f850229d9903206d92929b56000541caa870d646f7e5dae",
+      "status": "READY"
+    },
+    {
+      "asset_id": "domain_decision_question_tree",
+      "path": "00_domain/domain_decision_question_tree.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "domain_support_asset",
+      "sha256": "7e69d3a4d0d5c42ae6a1f8ff723ccab518037d3245f335793180be8bc28f6947",
+      "status": "READY"
+    },
+    {
+      "asset_id": "scenario_taxonomy",
+      "path": "00_domain/scenario_taxonomy.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "domain_support_asset",
+      "sha256": "a75770ad8bb648413d88b2e08858442b5121ea3a1aa0498f3d063f7ec30f6f9b",
+      "status": "READY"
+    },
+    {
+      "asset_id": "wallet_role_taxonomy",
+      "path": "00_domain/wallet_role_taxonomy.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "domain_support_asset",
+      "sha256": "ebba8deaa171eeecf1d0b5de7247eabb76b306494b3b917bc3c066342648576e",
+      "status": "READY"
+    },
+    {
+      "asset_id": "dominant_side_lifecycle_taxonomy",
+      "path": "00_domain/dominant_side_lifecycle_taxonomy.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "domain_support_asset",
+      "sha256": "f346a8b485adbd68a72dcbf8163dd7cc75aa19aaba0e0ec8dc81ecedae4cf264",
+      "status": "READY"
+    },
+    {
+      "asset_id": "domain_to_data_demand_map",
+      "path": "00_domain/domain_to_data_demand_map.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "domain_support_asset",
+      "sha256": "1b656dd2ac104eacd22c5804d7066b381e4357a6311cdd1a037ad8c5aa47a6a4",
+      "status": "READY"
+    },
+    {
+      "asset_id": "domain_to_phase_map",
+      "path": "00_domain/domain_to_phase_map.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "domain_support_asset",
+      "sha256": "8a22594494c1929a457e11847cf1c70a5bed615fbf00dd95e2c6c51e7bf3f75f",
+      "status": "READY"
+    },
+    {
+      "asset_id": "domain_acceptance_gate",
+      "path": "00_domain/domain_acceptance_gate.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-016",
+      "asset_type": "domain_support_asset",
+      "sha256": "138d49e2868d826d2ee0d2b2d65d7b5c53bc5ba41de6f5c6c5df8a9541c96d10",
+      "status": "READY"
+    },
+    {
+      "asset_id": "data_phase_target_data_raw_user_proposed",
+      "path": "00_data/data_phase_target_data.raw_user_proposed.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-017",
+      "asset_type": "phase_target_data_raw",
+      "sha256": "7ed830b434b3478e15de78950a0663ec378f8b54d790754d4e1bf774e6e8da8d",
+      "status": "PRESERVED_WITH_SCHEMA_AND_ENUM_GAPS"
+    },
+    {
+      "asset_id": "data_phase_target_data",
+      "path": "00_data/data_phase_target_data.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-017",
+      "asset_type": "phase_target_data",
+      "sha256": "53ca183a03197e6f8867f574510ff4759015aee7213058a2c848aaa25b9cd06a",
+      "status": "READY_NORMALIZED"
+    },
+    {
+      "asset_id": "data_quality_rules",
+      "path": "00_data/data_quality_rules.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-017",
+      "asset_type": "data_support_asset",
+      "sha256": "e8a28c0626ca60bfc80dbc2ea5da95accfd9f7f30ac18856ee25c354a6126a3f",
+      "status": "READY"
+    },
+    {
+      "asset_id": "evidence_level_rules",
+      "path": "00_data/evidence_level_rules.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-017",
+      "asset_type": "data_support_asset",
+      "sha256": "ee3798ee7d1071f4c5737c6fee758f657b38ee2b4b7348778993ed0838a82b8b",
+      "status": "READY"
+    },
+    {
+      "asset_id": "contradiction_record_rules",
+      "path": "00_data/contradiction_record_rules.yaml",
+      "exists": true,
+      "source_doc_id": "DOC-20260511-017",
+      "asset_type": "data_support_asset",
+      "sha256": "d651ddab54a4a223632efc76391512d0399e56bd87494afe1d6c24bbdcbd96f9",
+      "status": "READY"
+    }
+  ],
+  "updated_at": "2026-05-11T14:26:07.280460+00:00",
+  "canonical_build_order": [
+    "methodology_blueprint",
+    "governance_plane",
+    "domain_plane",
+    "data_plane",
+    "control_plane",
+    "phase_controllers",
+    "runner",
+    "acceptance_writeback",
+    "downstream_business_workflow"
+  ],
+  "automation_prerequisite_rule": "禁止在缺少数据平面、控制平面、阶段控制器和验收矩阵时，直接推进自动化交易功能。",
+  "canonical_system_planes": [
+    "Knowledge Plane",
+    "Methodology Plane",
+    "Governance Plane",
+    "Domain Plane",
+    "Data Plane",
+    "Control Plane",
+    "Execution Plane",
+    "Acceptance Plane",
+    "Trace Plane",
+    "Handoff Plane",
+    "Review Plane",
+    "Upgrade Plane"
+  ],
+  "system_plane_questions": {
+    "Knowledge Plane": "哪些资料已经被摄取、保存、建档？",
+    "Methodology Plane": "系统应该按照什么方法建造？",
+    "Governance Plane": "什么允许做，什么禁止做，谁有权限裁决？",
+    "Domain Plane": "系统到底在判断哪些对象、关系、场景和问题？",
+    "Data Plane": "判断这些对象需要哪些字段、来源、质量等级？",
+    "Control Plane": "当前系统状态是什么，下一步谁合法？",
+    "Execution Plane": "哪个 runner 执行哪个任务？",
+    "Acceptance Plane": "什么条件才算阶段真正完成？",
+    "Trace Plane": "方法论、资产、字段、阶段是否被覆盖？",
+    "Handoff Plane": "上游如何把产物交给下游？",
+    "Review Plane": "纸面交易和错判如何复盘？",
+    "Upgrade Plane": "哪些规则允许被更新？"
+  },
+  "lightweight_institutional_principle": "保留机构级核心控制逻辑，减少无效复杂度，优先建立可运行闭环。",
+  "system_compilation_chain": [
+    "user_input_documents_links_legacy_material",
+    "K00_knowledge_intake_taskization",
+    "methodology_blueprint_read",
+    "P00_system_build_controller",
+    "governance_plane_generation",
+    "domain_plane_generation",
+    "data_plane_generation",
+    "control_plane_generation",
+    "phase_controller_generation",
+    "runner_binding",
+    "acceptance_gate_generation",
+    "trace_matrix_generation",
+    "handoff_packet_generation"
+  ],
+  "critical_breakpoints": {
+    "k00_assetization_not_system_consumption": "K00 完成后，必须由 P00 系统建造控制器继续处理。"
+  },
+  "authoritative_state_source": "00_control/current_system_state.json",
+  "her_runtime_order": [
+    "identify_system_phase",
+    "read_current_system_state_json",
+    "read_phase_registry_yaml",
+    "validate_phase_legality",
+    "check_input_asset_exists",
+    "check_input_asset_registered",
+    "check_downstream_consumption",
+    "execute_phase_objective",
+    "write_output_files",
+    "write_acceptance_result",
+    "write_state_back",
+    "generate_handoff_packet",
+    "decide_next_legal_phase"
+  ],
+  "completion_state_distinctions": [
+    "diagnostic_artifact_passed",
+    "system_integration_repaired",
+    "phase_acceptance_passed",
+    "downstream_consumption_verified",
+    "runtime_execution_completed"
+  ],
+  "canonical_phase_sequence": [
+    "K00",
+    "P00",
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10"
+  ],
+  "phase_definitions": {
+    "K00": {
+      "name": "知识摄取与任务化",
+      "positioning": "把文档、资料、旧系统资产化"
+    },
+    "P00": {
+      "name": "系统建造与方法论编译",
+      "positioning": "把方法论编译成系统平面"
+    },
+    "P01": {
+      "name": "数据事实层",
+      "positioning": "统一事实模型与字段标准化"
+    },
+    "P02": {
+      "name": "钱包结构层",
+      "positioning": "钱包角色、同源组、资金路径"
+    },
+    "P03": {
+      "name": "筹码控制层",
+      "positioning": "控制权、筹码迁移、对手盘压力"
+    },
+    "P04": {
+      "name": "市场结构层",
+      "positioning": "K线、成交量、箱体、AVWAP、POC"
+    },
+    "P05": {
+      "name": "场景识别层",
+      "positioning": "识别吸筹、派发、二段、陷阱等盘型"
+    },
+    "P06": {
+      "name": "策略门禁层",
+      "positioning": "剔除低质量样本，裁决 paper 资格"
+    },
+    "P07": {
+      "name": "执行风控层",
+      "positioning": "模拟成交、滑点、手续费、熔断"
+    },
+    "P08": {
+      "name": "纸面交易验证层",
+      "positioning": "纸面持仓、交易、收益曲线、统计"
+    },
+    "P09": {
+      "name": "复盘学习层",
+      "positioning": "错判归因、规则修正候选"
+    },
+    "P10": {
+      "name": "系统升级层",
+      "positioning": "经过复盘证据后升级字段、规则、阶段"
+    }
+  },
+  "phase_reconciliation_required": {
+    "P09_P10_upgrade_split": true
+  },
+  "phase_target_data_standard": {
+    "schema_path": "00_control/phase_target_data.schema.json",
+    "required_fields": [
+      "phase_id",
+      "phase_name_cn",
+      "phase_type",
+      "phase_status",
+      "authority_scope",
+      "primary_goal",
+      "non_goal",
+      "upstream_dependencies",
+      "required_inputs",
+      "optional_inputs",
+      "forbidden_inputs",
+      "core_objects",
+      "core_questions",
+      "required_outputs",
+      "handoff_outputs",
+      "acceptance_gate",
+      "blocking_conditions",
+      "downstream_consumers",
+      "runner_binding_status",
+      "state_writeback_required",
+      "paper_only_required",
+      "real_trade_allowed"
+    ]
+  },
+  "phase_status_enum": {
+    "legal": [
+      "NOT_CREATED",
+      "STUB_REQUIRED",
+      "WAITING_INPUT",
+      "READY_TO_BUILD",
+      "READY_TO_EXECUTE",
+      "BLOCKED",
+      "BLOCKED_BY_DATA_PLANE",
+      "BLOCKED_BY_CONTROL_PLANE",
+      "BLOCKED_BY_ACCEPTANCE",
+      "RUNNING",
+      "OUTPUT_CREATED",
+      "ACCEPTANCE_PENDING",
+      "ACCEPTANCE_PASSED",
+      "ACCEPTANCE_FAILED",
+      "HANDOFF_READY",
+      "CONSUMED_BY_DOWNSTREAM",
+      "DEPRECATED"
+    ],
+    "forbidden": [
+      "done",
+      "finished",
+      "ok",
+      "looks good",
+      "almost complete",
+      "maybe ready"
+    ]
+  },
+  "k00_phase_target_data_path": "06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.yaml",
+  "k00_phase_target_data_raw_user_proposed_path": "06_phase_controllers/K00_knowledge_intake_taskization/phase_target_data.raw_user_proposed.yaml",
+  "p00_phase_target_data_path": "06_phase_controllers/P00_system_context_control/phase_target_data.yaml",
+  "p00_phase_target_data_raw_user_proposed_path": "06_phase_controllers/P00_system_context_control/phase_target_data.raw_user_proposed.yaml",
+  "governance_phase_target_data_path": "00_governance/governance_phase_target_data.yaml",
+  "governance_phase_target_data_raw_user_proposed_path": "00_governance/governance_phase_target_data.raw_user_proposed.yaml",
+  "domain_phase_target_data_path": "00_domain/domain_phase_target_data.yaml",
+  "domain_phase_target_data_raw_user_proposed_path": "00_domain/domain_phase_target_data.raw_user_proposed.yaml",
+  "data_phase_target_data_path": "00_data/data_phase_target_data.yaml",
+  "data_phase_target_data_raw_user_proposed_path": "00_data/data_phase_target_data.raw_user_proposed.yaml"
+}

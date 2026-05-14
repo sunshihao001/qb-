@@ -1,0 +1,12 @@
+policy_id: PAPER_ENTRY_POLICY
+controller_id: I04_PAPER_RUNTIME_INTEGRATION
+rules:
+- entry requires P08 PAPER_RUNTIME_ALLOWED or limited equivalent
+- deduplicate candidate
+- enforce position uniqueness
+- apply entry price, slippage, and cost before opening
+safety_boundaries:
+  paper_only: true
+  no_live_execution: true
+  no_wallet_signing: true
+  no_auto_deploy: true

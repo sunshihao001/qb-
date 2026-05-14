@@ -1,0 +1,22 @@
+{
+  "run_id": "TEST-KPP-ZIP-UPLOAD",
+  "doc_id": "TEST-KPP-ZIP-DOC",
+  "source_type": "telegram_upload",
+  "source_path": "/root/sikk-gmgn/data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-ZIP-UPLOAD/K00/normalized_text.md",
+  "original_source_path": "/tmp/pytest-of-root/pytest-370/test_zip_source_adapter_extrac0/docs.zip",
+  "staged_source_path": "/root/sikk-gmgn/data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-ZIP-UPLOAD/K00/uploaded_source/TEST-KPP-ZIP-DOC_e44d2d74ed88_docs.zip",
+  "normalized_source_adapter": "zip_text_bundle",
+  "normalized_source_files": [
+    "a.md",
+    "nested/b.txt"
+  ],
+  "telegram_context": {
+    "chat_id": "TEST_CHAT",
+    "message_id": "MSGZIP"
+  },
+  "input_classification": "system_building_material",
+  "output_root": "/root/sikk-gmgn/data/knowledge_processing_program/telegram_upload_productization/test_runs",
+  "queue_path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/input_governance_queue.jsonl",
+  "telegram_panel": true,
+  "candidate_only": true
+}

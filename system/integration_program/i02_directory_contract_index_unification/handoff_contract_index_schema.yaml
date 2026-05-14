@@ -1,0 +1,28 @@
+schema_id: handoff_contract_index_schema
+version: '1.0'
+type: object
+required:
+- record_id
+- generated_at
+- status
+properties:
+  record_id:
+    type: string
+  generated_at:
+    type: datetime
+  status:
+    type: string
+  source_paths:
+    type: list
+  items:
+    type: list
+  gaps:
+    type: list
+  restrictions:
+    type: list
+safety_invariants:
+- no_business_logic_mutation
+- no_auto_deploy
+- no_paper_runtime_start
+- no_live_execution
+- legacy_readonly

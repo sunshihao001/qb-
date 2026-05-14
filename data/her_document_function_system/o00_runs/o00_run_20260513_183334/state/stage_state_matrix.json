@@ -1,0 +1,38 @@
+{
+  "pipeline_run_id": "o00_run_20260513_183334",
+  "stages": {
+    "K00": {
+      "status": "DESIGN_LEVEL_EXPECTED_OUTPUT_SIMULATED",
+      "real_runtime_executed": false
+    },
+    "F00": {
+      "status": "DESIGN_LEVEL_EXPECTED_OUTPUT_SIMULATED",
+      "real_runtime_executed": false
+    },
+    "V00": {
+      "status": "DESIGN_LEVEL_EXPECTED_OUTPUT_SIMULATED",
+      "real_runtime_executed": false
+    },
+    "A00": {
+      "status": "DESIGN_LEVEL_EXPECTED_OUTPUT_SIMULATED",
+      "real_runtime_executed": false
+    },
+    "H00": {
+      "status": "DESIGN_LEVEL_EXPECTED_OUTPUT_SIMULATED",
+      "real_runtime_executed": false
+    },
+    "R00": {
+      "status": "SKIPPED",
+      "skip_reason": "runner binding not executed in design-level replay",
+      "real_runtime_executed": false
+    },
+    "U00": {
+      "status": "REVIEW_CANDIDATE_SIMULATED",
+      "real_runtime_executed": false
+    },
+    "G00": {
+      "status": "GOVERNANCE_CANDIDATE_SIMULATED_POLICY_NOT_ACTIVE",
+      "real_runtime_executed": false
+    }
+  }
+}

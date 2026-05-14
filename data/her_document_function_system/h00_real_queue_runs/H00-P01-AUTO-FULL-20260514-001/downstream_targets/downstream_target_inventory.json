@@ -1,0 +1,45 @@
+{
+  "inventory_id": "downstream_target_inventory_H00-P01-AUTO-FULL-20260514-001",
+  "targets": [
+    {
+      "target_id": "target_u00_review_upgrade",
+      "target_type": "U00_REVIEW_UPGRADE",
+      "target_controller": "U00",
+      "reason": "A00 contains open gaps and READY_WITH_GAPS status",
+      "handoff_required": true,
+      "execution_allowed": true
+    },
+    {
+      "target_id": "target_g00_governance",
+      "target_type": "G00_GOVERNANCE_BOUNDARY",
+      "target_controller": "G00",
+      "reason": "policy_not_active or governance candidates require governance review",
+      "handoff_required": true,
+      "execution_allowed": true
+    },
+    {
+      "target_id": "target_o00_run_document_preparation",
+      "target_type": "O00_PIPELINE_PREPARATION",
+      "target_controller": "O00",
+      "reason": "next stage requires safe-mode run-document preparation",
+      "handoff_required": true,
+      "execution_allowed": false
+    },
+    {
+      "target_id": "target_report_audit",
+      "target_type": "REPORT_AUDIT",
+      "target_controller": "Report_Audit_System",
+      "reason": "H00 must preserve trace/audit/report outputs",
+      "handoff_required": true,
+      "execution_allowed": false
+    },
+    {
+      "target_id": "target_backlog",
+      "target_type": "BACKLOG_UPGRADE_QUEUE",
+      "target_controller": "Backlog_Upgrade_Queue",
+      "reason": "deferred or non-executable items remain queued",
+      "handoff_required": true,
+      "execution_allowed": false
+    }
+  ]
+}

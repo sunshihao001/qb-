@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0026
+source_path: docs/09_her_execution_protocol/her_task_book_standard.md
+phase_scores:
+  P01: 1
+  P02: 0
+  P03: 1
+  P04: 0
+  P05: 1
+  P06: 0
+  P07: 2
+  P08: 15
+  P09: 0
+  P10: 0
+primary_phase: P08
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

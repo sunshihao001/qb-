@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "required": [
+    "validation_type",
+    "status",
+    "total_rules",
+    "valid_rules",
+    "invalid_rules",
+    "blocked_rules",
+    "warnings"
+  ],
+  "properties": {
+    "validation_type": {
+      "const": "rule_logic_validation"
+    },
+    "status": {
+      "type": "string"
+    },
+    "total_rules": {
+      "type": "integer"
+    },
+    "valid_rules": {
+      "type": "integer"
+    },
+    "invalid_rules": {
+      "type": "integer"
+    },
+    "blocked_rules": {
+      "type": "array"
+    },
+    "warnings": {
+      "type": "array"
+    }
+  }
+}

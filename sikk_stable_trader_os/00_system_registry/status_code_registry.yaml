@@ -1,0 +1,109 @@
+registry_id: status_code_registry
+version: '2.0'
+updated_at: '2026-05-11T02:27:03Z'
+global_status_codes:
+- code: PHASE_NOT_STARTED
+  scope: phase
+  meaning: 阶段包存在但尚未开始执行
+  advance_policy: may_start_when_upstream_policy_satisfied
+- code: PHASE_INPUT_LOADED
+  scope: phase
+  meaning: 已读取 input_contract 与输入包
+  advance_policy: continue
+- code: PHASE_RUNNING
+  scope: phase
+  meaning: 任务树执行中
+  advance_policy: continue
+- code: PHASE_READY
+  scope: phase
+  meaning: acceptance_gate 通过且 handoff_packet schema 通过
+  advance_policy: may_advance
+- code: PHASE_WITH_GAPS
+  scope: phase
+  meaning: 非阻断缺口已记录并继承
+  advance_policy: may_advance_only_if_gate_allows
+- code: PHASE_PAUSED
+  scope: phase
+  meaning: 等待补字段/补证据/人工确认
+  advance_policy: do_not_advance
+- code: PHASE_REJECTED
+  scope: phase
+  meaning: 验收门拒绝当前输出
+  advance_policy: do_not_advance
+- code: PHASE_ERROR
+  scope: phase
+  meaning: 工具/解析/合约异常
+  advance_policy: do_not_advance
+- code: PHASE_BLOCKED
+  scope: phase
+  meaning: hard negative 或致命缺失触发阻断
+  advance_policy: terminal_or_recovery_required
+- code: HANDOFF_READY
+  scope: handoff
+  meaning: 交接包已写入并通过 schema
+  advance_policy: may_pass_downstream
+- code: HANDOFF_BLOCKED
+  scope: handoff
+  meaning: 交接包缺失/无效/目标不一致
+  advance_policy: do_not_advance
+- code: ACCEPTANCE_PASS
+  scope: acceptance
+  meaning: 验收门通过
+  advance_policy: may_write_ready
+- code: ACCEPTANCE_PASS_WITH_WARNING
+  scope: acceptance
+  meaning: 验收门带缺口通过
+  advance_policy: may_write_with_gaps
+- code: ACCEPTANCE_PAUSE
+  scope: acceptance
+  meaning: 验收门要求暂停
+  advance_policy: pause
+- code: ACCEPTANCE_BLOCK
+  scope: acceptance
+  meaning: 验收门阻断
+  advance_policy: block
+- code: DATA_OK
+  scope: data
+  meaning: 必要事实字段完整且来源可追溯
+  advance_policy: supports_gate
+- code: DATA_PARTIAL
+  scope: data
+  meaning: 存在非致命缺失
+  advance_policy: degrade_or_warn
+- code: DATA_STALE
+  scope: data
+  meaning: 时间有效性不足
+  advance_policy: pause_or_recollect
+- code: DATA_INVALID
+  scope: data
+  meaning: 事实源冲突/格式无效/关键字段缺失
+  advance_policy: block
+- code: OBSERVE_ONLY
+  scope: safety
+  meaning: 只观察
+  advance_policy: no_real_trade
+- code: PAPER_ONLY
+  scope: safety
+  meaning: 只纸面验证
+  advance_policy: no_real_trade
+- code: REQUIRES_MANUAL_CONFIRMATION
+  scope: safety
+  meaning: 需要人工确认
+  advance_policy: pause_before_sensitive_action
+- code: BLOCK_REAL_TRADE
+  scope: safety
+  meaning: 实盘禁止
+  advance_policy: default_global_safety
+state_transition_policy:
+  start: PHASE_NOT_STARTED -> PHASE_INPUT_LOADED -> PHASE_RUNNING
+  complete: PHASE_RUNNING -> ACCEPTANCE_PASS -> HANDOFF_READY -> PHASE_READY
+  warning: PHASE_RUNNING -> ACCEPTANCE_PASS_WITH_WARNING -> HANDOFF_READY -> PHASE_WITH_GAPS
+  pause: any -> ACCEPTANCE_PAUSE/PHASE_PAUSED/HANDOFF_BLOCKED
+  block: any -> ACCEPTANCE_BLOCK/PHASE_BLOCKED/DATA_INVALID
+  forbidden: PHASE_READY without HANDOFF_READY; DATA_INVALID with downstream advance;
+    report-only completion
+status_policy:
+  completion: PHASE_READY only after professional acceptance gate passes
+  gaps: PHASE_WITH_GAPS can continue only with inherited gap_list
+  rejected: PHASE_REJECTED cannot advance downstream
+  real_trade: BLOCK_REAL_TRADE is default and cannot be cleared by phase score

@@ -1,0 +1,47 @@
+{
+  "policy_id": "forbidden_action_policy_v1",
+  "policy_domain": "forbidden_action_policy",
+  "version": "1.0.0",
+  "rules": [
+    {
+      "rule_id": "forbid_live_runtime",
+      "action": "live_runtime",
+      "policy_level": "HARD_FORBIDDEN",
+      "applies_to": "ALL_CONTROLLERS",
+      "violation_effect": "BLOCK_IMMEDIATELY",
+      "allowed_exception": false
+    },
+    {
+      "rule_id": "forbid_wallet_signing",
+      "action": "wallet_signing",
+      "policy_level": "HARD_FORBIDDEN",
+      "applies_to": "ALL_CONTROLLERS",
+      "violation_effect": "BLOCK_IMMEDIATELY",
+      "allowed_exception": false
+    },
+    {
+      "rule_id": "forbid_auto_deploy",
+      "action": "auto_deploy",
+      "policy_level": "HARD_FORBIDDEN",
+      "applies_to": "ALL_CONTROLLERS",
+      "violation_effect": "BLOCK_IMMEDIATELY",
+      "allowed_exception": false
+    },
+    {
+      "rule_id": "forbid_production_trading",
+      "action": "production_trading",
+      "policy_level": "HARD_FORBIDDEN",
+      "applies_to": "ALL_CONTROLLERS",
+      "violation_effect": "BLOCK_IMMEDIATELY",
+      "allowed_exception": false
+    },
+    {
+      "rule_id": "forbid_execute_real_order",
+      "action": "execute_real_order",
+      "policy_level": "HARD_FORBIDDEN",
+      "applies_to": "ALL_CONTROLLERS",
+      "violation_effect": "BLOCK_IMMEDIATELY",
+      "allowed_exception": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+trace_id: i02_trace_requirements
+required_trace_events:
+- input_loaded
+- scan_started
+- phase_index_built
+- contract_index_built
+- legacy_mapping_built
+- gap_report_built
+- prerequisite_built
+- handoff_built
+- acceptance_built
+trace_dir: /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/trace

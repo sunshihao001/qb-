@@ -1,0 +1,24 @@
+{
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "phase_id": "P07_execution_risk",
+  "artifact_kind": "evidence",
+  "generated_at": "2026-05-11T01:16:10Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "positive_evidence": [
+    "permission gate present",
+    "execution intent generated"
+  ],
+  "missing_evidence": [
+    "P07_REALTIME_QUOTE_OR_SLIPPAGE_CHECK_MISSING"
+  ],
+  "risk_evidence": [
+    "实时 quote/slippage 未接入时不得执行真实订单"
+  ]
+}

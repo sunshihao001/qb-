@@ -1,0 +1,45 @@
+{
+  "goal_id": "operator_goal_her_doc_closure_trading_system_20260514_071635",
+  "goal": "Continue the HER_DOC tasklist application by converting prior READY_WITH_GAPS outputs into a closed-loop document-processing task package for the SIKK trading-structure system.",
+  "language": "zh-CN",
+  "system": "HER-DFAFS / SIKK trading-structure document governance",
+  "source_document": "system/her_document_function_system/application_scenarios/trading_system_doc_ops/HER_DOC_CLOSURE_TRADING_SYSTEM.md",
+  "prior_run_dir": "data/her_document_function_system/applied_runs/HER_DOC_TASKLIST_TRADING_SYSTEM_20260514_070714",
+  "required_flow": [
+    "O00",
+    "K00",
+    "F00",
+    "V00",
+    "A00",
+    "H00",
+    "U00",
+    "G00"
+  ],
+  "required_closure": [
+    "map_prior_gaps_to_downstream_tasks",
+    "map_tasks_to_real_application_scenarios",
+    "preserve_READY_WITH_GAPS_vs_ACCEPTED_boundary",
+    "produce_safe_mode_evidence",
+    "produce_next_handoff_queue"
+  ],
+  "safety_boundary": {
+    "safe_mode": true,
+    "paper_only": true,
+    "no_real_swap": true,
+    "no_private_key": true,
+    "no_signing": true,
+    "no_broadcast": true
+  },
+  "forbidden_claims": [
+    "PRODUCTION_READY",
+    "FULLY_AUTOMATED",
+    "POLICY_ACTIVE",
+    "LIVE_READY",
+    "PIPELINE_ACCEPTED",
+    "SYSTEM_FULLY_IMPLEMENTED"
+  ],
+  "expected_status": [
+    "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS",
+    "O00_RUN_DOCUMENT_READY_WITH_GAPS"
+  ]
+}

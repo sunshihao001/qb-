@@ -1,0 +1,49 @@
+{
+  "version": "v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "fatal_required": [
+    "token_address",
+    "chain",
+    "run_id",
+    "data_snapshot_time"
+  ],
+  "phase_02_required": [
+    "token_create_time",
+    "current_market_cap_usd",
+    "current_liquidity_usd",
+    "kline_fact_table",
+    "trade_fact_table"
+  ],
+  "phase_03_required": [
+    "wallet_address",
+    "first_buy_time",
+    "current_token_balance",
+    "transfer_fact_table",
+    "source_address"
+  ],
+  "phase_05_required": [
+    "security_fact",
+    "quote_fact",
+    "liquidity_usd",
+    "slippage_estimate"
+  ],
+  "warning_allowed": [
+    "wallet_first_seen_time",
+    "historical_winrate",
+    "historical_roi",
+    "gmgn_tags",
+    "holder_fact_table"
+  ],
+  "optional": [
+    "token_name",
+    "social_links",
+    "website",
+    "twitter"
+  ],
+  "policy": {
+    "fatal_required_missing": "BLOCK",
+    "phase_02_required_missing": "PAUSE_OR_PASS_WITH_WARNING",
+    "warning_allowed_missing": "PASS_WITH_WARNING",
+    "optional_missing": "PASS"
+  }
+}

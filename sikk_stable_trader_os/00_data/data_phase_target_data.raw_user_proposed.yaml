@@ -1,0 +1,46 @@
+phase_id: DATA_PLANE
+phase_name_cn: 数据平面
+phase_type: normalized_fact_and_field_source_model
+phase_status: REQUIRED_BEFORE_P01_RUNTIME
+authority_scope: 定义系统字段、来源、质量等级、证据等级、缺失处理和统一事实模型
+primary_goal: 将 Domain Plane 中的判断需求转化为字段来源、标准化事实模型、输入合约和下游交接包。
+non_goal:
+- 不做交易判断
+- 不做钱包意图推断
+- 不做策略信号裁决
+required_inputs:
+- domain_object_registry.yaml
+- domain_to_data_demand_map.yaml
+- governance_plane.md
+required_outputs:
+- 00_data/data_plane.md
+- 00_data/field_source_map.yaml
+- 00_data/normalized_fact_model.schema.json
+- 00_data/data_input_contract.json
+- 00_data/data_quality_rules.yaml
+- 00_data/evidence_level_rules.yaml
+- 00_data/contradiction_record_rules.yaml
+- 00_data/data_handoff_packet.json
+core_questions:
+- 每个判断需要哪些字段？
+- 每个字段来自哪里？
+- 字段缺失时如何处理？
+- 哪些字段是阻断性字段？
+- 哪些字段只是降级置信度？
+- 哪些阶段消费这些字段？
+acceptance_gate:
+- field_source_map.yaml 存在
+- normalized_fact_model.schema.json 可解析
+- data_input_contract.json 可解析
+- data_handoff_packet.json 可解析
+- P01 所需字段全部有来源或 missing_policy
+blocking_conditions:
+- 核心字段无来源
+- 缺失字段无处理策略
+- schema 不可解析
+- data_handoff_packet 缺失
+downstream_consumers:
+- P01_data_fact_controller
+- P02_wallet_structure_controller
+- P03_chip_control_controller
+- P04_market_structure_controller

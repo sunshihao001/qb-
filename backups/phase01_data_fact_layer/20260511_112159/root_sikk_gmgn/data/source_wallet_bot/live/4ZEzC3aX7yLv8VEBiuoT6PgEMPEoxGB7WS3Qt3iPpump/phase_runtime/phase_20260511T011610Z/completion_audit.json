@@ -1,0 +1,20 @@
+{
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "generated_at": "2026-05-11T01:16:10Z",
+  "output_root": "data/source_wallet_bot/live/4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump/phase_runtime/phase_20260511T011610Z",
+  "phase_count": 9,
+  "expected_phase_count": 9,
+  "missing_files": [],
+  "ca_consistency_passed": true,
+  "safety_boundary_passed": true,
+  "overall_passed": true,
+  "degraded_phases": [
+    "P01_data_fact",
+    "P04_scenario_recognition",
+    "P05_structure_position",
+    "P06_strategy_gate",
+    "P07_execution_risk"
+  ],
+  "blocked_phases": [],
+  "scope_note": "完成审计证明 P01-P09 证据展开产物齐全；不代表实盘授权。"
+}

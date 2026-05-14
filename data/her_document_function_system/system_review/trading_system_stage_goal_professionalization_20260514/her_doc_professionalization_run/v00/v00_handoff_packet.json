@@ -1,0 +1,40 @@
+{
+  "handoff_id": "v00_handoff_her_doc_professionalization_run",
+  "from_phase": "V00",
+  "to_phase": "A00",
+  "status": "V00_HANDOFF_READY_WITH_GAPS",
+  "refs": {
+    "validation_matrix": "v00/validation_matrix.json",
+    "gap_register": "v00/gap_register.json",
+    "evidence_report": "v00/evidence_report.json"
+  },
+  "gaps": [
+    {
+      "gap_id": "gap_001",
+      "origin_phase": "F00",
+      "gap_type": "missing_implementation_evidence",
+      "gap_level": "HIGH_GAP",
+      "description": "Function mapping exists, but production implementation evidence is intentionally not claimed.",
+      "route_to": "U00",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "gap_002",
+      "origin_phase": "V00",
+      "gap_type": "real_tool_execution_limited_to_safe_mode",
+      "gap_level": "MEDIUM_GAP",
+      "description": "Pipeline has safe-mode file execution evidence only; no scheduler/live/paper runtime evidence.",
+      "route_to": "H00",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "gap_003",
+      "origin_phase": "G00",
+      "gap_type": "governance_candidate_not_applied",
+      "gap_level": "MEDIUM_GAP",
+      "description": "Governance rules are candidates, not globally active policy.",
+      "route_to": "G00",
+      "status": "OPEN"
+    }
+  ]
+}

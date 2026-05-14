@@ -1,0 +1,28 @@
+controller_id: P10_SELF_UPGRADE_CONTROLLER
+phase_id: P10
+name: Self Upgrade
+domain: self_upgrade
+status: STANDARD_WRAPPER_READY_WITH_RUNTIME_BLOCKED
+generated_by: HER-KPP-SYSTEM-RESCAN-AUTOFIX-20260513
+purpose: Convert docs-only phase material into standard controller assets with contracts,
+  acceptance, handoff, and read-only validation binding.
+upstream_required:
+- P09_REVIEW_REPLAY_CONTROLLER
+downstream_allowed:
+- GOVERNANCE_REVIEW
+- IMPLEMENTATION_TASK_QUEUE
+runtime_boundary:
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  swap_enabled: false
+  business_runtime_allowed: false
+  validator_only: true
+forbidden:
+- live_execution
+- wallet_signing
+- transaction_broadcast
+- swap
+- auto_order
+- treat_priority_level_as_buy_signal
+- skip_acceptance_gate

@@ -1,0 +1,53 @@
+p06_test_matrix:
+- test_id: P06_TEST_001
+  name: 证据束支持筹码留存，反证较弱
+  expected_output: ACCUMULATION_OR_RETENTION_SCENARIO_CANDIDATE
+  expected_status: P06_READY_FOR_P07_HANDOFF
+- test_id: P06_TEST_002
+  name: 缺 P05 handoff
+  expected_status: P06_BLOCKED
+- test_id: P06_TEST_003
+  name: 无 evidence bundle
+  expected_status: P06_REJECTED
+- test_id: P06_TEST_004
+  name: 弱证据被用于高置信二段扩张
+  expected_status: P06_BLOCKED
+- test_id: P06_TEST_005
+  name: 筹码留存与主动派发证据冲突
+  expected_output: SCENARIO_CONFLICT_RECORD
+  expected_status: P06_READY_WITH_GAPS
+- test_id: P06_TEST_006
+  name: 高对手盘压力与扩张场景冲突
+  expected_output: EXPANSION_VS_EXIT_LIQUIDITY_TRAP_CONFLICT
+- test_id: P06_TEST_007
+  name: 数据不足无法识别场景
+  expected_output: SCENARIO_UNKNOWN
+  expected_status: P06_READY_WITH_GAPS
+- test_id: P06_TEST_008
+  name: 长横盘语境下部分早期钱包卖出
+  expected_output: CONTEXT_INTERPRETATION_NORMAL_ROTATION_POSSIBLE
+- test_id: P06_TEST_009
+  name: 高位放量语境下早期钱包集中卖出
+  expected_output: ACTIVE_DISTRIBUTION_OR_FINAL_PUMP_DISTRIBUTION_CANDIDATE
+- test_id: P06_TEST_010
+  name: 二段扩张候选但存在高未解释转出
+  expected_output: SECOND_STAGE_EXPANSION_WITH_TRANSFER_RISK
+  expected_status: P06_READY_WITH_GAPS
+- test_id: P06_TEST_011
+  name: P06 输出 paper_ready
+  expected_status: P06_BLOCKED
+- test_id: P06_TEST_012
+  name: P06 请求 paper runtime
+  expected_status: P06_BLOCKED
+- test_id: P06_TEST_013
+  name: live execution requested
+  expected_status: P06_BLOCKED
+- test_id: P06_TEST_014
+  name: 场景候选未生成 rejection check
+  expected_status: P06_BLOCKED
+- test_id: P06_TEST_015
+  name: primary scenario 与 secondary distribution risk 并存
+  expected_output: PRIMARY_SCENARIO_WITH_SECONDARY_RISK_OVERLAY
+- test_id: P06_TEST_016
+  name: scenario taxonomy 缺失
+  expected_status: P06_REJECTED

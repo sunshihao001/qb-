@@ -1,0 +1,10 @@
+gate_id: P05_evidence_acceptance_gate
+required_checks:
+- controller_assets_exist
+- input_contract_valid_json_schema
+- output_contract_valid_json_schema
+- handoff_schema_valid_json_schema
+- runner_binding_is_validator_only
+- safety_boundary_false_for_real_trade_signing_broadcast_swap
+pass_status: READY_WITH_RUNTIME_BLOCKED
+fail_status: BLOCKED

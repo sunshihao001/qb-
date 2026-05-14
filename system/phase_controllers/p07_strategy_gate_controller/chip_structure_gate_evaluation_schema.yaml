@@ -1,0 +1,6 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: CHIP_STRUCTURE_GATE_EVALUATION_SCHEMA
+required_fields: [chip_gate_eval_id, candidate_id, chip_inputs, chip_support_checks, chip_gate_status, risk_reasons, downstream_effect]
+chip_gate_status_enum: [CHIP_SUPPORTS_GATE, CHIP_SUPPORTS_WITH_LIMITATIONS, CHIP_NEUTRAL_OBSERVE, CHIP_RISK_PAUSE, CHIP_BLOCKS_GATE, CHIP_UNKNOWN]

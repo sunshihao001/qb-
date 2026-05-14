@@ -1,0 +1,24 @@
+contract_id: P01_OUTPUT_CONTRACT_V3
+required_outputs:
+- candidate_master_records
+- candidate_source_events
+- token_identity_resolution
+- pool_identity_resolution
+- discovery_context
+- intake_time_context
+- dedup_resolution
+- source_quality
+- intake_quality
+- gap_report
+- p02_data_request_packet
+- p01_acceptance_packet
+- p01_to_p02_handoff_packet
+- candidate_intake_report
+forbidden_outputs:
+- buy_signal
+- evidence_claim
+- scenario_claim
+- strategy_gate_decision
+- paper_ready
+- live_execution_allowed
+allowed_next_controller: P02_SOURCE_DATA_FACT_CONTROLLER

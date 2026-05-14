@@ -1,0 +1,91 @@
+{
+  "handoff_id": "HANDOFF-DOC-20260511-018-K00-P00",
+  "source_stage": "K00_knowledge_intake_taskization",
+  "target_stage": "P00_system_bootstrap_controller",
+  "source_asset_id": "DOC-20260511-018",
+  "source_file_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md",
+  "handoff_type": "phase_controller_candidate_compilation",
+  "included_assets": {
+    "raw_input_copy": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md",
+    "document_passport": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260511-018.yaml",
+    "methodology_requirement_extract": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/methodology_extracts/methodology_requirement_extract_DOC-20260511-018.yaml",
+    "phase_controller_candidate_spec": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/phase_controller_candidates/DOC-20260511-018_phase_controller_candidate_spec.yaml",
+    "gap_report": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/gap_detection/gap_report_DOC-20260511-018.yaml"
+  },
+  "extracted_requirements": {
+    "system_goal": "文档进入后必须被任务化成可被 P00 编译的 Phase Controller 候选材料。",
+    "phase_goal_candidates": [
+      "K00_knowledge_intake_taskization v2 specialization"
+    ],
+    "task_tree_candidates": [
+      "K00_PROFESSIONAL_PHASE_CONTROLLER_CANDIDATE_UPGRADE"
+    ],
+    "input_contract_candidates": [
+      "input_asset",
+      "source_metadata"
+    ],
+    "output_contract_candidates": [
+      "phase_controller_candidate_spec",
+      "k00_to_p00_handoff_packet"
+    ],
+    "atomic_skill_candidates": [],
+    "tool_binding_candidates": [],
+    "acceptance_gate_candidates": [
+      "candidate spec exists",
+      "handoff target P00",
+      "not registered",
+      "paper_only true"
+    ],
+    "state_writeback_candidates": [],
+    "handoff_candidates": []
+  },
+  "known_gaps": [
+    {
+      "gap_id": "GAP-K00-P00-ID-ALIAS",
+      "description": "Existing project may use P00_system_context_control while this K00 v2 spec targets P00_system_bootstrap_controller; P00 must reconcile canonical id or alias."
+    },
+    {
+      "gap_id": "GAP-K00-STATUS-ENUM-LOCAL-VS-GLOBAL",
+      "description": "K00 v2 local output statuses differ from global phase status enum; use local runtime status only, not global 08_phase_state status."
+    }
+  ],
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "GAP-K00-P00-ID-ALIAS",
+      "description": "Existing project may use P00_system_context_control while this K00 v2 spec targets P00_system_bootstrap_controller; P00 must reconcile canonical id or alias."
+    },
+    {
+      "gap_id": "GAP-K00-STATUS-ENUM-LOCAL-VS-GLOBAL",
+      "description": "K00 v2 local output statuses differ from global phase status enum; use local runtime status only, not global 08_phase_state status."
+    }
+  ],
+  "k00_decision": {
+    "assetization_status": "COMPLETED",
+    "phase_controller_candidate_created": true,
+    "ready_for_p00_compilation": true,
+    "formal_registration_allowed_by_k00": false
+  },
+  "required_p00_actions": [
+    "review_phase_controller_candidate_spec",
+    "validate_authority_boundary",
+    "decide_existing_phase_or_new_phase",
+    "compile_formal_controller_yaml_if_approved",
+    "register_in_phase_registry_if_approved",
+    "update_current_system_state_if_approved",
+    "write_consumption_log"
+  ],
+  "next_recommended_stage": "P00_system_bootstrap_controller",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "private_key_included": false,
+    "seed_phrase_included": false,
+    "auto_order_allowed": false
+  },
+  "consumption_status": {
+    "consumed_by_p00": false,
+    "consumed_at": null,
+    "p00_decision": "PENDING"
+  }
+}

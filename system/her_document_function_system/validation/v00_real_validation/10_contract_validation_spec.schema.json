@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": [
+    "validation_type",
+    "status",
+    "contracts_checked",
+    "errors",
+    "warnings"
+  ],
+  "properties": {
+    "validation_type": {
+      "const": "contract_validation"
+    },
+    "status": {
+      "type": "string"
+    },
+    "contracts_checked": {
+      "type": "array"
+    },
+    "errors": {
+      "type": "array"
+    },
+    "warnings": {
+      "type": "array"
+    }
+  }
+}

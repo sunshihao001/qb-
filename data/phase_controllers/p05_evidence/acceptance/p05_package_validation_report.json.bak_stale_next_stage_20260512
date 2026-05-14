@@ -1,0 +1,109 @@
+{
+  "validated_at": "2026-05-12T02:46:13Z",
+  "status": "PASS_WITH_RUNTIME_GAPS",
+  "checks": [
+    {
+      "check": "controller_dir_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/system/phase_controllers/p05_evidence_controller"
+    },
+    {
+      "check": "runtime_data_tree_exists",
+      "passed": true,
+      "detail": "/root/sikk-gmgn/data/phase_controllers/p05_evidence"
+    },
+    {
+      "check": "expected_39_files_exist",
+      "passed": true,
+      "detail": {
+        "missing": [],
+        "actual_count": 39
+      }
+    },
+    {
+      "check": "expected_25_runtime_dirs_exist",
+      "passed": true,
+      "detail": {
+        "missing": [],
+        "actual_count": 25
+      }
+    },
+    {
+      "check": "json_yaml_parse_clean",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "semantic_safety_anchors_present",
+      "passed": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "check": "state_next_legal_stage_p06_design",
+      "passed": true,
+      "detail": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN"
+    },
+    {
+      "check": "state_p05_package_ready_with_gaps",
+      "passed": true,
+      "detail": "P05_PACKAGE_READY_WITH_RUNTIME_GAPS"
+    },
+    {
+      "check": "state_runtime_paper_live_blocked",
+      "passed": true,
+      "detail": {
+        "p05_runtime_connection_allowed": false,
+        "p05_paper_runtime_allowed": false,
+        "p05_live_runtime_allowed": false,
+        "paper_only": true,
+        "real_trade_enabled": false
+      }
+    },
+    {
+      "check": "asset_index_contains_p05_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "phase_registry_contains_p05_design_and_blocked_runtime",
+      "passed": true,
+      "detail": {
+        "phase_id": "P05_EVIDENCE_CONTROLLER_PACKAGE_DESIGN",
+        "canonical_controller_id": "P05_EVIDENCE_CONTROLLER",
+        "status": "PACKAGE_READY_WITH_RUNTIME_GAPS",
+        "runnable": false,
+        "runner_bound": false,
+        "acceptance_passed": false,
+        "package_acceptance_passed": true,
+        "runtime_allowed": false,
+        "paper_runtime_allowed": false,
+        "live_runtime_allowed": false,
+        "upstream_dependencies": [
+          "P04_CHIP_STRUCTURE_CONTROLLER_PACKAGE_DESIGN"
+        ],
+        "downstream_consumers": [
+          "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN"
+        ],
+        "controller_package": "system/phase_controllers/p05_evidence_controller",
+        "runtime_data_tree": "data/phase_controllers/p05_evidence"
+      }
+    },
+    {
+      "check": "blockers_include_p05_runtime_paper_live",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "summary": {
+    "files_expected": 39,
+    "files_actual": 39,
+    "runtime_dirs_expected": 25,
+    "runtime_dirs_actual": 25,
+    "next_legal_stage": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN",
+    "p05_status": "P05_PACKAGE_READY_WITH_RUNTIME_GAPS",
+    "paper_only": true,
+    "real_trade_enabled": false
+  }
+}

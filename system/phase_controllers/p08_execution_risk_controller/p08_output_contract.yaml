@@ -1,0 +1,14 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+contract_id: P08_OUTPUT_CONTRACT
+version: v3.0
+allowed_decisions: [PAPER_RUNTIME_ALLOWED, PAPER_RUNTIME_ALLOWED_WITH_LIMITATIONS, PAPER_RUNTIME_PAUSED, PAPER_RUNTIME_BLOCKED, HUMAN_CONFIRMATION_REQUIRED, EXECUTION_RISK_REJECTED]
+required_outputs:
+  records: [execution_risk_input_manifest, p07_candidate_validity_check_record, quote_snapshot_record, quote_consistency_record, liquidity_depth_record, slippage_estimation_record, execution_cost_model_record, security_recheck_record, sellability_risk_record, freshness_recheck_record, invalidation_precheck_record, wallet_delta_refresh_requirement_record, runtime_risk_limit_record, position_uniqueness_record, circuit_breaker_record, paper_entry_simulation_plan, paper_runtime_permission_record, execution_risk_block_reason_record, execution_risk_refresh_request_record]
+  packets: [paper_runtime_data_request_packet, p08_to_paper_runtime_handoff_packet]
+forbidden_outputs: [LIVE_EXECUTION_ALLOWED, auto_order, wallet_signing, real_order, real_fill_confirmation]
+compliance:
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+  auto_order_allowed: false

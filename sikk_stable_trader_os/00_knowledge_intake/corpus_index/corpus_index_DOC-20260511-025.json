@@ -1,0 +1,39 @@
+{
+  "doc_id": "DOC-20260511-025",
+  "anchors": [
+    {
+      "section": "Trace Plane definition",
+      "claim": "Trace Plane 是全系统追踪平面，不是业务判断层。"
+    },
+    {
+      "section": "trace_id_policy",
+      "claim": "trace_id 是系统可审计能力的最小单位。"
+    },
+    {
+      "section": "trace_object_registry",
+      "claim": "核心对象必须 have trace。"
+    },
+    {
+      "section": "acceptance/handoff",
+      "claim": "Acceptance 与 Handoff 不允许绕过 Trace Plane。"
+    },
+    {
+      "section": "HER protocol",
+      "claim": "HER 每次创建文件/合约/状态/验收/交接/工具/runtime/review/upgrade 都要写 trace。"
+    }
+  ],
+  "keywords": [
+    "TRACE_READY_WITH_GAPS",
+    "trace_id",
+    "field_lineage",
+    "artifact_trace",
+    "state_trace",
+    "acceptance_trace",
+    "handoff_trace",
+    "tool_trace",
+    "runtime_trace",
+    "review_trace",
+    "upgrade_trace",
+    "error_trace"
+  ]
+}

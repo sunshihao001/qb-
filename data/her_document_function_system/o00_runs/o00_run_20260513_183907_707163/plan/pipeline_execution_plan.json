@@ -1,0 +1,22 @@
+{
+  "pipeline_run_id": "o00_run_20260513_183907_707163",
+  "mode": "DESIGN_LEVEL_REPLAY",
+  "stages": [
+    "K00",
+    "F00",
+    "V00",
+    "R00",
+    "A00",
+    "H00",
+    "U00",
+    "G00"
+  ],
+  "expected_outputs_dir": "/root/sikk-gmgn/system/her_document_function_system/replay/sample_cases/sample_001_document_to_function/expected",
+  "forbidden_claims": [
+    "TESTED",
+    "RUNNER_BOUND",
+    "POLICY_ACTIVE",
+    "PIPELINE_ACCEPTED",
+    "SYSTEM_FULLY_IMPLEMENTED"
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "verification_id": "P09_REVIEW_REPLAY_PACKAGE_VERIFICATION_20260512",
+  "root": "/root/sikk-gmgn",
+  "parse_failures": [],
+  "parse_checked_count": 46,
+  "system_file_count": 45,
+  "expected_system_file_count": 30,
+  "missing_system_files": [
+    "review_case_schema.yaml",
+    "replay_input_manifest_schema.yaml",
+    "replay_result_schema.yaml",
+    "runtime_trace_reconstruction_schema.yaml",
+    "review_policy_registry.yaml",
+    "known_success_baseline_schema.yaml",
+    "regression_case_schema.yaml",
+    "shadow_review_schema.yaml",
+    "rollback_recommendation_schema.yaml",
+    "model_recalibration_candidate_schema.yaml"
+  ],
+  "extra_system_files": [
+    "attribution_policy.yaml",
+    "calibration_candidate_schema.yaml",
+    "calibration_policy.yaml",
+    "decision_chain_reconstruction_schema.yaml",
+    "false_negative_schema.yaml",
+    "false_positive_schema.yaml",
+    "historical_snapshot_policy.yaml",
+    "invalidation_trigger_analysis_schema.yaml",
+    "missed_opportunity_schema.yaml",
+    "model_calibration_candidate_schema.yaml",
+    "outcome_evaluation_schema.yaml",
+    "p05_evidence_feedback_schema.yaml",
+    "p06_scenario_feedback_schema.yaml",
+    "p07_gate_feedback_schema.yaml",
+    "p08_risk_feedback_schema.yaml",
+    "p10_upgrade_candidate_data_request_packet_contract.yaml",
+    "phase_replay_step_schema.yaml",
+    "replay_input_snapshot_schema.yaml",
+    "review_case_record_schema.yaml",
+    "risk_rule_effectiveness_schema.yaml",
+    "runtime_path_reconstruction_schema.yaml",
+    "snapshot_lock_schema.yaml",
+    "success_attribution_schema.yaml",
+    "threshold_sensitivity_schema.yaml",
+    "upgrade_candidate_record_schema.yaml"
+  ],
+  "runtime_dir_count": 34,
+  "expected_runtime_dir_count": 19,
+  "missing_runtime_dirs": [
+    "input_manifest",
+    "runtime_trace_reconstruction",
+    "replay_results",
+    "known_success_baselines",
+    "regression_cases",
+    "shadow_reviews",
+    "rollback_recommendations",
+    "model_recalibration_candidates",
+    "rejected_cases",
+    "blocked_cases"
+  ],
+  "anchor_results": {
+    "P09_REVIEW_REPLAY_CONTROLLER": true,
+    "review replay": true,
+    "failure_attribution": true,
+    "runtime_trace": false,
+    "known_success": false,
+    "regression": false,
+    "shadow": false,
+    "rollback": false,
+    "model_recalibration": false,
+    "P09_TO_P10": true,
+    "LIVE_EXECUTION_FORBIDDEN": false,
+    "NO_RUNTIME_MUTATION": false,
+    "allow_apply_to_runtime: false": false,
+    "requires_manual_confirmation": false
+  },
+  "anchor_missing": [
+    "runtime_trace",
+    "known_success",
+    "regression",
+    "shadow",
+    "rollback",
+    "model_recalibration",
+    "LIVE_EXECUTION_FORBIDDEN",
+    "NO_RUNTIME_MUTATION",
+    "allow_apply_to_runtime: false",
+    "requires_manual_confirmation"
+  ],
+  "safety_results": {
+    "current_state.runtime_allowed_false": true,
+    "current_state.paper_runtime_allowed_false": true,
+    "current_state.live_execution_allowed_false": true,
+    "current_state.wallet_signing_allowed_false": true,
+    "current_state.real_order_allowed_false": true,
+    "phase_registry.safety_live_false": true,
+    "phase_registry.safety_wallet_false": true,
+    "asset_index.p09_registered": false
+  },
+  "safety_failures": [
+    "asset_index.p09_registered"
+  ],
+  "p09_phase_entries": [
+    {
+      "phase_id": "P09_review_learning_controller",
+      "status": "NOT_READY",
+      "runnable": false,
+      "runner_bound": false,
+      "acceptance_passed": false,
+      "upstream_dependencies": [
+        "P08_paper_or_later_review_path"
+      ],
+      "downstream_consumers": [
+        "P10_system_upgrade_controller"
+      ]
+    }
+  ],
+  "p09_index_entries": [
+    {
+      "phase_id": "P09",
+      "controller_id": "P09_REVIEW_REPLAY_CONTROLLER",
+      "controller_name_cn": "复盘回放与失败归因控制器",
+      "controller_type": "BUSINESS_PHASE_CONTROLLER",
+      "responsibility": {
+        "primary": "对纸面运行、策略门控、场景识别、证据、数据、trace、handoff 结果进行复盘、回放和失败归因。",
+        "details": [
+          "读取 paper runtime 输出",
+          "读取 runtime_trace",
+          "重建当时输入状态",
+          "区分数据问题、追踪问题、证据问题、场景问题、策略问题、执行风险问题",
+          "输出 failure_attribution",
+          "输出 review_case",
+          "不直接修改实时规则",
+          "不直接升级策略"
+        ]
+      },
+      "reads_handoff": {
+        "required": [
+          "runtime_handoff_back_to_review",
+          "p08_execution_risk_handoff_packet",
+          "p07_strategy_gate_handoff_packet",
+          "trace_handoff_packet",
+          "paper_runtime_result_packet"
+        ],
+        "optional": [
+          "historical_review_case_library"
+        ]
+      },
+      "input_contracts": {
+        "required": [
+          "review_replay_input_contract",
+          "runtime_trace_contract",
+          "paper_result_contract",
+          "failure_attribution_contract"
+        ]
+      },
+      "output_contracts": {
+        "required": [
+          "review_case_contract",
+          "failure_attribution_output_contract",
+          "replay_result_contract",
+          "p09_review_replay_handoff_contract"
+        ],
+        "outputs": [
+          "review_cases.json",
+          "failure_attribution.jsonl",
+          "replay_results.json",
+          "review_replay_report.md",
+          "p09_review_replay_handoff_packet.yaml"
+        ]
+      },
+      "required_trace": [
+        "PHASE_TRACE",
+        "TASK_TRACE",
+        "ARTIFACT_TRACE",
+        "CONTRACT_TRACE",
+        "RUNTIME_TRACE",
+        "REVIEW_TRACE",
+        "STATE_TRACE"
+      ],
+      "required_acceptance": {
+        "gate_id": "GATE_P09_REVIEW_REPLAY_READY",
+        "accepted_status": [
+          "ACCEPTANCE_READY",
+          "ACCEPTANCE_READY_WITH_GAPS"
+        ]
+      },
+      "tool_binding": {
+        "allowed": true,
+        "mode": [
+          "REPLAY_ONLY",
+          "REVIEW_ONLY"
+        ],
+        "allowed_tools": [
+          "replay_runner",
+          "failure_attribution_analyzer",
+          "paper_daily_report_reader"
+        ],
+        "forbidden_tools": [
+          "live_trade_executor",
+          "auto_strategy_mutator",
+          "governance_rule_writer_without_approval"
+        ]
+      },
+      "paper_runtime": {
+        "allowed": false,
+        "reason": "P09 复盘已发生的纸面运行，不启动新的纸面交易。"
+      },
+      "forbidden": [
+        "directly_mutate_strategy_rules",
+        "directly_update_governance_rules",
+        "treat_review_result_as_runtime_rule",
+        "ignore_runtime_trace",
+        "ignore_handoff_limitations"
+      ]
+    }
+  ],
+  "verdict": "PASS_WITH_GAPS"
+}

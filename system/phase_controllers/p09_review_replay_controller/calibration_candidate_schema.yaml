@@ -1,0 +1,47 @@
+schema_id: CALIBRATION_CANDIDATE_SCHEMA
+title: Calibration Candidate
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- calibration_candidate_id
+- source_review_case_id
+- candidate_type
+- affected_phase
+- proposal_summary_cn
+- evidence_refs
+- requires_p10_review
+- apply_allowed_in_p09
+fields:
+  calibration_candidate_id: string
+  source_review_case_id: string
+  candidate_type: enum
+  affected_phase: string
+  proposal_summary_cn: string
+  evidence_refs: list
+  requires_p10_review: boolean
+  apply_allowed_in_p09: boolean
+enums:
+  candidate_type:
+  - RULE_REVIEW
+  - THRESHOLD_REVIEW
+  - WEIGHT_REVIEW
+  - EVIDENCE_REQUIREMENT_REVIEW
+  - SCENARIO_MAPPING_REVIEW
+  - RISK_LIMIT_REVIEW
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

@@ -1,0 +1,10 @@
+doc_id: DOC-20260514-S00-001
+target_system: SIKK Stable Trader OS / HER
+target_module: /system/unified_standardization
+primary_route: K00 -> S00 package landing -> R00 verification -> P01-P10 contract
+  binding -> single-token replay
+must_not_directly_change:
+- live trading rules
+- P08 live permission rules
+- runtime swap/sign/broadcast permissions
+route_status: K00_ACCEPTED_FOR_S00_LANDING

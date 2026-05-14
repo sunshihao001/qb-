@@ -1,0 +1,12 @@
+global_acceptance_policy:
+  levels: [file_level, structure_level, semantic_level, consumption_level, runtime_level, safety_level]
+  file_level_alone_never_enough: true
+  paper_only_required: true
+  real_trade_enabled_must_be_false: true
+  k00_route_status_required_for_phase_ready: true
+  valid_k00_route_status_for_ready:
+    - K00_INTAKE_ACCEPTED
+    - K00_ROUTE_RECOVERY_DOCUMENTED
+  phase_ready_without_k00_route_status_result: BLOCK_AND_ROUTE_RECOVERY_REQUIRED
+  p01_requires_data_plane_acceptance: true
+  invalid_status_codes: [done, ok, finished, looks_good, maybe_ready, almost_complete, should_work, probably_ready, trade_ready, real_trade_ready]

@@ -1,0 +1,106 @@
+{
+  "root": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake",
+  "owner_phase": "K00_knowledge_intake_taskization_controller",
+  "purpose": "standard output root for knowledge material intake, preservation, passporting, indexing, mapping, gap detection, task packaging, reporting, and handoff",
+  "directories": [
+    {
+      "name": "raw_inputs/",
+      "purpose": "保存原始上传资料，不修改。"
+    },
+    {
+      "name": "source_registry/",
+      "purpose": "记录资料来源、时间、类型、用途。"
+    },
+    {
+      "name": "document_passports/",
+      "purpose": "保存每份资料的文档护照。"
+    },
+    {
+      "name": "corpus_index/",
+      "purpose": "建立语料索引。"
+    },
+    {
+      "name": "system_mapping/",
+      "purpose": "映射到九大系统平面和 P00-P09。"
+    },
+    {
+      "name": "gap_detection/",
+      "purpose": "识别系统缺口。"
+    },
+    {
+      "name": "task_packages/",
+      "purpose": "生成阶段任务执行包。"
+    },
+    {
+      "name": "intake_reports/",
+      "purpose": "保存人类可读报告。"
+    },
+    {
+      "name": "handoff_packets/",
+      "purpose": "交接给 P00/P01 或其他阶段。"
+    }
+  ],
+  "write_boundary": {
+    "raw_inputs": "immutable original material or source pointer only",
+    "task_packages": "execution unit for downstream Phase Controllers",
+    "handoff_packets": "schema-bound downstream handoff to P00/P01 or target phase"
+  },
+  "document_passport_standard": {
+    "filename_pattern": "document_passport_<doc_id>.yaml",
+    "schema": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport.schema.json",
+    "template": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_TEMPLATE.yaml",
+    "status_values": [
+      "PASSPORT_READY",
+      "PASSPORT_DRAFT",
+      "PASSPORT_REJECTED",
+      "PASSPORT_SUPERSEDED"
+    ]
+  },
+  "k00_document_passport_standard_anchor": "K00 文档护照标准",
+  "document_passport_filename_pattern": "document_passport_<doc_id>.yaml",
+  "document_passport_schema": "00_knowledge_intake/document_passports/document_passport.schema.json",
+  "document_passport_template": "00_knowledge_intake/document_passports/document_passport_TEMPLATE.yaml",
+  "phase_task_execution_package_standard": {
+    "anchor": "阶段任务执行包标准",
+    "standard_root": "00_knowledge_intake/task_packages/phase_task_execution_package_standard/",
+    "required_files": [
+      "01_phase_manifest.yaml",
+      "02_phase_context_pack.md",
+      "03_phase_objective_tree.yaml",
+      "04_phase_input_contract.json",
+      "05_phase_output_contract.json",
+      "06_phase_execution_protocol.md",
+      "07_phase_acceptance_gate.yaml",
+      "08_phase_state.json",
+      "09_phase_handoff_packet.schema.json"
+    ],
+    "manifest_template": "00_knowledge_intake/task_packages/phase_task_execution_package_standard/01_phase_manifest_TEMPLATE.yaml",
+    "schema": "00_knowledge_intake/task_packages/phase_task_execution_package_standard/phase_task_execution_package.schema.json",
+    "context_pack_standard": {
+      "anchor": "7.2 02_phase_context_pack.md",
+      "purpose": "这不是普通说明。这是给 HER 的阶段上下文压缩包。HER 运行时必须先读它，避免把该阶段误做成普通总结或策略判断。",
+      "template": "00_knowledge_intake/task_packages/phase_task_execution_package_standard/02_phase_context_pack_TEMPLATE.md",
+      "required_sections": [
+        "本阶段为什么存在",
+        "本阶段不做什么",
+        "本阶段必须做什么",
+        "本阶段完成标准"
+      ],
+      "phase_ready_gate": "只有当原始资料、文档护照、系统映射、缺口列表、任务执行包、handoff_packet 全部生成后，本阶段才能进入 PHASE_READY。"
+    },
+    "03_phase_objective_tree": {
+      "anchor": "7.3 03_phase_objective_tree.yaml",
+      "role": "让 HER 知道目标层级，并按任务树推进而不是自由发挥",
+      "template": "00_knowledge_intake/task_packages/phase_task_execution_package_standard/03_phase_objective_tree_TEMPLATE.yaml",
+      "k00_file": "06_phase_controllers/K00_knowledge_intake_taskization/03_phase_objective_tree.yaml",
+      "required_root": "objective_tree",
+      "required_fields": [
+        "phase_id",
+        "level_1_goal",
+        "level_2_sub_goals",
+        "level_3_tasks"
+      ],
+      "parent_binding_required": true
+    }
+  }
+}

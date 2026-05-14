@@ -1,0 +1,44 @@
+{
+  "处理结果": [
+    {
+      "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+      "final_status": "RISK_MONITOR",
+      "signal_level": "SX",
+      "decision": "BLOCK",
+      "permission": "BLOCK_REAL_TRADE",
+      "contract_permission": "BLOCK_BUY_禁止买入",
+      "allowed_modes": [
+        "observe"
+      ],
+      "forbidden_modes": [
+        "real_auto",
+        "buy_now",
+        "auto_trade",
+        "sell_now"
+      ],
+      "block_reasons": [
+        "SECURITY_OR_LIQUIDITY_BLOCK"
+      ],
+      "pause_reasons": [
+        "STRUCTURAL_PAUSE",
+        "FUNDING_PENDING"
+      ],
+      "allow_reasons": [],
+      "reason_codes": [
+        "SECURITY_OR_LIQUIDITY_BLOCK",
+        "STRUCTURAL_PAUSE",
+        "FUNDING_PENDING"
+      ],
+      "human_confirmation_required": false,
+      "real_trade_enabled": false,
+      "token_symbol": "",
+      "funding_status": "资金待查",
+      "risk_level": "HIGH",
+      "execution_action": "OBSERVE",
+      "wallet_structure_status": "WALLET_BLOCK",
+      "wallet_structure_score": 20.0,
+      "wallet_risk_score": 0.0
+    }
+  ],
+  "说明": "固定 CA trade gate runtime summary；不执行真实 swap。"
+}

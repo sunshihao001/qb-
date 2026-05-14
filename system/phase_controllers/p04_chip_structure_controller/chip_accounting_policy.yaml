@@ -1,0 +1,7 @@
+principle: "buy_minus_sell_minus_transfer_out_plus_transfer_in_equals_current_explainable_holding"
+required_gap_fields:
+  - "accounting_matched"
+  - "accounting_gap"
+  - "unexplained_flow"
+  - "unknown_transfer_target"
+block_if_silent_gap: true

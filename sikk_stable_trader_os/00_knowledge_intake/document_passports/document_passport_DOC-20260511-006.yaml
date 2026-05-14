@@ -1,0 +1,37 @@
+doc_id: DOC-20260511-006
+source_type: user_uploaded_text
+source_name: 未命名 4 _1_.md
+received_at: 2026-05-11T15:28:29Z
+raw_path: 00_knowledge_intake/raw_inputs/DOC-20260511-006_p00_system_bootstrap_controller_landing_and_acceptance.md
+source_sha256: 63fa654d27beca3f8e6b7463c9bd967af612e6a1c358af3f70c5578fb3e1c778
+document_role:
+  primary_role: P00_LANDING_ACCEPTANCE_TASK_SPEC
+  secondary_roles:
+    - PHASE_CONTROLLER_LANDING_SPEC
+    - P00_ACCEPTANCE_GATE_SPEC
+    - CONTROL_PLANE_PRE_BOOTSTRAP_TASK
+summary:
+  core_intent: 将 P00_system_bootstrap_controller 正式落盘为 HER 可读取、验证、执行和回写的阶段控制器文件组，并生成 P00 landing acceptance report。
+  key_points:
+    - 本任务是 P00 落盘与验收，不是 P01 运行。
+    - 若处于设计未落盘状态，下一合法阶段应为 P00_BOOTSTRAP_EXECUTION。
+    - P01 必须禁止启动，paper_only=true，real_trade_enabled=false。
+    - 目标文件已存在时必须备份，不删除 legacy runtime 数据。
+system_mapping:
+  planes:
+    - Control Plane
+    - Trace Plane
+    - Acceptance Plane
+    - Handoff Plane
+    - Execution Plane
+  affected_phases:
+    - K00_knowledge_intake_taskization
+    - P00_system_bootstrap_controller
+    - P01_data_fact_controller
+required_actions:
+  - preserve_raw_upload
+  - verify_current_p00_landing_or_bootstrap_state
+  - do_not_downgrade_existing_bootstrap_passed_state
+  - keep_p01_blocked
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

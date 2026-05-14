@@ -1,0 +1,6 @@
+source_doc_id: DOC-20260511-017
+rules:
+- core_field_missing_blocks_acceptance
+- non_core_field_missing_degrades_confidence
+- source_must_be_recorded
+- timestamp_required_for_event_facts

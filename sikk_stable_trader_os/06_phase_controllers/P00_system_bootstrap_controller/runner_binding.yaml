@@ -1,0 +1,34 @@
+runner_binding_id: P00_RUNNER_BINDING_001
+stage: P00_system_bootstrap_controller
+version: v1.0-institutional
+runner_status: MANUAL_OR_HER_EXECUTED
+code_runner_required: false
+validation_runner_required: true
+execution_mode:
+  primary: HER_TASK_EXECUTION
+  secondary: MANUAL_FILE_GENERATION
+  future: PYTHON_VALIDATION_RUNNER
+allowed_tools:
+  - filesystem_read
+  - filesystem_write
+  - json_validation
+  - yaml_validation
+  - markdown_generation
+  - directory_scan
+forbidden_tools:
+  - exchange_order_execution
+  - private_key_access
+  - wallet_signing
+  - live_trade_api_write
+expected_runner_actions:
+  - create_missing_directories
+  - backup_existing_files_before_overwrite
+  - generate_required_yaml_json_md_files
+  - validate_json_outputs
+  - validate_yaml_outputs
+  - update_consumption_log
+  - generate_p00_bootstrap_report
+future_code_runner:
+  suggested_file: 07_runners/p00_bootstrap_validation_runner.py
+  purpose: Validate P00 outputs, check parseability, enforce P01 blocked state, verify K00 asset consumption, and generate acceptance report.
+  status: NOT_REQUIRED_FOR_FIRST_BUILD

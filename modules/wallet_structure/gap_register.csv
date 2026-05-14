@@ -1,0 +1,21 @@
+gap_id,gap_name,current_status,why_it_matters,required_data,implementation_difficulty,priority,recommended_action,accept_criteria
+GAP-01,有限 GMGN 列表非全量交易地址,旧系统只取 top/trader/tag list,可能漏掉关键早期小额结构钱包,全量 swap/transfer 或扩展分页,M,P1,先扩大分页和关键窗口，后接链上补查,覆盖 top/trader/tag + 早期窗口抽样
+GAP-02,缺 wallet_age_days,缺失,无法区分新钱包/老钱包/工具钱包,first_seen_time/history,M,P0,从历史库或链上首笔交易补齐,normalized 中 80% 钱包有 age 或 null reason
+GAP-03,缺 first_seen_time/last_active_time,部分 GMGN 字段不稳定,影响生命周期判断,链上交易时间/历史库,M,P0,标准化别名并补查,字段进入 wallet_normalized
+GAP-04,缺 token_count/traded_token_count,缺失,无法判断结果钱包稳定性,历史交易 token 统计,H,P1,历史库先轻量累计,历史库可返回 traded_token_count
+GAP-05,资金来源追踪不完整,只有 native_transfer 原始字段,同源判断证据不足,SOL/native transfer edges,H,P1,生成 funding_edges.csv,funding_source_address 覆盖核心钱包
+GAP-06,native_transfer 未展开成边表,原始字段写入 CSV,无法做图和回流,from/to/amount/time/tx,M,P0,先把已有 native_transfer 展开,输出 wallet_funding_edges.csv
+GAP-07,缺同源组算法,无,无法识别同步执行组,funding/token/time/tag edges,H,P1,规则版 G1/G2 分组,输出 same_source_groups.csv
+GAP-08,缺卖后资金回流检测,无,无法识别利润回收,sell tx + native transfer out,H,P1,先做候选路径，不强判,输出 backflow_paths.csv
+GAP-09,缺 Token 分发路径图,只有 transfer_in,无法区分派发/接收,token transfer edges,H,P1,展开 token_flow_edges,输出 distribution_paths.csv
+GAP-10,历史地址库结构不稳定,旧 CSV 复制为 master log,跨币复现弱,address master/history/review files,M,P0,定义轻量 CSV/JSON 历史库接口,新增 history update contract
+GAP-11,缺跨币复现判断,无稳定机制,E5 证据无法形成,history by wallet/role/result,H,P2,小模块稳定后做,同地址跨币角色复现可查询
+GAP-12,缺市场阶段/市值上下文,只取 1h kline,角色可能误判,market cap/stage/liquidity window,M,P2,作为辅助上下文，不做策略,report 中显示上下文
+GAP-13,结构执行钱包 vs 结果钱包不稳定,规则混杂,影响备注和历史库,hold/sell/profit/source/time,M,P0,拆分角色规则,role_rule_matrix 覆盖
+GAP-14,未接主状态机,缺 decision json,主系统无法稳定消费,wallet_structure_decision.json,M,P0,生成 decision contract,主系统只读该 JSON
+GAP-15,缺 wallet_structure_decision.json,缺失,不能机器化交接,status/score/factor/reasons,M,P0,实现 decision_builder,JSON schema 校验通过
+GAP-16,缺 paper runner factor,缺失,paper 无法量化结构侧影响,wallet_structure_factor,M,P2,Phase E 接入，只输出 factor,paper 只读 factor
+GAP-17,缺 evidence_chain,缺失,无法审计为什么给角色,field/rule/value/source,M,P0,所有角色输出 evidence_chain,每条核心结论有证据链
+GAP-18,缺多快照对比,无,无法看清仓/回流/角色变化,snapshot history,H,P2,稳定后加 snapshot diff,T+1h/T+6h 可 diff
+GAP-19,缺字段缺失质量评分,无,容易过度判断,field completeness,L,P0,输出 missing_quality_score,decision 附质量说明
+GAP-20,缺单币复盘更新机制,review_plan 但无回写规范,历史库难维护,review_update contract,M,P1,定义 review feedback,复盘可更新角色/证据

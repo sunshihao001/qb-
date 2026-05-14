@@ -1,0 +1,31 @@
+version: '2.0'
+required_files:
+- governance_plane.md
+- authority_boundary.yaml
+- stage_permission_matrix.yaml
+- hard_negative_rules.yaml
+- risk_boundary.yaml
+- real_trade_forbidden_policy.yaml
+- review_to_upgrade_policy.yaml
+- evidence_language_policy.yaml
+- assumption_control_policy.yaml
+- exception_escalation_policy.yaml
+- legacy_runtime_quarantine_policy.yaml
+- runner_permission_policy.yaml
+- governance_to_domain_constraints.yaml
+- governance_to_data_constraints.yaml
+- governance_to_control_constraints.yaml
+- governance_readiness_gate.yaml
+- governance_validation_rules.yaml
+- governance_integrity_manifest.json
+- governance_to_domain_handoff_packet.json
+- governance_to_data_handoff_packet.json
+- governance_event_log.jsonl
+semantic_checks:
+- covers_K00_P10
+- defines_can_cannot
+- contains_P0_hard_negatives
+- limits_deterministic_language
+- forbids_assumption_filling
+- outputs_domain_data_constraints
+- p01_remains_blocked

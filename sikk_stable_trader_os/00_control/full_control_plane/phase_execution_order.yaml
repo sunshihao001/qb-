@@ -1,0 +1,91 @@
+default_execution_order:
+- step: 0
+  plane: P00_FULL_CONTROL_PLANE
+  action: 全阶段调度、验收、状态回写、阻断、交接
+- step: 1
+  plane: P01_GOVERNANCE_PLANE
+  action: 定义系统边界、权限、风险红线、禁止事项
+- step: 2
+  plane: P02_DOMAIN_PLANE
+  action: 定义领域对象、场景、生命周期、证据/反证语义
+- step: 3
+  plane: P03_DATA_PLANE
+  action: 生成可采集、可校验、可追溯的数据事实体系
+- step: 4
+  plane: P04_EVIDENCE_PLANE
+  action: 把标准化事实转换为证据对象、证据等级、反证对象
+- step: 5
+  plane: P05_SCENARIO_RECOGNITION_PLANE
+  action: 基于证据链识别盘型/生命周期候选
+- step: 6
+  plane: P06_STRATEGY_GATE_PLANE
+  action: 只允许未被否定的样本进入 paper-only 候选
+- step: 7
+  plane: P07_EXECUTION_RISK_PLANE
+  action: 模拟执行风险、滑点、流动性、熔断，不允许实盘
+- step: 8
+  plane: P08_REVIEW_REPLAY_PLANE
+  action: 对 paper/replay 样本做失败归因与规则反馈
+- step: 9
+  plane: P09_SELF_UPGRADE_PLANE
+  action: 把复盘证据转成受控升级候选，不直接污染实时规则
+trace_plane_order:
+  previous: FULL_CONTROL_PLANE
+  current: TRACE_PLANE
+  next: ACCEPTANCE_PLANE
+  rule: Trace Plane must be completed before Acceptance/Handoff professional landing.
+acceptance_plane_order:
+  previous: TRACE_PLANE
+  current: ACCEPTANCE_PLANE
+  next: HANDOFF_PLANE
+  rule: Acceptance Plane must裁决 trace/contract/gap/permission before Handoff, Tool
+    Binding, Paper Runtime.
+phase_execution_order_v2:
+- K00_KNOWLEDGE_INTAKE
+- SYSTEM_METHODOLOGY_BLUEPRINT
+- P00_BUILD_CONTROLLER
+- BOOTSTRAP_CONTROL_PLANE
+- GOVERNANCE_PLANE
+- DOMAIN_PLANE
+- DATA_PLANE
+- FULL_CONTROL_PLANE
+- TRACE_PLANE
+- ACCEPTANCE_PLANE
+- HANDOFF_PLANE
+- P01_P10_PHASE_CONTROLLERS
+- RUNNER_TOOL_BINDING
+- PAPER_ONLY_RUNTIME
+- REVIEW_UPGRADE
+professional_plane_build_order:
+- K00
+- system_methodology_blueprint
+- P00
+- Bootstrap Control Plane
+- Governance Plane
+- Domain Plane
+- Data Plane
+- Full Control Plane
+- Trace Plane
+- Acceptance Plane
+- Handoff Plane
+- P01-P10 Phase Controller
+- Runner / Tool Binding
+- Paper-only Runtime
+- Review / Upgrade
+current_authoritative_stage: HANDOFF_PLANE
+next_legal_stage: P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN
+updated_at: '2026-05-11T17:54:04Z'
+phase_controller_stage:
+  stage_id: P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN
+  status: PHASE_CONTROLLER_INDEX_READY_WITH_GAPS
+  doc_id: DOC-20260511-028
+  previous_stage: HANDOFF_PLANE
+  current_stage: P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN
+  next_legal_stage: P01_P10_CONTROLLER_PACKAGE_EXPANSION
+  runtime_blocked: true
+  tool_binding_allowed: false
+  paper_runtime_allowed: false
+  live_runtime_allowed: false
+professional_build_sequence:
+- P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN
+- P01_P10_CONTROLLER_PACKAGE_EXPANSION

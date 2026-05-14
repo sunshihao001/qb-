@@ -1,0 +1,25 @@
+rules:
+- rule_id: I01_BLOCK_001
+  condition: phase_controller_index_missing
+  result: I01_BLOCKED
+- rule_id: I01_BLOCK_002
+  condition: any_phase_live_execution_allowed
+  result: I01_BLOCKED
+- rule_id: I01_BLOCK_003
+  condition: p07_outputs_paper_runtime_allowed_or_started
+  result: I01_BLOCKED
+- rule_id: I01_BLOCK_004
+  condition: p08_wallet_signing_allowed
+  result: I01_BLOCKED
+- rule_id: I01_BLOCK_005
+  condition: p09_direct_rule_mutation_allowed
+  result: I01_BLOCKED
+- rule_id: I01_BLOCK_006
+  condition: p10_auto_deploy_allowed
+  result: I01_BLOCKED
+- rule_id: I01_BLOCK_007
+  condition: critical_handoff_missing
+  result: I01_BLOCKED
+- rule_id: I01_BLOCK_008
+  condition: trace_chain_unusable
+  result: I01_BLOCKED

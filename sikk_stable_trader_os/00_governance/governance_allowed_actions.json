@@ -1,0 +1,25 @@
+{
+  "runtime_mode": "SYSTEM_BUILDING",
+  "allowed_actions": [
+    "build_methodology",
+    "build_governance_plane",
+    "build_domain_plane",
+    "build_data_plane",
+    "build_control_plane",
+    "build_decision_plane",
+    "build_risk_plane",
+    "build_execution_plane",
+    "build_verification_plane",
+    "build_learning_plane",
+    "build_domain_object_registry",
+    "build_state_dictionary",
+    "build_phase_registry",
+    "build_phase_transition_map",
+    "build_system_state_machine",
+    "build_flow_maps",
+    "build_atomic_skill_policy",
+    "build_her_execution_protocol",
+    "build_P00_phase_package",
+    "build_P01_phase_package"
+  ]
+}

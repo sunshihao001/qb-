@@ -1,0 +1,71 @@
+{
+  "binding_id": "gap_risk_binding_h00_real_20260514_001821",
+  "bindings": [
+    {
+      "queue_item_id": "queue_h00_u00_review_gaps",
+      "gap_refs": [
+        "policy_not_active",
+        "paper_runtime_not_enabled",
+        "live_runtime_forbidden",
+        "telegram_binding_design_only",
+        "V00_READY_WITH_GAPS",
+        "R00_READY_WITH_GAPS"
+      ],
+      "risk_refs": [
+        "safe_dry_run_only",
+        "telegram_binding_design_only"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order"
+      ],
+      "must_preserve_in_downstream": true
+    },
+    {
+      "queue_item_id": "queue_h00_g00_policy_review",
+      "gap_refs": [
+        "policy_not_active"
+      ],
+      "risk_refs": [
+        "governance_candidate_not_active"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "activate_policy_without_acceptance",
+        "weaken_forbidden_actions",
+        "silent_policy_overwrite"
+      ],
+      "must_preserve_in_downstream": true
+    },
+    {
+      "queue_item_id": "queue_h00_o00_run_document_safe_mode",
+      "gap_refs": [
+        "policy_not_active",
+        "paper_runtime_not_enabled",
+        "live_runtime_forbidden",
+        "telegram_binding_design_only",
+        "V00_READY_WITH_GAPS",
+        "R00_READY_WITH_GAPS"
+      ],
+      "risk_refs": [
+        "safe_dry_run_only",
+        "telegram_binding_design_only"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order"
+      ],
+      "must_preserve_in_downstream": true
+    }
+  ]
+}

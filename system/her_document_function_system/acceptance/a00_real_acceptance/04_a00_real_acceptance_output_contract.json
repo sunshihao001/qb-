@@ -1,0 +1,24 @@
+{
+  "phase_id": "A00_REAL_ACCEPTANCE",
+  "required_outputs": {
+    "preflight_result": "preflight/a00_real_acceptance_preflight.json",
+    "real_evidence_bundle": "evidence_bundle/real_evidence_bundle.json",
+    "evidence_integrity_check": "evidence_bundle/evidence_integrity_check.json",
+    "phase_status_matrix": "phase_status/phase_status_matrix.json",
+    "status_consistency_report": "phase_status/status_consistency_report.json",
+    "artifact_manifest": "artifact_manifest/artifact_manifest.json",
+    "artifact_existence_check": "artifact_manifest/artifact_existence_check.json",
+    "gap_propagation_report": "gap_review/gap_propagation_report.json",
+    "unresolved_gaps": "gap_review/unresolved_gaps.json",
+    "trace_audit_validation": "trace_audit/trace_audit_validation.json",
+    "acceptance_scorecard": "scorecard/acceptance_scorecard.json",
+    "readiness_certificate": "certificate/readiness_certificate.json",
+    "acceptance_decision": "decision/acceptance_decision.json",
+    "failure_summary": "failure_summary/failure_summary.json",
+    "recovery_report": "recovery/recovery_report.json",
+    "handoff_packet": "handoff/a00_real_acceptance_to_h00_handoff.json",
+    "trace_log": "trace_audit/a00_real_acceptance_trace.jsonl",
+    "audit_log": "trace_audit/a00_real_acceptance_audit.jsonl",
+    "final_report": "reports/a00_real_acceptance_report.md"
+  }
+}

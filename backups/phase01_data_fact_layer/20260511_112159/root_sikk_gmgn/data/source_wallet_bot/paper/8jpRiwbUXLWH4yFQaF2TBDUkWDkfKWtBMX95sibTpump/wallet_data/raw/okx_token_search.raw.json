@@ -1,0 +1,42 @@
+{
+  "source": "okx",
+  "endpoint": "token_search",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "search",
+    "--query",
+    "8jpRiwbUXLWH4yFQaF2TBDUkWDkfKWtBMX95sibTpump",
+    "--chains",
+    "501"
+  ],
+  "started_at": "2026-05-08T03:25:59Z",
+  "finished_at": "2026-05-08T03:25:59Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "chainIndex": "501",
+        "change": "498.15",
+        "cursor": "0",
+        "decimal": "6",
+        "explorerUrl": "https://web3.okx.com/explorer/solana/token/8jpRiwbUXLWH4yFQaF2TBDUkWDkfKWtBMX95sibTpump",
+        "holders": "3582",
+        "liquidity": "168706.5351366680857274294468558049522126278796279",
+        "marketCap": "910386.837237926344459505",
+        "price": "0.0009103921215625395546491359315171419",
+        "tagList": {
+          "communityRecognized": false
+        },
+        "tokenContractAddress": "8jpRiwbUXLWH4yFQaF2TBDUkWDkfKWtBMX95sibTpump",
+        "tokenLogoUrl": "https://static.oklink.com/cdn/web3/currency/token/large/501-8jpRiwbUXLWH4yFQaF2TBDUkWDkfKWtBMX95sibTpump-109/type=default_90_0?v=1778118247524",
+        "tokenName": "Hentaivirus",
+        "tokenSymbol": "HENTAI"
+      }
+    ]
+  }
+}

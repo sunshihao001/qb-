@@ -1,0 +1,41 @@
+p02_data_request_packet:
+  from_controller: P01_CANDIDATE_INTAKE_CONTROLLER
+  to_controller: P02_SOURCE_DATA_FACT_CONTROLLER
+  candidate_scope:
+  - candidate_ids
+  - token_addresses
+  - chain
+  required_data_requests:
+    token_identity:
+    - token_symbol
+    - token_name
+    - token_decimals
+    - pair_address
+    - pool_address
+    - deployer_address
+    - creator_address
+    - launch_time
+    market_discovery_context:
+    - current_market_cap_usd
+    - discovery_market_cap_usd_if_available
+    - liquidity_usd
+    - price_usd
+    - holder_count
+    - token_age_seconds
+    security_precheck:
+    - mint_authority_status
+    - freeze_authority_status
+    - blacklist_risk
+    - transfer_restriction_status
+    - honeypot_risk
+    source_reconciliation:
+    - gmgn_token_profile
+    - gmgn_pair_profile
+    - okx_quote_if_available
+    - chain_raw_identity_check
+  limitations_from_p01:
+  - CANDIDATE_ONLY
+  - NO_EVIDENCE
+  - NO_SCENARIO
+  - NO_STRATEGY_GATE
+  - LIVE_EXECUTION_FORBIDDEN

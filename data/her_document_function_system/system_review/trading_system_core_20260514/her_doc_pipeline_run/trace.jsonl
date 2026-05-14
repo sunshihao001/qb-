@@ -1,0 +1,17 @@
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "O00", "event": "run_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "K00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "K00", "event": "phase_completed", "status": "K00_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "F00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "F00", "event": "function_mapping_written", "status": "WRITTEN", "output": "f00/function_mapping.json"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "F00", "event": "phase_completed", "status": "F00_FUNCTION_MAPPING_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "V00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "V00", "event": "phase_completed", "status": "V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "A00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "A00", "event": "phase_completed", "status": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "H00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "H00", "event": "phase_completed", "status": "QUEUE_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "U00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "U00", "event": "phase_completed", "status": "UPGRADE_QUEUE_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "G00", "event": "phase_started", "status": "STARTED"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "G00", "event": "phase_completed", "status": "GOVERNANCE_CANDIDATES_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T09:27:25Z", "run_id": "her_doc_pipeline_run", "phase": "O00", "event": "run_completed", "status": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS"}

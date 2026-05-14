@@ -1,0 +1,160 @@
+{
+  "version": "2.0",
+  "source_doc_id": "DOC-20260511-021",
+  "updated_at": "2026-05-11T16:08:37Z",
+  "manifest_status": "GOVERNANCE_READY_WITH_DOWNSTREAM_WARNINGS",
+  "file_count": 36,
+  "files": [
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/assumption_control_policy.yaml",
+      "sha256": "473b72cdd64ac06a3a1ca7d82e497d61523a9812c131790e0f8e12d1bf3c8b0d"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/authority_boundary.yaml",
+      "sha256": "f192941c730b3dd59d1c936b91f55639cd74599ea0d44f3a834bb9d26beb2595"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/evidence_language_policy.yaml",
+      "sha256": "3299c5a799b3a493e4d2761e396d560a4f066d72f192366843c671c43de4b645"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/exception_escalation_policy.yaml",
+      "sha256": "e3edc1fcd78b718a0580d9ae6ead5d9e9cfb8d72f1095d0e9942840671fa30fe"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_allowed_actions.json",
+      "sha256": "a21384e3f7dfa235f6d3c75c521d86436a6ce28ef7cd0696b545425aeeaa0f94"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_boundary_summary.json",
+      "sha256": "ee4d24640dcedd1f19eb508cbd4a32a77e9237ed73bc403b23de98d30389c2c4"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_event_log.jsonl",
+      "sha256": "959cca96fdeed3420179e095e1ff75f90012ffff33a7f7dc09db0afbbead5920"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_forbidden_actions.json",
+      "sha256": "93626f91668fce95de952c58354d64d34954221ec6af61e10970b21ffdc89804"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_gap_list.json",
+      "sha256": "7b52876e61e7a19268782f9a472816fbcd4acd743d004e8ebdd7b702c7723c93"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_handoff_packet.json",
+      "sha256": "7625d4d9bbe0dc11cfa78ec5b006c09fd49c4b333a6c38025231835761e02955"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_integrity_manifest.json",
+      "sha256": "26a39a28b6e06c0b917d8f3b1dcc780e713ff8448e24e4e6bc8fe533117dcf0d"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_phase_target_data.raw_user_proposed.yaml",
+      "sha256": "50636ccf4fb769ae5b5cfc394fd963c4f75da349a295c4907338efc9879ff107"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_phase_target_data.yaml",
+      "sha256": "c2849bf7fc4f12c6264f148bc5b9a6e105ddc6a36495618d74e4415ac5dc5286"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_plane.md",
+      "sha256": "97e254253a001932ddf8d2a0444f9eec013e9e5a337456b3f2e3bad2886b40bc"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_readiness_gate.yaml",
+      "sha256": "6be0f146190160941827008d907da59af4eed9080ead22f8b138e30f7aadbda1"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_status.json",
+      "sha256": "a8bd111b3cac57b609e1c71bd695e3614cfb15ce979081ae8ad9e01005fe31f6"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_to_control_constraints.yaml",
+      "sha256": "d88805cf17629e9ed329806d95538288c9acababa372141de3d902c747106f8a"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_to_data_constraints.yaml",
+      "sha256": "6f5e7e66ce6d428d648afe3e16ce5a130a66546c3b3d13a6516fcb81dea0a38b"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_to_data_handoff_packet.json",
+      "sha256": "4cdb21884bf233a6338600da97c885856d05453713ffb39268fb893addd99e9c"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_to_domain_constraints.yaml",
+      "sha256": "7de1d8c07dbd4dcaceb013bfa349a3ba4f0784eaa3acee0fc42a505654f0fd94"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_to_domain_handoff_packet.json",
+      "sha256": "45e7de23a778aedc12f1f3df1194c6616292d9aa2dcc33e9c576669aff2f7893"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/governance_validation_rules.yaml",
+      "sha256": "3cfb39ca2d77a99edfbe0faf48075f59de155d1ec79162bdb0d914d6919e17a5"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/hard_negative_rules.yaml",
+      "sha256": "2594682fbc477b23501c5275e2258d5f388377037b4bb1d11d32b3d37bed0228"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/legacy_runtime_quarantine_policy.yaml",
+      "sha256": "77359bec9fbe08c03b099048f7948507d440fb554229dd04bd59504a1f18e14a"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/real_trade_forbidden_policy.yaml",
+      "sha256": "7df455dbbd360db80067271ca6f23265a6e5088790f6be0d07b830a16e3207ea"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/reports/governance_plane_acceptance_report.json",
+      "sha256": "e84f5caf2135b9b3b5e08902207fbb87b33f0c24b1030fc1b3693347457c5eca"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/reports/governance_plane_landing_report.json",
+      "sha256": "ef90401448777607b245ae7c06b7a3123de41a8a8d14ba26ccbf83804b73ef6e"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/review_to_upgrade_policy.yaml",
+      "sha256": "e9592dfd7a7340c414de2d6c27e287d7108d7cd54eaa56c2d7ffaf7ea075990a"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/risk_boundary.yaml",
+      "sha256": "df514b52406ace04605118c2834a9ffd7b540959f3421c174e128f7a28a37aab"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/runner_permission_policy.yaml",
+      "sha256": "6c5eb0056d38057c30ad6dfe593effff1d26794da138fe3e050d194a73928ca6"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/schemas/authority_boundary.schema.json",
+      "sha256": "ec4453122a0a2ab4cdd4a649a49de4c6b4d6ac0827d0a6be74f566c32c4dada2"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/schemas/governance_handoff_packet.schema.json",
+      "sha256": "0acb79bcdac6fb155fa78c834c610f61b192aad6d7e11e30d9cad757150d532e"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/schemas/hard_negative_rules.schema.json",
+      "sha256": "ec56c1430d892d35d2127e607b266c30482dffce51a9cc34080f1912a4d61a72"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/schemas/risk_boundary.schema.json",
+      "sha256": "db7d940e5149a833353d4080b58a6cd82c112f896921ba9df45bfbfd0dbb5993"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/schemas/stage_permission_matrix.schema.json",
+      "sha256": "8f1572616310bcc5e17069e6c8d7d2184d8687bfde8bffa932b869d06ff6ff8e"
+    },
+    {
+      "path": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/stage_permission_matrix.yaml",
+      "sha256": "b62f248c155e717c87a21bacbc9f585fb58acc93bdce9a3894040ca61546e9b3"
+    }
+  ],
+  "acceptance_report": "/root/sikk-gmgn/sikk_stable_trader_os/00_governance/reports/governance_plane_acceptance_report.json",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false,
+    "p01_runtime_connection_allowed": false
+  }
+}

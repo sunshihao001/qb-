@@ -1,0 +1,19 @@
+policy_id: P09_GAP_POLICY
+BLOCKING_GAP:
+- historical_snapshot_missing
+- trace_chain_missing
+- live_execution_requested
+- direct_rule_mutation_requested
+CRITICAL_GAP:
+- review_case_missing
+- p08_or_runtime_output_missing
+- p10_handoff_contract_missing
+HIGH_GAP:
+- partial_decision_chain
+- outcome_incomplete
+- attribution_conflicted
+MEDIUM_GAP:
+- minor_snapshot_freshness_unknown
+- optional_metric_missing
+LOW_GAP:
+- optional_metadata_missing

@@ -1,0 +1,12 @@
+acceptance_gate_id: P10_system_upgrade_controller_ACCEPTANCE_GATE_STUB
+stage: P10_system_upgrade_controller
+status: STUB_CREATED_BY_P00
+required_checks:
+  - file_level
+  - structure_level
+  - semantic_level
+  - consumption_level
+  - runtime_level
+safety_checks:
+  paper_only_true: true
+  real_trade_enabled_false: true

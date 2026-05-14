@@ -1,0 +1,54 @@
+acceptance_blocking_rules:
+- rule_id: ABLOCK_001
+  name: 无 trace 禁止验收通过
+  condition: required_trace_missing == true
+  result: ACCEPTANCE_BLOCKED
+  reason: 核心对象无 trace，无法审计和复盘
+- rule_id: ABLOCK_002
+  name: 输入合约缺失
+  condition: required_input_contract_missing == true
+  result: ACCEPTANCE_REJECTED
+  reason: 阶段缺少上游输入，不能证明执行有效
+- rule_id: ABLOCK_003
+  name: 输出合约缺失
+  condition: required_output_contract_missing == true
+  result: ACCEPTANCE_NEEDS_REWORK
+  reason: 无法交接下游
+- rule_id: ABLOCK_004
+  name: 阶段越权输出
+  condition: forbidden_output_detected == true
+  result: ACCEPTANCE_REJECTED
+  reason: 当前阶段输出超出权限边界
+- rule_id: ABLOCK_005
+  name: 缺口未登记
+  condition: known_gap_exists == true and gap_registered == false
+  result: ACCEPTANCE_NEEDS_REWORK
+  reason: 缺口未登记会污染下游判断
+- rule_id: ABLOCK_006
+  name: Handoff 试图绕过 Acceptance
+  condition: handoff_requested == true and acceptance_status not in [ACCEPTANCE_READY,
+    ACCEPTANCE_READY_WITH_GAPS]
+  result: ACCEPTANCE_BLOCKED
+  reason: 未通过验收不得交接
+- rule_id: ABLOCK_007
+  name: Tool Binding 早于 Phase Controller 合格
+  condition: tool_binding_requested == true and phase_controller_acceptance_not_ready
+    == true
+  result: ACCEPTANCE_BLOCKED
+  reason: 不能先绑定工具再定义控制器
+- rule_id: ABLOCK_008
+  name: Paper Runtime 无 tool_trace
+  condition: paper_runtime_requested == true and tool_trace_missing == true
+  result: ACCEPTANCE_BLOCKED
+  reason: 纸面运行必须可追踪
+- rule_id: ABLOCK_009
+  name: 自动实盘路径出现
+  condition: live_execution_enabled == true
+  result: ACCEPTANCE_BLOCKED
+  reason: 当前阶段只允许 paper-only，不允许自动实盘
+- rule_id: ABLOCK_010
+  name: Review Upgrade 绕过 Governance
+  condition: upgrade_rule_change_requested == true and governance_approval_missing
+    == true
+  result: ACCEPTANCE_BLOCKED
+  reason: 规则升级必须受治理约束

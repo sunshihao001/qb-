@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase09 Upgrade Candidate Classification",
+  "type": "object",
+  "required": ["phase", "candidate_count", "candidates"],
+  "properties": {
+    "phase": {"const": "phase_09_system_upgrade_controller"},
+    "candidate_count": {"type": "integer", "minimum": 0},
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["candidate_id", "upgrade_type", "target_phase", "evidence_cases", "classification_status"],
+        "properties": {
+          "candidate_id": {"type": "string"},
+          "upgrade_type": {"type": "string"},
+          "target_phase": {"type": "string"},
+          "evidence_cases": {"type": "array"},
+          "classification_status": {"type": "string"}
+        }
+      }
+    }
+  }
+}

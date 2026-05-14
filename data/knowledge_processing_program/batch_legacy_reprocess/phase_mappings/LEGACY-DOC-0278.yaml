@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0278
+source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-024_full_control_plane_professional_design.md
+phase_scores:
+  P01: 2
+  P02: 5
+  P03: 0
+  P04: 0
+  P05: 4
+  P06: 5
+  P07: 9
+  P08: 19
+  P09: 8
+  P10: 9
+primary_phase: P08
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

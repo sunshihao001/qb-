@@ -1,0 +1,15 @@
+meta:
+  standard_id: S00_LEGACY_READONLY_BOUNDARY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+readonly_for_downstream: true
+new_primary_fact_writes: /root/sikk-gmgn/data/source_wallet_bot/<mode>/<token>/
+no_delete_or_move: true

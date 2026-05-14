@@ -1,0 +1,46 @@
+schema_id: REVIEW_CASE_RECORD_SCHEMA
+title: Review Case Record
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- review_case_id
+- candidate_id
+- token_address
+- case_type
+- review_trigger
+- historical_window
+- source_packet_ids
+- trace
+fields:
+  review_case_id: string
+  candidate_id: string
+  token_address: string
+  case_type: enum
+  review_trigger: enum
+  historical_window: object
+  source_packet_ids: list
+  trace: object
+enums:
+  case_type:
+  - PAPER_TRADE_REVIEW
+  - MISSED_OPPORTUNITY_REVIEW
+  - FALSE_POSITIVE_REVIEW
+  - FALSE_NEGATIVE_REVIEW
+  - HUMAN_REVIEW_CASE
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

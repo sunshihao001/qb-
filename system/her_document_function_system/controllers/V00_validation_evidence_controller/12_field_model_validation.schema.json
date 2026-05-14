@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V00 Field Model Validation Evidence Schema",
+  "type": "object",
+  "required": [
+    "validation_type",
+    "status",
+    "total_fields",
+    "valid_fields",
+    "missing_source_fields",
+    "missing_policy_fields",
+    "warnings"
+  ],
+  "properties": {
+    "validation_type": {
+      "const": "field_model_validation"
+    },
+    "status": {
+      "enum": [
+        "PASSED",
+        "FAILED",
+        "BLOCKED",
+        "READY_WITH_GAPS"
+      ]
+    },
+    "total_fields": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "valid_fields": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "missing_source_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_policy_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_trace_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_field_keys": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "field_name",
+          "field_type",
+          "source",
+          "required",
+          "missing_policy",
+          "evidence_level",
+          "used_by",
+          "output_to",
+          "trace_required"
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}

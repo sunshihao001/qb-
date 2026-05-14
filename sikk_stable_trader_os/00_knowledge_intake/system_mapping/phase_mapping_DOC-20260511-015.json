@@ -1,0 +1,19 @@
+{
+  "doc_id": "DOC-20260511-015",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T14:15:02.799034+00:00",
+  "phase": "Governance Plane",
+  "phase_target_data_path": "00_governance/governance_phase_target_data.yaml",
+  "raw_user_proposed_path": "00_governance/governance_phase_target_data.raw_user_proposed.yaml",
+  "downstream_consumers": [
+    "Domain Plane",
+    "Data Plane",
+    "Control Plane",
+    "P01-P10 phase controllers"
+  ],
+  "handoff_outputs": [
+    "governance_handoff_packet",
+    "domain_plane_generation_prerequisite"
+  ],
+  "status_enum_reconciliation_required": true
+}

@@ -1,0 +1,21 @@
+schema_id: HER_DOC_DOCUMENT_PASSPORT_SCHEMA
+version: 1
+required_fields:
+  - document_id
+  - source_path
+  - source_type
+  - imported_at
+  - target_domain
+  - target_phase
+  - document_status
+  - safety_class
+  - summary
+  - extracted_object_refs
+  - downstream_mapping_refs
+field_enums:
+  document_status: [RAW, CANDIDATE, ASSETIZED, RESEARCH_REQUIRED, BUILD_READY, SUPERSEDED, REJECTED, BLOCKED]
+  safety_class: [READ_ONLY, PAPER_ONLY, DESIGN_ONLY, FORBIDDEN_REAL_TRADING]
+  target_phase: [K00_K08, P00, CONTROL_PLANES, P01_P10, I01_I05, R00, CPO, P09, P10, LEGACY]
+anti_pollution_rules:
+  - No document can become system rule without K00/governance or accepted downstream handoff.
+  - Document text is E1 evidence unless independently checked.

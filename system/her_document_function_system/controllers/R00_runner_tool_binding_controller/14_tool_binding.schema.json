@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HER tool binding schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "tool_binding_id",
+    "controller_id",
+    "entry_method",
+    "input_contract_ref",
+    "output_contract_ref",
+    "state_update",
+    "trace_update",
+    "failure_policy",
+    "safe_mode_required"
+  ],
+  "properties": {
+    "tool_binding_id": {
+      "type": "string"
+    },
+    "controller_id": {
+      "type": "string"
+    },
+    "entry_method": {
+      "type": "string"
+    },
+    "input_contract_ref": {
+      "type": "string"
+    },
+    "output_contract_ref": {
+      "type": "string"
+    },
+    "state_update": {
+      "type": "string"
+    },
+    "trace_update": {
+      "type": "string"
+    },
+    "failure_policy": {
+      "type": "string"
+    },
+    "safe_mode_required": {
+      "const": true
+    }
+  }
+}

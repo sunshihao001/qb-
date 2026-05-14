@@ -1,0 +1,16 @@
+i05_report_model:
+  report_id: string
+  summary:
+    i04_outputs_checked: integer
+    p09_validations_passed: integer
+    p10_validations_passed: integer
+    safety_violations: integer
+    maturity_level: string
+  required_sections:
+    - input_manifest
+    - p09_replay_validation
+    - p10_upgrade_validation
+    - integrity_validation
+    - defects
+    - readiness
+    - next_iteration

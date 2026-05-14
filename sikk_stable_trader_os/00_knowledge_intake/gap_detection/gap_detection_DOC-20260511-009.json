@@ -1,0 +1,28 @@
+{
+  "doc_id": "DOC-20260511-009",
+  "parent_doc_id": "DOC-20260511-006",
+  "generated_at": "2026-05-11T13:54:52.930598+00:00",
+  "closed_parent_gaps": [
+    "GAP-K00-ASSETIZATION-VS-SYSTEM-CONSUMPTION",
+    "GAP-SYSTEM-COMPILATION-CHAIN"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-STAGE-TARGET-DATA-DETAILS",
+      "severity": "DEGRADED",
+      "description": "Every phase target data object still needs explicit enumeration in later sections."
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "next_recommendation": "P00_should_consume_K00_assets_after_stage_target_data_definitions",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

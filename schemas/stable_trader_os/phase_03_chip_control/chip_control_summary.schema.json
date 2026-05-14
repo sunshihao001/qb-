@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "phase",
+    "token_address",
+    "chip_control_status",
+    "dominant_side_status",
+    "chip_transfer_status",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_triggered",
+    "hard_negative_reasons",
+    "missing_fields",
+    "allowed_next_stage",
+    "handoff_status"
+  ],
+  "properties": {
+    "phase": {},
+    "token_address": {},
+    "chip_control_status": {},
+    "dominant_side_status": {},
+    "chip_transfer_status": {},
+    "positive_evidence": {},
+    "negative_evidence": {},
+    "counter_evidence": {},
+    "hard_negative_triggered": {},
+    "hard_negative_reasons": {},
+    "missing_fields": {},
+    "allowed_next_stage": {},
+    "handoff_status": {}
+  }
+}

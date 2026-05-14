@@ -1,0 +1,7 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: STRATEGY_USAGE_PERMISSION_SCHEMA
+required_fields: [permission_id, candidate_id, decision_id, usage_permission, allowed_usage, forbidden_usage, reason_cn]
+usage_permission_enum: [SEND_TO_P08, OBSERVE_ONLY, PAUSE_ONLY, BLOCKED, HUMAN_REVIEW_ONLY]
+forbidden_usage: [direct_paper_runtime, live_execution, auto_order, wallet_signing, bypass_p08, bypass_execution_risk]

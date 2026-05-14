@@ -1,0 +1,52 @@
+{
+  "request_id": "HER_DOC_P01_SYSTEM_AUDIT_REQUEST_001",
+  "issue_pack_id": "HER_DOC_P01_SYSTEM_ISSUE_PACK_001",
+  "trigger_route": "HER_DOC_SYSTEM_AUDIT",
+  "status": "READY_FOR_MANUAL_TRIGGER",
+  "created_at": "2026-05-14T04:02:24Z",
+  "repo_root": "/root/sikk-gmgn",
+  "input_refs": {
+    "issue_pack": "data/her_document_function_system/issue_packs/HER_DOC_P01_SYSTEM_ISSUE_PACK_001/issue_pack.yaml",
+    "task_manifest": "research_loop/task_packages/pending/HER_DOC_P01_SYSTEM_ISSUE_PACK_001/task_manifest.yaml",
+    "controller_registry": "system/her_document_function_system/registry/controller_registry.json",
+    "pipeline_run": "data/her_document_function_system/runs/HER-DOC-REAL-20260514-SYSTEM-RESCAN-002",
+    "f00_controller": "system/her_document_function_system/controllers/F00_function_realization_controller"
+  },
+  "audit_scope": [
+    "K00_INPUT_CONTRACT",
+    "F00_FUNCTION_REALIZATION",
+    "V00_R00_A00_EVIDENCE_CHAIN",
+    "DATA_INTEGRITY_REVIEW"
+  ],
+  "required_outputs": [
+    "outputs/system_audit/k00_f00_entry_contract_audit.json",
+    "outputs/system_audit/f00_missing_input_status_matrix.json",
+    "outputs/system_audit/chat_context_bypass_findings.md",
+    "outputs/system_audit/f00_asset_realization_matrix.json",
+    "outputs/system_audit/f00_gap_register.yaml",
+    "outputs/system_audit/v00_r00_a00_evidence_audit.json",
+    "outputs/system_audit/readiness_debt_register.yaml",
+    "outputs/system_audit/her_doc_data_integrity_matrix.json",
+    "outputs/system_audit/parse_validation_result.json"
+  ],
+  "safety_boundary": {
+    "safe_mode": true,
+    "manual_trigger_only": true,
+    "allow_live_runtime": false,
+    "allow_wallet_signing": false,
+    "allow_auto_deploy": false,
+    "allow_production_trading": false,
+    "allow_direct_production_rule_change": false
+  },
+  "status_rules": {
+    "no_k00_handoff": "F00_BLOCKED",
+    "no_document_passport": "F00_BLOCKED",
+    "no_corpus_index": "F00_BLOCKED",
+    "no_gap_detection": "F00_BLOCKED",
+    "no_execution_boundary": "F00_BLOCKED",
+    "no_write_policy": "DESIGN_ONLY",
+    "no_repo_root": "DESIGN_ONLY",
+    "no_kv": "KV_GAP",
+    "ready_with_gaps_must_not_be_rewritten_to_ready": true
+  }
+}

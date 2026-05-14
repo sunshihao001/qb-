@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sikk.local/schemas/stable_trader_os/phase_02_wallet_structure/phase_02_handoff_packet.schema.json",
+  "title": "SIKK Stable Trader OS Phase02 Handoff Packet",
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "snapshot_id",
+    "phase_status",
+    "allow_next_stage",
+    "next_stage",
+    "required_files_for_next_stage",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_triggered",
+    "hard_negative_reasons",
+    "block_reason",
+    "degrade_reason",
+    "missing_fields",
+    "audit_file"
+  ],
+  "properties": {
+    "phase": {
+      "const": "phase_02_wallet_structure_controller"
+    },
+    "token_address": {
+      "type": "string"
+    },
+    "snapshot_id": {
+      "type": "string"
+    },
+    "phase_status": {
+      "type": "string",
+      "enum": [
+        "WALLET_SUPPORT",
+        "WALLET_PAUSE",
+        "WALLET_BLOCK",
+        "WALLET_UNKNOWN",
+        "WALLET_DATA_WEAK",
+        "WALLET_SAME_SOURCE_DETECTED",
+        "WALLET_DISTRIBUTION_DETECTED",
+        "WALLET_BACKFLOW_DETECTED",
+        "WALLET_COUNTERPARTY_PRESSURE"
+      ]
+    },
+    "allow_next_stage": {
+      "type": "boolean"
+    },
+    "next_stage": {
+      "const": "phase_03_chip_control_controller"
+    },
+    "required_files_for_next_stage": {
+      "type": "object"
+    },
+    "positive_evidence": {
+      "type": "array",
+      "items": {}
+    },
+    "negative_evidence": {
+      "type": "array",
+      "items": {}
+    },
+    "counter_evidence": {
+      "type": "array",
+      "items": {}
+    },
+    "hard_negative_triggered": {
+      "type": "boolean"
+    },
+    "hard_negative_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "block_reason": {
+      "type": "string"
+    },
+    "degrade_reason": {
+      "type": "string"
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {}
+    },
+    "audit_file": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

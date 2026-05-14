@@ -1,0 +1,10 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+policy_id: EXECUTION_RISK_POLICY
+principles:
+  - P08 is execution-risk permission, not strategy judgment
+  - P08 highest authority is Paper-only Runtime permission
+  - execution risk overrides strategy attractiveness
+  - key execution data must be refreshed
+required_check_order: [p07_candidate_validity, quote_snapshot, quote_consistency, liquidity_depth, slippage, cost_model, security_recheck, sellability, freshness, invalidation, wallet_delta_refresh, runtime_risk_limit, position_uniqueness, circuit_breaker, permission]

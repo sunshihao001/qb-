@@ -1,0 +1,62 @@
+{
+  "doc_id": "doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e",
+  "source_type": "uploaded_markdown_system_build_material",
+  "source_name": "未命名 6 _2_.md",
+  "received_at": "2026-05-13T15:27:56.955326+00:00",
+  "raw_path": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/raw/doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e.md",
+  "document_role": {
+    "primary_role": "HER_PHASE_CONTROLLER_BLUEPRINT",
+    "secondary_roles": [
+      "handoff_queue_controller_spec",
+      "schema_contract_requirements",
+      "trace_acceptance_recovery_requirements"
+    ]
+  },
+  "summary": {
+    "core_intent": "Define H00 as controlled handoff/downstream queue controller that converts A00 acceptance results into downstream handoff packets, queues, dependencies, priorities, gap/risk propagation, recovery, trace/audit, and final reports.",
+    "key_points": [
+      "H00 legal entry is A00 handoff plus readiness certificate",
+      "H00 builds downstream target inventory, routing decisions, queue items, dependency graph, priority plan, gap/risk propagation, handoff packets, queue state, recovery, trace/audit",
+      "H00 must not execute downstream tasks or start live/paper runtime",
+      "READY_WITH_GAPS must preserve unresolved gaps and accepted risks",
+      "queue_created must not be treated as task_executed"
+    ]
+  },
+  "system_mapping": {
+    "planes": [
+      "methodology",
+      "control_plane",
+      "phase_controller",
+      "schema_contract",
+      "data_plane",
+      "trace_plane",
+      "acceptance_handoff_plane",
+      "governance",
+      "runner_tool_binding",
+      "report_audit"
+    ],
+    "affected_phases": [
+      "K00",
+      "H00",
+      "A00",
+      "PXX",
+      "IXX",
+      "Runner_Tool_Binding",
+      "U00",
+      "G00",
+      "Report_Audit_System"
+    ]
+  },
+  "required_actions": [
+    "create_h00_controller_file_pack",
+    "create_h00_schemas_and_contracts",
+    "create_h00_execution_protocol",
+    "create_h00_acceptance_gate",
+    "create_h00_trace_audit_spec",
+    "create_h00_recovery_policy",
+    "create_h00_tests",
+    "write_h00_validation_evidence"
+  ],
+  "evidence_level": "DESIGN_BLUEPRINT_WITH_ACTIONABLE_CONTROLLER_FILE_REQUIREMENTS",
+  "status": "K00_ACCEPTED"
+}

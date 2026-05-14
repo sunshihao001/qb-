@@ -1,0 +1,19 @@
+document_type_classification:
+  document_id: KPP-DOC-20260512-001
+  primary_type: SYSTEM_DESIGN_DOC
+  secondary_types:
+    - METHODOLOGY_DOC
+    - TASK_INSTRUCTION_DOC
+    - FIELD_MODEL_DOC
+    - UPGRADE_PROPOSAL
+  action: FULL_FUNCTIONALIZATION
+  route_decision:
+    route: K00_TO_K08_KNOWLEDGE_PROCESSING_PROGRAM
+    direct_execution_allowed: false
+    production_rule_mutation_allowed: false
+    candidate_generation_allowed: true
+  hard_negative_checks:
+    KP_BLOCK_001: PASS_CLASSIFIED
+    KP_BLOCK_002: PASS_FUNCTIONALIZATION_REQUIRED
+    KP_BLOCK_007: PASS_CANDIDATE_ONLY
+    KP_BLOCK_010: PASS_TRACE_REQUIRED

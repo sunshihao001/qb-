@@ -1,0 +1,11 @@
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "g00_real_started", "policy_run_id": "G00-P01-AUTO-FULL-20260514-001"}
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "u00_handoff_loaded", "handoff_status": "HANDOFF_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "candidate_inventory_built", "count": 2}
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "candidate_classified", "count": 2}
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "policy_domain_mapped"}
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "policy_conflict_checked", "status": "PASSED_WITH_GAPS"}
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "policy_rules_built"}
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "policy_bundles_built", "active_status": "LOCAL_ACTIVE_WITH_GAPS"}
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "governance_registry_written", "registry_status": "REGISTRY_READY_WITH_GAPS"}
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "policy_handoff_written"}
+{"timestamp": "2026-05-14T05:02:44+00:00", "event_type": "g00_real_completed", "final_status": "G00_REAL_GOVERNANCE_POLICY_REGISTRY_READY_WITH_GAPS"}

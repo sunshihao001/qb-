@@ -1,0 +1,18 @@
+{
+  "validated_at": "2026-05-12T02:11:16Z",
+  "doc_id": "DOC-20260512-003",
+  "controller_dir": "/root/sikk-gmgn/system/phase_controllers/p03_wallet_entity_controller",
+  "data_dir": "/root/sikk-gmgn/data/phase_controllers/p03_wallet_entity",
+  "expected_files": 51,
+  "missing_files": [],
+  "json_parse_errors": {},
+  "yaml_parse_errors": {},
+  "runtime_dirs_expected": 28,
+  "runtime_dirs_missing": [],
+  "safety_anchor_passed": true,
+  "overall_status": "PASS_WITH_RUNTIME_GAPS",
+  "runtime_allowed": false,
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "next_legal_stage": "P04_CHIP_STRUCTURE_CONTROLLER_PACKAGE_DESIGN"
+}

@@ -1,0 +1,11 @@
+version: '2.0'
+runner_has_strategy_authority: false
+runner_must_bind_to_phase_controller: true
+forbid:
+- runner_direct_trade
+- runner_silent_failure
+- runner_bypass_acceptance_gate
+paper_runner_requires:
+- P06_permission
+- P07_execution_risk
+- paper_only_true

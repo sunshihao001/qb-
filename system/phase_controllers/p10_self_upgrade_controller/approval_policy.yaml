@@ -1,0 +1,14 @@
+policy_id: approval_policy
+approval_required_for:
+- rule_policy_upgrade
+- schema_contract_change
+- parameter_calibration
+- runtime_model_change
+- tool_binding_change
+approval_does_not_allow:
+- live_execution
+- wallet_signing
+- auto_deploy
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+controller_id: P10_SELF_UPGRADE_CONTROLLER

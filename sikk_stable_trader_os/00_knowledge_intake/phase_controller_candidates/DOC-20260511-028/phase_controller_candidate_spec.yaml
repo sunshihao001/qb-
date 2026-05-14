@@ -1,0 +1,11 @@
+doc_id: DOC-20260511-028
+candidate_type: PHASE_CONTROLLER_INDEX
+status: READY_FOR_PHASE_CONTROLLER_INDEX_LANDING
+canonical_target: /root/sikk-gmgn/system/phase_controllers/phase_controller_index.yaml
+acceptance_gate: GATE_PHASE_CONTROLLER_INDEX_READY
+controllers_registered: 10
+must_not_advance_to:
+- RUNNER_TOOL_BINDING_RUNTIME
+- PAPER_ONLY_RUNTIME
+- LIVE_RUNTIME
+source_yaml_present: true

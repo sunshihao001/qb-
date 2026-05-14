@@ -1,0 +1,9 @@
+sample_support_overfit_validation:
+  type: object
+  required:
+    - validation_id
+    - sample_support_assessed
+    - overfit_risk_assessed
+    - single_case_global_upgrade_detected
+    - status
+  additional_properties_allowed: true

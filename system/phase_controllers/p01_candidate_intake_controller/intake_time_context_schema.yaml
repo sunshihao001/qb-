@@ -1,0 +1,26 @@
+intake_time_context:
+  candidate_id: string
+  intake_mode:
+  - LIVE
+  - MANUAL
+  - REPLAY
+  - LEGACY_IMPORT
+  - TEST
+  system_time:
+  - received_at
+  - intake_started_at
+  - intake_completed_at
+  candidate_time:
+  - token_launch_time
+  - discovery_time
+  - source_observed_time
+  time_risk_status:
+  - TIME_CONTEXT_OK
+  - DISCOVERY_TIME_MISSING
+  - SOURCE_DELAY_HIGH
+  - TOKEN_AGE_UNKNOWN
+  - REPLAY_TIME_CONTEXT
+  - LEGACY_TIME_CONTEXT
+  downstream_note:
+  - p02_must_refresh_market_data
+  - p02_must_establish_launch_time

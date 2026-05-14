@@ -1,0 +1,122 @@
+metadata:
+  producer: ISSUEPACK_FULL_AUTOMATION
+  consumer:
+  - R00
+  - S00
+  version: 0.2.0
+  status: active_with_gaps
+  acceptance: py_compile must pass; --help may be timeout/nonzero for legacy scripts
+    but must not execute forbidden modes
+  updated_at: '2026-05-14T14:27:43Z'
+runner_checks:
+- runner_id: SIKK_LIVE_RUN
+  path: /root/sikk-gmgn/sikk_live_run.py
+  exists: true
+  safe_checks:
+  - command: python3 -m py_compile /root/sikk-gmgn/sikk_live_run.py
+    exit_code: 0
+    stdout_tail: ''
+    stderr_tail: ''
+  - command: python3 /root/sikk-gmgn/sikk_live_run.py --help
+    exit_code: 0
+    stdout_tail: "usage: sikk_live_run.py [-h] [--mode {once,loop}] [--output-root\
+      \ OUTPUT_ROOT]\n                        [--config CONFIG] [--limit LIMIT] [--include-s2]\n\
+      \                        [--quote-sources QUOTE_SOURCES]\n                 \
+      \       [--default-quote-amount-sol DEFAULT_QUOTE_AMOUNT_SOL]\n            \
+      \            [--wallet-address WALLET_ADDRESS]\n                        [--use-position-amount]\
+      \ [--interval-sec INTERVAL_SEC]\n                        [--force] [--telegram-broadcast]\n\
+      \                        [--telegram-target TELEGRAM_TARGET]\n\nSIKK Live Run\
+      \ 主入口（纸面/只读/不执行真实 swap）\n\noptions:\n  -h, --help            show this help\
+      \ message and exit\n  --mode {once,loop}\n  --output-root OUTPUT_ROOT\n  --config\
+      \ CONFIG\n  --limit LIMIT\n  --include-s2\n  --quote-sources QUOTE_SOURCES\n\
+      \  --default-quote-amount-sol DEFAULT_QUOTE_AMOUNT_SOL\n  --wallet-address WALLET_ADDRESS\n\
+      \  --use-position-amount\n  --interval-sec INTERVAL_SEC\n  --force\n  --telegram-broadcast\
+      \  每轮完成后向 Telegram home channel 广播运行摘要\n  --telegram-target TELEGRAM_TARGET\n\
+      \                        Hermes send_message 目标，默认 telegram home channel\n"
+    stderr_tail: ''
+  forbidden_modes:
+  - live_swap
+  - sign
+  - broadcast
+  status: PASS_WITH_GAPS
+- runner_id: RUN_SIKK_GMGN_PIPELINE
+  path: /root/sikk-gmgn/run_sikk_gmgn_pipeline.py
+  exists: true
+  safe_checks:
+  - command: python3 -m py_compile /root/sikk-gmgn/run_sikk_gmgn_pipeline.py
+    exit_code: 0
+    stdout_tail: ''
+    stderr_tail: ''
+  - command: python3 /root/sikk-gmgn/run_sikk_gmgn_pipeline.py --help
+    exit_code: 0
+    stdout_tail: "                               [--config CONFIG] [--limit LIMIT]\n\
+      \                                 [--include-s2] [--no-accumulation]\n     \
+      \                            [--no-signal] [--no-state]\n                  \
+      \               [--no-wallet-structure]\n                                 [--wallet-structure-mode\
+      \ {off,observe,soft,hard}]\n                                 [--run-quote-security]\n\
+      \                                 [--wallet-address WALLET_ADDRESS]\n      \
+      \                           [--quote-sources QUOTE_SOURCES]\n              \
+      \                   [--default-quote-amount-sol DEFAULT_QUOTE_AMOUNT_SOL]\n\
+      \                                 [--use-position-amount]\n                \
+      \                 [--account-equity-sol ACCOUNT_EQUITY_SOL]\n              \
+      \                   [--risk-per-trade-pct RISK_PER_TRADE_PCT]\n            \
+      \                     [--max-position-sol MAX_POSITION_SOL]\n\nSIKK-GMGN Pipeline\
+      \ Orchestrator v1.0\n\noptions:\n  -h, --help            show this help message\
+      \ and exit\n  --output-root OUTPUT_ROOT\n                        总输出目录\n  --config\
+      \ CONFIG       GMGN 新币筛选配置\n  --limit LIMIT         GMGN trenches 每类最大返回数量\n\
+      \  --include-s2          K线管道同时处理 S2_重点观察\n  --no-accumulation     跳过吸筹窗口识别\n\
+      \  --no-signal           跳过 SIKK 信号接入\n  --no-state            跳过状态机\n  --no-wallet-structure\n\
+      \                        跳过钱包结构门禁层\n  --wallet-structure-mode {off,observe,soft,hard}\n\
+      \                        钱包结构交易接入模式，默认 observe 只记录不阻断\n  --run-quote-security\
+      \  状态机后运行只读报价 + OKX token-scan + 确认层\n  --wallet-address WALLET_ADDRESS\n  \
+      \                      GMGN quote 需要的钱包地址；默认读取 GMGN_WALLET_ADDRESS；OKX-only\n\
+      \                        可留空\n  --quote-sources QUOTE_SOURCES\n            \
+      \            逗号分隔：okx 或 gmgn,okx；默认 okx\n  --default-quote-amount-sol DEFAULT_QUOTE_AMOUNT_SOL\n\
+      \                        确认层默认只读报价金额 SOL\n  --use-position-amount\n        \
+      \                确认层优先使用状态机建议纸面仓位作为报价金额\n  --account-equity-sol ACCOUNT_EQUITY_SOL\n\
+      \  --risk-per-trade-pct RISK_PER_TRADE_PCT\n  --max-position-sol MAX_POSITION_SOL\n"
+    stderr_tail: ''
+  forbidden_modes:
+  - live_swap
+  - sign
+  - broadcast
+  status: PASS_WITH_GAPS
+- runner_id: FULL_SYSTEM_RUNNER
+  path: /root/sikk-gmgn/modules/runtime/full_system_runner.py
+  exists: true
+  safe_checks:
+  - command: python3 -m py_compile /root/sikk-gmgn/modules/runtime/full_system_runner.py
+    exit_code: 0
+    stdout_tail: ''
+    stderr_tail: ''
+  - command: python3 /root/sikk-gmgn/modules/runtime/full_system_runner.py --help
+    exit_code: 1
+    stdout_tail: ''
+    stderr_tail: "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/runtime/full_system_runner.py\"\
+      , line 9, in <module>\n    from .phase_runner import PhaseRunner, PHASE_ALIASES,\
+      \ PHASE_CANONICAL_NAME, PHASE_OUTPUT\nImportError: attempted relative import\
+      \ with no known parent package\n"
+  forbidden_modes:
+  - live_swap
+  - sign
+  - broadcast
+  status: PASS_WITH_GAPS
+- runner_id: PHASE_RUNNER
+  path: /root/sikk-gmgn/modules/runtime/phase_runner.py
+  exists: true
+  safe_checks:
+  - command: python3 -m py_compile /root/sikk-gmgn/modules/runtime/phase_runner.py
+    exit_code: 0
+    stdout_tail: ''
+    stderr_tail: ''
+  - command: python3 /root/sikk-gmgn/modules/runtime/phase_runner.py --help
+    exit_code: 1
+    stdout_tail: ''
+    stderr_tail: "Traceback (most recent call last):\n  File \"/root/sikk-gmgn/modules/runtime/phase_runner.py\"\
+      , line 10, in <module>\n    from .candidate_state import create_candidate_state\n\
+      ImportError: attempted relative import with no known parent package\n"
+  forbidden_modes:
+  - live_swap
+  - sign
+  - broadcast
+  status: PASS_WITH_GAPS

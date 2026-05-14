@@ -1,0 +1,15 @@
+role,short_name,emoji,note_template,example,max_length,use_case
+新钱包狙击,新狙,🎯,{symbol}-新狙-{roi}x-{tag}-{group},ABC-新狙-3.2x-捆绑-G1,32,fresh/bundler 早期参与
+临时执行钱包,临执,⚡,{symbol}-临执-{roi}x-{source}-短持,ABC-临执-1.8x-单源-短持,32,短持快进快出
+同源执行组成员,G成员,🔗,{symbol}-{group}成员-{roi}x-同源,ABC-G1成员-4.5x-同源,32,同源组地址
+分发接收钱包,分发接收,📥,{symbol}-分发接收-{status}-{source}-R{risk},ABC-分发接收-持有-源A-R2,36,Token 转入接收
+分发派发钱包,分发卖出,📤,{symbol}-分发卖出-已清仓-R{risk},ABC-分发卖出-已清仓-R3,32,转入后高比例卖出
+利润回流节点,回流节点,🔁,{symbol}-回流节点-多地址回流-A4,ABC-回流节点-多地址回流-A4,32,卖后资金回流
+核心资金源候选,资金源,⛽,{symbol}-资金源-候选-{group}-R{risk},ABC-资金源-候选-G1-R4,32,多地址共同资金源
+结果钱包,结果,🏁,{symbol}-结果钱包-{roi}x-可追踪,ABC-结果钱包-8.2x-可追踪,32,高结果/稳定盈利
+接盘鲸鱼,接盘鲸鱼,🐋,{symbol}-接盘鲸鱼-高位-浮亏R{risk},ABC-接盘鲸鱼-高位-浮亏R2,34,高位大额承接
+套牢钱包,套牢,🪤,{symbol}-套牢-浮亏-{holding_pct}-R{risk},ABC-套牢-浮亏-2.1%-R1,32,浮亏高持仓
+可疑中转节点,中转,🚧,{symbol}-中转-可疑-{tag}-R{risk},ABC-中转-可疑-rat-R3,32,rat/pass-through
+LP/池子/路由器/基础设施,基础设施,🏗️,{symbol}-基础设施-{type}-I,ABC-基础设施-LP-I,28,排除评分但保留边
+普通交易钱包,普通,👤,{symbol}-普通-{status}-A{tracking},ABC-普通-观察-A1,28,低风险普通记录
+噪音钱包,噪音,🔇,{symbol}-噪音-低权重,ABC-噪音-低权重,24,低权重/缺字段

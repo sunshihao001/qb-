@@ -1,0 +1,87 @@
+{
+  "doc_id": "DOC-20260511-003",
+  "created_at": "2026-05-11T12:15:53Z",
+  "planes": {
+    "governance_plane": {
+      "impact": "定义系统定位、运行模式、禁止动作与风险边界；下一份 governance_plane.md 应从本总纲派生。",
+      "required_outputs": [
+        "system_manifest.yaml",
+        "global_building_principles.md",
+        "forbidden_action_policy.yaml",
+        "risk_boundary_policy.yaml"
+      ]
+    },
+    "domain_plane": {
+      "impact": "固定 Token/Wallet/AddressGroup/TransactionEvent/MarketScene/ChipState 等领域对象。",
+      "required_outputs": [
+        "domain_object_registry.yaml",
+        "field_dictionary.yaml",
+        "state_dictionary.yaml",
+        "entity_relationship_map.md"
+      ]
+    },
+    "data_plane": {
+      "impact": "固定字段来源、事实字段/推理字段边界、数据血缘。",
+      "required_outputs": [
+        "source_registry.yaml",
+        "input_contracts",
+        "field_source_maps",
+        "normalized_fact_models"
+      ]
+    },
+    "control_plane": {
+      "impact": "固定阶段流转、状态转移、handoff、acceptance gate。",
+      "required_outputs": [
+        "phase_registry.yaml",
+        "phase_transition_map.yaml",
+        "handoff_policy.yaml",
+        "acceptance_policy.yaml"
+      ]
+    },
+    "decision_plane": {
+      "impact": "固定判断规则、证据等级、反证、失效条件。",
+      "required_outputs": [
+        "decision_rule_registry.yaml",
+        "evidence_registry.yaml",
+        "counter_evidence_registry.yaml",
+        "invalidation_policy.yaml"
+      ]
+    },
+    "risk_plane": {
+      "impact": "固定硬否定、风险门禁、执行风险、安全边界。",
+      "required_outputs": [
+        "hard_negative_registry.yaml",
+        "risk_gate_policy.yaml",
+        "execution_risk_policy.yaml"
+      ]
+    },
+    "execution_plane": {
+      "impact": "固定工具调用、Runner、Validator、Replay、失败恢复。",
+      "required_outputs": [
+        "tool_registry.yaml",
+        "runner_protocol.md",
+        "runtime_log_schema.json",
+        "error_recovery_policy.md"
+      ]
+    },
+    "verification_plane": {
+      "impact": "固定 Schema、Contract、Replay、Acceptance Report、测试结果。",
+      "required_outputs": [
+        "schemas",
+        "contracts",
+        "replay_fixtures",
+        "acceptance_reports",
+        "test_results"
+      ]
+    },
+    "learning_plane": {
+      "impact": "固定复盘归因、规则升级、Skill 升级、字段补充计划。",
+      "required_outputs": [
+        "failure_attribution",
+        "review_reports",
+        "rule_upgrade_proposals",
+        "skill_upgrade_logs"
+      ]
+    }
+  }
+}

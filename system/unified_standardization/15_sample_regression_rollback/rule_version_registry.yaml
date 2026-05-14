@@ -1,0 +1,17 @@
+meta:
+  standard_id: S00_RULE_VERSION_REGISTRY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+rule_versions:
+- rule_set: S00_INITIAL_STANDARD_RULES
+  version: 0.1.0
+  status: active_with_gaps
+  rollback_to: null

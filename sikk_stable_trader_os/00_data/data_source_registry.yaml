@@ -1,0 +1,176 @@
+data_sources:
+- source_id: GMGN_TOKEN
+  source_name: GMGN 代币数据
+  source_type: API_OR_AGENT_SKILL
+  primary_use:
+  - 代币基础信息
+  - 热门候选发现
+  - 持有人结构
+  - 交易行为
+  freshness_requirement_seconds: 60
+  reliability_level: B
+  raw_storage_required: true
+  normalized_storage_required: true
+  known_risks:
+  - 字段可能变化
+  - 部分数据可能延迟
+  - 钱包归因需要交叉验证
+  fallback_sources:
+  - CHAIN_RAW
+  - OKX_QUOTE
+- source_id: GMGN_WALLET
+  source_name: GMGN 钱包数据
+  source_type: API_OR_AGENT_SKILL
+  primary_use:
+  - 钱包交易
+  - 持仓
+  - 盈利
+  - 角色线索
+  freshness_requirement_seconds: 120
+  reliability_level: B
+  raw_storage_required: true
+  normalized_storage_required: true
+  known_risks:
+  - 钱包归因误差
+  - 历史覆盖可能不足
+  fallback_sources:
+  - CHAIN_RAW
+  - HISTORICAL_ADDRESS_LIBRARY
+- source_id: CHAIN_RAW
+  source_name: 链上原始交易
+  source_type: RPC_OR_INDEXER
+  primary_use:
+  - 转账
+  - 买卖
+  - 资金流
+  freshness_requirement_seconds: 180
+  reliability_level: A
+  raw_storage_required: true
+  normalized_storage_required: true
+  known_risks:
+  - 解析成本高
+  - RPC 限速
+  fallback_sources: []
+- source_id: OKX_QUOTE
+  source_name: OKX 报价数据
+  source_type: API_OR_AGENT_SKILL
+  primary_use:
+  - 当前价格验证
+  - 报价偏差检查
+  - 流动性辅助判断
+  freshness_requirement_seconds: 30
+  reliability_level: B
+  raw_storage_required: true
+  normalized_storage_required: true
+  known_risks:
+  - 不覆盖所有长尾代币
+  - 与 DEX 即时报价偏差
+  fallback_sources:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+- source_id: OKX_SECURITY
+  source_name: OKX 安全扫描
+  source_type: API_OR_AGENT_SKILL
+  primary_use:
+  - 安全扫描
+  - 合约风险
+  freshness_requirement_seconds: 1800
+  reliability_level: B
+  raw_storage_required: true
+  normalized_storage_required: true
+  known_risks:
+  - 覆盖不完整
+  - 长尾资产缺失
+  fallback_sources:
+  - CHAIN_RAW
+- source_id: KLINE
+  source_name: K线数据
+  source_type: API_OR_FILE
+  primary_use:
+  - OHLCV
+  - 成交量
+  - 结构判断
+  freshness_requirement_seconds: 60
+  reliability_level: B
+  raw_storage_required: true
+  normalized_storage_required: true
+  known_risks:
+  - 粒度缺口
+  - 历史回补不完整
+  fallback_sources:
+  - GMGN_TOKEN
+  - CHAIN_RAW
+- source_id: LIQUIDITY_POOL
+  source_name: 流动性池数据
+  source_type: DEX_OR_INDEXER
+  primary_use:
+  - 池子深度
+  - 滑点
+  - LP变化
+  freshness_requirement_seconds: 60
+  reliability_level: B
+  raw_storage_required: true
+  normalized_storage_required: true
+  known_risks:
+  - 快速变化
+  - 池子切换
+  fallback_sources:
+  - OKX_QUOTE
+  - CHAIN_RAW
+- source_id: HOLDER_SNAPSHOT
+  source_name: 持有人快照
+  source_type: API_OR_INDEXER
+  primary_use:
+  - Top Holder
+  - 集中度
+  - 分布
+  freshness_requirement_seconds: 600
+  reliability_level: B
+  raw_storage_required: true
+  normalized_storage_required: true
+  known_risks:
+  - 快照过期
+  - 排序口径变化
+  fallback_sources:
+  - CHAIN_RAW
+- source_id: HISTORICAL_ADDRESS_LIBRARY
+  source_name: 历史地址库
+  source_type: LOCAL_LIBRARY
+  primary_use:
+  - 地址复现
+  - 历史表现
+  freshness_requirement_seconds: null
+  reliability_level: C
+  raw_storage_required: true
+  normalized_storage_required: true
+  known_risks:
+  - 样本不足
+  - 幸存者偏差
+  fallback_sources: []
+- source_id: PAPER_TRADE_DATA
+  source_name: 纸面交易数据
+  source_type: LOCAL_RUNTIME
+  primary_use:
+  - 回放
+  - 结果校准
+  freshness_requirement_seconds: null
+  reliability_level: B
+  raw_storage_required: true
+  normalized_storage_required: true
+  known_risks:
+  - 不属于实时判断源
+  fallback_sources: []
+- source_id: HUMAN_LABEL
+  source_name: 人工标注数据
+  source_type: MANUAL_REVIEW
+  primary_use:
+  - 复盘标签
+  - 样本校准
+  freshness_requirement_seconds: null
+  reliability_level: C
+  raw_storage_required: true
+  normalized_storage_required: false
+  known_risks:
+  - 主观污染
+  fallback_sources:
+  - PAPER_TRADE_DATA

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V00 Failure Evidence Schema",
+  "type": "object",
+  "required": [
+    "failure_id",
+    "failure_type",
+    "gap_level",
+    "affected_function",
+    "affected_asset",
+    "failure_reason",
+    "evidence_path",
+    "required_fix",
+    "can_continue"
+  ],
+  "properties": {
+    "failure_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "failure_type": {
+      "enum": [
+        "missing_f00_handoff",
+        "missing_function_mapping",
+        "missing_field_model",
+        "missing_rule_logic",
+        "missing_schema",
+        "missing_contract",
+        "invalid_schema",
+        "invalid_contract",
+        "missing_patch_evidence",
+        "missing_test_command",
+        "test_failed",
+        "replay_failed",
+        "missing_trace",
+        "missing_audit",
+        "handoff_invalid",
+        "runner_not_allowed",
+        "production_risk_detected"
+      ]
+    },
+    "gap_level": {
+      "enum": [
+        "BLOCKING_GAP",
+        "CRITICAL_GAP",
+        "HIGH_GAP",
+        "MEDIUM_GAP",
+        "LOW_GAP"
+      ]
+    },
+    "affected_function": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "affected_asset": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "failure_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "required_fix": {
+      "type": "string",
+      "minLength": 1
+    },
+    "can_continue": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

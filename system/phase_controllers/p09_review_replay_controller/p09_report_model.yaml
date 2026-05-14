@@ -1,0 +1,38 @@
+schema_id: P09_REPORT_MODEL
+title: P09 Report Model
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- report_id
+- summary
+- case_distribution
+- attribution_summary
+- calibration_summary
+- p10_handoff_summary
+- compliance
+fields:
+  report_id: string
+  summary: object
+  case_distribution: object
+  attribution_summary: object
+  calibration_summary: object
+  p10_handoff_summary: object
+  compliance: object
+enums: {}
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

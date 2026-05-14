@@ -1,0 +1,17 @@
+{
+  "stage_id": "K05",
+  "run_id": "MANUAL-KPP-AUTOCHAIN-REPLAY",
+  "status": "K05_ACCEPTED",
+  "started_at": "2026-05-13T06:15:39Z",
+  "ended_at": "2026-05-13T06:15:39Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K05/controller_candidate_packet.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K05/schema_contract_candidate_packet.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K05/candidate_risk_review.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K05/k05_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

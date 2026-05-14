@@ -1,0 +1,69 @@
+{
+  "doc_id": "DOC-20260514-HER-CLOSED-LOOP-001",
+  "source_type": "user_uploaded_markdown",
+  "source_name": "未命名 6 (2).md",
+  "received_at": "20260514",
+  "ingested_at": "2026-05-14T10:32:20Z",
+  "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260514-HER-CLOSED-LOOP-001_sikk_her_closed_loop.md",
+  "sha256": "3333493e393f3322c48c4c7554a2d8dc88527461cbd8e6c630fb769ec78b0518",
+  "document_role": {
+    "primary_role": "SIKK/HER closed-loop control constitution supplement",
+    "secondary_roles": [
+      "HER_DOC fixed trigger definition",
+      "R00 runtime orchestrator upgrade requirement",
+      "stage_completion acceptance upgrade",
+      "full-system audit trigger"
+    ]
+  },
+  "summary": {
+    "core_intent": "用HER总控闭环保障真实代币数据按P01-P10正确运行、判断、验收、复盘、升级。",
+    "key_points": [
+      "HER总控闭环约束、追踪、验收、升级真实代币分析判断。",
+      "R00必须升级为总控约束下的真实token运行编排器。",
+      "stage_completion_program验收标准提升为能否进入总闭环。",
+      "核心缺口是六个全。",
+      "固定口令：HER_DOC_PIPELINE、HER_DOC_SYSTEM_AUDIT、HER_DOC_SYSTEM_REVIEW。"
+    ]
+  },
+  "system_mapping": {
+    "planes": [
+      "K00 Knowledge Intake",
+      "Methodology Blueprint",
+      "P00 System Build",
+      "Full Control Plane",
+      "Trace Plane",
+      "Acceptance Plane",
+      "Handoff Plane",
+      "R00 Runtime Orchestrator",
+      "P01-P10 Phase Controllers",
+      "I04 Paper-only Runtime"
+    ],
+    "affected_phases": [
+      "K00",
+      "P00",
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P09",
+      "P10",
+      "I03",
+      "I04",
+      "I05",
+      "CPO"
+    ]
+  },
+  "required_actions": [
+    "Run HER_DOC_SYSTEM_REVIEW",
+    "Run HER_DOC_SYSTEM_AUDIT",
+    "Generate phase supplement repair task package",
+    "Execute safe-mode HER_DOC_PIPELINE",
+    "Preserve no-live/no-sign/no-broadcast boundary"
+  ],
+  "evidence_level": "EVIDENCE_A_STRONG",
+  "status": "PASSPORT_READY"
+}

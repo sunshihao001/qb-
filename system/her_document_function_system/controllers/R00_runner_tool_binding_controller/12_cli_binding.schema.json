@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CLI binding schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "cli_binding_id",
+    "command_id",
+    "script_path",
+    "working_dir",
+    "safe_mode_required",
+    "required_args",
+    "output_dir_policy",
+    "trace_enabled",
+    "audit_enabled",
+    "idempotency_required",
+    "lock_required"
+  ],
+  "properties": {
+    "cli_binding_id": {
+      "type": "string"
+    },
+    "command_id": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "script_path": {
+      "type": "string"
+    },
+    "working_dir": {
+      "type": "string"
+    },
+    "safe_mode_required": {
+      "const": true
+    },
+    "required_args": {
+      "type": "array"
+    },
+    "output_dir_policy": {
+      "enum": [
+        "run_id_scoped"
+      ]
+    },
+    "trace_enabled": {
+      "const": true
+    },
+    "audit_enabled": {
+      "const": true
+    },
+    "idempotency_required": {
+      "const": true
+    },
+    "lock_required": {
+      "const": true
+    }
+  }
+}

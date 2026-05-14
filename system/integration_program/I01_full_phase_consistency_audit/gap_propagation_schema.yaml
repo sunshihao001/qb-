@@ -1,0 +1,8 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: gap_propagation_record
+fields:
+- record_id
+- gap_classes
+- propagation_checks
+- violations

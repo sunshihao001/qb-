@@ -1,0 +1,5 @@
+missing_data_policy:
+  UNKNOWN_is_valid_state: true
+  force_classification_forbidden: true
+  blocking_missing_fields: [token_identity, system_state]
+  degraded_missing_fields: [quote_security, fund_flow, same_source_group, scenario_context]

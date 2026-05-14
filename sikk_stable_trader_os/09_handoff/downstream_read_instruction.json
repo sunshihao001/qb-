@@ -1,0 +1,62 @@
+{
+  "instruction_id": "DOWNSTREAM_READ_INSTRUCTION_DOC-20260511-027",
+  "generated_at": "2026-05-11T17:42:39Z",
+  "handoff_packet": "/root/sikk-gmgn/sikk_stable_trader_os/09_handoff/acceptance_to_handoff_packet.json",
+  "read_policy": "ONLY_READ_LISTED_ASSETS_IN_ORDER",
+  "read_order": [
+    "current_system_state.json",
+    "acceptance_plane_acceptance_result.json",
+    "trace_handoff_packet.json",
+    "handoff_packet",
+    "downstream_read_instruction"
+  ],
+  "allowed_assets": [
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_artifact_check_model.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_blocking_rules.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_context.md",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_contract_dependency.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_dimension_model.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_gap_policy.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_gap_register.md",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_gate_registry.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_object_registry.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_permission_check_model.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_plane.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_report_model.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_result_packet_contract.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_review_checklist.md",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_review_upgrade_check_model.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_runtime_check_model.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_score_model.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_semantic_check_model.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_status_code_table.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_storage_constitution.md",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_tool_binding_check_model.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/acceptance_trace_dependency.yaml",
+    "/root/sikk-gmgn/system/acceptance_plane/her_acceptance_execution_protocol.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/08_acceptance/acceptance_plane_acceptance_result.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/09_handoff/trace_handoff_packet.json"
+  ],
+  "observe_only_assets": [
+    "legacy artifacts lacking complete trace",
+    "runtime sample placeholders"
+  ],
+  "forbidden_assets": [
+    "private keys",
+    "seed phrases",
+    "live trading configs",
+    "unlisted upstream business documents for runtime use"
+  ],
+  "interpretation_rules": [
+    "ACCEPTANCE_READY_WITH_GAPS remains WITH_GAPS",
+    "LIMITED_HANDOFF cannot be treated as FULL_HANDOFF",
+    "weak-use fields cannot support strong claims",
+    "runtime outputs cannot be used until accepted"
+  ],
+  "must_propagate": [
+    "known_gaps",
+    "limitation_tags",
+    "forbidden_actions",
+    "field_usage_permission"
+  ]
+}

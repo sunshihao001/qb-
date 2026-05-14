@@ -1,0 +1,16 @@
+i05_hard_negative_rules:
+  - rule_id: I05_BLOCK_001
+    condition: i04_handoff_missing == true
+    result: I05_BLOCKED
+  - rule_id: I05_BLOCK_002
+    condition: p09_review_input_missing == true
+    result: I05_BLOCKED
+  - rule_id: I05_BLOCK_003
+    condition: live_execution_detected == true or wallet_signing_detected == true or auto_deploy_detected == true
+    result: I05_BLOCKED
+  - rule_id: I05_BLOCK_004
+    condition: single_case_global_upgrade_detected == true
+    result: I05_BLOCKED
+  - rule_id: I05_BLOCK_005
+    condition: p10_upgrade_package_without_regression_or_rollback == true
+    result: I05_BLOCKED

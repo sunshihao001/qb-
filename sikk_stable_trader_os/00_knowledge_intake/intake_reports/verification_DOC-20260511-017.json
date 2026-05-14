@@ -1,0 +1,333 @@
+{
+  "verification_id": "VERIFICATION-DOC-20260511-017",
+  "generated_at": "2026-05-11T14:25:39.844562+00:00",
+  "doc_id": "DOC-20260511-017",
+  "overall_passed": true,
+  "passed_count": 58,
+  "failed_count": 0,
+  "checks": [
+    {
+      "name": "exists:00_knowledge_intake/raw_inputs/DOC-20260511-017.md",
+      "passed": true,
+      "detail": "00_knowledge_intake/raw_inputs/DOC-20260511-017.md"
+    },
+    {
+      "name": "exists:00_methodology/system_methodology_blueprint.md",
+      "passed": true,
+      "detail": "00_methodology/system_methodology_blueprint.md"
+    },
+    {
+      "name": "exists:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/source_registry/source_registry.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/document_passports/document_passport_DOC-20260511-017.yaml",
+      "passed": true,
+      "detail": "00_knowledge_intake/document_passports/document_passport_DOC-20260511-017.yaml"
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-017.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-017.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-017.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-017.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-017.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-017.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-017.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-017.json"
+    },
+    {
+      "name": "exists:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-017.json",
+      "passed": true,
+      "detail": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-017.json"
+    },
+    {
+      "name": "exists:00_control/current_system_state.json",
+      "passed": true,
+      "detail": "00_control/current_system_state.json"
+    },
+    {
+      "name": "exists:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": "00_control/system_asset_index.json"
+    },
+    {
+      "name": "exists:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": "06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json"
+    },
+    {
+      "name": "exists:00_control/phase_registry.yaml",
+      "passed": true,
+      "detail": "00_control/phase_registry.yaml"
+    },
+    {
+      "name": "exists:00_data/data_phase_target_data.raw_user_proposed.yaml",
+      "passed": true,
+      "detail": "00_data/data_phase_target_data.raw_user_proposed.yaml"
+    },
+    {
+      "name": "exists:00_data/data_phase_target_data.yaml",
+      "passed": true,
+      "detail": "00_data/data_phase_target_data.yaml"
+    },
+    {
+      "name": "exists:00_data/data_plane.md",
+      "passed": true,
+      "detail": "00_data/data_plane.md"
+    },
+    {
+      "name": "exists:00_data/field_source_map.yaml",
+      "passed": true,
+      "detail": "00_data/field_source_map.yaml"
+    },
+    {
+      "name": "exists:00_data/normalized_fact_model.schema.json",
+      "passed": true,
+      "detail": "00_data/normalized_fact_model.schema.json"
+    },
+    {
+      "name": "exists:00_data/data_input_contract.json",
+      "passed": true,
+      "detail": "00_data/data_input_contract.json"
+    },
+    {
+      "name": "exists:00_data/data_quality_rules.yaml",
+      "passed": true,
+      "detail": "00_data/data_quality_rules.yaml"
+    },
+    {
+      "name": "exists:00_data/evidence_level_rules.yaml",
+      "passed": true,
+      "detail": "00_data/evidence_level_rules.yaml"
+    },
+    {
+      "name": "exists:00_data/contradiction_record_rules.yaml",
+      "passed": true,
+      "detail": "00_data/contradiction_record_rules.yaml"
+    },
+    {
+      "name": "exists:00_data/data_handoff_packet.json",
+      "passed": true,
+      "detail": "00_data/data_handoff_packet.json"
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-017.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-017.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-017.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-017.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-017.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/current_system_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_data/normalized_fact_model.schema.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_data/data_input_contract.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_data/data_handoff_packet.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_knowledge_intake/document_passports/document_passport_DOC-20260511-017.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_control/phase_registry.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_data/data_phase_target_data.raw_user_proposed.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_data/data_phase_target_data.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_data/field_source_map.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_data/data_quality_rules.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_data/evidence_level_rules.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:00_data/contradiction_record_rules.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical_anchor:## 12. Data Plane 阶段目标数据",
+      "passed": true,
+      "detail": "## 12. Data Plane 阶段目标数据"
+    },
+    {
+      "name": "canonical_anchor:phase_id: DATA_PLANE",
+      "passed": true,
+      "detail": "phase_id: DATA_PLANE"
+    },
+    {
+      "name": "canonical_anchor:phase_status: REQUIRED_BEFORE_P01_RUNTIME",
+      "passed": true,
+      "detail": "phase_status: REQUIRED_BEFORE_P01_RUNTIME"
+    },
+    {
+      "name": "canonical_anchor:normalized_fact_model.schema.json",
+      "passed": true,
+      "detail": "normalized_fact_model.schema.json"
+    },
+    {
+      "name": "canonical_anchor:P01 所需字段全部有来源或 missing_policy",
+      "passed": true,
+      "detail": "P01 所需字段全部有来源或 missing_policy"
+    },
+    {
+      "name": "raw_missing_fields_detected",
+      "passed": true,
+      "detail": "upstream_dependencies,optional_inputs,forbidden_inputs,core_objects,handoff_outputs,runner_binding_status,state_writeback_required,paper_only_required,real_trade_allowed"
+    },
+    {
+      "name": "normalized_has_all_22_fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "raw_phase_status_enum_valid_expected_false",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "normalized_phase_status_enum_valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "safety_flags_valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "field_source_map_has_missing_policy",
+      "passed": true,
+      "detail": "patched missing_policy for all field rows"
+    },
+    {
+      "name": "normalized_fact_schema_required_fields",
+      "passed": true,
+      "detail": "patched required fields"
+    },
+    {
+      "name": "data_handoff_packet_paper_only",
+      "passed": true,
+      "detail": "real_trade_allowed=False"
+    },
+    {
+      "name": "missing_fields_gap_recorded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "status_gap_recorded",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "remaining_degraded_gaps": [
+    {
+      "gap_id": "GAP-DATA-TARGET-DATA-MISSING-SECTION7-FIELDS",
+      "severity": "DEGRADED",
+      "description": "User-proposed Data Plane target data omits required section-7 fields: upstream_dependencies, optional_inputs, forbidden_inputs, core_objects, handoff_outputs, runner_binding_status, state_writeback_required, paper_only_required, real_trade_allowed. Executable YAML fills explicit defaults."
+    },
+    {
+      "gap_id": "GAP-DATA-PHASE-STATUS-ENUM-MISMATCH",
+      "severity": "DEGRADED",
+      "description": "User-proposed phase_status REQUIRED_BEFORE_P01_RUNTIME is not in legal enum; executable YAML normalized to READY_TO_BUILD."
+    },
+    {
+      "gap_id": "GAP-PER-PHASE-TARGET-DATA-INSTANCES",
+      "severity": "DEGRADED",
+      "description": "K00/P00/Governance/Domain/Data target instances are generated; P01-P10 concrete target data instances still need generation/validation."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "reverified_at": "2026-05-11T14:26:14.387838+00:00"
+}

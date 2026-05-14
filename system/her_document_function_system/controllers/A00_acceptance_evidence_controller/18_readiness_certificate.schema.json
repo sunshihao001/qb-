@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A00 readiness certificate schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "certificate_id",
+    "source_doc_ids",
+    "final_status",
+    "readiness_level",
+    "evidence_bundle_ref",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "issued_at",
+    "issued_by"
+  ],
+  "properties": {
+    "certificate_id": {
+      "type": "string"
+    },
+    "source_doc_ids": {
+      "type": "array"
+    },
+    "accepted_phases": {
+      "type": "array"
+    },
+    "final_status": {
+      "enum": [
+        "A00_ACCEPTED",
+        "A00_READY_WITH_GAPS",
+        "A00_BLOCKED",
+        "A00_REJECTED"
+      ]
+    },
+    "readiness_level": {
+      "enum": [
+        "HANDOFF_READY",
+        "HANDOFF_READY_WITH_NON_BLOCKING_GAPS",
+        "BLOCKED",
+        "REJECTED",
+        "DESIGN_ONLY",
+        "PARTIALLY_IMPLEMENTED"
+      ]
+    },
+    "evidence_bundle_ref": {
+      "type": "string"
+    },
+    "open_gaps": {
+      "type": "array"
+    },
+    "accepted_risks": {
+      "type": "array"
+    },
+    "allowed_next_actions": {
+      "type": "array"
+    },
+    "forbidden_next_actions": {
+      "type": "array"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "issued_by": {
+      "const": "A00_acceptance_evidence_controller"
+    }
+  }
+}

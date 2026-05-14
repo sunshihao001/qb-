@@ -1,0 +1,19 @@
+execution_permission_matrix:
+  P00_FULL_CONTROL_PLANE:
+    can_define: [phase, task, acceptance, status]
+    can_judge: [phase_progression]
+    can_output: [task_package, status_code, handoff_packet]
+    forbidden: [trade_signal, execution_order]
+  P03_DATA_PLANE:
+    can_define: [data_field, quality, lineage]
+    forbidden: [dominant_side_intent_claim, buy_signal]
+  P06_STRATEGY_GATE_PLANE:
+    can_output: [PAPER_READY, BLOCK]
+    forbidden: [bypass_execution_risk, live_order]
+  P07_EXECUTION_RISK_PLANE:
+    can_output: [paper_execution_gate, human_confirmation_required]
+    forbidden: [unauthorized_live_execution]
+  global:
+    paper_only: true
+    real_trade_enabled: false
+    auto_order_allowed: false

@@ -1,0 +1,12 @@
+policy_id: PAPER_RUNTIME_POLICY
+controller_id: I04_PAPER_RUNTIME_INTEGRATION
+rules:
+- I04 is paper-only runtime integration
+- accept only P08 permitted candidates
+- write only registered runtime paths
+- produce P09 review input and I05 handoff
+safety_boundaries:
+  paper_only: true
+  no_live_execution: true
+  no_wallet_signing: true
+  no_auto_deploy: true

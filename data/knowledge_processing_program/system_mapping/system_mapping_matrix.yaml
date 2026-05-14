@@ -1,0 +1,19 @@
+system_mapping_matrix:
+  document_id: KPP-DOC-20260512-001
+  mapped_items:
+    - source_chunk_id: C00_CONCLUSION
+      mapped_to_layer: [K00, GOVERNANCE_PLANE]
+      output_action: [ADD_HARD_NEGATIVE, ADD_ACCEPTANCE_RULE]
+    - source_chunk_id: C03_PHASE_TABLE
+      mapped_to_layer: [K00, P00, DATA_PLANE, GOVERNANCE_PLANE]
+      output_action: [CREATE_CONTROLLER_CANDIDATE, UPDATE_CONTRACT]
+    - source_chunk_id: C06_DIRECTORY
+      mapped_to_layer: [DATA_PLANE, TRACE_PLANE, HANDOFF_PLANE]
+      output_action: [UPDATE_SCHEMA, UPDATE_CONTRACT]
+    - source_chunk_id: C07_HARD_NEGATIVE
+      mapped_to_layer: [GOVERNANCE_PLANE, P10]
+      output_action: [ADD_HARD_NEGATIVE, ADD_TEST_CASE]
+    - source_chunk_id: C08_PROTOCOL
+      mapped_to_layer: [K00, I03]
+      output_action: [ADD_TASK_PACKAGE, CREATE_CONTROLLER_CANDIDATE]
+  route_status: K00_ACCEPTED_WITH_DEGRADED_GAPS

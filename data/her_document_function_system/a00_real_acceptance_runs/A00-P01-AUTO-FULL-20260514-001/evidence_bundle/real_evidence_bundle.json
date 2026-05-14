@@ -1,0 +1,39 @@
+{
+  "bundle_id": "real_evidence_bundle_A00-P01-AUTO-FULL-20260514-001",
+  "acceptance_run_id": "A00-P01-AUTO-FULL-20260514-001",
+  "source_pipeline_run_id": "o00_run_20260514_005235_104185",
+  "evidence_groups": {
+    "o00_pipeline": [
+      "input/o00_pipeline_run_ref.json"
+    ],
+    "k00_intake": [
+      "input/k00_handoff_packet_ref.json"
+    ],
+    "f00_function_realization": [
+      "input/f00_handoff_packet_ref.json"
+    ],
+    "v00_real_validation": [
+      "input/v00_validation_evidence_bundle_ref.json"
+    ],
+    "r00_real_binding": [
+      "input/r00_binding_evidence_bundle_ref.json"
+    ],
+    "gap_register": [
+      "gap_review/unresolved_gaps.json"
+    ],
+    "trace_audit": [
+      "trace_audit/a00_real_acceptance_trace.jsonl",
+      "trace_audit/a00_real_acceptance_audit.jsonl"
+    ],
+    "governance_policy": [
+      "input/governance_policy_bundle_ref.json"
+    ]
+  },
+  "summary": {
+    "o00_status": "O00_CLI_SAMPLE_REPLAY_READY_WITH_GAPS",
+    "v00_status": "V00_REAL_VALIDATION_EVIDENCE_READY_WITH_GAPS",
+    "r00_status": "R00_REAL_SAFE_DRY_RUN_BINDING_READY_WITH_GAPS",
+    "a00_input_integrity": "READY"
+  },
+  "bundle_status": "BUILT"
+}

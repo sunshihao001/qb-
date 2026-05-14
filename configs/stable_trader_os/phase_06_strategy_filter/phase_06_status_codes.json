@@ -1,0 +1,29 @@
+{
+  "phase": "phase_06_strategy_gate_controller",
+  "input_status_codes": [
+    "PHASE_06_INPUT_READY",
+    "PHASE_06_INPUT_DEGRADED",
+    "PHASE_06_INPUT_BLOCKED"
+  ],
+  "strategy_gate_status_codes": [
+    "A_PLUS_P1_PASS",
+    "PAPER_READY",
+    "READY_FOR_CONFIRMATION",
+    "STRATEGY_PAUSE",
+    "STRATEGY_BLOCK",
+    "REVIEW_ONLY"
+  ],
+  "hard_negative_statuses": [
+    "DATA_INVALID",
+    "WALLET_BLOCK",
+    "ACTIVE_DISTRIBUTION",
+    "TRANSFER_TO_COUNTERPARTY",
+    "STRUCTURE_COLLAPSE",
+    "SCENARIO_BLOCK",
+    "SCENARIO_TRAP_RISK",
+    "SCENARIO_DISTRIBUTION_RISK",
+    "COMPLETION_FAIL",
+    "FATIGUE_BLOCK",
+    "POSITION_OVEREXTENDED"
+  ]
+}

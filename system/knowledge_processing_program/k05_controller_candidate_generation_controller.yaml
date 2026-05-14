@@ -1,0 +1,23 @@
+phase_id: K05
+phase_name: "Controller Candidate Generation"
+program: KNOWLEDGE_PROCESSING_PROGRAM
+status: CONTROLLER_CANDIDATE_READY
+purpose: "create controller/schema/contract/hard-negative/test candidates without production mutation"
+required_inputs:
+  - upstream_handoff_or_raw_document
+required_outputs:
+  - phase_controller_candidate.yaml
+  - controller_patch_candidate.yaml
+  - schema_patch_candidate.yaml
+  - contract_patch_candidate.yaml
+  - hard_negative_candidate.yaml
+  - test_case_candidate.yaml
+acceptance:
+  - outputs_exist
+  - source_trace_present
+  - io_contract_declared
+  - handoff_declared
+forbidden:
+  - production_mutation_without_governance
+  - summary_only_completion
+  - untraced_claims

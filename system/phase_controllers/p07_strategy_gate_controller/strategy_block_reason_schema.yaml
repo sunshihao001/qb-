@@ -1,0 +1,7 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+schema_id: STRATEGY_BLOCK_REASON_SCHEMA
+required_fields: [block_reason_id, candidate_id, block_type, block_reasons, reentry_allowed, reentry_conditions, downstream]
+block_type_enum: [GOVERNANCE_BLOCK, TRACE_OR_HANDOFF_BLOCK, SCENARIO_BLOCK, EVIDENCE_BLOCK, CHIP_STRUCTURE_BLOCK, DATA_QUALITY_BLOCK, SECURITY_BLOCK, MARKET_POSITION_BLOCK, LIVE_EXECUTION_BLOCK]
+downstream: {p08_handoff_allowed: false}

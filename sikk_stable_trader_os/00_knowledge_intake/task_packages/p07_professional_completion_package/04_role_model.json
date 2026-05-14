@@ -1,0 +1,95 @@
+{
+  "role_model_id": "P07_STRATEGY_GATE_AI_AUXILIARY_BRAIN_MODEL_V1",
+  "generated_at": "2026-05-12T05:14:28Z",
+  "core_identity": "P07 是策略门控裁决器，不是买入信号、纸面运行器、实盘执行器。",
+  "roles": [
+    {
+      "role": "治理硬否定官",
+      "question": "哪些事绝对不能做？",
+      "outputs": [
+        "hard_negative_evaluation_record",
+        "strategy_block_reason_record"
+      ],
+      "principle": "先否定，再准入；红线优先于机会。"
+    },
+    {
+      "role": "场景适配官",
+      "question": "P06 场景是否可用于策略评估？",
+      "outputs": [
+        "scenario_gate_evaluation_record",
+        "scenario_conflict_gate_record"
+      ],
+      "principle": "UNKNOWN/CONFLICT 是风险，不是空值。"
+    },
+    {
+      "role": "证据审查官",
+      "question": "P05 支持证据、反证、未知、冲突是否足够？",
+      "outputs": [
+        "evidence_gate_evaluation_record"
+      ],
+      "principle": "正证必须和反证共同进入裁决，不允许单分数掩盖。"
+    },
+    {
+      "role": "筹码风险官",
+      "question": "P04 筹码结构是否支持、限制、暂停或阻断？",
+      "outputs": [
+        "chip_structure_gate_evaluation_record"
+      ],
+      "principle": "筹码派发/对手盘压力优先于策略想象。"
+    },
+    {
+      "role": "数据质量官",
+      "question": "P02/P03/P04/P05/P06 数据是否新鲜、可追踪、可用于门控？",
+      "outputs": [
+        "data_quality_gate_evaluation_record",
+        "strategy_gate_input_manifest"
+      ],
+      "principle": "数据不可用则策略不可用。"
+    },
+    {
+      "role": "市场位置官",
+      "question": "当前是否太早、太晚、追高、接盘？",
+      "outputs": [
+        "market_position_context_gate_record"
+      ],
+      "principle": "位置上下文决定是否允许成为候选，不决定执行。"
+    },
+    {
+      "role": "策略模板官",
+      "question": "是否匹配某个策略 profile？",
+      "outputs": [
+        "strategy_pattern_fit_record",
+        "strategy_candidate_record"
+      ],
+      "principle": "策略 profile 是门控政策，不是交易授权。"
+    },
+    {
+      "role": "暂停观察官",
+      "question": "不成熟样本应该观察什么、暂停到什么条件？",
+      "outputs": [
+        "observe_condition_record",
+        "pause_condition_record"
+      ],
+      "principle": "不确定性必须转化为可观察条件。"
+    },
+    {
+      "role": "P08交接官",
+      "question": "哪些候选可以交给 P08？",
+      "outputs": [
+        "p08_execution_risk_data_request_packet",
+        "p07_to_p08_handoff_packet",
+        "strategy_usage_permission_record"
+      ],
+      "principle": "P07 只能交接 P08。"
+    },
+    {
+      "role": "复盘审计官",
+      "question": "为什么这么裁决，未来如何复盘？",
+      "outputs": [
+        "strategy_gate_audit_record",
+        "p07_strategy_gate_report"
+      ],
+      "principle": "每个裁决必须可解释、可追踪、可复验。"
+    }
+  ]
+}

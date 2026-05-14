@@ -1,0 +1,25 @@
+dedup_resolution_record:
+  dedup_id: string
+  candidate_id: string
+  primary_key:
+  - chain
+  - token_address
+  secondary_keys:
+  - pair_address
+  - pool_address
+  - token_symbol
+  dedup_status:
+  - NEW_CANDIDATE
+  - EXACT_DUPLICATE_MERGED
+  - REDISCOVERY_MERGED
+  - MULTI_POOL_ATTACHED
+  - LEGACY_MATCH_ATTACHED
+  - SYMBOL_COLLISION_FLAGGED
+  - IDENTITY_CONFLICT_REJECTED
+  merge_policy:
+    preserve_first_seen_time: true
+    append_new_source_event: true
+    do_not_overwrite_discovery_market_cap: true
+    attach_latest_context_separately: true
+  trace:
+  - dedup_trace_id

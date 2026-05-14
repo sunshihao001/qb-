@@ -1,0 +1,23 @@
+gate_id: BOOTSTRAP_READINESS_GATE_001
+legal_results:
+- BOOTSTRAP_READY
+- BOOTSTRAP_WITH_WARNINGS
+- BOOTSTRAP_BLOCKED
+- BOOTSTRAP_FAILED
+required_for_BOOTSTRAP_READY:
+- current_system_state_exists
+- phase_registry_exists
+- system_asset_index_exists
+- task_consumption_log_exists
+- current_blockers_exists
+- next_stage_decision_exists
+- p01_blocked
+- k00_consumed_by_p00
+- methodology_consumed_by_p00
+- next_legal_stage_defined
+- paper_only_true
+- real_trade_enabled_false
+allowed_warnings_for_BOOTSTRAP_WITH_WARNINGS:
+- Governance Plane not fully generated/accepted
+- Domain Plane not fully generated/accepted
+- Data Plane not fully generated/accepted

@@ -1,0 +1,15 @@
+{
+  "phase_id": "G00_REAL_GOVERNANCE_POLICY_REGISTRY",
+  "required_outputs": {
+    "preflight_result": "preflight/g00_real_policy_preflight.json",
+    "candidate_inventory": "candidates/policy_candidate_inventory.json",
+    "candidate_classification": "candidates/candidate_classification.json",
+    "policy_domain_mapping": "domain_mapping/policy_domain_mapping.json",
+    "policy_conflict_report": "conflict_check/policy_conflict_report.json",
+    "active_policy_bundle": "policy_bundles/active_policy_bundle.json",
+    "governance_registry": "registry/governance_registry.json",
+    "policy_handoff_packets": "handoff/",
+    "acceptance_result": "acceptance/g00_real_policy_acceptance.json",
+    "final_report": "reports/g00_real_policy_report.md"
+  }
+}

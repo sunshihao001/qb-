@@ -1,0 +1,16 @@
+record_id: runtime_readiness_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+checks:
+  p07_outputs_paper_candidate_not_paper_ready: false
+  p08_receives_only_paper_candidate: true
+  p08_generates_paper_runtime_permission: true
+  p08_generates_paper_runtime_data_request: true
+  p08_to_paper_runtime_handoff_defined: true
+  paper_runtime_required_inputs_defined: true
+  live_execution_forbidden_preserved: true
+  wallet_signing_forbidden_preserved: true
+readiness_status: RUNTIME_INTEGRATION_NOT_READY
+gaps:
+- missing_item: p07_outputs_paper_candidate_not_paper_ready
+  severity: HIGH
+  required_before_i04: true

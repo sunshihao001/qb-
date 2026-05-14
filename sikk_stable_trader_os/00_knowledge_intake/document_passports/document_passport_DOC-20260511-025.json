@@ -1,0 +1,59 @@
+{
+  "doc_id": "DOC-20260511-025",
+  "source_type": "user_uploaded_text",
+  "source_name": "Trace 追踪平面专业v2.0⭐.md",
+  "received_at": "2026-05-11",
+  "ingested_at": "2026-05-11T17:13:34Z",
+  "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-025_trace_plane_professional_v2.md",
+  "checksum_sha256": "ceff92bc85de859b5e7b6582659a26032a705e872ccf9c580d2ef0317d199a7b",
+  "document_role": {
+    "primary_role": "TRACE_PLANE_PROFESSIONAL_DESIGN_V2",
+    "secondary_roles": [
+      "full_system_trace_model",
+      "acceptance_input",
+      "handoff_input",
+      "her_trace_protocol"
+    ]
+  },
+  "summary": {
+    "core_intent": "将 Trace Plane 从 Data→Evidence 中间层升级为全系统建造、运行、验收、交接、工具、纸面运行、复盘升级的全链路追踪平面。",
+    "key_points": [
+      "全系统 trace_id 体系",
+      "任务/文件/字段/合约/状态/验收/交接/工具/runtime/review/upgrade/error 追踪模型",
+      "Acceptance/Handoff 必须读取 trace",
+      "无 trace 不允许进入验收/交接/runner/paper runtime",
+      "Trace Plane 不做调度/验收裁决/交易执行"
+    ]
+  },
+  "system_mapping": {
+    "planes": [
+      "Trace Plane",
+      "Full Control Plane",
+      "Acceptance Plane",
+      "Handoff Plane",
+      "Data Plane",
+      "Review/Upgrade Plane"
+    ],
+    "affected_phases": [
+      "K00",
+      "P00",
+      "TRACE_PLANE",
+      "ACCEPTANCE_PLANE",
+      "HANDOFF_PLANE",
+      "P01-P10",
+      "Runner/Tool Binding",
+      "Paper-only Runtime",
+      "Review/Upgrade"
+    ]
+  },
+  "required_actions": [
+    "K00_intake",
+    "create_trace_plane_file_group",
+    "sync_full_control_plane_registry",
+    "generate_trace_handoff_packet",
+    "run_trace_plane_acceptance",
+    "update_current_system_state"
+  ],
+  "evidence_level": "EVIDENCE_A_STRONG",
+  "status": "PASSPORT_READY"
+}

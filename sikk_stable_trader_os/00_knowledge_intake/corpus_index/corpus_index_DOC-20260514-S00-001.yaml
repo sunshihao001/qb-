@@ -1,0 +1,26 @@
+doc_id: DOC-20260514-S00-001
+anchors:
+- section: '0'
+  claim: S00 is standard control layer, not document directory
+- section: '3'
+  claim: 16 sublayers + index
+- section: 8-12
+  claim: field lineage / permissions / schema-contract / runner-binding / trace-acceptance-handoff
+    are mandatory
+- section: 14-15
+  claim: P08/P09/P10 are permission and upgrade gates
+- section: 17-19
+  claim: legacy absorption, regression rollback, security boundary
+key_terms:
+- standard_id
+- phase_run_id
+- trace_id
+- acceptance_id
+- handoff_id
+- permission_status
+- review_case_id
+- upgrade_candidate_id
+- legacy_asset_id
+- regression_suite
+- rollback_plan
+downstream_use: S00 module landing and future R00 replay validation

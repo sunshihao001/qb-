@@ -1,0 +1,32 @@
+{
+  "handoff_id": "K00-HANDOFF-DOC-20260511-010",
+  "doc_id": "DOC-20260511-010",
+  "parent_doc_id": "DOC-20260511-006",
+  "from_phase": "K00",
+  "to_phase": "P00_system_context_control",
+  "status": "HER_RUNTIME_AND_STATE_SOURCE_RULES_CANONICALIZED",
+  "required_p00_checks": [
+    "read current_system_state.json before phase start",
+    "read phase_registry.yaml",
+    "do not bypass blocking gaps on user continue",
+    "distinguish diagnostic/system repair/phase acceptance/downstream consumption/runtime completion",
+    "if current_system_state missing: SYSTEM_CONTROL_PLANE_MISSING and block P01-P10"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-STAGE-TARGET-DATA-DETAILS",
+      "severity": "DEGRADED",
+      "description": "Every phase target data object still needs explicit enumeration in later sections."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

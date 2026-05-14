@@ -1,0 +1,21 @@
+candidate_id: P00_CANDIDATE_DOC-20260511-005
+source_doc_id: DOC-20260511-005
+target_controller: P00_system_bootstrap_controller
+candidate_status: READY_FOR_P00_COMPILATION
+registration_status: NOT_REGISTERED
+source_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005_p00_system_bootstrap_controller_institutional.md
+required_controller_files:
+  - context.md
+  - controller.yaml
+  - input_contract.json
+  - output_contract.json
+  - task_tree.yaml
+  - acceptance_gate.yaml
+  - runner_binding.yaml
+  - handoff_packet.schema.json
+  - state_writeback_policy.yaml
+  - p00_bootstrap_report.template.json
+safety_boundary:
+  paper_only: true
+  real_trade_enabled: false
+  p01_runtime_connection_allowed: false

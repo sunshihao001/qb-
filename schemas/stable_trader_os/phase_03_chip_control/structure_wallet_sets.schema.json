@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "token_address",
+    "early_structure_wallets",
+    "same_source_group_wallets",
+    "distribution_receivers",
+    "counterparty_whales",
+    "excluded_noise_wallets"
+  ],
+  "properties": {
+    "token_address": {},
+    "early_structure_wallets": {},
+    "same_source_group_wallets": {},
+    "distribution_receivers": {},
+    "counterparty_whales": {},
+    "excluded_noise_wallets": {}
+  }
+}

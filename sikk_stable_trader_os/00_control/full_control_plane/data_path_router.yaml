@@ -1,0 +1,21 @@
+data_path_router:
+  canonical_project_root: /root/sikk-gmgn/sikk_stable_trader_os
+  system_root:
+    path: /root/sikk-gmgn/sikk_stable_trader_os
+    purpose: 系统设计、阶段控制、合约、规则、上下文
+  full_control_plane_root:
+    path: /root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane
+    purpose: 全系统控制面文件
+  source_wallet_bot_root:
+    path: /root/sikk-gmgn/data/source_wallet_bot
+    purpose: 新采集/新结构分析/Source Wallet Bot 主事实写入
+  legacy_runtime_root:
+    path: /root/sikk-gmgn/data/gmgn_candidates_live_run
+    policy: legacy_runtime_keep_in_place_read_only
+  routing_rules:
+    - data_type: control_contracts
+      target: /root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane
+    - data_type: knowledge_intake
+      target: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake
+    - data_type: normalized_wallet_data
+      target: /root/sikk-gmgn/data/source_wallet_bot/normalized

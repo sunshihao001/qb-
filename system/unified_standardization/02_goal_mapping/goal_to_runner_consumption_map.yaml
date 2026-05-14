@@ -1,0 +1,20 @@
+meta:
+  standard_id: S00_GOAL_TO_RUNNER_CONSUMPTION_MAP
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+mappings:
+- goal_id: S00_GOAL_TOKEN_JUDGMENT_TRACEABLE
+  phase_controller: P01-P10
+  runner_refs:
+  - RUNNER_SIKK_LIVE_RUN_LEGACY
+  - RUNNER_FULL_SYSTEM_RUNNER
+  - RUNNER_PHASE_RUNNER
+  status: mapped_with_gaps

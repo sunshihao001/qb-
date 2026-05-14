@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Queue state",
+  "type": "object",
+  "required": [
+    "queue_id",
+    "queue_status",
+    "total_items",
+    "ready_items",
+    "blocked_items",
+    "review_items",
+    "created_at",
+    "last_updated_at",
+    "next_dispatch_candidates"
+  ],
+  "properties": {
+    "queue_id": {
+      "type": "string"
+    },
+    "queue_status": {
+      "enum": [
+        "QUEUE_CREATED",
+        "QUEUE_READY",
+        "QUEUE_READY_WITH_GAPS",
+        "QUEUE_BLOCKED",
+        "ITEM_QUEUED",
+        "ITEM_READY",
+        "ITEM_BLOCKED",
+        "ITEM_DISPATCHED",
+        "ITEM_ACCEPTED_BY_TARGET",
+        "ITEM_REJECTED_BY_TARGET",
+        "ITEM_COMPLETED",
+        "ITEM_FAILED",
+        "ITEM_DEFERRED",
+        "ITEM_ARCHIVED"
+      ]
+    },
+    "total_items": {
+      "type": "integer"
+    },
+    "ready_items": {
+      "type": "integer"
+    },
+    "blocked_items": {
+      "type": "integer"
+    },
+    "review_items": {
+      "type": "integer"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "last_updated_at": {
+      "type": "string"
+    },
+    "next_dispatch_candidates": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

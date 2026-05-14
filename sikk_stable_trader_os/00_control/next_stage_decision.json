@@ -1,0 +1,31 @@
+{
+  "updated_at": "2026-05-12T03:55:34Z",
+  "source_doc_id": "DOC-20260512-006",
+  "current_authoritative_stage": "P01_P10_CONTROLLER_PACKAGE_EXPANSION",
+  "next_legal_stage": "P07_STRATEGY_GATE_CONTROLLER_PACKAGE_DESIGN",
+  "recommended_next_substage": "P07_STRATEGY_GATE_CONTROLLER_PACKAGE_DESIGN",
+  "completed_stage": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_LANDING",
+  "completed_status": "P06_PACKAGE_READY_WITH_RUNTIME_GAPS_FORMAL_PHASE_CONTROLLER",
+  "p05_formal_phase_status": "P05_EVIDENCE_CONTROLLER_PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "p06_formal_phase_status": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "p07_status": "P07_STRATEGY_GATE_CONTROLLER_PACKAGE_DESIGN_NEXT",
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "p05_runtime_allowed": false,
+  "p06_runtime_allowed": false,
+  "p07_runtime_allowed": false,
+  "paper_runtime_allowed": false,
+  "live_runtime_allowed": false,
+  "blocked_runtime_paths": [
+    "P06_RUNTIME_EXECUTION",
+    "P07_RUNTIME_EXECUTION",
+    "PAPER_RUNTIME",
+    "LIVE_EXECUTION"
+  ],
+  "decision_basis": [
+    "P06 package assets created",
+    "P06 runtime not implemented or accepted",
+    "P07 strategy gate package not landed",
+    "paper/live/real trade remain forbidden"
+  ]
+}

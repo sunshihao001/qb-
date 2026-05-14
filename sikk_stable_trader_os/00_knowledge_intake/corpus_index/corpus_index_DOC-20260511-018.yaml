@@ -1,0 +1,13 @@
+doc_id: DOC-20260511-018
+anchors:
+- anchor: K00 boundary
+  claim: K00 generates candidates only; P00 compiles/registers formal controllers.
+- anchor: Phase Controller definition
+  claim: A phase controller binds goals, task tree, contracts, skills/tools, gates,
+    state writeback and handoff.
+- anchor: Required outputs
+  claim: phase_controller_candidate_spec and k00_to_p00_handoff_packet become core
+    K00 outputs.
+- anchor: Safety
+  claim: paper_only=true and real_trade_enabled=false; no P01 entry.
+created_at: '2026-05-11T14:40:47+00:00'

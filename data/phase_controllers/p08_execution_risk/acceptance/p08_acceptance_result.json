@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-05-12T05:47:29Z",
+  "doc_id": "DOC-20260512-008",
+  "status": "P08_PACKAGE_READY_WITH_RUNTIME_GAPS_AND_K00_ROUTE_ACCEPTED",
+  "system_files_found": 45,
+  "system_files_expected": 45,
+  "missing_system_files": [],
+  "runtime_dirs_found": 27,
+  "runtime_dirs_expected": 27,
+  "missing_runtime_dirs": [],
+  "anchor_checks": {
+    "live_execution_forbidden": true,
+    "wallet_signing_forbidden": true,
+    "real_order_forbidden": true,
+    "paper_only_runtime_required": true,
+    "p07_handoff_required": true,
+    "quote_required": true
+  },
+  "k00_acceptance_status": "K00_ACCEPTED_WITH_RUNTIME_GAPS",
+  "p08_acceptance_status": "P08_PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "runtime_allowed": false,
+  "paper_runtime_allowed": false,
+  "live_execution_allowed": false,
+  "next_legal_stage": "PAPER_ONLY_RUNTIME_PACKAGE_DESIGN_OR_P08_RUNNER_TOOL_BINDING_DESIGN",
+  "remaining_gaps": [
+    "P08 runtime/tool binding blocked",
+    "real quote/security API binding not implemented",
+    "Paper-only Runtime package not landed",
+    "live execution forbidden"
+  ]
+}

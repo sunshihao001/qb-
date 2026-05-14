@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 gap propagation",
+  "type": "object",
+  "required": [
+    "gap_id",
+    "origin_phase",
+    "current_phase",
+    "gap_type",
+    "gap_level",
+    "status",
+    "propagation_path",
+    "blocking",
+    "accepted_risk",
+    "resolution_plan"
+  ],
+  "properties": {
+    "gap_id": {
+      "type": "string"
+    },
+    "origin_phase": {
+      "type": "string"
+    },
+    "current_phase": {
+      "type": "string"
+    },
+    "gap_type": {
+      "enum": [
+        "governance_policy_gap",
+        "controller_registry_gap",
+        "source_input_gap",
+        "k00_handoff_gap",
+        "f00_handoff_gap",
+        "v00_handoff_gap",
+        "r00_handoff_gap",
+        "a00_handoff_gap",
+        "h00_queue_gap",
+        "u00_review_gap",
+        "g00_policy_gap",
+        "stage_transition_gap",
+        "gap_propagation_gap",
+        "trace_audit_gap",
+        "evidence_bundle_gap",
+        "pipeline_acceptance_gap"
+      ]
+    },
+    "gap_level": {
+      "enum": [
+        "BLOCKING_GAP",
+        "CRITICAL_GAP",
+        "HIGH_GAP",
+        "MEDIUM_GAP",
+        "LOW_GAP"
+      ]
+    },
+    "status": {
+      "enum": [
+        "OPEN",
+        "RESOLVED",
+        "ACCEPTED_RISK",
+        "DEFERRED",
+        "INVALIDATED",
+        "SUPERSEDED"
+      ]
+    },
+    "propagation_path": {
+      "type": "array"
+    },
+    "blocking": {
+      "type": "boolean"
+    },
+    "accepted_risk": {
+      "type": "boolean"
+    },
+    "resolution_plan": {
+      "type": "string"
+    }
+  }
+}

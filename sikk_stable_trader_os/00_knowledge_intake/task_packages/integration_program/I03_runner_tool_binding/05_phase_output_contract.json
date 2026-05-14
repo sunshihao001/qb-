@@ -1,0 +1,14 @@
+{
+  "required_outputs": [
+    "runner_capability_registry",
+    "phase_runner_binding_index",
+    "tool_binding_index",
+    "dry_run_validation_report",
+    "i04_prerequisite_packet",
+    "i03_to_i04_handoff_packet"
+  ],
+  "forbidden_outputs": [
+    "live_execution_command",
+    "wallet_signing_command"
+  ]
+}

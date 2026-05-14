@@ -1,0 +1,13 @@
+record_id: canonical_root_declaration_20260512
+generated_at: '2026-05-12T13:05:00Z'
+status: BUILT
+canonical_roots:
+  repo_root: /root/sikk-gmgn
+  phase_controller_root: /root/sikk-gmgn/system/phase_controllers
+  phase_runtime_data_root: /root/sikk-gmgn/data/phase_controllers
+  i02_system_root: /root/sikk-gmgn/system/integration_program/i02_directory_contract_index_unification
+  i02_runtime_root: /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification
+  k00_root: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake
+restrictions:
+- new writes use canonical roots
+- legacy paths read-only

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "registry_id",
+    "phases"
+  ],
+  "properties": {
+    "phases": {
+      "type": "array",
+      "minItems": 12
+    }
+  }
+}

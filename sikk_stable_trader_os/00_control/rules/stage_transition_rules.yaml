@@ -1,0 +1,32 @@
+rule_id: STAGE_TRANSITION_RULES_BOOTSTRAP_001
+allowed_transitions:
+- from: P00_LANDED_AND_ACCEPTANCE_CHECKED
+  to: P00_BOOTSTRAP_EXECUTED
+  required_conditions:
+  - p00_controller_files_exist
+  - p00_acceptance_gate_passed
+  - methodology_blueprint_exists
+  - k00_handoff_exists
+- from: P00_BOOTSTRAP_EXECUTED
+  to: SYSTEM_PLANES_PROFESSIONAL_GENERATION_AND_ACCEPTANCE
+  required_conditions:
+  - bootstrap_control_plane_active
+  - p01_blocked_by_data_plane
+  - next_stage_decision_created
+- from: P01_BLOCKED_BY_DATA_PLANE
+  to: P01_READY_FOR_PREFLIGHT
+  required_conditions:
+  - data_plane_generated
+  - data_plane_acceptance_passed
+  - p01_input_contract_exists
+  - p01_output_contract_exists
+forbidden_transitions:
+- from: K00_knowledge_intake_taskization
+  to: P01_data_fact_controller
+  reason: K00 output must be consumed by P00 first.
+- from: P00_system_bootstrap_controller
+  to: P01_READY_TO_EXECUTE
+  reason: P01 requires Data Plane Acceptance and P01 Preflight.
+- from: P06_strategy_gate_controller
+  to: REAL_TRADE_EXECUTION
+  reason: Real trade is disabled by global safety boundary.

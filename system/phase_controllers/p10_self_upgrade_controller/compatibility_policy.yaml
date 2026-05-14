@@ -1,0 +1,9 @@
+policy_id: compatibility_policy
+breaking_change_requires:
+- migration_plan
+- version_bump
+- rollback_plan
+- governance_approval
+version: v3.0
+generated_from: DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3
+controller_id: P10_SELF_UPGRADE_CONTROLLER

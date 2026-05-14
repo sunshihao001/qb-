@@ -1,0 +1,2504 @@
+{
+  "doc_id": "DOC-20260513-P01-DATA-FACT-001",
+  "detected_at_utc": "2026-05-13T04:35:02.771501+00:00",
+  "repo": "/root/sikk-gmgn",
+  "overall_status": "P01_RUNTIME_NOT_READY",
+  "blocking_issues": [
+    "controller_missing_1_of_1",
+    "connectors_missing_2_of_2",
+    "contracts_missing_6_of_6",
+    "tests_missing_7_of_7"
+  ],
+  "degraded_issues": [
+    "runtime_dirs_incomplete_0_of_13",
+    "possible_raw_or_legacy_direct_read_risk_detected"
+  ],
+  "counts": {
+    "controller": {
+      "exists": 0,
+      "expected": 1
+    },
+    "connectors": {
+      "exists": 0,
+      "expected": 2
+    },
+    "normalizers": {
+      "exists": 0,
+      "expected": 4
+    },
+    "gates": {
+      "exists": 0,
+      "expected": 4
+    },
+    "contracts": {
+      "exists": 0,
+      "expected": 6
+    },
+    "tests": {
+      "exists": 0,
+      "expected": 7
+    },
+    "runtime_dirs": {
+      "exists": 0,
+      "expected": 13
+    }
+  },
+  "expected_existence": {
+    "controller": [
+      {
+        "path": "controllers/p01_data_fact_controller.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      }
+    ],
+    "connectors": [
+      {
+        "path": "connectors/gmgn_connector.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "connectors/okx_connector.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      }
+    ],
+    "normalizers": [
+      {
+        "path": "normalizers/p01_token_fact_normalizer.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "normalizers/p01_market_fact_normalizer.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "normalizers/p01_wallet_fact_normalizer.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "normalizers/p01_quote_fact_normalizer.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      }
+    ],
+    "gates": [
+      {
+        "path": "gates/p01_data_quality_gate.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "gates/p01_freshness_gate.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "gates/p01_schema_contract_gate.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "gates/p01_cross_source_consistency_gate.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      }
+    ],
+    "contracts": [
+      {
+        "path": "contracts/p01/normalized_token_fact.schema.json",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "contracts/p01/normalized_market_fact.schema.json",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "contracts/p01/normalized_wallet_fact.schema.json",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "contracts/p01/normalized_quote_fact.schema.json",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "contracts/p01/data_quality_decision.schema.json",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "contracts/p01/data_fact_handoff_packet.schema.json",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      }
+    ],
+    "tests": [
+      {
+        "path": "tests/p01/test_gmgn_connector.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "tests/p01/test_okx_connector.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "tests/p01/test_p01_data_fact_controller.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "tests/p01/test_p01_normalizers.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "tests/p01/test_p01_quality_gate.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "tests/p01/test_p01_handoff_packet.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "tests/p01/test_p01_replay_fixture.py",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      }
+    ],
+    "runtime_dirs": [
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/phase_identity",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/source_registry",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/connectivity",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/candidate_universe",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/raw/gmgn",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/raw/okx",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/normalized",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/quality",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/handoff",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/replay_fixture",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/audit",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      },
+      {
+        "path": "data/gmgn_candidates_live_run/p01_data_fact/reports",
+        "exists": false,
+        "is_dir": false,
+        "size": null
+      }
+    ]
+  },
+  "contract_parse_results": [],
+  "p01_related_files_sample": [
+    "contracts/phase_01_data_fact/README.md",
+    "contracts/phase_01_data_fact/handoff_rules.md",
+    "contracts/phase_01_data_fact/input_contract.json",
+    "contracts/phase_01_data_fact/output_contract.json",
+    "contracts/phase_01_data_fact/required_fields.md",
+    "contracts/stable_trader_os/phase_01_candidate_intake/index.yaml",
+    "contracts/stable_trader_os/phase_01_candidate_intake/input_contract.json",
+    "contracts/stable_trader_os/phase_01_candidate_intake/output_contract.json",
+    "contracts/stable_trader_os/phase_01_data_fact/input_contract.json",
+    "contracts/stable_trader_os/phase_01_data_fact/output_contract.json",
+    "contracts/stable_trader_os/phase_01_data_fact/phase_01_acceptance_matrix.json",
+    "contracts/stable_trader_os/phase_01_data_fact/phase_01_forbidden_judgement_contract.md",
+    "contracts/stable_trader_os/phase_01_data_fact/phase_01_goal_passport.json",
+    "contracts/stable_trader_os/phase_01_data_fact/phase_01_input_contract.json",
+    "contracts/stable_trader_os/phase_01_data_fact/phase_01_output_contract.json",
+    "contracts/stable_trader_os/phase_01_data_fact/phase_01_to_phase_02_contract.json",
+    "contracts/stable_trader_os/phase_02_source_data_fact/index.yaml",
+    "contracts/stable_trader_os/phase_02_source_data_fact/input_contract.json",
+    "contracts/stable_trader_os/phase_02_source_data_fact/output_contract.json"
+  ],
+  "risk_hits": {
+    "direct_raw_reads": [
+      {
+        "file": "modules/wallet_data_guard/README.md",
+        "matches": [
+          {
+            "line": 57,
+            "text": "path=\"data/source_wallet_bot/paper/<token>/wallet_data/raw/gmgn.json\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/directory_governance.py",
+        "matches": [
+          {
+            "line": 11,
+            "text": "\"gmgn_wallet_rows_raw.json\": \"wallet_data/raw/gmgn_wallet_rows_raw.json\","
+          },
+          {
+            "line": 12,
+            "text": "\"gmgn_wallet_trade_input.json\": \"wallet_data/raw/gmgn_wallet_trade_input.json\","
+          },
+          {
+            "line": 13,
+            "text": "\"gmgn_wallet_profile_input.json\": \"wallet_data/raw/gmgn_wallet_profile_input.json\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/path_resolver.py",
+        "matches": [
+          {
+            "line": 24,
+            "text": "\"gmgn_wallet_rows_raw.json\": \"wallet_data/raw/gmgn_wallet_rows_raw.json\","
+          },
+          {
+            "line": 25,
+            "text": "\"gmgn_wallet_trade_input.json\": \"wallet_data/raw/gmgn_wallet_trade_input.json\","
+          },
+          {
+            "line": 26,
+            "text": "\"gmgn_wallet_profile_input.json\": \"wallet_data/raw/gmgn_wallet_profile_input.json\","
+          }
+        ]
+      },
+      {
+        "file": "tests/test_source_wallet_gmgn_live_adapter.py",
+        "matches": [
+          {
+            "line": 83,
+            "text": "assert (tmp_path / 'wallet_data/raw/gmgn_wallet_rows_raw.json').exists()"
+          },
+          {
+            "line": 84,
+            "text": "assert (tmp_path / 'wallet_data/raw/gmgn_wallet_trade_input.json').exists()"
+          },
+          {
+            "line": 85,
+            "text": "assert (tmp_path / 'wallet_data/raw/gmgn_wallet_profile_input.json').exists()"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_wallet_data_guard.py",
+        "matches": [
+          {
+            "line": 61,
+            "text": "raw_path=\"wallet_data/raw/gmgn_holders.json\","
+          }
+        ]
+      },
+      {
+        "file": "tests/test_source_wallet_directory_governance.py",
+        "matches": [
+          {
+            "line": 34,
+            "text": "_write(tmp_path / 'wallet_data/raw/gmgn_wallet_rows_raw.json', {'raw': True})"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/system_mapping/system_mapping_DOC-20260513-P01-DATA-FACT-001.json",
+        "matches": [
+          {
+            "line": 8,
+            "text": "\"raw/gmgn\","
+          },
+          {
+            "line": 9,
+            "text": "\"raw/okx\","
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-002_p01_data_fact_controller_professional.md",
+        "matches": [
+          {
+            "line": 385,
+            "text": "│   │       ├── token_profile_raw.json"
+          },
+          {
+            "line": 386,
+            "text": "│   │       ├── holder_list_raw.json"
+          },
+          {
+            "line": 392,
+            "text": "│   │       └── gmgn_fetch_manifest.json"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DATA-FACT-001_p01_data_fact_controller_professional_phase_pack.md",
+        "matches": [
+          {
+            "line": 385,
+            "text": "│   │       ├── token_profile_raw.json"
+          },
+          {
+            "line": 386,
+            "text": "│   │       ├── holder_list_raw.json"
+          },
+          {
+            "line": 392,
+            "text": "│   │       └── gmgn_fetch_manifest.json"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-002_p02_source_data_fact_controller_v3.md",
+        "matches": [
+          {
+            "line": 411,
+            "text": "token_profile_raw_available: boolean"
+          },
+          {
+            "line": 417,
+            "text": "quote_raw_available: boolean"
+          }
+        ]
+      }
+    ],
+    "legacy_gmgn_live_run_reads": [
+      {
+        "file": "modules/wallet_structure/constants.py",
+        "matches": [
+          {
+            "line": 8,
+            "text": "INTEL_BOT_ROOT = 'data/gmgn_candidates_live_run/intel-bot'"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure/implementation_plan.md",
+        "matches": [
+          {
+            "line": 86,
+            "text": "python3 -m json.tool data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/<token>/wallet_structure_decision.json"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure/README.md",
+        "matches": [
+          {
+            "line": 84,
+            "text": "python3 -m modules.wallet_structure.run   --input data/gmgn_candidates_live_run/intel-bot/logs/legacy_intel_bot/wallet_structure_input.json   --output-dir data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/<to"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure/module_contract.md",
+        "matches": [
+          {
+            "line": 86,
+            "text": "python3 -m modules.wallet_structure.run   --input data/gmgn_candidates_live_run/intel-bot/logs/legacy_intel_bot/wallet_structure_input.json   --output-dir data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/<to"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure/decision_builder.py",
+        "matches": [
+          {
+            "line": 521,
+            "text": "out_dir = Path(output_dir) if output_dir else Path('data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure') / request.get('token_address', 'unknown')"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/package_file_passport.json",
+        "matches": [
+          {
+            "line": 4,
+            "text": "\"source_archive\": \"/root/sikk-gmgn/data/gmgn_candidates_live_run/orchestrator/sikk_gmgn_live_run_summary_package.zip\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/kanban_task_board.md",
+        "matches": [
+          {
+            "line": 13,
+            "text": "- 输入：/root/sikk-gmgn/data/gmgn_candidates_live_run/orchestrator/sikk_gmgn_live_run_summary_package.zip"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/package_file_passport.md",
+        "matches": [
+          {
+            "line": 5,
+            "text": "- Source archive: `/root/sikk-gmgn/data/gmgn_candidates_live_run/orchestrator/sikk_gmgn_live_run_summary_package.zip`"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-021_governance_plane_v2_institutional_design.md",
+        "matches": [
+          {
+            "line": 1009,
+            "text": "- data/gmgn_candidates_live_run/"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I02_directory_contract_index_unification_v1_0.md",
+        "matches": [
+          {
+            "line": 164,
+            "text": "/root/sikk-gmgn/data/gmgn_candidates_live_run/"
+          },
+          {
+            "line": 260,
+            "text": "- /root/sikk-gmgn/data/gmgn_candidates_live_run/"
+          },
+          {
+            "line": 1360,
+            "text": "legacy_path: /root/sikk-gmgn/data/gmgn_candidates_live_run/candidate_signal_outputs"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-002_p01_data_fact_controller_professional.md",
+        "matches": [
+          {
+            "line": 1740,
+            "text": "3. 旧目录 `data/gmgn_candidates_live_run/` 中哪些文件可复用，哪些属于历史混乱输出，需要迁移映射。"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DATA-FACT-001_p01_data_fact_controller_professional_phase_pack.md",
+        "matches": [
+          {
+            "line": 1740,
+            "text": "3. 旧目录 `data/gmgn_candidates_live_run/` 中哪些文件可复用，哪些属于历史混乱输出，需要迁移映射。"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005_p00_system_bootstrap_controller_institutional.md",
+        "matches": [
+          {
+            "line": 827,
+            "text": "\"path\": \"data/gmgn_candidates_live_run/\","
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-024_full_control_plane_professional_design.md",
+        "matches": [
+          {
+            "line": 1649,
+            "text": "/root/sikk-gmgn/data/gmgn_candidates_live_run/"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/06_phase_controllers/P00_system_bootstrap_controller/input_contract.json",
+        "matches": [
+          {
+            "line": 50,
+            "text": "\"path\": \"data/gmgn_candidates_live_run/\","
+          }
+        ]
+      }
+    ],
+    "direct_okx_quote_security": [
+      {
+        "file": "modules/stable_trader_os/phase_01_data_fact/runner.py",
+        "matches": [
+          {
+            "line": 136,
+            "text": "required = [raw_manifest, token_fact_path, token_basic_path, token_market_context_path, wallet_path, trade_path, holder_path, kline_path, quote_path, security_path, wallet_normalized_path, holder_normalized_path, kline_n"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/legacy_mapping.md",
+        "matches": [
+          {
+            "line": 38,
+            "text": "- `candidate_quote_security_summary.json`"
+          },
+          {
+            "line": 116,
+            "text": "### `candidate_quote_security_summary.json`"
+          },
+          {
+            "line": 117,
+            "text": "- Historical quote/security scan summary."
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/field_mapping_dictionary.md",
+        "matches": [
+          {
+            "line": 78,
+            "text": "- liquidity_usd: current or snapshot liquidity; source GMGN/OKX/quote/security; required for quote/security; fallback from market snapshot with mark; used by liquidity gate handoff."
+          },
+          {
+            "line": 91,
+            "text": "- quote_price: quote price; source OKX/GMGN/quote; required yes; fallback market snapshot only marked."
+          },
+          {
+            "line": 110,
+            "text": "- old quote/security summary is historical reference only."
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/gmgn_okx_readonly_adapter.py",
+        "matches": [
+          {
+            "line": 160,
+            "text": "CollectorCommand(\"okx\", \"security_token_scan\", [\"onchainos\", \"security\", \"token-scan\", \"--tokens\", f\"501:{token_address}\"], False),"
+          },
+          {
+            "line": 534,
+            "text": "security_scan = _first_mapping(records.get(\"okx:security_token_scan\", {}).get(\"parsed\", {}))"
+          },
+          {
+            "line": 546,
+            "text": "risk_level = str(okx_adv.get(\"riskControlLevel\") or security_scan.get(\"riskLevel\") or \"\")"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/wallet_fact_schema_index.json",
+        "matches": [
+          {
+            "line": 40,
+            "text": "\"status\": \"contract_placeholder_OKX_quote_scan_allowed\""
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/wallet_fact_output_contract.md",
+        "matches": [
+          {
+            "line": 13,
+            "text": "- L1 OKX quote / scan，只用于 quote/security/liquidity 类"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/package_file_passport.json",
+        "matches": [
+          {
+            "line": 82,
+            "text": "\"file_path\": \"quote_security/candidate_quote_security_summary.json\","
+          },
+          {
+            "line": 87,
+            "text": "\"file_path\": \"quote_security/candidate_quote_security_summary.csv\","
+          },
+          {
+            "line": 92,
+            "text": "\"file_path\": \"quote_security/candidate_quote_security_summary.md\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/phase01_fact_store_router.py",
+        "matches": [
+          {
+            "line": 33,
+            "text": "\"description\": \"GMGN/OKX stage outputs, token quote/security/holder/trader overview.\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/package_file_passport.md",
+        "matches": [
+          {
+            "line": 31,
+            "text": "- `quote_security/candidate_quote_security_summary.json` → **HISTORY_SAMPLE**：历史钱包情报样本，可用于复盘、归档、模式参考，不可反推当前实时事实。"
+          },
+          {
+            "line": 32,
+            "text": "- `quote_security/candidate_quote_security_summary.csv` → **HISTORY_SAMPLE**：历史钱包情报样本，可用于复盘、归档、模式参考，不可反推当前实时事实。"
+          },
+          {
+            "line": 33,
+            "text": "- `quote_security/candidate_quote_security_summary.md` → **HISTORY_SAMPLE**：历史钱包情报样本，可用于复盘、归档、模式参考，不可反推当前实时事实。"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/wallet_fact_builder.py",
+        "matches": [
+          {
+            "line": 309,
+            "text": "\"- Class 11 Quote/security: 需要 OKX quote/security scan 补充当前条件背景。\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/codebase_inspection_report.md",
+        "matches": [
+          {
+            "line": 14,
+            "text": "- `candidate_quote_security_summary.json` / `.csv` / `.md`"
+          },
+          {
+            "line": 50,
+            "text": "- quote/security summary shape"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/old_system_inventory.json",
+        "matches": [
+          {
+            "line": 47,
+            "text": "\"path\": \"quote_security/candidate_quote_security_summary.json\","
+          },
+          {
+            "line": 48,
+            "text": "\"role\": \"quote/security summary artifact\","
+          },
+          {
+            "line": 50,
+            "text": "\"candidate_quote_security_summary.json\","
+          }
+        ]
+      },
+      {
+        "file": "modules/runtime/wave3_p06_p07_runner.py",
+        "matches": [
+          {
+            "line": 142,
+            "text": "for key in [\"quote_security_normalized\", \"token_market_context\", \"kline_normalized\", \"chip_control_summary\", \"wallet_structure_decision\"]:"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_execution_adapters.py",
+        "matches": [
+          {
+            "line": 23,
+            "text": "def test_okx_quote_adapter_builds_readonly_quote_command_not_execute():"
+          },
+          {
+            "line": 24,
+            "text": "from sikk_okx_quote_adapter import OKXQuoteAdapter"
+          },
+          {
+            "line": 26,
+            "text": "adapter = OKXQuoteAdapter()"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_shared_verification.py",
+        "matches": [
+          {
+            "line": 22,
+            "text": "\"evidence\": [{\"claim\": \"安全扫描通过\", \"source\": \"okx-security\"}],"
+          },
+          {
+            "line": 26,
+            "text": "\"source_skill\": [\"okx-security\"],"
+          },
+          {
+            "line": 28,
+            "text": "\"evidence_refs\": [\"okx-security:riskControlLevel\"],"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_trade_gate_runtime_integration.py",
+        "matches": [
+          {
+            "line": 89,
+            "text": "_write_json(root / \"quote_security\" / \"candidate_quote_security_summary.json\", {\"处理结果\": []})"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_run_sikk_gmgn_pipeline.py",
+        "matches": [
+          {
+            "line": 146,
+            "text": "summary = out / \"candidate_quote_security_summary.json\""
+          },
+          {
+            "line": 147,
+            "text": "csv_path = out / \"candidate_quote_security_summary.csv\""
+          },
+          {
+            "line": 148,
+            "text": "md_path = out / \"candidate_quote_security_summary.md\""
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_live_run.py",
+        "matches": [
+          {
+            "line": 16,
+            "text": "_write_json(root / \"quote_security\" / \"candidate_quote_security_summary.json\", {\"处理结果\": [{\"代币地址\": \"T1\", \"交易前状态\": \"READY_FOR_CONFIRMATION\", \"最终权限\": \"ALLOW_CONFIRMATION_LAYER\"}]})"
+          },
+          {
+            "line": 242,
+            "text": "_write_json(root / \"quote_security\" / \"candidate_quote_security_summary.json\", {\"处理结果\": [{\"代币地址\": \"T1\", \"最终权限\": \"PAUSE_NEED_CONFIRM\", \"交易前状态\": \"PAUSE\", \"说明\": \"报价缺失\", \"current_market_cap_usd\": 150000}]})"
+          },
+          {
+            "line": 278,
+            "text": "_write_json(root / \"quote_security\" / \"candidate_quote_security_summary.json\", {\"处理结果\": [{\"代币地址\": \"T2\", \"最终权限\": \"ALLOW_CONFIRMATION_LAYER\", \"交易前状态\": \"READY_FOR_CONFIRMATION\"}]})"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_explainability_engine.py",
+        "matches": [
+          {
+            "line": 73,
+            "text": "tmp_path / \"quote_security\" / \"candidate_quote_security_summary.json\","
+          },
+          {
+            "line": 154,
+            "text": "tmp_path / \"quote_security\" / \"candidate_quote_security_summary.json\","
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_live_collectors.py",
+        "matches": [
+          {
+            "line": 41,
+            "text": "def test_okx_quote_collector_parses_price_impact_from_onchainos_quote():"
+          },
+          {
+            "line": 42,
+            "text": "from sikk_live_quote_security_collector import OKXLiveQuoteCollector"
+          },
+          {
+            "line": 45,
+            "text": "collector = OKXLiveQuoteCollector()"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_system_audit.py",
+        "matches": [
+          {
+            "line": 89,
+            "text": "tmp_path / \"quote_security\" / \"candidate_quote_security_summary.json\","
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_paper_live_runner.py",
+        "matches": [
+          {
+            "line": 92,
+            "text": "quote_security_summary_path = _write_json("
+          },
+          {
+            "line": 93,
+            "text": "tmp_path / \"quote_security\" / \"candidate_quote_security_summary.json\","
+          },
+          {
+            "line": 133,
+            "text": "quote_security_summary_path=quote_security_summary_path,"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_orchestrator_wallet_structure_integration.py",
+        "matches": [
+          {
+            "line": 43,
+            "text": "summary = out / \"candidate_quote_security_summary.json\""
+          },
+          {
+            "line": 44,
+            "text": "csv_path = out / \"candidate_quote_security_summary.csv\""
+          },
+          {
+            "line": 45,
+            "text": "md_path = out / \"candidate_quote_security_summary.md\""
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_telegram_bot_handler_phase_4_7.py",
+        "matches": [
+          {
+            "line": 107,
+            "text": "(root / \"quote_security\" / \"candidate_quote_security_summary.json\").write_text(json.dumps({\"处理结果\": []}, ensure_ascii=False), encoding=\"utf-8\")"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_case_field_source_map.py",
+        "matches": [
+          {
+            "line": 32,
+            "text": "_write_json(root / \"quote_security\" / \"candidate_quote_security_summary.json\", {\"处理结果\": [{"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_sikk_paper_wallet_structure_integration.py",
+        "matches": [
+          {
+            "line": 42,
+            "text": "quote_security_summary_path = _write_json("
+          },
+          {
+            "line": 50,
+            "text": "quote_security_summary_path=quote_security_summary_path,"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/_backups/p00_bootstrap_20260511T151151Z/00_domain/domain_plane.md",
+        "matches": [
+          {
+            "line": 1272,
+            "text": "OKX quote/security"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_data/data_field_dictionary.yaml",
+        "matches": [
+          {
+            "line": 2333,
+            "text": "- OKX_QUOTE"
+          },
+          {
+            "line": 2357,
+            "text": "- OKX_QUOTE"
+          },
+          {
+            "line": 2381,
+            "text": "- OKX_QUOTE"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_data/data_source_registry.yaml",
+        "matches": [
+          {
+            "line": 20,
+            "text": "- OKX_QUOTE"
+          },
+          {
+            "line": 54,
+            "text": "- source_id: OKX_QUOTE"
+          },
+          {
+            "line": 71,
+            "text": "- source_id: OKX_SECURITY"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_methodology/system_methodology_blueprint.backup_before_DOC-20260511-007.md",
+        "matches": [
+          {
+            "line": 929,
+            "text": "primary_goal: 将 GMGN、OKX、K线、钱包、市值、quote、安全扫描、paper 数据转成统一事实模型"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_methodology/system_methodology_blueprint.md",
+        "matches": [
+          {
+            "line": 938,
+            "text": "primary_goal: 将 GMGN、OKX、K线、钱包、市值、quote、安全扫描、paper 数据转成统一事实模型"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260513-P01-DATA-FACT-001.md",
+        "matches": [
+          {
+            "line": 84,
+            "text": "- GMGN 是 Token + Wallet + Chip + Behavior Fact Source；OKX 是 Quote + Liquidity + Execution Feasibility + Safety Cross-check Source."
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-004_system_methodology_blueprint_v2_institutional_upload.md",
+        "matches": [
+          {
+            "line": 940,
+            "text": "primary_goal: 将 GMGN、OKX、K线、钱包、市值、quote、安全扫描、paper 数据转成统一事实模型"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-028_phase_controller_index_v2.md",
+        "matches": [
+          {
+            "line": 227,
+            "text": "- okx_quote_reader"
+          },
+          {
+            "line": 228,
+            "text": "- okx_security_reader"
+          },
+          {
+            "line": 770,
+            "text": "- okx_quote_checker"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I02_directory_contract_index_unification_v1_0.md",
+        "matches": [
+          {
+            "line": 1584,
+            "text": "- OKX_QUOTE"
+          },
+          {
+            "line": 1585,
+            "text": "- OKX_SECURITY"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-008_p08_execution_risk_controller_v3.md",
+        "matches": [
+          {
+            "line": 461,
+            "text": "okx_quote_price_usd: number | null"
+          },
+          {
+            "line": 1188,
+            "text": "quote_quality_summary: object"
+          },
+          {
+            "line": 1190,
+            "text": "security_quality_summary: object"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-023_data_plane_professional_design.md",
+        "matches": [
+          {
+            "line": 316,
+            "text": "|OKX Quote|报价、流动性、价格交叉验证|与 GMGN 报价偏差|"
+          },
+          {
+            "line": 317,
+            "text": "|OKX Security|安全扫描、合约风险|覆盖不完整|"
+          },
+          {
+            "line": 349,
+            "text": "- OKX_QUOTE"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-INTEGRATION-PROGRAM-V1_系统集成落地阶段.md",
+        "matches": [
+          {
+            "line": 190,
+            "text": "GMGN / OKX / K线 / quote / security 字段如何映射？"
+          },
+          {
+            "line": 203,
+            "text": "okx_quote_binding.yaml"
+          },
+          {
+            "line": 204,
+            "text": "okx_security_binding.yaml"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-005.md",
+        "matches": [
+          {
+            "line": 1281,
+            "text": "OKX quote/security"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-003.md",
+        "matches": [
+          {
+            "line": 1053,
+            "text": "quote_security_summary.json"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-002_p01_data_fact_controller_professional.md",
+        "matches": [
+          {
+            "line": 210,
+            "text": "OKX 是 Quote + Liquidity + Execution Feasibility + Safety Cross-check Source，主要用于报价、流动性、路径可用性、执行可行性、安全扫描、价格交叉验证。"
+          },
+          {
+            "line": 694,
+            "text": "\"primary_source\": \"okx.quote\","
+          },
+          {
+            "line": 826,
+            "text": "\"source\": \"okx.quote\","
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-003-DUP-001.md",
+        "matches": [
+          {
+            "line": 1042,
+            "text": "quote_security_summary.json"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DATA-FACT-001_p01_data_fact_controller_professional_phase_pack.md",
+        "matches": [
+          {
+            "line": 210,
+            "text": "OKX 是 Quote + Liquidity + Execution Feasibility + Safety Cross-check Source，主要用于报价、流动性、路径可用性、执行可行性、安全扫描、价格交叉验证。"
+          },
+          {
+            "line": 694,
+            "text": "\"primary_source\": \"okx.quote\","
+          },
+          {
+            "line": 826,
+            "text": "\"source\": \"okx.quote\","
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-007_p07_strategy_gate_controller_v3.md",
+        "matches": [
+          {
+            "line": 1242,
+            "text": "- okx_security_recheck"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I03_runner_tool_binding_v1_0.md",
+        "matches": [
+          {
+            "line": 84,
+            "text": "|11|OKX quote 如何绑定？|`okx_quote_binding`|"
+          },
+          {
+            "line": 85,
+            "text": "|12|OKX security 如何绑定？|`okx_security_binding`|"
+          },
+          {
+            "line": 251,
+            "text": "- OKX quote/security outputs"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-P10_SELF_UPGRADE_CONTROLLER_V3.md",
+        "matches": [
+          {
+            "line": 264,
+            "text": "- OKX quote / security 映射"
+          },
+          {
+            "line": 915,
+            "text": "- OKX_QUOTE_BINDING"
+          },
+          {
+            "line": 916,
+            "text": "- OKX_SECURITY_BINDING"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-002_p02_source_data_fact_controller_v3.md",
+        "matches": [
+          {
+            "line": 92,
+            "text": "|price / market cap|GMGN + OKX quote + 链上估算对账|"
+          },
+          {
+            "line": 94,
+            "text": "|security|OKX Security + 链上权限检查|"
+          },
+          {
+            "line": 266,
+            "text": "- source_id: OKX_QUOTE"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-001_p01_candidate_intake_controller_v3.md",
+        "matches": [
+          {
+            "line": 723,
+            "text": "- okx_quote_if_available"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/gap_detection/gap_detection_DOC-20260513-P01-DATA-FACT-001.json",
+        "matches": [
+          {
+            "line": 6,
+            "text": "\"Need audit of actual OKX connector capabilities beyond quote/security summary.\","
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260513-002.yaml",
+        "matches": [
+          {
+            "line": 22,
+            "text": "- \"OKX provides quote/liquidity/execution-feasibility/safety cross-check facts.\""
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/06_phase_controllers/P01_data_fact_controller/controller.yaml",
+        "matches": [
+          {
+            "line": 6,
+            "text": "primary_goal: 将 GMGN、OKX、K线、钱包、市值、quote、安全扫描、paper 数据转成统一事实模型"
+          }
+        ]
+      }
+    ],
+    "handoff_mentions": [
+      {
+        "file": "src/phase_01_data_fact/phase_01_auditor.py",
+        "matches": [
+          {
+            "line": 6,
+            "text": "p.write_text('\\n'.join(['# phase_01_data_fact audit','',f'- task: phase_01_data_fact_code_skeleton_landing',f'- phase: phase_01_data_fact',f'- data_quality_status: {result.get(\"data_quality_status\")}',f'- handoff_status:"
+          }
+        ]
+      },
+      {
+        "file": "src/phase_01_data_fact/phase_01_runner.py",
+        "matches": [
+          {
+            "line": 25,
+            "text": "def run_phase_01(mode,token,chain,raw_input_dir,output_root,shared_handoff_root,snapshot_time=None,legacy_input_dir=None,strict=False):"
+          },
+          {
+            "line": 38,
+            "text": "packet,local,shared=write_handoff(run_dir,shared_handoff_root,token_addr,chain,snapshot,tb,quality,time_report)"
+          },
+          {
+            "line": 39,
+            "text": "result={'task':'phase_01_data_fact_code_skeleton_landing','run_dir':str(run_dir),'token_address':token_addr,'data_quality_status':quality['data_quality_status'],'handoff_status':quality['handoff_status'],'local_handoff':"
+          }
+        ]
+      },
+      {
+        "file": "src/phase_01_data_fact/handoff_writer.py",
+        "matches": [
+          {
+            "line": 5,
+            "text": "def write_handoff(run_dir, shared_handoff_root, token, chain, snapshot_manifest, token_basic, quality, time_validity):"
+          },
+          {
+            "line": 8,
+            "text": "'phase_01_handoff_packet': run/'handoff'/'phase_01_handoff_packet.json',"
+          },
+          {
+            "line": 46,
+            "text": "'required_normalized_files_available':all(Path(v).exists() for k,v in required_paths.items() if k!='phase_01_handoff_packet'),"
+          }
+        ]
+      },
+      {
+        "file": "modules/stable_trader_os/phase_01_data_fact/runner.py",
+        "matches": [
+          {
+            "line": 40,
+            "text": "shared_handoff_dir = output_dir / \"shared_handoff\" / str(payload.get(\"token_address\", \"missing\"))"
+          },
+          {
+            "line": 41,
+            "text": "for d in (raw_dir, normalized_dir, audit_dir, handoff_dir, report_dir, summary_dir, shared_handoff_dir):"
+          },
+          {
+            "line": 125,
+            "text": "canonical_handoff_path = handoff_dir / \"phase_01_handoff_packet.json\""
+          }
+        ]
+      },
+      {
+        "file": "modules/stable_trader_os/phase_06_strategy_gate_controller/runner.py",
+        "matches": [
+          {
+            "line": 14,
+            "text": "\"phase_01_handoff_packet\","
+          },
+          {
+            "line": 197,
+            "text": "self._phase_row(\"phase_01_data_fact_controller\", docs.get(\"phase_01_handoff_packet\", {}), [\"phase_status\", \"data_quality_status\", \"gate_status\", \"handoff_status\"]),"
+          },
+          {
+            "line": 244,
+            "text": "for key in [\"phase_01_handoff_packet\", \"phase_02_handoff_packet\", \"phase_03_handoff_packet\", \"phase_04_handoff_packet\", \"phase_05_handoff_packet\", \"scenario_hard_negative_checklist\", \"structure_position_decision\"]:"
+          }
+        ]
+      },
+      {
+        "file": "modules/runtime/phase_runner.py",
+        "matches": [
+          {
+            "line": 181,
+            "text": "shared_handoff = self.root / \"shared_handoff\" / canonical_phase / token / handoff_name"
+          },
+          {
+            "line": 182,
+            "text": "shared_handoff.parent.mkdir(parents=True, exist_ok=True)"
+          },
+          {
+            "line": 187,
+            "text": "shutil.copyfile(runtime_handoff, shared_handoff)"
+          }
+        ]
+      },
+      {
+        "file": "modules/runtime/full_system_runner.py",
+        "matches": [
+          {
+            "line": 63,
+            "text": "reusable_handoff = self._shared_handoff_path(phase, token)"
+          },
+          {
+            "line": 120,
+            "text": "\"handoff_path\": str(self._shared_handoff_path(phase, token)),"
+          },
+          {
+            "line": 125,
+            "text": "prior_input = self._shared_handoff_path(phase, token)"
+          }
+        ]
+      },
+      {
+        "file": "modules/runtime/wave3_p06_p07_runner.py",
+        "matches": [
+          {
+            "line": 134,
+            "text": "(\"phase_01_handoff_packet\", refs.get(\"phase01_handoff_packet\") or refs.get(\"phase_01_handoff\")),"
+          }
+        ]
+      },
+      {
+        "file": "modules/runtime/full_system_workflow_v4.py",
+        "matches": [
+          {
+            "line": 132,
+            "text": "return self.root / \"shared_handoff\" / \"full_system_workflow_v4\""
+          }
+        ]
+      },
+      {
+        "file": "modules/runtime/wave1_p01_p03_runner.py",
+        "matches": [
+          {
+            "line": 137,
+            "text": "\"phase_01_handoff_packet\": artifacts[\"phase01_handoff\"],"
+          }
+        ]
+      },
+      {
+        "file": "tests/test_full_system_runtime_runner.py",
+        "matches": [
+          {
+            "line": 31,
+            "text": "handoff = root / \"shared_handoff\" / phase / token / f\"{phase}_handoff_packet.json\""
+          }
+        ]
+      },
+      {
+        "file": "tests/test_full_system_workflow_v4.py",
+        "matches": [
+          {
+            "line": 108,
+            "text": "handoff_json = root / \"shared_handoff\" / \"full_system_workflow_v4\" / \"workflow_v4_handoff_packet.json\""
+          }
+        ]
+      },
+      {
+        "file": "tests/test_full_system_runtime_controls.py",
+        "matches": [
+          {
+            "line": 48,
+            "text": "output = root / \"data\" / \"runtime\" / \"replay\" / \"Token111\" / \"phase_01\" / \"phase_01_handoff_packet.json\""
+          },
+          {
+            "line": 49,
+            "text": "shared = root / \"shared_handoff\" / \"phase_01\" / \"Token111\" / \"phase_01_handoff_packet.json\""
+          }
+        ]
+      },
+      {
+        "file": "tests/stable_trader_os/test_real_ca_phase01_phase02_runtime_closure.py",
+        "matches": [
+          {
+            "line": 43,
+            "text": "output = tmp_path / 'phase_01_handoff_packet.json'"
+          },
+          {
+            "line": 75,
+            "text": "output_file=tmp_path / 'phase_01_handoff_packet.json',"
+          },
+          {
+            "line": 82,
+            "text": "phase01_handoff_file=tmp_path / 'phase_01_handoff_packet.json',"
+          }
+        ]
+      },
+      {
+        "file": "tests/stable_trader_os/phase_01_data_fact/test_phase_01_canonical_system_integration.py",
+        "matches": [
+          {
+            "line": 10,
+            "text": "def test_phase_01_runner_writes_canonical_data_fact_outputs_and_shared_handoff(tmp_path):"
+          },
+          {
+            "line": 21,
+            "text": "\"01_data_fact/handoff/phase_01_handoff_packet.json\","
+          },
+          {
+            "line": 26,
+            "text": "shared_handoff = tmp_path / \"run\" / \"shared_handoff\" / \"MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET\" / \"phase_01_handoff_packet.json\""
+          }
+        ]
+      },
+      {
+        "file": "tests/stable_trader_os/phase_06_strategy_filter/test_phase_06_controller_runtime_closure.py",
+        "matches": [
+          {
+            "line": 92,
+            "text": "_write_json(p01_handoff / \"phase_01_handoff_packet.json\", phase01_handoff_packet)"
+          },
+          {
+            "line": 184,
+            "text": "\"phase_01_handoff_packet\": str(p01_handoff / \"phase_01_handoff_packet.json\"),"
+          }
+        ]
+      },
+      {
+        "file": "tests/stable_trader_os/phase_02_wallet_structure/test_phase_02_controller_runtime_closure.py",
+        "matches": [
+          {
+            "line": 82,
+            "text": "handoff_file = _write_json(tmp_path / \"phase_01_handoff_packet.json\", _base_handoff(wallet_file))"
+          },
+          {
+            "line": 146,
+            "text": "tmp_path / \"phase_01_handoff_packet.json\","
+          },
+          {
+            "line": 166,
+            "text": "handoff_file = _write_json(tmp_path / \"phase_01_handoff_packet.json\", _base_handoff(wallet_file))"
+          }
+        ]
+      },
+      {
+        "file": "tests/phase_01_data_fact/test_phase_01_runner.py",
+        "matches": [
+          {
+            "line": 12,
+            "text": "return run_phase_01(mode, TOKEN, CHAIN, FIX/fixture, tmp_path/'out', tmp_path/'shared_handoff', snapshot_time='2026-05-09T15:00:00Z')"
+          },
+          {
+            "line": 24,
+            "text": "for rel in ['summary/data_quality_summary.json','summary/time_validity_report.json','handoff/phase_01_handoff_packet.json','normalized/token_basic_normalized.json','normalized/token_market_context.json','normalized/walle"
+          },
+          {
+            "line": 26,
+            "text": "assert Path(res['shared_handoff']).exists()"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/06_tools/validators/validate_system_registry.py",
+        "matches": [
+          {
+            "line": 37,
+            "text": "for required_out in ['phase_01_fact_summary.json','field_source_map.json','phase_01_gap_list.json','phase_01_handoff_packet.json']:"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/_backups/p00_bootstrap_20260511T151151Z/00_governance/governance_plane.md",
+        "matches": [
+          {
+            "line": 426,
+            "text": "建立输入快照、字段来源映射、标准事实层和 phase_01_handoff_packet。"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260513-P01-DATA-FACT-001.md",
+        "matches": [
+          {
+            "line": 68,
+            "text": "- `data_fact_handoff_packet.json`"
+          },
+          {
+            "line": 82,
+            "text": "- P01 的下游唯一可信入口是 `data_fact_handoff_packet.json`。"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260513-002.json",
+        "matches": [
+          {
+            "line": 47,
+            "text": "\"data_fact_handoff_packet.json\""
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/task_packages/task_execution_package_DOC-20260513-002.json",
+        "matches": [
+          {
+            "line": 35,
+            "text": "\"data_fact_handoff_packet.json\","
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_pack_DOC-20260513-P01-DATA-FACT-001.md",
+        "matches": [
+          {
+            "line": 25,
+            "text": "- `data_fact_handoff_packet.json`"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/task_packages/task_execution_package_DOC-20260513-P01-DATA-FACT-001.json",
+        "matches": [
+          {
+            "line": 20,
+            "text": "\"data_fact_handoff_packet.json\","
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/system_mapping/system_mapping_DOC-20260513-P01-DATA-FACT-001.json",
+        "matches": [
+          {
+            "line": 18,
+            "text": "\"data_fact_handoff_packet.schema\""
+          },
+          {
+            "line": 30,
+            "text": "\"data_fact_handoff_packet.json\","
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-028_phase_controller_index_v2.md",
+        "matches": [
+          {
+            "line": 201,
+            "text": "- p02_source_data_fact_handoff_packet.yaml"
+          },
+          {
+            "line": 269,
+            "text": "- p02_source_data_fact_handoff_packet"
+          },
+          {
+            "line": 358,
+            "text": "- p02_source_data_fact_handoff_packet"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-004.md",
+        "matches": [
+          {
+            "line": 435,
+            "text": "建立输入快照、字段来源映射、标准事实层和 phase_01_handoff_packet。"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-003.md",
+        "matches": [
+          {
+            "line": 895,
+            "text": "phase_01_handoff_packet.json"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-002_p01_data_fact_controller_professional.md",
+        "matches": [
+          {
+            "line": 99,
+            "text": "- data_fact_handoff_packet"
+          },
+          {
+            "line": 154,
+            "text": "- data_fact_handoff_packet.json"
+          },
+          {
+            "line": 212,
+            "text": "P01 的核心输出不是接口返回，而是 data_fact_handoff_packet.json。"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-003-DUP-001.md",
+        "matches": [
+          {
+            "line": 884,
+            "text": "phase_01_handoff_packet.json"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DATA-FACT-001_p01_data_fact_controller_professional_phase_pack.md",
+        "matches": [
+          {
+            "line": 99,
+            "text": "- data_fact_handoff_packet"
+          },
+          {
+            "line": 154,
+            "text": "- data_fact_handoff_packet.json"
+          },
+          {
+            "line": 212,
+            "text": "P01 的核心输出不是接口返回，而是 data_fact_handoff_packet.json。"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260513-002.yaml",
+        "matches": [
+          {
+            "line": 20,
+            "text": "- \"P01 core output is data_fact_handoff_packet.json.\""
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260513-P01-DATA-FACT-001.yaml",
+        "matches": [
+          {
+            "line": 23,
+            "text": "- 核心产物是 data_fact_handoff_packet.json，下游不得直接读取 GMGN/OKX raw。"
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/02_phase_controllers/P06_strategy_gate/phase_input_contract.json",
+        "matches": [
+          {
+            "line": 26,
+            "text": "\"field\": \"phase_01_handoff\","
+          }
+        ]
+      },
+      {
+        "file": "sikk_stable_trader_os/02_phase_controllers/P01_data_fact/phase_output_contract.json",
+        "matches": [
+          {
+            "line": 22,
+            "text": "\"file\": \"phase_01_handoff_packet.json\","
+          }
+        ]
+      }
+    ],
+    "real_execution_flags": [
+      {
+        "file": "src/phase_01_data_fact/phase_01_auditor.py",
+        "matches": [
+          {
+            "line": 6,
+            "text": "p.write_text('\\n'.join(['# phase_01_data_fact audit','',f'- task: phase_01_data_fact_code_skeleton_landing',f'- phase: phase_01_data_fact',f'- data_quality_status: {result.get(\"data_quality_status\")}',f'- handoff_status:"
+          }
+        ]
+      },
+      {
+        "file": "src/phase_01_data_fact/phase_01_runner.py",
+        "matches": [
+          {
+            "line": 37,
+            "text": "write_json(run_dir/'summary'/'phase_01_analysis_scope.json',{'phase':'phase_01_data_fact','scope':'data facts only','forbidden':['wallet_structure_status','WALLET_SUPPORT','CONTROL_RETAINED','SCENARIO_ALLOW','PAPER_READY"
+          },
+          {
+            "line": 44,
+            "text": "(run_dir/'reports'/'phase_01_data_fact_report.md').write_text(f\"# P01 Data Fact Report\\n\\n- status: {quality['data_quality_status']}\\n- handoff: {quality['handoff_status']}\\n- P01 fact-only; no trading signal.\\n\",encodin"
+          }
+        ]
+      },
+      {
+        "file": "src/phase_01_data_fact/transfer_normalizer.py",
+        "matches": [
+          {
+            "line": 9,
+            "text": "for i,r in enumerate(listify(data)): rows.append({'source_file':'raw_transfer.json','row_id':i,'from_address':get_any(r,['from_address','from']),'to_address':get_any(r,['to_address','to']),'amount_token':get_any(r,['amou"
+          }
+        ]
+      },
+      {
+        "file": "src/phase_01_data_fact/wallet_trade_normalizer.py",
+        "matches": [
+          {
+            "line": 7,
+            "text": "row={'source_file':'raw_wallet_trade.json','row_id':i,'wallet_address':get_any(r,['wallet_address','address','maker']),'tx_hash':get_any(r,['tx_hash','hash','signature']),'side':get_any(r,['side','type']),'amount_token':"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_data_guard/README.md",
+        "matches": [
+          {
+            "line": 46,
+            "text": "handoff ≠ trade signal"
+          }
+        ]
+      },
+      {
+        "file": "modules/stable_trader_os/phase_04_scenario_recognition_controller/runner.py",
+        "matches": [
+          {
+            "line": 42,
+            "text": "entries, buy/sell advice, strategy decisions, swaps, signing, or execution."
+          }
+        ]
+      },
+      {
+        "file": "modules/stable_trader_os/phase_01_data_fact/validator.py",
+        "matches": [
+          {
+            "line": 8,
+            "text": "\"buy_signal\","
+          },
+          {
+            "line": 9,
+            "text": "\"sell_signal\","
+          },
+          {
+            "line": 15,
+            "text": "\"signed_transaction\","
+          }
+        ]
+      },
+      {
+        "file": "modules/stable_trader_os/phase_01_data_fact/runner.py",
+        "matches": [
+          {
+            "line": 20,
+            "text": "deliberately read-only with respect to trading execution: it never signs,"
+          },
+          {
+            "line": 21,
+            "text": "broadcasts, swaps, or emits buy/sell permission."
+          }
+        ]
+      },
+      {
+        "file": "modules/stable_trader_os/adapters/gmgn_source_wallet_to_phase01.py",
+        "matches": [
+          {
+            "line": 49,
+            "text": "It does not classify wallets, infer scenarios, sign, broadcast, or trade."
+          }
+        ]
+      },
+      {
+        "file": "modules/stable_trader_os/phase_09_system_upgrade_controller/runner.py",
+        "matches": [
+          {
+            "line": 396,
+            "text": "\"broadcast_allowed\": False,"
+          },
+          {
+            "line": 397,
+            "text": "\"signing_allowed\": False,"
+          },
+          {
+            "line": 447,
+            "text": "lines.append(\"- runtime_apply: blocked_by_design\")"
+          }
+        ]
+      },
+      {
+        "file": "modules/stable_trader_os/phase_07_execution_risk_controller/runner.py",
+        "matches": [
+          {
+            "line": 90,
+            "text": "\"real_execution_allowed\": False,"
+          },
+          {
+            "line": 93,
+            "text": "signal = self._check_signal_freshness(strategy, phase06_handoff, risk_config)"
+          },
+          {
+            "line": 110,
+            "text": "(signal, \"signal_freshness_status\"),"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure_governance/consumption.py",
+        "matches": [
+          {
+            "line": 57,
+            "text": "'no_signing': True,"
+          },
+          {
+            "line": 58,
+            "text": "'no_broadcast': True,"
+          },
+          {
+            "line": 59,
+            "text": "'no_swap': True,"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure_governance/README.md",
+        "matches": [
+          {
+            "line": 44,
+            "text": "no_private_key/signing/broadcast/swap"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure_governance/__init__.py",
+        "matches": [
+          {
+            "line": 14,
+            "text": "build_maturity_design_contract,"
+          },
+          {
+            "line": 16,
+            "text": "write_maturity_design_contract,"
+          },
+          {
+            "line": 29,
+            "text": "'build_maturity_design_contract',"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure_governance/runtime_adapters.py",
+        "matches": [
+          {
+            "line": 89,
+            "text": "'no_signing': True,"
+          },
+          {
+            "line": 90,
+            "text": "'no_broadcast': True,"
+          },
+          {
+            "line": 91,
+            "text": "'no_swap': True,"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure_governance/registry.py",
+        "matches": [
+          {
+            "line": 114,
+            "text": "'no_signing': True,"
+          },
+          {
+            "line": 115,
+            "text": "'no_broadcast': True,"
+          },
+          {
+            "line": 116,
+            "text": "'no_swap': True,"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure_governance/gap_scanner.py",
+        "matches": [
+          {
+            "line": 231,
+            "text": "'no_signing': True,"
+          },
+          {
+            "line": 232,
+            "text": "'no_broadcast': True,"
+          },
+          {
+            "line": 233,
+            "text": "'no_swap': True,"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure/role_classifier.py",
+        "matches": [
+          {
+            "line": 46,
+            "text": "signal_text = ','.join([str(t) for t in tags + maker_tags if t])"
+          },
+          {
+            "line": 47,
+            "text": "signals: List[str] = []"
+          },
+          {
+            "line": 48,
+            "text": "if signal_text:"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure/history_store.py",
+        "matches": [
+          {
+            "line": 12,
+            "text": "No database dependency. Designed for incremental wallet profile updates and"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure/README.md",
+        "matches": [
+          {
+            "line": 25,
+            "text": "- 不执行真实 swap。"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure/module_contract.md",
+        "matches": [
+          {
+            "line": 64,
+            "text": "- 不负责真实 swap。"
+          },
+          {
+            "line": 66,
+            "text": "- 不签名，不 broadcast。"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure/models.py",
+        "matches": [
+          {
+            "line": 81,
+            "text": "signals: List[str] = field(default_factory=list)"
+          },
+          {
+            "line": 94,
+            "text": "'signals': '|'.join(self.signals),"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_structure/source_reader.py",
+        "matches": [
+          {
+            "line": 19,
+            "text": "forbidden = ['swap', 'broadcast', 'sign', 'paper_execute']"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/config.py",
+        "matches": [
+          {
+            "line": 54,
+            "text": "\"real_execution_action\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/wallet_trade_contract.md",
+        "matches": [
+          {
+            "line": 15,
+            "text": "- 链上 DEX swap 记录"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/legacy_mapping.md",
+        "matches": [
+          {
+            "line": 35,
+            "text": "- `candidate_signal_summary.json`"
+          },
+          {
+            "line": 36,
+            "text": "- `candidate_signal_summary.csv`"
+          },
+          {
+            "line": 72,
+            "text": "- `candidate_signal_summary.json` → historical signal sample only; not a fact source"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/__init__.py",
+        "matches": [
+          {
+            "line": 4,
+            "text": "private keys, signing, broadcasting, or swap execution."
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/current_token_behavior_schema.json",
+        "matches": [
+          {
+            "line": 5,
+            "text": "\"description\": \"Current token wallet behavior normalized from GMGN wallet trade, GMGN trader detail, and chain DEX swaps.\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/field_mapping_dictionary.md",
+        "matches": [
+          {
+            "line": 27,
+            "text": "- 所属数据源: GMGN holder/trader / 链上 transfer/swap"
+          },
+          {
+            "line": 28,
+            "text": "- 来源接口: wallet holders / traders / transfers / swaps"
+          },
+          {
+            "line": 97,
+            "text": "- first_buy_time: first buy event time; source DEX swap / GMGN trader detail; required for cost and entry timing; fallback no if only transfer."
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/runner.py",
+        "matches": [
+          {
+            "line": 13,
+            "text": "from .schema_validator import validate_source_wallet_design_package"
+          },
+          {
+            "line": 96,
+            "text": "result = validate_source_wallet_design_package(args.root)"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/source_registry.md",
+        "matches": [
+          {
+            "line": 10,
+            "text": "- 说明：最底层事实事件，如 swap、transfer、mint、burn、pool create、LP add/remove。"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/gmgn_okx_readonly_adapter.py",
+        "matches": [
+          {
+            "line": 15,
+            "text": "\"swap\","
+          },
+          {
+            "line": 16,
+            "text": "\"multi-swap\","
+          },
+          {
+            "line": 18,
+            "text": "\"sign\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/source_and_group_models.md",
+        "matches": [
+          {
+            "line": 14,
+            "text": "- matching transaction path signature"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/wallet_intel_behavior_handoff_addendum.md",
+        "matches": [
+          {
+            "line": 65,
+            "text": "- `buy_signal`"
+          },
+          {
+            "line": 66,
+            "text": "- `sell_signal`"
+          },
+          {
+            "line": 71,
+            "text": "- `real_execution_action`"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/wallet_fact_schema_index.json",
+        "matches": [
+          {
+            "line": 9,
+            "text": "\"sources\": [\"GMGN wallet trade\", \"GMGN trader detail\", \"on-chain DEX swap records\"]"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/directory_governance.py",
+        "matches": [
+          {
+            "line": 183,
+            "text": "\"no_signing\": True,"
+          },
+          {
+            "line": 184,
+            "text": "\"no_broadcast\": True,"
+          },
+          {
+            "line": 185,
+            "text": "\"no_swap\": True,"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/wallet_fact_output_contract.md",
+        "matches": [
+          {
+            "line": 11,
+            "text": "- L0 链上 DEX swap / transfer"
+          },
+          {
+            "line": 164,
+            "text": "- buy_signal"
+          },
+          {
+            "line": 165,
+            "text": "- sell_signal"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/quantitative_structure_field_addendum.md",
+        "matches": [
+          {
+            "line": 116,
+            "text": "- real swap / signing / broadcast"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/package_file_passport.json",
+        "matches": [
+          {
+            "line": 42,
+            "text": "\"file_path\": \"candidate_signal_outputs/candidate_signal_summary.json\","
+          },
+          {
+            "line": 47,
+            "text": "\"file_path\": \"candidate_signal_outputs/candidate_signal_summary.csv\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/wallet_fact_architecture.md",
+        "matches": [
+          {
+            "line": 129,
+            "text": "- by_path_signature"
+          },
+          {
+            "line": 197,
+            "text": "- swap"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/phase01_fact_store_router.py",
+        "matches": [
+          {
+            "line": 151,
+            "text": "\"buy_signal\","
+          },
+          {
+            "line": 152,
+            "text": "\"sell_signal\","
+          },
+          {
+            "line": 156,
+            "text": "\"real_execution\","
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/token_data_display_panel.py",
+        "matches": [
+          {
+            "line": 23,
+            "text": "\"buy_signal\","
+          },
+          {
+            "line": 24,
+            "text": "\"sell_signal\","
+          },
+          {
+            "line": 335,
+            "text": "\"forbidden_summary\": [\"确定性内幕/主控结论\", \"买卖建议\", \"策略状态机字段\", \"实盘签名/广播/swap\"],"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/same_source_group_schema.json",
+        "matches": [
+          {
+            "line": 163,
+            "text": "\"transaction_path_signature\": {"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/bot2_handoff_contract.md",
+        "matches": [
+          {
+            "line": 30,
+            "text": "- real_execution_action"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/wallet_trade_normalizer.py",
+        "matches": [
+          {
+            "line": 50,
+            "text": "for key in (\"timestamp\", \"time\", \"block_time\", \"swap_time\"):"
+          },
+          {
+            "line": 219,
+            "text": "source_names=[\"GMGN wallet trade\", \"GMGN trader detail\", \"链上 DEX swap 记录\"],"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/source_group_contract.md",
+        "matches": [
+          {
+            "line": 14,
+            "text": "- matching transaction path signature"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/package_file_passport.md",
+        "matches": [
+          {
+            "line": 23,
+            "text": "- `candidate_signal_outputs/candidate_signal_summary.json` → **REVIEW_ONLY**：只能作为复盘 / 审计 / 展示参考，不能反向生成事实字段。"
+          },
+          {
+            "line": 24,
+            "text": "- `candidate_signal_outputs/candidate_signal_summary.csv` → **REVIEW_ONLY**：只能作为复盘 / 审计 / 展示参考，不能反向生成事实字段。"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/wallet_fact_builder.py",
+        "matches": [
+          {
+            "line": 16,
+            "text": "\"buy_signal\","
+          },
+          {
+            "line": 17,
+            "text": "\"sell_signal\","
+          },
+          {
+            "line": 257,
+            "text": "\"safety_boundaries\": [\"no_state_machine\", \"no_paper_runner\", \"no_real_execution\", \"no_signing\", \"no_broadcast\", \"no_swap\"],"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/gmgn_live_adapter.py",
+        "matches": [
+          {
+            "line": 57,
+            "text": "for snippet in (\" swap\", \" order\", \"execute\", \"broadcast\", \"sign\"):"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/final_module_package.md",
+        "matches": [
+          {
+            "line": 32,
+            "text": "- no real swap logic touched"
+          },
+          {
+            "line": 34,
+            "text": "- no signing"
+          },
+          {
+            "line": 35,
+            "text": "- no broadcasting"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/schema_validator.py",
+        "matches": [
+          {
+            "line": 10,
+            "text": "REQUIRED_DESIGN_FILES = ["
+          },
+          {
+            "line": 61,
+            "text": "def validate_source_wallet_design_package(project_root: str | Path) -> dict[str, Any]:"
+          },
+          {
+            "line": 63,
+            "text": "missing = [rel for rel in REQUIRED_DESIGN_FILES if not (root / rel).exists()]"
+          }
+        ]
+      },
+      {
+        "file": "modules/source_wallet_bot/codebase_inspection_report.md",
+        "matches": [
+          {
+            "line": 15,
+            "text": "- `candidate_signal_summary.json` / `.csv`"
+          }
+        ]
+      },
+      {
+        "file": "modules/module_maturity_governance/scanner.py",
+        "matches": [
+          {
+            "line": 273,
+            "text": "def build_maturity_design_contract() -> dict[str, Any]:"
+          },
+          {
+            "line": 275,
+            "text": "'artifact_type': 'module_maturity_design_contract',"
+          },
+          {
+            "line": 292,
+            "text": "'system_design_role': 'HER bottom-level modular maturity governance: function done is not equal to module maturity',"
+          }
+        ]
+      },
+      {
+        "file": "modules/module_maturity_governance/README.md",
+        "matches": [
+          {
+            "line": 40,
+            "text": "build_maturity_design_contract,"
+          },
+          {
+            "line": 41,
+            "text": "write_maturity_design_contract,"
+          },
+          {
+            "line": 49,
+            "text": "- 生成 module_maturity_design_contract，可被 HER 底层逻辑系统设计引用。"
+          }
+        ]
+      },
+      {
+        "file": "modules/module_maturity_governance/__init__.py",
+        "matches": [
+          {
+            "line": 3,
+            "text": "HER bottom-level system design module for deciding whether a capability is only functional code (L1), runtime-integrated (L2), or a standalone callable submodule (L3)."
+          },
+          {
+            "line": 7,
+            "text": "build_maturity_design_contract,"
+          },
+          {
+            "line": 10,
+            "text": "write_maturity_design_contract,"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_schema_validator/README.md",
+        "matches": [
+          {
+            "line": 26,
+            "text": "- `validate_source_wallet_design_package`"
+          }
+        ]
+      },
+      {
+        "file": "modules/wallet_schema_validator/__init__.py",
+        "matches": [
+          {
+            "line": 8,
+            "text": "validate_source_wallet_design_package,"
+          },
+          {
+            "line": 18,
+            "text": "'validate_source_wallet_design_package',"
+          }
+        ]
+      },
+      {
+        "file": "modules/integration_program/i05_auto_closure_runner.py",
+        "matches": [
+          {
+            "line": 6,
+            "text": "runtime, and never signs/broadcasts transactions."
+          },
+          {
+            "line": 27,
+            "text": "'live_execution_allowed': False,"
+          },
+          {
+            "line": 28,
+            "text": "'wallet_signing_allowed': False,"
+          }
+        ]
+      },
+      {
+        "file": "modules/shared_verification/__init__.py",
+        "matches": [
+          {
+            "line": 13,
+            "text": "\"buy_signal\","
+          },
+          {
+            "line": 14,
+            "text": "\"sell_signal\","
+          },
+          {
+            "line": 17,
+            "text": "\"swap\","
+          }
+        ]
+      },
+      {
+        "file": "modules/runtime/planbook_repository.py",
+        "matches": [
+          {
+            "line": 41,
+            "text": "\"signing: allowed\","
+          },
+          {
+            "line": 42,
+            "text": "\"broadcast: allowed\","
+          },
+          {
+            "line": 43,
+            "text": "\"execute_swap\","
+          }
+        ]
+      }
+    ]
+  },
+  "safety": {
+    "paper_runtime_allowed": false,
+    "live_execution_allowed": false,
+    "real_execution_allowed": false
+  },
+  "next_recommended_stage": "P01_data_fact_controller_package_or_code_landing_repair"
+}

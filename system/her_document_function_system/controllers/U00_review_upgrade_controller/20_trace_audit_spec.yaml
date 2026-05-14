@@ -1,0 +1,27 @@
+trace_audit_spec:
+  phase_id: U00
+  required_events:
+    - u00_started
+    - h00_handoff_loaded
+    - a00_evidence_bundle_loaded
+    - review_cases_classified
+    - issues_normalized
+    - root_cause_analyzed
+    - recurring_issues_detected
+    - upgrade_candidates_built
+    - upgrade_queue_built
+    - learning_index_written
+    - handoff_written
+    - u00_completed
+    - u00_blocked
+  required_fields:
+    - event_id
+    - timestamp
+    - phase_id
+    - run_id
+    - event_type
+    - status_before
+    - status_after
+    - evidence_refs
+    - gap_refs
+    - message

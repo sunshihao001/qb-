@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F00 Field Model Schema",
+  "type": "object",
+  "required": [
+    "field_name",
+    "field_type",
+    "source",
+    "required",
+    "missing_policy",
+    "evidence_level",
+    "confidence_required",
+    "counter_evidence_required",
+    "used_by",
+    "output_to"
+  ],
+  "properties": {
+    "field_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "field_type": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "missing_policy": {
+      "type": "string"
+    },
+    "evidence_level": {
+      "type": "string"
+    },
+    "confidence_required": {
+      "type": "boolean"
+    },
+    "counter_evidence_required": {
+      "type": "boolean"
+    },
+    "used_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output_to": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "trace_required": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

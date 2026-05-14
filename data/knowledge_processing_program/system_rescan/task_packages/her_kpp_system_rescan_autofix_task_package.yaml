@@ -1,0 +1,39 @@
+task_package_id: HER-KPP-SYSTEM-RESCAN-AUTOFIX-20260513
+status: READY_FOR_AUTOMATED_EXECUTION
+created_at: '2026-05-14T05:45:45.806022+00:00'
+goal: 按 K00-K08 Knowledge Processing Program 重扫全系统，补齐 docs-only 阶段的 controller/contract/schema/runner-binding/test/handoff
+  缺口。
+safety_boundaries:
+- do_not_start_runtime_trading
+- do_not_start_paper_runtime
+- do_not_sign
+- do_not_broadcast
+- do_not_swap
+- do_not_delete_or_move_legacy_files
+- candidate_or_wrapper_assets_only_until_governance_review
+execution_order:
+- scan_inventory
+- write_gap_registry
+- generate_current_phase_contract_schema_wrappers
+- patch_runner_bindings_as_readonly_validators
+- create_kpp_system_rescan_acceptance_test
+- write_handoff_and_landing_report
+- run_validation
+gaps_to_resolve:
+- gap_id: KPP_RESCAN_GAP_001
+  severity: HIGH
+  phase: K00-K08
+  area: knowledge_processing
+  title: 旧系统文档未按 K00-K08 批量重处理
+  evidence:
+  - candidate_docs=416
+  - processed_raw_documents=1
+  - batch_reprocess_passports=371
+  required_action: 建立旧文档批量 KPP 重处理任务包，输出 passport/chunks/mapping/candidates/task_packages。
+  target_paths:
+  - data/knowledge_processing_program/system_rescan/task_packages/batch_legacy_document_reprocess_task_package.yaml
+  auto_fixable: true
+  safety_boundary: OBSERVE_PAPER_ONLY_NO_RUNTIME_TRADING
+output_roots:
+  system: system/knowledge_processing_program/system_rescan
+  data: data/knowledge_processing_program/system_rescan

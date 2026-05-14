@@ -1,0 +1,36 @@
+{
+  "report_id": "P05_K00_ALIGNMENT_CORRECTION_202605120255",
+  "updated_at": "2026-05-12T02:55:58Z",
+  "finding": "prior_p05_evidence_landing_partially_violated_k00_and_authoritative_phase_order",
+  "violations": [
+    "P05 evidence package was over-promoted as formal phase completion while blueprint v2.0 defines formal P05 as scenario classification.",
+    "next_legal_stage was incorrectly advanced to P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN.",
+    "P06 scenario recognition name conflicts with blueprint v2.0 where P06 is strategy gate."
+  ],
+  "corrections_applied": [
+    "next_legal_stage corrected to P05_SCENARIO_CLASSIFICATION_CONTROLLER_PACKAGE_DESIGN",
+    "p05_evidence_controller_status downgraded to SUPPORT_ASSET_CREATED_NOT_FORMAL_PHASE_CONTROLLER",
+    "phase_registry pseudo phase P05_EVIDENCE_CONTROLLER_PACKAGE_DESIGN removed and reclassified under support_assets",
+    "P06 strategy gate remains blocked by missing formal P05 outputs",
+    "runtime/paper/live blockers preserved"
+  ],
+  "corrected_files": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/current_system_state.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/next_stage_decision.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/phase_registry.yaml",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_control/current_blockers.json",
+    "/root/sikk-gmgn/sikk_stable_trader_os/08_acceptance/p05_k00_alignment_correction_report.json"
+  ],
+  "backups_suffix": ".bak_k00_correction_202605120255",
+  "safety": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false,
+    "private_key_allowed": false,
+    "seed_phrase_allowed": false,
+    "p05_runtime_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_runtime_allowed": false
+  },
+  "next_legal_stage": "P05_SCENARIO_CLASSIFICATION_CONTROLLER_PACKAGE_DESIGN"
+}

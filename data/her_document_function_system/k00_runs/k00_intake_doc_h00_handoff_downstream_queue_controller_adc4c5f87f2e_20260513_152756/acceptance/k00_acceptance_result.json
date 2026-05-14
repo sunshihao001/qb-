@@ -1,0 +1,23 @@
+{
+  "phase_id": "K00",
+  "doc_id": "doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e",
+  "status": "K00_READY_WITH_GAPS",
+  "checked_assets": {
+    "raw_input": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/raw/doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e.md",
+    "source_registry": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/source_registry/source_registry.json",
+    "document_passport": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/document_passport/document_passport.json",
+    "corpus_index": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/corpus_index/corpus_index.json",
+    "system_mapping": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/system_mapping/system_mapping.json",
+    "gap_report": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/gaps/gap_report.json",
+    "phase_task_package": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/phase_task_package/H00_handoff_downstream_queue_controller",
+    "phase_state": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/phase_state/phase_state.json",
+    "handoff_packet": "/root/sikk-gmgn/data/her_document_function_system/k00_runs/k00_intake_doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e_20260513_152756/handoff/k00_to_h00_handoff_packet.json"
+  },
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "gap_h00_001",
+    "gap_h00_002"
+  ],
+  "accepted_for_target_phase_controller_asset_creation": true,
+  "not_accepted_for_real_downstream_execution": true
+}

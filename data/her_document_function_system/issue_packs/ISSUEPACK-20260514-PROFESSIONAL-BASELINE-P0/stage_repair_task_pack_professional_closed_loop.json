@@ -1,0 +1,488 @@
+{
+  "repair_pack_id": "STAGE_REPAIR_TASKPACK-20260514-PROFESSIONAL-CLOSED-LOOP-P0",
+  "source_doc_id": "DOC-20260514-PROFESSIONAL-REQ-001",
+  "status": "READY_WITH_GAPS_REPAIR_QUEUE_READY",
+  "professional_target": "轻量机构级：真实 token/candidate batch 的数据、判断、trace、acceptance、handoff、paper review、controlled upgrade 都有文件级与语义级证据。",
+  "previous_highest_cognition_package": "/root/sikk-gmgn/data/her_document_function_system/system_review/trading_system_full_gap_scan_20260514/her_doc_auto_repair_task_package_with_highest_cognition.json",
+  "professional_baseline_gap_matrix": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/gap_detection/professional_baseline_gap_matrix_DOC-20260514-PROFESSIONAL-REQ-001.json",
+  "phase_repair_tasks": [
+    {
+      "task_id": "PHASE_REPAIR_P01_FACT_CONTROLLER",
+      "priority": "P0_BLOCKING",
+      "phase_id": "P01",
+      "role": "FACT_CONTROLLER",
+      "target_output": "data_fact_handoff_packet.json",
+      "goal": "让该阶段成为 R00 可读取、可验收、可下游消费的真实 token/candidate batch 阶段对象。",
+      "required_data": "GMGN/OKX facts, source/time/confidence/missing_reason/permission",
+      "required_contract_fields": [
+        "run_id",
+        "token_case_id",
+        "phase_id",
+        "input_refs",
+        "output_ref",
+        "source_refs",
+        "generated_at",
+        "status",
+        "evidence_level",
+        "missing_fields",
+        "missing_reasons",
+        "downstream_permissions",
+        "consumer_refs",
+        "acceptance_status",
+        "trace_ref"
+      ],
+      "must_not_claim": [
+        "FULLY_ACCEPTED",
+        "LIVE_READY",
+        "PRODUCTION_READY",
+        "REAL_TRADE_AUTHORIZED"
+      ],
+      "acceptance_levels": [
+        "file_exists",
+        "json_or_yaml_parse_ok",
+        "schema_min_fields_present",
+        "semantic_evidence_not_empty_or_statused_missing",
+        "handoff_consumption_declared",
+        "runtime_trace_ref_present"
+      ],
+      "application_scenario": "R00 单 token dry-run / candidate batch ranking / paper-only cycle 的阶段输入输出。",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "PHASE_REPAIR_P02_TOKEN_MARKET_DATA",
+      "priority": "P1_HIGH",
+      "phase_id": "P02",
+      "role": "TOKEN_MARKET_DATA",
+      "target_output": "token_market_fact_packet.json",
+      "goal": "让该阶段成为 R00 可读取、可验收、可下游消费的真实 token/candidate batch 阶段对象。",
+      "required_data": "quote/security/liquidity/base market facts",
+      "required_contract_fields": [
+        "run_id",
+        "token_case_id",
+        "phase_id",
+        "input_refs",
+        "output_ref",
+        "source_refs",
+        "generated_at",
+        "status",
+        "evidence_level",
+        "missing_fields",
+        "missing_reasons",
+        "downstream_permissions",
+        "consumer_refs",
+        "acceptance_status",
+        "trace_ref"
+      ],
+      "must_not_claim": [
+        "FULLY_ACCEPTED",
+        "LIVE_READY",
+        "PRODUCTION_READY",
+        "REAL_TRADE_AUTHORIZED"
+      ],
+      "acceptance_levels": [
+        "file_exists",
+        "json_or_yaml_parse_ok",
+        "schema_min_fields_present",
+        "semantic_evidence_not_empty_or_statused_missing",
+        "handoff_consumption_declared",
+        "runtime_trace_ref_present"
+      ],
+      "application_scenario": "R00 单 token dry-run / candidate batch ranking / paper-only cycle 的阶段输入输出。",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "PHASE_REPAIR_P03_WALLET_ENTITY",
+      "priority": "P0_BLOCKING",
+      "phase_id": "P03",
+      "role": "WALLET_ENTITY",
+      "target_output": "wallet_entity_structure_packet.json",
+      "goal": "让该阶段成为 R00 可读取、可验收、可下游消费的真实 token/candidate batch 阶段对象。",
+      "required_data": "roles/same-source/funding paths/token distribution edges",
+      "required_contract_fields": [
+        "run_id",
+        "token_case_id",
+        "phase_id",
+        "input_refs",
+        "output_ref",
+        "source_refs",
+        "generated_at",
+        "status",
+        "evidence_level",
+        "missing_fields",
+        "missing_reasons",
+        "downstream_permissions",
+        "consumer_refs",
+        "acceptance_status",
+        "trace_ref"
+      ],
+      "must_not_claim": [
+        "FULLY_ACCEPTED",
+        "LIVE_READY",
+        "PRODUCTION_READY",
+        "REAL_TRADE_AUTHORIZED"
+      ],
+      "acceptance_levels": [
+        "file_exists",
+        "json_or_yaml_parse_ok",
+        "schema_min_fields_present",
+        "semantic_evidence_not_empty_or_statused_missing",
+        "handoff_consumption_declared",
+        "runtime_trace_ref_present"
+      ],
+      "application_scenario": "R00 单 token dry-run / candidate batch ranking / paper-only cycle 的阶段输入输出。",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "PHASE_REPAIR_P04_CHIP_STRUCTURE",
+      "priority": "P0_BLOCKING",
+      "phase_id": "P04",
+      "role": "CHIP_STRUCTURE",
+      "target_output": "chip_structure_evidence_packet.json",
+      "goal": "让该阶段成为 R00 可读取、可验收、可下游消费的真实 token/candidate batch 阶段对象。",
+      "required_data": "chip inventory/cost band/distribution progress/反证",
+      "required_contract_fields": [
+        "run_id",
+        "token_case_id",
+        "phase_id",
+        "input_refs",
+        "output_ref",
+        "source_refs",
+        "generated_at",
+        "status",
+        "evidence_level",
+        "missing_fields",
+        "missing_reasons",
+        "downstream_permissions",
+        "consumer_refs",
+        "acceptance_status",
+        "trace_ref"
+      ],
+      "must_not_claim": [
+        "FULLY_ACCEPTED",
+        "LIVE_READY",
+        "PRODUCTION_READY",
+        "REAL_TRADE_AUTHORIZED"
+      ],
+      "acceptance_levels": [
+        "file_exists",
+        "json_or_yaml_parse_ok",
+        "schema_min_fields_present",
+        "semantic_evidence_not_empty_or_statused_missing",
+        "handoff_consumption_declared",
+        "runtime_trace_ref_present"
+      ],
+      "application_scenario": "R00 单 token dry-run / candidate batch ranking / paper-only cycle 的阶段输入输出。",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "PHASE_REPAIR_P05_EVIDENCE_CONTROL",
+      "priority": "P1_HIGH",
+      "phase_id": "P05",
+      "role": "EVIDENCE_CONTROL",
+      "target_output": "evidence_counterevidence_packet.json",
+      "goal": "让该阶段成为 R00 可读取、可验收、可下游消费的真实 token/candidate batch 阶段对象。",
+      "required_data": "evidence and counterevidence with confidence + contradiction status",
+      "required_contract_fields": [
+        "run_id",
+        "token_case_id",
+        "phase_id",
+        "input_refs",
+        "output_ref",
+        "source_refs",
+        "generated_at",
+        "status",
+        "evidence_level",
+        "missing_fields",
+        "missing_reasons",
+        "downstream_permissions",
+        "consumer_refs",
+        "acceptance_status",
+        "trace_ref"
+      ],
+      "must_not_claim": [
+        "FULLY_ACCEPTED",
+        "LIVE_READY",
+        "PRODUCTION_READY",
+        "REAL_TRADE_AUTHORIZED"
+      ],
+      "acceptance_levels": [
+        "file_exists",
+        "json_or_yaml_parse_ok",
+        "schema_min_fields_present",
+        "semantic_evidence_not_empty_or_statused_missing",
+        "handoff_consumption_declared",
+        "runtime_trace_ref_present"
+      ],
+      "application_scenario": "R00 单 token dry-run / candidate batch ranking / paper-only cycle 的阶段输入输出。",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "PHASE_REPAIR_P06_SCENARIO_RECOGNITION",
+      "priority": "P1_HIGH",
+      "phase_id": "P06",
+      "role": "SCENARIO_RECOGNITION",
+      "target_output": "scenario_recognition_packet.json",
+      "goal": "让该阶段成为 R00 可读取、可验收、可下游消费的真实 token/candidate batch 阶段对象。",
+      "required_data": "场景识别/风险分支/不确定性",
+      "required_contract_fields": [
+        "run_id",
+        "token_case_id",
+        "phase_id",
+        "input_refs",
+        "output_ref",
+        "source_refs",
+        "generated_at",
+        "status",
+        "evidence_level",
+        "missing_fields",
+        "missing_reasons",
+        "downstream_permissions",
+        "consumer_refs",
+        "acceptance_status",
+        "trace_ref"
+      ],
+      "must_not_claim": [
+        "FULLY_ACCEPTED",
+        "LIVE_READY",
+        "PRODUCTION_READY",
+        "REAL_TRADE_AUTHORIZED"
+      ],
+      "acceptance_levels": [
+        "file_exists",
+        "json_or_yaml_parse_ok",
+        "schema_min_fields_present",
+        "semantic_evidence_not_empty_or_statused_missing",
+        "handoff_consumption_declared",
+        "runtime_trace_ref_present"
+      ],
+      "application_scenario": "R00 单 token dry-run / candidate batch ranking / paper-only cycle 的阶段输入输出。",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "PHASE_REPAIR_P07_STRATEGY_GATE",
+      "priority": "P0_BLOCKING",
+      "phase_id": "P07",
+      "role": "STRATEGY_GATE",
+      "target_output": "strategy_gate_decision_packet.json",
+      "goal": "让该阶段成为 R00 可读取、可验收、可下游消费的真实 token/candidate batch 阶段对象。",
+      "required_data": "EXCLUDE/RECORD/RISK_MONITOR/WATCH/PAPER_READY/READY_FOR_CONFIRMATION",
+      "required_contract_fields": [
+        "run_id",
+        "token_case_id",
+        "phase_id",
+        "input_refs",
+        "output_ref",
+        "source_refs",
+        "generated_at",
+        "status",
+        "evidence_level",
+        "missing_fields",
+        "missing_reasons",
+        "downstream_permissions",
+        "consumer_refs",
+        "acceptance_status",
+        "trace_ref"
+      ],
+      "must_not_claim": [
+        "FULLY_ACCEPTED",
+        "LIVE_READY",
+        "PRODUCTION_READY",
+        "REAL_TRADE_AUTHORIZED"
+      ],
+      "acceptance_levels": [
+        "file_exists",
+        "json_or_yaml_parse_ok",
+        "schema_min_fields_present",
+        "semantic_evidence_not_empty_or_statused_missing",
+        "handoff_consumption_declared",
+        "runtime_trace_ref_present"
+      ],
+      "application_scenario": "R00 单 token dry-run / candidate batch ranking / paper-only cycle 的阶段输入输出。",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "PHASE_REPAIR_P08_PAPER_PERMISSION",
+      "priority": "P0_BLOCKING",
+      "phase_id": "P08",
+      "role": "PAPER_PERMISSION",
+      "target_output": "paper_permission_packet.json",
+      "goal": "让该阶段成为 R00 可读取、可验收、可下游消费的真实 token/candidate batch 阶段对象。",
+      "required_data": "paper-only permission/risk boundary/no live execution",
+      "required_contract_fields": [
+        "run_id",
+        "token_case_id",
+        "phase_id",
+        "input_refs",
+        "output_ref",
+        "source_refs",
+        "generated_at",
+        "status",
+        "evidence_level",
+        "missing_fields",
+        "missing_reasons",
+        "downstream_permissions",
+        "consumer_refs",
+        "acceptance_status",
+        "trace_ref"
+      ],
+      "must_not_claim": [
+        "FULLY_ACCEPTED",
+        "LIVE_READY",
+        "PRODUCTION_READY",
+        "REAL_TRADE_AUTHORIZED"
+      ],
+      "acceptance_levels": [
+        "file_exists",
+        "json_or_yaml_parse_ok",
+        "schema_min_fields_present",
+        "semantic_evidence_not_empty_or_statused_missing",
+        "handoff_consumption_declared",
+        "runtime_trace_ref_present"
+      ],
+      "application_scenario": "R00 单 token dry-run / candidate batch ranking / paper-only cycle 的阶段输入输出。",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "PHASE_REPAIR_P09_REVIEW_REPLAY",
+      "priority": "P1_HIGH",
+      "phase_id": "P09",
+      "role": "REVIEW_REPLAY",
+      "target_output": "review_replay_packet.json",
+      "goal": "让该阶段成为 R00 可读取、可验收、可下游消费的真实 token/candidate batch 阶段对象。",
+      "required_data": "paper result replay/failure attribution/no rule mutation",
+      "required_contract_fields": [
+        "run_id",
+        "token_case_id",
+        "phase_id",
+        "input_refs",
+        "output_ref",
+        "source_refs",
+        "generated_at",
+        "status",
+        "evidence_level",
+        "missing_fields",
+        "missing_reasons",
+        "downstream_permissions",
+        "consumer_refs",
+        "acceptance_status",
+        "trace_ref"
+      ],
+      "must_not_claim": [
+        "FULLY_ACCEPTED",
+        "LIVE_READY",
+        "PRODUCTION_READY",
+        "REAL_TRADE_AUTHORIZED"
+      ],
+      "acceptance_levels": [
+        "file_exists",
+        "json_or_yaml_parse_ok",
+        "schema_min_fields_present",
+        "semantic_evidence_not_empty_or_statused_missing",
+        "handoff_consumption_declared",
+        "runtime_trace_ref_present"
+      ],
+      "application_scenario": "R00 单 token dry-run / candidate batch ranking / paper-only cycle 的阶段输入输出。",
+      "status": "OPEN"
+    },
+    {
+      "task_id": "PHASE_REPAIR_P10_CONTROLLED_UPGRADE",
+      "priority": "P1_HIGH",
+      "phase_id": "P10",
+      "role": "CONTROLLED_UPGRADE",
+      "target_output": "upgrade_candidate_packet.json",
+      "goal": "让该阶段成为 R00 可读取、可验收、可下游消费的真实 token/candidate batch 阶段对象。",
+      "required_data": "candidate/shadow/regression/approval/rollback",
+      "required_contract_fields": [
+        "run_id",
+        "token_case_id",
+        "phase_id",
+        "input_refs",
+        "output_ref",
+        "source_refs",
+        "generated_at",
+        "status",
+        "evidence_level",
+        "missing_fields",
+        "missing_reasons",
+        "downstream_permissions",
+        "consumer_refs",
+        "acceptance_status",
+        "trace_ref"
+      ],
+      "must_not_claim": [
+        "FULLY_ACCEPTED",
+        "LIVE_READY",
+        "PRODUCTION_READY",
+        "REAL_TRADE_AUTHORIZED"
+      ],
+      "acceptance_levels": [
+        "file_exists",
+        "json_or_yaml_parse_ok",
+        "schema_min_fields_present",
+        "semantic_evidence_not_empty_or_statused_missing",
+        "handoff_consumption_declared",
+        "runtime_trace_ref_present"
+      ],
+      "application_scenario": "R00 单 token dry-run / candidate batch ranking / paper-only cycle 的阶段输入输出。",
+      "status": "OPEN"
+    }
+  ],
+  "cross_system_repair_tasks": [
+    {
+      "task_id": "CROSS_REPAIR_07_RUNNERS_REGISTRY",
+      "priority": "P0_BLOCKING",
+      "target": "sikk_stable_trader_os/07_runners",
+      "title": "建立 runner_registry / phase_runner_binding / runner_failure_policy / validation_runner_registry",
+      "application": "R00 运行前判断 P01-P10 哪个 runner 合法可执行；无绑定则阻断真实 runtime。"
+    },
+    {
+      "task_id": "CROSS_REPAIR_RUNTIME_GOAL_CONTEXT",
+      "priority": "P0_BLOCKING",
+      "target": "00_control + modules/her_runtime_bridge",
+      "title": "建立 runtime_goal_context.schema / goal_consumption_report.schema / goal_context_loader",
+      "application": "每轮运行必须证明 operator_goal→phase_goal→runner→artifact→acceptance 被读取。"
+    },
+    {
+      "task_id": "CROSS_REPAIR_PHASE_OUTPUT_INDEX_TRACE",
+      "priority": "P0_BLOCKING",
+      "target": "00_control/phase_output_index.json + 00_trace/runner_execution_trace.yaml",
+      "title": "建立阶段输出统一索引与 runner trace",
+      "application": "dashboard/验收/复盘只读统一索引，不直读临时输出。"
+    },
+    {
+      "task_id": "CROSS_REPAIR_HANDOFF_CONSUMPTION_ACCEPTANCE",
+      "priority": "P0_BLOCKING",
+      "target": "09_handoff + 08_acceptance + modules/her_runtime_bridge",
+      "title": "建立 handoff_consumption_status 与 runtime_acceptance_runner",
+      "application": "上游输出必须被下游读取消费后，才允许升级状态。"
+    },
+    {
+      "task_id": "CROSS_REPAIR_R00_RUNTIME_BLOCKER_MATRIX",
+      "priority": "P0_BLOCKING",
+      "target": "R00 runtime readiness",
+      "title": "建立 R00 runtime blocker matrix / token_case_manifest / phase_execution_plan",
+      "application": "真实 token 不直接进 paper；必须先通过 P01-P07。"
+    },
+    {
+      "task_id": "CROSS_REPAIR_P09_P10_UPGRADE_LOOP",
+      "priority": "P1_HIGH",
+      "target": "P09/P10",
+      "title": "建立 review_to_upgrade_policy / failure_attribution / shadow_regression_approval package",
+      "application": "复盘结果进入受控升级候选，不直接改 live rules。"
+    }
+  ],
+  "execution_policy": {
+    "safe_mode_only": true,
+    "paper_only_until_P08_permission": true,
+    "no_live_trade": true,
+    "no_signing": true,
+    "ready_with_gaps_not_accepted": true
+  },
+  "next_execution_order": [
+    "system_review_rescan",
+    "system_audit",
+    "o00_run_document_safe_mode",
+    "verification_bind_outputs",
+    "keep_open_blockers_for_R00_07_runners_and_wallet_evidence"
+  ]
+}

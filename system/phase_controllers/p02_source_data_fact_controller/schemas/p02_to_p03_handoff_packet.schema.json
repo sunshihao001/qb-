@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "p02_to_p03_handoff_packet",
+  "type": "object",
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "candidate_id": {
+      "type": "string"
+    },
+    "source_trace": {
+      "type": "array"
+    },
+    "quality_status": {
+      "type": "string"
+    },
+    "downstream_usage_limit": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

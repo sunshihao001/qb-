@@ -1,0 +1,9 @@
+trace_audit:
+  trace_file: trace/v00_real_validation_trace.jsonl
+  audit_file: audit/v00_real_validation_audit.jsonl
+  append_only: true
+  required_events:
+    - preflight_passed
+    - test_command_executed
+    - replay_tested
+    - bundle_built

@@ -1,0 +1,36 @@
+{
+  "K00": {
+    "status": "K00_READY_WITH_GAPS",
+    "real_runtime_executed": false
+  },
+  "F00": {
+    "status": "F00_READY_WITH_GAPS",
+    "real_runtime_executed": false
+  },
+  "V00": {
+    "status": "V00_READY_WITH_GAPS",
+    "real_runtime_executed": false
+  },
+  "R00": {
+    "status": "SKIPPED_WITH_REASON",
+    "skip_reason": "runner binding not required/executed in design-level replay",
+    "real_runtime_executed": false
+  },
+  "A00": {
+    "status": "A00_READY_WITH_GAPS",
+    "real_runtime_executed": false
+  },
+  "H00": {
+    "status": "H00_READY_WITH_GAPS",
+    "real_runtime_executed": false
+  },
+  "U00": {
+    "status": "U00_READY_WITH_GAPS",
+    "real_runtime_executed": false
+  },
+  "G00": {
+    "status": "G00_READY_WITH_GAPS",
+    "policy_active": false,
+    "real_runtime_executed": false
+  }
+}

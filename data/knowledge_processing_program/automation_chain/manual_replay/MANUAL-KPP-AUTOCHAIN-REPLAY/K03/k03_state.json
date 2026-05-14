@@ -1,0 +1,18 @@
+{
+  "stage_id": "K03",
+  "run_id": "MANUAL-KPP-AUTOCHAIN-REPLAY",
+  "status": "K03_ACCEPTED",
+  "started_at": "2026-05-13T06:15:39Z",
+  "ended_at": "2026-05-13T06:15:39Z",
+  "validator_status": "PASS",
+  "acceptance_status": "ACCEPTED",
+  "artifact_refs": [
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K03/functional_object_registry.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K03/assumption_registry.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K03/constraint_registry.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K03/unknown_gap_registry.json",
+    "data/knowledge_processing_program/automation_chain/manual_replay/MANUAL-KPP-AUTOCHAIN-REPLAY/K03/k03_state.json"
+  ],
+  "gaps": [],
+  "source_trace": true
+}

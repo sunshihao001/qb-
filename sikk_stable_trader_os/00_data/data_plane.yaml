@@ -1,0 +1,54 @@
+plane_id: P03_DATA_PLANE
+plane_name: 数据平面
+plane_level: light_institutional
+version: v1.0
+status: DATA_READY_WITH_GAPS
+created_from_doc_id: DOC-20260511-023
+mission:
+  primary: 把 Domain Plane 的领域字段需求转化为可采集、可校验、可追溯、可交接的数据事实体系
+authority:
+  can_define:
+  - 数据源
+  - 字段字典
+  - 原始数据模型
+  - 标准化模型
+  - 实体模型
+  - 事件模型
+  - 快照模型
+  - 数据质量规则
+  - 数据新鲜度规则
+  - 数据缺失规则
+  - 数据冲突规则
+  - 数据血缘
+  - 数据交接合约
+  cannot_do:
+  - 直接生成买入信号
+  - 直接判断主导侧意图
+  - 直接输出策略结论
+  - 用缺失字段强行推理
+  - 覆盖原始数据
+  - 忽略多源冲突
+  - 忽略数据过期
+upstream_planes:
+- P02_DOMAIN_PLANE
+downstream_planes:
+- P04_EVIDENCE_PLANE
+- P05_SCENARIO_RECOGNITION_PLANE
+- P08_REVIEW_REPLAY_PLANE
+status_codes:
+- DATA_UNINITIALIZED
+- DATA_SOURCE_REGISTERED
+- DATA_REQUIREMENT_MAPPED
+- RAW_DATA_READY
+- NORMALIZED_DATA_READY
+- DATA_QUALITY_CHECKED
+- DATA_WITH_MISSING_FIELDS
+- DATA_CONFLICT_DETECTED
+- DATA_STALE
+- DATA_READY_FOR_EVIDENCE
+- DATA_READY_WITH_GAPS
+- DATA_REJECTED
+safety_boundary:
+  paper_only: true
+  real_trade_enabled: false
+  auto_order_allowed: false

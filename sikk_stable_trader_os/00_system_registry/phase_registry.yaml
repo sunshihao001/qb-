@@ -1,0 +1,626 @@
+registry_id: phase_registry
+system: SIKK_STABLE_TRADER_OS
+version: 2.1-k00
+updated_at: '2026-05-11T10:10:00Z'
+phase_controller_rule: Phase Controller 不是阶段说明文档。Phase Controller 是一个可调度的阶段运行单元，负责把系统目标拆成阶段目标，把阶段目标拆成任务树，把任务树绑定到输入合约、输出合约、Atomic
+  Skill、代码工具、验收门、状态回写和下游交接包。它不追求一次性给出智能判断，而是保证每一个判断都有字段来源、证据等级、反证记录、失败处理和可复盘路径。
+global_phase_rules:
+  all_phases_are_schedulable_units: true
+  markdown_is_not_runtime_completion_source: true
+  acceptance_gate_decides_completion: true
+  handoff_packet_required_for_downstream: true
+  k00_route_status_required_for_phase_ready: true
+  valid_k00_route_status_for_ready:
+  - K00_INTAKE_ACCEPTED
+  - K00_ROUTE_RECOVERY_DOCUMENTED
+  missing_or_failed_k00_route_blocks_ready: true
+  missing_required_fact_policy: do_not_infer; mark_gap_or_block_by_contract
+  report_policy: human_readable_only; never_machine_judgement_source
+phase_order:
+- K00
+- P00
+- P01
+- P02
+- P03
+- P04
+- P05
+- P06
+- P07
+- P08
+- P09
+phases:
+- phase_id: K00
+  sequence_order: 0
+  phase_slug: K00_knowledge_intake_taskization_controller
+  phase_name: 知识资料摄取与任务化控制器
+  domain: knowledge_intake_taskization
+  controller_type: schedulable_phase_runtime_unit
+  is_trading_phase: false
+  placement: before_P00
+  package_path: 06_phase_controllers/K00_knowledge_intake_taskization
+  depends_on_phase: []
+  upstream_required:
+  - user_supplied_material_or_import_pointer
+  downstream_next: P00_system_boundary
+  input_contract_ref: 06_phase_controllers/K00_knowledge_intake_taskization/04_phase_input_contract.json
+  input_packet_expected: knowledge_material_intake_input.json
+  output_contract_ref: 06_phase_controllers/K00_knowledge_intake_taskization/05_phase_output_contract.json
+  output_packet_produced: k00_knowledge_intake_handoff_packet.json
+  handoff_schema_ref: 06_phase_controllers/K00_knowledge_intake_taskization/09_phase_handoff_packet.schema.json
+  handoff_target: P00_system_boundary
+  acceptance_gate_ref: 06_phase_controllers/K00_knowledge_intake_taskization/07_phase_acceptance_gate.yaml
+  phase_state_ref: 06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json
+  required_files:
+  - 01_phase_manifest.yaml
+  - 02_phase_context_pack.md
+  - 03_phase_objective_tree.yaml
+  - 04_phase_input_contract.json
+  - 05_phase_output_contract.json
+  - 06_phase_execution_protocol.md
+  - 07_phase_acceptance_gate.yaml
+  - 08_phase_state.json
+  - 09_phase_handoff_packet.schema.json
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  - material_inventory
+  - document_passport
+  - task_execution_package
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  - chat_context_only_summary
+  required_evidence_bindings:
+  - field_source
+  - raw_material_snapshot
+  - material_inventory
+  - document_passport
+  - system_plane_mapping
+  - P00_P09_phase_mapping
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_to_P00_only_when_K00_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - raw_material_snapshot
+  - material_inventory
+  - document_passport
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade
+  - read_or_write_private_key
+  - sign_transaction
+  - broadcast_transaction
+  - execute_swap
+- phase_id: P00
+  sequence_order: 1
+  phase_slug: P00_system_boundary
+  phase_name: 系统边界与宪法层
+  domain: system_boundary
+  controller_type: schedulable_phase_runtime_unit
+  package_path: 02_phase_controllers/P00_system_boundary
+  depends_on_phase:
+  - K00_knowledge_intake_taskization_controller
+  upstream_required:
+  - K00_knowledge_intake_taskization_controller
+  downstream_next: P01_data_fact
+  input_contract_ref: 02_phase_controllers/P00_system_boundary/phase_input_contract.json
+  input_packet_expected: system_boundary_input.json
+  output_contract_ref: 02_phase_controllers/P00_system_boundary/phase_output_contract.json
+  output_packet_produced: system_boundary_handoff_packet.json
+  handoff_schema_ref: 02_phase_controllers/P00_system_boundary/phase_handoff_packet.schema.json
+  handoff_target: P01_data_fact
+  acceptance_gate_ref: 02_phase_controllers/P00_system_boundary/phase_acceptance_gate.yaml
+  phase_state_ref: 02_phase_controllers/P00_system_boundary/phase_state.json
+  required_files: &id001
+  - phase_manifest.yaml
+  - phase_context_pack.md
+  - phase_objective_tree.yaml
+  - phase_input_contract.json
+  - phase_output_contract.json
+  - phase_execution_protocol.md
+  - phase_acceptance_gate.yaml
+  - phase_state.json
+  - phase_handoff_packet.schema.json
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  required_evidence_bindings:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade
+- phase_id: P01
+  sequence_order: 2
+  phase_slug: P01_data_fact
+  phase_name: 数据事实层
+  domain: data_fact
+  controller_type: schedulable_phase_runtime_unit
+  package_path: 02_phase_controllers/P01_data_fact
+  depends_on_phase:
+  - P00_system_boundary
+  upstream_required:
+  - P00_system_boundary
+  downstream_next: P02_wallet_structure
+  input_contract_ref: 02_phase_controllers/P01_data_fact/phase_input_contract.json
+  input_packet_expected: token_or_run_raw_input.json
+  output_contract_ref: 02_phase_controllers/P01_data_fact/phase_output_contract.json
+  output_packet_produced: phase_01_to_phase_02_handoff_packet.json
+  handoff_schema_ref: 02_phase_controllers/P01_data_fact/phase_handoff_packet.schema.json
+  handoff_target: P02_wallet_structure
+  acceptance_gate_ref: 02_phase_controllers/P01_data_fact/phase_acceptance_gate.yaml
+  phase_state_ref: 02_phase_controllers/P01_data_fact/phase_state.json
+  required_files: *id001
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  required_evidence_bindings:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade
+- phase_id: P02
+  sequence_order: 3
+  phase_slug: P02_wallet_structure
+  phase_name: 钱包结构层
+  domain: wallet_structure
+  controller_type: schedulable_phase_runtime_unit
+  package_path: 02_phase_controllers/P02_wallet_structure
+  depends_on_phase:
+  - P01_data_fact
+  upstream_required:
+  - P01_data_fact
+  downstream_next: P03_chip_control
+  input_contract_ref: 02_phase_controllers/P02_wallet_structure/phase_input_contract.json
+  input_packet_expected: phase_01_to_phase_02_handoff_packet.json
+  output_contract_ref: 02_phase_controllers/P02_wallet_structure/phase_output_contract.json
+  output_packet_produced: phase_02_to_phase_03_handoff_packet.json
+  handoff_schema_ref: 02_phase_controllers/P02_wallet_structure/phase_handoff_packet.schema.json
+  handoff_target: P03_chip_control
+  acceptance_gate_ref: 02_phase_controllers/P02_wallet_structure/phase_acceptance_gate.yaml
+  phase_state_ref: 02_phase_controllers/P02_wallet_structure/phase_state.json
+  required_files: *id001
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  required_evidence_bindings:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade
+- phase_id: P03
+  sequence_order: 4
+  phase_slug: P03_chip_control
+  phase_name: 筹码控制层
+  domain: chip_control
+  controller_type: schedulable_phase_runtime_unit
+  package_path: 02_phase_controllers/P03_chip_control
+  depends_on_phase:
+  - P02_wallet_structure
+  upstream_required:
+  - P02_wallet_structure
+  downstream_next: P04_scenario_recognition
+  input_contract_ref: 02_phase_controllers/P03_chip_control/phase_input_contract.json
+  input_packet_expected: phase_02_to_phase_03_handoff_packet.json
+  output_contract_ref: 02_phase_controllers/P03_chip_control/phase_output_contract.json
+  output_packet_produced: phase_03_to_phase_04_handoff_packet.json
+  handoff_schema_ref: 02_phase_controllers/P03_chip_control/phase_handoff_packet.schema.json
+  handoff_target: P04_scenario_recognition
+  acceptance_gate_ref: 02_phase_controllers/P03_chip_control/phase_acceptance_gate.yaml
+  phase_state_ref: 02_phase_controllers/P03_chip_control/phase_state.json
+  required_files: *id001
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  required_evidence_bindings:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade
+- phase_id: P04
+  sequence_order: 5
+  phase_slug: P04_scenario_recognition
+  phase_name: 场景盘型层
+  domain: scenario_recognition
+  controller_type: schedulable_phase_runtime_unit
+  package_path: 02_phase_controllers/P04_scenario_recognition
+  depends_on_phase:
+  - P03_chip_control
+  upstream_required:
+  - P03_chip_control
+  downstream_next: P05_structure_position
+  input_contract_ref: 02_phase_controllers/P04_scenario_recognition/phase_input_contract.json
+  input_packet_expected: phase_03_to_phase_04_handoff_packet.json
+  output_contract_ref: 02_phase_controllers/P04_scenario_recognition/phase_output_contract.json
+  output_packet_produced: phase_04_to_phase_05_handoff_packet.json
+  handoff_schema_ref: 02_phase_controllers/P04_scenario_recognition/phase_handoff_packet.schema.json
+  handoff_target: P05_structure_position
+  acceptance_gate_ref: 02_phase_controllers/P04_scenario_recognition/phase_acceptance_gate.yaml
+  phase_state_ref: 02_phase_controllers/P04_scenario_recognition/phase_state.json
+  required_files: *id001
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  required_evidence_bindings:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade
+- phase_id: P05
+  sequence_order: 6
+  phase_slug: P05_structure_position
+  phase_name: 结构位置层
+  domain: structure_position
+  controller_type: schedulable_phase_runtime_unit
+  package_path: 02_phase_controllers/P05_structure_position
+  depends_on_phase:
+  - P04_scenario_recognition
+  upstream_required:
+  - P04_scenario_recognition
+  downstream_next: P06_strategy_gate
+  input_contract_ref: 02_phase_controllers/P05_structure_position/phase_input_contract.json
+  input_packet_expected: phase_04_to_phase_05_handoff_packet.json
+  output_contract_ref: 02_phase_controllers/P05_structure_position/phase_output_contract.json
+  output_packet_produced: phase_05_to_phase_06_handoff_packet.json
+  handoff_schema_ref: 02_phase_controllers/P05_structure_position/phase_handoff_packet.schema.json
+  handoff_target: P06_strategy_gate
+  acceptance_gate_ref: 02_phase_controllers/P05_structure_position/phase_acceptance_gate.yaml
+  phase_state_ref: 02_phase_controllers/P05_structure_position/phase_state.json
+  required_files: *id001
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  required_evidence_bindings:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade
+- phase_id: P06
+  sequence_order: 7
+  phase_slug: P06_strategy_gate
+  phase_name: 策略门禁层
+  domain: strategy_gate
+  controller_type: schedulable_phase_runtime_unit
+  package_path: 02_phase_controllers/P06_strategy_gate
+  depends_on_phase:
+  - P05_structure_position
+  upstream_required:
+  - P05_structure_position
+  downstream_next: P07_execution_risk
+  input_contract_ref: 02_phase_controllers/P06_strategy_gate/phase_input_contract.json
+  input_packet_expected: phase_05_to_phase_06_handoff_packet.json
+  output_contract_ref: 02_phase_controllers/P06_strategy_gate/phase_output_contract.json
+  output_packet_produced: phase_06_to_phase_07_handoff_packet.json
+  handoff_schema_ref: 02_phase_controllers/P06_strategy_gate/phase_handoff_packet.schema.json
+  handoff_target: P07_execution_risk
+  acceptance_gate_ref: 02_phase_controllers/P06_strategy_gate/phase_acceptance_gate.yaml
+  phase_state_ref: 02_phase_controllers/P06_strategy_gate/phase_state.json
+  required_files: *id001
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  required_evidence_bindings:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade
+- phase_id: P07
+  sequence_order: 8
+  phase_slug: P07_execution_risk
+  phase_name: 执行风控层
+  domain: execution_risk
+  controller_type: schedulable_phase_runtime_unit
+  package_path: 02_phase_controllers/P07_execution_risk
+  depends_on_phase:
+  - P06_strategy_gate
+  upstream_required:
+  - P06_strategy_gate
+  downstream_next: P08_review_learning
+  input_contract_ref: 02_phase_controllers/P07_execution_risk/phase_input_contract.json
+  input_packet_expected: phase_06_to_phase_07_handoff_packet.json
+  output_contract_ref: 02_phase_controllers/P07_execution_risk/phase_output_contract.json
+  output_packet_produced: phase_07_to_phase_08_handoff_packet.json
+  handoff_schema_ref: 02_phase_controllers/P07_execution_risk/phase_handoff_packet.schema.json
+  handoff_target: P08_review_learning
+  acceptance_gate_ref: 02_phase_controllers/P07_execution_risk/phase_acceptance_gate.yaml
+  phase_state_ref: 02_phase_controllers/P07_execution_risk/phase_state.json
+  required_files: *id001
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  required_evidence_bindings:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade
+- phase_id: P08
+  sequence_order: 9
+  phase_slug: P08_review_learning
+  phase_name: 复盘学习层
+  domain: review_learning
+  controller_type: schedulable_phase_runtime_unit
+  package_path: 02_phase_controllers/P08_review_learning
+  depends_on_phase:
+  - P07_execution_risk
+  upstream_required:
+  - P07_execution_risk
+  downstream_next: P09_system_upgrade
+  input_contract_ref: 02_phase_controllers/P08_review_learning/phase_input_contract.json
+  input_packet_expected: phase_07_to_phase_08_handoff_packet.json
+  output_contract_ref: 02_phase_controllers/P08_review_learning/phase_output_contract.json
+  output_packet_produced: phase_08_to_phase_09_handoff_packet.json
+  handoff_schema_ref: 02_phase_controllers/P08_review_learning/phase_handoff_packet.schema.json
+  handoff_target: P09_system_upgrade
+  acceptance_gate_ref: 02_phase_controllers/P08_review_learning/phase_acceptance_gate.yaml
+  phase_state_ref: 02_phase_controllers/P08_review_learning/phase_state.json
+  required_files: *id001
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  required_evidence_bindings:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade
+- phase_id: P09
+  sequence_order: 10
+  phase_slug: P09_system_upgrade
+  phase_name: 系统升级层
+  domain: system_upgrade
+  controller_type: schedulable_phase_runtime_unit
+  package_path: 02_phase_controllers/P09_system_upgrade
+  depends_on_phase:
+  - P08_review_learning
+  upstream_required:
+  - P08_review_learning
+  downstream_next: null
+  input_contract_ref: 02_phase_controllers/P09_system_upgrade/phase_input_contract.json
+  input_packet_expected: phase_08_to_phase_09_handoff_packet.json
+  output_contract_ref: 02_phase_controllers/P09_system_upgrade/phase_output_contract.json
+  output_packet_produced: phase_09_final_audit_packet.json
+  handoff_schema_ref: 02_phase_controllers/P09_system_upgrade/phase_handoff_packet.schema.json
+  handoff_target: null
+  acceptance_gate_ref: 02_phase_controllers/P09_system_upgrade/phase_acceptance_gate.yaml
+  phase_state_ref: 02_phase_controllers/P09_system_upgrade/phase_state.json
+  required_files: *id001
+  machine_decision_sources_allowed:
+  - input_contract
+  - output_contract
+  - schemas
+  - normalized_json
+  - runtime_trace
+  - acceptance_gate_result
+  - handoff_packet
+  machine_decision_sources_forbidden:
+  - human_markdown_report
+  - ai_guess
+  - unverified_missing_field
+  - downstream_inference_before_handoff
+  required_evidence_bindings:
+  - field_source
+  - evidence_level
+  - counter_evidence
+  - acceptance_gate
+  - audit_ref
+  advance_policy: advance_only_when_acceptance_gate_passes_and_handoff_packet_schema_validates
+  must_write:
+  - phase_state.json
+  - handoff_packet
+  - audit_report
+  cannot_do:
+  - skip_acceptance_gate
+  - use_report_as_machine_source
+  - infer_missing_required_fact
+  - bypass_handoff_packet
+  - authorize_real_trade

@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "replay_id",
+    "validation_run_id",
+    "replay_config",
+    "replay_input",
+    "replay_output",
+    "replay_expected",
+    "replay_comparison",
+    "trace_path",
+    "status"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    }
+  }
+}

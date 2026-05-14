@@ -1,0 +1,21 @@
+{
+  "command": "init",
+  "status": "INIT_COMPLETED",
+  "created_dirs": [],
+  "existing_dirs": [
+    "/root/sikk-gmgn/system/her_document_function_system/cli",
+    "/root/sikk-gmgn/system/her_document_function_system/registry",
+    "/root/sikk-gmgn/system/her_document_function_system/config",
+    "/root/sikk-gmgn/system/her_document_function_system/replay/sample_cases",
+    "/root/sikk-gmgn/data/her_document_function_system/o00_runs",
+    "/root/sikk-gmgn/data/her_document_function_system/cli_runs"
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ],
+  "gaps": []
+}

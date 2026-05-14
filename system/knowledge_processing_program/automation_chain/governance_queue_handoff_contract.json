@@ -1,0 +1,51 @@
+{
+  "contract_id": "KPP_GOVERNANCE_QUEUE_HANDOFF_CONTRACT_V1",
+  "task_id": "KPP-AUTOCHAIN-20260513-001",
+  "queue_path": "/root/sikk-gmgn/hermes_harness/03_task_runtime/input_governance_queue.jsonl",
+  "entry_schema": {
+    "queue_entry_id": "string",
+    "entry_type": "KPP_CANDIDATE_READY_FOR_GOVERNANCE_OR_P00_REVIEW",
+    "run_id": "string",
+    "doc_id": "string",
+    "source_refs": [
+      "raw_path",
+      "passport_path",
+      "semantic_index_path"
+    ],
+    "candidate_refs": [
+      "controller_candidate_packet",
+      "schema_contract_candidate_packet",
+      "her_task_package"
+    ],
+    "acceptance_refs": [
+      "knowledge_processing_acceptance_result",
+      "validation_report"
+    ],
+    "handoff_refs": [
+      "knowledge_processing_handoff_packet"
+    ],
+    "governance_policy": {
+      "candidate_only": true,
+      "manual_review_required": true,
+      "production_mutation_allowed": false
+    },
+    "p00_routing": {
+      "allowed": true,
+      "target": "P00_SYSTEM_BOUNDARY_OR_GOVERNANCE_REVIEW",
+      "blocked_targets": [
+        "P01_RUNTIME",
+        "PAPER_RUNTIME",
+        "LIVE_RUNTIME",
+        "SWAP",
+        "BROADCAST"
+      ]
+    },
+    "status": "QUEUED_FOR_GOVERNANCE_REVIEW"
+  },
+  "acceptance": [
+    "entry_is_jsonl_serializable",
+    "candidate_refs_exist",
+    "manual_review_required_true",
+    "production_mutation_allowed_false"
+  ]
+}

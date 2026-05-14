@@ -1,0 +1,23 @@
+{
+  "doc_id": "DOC-20260513-H00-4",
+  "k00_gap_status": "READY_WITH_GAPS",
+  "gaps": [
+    {
+      "gap_id": "A00_SOURCE_DISCOVERY_REQUIRED",
+      "severity": "blocking_for_h00_until_resolved",
+      "description": "Need locate latest A00_REAL_ACCEPTANCE_EVIDENCE_READY_WITH_GAPS handoff outputs before executing H00."
+    },
+    {
+      "gap_id": "DOWNSTREAM_NOT_EXECUTED",
+      "severity": "non_blocking",
+      "description": "H00 will generate queue only; U00/G00/O00 consumption remains future work."
+    }
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ]
+}

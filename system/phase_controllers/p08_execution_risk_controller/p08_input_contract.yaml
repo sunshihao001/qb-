@@ -1,0 +1,22 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+contract_id: P08_INPUT_CONTRACT
+version: v3.0
+required_inputs:
+  from_p07: [p07_to_p08_handoff_packet, p08_execution_risk_data_request_packet, strategy_gate_decision_records, strategy_candidate_records, strategy_usage_permission_records, strategy_invalidation_binding_records, hard_negative_evaluation_records, strategy_gate_report]
+  from_p06: [scenario_risk_flag_records, scenario_invalidation_records, scenario_usage_permission_records]
+  from_p05: [counter_evidence_records, evidence_conflict_records, unknown_evidence_records]
+  from_p04: [chip_structure_quality_records, counterparty_pressure_records, chip_transfer_status_records, distribution_progress_records]
+  from_p02: [market_fact_records, security_fact_records, freshness_report, quote_or_market_fact_sources, data_quality_report]
+  from_runtime_state: [open_paper_positions, closed_paper_positions, risk_events, strategy_metrics, daily_paper_summary, circuit_breaker_state]
+  from_control_planes: [trace_handoff_packet, acceptance_result_packet, handoff_packet, downstream_read_instruction, limitation_transfer_packet, forbidden_use_policy, governance_handoff_packet, execution_risk_policy_handoff]
+preconditions:
+  - P07 accepted
+  - P07 handoff generated
+  - candidate status is PAPER_CANDIDATE or HUMAN_CONFIRMATION_REQUIRED
+  - P08 reads only authorized fields
+forbidden:
+  - bypass_p07
+  - live_execution
+  - wallet_signing

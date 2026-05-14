@@ -1,0 +1,139 @@
+{
+  "schema_version": "wallet_fact_table_schema_v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "file_role": "wallet_fact_table",
+  "format": "csv",
+  "fields": [
+    {
+      "field_name": "run_id",
+      "field_chinese_name": "运行编号",
+      "field_group": "runtime",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_01_audit",
+        "phase_02_wallet_structure"
+      ],
+      "description": "本次 Phase 01 运行的唯一编号。"
+    },
+    {
+      "field_name": "token_address",
+      "field_chinese_name": "代币地址",
+      "field_group": "token_fact",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control",
+        "phase_04_scenario_recognition"
+      ],
+      "description": "Solana 代币 mint 地址，是本次分析对象的唯一标识。"
+    },
+    {
+      "field_name": "data_snapshot_time",
+      "field_chinese_name": "数据快照时间",
+      "field_group": "runtime",
+      "data_type": "datetime",
+      "required_level": "fatal_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "quote",
+        "gmgn",
+        "chain"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "all_downstream_phases"
+      ],
+      "description": "本次数据事实快照的时间，防止回测污染。"
+    },
+    {
+      "field_name": "wallet_address",
+      "field_chinese_name": "钱包地址",
+      "field_group": "wallet_fact",
+      "data_type": "string",
+      "required_level": "phase_03_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control"
+      ],
+      "description": "参与当前 token 的钱包地址。"
+    },
+    {
+      "field_name": "current_token_balance",
+      "field_chinese_name": "当前 token 余额",
+      "field_group": "wallet_fact",
+      "data_type": "number",
+      "required_level": "phase_03_required",
+      "unit": "token",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "chain",
+      "downstream_used_by": [
+        "phase_03_chip_control"
+      ],
+      "description": "钱包当前持有的 token 数量。"
+    },
+    {
+      "field_name": "gmgn_tags",
+      "field_chinese_name": "GMGN 标签",
+      "field_group": "wallet_fact",
+      "data_type": "array",
+      "required_level": "warning_allowed",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "gmgn"
+      ],
+      "preferred_source": "gmgn",
+      "downstream_used_by": [
+        "phase_02_wallet_structure"
+      ],
+      "description": "GMGN 标签只能作为事实标签，不得直接作为结构角色裁决。"
+    }
+  ]
+}

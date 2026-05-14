@@ -1,0 +1,73 @@
+phase_id: GOVERNANCE_PLANE
+phase_name_cn: 治理平面
+phase_type: authority_and_risk_boundary
+phase_status: READY_TO_BUILD
+authority_scope: 定义系统权限、禁止事项、硬否定规则、安全边界
+primary_goal: 建立系统运行边界，确保分析层、策略层、执行层、复盘层之间权限清晰，防止未验证逻辑进入真实交易。
+non_goal:
+- 不做领域对象推断
+- 不定义数据字段细节
+- 不执行 runner
+upstream_dependencies:
+- P00_system_context_control
+- system_methodology_blueprint
+- current_system_state
+required_inputs:
+- system_methodology_blueprint.md
+- current_system_state.json
+optional_inputs:
+- governance_plane.md existing draft
+- governance_status.json
+- governance_boundary_summary.json
+forbidden_inputs:
+- real_trade_instruction
+- unverified_execution_permission
+- private_key_or_secret
+core_objects:
+- authority_boundary
+- hard_negative_rule
+- risk_boundary
+- stage_permission
+- real_trade_forbidden_policy
+core_questions:
+- 什么阶段有裁决权？
+- 什么阶段只能记录事实？
+- 什么情况必须阻断？
+- 什么情况禁止进入真实交易？
+- 复盘数据如何进入升级层？
+required_outputs:
+- 00_governance/governance_plane.md
+- 00_governance/authority_boundary.yaml
+- 00_governance/hard_negative_rules.yaml
+- 00_governance/risk_boundary.yaml
+- 00_governance/stage_permission_matrix.yaml
+- 00_governance/real_trade_forbidden_policy.yaml
+handoff_outputs:
+- governance_handoff_packet
+- domain_plane_generation_prerequisite
+acceptance_gate:
+- paper_only=true
+- real_trade_enabled=false
+- stage_permission_matrix 存在
+- hard_negative_rules 存在
+- P01-P10 权限边界明确
+blocking_conditions:
+- missing_system_methodology_blueprint
+- missing_current_system_state
+- paper_only_not_true
+- real_trade_enabled_not_false
+- missing_stage_permission_matrix
+- missing_hard_negative_rules
+downstream_consumers:
+- Domain Plane
+- Data Plane
+- Control Plane
+- P01-P10 phase controllers
+runner_binding_status: required
+state_writeback_required: true
+paper_only_required: true
+real_trade_allowed: false
+status_normalization_note: User-proposed phase_status REQUIRED_BEFORE_DOMAIN_AND_DATA
+  is not in legal enum; normalized to READY_TO_BUILD while preserving raw proposal.
+schema_completion_note: User proposal omitted several section-7 required fields; executable
+  target fills explicit defaults and safety constraints.

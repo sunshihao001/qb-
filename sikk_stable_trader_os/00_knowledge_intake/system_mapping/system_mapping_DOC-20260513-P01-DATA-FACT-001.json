@@ -1,0 +1,51 @@
+{
+  "doc_id": "DOC-20260513-P01-DATA-FACT-001",
+  "material": "P01 data fact controller professional phase pack",
+  "primary_phase": "P01_data_fact_controller",
+  "k00_route_status": "K00_ACCEPTED_PENDING_PHASE_EXECUTION",
+  "system_plane_mapping": {
+    "data_plane": [
+      "raw/gmgn",
+      "raw/okx",
+      "normalized",
+      "quality",
+      "handoff",
+      "replay_fixture"
+    ],
+    "contract_schema_plane": [
+      "normalized_*_fact schemas",
+      "data_quality_decision.schema",
+      "data_fact_handoff_packet.schema"
+    ],
+    "phase_controller_plane": [
+      "controllers/p01_data_fact_controller.py",
+      "phase_identity yaml/md"
+    ],
+    "tool_binding_plane": [
+      "gmgn_connector.py",
+      "okx_connector.py",
+      "connectivity-check modes"
+    ],
+    "handoff_plane": [
+      "data_fact_handoff_packet.json",
+      "downstream_permission_matrix.json"
+    ],
+    "audit_replay_plane": [
+      "fixture_manifest.json",
+      "daily_data_source_report.md",
+      "runtime logs"
+    ],
+    "safety_permission_plane": [
+      "real_execution=false",
+      "raw_direct_access_allowed=false",
+      "replay_only marking"
+    ]
+  },
+  "must_not_directly_change": [
+    "P02 wallet final classification",
+    "strategy entry signal",
+    "paper/live execution",
+    "dashboard primary reads"
+  ],
+  "downstream_route": "P01 package/code landing after K00 acceptance; runtime remains blocked until implementation/test acceptance"
+}

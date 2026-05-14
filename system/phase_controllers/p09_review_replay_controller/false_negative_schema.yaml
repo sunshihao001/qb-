@@ -1,0 +1,34 @@
+schema_id: FALSE_NEGATIVE_SCHEMA
+title: False Negative Analysis
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- false_negative_id
+- review_case_id
+- negative_source_phase
+- overblocking_rules
+- required_rule_review
+fields:
+  false_negative_id: string
+  review_case_id: string
+  negative_source_phase: string
+  overblocking_rules: list
+  required_rule_review: boolean
+enums: {}
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

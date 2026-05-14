@@ -1,0 +1,14 @@
+ready_status:
+- I02_READY
+- I02_READY_WITH_GAPS
+- I02_BLOCKED
+- I02_REJECTED
+ready_with_gaps_allowed_for:
+- naming/index gaps
+- legacy mapping gaps
+- missing optional reports
+blocked_if:
+- live execution path enabled
+- wallet signing allowed
+- auto deploy allowed
+- business logic modified

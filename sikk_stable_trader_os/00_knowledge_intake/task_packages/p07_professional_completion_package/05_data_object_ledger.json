@@ -1,0 +1,342 @@
+{
+  "ledger_id": "P07_PROFESSIONAL_DATA_OBJECT_LEDGER_V1",
+  "generated_at": "2026-05-12T05:14:28Z",
+  "target": "ensure no P07 professional data output is missing at design/package level",
+  "objects": [
+    {
+      "object_name": "strategy_gate_input_manifest",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "strategy_policy_registry",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "hard_negative_evaluation_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "scenario_gate_evaluation_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "evidence_gate_evaluation_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "chip_structure_gate_evaluation_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "data_quality_gate_evaluation_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "scenario_conflict_gate_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "market_position_context_gate_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "strategy_pattern_fit_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "strategy_risk_flag_evaluation_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "strategy_invalidation_binding_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "observe_condition_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "pause_condition_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "strategy_block_reason_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "strategy_candidate_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "human_confirmation_requirement_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "strategy_gate_decision_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "strategy_usage_permission_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "p08_execution_risk_data_request_packet",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "p07_to_p08_handoff_packet",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "strategy_gate_audit_record",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "p07_strategy_gate_report",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "gap_register",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    },
+    {
+      "object_name": "acceptance_result",
+      "required": true,
+      "status": "REQUIRED_IN_PACKAGE",
+      "must_have": [
+        "id",
+        "candidate_id_or_scope",
+        "source_trace",
+        "decision_or_status",
+        "limitations",
+        "downstream_effect"
+      ]
+    }
+  ],
+  "forbidden_outputs": [
+    "buy_signal",
+    "paper_runtime_started",
+    "live_execution_allowed",
+    "wallet_signing",
+    "swap",
+    "broadcast",
+    "bypass_p08"
+  ],
+  "readiness_policy": "All required objects must exist as schemas/contracts/policies or runtime data directories before P07_PACKAGE_READY can be claimed. Runtime evaluator implementation remains a separate gap."
+}

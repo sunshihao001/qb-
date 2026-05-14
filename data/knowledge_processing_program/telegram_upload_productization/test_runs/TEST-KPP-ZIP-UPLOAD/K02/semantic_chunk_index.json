@@ -1,0 +1,21 @@
+{
+  "doc_id": "TEST-KPP-ZIP-DOC",
+  "chunks": [
+    {
+      "chunk_id": "TEST-KPP-ZIP-DOC-CHUNK-001",
+      "heading": "ZIP_FILE: a.md",
+      "source_doc_id": "TEST-KPP-ZIP-DOC"
+    },
+    {
+      "chunk_id": "TEST-KPP-ZIP-DOC-CHUNK-002",
+      "heading": "Zip KPP Doc",
+      "source_doc_id": "TEST-KPP-ZIP-DOC"
+    },
+    {
+      "chunk_id": "TEST-KPP-ZIP-DOC-CHUNK-003",
+      "heading": "ZIP_FILE: nested/b.txt",
+      "source_doc_id": "TEST-KPP-ZIP-DOC"
+    }
+  ],
+  "chunk_count": 3
+}

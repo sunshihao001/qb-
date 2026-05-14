@@ -1,0 +1,29 @@
+{
+  "模块": "SIKK Candidate Quote/Security Pipeline v0.6",
+  "扫描时间": "2026-05-10T17:35:47Z",
+  "输入文件": {
+    "候选状态": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/state_machine/candidate_states.json",
+    "信号汇总": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/candidate_signal_outputs/candidate_signal_summary.json"
+  },
+  "处理统计": {
+    "读取状态数": 1,
+    "PAPER_READY数量": 0,
+    "成功数量": 0,
+    "跳过数量": 1,
+    "失败数量": 0,
+    "READY_FOR_CONFIRMATION": 0,
+    "PAUSE": 0,
+    "BLOCK": 0
+  },
+  "处理结果": [],
+  "跳过结果": [
+    {
+      "代币地址": "J81YExNqSMwQHGMtPaBK9sUB6wHEPp1q2oBk7Nfwo111",
+      "代币符号": "IMGN",
+      "原状态": "WATCHING",
+      "原因": "不是 PAPER_READY，暂不进入报价/安全扫描层"
+    }
+  ],
+  "失败结果": [],
+  "说明": "PAPER_READY 后置只读报价与安全扫描管道；输出 READY_FOR_CONFIRMATION / PAUSE / BLOCK，不执行真实 swap。"
+}

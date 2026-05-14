@@ -1,0 +1,13 @@
+source_quality_model:
+  dimensions:
+    source_reliability_score: 0.25
+    source_timeliness_score: 0.2
+    source_identity_completeness_score: 0.25
+    source_replayability_score: 0.15
+    source_traceability_score: 0.15
+  quality_status:
+  - SOURCE_HIGH_CONFIDENCE
+  - SOURCE_USABLE
+  - SOURCE_USABLE_WITH_GAPS
+  - SOURCE_LOW_CONFIDENCE
+  - SOURCE_REJECTED

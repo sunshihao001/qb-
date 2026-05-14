@@ -1,0 +1,28 @@
+{
+  "phase": 9,
+  "name": "系统自我升级层",
+  "goal": "阈值校准、规则版本、模型淘汰、系统升级包",
+  "output_file": "rule_update_package.json",
+  "required_fields": [
+    "token_address",
+    "run_id",
+    "phase",
+    "status_code",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "hard_negative_trigger",
+    "confidence_level",
+    "missing_fields",
+    "source_files",
+    "handoff_to"
+  ],
+  "allowed_status_codes": [
+    "UPGRADE_PROPOSED",
+    "UPGRADE_REJECTED",
+    "UPGRADE_ACCEPTED",
+    "MODEL_RETIRED"
+  ],
+  "missing_policy": "缺失字段必须写 missing；自动推导写 系统推导",
+  "downstream": "audit_or_next_version"
+}

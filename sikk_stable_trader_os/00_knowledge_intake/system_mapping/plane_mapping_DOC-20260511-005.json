@@ -1,0 +1,32 @@
+{
+  "doc_id": "DOC-20260511-005",
+  "plane": "Domain Plane",
+  "position": "after Governance Plane before Data Plane",
+  "objects": [
+    "Token",
+    "Wallet",
+    "AddressGroup",
+    "TransactionEvent",
+    "MarketSnapshot",
+    "MarketScene",
+    "ChipState",
+    "DominantSide",
+    "Counterparty",
+    "GateDecision",
+    "RiskEvent",
+    "ExecutionTicket",
+    "PaperPosition",
+    "ReviewCase",
+    "RuleChange",
+    "SkillDecision",
+    "HandoffPacket"
+  ],
+  "outputs": [
+    "domain_object_registry.yaml",
+    "field_dictionary.yaml",
+    "state_dictionary.yaml",
+    "entity_relationship_map.md",
+    "domain_handoff_packet.json"
+  ],
+  "next_required_plane": "data_plane.md"
+}

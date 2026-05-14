@@ -1,0 +1,8 @@
+{
+  "phase_id": "F00",
+  "status": "TEST_REPLAY_PLANNED",
+  "test_command": "python3 -m pytest tests/test_f00_runner_binding.py tests/test_f00_safe_runner.py",
+  "replay_fixture": "/root/sikk-gmgn/tests/fixtures/her_document_function_system/f00_e2e_replay_fixture.json",
+  "expected_replay_status": "REPLAY_TESTED",
+  "generated_at": "2026-05-13T14:53:53+00:00"
+}

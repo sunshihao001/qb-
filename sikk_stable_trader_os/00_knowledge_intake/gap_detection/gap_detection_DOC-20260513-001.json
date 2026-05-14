@@ -1,0 +1,27 @@
+{
+  "doc_id": "DOC-20260513-001",
+  "status": "GAP_DETECTION_READY",
+  "blocking_gaps": [
+    {
+      "gap_id": "KV-K00-GAP-001",
+      "severity": "P0",
+      "description": "K00 output/handoff contracts do not yet require kv_cache_manifest.",
+      "required_fix": "Update K00 output contract and handoff schema."
+    },
+    {
+      "gap_id": "KV-K00-GAP-002",
+      "severity": "P0",
+      "description": "KV extractor/manifest writer runner is not implemented.",
+      "required_fix": "Add K00 KV extraction/writer tool and tests."
+    }
+  ],
+  "non_blocking_gaps": [
+    {
+      "gap_id": "KV-P09-GAP-001",
+      "severity": "P1",
+      "description": "Rule supersession/replay tracking via KV keys is not yet implemented.",
+      "required_fix": "Route to P09 after K00/P00 acceptance."
+    }
+  ],
+  "status_code": "KV_CACHE_METHOD_ACCEPTED_IMPLEMENTATION_REQUIRED"
+}

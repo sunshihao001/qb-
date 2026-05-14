@@ -1,0 +1,12 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+policy_id: RUNTIME_RISK_LIMIT_POLICY
+default_limits:
+  max_open_paper_positions: 5
+  max_candidates_per_cycle: 10
+  max_position_size_usd: 100
+  daily_max_failed_trades: 5
+  daily_max_loss_sol: null
+breach_action: BLOCK_RUNTIME
+stale_state_action: PAUSE_RUNTIME

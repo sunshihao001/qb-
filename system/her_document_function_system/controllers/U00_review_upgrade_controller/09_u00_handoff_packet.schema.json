@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U00 Handoff Packet",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "handoff_type",
+    "review_case_refs",
+    "root_cause_refs",
+    "upgrade_candidate_refs",
+    "upgrade_queue_item_refs",
+    "target_controller",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "handoff_status"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "from_phase": {
+      "const": "U00"
+    },
+    "to_phase": {
+      "type": "string"
+    },
+    "handoff_type": {
+      "type": "string",
+      "enum": [
+        "U00_TO_K00_HANDOFF",
+        "U00_TO_F00_HANDOFF",
+        "U00_TO_V00_HANDOFF",
+        "U00_TO_R00_HANDOFF",
+        "U00_TO_G00_HANDOFF",
+        "U00_TO_BACKLOG_HANDOFF"
+      ]
+    },
+    "review_case_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "root_cause_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "upgrade_candidate_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "upgrade_queue_item_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "target_controller": {
+      "type": "string"
+    },
+    "target_assets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "required_changes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "P0_CRITICAL",
+        "P1_HIGH",
+        "P2_MEDIUM",
+        "P3_LOW",
+        "P4_BACKLOG"
+      ]
+    },
+    "allowed_next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "handoff_status": {
+      "type": "string",
+      "enum": [
+        "HANDOFF_READY",
+        "HANDOFF_BLOCKED",
+        "HANDOFF_WITH_GAPS"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

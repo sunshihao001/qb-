@@ -1,0 +1,22 @@
+{
+  "doc_id": "doc_h00_handoff_downstream_queue_controller_adc4c5f87f2e",
+  "gaps": [
+    {
+      "gap_id": "gap_h00_001",
+      "gap_type": "missing_real_a00_handoff_sample",
+      "gap_level": "HIGH_GAP",
+      "description": "No real A00 handoff/readiness certificate sample is available, so only controller asset creation can be tested; real H00 queue replay cannot be claimed.",
+      "blocking_for": "H00_REAL_QUEUE_REPLAY",
+      "can_continue_controller_asset_creation": true
+    },
+    {
+      "gap_id": "gap_h00_002",
+      "gap_type": "missing_downstream_target_capability_registry",
+      "gap_level": "MEDIUM_GAP",
+      "description": "No existing PXX/IXX/Runner target capability registry found; H00 schema will define required shape but cannot validate real target readiness.",
+      "blocking_for": "REAL_DOWNSTREAM_DISPATCH",
+      "can_continue_controller_asset_creation": true
+    }
+  ],
+  "status": "K00_READY_WITH_GAPS"
+}

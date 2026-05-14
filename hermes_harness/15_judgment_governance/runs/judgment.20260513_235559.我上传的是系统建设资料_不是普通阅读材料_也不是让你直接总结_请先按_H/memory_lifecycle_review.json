@@ -1,0 +1,8 @@
+{
+  "memory_action": "queue_unverified",
+  "scope": "hermes_harness_judgment_governance",
+  "staleness_risk": "medium",
+  "conflict_risk": "low",
+  "decay_condition": "if route/schema names change or governance hook is superseded",
+  "verified_memory_allowed": false
+}

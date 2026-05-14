@@ -1,0 +1,25 @@
+meta:
+  standard_id: S00_RUNNER_OUTPUT_CONTRACT_MAP
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+maps:
+- runner_id: RUNNER_SIKK_LIVE_RUN_LEGACY
+  output_contract: legacy_runtime_output_contract
+  phase: LEGACY_RUNTIME_COMPAT_TO_P01_P08_REVIEW
+- runner_id: RUNNER_GMGN_PIPELINE_LEGACY
+  output_contract: legacy_runtime_output_contract
+  phase: LEGACY_RUNTIME_COMPAT
+- runner_id: RUNNER_FULL_SYSTEM_RUNNER
+  output_contract: full_system_replay_output_contract
+  phase: P01_P10_REPLAY
+- runner_id: RUNNER_PHASE_RUNNER
+  output_contract: phase_output_contract
+  phase: P01_P10

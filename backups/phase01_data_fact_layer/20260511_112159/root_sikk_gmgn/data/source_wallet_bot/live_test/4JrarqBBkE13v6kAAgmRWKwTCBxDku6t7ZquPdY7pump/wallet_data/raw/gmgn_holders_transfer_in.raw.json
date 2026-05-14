@@ -1,0 +1,31 @@
+{
+  "source": "gmgn",
+  "endpoint": "holders_transfer_in",
+  "required": false,
+  "command_redacted": [
+    "gmgn-cli",
+    "token",
+    "holders",
+    "--chain",
+    "sol",
+    "--address",
+    "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+    "--limit",
+    "8",
+    "--tag",
+    "transfer_in",
+    "--order-by",
+    "amount_percentage",
+    "--direction",
+    "desc",
+    "--raw"
+  ],
+  "started_at": "2026-05-11T10:29:10Z",
+  "finished_at": "2026-05-11T10:29:10Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "list": []
+  }
+}

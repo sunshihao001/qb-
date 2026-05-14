@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F00 Rule Logic Schema",
+  "type": "object",
+  "required": [
+    "rule_id",
+    "rule_type",
+    "input_fields",
+    "calculation_method",
+    "threshold_or_condition",
+    "positive_evidence",
+    "counter_evidence",
+    "confidence_logic",
+    "failure_condition",
+    "output_status",
+    "trace_required"
+  ],
+  "properties": {
+    "rule_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rule_type": {
+      "type": "string"
+    },
+    "input_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "calculation_method": {
+      "type": "string"
+    },
+    "threshold_or_condition": {
+      "type": "string"
+    },
+    "positive_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "counter_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence_logic": {
+      "type": "string"
+    },
+    "failure_condition": {
+      "type": "string"
+    },
+    "output_status": {
+      "type": "string"
+    },
+    "trace_required": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

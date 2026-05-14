@@ -1,0 +1,140 @@
+interface_id: GMGN_OKX_SKILL_DATA_INTERFACE_V1
+system: SIKK_STABLE_TRADER_OS
+status: STANDARD_BINDING_READY_VALIDATOR_ONLY
+created_by: HER-GMGN-OKX-SKILL-BINDING-20260513
+runtime_boundary: OBSERVE_PAPER_ONLY
+purpose: >-
+  Bind Stable Trader OS source-data phases to the already-existing GMGN/OKX read-only
+  skill/tool capability layer as the canonical external data interface. This registry prevents
+  Phase Controllers from treating GMGN/OKX as vague documents or optional notes.
+canonical_adapter:
+  module: modules.source_wallet_bot.gmgn_okx_readonly_adapter
+  callable_raw_snapshot: collect_token_raw_snapshot
+  callable_stage_outputs: run_readonly_adapter_for_token
+  callable_wallet_rows: collect_wallet_structure_rows_for_token
+  source_wallet_bot_output_root: data/source_wallet_bot/<mode>/<token_address>/
+skill_bindings:
+  gmgn-token:
+    provider: GMGN
+    mode: read_only
+    cli: gmgn-cli
+    allowed_operations:
+      - token info
+      - token security
+      - token pool
+      - token holders
+      - token traders
+      - market kline
+    forbidden_operations:
+      - swap
+      - order
+      - execute
+      - sign
+      - broadcast
+      - private_key
+    consumed_by_phases:
+      - P01_candidate_intake
+      - P02_source_data_fact
+      - P03_wallet_entity
+      - P04_chip_structure
+      - P05_evidence
+      - P06_scenario_recognition
+  okx-dex-token:
+    provider: OKX
+    mode: read_only
+    cli: onchainos
+    allowed_operations:
+      - token search
+      - token info
+      - token price-info
+      - token liquidity
+      - token advanced-info
+      - token holders
+      - token top-trader
+      - token cluster-overview
+      - token cluster-top-holders
+      - token cluster-list
+      - market kline
+      - market price
+    forbidden_operations:
+      - swap
+      - order
+      - execute
+      - sign
+      - broadcast
+      - private_key
+    consumed_by_phases:
+      - P01_candidate_intake
+      - P02_source_data_fact
+      - P04_chip_structure
+      - P05_evidence
+      - P06_scenario_recognition
+  okx-security:
+    provider: OKX
+    mode: read_only
+    cli: onchainos
+    allowed_operations:
+      - security token-scan
+    forbidden_operations:
+      - approve
+      - revoke
+      - sign
+      - broadcast
+      - private_key
+    consumed_by_phases:
+      - P02_source_data_fact
+      - P05_evidence
+phase_binding:
+  P01_candidate_intake:
+    role: candidate discovery / token identity background
+    required_skills:
+      - gmgn-token
+      - okx-dex-token
+    output_fields:
+      - token_address
+      - chain
+      - discovered_at
+      - symbol
+      - source_skill
+      - evidence_refs
+  P02_source_data_fact:
+    role: canonical raw-to-fact source collector
+    required_skills:
+      - gmgn-token
+      - okx-dex-token
+      - okx-security
+    adapter_module: modules.source_wallet_bot.gmgn_okx_readonly_adapter
+    standard_outputs:
+      - wallet_data/raw/*.raw.json
+      - wallet_data/normalized/gmgn_okx_raw_stage_outputs.json
+      - structure_analysis/intelligence/stage_outputs.jsonl
+      - manifest/token_output_manifest.json
+  P03_wallet_entity:
+    role: consume normalized wallet rows from P02, not direct external API unless P02 handoff accepted
+    input_from: P02_source_data_fact
+  P04_chip_structure:
+    role: consume GMGN holders/traders and OKX holder/cluster facts through normalized P02 handoff
+    input_from: P02_source_data_fact
+  P05_evidence:
+    role: aggregate evidence_refs and source_skill fields into evidence matrix
+    input_from:
+      - P02_source_data_fact
+      - P03_wallet_entity
+      - P04_chip_structure
+quality_rules:
+  - id: Q01_NO_DIRECT_DOWNSTREAM_API_BYPASS
+    rule: Downstream P03-P10 must consume P02 normalized handoff, not directly call GMGN/OKX, unless a later controller explicitly declares a read-only enrichment step.
+  - id: Q02_SOURCE_SKILL_REQUIRED
+    rule: Every GMGN/OKX-derived stage output must include source_skill and evidence_refs.
+  - id: Q03_MISSING_IS_GAP
+    rule: Missing GMGN/OKX fields must be recorded as explicit gaps; never guess values.
+  - id: Q04_DUAL_SOURCE_CONFLICT_DOWNGRADE
+    rule: GMGN/OKX conflicting values downgrade confidence and require evidence_refs for both sources.
+  - id: Q05_NO_TRADE_CAPABILITY
+    rule: The interface is read-only and cannot enable private keys, signing, broadcast, swap, order, live execution, or paper runtime start.
+acceptance_checks:
+  - system/data_interfaces/gmgn_okx_skill_interface.yaml exists
+  - modules/source_wallet_bot/gmgn_okx_readonly_adapter.py exists
+  - P02 controller declares data_interface_binding GMGN_OKX_SKILL_DATA_INTERFACE_V1
+  - P02 contracts expose data_interface/source_skill/evidence_refs requirements
+  - validator passes without calling network or starting runtime

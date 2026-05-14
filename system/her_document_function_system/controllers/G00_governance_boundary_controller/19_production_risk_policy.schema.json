@@ -1,0 +1,28 @@
+{
+  "title": "Production Risk Policy",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "risk_rules",
+    "status"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "risk_rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PENDING",
+        "DEPRECATED"
+      ]
+    }
+  }
+}

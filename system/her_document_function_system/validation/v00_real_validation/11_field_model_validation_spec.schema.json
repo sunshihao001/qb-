@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "required": [
+    "validation_type",
+    "status",
+    "total_fields",
+    "valid_fields",
+    "invalid_fields",
+    "warnings"
+  ],
+  "properties": {
+    "validation_type": {
+      "const": "field_model_validation"
+    },
+    "status": {
+      "type": "string"
+    },
+    "total_fields": {
+      "type": "integer"
+    },
+    "valid_fields": {
+      "type": "integer"
+    },
+    "invalid_fields": {
+      "type": "integer"
+    },
+    "warnings": {
+      "type": "array"
+    }
+  }
+}

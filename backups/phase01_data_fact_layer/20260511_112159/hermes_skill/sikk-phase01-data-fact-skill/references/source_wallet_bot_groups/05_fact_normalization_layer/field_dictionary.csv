@@ -1,0 +1,30 @@
+field_name,chinese_name,data_type,source,required,example,description,used_for,missing_policy
+token_address,代币地址,string,GMGN token / chain,true,So11111111111111111111111111111111111111112,Token mint/contract address.,token identity / joins,missing
+token_symbol,代币符号,string,GMGN token,false,SIKK,Display symbol from GMGN or token metadata.,display / reports,unknown
+wallet_address,钱包地址,string,GMGN wallet / chain,true,7xK...abc,Wallet address being profiled.,wallet identity / joins,missing
+first_buy_time,首次买入时间,datetime,GMGN wallet trade / DEX swap,true,2026-05-02T05:00:00Z,First observed buy time for this wallet on current token.,single wallet cost / early wallet detection,missing
+buy_count,买入次数,integer,GMGN wallet trade / trader detail,true,3,Number of buy swaps/trades.,buy behavior,missing
+sell_count,卖出次数,integer,GMGN wallet trade / trader detail,true,1,Number of sell swaps/trades.,sell behavior / exit status,missing
+realized_profit,已实现利润,number,GMGN trader detail,false,12.4,Realized PnL after sells.,result wallet / pnl,unknown
+unrealized_profit,未实现利润,number,GMGN trader detail,false,3.2,Current unrealized PnL for remaining balance.,remaining position pnl,unknown
+total_profit,总利润,number,GMGN trader detail,false,15.6,Realized plus unrealized profit.,high result wallet,unknown
+pnl_multiple,盈亏倍数,number,GMGN trader detail,false,2.7,PnL multiple relative to cost.,high result wallet,unknown
+gmgn_tags,GMGN 标签,array[string],GMGN wallet profile,false,"[""smart"", ""fresh""]",GMGN labels/tags preserved as evidence hints.,role hints / watchlist,unknown
+native_transfer.from_address,原生币转入来源地址,string,chain native transfer,false,9abc...fund,Funding source for native token transfer.,funding source evidence,missing
+native_transfer.amount,原生币转账数量,number,chain native transfer,false,1.25,Native token funding amount.,funding amount evidence,missing
+native_transfer.time,原生币转账时间,datetime,chain native transfer,false,2026-05-02T04:58:10Z,Funding transfer timestamp.,funding time alignment,missing
+sell_amount_percentage,卖出金额占比,number,GMGN trader detail / normalized,false,42.5,Sold amount percentage used for distribution progress.,distribution / partial exit,unknown
+amount_percentage,持仓/转账占比,number,GMGN holder / transfer normalized,false,8.2,Wallet amount or transfer share percentage.,concentration / transfer weight,unknown
+transfer_in.from_address,Token 转入来源地址,string,chain token transfer,false,source_wallet,Token source wallet for incoming token transfers.,token source evidence,missing
+transfer_out.to_address,Token 转出目标地址,string,chain token transfer,false,receiver_wallet,Recipient wallet for outgoing token transfers.,distribution path evidence,missing
+wallet_age_days,钱包年龄天数,number,wallet profile,false,12.5,Age of wallet in days.,fresh wallet / risk,unknown
+wallet_first_seen_time,钱包首次出现时间,datetime,wallet profile / chain,false,2026-04-20T00:00:00Z,Earliest observed activity time for wallet.,wallet age / recurrence,missing
+wallet_last_active_time,钱包最后活跃时间,datetime,wallet profile / chain,false,2026-05-02T05:30:00Z,Latest observed activity time for wallet.,activity freshness,missing
+total_token_count,历史持有代币总数,integer,wallet profile,false,31,Total tokens historically interacted with.,wallet profile,unknown
+traded_token_count,历史交易代币数,integer,wallet profile,false,18,Number of tokens traded.,wallet sophistication,unknown
+funding_source_address,资金来源地址,string,funding flow normalized,false,funding_wallet,Candidate funding source address.,same-source / fund source,missing
+token_transfer_edges,Token 转账边,array[object],chain token transfer graph,false,"[{""from"":""A"",""to"":""B"",""amount"":100}]",Directed token transfer evidence graph.,distribution / same-source graph,missing
+backflow_address,利润回流地址,string,backflow path normalized,false,profit_receiver,Candidate address receiving profit/backflow.,疑似利润回收钱包,missing
+cross_token_reappearance,跨币种复现,boolean|object,historical address registry,false,true,Historical recurrence across tokens.,historical recurrence,unknown
+wallet_snapshot_time,钱包快照时间,datetime,SIKK normalized,true,2026-05-02T05:00:00Z,Normalized wallet evidence snapshot time.,time alignment / evidence packet,missing
+raw_snapshot_time,原始快照时间,datetime,GMGN/raw response,true,2026-05-02T05:00:00Z,Raw provider/chain snapshot time.,raw evidence traceability,missing

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SIKK wallet_structure input schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "token_address",
+    "chain",
+    "analysis_time"
+  ],
+  "properties": {
+    "token_address": {
+      "type": "string",
+      "minLength": 32,
+      "maxLength": 64
+    },
+    "token_symbol": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "chain": {
+      "type": "string",
+      "enum": [
+        "sol"
+      ]
+    },
+    "discovery_time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "analysis_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "analysis_window": {
+      "type": "string",
+      "enum": [
+        "W1_0_5m",
+        "W2_5_15m",
+        "W3_15_30m",
+        "W4_30_60m",
+        "W5_1_6h",
+        "W6_6_24h",
+        "CUSTOM"
+      ]
+    },
+    "max_wallets": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 500,
+      "default": 100
+    },
+    "include_holders": {
+      "type": "boolean",
+      "default": true
+    },
+    "include_traders": {
+      "type": "boolean",
+      "default": true
+    },
+    "include_fresh": {
+      "type": "boolean",
+      "default": true
+    },
+    "include_bundler": {
+      "type": "boolean",
+      "default": true
+    },
+    "include_transfer_in": {
+      "type": "boolean",
+      "default": true
+    },
+    "include_smart": {
+      "type": "boolean",
+      "default": true
+    },
+    "include_rat": {
+      "type": "boolean",
+      "default": true
+    },
+    "include_funding_source": {
+      "type": "boolean",
+      "default": false
+    },
+    "include_token_flow": {
+      "type": "boolean",
+      "default": false
+    },
+    "update_history": {
+      "type": "boolean",
+      "default": false
+    },
+    "output_gmgn_notes": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

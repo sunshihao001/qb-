@@ -1,0 +1,13 @@
+p09_review_replay_input_packet:
+  packet_id: I04_TO_P09_INPUT_20260512_01
+  source_controller: I04_PAPER_RUNTIME_INTEGRATION
+  trace_id: I04_TRACE_20260512_01
+  inputs:
+  - /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/acceptance/i04_acceptance_result.yaml
+  - /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/reports/i04_paper_runtime_integration_report.md
+  - /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/trace/i04_runtime_trace.yaml
+  payload_types:
+  - paper_runtime_acceptance_result
+  - runtime_report
+  - runtime_trace
+  paper_only: true

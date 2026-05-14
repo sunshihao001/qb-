@@ -1,0 +1,48 @@
+{
+  "duplicate_record_id": "DOC-20260511-003-DUP-001",
+  "canonical_doc_id": "DOC-20260511-003",
+  "source_name": "r OS 的系统方法论总纲_.md",
+  "original_cache_path": "/root/.hermes/cache/documents/doc_f19952e9be7c_r OS 的系统方法论总纲。.md",
+  "raw_path": "00_knowledge_intake/raw_inputs/DOC-20260511-003-DUP-001.md",
+  "received_at": "2026-05-11T12:55:00Z",
+  "sha256": "5bad928e6b4e279cff5ea1c7ad65cf39f916ec2633bf8a9c6e6317131b9357bc",
+  "classification": "DUPLICATE_OF_DOC-20260511-003",
+  "decision": "do_not_create_new_canonical_doc_id; link_to_existing_k00_intake",
+  "reason": "latest upload hash matches existing DOC-20260511-003 source hash; all methodology anchors are present in the uploaded document",
+  "k00_handling": [
+    "preserve_raw_input_copy",
+    "register_duplicate_alias",
+    "verify_methodology_anchors",
+    "link_to_existing_passport_index_mapping_gap_task_handoff",
+    "update_phase_state_duplicate_records"
+  ],
+  "anchor_completion_requirements": [
+    "系统不是预测器，而是控制系统",
+    "HER 是调度、执行、验收、状态回写和交接核心",
+    "9 个底层方法论模型",
+    "9 个系统平面",
+    "P00-P09 阶段职责",
+    "阶段 × 系统平面矩阵",
+    "领域对象建模要求",
+    "状态机模型",
+    "硬否定原则",
+    "Atomic Skill 抽取原则",
+    "HER 执行协议",
+    "后续派生文件顺序",
+    "固定建设顺序",
+    "governance_plane.md as next derived file"
+  ],
+  "linked_assets": {
+    "canonical_raw": "00_knowledge_intake/raw_inputs/DOC-20260511-003.md",
+    "canonical_blueprint": "00_methodology/system_methodology_blueprint.md",
+    "passport": "00_knowledge_intake/document_passports/document_passport_DOC-20260511-003.yaml",
+    "corpus_index": "00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-003.json",
+    "plane_mapping": "00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-003.json",
+    "phase_mapping": "00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-003.json",
+    "gap_detection": "00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-003.json",
+    "task_package": "00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-003.json",
+    "handoff_packet": "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-003.json"
+  },
+  "blocking_gap_count": 0,
+  "next_recommended_artifact": "00_governance/governance_plane.md"
+}

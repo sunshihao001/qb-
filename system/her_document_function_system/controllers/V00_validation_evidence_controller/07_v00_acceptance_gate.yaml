@@ -1,0 +1,34 @@
+phase_id: V00
+acceptance_gate_name: v00_validation_evidence_gate
+must_pass:
+  - f00_handoff_loaded
+  - function_mapping_validated
+  - field_model_validated
+  - rule_logic_validated
+  - schema_validated_if_schema_present
+  - contract_validated
+  - patch_evidence_validated_if_implementation_claimed
+  - test_evidence_generated_if_functional_change
+  - replay_evidence_generated_professional_grade
+  - trace_audit_written
+  - gap_failure_classified
+  - acceptance_result_generated
+  - handoff_packet_generated
+status_rules:
+  V00_ACCEPTED: core_validation_passed_and_no_blocking_gap
+  V00_READY_WITH_GAPS: core_validation_passed_with_non_blocking_gaps
+  V00_BLOCKED: blocking_gap_exists
+  V00_REJECTED: invalid_or_missing_f00_input
+anti_false_pass_rules:
+  - test_plan_only_is_TEST_PLANNED_not_TESTED
+  - replay_plan_only_is_REPLAY_PLANNED_not_REPLAY_TESTED
+  - schema_plan_only_is_not_SCHEMA_VALIDATED
+  - contract_plan_only_is_not_CONTRACT_VALIDATED
+  - natural_language_rule_only_is_not_RULE_LOGIC_VALIDATED
+  - field_without_source_is_not_FIELD_MODEL_VALIDATED
+  - patch_without_modified_files_or_diff_is_not_PATCH_EVIDENCE_VALIDATED
+  - missing_trace_or_audit_blocks_V00_ACCEPTED
+forbidden_next_actions:
+  - live_runtime
+  - wallet_signing
+  - auto_deploy

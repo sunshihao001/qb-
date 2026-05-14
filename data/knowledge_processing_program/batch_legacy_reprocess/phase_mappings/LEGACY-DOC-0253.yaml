@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0253
+source_path: sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-003.md
+phase_scores:
+  P01: 3
+  P02: 1
+  P03: 11
+  P04: 10
+  P05: 11
+  P06: 5
+  P07: 16
+  P08: 11
+  P09: 14
+  P10: 8
+primary_phase: P07
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

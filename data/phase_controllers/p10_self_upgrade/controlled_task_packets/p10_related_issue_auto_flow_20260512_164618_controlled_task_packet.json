@@ -1,0 +1,77 @@
+{
+  "task_packet_id": "p10_related_issue_auto_flow_20260512_164618_controlled_task_packet",
+  "generated_at": "2026-05-12T16:46:18Z",
+  "source_task_id": "p10_related_issue_auto_flow_20260512_164618",
+  "task_scope": {
+    "target_repo_root": "/root/sikk-gmgn",
+    "target_system_dirs": [
+      "/root/sikk-gmgn/system/phase_controllers/p10_self_upgrade_controller"
+    ],
+    "target_data_dirs": [
+      "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade"
+    ],
+    "target_files_to_create_or_modify": [
+      "/root/sikk-gmgn/research_loop/task_packages/pending/p10_related_issue_auto_flow_20260512_164618/problem_inventory.json",
+      "/root/sikk-gmgn/research_loop/task_packages/pending/p10_related_issue_auto_flow_20260512_164618/execution_flow_plan.json",
+      "/root/sikk-gmgn/research_loop/task_packages/pending/p10_related_issue_auto_flow_20260512_164618/next_actions.md",
+      "/root/sikk-gmgn/system/phase_controllers/p10_self_upgrade_controller/p10_related_issue_auto_flow_policy.yaml",
+      "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/controlled_task_packets/p10_related_issue_auto_flow_20260512_164618_controlled_task_packet.json",
+      "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/upgrade_backlog/p10_related_issue_auto_flow_20260512_164618_upgrade_backlog_record.json",
+      "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/gaps/p10_related_issue_auto_flow_20260512_164618_gap_register.json",
+      "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/handoff/p10_related_issue_auto_flow_20260512_164618_handoff_packet.json",
+      "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/acceptance/p10_related_issue_auto_flow_20260512_164618_acceptance_result.json",
+      "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/reports/p10_related_issue_auto_flow_20260512_164618_report.md"
+    ]
+  },
+  "implementation_tasks": [
+    {
+      "task_id": "TASK_P0_ISSUE_INVENTORY",
+      "task_type": "CREATE_FILE",
+      "target_file": "/root/sikk-gmgn/research_loop/task_packages/pending/p10_related_issue_auto_flow_20260512_164618/problem_inventory.json",
+      "instruction_cn": "建立P10后续相关问题清单并按P0/P1/P2排序。",
+      "acceptance_check_cn": "每个问题具有id、priority、category、status、automation_action。"
+    },
+    {
+      "task_id": "TASK_P0_FLOW_PLAN",
+      "task_type": "CREATE_FILE",
+      "target_file": "/root/sikk-gmgn/research_loop/task_packages/pending/p10_related_issue_auto_flow_20260512_164618/execution_flow_plan.json",
+      "instruction_cn": "建立全自动流程规划，明确批次、门控和禁止路线。",
+      "acceptance_check_cn": "包含I01-I05后续路线且禁止P11/实盘/自动部署。"
+    },
+    {
+      "task_id": "TASK_P0_SYSTEM_DATA_LANDING",
+      "task_type": "UPDATE_INDEX",
+      "target_file": "/root/sikk-gmgn/data/phase_controllers/p10_self_upgrade/upgrade_backlog/p10_related_issue_auto_flow_20260512_164618_upgrade_backlog_record.json",
+      "instruction_cn": "将问题清单落地到P10升级待办与gap register。",
+      "acceptance_check_cn": "P10 data目录内存在backlog/gap/trace/handoff/acceptance/report记录。"
+    },
+    {
+      "task_id": "TASK_P1_RUNNER_GOVERNANCE_QUEUE",
+      "task_type": "UPDATE_POLICY",
+      "target_file": "/root/sikk-gmgn/system/phase_controllers/p10_self_upgrade_controller/p10_related_issue_auto_flow_policy.yaml",
+      "instruction_cn": "把Runner/Governance/CI缺口作为受控后续任务，不执行部署。",
+      "acceptance_check_cn": "policy明确downstream_allowed且安全边界为false。"
+    }
+  ],
+  "validation_commands": [
+    {
+      "command_cn": "验证P10相关问题自动流程任务包",
+      "command": "python3 scripts/validate_p10_related_issue_auto_flow.py",
+      "expected_result_cn": "PASS"
+    }
+  ],
+  "required_reports": [
+    "problem_inventory_report",
+    "task_results_report",
+    "gap_register",
+    "handoff_packet",
+    "acceptance_result"
+  ],
+  "execution_constraints": {
+    "stop_if_tests_fail": true,
+    "stop_if_trace_breaks": true,
+    "stop_if_handoff_breaks": true,
+    "stop_if_live_execution_path_detected": true,
+    "no_auto_deploy": true
+  }
+}

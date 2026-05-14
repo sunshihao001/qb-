@@ -1,0 +1,173 @@
+{
+  "queue_id": "u00_upgrade_queue_U00-P01-AUTO-FULL-20260514-005",
+  "queue_items": [
+    {
+      "queue_item_id": "u00_queue_001",
+      "upgrade_candidate_id": "uc_u00_real_001",
+      "target_controller": "G00",
+      "handoff_target": "G00",
+      "priority": "P1_HIGH",
+      "status": "QUEUED_FOR_DOWNSTREAM_REVIEW",
+      "allowed_actions": [
+        "read_evidence",
+        "validate_contract",
+        "plan_safe_upgrade",
+        "write_downstream_acceptance"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_downstream_task_directly",
+        "modify_production_rules_directly",
+        "drop_unresolved_gaps",
+        "convert_ready_with_gaps_to_ready"
+      ],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    },
+    {
+      "queue_item_id": "u00_queue_002",
+      "upgrade_candidate_id": "uc_u00_real_002",
+      "target_controller": "H00_REAL_DOWNSTREAM_QUEUE",
+      "handoff_target": "H00_REAL_DOWNSTREAM_QUEUE",
+      "priority": "P2_MEDIUM",
+      "status": "QUEUED_FOR_DOWNSTREAM_REVIEW",
+      "allowed_actions": [
+        "read_evidence",
+        "validate_contract",
+        "plan_safe_upgrade",
+        "write_downstream_acceptance"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_downstream_task_directly",
+        "modify_production_rules_directly",
+        "drop_unresolved_gaps",
+        "convert_ready_with_gaps_to_ready"
+      ],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    },
+    {
+      "queue_item_id": "u00_queue_003",
+      "upgrade_candidate_id": "uc_u00_real_003",
+      "target_controller": "H00_REAL_DOWNSTREAM_QUEUE",
+      "handoff_target": "H00_REAL_DOWNSTREAM_QUEUE",
+      "priority": "P2_MEDIUM",
+      "status": "QUEUED_FOR_DOWNSTREAM_REVIEW",
+      "allowed_actions": [
+        "read_evidence",
+        "validate_contract",
+        "plan_safe_upgrade",
+        "write_downstream_acceptance"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_downstream_task_directly",
+        "modify_production_rules_directly",
+        "drop_unresolved_gaps",
+        "convert_ready_with_gaps_to_ready"
+      ],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    },
+    {
+      "queue_item_id": "u00_queue_004",
+      "upgrade_candidate_id": "uc_u00_real_004",
+      "target_controller": "H00_REAL_DOWNSTREAM_QUEUE",
+      "handoff_target": "H00_REAL_DOWNSTREAM_QUEUE",
+      "priority": "P2_MEDIUM",
+      "status": "QUEUED_FOR_DOWNSTREAM_REVIEW",
+      "allowed_actions": [
+        "read_evidence",
+        "validate_contract",
+        "plan_safe_upgrade",
+        "write_downstream_acceptance"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_downstream_task_directly",
+        "modify_production_rules_directly",
+        "drop_unresolved_gaps",
+        "convert_ready_with_gaps_to_ready"
+      ],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    },
+    {
+      "queue_item_id": "u00_queue_005",
+      "upgrade_candidate_id": "uc_u00_real_005",
+      "target_controller": "H00_REAL_DOWNSTREAM_QUEUE",
+      "handoff_target": "H00_REAL_DOWNSTREAM_QUEUE",
+      "priority": "P2_MEDIUM",
+      "status": "QUEUED_FOR_DOWNSTREAM_REVIEW",
+      "allowed_actions": [
+        "read_evidence",
+        "validate_contract",
+        "plan_safe_upgrade",
+        "write_downstream_acceptance"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_downstream_task_directly",
+        "modify_production_rules_directly",
+        "drop_unresolved_gaps",
+        "convert_ready_with_gaps_to_ready"
+      ],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    },
+    {
+      "queue_item_id": "u00_queue_006",
+      "upgrade_candidate_id": "uc_u00_real_006",
+      "target_controller": "R00",
+      "handoff_target": "R00",
+      "priority": "P1_HIGH",
+      "status": "QUEUED_FOR_DOWNSTREAM_REVIEW",
+      "allowed_actions": [
+        "read_evidence",
+        "validate_contract",
+        "plan_safe_upgrade",
+        "write_downstream_acceptance"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_downstream_task_directly",
+        "modify_production_rules_directly",
+        "drop_unresolved_gaps",
+        "convert_ready_with_gaps_to_ready"
+      ],
+      "evidence_refs": [
+        "/root/sikk-gmgn/data/her_document_function_system/h00_real_queue_runs/H00-P01-AUTO-FULL-20260514-001/handoff_packets/h00_to_u00_handoff_packet.json"
+      ]
+    }
+  ],
+  "priority_summary": {
+    "P1_HIGH": 2,
+    "P2_MEDIUM": 4
+  },
+  "blocked_items": [],
+  "deferred_items": []
+}

@@ -1,0 +1,33 @@
+domain_objects:
+  - object_id: token
+    status: REGISTERED
+  - object_id: wallet
+    status: REGISTERED
+  - object_id: wallet_entity
+    status: REGISTERED
+  - object_id: same_source_group
+    status: REGISTERED
+  - object_id: funding_source
+    status: REGISTERED
+  - object_id: chip_cluster
+    status: REGISTERED
+  - object_id: early_wallet_group
+    status: REGISTERED
+  - object_id: dominant_side
+    status: REGISTERED
+  - object_id: counterparty_group
+    status: REGISTERED
+  - object_id: market_structure
+    status: REGISTERED
+  - object_id: scenario
+    status: REGISTERED
+  - object_id: strategy_candidate
+    status: REGISTERED
+  - object_id: execution_risk
+    status: REGISTERED
+  - object_id: paper_trade
+    status: REGISTERED
+  - object_id: review_case
+    status: REGISTERED
+  - object_id: upgrade_candidate
+    status: REGISTERED

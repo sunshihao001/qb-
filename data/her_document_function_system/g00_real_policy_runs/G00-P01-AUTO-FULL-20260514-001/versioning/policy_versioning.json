@@ -1,0 +1,75 @@
+{
+  "versioning_id": "policy_versioning_G00-P01-AUTO-FULL-20260514-001",
+  "versioning_rules": {
+    "semantic_versioning": true,
+    "silent_overwrite_allowed": false,
+    "deprecated_policy_requires_record": true,
+    "policy_change_requires_evidence_ref": true,
+    "weakening_forbidden_actions_requires_rejection": true
+  },
+  "policy_versions": [
+    {
+      "policy_id": "forbidden_action_policy_v1",
+      "version": "1.0.0",
+      "status": "LOCAL_ACTIVE_WITH_GAPS",
+      "supersedes": null,
+      "change_reason": "Initial real governance policy registry from U00 review candidates",
+      "source_handoff": "u00_to_g00_handoff_packet",
+      "created_at": "2026-05-14T05:02:44+00:00"
+    },
+    {
+      "policy_id": "status_code_policy_v1",
+      "version": "1.0.0",
+      "status": "LOCAL_ACTIVE_WITH_GAPS",
+      "supersedes": null,
+      "change_reason": "Initial real governance policy registry from U00 review candidates",
+      "source_handoff": "u00_to_g00_handoff_packet",
+      "created_at": "2026-05-14T05:02:44+00:00"
+    },
+    {
+      "policy_id": "evidence_policy_v1",
+      "version": "1.0.0",
+      "status": "LOCAL_ACTIVE_WITH_GAPS",
+      "supersedes": null,
+      "change_reason": "Initial real governance policy registry from U00 review candidates",
+      "source_handoff": "u00_to_g00_handoff_packet",
+      "created_at": "2026-05-14T05:02:44+00:00"
+    },
+    {
+      "policy_id": "gap_policy_v1",
+      "version": "1.0.0",
+      "status": "LOCAL_ACTIVE_WITH_GAPS",
+      "supersedes": null,
+      "change_reason": "Initial real governance policy registry from U00 review candidates",
+      "source_handoff": "u00_to_g00_handoff_packet",
+      "created_at": "2026-05-14T05:02:44+00:00"
+    },
+    {
+      "policy_id": "runner_safety_policy_v1",
+      "version": "1.0.0",
+      "status": "LOCAL_ACTIVE_WITH_GAPS",
+      "supersedes": null,
+      "change_reason": "Initial real governance policy registry from U00 review candidates",
+      "source_handoff": "u00_to_g00_handoff_packet",
+      "created_at": "2026-05-14T05:02:44+00:00"
+    },
+    {
+      "policy_id": "human_confirmation_policy_v1",
+      "version": "1.0.0",
+      "status": "LOCAL_ACTIVE_WITH_GAPS",
+      "supersedes": null,
+      "change_reason": "Initial real governance policy registry from U00 review candidates",
+      "source_handoff": "u00_to_g00_handoff_packet",
+      "created_at": "2026-05-14T05:02:44+00:00"
+    },
+    {
+      "policy_id": "production_risk_policy_v1",
+      "version": "1.0.0",
+      "status": "LOCAL_ACTIVE_WITH_GAPS",
+      "supersedes": null,
+      "change_reason": "Initial real governance policy registry from U00 review candidates",
+      "source_handoff": "u00_to_g00_handoff_packet",
+      "created_at": "2026-05-14T05:02:44+00:00"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "run_id": "TEST-KPP-TELEGRAM-UPLOAD",
+  "doc_id": "TEST-KPP-TELEGRAM-DOC",
+  "handoff_status": "READY_FOR_K08_INDEX_AND_QUEUE",
+  "artifact_index": {
+    "K00": [
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K00/run_request.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K00/raw_source_manifest.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K00/source_registry_entry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K00/k00_state.json"
+    ],
+    "K01": [
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K01/document_passport.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K01/document_type_classification.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K01/k01_state.json"
+    ],
+    "K02": [
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K02/semantic_chunk_index.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K02/concept_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K02/method_principle_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K02/k02_state.json"
+    ],
+    "K03": [
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K03/functional_object_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K03/assumption_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K03/constraint_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K03/unknown_gap_registry.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K03/k03_state.json"
+    ],
+    "K04": [
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K04/system_mapping_matrix.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K04/phase_mapping_matrix.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K04/gap_detection_report.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K04/k04_state.json"
+    ],
+    "K05": [
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K05/controller_candidate_packet.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K05/schema_contract_candidate_packet.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K05/candidate_risk_review.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K05/k05_state.json"
+    ],
+    "K06": [
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K06/her_task_package.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K06/execution_plan.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K06/runner_binding_spec.json",
+      "data/knowledge_processing_program/telegram_upload_productization/test_runs/TEST-KPP-TELEGRAM-UPLOAD/K06/k06_state.json"
+    ]
+  }
+}

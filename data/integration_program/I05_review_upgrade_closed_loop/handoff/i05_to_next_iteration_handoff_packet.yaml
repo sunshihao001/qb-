@@ -1,0 +1,19 @@
+i05_to_next_iteration_handoff_packet:
+  packet_id: I05_TO_NEXT_ITERATION_HANDOFF_20260512_AUTO_01
+  generated_at: '2026-05-12T16:03:17Z'
+  from: I05_REVIEW_UPGRADE_CLOSED_LOOP
+  to:
+  - REPLAY_FIXTURE_TASK_QUEUE
+  - GOVERNANCE_REVIEW
+  - DRY_RUN_VALIDATION
+  status: I05_AUTOMATION_READY_WITH_GAPS
+  read_first:
+  - /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/runtime_state/i05_runtime_state.yaml
+  - /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/automation_task_packages/i05_full_automation_task_packet.yaml
+  - /root/sikk-gmgn/data/integration_program/I05_review_upgrade_closed_loop/automation_task_packages/i05_automated_issue_list_package.yaml
+  restrictions:
+    live_execution_allowed: false
+    wallet_signing_allowed: false
+    auto_deploy_allowed: false
+    direct_rule_mutation_allowed: false
+    paper_runtime_mutation_allowed: false

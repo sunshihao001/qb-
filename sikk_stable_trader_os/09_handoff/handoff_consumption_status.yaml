@@ -1,0 +1,24 @@
+handoff_status_id: S02_handoff_consumption_status
+generated_at: '2026-05-14T14:15:24Z'
+status: HANDOFF_READY_WITH_GAPS
+upstream: S01_runtime_absorption_single_token_replay
+current_stage: S02_runner_registry_and_phase_binding_closure
+downstream_queue:
+- queue_id: S03_FORMAL_REGISTRY_REPLAY
+  target: phase_controller_replay_runner
+  task: Run selected token through formal phase_runner_binding and record consumption
+    evidence.
+  status: queued
+- queue_id: S04_WALLET_STRUCTURE_CANONICAL_SUMMARY
+  target: runner_wallet_structure_pipeline
+  task: Emit candidate_wallet_structure_summary.json in canonical runtime tree.
+  status: queued
+- queue_id: S05_P10_SHADOW_VALIDATION
+  target: P10_review_upgrade
+  task: Execute shadow validation/regression/rollback package without mutating live
+    rules.
+  status: queued
+consumption_rules:
+- handoff is authority transfer, not file transfer
+- downstream_executed=false remains READY_WITH_GAPS
+downstream_executed: false

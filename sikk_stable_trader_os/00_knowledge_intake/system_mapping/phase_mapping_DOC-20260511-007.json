@@ -1,0 +1,9 @@
+{
+  "doc_id": "DOC-20260511-007",
+  "phase_impacts": {
+    "K00": "intake and taskize",
+    "P00": "consume and maintain bootstrap control plane",
+    "P01": "remain blocked pending Data Plane acceptance",
+    "P02-P10": "remain blocked by upstream"
+  }
+}

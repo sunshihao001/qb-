@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 pipeline state",
+  "type": "object",
+  "required": [
+    "pipeline_run_id",
+    "current_status",
+    "final_status",
+    "system_status_code",
+    "forbidden_actions"
+  ],
+  "properties": {
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "current_status": {
+      "type": "string"
+    },
+    "final_status": {
+      "type": "string",
+      "enum": [
+        "PIPELINE_ACCEPTED",
+        "PIPELINE_READY_WITH_GAPS",
+        "PIPELINE_BLOCKED",
+        "PIPELINE_REJECTED"
+      ]
+    },
+    "system_status_code": {
+      "type": "string"
+    },
+    "current_stage": {
+      "type": "string"
+    },
+    "completed_stages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "skipped_stages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "open_gaps": {
+      "type": "array"
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_claims_blocked": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

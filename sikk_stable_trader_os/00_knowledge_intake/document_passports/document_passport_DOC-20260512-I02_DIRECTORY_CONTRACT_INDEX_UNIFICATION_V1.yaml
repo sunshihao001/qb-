@@ -1,0 +1,45 @@
+doc_id: DOC-20260512-I02_DIRECTORY_CONTRACT_INDEX_UNIFICATION_V1
+source_type: user_uploaded_markdown
+source_name: I02 Directory & Contract Index Unification 专业版 v1.0
+received_at: '2026-05-12'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I02_directory_contract_index_unification_v1_0.md
+sha256: 35b8d97465d1e1ca377329d658549a2b8efc52c106570b789c46272b9babc936
+document_role:
+  primary_role: Integration Program I02 task package specification
+  secondary_roles:
+  - directory constitution
+  - contract/schema/handoff indexing
+  - legacy mapping
+  - I03 prerequisite generation
+summary:
+  core_intent: 建立 I02 目录、合约、Schema、Handoff、运行数据路径与 Legacy 映射统一任务包，使 HER/Runner 可按索引读取
+    P01-P10 与 I01 输出。
+  key_points:
+  - I02 不是 P11/P12，不新增业务阶段
+  - 不修改 P01-P10 业务逻辑、不写 Runner、不启动 Paper Runtime
+  - 输出 canonical root、phase controller file index、schema/contract/handoff indexes、legacy
+    mapping、I03 prerequisite、I02→I03 handoff
+  - 必须保留 legacy read-only，不删除旧目录
+system_mapping:
+  planes:
+  - Control Plane
+  - Data Plane
+  - Contract Plane
+  - Handoff Plane
+  - Trace Plane
+  - Acceptance Plane
+  - Runner Tool Binding Preparation
+  affected_phases:
+  - K00
+  - P01-P10
+  - I01
+  - I02
+  - I03
+required_actions:
+- K00 assetization
+- land I02 system package
+- generate runtime indexes
+- generate I03 prerequisite packet
+- generate I02 acceptance and handoff
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

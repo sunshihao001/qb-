@@ -1,0 +1,3707 @@
+{
+  "generated_at": "2026-05-07T02:00:20.607394Z",
+  "policy": {
+    "delete_old_dirs": false,
+    "move_old_dirs": false,
+    "modify_code_now": false,
+    "copy_now": false,
+    "old_dirs_readonly_reference": true,
+    "new_tasks_read_new_index_first": true
+  },
+  "directory_mappings": [
+    {
+      "old_dir": "data/gmgn_candidates_live_run/intel-bot",
+      "file_count": 2833,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 2605,
+        "unknown": 1,
+        "行为推断数据": 49,
+        "结构证据数据": 178
+      },
+      "token_count": 38,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/intel-bot/README.md",
+        "data/gmgn_candidates_live_run/intel-bot/code/README.md",
+        "data/gmgn_candidates_live_run/intel-bot/logs/README.md",
+        "data/gmgn_candidates_live_run/intel-bot/logs/intel_bot_data_consolidation_manifest.json",
+        "data/gmgn_candidates_live_run/intel-bot/logs/wallet_structure/candidate_wallet_structure_summary.md"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/kline_pipeline",
+      "file_count": 603,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "钱包原始数据": 173,
+        "unknown": 172,
+        "行为推断数据": 178,
+        "结构证据数据": 80
+      },
+      "token_count": 86,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/kline_pipeline/candidate_kline_pipeline_summary.json",
+        "data/gmgn_candidates_live_run/kline_pipeline/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/kline_5m.csv",
+        "data/gmgn_candidates_live_run/kline_pipeline/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/kline_1m.csv",
+        "data/gmgn_candidates_live_run/kline_pipeline/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/gmgn_kline_5m_raw.json",
+        "data/gmgn_candidates_live_run/kline_pipeline/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/gmgn_kline_1m_raw.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/tokens",
+      "file_count": 594,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 339,
+        "行为推断数据": 211,
+        "钱包原始数据": 22,
+        "交接输出数据": 22
+      },
+      "token_count": 198,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/tokens/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/process_trace.jsonl",
+        "data/gmgn_candidates_live_run/tokens/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/token_status.md",
+        "data/gmgn_candidates_live_run/tokens/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/token_status.json",
+        "data/gmgn_candidates_live_run/tokens/Ha5Z2DfRv6Ar2nAeBLCGWHqzwXKL3of4DqKwzzwpump/process_trace.jsonl",
+        "data/gmgn_candidates_live_run/tokens/Ha5Z2DfRv6Ar2nAeBLCGWHqzwXKL3of4DqKwzzwpump/token_status.md"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/legacy",
+      "file_count": 576,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 478,
+        "结构证据数据": 28,
+        "钱包标准化数据": 21,
+        "unknown": 11,
+        "行为推断数据": 38
+      },
+      "token_count": 12,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/structure_analysis/handoff/bb749e7437__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_04_45Z.md",
+        "data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/structure_analysis/handoff/7edf815d88__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_36_09Z.md",
+        "data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/structure_analysis/handoff/52ba0a4645__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_46_33Z.md",
+        "data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/structure_analysis/handoff/851741349a__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_36_47Z.md",
+        "data/source_wallet_bot/legacy/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/structure_analysis/handoff/7a93e45c3b__paper-q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump-2026-05-03T04_46_33Z.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/candidate_signal_outputs",
+      "file_count": 518,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "钱包原始数据": 88,
+        "unknown": 172,
+        "行为推断数据": 258
+      },
+      "token_count": 86,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.json",
+        "data/gmgn_candidates_live_run/candidate_signal_outputs/candidate_signal_summary.csv",
+        "data/gmgn_candidates_live_run/candidate_signal_outputs/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/signal_outputs/auto_readiness_review.md",
+        "data/gmgn_candidates_live_run/candidate_signal_outputs/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/signal_outputs/token_readiness_result.json",
+        "data/gmgn_candidates_live_run/candidate_signal_outputs/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/signal_outputs/exit_plan.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/paper_live",
+      "file_count": 462,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 422,
+        "行为推断数据": 40
+      },
+      "token_count": 30,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/paper_live/paper_equity_curve.csv",
+        "data/gmgn_candidates_live_run/paper_live/paper_positions_closed.csv",
+        "data/gmgn_candidates_live_run/paper_live/paper_positions_open.csv",
+        "data/gmgn_candidates_live_run/paper_live/failure_attribution.jsonl",
+        "data/gmgn_candidates_live_run/paper_live/strategy_metrics.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/site",
+      "file_count": 414,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "unknown": 1,
+        "钱包原始数据": 413
+      },
+      "token_count": 30,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/site/AGENTS.md",
+        "data/gmgn_candidates_live_run/site/dashboard_data.json",
+        "data/gmgn_candidates_live_run/site/case_files/paper-ARea51UmRfn22Ds7KwFZirSMEEn1gtBdrhW4zLeveeV1-2026-05-03T08_35_14Z.json",
+        "data/gmgn_candidates_live_run/site/case_files/paper-6Wbs2dcRwMMivXV3TmBP1MmrqJ7SJkN768tC5rG5pump-2026-05-04T04_55_43Z.json",
+        "data/gmgn_candidates_live_run/site/case_files/paper-FESx6q1owjzTqaysjSkcaJRBKvNAcE6TEwSuaY65pump-2026-05-04T08_09_00Z.md"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/quote_security",
+      "file_count": 193,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "交接输出数据": 1,
+        "钱包原始数据": 130,
+        "行为推断数据": 31,
+        "unknown": 31
+      },
+      "token_count": 38,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.md",
+        "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.csv",
+        "data/gmgn_candidates_live_run/quote_security/candidate_quote_security_summary.json",
+        "data/gmgn_candidates_live_run/quote_security/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/quote_security_decision.json",
+        "data/gmgn_candidates_live_run/quote_security/q7oDiKKY8j5FecGwvUR5Eyv7se9sh2DSaUD7aXEpump/trade_confirmation_ticket.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run_20260501T082334Z/kline_pipeline",
+      "file_count": 92,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "钱包原始数据": 27,
+        "unknown": 26,
+        "行为推断数据": 35,
+        "结构证据数据": 4
+      },
+      "token_count": 13,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run_20260501T082334Z/kline_pipeline/candidate_kline_pipeline_summary.json",
+        "data/gmgn_candidates_live_run_20260501T082334Z/kline_pipeline/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/kline_5m.csv",
+        "data/gmgn_candidates_live_run_20260501T082334Z/kline_pipeline/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/kline_1m.csv",
+        "data/gmgn_candidates_live_run_20260501T082334Z/kline_pipeline/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/gmgn_kline_5m_raw.json",
+        "data/gmgn_candidates_live_run_20260501T082334Z/kline_pipeline/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/gmgn_kline_1m_raw.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run_20260501T082334Z/candidate_signal_outputs",
+      "file_count": 80,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "钱包原始数据": 15,
+        "unknown": 26,
+        "行为推断数据": 39
+      },
+      "token_count": 13,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run_20260501T082334Z/candidate_signal_outputs/candidate_signal_summary.json",
+        "data/gmgn_candidates_live_run_20260501T082334Z/candidate_signal_outputs/candidate_signal_summary.csv",
+        "data/gmgn_candidates_live_run_20260501T082334Z/candidate_signal_outputs/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/signal_outputs/auto_readiness_review.md",
+        "data/gmgn_candidates_live_run_20260501T082334Z/candidate_signal_outputs/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/signal_outputs/token_readiness_result.json",
+        "data/gmgn_candidates_live_run_20260501T082334Z/candidate_signal_outputs/9qy89gnSE6HkPPFigfJPWppuLsL3hTpE7HR3YE4Qpump/signal_outputs/exit_plan.json"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/live",
+      "file_count": 53,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "unknown": 4,
+        "交接输出数据": 1,
+        "行为推断数据": 2,
+        "钱包标准化数据": 9,
+        "钱包原始数据": 31,
+        "结构证据数据": 6
+      },
+      "token_count": 1,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/live/_TEMPLATE_TOKEN/structure_analysis/reports/README.md",
+        "data/source_wallet_bot/live/_TEMPLATE_TOKEN/structure_analysis/handoff/README.md",
+        "data/source_wallet_bot/live/_TEMPLATE_TOKEN/structure_analysis/wallet_fact/README.md",
+        "data/source_wallet_bot/live/_TEMPLATE_TOKEN/structure_analysis/intelligence/README.md",
+        "data/source_wallet_bot/live/_TEMPLATE_TOKEN/manifest/README.md"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run_20260501T082334Z/quote_security",
+      "file_count": 23,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "交接输出数据": 1,
+        "钱包原始数据": 22
+      },
+      "token_count": 4,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run_20260501T082334Z/quote_security/candidate_quote_security_summary.md",
+        "data/gmgn_candidates_live_run_20260501T082334Z/quote_security/candidate_quote_security_summary.csv",
+        "data/gmgn_candidates_live_run_20260501T082334Z/quote_security/candidate_quote_security_summary.json",
+        "data/gmgn_candidates_live_run_20260501T082334Z/quote_security/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/quote_security_decision.json",
+        "data/gmgn_candidates_live_run_20260501T082334Z/quote_security/LzxN1DNn3qNdLw7VKYvxBqvWMY45rhTeq4KoytyLUSA/trade_confirmation_ticket.json"
+      ]
+    },
+    {
+      "old_dir": "docs/harness/ai_harness_system",
+      "file_count": 23,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 19,
+        "钱包原始数据": 2,
+        "行为推断数据": 1,
+        "交接输出数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/harness/ai_harness_system/recovery_report.md",
+        "docs/harness/ai_harness_system/verification_report.md",
+        "docs/harness/ai_harness_system/00_startup/startup_check_report.md",
+        "docs/harness/ai_harness_system/09_reports/report_classification_policy.md",
+        "docs/harness/ai_harness_system/09_reports/README.md"
+      ]
+    },
+    {
+      "old_dir": "reports/review_ops_bot/audit",
+      "file_count": 21,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "行为推断数据": 3,
+        "钱包原始数据": 17,
+        "交接输出数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/review_ops_bot/audit/system_directory_governance_20260506/directory_governance_validation_report_20260506.md",
+        "reports/review_ops_bot/audit/system_directory_governance_20260506/file_routing_matrix_20260506.json",
+        "reports/review_ops_bot/audit/system_directory_governance_20260506/new_task_write_routing_table_20260506.json",
+        "reports/review_ops_bot/audit/system_directory_governance_20260506/directory_official_decisions_20260506.md",
+        "reports/review_ops_bot/audit/system_directory_governance_20260506/file_routing_matrix_summary_20260506.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/08_reports/project_governance",
+      "file_count": 20,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "行为推断数据": 5,
+        "钱包原始数据": 10,
+        "unknown": 3,
+        "钱包标准化数据": 1,
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/08_reports/project_governance/HIGH_RISK_PATH_REVIEW_LIST_V1.md",
+        "hermes_harness/08_reports/project_governance/STANDARD_WALLET_DATA_DIRECTORY_SPEC_V1.md",
+        "hermes_harness/08_reports/project_governance/WALLET_STRUCTURE_DATA_LOCATION_SUMMARY_V1.md",
+        "hermes_harness/08_reports/project_governance/PATH_MIGRATION_MATRIX_V1.json",
+        "hermes_harness/08_reports/project_governance/project_governance_task_package.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/orchestrator",
+      "file_count": 18,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 13,
+        "交接输出数据": 1,
+        "unknown": 1,
+        "结构证据数据": 3
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/orchestrator/pipeline_report.md",
+        "data/gmgn_candidates_live_run/orchestrator/pipeline_manifest.json",
+        "data/gmgn_candidates_live_run/orchestrator/sikk_gmgn_live_run_summary_package_unpacked/quote_security/candidate_quote_security_summary.md",
+        "data/gmgn_candidates_live_run/orchestrator/sikk_gmgn_live_run_summary_package_unpacked/quote_security/candidate_quote_security_summary.csv",
+        "data/gmgn_candidates_live_run/orchestrator/sikk_gmgn_live_run_summary_package_unpacked/quote_security/candidate_quote_security_summary.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/reports",
+      "file_count": 10,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 6,
+        "行为推断数据": 4
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260502.md",
+        "data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260502.csv",
+        "data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260503.csv",
+        "data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260503.md",
+        "data/gmgn_candidates_live_run/reports/wallet_structure_daily_report_20260504.json"
+      ]
+    },
+    {
+      "old_dir": "reports",
+      "file_count": 10,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 10
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/sikk_site_case_file_link_fix_acceptance_20260503.md",
+        "reports/sikk_gpt_share_69f74bb3_automation_acceptance_report.md",
+        "reports/chatgpt_share_69f75c79_absorption_acceptance_20260503.md",
+        "reports/sikk_phase_4_7_telegram_readonly_acceptance_20260503.md",
+        "reports/sikk_phase_9_entry_gateway_site_acceptance_20260503.md"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/schemas",
+      "file_count": 9,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 9
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/schemas/token_transfer_normalized.schema.json",
+        "data/source_wallet_bot/schemas/funding_flow_normalized.schema.json",
+        "data/source_wallet_bot/schemas/backflow_paths_normalized.schema.json",
+        "data/source_wallet_bot/schemas/bot2_handoff_packet.schema.json",
+        "data/source_wallet_bot/schemas/wallet_profile_normalized.schema.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/index",
+      "file_count": 9,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 6,
+        "钱包标准化数据": 2,
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/index/case_file_index.json",
+        "data/gmgn_candidates_live_run/index/alert_index.json",
+        "data/gmgn_candidates_live_run/index/telegram_callback_index.json",
+        "data/gmgn_candidates_live_run/index/token_detail_index.json",
+        "data/gmgn_candidates_live_run/index/position_index.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/time_context",
+      "file_count": 8,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 7,
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/time_context/time_context_summary.csv",
+        "data/gmgn_candidates_live_run/time_context/time_context_input_audit.json",
+        "data/gmgn_candidates_live_run/time_context/token_first_seen_registry.json",
+        "data/gmgn_candidates_live_run/time_context/time_context_report.md",
+        "data/gmgn_candidates_live_run/time_context/time_context_input_audit.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/08_reports/final_reports",
+      "file_count": 7,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 3,
+        "钱包原始数据": 3,
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/08_reports/final_reports/MIGRATION_RECOMMENDATION_V1.md",
+        "hermes_harness/08_reports/final_reports/PROJECT_SYSTEM_MAP_V1.md",
+        "hermes_harness/08_reports/final_reports/README.md",
+        "hermes_harness/08_reports/final_reports/hermes_harness_v11_first_priority_plan.md",
+        "hermes_harness/08_reports/final_reports/HERMES_HARNESS_V1_1_UPGRADE_REPORT.md"
+      ]
+    },
+    {
+      "old_dir": "data/6AVA_accumulation_test/auto_readiness_outputs",
+      "file_count": 6,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 4,
+        "行为推断数据": 2
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/6AVA_accumulation_test/auto_readiness_outputs/quote_snapshot.json",
+        "data/6AVA_accumulation_test/auto_readiness_outputs/token_readiness_result.json",
+        "data/6AVA_accumulation_test/auto_readiness_outputs/security_scan_report.json",
+        "data/6AVA_accumulation_test/auto_readiness_outputs/risk_gate_report.json",
+        "data/6AVA_accumulation_test/auto_readiness_outputs/v05_fake_live_review/quote_snapshot.json"
+      ]
+    },
+    {
+      "old_dir": "data/intel_bot/live",
+      "file_count": 6,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 4,
+        "行为推断数据": 2
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/intel_bot/live/_TEMPLATE_TOKEN/counter_evidence/README.md",
+        "data/intel_bot/live/_TEMPLATE_TOKEN/reports/README.md",
+        "data/intel_bot/live/_TEMPLATE_TOKEN/behavior_inference/README.md",
+        "data/intel_bot/live/_TEMPLATE_TOKEN/manifest/README.md",
+        "data/intel_bot/live/_TEMPLATE_TOKEN/quant_scores/README.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/08_reports/verification_reports",
+      "file_count": 6,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 4,
+        "钱包原始数据": 1,
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/08_reports/verification_reports/hermes_harness_v11_priority3_verification.md",
+        "hermes_harness/08_reports/verification_reports/README.md",
+        "hermes_harness/08_reports/verification_reports/hermes_harness_v11_priority1_verification.md",
+        "hermes_harness/08_reports/verification_reports/hermes_harness_v11_priority4_memory_verification.md",
+        "hermes_harness/08_reports/verification_reports/hermes_harness_v11_verification.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/03_task_runtime/project_inventory",
+      "file_count": 5,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 5
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/03_task_runtime/project_inventory/dataflow_map.json",
+        "hermes_harness/03_task_runtime/project_inventory/wallet_structure_data_map/wallet_structure_related_file_inventory.jsonl",
+        "hermes_harness/03_task_runtime/project_inventory/wallet_structure_data_map/wallet_structure_related_directory_inventory.json",
+        "hermes_harness/03_task_runtime/project_inventory/wallet_structure_data_map/wallet_structure_category_index.json",
+        "hermes_harness/03_task_runtime/project_inventory/wallet_structure_data_map/wallet_structure_category_directory_index.json"
+      ]
+    },
+    {
+      "old_dir": "docs/source_wallet_bot/directory_governance",
+      "file_count": 5,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 5
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/source_wallet_bot/directory_governance/legacy_runtime_policy.md",
+        "docs/source_wallet_bot/directory_governance/file_level_inventory_acceptance.md",
+        "docs/source_wallet_bot/directory_governance/current_directory_baseline.md",
+        "docs/source_wallet_bot/directory_governance/file_level_inventory_summary.md",
+        "docs/source_wallet_bot/directory_governance/write_routing_policy.md"
+      ]
+    },
+    {
+      "old_dir": "data/6AVA_accumulation_test/control_outputs",
+      "file_count": 4,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 3,
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/6AVA_accumulation_test/control_outputs/control_chip_window.csv",
+        "data/6AVA_accumulation_test/control_outputs/control_chip_phase_summary.csv",
+        "data/6AVA_accumulation_test/control_outputs/control_chip_structural_wallets.csv",
+        "data/6AVA_accumulation_test/control_outputs/control_chip_window.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run_20260501T082334Z/state_machine",
+      "file_count": 4,
+      "primary_semantic": "交接输出数据",
+      "semantic_distribution": {
+        "交接输出数据": 3,
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run_20260501T082334Z/state_machine/state_summary.md",
+        "data/gmgn_candidates_live_run_20260501T082334Z/state_machine/state_events.jsonl",
+        "data/gmgn_candidates_live_run_20260501T082334Z/state_machine/candidate_states.csv",
+        "data/gmgn_candidates_live_run_20260501T082334Z/state_machine/candidate_states.json"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/ad_hoc",
+      "file_count": 4,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 3,
+        "钱包标准化数据": 1
+      },
+      "token_count": 1,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/ad_hoc/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/bot2_handoff_packet.json",
+        "data/source_wallet_bot/ad_hoc/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_profiles.json",
+        "data/source_wallet_bot/ad_hoc/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/raw_wallet_trades.json",
+        "data/source_wallet_bot/ad_hoc/4TKYts6M7Y1RzW6xbHo92anF2LBrRMiFFsANoTr9pump/wallet_trade_normalized.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/state_machine",
+      "file_count": 4,
+      "primary_semantic": "交接输出数据",
+      "semantic_distribution": {
+        "交接输出数据": 2,
+        "行为推断数据": 1,
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/state_machine/state_summary.md",
+        "data/gmgn_candidates_live_run/state_machine/state_events.jsonl",
+        "data/gmgn_candidates_live_run/state_machine/candidate_states.csv",
+        "data/gmgn_candidates_live_run/state_machine/candidate_states.json"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/03_task_runtime/compact_snapshots",
+      "file_count": 4,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 4
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/03_task_runtime/compact_snapshots/post_compact_context.md",
+        "hermes_harness/03_task_runtime/compact_snapshots/README.md",
+        "hermes_harness/03_task_runtime/compact_snapshots/compact_boundary.json",
+        "hermes_harness/03_task_runtime/compact_snapshots/compact_summary.md"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run_20260501T082334Z/gmgn_new_token_filter",
+      "file_count": 3,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 3
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run_20260501T082334Z/gmgn_new_token_filter/token_candidates.json",
+        "data/gmgn_candidates_live_run_20260501T082334Z/gmgn_new_token_filter/gmgn_trenches_raw.json",
+        "data/gmgn_candidates_live_run_20260501T082334Z/gmgn_new_token_filter/token_candidates.csv"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/registry",
+      "file_count": 3,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 3
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/registry/new_task_route_table.json",
+        "data/source_wallet_bot/registry/current_directory_inventory.json",
+        "data/source_wallet_bot/registry/file_level_inventory.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/gmgn_new_token_filter",
+      "file_count": 3,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 3
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.json",
+        "data/gmgn_candidates_live_run/gmgn_new_token_filter/gmgn_trenches_raw.json",
+        "data/gmgn_candidates_live_run/gmgn_new_token_filter/token_candidates.csv"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/10_audit/task_audit_reports",
+      "file_count": 3,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "钱包原始数据": 1,
+        "unknown": 2
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/10_audit/task_audit_reports/hermes_harness_v1_gap_audit.md",
+        "hermes_harness/10_audit/task_audit_reports/README.md",
+        "hermes_harness/10_audit/task_audit_reports/harness_professional_completion_task_audit.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/03_task_runtime/project_governance",
+      "file_count": 3,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 3
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/03_task_runtime/project_governance/checkpoint_wallet_structure_scan_v1.json",
+        "hermes_harness/03_task_runtime/project_governance/phase_02_classification_and_registries.md",
+        "hermes_harness/03_task_runtime/project_governance/checkpoint_wallet_structure_data_location_v1.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run_20260501T082334Z/orchestrator",
+      "file_count": 2,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 2
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run_20260501T082334Z/orchestrator/pipeline_report.md",
+        "data/gmgn_candidates_live_run_20260501T082334Z/orchestrator/pipeline_manifest.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/automation",
+      "file_count": 2,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 2
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/automation/sikk_paper_workflow_plan.json",
+        "data/gmgn_candidates_live_run/automation/sikk_paper_workflow_plan.md"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/events",
+      "file_count": 2,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 2
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/events/latest_events.md",
+        "data/gmgn_candidates_live_run/events/live_events.jsonl"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/10_audit/memory_audit_reports",
+      "file_count": 2,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 2
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/10_audit/memory_audit_reports/README.md",
+        "hermes_harness/10_audit/memory_audit_reports/memory_audit_policy.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/07_recovery/recovery_reports",
+      "file_count": 2,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 2
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/07_recovery/recovery_reports/README.md",
+        "hermes_harness/07_recovery/recovery_reports/HERMES_HARNESS_V1_1_RECOVERY.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/08_reports/recovery_reports",
+      "file_count": 2,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 2
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/08_reports/recovery_reports/README.md",
+        "hermes_harness/08_reports/recovery_reports/hermes_harness_v11_priority1_recovery.md"
+      ]
+    },
+    {
+      "old_dir": "docs",
+      "file_count": 2,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 2
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/sikk_wallet_structure_integration_v2.md",
+        "docs/sikk_wallet_normalized_contract.md"
+      ]
+    },
+    {
+      "old_dir": "data/6AVA_accumulation_test/from_creation_chip_summary.csv",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/6AVA_accumulation_test/from_creation_chip_summary.csv"
+      ]
+    },
+    {
+      "old_dir": "data/6AVA_accumulation_test/wallet_auxiliary_early.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/6AVA_accumulation_test/wallet_auxiliary_early.csv"
+      ]
+    },
+    {
+      "old_dir": "data/6AVA_accumulation_test/holders.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/6AVA_accumulation_test/holders.json"
+      ]
+    },
+    {
+      "old_dir": "data/6AVA_accumulation_test/wallet_auxiliary_in_accumulation_window.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/6AVA_accumulation_test/wallet_auxiliary_in_accumulation_window.csv"
+      ]
+    },
+    {
+      "old_dir": "data/6AVA_accumulation_test/holders_full.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/6AVA_accumulation_test/holders_full.json"
+      ]
+    },
+    {
+      "old_dir": "data/paper_live_20260501T082334Z/daily_reports",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/paper_live_20260501T082334Z/daily_reports/paper_daily_report_20260501.md"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/backflow_paths_normalized.json",
+      "file_count": 1,
+      "primary_semantic": "钱包标准化数据",
+      "semantic_distribution": {
+        "钱包标准化数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/backflow_paths_normalized.json"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/bot2_handoff_packet.json",
+      "file_count": 1,
+      "primary_semantic": "钱包标准化数据",
+      "semantic_distribution": {
+        "钱包标准化数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/bot2_handoff_packet.json"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/source_bot_schema_plan.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/source_bot_schema_plan.json"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/same_source_evidence_normalized.json",
+      "file_count": 1,
+      "primary_semantic": "钱包标准化数据",
+      "semantic_distribution": {
+        "钱包标准化数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/same_source_evidence_normalized.json"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/wallet_trade_normalized.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/wallet_trade_normalized.json"
+      ]
+    },
+    {
+      "old_dir": "data/source_wallet_bot/audit",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/source_wallet_bot/audit/kanban_task_board.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/live_state.json",
+      "file_count": 1,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/live_state.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/directory_governance_manifest.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/directory_governance_manifest.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/explainability_report.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/explainability_report.md"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/explainability_report.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/explainability_report.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/live_run_manifest.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/live_run_manifest.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/system_audit.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/system_audit.md"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/live_board.md",
+      "file_count": 1,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/live_board.md"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/system_audit.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/system_audit.json"
+      ]
+    },
+    {
+      "old_dir": "data/gmgn_candidates_live_run/system_split",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": true,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "data/gmgn_candidates_live_run/system_split/module_ownership_inventory.json"
+      ]
+    },
+    {
+      "old_dir": "modules/intel_bot/schemas",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/intel_bot/schemas/README.md"
+      ]
+    },
+    {
+      "old_dir": "modules/intel_bot/contracts",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/intel_bot/contracts/README.md"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/legacy_mapping.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/legacy_mapping.md"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/evidence_level_matrix.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/evidence_level_matrix.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/implementation_plan.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/implementation_plan.md"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/module_flow.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/module_flow.md"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/README.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/README.md"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/module_contract.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/module_contract.md"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/field_dictionary.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/field_dictionary.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/role_rule_matrix.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/role_rule_matrix.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/quantitative_structure_skeleton.md",
+      "file_count": 1,
+      "primary_semantic": "钱包标准化数据",
+      "semantic_distribution": {
+        "钱包标准化数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/quantitative_structure_skeleton.md"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/gap_register.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/gap_register.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/extension_backlog.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/extension_backlog.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/gmgn_note_dictionary.csv",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/gmgn_note_dictionary.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/input_schema.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/input_schema.json"
+      ]
+    },
+    {
+      "old_dir": "modules/wallet_structure/output_schema.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/wallet_structure/output_schema.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/distribution_recovery_whale_rules.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/distribution_recovery_whale_rules.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/missing_fields_report.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/missing_fields_report.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/wallet_trade_contract.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/wallet_trade_contract.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/legacy_mapping.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/legacy_mapping.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/evidence_level_matrix.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/evidence_level_matrix.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/source_registry_schema.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/source_registry_schema.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/source_manifest_contract.md",
+      "file_count": 1,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/source_manifest_contract.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/current_token_behavior_schema.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/current_token_behavior_schema.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/field_dictionary.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/field_dictionary.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/field_mapping_dictionary.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/field_mapping_dictionary.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/wallet_intelligence_contracts.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/wallet_intelligence_contracts.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/gmgn_note_watchlist_rules.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/gmgn_note_watchlist_rules.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/source_registry.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/source_registry.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/gmgn_to_sikk_field_mapping.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/gmgn_to_sikk_field_mapping.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/source_and_group_models.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/source_and_group_models.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/wallet_fact_schema_index.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/wallet_fact_schema_index.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/gmgn_note_dictionary.csv",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/gmgn_note_dictionary.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/wallet_intelligence_decision_schema.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/wallet_intelligence_decision_schema.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/wallet_fact_output_contract.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/wallet_fact_output_contract.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/package_file_passport.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/package_file_passport.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/wallet_fact_architecture.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/wallet_fact_architecture.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/source_wallet_bot_architecture.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/source_wallet_bot_architecture.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/source_reliability_matrix.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/source_reliability_matrix.csv"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/same_source_group_schema.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/same_source_group_schema.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/bot2_handoff_contract.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/bot2_handoff_contract.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/source_group_contract.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/source_group_contract.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/kanban_task_board.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/kanban_task_board.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/bot2_handoff_packet_schema.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/bot2_handoff_packet_schema.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/package_file_passport.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/package_file_passport.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/wallet_entity_profile_schema.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/wallet_entity_profile_schema.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/evidence_note_rules.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/evidence_note_rules.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/wallet_raw_normalized_schema.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/wallet_raw_normalized_schema.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/final_module_package.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/final_module_package.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/codebase_inspection_report.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/codebase_inspection_report.md"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/old_system_inventory.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/old_system_inventory.json"
+      ]
+    },
+    {
+      "old_dir": "modules/source_wallet_bot/wallet_role_rule_matrix.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "modules/source_wallet_bot/wallet_role_rule_matrix.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/sikk_gmgn_master_log.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/sikk_gmgn_master_log.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/05_infrastructure_registry.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/05_infrastructure_registry.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/sikk_gmgn_report.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/sikk_gmgn_report.md"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/06_low_weight_scope.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/06_low_weight_scope.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/01_analysis_depth.csv",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/01_analysis_depth.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/infrastructure_registry.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/infrastructure_registry.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/review_update_history.csv",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/review_update_history.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/03_structure_metrics.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/03_structure_metrics.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/08_summary.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/08_summary.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/07_review_plan.csv",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/07_review_plan.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/04_key_address_matrix.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/04_key_address_matrix.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034659/02_token_basic.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034659/02_token_basic.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033524/05_infrastructure_registry.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033524/05_infrastructure_registry.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033524/sikk_gmgn_report.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033524/sikk_gmgn_report.md"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033524/06_low_weight_scope.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033524/06_low_weight_scope.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033524/01_analysis_depth.csv",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033524/01_analysis_depth.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033524/03_structure_metrics.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033524/03_structure_metrics.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033524/08_summary.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033524/08_summary.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033524/07_review_plan.csv",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033524/07_review_plan.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033524/04_key_address_matrix.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033524/04_key_address_matrix.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033524/02_token_basic.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033524/02_token_basic.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/sikk_gmgn_master_log.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/sikk_gmgn_master_log.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/05_infrastructure_registry.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/05_infrastructure_registry.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/sikk_gmgn_report.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/sikk_gmgn_report.md"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/06_low_weight_scope.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/06_low_weight_scope.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/01_analysis_depth.csv",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/01_analysis_depth.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/infrastructure_registry.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/infrastructure_registry.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/review_update_history.csv",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/review_update_history.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/03_structure_metrics.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/03_structure_metrics.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/08_summary.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/08_summary.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/07_review_plan.csv",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/07_review_plan.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/04_key_address_matrix.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/04_key_address_matrix.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_034739/02_token_basic.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_034739/02_token_basic.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/intel_bot/live",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/intel_bot/live/_TEMPLATE_TOKEN/README.md"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_030541/sikk_gmgn_master_log.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_030541/sikk_gmgn_master_log.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_030541/sikk_gmgn_report.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_030541/sikk_gmgn_report.md"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_030541/infrastructure_registry.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_030541/infrastructure_registry.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_030541/review_update_history.csv",
+      "file_count": 1,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_030541/review_update_history.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/chatgpt_share_69f868b8/workflow_automation_acceptance.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/chatgpt_share_69f868b8/workflow_automation_acceptance.md"
+      ]
+    },
+    {
+      "old_dir": "reports/chatgpt_share_69f868b8/automation_absorption_acceptance.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/chatgpt_share_69f868b8/automation_absorption_acceptance.md"
+      ]
+    },
+    {
+      "old_dir": "reports/chatgpt_share_69f83af2/her_core_automation_acceptance.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/chatgpt_share_69f83af2/her_core_automation_acceptance.md"
+      ]
+    },
+    {
+      "old_dir": "reports/chatgpt_share_69f83af2/her_task_router_acceptance.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/chatgpt_share_69f83af2/her_task_router_acceptance.md"
+      ]
+    },
+    {
+      "old_dir": "reports/research_loop_system/FINAL_STATUS.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/research_loop_system/FINAL_STATUS.md"
+      ]
+    },
+    {
+      "old_dir": "reports/research_loop_system/NEXT_BACKLOG.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/research_loop_system/NEXT_BACKLOG.md"
+      ]
+    },
+    {
+      "old_dir": "reports/research_loop_system/MASTER_REPORT.md",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/research_loop_system/MASTER_REPORT.md"
+      ]
+    },
+    {
+      "old_dir": "reports/source_wallet_bot/live",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/source_wallet_bot/live/_TEMPLATE_TOKEN/README.md"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/sikk_gmgn_master_log.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/sikk_gmgn_master_log.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/05_infrastructure_registry.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/05_infrastructure_registry.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/sikk_gmgn_report.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/sikk_gmgn_report.md"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/06_low_weight_scope.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/06_low_weight_scope.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/01_analysis_depth.csv",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/01_analysis_depth.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/infrastructure_registry.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/infrastructure_registry.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/review_update_history.csv",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/review_update_history.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/03_structure_metrics.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/03_structure_metrics.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/08_summary.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/08_summary.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/07_review_plan.csv",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/07_review_plan.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/04_key_address_matrix.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/04_key_address_matrix.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/ewon_12eM87_20260429_033614/02_token_basic.csv",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/ewon_12eM87_20260429_033614/02_token_basic.csv"
+      ]
+    },
+    {
+      "old_dir": "reports/chatgpt_share_69f809c6/workflow_automation_acceptance.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/chatgpt_share_69f809c6/workflow_automation_acceptance.md"
+      ]
+    },
+    {
+      "old_dir": "reports/chatgpt_share_69f809c6/FAILED_ITEMS.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/chatgpt_share_69f809c6/FAILED_ITEMS.md"
+      ]
+    },
+    {
+      "old_dir": "reports/chatgpt_share_69f809c6/PHASE_CONTRACT.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/chatgpt_share_69f809c6/PHASE_CONTRACT.md"
+      ]
+    },
+    {
+      "old_dir": "reports/chatgpt_share_69f809c6/PHASE_HANDOFF.md",
+      "file_count": 1,
+      "primary_semantic": "交接输出数据",
+      "semantic_distribution": {
+        "交接输出数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/chatgpt_share_69f809c6/PHASE_HANDOFF.md"
+      ]
+    },
+    {
+      "old_dir": "reports/chatgpt_share_69f809c6/automation_absorption_acceptance.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/chatgpt_share_69f809c6/automation_absorption_acceptance.md"
+      ]
+    },
+    {
+      "old_dir": "reports/chatgpt_share_69f809c6/her_task_router_acceptance.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "reports/chatgpt_share_69f809c6/her_task_router_acceptance.md"
+      ]
+    },
+    {
+      "old_dir": "legacy_compat/path_maps/wallet_data_old_to_standard_map_v1.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "legacy_compat/path_maps/wallet_data_old_to_standard_map_v1.json"
+      ]
+    },
+    {
+      "old_dir": "legacy_compat/path_maps/钱包数据分析_path_map_20260506.json",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "legacy_compat/path_maps/钱包数据分析_path_map_20260506.json"
+      ]
+    },
+    {
+      "old_dir": "legacy_compat/path_maps/结构分析_path_map_20260506.json",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "legacy_compat/path_maps/结构分析_path_map_20260506.json"
+      ]
+    },
+    {
+      "old_dir": "legacy_compat/path_maps/wallet_data_token_index_v1.json",
+      "file_count": 1,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "legacy_compat/path_maps/wallet_data_token_index_v1.json"
+      ]
+    },
+    {
+      "old_dir": "legacy_compat/read_fallbacks/wallet_data_read_priority_v1.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "legacy_compat/read_fallbacks/wallet_data_read_priority_v1.md"
+      ]
+    },
+    {
+      "old_dir": "legacy_compat/manifests/wallet_data_copy_manifest_v1.json",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "legacy_compat/manifests/wallet_data_copy_manifest_v1.json"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/11_workflows/method_wheel.workflow.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/11_workflows/method_wheel.workflow.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/11_workflows/directory_governance.workflow.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/11_workflows/directory_governance.workflow.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/11_workflows/README.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/11_workflows/README.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/11_workflows/code_change.workflow.md",
+      "file_count": 1,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/11_workflows/code_change.workflow.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/11_workflows/verification.workflow.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/11_workflows/verification.workflow.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/11_workflows/recovery.workflow.md",
+      "file_count": 1,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/11_workflows/recovery.workflow.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/10_audit/permission_audit_reports",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/10_audit/permission_audit_reports/README.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/10_audit/project_governance",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/10_audit/project_governance/long_term_rule_candidates_v1.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/07_recovery/recovery_report_template.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/07_recovery/recovery_report_template.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/07_recovery/interrupt_reports",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/07_recovery/interrupt_reports/interrupt_report_template.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/04_memory/workflow_memory.jsonl",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/04_memory/workflow_memory.jsonl"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/06_verification/project_governance",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/06_verification/project_governance/WALLET_STRUCTURE_DATA_LOCATION_VERIFICATION_V1.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/06_verification/verification_reports",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/06_verification/verification_reports/HERMES_HARNESS_V1_1_VERIFICATION.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/08_reports/report_classification_policy.md",
+      "file_count": 1,
+      "primary_semantic": "行为推断数据",
+      "semantic_distribution": {
+        "行为推断数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/08_reports/report_classification_policy.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/08_reports/README.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/08_reports/README.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/08_reports/scan_reports",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/08_reports/scan_reports/README.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/08_reports/phase_reports",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/08_reports/phase_reports/README.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/08_reports/audit_reports",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/08_reports/audit_reports/README.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/05_templates/recovery_report_template.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/05_templates/recovery_report_template.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/05_templates/final_report_template.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/05_templates/final_report_template.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/05_templates/phase_report_template.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/05_templates/phase_report_template.md"
+      ]
+    },
+    {
+      "old_dir": "hermes_harness/05_templates/verification_report_template.md",
+      "file_count": 1,
+      "primary_semantic": "unknown",
+      "semantic_distribution": {
+        "unknown": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "hermes_harness/05_templates/verification_report_template.md"
+      ]
+    },
+    {
+      "old_dir": "docs/plans/2026-05-02-wallet-trade-adapter-observe-soft-hard.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/plans/2026-05-02-wallet-trade-adapter-observe-soft-hard.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/source_bot_upstream_layer_02_kline_market_structure.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/source_bot_upstream_layer_02_kline_market_structure.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/dominant_cost_zone_framework.md",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/dominant_cost_zone_framework.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/wallet_intel_layer_reconstruction.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/wallet_intel_layer_reconstruction.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/wallet_intel_2h_workflow_report.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/wallet_intel_2h_workflow_report.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/source_bot_upstream_layer_01_candidate_token_data.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/source_bot_upstream_layer_01_candidate_token_data.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/counterparty_pressure_quant_model.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/counterparty_pressure_quant_model.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/wallet_research_scope.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/wallet_research_scope.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/quantitative_structure_schema_contract.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/quantitative_structure_schema_contract.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/wallet_intel_module_map.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/wallet_intel_module_map.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/wallet_intel_execution_plan.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/wallet_intel_execution_plan.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/source_bot_upstream_layer_03_holder_snapshot.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/source_bot_upstream_layer_03_holder_snapshot.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/wallet_file_passports.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/wallet_file_passports.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/quantitative_structure_models.md",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/quantitative_structure_models.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/distribution_progress_model.md",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/distribution_progress_model.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/chinese_judgement_dictionary.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/chinese_judgement_dictionary.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/theory_to_code_rules.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/theory_to_code_rules.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/markup_motivation_model.md",
+      "file_count": 1,
+      "primary_semantic": "结构证据数据",
+      "semantic_distribution": {
+        "结构证据数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/markup_motivation_model.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/intel_structure_bot_index.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/intel_structure_bot_index.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/wallet_intel_command_lens.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/wallet_intel_command_lens.md"
+      ]
+    },
+    {
+      "old_dir": "docs/intel_bot/intel_structure_bot_delivery_checklist.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/intel_bot/intel_structure_bot_delivery_checklist.md"
+      ]
+    },
+    {
+      "old_dir": "docs/source_wallet_bot/acceptance",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/source_wallet_bot/acceptance/current_directory_inventory_acceptance.md"
+      ]
+    },
+    {
+      "old_dir": "docs/templates/source_wallet_bot_token_directory_template.md",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": false,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "docs/templates/source_wallet_bot_token_directory_template.md"
+      ]
+    },
+    {
+      "old_dir": "standard_wallet_data",
+      "file_count": 1,
+      "primary_semantic": "钱包原始数据",
+      "semantic_distribution": {
+        "钱包原始数据": 1
+      },
+      "token_count": 0,
+      "compat_read_still_needed": false,
+      "legacy_write_forbidden": true,
+      "new_standard_root": "data/source_wallet_bot/legacy/<token_address>/ + token index",
+      "sample_old_paths": [
+        "standard_wallet_data/README.md"
+      ]
+    }
+  ]
+}

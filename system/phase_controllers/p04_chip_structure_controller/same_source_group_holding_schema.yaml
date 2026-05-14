@@ -1,0 +1,67 @@
+schema_id: "same_source_group_holding_schema"
+json_schema:
+  $schema: "https://json-schema.org/draft/2020-12/schema"
+  title: "Same Source Group Holding Record"
+  description: "P04 structure-state record. Candidate-only and trace-required."
+  type: "object"
+  required:
+    - "record_id"
+    - "cohort_id"
+    - "aggregate_holding"
+    - "holding_pct"
+    - "trace_ids"
+  properties:
+    record_id:
+      type: "string"
+    token_address:
+      type:
+        - "string"
+        - "null"
+    snapshot_time:
+      type:
+        - "string"
+        - "null"
+    cohort_id:
+      type:
+        - "string"
+        - "null"
+    wallet_entity_id:
+      type:
+        - "string"
+        - "null"
+    candidate_only:
+      const: true
+    source_record_ids:
+      type: "array"
+      items:
+        type: "string"
+    trace_ids:
+      type: "array"
+      items:
+        type: "string"
+    limitations:
+      type: "array"
+      items:
+        type: "string"
+    quality_level:
+      type: "string"
+      enum:
+        - "BLOCKED"
+        - "LOW"
+        - "MEDIUM"
+        - "HIGH"
+        - "UNKNOWN"
+        - "NOT_APPLICABLE"
+    created_at:
+      type: "string"
+    aggregate_holding:
+      type:
+        - "number"
+        - "null"
+    holding_pct:
+      type:
+        - "number"
+        - "null"
+    same_source_candidate_only:
+      const: true
+  additionalProperties: true

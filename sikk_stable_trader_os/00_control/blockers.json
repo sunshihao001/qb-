@@ -1,0 +1,41 @@
+{
+  "blocker_registry_id": "SIKK_STABLE_TRADER_OS_BLOCKERS",
+  "blockers": [
+    {
+      "blocker_id": "BLOCK_P07_RUNTIME",
+      "scope": "P07_strategy_gate_controller",
+      "reason": "P07 package is design/controller package only; no runner/tool binding or real handoff execution accepted.",
+      "status": "ACTIVE_BLOCKER",
+      "updated_at": "2026-05-12T04:11:09Z"
+    },
+    {
+      "blocker_id": "BLOCK_P07_DIRECT_PAPER_RUNTIME",
+      "scope": "P07_strategy_gate_controller",
+      "reason": "PAPER_CANDIDATE must be handed to P08; P07 cannot start paper runtime.",
+      "status": "ACTIVE_BLOCKER",
+      "updated_at": "2026-05-12T04:11:09Z"
+    },
+    {
+      "blocker_id": "BLOCK_P07_BUY_SIGNAL",
+      "scope": "P07_strategy_gate_controller",
+      "reason": "P07 cannot output buy_signal or direct trading trigger.",
+      "status": "ACTIVE_BLOCKER",
+      "updated_at": "2026-05-12T04:11:09Z"
+    },
+    {
+      "blocker_id": "BLOCK_P08_RUNTIME",
+      "scope": "P08_execution_risk_controller",
+      "reason": "P08 package/design not yet landed and accepted.",
+      "status": "ACTIVE_BLOCKER",
+      "updated_at": "2026-05-12T04:11:09Z"
+    },
+    {
+      "blocker_id": "BLOCK_LIVE_EXECUTION",
+      "scope": "GLOBAL",
+      "reason": "Live execution/signing/broadcast/swap remains globally forbidden.",
+      "status": "ACTIVE_BLOCKER",
+      "updated_at": "2026-05-12T04:11:09Z"
+    }
+  ],
+  "updated_at": "2026-05-12T04:11:09Z"
+}

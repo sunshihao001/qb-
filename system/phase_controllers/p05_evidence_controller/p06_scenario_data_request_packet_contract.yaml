@@ -1,0 +1,37 @@
+controller_id: P05_EVIDENCE_CONTROLLER
+version: v3.0-professional
+status: PACKAGE_SPEC_READY_WITH_RUNTIME_GAPS
+created_at: '2026-05-12T02:44:17Z'
+paper_only: true
+real_trade_enabled: false
+runtime_allowed: false
+paper_runtime_allowed: false
+live_execution_allowed: false
+packet_type: P06_SCENARIO_DATA_REQUEST_PACKET
+from_controller: P05_EVIDENCE_CONTROLLER
+to_controller: P06_SCENARIO_RECOGNITION_CONTROLLER
+scenario_input_bundles:
+- chip_retention_bundle_path
+- distribution_risk_bundle_path
+- counterparty_pressure_bundle_path
+- transfer_risk_bundle_path
+- cost_basis_bundle_path
+- data_uncertainty_bundle_path
+- security_risk_bundle_path
+required_p06_tasks:
+- accumulation_or_retention_scenario_check
+- active_distribution_scenario_check
+- partial_distribution_or_rotation_check
+- counterparty_exit_liquidity_check
+- second_stage_expansion_precondition_check
+- data_insufficient_scenario_block_check
+usage_limitations:
+- EVIDENCE_ONLY
+- NO_STRATEGY_GATE
+- NO_PAPER_RUNTIME
+- NO_CONFIRMED_MARKET_MAKER
+- LIVE_EXECUTION_FORBIDDEN
+must_propagate:
+- conflicts_to_propagate
+- unknowns_to_propagate
+- usage_permissions

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "phase_order_head": [
+    "K00",
+    "P00",
+    "P01"
+  ],
+  "phase_count": 11,
+  "k00_package_files": [
+    "01_phase_manifest.yaml",
+    "02_phase_context_pack.md",
+    "03_phase_objective_tree.yaml",
+    "04_phase_input_contract.json",
+    "05_phase_output_contract.json",
+    "06_phase_execution_protocol.md",
+    "07_phase_acceptance_gate.yaml",
+    "08_phase_state.json",
+    "09_phase_handoff_packet.schema.json"
+  ]
+}

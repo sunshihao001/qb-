@@ -1,0 +1,9 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+policy_id: EXECUTION_COST_POLICY
+components: [network_fee, platform_fee, slippage_cost, spread_cost]
+if_missing_cost_model: ALLOW_WITH_DEFAULT_COST_MODEL
+paper_runtime_requirement:
+  apply_cost_model_to_paper_pnl: true
+  record_cost_assumptions: true

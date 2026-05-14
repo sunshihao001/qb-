@@ -20,10 +20,37 @@
 ## 禁止行为
 - 跳过目标护照直接执行。
 - 跳过控制面路由直接改代码、建 workflow 或跑数据。
+- 用户上传/粘贴系统建设资料、Phase Controller 资料、方法论资料或执行包资料后，跳过 K00 raw → passport → registry/index → mapping → gap → task_package → handoff，直接总结、验收、执行或标记 PXX/IXX READY。
+- PXX / IXX / Phase Controller READY 结论缺少显式 `k00_route_status`，或在 `K00_ROUTE_FAILED` 未完成 route recovery 时仍声明有效 READY。
 - 跳过验证声称完成。
 - 把未验证内容写成长期规则。
 - 把业务代码、方法论、运行数据、复盘报告混在一起。
 - 对钱包结构 / Wallet-Intel / source_wallet_bot / 结构分析任务另建并行主系统；必须先进入 Wallet-Intel 语义路由并修改既有 canonical 系统。
+
+## K00 / 系统资料输入强制底层规则
+- 命中用户上传、粘贴或转述的系统建设资料、Phase Controller 资料、Integration Program 资料、方法论蓝图、执行协议、合约/schema、验收规则、handoff 包、P00-P10/PXX/IXX 控制器资料时，必须先进入 K00 知识摄入/任务化 route；不得直接当普通文档总结或直接落阶段结论。
+
+```text
+K00 raw input 保存
+→ source registry / document passport
+→ corpus index / methodology extract
+→ system mapping / phase mapping
+→ gap detection
+→ task package
+→ phase_state / acceptance / handoff
+→ k00_route_status
+```
+
+- `k00_route_status` 是所有 PXX / IXX / Phase Controller READY 结论的前置字段：
+
+```text
+允许有效 READY: K00_INTAKE_ACCEPTED | K00_ROUTE_RECOVERY_DOCUMENTED
+禁止有效 READY: K00_ROUTE_FAILED | missing_k00_route_status
+```
+
+- 如果发现资料已经被跳过 K00 使用，必须先生成 route recovery 记录，并把结论降级为 `READY_WITH_RUNTIME_GAPS` 或 `READY_WITH_K00_ROUTE_RECOVERED`；只有 recovery 证据、acceptance、handoff 同时存在后，才允许继续下游阶段。
+
+- K00 只负责摄入、映射、任务化与交接，不直接注册正式 Phase Controller、不直接执行 P01-P10、不直接触发 paper runtime、不直接给 live execution 权限。
 
 ## Wallet-Intel / 钱包结构强制底层规则
 - 命中钱包结构、钱包数据、source_wallet_bot、Wallet-Intel、字段字典、数据护照、旧路径映射、handoff、筹码/同源/结构证据时，必须先执行：

@@ -1,0 +1,90 @@
+{
+  "token": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+  "output_root": "/root/sikk-gmgn/data/source_wallet_bot/live_test/4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+  "groups": {
+    "01_skill_solidification_layer": {
+      "status": "PASS",
+      "group_dirs": 8,
+      "manifest_groups": 8
+    },
+    "02_runtime_orchestration_layer": {
+      "status": "PASS",
+      "commands": [
+        "build-handoff",
+        "build-source-groups",
+        "classify-wallets",
+        "normalize-wallet-trade",
+        "validate-package"
+      ]
+    },
+    "03_directory_governance_layer": {
+      "status": "PASS",
+      "primary_write_layout": "standard_source_wallet_token_layout",
+      "guard_status": "PASS"
+    },
+    "04_data_adapter_layer": {
+      "status": "PASS",
+      "commands_total": 21,
+      "commands_success": 21,
+      "required_failures": 0
+    },
+    "05_fact_normalization_layer": {
+      "status": "PASS",
+      "trade_records": 28,
+      "profile_records": 28,
+      "same_source_groups": 2,
+      "decision_records": 28
+    },
+    "06_schema_contract_layer": {
+      "status": "PASS",
+      "schema_count": 9,
+      "package_validation": true
+    },
+    "07_handoff_layer": {
+      "status": "PASS",
+      "handoff_keys": [
+        "backflow_path_refs",
+        "created_at",
+        "evidence_language_only",
+        "forbidden_decision_fields",
+        "funding_flow_refs",
+        "missing_fields_summary",
+        "packet_id",
+        "requires_followup_fields",
+        "same_source_evidence_refs",
+        "source_manifest_refs",
+        "token_address",
+        "token_source_refs"
+      ],
+      "aggregate_list_records": 7
+    },
+    "08_rules_acceptance_layer": {
+      "status": "PASS",
+      "acceptance_output": "SOURCE_WALLET_BOT_ACCEPTANCE_PASS",
+      "fix_applied": "accept explicit 禁止交接字段 section as allowed forbidden-language documentation"
+    }
+  },
+  "live_summary": {
+    "symbol": "LOBSTER",
+    "market_cap": 488879.6324018165,
+    "liquidity_usd": 62146.25503389308,
+    "price_usd": 0.00048889226,
+    "top10_holder_rate": 0.1966,
+    "rug_ratio": null,
+    "risk_level": "1",
+    "holders_count": 8,
+    "traders_count": 8,
+    "okx_top_trader_count": 8,
+    "okx_cluster_count": 1,
+    "required_failures_count": 0
+  },
+  "stage_statuses": {
+    "stage_01_candidate_discovery": "PASS",
+    "stage_02_safety_gate": "PASS",
+    "stage_03_market_gate": "PASS",
+    "stage_05_early_wallet_analyzer": "PASS",
+    "stage_07_holder_cluster": "PASS",
+    "stage_09_chip_distribution_analyzer": "PASS"
+  },
+  "overall": "PASS"
+}

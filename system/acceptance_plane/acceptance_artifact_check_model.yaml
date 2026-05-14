@@ -1,0 +1,27 @@
+artifact_acceptance_check:
+  artifact_id: string
+  file_path: string
+  artifact_type:
+  - MARKDOWN_DOC
+  - YAML_SCHEMA
+  - CONTRACT
+  - REGISTRY
+  - CHECKLIST
+  - REPORT
+  - SCRIPT
+  - TEST_FILE
+  required_checks:
+  - file_exists
+  - file_not_empty
+  - required_sections_present
+  - schema_valid_if_yaml
+  - no_placeholder_only_content
+  - has_trace_id
+  - has_owner_phase
+  - has_downstream_usage
+  - has_acceptance_status
+  result:
+    passed: boolean
+    failed_checks: list
+    warnings: list
+    acceptance_status: string

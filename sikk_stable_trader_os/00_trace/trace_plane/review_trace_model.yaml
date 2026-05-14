@@ -1,0 +1,17 @@
+review_trace_record:
+  trace_id: string
+  review_case_id: required
+  token_address: required
+  reviewed_at: required
+  reviewed_chain: required
+  attribution: required
+  upgrade_recommendation: required
+  required_trace_links:
+    - parent_trace_ids
+    - child_trace_ids
+    - related_artifact_trace_ids
+  validation_rules:
+    - trace_id_present
+    - source_present
+    - downstream_usage_declared
+    - forbidden_actions_respected

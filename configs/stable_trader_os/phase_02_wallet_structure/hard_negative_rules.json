@@ -1,0 +1,76 @@
+{
+  "phase_id": "phase_02_wallet_structure_controller",
+  "precedence": "hard_negative > positive_evidence",
+  "rules": [
+    {
+      "id": "P02_HN_01",
+      "name": "同源组核心成员大比例同步卖出",
+      "status": "WALLET_BLOCK",
+      "evidence_required": [
+        "same_source_groups.csv",
+        "current_token_behavior.csv"
+      ]
+    },
+    {
+      "id": "P02_HN_02",
+      "name": "早期结构钱包集中清仓",
+      "status": "WALLET_BLOCK",
+      "evidence_required": [
+        "wallet_classification.csv",
+        "current_token_behavior.csv"
+      ]
+    },
+    {
+      "id": "P02_HN_03",
+      "name": "多个 Token 分发接收地址卖出或清仓",
+      "status": "WALLET_DISTRIBUTION_DETECTED",
+      "evidence_required": [
+        "distribution_paths.csv",
+        "wallet_classification.csv"
+      ]
+    },
+    {
+      "id": "P02_HN_04",
+      "name": "卖后资金集中回流到同一核心节点",
+      "status": "WALLET_BACKFLOW_DETECTED",
+      "evidence_required": [
+        "backflow_paths.csv",
+        "fund_flow_edges.csv"
+      ]
+    },
+    {
+      "id": "P02_HN_05",
+      "name": "高位接盘鲸鱼成为主要承接方",
+      "status": "WALLET_COUNTERPARTY_PRESSURE",
+      "evidence_required": [
+        "wallet_classification.csv",
+        "current_token_behavior.csv"
+      ]
+    },
+    {
+      "id": "P02_HN_06",
+      "name": "钱包结构证据显示结构侧已经撤退",
+      "status": "WALLET_BLOCK",
+      "evidence_required": [
+        "wallet_structure_decision.json"
+      ]
+    },
+    {
+      "id": "P02_HN_07",
+      "name": "Phase01 数据无效或上游硬否决",
+      "status": "WALLET_BLOCK",
+      "evidence_required": [
+        "phase_01_handoff_packet.json"
+      ]
+    },
+    {
+      "id": "P02_HN_08",
+      "name": "钱包数据缺失且无法降级处理",
+      "status": "WALLET_DATA_WEAK",
+      "evidence_required": [
+        "missing_fields_report.md"
+      ]
+    }
+  ],
+  "forbidden_override": "任何下游或 GMGN 标签不得覆盖硬否决。"
+}

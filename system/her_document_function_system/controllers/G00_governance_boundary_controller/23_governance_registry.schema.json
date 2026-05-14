@@ -1,0 +1,33 @@
+{
+  "title": "Governance Registry",
+  "type": "object",
+  "required": [
+    "registry_id",
+    "active_policies",
+    "pending_policies",
+    "deprecated_policies"
+  ],
+  "properties": {
+    "registry_id": {
+      "type": "string"
+    },
+    "active_policies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pending_policies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deprecated_policies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

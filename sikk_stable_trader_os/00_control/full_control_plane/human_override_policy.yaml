@@ -1,0 +1,4 @@
+human_override_policy:
+  allowed_override_cases: [governance_rule_update, phase_priority_change, accepted_risk_marking, manual_gap_closure, directory_constitution_change]
+  forbidden_override_cases: [bypass_security_gate, bypass_missing_critical_data, force_live_trade_without_execution_permission, mark_phase_ready_without_acceptance, delete_raw_data]
+  override_record_required: [override_id, operator, timestamp, reason, affected_plane, affected_status, risk_acknowledgement, rollback_plan]

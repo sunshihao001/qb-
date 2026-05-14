@@ -1,0 +1,44 @@
+{
+  "policy_id": "status_code_policy_v1",
+  "version": "1.0.0",
+  "status_rules": [
+    {
+      "status_code": "READY_WITH_GAPS",
+      "definition": "可继续下游处理，但必须携带 gap_refs，不允许改写为 ACCEPTED。",
+      "required_fields": [
+        "gap_refs",
+        "allowed_next_actions",
+        "forbidden_next_actions"
+      ],
+      "forbidden_equivalent_statuses": [
+        "ACCEPTED",
+        "PIPELINE_ACCEPTED",
+        "SYSTEM_FULLY_IMPLEMENTED"
+      ]
+    },
+    {
+      "status_code": "POLICY_CANDIDATE",
+      "definition": "治理候选规则，未经过冲突检查与激活验收。",
+      "forbidden_equivalent_statuses": [
+        "POLICY_ACTIVE",
+        "GOVERNANCE_ENFORCED"
+      ]
+    },
+    {
+      "status_code": "QUEUE_READY_WITH_GAPS",
+      "definition": "下游队列已生成，但下游任务尚未完成。",
+      "forbidden_equivalent_statuses": [
+        "DOWNSTREAM_EXECUTED",
+        "ITEM_COMPLETED"
+      ]
+    },
+    {
+      "status_code": "UPGRADE_QUEUE_READY_WITH_GAPS",
+      "definition": "升级队列已生成，但升级尚未应用。",
+      "forbidden_equivalent_statuses": [
+        "UPGRADE_APPLIED",
+        "IMPLEMENTED"
+      ]
+    }
+  ]
+}

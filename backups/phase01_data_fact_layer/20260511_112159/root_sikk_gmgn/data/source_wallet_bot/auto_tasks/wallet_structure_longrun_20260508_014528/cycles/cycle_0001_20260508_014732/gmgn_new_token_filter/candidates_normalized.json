@@ -1,0 +1,107 @@
+[
+  {
+    "token_address": "KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump",
+    "token_symbol": "GABI",
+    "chain": "sol",
+    "pool_address": "",
+    "token_open_time": "2026-05-08T01:00:47Z",
+    "pool_created_at": "2026-05-08T01:00:47Z",
+    "discovered_at": "2026-05-08T01:47:32Z",
+    "first_seen_at": "2026-05-08T01:47:32Z",
+    "last_seen_at": "2026-05-08T01:47:32Z",
+    "candidate_snapshot_at": "2026-05-08T01:47:32Z",
+    "candidate_batch_id": "RUN_20260508_014732",
+    "candidate_source": "gmgn_trenches:completed",
+    "market_cap_usd": 298656.919360568,
+    "liquidity_usd": 44865.0290107656,
+    "holder_count": 1967,
+    "volume_1m": 0.0,
+    "volume_5m": 0.0,
+    "volume_15m": 0.0,
+    "price_usd": 0.0,
+    "source_trace": {
+      "gmgn_new_pool": "gmgn_trenches:completed",
+      "gmgn_token_info": "raw.gmgn_trenches",
+      "gmgn_pool_info": "raw.pool|raw.pairs",
+      "okx_or_gmgn_market_data": "gmgn_trenches.market_fields",
+      "first_seen_registry": "time_context/token_first_seen_registry.json"
+    },
+    "field_quality": {
+      "missing_required_fields": [
+        "pool_address"
+      ],
+      "time_anchor_status": "时间锚点完整",
+      "market_snapshot_status": "市场快照完整"
+    }
+  },
+  {
+    "token_address": "xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump",
+    "token_symbol": "MV",
+    "chain": "sol",
+    "pool_address": "",
+    "token_open_time": "2026-05-08T00:37:36Z",
+    "pool_created_at": "2026-05-08T00:37:36Z",
+    "discovered_at": "2026-05-08T01:47:32Z",
+    "first_seen_at": "2026-05-08T01:47:32Z",
+    "last_seen_at": "2026-05-08T01:47:32Z",
+    "candidate_snapshot_at": "2026-05-08T01:47:32Z",
+    "candidate_batch_id": "RUN_20260508_014732",
+    "candidate_source": "gmgn_trenches:completed",
+    "market_cap_usd": 352576.99343448196,
+    "liquidity_usd": 47903.4465622272,
+    "holder_count": 1693,
+    "volume_1m": 0.0,
+    "volume_5m": 0.0,
+    "volume_15m": 0.0,
+    "price_usd": 0.0,
+    "source_trace": {
+      "gmgn_new_pool": "gmgn_trenches:completed",
+      "gmgn_token_info": "raw.gmgn_trenches",
+      "gmgn_pool_info": "raw.pool|raw.pairs",
+      "okx_or_gmgn_market_data": "gmgn_trenches.market_fields",
+      "first_seen_registry": "time_context/token_first_seen_registry.json"
+    },
+    "field_quality": {
+      "missing_required_fields": [
+        "pool_address"
+      ],
+      "time_anchor_status": "时间锚点完整",
+      "market_snapshot_status": "市场快照完整"
+    }
+  },
+  {
+    "token_address": "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+    "token_symbol": "MASK",
+    "chain": "sol",
+    "pool_address": "",
+    "token_open_time": "2026-05-08T00:10:35Z",
+    "pool_created_at": "2026-05-08T00:10:35Z",
+    "discovered_at": "2026-05-08T01:47:32Z",
+    "first_seen_at": "2026-05-08T01:47:32Z",
+    "last_seen_at": "2026-05-08T01:47:32Z",
+    "candidate_snapshot_at": "2026-05-08T01:47:32Z",
+    "candidate_batch_id": "RUN_20260508_014732",
+    "candidate_source": "gmgn_trenches:completed",
+    "market_cap_usd": 257869.75219340602,
+    "liquidity_usd": 41388.728208282,
+    "holder_count": 4441,
+    "volume_1m": 0.0,
+    "volume_5m": 0.0,
+    "volume_15m": 0.0,
+    "price_usd": 0.0,
+    "source_trace": {
+      "gmgn_new_pool": "gmgn_trenches:completed",
+      "gmgn_token_info": "raw.gmgn_trenches",
+      "gmgn_pool_info": "raw.pool|raw.pairs",
+      "okx_or_gmgn_market_data": "gmgn_trenches.market_fields",
+      "first_seen_registry": "time_context/token_first_seen_registry.json"
+    },
+    "field_quality": {
+      "missing_required_fields": [
+        "pool_address"
+      ],
+      "time_anchor_status": "时间锚点完整",
+      "market_snapshot_status": "市场快照完整"
+    }
+  }
+]

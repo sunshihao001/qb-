@@ -1,0 +1,390 @@
+{
+  "generated_at": "2026-05-06T03:25:36",
+  "items": [
+    {
+      "old_path": "outputs/gmgn_kline_pipeline_fake_candidates.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "outputs"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_kline_pipeline_fake/candidate_kline_pipeline_summary.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_candidate_kline_pipeline_fake"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_kline_pipeline_fake/Good111111111111111111111111111111111111111/kline_5m.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_kline_pipeline_fake/Good111111111111111111111111111111111111111/kline_1m.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_kline_pipeline_fake/Good111111111111111111111111111111111111111/gmgn_kline_5m_raw.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_kline_pipeline_fake/Good111111111111111111111111111111111111111/gmgn_kline_1m_raw.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_kline_pipeline_fake/Good111111111111111111111111111111111111111/accumulation_outputs/accumulation_window.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_kline_pipeline_fake/Good111111111111111111111111111111111111111/accumulation_outputs/accumulation_window.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_kline_pipeline_fake/Good111111111111111111111111111111111111111/accumulation_outputs/accumulation_window_bars.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_state_machine_fake_inputs/candidate_signal_summary.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_state_machine_fake_inputs"
+    },
+    {
+      "old_path": "outputs/gmgn_state_machine_fake_inputs/candidate_kline_pipeline_summary.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_state_machine_fake_inputs"
+    },
+    {
+      "old_path": "outputs/gmgn_state_machine_fake_inputs/token_candidates.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_state_machine_fake_inputs"
+    },
+    {
+      "old_path": "outputs/gmgn_state_machine_fake_inputs/Accum22222222222222222222222222222222222222/accumulation_window.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Accum22222222222222222222222222222222222222"
+    },
+    {
+      "old_path": "outputs/gmgn_state_machine_fake_inputs/Block44444444444444444444444444444444444444/accumulation_window.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "ock44444444444444444444444444444444444444"
+    },
+    {
+      "old_path": "outputs/gmgn_state_machine_fake_inputs/Ready11111111111111111111111111111111111111/accumulation_window.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Ready11111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_new_token_filter_fake/token_candidates.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_new_token_filter_fake"
+    },
+    {
+      "old_path": "outputs/gmgn_new_token_filter_fake/gmgn_trenches_raw.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_new_token_filter_fake"
+    },
+    {
+      "old_path": "outputs/gmgn_new_token_filter_fake/token_candidates.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_new_token_filter_fake"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_state_machine_fake/state_summary.md",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_candidate_state_machine_fake"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_state_machine_fake/state_events.jsonl",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_candidate_state_machine_fake"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_state_machine_fake/candidate_states.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_candidate_state_machine_fake"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_state_machine_fake/candidate_states.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_candidate_state_machine_fake"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/orchestrator/pipeline_report.md",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "orchestrator"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/orchestrator/pipeline_manifest.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "orchestrator"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/candidate_kline_pipeline_summary.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "kline_pipeline"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111/kline_5m.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111/kline_1m.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111/gmgn_kline_5m_raw.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111/gmgn_kline_1m_raw.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111/accumulation_outputs/accumulation_window.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111/accumulation_outputs/accumulation_window.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/kline_pipeline/Pipe111111111111111111111111111111111111111/accumulation_outputs/accumulation_window_bars.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/state_machine/state_summary.md",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "state_machine"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/state_machine/state_events.jsonl",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "state_machine"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/state_machine/candidate_states.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "state_machine"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/state_machine/candidate_states.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "state_machine"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/gmgn_new_token_filter/token_candidates.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_new_token_filter"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/gmgn_new_token_filter/gmgn_trenches_raw.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_new_token_filter"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/gmgn_new_token_filter/token_candidates.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_new_token_filter"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/candidate_signal_outputs/candidate_signal_summary.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "candidate_signal_outputs"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/candidate_signal_outputs/candidate_signal_summary.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "candidate_signal_outputs"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/candidate_signal_outputs/Pipe111111111111111111111111111111111111111/signal_outputs/auto_readiness_review.md",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/candidate_signal_outputs/Pipe111111111111111111111111111111111111111/signal_outputs/token_readiness_result.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/candidate_signal_outputs/Pipe111111111111111111111111111111111111111/signal_outputs/exit_plan.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/candidate_signal_outputs/Pipe111111111111111111111111111111111111111/signal_outputs/paper_trades.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/candidate_signal_outputs/Pipe111111111111111111111111111111111111111/signal_outputs/signal_events.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/sikk_gmgn_pipeline_fake/candidate_signal_outputs/Pipe111111111111111111111111111111111111111/signal_outputs/risk_gate_report.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Pipe111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_signal_pipeline_fake/candidate_signal_summary.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_candidate_signal_pipeline_fake"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_signal_pipeline_fake/candidate_signal_summary.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "gmgn_candidate_signal_pipeline_fake"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/auto_readiness_review.md",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/token_readiness_result.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/exit_plan.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/paper_trades.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/signal_events.csv",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    },
+    {
+      "old_path": "outputs/gmgn_candidate_signal_pipeline_fake/Good111111111111111111111111111111111111111/signal_outputs/risk_gate_report.json",
+      "suggested_action": "LEGACY_KEEP",
+      "suggested_target": "legacy_compat/path_maps/outputs_to_new_layout.json",
+      "asset_label": "runtime_data_legacy",
+      "asset_id": "Good111111111111111111111111111111111111111"
+    }
+  ]
+}

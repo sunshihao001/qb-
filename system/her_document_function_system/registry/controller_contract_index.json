@@ -1,0 +1,50 @@
+{
+  "index_id": "controller_contract_index_v1",
+  "contracts": [
+    {
+      "controller_id": "G00",
+      "input_contract": "system/her_document_function_system/controllers/G00_governance_boundary_controller/04_g00_input_contract.json",
+      "output_contract": "system/her_document_function_system/controllers/G00_governance_boundary_controller/05_g00_output_contract.json"
+    },
+    {
+      "controller_id": "K00",
+      "input_contract": "system/her_document_function_system/controllers/K00_knowledge_intake_controller/04_k00_input_contract.json",
+      "output_contract": "system/her_document_function_system/controllers/K00_knowledge_intake_controller/05_k00_output_contract.json"
+    },
+    {
+      "controller_id": "F00",
+      "input_contract": "system/her_document_function_system/controllers/F00_function_realization_controller/04_f00_input_contract.json",
+      "output_contract": "system/her_document_function_system/controllers/F00_function_realization_controller/05_f00_output_contract.json"
+    },
+    {
+      "controller_id": "V00",
+      "input_contract": "system/her_document_function_system/controllers/V00_validation_evidence_controller/04_v00_input_contract.json",
+      "output_contract": "system/her_document_function_system/controllers/V00_validation_evidence_controller/05_v00_output_contract.json"
+    },
+    {
+      "controller_id": "R00",
+      "input_contract": "system/her_document_function_system/controllers/R00_runner_tool_binding_controller/04_r00_input_contract.json",
+      "output_contract": "system/her_document_function_system/controllers/R00_runner_tool_binding_controller/05_r00_output_contract.json"
+    },
+    {
+      "controller_id": "A00",
+      "input_contract": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/04_a00_input_contract.json",
+      "output_contract": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/05_a00_output_contract.json"
+    },
+    {
+      "controller_id": "H00",
+      "input_contract": "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/04_h00_input_contract.json",
+      "output_contract": "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/05_h00_output_contract.json"
+    },
+    {
+      "controller_id": "U00",
+      "input_contract": "system/her_document_function_system/controllers/U00_review_upgrade_controller/04_u00_input_contract.json",
+      "output_contract": "system/her_document_function_system/controllers/U00_review_upgrade_controller/05_u00_output_contract.json"
+    },
+    {
+      "controller_id": "O00",
+      "input_contract": "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/04_o00_input_contract.json",
+      "output_contract": "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/05_o00_output_contract.json"
+    }
+  ]
+}

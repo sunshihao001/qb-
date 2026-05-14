@@ -1,0 +1,27 @@
+{
+  "doc_id": "DOC-20260512-I03_RUNNER_TOOL_BINDING_V1",
+  "source_type": "user_uploaded_text_document",
+  "source_name": "I03 专业版 v1.0",
+  "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/I03_runner_tool_binding_v1_0.md",
+  "sha256": "3d5106279345995d901c28589c9cc79cd3438da9a8f9e9b9fd601040f79cc1ae",
+  "document_role": {
+    "primary_role": "integration_program_runner_tool_binding_spec",
+    "secondary_roles": [
+      "runner_execution_contract",
+      "tool_binding_field_governance",
+      "dry_run_validation_prerequisite",
+      "i04_handoff_prerequisite"
+    ]
+  },
+  "summary": {
+    "core_intent": "建立 I03 Runner / Tool Binding：把 I02 索引与 P01-P10 控制器绑定到 runner、tool adapter、validator、writer、path guard 和 dry-run 验证。",
+    "key_points": [
+      "I03 属于 Integration Program，不是 P13/新业务阶段",
+      "I03 必须读取 I02 handoff 与索引",
+      "I03 只做绑定和 dry-run，不启动 Paper Runtime",
+      "阻断 live execution、wallet signing、auto order、未登记路径写入",
+      "输出 I04 Paper Runtime Prerequisite Packet 与 I03→I04 handoff"
+    ]
+  },
+  "status": "PASSPORT_READY"
+}

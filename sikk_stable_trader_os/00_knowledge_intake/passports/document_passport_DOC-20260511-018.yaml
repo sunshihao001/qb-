@@ -1,0 +1,39 @@
+doc_id: DOC-20260511-018
+source_type: user_uploaded_markdown
+source_name: 未命名 4.md
+received_at: '2026-05-11'
+raw_path: /root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-018_k00_professional_phase_controller_candidate_upgrade.md
+sha256: 62b5f51591bbbc430a1aa1c552dd6f270aac9825d83a765014520fc6f3c82287
+document_role:
+  primary_role: 'K00 professional upgrade: knowledge intake + methodology extraction
+    + Phase Controller candidate taskization'
+  secondary_roles:
+  - phase_controller_candidate_spec_template
+  - k00_to_p00_handoff_template
+  - authority_boundary_definition
+  - acceptance_gate_upgrade
+summary:
+  core_intent: 将 K00 从文档摄取/资产化升级为可生成 Phase Controller Candidate Spec 并交给 P00 编译的系统建造入口。
+  key_points:
+  - K00 只生成候选规格，P00 才正式注册与接入控制平面。
+  - K00 必须输出 phase_controller_candidate_spec 与 k00_to_p00_handoff_packet。
+  - Phase Controller 是可调度阶段运行单元，不是说明文档。
+  - K00 禁止启动 P01-P10、禁止真实交易、禁止正式写入 phase_registry。
+system_mapping:
+  planes:
+  - knowledge_intake
+  - control_plane
+  - methodology_plane
+  - trace_plane
+  - governance_plane
+  affected_phases:
+  - K00_knowledge_intake_taskization
+  - P00_system_bootstrap_controller
+required_actions:
+- update K00 context.md
+- update K00 controller.yaml
+- create phase_controller_candidate_spec.template.yaml
+- create k00_to_p00_handoff_packet.template.json
+- verify YAML/JSON parse and safety boundary
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

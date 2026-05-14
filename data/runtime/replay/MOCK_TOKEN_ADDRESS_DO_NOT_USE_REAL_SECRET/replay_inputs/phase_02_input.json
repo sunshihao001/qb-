@@ -1,0 +1,49 @@
+{
+  "token_address": "MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET",
+  "mode": "replay",
+  "current_phase": "phase_01_data_fact_layer",
+  "previous_phase": "phase_00_system_constitution",
+  "next_phase": "phase_02_wallet_structure_layer",
+  "status_code": "DATA_OK",
+  "status_family": "ALLOW",
+  "positive_evidence": [
+    {
+      "field": "raw_wallet_trade",
+      "reason": "present"
+    },
+    {
+      "field": "raw_kline",
+      "reason": "present"
+    },
+    {
+      "field": "raw_quote_security",
+      "reason": "present"
+    },
+    {
+      "field": "common",
+      "reason": "present"
+    }
+  ],
+  "negative_evidence": [],
+  "counter_evidence": [],
+  "hard_negative_trigger": null,
+  "invalidation_condition": "counter_evidence_or_hard_negative_triggered",
+  "confidence_level": "medium",
+  "missing_fields": [],
+  "gaps": [],
+  "audit_refs": [
+    "/root/sikk-gmgn/reports/runtime/replay/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_01/audit_report.md"
+  ],
+  "source_refs": [
+    "/root/sikk-gmgn/data/runtime/replay/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/replay_inputs/phase_01_input.json"
+  ],
+  "created_at": "2026-05-11T08:57:57.839875+00:00",
+  "updated_at": "2026-05-11T08:57:57.839880+00:00",
+  "rule_version": "runtime_state_core_v1",
+  "run_id": "replay_MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET",
+  "phase": 2,
+  "source_files": [
+    "/root/sikk-gmgn/shared_handoff/phase_01/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_01_handoff_packet.json"
+  ],
+  "handoff_to": "phase_03"
+}

@@ -1,0 +1,12 @@
+paper_runtime_trace:
+  trace_id: I04_TRACE_20260512_01
+  source_document_id: DOC-20260512-I04_PAPER_RUNTIME_INTEGRATION_V1
+  artifacts:
+    acceptance_result: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/acceptance/i04_acceptance_result.yaml
+    report: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/reports/i04_paper_runtime_integration_report.md
+    handoff: /root/sikk-gmgn/data/integration_program/I04_paper_runtime_integration/i05_handoff/i04_to_i05_handoff_packet.yaml
+  safety:
+    paper_only: true
+    live_execution_allowed: false
+    wallet_signing_allowed: false
+    auto_deploy_allowed: false

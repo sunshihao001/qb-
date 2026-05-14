@@ -1,0 +1,10 @@
+# Auto-landed by HER P07 package landing
+# generated_at: 2026-05-12T04:08:53Z
+# authority: user uploaded P07 Strategy Gate Controller 专业版 v3.0
+policy_id: P07_HARD_NEGATIVE_POLICY
+priority: BEFORE_ALL_POSITIVE_FIT
+rules_must_run_before: [scenario_gate, evidence_gate, chip_gate, market_position_gate, pattern_fit]
+blocking_sources: [governance, trace_handoff, p06_scenario_conflict, p05_counter_evidence, p04_chip_quality, p02_data_quality, p02_security_fact]
+if_hard_block: {p08_handoff_allowed: false, required_record: strategy_block_reason_record}
+if_pause: {required_record: pause_condition_record}
+if_human_confirmation: {required_record: human_confirmation_requirement_record}

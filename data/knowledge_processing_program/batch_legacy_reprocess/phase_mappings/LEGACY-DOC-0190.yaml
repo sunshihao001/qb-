@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0190
+source_path: docs/stable_trader_os/phases/phase_01_acceptance_standard.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 3
+  P04: 0
+  P05: 0
+  P06: 0
+  P07: 5
+  P08: 0
+  P09: 0
+  P10: 0
+primary_phase: P07
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

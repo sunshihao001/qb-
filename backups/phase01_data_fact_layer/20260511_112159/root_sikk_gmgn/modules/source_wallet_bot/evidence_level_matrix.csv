@@ -1,0 +1,7 @@
+evidence_level,meaning,required_evidence,example,allowed_action,not_allowed_action
+E0,无有效证据,只有地址或字段严重缺失,仅有 wallet_address,A0/A1 记录,不得分类为结构钱包，不得影响主状态
+E1,单字段弱证据,一个 GMGN 标签或一个浅字段,fresh_wallet 单标签,A1 低权重记录,不得 block，不得给 R4
+E2,多字段弱关联,两个以上弱字段但无路径证据,top_holder + high hold,A2 观察,不得判同源/回流
+E3,当前代币内强证据,当前代币买卖/转入/利润/时序形成一致证据,transfer_in + high hold,A3 跟踪,不得声称跨币稳定
+E4,当前代币强证据 + 同源/分发/回流,边表或路径支撑角色,多个钱包同源同步卖出,A4 核心跟踪/风险提示,不得写确定庄家
+E5,跨代币复现 + 同源/回流/盈利稳定,历史库多币复现 + 当前路径证据,同资金源多币重复回流,A4 核心监控，允许高风险候选,不得自动交易或真实 swap

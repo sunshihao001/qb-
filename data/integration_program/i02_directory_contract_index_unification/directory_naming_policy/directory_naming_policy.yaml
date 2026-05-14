@@ -1,0 +1,9 @@
+record_id: directory_naming_policy_20260512
+generated_at: '2026-05-12T13:05:00Z'
+status: BUILT
+items:
+- system artifacts under /system
+- runtime artifacts under /data
+- integration program under /system/integration_program and /data/integration_program
+- legacy paths readonly
+gaps: []

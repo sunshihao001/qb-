@@ -1,0 +1,23 @@
+meta:
+  standard_id: S00_FIELD_MUTATION_POLICY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+rules:
+  raw_fact: forbidden_manual_write
+  normalized_fact: runner_rebuild_only
+  derived_metric: runner_recompute
+  inferred_state: evidence_update_only
+  decision_field: phase_controller_only
+  permission_field: P08_or_control_plane_only
+  review_field: P09_only
+  upgrade_field: P10_only
+  manual_note: manual_allowed_not_for_auto_decision
+hard_rule: raw_fact and permission_field cannot be manually mutated by analysis runner.

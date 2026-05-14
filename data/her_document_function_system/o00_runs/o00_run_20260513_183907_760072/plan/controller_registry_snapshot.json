@@ -1,0 +1,645 @@
+{
+  "registry_id": "controller_registry_her_document_function_system_v1",
+  "legacy_registry_id": "controller_registry_o00_v1",
+  "registry_version": "1.0.0",
+  "created_at": "2026-05-13T00:00:00Z",
+  "updated_at": "2026-05-13T00:00:00Z",
+  "repo_root": "/root/sikk-gmgn",
+  "governance_policy_ref": "system/her_document_function_system/controllers/G00_governance_boundary_controller/active_policy_bundle.json",
+  "global_forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order",
+    "overwrite_raw_documents",
+    "overwrite_trace_audit",
+    "delete_legacy_runtime",
+    "convert_ready_with_gaps_to_ready",
+    "treat_design_as_implemented",
+    "treat_plan_as_evidence",
+    "treat_binding_plan_as_runner_bound"
+  ],
+  "registered_controllers": [
+    {
+      "controller_id": "G00",
+      "status": "REGISTERED",
+      "input_contract": "required",
+      "output_contract": "required",
+      "acceptance_gate": "required",
+      "handoff": "required"
+    },
+    {
+      "controller_id": "O00",
+      "status": "REGISTERED",
+      "input_contract": "required",
+      "output_contract": "required",
+      "acceptance_gate": "required",
+      "handoff": "required"
+    },
+    {
+      "controller_id": "K00",
+      "status": "REGISTERED",
+      "input_contract": "required",
+      "output_contract": "required",
+      "acceptance_gate": "required",
+      "handoff": "required"
+    },
+    {
+      "controller_id": "F00",
+      "status": "REGISTERED",
+      "input_contract": "required",
+      "output_contract": "required",
+      "acceptance_gate": "required",
+      "handoff": "required"
+    },
+    {
+      "controller_id": "V00",
+      "status": "REGISTERED",
+      "input_contract": "required",
+      "output_contract": "required",
+      "acceptance_gate": "required",
+      "handoff": "required"
+    },
+    {
+      "controller_id": "R00",
+      "status": "REGISTERED",
+      "input_contract": "required",
+      "output_contract": "required",
+      "acceptance_gate": "required",
+      "handoff": "required"
+    },
+    {
+      "controller_id": "A00",
+      "status": "REGISTERED",
+      "input_contract": "required",
+      "output_contract": "required",
+      "acceptance_gate": "required",
+      "handoff": "required"
+    },
+    {
+      "controller_id": "H00",
+      "status": "REGISTERED",
+      "input_contract": "required",
+      "output_contract": "required",
+      "acceptance_gate": "required",
+      "handoff": "required"
+    },
+    {
+      "controller_id": "U00",
+      "status": "REGISTERED",
+      "input_contract": "required",
+      "output_contract": "required",
+      "acceptance_gate": "required",
+      "handoff": "required"
+    }
+  ],
+  "controllers": [
+    {
+      "controller_id": "G00",
+      "controller_name": "G00_governance_boundary_controller",
+      "controller_type": "HER_PHASE_CONTROLLER",
+      "phase_id": "G00",
+      "controller_path": "system/her_document_function_system/controllers/G00_governance_boundary_controller/",
+      "input_contract": "04_g00_input_contract.json",
+      "output_contract": "05_g00_output_contract.json",
+      "execution_protocol": "06_g00_execution_protocol.md",
+      "acceptance_gate": "07_g00_acceptance_gate.yaml",
+      "state_file": "08_g00_state.json",
+      "handoff_schema": "09_g00_handoff_packet.schema.json",
+      "trace_spec": "24_trace_audit_spec.yaml",
+      "recovery_policy": "25_recovery_policy.md",
+      "default_mode": "POLICY_WRITE",
+      "required_upstream": [
+        "U00",
+        "A00"
+      ],
+      "allowed_downstream": [
+        "O00",
+        "K00",
+        "F00",
+        "V00",
+        "R00",
+        "A00",
+        "H00",
+        "U00",
+        "PXX",
+        "IXX"
+      ],
+      "required_inputs_summary": [
+        "u00_governance_candidates",
+        "a00_evidence_bundle",
+        "gap_reports",
+        "trace_refs",
+        "audit_refs"
+      ],
+      "required_outputs_summary": [
+        "forbidden_action_registry",
+        "status_code_table",
+        "evidence_policy",
+        "gap_policy",
+        "execution_boundary_policy",
+        "runner_safety_policy",
+        "governance_registry",
+        "active_policy_bundle",
+        "g00_handoff_packet"
+      ],
+      "forbidden_actions": [
+        "start_live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "silent_policy_overwrite"
+      ],
+      "policy_refs": [
+        "forbidden_action_registry",
+        "status_code_table",
+        "evidence_policy",
+        "gap_policy"
+      ],
+      "status": "DESIGN_ONLY",
+      "gaps": [
+        "active_policy_bundle_not_yet_validated"
+      ]
+    },
+    {
+      "controller_id": "O00",
+      "controller_name": "O00_full_pipeline_orchestrator",
+      "controller_type": "HER_MASTER_ORCHESTRATOR",
+      "phase_id": "O00",
+      "controller_path": "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/",
+      "input_contract": "04_o00_input_contract.json",
+      "output_contract": "05_o00_output_contract.json",
+      "execution_protocol": "06_o00_execution_protocol.md",
+      "acceptance_gate": "07_o00_acceptance_gate.yaml",
+      "state_file": "08_o00_state.json",
+      "handoff_schema": "09_o00_handoff_packet.schema.json",
+      "trace_spec": "17_pipeline_trace_audit_spec.yaml",
+      "recovery_policy": "16_pipeline_recovery_policy.schema.json",
+      "default_mode": "ORCHESTRATE_ONLY",
+      "required_upstream": [
+        "G00"
+      ],
+      "allowed_downstream": [
+        "K00",
+        "F00",
+        "V00",
+        "R00",
+        "A00",
+        "H00",
+        "U00",
+        "G00"
+      ],
+      "required_inputs_summary": [
+        "source_document_or_document_refs",
+        "operator_goal",
+        "governance_policy_bundle",
+        "controller_registry",
+        "execution_boundary",
+        "pipeline_config",
+        "repo_root",
+        "safe_mode"
+      ],
+      "required_outputs_summary": [
+        "pipeline_run",
+        "pipeline_execution_plan",
+        "stage_dependency_graph",
+        "pipeline_state",
+        "pipeline_queue",
+        "pipeline_gap_register",
+        "pipeline_acceptance_matrix",
+        "o00_final_handoff",
+        "o00_final_report"
+      ],
+      "forbidden_actions": [
+        "bypass_governance_policy",
+        "bypass_k00",
+        "start_live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading"
+      ],
+      "policy_refs": [
+        "active_policy_bundle",
+        "stage_transition_policy",
+        "pipeline_gap_policy"
+      ],
+      "status": "DESIGN_ONLY",
+      "gaps": [
+        "orchestrator_runtime_not_yet_implemented"
+      ]
+    },
+    {
+      "controller_id": "K00",
+      "controller_name": "K00_knowledge_intake_controller",
+      "controller_type": "HER_PHASE_CONTROLLER",
+      "phase_id": "K00",
+      "controller_path": "system/her_document_function_system/controllers/K00_knowledge_intake_controller/",
+      "input_contract": "04_k00_input_contract.json",
+      "output_contract": "05_k00_output_contract.json",
+      "execution_protocol": "06_k00_execution_protocol.md",
+      "acceptance_gate": "07_k00_acceptance_gate.yaml",
+      "state_file": "08_k00_state.json",
+      "handoff_schema": "09_k00_handoff_packet.schema.json",
+      "trace_spec": "18_trace_audit_spec.yaml",
+      "recovery_policy": "17_recovery_policy.md",
+      "default_mode": "SAFE_WRITE",
+      "required_upstream": [
+        "O00",
+        "G00"
+      ],
+      "allowed_downstream": [
+        "F00",
+        "U00"
+      ],
+      "required_inputs_summary": [
+        "source_document",
+        "operator_goal",
+        "execution_boundary",
+        "governance_policy_bundle"
+      ],
+      "required_outputs_summary": [
+        "raw_input",
+        "source_registry",
+        "document_passport",
+        "corpus_index",
+        "system_mapping",
+        "gap_detection",
+        "kv_memory_index",
+        "k00_acceptance_result",
+        "k00_handoff_packet"
+      ],
+      "forbidden_actions": [
+        "direct_summary_only",
+        "bypass_k00",
+        "overwrite_raw_documents",
+        "start_runner"
+      ],
+      "policy_refs": [
+        "directory_policy",
+        "evidence_policy",
+        "gap_policy"
+      ],
+      "status": "DESIGN_ONLY",
+      "gaps": [
+        "controller_files_not_yet_written_or_not_validated"
+      ]
+    },
+    {
+      "controller_id": "F00",
+      "controller_name": "F00_function_realization_controller",
+      "controller_type": "HER_PHASE_CONTROLLER",
+      "phase_id": "F00",
+      "controller_path": "system/her_document_function_system/controllers/F00_function_realization_controller/",
+      "input_contract": "04_f00_input_contract.json",
+      "output_contract": "05_f00_output_contract.json",
+      "execution_protocol": "06_f00_execution_protocol.md",
+      "acceptance_gate": "07_f00_acceptance_gate.yaml",
+      "state_file": "08_f00_state.json",
+      "handoff_schema": "09_f00_handoff_packet.schema.json",
+      "trace_spec": "18_trace_audit_spec.yaml",
+      "recovery_policy": "17_recovery_policy.md",
+      "default_mode": "DESIGN_ONLY",
+      "required_upstream": [
+        "K00"
+      ],
+      "allowed_downstream": [
+        "V00",
+        "U00"
+      ],
+      "required_inputs_summary": [
+        "k00_handoff_packet",
+        "document_passport_refs",
+        "corpus_index_refs",
+        "system_mapping_refs",
+        "gap_detection_refs",
+        "repo_root",
+        "write_policy"
+      ],
+      "required_outputs_summary": [
+        "function_mapping",
+        "implementation_decision",
+        "repo_scan_result",
+        "function_asset_plan",
+        "field_model",
+        "rule_logic",
+        "schema_contract_plan",
+        "test_replay_plan",
+        "runner_binding_plan",
+        "f00_handoff_packet"
+      ],
+      "forbidden_actions": [
+        "declare_implemented_without_patch",
+        "declare_tested_without_test_evidence",
+        "start_live_runtime",
+        "wallet_signing"
+      ],
+      "policy_refs": [
+        "status_code_table",
+        "evidence_policy",
+        "execution_boundary_policy"
+      ],
+      "status": "DESIGN_ONLY",
+      "gaps": [
+        "code_realizer_not_yet_implemented"
+      ]
+    },
+    {
+      "controller_id": "V00",
+      "controller_name": "V00_validation_evidence_controller",
+      "controller_type": "HER_PHASE_CONTROLLER",
+      "phase_id": "V00",
+      "controller_path": "system/her_document_function_system/controllers/V00_validation_evidence_controller/",
+      "input_contract": "04_v00_input_contract.json",
+      "output_contract": "05_v00_output_contract.json",
+      "execution_protocol": "06_v00_execution_protocol.md",
+      "acceptance_gate": "07_v00_acceptance_gate.yaml",
+      "state_file": "08_v00_state.json",
+      "handoff_schema": "09_v00_handoff_packet.schema.json",
+      "trace_spec": "18_trace_audit_spec.yaml",
+      "recovery_policy": "19_recovery_policy.md",
+      "default_mode": "SAFE_REPLAY",
+      "required_upstream": [
+        "F00"
+      ],
+      "allowed_downstream": [
+        "R00",
+        "A00",
+        "U00"
+      ],
+      "required_inputs_summary": [
+        "f00_handoff_packet",
+        "function_mapping",
+        "field_model",
+        "rule_logic",
+        "schema_contract_plan",
+        "test_plan",
+        "replay_plan"
+      ],
+      "required_outputs_summary": [
+        "schema_validation_result",
+        "contract_validation_result",
+        "field_model_validation_result",
+        "rule_logic_validation_result",
+        "test_evidence",
+        "replay_evidence",
+        "failure_evidence",
+        "v00_handoff_packet"
+      ],
+      "forbidden_actions": [
+        "treat_test_plan_as_test_evidence",
+        "treat_replay_plan_as_replay_evidence",
+        "declare_passed_without_command_output"
+      ],
+      "policy_refs": [
+        "evidence_policy",
+        "gap_policy",
+        "status_code_table"
+      ],
+      "status": "DESIGN_ONLY",
+      "gaps": [
+        "test_executor_not_yet_implemented"
+      ]
+    },
+    {
+      "controller_id": "R00",
+      "controller_name": "R00_runner_tool_binding_controller",
+      "controller_type": "HER_PHASE_CONTROLLER",
+      "phase_id": "R00",
+      "controller_path": "system/her_document_function_system/controllers/R00_runner_tool_binding_controller/",
+      "input_contract": "04_r00_input_contract.json",
+      "output_contract": "05_r00_output_contract.json",
+      "execution_protocol": "06_r00_execution_protocol.md",
+      "acceptance_gate": "07_r00_acceptance_gate.yaml",
+      "state_file": "08_r00_state.json",
+      "handoff_schema": "09_r00_handoff_packet.schema.json",
+      "trace_spec": "21_trace_audit_spec.yaml",
+      "recovery_policy": "17_recovery_policy.md",
+      "default_mode": "SAFE_DRY_RUN",
+      "required_upstream": [
+        "V00"
+      ],
+      "allowed_downstream": [
+        "A00",
+        "U00"
+      ],
+      "required_inputs_summary": [
+        "v00_handoff_packet",
+        "validation_evidence",
+        "test_evidence_refs",
+        "replay_evidence_refs",
+        "binding_policy",
+        "safe_mode"
+      ],
+      "required_outputs_summary": [
+        "binding_target_inventory",
+        "command_contract",
+        "cli_binding",
+        "tool_binding",
+        "orchestrator_binding",
+        "dry_run_evidence",
+        "r00_handoff_packet"
+      ],
+      "forbidden_actions": [
+        "start_live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "declare_runner_bound_without_dry_run"
+      ],
+      "policy_refs": [
+        "runner_safety_policy",
+        "production_risk_policy",
+        "evidence_policy"
+      ],
+      "status": "DESIGN_ONLY",
+      "gaps": [
+        "dry_run_runner_not_yet_implemented"
+      ]
+    },
+    {
+      "controller_id": "A00",
+      "controller_name": "A00_acceptance_evidence_controller",
+      "controller_type": "HER_PHASE_CONTROLLER",
+      "phase_id": "A00",
+      "controller_path": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/",
+      "input_contract": "04_a00_input_contract.json",
+      "output_contract": "05_a00_output_contract.json",
+      "execution_protocol": "06_a00_execution_protocol.md",
+      "acceptance_gate": "07_a00_acceptance_gate.yaml",
+      "state_file": "08_a00_state.json",
+      "handoff_schema": "09_a00_handoff_packet.schema.json",
+      "trace_spec": "20_trace_audit_spec.yaml",
+      "recovery_policy": "19_recovery_policy.md",
+      "default_mode": "EVIDENCE_REVIEW",
+      "required_upstream": [
+        "K00",
+        "F00",
+        "V00",
+        "R00"
+      ],
+      "allowed_downstream": [
+        "H00",
+        "U00"
+      ],
+      "required_inputs_summary": [
+        "k00_handoff_packet",
+        "f00_handoff_packet",
+        "v00_handoff_packet",
+        "r00_handoff_packet_if_required",
+        "phase_state_refs",
+        "gap_report_refs",
+        "trace_refs",
+        "audit_refs"
+      ],
+      "required_outputs_summary": [
+        "evidence_bundle",
+        "phase_status_matrix",
+        "artifact_manifest",
+        "gap_propagation_report",
+        "acceptance_scorecard",
+        "readiness_certificate",
+        "a00_handoff_packet"
+      ],
+      "forbidden_actions": [
+        "mark_ready_without_evidence",
+        "convert_ready_with_gaps_to_ready",
+        "treat_plan_as_execution"
+      ],
+      "policy_refs": [
+        "status_code_table",
+        "evidence_policy",
+        "gap_policy"
+      ],
+      "status": "DESIGN_ONLY",
+      "gaps": [
+        "evidence_bundle_checker_not_yet_implemented"
+      ]
+    },
+    {
+      "controller_id": "H00",
+      "controller_name": "H00_handoff_downstream_queue_controller",
+      "controller_type": "HER_PHASE_CONTROLLER",
+      "phase_id": "H00",
+      "controller_path": "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/",
+      "input_contract": "04_h00_input_contract.json",
+      "output_contract": "05_h00_output_contract.json",
+      "execution_protocol": "06_h00_execution_protocol.md",
+      "acceptance_gate": "07_h00_acceptance_gate.yaml",
+      "state_file": "08_h00_state.json",
+      "handoff_schema": "09_h00_handoff_packet.schema.json",
+      "trace_spec": "19_trace_audit_spec.yaml",
+      "recovery_policy": "18_retry_recovery.schema.json",
+      "default_mode": "QUEUE_WRITE",
+      "required_upstream": [
+        "A00"
+      ],
+      "allowed_downstream": [
+        "PXX",
+        "IXX",
+        "Runner",
+        "U00",
+        "G00"
+      ],
+      "required_inputs_summary": [
+        "a00_handoff_packet",
+        "readiness_certificate",
+        "evidence_bundle",
+        "phase_status_matrix",
+        "artifact_manifest",
+        "gap_propagation_report"
+      ],
+      "required_outputs_summary": [
+        "downstream_target_inventory",
+        "routing_decision",
+        "downstream_queue",
+        "queue_items",
+        "dependency_graph",
+        "priority_plan",
+        "downstream_handoff_packets"
+      ],
+      "forbidden_actions": [
+        "route_blocked_task_to_execution",
+        "drop_unresolved_gaps",
+        "delete_forbidden_actions"
+      ],
+      "policy_refs": [
+        "handoff_policy",
+        "gap_policy",
+        "execution_boundary_policy"
+      ],
+      "status": "DESIGN_ONLY",
+      "gaps": [
+        "target_capability_matrix_not_yet_validated"
+      ]
+    },
+    {
+      "controller_id": "U00",
+      "controller_name": "U00_review_upgrade_controller",
+      "controller_type": "HER_PHASE_CONTROLLER",
+      "phase_id": "U00",
+      "controller_path": "system/her_document_function_system/controllers/U00_review_upgrade_controller/",
+      "input_contract": "04_u00_input_contract.json",
+      "output_contract": "05_u00_output_contract.json",
+      "execution_protocol": "06_u00_execution_protocol.md",
+      "acceptance_gate": "07_u00_acceptance_gate.yaml",
+      "state_file": "08_u00_state.json",
+      "handoff_schema": "09_u00_handoff_packet.schema.json",
+      "trace_spec": "20_trace_audit_spec.yaml",
+      "recovery_policy": "19_recovery_policy.md",
+      "default_mode": "EVIDENCE_REVIEW",
+      "required_upstream": [
+        "H00",
+        "A00"
+      ],
+      "allowed_downstream": [
+        "K00",
+        "F00",
+        "V00",
+        "R00",
+        "G00",
+        "Backlog"
+      ],
+      "required_inputs_summary": [
+        "h00_handoff_packet",
+        "a00_evidence_bundle",
+        "gap_reports",
+        "failure_evidence",
+        "queue_state",
+        "trace_refs",
+        "audit_refs"
+      ],
+      "required_outputs_summary": [
+        "review_cases",
+        "root_cause_analysis",
+        "recurring_issue_report",
+        "upgrade_candidates",
+        "upgrade_queue",
+        "governance_candidates",
+        "learning_index",
+        "u00_handoff_packets"
+      ],
+      "forbidden_actions": [
+        "treat_review_as_fix",
+        "treat_upgrade_candidate_as_applied",
+        "delete_failure_history"
+      ],
+      "policy_refs": [
+        "evidence_policy",
+        "gap_policy",
+        "governance_policy"
+      ],
+      "status": "DESIGN_ONLY",
+      "gaps": [
+        "recurring_issue_detector_not_yet_implemented"
+      ]
+    }
+  ],
+  "status": "DESIGN_BLUEPRINT_READY",
+  "must_not_claim": [
+    "POLICY_ACTIVE",
+    "PIPELINE_RUNNING",
+    "TESTED",
+    "RUNNER_BOUND"
+  ]
+}

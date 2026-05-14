@@ -1,0 +1,44 @@
+candidate_intake_test_matrix:
+- test_id: P01_TEST_001
+  name: 正常 GMGN 候选输入
+  input: token_address + chain + source_type
+  expected_status: READY_FOR_P02
+- test_id: P01_TEST_002
+  name: 缺 token_address
+  input: chain + source_type only
+  expected_status: P01_REJECTED
+- test_id: P01_TEST_003
+  name: 重复 token 再次发现
+  input: same chain + same token_address + new source
+  expected_status: DUPLICATE_MERGED
+- test_id: P01_TEST_004
+  name: 同 symbol 不同 token
+  input: same symbol + different token_address
+  expected_status: SYMBOL_COLLISION_FLAGGED
+- test_id: P01_TEST_005
+  name: legacy runtime 导入
+  input: legacy token record
+  expected_status: READY_WITH_GAPS
+  required_limitation: LEGACY_REFERENCE_ONLY
+- test_id: P01_TEST_006
+  name: replay sample 输入
+  input: replay candidate
+  expected_status: READY_WITH_GAPS
+  required_limitation: REPLAY_CONTEXT
+- test_id: P01_TEST_007
+  name: 请求直接进入策略层
+  input: token + requested_next_stage=P07
+  expected_status: P01_BLOCKED
+- test_id: P01_TEST_008
+  name: 自动实盘请求
+  input: token + live_execution_requested=true
+  expected_status: P01_BLOCKED
+- test_id: P01_TEST_009
+  name: 缺 discovery market cap
+  input: token + source but no market cap
+  expected_status: READY_WITH_GAPS
+  required_p02_request: current_market_cap_usd
+- test_id: P01_TEST_010
+  name: 无 trace 输入
+  input: token but no trace
+  expected_status: P01_BLOCKED

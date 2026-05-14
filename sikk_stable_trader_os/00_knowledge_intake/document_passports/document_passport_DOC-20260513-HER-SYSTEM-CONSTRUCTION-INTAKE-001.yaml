@@ -1,0 +1,81 @@
+doc_id: DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001
+source_type: user_uploaded_markdown
+source_name: HER_SYSTEM_CONSTRUCTION_DOCUMENT_INTAKE_PROMPT_v2.0
+received_at: "2026-05-13T10:42:31Z"
+raw_path: "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001_her_system_construction_document_intake_prompt_v2_0.md"
+content_hash: "5be095a33166ddf59645eb6f551d652ccf32fef1636f4037f2a7a02c347ca473"
+document_role:
+  primary_role: system_construction_intake_protocol
+  secondary_roles:
+    - k00_gate_definition
+    - phase_package_specification
+    - governance_boundary_specification
+summary:
+  core_intent: >-
+    Define a mandatory K00 intake flow that preserves raw source material and converts uploaded HER system construction prompts into file-backed, auditable, handoff-ready assets.
+  key_points:
+    - K00 is the mandatory entry for uploaded system materials.
+    - Raw input, registry, passport, index, mapping, gaps, task package, state, acceptance, and handoff are all required.
+    - Direct entry to PXX/IXX/Runner/Paper/Live is forbidden without K00 acceptance and handoff.
+    - File-backed state and trace/audit are mandatory.
+    - Unresolved gaps must be preserved and cannot be rewritten away.
+  non_goals:
+    - No trading logic.
+    - No runner start.
+    - No paper runtime start.
+    - No live runtime start.
+    - No production rule modification.
+system_mapping:
+  planes:
+    - methodology_plane
+    - governance_plane
+    - control_plane
+    - phase_controller_plane
+    - schema_contract_plane
+    - trace_plane
+    - acceptance_handoff_plane
+    - report_audit_plane
+  affected_phases:
+    - K00
+    - P00
+    - P01
+    - P02
+    - P03
+    - P04
+    - P05
+    - P06
+    - P07
+    - P08
+    - P09
+    - P10
+    - I01
+    - I02
+    - I03
+    - I04
+    - I05
+  target_phase: K00 Knowledge Intake & Taskization
+required_actions:
+  - preserve_raw_source
+  - register_source
+  - generate_document_passport
+  - build_corpus_index
+  - perform_system_mapping
+  - detect_gaps
+  - generate_phase_task_package
+  - write_phase_state
+  - write_acceptance
+  - write_handoff
+forbidden_actions:
+  - summarize_only
+  - skip_k00
+  - enter_pxx_without_handoff
+  - enter_ixx_without_handoff
+  - start_runner
+  - start_paper_runtime
+  - start_live_runtime
+  - modify_production_rules
+evidence_level: EVIDENCE_A_STRONG
+gap_summary:
+  - LOW_GAP: document is a reusable intake template and does not itself specify a concrete downstream execution artifact beyond K00/P00 design-time routing.
+routing_decision: K00_ONLY_WITH_DESIGN_ONLY_DOWNSTREAM_CONSUMER
+status: PASSPORT_READY_WITH_GAPS

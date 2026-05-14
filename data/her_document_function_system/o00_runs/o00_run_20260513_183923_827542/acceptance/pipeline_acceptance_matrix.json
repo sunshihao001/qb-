@@ -1,0 +1,65 @@
+{
+  "pipeline_run_id": "o00_run_20260513_183923_827542",
+  "final_status": "PIPELINE_READY_WITH_GAPS",
+  "dimensions": [
+    {
+      "dimension": "controller_registry",
+      "status": "PASSED",
+      "evidence": "controller_registry.json loaded"
+    },
+    {
+      "dimension": "pipeline_config",
+      "status": "PASSED",
+      "evidence": "pipeline_config.full_safe_replay.json loaded"
+    },
+    {
+      "dimension": "sample_replay_input",
+      "status": "PASSED",
+      "evidence": "sample_document.md and operator_goal.json loaded"
+    },
+    {
+      "dimension": "function_mapping",
+      "status": "PASSED",
+      "evidence": "test_plan_not_tested mapped to governance/evidence rule"
+    },
+    {
+      "dimension": "validation_evidence",
+      "status": "READY_WITH_GAPS",
+      "reason": "test evidence not executed in design-level replay"
+    },
+    {
+      "dimension": "runner_binding",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "runner_binding_required=false"
+    },
+    {
+      "dimension": "governance_policy",
+      "status": "READY_WITH_GAPS",
+      "reason": "governance candidate created but not active"
+    },
+    {
+      "dimension": "status_integrity",
+      "status": "PASSED",
+      "evidence": "no false TESTED / RUNNER_BOUND / POLICY_ACTIVE status"
+    }
+  ],
+  "forbidden_claims_blocked": [
+    "TESTED",
+    "RUNNER_BOUND",
+    "POLICY_ACTIVE",
+    "PIPELINE_ACCEPTED"
+  ],
+  "allowed_next_actions": [
+    "implement real V00 test executor",
+    "implement real G00 policy activation check",
+    "implement O00 run-document safe mode",
+    "route upgrade candidates to U00"
+  ],
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "mark_tested_without_evidence"
+  ]
+}

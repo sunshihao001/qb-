@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Function Asset Plan Schema",
+  "type": "object",
+  "required": [
+    "asset_id",
+    "function_id",
+    "asset_type",
+    "path",
+    "action",
+    "reason",
+    "upstream_input",
+    "downstream_output",
+    "acceptance_check"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "function_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "asset_type": {
+      "type": "string",
+      "enum": [
+        "schema_file",
+        "input_contract",
+        "output_contract",
+        "controller_file",
+        "python_module",
+        "function",
+        "config_file",
+        "cli_command",
+        "runner_binding",
+        "telegram_command",
+        "test_file",
+        "replay_sample",
+        "trace_spec",
+        "audit_log_spec",
+        "report_template",
+        "dashboard_field",
+        "handoff_packet_field",
+        "kv_index_entry",
+        "recovery_policy"
+      ]
+    },
+    "path": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "CREATE",
+        "UPDATE",
+        "EXTEND",
+        "DEPRECATE",
+        "BLOCK",
+        "DESIGN_ONLY",
+        "PLANNED_NOT_WRITTEN"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "upstream_input": {
+      "type": "string"
+    },
+    "downstream_output": {
+      "type": "string"
+    },
+    "acceptance_check": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

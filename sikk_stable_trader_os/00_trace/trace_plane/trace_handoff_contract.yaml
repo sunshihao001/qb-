@@ -1,0 +1,49 @@
+trace_handoff_packet:
+  packet_id: string
+  generated_at: datetime
+  trace_plane_version: v2.0
+  run_id: string
+  build_order_context:
+    current_build_stage: TRACE_PLANE
+    previous_stage: FULL_CONTROL_PLANE
+    next_stage:
+      - ACCEPTANCE_PLANE
+      - HANDOFF_PLANE
+  trace_summary:
+    trace_quality_status: string
+    trace_quality_score: number
+    trace_chain_complete: boolean
+    blocking_trace_errors: list
+    non_blocking_trace_gaps: list
+  trace_indexes:
+    knowledge_trace_index_path: string
+    methodology_trace_index_path: string
+    build_trace_index_path: string
+    phase_trace_index_path: string
+    artifact_trace_index_path: string
+    contract_trace_index_path: string
+    state_trace_index_path: string
+    acceptance_trace_index_path: string
+    handoff_trace_index_path: string
+    tool_trace_index_path: string
+    runtime_trace_index_path: string
+    review_trace_index_path: string
+  acceptance_input:
+    acceptance_allowed: boolean
+    acceptance_limitations: list
+    acceptance_required_checks: list
+  handoff_input:
+    handoff_allowed: boolean
+    handoff_limitations: list
+    required_handoff_trace_fields: list
+  downstream_permission:
+    phase_controller_definition_allowed: boolean
+    runner_binding_allowed: boolean
+    paper_runtime_allowed: boolean
+    live_runtime_allowed: false
+  forbidden_actions:
+    - ACCEPTANCE_WITHOUT_TRACE
+    - HANDOFF_WITHOUT_TRACE
+    - RUNNER_BINDING_WITHOUT_PHASE_TRACE
+    - PAPER_RUNTIME_WITHOUT_TOOL_TRACE
+    - LIVE_EXECUTION

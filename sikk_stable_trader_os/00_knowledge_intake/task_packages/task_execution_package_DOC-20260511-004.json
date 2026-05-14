@@ -1,0 +1,31 @@
+{
+  "task_id": "K00_INTAKE_DOC-20260511-004",
+  "doc_id": "DOC-20260511-004",
+  "task_type": "methodology_blueprint_intake",
+  "objective": "Preserve uploaded methodology blueprint and verify canonical P00-consumed system state.",
+  "source_references": [
+    "00_knowledge_intake/raw_inputs/DOC-20260511-004_system_methodology_blueprint_v2_institutional_upload.md"
+  ],
+  "canonical_target_path": "00_methodology/system_methodology_blueprint.md",
+  "required_outputs": [
+    "00_knowledge_intake/document_passports/document_passport_DOC-20260511-004.yaml",
+    "00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-004.md",
+    "00_knowledge_intake/system_mapping/system_mapping_DOC-20260511-004.json",
+    "00_knowledge_intake/gap_detection/gap_report_DOC-20260511-004.json",
+    "00_knowledge_intake/handoff_packets/k00_to_p00_handoff_packet_DOC-20260511-004.json"
+  ],
+  "constraints": [
+    "no P01 runtime start",
+    "paper_only true",
+    "real_trade_enabled false"
+  ],
+  "acceptance_criteria": [
+    "raw preserved",
+    "passport ready",
+    "canonical body matches upload",
+    "P00 consumption state verified",
+    "P01 blocked"
+  ],
+  "handoff_destination": "P00_system_bootstrap_controller",
+  "status": "TASK_PACKAGE_READY"
+}

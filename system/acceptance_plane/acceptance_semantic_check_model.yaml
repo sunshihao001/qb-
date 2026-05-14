@@ -1,0 +1,22 @@
+semantic_acceptance_check:
+  target_artifact: string
+  target_phase: string
+  semantic_checks:
+  - check_id: SEM_001
+    name: 阶段定位一致
+    question: 内容是否符合职责边界
+  - check_id: SEM_002
+    name: 不越权
+    question: 是否输出无权结论
+  - check_id: SEM_003
+    name: 术语一致
+    question: 是否使用已定义领域术语
+  - check_id: SEM_004
+    name: 下游可读
+    question: 下游是否可继续执行
+  - check_id: SEM_005
+    name: 缺口诚实
+    question: 是否明确待验证部分
+  - check_id: SEM_006
+    name: 非空洞内容
+    question: 是否包含具体字段、状态码、合约、规则、验收条件

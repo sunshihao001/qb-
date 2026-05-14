@@ -1,0 +1,40 @@
+meta:
+  standard_id: S00_LEGACY_ASSET_INVENTORY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+legacy_assets:
+- legacy_asset_id: LEGACY_GMGN_CANDIDATES_LIVE_RUN
+  legacy_path: /root/sikk-gmgn/data/gmgn_candidates_live_run
+  asset_type: legacy_runtime_output_root
+  current_usage: sikk_live_run runtime compatibility outputs, site, paper_live, reports
+  new_system_mapping: read through S00 absorption map; no new primary writes except
+    legacy-compatible runner
+  absorption_mode: keep_in_place
+  risk_level: medium
+  consumer:
+  - legacy dashboard
+  - paper reports
+  - S00 R00 validators
+  replacement_plan: wrap outputs into trace/acceptance/handoff and migrate new source-wallet
+    data to data/source_wallet_bot
+  validation_required: true
+- legacy_asset_id: LEGACY_SIKK_LIVE_RUN_SCRIPT
+  legacy_path: /root/sikk-gmgn/sikk_live_run.py
+  asset_type: legacy_runner
+  current_usage: main legacy runtime entry
+  new_system_mapping: RUNNER_SIKK_LIVE_RUN_LEGACY
+  absorption_mode: wrap_runner
+  risk_level: high
+  consumer:
+  - R00
+  - P08 paper gate future wrapper
+  replacement_plan: do not delete; add wrapper/contract validation
+  validation_required: true

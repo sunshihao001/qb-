@@ -1,0 +1,33 @@
+document_passport:
+  doc_id: "DOC-YYYYMMDD-001"
+  source_type: "user_uploaded_text"
+  source_name: "<source title or user-provided label>"
+  received_at: "YYYY-MM-DD"
+  raw_path: "00_knowledge_intake/raw_inputs/DOC-YYYYMMDD-001.md"
+  document_role:
+    primary_role: "system_design_instruction"
+    secondary_roles:
+      - "phase_controller_definition"
+      - "her_execution_protocol"
+      - "task_package_requirement"
+  summary:
+    core_intent: "<why this material enters K00>"
+    key_points:
+      - "<key point 1>"
+      - "<key point 2>"
+  system_mapping:
+    planes:
+      - "governance_plane"
+      - "control_plane"
+      - "data_plane"
+      - "execution_plane"
+      - "verification_plane"
+    affected_phases:
+      - "K00_knowledge_intake"
+      - "P00_system_boundary"
+      - "P01_data_fact"
+  required_actions:
+    - "<action 1>"
+    - "<action 2>"
+  evidence_level: "EVIDENCE_A_STRONG"
+  status: "PASSPORT_DRAFT"

@@ -1,0 +1,20 @@
+{
+  "runner_capability_registry": {
+    "registry_id": "RUNNER_CAPABILITY_REGISTRY",
+    "version": "v1.0",
+    "runner_types": [
+      "PHASE_RUNNER",
+      "GLOBAL_ORCHESTRATOR",
+      "TOOL_ADAPTER",
+      "VALIDATOR",
+      "WRITER"
+    ],
+    "execution_modes": [
+      "DRY_RUN",
+      "MOCK_TOOL_RUN",
+      "LEGACY_READONLY_RUN",
+      "PAPER_ONLY_PRECHECK"
+    ],
+    "registry_status": "COMPLETE"
+  }
+}

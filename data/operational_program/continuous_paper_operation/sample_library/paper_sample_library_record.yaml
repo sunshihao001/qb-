@@ -1,0 +1,14 @@
+paper_sample_library_record:
+  id: PAPER_SAMPLE_LIBRARY_RECORD-20260512-001
+  generated_at: 2026-05-12T16:29:31Z
+  status: INITIAL_READY_WITH_GAPS
+  source_doc_id: DOC-20260512-CPO-001
+  safety_boundary:
+    live_execution_allowed: false
+    wallet_signing_allowed: false
+    auto_order_allowed: false
+    auto_deploy_allowed: false
+  gaps:
+    - I05 readiness not live-verified in this task
+    - scheduler runner not enabled
+    - sample library has zero real cycles

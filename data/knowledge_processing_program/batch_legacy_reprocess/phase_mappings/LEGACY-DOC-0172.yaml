@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0172
+source_path: docs/sikk_wallet_structure_integration_v2.md
+phase_scores:
+  P01: 8
+  P02: 3
+  P03: 77
+  P04: 7
+  P05: 16
+  P06: 0
+  P07: 20
+  P08: 2
+  P09: 1
+  P10: 1
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

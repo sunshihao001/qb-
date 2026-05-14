@@ -1,0 +1,8 @@
+record_type: paper_trade_record
+fields:
+- trade_id
+- position_id
+- side
+- price
+- quantity
+- trace_id

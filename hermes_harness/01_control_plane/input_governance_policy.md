@@ -40,6 +40,8 @@ Every task start must answer:
 - Temporary noise must not be promoted to memory.
 - Irrelevant or duplicate content should be summarized or dropped.
 - Governance decisions must be audit-able.
+- Uploaded or pasted system-building documents must not be treated as ordinary context. They require K00 raw preservation, document passport, registry/index, system/phase mapping, gap detection, task package, acceptance, and handoff before PXX/IXX/Phase Controller READY can be accepted.
+- A READY claim without explicit `k00_route_status` is incomplete. Valid READY requires `K00_INTAKE_ACCEPTED` or `K00_ROUTE_RECOVERY_DOCUMENTED`; `K00_ROUTE_FAILED` or missing K00 route status requires route recovery before phase acceptance.
 
 ## Required Record Fields
 Each queue entry should record:

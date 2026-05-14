@@ -1,0 +1,19 @@
+{
+  "doc_id": "DOC-20260514-HER-PIPELINE-RUNNABLE-WITH-GAPS",
+  "target_repo": "/root/sikk-gmgn",
+  "system_root": "system/her_doc_function_pipeline",
+  "run_root": "data/her_document_function_system/runs",
+  "tool_paths": [
+    "tools/o00_run_document_main.py",
+    "tools/k00_document_intake.py",
+    "tools/f00_function_mapping.py",
+    "tools/v00_validation_evidence.py",
+    "tools/a00_acceptance.py",
+    "tools/h00_downstream_queue.py",
+    "tools/u00_review_upgrade.py",
+    "tools/g00_governance_update.py",
+    "tools/her_pipeline_status.py"
+  ],
+  "test_root": "tests/her_doc_function_pipeline",
+  "status": "SYSTEM_MAPPING_READY"
+}

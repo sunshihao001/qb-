@@ -1,0 +1,4 @@
+policy: scenario_family_policy
+rules:
+- scenario must belong to one configured family
+- UNCERTAIN_FAMILY is valid when data insufficient or conflicted

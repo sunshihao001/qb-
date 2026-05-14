@@ -1,0 +1,40 @@
+{
+  "task_id": "TASK-DOC-20260513-P01-DATA-FACT-CONTROLLER-002-P01-LANDING",
+  "doc_id": "DOC-20260513-P01-DATA-FACT-CONTROLLER-002",
+  "task_status": "TASK_PACKAGE_READY",
+  "source_material": {
+    "raw_path": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-P01-DATA-FACT-CONTROLLER-002_phase_01_data_fact_controller_v1.md",
+    "canonical_doc_path": "/root/sikk-gmgn/docs/stable_trader_os/phases/phase_01_data_fact_controller.md",
+    "sha256": "7da000a790998d55835c833b48551efd0c9573be36cea1661cd53665fb2933f4"
+  },
+  "objective": "Land Phase 01 data fact controller as file-backed, testable, handoff-safe P01 package/runtime without producing trading judgments.",
+  "target_phase": "P01_data_fact_controller",
+  "required_outputs": [
+    "phase_01_data_fact_controller.md",
+    "phase_01_field_schema.md or equivalent schemas",
+    "raw placeholders",
+    "normalized fact files",
+    "audit reports",
+    "phase_01_quality_gate.json",
+    "phase_01_handoff_to_phase_02.json",
+    "phase_01_data_fact_report.md",
+    "mock fixture",
+    "pytest coverage"
+  ],
+  "constraints": [
+    "No market interpretation in P01",
+    "No buy/sell/paper/live permission",
+    "Missing fields must be explicit",
+    "Raw source preserved before normalization",
+    "P02 reads via P01 handoff only"
+  ],
+  "acceptance_criteria": [
+    "All expected P01 files are generated in a run directory",
+    "quality gate emits PASS/PASS_WITH_WARNING/PAUSE/BLOCK",
+    "tests pass for missing/invalid/duplicate/time/amount/score/handoff cases",
+    "no trading signal fields appear in P01 outputs",
+    "shared handoff packet is parseable and downstream-safe"
+  ],
+  "next_legal_stage": "P01_DATA_FACT_CONTROLLER_PACKAGE_OR_CODE_LANDING",
+  "created_at": "2026-05-13T09:39:17Z"
+}

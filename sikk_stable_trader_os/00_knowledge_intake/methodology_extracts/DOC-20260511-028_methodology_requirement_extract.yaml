@@ -1,0 +1,48 @@
+doc_id: DOC-20260511-028
+methodology_requirements:
+- register P01-P10 business controllers as governed phase controllers
+- enforce Full Control / Trace / Acceptance / Handoff before controller use
+- define handoff inputs, contracts, trace, acceptance, tool binding, paper runtime,
+  forbidden actions per phase
+- keep live execution forbidden globally
+- do not implement runtime or runner binding in this stage
+required_outputs:
+- phase_controller_index.yaml
+- phase_controller_index_acceptance_result.json
+- phase_controller_index_acceptance_report.md
+blocking_boundaries:
+- P01 runtime remains blocked
+- Tool Binding remains blocked
+- Paper Runtime remains blocked
+- Live Runtime remains blocked
+controllers:
+- phase_id: P01
+  controller_id: P01_CANDIDATE_INTAKE_CONTROLLER
+  name_cn: 候选接收与基础对象建档控制器
+- phase_id: P02
+  controller_id: P02_SOURCE_DATA_FACT_CONTROLLER
+  name_cn: 数据事实接收与标准化控制器
+- phase_id: P03
+  controller_id: P03_WALLET_ENTITY_CONTROLLER
+  name_cn: 钱包实体归并与角色初判控制器
+- phase_id: P04
+  controller_id: P04_CHIP_STRUCTURE_CONTROLLER
+  name_cn: 筹码结构与迁移状态控制器
+- phase_id: P05
+  controller_id: P05_EVIDENCE_CONTROLLER
+  name_cn: 证据与反证生成控制器
+- phase_id: P06
+  controller_id: P06_SCENARIO_RECOGNITION_CONTROLLER
+  name_cn: 多模型交易场景识别控制器
+- phase_id: P07
+  controller_id: P07_STRATEGY_GATE_CONTROLLER
+  name_cn: 策略准入与阻断控制器
+- phase_id: P08
+  controller_id: P08_EXECUTION_RISK_CONTROLLER
+  name_cn: 执行风控与纸面运行前门控控制器
+- phase_id: P09
+  controller_id: P09_REVIEW_REPLAY_CONTROLLER
+  name_cn: 复盘回放与失败归因控制器
+- phase_id: P10
+  controller_id: P10_SELF_UPGRADE_CONTROLLER
+  name_cn: 规则字段参数与系统升级控制器

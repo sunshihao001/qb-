@@ -1,0 +1,11 @@
+{
+  "dry_run_validation_matrix": {
+    "binding_id": "DRY_RUN_VALIDATION_MATRIX",
+    "ready": true,
+    "failure_policy": "BLOCK_ON_REQUIRED_FAILURE",
+    "safety": {
+      "no_live_execution": true,
+      "no_wallet_signing": true
+    }
+  }
+}

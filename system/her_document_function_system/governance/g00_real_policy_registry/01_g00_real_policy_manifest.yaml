@@ -1,0 +1,5 @@
+phase_id: G00_REAL_GOVERNANCE_POLICY_REGISTRY
+controller: G00_governance_boundary_controller
+status_target: G00_REAL_GOVERNANCE_POLICY_REGISTRY_READY_WITH_GAPS
+safe_mode_required: true
+forbidden_actions: [live_runtime, wallet_signing, auto_deploy, production_trading, execute_real_order, silent_policy_overwrite, weaken_forbidden_actions]

@@ -1,0 +1,23 @@
+{
+  "controller_id": "P01_CANDIDATE_INTAKE_CONTROLLER",
+  "doc_id": "DOC-20260512-001",
+  "validated_at": "2026-05-12T01:42:26Z",
+  "status": "P01_PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "P01 runner/tool binding not implemented",
+    "P01 acceptance validator not implemented",
+    "P01→P02 live联调 waits for P02 package",
+    "real GMGN/Telegram input adapters not bound"
+  ],
+  "runtime_connection_allowed": false,
+  "safety": {
+    "paper_only": true,
+    "live_execution_allowed": false,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false
+  },
+  "allowed_next_controller": "P02_SOURCE_DATA_FACT_CONTROLLER"
+}

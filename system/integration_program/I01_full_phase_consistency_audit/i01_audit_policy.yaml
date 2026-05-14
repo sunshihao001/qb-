@@ -1,0 +1,22 @@
+audit_only: true
+audit_order:
+- manifest
+- inventory
+- responsibility_boundary
+- io_alignment
+- handoff_chain
+- data_request_chain
+- schema_contract_coverage
+- status_code_consistency
+- gap_propagation
+- forbidden_use_inheritance
+- trace_coverage
+- acceptance_coverage
+- boundary_violation
+- downstream_permission
+- runtime_readiness
+- review_upgrade_readiness
+- findings
+- fix_priority
+- report
+- i02_handoff

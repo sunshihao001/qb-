@@ -1,0 +1,19 @@
+meta:
+  standard_id: S00_LEGACY_KEEP_DEPRECATE_MIGRATE_POLICY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+modes:
+- keep_in_place
+- wrap_runner
+- migrate_output
+- deprecate
+- archive
+default: keep_in_place until contract-compatible replacement passes regression

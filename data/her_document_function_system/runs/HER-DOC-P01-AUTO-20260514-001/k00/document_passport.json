@@ -1,0 +1,74 @@
+{
+  "doc_id": "doc_HER-DOC-P01-AUTO-20260514-001",
+  "source_name": "issue_pack.yaml",
+  "source_type": "SYSTEM_CONSTRUCTION_MATERIAL",
+  "received_at": "2026-05-14T04:23:28Z",
+  "raw_path": "input/raw_document.md",
+  "sha256": "ae449d7d442d8a12b1d50eff691d7b56be528e9475387e59fa58bf360f8ca496",
+  "document_role": {
+    "primary_role": "system_building_material",
+    "secondary_roles": [
+      "methodology",
+      "controller_design",
+      "function_realization",
+      "validation_or_governance"
+    ]
+  },
+  "summary": {
+    "core_intent": "让真实 GPT 研究资料 / 系统建设资料进入 HER，按主链路跑完，生成完整文件输出，保留 gap。",
+    "key_points": [
+      "f00_controller: system/her_document_function_system/controllers/F00_function_realization_controller",
+      "title: K00→F00 唯一合法入口校验",
+      "target_phase: K00,F00",
+      "system/her_document_function_system/controllers/K00_knowledge_intake_controller/04_k00_input_contract.json",
+      "system/her_document_function_system/controllers/K00_knowledge_intake_controller/09_k00_handoff_packet.schema.json",
+      "system/her_document_function_system/controllers/F00_function_realization_controller/04_f00_input_contract.json",
+      "no_k00_handoff => F00_BLOCKED",
+      "no_document_passport => F00_BLOCKED",
+      "no_corpus_index => F00_BLOCKED",
+      "no_gap_detection => F00_BLOCKED",
+      "no_execution_boundary => F00_BLOCKED",
+      "handoff_target: F00_FUNCTION_REALIZATION",
+      "title: F00 功能映射到真实资产闭环",
+      "target_phase: F00",
+      "system/her_document_function_system/controllers/F00_function_realization_controller/outputs/concept_to_function_map.json",
+      "system/her_document_function_system/controllers/F00_function_realization_controller/outputs/function_asset_plan.json",
+      "system/her_document_function_system/controllers/F00_function_realization_controller/outputs/f00_acceptance_result.json",
+      "problem_statement: F00 已有设计/映射/计划类资产，但需要审计哪些是真实写入、哪些只是 task_required 或 plan，避免把 mapping 当 implementation。",
+      "每个 function mapping 必须有 target_controller、required_inputs、required_outputs、artifact_path、status",
+      "unmapped_items 与 gaps 必须进入后续 H00/U00 queue"
+    ]
+  },
+  "system_mapping": {
+    "affected_planes": [
+      "input",
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00",
+      "trace",
+      "audit"
+    ],
+    "affected_controllers": [
+      "K00",
+      "F00",
+      "V00",
+      "A00",
+      "H00",
+      "U00",
+      "G00",
+      "O00"
+    ],
+    "affected_outputs": [
+      "system/her_document_function_system",
+      "tools",
+      "tests/her_document_function_system",
+      "data/her_document_function_system/runs"
+    ]
+  },
+  "status": "K00_READY_WITH_GAPS"
+}

@@ -1,0 +1,25 @@
+{
+  "task_id": "CREATE_ACCEPTANCE_PLANE_V2_DOC-20260511-026",
+  "doc_id": "DOC-20260511-026",
+  "target_stage": "ACCEPTANCE_PLANE_PROFESSIONAL_DESIGN",
+  "objective": "Create system Acceptance Plane v2.0 and sync Full Control Plane gating/routes/status codes.",
+  "required_outputs": [
+    "23 acceptance_plane files",
+    "full control route/status/hard-negative sync",
+    "acceptance result/report",
+    "handoff permission model"
+  ],
+  "constraints": [
+    "paper_only=true",
+    "real_trade_enabled=false",
+    "do not unblock P01",
+    "do not run tools/paper runtime as acceptance plane"
+  ],
+  "acceptance_criteria": [
+    "all required files exist",
+    "YAML parse passes",
+    "anchors present",
+    "Handoff/Tool/Paper cannot bypass Acceptance"
+  ],
+  "handoff_destination": "HANDOFF_PLANE_DESIGN"
+}

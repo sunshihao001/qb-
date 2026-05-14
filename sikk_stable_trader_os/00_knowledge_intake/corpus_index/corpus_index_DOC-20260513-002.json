@@ -1,0 +1,50 @@
+{
+  "doc_id": "DOC-20260513-002",
+  "title": "P01 数据事实层专业版阶段包",
+  "raw_path": "00_knowledge_intake/raw_inputs/DOC-20260513-002_p01_data_fact_controller_professional.md",
+  "sha256": "bf61c250468b94da8b2fc7ef17758315e8c60be8463b387f86e933b8781be188",
+  "anchors": [
+    {
+      "line": 1,
+      "anchor": "P01 数据事实层专业版阶段包"
+    },
+    {
+      "line": 34,
+      "anchor": "P01 阶段核心结论"
+    },
+    {
+      "line": 141,
+      "anchor": "core_outputs"
+    },
+    {
+      "line": 158,
+      "anchor": "hard_rules"
+    },
+    {
+      "line": 204,
+      "anchor": "GMGN/OKX 定位"
+    }
+  ],
+  "key_claims": [
+    "P01 must persist raw before normalization",
+    "P01 must expose explicit DATA_READY/DATA_PARTIAL_READY/DATA_PAUSE/DATA_BLOCK",
+    "Downstream must consume handoff packet not raw external payload",
+    "Real execution permission is false in P01"
+  ],
+  "core_outputs": [
+    "source_health_summary.json",
+    "candidate_token_universe.json",
+    "raw_snapshot_manifest.json",
+    "normalized_token_fact.json",
+    "normalized_market_fact.json",
+    "normalized_wallet_fact.json",
+    "normalized_quote_fact.json",
+    "data_coverage_report.json",
+    "freshness_report.json",
+    "field_provenance_report.json",
+    "cross_source_consistency_report.json",
+    "data_quality_decision.json",
+    "data_fact_handoff_packet.json"
+  ],
+  "downstream_route": "P01_data_fact_controller"
+}

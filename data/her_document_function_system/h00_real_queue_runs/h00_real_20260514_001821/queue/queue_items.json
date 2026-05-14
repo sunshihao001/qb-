@@ -1,0 +1,165 @@
+{
+  "queue_items": [
+    {
+      "queue_item_id": "queue_h00_u00_review_gaps",
+      "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+      "target_controller": "U00",
+      "task_type": "REVIEW_OPEN_GAPS_AND_BUILD_UPGRADE_QUEUE",
+      "priority": "P0_CRITICAL",
+      "status": "QUEUED",
+      "required_inputs": [
+        "readiness_certificate",
+        "gap_propagation_report",
+        "acceptance_decision",
+        "real_evidence_bundle"
+      ],
+      "expected_outputs": [
+        "review_cases",
+        "root_cause_analysis",
+        "upgrade_candidates",
+        "upgrade_queue",
+        "u00_handoff"
+      ],
+      "allowed_actions": [
+        "load_handoff",
+        "classify_review_cases",
+        "build_upgrade_queue",
+        "write_learning_index"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order"
+      ],
+      "gap_refs": [
+        "policy_not_active",
+        "paper_runtime_not_enabled",
+        "live_runtime_forbidden",
+        "telegram_binding_design_only",
+        "V00_READY_WITH_GAPS",
+        "R00_READY_WITH_GAPS"
+      ],
+      "risk_refs": [
+        "safe_dry_run_only",
+        "telegram_binding_design_only"
+      ],
+      "evidence_refs": [
+        "readiness_certificate",
+        "real_evidence_bundle",
+        "gap_propagation_report"
+      ],
+      "handoff_packet_ref": "handoff_packets/h00_to_u00_handoff_packet.json",
+      "acceptance_requirements": [
+        "handoff_loaded",
+        "forbidden_actions_preserved",
+        "no_downstream_completed_claim"
+      ],
+      "created_at": "2026-05-14T00:18:21Z"
+    },
+    {
+      "queue_item_id": "queue_h00_g00_policy_review",
+      "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+      "target_controller": "G00",
+      "task_type": "REVIEW_AND_REGISTER_GOVERNANCE_POLICY_CANDIDATES",
+      "priority": "P0_CRITICAL",
+      "status": "QUEUED",
+      "required_inputs": [
+        "governance_candidate_refs",
+        "evidence_policy_gap_refs",
+        "forbidden_actions",
+        "trace_audit_refs"
+      ],
+      "expected_outputs": [
+        "policy_conflict_report",
+        "pending_policy_bundle",
+        "g00_handoff"
+      ],
+      "allowed_actions": [
+        "classify_governance_candidate",
+        "check_policy_conflict",
+        "write_policy_registry"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order",
+        "activate_policy_without_acceptance",
+        "weaken_forbidden_actions",
+        "silent_policy_overwrite"
+      ],
+      "gap_refs": [
+        "policy_not_active"
+      ],
+      "risk_refs": [
+        "governance_candidate_not_active"
+      ],
+      "evidence_refs": [
+        "real_evidence_bundle",
+        "status_consistency_report",
+        "gap_propagation_report"
+      ],
+      "handoff_packet_ref": "handoff_packets/h00_to_g00_handoff_packet.json",
+      "acceptance_requirements": [
+        "handoff_loaded",
+        "forbidden_actions_preserved",
+        "no_downstream_completed_claim",
+        "policy_not_marked_active"
+      ],
+      "created_at": "2026-05-14T00:18:21Z"
+    },
+    {
+      "queue_item_id": "queue_h00_o00_run_document_safe_mode",
+      "source_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+      "target_controller": "O00",
+      "task_type": "PREPARE_RUN_DOCUMENT_SAFE_MODE",
+      "priority": "P2_MEDIUM",
+      "status": "DEFERRED",
+      "required_inputs": [
+        "u00_handoff",
+        "g00_handoff",
+        "safe_mode_boundary"
+      ],
+      "expected_outputs": [
+        "run_document_safe_mode_plan",
+        "o00_handoff"
+      ],
+      "allowed_actions": [
+        "prepare_safe_mode_plan"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order"
+      ],
+      "gap_refs": [
+        "policy_not_active",
+        "paper_runtime_not_enabled",
+        "live_runtime_forbidden",
+        "telegram_binding_design_only",
+        "V00_READY_WITH_GAPS",
+        "R00_READY_WITH_GAPS"
+      ],
+      "risk_refs": [
+        "safe_dry_run_only",
+        "telegram_binding_design_only"
+      ],
+      "evidence_refs": [
+        "h00_queue_state"
+      ],
+      "handoff_packet_ref": "handoff_packets/h00_to_o00_handoff_packet.json",
+      "acceptance_requirements": [
+        "handoff_loaded",
+        "forbidden_actions_preserved",
+        "no_downstream_completed_claim",
+        "u00_g00_first"
+      ],
+      "created_at": "2026-05-14T00:18:21Z"
+    }
+  ]
+}

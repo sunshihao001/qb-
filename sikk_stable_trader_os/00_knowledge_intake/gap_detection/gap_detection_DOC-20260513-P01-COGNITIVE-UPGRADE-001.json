@@ -1,0 +1,30 @@
+{
+  "doc_id": "DOC-20260513-P01-COGNITIVE-UPGRADE-001",
+  "created_at": "2026-05-13T05:27:17Z",
+  "overall_gap_status": "P01_SEMANTIC_UPGRADE_REQUIRED",
+  "blocking_gaps": [
+    {
+      "gap_id": "P01-GAP-CORE-OUTPUT-AUTHORITY",
+      "severity": "BLOCKER",
+      "description": "P01 artifacts must make data_fact_handoff_packet.json the primary authoritative output, not raw data files."
+    },
+    {
+      "gap_id": "P01-GAP-GMGN-OKX-CORE-CONDITION",
+      "severity": "BLOCKER",
+      "description": "GMGN/OKX connector statuses must be part of P01 core acceptance, with failures and empty returns stateful."
+    },
+    {
+      "gap_id": "P01-GAP-DOWNSTREAM-PERMISSION",
+      "severity": "BLOCKER",
+      "description": "Downstream phases need explicit permission/read policy to prevent direct raw API reads."
+    }
+  ],
+  "degraded_gaps": [
+    {
+      "gap_id": "P01-GAP-FIELD-PROVENANCE",
+      "severity": "DEGRADED",
+      "description": "Every field must carry source/time/confidence/missing_reason/downstream_permission metadata."
+    }
+  ],
+  "strategy_policy": "P02_PLUS_STRATEGY_WORK_BLOCKED_UNTIL_P01_FACT_HANDOFF_ACCEPTED"
+}

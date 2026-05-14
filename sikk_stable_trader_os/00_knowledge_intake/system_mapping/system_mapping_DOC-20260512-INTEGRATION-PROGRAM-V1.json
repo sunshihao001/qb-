@@ -1,0 +1,60 @@
+{
+  "doc_id": "DOC-20260512-INTEGRATION-PROGRAM-V1",
+  "material_role": "integration_program_design",
+  "not_a_new_business_phase": true,
+  "integration_program_root": "/root/sikk-gmgn/system/integration_program/",
+  "task_packages": [
+    {
+      "id": "I01",
+      "name": "full_phase_consistency_audit",
+      "depends_on": [
+        "P01-P10 package/design artifacts"
+      ],
+      "handoff_to": "I02"
+    },
+    {
+      "id": "I02",
+      "name": "directory_contract_index_unification",
+      "depends_on": [
+        "I01 handoff"
+      ],
+      "handoff_to": "I03"
+    },
+    {
+      "id": "I03",
+      "name": "runner_tool_binding",
+      "depends_on": [
+        "I02 handoff"
+      ],
+      "handoff_to": "I04"
+    },
+    {
+      "id": "I04",
+      "name": "paper_runtime_integration",
+      "depends_on": [
+        "I03 handoff"
+      ],
+      "handoff_to": "I05"
+    },
+    {
+      "id": "I05",
+      "name": "review_upgrade_closed_loop",
+      "depends_on": [
+        "I04 handoff"
+      ],
+      "handoff_to": "Governance / next backlog"
+    }
+  ],
+  "current_legal_next_stage": "I01_full_phase_consistency_audit",
+  "blocked_until_i01_i02_acceptance": [
+    "I03_runner_tool_binding",
+    "I04_paper_runtime_integration",
+    "I05_review_upgrade_closed_loop"
+  ],
+  "safety_boundaries": [
+    "NO_LIVE_EXECUTION",
+    "NO_WALLET_SIGNING",
+    "NO_AUTO_DEPLOY",
+    "NO_RUNNER_BINDING_BEFORE_I01_I02"
+  ]
+}

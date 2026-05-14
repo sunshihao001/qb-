@@ -1,0 +1,30 @@
+{
+  "task_id": "TASK_DOC-20260511-023_P03_DATA_PLANE",
+  "doc_id": "DOC-20260511-023",
+  "task_type": "P03_DATA_PLANE_PROFESSIONALIZATION",
+  "objective": "建立可调度、可验收、可交接的数据事实生产平面",
+  "source_refs": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-023_data_plane_professional_design.md"
+  ],
+  "target_outputs": [
+    "00_data/*",
+    "08_acceptance/data_plane_acceptance_result.json",
+    "09_handoff/data_to_evidence_handoff_packet.json"
+  ],
+  "constraints": [
+    "no_buy_signal",
+    "no_dominant_side_intent_claim",
+    "preserve_raw",
+    "no_real_trade",
+    "keep_p01_blocked"
+  ],
+  "acceptance": [
+    "required files exist",
+    "yaml/json parse",
+    "field dictionary nonempty",
+    "source registry covers 11 sources",
+    "handoff contract present",
+    "state writeback preserves safety boundaries"
+  ],
+  "handoff_destination": "P04_EVIDENCE_PLANE"
+}

@@ -1,0 +1,99 @@
+{
+  "artifact_type": "wallet_structure_system_audit",
+  "generated_at": "2026-05-08T01:48:00Z",
+  "overall_status": "PASS",
+  "canonical_route": [
+    "modules/source_wallet_bot",
+    "modules/wallet_data_guard",
+    "sikk_candidate_wallet_structure_pipeline.py",
+    "sikk_wallet_structure_gate.py",
+    "sikk_same_source_grouping.py",
+    "sikk_chip_control_state_machine.py",
+    "sikk_candidate_state_machine.py / sikk_live_run.py"
+  ],
+  "runtime_artifacts": [
+    {
+      "name": "source_wallet_runner",
+      "path": "modules/source_wallet_bot/runner.py",
+      "status": "present"
+    },
+    {
+      "name": "source_wallet_gmgn_adapter",
+      "path": "modules/source_wallet_bot/gmgn_live_adapter.py",
+      "status": "present"
+    },
+    {
+      "name": "wallet_data_guard",
+      "path": "modules/wallet_data_guard/contamination_scan.py",
+      "status": "present"
+    },
+    {
+      "name": "candidate_wallet_pipeline",
+      "path": "sikk_candidate_wallet_structure_pipeline.py",
+      "status": "present"
+    },
+    {
+      "name": "wallet_structure_gate",
+      "path": "sikk_wallet_structure_gate.py",
+      "status": "present"
+    },
+    {
+      "name": "same_source_grouping",
+      "path": "sikk_same_source_grouping.py",
+      "status": "present"
+    },
+    {
+      "name": "chip_control_state_machine",
+      "path": "sikk_chip_control_state_machine.py",
+      "status": "present"
+    },
+    {
+      "name": "candidate_state_machine",
+      "path": "sikk_candidate_state_machine.py",
+      "status": "present"
+    },
+    {
+      "name": "pipeline_orchestrator",
+      "path": "run_sikk_gmgn_pipeline.py",
+      "status": "present"
+    }
+  ],
+  "missing_runtime_artifacts": [],
+  "gaps": [],
+  "resolved_gaps": [
+    {
+      "id": "LONG_RUNNING_AUTO_RUNNER",
+      "status": "needs_runtime_code",
+      "severity": "HIGH",
+      "description": "缺少面向钱包结构系统的长时间循环 runner、checkpoint/resume、周期 manifest。",
+      "runtime_fix": "sikk_wallet_structure_auto_runner.py",
+      "resolution_status": "resolved"
+    },
+    {
+      "id": "ACCEPTANCE_NOT_IN_PIPELINE_MANIFEST",
+      "status": "partial_runtime_integration",
+      "severity": "MEDIUM",
+      "description": "Source Wallet acceptance validator 存在，但未作为全流程 orchestrator/长任务每轮固定验收输出。",
+      "runtime_fix": "auto runner 每轮写 acceptance/system audit 引用。",
+      "resolution_status": "resolved"
+    },
+    {
+      "id": "WALLET_GUARD_SYSTEM_WIDE_INDEX",
+      "status": "partial_runtime_integration",
+      "severity": "MEDIUM",
+      "description": "wallet_data_guard 已接入 upstream 与 candidate pipeline，但缺系统级汇总索引方便长时间任务追踪污染趋势。",
+      "runtime_fix": "auto runner 聚合每轮 guard 状态。",
+      "resolution_status": "resolved"
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_collectors": true,
+    "real_swap_enabled": false,
+    "private_key_required": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false
+  },
+  "json_path": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/system_audit/wallet_structure_system_audit.json",
+  "md_path": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/system_audit/wallet_structure_system_audit.md"
+}

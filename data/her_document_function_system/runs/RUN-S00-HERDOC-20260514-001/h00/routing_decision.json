@@ -1,0 +1,21 @@
+{
+  "routing_id": "h00_routing_RUN-S00-HERDOC-20260514-001",
+  "routing_status": "ROUTING_READY_WITH_GAPS",
+  "decisions": [
+    {
+      "source_gap": "gap_001",
+      "target_controller": "U00",
+      "decision": "QUEUE_NOT_EXECUTE"
+    },
+    {
+      "source_gap": "gap_002",
+      "target_controller": "H00",
+      "decision": "QUEUE_NOT_EXECUTE"
+    },
+    {
+      "source_gap": "gap_003",
+      "target_controller": "G00",
+      "decision": "QUEUE_NOT_EXECUTE"
+    }
+  ]
+}

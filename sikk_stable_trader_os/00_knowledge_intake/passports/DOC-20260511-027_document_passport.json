@@ -1,0 +1,23 @@
+{
+  "doc_id": "DOC-20260511-027",
+  "source_file": "/root/.hermes/cache/documents/doc_306b3a2e3085_Han：交接平面v2.0⭐.md",
+  "saved_raw_input": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-027_handoff_plane_v2.md",
+  "title": "Handoff Plane：交接平面专业版设计 v2.0",
+  "sha256": "712b1410f257d2779f01c4a6f7ca6f2f72fa0ef90702a6ba22a260bc3cadfbec",
+  "created_at": "2026-05-11T17:41:23Z",
+  "document_type": "SYSTEM_PLANE_PROFESSIONAL_DESIGN",
+  "target_plane": "HANDOFF_PLANE",
+  "k00_status": "ASSETIZED_FOR_P00_CONSUMPTION",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false
+  },
+  "heading_count": 58,
+  "key_requirements": [
+    "Handoff Plane is a stage handoff control plane, not file transfer",
+    "Must read acceptance_result_packet and trace_handoff_packet",
+    "Must propagate gaps, limitation tags, forbidden actions and field usage permissions",
+    "READY_WITH_GAPS cannot be upgraded to READY/FULL_HANDOFF downstream",
+    "Runner/Tool Binding/Paper Runtime cannot bypass handoff packets"
+  ]
+}

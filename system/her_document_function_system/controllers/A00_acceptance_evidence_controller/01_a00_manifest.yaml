@@ -1,0 +1,26 @@
+controller_name: A00_acceptance_evidence_controller
+controller_type: HER_PHASE_CONTROLLER
+phase_id: A00
+phase_name: Acceptance Evidence Controller
+中文名称: 总验收证据控制器
+version: 1.0
+upstream_phase:
+  - K00_knowledge_intake
+  - F00_function_realization
+  - V00_validation_evidence
+  - R00_runner_tool_binding
+downstream_phase:
+  - H00_handoff_controller
+  - U00_review_upgrade_controller
+  - G00_governance_boundary_controller
+controller_root: /root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller
+run_root: /root/sikk-gmgn/data/her_document_function_system/a00_runs
+legal_entry: k00_f00_v00_r00_handoff_evidence_bundle
+mission: aggregate upstream evidence, validate consistency, preserve gaps, classify readiness, issue certificate, and write downstream handoff
+status_truth_rule: evidence_first_not_description_first
+forbidden_modes:
+  - LIVE_RUNTIME
+  - WALLET_SIGNING
+  - AUTO_DEPLOY
+  - PRODUCTION_TRADING
+  - MODIFY_PRODUCTION_RULES_DIRECTLY

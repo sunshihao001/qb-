@@ -1,0 +1,94 @@
+{
+  "contract_id": "o00_command_contract_v1",
+  "version": "1.0.0",
+  "command_entry": "tools/o00_cli.py",
+  "required_global_args": {
+    "repo_root": {
+      "type": "string",
+      "required": true
+    },
+    "safe_mode": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "commands": {
+    "init": {
+      "required_args": [
+        "repo_root",
+        "safe_mode"
+      ],
+      "outputs": [
+        "cli_run",
+        "init_result",
+        "exit_code"
+      ]
+    },
+    "validate-config": {
+      "required_args": [
+        "registry",
+        "config",
+        "repo_root",
+        "safe_mode"
+      ],
+      "outputs": [
+        "config_validation_result",
+        "cli_trace",
+        "exit_code"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading"
+      ]
+    },
+    "run-sample": {
+      "required_args": [
+        "sample",
+        "registry",
+        "config",
+        "repo_root",
+        "safe_mode"
+      ],
+      "outputs": [
+        "cli_run",
+        "pipeline_run",
+        "sample_replay_result",
+        "pipeline_acceptance_matrix",
+        "o00_final_report"
+      ],
+      "expected_final_status": "PIPELINE_READY_WITH_GAPS",
+      "forbidden_claims": [
+        "TESTED",
+        "RUNNER_BOUND",
+        "POLICY_ACTIVE",
+        "PIPELINE_ACCEPTED"
+      ]
+    },
+    "run-document": {
+      "required_args": [
+        "document",
+        "goal",
+        "registry",
+        "config",
+        "repo_root",
+        "safe_mode"
+      ],
+      "outputs": [
+        "pipeline_run",
+        "pipeline_state",
+        "gap_register",
+        "final_report"
+      ],
+      "forbidden_actions": [
+        "live_runtime",
+        "wallet_signing",
+        "auto_deploy",
+        "production_trading",
+        "execute_real_order"
+      ]
+    }
+  }
+}

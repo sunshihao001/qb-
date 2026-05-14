@@ -1,0 +1,30 @@
+{
+  "task_package_id": "task_pkg_DOC-20260514-HER-PIPELINE-RUNNABLE-WITH-GAPS",
+  "source_doc_id": "DOC-20260514-HER-PIPELINE-RUNNABLE-WITH-GAPS",
+  "phase_target": "HER_DOC_FUNCTION_PIPELINE_RUNNABLE",
+  "objective": "建立并运行 HER_DOC_FUNCTION_PIPELINE_RUNNABLE_WITH_GAPS 主链路",
+  "required_outputs": [
+    "system_definition_files",
+    "pipeline_tools",
+    "tests",
+    "real_run_outputs",
+    "final_report"
+  ],
+  "constraints": [
+    "safe_mode_only",
+    "manual_trigger_only",
+    "no_scheduler",
+    "no_live_runtime",
+    "no_wallet_signing",
+    "no_auto_deploy",
+    "no_production_trading",
+    "preserve_READY_WITH_GAPS"
+  ],
+  "acceptance_criteria": [
+    "真实文档可读取",
+    "完整输出 K00/F00/V00/A00/H00/U00/G00/O00",
+    "trace/audit 存在",
+    "safe_mode=false 阻断",
+    "最终状态 WITH_GAPS"
+  ]
+}

@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0186
+source_path: docs/stable_trader_os/07_contract_index/contract_index.md
+phase_scores:
+  P01: 0
+  P02: 0
+  P03: 8
+  P04: 10
+  P05: 0
+  P06: 10
+  P07: 8
+  P08: 16
+  P09: 6
+  P10: 1
+primary_phase: P08
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

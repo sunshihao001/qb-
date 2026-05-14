@@ -1,0 +1,22 @@
+meta:
+  standard_id: S00_R00_VALIDATION_CHECKLIST
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+checks:
+- script_exists
+- entry_command_help_or_dry_run
+- input_contract_parse
+- output_schema_parse
+- trace_written
+- acceptance_generated
+- handoff_consumable
+- phase_controller_binding
+- security_no_live_swap

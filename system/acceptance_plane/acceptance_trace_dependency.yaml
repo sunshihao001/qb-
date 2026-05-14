@@ -1,0 +1,25 @@
+trace_dependency_rules:
+- dependency_id: TRACE_DEP_001
+  target: all_core_artifacts
+  required_trace_type: ARTIFACT_TRACE
+  missing_policy: ACCEPTANCE_BLOCKED
+- dependency_id: TRACE_DEP_002
+  target: all_contracts
+  required_trace_type: CONTRACT_TRACE
+  missing_policy: ACCEPTANCE_REJECTED
+- dependency_id: TRACE_DEP_003
+  target: all_state_transitions
+  required_trace_type: STATE_TRACE
+  missing_policy: ACCEPTANCE_REJECTED
+- dependency_id: TRACE_DEP_004
+  target: all_handoff_packets
+  required_trace_type: HANDOFF_TRACE
+  missing_policy: BLOCK_HANDOFF
+- dependency_id: TRACE_DEP_005
+  target: all_tool_bindings
+  required_trace_type: TOOL_TRACE
+  missing_policy: BLOCK_TOOL_BINDING
+- dependency_id: TRACE_DEP_006
+  target: paper_runtime
+  required_trace_type: RUNTIME_TRACE
+  missing_policy: BLOCK_PAPER_RUNTIME

@@ -1,0 +1,36 @@
+schema_id: INVALIDATION_TRIGGER_ANALYSIS_SCHEMA
+title: Invalidation Trigger Analysis
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- analysis_id
+- review_case_id
+- triggered_invalidations
+- missed_invalidations
+- late_invalidations
+- p08_or_runtime_action
+fields:
+  analysis_id: string
+  review_case_id: string
+  triggered_invalidations: list
+  missed_invalidations: list
+  late_invalidations: list
+  p08_or_runtime_action: string
+enums: {}
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

@@ -1,0 +1,19 @@
+{
+  "validation_type": "o00_cli_test_execution",
+  "test_command": "pytest -q tests/test_o00_cli_entry.py",
+  "exit_code": 0,
+  "passed_count": 4,
+  "failed_count": 0,
+  "stdout_path": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_cli_validation_20260513_160616/test_execution/pytest_stdout.log",
+  "stderr_path": "/root/sikk-gmgn/data/her_document_function_system/o00_runs/o00_cli_validation_20260513_160616/test_execution/pytest_stderr.log",
+  "covered_commands": [
+    "init",
+    "validate-config",
+    "run-sample",
+    "status",
+    "show-report",
+    "show-gaps",
+    "recover"
+  ],
+  "status": "PASSED"
+}

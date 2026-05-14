@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "scenario_counter_evidence",
+  "type": "object",
+  "required": [
+    "phase",
+    "token_address",
+    "tested_primary_scenario",
+    "counter_evidence_items",
+    "hard_negative_items",
+    "scenario_invalidated",
+    "scenario_degraded",
+    "final_counter_evidence_level"
+  ],
+  "properties": {
+    "phase": {},
+    "token_address": {},
+    "tested_primary_scenario": {},
+    "counter_evidence_items": {},
+    "hard_negative_items": {},
+    "scenario_invalidated": {},
+    "scenario_degraded": {},
+    "final_counter_evidence_level": {}
+  },
+  "additionalProperties": true
+}

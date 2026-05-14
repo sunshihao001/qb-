@@ -1,0 +1,22 @@
+phase_id: K08
+phase_name: "Knowledge Memory / Index / Reuse Layer"
+program: KNOWLEDGE_PROCESSING_PROGRAM
+status: CONTROLLER_CANDIDATE_READY
+purpose: "index reusable methodology/controller/task package patterns"
+required_inputs:
+  - upstream_handoff_or_raw_document
+required_outputs:
+  - knowledge_object_index.yaml
+  - methodology_pattern_index.yaml
+  - controller_pattern_index.yaml
+  - task_package_template_index.yaml
+  - reuse_instruction_index.yaml
+acceptance:
+  - outputs_exist
+  - source_trace_present
+  - io_contract_declared
+  - handoff_declared
+forbidden:
+  - production_mutation_without_governance
+  - summary_only_completion
+  - untraced_claims

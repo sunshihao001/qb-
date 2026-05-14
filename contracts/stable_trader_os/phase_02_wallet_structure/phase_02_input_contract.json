@@ -1,0 +1,60 @@
+{
+  "contract_name": "phase_02_input_contract",
+  "version": "v1.0",
+  "phase_id": "phase_02_wallet_structure_controller",
+  "upstream_phase": "phase_01_data_fact_controller",
+  "accepted_upstream_status": [
+    "DATA_OK",
+    "DATA_PARTIAL",
+    "PASS",
+    "PASS_WITH_WARNING",
+    "HANDOFF_READY"
+  ],
+  "blocked_upstream_status": [
+    "DATA_INVALID",
+    "DATA_SOURCE_CONFLICT",
+    "HANDOFF_BLOCKED",
+    "BLOCK"
+  ],
+  "required_handoff_file": "phase_01_handoff_packet.json",
+  "required_handoff_fields": [
+    "phase",
+    "token_address",
+    "snapshot_id",
+    "phase_status",
+    "allow_next_stage",
+    "next_stage",
+    "required_files_for_next_stage",
+    "missing_fields",
+    "hard_negative_triggered"
+  ],
+  "required_files_for_next_stage_any_of": [
+    "wallet_trade_source_json",
+    "gmgn_traders",
+    "trade_fact_table",
+    "wallet_trade_normalized",
+    "wallet_fact_table"
+  ],
+  "recommended_phase01_files": [
+    "data_quality_summary.json",
+    "wallet_trade_normalized.csv",
+    "holder_normalized.csv",
+    "top_trader_normalized.csv",
+    "transfer_normalized.csv",
+    "token_market_context.json"
+  ],
+  "input_gate_status_codes": [
+    "PHASE_02_INPUT_READY",
+    "PHASE_02_INPUT_DEGRADED",
+    "PHASE_02_INPUT_BLOCKED"
+  ],
+  "missing_rule": "字段缺失必须显式写 missing 并进入 missing_fields_report.md；不得用 0、空字符串或 AI 猜测替代。",
+  "degrade_rule": "非关键字段缺失时可降级为 PHASE_02_INPUT_DEGRADED；钱包交易主事实缺失或上游硬否决时必须 PHASE_02_INPUT_BLOCKED。",
+  "forbidden_inputs": [
+    "private_key",
+    "seed_phrase",
+    "signed_transaction",
+    "swap_execution",
+    "broadcast_transaction"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "phase": "phase_05_structure_position_controller",
+  "acceptance": [
+    {
+      "id": "p05-ready",
+      "requires": [
+        "all_required_outputs_exist",
+        "handoff_status_HANDOFF_READY",
+        "allowed_next_stage_phase_06"
+      ]
+    },
+    {
+      "id": "p05-upstream-block",
+      "requires": [
+        "upstream_hard_negative_propagated",
+        "handoff_status_HANDOFF_BLOCKED"
+      ]
+    },
+    {
+      "id": "p05-adx-boundary",
+      "requires": [
+        "adx_noise_filter_cannot_alone_pass_completion"
+      ]
+    },
+    {
+      "id": "p05-audit",
+      "requires": [
+        "audit_report",
+        "output_validation_report",
+        "handoff_validation_report",
+        "missing_fields_report",
+        "gaps"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "verification_id": "VERIFICATION-DOC-20260511-009",
+  "generated_at": "2026-05-11T13:54:52.930598+00:00",
+  "doc_id": "DOC-20260511-009",
+  "overall_passed": true,
+  "passed_count": 34,
+  "failed_count": 0,
+  "checks": [
+    {
+      "name": "exists:00_knowledge_intake/raw_inputs/DOC-20260511-009.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_methodology/system_methodology_blueprint.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/document_passports/document_passport_DOC-20260511-009.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-009.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-009.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-009.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-009.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-009.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_control/current_system_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/source_registry/source_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-009.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-009.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-009.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-009.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-009.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/current_system_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:00_control/system_asset_index.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "json_parse:06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "yaml_parse:passport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical_anchor:## 3. 系统编译链路",
+      "passed": true,
+      "detail": "## 3. 系统编译链路"
+    },
+    {
+      "name": "canonical_anchor:K00 知识摄取与任务化",
+      "passed": true,
+      "detail": "K00 知识摄取与任务化"
+    },
+    {
+      "name": "canonical_anchor:P00 系统建造控制器",
+      "passed": true,
+      "detail": "P00 系统建造控制器"
+    },
+    {
+      "name": "canonical_anchor:runner 绑定",
+      "passed": true,
+      "detail": "runner 绑定"
+    },
+    {
+      "name": "canonical_anchor:验收门生成",
+      "passed": true,
+      "detail": "验收门生成"
+    },
+    {
+      "name": "canonical_anchor:trace matrix 生成",
+      "passed": true,
+      "detail": "trace matrix 生成"
+    },
+    {
+      "name": "canonical_anchor:handoff packet 生成",
+      "passed": true,
+      "detail": "handoff packet 生成"
+    },
+    {
+      "name": "canonical_anchor:K00 资产化",
+      "passed": true,
+      "detail": "K00 资产化"
+    },
+    {
+      "name": "canonical_anchor:系统消费",
+      "passed": true,
+      "detail": "系统消费"
+    },
+    {
+      "name": "canonical_anchor:K00 完成后，必须由 P00 系统建造控制器继续处理",
+      "passed": true,
+      "detail": "K00 完成后，必须由 P00 系统建造控制器继续处理"
+    },
+    {
+      "name": "control_state_has_compilation_chain",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "control_state_has_breakpoint",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "remaining_degraded_gaps": [
+    {
+      "gap_id": "GAP-STAGE-TARGET-DATA-DETAILS",
+      "severity": "DEGRADED",
+      "description": "Every phase target data object still needs explicit enumeration in later sections."
+    }
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Forbidden Action Registry",
+  "type": "object",
+  "required": [
+    "registry_id",
+    "rules",
+    "status",
+    "updated_at"
+  ],
+  "properties": {
+    "registry_id": {
+      "type": "string"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PENDING",
+        "DEPRECATED"
+      ]
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

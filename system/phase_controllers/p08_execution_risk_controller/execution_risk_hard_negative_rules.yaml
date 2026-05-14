@@ -1,0 +1,70 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+policy_id: P08_HARD_NEGATIVE_RULES
+rules:
+  - rule_id: P08_BLOCK_001
+    name: 未读取 P07 handoff
+    condition: p07_to_p08_handoff_packet_missing == true
+    result: P08_BLOCKED
+    reason: P08 不能绕过 P07 / Handoff 启动
+
+  - rule_id: P08_BLOCK_002
+    name: 无 P07 纸面候选
+    condition: "no_candidate_with_p07_decision_in [PAPER_CANDIDATE, HUMAN_CONFIRMATION_REQUIRED]"
+    result: P08_REJECTED
+    reason: 没有可执行前风控检查的候选
+
+  - rule_id: P08_BLOCK_003
+    name: 报价不可用
+    condition: quote_snapshot_missing == true or quote_status == QUOTE_UNUSABLE
+    result: P08_BLOCKED
+    reason: 无报价不能进入纸面运行
+
+  - rule_id: P08_BLOCK_004
+    name: 多源报价严重冲突
+    condition: quote_consistency_status == QUOTE_MAJOR_DEVIATION
+    result: P08_BLOCKED
+    reason: 报价冲突会污染纸面入场价
+
+  - rule_id: P08_BLOCK_005
+    name: 流动性不足
+    condition: liquidity_capacity_status in [THIN, UNUSABLE]
+    result: P08_BLOCKED
+    reason: 流动性不足，纸面模拟失真
+
+  - rule_id: P08_BLOCK_006
+    name: 滑点过高
+    condition: slippage_status == SLIPPAGE_TOO_HIGH
+    result: P08_BLOCKED
+    reason: 滑点不可接受
+
+  - rule_id: P08_BLOCK_007
+    name: 安全风险阻断
+    condition: security_status in [SECURITY_RISK_BLOCK, SECURITY_UNKNOWN_BLOCK]
+    result: P08_BLOCKED
+    reason: 安全风险未通过执行前检查
+
+  - rule_id: P08_BLOCK_008
+    name: 场景硬失效已触发
+    condition: invalidation_status == HARD_INVALIDATION_TRIGGERED
+    result: P08_BLOCKED
+    reason: P07 绑定失效条件已触发
+
+  - rule_id: P08_BLOCK_009
+    name: 风险熔断触发
+    condition: circuit_status in [CIRCUIT_TRIGGERED_PAUSE, CIRCUIT_TRIGGERED_BLOCK]
+    result: P08_BLOCKED
+    reason: 当前运行风险状态不允许新增纸面样本
+
+  - rule_id: P08_BLOCK_010
+    name: 重复持仓
+    condition: uniqueness_status in [EXISTING_POSITION_BLOCKS, COOLDOWN_BLOCKS]
+    result: P08_BLOCKED
+    reason: 单 token 仓位唯一性或冷却期阻断
+
+  - rule_id: P08_BLOCK_011
+    name: 直接实盘或钱包签名请求
+    condition: live_execution_requested == true or wallet_signing_requested == true
+    result: P08_BLOCKED
+    reason: 当前系统禁止自动实盘与钱包签名

@@ -1,0 +1,28 @@
+{
+  "task_id": "TASK_DOC-20260512-007_P07_PACKAGE_LANDING",
+  "doc_id": "DOC-20260512-007",
+  "task_type": "phase_controller_package_landing",
+  "target_controller": "P07_STRATEGY_GATE_CONTROLLER",
+  "objective": "Land formal P07 Strategy Gate Controller v3.0 package and runtime data skeleton while keeping strategy/runtime/paper/live execution blocked.",
+  "required_outputs": [
+    "41 controller files",
+    "29 runtime data directories",
+    "validation report",
+    "control state update",
+    "asset index registration"
+  ],
+  "acceptance": [
+    "all expected files exist",
+    "yaml/json parse ok",
+    "safety anchors pass",
+    "P07 classified as formal strategy gate package with runtime gaps",
+    "next legal stage P08_EXECUTION_RISK_CONTROLLER_PACKAGE_DESIGN"
+  ],
+  "constraints": [
+    "no buy signal",
+    "no PAPER_READY",
+    "no direct paper runtime",
+    "no live execution",
+    "handoff only to P08"
+  ]
+}

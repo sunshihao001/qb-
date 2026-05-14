@@ -1,0 +1,67 @@
+schema_id: "chip_structure_quality_schema"
+json_schema:
+  $schema: "https://json-schema.org/draft/2020-12/schema"
+  title: "Chip Structure Quality Record"
+  description: "P04 structure-state record. Candidate-only and trace-required."
+  type: "object"
+  required:
+    - "record_id"
+    - "token_address"
+    - "blocking_gaps"
+    - "trace_ids"
+  properties:
+    record_id:
+      type: "string"
+    token_address:
+      type:
+        - "string"
+        - "null"
+    snapshot_time:
+      type:
+        - "string"
+        - "null"
+    cohort_id:
+      type:
+        - "string"
+        - "null"
+    wallet_entity_id:
+      type:
+        - "string"
+        - "null"
+    candidate_only:
+      const: true
+    source_record_ids:
+      type: "array"
+      items:
+        type: "string"
+    trace_ids:
+      type: "array"
+      items:
+        type: "string"
+    limitations:
+      type: "array"
+      items:
+        type: "string"
+    quality_level:
+      type: "string"
+      enum:
+        - "BLOCKED"
+        - "LOW"
+        - "MEDIUM"
+        - "HIGH"
+        - "UNKNOWN"
+        - "NOT_APPLICABLE"
+    created_at:
+      type: "string"
+    blocking_gaps:
+      type: "array"
+      items:
+        type: "string"
+    p05_usage_permission:
+      type: "string"
+      enum:
+        - "ALLOW_AS_WEAK_INPUT"
+        - "ALLOW_AS_MEDIUM_INPUT"
+        - "BLOCK_EVIDENCE_CONVERSION"
+        - "UNKNOWN"
+  additionalProperties: true

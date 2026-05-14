@@ -1,0 +1,145 @@
+{
+  "schema_version": "phase_01_quality_gate_schema_v1.0",
+  "phase_id": "phase_01_data_fact_controller",
+  "allowed_gate_status": [
+    "PASS",
+    "PASS_WITH_WARNING",
+    "PAUSE",
+    "BLOCK"
+  ],
+  "fields": [
+    {
+      "field_name": "run_id",
+      "field_chinese_name": "运行编号",
+      "field_group": "runtime",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_01_audit",
+        "phase_02_wallet_structure"
+      ],
+      "description": "本次 Phase 01 运行的唯一编号。"
+    },
+    {
+      "field_name": "token_address",
+      "field_chinese_name": "代币地址",
+      "field_group": "token_fact",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "chain",
+        "gmgn"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "phase_02_wallet_structure",
+        "phase_03_chip_control",
+        "phase_04_scenario_recognition"
+      ],
+      "description": "Solana 代币 mint 地址，是本次分析对象的唯一标识。"
+    },
+    {
+      "field_name": "data_snapshot_time",
+      "field_chinese_name": "数据快照时间",
+      "field_group": "runtime",
+      "data_type": "datetime",
+      "required_level": "fatal_required",
+      "unit": "UTC",
+      "timezone": "UTC",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "manual_config",
+        "quote",
+        "gmgn",
+        "chain"
+      ],
+      "preferred_source": "manual_config",
+      "downstream_used_by": [
+        "all_downstream_phases"
+      ],
+      "description": "本次数据事实快照的时间，防止回测污染。"
+    },
+    {
+      "field_name": "quality_score",
+      "field_chinese_name": "质量分",
+      "field_group": "quality_gate",
+      "data_type": "number",
+      "required_level": "fatal_required",
+      "unit": "score",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "calculated"
+      ],
+      "preferred_source": "calculated",
+      "downstream_used_by": [
+        "phase_02_wallet_structure"
+      ],
+      "description": "Phase 01 数据质量评分。"
+    },
+    {
+      "field_name": "phase_01_gate_status",
+      "field_chinese_name": "Phase 01 门禁状态",
+      "field_group": "quality_gate",
+      "data_type": "string",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": [
+        "PASS",
+        "PASS_WITH_WARNING",
+        "PAUSE",
+        "BLOCK"
+      ],
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "calculated"
+      ],
+      "preferred_source": "calculated",
+      "downstream_used_by": [
+        "phase_02_wallet_structure"
+      ],
+      "description": "Phase 01 门禁状态，可取 PASS / PASS_WITH_WARNING / PAUSE / BLOCK。"
+    },
+    {
+      "field_name": "missing_fields",
+      "field_chinese_name": "缺失字段列表",
+      "field_group": "quality_gate",
+      "data_type": "array",
+      "required_level": "fatal_required",
+      "unit": "none",
+      "timezone": "none",
+      "allowed_values": null,
+      "default_value": null,
+      "missing_value": "missing",
+      "source_candidates": [
+        "calculated"
+      ],
+      "preferred_source": "calculated",
+      "downstream_used_by": [
+        "all_downstream_phases"
+      ],
+      "description": "所有缺失字段必须显式写为 missing。"
+    }
+  ]
+}

@@ -1,0 +1,1591 @@
+# SIKK Stable Trader OS｜Domain Plane v2.0
+
+## 0. 文件定位
+
+本文件定义 SIKK Stable Trader OS 的领域平面。
+
+领域平面用于回答：
+
+```text
+系统到底处理哪些对象？
+每个对象的身份是什么？
+对象之间如何关联？
+哪些字段属于对象本身？
+哪些字段属于状态？
+哪些字段属于证据？
+哪些字段可以进入下游阶段？
+````
+
+本文件不是交易策略。  
+本文件不是买卖判断。  
+本文件不是钱包分析报告。  
+本文件不是单个阶段执行文档。
+
+本文件是所有数据字段、阶段输入输出、状态机、Schema、Contract、Atomic Skill 的领域对象来源。
+
+---
+
+# 1. 领域平面的系统位置
+
+SIKK Stable Trader OS 的完整系统平面包括：
+
+```text
+治理平面 Governance Plane
+领域平面 Domain Plane
+数据平面 Data Plane
+控制平面 Control Plane
+决策平面 Decision Plane
+风险平面 Risk Plane
+执行平面 Execution Plane
+验证平面 Verification Plane
+学习平面 Learning Plane
+```
+
+领域平面位于治理平面之后，数据平面之前。
+
+原因：
+
+```text
+治理平面回答：系统允许做什么。
+领域平面回答：系统处理什么对象。
+数据平面回答：这些对象的数据从哪里来。
+控制平面回答：这些对象如何流转。
+决策平面回答：如何对这些对象做判断。
+风险平面回答：哪些对象状态必须阻断。
+```
+
+如果没有领域平面，后续所有字段、阶段、Skill、工具都会失去统一语义。
+
+---
+
+# 2. 领域平面的核心职责
+
+领域平面负责：
+
+```text
+1. 定义系统核心领域对象
+2. 定义对象唯一标识
+3. 定义对象之间的关系
+4. 定义对象状态
+5. 定义对象字段分类
+6. 定义事实字段与推理字段边界
+7. 定义对象如何进入 P00-P09 阶段
+8. 定义对象如何被 Atomic Skill 使用
+9. 定义对象如何进入 Handoff Packet
+10. 定义对象如何进入 Review / Rule Upgrade
+```
+
+领域平面不负责：
+
+```text
+1. 不负责直接判断买入
+2. 不负责直接判断卖出
+3. 不负责直接执行钱包分类
+4. 不负责直接判断筹码控制
+5. 不负责直接生成策略门禁结果
+6. 不负责直接执行交易
+7. 不负责替代 Schema / Contract 校验
+```
+
+---
+
+# 3. 领域建模原则
+
+## 3.1 先对象，后字段
+
+字段必须归属于对象。
+
+禁止出现：
+
+```text
+孤立字段
+无对象字段
+无来源字段
+无下游用途字段
+同一字段在不同阶段有不同含义
+```
+
+例如：
+
+```text
+market_cap_usd
+```
+
+必须明确属于：
+
+```text
+Token.market_cap_usd
+```
+
+而不是一个漂浮字段。
+
+---
+
+## 3.2 先身份，后状态
+
+每个对象必须先有唯一身份，再有状态。
+
+例如：
+
+```text
+Wallet
+```
+
+必须先定义：
+
+```text
+wallet_address
+chain
+token_address
+first_seen_at
+```
+
+然后才能定义：
+
+```text
+wallet_role
+wallet_structure_status
+current_position_ratio
+sell_sync_score
+```
+
+---
+
+## 3.3 先事实，后推理
+
+对象字段分为四类：
+
+```text
+事实字段 Fact Field
+推理字段 Inference Field
+状态字段 State Field
+报告字段 Report Field
+```
+
+### 事实字段
+
+来自数据源或工具计算，不允许 AI 推测补全。
+
+### 推理字段
+
+由规则、模型、Atomic Skill 根据事实字段生成。
+
+### 状态字段
+
+表示对象当前处于哪个状态。
+
+### 报告字段
+
+只用于解释和审计，不得反向进入机器判断。
+
+---
+
+## 3.4 每个对象必须可追踪
+
+每个对象必须具备：
+
+```text
+object_id
+object_type
+source
+created_at
+updated_at
+evidence_chain
+counter_evidence
+current_status
+downstream_usage
+```
+
+---
+
+## 3.5 领域对象必须支持阶段流转
+
+领域对象必须能回答：
+
+```text
+这个对象在哪个阶段被创建？
+在哪个阶段被更新？
+在哪个阶段被判断？
+在哪个阶段被阻断？
+在哪个阶段进入复盘？
+```
+
+---
+
+# 4. 核心领域对象总表
+
+SIKK Stable Trader OS 的核心领域对象包括：
+
+```text
+Token
+Wallet
+AddressGroup
+TransactionEvent
+MarketSnapshot
+MarketScene
+ChipState
+DominantSide
+Counterparty
+GateDecision
+RiskEvent
+ExecutionTicket
+PaperPosition
+ReviewCase
+RuleChange
+SkillDecision
+HandoffPacket
+```
+
+---
+
+# 5. Token｜候选代币对象
+
+## 5.1 对象定义
+
+Token 是系统处理的基础对象。
+
+一个 Token 代表一个候选交易标的。
+
+系统所有阶段都围绕 Token 进行：
+
+```text
+P01 建立 Token 事实
+P02 判断 Token 市场场景
+P03 分析 Token 相关钱包
+P04 判断 Token 筹码控制
+P05 对 Token 做策略门禁
+P06 对 Token 做风险控制
+P07 对 Token 做纸面执行
+P08 对 Token 做复盘归因
+P09 对 Token 相关规则升级
+```
+
+---
+
+## 5.2 唯一标识
+
+```yaml
+object_type: Token
+primary_id: token_address
+secondary_keys:
+  - chain
+  - token_symbol
+  - discovered_at
+```
+
+---
+
+## 5.3 核心字段
+
+### 事实字段
+
+```text
+token_address
+chain
+token_symbol
+token_name
+discovered_at
+launch_time
+pair_address
+pool_address
+creator_address
+market_cap_usd
+liquidity_usd
+volume_5m
+volume_1h
+volume_24h
+holders_count
+top_holder_ratio
+price_usd
+price_change_5m
+price_change_1h
+price_change_24h
+```
+
+### 推理字段
+
+```text
+token_lifecycle_stage
+market_scene
+time_context_status
+market_cap_context_status
+scene_confidence
+```
+
+### 状态字段
+
+```text
+token_state
+phase_status
+strategy_status
+risk_status
+paper_status
+review_status
+```
+
+### 报告字段
+
+```text
+token_summary
+scene_explanation
+risk_summary
+review_notes
+```
+
+---
+
+## 5.4 下游用途
+
+|阶段|用途|
+|---|---|
+|P01|建立事实层|
+|P02|市场场景识别|
+|P03|钱包结构关联|
+|P04|筹码控制判断|
+|P05|策略门禁|
+|P06|风险控制|
+|P07|纸面交易|
+|P08|复盘|
+|P09|规则升级|
+
+---
+
+# 6. Wallet｜钱包对象
+
+## 6.1 对象定义
+
+Wallet 是链上地址行为分析对象。
+
+钱包对象不直接等于“庄家”。  
+系统只能基于行为证据判断其可能角色。
+
+允许使用：
+
+```text
+疑似结构钱包
+疑似同源执行钱包
+疑似分发接收钱包
+疑似利润回收钱包
+疑似接盘鲸鱼
+```
+
+禁止直接无证据称为：
+
+```text
+庄家
+主控
+黑手
+绝对控盘地址
+```
+
+---
+
+## 6.2 唯一标识
+
+```yaml
+object_type: Wallet
+primary_id: wallet_address
+secondary_keys:
+  - chain
+  - token_address
+  - first_seen_at
+```
+
+---
+
+## 6.3 核心字段
+
+### 事实字段
+
+```text
+wallet_address
+chain
+token_address
+first_seen_at
+first_buy_time
+first_buy_price
+first_buy_amount
+total_buy_amount
+total_sell_amount
+current_balance
+current_position_ratio
+holding_duration
+funding_source
+funding_time
+funding_amount
+realized_pnl
+unrealized_pnl
+transfer_in_count
+transfer_out_count
+buy_count
+sell_count
+last_activity_at
+```
+
+### 推理字段
+
+```text
+wallet_role
+wallet_role_confidence
+same_source_group_id
+sell_sync_score
+buy_sync_score
+distribution_role_score
+accumulation_role_score
+counterparty_role_score
+funding_relation_score
+```
+
+### 状态字段
+
+```text
+wallet_status
+wallet_structure_status
+position_status
+activity_status
+risk_status
+```
+
+### 报告字段
+
+```text
+wallet_reason
+wallet_note
+gmgn_note
+classification_explanation
+```
+
+---
+
+## 6.4 钱包角色枚举
+
+```text
+UNKNOWN_WALLET
+EARLY_STRUCTURE_WALLET
+NEW_SNIPER_WALLET
+TEMP_EXECUTION_WALLET
+SAME_SOURCE_EXECUTION_WALLET
+DISTRIBUTION_RECEIVER_WALLET
+DISTRIBUTION_WALLET
+PROFIT_COLLECTOR_WALLET
+CORE_FUNDING_SOURCE_WALLET
+COUNTERPARTY_WHALE_WALLET
+RETAIL_WALLET
+```
+
+---
+
+## 6.5 下游用途
+
+|阶段|用途|
+|---|---|
+|P01|建立钱包事实字段|
+|P03|钱包角色分类|
+|P04|筹码控制判断|
+|P05|策略门禁证据|
+|P08|失败归因|
+|P09|钱包规则升级|
+
+---
+
+# 7. AddressGroup｜地址组对象
+
+## 7.1 对象定义
+
+AddressGroup 表示多个钱包之间可能存在结构关联。
+
+它不等于确定同一实体，只表示基于证据的关联候选。
+
+---
+
+## 7.2 地址组类型
+
+```text
+SAME_SOURCE_GROUP
+SYNC_BUY_GROUP
+SYNC_SELL_GROUP
+FUNDING_RELATION_GROUP
+DISTRIBUTION_PATH_GROUP
+PROFIT_COLLECTION_GROUP
+COUNTERPARTY_GROUP
+STRUCTURAL_CLUSTER
+```
+
+---
+
+## 7.3 核心字段
+
+### 事实字段
+
+```text
+group_id
+group_type
+chain
+token_address
+member_wallets
+shared_funding_source
+shared_funding_time_window
+common_transfer_path
+sync_buy_time_window
+sync_sell_time_window
+total_group_balance
+total_group_buy_amount
+total_group_sell_amount
+```
+
+### 推理字段
+
+```text
+group_confidence
+same_source_score
+sync_behavior_score
+distribution_path_score
+control_relevance_score
+counterparty_pressure_score
+```
+
+### 状态字段
+
+```text
+group_status
+group_activity_status
+group_risk_status
+```
+
+---
+
+## 7.4 下游用途
+
+|阶段|用途|
+|---|---|
+|P03|同源组识别|
+|P04|筹码控制与派发判断|
+|P05|策略门禁反证|
+|P08|误判归因|
+|P09|同源识别规则升级|
+
+---
+
+# 8. TransactionEvent｜交易事件对象
+
+## 8.1 对象定义
+
+TransactionEvent 是链上行为的最小事件单元。
+
+钱包角色、筹码迁移、派发、同步行为都必须基于交易事件推导。
+
+---
+
+## 8.2 事件类型
+
+```text
+BUY
+SELL
+TRANSFER_IN
+TRANSFER_OUT
+ADD_LIQUIDITY
+REMOVE_LIQUIDITY
+FUNDING_IN
+FUNDING_OUT
+PROFIT_COLLECT
+DISTRIBUTION_TRANSFER
+UNKNOWN_EVENT
+```
+
+---
+
+## 8.3 核心字段
+
+```text
+tx_hash
+chain
+token_address
+wallet_address
+event_type
+event_time
+block_number
+amount_token
+amount_usd
+price_usd
+counterparty_address
+pool_address
+gas_fee
+source
+```
+
+---
+
+## 8.4 下游用途
+
+|阶段|用途|
+|---|---|
+|P01|事实事件表|
+|P03|钱包行为识别|
+|P04|筹码迁移判断|
+|P08|交易复盘|
+|P09|规则升级样本|
+
+---
+
+# 9. MarketSnapshot｜市场快照对象
+
+## 9.1 对象定义
+
+MarketSnapshot 是某一时间点的市场状态。
+
+市场场景、风险判断、纸面入场都依赖快照，而不是单一实时值。
+
+---
+
+## 9.2 核心字段
+
+```text
+snapshot_id
+token_address
+snapshot_time
+price_usd
+market_cap_usd
+liquidity_usd
+volume_5m
+volume_1h
+holder_count
+top_holder_ratio
+buy_count_5m
+sell_count_5m
+net_buy_volume
+spread
+slippage_estimate
+quote_source
+```
+
+---
+
+## 9.3 下游用途
+
+|阶段|用途|
+|---|---|
+|P01|建立事实快照|
+|P02|市场场景识别|
+|P05|策略位置判断|
+|P06|风险控制|
+|P07|纸面成交|
+|P08|复盘|
+
+---
+
+# 10. MarketScene｜市场场景对象
+
+## 10.1 对象定义
+
+MarketScene 表示 Token 当前所处的市场行为场景。
+
+它是 P02 的核心输出，也是 P05 策略门禁的关键输入。
+
+---
+
+## 10.2 场景枚举
+
+```text
+ACCUMULATION
+MARKUP
+SECOND_STAGE_EXPANSION
+HIGH_DISTRIBUTION
+DOWNTREND_DISTRIBUTION
+BULL_TRAP_REBOUND
+EXIT_LIQUIDITY_TRAP
+FAKE_SIDEWAYS
+RE_ACCUMULATION
+TERMINAL_MARKUP_DISTRIBUTION
+WASH_VOLUME_FAKE_BREAKOUT
+COUNTERPARTY_WHALE_TRAP
+UNKNOWN_SCENE
+```
+
+---
+
+## 10.3 核心字段
+
+### 事实字段
+
+```text
+token_address
+scene_time
+kline_window
+volume_window
+price_structure
+market_cap_context
+liquidity_context
+```
+
+### 推理字段
+
+```text
+market_scene
+scene_confidence
+scene_evidence
+scene_counter_evidence
+scene_invalidation_conditions
+```
+
+### 状态字段
+
+```text
+scene_status
+scene_gate_status
+```
+
+---
+
+# 11. ChipState｜筹码状态对象
+
+## 11.1 对象定义
+
+ChipState 表示 token 的筹码控制状态。
+
+它不是单纯看 holder 分布，而是综合钱包行为、持仓变化、迁移路径、对手盘压力、市场阶段后的状态判断。
+
+---
+
+## 11.2 筹码状态枚举
+
+```text
+CHIP_CONTROL_RETAINED
+CHIP_CONTROL_WEAKENING
+CHIP_TRANSFER_ACTIVE
+DISTRIBUTION_ACTIVE
+COUNTERPARTY_DOMINANT
+CONTROL_COLLAPSED
+CHIP_STATE_UNKNOWN
+```
+
+---
+
+## 11.3 核心字段
+
+```text
+token_address
+chip_state
+early_wallet_remaining_ratio
+same_source_group_remaining_ratio
+distribution_wallet_ratio
+counterparty_pressure_score
+chip_transfer_score
+control_retention_score
+distribution_risk_score
+evidence_level
+counter_evidence
+invalidation_conditions
+```
+
+---
+
+# 12. DominantSide｜主导侧对象
+
+## 12.1 对象定义
+
+DominantSide 是基于证据对结构侧行为的假设对象。
+
+它不表示系统知道“庄家是谁”，只表示系统基于可观察证据推断当前主导行为倾向。
+
+---
+
+## 12.2 主导侧生命周期
+
+```text
+EARLY_ACCUMULATION
+CONTROL_BOX_ACCUMULATION
+FIRST_EXPANSION
+PARTIAL_DISTRIBUTION
+RE_ACCUMULATION
+SECOND_STAGE_EXPANSION
+ACTIVE_DISTRIBUTION
+COLLAPSE
+DEAD_SIDEWAYS
+REACTIVATION
+UNKNOWN_LIFECYCLE
+```
+
+---
+
+## 12.3 主导侧意图假设
+
+```text
+ACCUMULATION_INTENT
+WASHOUT_INTENT
+LIQUIDITY_SEEKING_INTENT
+BREAKOUT_TEST_INTENT
+CONTROLLED_PULLBACK_INTENT
+DISTRIBUTION_INTENT
+RE_ACCUMULATION_INTENT
+REACTIVATION_INTENT
+UNKNOWN_INTENT
+```
+
+---
+
+## 12.4 核心字段
+
+```text
+token_address
+dominant_side_status
+dominant_lifecycle
+dominant_intent_hypothesis
+confidence
+evidence
+counter_evidence
+invalidation_conditions
+```
+
+---
+
+# 13. Counterparty｜对手盘对象
+
+## 13.1 对象定义
+
+Counterparty 表示结构侧之外正在承接、压制、干扰或接收筹码的一方。
+
+---
+
+## 13.2 对手盘类型
+
+```text
+COUNTERPARTY_WHALE
+RETAIL_FLOW
+DISTRIBUTION_RECEIVER
+BOT_VOLUME_CLUSTER
+EXIT_LIQUIDITY_BUYER
+UNKNOWN_COUNTERPARTY
+```
+
+---
+
+## 13.3 核心字段
+
+```text
+counterparty_id
+token_address
+counterparty_type
+related_wallets
+buy_pressure
+sell_pressure
+net_position_change
+counterparty_pressure_score
+risk_level
+evidence
+```
+
+---
+
+# 14. GateDecision｜门禁裁决对象
+
+## 14.1 对象定义
+
+GateDecision 是系统裁决对象。
+
+它不是买入指令。  
+它只决定样本是否允许进入下一阶段、观察、纸面验证或人工确认。
+
+---
+
+## 14.2 门禁状态
+
+```text
+STRATEGY_BLOCK
+STRATEGY_PAUSE
+STRATEGY_WATCH
+PAPER_READY
+READY_FOR_CONFIRMATION
+RISK_REJECTED
+RISK_APPROVED
+```
+
+---
+
+## 14.3 核心字段
+
+```text
+decision_id
+token_address
+phase_id
+decision
+decision_reason
+evidence_level
+evidence_chain
+counter_evidence
+hard_negative_hits
+invalidation_conditions
+next_action
+next_phase_allowed
+```
+
+---
+
+# 15. RiskEvent｜风险事件对象
+
+## 15.1 对象定义
+
+RiskEvent 表示系统检测到的风险事件。
+
+风险事件可以来自数据层、判断层、钱包结构层、筹码层、执行层或复盘层。
+
+---
+
+## 15.2 风险类型
+
+```text
+DATA_QUALITY_RISK
+FIELD_MISSING_RISK
+SCENE_MISCLASSIFICATION_RISK
+WALLET_STRUCTURE_RISK
+DISTRIBUTION_RISK
+COUNTERPARTY_PRESSURE_RISK
+LIQUIDITY_RISK
+QUOTE_DEVIATION_RISK
+SLIPPAGE_RISK
+EXECUTION_RISK
+REVIEW_CONTAMINATION_RISK
+RULE_UPGRADE_RISK
+```
+
+---
+
+## 15.3 核心字段
+
+```text
+risk_event_id
+token_address
+risk_type
+risk_level
+source_phase
+trigger_condition
+forced_status
+evidence
+created_at
+resolved_at
+```
+
+---
+
+# 16. ExecutionTicket｜执行票据对象
+
+## 16.1 对象定义
+
+ExecutionTicket 是执行前置凭证。
+
+没有 ExecutionTicket，不允许进入 P07 执行层。
+
+ExecutionTicket 不等于实盘订单。  
+它只表示系统允许进入纸面执行或人工确认流程。
+
+---
+
+## 16.2 核心字段
+
+```text
+ticket_id
+token_address
+execution_mode
+strategy_decision_id
+risk_decision_id
+entry_condition
+invalidation_condition
+paper_entry_allowed
+human_confirmation_required
+live_execution_allowed
+max_loss_limit
+slippage_limit
+fee_model
+created_at
+expires_at
+```
+
+---
+
+# 17. PaperPosition｜纸面仓位对象
+
+## 17.1 对象定义
+
+PaperPosition 是纸面验证对象。
+
+它用于验证策略门禁和风险控制是否有效。
+
+---
+
+## 17.2 核心字段
+
+```text
+paper_position_id
+token_address
+entry_time
+entry_price
+entry_market_cap_usd
+entry_reason
+wallet_structure_status
+chip_control_status
+strategy_gate_status
+risk_status
+exit_time
+exit_price
+exit_reason
+pnl_pct
+max_drawdown_pct
+max_runup_pct
+review_status
+```
+
+---
+
+# 18. ReviewCase｜复盘案例对象
+
+## 18.1 对象定义
+
+ReviewCase 表示一个需要复盘的样本。
+
+它可以来自：
+
+```text
+成功纸面交易
+失败纸面交易
+被阻断但后续上涨样本
+被放行但失败样本
+遗漏机会
+错误分类样本
+```
+
+---
+
+## 18.2 核心字段
+
+```text
+review_case_id
+token_address
+case_type
+source_position_id
+source_decision_id
+failure_type
+success_type
+root_cause_phase
+root_cause_field
+root_cause_rule
+evidence
+review_conclusion
+rule_adjustment_candidate
+```
+
+---
+
+# 19. RuleChange｜规则变更对象
+
+## 19.1 对象定义
+
+RuleChange 表示规则升级候选。
+
+P09 可以生成 RuleChange，但不得未经审计直接生效。
+
+---
+
+## 19.2 核心字段
+
+```text
+rule_change_id
+source_review_case_id
+target_rule
+target_phase
+target_skill
+change_type
+old_rule
+new_rule
+reason
+expected_impact
+risk_of_change
+rollback_plan
+approval_required
+status
+```
+
+---
+
+# 20. SkillDecision｜Skill 判断对象
+
+## 20.1 对象定义
+
+SkillDecision 表示 Atomic Skill 的输出判断。
+
+它必须可被阶段控制器读取，但不能直接越权成为策略结论。
+
+---
+
+## 20.2 核心字段
+
+```text
+skill_decision_id
+skill_id
+token_address
+related_object_id
+decision
+evidence_level
+evidence
+counter_evidence
+confidence
+invalidation_conditions
+recommended_phase_action
+```
+
+---
+
+# 21. HandoffPacket｜交接包对象
+
+## 21.1 对象定义
+
+HandoffPacket 是阶段之间唯一正式交接对象。
+
+没有 HandoffPacket，不能进入下一阶段。
+
+---
+
+## 21.2 核心字段
+
+```text
+handoff_id
+source_phase
+target_phase
+phase_status
+token_address
+input_files
+output_files
+created_objects
+updated_objects
+decision
+evidence_level
+gap_list
+hard_negative_hits
+counter_evidence
+next_phase_allowed
+generated_at
+```
+
+---
+
+# 22. 领域对象关系图
+
+## 22.1 核心关系
+
+```text
+Token
+  ├── has_many Wallet
+  ├── has_many TransactionEvent
+  ├── has_many MarketSnapshot
+  ├── has_one MarketScene
+  ├── has_one ChipState
+  ├── has_one DominantSide
+  ├── has_many Counterparty
+  ├── has_many GateDecision
+  ├── has_many RiskEvent
+  ├── has_many ExecutionTicket
+  ├── has_many PaperPosition
+  ├── has_many ReviewCase
+  └── has_many RuleChange
+
+Wallet
+  ├── belongs_to Token
+  ├── has_many TransactionEvent
+  └── belongs_to AddressGroup
+
+AddressGroup
+  ├── has_many Wallet
+  ├── has_many TransactionEvent
+  └── contributes_to ChipState
+
+MarketScene
+  └── contributes_to GateDecision
+
+ChipState
+  └── contributes_to GateDecision
+
+DominantSide
+  └── contributes_to GateDecision
+
+RiskEvent
+  └── may_force GateDecision
+
+ExecutionTicket
+  └── creates PaperPosition
+
+PaperPosition
+  └── creates ReviewCase
+
+ReviewCase
+  └── may_create RuleChange
+```
+
+---
+
+# 23. 领域对象与阶段映射
+
+|对象|创建阶段|更新阶段|使用阶段|
+|---|---|---|---|
+|Token|P01|P02-P09|全阶段|
+|Wallet|P01|P03-P08|P03/P04/P05/P08|
+|AddressGroup|P03|P04/P08|P03/P04/P05|
+|TransactionEvent|P01|P03/P04/P08|P03/P04/P08|
+|MarketSnapshot|P01|P02/P06/P07/P08|P02/P05/P06/P07|
+|MarketScene|P02|P08/P09|P05/P08/P09|
+|ChipState|P04|P08/P09|P05/P08/P09|
+|DominantSide|P04|P08/P09|P05/P08/P09|
+|Counterparty|P04|P08/P09|P04/P05/P08|
+|GateDecision|P05/P06|P08/P09|P07/P08/P09|
+|RiskEvent|P01-P06|P08/P09|P05/P06/P08|
+|ExecutionTicket|P07|P08|P07/P08|
+|PaperPosition|P07|P08|P08/P09|
+|ReviewCase|P08|P09|P09|
+|RuleChange|P09|P09|P09|
+|SkillDecision|各 Skill|所属阶段|所属阶段|
+|HandoffPacket|各阶段|下游阶段|全阶段|
+
+---
+
+# 24. 字段分类标准
+
+所有字段必须分类为：
+
+```text
+fact_field
+inference_field
+state_field
+report_field
+control_field
+risk_field
+handoff_field
+```
+
+---
+
+## 24.1 fact_field
+
+事实字段。
+
+来源：
+
+```text
+链上数据
+GMGN 数据
+OKX quote/security
+K 线数据
+纸面交易记录
+工具计算结果
+```
+
+禁止 AI 推测补全。
+
+---
+
+## 24.2 inference_field
+
+推理字段。
+
+来源：
+
+```text
+Atomic Skill
+阶段规则
+评分模型
+状态机转换
+```
+
+必须记录依据字段和证据等级。
+
+---
+
+## 24.3 state_field
+
+状态字段。
+
+表示对象当前状态。
+
+例如：
+
+```text
+token_state
+wallet_status
+chip_state
+strategy_status
+risk_status
+paper_status
+review_status
+```
+
+---
+
+## 24.4 report_field
+
+报告字段。
+
+只用于人类阅读，不得反向作为机器判断依据。
+
+---
+
+## 24.5 control_field
+
+控制字段。
+
+用于判断是否允许进入下一阶段。
+
+例如：
+
+```text
+next_phase_allowed
+phase_status
+acceptance_gate_passed
+handoff_required
+```
+
+---
+
+## 24.6 risk_field
+
+风险字段。
+
+用于触发风险控制或硬否定。
+
+例如：
+
+```text
+risk_level
+hard_negative_hits
+forced_status
+risk_event_type
+```
+
+---
+
+## 24.7 handoff_field
+
+交接字段。
+
+用于阶段之间传递。
+
+例如：
+
+```text
+source_phase
+target_phase
+output_files
+created_objects
+updated_objects
+gap_list
+```
+
+---
+
+# 25. 领域平面输出
+
+领域平面完成后，应输出：
+
+```text
+domain_object_registry.yaml
+field_dictionary.yaml
+state_dictionary.yaml
+entity_relationship_map.md
+domain_handoff_packet.json
+```
+
+---
+
+# 26. domain_object_registry.yaml 结构要求
+
+```yaml
+domain_object_registry:
+  version: "2.0"
+  system: "SIKK Stable Trader OS"
+
+  objects:
+    - object_type: "Token"
+      primary_id: "token_address"
+      created_by_phase: "P01_data_fact"
+      updated_by_phases:
+        - "P02_market_scene"
+        - "P03_wallet_structure"
+        - "P04_chip_control"
+        - "P05_strategy_gate"
+        - "P06_risk_control"
+        - "P07_execution"
+        - "P08_review"
+        - "P09_self_upgrade"
+      required_fields:
+        - "token_address"
+        - "chain"
+        - "discovered_at"
+      field_classes:
+        fact_fields: []
+        inference_fields: []
+        state_fields: []
+        report_fields: []
+      downstream_usage:
+        - "P02_market_scene"
+        - "P03_wallet_structure"
+        - "P04_chip_control"
+        - "P05_strategy_gate"
+```
+
+---
+
+# 27. 领域平面验收标准
+
+领域平面完成必须满足：
+
+```text
+1. 核心领域对象已定义。
+2. 每个对象有唯一 ID。
+3. 每个对象有事实字段、推理字段、状态字段、报告字段分类。
+4. 每个对象有创建阶段、更新阶段、使用阶段。
+5. 每个对象有下游用途。
+6. Token 与 Wallet、TransactionEvent、MarketScene、ChipState 等关系清楚。
+7. GateDecision 不等于买卖指令。
+8. ExecutionTicket 不等于实盘订单。
+9. DominantSide 不被定义为确定庄家，只作为证据假设。
+10. Report Field 不得反向污染机器判断。
+11. 所有对象均可进入 Schema / Contract / Handoff 设计。
+```
+
+---
+
+# 28. 与其他平面的关系
+
+## 28.1 对治理平面的依赖
+
+领域平面必须遵守治理平面边界：
+
+```text
+不直接输出买卖判断
+不直接称呼确定庄家
+不允许 AI 补事实字段
+不允许 report 字段进入机器判断
+```
+
+---
+
+## 28.2 对数据平面的输出
+
+领域平面向数据平面输出：
+
+```text
+对象定义
+字段分类
+字段归属
+对象关系
+```
+
+数据平面基于此定义数据来源、input_contract、field_source_map 和 normalized_fact_model。
+
+---
+
+## 28.3 对控制平面的输出
+
+领域平面向控制平面输出：
+
+```text
+对象在 P00-P09 的创建、更新、使用关系
+```
+
+控制平面据此定义阶段流转和 handoff 条件。
+
+---
+
+## 28.4 对决策平面的输出
+
+领域平面向决策平面输出：
+
+```text
+MarketScene
+ChipState
+DominantSide
+GateDecision
+RiskEvent
+```
+
+决策平面据此设计判断规则、证据链和失效条件。
+
+---
+
+## 28.5 对风险平面的输出
+
+领域平面向风险平面输出：
+
+```text
+RiskEvent
+Counterparty
+ChipState
+GateDecision
+ExecutionTicket
+```
+
+风险平面据此定义硬否定和风险门禁。
+
+---
+
+## 28.6 对验证平面的输出
+
+领域平面向验证平面输出：
+
+```text
+对象 Schema 需求
+字段类型需求
+状态枚举需求
+Handoff 对象需求
+```
+
+---
+
+## 28.7 对学习平面的输出
+
+领域平面向学习平面输出：
+
+```text
+ReviewCase
+RuleChange
+SkillDecision
+PaperPosition
+```
+
+学习平面据此进行复盘归因和规则升级。
+
+---
+
+# 29. 领域平面总结
+
+领域平面是 SIKK Stable Trader OS 的语义地基。
+
+没有领域平面，系统会出现：
+
+```text
+字段漂浮
+阶段混乱
+Skill 无边界
+状态无归属
+判断无对象
+报告污染机器判断
+钱包判断和筹码判断混在一起
+```
+
+领域平面的目标是让 HER 清楚：
+
+```text
+当前处理的对象是什么
+对象有哪些字段
+字段属于哪一类
+对象在哪个阶段创建
+对象在哪个阶段更新
+对象如何进入下游
+对象如何被复盘
+对象如何触发规则升级
+```
+
+领域平面完成后，系统才允许进入数据平面设计。
+
+---
+
+下一份应继续生成：
+
+```text
+data_plane.md
+```

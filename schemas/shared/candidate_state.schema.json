@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SIKK Candidate State Schema",
+  "version": "runtime_state_core_v1",
+  "type": "object",
+  "required": [
+    "token_address",
+    "mode",
+    "current_phase",
+    "status_code",
+    "status_family",
+    "positive_evidence",
+    "negative_evidence",
+    "counter_evidence",
+    "missing_fields",
+    "audit_refs",
+    "source_refs",
+    "rule_version"
+  ],
+  "properties": {
+    "token_address": {"type": "string"},
+    "mode": {"type": "string"},
+    "current_phase": {"type": "string"},
+    "previous_phase": {"type": ["string", "null"]},
+    "next_phase": {"type": ["string", "null"]},
+    "status_code": {"type": "string"},
+    "status_family": {"type": "string"},
+    "positive_evidence": {"type": "array"},
+    "negative_evidence": {"type": "array"},
+    "counter_evidence": {"type": "array"},
+    "hard_negative_trigger": {"type": ["string", "null"]},
+    "invalidation_condition": {"type": "string"},
+    "confidence_level": {"type": "string"},
+    "missing_fields": {"type": "array"},
+    "gaps": {"type": "array"},
+    "audit_refs": {"type": "array"},
+    "source_refs": {"type": "array"},
+    "created_at": {"type": "string"},
+    "updated_at": {"type": "string"},
+    "rule_version": {"type": "string"}
+  }
+}

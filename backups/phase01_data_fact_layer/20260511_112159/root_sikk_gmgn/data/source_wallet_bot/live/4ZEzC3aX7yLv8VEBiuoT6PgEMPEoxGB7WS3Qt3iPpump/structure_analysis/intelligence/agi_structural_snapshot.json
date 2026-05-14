@@ -1,0 +1,74 @@
+{
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "token_symbol": "AGI",
+  "token_name": "autistic genius intelligence",
+  "chain": "sol",
+  "launchpad": "pump",
+  "pool_type": "pump_amm",
+  "pool_address": "Fej6xTZ4w2EgTUtAsDe7Dzdtq3T1oRDfGeQbXeWAw37w",
+  "gmgn_url": "https://gmgn.ai/sol/token/4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "price_usd": 0.00070805656,
+  "supply": 995834215,
+  "market_cap_usd": 705106.95,
+  "liquidity_usd": 85726.82,
+  "liquidity_to_market_cap_pct": 12.16,
+  "holder_count": 3253,
+  "mint_renounced": true,
+  "freeze_renounced": true,
+  "buy_tax_pct": 0,
+  "sell_tax_pct": 0,
+  "lp_burned": true,
+  "top10_holder_rate_pct": 15.49,
+  "dev_current_holding": 0,
+  "dev_status": "creator_close",
+  "dev_funding_source": "MEXC",
+  "dev_launch_count": 13,
+  "cto_flag": 1,
+  "smart_wallet_count": 56,
+  "kol_wallet_count": 13,
+  "fresh_wallet_count": 1000,
+  "bundler_wallet_count": 1000,
+  "sniper_wallet_count": 159,
+  "whale_wallet_count": 1,
+  "bot_degen_rate_pct": 31.61,
+  "fresh_wallet_rate_pct": 9.27,
+  "top_bundler_trader_percentage_pct": 39.5,
+  "top_entrapment_trader_percentage_pct": 8.15,
+  "funding_traced": false,
+  "generated_at": "2026-05-10T17:13:00Z",
+  "source_note": "GMGN quick structural scan fixture from Telegram runtime demonstration; funding path intentionally not traced.",
+  "sample_wallets": [
+    {
+      "address": "Fej6xTZ4w2EgTUtAsDe7Dzdtq3T1oRDfGeQbXeWAw37w",
+      "tags": ["pool", "pump_amm", "lp"],
+      "holder_pct": 6.09
+    },
+    {
+      "address": "7Btw_AGI_top_bundler_loss_sample",
+      "tags": ["top_holder", "bundler"],
+      "pnl_usd": -10530,
+      "unrealized_profit_usd": -14634,
+      "holder_pct": 1.23
+    },
+    {
+      "address": "4HfU_AGI_high_float_sample",
+      "tags": ["top_holder", "bundler"],
+      "pnl_usd": 10796,
+      "sold_usd": 0,
+      "holder_pct": 0.91
+    },
+    {
+      "address": "4JoE_AGI_transfer_in_sample",
+      "tags": ["top_holder", "transfer_in"],
+      "buy_usd": 0,
+      "holding_value_usd": 9143,
+      "holder_pct": 0.73
+    },
+    {
+      "address": "Sniper_AGI_sample",
+      "tags": ["sniper", "fresh_wallet"],
+      "pnl_usd": 512,
+      "holder_pct": 0.08
+    }
+  ]
+}

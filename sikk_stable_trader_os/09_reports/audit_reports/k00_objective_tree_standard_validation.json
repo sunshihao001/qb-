@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "validated_file": "/root/sikk-gmgn/sikk_stable_trader_os/06_phase_controllers/K00_knowledge_intake_taskization/03_phase_objective_tree.yaml",
+  "template_file": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/phase_task_execution_package_standard/03_phase_objective_tree_TEMPLATE.yaml",
+  "level_2_sub_goal_count": 8,
+  "level_3_task_count": 8,
+  "phase_order_head": [
+    "K00",
+    "P00",
+    "P01"
+  ],
+  "required_output_paths_validated": [
+    "raw_inputs/<doc_id>.md",
+    "source_registry/source_registry.json",
+    "document_passports/document_passport_<doc_id>.yaml",
+    "system_mapping/plane_mapping_<doc_id>.json",
+    "system_mapping/phase_mapping_<doc_id>.json",
+    "gap_detection/gap_detection_<doc_id>.json",
+    "task_packages/task_execution_package_<doc_id>.json",
+    "handoff_packets/k00_handoff_packet_<doc_id>.json"
+  ]
+}

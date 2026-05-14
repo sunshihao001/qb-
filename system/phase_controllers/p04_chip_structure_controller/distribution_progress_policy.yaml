@@ -1,0 +1,9 @@
+candidate_only: true
+distinguish:
+  - "partial_selling"
+  - "clear_out"
+  - "transfer_out"
+  - "internal_rotation"
+  - "unknown_transfer"
+  - "receiver_absorption"
+scenario_confirmation_required_by_P06: true

@@ -1,0 +1,122 @@
+{
+  "audit_id": "AUDIT-CA-ORCHESTRATOR-P0-CONTROL-CLOSURE-REPLAY",
+  "generated_at": "2026-05-11T12:42:23Z",
+  "run_id": "P0REPLAY-20260511T124222Z",
+  "token_address": "4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump",
+  "pipeline_command": "python3 sikk_ca_runtime_pipeline.py --ca 4ZEzC3aX7yLv8VEBiuoT6PgEMPEoxGB7WS3Qt3iPpump --snapshot /root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/input_snapshot.json --output-root /root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs --mode replay --run-id P0REPLAY-20260511T124222Z",
+  "pipeline_exit_code": 0,
+  "pytest_exit_code": 0,
+  "pipeline_result": {
+    "status": "OK",
+    "runtime_context_json": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/runtime_context.json",
+    "permission_gate_json": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/permission_gate.json",
+    "stage_ledger_jsonl": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/stage_ledger.jsonl",
+    "ca_consistency_audit_json": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/ca_consistency_audit.json",
+    "trade_gate_summary_json": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/trade_gate_runtime/trade_gate_runtime_summary.json",
+    "candidate_states_json": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/state_machine/candidate_states.json",
+    "live_state_json": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/live_state.json",
+    "trade_gate_journal_jsonl": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/trade_gate_journal/trade_gate_review.jsonl",
+    "completion_audit_json": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/completion_audit.json",
+    "final_report_md": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/final_report_zh.md",
+    "review_writeback_json": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/review_writeback.json"
+  },
+  "pytest_output_tail": "..                                                                       [100%]\n2 passed in 0.08s",
+  "checks": [
+    {
+      "name": "pipeline_exit_zero",
+      "ok": true,
+      "detail": "{\n  \"status\": \"OK\",\n  \"runtime_context_json\": \"/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/runtime_context.json\",\n  \"permission_gate_json\": \"/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/permission_gate.json\",\n  \"stage_ledger_jsonl\": \"/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/stage_l"
+    },
+    {
+      "name": "pytest_exit_zero",
+      "ok": true,
+      "detail": "..                                                                       [100%]\n2 passed in 0.08s"
+    },
+    {
+      "name": "pipeline_output_runtime_context_json_exists",
+      "ok": true,
+      "detail": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/runtime_context.json"
+    },
+    {
+      "name": "pipeline_output_permission_gate_json_exists",
+      "ok": true,
+      "detail": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/permission_gate.json"
+    },
+    {
+      "name": "pipeline_output_stage_ledger_jsonl_exists",
+      "ok": true,
+      "detail": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/stage_ledger.jsonl"
+    },
+    {
+      "name": "pipeline_output_ca_consistency_audit_json_exists",
+      "ok": true,
+      "detail": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/ca_consistency_audit.json"
+    },
+    {
+      "name": "pipeline_output_completion_audit_json_exists",
+      "ok": true,
+      "detail": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/completion_audit.json"
+    },
+    {
+      "name": "pipeline_output_final_report_md_exists",
+      "ok": true,
+      "detail": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/final_report_zh.md"
+    },
+    {
+      "name": "pipeline_output_review_writeback_json_exists",
+      "ok": true,
+      "detail": "/root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/review_writeback.json"
+    },
+    {
+      "name": "fixed_ca_mode_true",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no_discovery_true",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "permission_real_trade_false",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "permission_signing_false",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "permission_broadcast_false",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "permission_secret_not_used",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ca_consistency_passed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "completion_overall_passed",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "passed": 17,
+  "total": 17,
+  "overall_passed": true,
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

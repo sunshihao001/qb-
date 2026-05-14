@@ -1,0 +1,137 @@
+{
+  "blocker_set_id": "CURRENT_BLOCKERS_P07_PACKAGE_LANDED",
+  "updated_at": "2026-05-12T04:08:53Z",
+  "authority": "00_control/current_system_state.json",
+  "blocked_stages": [
+    "LIVE_EXECUTION",
+    "P01_data_fact_controller",
+    "P02_wallet_structure_controller",
+    "P03_chip_control_controller",
+    "P04_market_structure_controller",
+    "P05_EVIDENCE_RUNTIME_EXECUTION",
+    "P05_TO_PAPER_OR_STRATEGY",
+    "P06_SCENARIO_RECOGNITION_RUNTIME_EXECUTION",
+    "P06_TO_PAPER_OR_LIVE",
+    "P07_STRATEGY_GATE_RUNTIME_EXECUTION",
+    "P07_TO_PAPER_RUNTIME_DIRECT",
+    "P07_execution_risk_controller",
+    "P08_PAPER_RUNTIME",
+    "P08_paper_trading_controller",
+    "P09_review_learning_controller",
+    "P10_system_upgrade_controller",
+    "PAPER_RUNTIME"
+  ],
+  "stage_block_reasons": {
+    "P01_data_fact_controller": "Data Plane has not been generated and accepted; P01 preflight has not passed; P01 I/O contracts have not been validated.",
+    "P02_wallet_structure_controller": "P01 normalized wallet facts are not available.",
+    "P03_chip_control_controller": "P02 wallet structure outputs are not available.",
+    "P04_market_structure_controller": "P01 normalized market facts are not available.",
+    "P07_execution_risk_controller": "Strategy gate paper permission is not available.",
+    "P08_paper_trading_controller": "P08 execution risk package and acceptance are not available.",
+    "P09_review_learning_controller": "Paper trading closed samples are not available.",
+    "P10_system_upgrade_controller": "Review learning outputs are not available.",
+    "P05_EVIDENCE_RUNTIME_EXECUTION": "P05 Evidence Controller is formal package-ready with runtime gaps; runner/tool binding and real upstream P04 handoff execution are not accepted.",
+    "P05_TO_PAPER_OR_STRATEGY": "P05 evidence outputs only hand off to P06; no scenario claim, strategy gate, PAPER_READY, paper runtime, or live execution.",
+    "PAPER_RUNTIME": "Paper runtime remains blocked until P08 execution risk and runtime handoff acceptance pass.",
+    "LIVE_EXECUTION": "Live execution and real trade are forbidden.",
+    "P06_scenario_recognition_controller": "Package design is next legal work; runtime blocked until P06 package/contracts/fixtures/acceptance exist.",
+    "P07_strategy_gate_controller": "P07 package is design-ready with runtime gaps; it cannot execute without runner/tool binding, real P06 handoff execution, trace, and runtime acceptance.",
+    "P06_SCENARIO_RECOGNITION_RUNTIME_EXECUTION": "P06 package exists but runner/tool binding/live task acceptance are not implemented; runtime remains blocked.",
+    "P07_STRATEGY_GATE_RUNTIME_EXECUTION": "P07 package/design landed only; runtime remains blocked.",
+    "P06_TO_PAPER_OR_LIVE": "P06 cannot handoff directly to paper/live; only P07 Strategy Gate is allowed.",
+    "P07_TO_PAPER_RUNTIME_DIRECT": "P07 PAPER_CANDIDATE is not PAPER_READY; P08 is mandatory."
+  },
+  "blocked_tasks": {
+    "P01_DATA_FACT_RUNTIME_CONNECTION": [
+      "Data Plane not generated/accepted",
+      "P01 preflight not passed",
+      "P01 I/O contracts not validated"
+    ],
+    "P02_WALLET_STRUCTURE_RUNTIME": [
+      "P01 unavailable"
+    ],
+    "PAPER_TRADING_RUNTIME": [
+      "Strategy gate/execution risk/paper permissions unavailable"
+    ],
+    "REAL_TRADE_EXECUTION": [
+      "Global safety boundary forbids real trade"
+    ],
+    "P05_EVIDENCE_RUNTIME": [
+      "P05 runner/tool binding not implemented",
+      "real upstream P04 runtime handoff not executed",
+      "P05 runtime acceptance not run"
+    ],
+    "P05_TO_PAPER_OR_STRATEGY": [
+      "P05 boundary forbids scenario/strategy/paper permission",
+      "P06/P07 not accepted"
+    ],
+    "P06_SCENARIO_RECOGNITION_RUNTIME": [
+      "P06 package not landed",
+      "P05 handoff fixtures not executed",
+      "P06 runtime acceptance not run"
+    ],
+    "P07_STRATEGY_GATE_RUNTIME": [
+      "P07 runner/tool binding not implemented",
+      "real P06 scenario handoff not executed",
+      "P07 runtime acceptance not run"
+    ],
+    "P07_TO_PAPER_RUNTIME_DIRECT": [
+      "P07 cannot start paper runtime",
+      "P08 execution risk is mandatory",
+      "paper runtime handoff unavailable"
+    ]
+  },
+  "hard_blocks": [
+    "P01_READY",
+    "PAPER_READY_FROM_P05",
+    "PAPER_READY_FROM_P07_WITHOUT_P08",
+    "auto_order_allowed_true",
+    "buy_signal_from_p07",
+    "p01_runtime_connection_allowed_true",
+    "p05_live_runtime_allowed_true",
+    "p05_paper_runtime_allowed_true",
+    "p05_runtime_connection_allowed_true",
+    "p07_live_runtime_allowed_true",
+    "p07_paper_runtime_allowed_true",
+    "p07_runtime_connection_allowed_true",
+    "real_trade_enabled_true"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false,
+    "private_key_allowed": false,
+    "seed_phrase_allowed": false
+  },
+  "p01_blocked": true,
+  "p01_block_reasons": [
+    "DATA_PLANE_ACCEPTANCE_NOT_RUN",
+    "P01_PREFLIGHT_NOT_RUN",
+    "SYSTEM_PLANES_ACCEPTANCE_NOT_COMPLETE"
+  ],
+  "governance_plane_blocker_cleared": true,
+  "remaining_system_plane_gaps": [
+    "Domain Plane acceptance not run",
+    "Data Plane acceptance not run",
+    "Full Control Plane acceptance not complete"
+  ],
+  "blocking_items": [],
+  "p05_formalization_correction": {
+    "status": "APPLIED",
+    "applied_at": "2026-05-12T03:19:13Z",
+    "formal_phase": "P05_evidence_controller",
+    "next_legal_stage": "P06_SCENARIO_RECOGNITION_CONTROLLER_PACKAGE_DESIGN",
+    "deprecated": "P05_scenario_classification_controller",
+    "runtime_blockers_hold": true,
+    "paper_only": true,
+    "real_trade_enabled": false
+  },
+  "p06_package_status": "P06_PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "next_legal_stage": "P08_EXECUTION_RISK_CONTROLLER_PACKAGE_DESIGN",
+  "paper_only": true,
+  "real_trade_enabled": false,
+  "auto_order_allowed": false,
+  "private_key_allowed": false,
+  "seed_phrase_allowed": false,
+  "p07_package_status": "P07_PACKAGE_READY_WITH_RUNTIME_GAPS"
+}

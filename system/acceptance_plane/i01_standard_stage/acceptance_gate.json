@@ -1,0 +1,48 @@
+{
+  "acceptance_depth": "SEMANTIC_REPLAY_ACCEPTANCE",
+  "acceptance_id": "I01_STANDARD_STAGE_ACCEPTANCE",
+  "checks": [
+    "business_bound_runtime_context_loaded",
+    "conflict_input_blocker_replay",
+    "contract_exists",
+    "controller_exists",
+    "dirty_data_quality_replay",
+    "forbidden_action_replay_scan",
+    "handoff_contract_field_alignment",
+    "handoff_exists",
+    "happy_path_sample_replay",
+    "missing_field_downgrade_replay",
+    "no_real_execution_fields_enabled",
+    "paper_only_permissions_enforced",
+    "runtime_entry_exists",
+    "schema_exists",
+    "schema_validation_replay",
+    "trace_evidence_completeness",
+    "trace_exists"
+  ],
+  "pass_status": "STANDARD_STAGE_CLOSED_PAPER_ONLY",
+  "phase_id": "I01",
+  "semantic_replay_acceptance": {
+    "paper_only": true,
+    "pass_policy": "PASS or PASS_WITH_DOWNGRADE; never fabricate missing fields",
+    "real_execution_allowed": false,
+    "required_replays": [
+      "schema_validation_replay",
+      "happy_path_sample_replay",
+      "missing_field_downgrade_replay",
+      "conflict_input_blocker_replay",
+      "dirty_data_quality_replay",
+      "forbidden_action_replay_scan",
+      "handoff_contract_field_alignment",
+      "trace_evidence_completeness"
+    ],
+    "sample_kinds": [
+      "happy_path",
+      "missing_field",
+      "conflict_input",
+      "dirty_data",
+      "forbidden_action_scan"
+    ]
+  },
+  "status": "SEMANTIC_ACCEPTANCE_READY_PAPER_ONLY"
+}

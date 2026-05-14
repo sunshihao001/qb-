@@ -1,0 +1,21 @@
+{
+  "contains_mock_data": true,
+  "rows": [
+    {
+      "wallet_address": "MockWallet111111111111111111111111111111111",
+      "first_buy_time": "2026-05-08T23:59:00Z",
+      "first_buy_amount_sol": 1.2,
+      "gmgn_tags": [
+        "smart_degen_mock"
+      ]
+    },
+    {
+      "wallet_address": "INVALID_MOCK_ADDRESS",
+      "first_buy_time": "2099-01-01T00:00:00Z",
+      "first_buy_amount_sol": -1,
+      "gmgn_tags": [
+        "mock_anomaly"
+      ]
+    }
+  ]
+}

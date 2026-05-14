@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "required": [
+    "version",
+    "source_doc_id",
+    "coverage",
+    "stages"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "source_doc_id": {
+      "type": "string"
+    },
+    "coverage": {
+      "type": "array"
+    },
+    "stages": {
+      "type": "object"
+    }
+  }
+}

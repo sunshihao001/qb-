@@ -1,0 +1,10 @@
+i05_trace_requirements:
+  required_trace_ids:
+    - i04_trace_id
+    - p09_replay_trace_id
+    - p10_upgrade_trace_id
+    - i05_validation_trace_id
+  every_record_must_include:
+    - source_paths
+    - generated_at
+    - validation_status

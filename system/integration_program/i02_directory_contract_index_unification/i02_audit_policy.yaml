@@ -1,0 +1,9 @@
+policy_id: i02_audit_policy
+audit_required: true
+audit_events:
+- file_creation
+- index_generation
+- gap_detection
+- handoff_generation
+- acceptance_verification
+audit_dir: /root/sikk-gmgn/data/integration_program/i02_directory_contract_index_unification/audit

@@ -1,0 +1,23 @@
+{
+  "review_cases": [
+    {
+      "review_case_id": "review_001",
+      "source_gap": "gap_001",
+      "gap_level": "HIGH_GAP",
+      "status": "OPEN"
+    },
+    {
+      "review_case_id": "review_002",
+      "source_gap": "gap_002",
+      "gap_level": "MEDIUM_GAP",
+      "status": "OPEN"
+    },
+    {
+      "review_case_id": "review_003",
+      "source_gap": "gap_003",
+      "gap_level": "MEDIUM_GAP",
+      "status": "OPEN"
+    }
+  ],
+  "status": "REVIEW_CASES_READY_WITH_GAPS"
+}

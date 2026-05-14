@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Downstream queue",
+  "type": "object",
+  "required": [
+    "queue_id",
+    "queue_status",
+    "queue_items",
+    "dependency_graph_ref",
+    "priority_plan_ref",
+    "created_at"
+  ],
+  "properties": {
+    "queue_id": {
+      "type": "string"
+    },
+    "queue_status": {
+      "enum": [
+        "QUEUE_CREATED",
+        "QUEUE_READY",
+        "QUEUE_READY_WITH_GAPS",
+        "QUEUE_BLOCKED"
+      ]
+    },
+    "queue_items": {
+      "type": "array"
+    },
+    "dependency_graph_ref": {
+      "type": "string"
+    },
+    "priority_plan_ref": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

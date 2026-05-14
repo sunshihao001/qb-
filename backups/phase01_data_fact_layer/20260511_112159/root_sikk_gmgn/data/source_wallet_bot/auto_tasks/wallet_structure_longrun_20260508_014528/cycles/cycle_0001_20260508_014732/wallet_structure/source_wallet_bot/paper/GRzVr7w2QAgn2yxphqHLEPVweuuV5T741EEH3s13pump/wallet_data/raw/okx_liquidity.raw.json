@@ -1,0 +1,42 @@
+{
+  "source": "okx",
+  "endpoint": "liquidity",
+  "required": false,
+  "command_redacted": [
+    "onchainos",
+    "token",
+    "liquidity",
+    "--address",
+    "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+    "--chain",
+    "solana"
+  ],
+  "started_at": "2026-05-08T01:47:57Z",
+  "finished_at": "2026-05-08T01:47:57Z",
+  "available": true,
+  "exit_code": 0,
+  "stderr_head": "",
+  "parsed": {
+    "ok": true,
+    "data": [
+      {
+        "liquidityAmount": [
+          {
+            "tokenAmount": "79884912.449923",
+            "tokenSymbol": "MASK"
+          },
+          {
+            "tokenAmount": "235.87412047",
+            "tokenSymbol": "SOL"
+          }
+        ],
+        "liquidityProviderFeePercent": "0.25%",
+        "liquidityUsd": "41558.7641875521083748362111184165989633303083245",
+        "pool": "MASK/SOL",
+        "poolAddress": "ArwA4hci9Xz2YqAwFLWwXM2RGQJ7hiW21baCQgX4tJrV",
+        "poolCreator": "H3PzPLfSgF2ao4FjG7VNd1hjy76XGyeGriyNmaqurzZE",
+        "protocolName": "PumpSwap"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "graph_id": "dependency_graph_h00_real_20260514_001821",
+  "nodes": [
+    {
+      "queue_item_id": "queue_h00_u00_review_gaps",
+      "target_controller": "U00"
+    },
+    {
+      "queue_item_id": "queue_h00_g00_policy_review",
+      "target_controller": "G00"
+    },
+    {
+      "queue_item_id": "queue_h00_o00_run_document_safe_mode",
+      "target_controller": "O00"
+    }
+  ],
+  "edges": [
+    {
+      "from": "queue_h00_u00_review_gaps",
+      "to": "queue_h00_g00_policy_review",
+      "dependency_type": "GOVERNANCE_CANDIDATES_FROM_U00"
+    },
+    {
+      "from": "queue_h00_g00_policy_review",
+      "to": "queue_h00_o00_run_document_safe_mode",
+      "dependency_type": "REQUIRES_POLICY_REVIEW_FIRST"
+    }
+  ],
+  "blocked_nodes": [],
+  "execution_order": [
+    "queue_h00_u00_review_gaps",
+    "queue_h00_g00_policy_review",
+    "queue_h00_o00_run_document_safe_mode"
+  ]
+}

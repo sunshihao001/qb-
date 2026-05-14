@@ -1,0 +1,21 @@
+{
+  "planes": [
+    "Trace Plane",
+    "Full Control Plane",
+    "Acceptance Plane",
+    "Handoff Plane",
+    "Data Plane",
+    "Review/Upgrade Plane"
+  ],
+  "affected_phases": [
+    "K00",
+    "P00",
+    "TRACE_PLANE",
+    "ACCEPTANCE_PLANE",
+    "HANDOFF_PLANE",
+    "P01-P10",
+    "Runner/Tool Binding",
+    "Paper-only Runtime",
+    "Review/Upgrade"
+  ]
+}

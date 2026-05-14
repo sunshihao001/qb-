@@ -1,0 +1,10 @@
+relations:
+  - {from: wallet, relation: belongs_to, to: wallet_entity}
+  - {from: wallet_entity, relation: may_form, to: same_source_group}
+  - {from: same_source_group, relation: may_control, to: chip_cluster}
+  - {from: chip_cluster, relation: affects, to: dominant_side_status}
+  - {from: dominant_side_status, relation: affects, to: scenario}
+  - {from: scenario, relation: constrains, to: strategy_gate}
+  - {from: strategy_gate, relation: controls, to: paper_permission}
+  - {from: paper_trade_result, relation: feeds, to: review_learning}
+  - {from: review_learning, relation: proposes, to: system_upgrade}

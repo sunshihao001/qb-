@@ -1,0 +1,75 @@
+acceptance_gate_id: P00_ACCEPTANCE_GATE_001
+stage: P00_system_bootstrap_controller
+version: v1.0-institutional
+acceptance_levels:
+  file_level:
+    required:
+      - 00_methodology/system_methodology_blueprint.md
+      - 00_control/current_system_state.json
+      - 00_control/phase_registry.yaml
+      - 00_control/system_asset_index.json
+      - 00_control/task_consumption_log.json
+      - 00_control/next_stage_decision.json
+      - 00_trace/methodology_implementation_trace_matrix.yaml
+      - 00_trace/asset_consumption_matrix.yaml
+      - 08_acceptance/global_acceptance_policy.yaml
+      - 09_handoff/handoff_packet_registry.yaml
+  structure_level:
+    required_checks:
+      - current_system_state_has_authoritative_stage
+      - phase_registry_contains_all_phases
+      - p01_status_is_not_ready
+      - all_json_outputs_parse
+      - all_yaml_outputs_parse
+  semantic_level:
+    required_checks:
+      - methodology_blueprint_consumed
+      - phase_controller_definition_reflected_in_p00
+      - governance_authority_boundary_created
+      - domain_objects_registered
+      - data_plane_tasks_created
+      - next_legal_stage_explicit
+  consumption_level:
+    required_checks:
+      - k00_handoff_marked_consumed_by_p00
+      - task_consumption_log_updated
+      - asset_consumption_matrix_updated
+  runtime_level:
+    required_checks:
+      - current_system_state_written
+      - next_stage_decision_written
+      - blockers_written
+      - p00_bootstrap_report_written
+      - p01_runtime_connection_allowed_false
+  safety_level:
+    required_checks:
+      - paper_only_true
+      - real_trade_enabled_false
+      - auto_order_allowed_false
+      - private_key_absent
+      - seed_phrase_absent
+hard_fail_conditions:
+  - methodology_blueprint_missing
+  - k00_handoff_missing
+  - phase_controller_candidate_spec_missing
+  - current_system_state_missing
+  - phase_registry_missing
+  - p01_marked_ready_before_data_plane
+  - real_trade_enabled_true
+  - no_next_legal_stage
+  - k00_assets_not_consumed
+  - json_or_yaml_parse_error
+success_conditions:
+  - all_file_level_checks_pass
+  - all_structure_level_checks_pass
+  - all_semantic_level_checks_pass
+  - all_consumption_level_checks_pass
+  - all_runtime_level_checks_pass
+  - all_safety_level_checks_pass
+p00_success_state:
+  p00_bootstrap_passed: true
+  system_integration_repaired: false
+  p01_runtime_connection_allowed: false
+  next_legal_stage: DATA_PLANE_ACCEPTANCE_REVIEW
+  paper_only: true
+  real_trade_enabled: false

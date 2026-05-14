@@ -1,0 +1,14 @@
+{
+  "status": "NO_BLOCKING_RECOVERY_REQUIRED",
+  "safe_next_actions": [
+    "inspect_report",
+    "implement_real_stage_bindings_under_safe_mode"
+  ],
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading",
+    "execute_real_order"
+  ]
+}

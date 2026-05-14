@@ -1,0 +1,21 @@
+{
+  "operator_goal_id": "operator_goal_sample_001",
+  "goal": "验证 HER 文档到功能系统能否把一条解释性系统规则转化为功能需求、字段模型、规则逻辑、验证要求、治理候选和全链路 handoff。",
+  "expected_pipeline": [
+    "K00",
+    "F00",
+    "V00",
+    "A00",
+    "H00",
+    "U00",
+    "G00"
+  ],
+  "runner_binding_required": false,
+  "safe_mode": true,
+  "forbidden_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ]
+}

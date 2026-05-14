@@ -1,0 +1,61 @@
+{
+  "matrix_id": "target_capability_matrix_H00-P01-AUTO-FULL-20260514-001",
+  "targets": [
+    {
+      "target_controller": "U00",
+      "controller_registered": true,
+      "input_contract_exists": true,
+      "can_accept_handoff": true,
+      "can_accept_gap_refs": true,
+      "can_accept_evidence_refs": true,
+      "can_accept_forbidden_actions": true,
+      "requires_additional_contract": false,
+      "target_status": "TARGET_READY"
+    },
+    {
+      "target_controller": "G00",
+      "controller_registered": true,
+      "input_contract_exists": true,
+      "can_accept_handoff": true,
+      "can_accept_gap_refs": true,
+      "can_accept_evidence_refs": true,
+      "can_accept_forbidden_actions": true,
+      "requires_additional_contract": false,
+      "target_status": "TARGET_READY_WITH_GAPS"
+    },
+    {
+      "target_controller": "O00",
+      "controller_registered": true,
+      "input_contract_exists": true,
+      "can_accept_handoff": true,
+      "can_accept_gap_refs": true,
+      "can_accept_evidence_refs": true,
+      "can_accept_forbidden_actions": true,
+      "requires_additional_contract": true,
+      "target_status": "TARGET_READY_WITH_GAPS"
+    },
+    {
+      "target_controller": "Report_Audit_System",
+      "controller_registered": true,
+      "input_contract_exists": true,
+      "can_accept_handoff": true,
+      "can_accept_gap_refs": true,
+      "can_accept_evidence_refs": true,
+      "can_accept_forbidden_actions": true,
+      "requires_additional_contract": false,
+      "target_status": "TARGET_READY"
+    },
+    {
+      "target_controller": "Backlog_Upgrade_Queue",
+      "controller_registered": true,
+      "input_contract_exists": true,
+      "can_accept_handoff": true,
+      "can_accept_gap_refs": true,
+      "can_accept_evidence_refs": true,
+      "can_accept_forbidden_actions": true,
+      "requires_additional_contract": false,
+      "target_status": "TARGET_READY"
+    }
+  ],
+  "matrix_status": "BUILT"
+}

@@ -1,0 +1,8 @@
+schema_version: '1.0'
+controller: I01_FULL_PHASE_CONSISTENCY_AUDIT
+object: handoff_chain_integrity_record
+fields:
+- record_id
+- handoff_chain
+- chain_checks
+- result

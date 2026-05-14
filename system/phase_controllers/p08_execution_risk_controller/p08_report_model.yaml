@@ -1,0 +1,12 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+report_model_id: P08_EXECUTION_RISK_REPORT
+summary_fields: [candidate_count_received, candidate_count_processed, paper_runtime_allowed_count, allowed_with_limitations_count, paused_count, blocked_count, human_confirmation_required_count, rejected_count]
+permission_distribution: [PAPER_RUNTIME_ALLOWED, PAPER_RUNTIME_ALLOWED_WITH_LIMITATIONS, PAPER_RUNTIME_PAUSED, PAPER_RUNTIME_BLOCKED, HUMAN_CONFIRMATION_REQUIRED, EXECUTION_RISK_REJECTED]
+sections: [quote_summary, liquidity_summary, security_summary, risk_limit_summary, block_reason_summary, paper_runtime_handoff_summary, compliance]
+compliance:
+  live_execution_allowed_generated: false
+  wallet_signing_allowed_generated: false
+  auto_order_generated: false
+  paper_runtime_bypassed: false

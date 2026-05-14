@@ -1,0 +1,19 @@
+{
+  "token_address": "6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump",
+  "review_required": true,
+  "review_windows": [
+    "W1_0_60s",
+    "W2_1_5m",
+    "W3_5_30m",
+    "W4_30m_2h"
+  ],
+  "writeback_targets": [
+    "trade_journal",
+    "wallet_structure_decision",
+    "planbook_gap_register"
+  ],
+  "runtime_review_status": "PENDING_HUMAN_REVIEW",
+  "ca_pipeline_run_id": "run_20260513_ca_6azt",
+  "journal_path": "/root/sikk-gmgn/runtime_outputs/6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump/runtime/trade_gate_journal/trade_gate_review.jsonl",
+  "scope_note": "复盘写回候选；不改变实盘权限。"
+}

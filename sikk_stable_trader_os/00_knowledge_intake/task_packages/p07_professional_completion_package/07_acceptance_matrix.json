@@ -1,0 +1,38 @@
+{
+  "matrix_id": "P07_PROFESSIONAL_ACCEPTANCE_MATRIX_V1",
+  "generated_at": "2026-05-12T05:14:28Z",
+  "verdict_options": [
+    "P07_PACKAGE_READY_WITH_RUNTIME_GAPS_AND_K00_ROUTE_RECOVERED",
+    "P07_READY_WITH_GAPS",
+    "P07_REJECTED",
+    "P07_BLOCKED"
+  ],
+  "must_pass": [
+    "K00_REQUIRED_PATHS=12 MISSING=0",
+    "P07 system files complete (41/41)",
+    "P07 runtime directory skeleton complete (29/29)",
+    "YAML/JSON parse errors = 0",
+    "strategy policy registry exists",
+    "hard negative rules exist and execute before positive gate",
+    "all professional data objects have schema/contract/policy or data directory",
+    "PAPER_CANDIDATE has P08 request, not paper runtime",
+    "runtime_allowed=false; paper_runtime_allowed=false; live_execution_allowed=false",
+    "next_legal_stage=P08_EXECUTION_RISK_CONTROLLER_PACKAGE_DESIGN"
+  ],
+  "known_runtime_gaps_not_blocking_package": [
+    "evaluator runner not implemented",
+    "strategy weights not backtested",
+    "market thresholds not calibrated",
+    "human confirmation UI not wired",
+    "P08 controller not yet built"
+  ],
+  "hard_blocks": [
+    "missing K00 route",
+    "missing P06 handoff",
+    "missing strategy registry",
+    "buy_signal output",
+    "paper runtime started",
+    "live execution allowed",
+    "P08 bypass"
+  ]
+}

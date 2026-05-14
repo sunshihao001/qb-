@@ -1,0 +1,256 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F00 Concept To Required Function Map Schema",
+  "type": "object",
+  "required": [
+    "function_id",
+    "source_concept",
+    "required_function",
+    "function_type",
+    "target_phase",
+    "input_fields",
+    "field_sources",
+    "output_fields",
+    "judgement_logic",
+    "schema",
+    "contract",
+    "code_module",
+    "tests",
+    "replay",
+    "trace",
+    "report",
+    "kv",
+    "handoff",
+    "runner_binding",
+    "acceptance_criteria",
+    "implementation_status"
+  ],
+  "properties": {
+    "function_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_concept": {
+      "type": "string",
+      "minLength": 1
+    },
+    "required_function": {
+      "type": "string",
+      "minLength": 1
+    },
+    "function_type": {
+      "type": "string",
+      "enum": [
+        "NEW_FUNCTION",
+        "MODIFY_FUNCTION",
+        "ENHANCE_FUNCTION",
+        "HARD_BLOCK_RULE",
+        "SOFT_SCORE_RULE",
+        "STATE_MACHINE_RULE",
+        "SCHEMA_UPDATE",
+        "CONTRACT_UPDATE",
+        "TRACE_REQUIREMENT",
+        "REPORT_REQUIREMENT",
+        "TEST_REQUIREMENT",
+        "RUNNER_BINDING",
+        "GOVERNANCE_RULE",
+        "REVIEW_RULE",
+        "KV_INDEX_UPDATE",
+        "HANDOFF_UPDATE",
+        "RECOVERY_POLICY_UPDATE"
+      ]
+    },
+    "target_phase": {
+      "type": "string"
+    },
+    "input_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_logic": {
+      "type": "string"
+    },
+    "required_assets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "implementation_status": {
+      "type": "string",
+      "enum": [
+        "IMPLEMENT_NOW",
+        "DESIGN_ONLY",
+        "EXTEND_EXISTING",
+        "UPDATE_SCHEMA_ONLY",
+        "UPDATE_CONTRACT_ONLY",
+        "ADD_TEST_ONLY",
+        "ADD_REPORT_ONLY",
+        "ADD_KV_ONLY",
+        "ADD_TRACE_ONLY",
+        "BLOCKED_BY_MISSING_DATA",
+        "BLOCKED_BY_PRODUCTION_RISK",
+        "BLOCKED_BY_UNKNOWN_CODEBASE",
+        "DEFER_TO_DOWNSTREAM_PHASE"
+      ]
+    },
+    "field_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "field",
+          "source_ref",
+          "source_type"
+        ],
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "source_ref": {
+            "type": "string"
+          },
+          "source_type": {
+            "type": "string"
+          },
+          "missing_policy": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "judgement_logic": {
+      "type": "object",
+      "required": [
+        "logic_type",
+        "description",
+        "input_fields",
+        "output_status",
+        "failure_condition"
+      ],
+      "properties": {
+        "logic_type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "input_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "output_status": {
+          "type": "string"
+        },
+        "failure_condition": {
+          "type": "string"
+        },
+        "trace_required": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "schema": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "contract": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "code_module": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "tests": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "replay": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "trace": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "report": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "kv": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "handoff": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "runner_binding": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "acceptance_criteria": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "description": "Every explanatory concept must compile into required_function records with implementation, test, replay, runner, acceptance, and handoff obligations."
+}

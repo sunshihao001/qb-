@@ -1,0 +1,31 @@
+controller_id: I04_PAPER_RUNTIME_INTEGRATION
+required_outputs:
+- paper_runtime_input_manifest
+- p08_permission_ingestion_record
+- runtime_permission_gate_record
+- paper_candidate_queue
+- paper_candidate_dedup_record
+- paper_position_uniqueness_record
+- paper_entry_price_model_record
+- paper_slippage_application_record
+- paper_cost_application_record
+- paper_position_open_record
+- paper_trade_record
+- paper_position_update_record
+- paper_mark_to_market_record
+- runtime_invalidation_monitor_record
+- paper_exit_rule_evaluation_record
+- paper_exit_event_record
+- paper_position_close_record
+- paper_equity_curve_record
+- paper_runtime_risk_event_record
+- paper_runtime_snapshot_record
+- paper_runtime_trace_record
+- paper_runtime_acceptance_result
+- p09_review_replay_input_packet
+- i04_to_i05_handoff_packet
+- i04_paper_runtime_integration_report
+forbidden_outputs:
+- live execution command
+- wallet signing command
+- auto deploy command

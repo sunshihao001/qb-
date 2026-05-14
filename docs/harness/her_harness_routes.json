@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "name": "HER Harness Routes",
+  "project_root": "/root/sikk-gmgn",
+  "canonical_root": "/root/sikk-gmgn",
+  "paths": {
+    "routes": "docs/harness/her_harness_routes.json",
+    "task_ticket_schema": "schemas/harness/task_ticket.schema.json",
+    "file_manifest_schema": "schemas/harness/file_manifest.schema.json",
+    "acceptance_schema": "schemas/harness/acceptance.schema.json",
+    "route_checker": "tools/harness/check_routes.py"
+  },
+  "policy": {
+    "canonical_root_only": true,
+    "legacy_workspace_is_reference_only": true,
+    "copy_only_legacy_migration": true,
+    "no_private_key": true,
+    "no_signing": true,
+    "no_broadcast": true,
+    "no_swap": true,
+    "no_real_trading": true
+  },
+  "task_ticket": {
+    "schema_ref": "schemas/harness/task_ticket.schema.json",
+    "required_fields": [
+      "task_id",
+      "title",
+      "bot",
+      "asset_type",
+      "asset_id",
+      "mode",
+      "input_root",
+      "output_root",
+      "allowed_paths",
+      "forbidden_paths",
+      "required_outputs",
+      "phase",
+      "created_at"
+    ]
+  },
+  "file_manifest": {
+    "schema_ref": "schemas/harness/file_manifest.schema.json",
+    "required_fields": [
+      "manifest_id",
+      "asset_type",
+      "asset_id",
+      "bot",
+      "root",
+      "files",
+      "generated_at"
+    ]
+  },
+  "acceptance": {
+    "schema_ref": "schemas/harness/acceptance.schema.json",
+    "required_fields": [
+      "task_id",
+      "status",
+      "checks",
+      "summary",
+      "generated_at"
+    ]
+  },
+  "default_paths": {
+    "source_wallet_bot_root": "data/source_wallet_bot/{mode}/{asset_id}/",
+    "intel_bot_root": "data/intel_bot/{mode}/{asset_id}/",
+    "research_acceptance": "research_loop/acceptance/{task_name}_acceptance.md",
+    "research_state": "research_loop/state/{task_id}/",
+    "legacy_manifest": "legacy_compat/manifests/{manifest_name}.json"
+  }
+}

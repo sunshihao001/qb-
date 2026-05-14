@@ -1,0 +1,34 @@
+{
+  "doc_id": "DOC-20260512-005",
+  "primary_plane": "Handoff Plane / Evidence Domain Model",
+  "plane_impacts": {
+    "Domain Plane": [
+      "hypothesis_frame",
+      "evidence_subject",
+      "alternative_explanation"
+    ],
+    "Data Plane": [
+      "evidence object schemas",
+      "usage permission schemas"
+    ],
+    "Trace Plane": [
+      "source_trace_ids",
+      "field_trace_ids",
+      "handoff_trace_id"
+    ],
+    "Acceptance Plane": [
+      "P05 acceptance criteria and hard negatives"
+    ],
+    "Handoff Plane": [
+      "P05_TO_P06_EVIDENCE_HANDOFF"
+    ],
+    "Control Plane": [
+      "P05 package status and runtime blockers"
+    ]
+  },
+  "must_not_change": [
+    "real_trade_enabled",
+    "paper_runtime_allowed",
+    "P07 strategy gate"
+  ]
+}

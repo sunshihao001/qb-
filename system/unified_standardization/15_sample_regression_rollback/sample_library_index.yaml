@@ -1,0 +1,36 @@
+metadata:
+  producer: ISSUEPACK_FULL_AUTOMATION
+  version: 0.2.0
+  status: seeded_needs_labels
+  updated_at: '2026-05-14T14:27:43Z'
+samples:
+- sample_id: SAMPLE_WALLET_DECISION_001
+  sample_type: wallet_structure_decision_existing_output
+  token_id: solana:6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump
+  source_path: /root/sikk-gmgn/runtime_outputs/6aztCndC8EZwD9KmHjL2WWezCx1ZhQnavLG3ZrEtpump/runtime/trade_gate/wallet_structure_decision.json
+  label_status: NEEDS_HUMAN_LABEL
+  regression_use: schema_parse_and_replay_baseline_candidate
+- sample_id: SAMPLE_WALLET_DECISION_002
+  sample_type: wallet_structure_decision_existing_output
+  token_id: UNKNOWN
+  source_path: /root/sikk-gmgn/reports/runtime_replay/ca_orchestrator_p0_control_closure/P0REPLAY-20260511T124222Z/runtime_outputs/trade_gate/wallet_structure_decision.json
+  label_status: NEEDS_HUMAN_LABEL
+  regression_use: schema_parse_and_replay_baseline_candidate
+- sample_id: SAMPLE_WALLET_DECISION_003
+  sample_type: wallet_structure_decision_existing_output
+  token_id: solana:xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump
+  source_path: /root/sikk-gmgn/backups/phase01_data_fact_layer/20260511_112159/root_sikk_gmgn/data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/wallet_structure/xNGegLW3dgvSGq4qZP33gz3AJFq9jzSMysCbPrSpump/structure_analysis/wallet_structure_decision.json
+  label_status: NEEDS_HUMAN_LABEL
+  regression_use: schema_parse_and_replay_baseline_candidate
+- sample_id: SAMPLE_WALLET_DECISION_004
+  sample_type: wallet_structure_decision_existing_output
+  token_id: solana:GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump
+  source_path: /root/sikk-gmgn/backups/phase01_data_fact_layer/20260511_112159/root_sikk_gmgn/data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/wallet_structure/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/structure_analysis/wallet_structure_decision.json
+  label_status: NEEDS_HUMAN_LABEL
+  regression_use: schema_parse_and_replay_baseline_candidate
+- sample_id: SAMPLE_WALLET_DECISION_005
+  sample_type: wallet_structure_decision_existing_output
+  token_id: solana:KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump
+  source_path: /root/sikk-gmgn/backups/phase01_data_fact_layer/20260511_112159/root_sikk_gmgn/data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/wallet_structure/KJtdeGP5Tha1RbCYaTvedHdv6oaXcV1kD8FCZtBpump/structure_analysis/wallet_structure_decision.json
+  label_status: NEEDS_HUMAN_LABEL
+  regression_use: schema_parse_and_replay_baseline_candidate

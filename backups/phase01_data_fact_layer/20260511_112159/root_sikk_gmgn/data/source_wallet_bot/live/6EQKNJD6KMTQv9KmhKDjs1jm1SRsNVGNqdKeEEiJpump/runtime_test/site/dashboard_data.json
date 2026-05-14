@@ -1,0 +1,585 @@
+{
+  "meta": {
+    "generated_at": "2026-05-10T17:35:47Z",
+    "base_dir": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test",
+    "boundary": "只读静态观察控制台；不执行真实 swap，不读取私钥，不自动 broadcast。",
+    "source_last_update": "2026-05-10T17:35:46Z",
+    "case_files_static_publish": {
+      "copied_count": 0,
+      "missing": [],
+      "published": {}
+    }
+  },
+  "metadata": {
+    "generated_at": "2026-05-10T17:35:47Z",
+    "base_dir": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test",
+    "boundary": "只读静态观察控制台；不执行真实 swap，不读取私钥，不自动 broadcast。",
+    "source_last_update": "2026-05-10T17:35:46Z",
+    "case_files_static_publish": {
+      "copied_count": 0,
+      "missing": [],
+      "published": {}
+    }
+  },
+  "kpi": {
+    "token_count": 1,
+    "state_counts": {
+      "WATCHING": 1
+    },
+    "WATCHING": 1,
+    "BLOCKED": 0,
+    "PAUSE": 0,
+    "PAPER_READY": 0,
+    "PAPER_OPEN": 0,
+    "wallet_structure_coverage": 0,
+    "wallet_missing_count": 1,
+    "wallet_status_counts": {
+      "MISSING": 1
+    },
+    "open_positions": 0,
+    "closed_positions": 0,
+    "closed_win_rate": 0,
+    "avg_closed_pnl": 0
+  },
+  "funnel": {
+    "candidates": 1,
+    "signal_ready": 0,
+    "wallet_support": 0,
+    "quote_security_pass": 0,
+    "paper_ready": 0,
+    "paper_open": 0
+  },
+  "system_health": {
+    "runtime_status": "OK",
+    "source_last_update": "2026-05-10T17:35:46Z",
+    "token_count": 1,
+    "paper_open_count": 0,
+    "paper_closed_count": 0,
+    "wallet_missing_count": 1,
+    "opportunity_count": 0,
+    "event_count": 3
+  },
+  "coverage_diagnostics": {
+    "wallet_coverage": 0,
+    "wallet_missing_count": 1,
+    "wallet_missing_rate_pct": 100.0,
+    "wallet_missing_repair_plan": [
+      "优先检查 wallet_structure_decision.json 是否生成并被 dashboard/load_wallet_decisions 读取。",
+      "对 PAPER_READY/PAPER_OPEN 且 wallet_structure_status=MISSING 的 token 输出源文件、字段、状态诊断；不放宽入场。",
+      "复查 early_wallet_raw.csv / wallet_classification.csv / candidate_groups.csv 与 token_address join key。"
+    ],
+    "paper_json_csv_sync": {
+      "open_json_count": 0,
+      "closed_json_count": 0,
+      "open_csv_exists": true,
+      "closed_csv_exists": true,
+      "source_note": "sikk_live_run.py 单入口负责 paper JSON/CSV 同步与 dashboard_data.json 刷新。"
+    },
+    "safety_defaults": {
+      "real_swap_enabled": false,
+      "broadcast_allowed": false,
+      "private_key_required": false,
+      "boundary": "只读静态观察控制台；不执行真实 swap，不读取私钥，不自动 broadcast。"
+    }
+  },
+  "tokens": [
+    {
+      "token_symbol": "IMGN",
+      "token_address": "J81YExNqSMwQHGMtPaBK9sUB6wHEPp1q2oBk7Nfwo111",
+      "current_state": "WATCHING",
+      "priority_level": "P3_WATCHING",
+      "signal_level": "UNKNOWN",
+      "signal_gate": "UNKNOWN",
+      "discovery_market_cap_usd": "",
+      "signal_market_cap_usd": "",
+      "wallet_decision_market_cap_usd": "",
+      "paper_entry_market_cap_usd": "",
+      "current_market_cap_usd": "",
+      "market_cap_context_quality": "MISSING",
+      "operator_lifecycle_stage": "UNKNOWN",
+      "operator_psychology_label": "证据不足 / 待复查",
+      "operator_psychology": "DATA_INSUFFICIENT",
+      "paper_trade_alignment": "DATA_INSUFFICIENT",
+      "psychology_reason": "主导侧心理解释：主导侧心理证据不足，不能把盘型直接解释为明确控筹或派发。",
+      "next_observation_focus": "证据不足，先复查生命周期、钱包结构、市值上下文与多轮快照。",
+      "wallet_structure_status": "MISSING",
+      "wallet_missing_reason": "WAIT_SIGNAL",
+      "wallet_structure_score": 0.0,
+      "wallet_risk_score": 0.0,
+      "counterparty_pressure_score": 0.0,
+      "data_quality_score": 0.0,
+      "quote_gate": "MISSING",
+      "security_gate": "MISSING",
+      "paper_status": "NONE",
+      "paper_pnl_pct": 0.0,
+      "main_reason": "未进入钱包结构阶段：等待 K线/信号确认",
+      "next_action": "FIX_DATA_SOURCE",
+      "last_update": "2026-05-10T17:35:46Z"
+    }
+  ],
+  "opportunities": [],
+  "wallet_structure_summary": {
+    "MISSING": 1
+  },
+  "wallet_missing_reasons": {
+    "WAIT_SIGNAL": 1
+  },
+  "entry_block_reasons": {
+    "wallet_structure_missing": 1,
+    "signal_not_ready": 1,
+    "quote_not_ready": 1,
+    "security_not_ready": 1,
+    "state_not_ready": 1,
+    "paper_runner_not_called": 1
+  },
+  "paper_positions": {
+    "open": [],
+    "closed": [],
+    "strategy_metrics": {
+      "snapshot_time": "2026-05-10T17:35:47Z",
+      "scope_note": "OKX/GMGN 只读报价驱动的纸面自动交易统计；不执行真实 swap。",
+      "统计": {
+        "读取候选数": 1,
+        "新增纸面入场数": 0,
+        "纸面退出数": 0,
+        "阻断候选数": 0,
+        "重复持仓跳过数": 0,
+        "当前开放仓位数": 0,
+        "累计关闭仓位数": 0,
+        "已关闭胜率_pct": 0.0,
+        "已关闭平均收益率_pct": 0.0
+      }
+    },
+    "strategy_panel": {
+      "title": "策略评估面板",
+      "summary": {
+        "snapshot_time": "2026-05-10T17:35:47Z",
+        "scope_note": "OKX/GMGN 只读报价驱动的纸面自动交易统计；不执行真实 swap。",
+        "统计": {
+          "读取候选数": 1,
+          "新增纸面入场数": 0,
+          "纸面退出数": 0,
+          "阻断候选数": 0,
+          "重复持仓跳过数": 0,
+          "当前开放仓位数": 0,
+          "累计关闭仓位数": 0,
+          "已关闭胜率_pct": 0.0,
+          "已关闭平均收益率_pct": 0.0
+        }
+      },
+      "entry_price_mode_counts": {},
+      "live_pnl_avg_pct": null,
+      "signal_pnl_avg_pct": null,
+      "live_signal_pnl_gap_avg_pct": null,
+      "failure_reason_top": {},
+      "daily_groups": {},
+      "signal_groups": {},
+      "wallet_groups": {},
+      "scope_note": "对纸面仓位同时保留 live / signal 两套收益指标，并汇总日报、胜率与失败原因。"
+    },
+    "entry_quality_summary": {
+      "title": "入场质量统计",
+      "market_cap_buckets": {},
+      "avg_entry_delay_from_discovery_sec": null,
+      "scope_note": "按入场市值分桶、发现到入场延迟、入场相对发现市值涨幅复盘纸面质量。"
+    },
+    "wallet_exit_effectiveness": {
+      "title": "钱包退出有效性 / 影子持仓复盘",
+      "wallet_force_exit_count": 0,
+      "false_positive_exit_count": 0,
+      "false_exit_rate": 0.0,
+      "avg_missed_profit_pct": null,
+      "avg_avoided_drawdown_pct": null,
+      "shadow_hold_tracking": "force exit 后继续记录 shadow_hold_price_15m/30m/60m、missed_profit_pct、avoided_drawdown_pct。"
+    },
+    "open_count": 0,
+    "closed_count": 0
+  },
+  "strategy_panel": {
+    "title": "策略评估面板",
+    "summary": {
+      "snapshot_time": "2026-05-10T17:35:47Z",
+      "scope_note": "OKX/GMGN 只读报价驱动的纸面自动交易统计；不执行真实 swap。",
+      "统计": {
+        "读取候选数": 1,
+        "新增纸面入场数": 0,
+        "纸面退出数": 0,
+        "阻断候选数": 0,
+        "重复持仓跳过数": 0,
+        "当前开放仓位数": 0,
+        "累计关闭仓位数": 0,
+        "已关闭胜率_pct": 0.0,
+        "已关闭平均收益率_pct": 0.0
+      }
+    },
+    "entry_price_mode_counts": {},
+    "live_pnl_avg_pct": null,
+    "signal_pnl_avg_pct": null,
+    "live_signal_pnl_gap_avg_pct": null,
+    "failure_reason_top": {},
+    "daily_groups": {},
+    "signal_groups": {},
+    "wallet_groups": {},
+    "scope_note": "对纸面仓位同时保留 live / signal 两套收益指标，并汇总日报、胜率与失败原因。"
+  },
+  "events": [
+    {
+      "time": "2026-05-10T17:35:17Z",
+      "event_type": "LIVE_RUN_STARTED",
+      "token_symbol": "",
+      "token_address": "",
+      "message": "SIKK 主入口开始运行"
+    },
+    {
+      "time": "2026-05-10T17:35:17Z",
+      "event_type": "LIVE_RUN_FINISHED",
+      "token_symbol": "",
+      "token_address": "",
+      "message": "SIKK 主入口完成一轮运行"
+    },
+    {
+      "time": "2026-05-10T17:35:46Z",
+      "event_type": "LIVE_RUN_STARTED",
+      "token_symbol": "",
+      "token_address": "",
+      "message": "SIKK 主入口开始运行"
+    }
+  ],
+  "methodology": {
+    "title": "SIKK-SOL 方法论流程",
+    "boundary": "纸面验证 / 策略观察 / 只读，不执行真实 swap，不签名，不广播",
+    "stages": [
+      {
+        "stage_id": "P0_候选发现",
+        "stage_name": "P0 候选发现",
+        "goal": "从 GMGN 新币池筛出可继续结构分析的候选，不把候选等级当买入信号。",
+        "entry_condition": "GMGN filter 命中市值、池子、成交额、净流入、Top10/Dev 持仓等基础条件。",
+        "checks": [
+          "市值 50K-1.5M",
+          "池子 10K-300K",
+          "成交额 50K+",
+          "净流入 5K+",
+          "Top10≤35%",
+          "Dev≤5%"
+        ],
+        "pass_condition": "进入 WATCHING / 后续 K线吸筹分析。",
+        "block_condition": "基础流动性/持仓/成交结构不合格，或数据缺失。",
+        "outputs": [
+          "gmgn_new_token_filter/token_candidates.json",
+          "token_candidates.csv"
+        ],
+        "token_fields": [
+          "token_symbol",
+          "token_address",
+          "discovery_market_cap_usd",
+          "liquidity_usd",
+          "volume_24h_usd",
+          "net_buy_usd"
+        ]
+      },
+      {
+        "stage_id": "P1_K线吸筹与信号",
+        "stage_name": "P1 K线吸筹与信号",
+        "goal": "验证是否出现 SIKK-B 控盘箱体、吸筹窗口、突破回踩或失效结构。",
+        "entry_condition": "候选池 token 有 1m/5m K线和 accumulation_window 输出。",
+        "checks": [
+          "control_box_high/low",
+          "T_start/T_end",
+          "AVWAP",
+          "POC",
+          "OBV",
+          "CMF",
+          "S0/S1/S2/S3/S4/SX"
+        ],
+        "pass_condition": "S3/S4 + 风险门禁非 BLOCK，才允许进入纸面准备。",
+        "block_condition": "SX、跌破控盘底、跌破 POC/AVWAP 且放量、窗口 invalid。",
+        "outputs": [
+          "candidate_signal_outputs/candidate_signal_summary.json",
+          "token_readiness_result.json",
+          "risk_gate_report.json"
+        ],
+        "token_fields": [
+          "signal_level",
+          "signal_gate",
+          "signal_time",
+          "signal_price",
+          "strategy_type",
+          "main_reason"
+        ]
+      },
+      {
+        "stage_id": "P2_钱包结构门禁",
+        "stage_name": "P2 钱包结构门禁",
+        "goal": "判断筹码控制权是否仍在结构侧；WALLET_SUPPORT 只是不阻断，不是实盘授权。",
+        "entry_condition": "token 达到 PAPER_READY / 需要钱包证据复核。",
+        "checks": [
+          "早期钱包是否仍持有",
+          "高结果钱包是否退出",
+          "同源组同步卖出",
+          "分发侧卖出",
+          "对手盘压力",
+          "数据质量"
+        ],
+        "pass_condition": "WALLET_SUPPORT / WALLET_NEUTRAL 且其他门禁通过。",
+        "block_condition": "WALLET_BLOCK、早期集中清仓、同源组同步卖出、对手盘压力过高。",
+        "outputs": [
+          "wallet_structure_decision.json",
+          "early_wallet_raw.csv",
+          "wallet_classification.csv",
+          "candidate_groups.csv"
+        ],
+        "token_fields": [
+          "wallet_structure_status",
+          "wallet_structure_score",
+          "wallet_risk_score",
+          "counterparty_pressure_score",
+          "data_quality_score",
+          "wallet_missing_reason"
+        ]
+      },
+      {
+        "stage_id": "P3_报价安全确认",
+        "stage_name": "P3 报价安全确认",
+        "goal": "用 OKX/GMGN 只读 quote 与 token-scan 判断是否允许进入确认/纸面层。",
+        "entry_condition": "候选状态进入 PAPER_READY 或需要 quote/security 复查。",
+        "checks": [
+          "quote 是否可用",
+          "price impact",
+          "多源报价偏差",
+          "token-scan 风险",
+          "是否 honeypot/不可卖"
+        ],
+        "pass_condition": "ALLOW_CONFIRMATION_LAYER / ALLOW_PAPER_TRADE。",
+        "block_condition": "BLOCK_BUY、quote 缺失、scan 缺失、price impact > 10%、高危安全风险。",
+        "outputs": [
+          "quote_snapshot.json",
+          "security_scan_report.json",
+          "quote_security_decision.json",
+          "trade_confirmation_ticket.json"
+        ],
+        "token_fields": [
+          "quote_gate",
+          "security_gate",
+          "quote_status",
+          "security_status",
+          "latest_reason"
+        ]
+      },
+      {
+        "stage_id": "P4_纸面买入",
+        "stage_name": "P4 纸面买入",
+        "goal": "只做模拟买入，记录真实可复盘的入场证据：时间、SOL 数量、价格、市值、止损。",
+        "entry_condition": "当前状态 PAPER_READY，quote/security 未阻断，且没有重复开放仓位。",
+        "checks": [
+          "live_entry_price 优先",
+          "signal_entry_price 作为基准",
+          "position_sol",
+          "stop_price",
+          "entry_price_diff_pct",
+          "cost_model"
+        ],
+        "pass_condition": "写入 paper_positions_open.json/csv 与 paper_trades.csv。",
+        "block_condition": "quote/security PAUSE/BLOCK、价格读取失败、仓位为 0、已存在开放仓。",
+        "outputs": [
+          "paper_positions_open.json",
+          "paper_positions_open.csv",
+          "paper_trades.csv"
+        ],
+        "token_fields": [
+          "paper_entry_time",
+          "paper_position_sol",
+          "paper_entry_price",
+          "paper_entry_market_cap_usd",
+          "paper_stop_price",
+          "paper_pnl_pct"
+        ]
+      },
+      {
+        "stage_id": "P5_持仓监控与退出",
+        "stage_name": "P5 持仓监控与退出",
+        "goal": "纸面持仓期间持续监控价格、止损、止盈、钱包结构恶化和失败归因。",
+        "entry_condition": "已有 PAPER_OPEN 纸面仓位。",
+        "checks": [
+          "硬止损",
+          "时间止损",
+          "+50/+100/+200 分批止盈",
+          "移动止盈",
+          "FORCE_PAPER_EXIT",
+          "EXIT_MONITOR"
+        ],
+        "pass_condition": "HOLD / EXIT_MONITOR / 纸面关闭仓位并记录原因。",
+        "block_condition": "触发止损、结构恶化、报价安全恶化、流动性骤降。",
+        "outputs": [
+          "paper_positions_closed.json",
+          "paper_positions_closed.csv",
+          "risk_events.jsonl",
+          "failure_attribution.jsonl"
+        ],
+        "token_fields": [
+          "remaining_pct",
+          "max_profit_pct",
+          "max_drawdown_pct",
+          "take_profit_trigger_count",
+          "exit_reason",
+          "failure_type"
+        ]
+      },
+      {
+        "stage_id": "P6_复盘校准",
+        "stage_name": "P6 复盘校准",
+        "goal": "按钱包结构状态、失败归因、信号等级统计纸面策略表现。",
+        "entry_condition": "存在 open/closed paper positions 与 failure_attribution。",
+        "checks": [
+          "胜率",
+          "平均收益",
+          "中位数收益",
+          "按 wallet_structure_status 分组",
+          "按 failure_type 分组"
+        ],
+        "pass_condition": "日报/钱包结构日报生成，供下一轮策略校准。",
+        "block_condition": "数据缺失时生成空报告，不影响主流程。",
+        "outputs": [
+          "paper_daily_report_YYYYMMDD.md",
+          "wallet_structure_daily_report_YYYYMMDD.md"
+        ],
+        "token_fields": [
+          "wallet_structure_status",
+          "signal_level",
+          "final_pnl_pct",
+          "failure_type"
+        ]
+      },
+      {
+        "stage_id": "P7_人工确认后小额实盘准备",
+        "stage_name": "P7 人工确认后小额实盘准备",
+        "goal": "只生成确认单与执行前门禁；默认不真实 swap、不签名、不广播。",
+        "entry_condition": "多日纸面验证有效，且用户明确要求进入人工确认层。",
+        "checks": [
+          "CONFIRM_REAL_TRADE",
+          "execution_gate",
+          "broadcast_guard",
+          "fresh quote/security",
+          "human amount"
+        ],
+        "pass_condition": "PRE_EXECUTION_READY 仅代表可人工复核，不代表自动执行。",
+        "block_condition": "默认关闭：confirmation_enabled=false、real_swap_enabled=false、broadcast_allowed=false。",
+        "outputs": [
+          "trade_confirmation_ticket.md",
+          "execution_gate_decision.json",
+          "broadcast_gate_decision.json"
+        ],
+        "token_fields": [
+          "默认关闭",
+          "confirmation_enabled",
+          "real_swap_enabled",
+          "broadcast_allowed"
+        ]
+      }
+    ],
+    "risk_gate_rules": {
+      "BLOCK_BUY": [
+        "安全风险 CRITICAL",
+        "无法卖出 / honeypot",
+        "无有效报价",
+        "流动性过低",
+        "price impact > 10%",
+        "跌破控盘底",
+        "早期钱包集中清仓"
+      ],
+      "PAUSE_NEED_CONFIRM": [
+        "安全风险 HIGH",
+        "price impact 5%-10%",
+        "quote/scan 缺失或过期",
+        "钱包证据不足",
+        "关键数据延迟"
+      ],
+      "ALLOW_PAPER_TRADE": [
+        "报价可用",
+        "安全扫描未触发硬风险",
+        "流动性和滑点可接受",
+        "未跌破控盘底",
+        "未出现集中清仓"
+      ]
+    },
+    "signal_rules": {
+      "S3": [
+        "控盘箱体明确",
+        "突破 control_box_high",
+        "回踩不破 0.236/0.382 或箱体上沿",
+        "站上 AVWAP",
+        "OBV/CMF 不弱",
+        "风险门禁非 BLOCK"
+      ],
+      "S4": [
+        "S3 基础上突破最近 LH",
+        "形成 HL→HH",
+        "OBV/CMF 同步增强",
+        "风险收益比合格"
+      ],
+      "SX": [
+        "跌破控盘底",
+        "跌破 POC 且放量",
+        "跌破 AVWAP 且放量",
+        "OBV 持续下降",
+        "CMF 持续小于 0",
+        "风险门禁 BLOCK"
+      ]
+    },
+    "position_sizing": {
+      "account_equity_sol": 10,
+      "risk_per_trade_pct": 0.25,
+      "max_position_sol": 0.2,
+      "formula": "risk_sol / ((entry_price - stop_price) / entry_price) × signal_factor × liquidity_factor"
+    },
+    "exit_plan": {
+      "hard_stop_priority": [
+        "0.236",
+        "0.382",
+        "控盘底"
+      ],
+      "time_stop": "15-30 分钟未形成 HH 或重新跌回箱体",
+      "take_profit_steps": [
+        "+50% 卖 25%",
+        "+100% 卖 25%",
+        "+200% 卖 25%",
+        "剩余仓位移动止盈"
+      ],
+      "emergency_exit": [
+        "早期钱包集中清仓",
+        "跌破控盘底",
+        "安全风险升级",
+        "流动性骤降/无报价"
+      ]
+    },
+    "wallet_exit_policy": {
+      "title": "钱包退出策略",
+      "enabled": true,
+      "default_action": "EXIT_MONITOR",
+      "force_exit_min_confidence": 80,
+      "min_data_quality_score": 65,
+      "require_delta_snapshots": 2,
+      "require_pattern_conflict": true,
+      "require_market_confirmation": true,
+      "shadow_hold_tracking": true,
+      "summary": "默认 EXIT_MONITOR；强证据才 FORCE_PAPER_EXIT；所有强制退出进入影子持仓复盘。",
+      "hard_exit_codes": [
+        "SAME_SOURCE_SYNC_EXIT",
+        "ACTIVE_DISTRIBUTION",
+        "HIGH_RESULT_GROUP_EXIT",
+        "COUNTERPARTY_ABSORBING",
+        "WALLET_RISK_WITH_PRICE_BREAKDOWN"
+      ]
+    }
+  },
+  "sections": [
+    "总控台",
+    "方法论流程",
+    "策略评估面板",
+    "候选漏斗",
+    "重点机会",
+    "代币总表",
+    "单币详情",
+    "纸面验证区",
+    "系统健康"
+  ]
+}

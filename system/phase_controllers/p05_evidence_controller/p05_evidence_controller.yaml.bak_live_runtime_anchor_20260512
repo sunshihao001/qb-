@@ -1,0 +1,90 @@
+controller_id: P05_EVIDENCE_CONTROLLER
+version: v3.0-professional
+status: PACKAGE_SPEC_READY_WITH_RUNTIME_GAPS
+created_at: '2026-05-12T02:44:17Z'
+paper_only: true
+real_trade_enabled: false
+runtime_allowed: false
+paper_runtime_allowed: false
+live_execution_allowed: false
+name: P05 Evidence Controller
+phase_id: P05
+phase_name_cn: 证据对象与 P06 场景识别交接控制器
+primary_goal: 把 P02/P03/P04 可追踪事实与 P04 筹码结构状态转换为支持证据、反证、弱证据、未知证据、冲突证据、替代解释、证据权重、证据束、充分性与
+  P06 交接包。
+non_goals:
+- 不识别场景
+- 不生成策略准入
+- 不输出 PAPER_READY
+- 不进入 paper runtime
+- 不允许 live execution
+- 不确认庄家/主控/做市商
+upstream:
+- P02_SOURCE_DATA_FACT_CONTROLLER
+- P03_WALLET_ENTITY_CONTROLLER
+- P04_CHIP_STRUCTURE_CONTROLLER
+downstream_allowed:
+- P06_SCENARIO_RECOGNITION_CONTROLLER
+downstream_forbidden:
+- P07_STRATEGY_GATE_CONTROLLER
+- PAPER_ONLY_RUNTIME
+- LIVE_EXECUTION
+required_inputs:
+- p04_to_p05_handoff_packet
+- p05_evidence_data_request_packet
+- chip_structure_records
+- wallet_entity_records
+- data_fact_records
+- trace_handoff_packet
+- field_usage_permission_packet
+required_outputs:
+- evidence_input_manifest
+- hypothesis_frame_records
+- evidence_object_records
+- supporting_evidence_records
+- counter_evidence_records
+- weak_evidence_records
+- unknown_evidence_records
+- evidence_conflict_records
+- alternative_explanation_records
+- evidence_chain_records
+- evidence_weight_records
+- evidence_bundle_records
+- evidence_sufficiency_records
+- evidence_usage_permission_records
+- p06_scenario_data_request_packet
+- p05_to_p06_handoff_packet
+state_codes:
+- P05_UNINITIALIZED
+- P05_CONTEXT_LOADED
+- P05_HANDOFF_READ
+- P05_INPUT_MANIFEST_BUILT
+- P05_HYPOTHESIS_FRAMES_BUILT
+- P05_EVIDENCE_SUBJECTS_REGISTERED
+- P05_SOURCE_MATERIAL_QUALIFIED
+- P05_SUPPORTING_EVIDENCE_BUILT
+- P05_COUNTER_EVIDENCE_BUILT
+- P05_UNKNOWN_EVIDENCE_BUILT
+- P05_CONFLICT_EVIDENCE_BUILT
+- P05_ALTERNATIVE_EXPLANATIONS_BUILT
+- P05_EVIDENCE_WEIGHTS_BUILT
+- P05_EVIDENCE_BUNDLES_BUILT
+- P05_SUFFICIENCY_CHECKED
+- P05_USAGE_PERMISSIONS_BUILT
+- P05_GAP_ANALYZED
+- P05_P06_DATA_REQUEST_BUILT
+- P05_READY_FOR_ACCEPTANCE
+- P05_READY_FOR_P06_HANDOFF
+- P05_READY_WITH_GAPS
+- P05_REJECTED
+- P05_BLOCKED
+hard_boundaries:
+- facts_are_not_evidence
+- evidence_must_bind_hypothesis
+- counter_evidence_required
+- conflict_and_unknowns_must_propagate
+- weak_evidence_cannot_be_promoted_without_permission
+- no_scenario_claim
+- no_strategy_signal
+- no_paper_ready
+- no_live_execution

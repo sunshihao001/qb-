@@ -1,0 +1,20 @@
+{
+  "phase": "phase_08_review_learning",
+  "outputs": [
+    "review_fact/paper_trade_result_snapshot.json",
+    "review_fact/paper_position_result_table.csv",
+    "review_trace/phase_decision_trace.json",
+    "review_trace/phase_decision_trace.md",
+    "failure_attribution.jsonl",
+    "success_attribution.jsonl",
+    "address_history_update.csv",
+    "scenario_case_library.json",
+    "strategy_performance_summary.json",
+    "rule_update_candidates.json",
+    "threshold_review_candidates.json",
+    "model_recalibration_candidates.json",
+    "review_learning_summary.json",
+    "phase_08_handoff_packet.json",
+    "daily_review_report.md"
+  ]
+}

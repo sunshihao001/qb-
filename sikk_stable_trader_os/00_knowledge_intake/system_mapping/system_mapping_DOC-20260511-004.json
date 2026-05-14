@@ -1,0 +1,33 @@
+{
+  "doc_id": "DOC-20260511-004",
+  "planes": [
+    "Knowledge Plane",
+    "Methodology Plane",
+    "Governance Plane",
+    "Domain Plane",
+    "Data Plane",
+    "Control Plane",
+    "Trace Plane",
+    "Acceptance Plane",
+    "Handoff Plane",
+    "Execution Plane",
+    "Review Plane",
+    "Upgrade Plane"
+  ],
+  "affected_phases": [
+    "K00_knowledge_intake_taskization",
+    "P00_system_bootstrap_controller",
+    "P01_data_fact_controller",
+    "P02_wallet_structure_controller",
+    "P03_chip_control_controller",
+    "P04_market_structure_controller",
+    "P05_scenario_classification_controller",
+    "P06_strategy_gate_controller",
+    "P07_execution_risk_controller",
+    "P08_paper_trading_controller",
+    "P09_review_learning_controller",
+    "P10_system_upgrade_controller"
+  ],
+  "canonical_target_path": "00_methodology/system_methodology_blueprint.md",
+  "status": "SYSTEM_MAPPING_READY"
+}

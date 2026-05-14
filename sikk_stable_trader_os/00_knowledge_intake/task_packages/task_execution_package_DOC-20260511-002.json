@@ -1,0 +1,69 @@
+{
+  "task_package_id": "TASKPKG-DOC-20260511-002-K00",
+  "source_doc_id": "DOC-20260511-002",
+  "package_type": "K00_knowledge_intake_taskization",
+  "created_for": "SIKK Stable Trader OS / HER runtime control plane",
+  "created_at": "2026-05-11T12:06:52Z",
+  "purpose": "把用户上传的 K00 Phase Package 规范转化为文件化系统资产，并验证其与现有 K00 控制面的一致性。",
+  "system_understanding": "该资料不是普通文档；它是 K00 控制器标准与总控路由规则的系统建设输入。",
+  "affected_system_planes": [
+    "governance_plane",
+    "domain_plane",
+    "data_plane",
+    "control_plane",
+    "decision_plane",
+    "risk_plane",
+    "execution_plane",
+    "verification_plane",
+    "learning_plane"
+  ],
+  "affected_phases": [
+    "K00_knowledge_intake",
+    "P00_system_boundary",
+    "P01_data_fact",
+    "P09_self_upgrade",
+    "system_methodology_update"
+  ],
+  "main_objective": "完成 K00 知识资料摄取、保存、建模、系统映射、缺口识别、任务包生成与下游交接。",
+  "objective_tree": {
+    "K00-GOAL-001": "生成 doc_id 并保存原文",
+    "K00-GOAL-002": "登记 source_registry 与 document_passport",
+    "K00-GOAL-003": "生成 corpus/plane/phase/gap/task/handoff 资产",
+    "K00-GOAL-004": "回写 phase_state 并执行 acceptance 验证"
+  },
+  "required_phase_package_files": [
+    "06_phase_controllers/K00_knowledge_intake_taskization/01_phase_manifest.yaml",
+    "06_phase_controllers/K00_knowledge_intake_taskization/02_phase_context_pack.md",
+    "06_phase_controllers/K00_knowledge_intake_taskization/03_phase_objective_tree.yaml",
+    "06_phase_controllers/K00_knowledge_intake_taskization/04_phase_input_contract.json",
+    "06_phase_controllers/K00_knowledge_intake_taskization/05_phase_output_contract.json",
+    "06_phase_controllers/K00_knowledge_intake_taskization/06_phase_execution_protocol.md",
+    "06_phase_controllers/K00_knowledge_intake_taskization/07_phase_acceptance_gate.yaml",
+    "06_phase_controllers/K00_knowledge_intake_taskization/08_phase_state.json",
+    "06_phase_controllers/K00_knowledge_intake_taskization/09_phase_handoff_packet.schema.json"
+  ],
+  "execution_policy": {
+    "preserve_raw_source": true,
+    "summary_only_forbidden": true,
+    "chat_context_not_system_memory": true,
+    "no_real_trade_execution": true,
+    "state_update_required": true
+  },
+  "acceptance_policy": {
+    "required_outputs_exist": [
+      "00_knowledge_intake/raw_inputs/DOC-20260511-002.md",
+      "00_knowledge_intake/source_registry/source_registry.json",
+      "00_knowledge_intake/document_passports/document_passport_DOC-20260511-002.yaml",
+      "00_knowledge_intake/corpus_index/corpus_index_DOC-20260511-002.json",
+      "00_knowledge_intake/system_mapping/plane_mapping_DOC-20260511-002.json",
+      "00_knowledge_intake/system_mapping/phase_mapping_DOC-20260511-002.json",
+      "00_knowledge_intake/gap_detection/gap_detection_DOC-20260511-002.json",
+      "00_knowledge_intake/task_packages/task_execution_package_DOC-20260511-002.json",
+      "00_knowledge_intake/intake_reports/intake_report_DOC-20260511-002.md",
+      "00_knowledge_intake/handoff_packets/k00_handoff_packet_DOC-20260511-002.json"
+    ],
+    "json_yaml_parse_required": true,
+    "no_blocker_gap_required_for_ready": true
+  },
+  "next_action": "handoff_to_system_methodology_update_or_P09_self_upgrade_if further consolidation is needed"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "version",
+    "source_doc_id",
+    "rules"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "source_doc_id": {
+      "type": "string"
+    },
+    "rules": {
+      "type": "array"
+    }
+  }
+}

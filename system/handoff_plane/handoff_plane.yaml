@@ -1,0 +1,24 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+status: HANDOFF_READY_WITH_GAPS
+definition: stage handoff control plane, not file transfer
+inputs:
+- acceptance_result_packet
+- trace_handoff_packet
+- full_control_routes
+- gap_register
+- limitation_tags
+- forbidden_actions
+outputs:
+- handoff_packet
+- downstream_read_instruction
+- gap_propagation_packet
+- limitation_transfer_packet
+- forbidden_use_policy
+- field_usage_permission
+- handoff_audit_record
+cannot_override: Acceptance Plane裁决

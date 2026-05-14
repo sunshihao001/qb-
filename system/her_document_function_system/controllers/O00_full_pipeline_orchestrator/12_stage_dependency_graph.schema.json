@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 stage dependency graph",
+  "type": "object",
+  "required": [
+    "graph_id",
+    "nodes",
+    "edges",
+    "blocked_edges",
+    "optional_edges"
+  ],
+  "properties": {
+    "graph_id": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "G00",
+          "O00",
+          "K00",
+          "F00",
+          "V00",
+          "R00",
+          "A00",
+          "H00",
+          "U00"
+        ]
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "from",
+          "to",
+          "dependency_type"
+        ],
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "dependency_type": {
+            "enum": [
+              "REQUIRES_G00_POLICY",
+              "REQUIRES_K00_HANDOFF",
+              "REQUIRES_F00_HANDOFF",
+              "REQUIRES_V00_HANDOFF",
+              "REQUIRES_R00_HANDOFF_WHEN_BINDING_REQUIRED",
+              "REQUIRES_A00_READINESS_CERTIFICATE",
+              "REQUIRES_ACCEPTANCE",
+              "REQUIRES_TRACE_AUDIT"
+            ]
+          }
+        }
+      }
+    },
+    "blocked_edges": {
+      "type": "array"
+    },
+    "optional_edges": {
+      "type": "array"
+    }
+  }
+}

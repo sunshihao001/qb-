@@ -1,0 +1,12 @@
+gap_report:
+  doc_id: DOC-20260512-I05_REVIEW_UPGRADE_CLOSED_LOOP_V1
+  status: READY_WITH_GAPS
+  gaps:
+    - gap_id: I05_GAP_001
+      severity: HIGH
+      description_cn: 当前为 skeleton 闭环验证；真实多案例 paper runtime replay 样本仍需后续补齐。
+    - gap_id: I05_GAP_002
+      severity: MEDIUM
+      description_cn: P09/P10 实际 runner 自动化验证仍需工具绑定阶段继续代码化。
+  blockers: []
+  safety_restrictions_intact: true

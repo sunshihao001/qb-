@@ -1,0 +1,19 @@
+{
+  "run_id": "ACCEPTANCE-KPP-TELEGRAM-UPLOAD",
+  "doc_id": "ACCEPTANCE-KPP-TELEGRAM-DOC",
+  "source_path": "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/normalized_text.md",
+  "raw_path": "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/ACCEPTANCE-KPP-TELEGRAM-DOC_8f72ae51ba73_normalized_text.md",
+  "sha256": "8f72ae51ba73a9fefe244ceadef6b3a6e6a5b4f64ed2a9b3995001c4d9ee44d3",
+  "received_at": "2026-05-13T06:30:56Z",
+  "source_type": "telegram_upload",
+  "input_classification": "system_building_material",
+  "secret_policy": "redact_credentials_as_[REDACTED]_before_derived_outputs",
+  "original_source_path": "tests/fixtures/kpp/sample_system_design_doc.md",
+  "staged_source_path": "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/uploaded_source/ACCEPTANCE-KPP-TELEGRAM-DOC_8f72ae51ba73_sample_system_design_doc.md",
+  "normalized_text_path": "data/knowledge_processing_program/telegram_upload_productization/acceptance_runs/ACCEPTANCE-KPP-TELEGRAM-UPLOAD/K00/normalized_text.md",
+  "normalized_source_adapter": "plain_text",
+  "telegram_context": {
+    "chat_id": "ACCEPTANCE_CHAT",
+    "message_id": "ACCEPTANCE_MSG"
+  }
+}

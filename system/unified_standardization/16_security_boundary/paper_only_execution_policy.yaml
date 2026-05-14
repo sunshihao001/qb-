@@ -1,0 +1,22 @@
+meta:
+  standard_id: S00_PAPER_ONLY_EXECUTION_POLICY
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+paper_only: true
+allowed:
+- observe
+- dry_run
+- replay
+- paper_position_simulation
+forbidden:
+- swap
+- sign
+- broadcast

@@ -1,0 +1,335 @@
+{
+  "token_address": "6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump",
+  "phase_id": "P02_wallet_structure",
+  "artifact_kind": "output",
+  "generated_at": "2026-05-11T01:19:58Z",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  },
+  "wallet_structure_status": "WALLET_PAUSE",
+  "wallet_structure_score": 23.41,
+  "wallet_risk_score": 78.2,
+  "role_matrix": [
+    {
+      "address": "DCPt5Qjw7K1jZfti8SUWKhKwEJNLG3nvkY7Fmervz3FA",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "top_holder"
+      ],
+      "holder_pct": 7.682205492183384,
+      "pnl_usd": 0.0,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "4TrC95MtMW3kiwdbZCyyeu4XV7m2bzq5DHaH3jCz9iyi",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "fresh_wallet",
+        "top_holder"
+      ],
+      "holder_pct": 2.3168919823246754,
+      "pnl_usd": 0.0,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "9XVWfqzavraezfvS38v8xcZepHYxcNKtnNMEKpPXEwTN",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "axiom",
+        "bundler",
+        "padre",
+        "photon",
+        "top_holder"
+      ],
+      "holder_pct": 2.1038075721199663,
+      "pnl_usd": -6814.349637214527,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "CWZ2Xcgi6xqwbjMc127n8bsQgQsPrHNMHcqkVLMWRnz1",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "fresh_wallet",
+        "top_holder"
+      ],
+      "holder_pct": 1.6124577335511938,
+      "pnl_usd": -2861.7262290788576,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "4G9bN5FkCzThJaJHNJ6GnpA49EziVi5mr4AfHQWeivB5",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "bundler",
+        "top_holder"
+      ],
+      "holder_pct": 1.192374323020731,
+      "pnl_usd": -7690.067402336603,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "EjWxDQfZ45zDyLCvJnQomXWNfGukNGi2ErKjub8V8Qc1",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "fresh_wallet",
+        "top_holder"
+      ],
+      "holder_pct": 1.174463547970826,
+      "pnl_usd": -3829.8133188863985,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "4xXktgMDX7tDtXKiNrpMFywWqitHehH6Q9A37idwXGWX",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "bundler",
+        "fresh_wallet",
+        "top_holder"
+      ],
+      "holder_pct": 1.06730706962031,
+      "pnl_usd": -4931.984281035275,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "3Ty1CFw99zMFqrjL6eP15A5KSjqCSCioU1fJFHx1iM7B",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "top_holder"
+      ],
+      "holder_pct": 1.0045735859087008,
+      "pnl_usd": -376.23244465481184,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "3vQrYqY5uxEeXtxgCBG88MfbqqAnLKgF7uzYPTax4oN1",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "bundler",
+        "fomo",
+        "top_holder"
+      ],
+      "holder_pct": 0.991546299175011,
+      "pnl_usd": -4232.962284735313,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "BUjwjb7wFtfwnb4gwZTZHionHrRcrE7BHeYDAQMPbbbW",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "top_holder"
+      ],
+      "holder_pct": 0.9828746929848636,
+      "pnl_usd": -3249.915586104181,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "BGXVM7DJ52JMRV7QxLfzbRC3m5x5qWKr1ycmY8WrCxWc",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "axiom",
+        "bundler",
+        "top_holder"
+      ],
+      "holder_pct": 0.9648890564957311,
+      "pnl_usd": -2954.4109363222387,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "9GNHFWmVEw3Mbrh8Rrz1fTJMv36SxsuQrMtCq7tmrN3K",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "fomo",
+        "top_holder"
+      ],
+      "holder_pct": 0.9569662608404617,
+      "pnl_usd": -4176.978677379562,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "B7GWykMjkVHBrWrbxN2WL3HT4srqXX32WQUUpSgPuWcy",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "fresh_wallet"
+      ],
+      "holder_pct": 0.9472427055502856,
+      "pnl_usd": 154.38701948433936,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "69tu9ypLvRkx5CpoxX9c5XMKtZhr6iYvLdwyNetQpT7b",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "bundler"
+      ],
+      "holder_pct": 0.9186661628906616,
+      "pnl_usd": -1648.338385150434,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "Eu4DNnkPbV9kMj81FwaZMHPqAHsBAVrwbtjGfKdRhVzh",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "bundler"
+      ],
+      "holder_pct": 0.9100616122950121,
+      "pnl_usd": -6541.088175608814,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "GzyicuL1wmQVKPx95L4odK6hAiD8Rh86ZrCR6p233BDg",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "fresh_wallet"
+      ],
+      "holder_pct": 0.8265643949441025,
+      "pnl_usd": -1301.0006074950625,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "FuGYEAxii1EFXjNtsbfioQJmsUhEck9cNAxVNgG4XvM1",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [],
+      "holder_pct": 0.7945385260300823,
+      "pnl_usd": -472.11662868183566,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "GqZ3j4UayuuQ1vcJorPM5BnZu115MzLFFNYncnepQX6x",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "axiom"
+      ],
+      "holder_pct": 0.7584388842966715,
+      "pnl_usd": -262.0054050966264,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "ACTbvbNm5qTLuofNRPxFPMtHAAtdH1CtzhCZatYHy831",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "axiom",
+        "photon"
+      ],
+      "holder_pct": 0.7489807858851079,
+      "pnl_usd": 536.3466366332736,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "6oSjFNpnJc3MzXHpuAggkBGaNMLH3t3opi5RrvYNskhS",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "bundler"
+      ],
+      "holder_pct": 0.7009947101343939,
+      "pnl_usd": -3209.1317600008524,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "Dpjpr2dmtLhGVR1xVn1e8uKfqLAy3cjnsqtcSqH1YVun",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "bundler"
+      ],
+      "holder_pct": 0.693405365523833,
+      "pnl_usd": -1230.2460415018304,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "2dHw4SX5CKyWieP3HuyVCVuegycF6ScE98yUqVv3aFcz",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [],
+      "holder_pct": 0.6914020695735543,
+      "pnl_usd": -2260.282672852549,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "DRvJEnxTmEVCaSjSDxBeEtybqUvCtZGvcXhUzM1AwRS8",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "trojan"
+      ],
+      "holder_pct": 0.6783053091728427,
+      "pnl_usd": -1130.7338560667913,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "FWKgTEb2vwHy4ZVMEnPtFLkXLz9QudAHFfr7Bbgsk6e",
+      "role": "NORMAL_OR_UNCLASSIFIED",
+      "action_code": "A2",
+      "keep_edges": false,
+      "tags": [
+        "fresh_wallet"
+      ],
+      "holder_pct": 0.6740050660546641,
+      "pnl_usd": 140.52212606265994,
+      "reason": "结构角色候选，需证据复查"
+    },
+    {
+      "address": "2TPcm9KkJmAduVqYrhvQRXXiq5jfxFKDUL4bzmqh3ydw",
+      "role": "BAGHOLDER_OR_HIGH_ENTRY_CANDIDATE",
+      "action_code": "R",
+      "keep_edges": false,
+      "tags": [
+        "bundler",
+        "fomo",
+        "padre"
+      ],
+      "holder_pct": 0.6694677987750028,
+      "pnl_usd": -1112.611786613372,
+      "reason": "结构角色候选，需证据复查"
+    }
+  ],
+  "infra_excluded_count": 0,
+  "reason": "结构活跃但追高/资金证据不足，进入观察/纸面门控"
+}

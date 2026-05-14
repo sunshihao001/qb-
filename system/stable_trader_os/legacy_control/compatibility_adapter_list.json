@@ -1,0 +1,73 @@
+{
+  "adapter_list_id": "SIKK_LEGACY_COMPATIBILITY_ADAPTER_LIST",
+  "compatibility_adapters": [
+    {
+      "allowed_access": "read_only",
+      "path": "modules/stable_trader_os/i05_standard_stage/runtime_entry.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "modules/stable_trader_os/r00_standard_stage/runtime_entry.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "modules/wallet_data_guard/legacy_quarantine.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/her_document_function_system/test_g00_policy_handoff_required_targets.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_her_dfafs_r00_runtime_closure.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_o00_cli_sample_replay.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_o00_full_pipeline_orchestrator.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_r00_runner_tool_binding_controller.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_standard_stage_a01_a02_a04_upgrade.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_standard_stage_closure_all_phases.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    },
+    {
+      "allowed_access": "read_only",
+      "path": "tests/test_wallet_data_guard_legacy_quarantine.py",
+      "required_route": "standard_stage_closure_manifest_or_telegram_canonical_router",
+      "route_policy": "READ_ONLY_AUDIT_CANDIDATE"
+    }
+  ],
+  "generated_at": "2026-05-14T05:19:09.075414+00:00",
+  "status": "COMPATIBILITY_ADAPTER_LIST_READY"
+}

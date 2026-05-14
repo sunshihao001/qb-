@@ -1,0 +1,37 @@
+{
+  "task_id": "TASK-DOC-20260511-012-PHASE-TARGET-DATA-STANDARD-LANDING",
+  "doc_id": "DOC-20260511-012",
+  "parent_doc_id": "DOC-20260511-006",
+  "created_at": "2026-05-11T13:59:07.724119+00:00",
+  "objective_tree": {
+    "root": "Append phase target data standard and status enum",
+    "children": [
+      "raw preservation",
+      "canonical append",
+      "generate machine-readable phase target schema",
+      "generate status enum",
+      "update phase registry/control state",
+      "flag concrete phase instance generation"
+    ]
+  },
+  "acceptance_gate": [
+    "raw_saved",
+    "canonical_contains_section_7",
+    "schema_generated",
+    "enum_generated",
+    "all_22_fields_registered",
+    "17_legal_statuses_registered",
+    "forbidden_vague_statuses_registered",
+    "paper_only_and_no_real_trade_constants"
+  ],
+  "status": "GENERATED",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

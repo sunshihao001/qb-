@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "token_address",
+    "distribution_sell_status",
+    "distribution_risk_level"
+  ],
+  "properties": {
+    "token_address": {},
+    "distribution_sell_status": {},
+    "distribution_risk_level": {}
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "doc_id": "DOC-20260513-HER-SYSTEM-CONSTRUCTION-INTAKE-001",
+  "mapped_planes": [
+    "methodology_plane",
+    "governance_plane",
+    "control_plane",
+    "phase_controller_plane",
+    "schema_contract_plane",
+    "trace_plane",
+    "acceptance_handoff_plane",
+    "report_audit_plane"
+  ],
+  "affected_phase_controllers": [
+    "K00",
+    "P00",
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "I01",
+    "I02",
+    "I03",
+    "I04",
+    "I05"
+  ],
+  "affected_contracts": [
+    "document passport schema",
+    "phase task package schema",
+    "handoff packet schema",
+    "acceptance gate schema"
+  ],
+  "affected_schemas": [
+    "passport",
+    "corpus_index",
+    "system_mapping",
+    "gap_detection",
+    "phase_state",
+    "handoff_packet"
+  ],
+  "affected_runtime_outputs": [
+    "intake report",
+    "acceptance report",
+    "verification result"
+  ],
+  "affected_trace_requirements": [
+    "content hash trace",
+    "asset path trace",
+    "acceptance basis trace"
+  ],
+  "affected_acceptance_gates": [
+    "K00 acceptance gate"
+  ],
+  "affected_handoff_packets": [
+    "K00 handoff packet"
+  ],
+  "affected_reports": [
+    "intake report",
+    "acceptance report",
+    "verification result"
+  ],
+  "affected_governance_rules": [
+    "K00 mandatory entry",
+    "no direct PXX/IXX entry",
+    "no runner without acceptance"
+  ]
+}

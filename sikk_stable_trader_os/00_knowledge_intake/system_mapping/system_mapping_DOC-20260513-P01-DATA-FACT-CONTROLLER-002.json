@@ -1,0 +1,37 @@
+{
+  "doc_id": "DOC-20260513-P01-DATA-FACT-CONTROLLER-002",
+  "mapping_status": "K00_ACCEPTED_PENDING_PHASE_EXECUTION",
+  "material_type": "phase_controller_spec",
+  "target_system": "SIKK Stable Trader OS",
+  "target_controller": "P01_data_fact_controller",
+  "canonical_doc_path": "/root/sikk-gmgn/docs/stable_trader_os/phases/phase_01_data_fact_controller.md",
+  "system_planes": [
+    "Data Plane",
+    "Acceptance Plane",
+    "Handoff Plane",
+    "Trace Plane",
+    "Runtime Control Plane"
+  ],
+  "affected_phases": [
+    "K00",
+    "P00",
+    "P01",
+    "P02",
+    "P03"
+  ],
+  "allowed_influence": [
+    "phase documentation",
+    "P01 contracts/schemas",
+    "P01 mock/replay implementation plan",
+    "quality gate design",
+    "handoff schema seed"
+  ],
+  "forbidden_influence": [
+    "buy/sell signals",
+    "paper/live runtime enablement",
+    "private key/sign/broadcast/swap behavior",
+    "P02 interpretation shortcuts"
+  ],
+  "route": "K00 -> P01_DATA_FACT_CONTROLLER_PACKAGE_OR_CODE_LANDING",
+  "created_at": "2026-05-13T09:39:17Z"
+}

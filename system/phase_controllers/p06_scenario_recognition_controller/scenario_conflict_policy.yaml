@@ -1,0 +1,4 @@
+policy: scenario_conflict_policy
+rules:
+- accumulation_vs_distribution and expansion_vs_trap conflicts must propagate
+- unresolved conflicts limit P07 use

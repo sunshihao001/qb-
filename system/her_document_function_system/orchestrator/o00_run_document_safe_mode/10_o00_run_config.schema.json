@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 run config",
+  "type": "object",
+  "required": [
+    "safe_mode",
+    "execution_boundary",
+    "stage_order",
+    "required_controllers"
+  ],
+  "properties": {
+    "safe_mode": {
+      "const": true
+    },
+    "execution_boundary": {
+      "type": "object",
+      "required": [
+        "allow_live_runtime",
+        "allow_wallet_signing",
+        "allow_auto_deploy",
+        "allow_production_trading"
+      ],
+      "properties": {
+        "allow_live_runtime": {
+          "const": false
+        },
+        "allow_wallet_signing": {
+          "const": false
+        },
+        "allow_auto_deploy": {
+          "const": false
+        },
+        "allow_production_trading": {
+          "const": false
+        },
+        "allow_execute_real_order": {
+          "const": false
+        }
+      }
+    },
+    "stage_order": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_controllers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

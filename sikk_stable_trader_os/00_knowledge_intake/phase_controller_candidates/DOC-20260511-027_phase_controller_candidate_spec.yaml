@@ -1,0 +1,22 @@
+candidate_id: DOC-20260511-027_HANDOFF_PLANE_CONTROLLER_CANDIDATE
+candidate_stage: HANDOFF_PLANE_PROFESSIONAL_DESIGN
+controller_candidate: Handoff Plane Controller
+required_controller_files:
+- controller.yaml
+- context.md
+- input_contract.json
+- output_contract.json
+- task_tree.yaml
+- acceptance_gate.yaml
+- runner_binding.yaml
+- state_writeback_policy.yaml
+- handoff_packet.schema.json
+canonical_system_files_count: 26
+build_allowed: true
+runtime_allowed: false
+next_after_design: P01_P10_PHASE_CONTROLLER_STUBS_OR_INDEX_DESIGN
+blocks:
+  tool_binding_allowed: false
+  paper_runtime_allowed: false
+  live_runtime_allowed: false
+  p01_runtime_connection_allowed: false

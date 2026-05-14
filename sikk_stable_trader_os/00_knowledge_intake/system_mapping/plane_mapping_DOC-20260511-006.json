@@ -1,0 +1,82 @@
+{
+  "doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T13:49:31.471070+00:00",
+  "planes": {
+    "methodology_plane": {
+      "impact": "primary",
+      "target_assets": [
+        "00_methodology/system_methodology_blueprint.md"
+      ]
+    },
+    "governance_plane": {
+      "impact": "constraint",
+      "anchors": [
+        "paper-only",
+        "禁止真实交易自动执行"
+      ]
+    },
+    "domain_plane": {
+      "impact": "requires_alignment",
+      "anchors": [
+        "领域模型",
+        "字段、合约、状态、验收"
+      ]
+    },
+    "data_plane": {
+      "impact": "requires_alignment",
+      "anchors": [
+        "数据模型",
+        "数据事实"
+      ]
+    },
+    "control_plane": {
+      "impact": "primary",
+      "anchors": [
+        "可调度",
+        "可验收",
+        "可回写",
+        "可复盘",
+        "防止文件存在但系统没有使用"
+      ]
+    },
+    "phase_controller_plane": {
+      "impact": "primary",
+      "anchors": [
+        "阶段控制器",
+        "Runner",
+        "阶段是否真正被消费"
+      ]
+    },
+    "runtime_plane": {
+      "impact": "constraint",
+      "anchors": [
+        "paper-only",
+        "禁止真实交易自动执行"
+      ]
+    },
+    "audit_plane": {
+      "impact": "primary",
+      "anchors": [
+        "验收",
+        "复盘",
+        "失败归因"
+      ]
+    },
+    "upgrade_plane": {
+      "impact": "primary",
+      "anchors": [
+        "规则修正",
+        "逐步接近机构级别"
+      ]
+    }
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

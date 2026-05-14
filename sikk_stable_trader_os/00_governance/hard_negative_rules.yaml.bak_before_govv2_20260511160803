@@ -1,0 +1,13 @@
+hard_negative_rules:
+  - id: REAL_TRADE_REQUEST
+    condition: real_trade_enabled == true or private_key_present == true
+    action: HARD_BLOCK
+  - id: DATA_PLANE_NOT_ACCEPTED
+    condition: P01 requested before Data Plane acceptance
+    action: BLOCK_P01
+  - id: UNKNOWN_WALLET_FORCED_CLASSIFICATION
+    condition: wallet_role_evidence_missing and role_classification_is_certain
+    action: DOWNGRADE_TO_UNKNOWN
+  - id: NO_CONTRADICTION_RECORD
+    condition: strategy_gate_requested and contradiction_records_missing
+    action: BLOCK_STRATEGY_GATE

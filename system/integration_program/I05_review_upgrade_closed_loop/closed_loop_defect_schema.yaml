@@ -1,0 +1,9 @@
+closed_loop_defect:
+  type: object
+  required:
+    - defect_id
+    - severity
+    - source
+    - description_cn
+    - recommended_action_cn
+  additional_properties_allowed: true

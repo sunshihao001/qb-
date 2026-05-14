@@ -1,0 +1,23 @@
+{
+  "plane_id": "P00_FULL_CONTROL_PLANE",
+  "doc_id": "DOC-20260511-024",
+  "status": "CONTROL_READY_WITH_GAPS",
+  "created_at": "2026-05-11T16:50:12Z",
+  "root": "/root/sikk-gmgn/sikk_stable_trader_os/00_control/full_control_plane",
+  "required_files_count": 27,
+  "non_blocking_gaps": [
+    "phase_controllers_not_all_code_implemented",
+    "acceptance_gates_not_all_automated",
+    "legacy_mapping_not_scanned",
+    "skill_tool_registry_not_runtime_verified",
+    "handoff_not_integration_tested",
+    "state_machine_not_attached_to_real_orchestrator",
+    "telegram_dashboard_not_connected"
+  ],
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false,
+    "p01_runtime_connection_allowed": false
+  }
+}

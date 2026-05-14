@@ -1,0 +1,39 @@
+p01_to_p02_handoff_packet:
+  packet_type: P01_TO_P02_CANDIDATE_INTAKE_HANDOFF
+  route:
+    from_controller: P01_CANDIDATE_INTAKE_CONTROLLER
+    to_controller: P02_SOURCE_DATA_FACT_CONTROLLER
+  candidate_registry:
+  - candidate_master_index_path
+  - candidate_registry_json_path
+  - candidate_count_total
+  - candidate_count_ready_for_p02
+  - candidate_count_ready_with_gaps
+  - candidate_count_rejected
+  - candidate_count_blocked
+  candidate_objects:
+  - candidate_master_records_path
+  - source_events_path
+  - identity_resolution_path
+  - discovery_context_path
+  - dedup_resolution_path
+  p02_data_request:
+  - p02_data_request_packet_path
+  - high_priority_requests
+  - missing_fields_by_candidate
+  gap_transfer:
+  - propagated_gap_report_path
+  - blocking_gaps
+  - non_blocking_gaps
+  - limitations
+  downstream_permission:
+    allowed:
+    - P02_SOURCE_DATA_FACT_CONTROLLER
+    forbidden:
+    - P03_WALLET_ENTITY_CONTROLLER
+    - P04_CHIP_STRUCTURE_CONTROLLER
+    - P05_EVIDENCE_CONTROLLER
+    - P06_SCENARIO_RECOGNITION_CONTROLLER
+    - P07_STRATEGY_GATE_CONTROLLER
+    - PAPER_ONLY_RUNTIME
+    - LIVE_EXECUTION

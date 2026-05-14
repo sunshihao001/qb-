@@ -1,0 +1,15 @@
+{
+  "test_status": "TEST_PLANNED_NOT_EXECUTED",
+  "test_types": [
+    "schema_validation_test",
+    "contract_test",
+    "function_mapping_test",
+    "handoff_test",
+    "failure_case_test"
+  ],
+  "commands": [
+    "python3 -m json.tool <json files>",
+    "python3 validation script for 19-file F00 package"
+  ],
+  "note": "This run performs parse/file validation but not full pytest module execution."
+}

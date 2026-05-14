@@ -1,0 +1,99 @@
+{
+  "index_id": "controller_handoff_index_v1",
+  "handoffs": [
+    {
+      "controller_id": "G00",
+      "handoff_schema": "system/her_document_function_system/controllers/G00_governance_boundary_controller/09_g00_handoff_packet.schema.json",
+      "allowed_downstream": [
+        "O00",
+        "K00",
+        "F00",
+        "V00",
+        "R00",
+        "A00",
+        "H00",
+        "U00",
+        "PXX",
+        "IXX"
+      ]
+    },
+    {
+      "controller_id": "K00",
+      "handoff_schema": "system/her_document_function_system/controllers/K00_knowledge_intake_controller/09_k00_handoff_packet.schema.json",
+      "allowed_downstream": [
+        "F00",
+        "U00"
+      ]
+    },
+    {
+      "controller_id": "F00",
+      "handoff_schema": "system/her_document_function_system/controllers/F00_function_realization_controller/09_f00_handoff_packet.schema.json",
+      "allowed_downstream": [
+        "V00",
+        "U00"
+      ]
+    },
+    {
+      "controller_id": "V00",
+      "handoff_schema": "system/her_document_function_system/controllers/V00_validation_evidence_controller/09_v00_handoff_packet.schema.json",
+      "allowed_downstream": [
+        "R00",
+        "A00",
+        "U00"
+      ]
+    },
+    {
+      "controller_id": "R00",
+      "handoff_schema": "system/her_document_function_system/controllers/R00_runner_tool_binding_controller/09_r00_handoff_packet.schema.json",
+      "allowed_downstream": [
+        "A00",
+        "U00"
+      ]
+    },
+    {
+      "controller_id": "A00",
+      "handoff_schema": "system/her_document_function_system/controllers/A00_acceptance_evidence_controller/09_a00_handoff_packet.schema.json",
+      "allowed_downstream": [
+        "H00",
+        "U00"
+      ]
+    },
+    {
+      "controller_id": "H00",
+      "handoff_schema": "system/her_document_function_system/controllers/H00_handoff_downstream_queue_controller/09_h00_handoff_packet.schema.json",
+      "allowed_downstream": [
+        "PXX",
+        "IXX",
+        "Runner",
+        "U00",
+        "G00"
+      ]
+    },
+    {
+      "controller_id": "U00",
+      "handoff_schema": "system/her_document_function_system/controllers/U00_review_upgrade_controller/09_u00_handoff_packet.schema.json",
+      "allowed_downstream": [
+        "K00",
+        "F00",
+        "V00",
+        "R00",
+        "G00",
+        "Backlog"
+      ]
+    },
+    {
+      "controller_id": "O00",
+      "handoff_schema": "system/her_document_function_system/controllers/O00_full_pipeline_orchestrator/09_o00_handoff_packet.schema.json",
+      "allowed_downstream": [
+        "K00",
+        "F00",
+        "V00",
+        "R00",
+        "A00",
+        "H00",
+        "U00",
+        "G00"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "phase_id": "R00",
+  "run_id": "r00_controller_creation_20260513_1500",
+  "scope": "runner_tool_binding_runtime_closure",
+  "acceptance_status": "R00_ACCEPTED",
+  "runner_bound": true,
+  "binding_tested_against_real_v00_handoff": true,
+  "dry_run_asset_test_status": "PASSED",
+  "dry_run_evidence_ref": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/dry_run/dry_run_result.json",
+  "v00_handoff_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/handoff/v00_to_r00_handoff_packet.json"
+  ],
+  "run_manifest_ref": "/root/sikk-gmgn/data/her_document_function_system/r00_runs/r00_controller_creation_20260513_1500/run_manifest.json",
+  "runtime_index_ref": "/root/sikk-gmgn/data/her_document_function_system/runtime_index/her_dfafs_runtime_index.json",
+  "blocking_gaps": [],
+  "unresolved_gaps": [],
+  "forbidden_runtime_modes_preserved": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ],
+  "accepted_at": "2026-05-13T15:32:00Z"
+}

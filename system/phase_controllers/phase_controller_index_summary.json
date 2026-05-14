@@ -1,0 +1,61 @@
+{
+  "doc_id": "DOC-20260511-028",
+  "generated_at": "2026-05-11T17:52:04Z",
+  "index_path": "/root/sikk-gmgn/system/phase_controllers/phase_controller_index.yaml",
+  "controller_count": 10,
+  "phase_ids": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10"
+  ],
+  "controller_ids": [
+    "P01_CANDIDATE_INTAKE_CONTROLLER",
+    "P02_SOURCE_DATA_FACT_CONTROLLER",
+    "P03_WALLET_ENTITY_CONTROLLER",
+    "P04_CHIP_STRUCTURE_CONTROLLER",
+    "P05_EVIDENCE_CONTROLLER",
+    "P06_SCENARIO_RECOGNITION_CONTROLLER",
+    "P07_STRATEGY_GATE_CONTROLLER",
+    "P08_EXECUTION_RISK_CONTROLLER",
+    "P09_REVIEW_REPLAY_CONTROLLER",
+    "P10_SELF_UPGRADE_CONTROLLER"
+  ],
+  "global_forbidden": [
+    "bypass_handoff_plane",
+    "bypass_acceptance_plane",
+    "bypass_trace_plane",
+    "read_unaccepted_artifacts",
+    "remove_gap_tags",
+    "remove_limitation_tags",
+    "convert_weak_use_to_full_use",
+    "generate_live_execution_signal",
+    "enable_auto_live_trade",
+    "mutate_governance_rules_without_review"
+  ],
+  "runtime_boundary": {
+    "phase_controller_index_build_allowed": true,
+    "p01_runtime_connection_allowed": false,
+    "tool_binding_runtime_allowed": false,
+    "paper_runtime_allowed": false,
+    "live_runtime_allowed": false,
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "auto_order_allowed": false,
+    "private_key_allowed": false,
+    "seed_phrase_allowed": false
+  },
+  "next_legal_stage": "P01_P10_CONTROLLER_PACKAGE_EXPANSION",
+  "blocked_runtime": [
+    "P01_RUNTIME_CONNECTION",
+    "TOOL_BINDING_RUNTIME",
+    "PAPER_RUNTIME",
+    "LIVE_RUNTIME"
+  ]
+}

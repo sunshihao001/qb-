@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V00 Downstream Handoff Packet Schema",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "source_doc_refs",
+    "k00_handoff_refs",
+    "f00_handoff_refs",
+    "function_mapping_validation_refs",
+    "field_model_validation_refs",
+    "rule_logic_validation_refs",
+    "schema_validation_refs",
+    "contract_validation_refs",
+    "patch_evidence_refs",
+    "test_evidence_refs",
+    "replay_evidence_refs",
+    "trace_refs",
+    "gap_refs",
+    "failure_refs",
+    "acceptance_refs",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "unresolved_gaps",
+    "handoff_status"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "from_phase": {
+      "const": "V00"
+    },
+    "to_phase": {
+      "enum": [
+        "R00",
+        "A00",
+        "H00",
+        "U00",
+        "DOWNSTREAM"
+      ]
+    },
+    "source_doc_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "k00_handoff_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "f00_handoff_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "function_mapping_validation_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "field_model_validation_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rule_logic_validation_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "schema_validation_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contract_validation_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "patch_evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "test_evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "replay_evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "trace_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gap_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "failure_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "acceptance_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_next_actions": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "plan_runner_binding",
+          "validate_cli_binding",
+          "prepare_acceptance_review",
+          "request_fix_and_rerun_v00"
+        ]
+      }
+    },
+    "forbidden_next_actions": {
+      "type": "array",
+      "contains": {
+        "const": "live_runtime"
+      }
+    },
+    "unresolved_gaps": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "handoff_status": {
+      "enum": [
+        "HANDOFF_READY",
+        "HANDOFF_BLOCKED",
+        "HANDOFF_READY_WITH_GAPS"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

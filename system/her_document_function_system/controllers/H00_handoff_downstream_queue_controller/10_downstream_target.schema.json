@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Downstream target",
+  "type": "object",
+  "required": [
+    "target_id",
+    "target_type",
+    "target_phase",
+    "reason",
+    "required_inputs",
+    "handoff_required",
+    "execution_allowed"
+  ],
+  "properties": {
+    "target_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "enum": [
+        "PXX_PHASE_CONTROLLER",
+        "IXX_INTEGRATION_CONTROLLER",
+        "RUNNER_TOOL_BINDING",
+        "REPORT_AUDIT_SYSTEM",
+        "U00_REVIEW_UPGRADE",
+        "G00_GOVERNANCE_BOUNDARY",
+        "BACKLOG_QUEUE",
+        "RECOVERY_QUEUE",
+        "ARCHIVE_ONLY"
+      ]
+    },
+    "target_phase": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "required_inputs": {
+      "type": "array"
+    },
+    "handoff_required": {
+      "type": "boolean"
+    },
+    "execution_allowed": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

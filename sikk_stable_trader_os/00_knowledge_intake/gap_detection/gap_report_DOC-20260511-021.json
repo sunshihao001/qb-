@@ -1,0 +1,29 @@
+{
+  "doc_id": "DOC-20260511-021",
+  "created_at": "2026-05-11T16:07:09Z",
+  "gap_status": "GAPS_IDENTIFIED_FOR_GOVERNANCE_LANDING",
+  "missing_or_to_verify": [
+    "00_governance/evidence_language_policy.yaml",
+    "00_governance/assumption_control_policy.yaml",
+    "00_governance/exception_escalation_policy.yaml",
+    "00_governance/legacy_runtime_quarantine_policy.yaml",
+    "00_governance/runner_permission_policy.yaml",
+    "00_governance/governance_to_domain_constraints.yaml",
+    "00_governance/governance_to_data_constraints.yaml",
+    "00_governance/governance_to_control_constraints.yaml",
+    "00_governance/governance_readiness_gate.yaml",
+    "00_governance/governance_validation_rules.yaml",
+    "00_governance/governance_integrity_manifest.json",
+    "00_governance/governance_to_domain_handoff_packet.json",
+    "00_governance/governance_to_data_handoff_packet.json",
+    "00_governance/governance_event_log.jsonl",
+    "00_governance/schemas/authority_boundary.schema.json",
+    "00_governance/schemas/stage_permission_matrix.schema.json",
+    "00_governance/schemas/hard_negative_rules.schema.json",
+    "00_governance/schemas/risk_boundary.schema.json",
+    "00_governance/schemas/governance_handoff_packet.schema.json",
+    "00_governance/reports/governance_plane_acceptance_report.json"
+  ],
+  "blocking_to_p01": true,
+  "next_action": "LAND_GOVERNANCE_PLANE_V2"
+}

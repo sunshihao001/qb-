@@ -1,0 +1,16 @@
+record_type: paper_runtime_risk_event_record
+required_fields:
+- risk_event_id
+- position_id
+- event_type
+- severity
+- action
+- trace_id
+required_safety:
+  paper_only: true
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+validation:
+- all required fields present
+- trace_id present
+- no live execution artifact

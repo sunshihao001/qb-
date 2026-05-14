@@ -1,0 +1,8 @@
+p09_to_p10_data_request_validation:
+  type: object
+  required:
+    - validation_id
+    - data_request_packet_present
+    - candidate_refs_present
+    - status
+  additional_properties_allowed: true

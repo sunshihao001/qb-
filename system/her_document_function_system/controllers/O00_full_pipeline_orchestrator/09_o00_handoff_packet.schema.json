@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "O00 handoff",
+  "type": "object",
+  "required": [
+    "from_phase",
+    "to_phase",
+    "pipeline_run_id",
+    "final_pipeline_status",
+    "report_refs",
+    "gap_refs",
+    "forbidden_next_actions"
+  ],
+  "properties": {
+    "from_phase": {
+      "type": "string"
+    },
+    "to_phase": {
+      "type": "string"
+    },
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "final_pipeline_status": {
+      "type": "string"
+    },
+    "report_refs": {
+      "type": "string"
+    },
+    "gap_refs": {
+      "type": "string"
+    },
+    "forbidden_next_actions": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,43 @@
+{
+  "system": "HER-DFAFS",
+  "canonical_root": "/root/sikk-gmgn/system/her_document_function_system",
+  "canonical_f00_controller": "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller",
+  "archived_legacy_root": "/root/her_document_function_system_ARCHIVED_READONLY_20260513",
+  "legacy_root_policy": "ARCHIVED_READONLY_DO_NOT_WRITE",
+  "new_write_policy": "WRITE_ONLY_TO_CANONICAL_ROOT",
+  "resolved_at": "2026-05-13T13:30:23",
+  "resolution_reason": "User rejected split-brain two-directory state; standalone files were archived and the stricter F00 input contract/protocol were synced into SIKK canonical root.",
+  "synced_from_legacy_to_canonical": [
+    "controllers/F00_function_realization_controller/04_f00_input_contract.json",
+    "controllers/F00_function_realization_controller/06_f00_execution_protocol.md",
+    "00_governance/HER_DFAFS_SYSTEM_SPEC_V1.md",
+    "00_governance/forbidden_actions.yaml",
+    "00_governance/status_code_table.yaml",
+    "00_governance/system_policy.md"
+  ],
+  "canonical_v00_controller": "/root/sikk-gmgn/system/her_document_function_system/controllers/V00_validation_evidence_controller",
+  "canonical_r00_controller": "/root/sikk-gmgn/system/her_document_function_system/controllers/R00_runner_tool_binding_controller",
+  "canonical_a00_controller": "/root/sikk-gmgn/system/her_document_function_system/controllers/A00_acceptance_evidence_controller",
+  "canonical_a00_run_root": "/root/sikk-gmgn/data/her_document_function_system/a00_runs",
+  "controller_chain": [
+    "O00",
+    "K00",
+    "F00",
+    "V00",
+    "R00",
+    "A00",
+    "H00",
+    "U00",
+    "G00"
+  ],
+  "canonical_data_root": "/root/sikk-gmgn/data/her_document_function_system",
+  "canonical_k00_run_root": "/root/sikk-gmgn/data/her_document_function_system/k00_runs",
+  "canonical_f00_run_root": "/root/sikk-gmgn/data/her_document_function_system/f00_runs",
+  "canonical_v00_run_root": "/root/sikk-gmgn/data/her_document_function_system/v00_runs",
+  "canonical_r00_run_root": "/root/sikk-gmgn/data/her_document_function_system/r00_runs",
+  "canonical_runtime_index": "/root/sikk-gmgn/data/her_document_function_system/runtime_index/her_dfafs_runtime_index.json",
+  "last_runtime_closure_update": "2026-05-13T15:32:00Z",
+  "canonical_o00_controller": "/root/sikk-gmgn/system/her_document_function_system/controllers/O00_full_pipeline_orchestrator",
+  "canonical_o00_run_root": "/root/sikk-gmgn/data/her_document_function_system/o00_runs",
+  "last_o00_update": "2026-05-13T16:02:06Z"
+}

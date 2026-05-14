@@ -1,0 +1,18 @@
+record_type: paper_equity_curve_record
+required_fields:
+- curve_id
+- timestamp
+- equity
+- cash
+- open_pnl
+- closed_pnl
+- drawdown
+- trace_id
+required_safety:
+  paper_only: true
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+validation:
+- all required fields present
+- trace_id present
+- no live execution artifact

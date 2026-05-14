@@ -1,0 +1,28 @@
+{
+  "contract_id": "KPP_TELEGRAM_STATUS_PANEL_CONTRACT_V1",
+  "task_id": "KPP-AUTOCHAIN-20260513-001",
+  "panel_schema": {
+    "run_id": "string",
+    "doc_id": "string",
+    "overall_status": "enum",
+    "current_stage": "K00-K08",
+    "progress_percent": "number",
+    "stage_statuses": "array[{stage_id,status,started_at,ended_at,validator_status,acceptance_status,artifact_refs,gaps}]",
+    "latest_event": "string",
+    "blockers": "array",
+    "degraded_gaps": "array",
+    "handoff_status": "string",
+    "governance_queue_status": "string",
+    "next_action": "string",
+    "query_commands": "array",
+    "artifact_index": "object",
+    "updated_at": "datetime"
+  },
+  "message_templates": {
+    "RUN_CREATED": "KPP 已创建 run：{run_id}，已进入 K00。",
+    "STAGE_ACCEPTED": "{stage_id} 已验收通过，下一阶段：{next_stage}。",
+    "BLOCKER_FOUND": "{stage_id} 阻塞：{blocker_summary}。已停止自动推进。",
+    "QUEUE_ENQUEUED": "K08 完成，候选已进入 Governance/P00 队列：{queue_entry_id}。",
+    "RUN_COMPLETED": "KPP 自动链完成：{overall_status}。"
+  }
+}

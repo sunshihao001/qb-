@@ -1,0 +1,46 @@
+entity_types:
+- entity: TOKEN
+  primary_key: token_address
+- entity: WALLET
+  primary_key: wallet_address
+- entity: WALLET_ENTITY
+  primary_key: entity_id
+- entity: WALLET_GROUP
+  primary_key: group_id
+- entity: POOL
+  primary_key: pool_address
+- entity: TRANSACTION
+  primary_key: transaction_hash
+- entity: SNAPSHOT
+  primary_key: snapshot_id
+- entity: RUN
+  primary_key: run_id
+wallet_entity:
+  wallet_address: string
+  entity_id: string|null
+  chain: string
+  first_seen_time: datetime
+  entity_resolution_status:
+  - SINGLE_ADDRESS
+  - SAME_SOURCE_CANDIDATE
+  - CONFIRMED_GROUP_MEMBER
+  - UNKNOWN
+  funding_source_address: string|null
+  funding_source_type: string|null
+  known_group_ids: list
+  historical_profile_id: string|null
+wallet_group_entity:
+  group_id: string
+  group_type:
+  - SAME_SOURCE_GROUP
+  - SYNC_BUY_GROUP
+  - SYNC_SELL_GROUP
+  - DISTRIBUTION_RECEIVER_GROUP
+  - PROFIT_COLLECTION_GROUP
+  - COUNTERPARTY_WHALE_GROUP
+  token_address: string
+  wallet_addresses: list
+  group_created_at: datetime
+  group_confidence: number
+  group_evidence_fields: list
+  group_counter_evidence_fields: list

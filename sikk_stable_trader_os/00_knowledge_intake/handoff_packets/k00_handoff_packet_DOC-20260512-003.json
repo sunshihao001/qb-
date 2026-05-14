@@ -1,0 +1,28 @@
+{
+  "handoff_id": "K00_TO_P03_PACKAGE_DESIGN_DOC-20260512-003",
+  "source_stage": "K00_KNOWLEDGE_INTAKE",
+  "target_stage": "P03_WALLET_ENTITY_CONTROLLER",
+  "included_assets": [
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260512-003_p03_wallet_entity_controller_v3.md",
+    "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260512-003.yaml"
+  ],
+  "known_gaps": [
+    "P03 runner/tool binding not implemented or accepted",
+    "P02 real handoff sample not consumed in runtime",
+    "funding source/history address DB may be missing",
+    "entity resolution thresholds not backtested",
+    "same-source/sync scoring weights not calibrated",
+    "P04 consumer controller package not yet landed in this flow"
+  ],
+  "blocking_gaps": [
+    "runtime execution remains blocked"
+  ],
+  "non_blocking_gaps": [
+    "Package stubs and contracts can be created before runtime implementation",
+    "P03 can be READY_WITH_GAPS because missing funding/history fields are transferred as limitations"
+  ],
+  "acceptance_status": "K00_HANDOFF_READY_FOR_PACKAGE_LANDING",
+  "next_legal_stage": "P03_CONTROLLER_PACKAGE_LANDING",
+  "consumption_required": true,
+  "created_at": "2026-05-12T02:11:16Z"
+}

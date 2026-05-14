@@ -1,0 +1,38 @@
+{
+  "handoff_id": "handoff_v00_controller_creation_20260513_1429_to_r00",
+  "from_phase": "V00",
+  "to_phase": "R00",
+  "created_at": "2026-05-13T15:32:00Z",
+  "handoff_status": "HANDOFF_READY",
+  "scope": "controller_asset_creation_with_validation_evidence",
+  "f00_handoff_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_to_downstream_handoff_packet.json"
+  ],
+  "validation_evidence_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/schema_validation/schema_validation_result.json",
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/contract_validation/contract_validation_result.json",
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/test_execution/test_evidence.json"
+  ],
+  "trace_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/trace/v00_trace.jsonl"
+  ],
+  "audit_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/trace/v00_audit.jsonl"
+  ],
+  "acceptance_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/v00_runs/v00_controller_creation_20260513_1429/acceptance/v00_acceptance_result.json"
+  ],
+  "blocking_gaps": [],
+  "unresolved_gaps": [],
+  "allowed_next_actions": [
+    "bind_runner_tools_in_safe_mode",
+    "dry_run_binding",
+    "handoff_to_a00_after_r00_acceptance"
+  ],
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ]
+}

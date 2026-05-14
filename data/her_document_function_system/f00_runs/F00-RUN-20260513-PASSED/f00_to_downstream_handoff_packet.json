@@ -1,0 +1,71 @@
+{
+  "from_phase": "F00",
+  "to_phase": "A01/H01/U01",
+  "source_doc_refs": [
+    "DOC-F00-E2E-REPLAY-001"
+  ],
+  "registry_refs": [],
+  "passport_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/passports/doc_20260513_her_dfafs_rebuild_v1_document_passport.json"
+  ],
+  "corpus_index_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/corpus_index/doc_20260513_her_dfafs_rebuild_v1_corpus_index.json"
+  ],
+  "system_mapping_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/system_mapping/doc_20260513_her_dfafs_rebuild_v1_system_mapping.json"
+  ],
+  "function_mapping_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/concept_to_function_map.json"
+  ],
+  "field_model_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/field_model.json"
+  ],
+  "rule_logic_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/rule_logic.json"
+  ],
+  "schema_refs": [
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/09_f00_handoff_packet.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/10_concept_to_function_map.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/11_function_asset_plan.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/12_field_model.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/13_rule_logic.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/14_implementation_decision.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/15_test_replay_evidence.schema.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/16_runner_binding.schema.json"
+  ],
+  "contract_refs": [
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/04_f00_input_contract.json",
+    "/root/sikk-gmgn/system/her_document_function_system/controllers/F00_function_realization_controller/05_f00_output_contract.json"
+  ],
+  "patch_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/patch_plan.json"
+  ],
+  "test_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/test_replay_evidence.json"
+  ],
+  "replay_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/replay_acceptance.json"
+  ],
+  "runner_binding_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/runner_binding_evidence.json"
+  ],
+  "KV_refs": [],
+  "gap_refs": [],
+  "acceptance_refs": [
+    "/root/sikk-gmgn/data/her_document_function_system/f00_runs/F00-RUN-20260513-PASSED/f00_acceptance_result.json"
+  ],
+  "allowed_next_actions": [
+    "review_upgrade_loop",
+    "add_more_replay_cases",
+    "bind_higher_orchestrator_when_requested"
+  ],
+  "forbidden_next_actions": [
+    "live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_rule_direct_change",
+    "claim_live_ready"
+  ],
+  "unresolved_gaps": [],
+  "status": "HANDOFF_READY"
+}

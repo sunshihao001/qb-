@@ -1,0 +1,19 @@
+error_trace_record:
+  trace_id: string
+  error_id: required
+  detected_at: required
+  detected_by_phase: required
+  error_type: required
+  severity: required
+  affected_objects: required
+  required_action: required
+  status: required
+  required_trace_links:
+    - parent_trace_ids
+    - child_trace_ids
+    - related_artifact_trace_ids
+  validation_rules:
+    - trace_id_present
+    - source_present
+    - downstream_usage_declared
+    - forbidden_actions_respected

@@ -1,0 +1,11 @@
+policy_id: PAPER_COST_SLIPPAGE_POLICY
+controller_id: I04_PAPER_RUNTIME_INTEGRATION
+rules:
+- cost and slippage required
+- use conservative defaults only when allowed and logged
+- missing required cost/slippage blocks
+safety_boundaries:
+  paper_only: true
+  no_live_execution: true
+  no_wallet_signing: true
+  no_auto_deploy: true

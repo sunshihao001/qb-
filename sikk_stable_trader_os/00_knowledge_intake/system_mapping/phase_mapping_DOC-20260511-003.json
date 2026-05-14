@@ -1,0 +1,94 @@
+{
+  "doc_id": "DOC-20260511-003",
+  "created_at": "2026-05-11T12:15:53Z",
+  "affected_phases": [
+    {
+      "phase": "K00_knowledge_intake",
+      "impact_level": "HIGH",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "P00_system_boundary",
+      "impact_level": "PRIMARY",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "P01_data_fact",
+      "impact_level": "HIGH",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "P02_market_scene",
+      "impact_level": "HIGH",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "P03_wallet_structure",
+      "impact_level": "HIGH",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "P04_chip_control",
+      "impact_level": "HIGH",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "P05_strategy_gate",
+      "impact_level": "HIGH",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "P06_risk_control",
+      "impact_level": "HIGH",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "P07_execution",
+      "impact_level": "HIGH",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "P08_review",
+      "impact_level": "HIGH",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "P09_self_upgrade",
+      "impact_level": "HIGH",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    },
+    {
+      "phase": "system_methodology_update",
+      "impact_level": "PRIMARY",
+      "reason": "方法论总纲定义该阶段的职责、输入输出、状态、硬否定或执行边界。"
+    }
+  ],
+  "next_phase_recommendation": "governance_plane_generation",
+  "next_artifact": "00_governance/governance_plane.md",
+  "derivation_sequence": [
+    "governance_plane.md",
+    "domain_plane.md",
+    "data_plane.md",
+    "control_plane.md",
+    "decision_plane.md",
+    "risk_plane.md",
+    "execution_plane.md",
+    "verification_plane.md",
+    "learning_plane.md",
+    "domain_object_registry.yaml",
+    "state_dictionary.yaml",
+    "phase_registry.yaml",
+    "phase_transition_map.yaml",
+    "system_state_machine.yaml",
+    "data_flow_map.md",
+    "decision_flow_map.md",
+    "risk_flow_map.md",
+    "handoff_flow_map.md",
+    "atomic_skill_extraction_policy.md",
+    "atomic_skill_registry.yaml",
+    "her_execution_protocol.md",
+    "total_control_skill/SKILL.md",
+    "P00_system_boundary Phase Package",
+    "P01_data_fact Phase Package"
+  ]
+}

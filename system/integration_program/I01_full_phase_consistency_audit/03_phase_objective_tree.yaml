@@ -1,0 +1,35 @@
+objective_tree:
+  phase_id: I01_full_phase_consistency_audit
+  level_1_goal: Verify P01-P10 can connect as a consistent controller chain before any runner/tool binding work.
+  level_2_sub_goals:
+    - id: SG1
+      name: phase_io_alignment
+    - id: SG2
+      name: handoff_chain_integrity
+    - id: SG3
+      name: status_gap_forbidden_inheritance
+    - id: SG4
+      name: phase_boundary_violation_detection
+    - id: SG5
+      name: fix_priority_and_handoff
+  level_3_tasks:
+    - id: T1
+      parent: SG1
+      action: scan P01-P10 input/output contracts and schemas
+      output: phase_io_alignment_matrix.yaml
+    - id: T2
+      parent: SG2
+      action: verify every phase output has a downstream handoff reader
+      output: handoff_chain_integrity_report.yaml
+    - id: T3
+      parent: SG3
+      action: verify global status codes, READY_WITH_GAPS propagation, and forbidden-use inheritance
+      output: status_code_consistency_report.yaml / gap_propagation_report.yaml / forbidden_use_inheritance_report.yaml
+    - id: T4
+      parent: SG4
+      action: identify boundary violations such as runtime/paper/live/tool-binding leaks
+      output: phase_boundary_violation_report.yaml
+    - id: T5
+      parent: SG5
+      action: prioritize fixes and hand off to I02
+      output: fix_priority_list.yaml / i01_to_i02_handoff_packet.yaml

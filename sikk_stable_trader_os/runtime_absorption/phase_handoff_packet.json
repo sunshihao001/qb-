@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-05-14T20:34:54Z",
+  "token_address": "ECgweD7xkMj4bm8CcM9rusxKjyQGgdosCvVmhGUupump",
+  "token_symbol": "TROLLIEN",
+  "acceptance": "PHASE_REPLAY_PASS_WITH_GAPS",
+  "phase_outputs": {
+    "P01": [
+      "runtime_absorption/data_fact_handoff_packet.json"
+    ],
+    "P02": [
+      "runtime_absorption/wallet_chip_fact_handoff_packet.json"
+    ],
+    "P03": [
+      "runtime_absorption/wallet_entity_handoff_packet.json"
+    ],
+    "P04": [
+      "runtime_absorption/chip_structure_handoff_packet.json"
+    ],
+    "P05": [
+      "runtime_absorption/evidence_control_packet.json"
+    ],
+    "P06": [
+      "runtime_absorption/scenario_recognition_packet.json"
+    ],
+    "P07": [
+      "runtime_absorption/strategy_gate_decision.json"
+    ],
+    "P08": [
+      "runtime_absorption/paper_only_execution_gate.json"
+    ],
+    "P09": [
+      "runtime_absorption/failure_attribution_packet.json"
+    ]
+  },
+  "issue_registry": "runtime_absorption/runtime_absorption_issue_registry.md",
+  "next_route": "issue_registry_only_fix_package",
+  "forbidden_next_actions": [
+    "new Plane",
+    "new P11/P12",
+    "dashboard",
+    "telegram",
+    "direct realtime rule mutation",
+    "paper runner after candidate discovery without P07/P08"
+  ],
+  "p09_p10_boundary": "review/failure attribution may enter P09/P10 task package only"
+}

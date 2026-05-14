@@ -1,0 +1,32 @@
+{
+  "source_id": "gmgn_okx_readonly:GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump:2026-05-08T01:47:36Z",
+  "source_type": "gmgn_okx_readonly",
+  "token_address": "GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump",
+  "collected_at": "2026-05-08T01:47:36Z",
+  "collector": "gmgn_okx_readonly",
+  "raw_path": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/wallet_structure/source_wallet_bot/paper/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/wallet_data/raw",
+  "normalized_path": "data/source_wallet_bot/auto_tasks/wallet_structure_longrun_20260508_014528/cycles/cycle_0001_20260508_014732/wallet_structure/source_wallet_bot/paper/GRzVr7w2QAgn2yxphqHLEPVweuuV5T741EEH3s13pump/wallet_data/normalized",
+  "schema_version": "v1",
+  "read_mode": "readonly",
+  "confidence": "normalized",
+  "contains_inference": false,
+  "contains_handoff": false,
+  "allowed_layers": [
+    "raw",
+    "normalized",
+    "facts"
+  ],
+  "blocked_layers": [
+    "quarantine",
+    "evidence",
+    "inference",
+    "handoff",
+    "state",
+    "report",
+    "manifest"
+  ],
+  "validation": {
+    "status": "PASS",
+    "failures": []
+  }
+}

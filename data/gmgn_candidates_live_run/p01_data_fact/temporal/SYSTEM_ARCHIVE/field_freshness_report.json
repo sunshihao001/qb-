@@ -1,0 +1,16 @@
+{
+  "token_address": "SYSTEM_ARCHIVE",
+  "freshness_status": "REPLAY_ONLY",
+  "fields": {
+    "quote_price": {
+      "age_sec": null,
+      "max_allowed_age_sec": 60,
+      "status": "MISSING"
+    },
+    "wallet_profile": {
+      "age_sec": null,
+      "max_allowed_age_sec": 86400,
+      "status": "MISSING"
+    }
+  }
+}

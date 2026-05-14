@@ -1,0 +1,13 @@
+{
+  "contains_mock_data": true,
+  "rows": [
+    {
+      "wallet_address": "MockWallet111111111111111111111111111111111",
+      "current_token_balance": 1000000
+    },
+    {
+      "wallet_address": "MockWallet222222222222222222222222222222222",
+      "current_token_balance": "missing"
+    }
+  ]
+}

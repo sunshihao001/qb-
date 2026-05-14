@@ -1,0 +1,50 @@
+document_passport:
+  doc_id: DOC-20260511-002
+  source_type: user_uploaded_text_document
+  source_name: K00_是知识资料摄取_保存_建模_系统映射_缺口识别_任务执行包生成和下游交接阶段.md
+  received_at: '2026-05-11T12:06:52Z'
+  raw_path: 00_knowledge_intake/raw_inputs/DOC-20260511-002.md
+  document_role:
+    primary_role: K00 Phase Package specification / HER knowledge-intake taskization
+      controller input
+    secondary_roles:
+    - phase_controller_standard
+    - acceptance_gate_standard
+    - handoff_contract_standard
+    - total_control_skill_update_trigger
+  summary:
+    core_intent: 将 K00 定义为知识资料摄取、保存、建模、系统映射、缺口识别、任务执行包生成和下游交接阶段，并给出 9 文件 Phase Package
+      内容。
+    key_points:
+    - K00 不是普通文档总结阶段，而是 P00 前置的知识输入任务化阶段。
+    - K00 Phase Package 必须包含 manifest、context、objective_tree、input/output contract、execution
+      protocol、acceptance gate、state、handoff schema 九个核心文件。
+    - 所有知识输入必须生成 doc_id、raw_inputs、source_registry、document_passport、corpus_index、system
+      mapping、gap_detection、task package、handoff_packet。
+    - K00 完成后必须通过 acceptance_gate 判断是否自动进入 P00/P01/P09/system_methodology_update。
+    - 下一步要求总控 Skill 写入文档知识输入必须先进入 K00 的强制规则。
+  system_mapping:
+    planes:
+    - governance_plane
+    - domain_plane
+    - data_plane
+    - control_plane
+    - decision_plane
+    - risk_plane
+    - execution_plane
+    - verification_plane
+    - learning_plane
+    affected_phases:
+    - K00_knowledge_intake
+    - P00_system_boundary
+    - P01_data_fact
+    - P09_self_upgrade
+    - system_methodology_update
+  required_actions:
+  - 保存当前上传资料为 raw input
+  - 登记 source_registry
+  - 生成 K00 文档护照、语料索引、系统映射、阶段映射、缺口识别、任务执行包、intake report、handoff_packet
+  - 核对现有 K00 控制器 9 文件是否覆盖该资料规范
+  - 确认总控 Skill 已包含文档知识输入强制路由到 K00 的规则
+  evidence_level: EVIDENCE_A_STRONG
+  status: PASSPORT_READY

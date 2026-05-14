@@ -1,0 +1,9 @@
+upgrade_safety_boundary_validation:
+  type: object
+  required:
+    - validation_id
+    - live_execution_detected
+    - wallet_signing_detected
+    - auto_deploy_detected
+    - status
+  additional_properties_allowed: true

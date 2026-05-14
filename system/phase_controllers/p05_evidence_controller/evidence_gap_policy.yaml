@@ -1,0 +1,48 @@
+controller_id: P05_EVIDENCE_CONTROLLER
+version: v3.0-professional
+status: PACKAGE_SPEC_READY_WITH_RUNTIME_GAPS
+created_at: '2026-05-12T02:44:17Z'
+paper_only: true
+real_trade_enabled: false
+runtime_allowed: false
+paper_runtime_allowed: false
+live_execution_allowed: false
+BLOCKING_GAP:
+  result: P05_BLOCKED
+  examples:
+  - p04_handoff_missing
+  - trace_missing
+  - acceptance_missing
+  - live_execution_requested
+  - handoff_plane_bypassed
+CRITICAL_GAP:
+  result: P05_REJECTED
+  examples:
+  - no_chip_structure_inputs
+  - no_evidence_object_contract
+  - source_records_untraceable
+  - all_evidence_inputs_unusable
+HIGH_GAP:
+  result: P05_READY_WITH_GAPS
+  downstream_permission: P06_LIMITED
+  examples:
+  - counter_evidence_missing
+  - evidence_conflict_unresolved
+  - major_unknowns_present
+  - stale_chip_structure_inputs
+  - weak_same_source_inputs
+MEDIUM_GAP:
+  result: P05_READY_WITH_GAPS
+  downstream_permission: P06_ALLOWED_WITH_LIMITATIONS
+  examples:
+  - cost_basis_low_confidence
+  - partial_transfer_path_unknown
+  - counterparty_pressure_weak
+  - security_fact_stale
+LOW_GAP:
+  result: P05_READY_WITH_GAPS
+  downstream_permission: P06_ALLOWED_WITH_NOTE
+  examples:
+  - optional_historical_context_missing
+  - minor_freshness_delay
+  - noncritical_evidence_metadata_missing

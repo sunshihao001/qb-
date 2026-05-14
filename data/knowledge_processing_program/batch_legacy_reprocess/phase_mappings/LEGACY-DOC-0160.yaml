@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0160
+source_path: docs/intel_bot/wallet_intel_execution_plan.md
+phase_scores:
+  P01: 11
+  P02: 0
+  P03: 36
+  P04: 5
+  P05: 4
+  P06: 0
+  P07: 2
+  P08: 5
+  P09: 5
+  P10: 1
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

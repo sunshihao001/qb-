@@ -1,0 +1,32 @@
+{
+  "validation_type": "test_execution",
+  "status": "PASSED",
+  "test_commands": [
+    "python3 /root/sikk-gmgn/scripts/her_document_function_system/validate_h00_controller_assets.py",
+    "python3 -m pytest -q /root/sikk-gmgn/tests/her_document_function_system/test_h00_controller_assets.py"
+  ],
+  "exit_codes": [
+    0,
+    0
+  ],
+  "passed_count": 4,
+  "failed_count": 0,
+  "covered_assets": [
+    "20_controller_files",
+    "input_contract",
+    "output_contract",
+    "execution_protocol",
+    "acceptance_gate",
+    "schemas",
+    "trace_spec",
+    "forbidden_actions"
+  ],
+  "stdout_paths": [
+    "/root/sikk-gmgn/data/her_document_function_system/h00_runs/h00_asset_validation_20260513_154317/test_execution/asset_validator_stdout.log",
+    "/root/sikk-gmgn/data/her_document_function_system/h00_runs/h00_asset_validation_20260513_154317/test_execution/pytest_stdout.log"
+  ],
+  "stderr_paths": [
+    "/root/sikk-gmgn/data/her_document_function_system/h00_runs/h00_asset_validation_20260513_154317/test_execution/asset_validator_stderr.log",
+    "/root/sikk-gmgn/data/her_document_function_system/h00_runs/h00_asset_validation_20260513_154317/test_execution/pytest_stderr.log"
+  ]
+}

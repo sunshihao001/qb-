@@ -1,0 +1,22 @@
+{
+  "audit_id": "HANDOFF_AUDIT_DOC-20260511-027",
+  "generated_at": "2026-05-11T17:42:39Z",
+  "input_packets": [
+    "ACCEPTANCE_RESULT_DOC-20260511-026",
+    "TRACE_TO_ACCEPTANCE_HANDOFF_20260511"
+  ],
+  "created_packets": [
+    "acceptance_to_handoff_packet.json",
+    "downstream_read_instruction.json",
+    "gap_propagation_packet.json",
+    "limitation_transfer_packet.json",
+    "forbidden_use_policy.json",
+    "field_usage_permission.json"
+  ],
+  "decision": "HANDOFF_READY_WITH_GAPS_LIMITED",
+  "safety_boundary": {
+    "paper_only": true,
+    "real_trade_enabled": false,
+    "p01_runtime_connection_allowed": false
+  }
+}

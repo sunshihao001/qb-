@@ -1,0 +1,15 @@
+source_types:
+- GMGN_TRENDING
+- GMGN_NEW_TOKEN
+- GMGN_SMART_MONEY
+- GMGN_KOL_SIGNAL
+- MANUAL_INPUT
+- TELEGRAM_COMMAND
+- LEGACY_RUNTIME
+- REPLAY_SAMPLE
+- WATCHLIST_IMPORT
+- EXTERNAL_CSV_IMPORT
+- SYSTEM_REDISCOVERY
+trusted_for_strategy: false
+trusted_for_evidence: false
+candidate_intake_only: true

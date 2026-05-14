@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-05-12T04:36:20Z",
+  "doc_id": "DOC-20260512-007",
+  "status": "P07_PACKAGE_READY_WITH_RUNTIME_GAPS_AND_K00_ROUTE_RECOVERED",
+  "system_files_found": 41,
+  "system_files_expected": 41,
+  "missing_system_files": [],
+  "runtime_dirs_found": 29,
+  "runtime_dirs_expected": 29,
+  "missing_runtime_dirs": [],
+  "parse_errors": [],
+  "anchor_checks": {
+    "buy_signal_forbidden": true,
+    "paper_runtime_forbidden": true,
+    "live_execution_forbidden": true,
+    "p08_required": true,
+    "paper_candidate_not_ready": true,
+    "k00_route_recovery_present": true,
+    "k00_acceptance_present": true,
+    "k00_phase_state_present": true
+  },
+  "k00_acceptance_status": "K00_ACCEPTED_WITH_RUNTIME_GAPS",
+  "route_recovery_verdict": "PASS_WITH_RUNTIME_BOUNDARY_PRESERVED",
+  "p07_acceptance_status": "P07_PACKAGE_READY_WITH_RUNTIME_GAPS",
+  "runtime_allowed": false,
+  "paper_runtime_allowed": false,
+  "live_execution_allowed": false,
+  "next_legal_stage": "P08_EXECUTION_RISK_CONTROLLER_PACKAGE_DESIGN",
+  "remaining_gaps": [
+    "P07 runtime/tool binding blocked",
+    "P08 package design next",
+    "paper runtime blocked until P08 approval",
+    "live execution forbidden"
+  ]
+}

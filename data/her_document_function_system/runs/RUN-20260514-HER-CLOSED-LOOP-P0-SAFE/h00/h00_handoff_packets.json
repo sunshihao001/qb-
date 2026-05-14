@@ -1,0 +1,31 @@
+{
+  "handoff_packets": [
+    {
+      "handoff_id": "h00_to_U00_queue_item_001",
+      "from_phase": "H00",
+      "to_phase": "U00",
+      "status": "HANDOFF_READY_WITH_GAPS",
+      "refs": {
+        "queue": "h00/downstream_queue.json"
+      }
+    },
+    {
+      "handoff_id": "h00_to_H00_queue_item_002",
+      "from_phase": "H00",
+      "to_phase": "H00",
+      "status": "HANDOFF_READY_WITH_GAPS",
+      "refs": {
+        "queue": "h00/downstream_queue.json"
+      }
+    },
+    {
+      "handoff_id": "h00_to_G00_queue_item_003",
+      "from_phase": "H00",
+      "to_phase": "G00",
+      "status": "HANDOFF_READY_WITH_GAPS",
+      "refs": {
+        "queue": "h00/downstream_queue.json"
+      }
+    }
+  ]
+}

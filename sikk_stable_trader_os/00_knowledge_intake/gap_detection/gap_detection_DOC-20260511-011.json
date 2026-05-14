@@ -1,0 +1,32 @@
+{
+  "doc_id": "DOC-20260511-011",
+  "parent_doc_id": "DOC-20260511-006",
+  "generated_at": "2026-05-11T13:57:35.735732+00:00",
+  "closed_parent_gaps": [
+    "GAP-PHASE-NUMBERING-TABLE"
+  ],
+  "blocking_gaps": [],
+  "degraded_gaps": [
+    {
+      "gap_id": "GAP-STAGE-TARGET-DATA-DETAILS",
+      "severity": "DEGRADED",
+      "description": "Phase names/positioning are defined; detailed target data objects, inputs, outputs, acceptance data for each phase still need explicit enumeration."
+    },
+    {
+      "gap_id": "GAP-P10-REGISTRY-RECONCILIATION",
+      "severity": "DEGRADED",
+      "description": "Prior registry/control references used P09 as upgrade; new methodology defines P09 review learning and P10 system upgrade, requiring registry reconciliation before full phase execution."
+    }
+  ],
+  "status": "PHASE_WITH_GAPS",
+  "next_recommendation": "continue_phase_target_data_definitions_and_reconcile_P10_registry",
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}

@@ -1,0 +1,7 @@
+{"ts":"2026-05-14T04:02:24Z","event":"issue_pack_created","issue_pack_id":"HER_DOC_P01_SYSTEM_ISSUE_PACK_001","status":"ISSUE_PACK_CREATED"}
+{"ts":"2026-05-14T04:02:24Z","event":"system_review_pack_written","path":"system_review_pack.md"}
+{"ts":"2026-05-14T04:02:24Z","event":"system_audit_request_written","path":"system_audit_request.json"}
+{"ts":"2026-05-14T04:02:24Z","event":"pipeline_run_request_written","path":"pipeline_run_request.json"}
+{"ts": "2026-05-14T04:20:51Z", "event": "system_review_outputs_written", "output_dir": "data/her_document_function_system/issue_packs/HER_DOC_P01_SYSTEM_ISSUE_PACK_001/outputs/system_review", "gap_count": 2}
+{"ts": "2026-05-14T04:22:49Z", "event": "system_audit_outputs_written", "output_dir": "data/her_document_function_system/issue_packs/HER_DOC_P01_SYSTEM_ISSUE_PACK_001/outputs/system_audit", "f00_entry_status": "F00_READY_WITH_GAPS"}
+{"ts": "2026-05-14T04:24:09Z", "event": "pipeline_run_completed", "run_dir": "data/her_document_function_system/runs/HER-DOC-P01-AUTO-20260514-001", "exit_code": 10, "final_status": "RUNNABLE_WITH_GAPS"}

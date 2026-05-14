@@ -1,0 +1,14 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+read_policy: ONLY_READ_LISTED_ASSETS_IN_ORDER
+sections:
+- read_order
+- allowed_assets
+- observe_only_assets
+- forbidden_assets
+- interpretation_rules
+- must_propagate

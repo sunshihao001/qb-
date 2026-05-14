@@ -1,0 +1,23 @@
+meta:
+  standard_id: S00_TOKEN_ENTITY_SCHEMA
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+entity: token
+required_fields:
+- token_id
+- chain
+- address
+- symbol
+- name
+- market_snapshot_refs
+- data_quality_score
+schema_version: 0.1.0
+validation: R00 schema validation pending

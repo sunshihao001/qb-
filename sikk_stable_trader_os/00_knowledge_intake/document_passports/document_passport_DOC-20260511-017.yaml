@@ -1,0 +1,24 @@
+doc_id: DOC-20260511-017
+parent_doc_id: DOC-20260511-006
+document_type: system_methodology_blueprint_continuation
+section: 12. Data Plane 阶段目标数据
+raw_input_path: 00_knowledge_intake/raw_inputs/DOC-20260511-017.md
+canonical_path: 00_methodology/system_methodology_blueprint.md
+derived_assets:
+- 00_data/data_phase_target_data.raw_user_proposed.yaml
+- 00_data/data_phase_target_data.yaml
+- 00_data/data_quality_rules.yaml
+- 00_data/evidence_level_rules.yaml
+- 00_data/contradiction_record_rules.yaml
+sha256: 5aff408b3d303951efc4e8260c2c1d3d4eefac54c29ad165a32ec61fa2ce8454
+canonical_sha256_after_update: 243327a1ded9488f3b8cc9972cb7276e9747b3daa46703a31ab8e91191d5942f
+intake_time: '2026-05-11T14:25:39.844562+00:00'
+status: CANONICAL_SECTION_APPENDED_WITH_RECONCILIATION_GAPS
+safety_boundary:
+  paper_only: true
+  read_only_research: true
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  auto_swap_enabled: false
+  secret_access: not_requested_not_used

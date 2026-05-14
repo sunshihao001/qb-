@@ -1,0 +1,4 @@
+{"timestamp": "2026-05-14T00:05:18.019448+00:00", "event_type": "safe_mode_asserted", "safe_mode": true}
+{"timestamp": "2026-05-14T00:05:18.019975+00:00", "event_type": "forbidden_actions_checked", "forbidden_actions": ["live_runtime", "wallet_signing", "auto_deploy", "production_trading", "execute_real_order"]}
+{"timestamp": "2026-05-14T00:05:18.024936+00:00", "event_type": "false_claims_blocked", "forbidden_claims": ["PIPELINE_ACCEPTED", "POLICY_ACTIVE", "PRODUCTION_READY", "LIVE_READY"]}
+{"timestamp": "2026-05-14T00:05:18.025000+00:00", "event_type": "final_decision_written", "final_status": "A00_REAL_ACCEPTANCE_EVIDENCE_READY_WITH_GAPS"}

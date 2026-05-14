@@ -1,0 +1,17 @@
+handoff_id: "P04_TO_P05_HANDOFF_PACKET"
+source: "P04"
+target: "P05"
+consumption_required: true
+included_assets:
+  - "chip_accounting"
+  - "cohorts"
+  - "retention"
+  - "holdings"
+  - "exit_flow"
+  - "transfer_status"
+  - "distribution_progress"
+  - "counterparty_pressure"
+  - "cost_basis"
+  - "quality"
+  - "gaps"
+known_gaps_required: true

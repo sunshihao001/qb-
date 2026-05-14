@@ -1,0 +1,16 @@
+record_type: paper_exit_rule_evaluation_record
+required_fields:
+- evaluation_id
+- position_id
+- rule_id
+- evaluation_result
+- reason
+- trace_id
+required_safety:
+  paper_only: true
+  live_execution_allowed: false
+  wallet_signing_allowed: false
+validation:
+- all required fields present
+- trace_id present
+- no live execution artifact

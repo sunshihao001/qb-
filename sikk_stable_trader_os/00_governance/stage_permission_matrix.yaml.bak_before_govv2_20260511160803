@@ -1,0 +1,7 @@
+stage_permission_matrix:
+  K00_knowledge_intake_taskization: {may_record_facts: true, may_generate_candidates: true, may_register_phase: false, may_trade: false}
+  P00_system_bootstrap_controller: {may_build_system: true, may_register_phase: true, may_run_business: false, may_trade: false}
+  P01_data_fact_controller: {may_normalize_data: true, may_judge_strategy: false, may_trade: false}
+  P06_strategy_gate_controller: {may_grant_paper_permission: true, may_trade: false}
+  P07_execution_risk_controller: {may_simulate_execution_risk: true, may_trade: false}
+  P08_paper_trading_controller: {may_run_paper_trade: true, may_trade: false}

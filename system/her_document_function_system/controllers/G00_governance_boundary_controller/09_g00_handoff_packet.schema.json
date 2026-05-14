@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "G00 Handoff Packet",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "from_phase",
+    "to_phase",
+    "handoff_type",
+    "active_policy_bundle_refs",
+    "forbidden_action_registry_refs",
+    "status_code_table_refs",
+    "evidence_policy_refs",
+    "gap_policy_refs",
+    "execution_boundary_policy_refs",
+    "directory_policy_refs",
+    "contract_policy_refs",
+    "runner_safety_policy_refs",
+    "human_confirmation_policy_refs",
+    "production_risk_policy_refs",
+    "policy_version_refs",
+    "policy_conflict_refs",
+    "allowed_next_actions",
+    "forbidden_next_actions",
+    "handoff_status"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "from_phase": {
+      "const": "G00"
+    },
+    "to_phase": {
+      "type": "string"
+    },
+    "handoff_type": {
+      "type": "string",
+      "enum": [
+        "GOVERNANCE_POLICY_HANDOFF"
+      ]
+    },
+    "active_policy_bundle_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_action_registry_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status_code_table_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_policy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gap_policy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "execution_boundary_policy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "directory_policy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contract_policy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "runner_safety_policy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_confirmation_policy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "production_risk_policy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "policy_version_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "policy_conflict_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "handoff_status": {
+      "type": "string",
+      "enum": [
+        "HANDOFF_READY",
+        "HANDOFF_WITH_GAPS",
+        "HANDOFF_BLOCKED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

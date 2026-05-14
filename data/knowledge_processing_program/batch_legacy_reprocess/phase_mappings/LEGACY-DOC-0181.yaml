@@ -1,0 +1,20 @@
+document_id: LEGACY-DOC-0181
+source_path: docs/source_wallet_bot/directory_governance/wallet_structure_primary_root_policy.md
+phase_scores:
+  P01: 2
+  P02: 2
+  P03: 76
+  P04: 3
+  P05: 9
+  P06: 0
+  P07: 3
+  P08: 4
+  P09: 0
+  P10: 1
+primary_phase: P03
+assetization_required:
+- contract_check
+- controller_asset_check
+- runner_binding_check
+- acceptance_gate_check
+

@@ -1,0 +1,111 @@
+{
+  "模块": "SIKK Live Run 主入口",
+  "模式": "paper_runtime_once",
+  "运行时间": "2026-05-10T17:35:46Z",
+  "输出根目录": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test",
+  "配置": {
+    "notification_enabled": false,
+    "telegram_broadcast_enabled": false,
+    "telegram_target": "",
+    "confirmation_enabled": false,
+    "real_swap_enabled": false,
+    "broadcast_allowed": false,
+    "dashboard_enabled": true,
+    "trace_enabled": true
+  },
+  "分阶段流程": [
+    {
+      "阶段": "P0_候选发现",
+      "目标": "GMGN 新币候选池，只筛选不下单",
+      "输出": "gmgn_new_token_filter/token_candidates.*",
+      "完成标准": "候选等级 S1/S2/S3 与排除原因完整"
+    },
+    {
+      "阶段": "P1_K线吸筹与信号",
+      "目标": "K线、吸筹窗口、SIKK S0-S4/SX 信号",
+      "输出": "candidate_signal_outputs/",
+      "完成标准": "PAPER_READY 必须来自 S3/S4 + 风险门禁通过"
+    },
+    {
+      "阶段": "P2_钱包结构门禁",
+      "目标": "observe 默认记录钱包结构，不直接实盘授权",
+      "输出": "wallet_structure/",
+      "完成标准": "WALLET_SUPPORT 只表示不阻断；WALLET_BLOCK/PAUSE 可进入观察或阻断"
+    },
+    {
+      "阶段": "P3_报价安全确认",
+      "目标": "只读 quote + token-scan + confirmation ticket",
+      "输出": "quote_security/",
+      "完成标准": "缺 quote/scan 一律 PAUSE，不当作安全"
+    },
+    {
+      "阶段": "P4_live纸面交易",
+      "目标": "live 入场价/成本模型/纸面仓位更新",
+      "输出": "paper_live/",
+      "完成标准": "记录 signal/live 价差、滑点、费用和 paper PnL"
+    },
+    {
+      "阶段": "P5_复盘校准",
+      "目标": "日报、失败归因、钱包结构状态胜率统计",
+      "输出": "reports/",
+      "完成标准": "按 wallet_structure_status/failure_type 复盘"
+    },
+    {
+      "阶段": "P6_人工确认后小额实盘准备",
+      "目标": "仅生成确认层与执行前门禁，不自动广播",
+      "输出": "confirmation/execution_gate",
+      "完成标准": "必须人工确认，real_swap/broadcast 默认关闭"
+    }
+  ],
+  "当前不足修正": {
+    "默认入场价": "live优先，缺失时降级signal并标记偏差",
+    "钱包结构": "observe默认接入，soft/hard需显式启用",
+    "quote安全": "缺失/过期/偏差过大一律 PAUSE 或 BLOCK",
+    "纸面验证": "先连续多轮统计，再考虑人工确认小额实盘",
+    "真实交易": "默认关闭，只生成确认层，不广播"
+  },
+  "阶段输出": {
+    "pipeline": {
+      "manifest_json": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/orchestrator/pipeline_manifest.json",
+      "report_md": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/orchestrator/pipeline_report.md"
+    },
+    "paper_live": {
+      "open_positions_json": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/paper_positions_open.json",
+      "closed_positions_json": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/paper_positions_closed.json",
+      "paper_trades_csv": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/paper_trades.csv",
+      "paper_equity_curve_csv": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/paper_equity_curve.csv",
+      "strategy_metrics_json": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/strategy_metrics.json",
+      "risk_events_jsonl": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/risk_events.jsonl",
+      "failure_attribution_jsonl": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/failure_attribution.jsonl",
+      "daily_report_md": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/daily_reports/paper_daily_report_20260510.md",
+      "open_positions_csv": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/paper_positions_open.csv",
+      "closed_positions_csv": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/paper_positions_closed.csv",
+      "case_files_manifest": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/case_files/case_files_manifest.json",
+      "case_json_count": 0,
+      "case_md_count": 0,
+      "output_dir": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/paper_live/case_files"
+    },
+    "wallet_structure_daily_report": {
+      "summary_json": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/reports/wallet_structure_daily_report_20260510.json",
+      "summary_csv": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/reports/wallet_structure_daily_report_20260510.csv",
+      "summary_md": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/reports/wallet_structure_daily_report_20260510.md"
+    },
+    "runtime": {
+      "live_state_json": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/live_state.json",
+      "live_board_md": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/live_board.md",
+      "live_dashboard_html": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/live_dashboard.html",
+      "trade_gate_journal_jsonl": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/trade_gate_journal/trade_gate_review.jsonl",
+      "site_dashboard_data_json": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/site/dashboard_data.json",
+      "site_index_html": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/site/index.html",
+      "site_app_js": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/site/app.js",
+      "site_style_css": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/site/style.css",
+      "events_jsonl": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/events/live_events.jsonl",
+      "latest_events_md": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/events/latest_events.md",
+      "token_status_md": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/tokens/J81YExNqSMwQHGMtPaBK9sUB6wHEPp1q2oBk7Nfwo111/token_status.md",
+      "unified_index_dir": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/index",
+      "telegram_callback_index_json": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/index/telegram_callback_index.json",
+      "system_index_json": "/root/sikk-gmgn/data/source_wallet_bot/live/6EQKNJD6KMTQv9KmhKDjs1jm1SRsNVGNqdKeEEiJpump/runtime_test/index/system_index.json"
+    }
+  },
+  "说明": "统一主入口只做候选发现、K线/钱包结构/quote-security、纸面交易、状态观测和日报复盘，不执行真实 swap。notification/confirmation/real swap 默认关闭。"
+}

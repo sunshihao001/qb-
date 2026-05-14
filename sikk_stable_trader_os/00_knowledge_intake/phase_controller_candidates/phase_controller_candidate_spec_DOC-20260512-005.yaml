@@ -1,0 +1,15 @@
+doc_id: DOC-20260512-005
+candidate_controller_id: P05_EVIDENCE_CONTROLLER
+status: PHASE_CONTROLLER_CANDIDATE_READY_FOR_PACKAGE_LANDING
+required_files_count: 39
+runtime_dirs_count: 24
+upstream:
+- P02
+- P03
+- P04
+downstream:
+- P06
+forbidden_downstream:
+- P07
+- PAPER_RUNTIME
+- LIVE_EXECUTION

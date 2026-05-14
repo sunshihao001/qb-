@@ -1,0 +1,22 @@
+# Auto-landed by HER P08 package landing
+# generated_at: 2026-05-12T05:47:29Z
+# authority: user uploaded P08 Execution Risk Controller 专业版 v3.0
+schema_id: EXECUTION_RISK_INPUT_MANIFEST_SCHEMA
+version: v3.0
+required_fields:
+  - manifest_id
+  - candidate_id
+  - token_address
+  - generated_at
+  - upstream_packets
+  - p07_decision_context
+  - inherited_limits
+  - input_quality
+  - trace
+allowed_statuses:
+  - EXECUTION_INPUT_HIGH_CONFIDENCE
+  - EXECUTION_INPUT_USABLE
+  - EXECUTION_INPUT_USABLE_WITH_GAPS
+  - EXECUTION_INPUT_LOW_CONFIDENCE
+  - EXECUTION_INPUT_UNUSABLE
+no_live_execution_fields_allowed: true

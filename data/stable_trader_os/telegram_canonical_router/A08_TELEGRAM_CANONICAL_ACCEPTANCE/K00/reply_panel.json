@@ -1,0 +1,25 @@
+{
+  "acceptance_depth": "SEMANTIC_REPLAY_ACCEPTANCE",
+  "blocked_real_execution": [
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast",
+    "real_trade"
+  ],
+  "message": "K00 paper-only standard-stage runtime completed via canonical Telegram route.",
+  "panel_id": "TELEGRAM_REPLY_PANEL_K00_A08_TELEGRAM_CANONICAL_ACCEPTANCE",
+  "phase_id": "K00",
+  "real_execution_allowed": false,
+  "route_chain": [
+    "telegram_command",
+    "canonical_router",
+    "standard_stage_closure_manifest",
+    "runtime_entry",
+    "acceptance_gate",
+    "reply_panel"
+  ],
+  "runtime_mode": "paper_only",
+  "semantic_acceptance_status": "SEMANTIC_REPLAY_ACCEPTED",
+  "status": "PAPER_ONLY_STAGE_REPLY_READY"
+}

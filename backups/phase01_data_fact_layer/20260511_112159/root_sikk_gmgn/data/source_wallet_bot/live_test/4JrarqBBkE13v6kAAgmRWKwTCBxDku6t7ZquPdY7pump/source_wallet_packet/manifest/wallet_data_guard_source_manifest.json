@@ -1,0 +1,32 @@
+{
+  "allowed_layers": [
+    "raw",
+    "normalized",
+    "facts"
+  ],
+  "blocked_layers": [
+    "quarantine",
+    "evidence",
+    "inference",
+    "handoff",
+    "state",
+    "report",
+    "manifest"
+  ],
+  "collected_at": "2026-05-11T10:29:25Z",
+  "collector": "modules.source_wallet_bot.gmgn_live_adapter",
+  "confidence": "normalized",
+  "contains_handoff": false,
+  "contains_inference": false,
+  "normalized_path": "/root/sikk-gmgn/data/source_wallet_bot/live_test/4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump/source_wallet_packet/wallet_data/normalized",
+  "raw_path": "/root/sikk-gmgn/data/source_wallet_bot/live_test/4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump/source_wallet_packet/wallet_data/raw",
+  "read_mode": "readonly",
+  "schema_version": "v1",
+  "source_id": "gmgn_live_adapter:4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+  "source_type": "gmgn_live_adapter",
+  "token_address": "4JrarqBBkE13v6kAAgmRWKwTCBxDku6t7ZquPdY7pump",
+  "validation": {
+    "failures": [],
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,20 @@
+meta:
+  standard_id: S00_LEGACY_TO_NEW_MAPPING
+  producer: S00_unified_system_standardization
+  consumer:
+  - HER Control Plane
+  - Phase Controllers
+  - R00 validation controller
+  version: 0.1.0
+  status: active_with_gaps
+  created_at: '2026-05-14T12:50:47Z'
+  acceptance: Must parse and be listed in unified_standardization_index; runtime binding
+    may remain WITH_GAPS.
+mappings:
+- legacy_asset_id: LEGACY_GMGN_CANDIDATES_LIVE_RUN
+  new_mapping: read through S00 absorption map; no new primary writes except legacy-compatible
+    runner
+  absorption_mode: keep_in_place
+- legacy_asset_id: LEGACY_SIKK_LIVE_RUN_SCRIPT
+  new_mapping: RUNNER_SIKK_LIVE_RUN_LEGACY
+  absorption_mode: wrap_runner

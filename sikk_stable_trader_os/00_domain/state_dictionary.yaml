@@ -1,0 +1,53 @@
+{
+  "version": "2.0",
+  "system": "SIKK Stable Trader OS",
+  "source_doc_id": "DOC-20260511-005",
+  "states": {
+    "wallet_roles": [
+      "UNKNOWN_WALLET",
+      "EARLY_STRUCTURE_WALLET",
+      "NEW_SNIPER_WALLET",
+      "TEMP_EXECUTION_WALLET",
+      "SAME_SOURCE_EXECUTION_WALLET",
+      "DISTRIBUTION_RECEIVER_WALLET",
+      "DISTRIBUTION_WALLET",
+      "PROFIT_COLLECTOR_WALLET",
+      "CORE_FUNDING_SOURCE_WALLET",
+      "COUNTERPARTY_WHALE_WALLET",
+      "RETAIL_WALLET"
+    ],
+    "market_scenes": [
+      "ACCUMULATION",
+      "MARKUP",
+      "SECOND_STAGE_EXPANSION",
+      "HIGH_DISTRIBUTION",
+      "DOWNTREND_DISTRIBUTION",
+      "BULL_TRAP_REBOUND",
+      "EXIT_LIQUIDITY_TRAP",
+      "FAKE_SIDEWAYS",
+      "RE_ACCUMULATION",
+      "TERMINAL_MARKUP_DISTRIBUTION",
+      "WASH_VOLUME_FAKE_BREAKOUT",
+      "COUNTERPARTY_WHALE_TRAP",
+      "UNKNOWN_SCENE"
+    ],
+    "chip_states": [
+      "CHIP_CONTROL_RETAINED",
+      "CHIP_CONTROL_WEAKENING",
+      "CHIP_TRANSFER_ACTIVE",
+      "DISTRIBUTION_ACTIVE",
+      "COUNTERPARTY_DOMINANT",
+      "CONTROL_COLLAPSED",
+      "CHIP_STATE_UNKNOWN"
+    ],
+    "gate_decisions": [
+      "STRATEGY_BLOCK",
+      "STRATEGY_PAUSE",
+      "STRATEGY_WATCH",
+      "PAPER_READY",
+      "READY_FOR_CONFIRMATION",
+      "RISK_REJECTED",
+      "RISK_APPROVED"
+    ]
+  }
+}

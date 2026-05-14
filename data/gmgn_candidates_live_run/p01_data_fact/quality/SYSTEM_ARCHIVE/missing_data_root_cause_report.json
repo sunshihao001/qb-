@@ -1,0 +1,18 @@
+{
+  "missing_fields": [
+    {
+      "missing_field": "quote_price",
+      "root_cause": "LIVE_FETCH_DISABLED",
+      "impact": "market facts paused",
+      "resolution_plan": "run OKX quote capability audit and replay fixture",
+      "priority": "HIGH"
+    },
+    {
+      "missing_field": "funding_relation_edges",
+      "root_cause": "SOURCE_CAPABILITY_UNCONFIRMED",
+      "impact": "same-source confidence capped",
+      "resolution_plan": "audit GMGN/OKX or behavior similarity fallback",
+      "priority": "HIGH"
+    }
+  ]
+}

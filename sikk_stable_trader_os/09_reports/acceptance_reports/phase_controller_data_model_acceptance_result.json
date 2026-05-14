@@ -1,0 +1,19 @@
+{
+  "status": "PHASE_CONTROLLER_DATA_MODEL_READY",
+  "overall": true,
+  "errors": [],
+  "warnings": [],
+  "phase_count": 10,
+  "required_files_per_phase": 9,
+  "total_required_phase_files": 90,
+  "core_definition_present": true,
+  "runtime_boundary": "OBSERVE_PAPER_ONLY",
+  "secret_hits": {
+    "openrouter_key": 0,
+    "generic_openai_key": 0,
+    "telegram_bot_token": 0
+  },
+  "next_phase_allowed": true,
+  "next_phase": "system_planes_definition_landing",
+  "hard_negative_hits": []
+}

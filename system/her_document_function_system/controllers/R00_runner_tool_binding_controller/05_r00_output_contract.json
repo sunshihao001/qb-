@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "R00 output contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "preflight_result",
+    "binding_target_inventory",
+    "binding_manifest",
+    "command_contract",
+    "cli_binding",
+    "orchestrator_binding",
+    "tool_binding",
+    "telegram_binding",
+    "report_binding",
+    "dashboard_binding",
+    "scheduler_binding",
+    "dry_run_evidence",
+    "generated_outputs_manifest",
+    "gap_report",
+    "trace_log",
+    "audit_log",
+    "acceptance_result",
+    "handoff_packet",
+    "final_report"
+  ],
+  "properties": {
+    "preflight_result": {
+      "type": "string"
+    },
+    "binding_target_inventory": {
+      "type": "string"
+    },
+    "binding_manifest": {
+      "type": "string"
+    },
+    "command_contract": {
+      "type": "string"
+    },
+    "cli_binding": {
+      "type": "string"
+    },
+    "orchestrator_binding": {
+      "type": "string"
+    },
+    "tool_binding": {
+      "type": "string"
+    },
+    "telegram_binding": {
+      "type": "string"
+    },
+    "report_binding": {
+      "type": "string"
+    },
+    "dashboard_binding": {
+      "type": "string"
+    },
+    "scheduler_binding": {
+      "type": "string"
+    },
+    "dry_run_evidence": {
+      "type": "string"
+    },
+    "generated_outputs_manifest": {
+      "type": "string"
+    },
+    "gap_report": {
+      "type": "string"
+    },
+    "trace_log": {
+      "type": "string"
+    },
+    "audit_log": {
+      "type": "string"
+    },
+    "acceptance_result": {
+      "type": "string"
+    },
+    "handoff_packet": {
+      "type": "string"
+    },
+    "final_report": {
+      "type": "string"
+    }
+  }
+}

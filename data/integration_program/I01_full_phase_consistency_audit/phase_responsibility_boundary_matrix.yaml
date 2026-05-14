@@ -1,0 +1,46 @@
+matrix_id: responsibility_boundary_i01_001
+generated_at: '2026-05-12T12:09:20.376839+00:00'
+boundary_checks:
+  P01:
+    expected_role: 候选接收与候选主档建立
+    audit_result: NO_EXPLICIT_BOUNDARY_VIOLATION_DETECTED
+    forbidden_runtime_mutations_preserved: true
+  P02:
+    expected_role: 数据事实采集、标准化、质量检查
+    audit_result: NO_EXPLICIT_BOUNDARY_VIOLATION_DETECTED
+    forbidden_runtime_mutations_preserved: true
+  P03:
+    expected_role: 钱包实体、地址归并、角色候选
+    audit_result: NO_EXPLICIT_BOUNDARY_VIOLATION_DETECTED
+    forbidden_runtime_mutations_preserved: true
+  P04:
+    expected_role: 筹码结构、留存、迁移、对手盘压力
+    audit_result: NO_EXPLICIT_BOUNDARY_VIOLATION_DETECTED
+    forbidden_runtime_mutations_preserved: true
+  P05:
+    expected_role: 证据对象、反证、冲突、未知证据
+    audit_result: NO_EXPLICIT_BOUNDARY_VIOLATION_DETECTED
+    forbidden_runtime_mutations_preserved: true
+  P06:
+    expected_role: 场景候选、冲突场景、失效条件
+    audit_result: NO_EXPLICIT_BOUNDARY_VIOLATION_DETECTED
+    forbidden_runtime_mutations_preserved: true
+  P07:
+    expected_role: 策略门控、观察、暂停、阻断、纸面候选
+    audit_result: NO_EXPLICIT_BOUNDARY_VIOLATION_DETECTED
+    forbidden_runtime_mutations_preserved: true
+  P08:
+    expected_role: 执行前风控、纸面运行许可
+    audit_result: NO_EXPLICIT_BOUNDARY_VIOLATION_DETECTED
+    forbidden_runtime_mutations_preserved: true
+  P09:
+    expected_role: 复盘回放、失败归因、校准候选
+    audit_result: NO_EXPLICIT_BOUNDARY_VIOLATION_DETECTED
+    forbidden_runtime_mutations_preserved: true
+  P10:
+    expected_role: 受控升级审查、升级包、回滚计划
+    audit_result: NO_EXPLICIT_BOUNDARY_VIOLATION_DETECTED
+    forbidden_runtime_mutations_preserved: true
+output:
+  boundary_violation_count: 0
+  boundary_violation_records_path: /root/sikk-gmgn/data/integration_program/I01_full_phase_consistency_audit/boundary_violations/phase_boundary_violation_report.yaml

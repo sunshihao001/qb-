@@ -1,0 +1,10 @@
+market_cap_context:
+  discovery_market_cap_usd: number
+  current_market_cap_usd: number
+  market_cap_change_from_discovery_pct: number
+  market_cap_at_wallet_decision_usd: number
+  market_cap_at_signal_usd: number
+  market_cap_at_paper_entry_usd: number
+  market_cap_stage_label: [EARLY, MID_EXPANSION, LATE_EXPANSION, HIGH_RISK_CHASING, EXIT_LIQUIDITY_ZONE, UNKNOWN]
+  market_cap_context_status: [SUPPORTS_EARLY_STRUCTURE, NEUTRAL, WARNING_LATE_ENTRY, BLOCK_EXIT_LIQUIDITY_RISK, UNKNOWN]
+interpretation_rule: 同一钱包行为必须结合市值阶段解释；高位承接不能自动解释为健康买入。

@@ -1,0 +1,7 @@
+{"ts": "2026-05-14T13:40:44Z", "event": "ISSUE_PACK_CREATED", "issue_pack_id": "ISSUEPACK-S00-HERDOC-20260514-001", "status": "ISSUE_PACK_READY_FOR_SAFE_AUTOMATION_WITH_GAPS"}
+{"ts": "2026-05-14T13:40:44Z", "event": "SYSTEM_REVIEW_READY", "route": "HER_DOC_SYSTEM_REVIEW"}
+{"ts": "2026-05-14T14:24:43Z", "event": "FULL_AUTOMATION_START", "safe_mode": true, "pack_id": "ISSUEPACK-S00-HERDOC-20260514-001"}
+{"ts": "2026-05-14T14:24:43Z", "event": "SYSTEM_REVIEW_OUTPUTS_WRITTEN", "dir": "/root/sikk-gmgn/data/her_document_function_system/issue_packs/ISSUEPACK-S00-HERDOC-20260514-001/outputs/system_review"}
+{"ts": "2026-05-14T14:24:43Z", "event": "SYSTEM_AUDIT_OUTPUTS_WRITTEN", "dir": "/root/sikk-gmgn/data/her_document_function_system/issue_packs/ISSUEPACK-S00-HERDOC-20260514-001/outputs/system_audit", "parse_errors": 0}
+{"ts": "2026-05-14T14:27:43Z", "event": "HER_DOC_PIPELINE_EXECUTED", "run_id": "RUN-S00-HERDOC-20260514-001", "run_dir": "/root/sikk-gmgn/data/her_document_function_system/runs/RUN-S00-HERDOC-20260514-001"}
+{"ts": "2026-05-14T14:27:43Z", "event": "ISSUE_AUTOMATION_OUTPUTS_WRITTEN", "status": "S00_AUTOMATION_APPLIED_READY_WITH_GAPS"}

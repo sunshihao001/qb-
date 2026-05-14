@@ -1,0 +1,39 @@
+schema_id: P09_ACCEPTANCE_RESULT_SCHEMA
+title: P09 Acceptance Result
+version: v3.0
+controller: P09_REVIEW_REPLAY_CONTROLLER
+generated_from: DOC-20260512-P09_REVIEW_REPLAY_CONTROLLER_V3
+required:
+- acceptance_id
+- status
+- blocking_gaps
+- runtime_gaps
+- safety_boundary_passed
+fields:
+  acceptance_id: string
+  status: enum
+  blocking_gaps: list
+  runtime_gaps: list
+  safety_boundary_passed: boolean
+enums:
+  status:
+  - P09_READY
+  - P09_READY_WITH_GAPS
+  - P09_REJECTED
+  - P09_BLOCKED
+notes: []
+safety:
+  review_only: true
+  no_direct_rule_mutation: true
+  runtime_mutation_allowed: false
+  paper_runtime_allowed: false
+  live_execution_allowed: false
+  forbidden:
+  - direct_rule_mutation
+  - runtime_patch
+  - paper_runtime_start
+  - live_execution
+  - wallet_signing
+  - order_broadcast
+  - swap_execution
+  - bypass_p10

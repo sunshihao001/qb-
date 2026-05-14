@@ -1,0 +1,15 @@
+record_id: index_gap_report_20260512
+generated_at: '2026-05-12T13:05:00Z'
+status: BUILT_WITH_GAPS
+gaps:
+- gap_id: LEGACY_ROOT_MISSING
+  severity: LOW
+  path: /root/sikk-gmgn/data/shared_handoff
+  source_index: legacy
+summary:
+  total_gaps: 1
+  high: 0
+  medium: 0
+  low: 1
+restrictions:
+- gaps do not unblock runtime

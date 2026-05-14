@@ -1,0 +1,68 @@
+schema_id: "chip_cost_basis_schema"
+json_schema:
+  $schema: "https://json-schema.org/draft/2020-12/schema"
+  title: "Chip Cost Basis Record"
+  description: "P04 structure-state record. Candidate-only and trace-required."
+  type: "object"
+  required:
+    - "record_id"
+    - "cohort_id"
+    - "cost_basis_quality"
+    - "trace_ids"
+  properties:
+    record_id:
+      type: "string"
+    token_address:
+      type:
+        - "string"
+        - "null"
+    snapshot_time:
+      type:
+        - "string"
+        - "null"
+    cohort_id:
+      type:
+        - "string"
+        - "null"
+    wallet_entity_id:
+      type:
+        - "string"
+        - "null"
+    candidate_only:
+      const: true
+    source_record_ids:
+      type: "array"
+      items:
+        type: "string"
+    trace_ids:
+      type: "array"
+      items:
+        type: "string"
+    limitations:
+      type: "array"
+      items:
+        type: "string"
+    quality_level:
+      type: "string"
+      enum:
+        - "BLOCKED"
+        - "LOW"
+        - "MEDIUM"
+        - "HIGH"
+        - "UNKNOWN"
+        - "NOT_APPLICABLE"
+    created_at:
+      type: "string"
+    estimated_cost_basis:
+      type:
+        - "number"
+        - "null"
+    cost_basis_quality:
+      type: "string"
+      enum:
+        - "MISSING"
+        - "LOW"
+        - "MEDIUM"
+        - "HIGH"
+        - "UNKNOWN"
+  additionalProperties: true

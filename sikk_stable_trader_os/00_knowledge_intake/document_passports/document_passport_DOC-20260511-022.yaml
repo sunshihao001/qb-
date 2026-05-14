@@ -1,0 +1,42 @@
+doc_id: DOC-20260511-022
+source_type: user_uploaded_text_markdown
+source_name: "Domain：领域平面专业⭐.md"
+received_at: "2026-05-11"
+raw_path: "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260511-022_domain_plane_professional_design.md"
+sha256: "2b0909bbb9b81587c9accf14d01c90612cc3c1be523c6cf8f8bf1afd329f7a25"
+document_role:
+  primary_role: DOMAIN_PLANE_PROFESSIONAL_DESIGN_TASKBOOK
+  secondary_roles:
+    - DOMAIN_OBJECT_REGISTRY_SPEC
+    - DOMAIN_REASONING_BOUNDARY_SPEC
+    - DOMAIN_TO_DATA_REQUIREMENT_SPEC
+    - DOMAIN_ACCEPTANCE_AND_HANDOFF_SPEC
+summary:
+  core_intent: "将 Domain Plane 从说明文档升级为 HER 可读取、可验收、可交接的领域语义运行单元。"
+  key_points:
+    - "Domain Plane 决定系统到底在判断什么，不生成买卖信号。"
+    - "必须定义领域对象、钱包角色、主导侧生命周期、场景、证据、反证、硬否定、市值上下文、推理边界。"
+    - "必须向 Data Plane 输出字段需求，并生成 handoff 合约。"
+    - "必须保持 paper-only、no-real-trade、no-buy-signal。"
+system_mapping:
+  planes:
+    - Domain Plane
+    - Data Plane
+    - Evidence Plane
+    - Scenario Recognition Plane
+    - Strategy Gate Plane
+    - Acceptance Plane
+    - Handoff Plane
+  affected_phases:
+    - K00_knowledge_intake_taskization
+    - P00_system_bootstrap_controller
+    - P02_domain_plane_professionalization
+    - P03_data_plane_generation
+required_actions:
+  - PRESERVE_RAW_INPUT
+  - GENERATE_DOMAIN_PLANE_FILE_SET
+  - GENERATE_DOMAIN_ACCEPTANCE_RESULT
+  - UPDATE_CONTROL_STATE
+  - KEEP_P01_BLOCKED
+evidence_level: EVIDENCE_A_STRONG
+status: PASSPORT_READY

@@ -1,0 +1,8 @@
+data_to_phase_trace_matrix:
+  token_identity: [P01_data_fact_controller]
+  wallet_identity: [P01_data_fact_controller, P02_wallet_structure_controller]
+  wallet_behavior: [P01_data_fact_controller, P02_wallet_structure_controller]
+  chip_distribution: [P01_data_fact_controller, P03_chip_control_controller]
+  kline_volume_structure: [P01_data_fact_controller, P04_market_structure_controller]
+  scenario_context: [P05_scenario_classification_controller]
+  strategy_gate_fact: [P06_strategy_gate_controller]

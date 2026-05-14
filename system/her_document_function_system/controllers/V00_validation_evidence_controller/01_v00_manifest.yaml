@@ -1,0 +1,94 @@
+controller_name: V00_validation_evidence_controller
+controller_type: HER_PHASE_CONTROLLER
+phase_id: V00
+phase_name: Validation Evidence Controller
+chinese_name: 验证证据控制器
+version: 1.0.0
+system: HER-DFAFS
+owner_layer: 05_validation_evidence
+purpose: >-
+  Convert F00 outputs into executable validation, traceable evidence,
+  auditable results, acceptance status, and downstream handoff packets.
+upstream_phase:
+  - K00_knowledge_intake
+  - F00_function_realization
+downstream_phase:
+  - R00_runner_binding_controller
+  - A00_acceptance_evidence_controller
+  - H00_handoff_controller
+  - U00_review_upgrade_controller
+entry_status_required:
+  - F00_ACCEPTED
+  - F00_READY_WITH_GAPS
+allowed_modes:
+  - SCHEMA_VALIDATE
+  - CONTRACT_VALIDATE
+  - SAFE_TEST
+  - SAFE_REPLAY
+  - EVIDENCE_COLLECT
+permissions:
+  - read_k00_handoff
+  - read_f00_handoff
+  - read_function_mapping
+  - read_field_model
+  - read_rule_logic
+  - read_schema_contract_plan
+  - read_patch_plan
+  - read_modified_files
+  - read_test_plan
+  - read_replay_plan
+  - validate_schema
+  - validate_contract
+  - validate_field_model
+  - validate_rule_logic
+  - execute_safe_tests
+  - execute_safe_replay
+  - write_validation_report
+  - write_test_evidence
+  - write_replay_evidence
+  - write_failure_evidence
+  - write_trace_audit
+  - write_acceptance_precheck
+  - write_v00_handoff
+forbidden_actions:
+  - bypass_f00
+  - validate_without_f00_handoff
+  - treat_test_plan_as_test_evidence
+  - treat_replay_plan_as_replay_evidence
+  - declare_passed_without_command_output
+  - declare_schema_valid_without_validation
+  - declare_contract_valid_without_validation
+  - declare_runner_bound
+  - start_live_runtime
+  - wallet_signing
+  - auto_deploy
+  - modify_production_rules
+  - delete_source_files
+  - overwrite_raw_documents
+  - hide_failed_tests
+  - convert_failed_to_passed
+  - remove_unresolved_gaps
+outputs:
+  - v00_preflight_result
+  - input_evidence_status
+  - function_mapping_validation_result
+  - field_model_validation_result
+  - rule_logic_validation_result
+  - schema_validation_result
+  - contract_validation_result
+  - patch_evidence_validation_result
+  - test_evidence
+  - replay_evidence
+  - failure_evidence
+  - v00_gap_report
+  - v00_trace
+  - v00_audit
+  - v00_acceptance_result
+  - v00_handoff_packet
+  - v00_final_report
+completion_status:
+  success: V00_ACCEPTED
+  gaps: V00_READY_WITH_GAPS
+  blocked: V00_BLOCKED
+  rejected: V00_REJECTED
+updated_at: "2026-05-13T14:35:55.001746+00:00"

@@ -1,0 +1,14 @@
+plane: HANDOFF_PLANE
+version: v2.0
+doc_id: DOC-20260511-027
+updated_at: '2026-05-11T17:41:51Z'
+paper_only: true
+real_trade_enabled: false
+handoff_status_codes:
+- HANDOFF_READY
+- HANDOFF_READY_WITH_GAPS
+- HANDOFF_LIMITED
+- HANDOFF_OBSERVE_ONLY
+- HANDOFF_BLOCKED
+- HANDOFF_REJECTED
+- HANDOFF_CONSUMED_BY_DOWNSTREAM

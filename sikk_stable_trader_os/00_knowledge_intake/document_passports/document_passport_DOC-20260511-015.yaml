@@ -1,0 +1,26 @@
+doc_id: DOC-20260511-015
+parent_doc_id: DOC-20260511-006
+document_type: system_methodology_blueprint_continuation
+section: 10. Governance Plane 阶段目标数据
+raw_input_path: 00_knowledge_intake/raw_inputs/DOC-20260511-015.md
+canonical_path: 00_methodology/system_methodology_blueprint.md
+derived_assets:
+- 00_governance/governance_phase_target_data.raw_user_proposed.yaml
+- 00_governance/governance_phase_target_data.yaml
+- 00_governance/authority_boundary.yaml
+- 00_governance/hard_negative_rules.yaml
+- 00_governance/risk_boundary.yaml
+- 00_governance/stage_permission_matrix.yaml
+- 00_governance/real_trade_forbidden_policy.yaml
+sha256: fa655147876024fc7abe1e1d2305389d20eafc581b6c86540f4c306473324069
+canonical_sha256_after_update: f009b95818f70d838bf3c11dcb763c805ef947c9f47df9ad9a654f961c391661
+intake_time: '2026-05-11T14:15:02.799034+00:00'
+status: CANONICAL_SECTION_APPENDED_WITH_RECONCILIATION_GAPS
+safety_boundary:
+  paper_only: true
+  read_only_research: true
+  real_trade_enabled: false
+  signing_enabled: false
+  broadcast_enabled: false
+  auto_swap_enabled: false
+  secret_access: not_requested_not_used

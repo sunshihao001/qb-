@@ -1,0 +1,82 @@
+{
+  "handoff_id": "full_system_runtime::replay_MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET",
+  "handoff_status": "READY_WITH_DEGRADED_GAPS",
+  "runtime_status": "FULL_SYSTEM_AUTOMATION_READY_WITH_GAPS",
+  "runtime_boundary": "OBSERVE_PAPER_ONLY",
+  "source_result": "reports/system_audit/full_system_automation_result.json",
+  "source_acceptance": "reports/system_audit/full_system_automation_acceptance.json",
+  "checkpoint_path": "runtime_logs/full_system_runtime/checkpoint_state.json",
+  "phase_handoff_chain": [
+    "/root/sikk-gmgn/shared_handoff/phase_01/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_01_handoff_packet.json",
+    "/root/sikk-gmgn/shared_handoff/phase_02/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_02_handoff_packet.json",
+    "/root/sikk-gmgn/shared_handoff/phase_03/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_03_handoff_packet.json",
+    "/root/sikk-gmgn/shared_handoff/phase_04/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_04_handoff_packet.json",
+    "/root/sikk-gmgn/shared_handoff/phase_05/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_05_handoff_packet.json",
+    "/root/sikk-gmgn/shared_handoff/phase_06/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_06_handoff_packet.json",
+    "/root/sikk-gmgn/shared_handoff/phase_07/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_07_handoff_packet.json",
+    "/root/sikk-gmgn/shared_handoff/phase_08/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_08_handoff_packet.json",
+    "/root/sikk-gmgn/shared_handoff/phase_09/MOCK_TOKEN_ADDRESS_DO_NOT_USE_REAL_SECRET/phase_09_handoff_packet.json"
+  ],
+  "wave_artifacts": {
+    "wave4_p08_p09": {
+      "phase08_handoff": "/root/sikk-gmgn/runtime_logs/full_system_runtime/wave4_p08_p09/08_review_learning/handoff/phase_08_handoff_packet.json",
+      "phase09_handoff": "/root/sikk-gmgn/runtime_logs/full_system_runtime/wave4_p08_p09/09_system_upgrade/handoff/phase_09_handoff_packet.json",
+      "wave4_gap_register": "/root/sikk-gmgn/runtime_logs/full_system_runtime/wave4_p08_p09/audit/wave4_gap_register.json",
+      "wave4_execution_trace": "/root/sikk-gmgn/runtime_logs/full_system_runtime/wave4_p08_p09/audit/wave4_execution_trace.json",
+      "wave4_state": "/root/sikk-gmgn/runtime_logs/full_system_runtime/wave4_p08_p09/state/wave4_state.json",
+      "wave4_handoff": "/root/sikk-gmgn/runtime_logs/full_system_runtime/wave4_p08_p09/handoff/wave4_p08_p09_handoff_packet.json",
+      "wave4_audit": "/root/sikk-gmgn/runtime_logs/full_system_runtime/wave4_p08_p09/audit/wave4_audit.md",
+      "wave4_result": "/root/sikk-gmgn/runtime_logs/full_system_runtime/wave4_p08_p09/control/wave4_result.json"
+    },
+    "patch_and_regression": {
+      "patch_gap_register": "/root/sikk-gmgn/runtime_logs/full_system_runtime/patch_and_regression/audit/patch_regression_gap_register.json",
+      "gap_closure_package": "/root/sikk-gmgn/runtime_logs/full_system_runtime/patch_and_regression/control/gap_closure_package.json",
+      "patch_state": "/root/sikk-gmgn/runtime_logs/full_system_runtime/patch_and_regression/state/patch_regression_state.json",
+      "patch_handoff": "/root/sikk-gmgn/runtime_logs/full_system_runtime/patch_and_regression/handoff/patch_regression_handoff_packet.json",
+      "patch_audit": "/root/sikk-gmgn/runtime_logs/full_system_runtime/patch_and_regression/audit/patch_regression_audit.md",
+      "patch_result": "/root/sikk-gmgn/runtime_logs/full_system_runtime/patch_and_regression/control/patch_regression_result.json"
+    }
+  },
+  "blocking_issues": [],
+  "degraded_issues": [
+    {
+      "issue_id": "PHASE_09_LOW_CONFIDENCE_REPLAY",
+      "severity": "degraded",
+      "reason": "replay fixture uses explicit low-confidence mock/canonical handoff evidence; no real collector or live trade data used"
+    },
+    {
+      "severity": "degraded",
+      "code": "phase08_next_stage_blocked_gap_aware_progression",
+      "detail": "review_fact_missing;prior_evidence_chain_all_missing",
+      "phase": "phase_08_review_learning_controller",
+      "issue_id": "PHASE08_NEXT_STAGE_BLOCKED_GAP_AWARE_PROGRESSION",
+      "source": "wave_4_p08_p09"
+    },
+    {
+      "severity": "degraded",
+      "code": "phase08_degrade_reason",
+      "detail": "evidence_chain:data_quality_summary;evidence_chain:wallet_structure_decision;evidence_chain:chip_control_summary;evidence_chain:primary_scenario;evidence_chain:structure_position_decision;evidence_chain:strategy_gate_decision;evidence_chain:execution_risk_decision",
+      "phase": "phase_08_review_learning_controller",
+      "issue_id": "PHASE08_DEGRADE_REASON",
+      "source": "wave_4_p08_p09"
+    },
+    {
+      "severity": "degraded",
+      "code": "phase08_missing_fields",
+      "detail": "evidence_chain:data_quality_summary;evidence_chain:wallet_structure_decision;evidence_chain:chip_control_summary;evidence_chain:primary_scenario;evidence_chain:structure_position_decision;evidence_chain:strategy_gate_decision;evidence_chain:execution_risk_decision",
+      "phase": "phase_08_review_learning_controller",
+      "issue_id": "PHASE08_MISSING_FIELDS",
+      "source": "wave_4_p08_p09"
+    },
+    {
+      "severity": "degraded",
+      "code": "phase09_system_upgrade_blocked_gap_aware_progression",
+      "detail": "new_rule_would_not_preserve_known_success_cases;known_success_cases_missing",
+      "phase": "phase_09_system_upgrade_controller",
+      "issue_id": "PHASE09_SYSTEM_UPGRADE_BLOCKED_GAP_AWARE_PROGRESSION",
+      "source": "wave_4_p08_p09"
+    }
+  ],
+  "next_runtime_step": "live_input_adapter_or_business_logic_integration",
+  "created_at": "2026-05-11T08:58:03.504519+00:00"
+}

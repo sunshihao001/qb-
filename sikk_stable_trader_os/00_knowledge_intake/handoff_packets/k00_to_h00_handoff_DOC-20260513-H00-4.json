@@ -1,0 +1,32 @@
+{
+  "handoff_id": "k00_to_h00_DOC-20260513-H00-4",
+  "from_phase": "K00",
+  "to_phase": "H00_REAL_DOWNSTREAM_QUEUE",
+  "status": "K00_ACCEPTED_WITH_GAPS",
+  "material_id": "DOC-20260513-H00-4",
+  "k00_assets": {
+    "raw": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/raw_inputs/DOC-20260513-H00-4_H00_REAL_DOWNSTREAM_QUEUE_READY_WITH_GAPS.md",
+    "passport": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/document_passports/document_passport_DOC-20260513-H00-4.yaml",
+    "index": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/corpus_index/corpus_index_DOC-20260513-H00-4.json",
+    "mapping": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/system_mapping/system_mapping_DOC-20260513-H00-4.json",
+    "gap": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/gap_detection/gap_detection_DOC-20260513-H00-4.json",
+    "task": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/task_packages/task_package_DOC-20260513-H00-4_H00_REAL_DOWNSTREAM_QUEUE.md",
+    "handoff": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/handoff_packets/k00_to_h00_handoff_DOC-20260513-H00-4.json",
+    "report": "/root/sikk-gmgn/sikk_stable_trader_os/00_knowledge_intake/intake_reports/intake_report_DOC-20260513-H00-4.md"
+  },
+  "required_next_action": "implement_and_execute_h00_real_downstream_queue_safe_mode",
+  "execution_boundary": {
+    "write_files": true,
+    "write_code": true,
+    "run_tests": true,
+    "safe_mode_required": true,
+    "forbidden_actions": [
+      "live_runtime",
+      "wallet_signing",
+      "auto_deploy",
+      "production_trading",
+      "execute_real_order"
+    ]
+  },
+  "repo_root": "/root/sikk-gmgn"
+}

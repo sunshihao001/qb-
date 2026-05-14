@@ -1,0 +1,28 @@
+{
+  "handoff_id": "handoff_g00_to_o00_g00_real_policy_20260514_0024",
+  "from_phase": "G00_REAL_GOVERNANCE_POLICY_REGISTRY",
+  "to_phase": "O00",
+  "handoff_type": "REAL_GOVERNANCE_POLICY_HANDOFF",
+  "governance_registry_ref": "registry/governance_registry.json",
+  "active_policy_bundle_ref": "policy_bundles/active_policy_bundle.json",
+  "policy_conflict_report_ref": "conflict_check/policy_conflict_report.json",
+  "policy_versioning_ref": "versioning/policy_versioning.json",
+  "required_next_action": "controllers_must_load_policy_bundle_before_next_execution",
+  "allowed_next_actions": [
+    "load_active_policy_bundle",
+    "validate_status_against_status_code_policy",
+    "validate_evidence_against_evidence_policy",
+    "inherit_forbidden_actions",
+    "preserve_gap_policy"
+  ],
+  "forbidden_next_actions": [
+    "ignore_governance_policy",
+    "weaken_forbidden_actions",
+    "treat_local_active_as_system_enforced_without_consumption_evidence",
+    "start_live_runtime",
+    "wallet_signing",
+    "auto_deploy",
+    "production_trading"
+  ],
+  "handoff_status": "POLICY_HANDOFF_READY_WITH_GAPS"
+}

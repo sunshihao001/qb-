@@ -1,0 +1,19 @@
+acceptance_trace_record:
+  trace_id: string
+  acceptance_id: required
+  target_phase: required
+  target_artifact_ids: required
+  acceptance_gate_id: required
+  executed_at: required
+  checks: required
+  result: required
+  downstream_permission: required
+  required_trace_links:
+    - parent_trace_ids
+    - child_trace_ids
+    - related_artifact_trace_ids
+  validation_rules:
+    - trace_id_present
+    - source_present
+    - downstream_usage_declared
+    - forbidden_actions_respected

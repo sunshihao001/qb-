@@ -1,0 +1,294 @@
+{
+  "version": "1.1.0",
+  "name": "SIKK-GMGN System Directory Constitution Routes",
+  "project_root": "/root/sikk-gmgn",
+  "global_roots": {
+    "docs": "docs/",
+    "modules": "modules/",
+    "tests": "tests/",
+    "data": "data/",
+    "reports": "reports/",
+    "research_loop": "research_loop/",
+    "imports": "imports/",
+    "schemas": "schemas/",
+    "contracts": "contracts/",
+    "tools": "tools/",
+    "legacy_compat": "legacy_compat/"
+  },
+  "asset_class_routes": {
+    "wallet_data_read_priority": "legacy_compat/read_fallbacks/wallet_data_read_priority_v1.md",
+    "wallet_path_resolver": "modules/source_wallet_bot/path_resolver.py",
+    "wallet_source_trigger": {
+      "text": "ca",
+      "aliases": [
+        "CA",
+        "ca <token_address>"
+      ],
+      "bot": "source_wallet_bot",
+      "data_root": "data/source_wallet_bot/{mode}/{token_address}/",
+      "primary_layers": [
+        "wallet_data/",
+        "structure_analysis/"
+      ],
+      "policy": "只读观察；不执行真实交易、不签名、不广播"
+    },
+    "method_passport": "research_loop/methodology/passports/{source_id}_passport.{ext}",
+    "method_rule": "research_loop/methodology/rules/{rule_family}.{ext}",
+    "counter_evidence_rule": "research_loop/methodology/counter_evidence/{counter_rule}.{ext}",
+    "stat_model": "research_loop/methodology/stat_models/{model_name}.{ext}",
+    "audit_rule": "research_loop/methodology/audit_rules/{audit_name}.{ext}",
+    "field_map": "research_loop/methodology/field_maps/{map_name}.{ext}",
+    "code": "modules/{bot_or_domain}/",
+    "test": "tests/test_{module}_{feature}.py",
+    "system_schema": "schemas/shared/{schema_name}.json",
+    "module_schema": "modules/{bot}/schemas/{schema_name}.json",
+    "system_contract": "contracts/shared/{contract_name}.md",
+    "bot_handoff_contract": "contracts/bot_handoff/{contract_name}.md",
+    "runtime_data": "data/{bot}/{mode}/{asset_id}/",
+    "report": "reports/{bot}/{mode}/{asset_id}/{report_name}.md",
+    "import_staging": "imports/staging/{import_id}/",
+    "legacy_manifest": "legacy_compat/manifests/{manifest_name}.json",
+    "legacy_path_map": "legacy_compat/path_maps/{map_name}.json",
+    "legacy_read_fallback": "legacy_compat/read_fallbacks/{fallback_name}.md",
+    "planbook_repository_protocol": "docs/09_her_execution_protocol/trading_system_planbook_repository_protocol.md",
+    "planbook_root": "research_loop/plan_books/{status}/{planbook_id}.md",
+    "planbook_index": "research_loop/plan_books/index/planbook_index.json",
+    "planbook_reader": "modules/runtime/planbook_repository.py",
+    "planbook_validation_report": "reports/system_audit/planbook_repository_validation.json"
+  },
+  "research_loop": {
+    "plans": "research_loop/plans/{task_name}.md",
+    "checkpoints": "research_loop/checkpoints/{round_name}.md",
+    "acceptance": "research_loop/acceptance/{task_name}_acceptance.md",
+    "blockers": "research_loop/blockers/{task_name}_blocker_report.md",
+    "state": "research_loop/state/{task_id}/loop_state.json",
+    "task_packages": "research_loop/task_packages/{status}/{task_id}/",
+    "plan_books": "research_loop/plan_books/{status}/{planbook_id}.md",
+    "planbook_index": "research_loop/plan_books/index/planbook_index.json"
+  },
+  "bots": {
+    "source_wallet_bot": {
+      "code": "modules/source_wallet_bot/",
+      "tests_prefix": "tests/test_source_wallet_",
+      "schemas": "modules/source_wallet_bot/schemas/",
+      "contracts": "modules/source_wallet_bot/contracts/",
+      "data_root": "data/source_wallet_bot/{mode}/{asset_id}/",
+      "reports_root": "reports/source_wallet_bot/{mode}/{asset_id}/",
+      "token_layout": {
+        "wallet_data_raw": "data/source_wallet_bot/{mode}/{asset_id}/wallet_data/raw/",
+        "wallet_data_normalized": "data/source_wallet_bot/{mode}/{asset_id}/wallet_data/normalized/",
+        "wallet_data_summary": "data/source_wallet_bot/{mode}/{asset_id}/wallet_data/summary/",
+        "structure_wallet_fact": "data/source_wallet_bot/{mode}/{asset_id}/structure_analysis/wallet_fact/",
+        "structure_intelligence": "data/source_wallet_bot/{mode}/{asset_id}/structure_analysis/intelligence/",
+        "structure_handoff": "data/source_wallet_bot/{mode}/{asset_id}/structure_analysis/handoff/",
+        "structure_reports": "data/source_wallet_bot/{mode}/{asset_id}/structure_analysis/reports/",
+        "manifest": "data/source_wallet_bot/{mode}/{asset_id}/manifest/"
+      },
+      "asset_routes": {
+        "gmgn_wallet_rows_raw.json": "wallet_data/raw/gmgn_wallet_rows_raw.json",
+        "gmgn_wallet_trade_input.json": "wallet_data/raw/gmgn_wallet_trade_input.json",
+        "gmgn_wallet_profile_input.json": "wallet_data/raw/gmgn_wallet_profile_input.json",
+        "wallet_trade_normalized.json": "wallet_data/normalized/wallet_trade_normalized.json",
+        "wallet_entity_profile_normalized.json": "wallet_data/normalized/wallet_entity_profile_normalized.json",
+        "token_transfer_normalized.json": "wallet_data/normalized/token_transfer_normalized.json",
+        "token_source_classification_base.json": "wallet_data/normalized/token_source_classification_base.json",
+        "funding_flow_normalized.json": "wallet_data/normalized/funding_flow_normalized.json",
+        "funding_source_normalized.json": "wallet_data/normalized/funding_source_normalized.json",
+        "backflow_paths_normalized.json": "wallet_data/normalized/backflow_paths_normalized.json",
+        "gmgn_wallet_tags_normalized.json": "wallet_data/normalized/gmgn_wallet_tags_normalized.json",
+        "wallet_snapshot_delta_source.json": "wallet_data/normalized/wallet_snapshot_delta_source.json",
+        "holder_delta_normalized.json": "wallet_data/normalized/holder_delta_normalized.json",
+        "quote_security_normalized.json": "wallet_data/normalized/quote_security_normalized.json",
+        "summary_overview.json": "wallet_data/summary/summary_overview.json",
+        "summary_overview.md": "wallet_data/summary/summary_overview.md",
+        "same_source_evidence_normalized.json": "structure_analysis/intelligence/same_source_evidence_normalized.json",
+        "wallet_intelligence_decision.json": "structure_analysis/intelligence/wallet_intelligence_decision.json",
+        "bot2_handoff_packet.json": "structure_analysis/handoff/bot2_handoff_packet.json",
+        "wallet_structure_normalized.json": "structure_analysis/wallet_fact/wallet_structure_normalized.json",
+        "chip_distribution_summary.json": "structure_analysis/wallet_fact/chip_distribution_summary.json",
+        "same_source_groups.json": "structure_analysis/wallet_fact/same_source_groups.json",
+        "fund_flow_edges.csv": "structure_analysis/wallet_fact/fund_flow_edges.csv",
+        "address_history.json": "structure_analysis/wallet_fact/address_history.json",
+        "wallet_fact_package_manifest.json": "structure_analysis/wallet_fact/wallet_fact_package_manifest.json",
+        "wallet_fact_report.md": "structure_analysis/reports/wallet_fact_report.md",
+        "token_output_manifest.json": "manifest/token_output_manifest.json",
+        "directory_layout.md": "manifest/directory_layout.md"
+      },
+      "forbidden_outputs": [
+        "PAPER_READY",
+        "BLOCKED",
+        "final_trade_gate",
+        "trade_allowed",
+        "buy_signal",
+        "sell_signal",
+        "execute_now"
+      ]
+    },
+    "intel_bot": {
+      "code": "modules/intel_bot/",
+      "schemas": "modules/intel_bot/schemas/",
+      "contracts": "modules/intel_bot/contracts/",
+      "data_root": "data/intel_bot/{mode}/{asset_id}/",
+      "reports_root": "reports/intel_bot/{mode}/{asset_id}/",
+      "token_layout": {
+        "behavior_inference": "data/intel_bot/{mode}/{asset_id}/behavior_inference/",
+        "counter_evidence": "data/intel_bot/{mode}/{asset_id}/counter_evidence/",
+        "quant_scores": "data/intel_bot/{mode}/{asset_id}/quant_scores/",
+        "structure_conclusion": "data/intel_bot/{mode}/{asset_id}/structure_conclusion/",
+        "reports": "data/intel_bot/{mode}/{asset_id}/reports/",
+        "manifest": "data/intel_bot/{mode}/{asset_id}/manifest/"
+      },
+      "allowed_upstream": [
+        "data/source_wallet_bot/{mode}/{asset_id}/structure_analysis/handoff/bot2_handoff_packet.json",
+        "data/source_wallet_bot/{mode}/{asset_id}/manifest/token_output_manifest.json"
+      ],
+      "forbidden_upstream": [
+        "data/gmgn_candidates_live_run/**/dashboard*",
+        "data/gmgn_candidates_live_run/**/paper*",
+        "reports/**"
+      ]
+    },
+    "strategy_gate_bot": {
+      "code": "modules/strategy_gate_bot/",
+      "data_root": "data/strategy_gate_bot/{mode}/{asset_id}/",
+      "reports_root": "reports/strategy_gate_bot/{mode}/{asset_id}/"
+    },
+    "execution_risk_bot": {
+      "code": "modules/execution_risk_bot/",
+      "data_root": "data/execution_risk_bot/{mode}/{asset_id}/",
+      "reports_root": "reports/execution_risk_bot/{mode}/{asset_id}/"
+    },
+    "review_ops_bot": {
+      "code": "modules/review_ops_bot/",
+      "data_root": "data/review_ops_bot/{mode}/{asset_id}/",
+      "reports_root": "reports/review_ops_bot/{mode}/{asset_id}/"
+    },
+    "gmgn_candidates_live_run": {
+      "data_root": "data/gmgn_candidates_live_run/",
+      "status": "legacy_runtime_keep_in_place",
+      "new_source_wallet_outputs_allowed": false
+    }
+  },
+  "imports": {
+    "staging": "imports/staging/{import_id}/",
+    "sha256": "imports/staging/{import_id}/package.sha256",
+    "file_list": "imports/staging/{import_id}/package_file_list.txt",
+    "passport": "imports/staging/{import_id}/package_file_passport.json"
+  },
+  "deny_write_patterns": [
+    "/root/sikk-gmgn/*.json",
+    "/root/sikk-gmgn/*.csv",
+    "/root/sikk-gmgn/*.md",
+    "data/source_wallet_bot/*.json",
+    "data/*/*.json",
+    "reports/*.json",
+    "modules/*/*_runtime_output.json"
+  ],
+  "allowed_root_file_exceptions": [
+    "AGENTS.md",
+    "README.md",
+    "SIKK_*.md",
+    "sikk_*.py",
+    "run_sikk_gmgn_pipeline.py"
+  ],
+  "policy": {
+    "delete_old_files": false,
+    "move_old_files": false,
+    "copy_legacy_to_new_layout": true,
+    "future_outputs_must_use_constitution_routes": true,
+    "require_asset_class_before_write": true,
+    "require_manifest_for_token_outputs": true,
+    "no_trading": true,
+    "no_state_machine": true,
+    "no_paper_runner": true,
+    "no_private_key": true,
+    "no_signing": true,
+    "no_broadcast": true,
+    "no_swap": true
+  },
+  "governance_policies": {
+    "wallet_structure_primary_root_policy": {
+      "policy_file": "docs/source_wallet_bot/directory_governance/wallet_structure_primary_root_policy.md",
+      "primary_project_root": "/root/sikk-gmgn",
+      "primary_data_root": "data/source_wallet_bot/{mode}/{token_address}/",
+      "primary_code_roots": [
+        "modules/source_wallet_bot/",
+        "modules/wallet_structure/"
+      ],
+      "wallet_intel_role": "coordination_orchestrator_behavior_inference_only_not_primary_wallet_structure_data",
+      "forbidden_new_primary_write_roots": [
+        "/root/sikk-wallet-intel/wallet_fact/data/",
+        "/root/sikk-wallet-intel/research_loop/structure_analysis/runs/",
+        "data/source_wallet_bot/*.json",
+        "data/source_wallet_bot/live/{token_address}/wallet_fact/",
+        "/root/sikk/source-bot/"
+      ],
+      "standard_token_layers": [
+        "wallet_data/raw/",
+        "wallet_data/normalized/",
+        "wallet_data/summary/",
+        "structure_analysis/wallet_fact/",
+        "structure_analysis/intelligence/",
+        "structure_analysis/handoff/",
+        "structure_analysis/reports/",
+        "manifest/"
+      ],
+      "does_not_do": [
+        "real_swap",
+        "private_key",
+        "signing",
+        "broadcast",
+        "paper_runner",
+        "state_machine_action",
+        "final_trade_gate",
+        "buy_or_sell_advice",
+        "strong_insider_or_dealer_claims"
+      ]
+    },
+    "ai_driven_trading_structure_control_system": {
+      "policy_file": "docs/harness/trading_structure_control/AI_DRIVEN_TRADING_STRUCTURE_CONTROL_SYSTEM.md",
+      "core_chain": [
+        "skill_capability_map",
+        "system_target_map",
+        "auto_gap_discovery",
+        "auto_implementation_completion",
+        "verification_loop"
+      ],
+      "principle": "Harness Engineering: skills are verifiable workflow modules, not prompts",
+      "control_plane_roots": [
+        "docs/harness/trading_structure_control/",
+        "research_loop/state/trading_structure_control/",
+        "contracts/shared/trading_structure_control/"
+      ],
+      "allowed_final_statuses": [
+        "EXCLUDE",
+        "RECORD_ONLY",
+        "RISK_MONITOR",
+        "OBSERVE",
+        "PAPER_CANDIDATE",
+        "LIVE_CANDIDATE_REQUIRES_HUMAN_CONFIRMATION"
+      ],
+      "forbidden_final_statuses": [
+        "BUY_NOW",
+        "SELL_NOW",
+        "AUTO_TRADE",
+        "GUARANTEED_PROFIT",
+        "CONFIRMED_DEALER"
+      ],
+      "subsystems": {
+        "wallet_structure_base": "/root/sikk-gmgn/data/source_wallet_bot/{mode}/{token_address}/",
+        "coordination_behavior_harness": "/root/sikk-wallet-intel/"
+      },
+      "required_control_artifacts": [
+        "skill_registry.json",
+        "system_target_map.json",
+        "skill_gap_report.json",
+        "data_gap_report.json",
+        "contract_gap_report.json",
+        "verification_gap_report.json",
+        "permission_policy.json",
+        "acceptance_report.json"
+      ]
+    }
+  }
+}

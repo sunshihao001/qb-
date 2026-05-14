@@ -1,0 +1,97 @@
+{
+  "doc_id": "DOC-20260511-009",
+  "parent_doc_id": "DOC-20260511-006",
+  "mapped_at": "2026-05-11T13:54:52.930598+00:00",
+  "compilation_chain": [
+    "user_input_documents_links_legacy_material",
+    "K00_knowledge_intake_taskization",
+    "methodology_blueprint_read",
+    "P00_system_build_controller",
+    "governance_plane_generation",
+    "domain_plane_generation",
+    "data_plane_generation",
+    "control_plane_generation",
+    "phase_controller_generation",
+    "runner_binding",
+    "acceptance_gate_generation",
+    "trace_matrix_generation",
+    "handoff_packet_generation"
+  ],
+  "critical_breakpoint": {
+    "K00_assetization": "not_equal_to_system_consumption",
+    "required_continuation": "P00_system_build_controller"
+  },
+  "planes": {
+    "Knowledge Plane": {
+      "impact": "source",
+      "steps": [
+        "user_input_documents_links_legacy_material",
+        "K00_knowledge_intake_taskization"
+      ]
+    },
+    "Methodology Plane": {
+      "impact": "authority",
+      "steps": [
+        "methodology_blueprint_read"
+      ]
+    },
+    "Governance Plane": {
+      "impact": "generated_asset",
+      "steps": [
+        "governance_plane_generation"
+      ]
+    },
+    "Domain Plane": {
+      "impact": "generated_asset",
+      "steps": [
+        "domain_plane_generation"
+      ]
+    },
+    "Data Plane": {
+      "impact": "generated_asset",
+      "steps": [
+        "data_plane_generation"
+      ]
+    },
+    "Control Plane": {
+      "impact": "orchestrator",
+      "steps": [
+        "P00_system_build_controller",
+        "control_plane_generation"
+      ]
+    },
+    "Execution Plane": {
+      "impact": "runtime",
+      "steps": [
+        "runner_binding"
+      ]
+    },
+    "Acceptance Plane": {
+      "impact": "gate",
+      "steps": [
+        "acceptance_gate_generation"
+      ]
+    },
+    "Trace Plane": {
+      "impact": "coverage",
+      "steps": [
+        "trace_matrix_generation"
+      ]
+    },
+    "Handoff Plane": {
+      "impact": "downstream_transfer",
+      "steps": [
+        "handoff_packet_generation"
+      ]
+    }
+  },
+  "safety_boundary": {
+    "paper_only": true,
+    "read_only_research": true,
+    "real_trade_enabled": false,
+    "signing_enabled": false,
+    "broadcast_enabled": false,
+    "auto_swap_enabled": false,
+    "secret_access": "not_requested_not_used"
+  }
+}
