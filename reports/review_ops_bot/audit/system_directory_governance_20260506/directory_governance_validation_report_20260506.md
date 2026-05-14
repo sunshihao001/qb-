@@ -1,0 +1,46 @@
+# 目录治理校验报告 20260506
+
+- status: `PASS`
+
+- ✅ exists:docs/system_directory_constitution.md: 18742 bytes
+- ✅ exists:docs/system_directory_routes.json: 13466 bytes
+- ✅ exists:docs/new_task_write_routing_table.json: 1526 bytes
+- ✅ exists:docs/forbidden_write_paths.json: 924 bytes
+- ✅ exists:legacy_compat/manifests/copy_only_migration_plan_20260506.json: 1494121 bytes
+- ✅ exists:legacy_compat/read_fallbacks/system_legacy_read_fallback_rules_20260506.md: 1626 bytes
+- ✅ exists:reports/review_ops_bot/audit/system_directory_governance_20260506/file_routing_matrix_20260506.csv: 407 bytes
+- ✅ exists:reports/review_ops_bot/audit/system_directory_governance_20260506/directory_official_decisions_20260506.md: 614 bytes
+- ✅ exists:reports/review_ops_bot/audit/system_directory_governance_20260506/new_task_write_routing_table_20260506.json: 1526 bytes
+- ✅ exists:reports/review_ops_bot/audit/system_directory_governance_20260506/forbidden_write_paths_20260506.json: 924 bytes
+- ✅ exists:reports/review_ops_bot/audit/system_directory_governance_20260506/legacy_read_fallback_rules_20260506.json: 1569 bytes
+- ✅ exists:reports/review_ops_bot/audit/system_directory_governance_20260506/copy_only_migration_plan_20260506.json: 1494121 bytes
+- ✅ exists:reports/review_ops_bot/audit/system_directory_governance_20260506/directory_validator_acceptance_standard_20260506.json: 775 bytes
+- ✅ json_parse:docs/system_directory_routes.json: 
+- ✅ json_parse:docs/new_task_write_routing_table.json: 
+- ✅ json_parse:docs/forbidden_write_paths.json: 
+- ✅ json_parse:legacy_compat/manifests/copy_only_migration_plan_20260506.json: 
+- ✅ json_parse:reports/review_ops_bot/audit/system_directory_governance_20260506/new_task_write_routing_table_20260506.json: 
+- ✅ json_parse:reports/review_ops_bot/audit/system_directory_governance_20260506/forbidden_write_paths_20260506.json: 
+- ✅ json_parse:reports/review_ops_bot/audit/system_directory_governance_20260506/legacy_read_fallback_rules_20260506.json: 
+- ✅ json_parse:reports/review_ops_bot/audit/system_directory_governance_20260506/copy_only_migration_plan_20260506.json: 
+- ✅ json_parse:reports/review_ops_bot/audit/system_directory_governance_20260506/directory_validator_acceptance_standard_20260506.json: 
+- ✅ dir:docs: 
+- ✅ dir:modules: 
+- ✅ dir:tests: 
+- ✅ dir:data: 
+- ✅ dir:reports: 
+- ✅ dir:research_loop: 
+- ✅ dir:imports: 
+- ✅ dir:schemas: 
+- ✅ dir:contracts: 
+- ✅ dir:tools: 
+- ✅ dir:legacy_compat: 
+- ✅ dir:legacy_compat/manifests: 
+- ✅ dir:legacy_compat/path_maps: 
+- ✅ dir:legacy_compat/read_fallbacks: 
+- ✅ copy_manifest_no_delete_no_move: bad=0 planned=2901
+- ✅ new_routes_do_not_target_legacy_runtime: []
+- ✅ matrix_required_columns: ['current_path', 'asset_label', 'suggested_action', 'suggested_target', 'owner_bot_or_domain', 'asset_id']
+- ✅ matrix_has_rows: rows=3
+- ✅ forbidden_includes_legacy_runtime: 
+- ✅ forbidden_includes_old_cn_dirs: 

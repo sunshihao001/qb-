@@ -1,0 +1,65 @@
+{
+  "manifest_version": "1.0",
+  "backup_id": "full-system-20260514-215254",
+  "created_for": "SIKK-GMGN large trading system backup restore",
+  "source": {
+    "repo": "https://github.com/sunshihao001/qb-.git",
+    "web_url": "https://github.com/sunshihao001/qb-",
+    "branch": "backup/full-system-20260514-215254",
+    "base_commit": "83edf22ff1e1c0c5769d8ff9c2e06a0d1ae6014c"
+  },
+  "restore_policy": {
+    "restore_mode": "isolated_directory_first",
+    "default_target": "/root/restore-test/sikk-gmgn-20260514",
+    "must_not_overwrite_live_root": "/root/sikk-gmgn",
+    "allow_direct_live_restore": false,
+    "allow_real_trade_restore": false,
+    "paper_only": true,
+    "private_key_backup_allowed": false,
+    "broadcast_allowed_after_restore": false
+  },
+  "included_scope": [
+    "system and architecture documents",
+    "HER/KPP/stable trader OS control-plane files",
+    "modules and tools",
+    "tests and fixtures",
+    "contracts and schemas",
+    "task books and audits",
+    "source wallet bot and wallet structure modules",
+    "backup restore package under 备份恢复/"
+  ],
+  "excluded_or_manual_scope": [
+    ".env and real local configuration",
+    "private keys",
+    "mnemonic or seed phrase",
+    "real exchange/API signing secrets",
+    "Telegram bot token real value",
+    "large external runtime datasets not present in git",
+    "machine-local cron/systemd state unless separately exported"
+  ],
+  "restore_entrypoints": {
+    "human_runbook": "备份恢复/RESTORE_RUNBOOK.md",
+    "readiness_check": "备份恢复/scripts/check_restore_readiness.sh",
+    "restore_script": "备份恢复/scripts/restore_from_backup.sh",
+    "acceptance_template": "备份恢复/RESTORE_ACCEPTANCE_TEMPLATE.md"
+  },
+  "minimum_acceptance_commands": [
+    "python3 tools/validate_directory_constitution.py",
+    "python3 tools/validate_system_directory_governance.py",
+    "python3 -m pytest tests/test_wallet_data_guard.py tests/test_wallet_data_guard_legacy_quarantine.py tests/test_sikk_transaction_broadcast_guard.py"
+  ],
+  "restore_success_definition": [
+    "repo cloned into isolated target directory",
+    "requested commit checked out exactly",
+    "restore package files exist",
+    "no real secret files are required from backup",
+    "directory governance validation passes or reports explicit known gap",
+    "transaction broadcast/private-key guard tests pass",
+    "RESTORE_ACCEPTANCE_REPORT.md generated in target directory"
+  ],
+  "known_gaps": [
+    "No universal requirements.txt or pyproject.toml was found during package creation; dependency install is best-effort unless a later backup adds a lock file.",
+    "Large runtime data and external live data sources may require separate data snapshot manifests if not included in git.",
+    "Connected Telegram gateway credentials must be re-injected manually and are not part of backup."
+  ]
+}

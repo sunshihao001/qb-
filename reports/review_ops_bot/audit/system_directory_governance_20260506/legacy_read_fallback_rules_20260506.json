@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-05-06T03:25:36",
+  "default_policy": "new_path_first_legacy_fallback_read_only",
+  "rules": [
+    {
+      "legacy_path": "data/gmgn_candidates_live_run/**",
+      "allowed_reader": "review_ops_bot/audit 或 copy-only migrator",
+      "fallback_allowed": true,
+      "write_allowed": false,
+      "note": "混合旧 runtime，只读兼容，不作为新主写路径"
+    },
+    {
+      "legacy_path": "outputs/**",
+      "allowed_reader": "legacy migrator/review_ops_bot",
+      "fallback_allowed": true,
+      "write_allowed": false,
+      "note": "旧输出目录，只索引或 copy-only"
+    },
+    {
+      "legacy_path": "结构分析/**",
+      "allowed_reader": "intel_bot legacy adapter/review_ops_bot",
+      "fallback_allowed": true,
+      "write_allowed": false,
+      "note": "旧结构分析资料，只读兼容"
+    },
+    {
+      "legacy_path": "钱包数据分析/**",
+      "allowed_reader": "source_wallet_bot legacy adapter/review_ops_bot",
+      "fallback_allowed": true,
+      "write_allowed": false,
+      "note": "旧钱包事实资料，只读兼容"
+    },
+    {
+      "legacy_path": "audits/**",
+      "allowed_reader": "review_ops_bot",
+      "fallback_allowed": true,
+      "write_allowed": false,
+      "note": "历史审计只读"
+    }
+  ],
+  "resolution_order": [
+    "new canonical path",
+    "manifest old_path->new_path",
+    "legacy_compat/path_maps",
+    "legacy read fallback path"
+  ],
+  "must_record": [
+    "reader_name",
+    "legacy_path",
+    "reason",
+    "new_target_if_copy",
+    "read_time"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-05-06T03:25:36",
+  "purpose": "directory validator acceptance standard snapshot for backup restore",
+  "required_status": "PASS",
+  "required_checks": [
+    "all required governance files exist",
+    "all required JSON files parse",
+    "copy_only_migration_plan contains no delete_old or move_old true items",
+    "new task routes do not target data/gmgn_candidates_live_run as primary output",
+    "forbidden_write_paths includes legacy runtime and old CN dirs",
+    "file routing matrix has required columns and at least one row"
+  ],
+  "restore_interpretation": {
+    "PASS": "directory governance is restorable from this branch",
+    "FAIL": "restore may still clone, but paper-run should wait until missing governance files are restored"
+  }
+}

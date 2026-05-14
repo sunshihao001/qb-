@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-05-06T03:25:36",
+  "new_task_write_routes": {
+    "methodology": "research_loop/methodology/{subtype}/{asset_id}.{ext}",
+    "plan": "research_loop/plans/{task_name}.md",
+    "state": "research_loop/state/{task_id}/loop_state.json",
+    "task_package": "research_loop/task_packages/{status}/{task_id}/",
+    "source_wallet_runtime": "data/source_wallet_bot/{mode}/{token_address}/",
+    "source_wallet_report": "reports/source_wallet_bot/{mode}/{token_address}/",
+    "intel_runtime": "data/intel_bot/{mode}/{token_address}/",
+    "intel_report": "reports/intel_bot/{mode}/{token_address}/",
+    "strategy_gate_runtime": "data/strategy_gate_bot/{mode}/{token_address}/",
+    "review_audit_report": "reports/review_ops_bot/audit/{asset_id}/",
+    "code": "modules/{bot_or_domain}/",
+    "test": "tests/test_{module}_{feature}.py",
+    "schema": "modules/{bot}/schemas/{schema_name}.json OR schemas/shared/{schema_name}.json",
+    "contract": "modules/{bot}/contracts/{name}.md OR contracts/bot_handoff/{name}.md",
+    "import_staging": "imports/staging/{import_id}/",
+    "legacy_manifest": "legacy_compat/manifests/{manifest_name}.json",
+    "legacy_path_map": "legacy_compat/path_maps/{map_name}.json",
+    "legacy_read_fallback": "legacy_compat/read_fallbacks/{fallback_name}.md"
+  },
+  "required_prewrite_questions": [
+    "bot_or_domain",
+    "asset_class",
+    "asset_id",
+    "route_key",
+    "target_path",
+    "is_legacy_copy_only"
+  ],
+  "default_mode": "ad_hoc",
+  "legacy_mode": "legacy"
+}

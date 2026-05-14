@@ -1,0 +1,216 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-05-14T22:39:07",
+  "checks": [
+    {
+      "check": "exists:docs/system_directory_constitution.md",
+      "ok": true,
+      "detail": "18742 bytes"
+    },
+    {
+      "check": "exists:docs/system_directory_routes.json",
+      "ok": true,
+      "detail": "13466 bytes"
+    },
+    {
+      "check": "exists:docs/new_task_write_routing_table.json",
+      "ok": true,
+      "detail": "1526 bytes"
+    },
+    {
+      "check": "exists:docs/forbidden_write_paths.json",
+      "ok": true,
+      "detail": "924 bytes"
+    },
+    {
+      "check": "exists:legacy_compat/manifests/copy_only_migration_plan_20260506.json",
+      "ok": true,
+      "detail": "1494121 bytes"
+    },
+    {
+      "check": "exists:legacy_compat/read_fallbacks/system_legacy_read_fallback_rules_20260506.md",
+      "ok": true,
+      "detail": "1626 bytes"
+    },
+    {
+      "check": "exists:reports/review_ops_bot/audit/system_directory_governance_20260506/file_routing_matrix_20260506.csv",
+      "ok": true,
+      "detail": "407 bytes"
+    },
+    {
+      "check": "exists:reports/review_ops_bot/audit/system_directory_governance_20260506/directory_official_decisions_20260506.md",
+      "ok": true,
+      "detail": "614 bytes"
+    },
+    {
+      "check": "exists:reports/review_ops_bot/audit/system_directory_governance_20260506/new_task_write_routing_table_20260506.json",
+      "ok": true,
+      "detail": "1526 bytes"
+    },
+    {
+      "check": "exists:reports/review_ops_bot/audit/system_directory_governance_20260506/forbidden_write_paths_20260506.json",
+      "ok": true,
+      "detail": "924 bytes"
+    },
+    {
+      "check": "exists:reports/review_ops_bot/audit/system_directory_governance_20260506/legacy_read_fallback_rules_20260506.json",
+      "ok": true,
+      "detail": "1569 bytes"
+    },
+    {
+      "check": "exists:reports/review_ops_bot/audit/system_directory_governance_20260506/copy_only_migration_plan_20260506.json",
+      "ok": true,
+      "detail": "1494121 bytes"
+    },
+    {
+      "check": "exists:reports/review_ops_bot/audit/system_directory_governance_20260506/directory_validator_acceptance_standard_20260506.json",
+      "ok": true,
+      "detail": "775 bytes"
+    },
+    {
+      "check": "json_parse:docs/system_directory_routes.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "json_parse:docs/new_task_write_routing_table.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "json_parse:docs/forbidden_write_paths.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "json_parse:legacy_compat/manifests/copy_only_migration_plan_20260506.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "json_parse:reports/review_ops_bot/audit/system_directory_governance_20260506/new_task_write_routing_table_20260506.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "json_parse:reports/review_ops_bot/audit/system_directory_governance_20260506/forbidden_write_paths_20260506.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "json_parse:reports/review_ops_bot/audit/system_directory_governance_20260506/legacy_read_fallback_rules_20260506.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "json_parse:reports/review_ops_bot/audit/system_directory_governance_20260506/copy_only_migration_plan_20260506.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "json_parse:reports/review_ops_bot/audit/system_directory_governance_20260506/directory_validator_acceptance_standard_20260506.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:docs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:modules",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:tests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:data",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:reports",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:research_loop",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:imports",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:schemas",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:contracts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:tools",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:legacy_compat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:legacy_compat/manifests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:legacy_compat/path_maps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dir:legacy_compat/read_fallbacks",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "copy_manifest_no_delete_no_move",
+      "ok": true,
+      "detail": "bad=0 planned=2901"
+    },
+    {
+      "check": "new_routes_do_not_target_legacy_runtime",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "matrix_required_columns",
+      "ok": true,
+      "detail": "['current_path', 'asset_label', 'suggested_action', 'suggested_target', 'owner_bot_or_domain', 'asset_id']"
+    },
+    {
+      "check": "matrix_has_rows",
+      "ok": true,
+      "detail": "rows=3"
+    },
+    {
+      "check": "forbidden_includes_legacy_runtime",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "forbidden_includes_old_cn_dirs",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}
