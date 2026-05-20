@@ -53,3 +53,14 @@ secrets 不在 GitHub 中恢复。请在目标机器上：
 cp configs/templates/env.example .env
 # 手动填入目标机器自己的真实 secret
 ```
+
+## One-command restore
+
+After cloning the repo:
+
+```bash
+cd qb-
+bash github_backup_upload/AG_AWGP_HERMES_RECOVERY_BACKUP_V0_1/bootstrap_restore.sh .
+```
+
+This runs protocol restore, verification, full snapshot checksum verification, extraction, and post-extract verification.

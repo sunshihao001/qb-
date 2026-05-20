@@ -1,0 +1,9 @@
+{
+  "latest_snapshot": {
+    "archive": "snapshots/AG_AWGP_HERMES_FULL_NONSECRET_RECOVERY_SNAPSHOT_20260520T081843Z.tar.zst",
+    "checksum": "snapshots/AG_AWGP_HERMES_FULL_NONSECRET_RECOVERY_SNAPSHOT_20260520T081843Z.tar.zst.sha256",
+    "manifest": "snapshots/AG_AWGP_HERMES_FULL_NONSECRET_RECOVERY_SNAPSHOT_20260520T081843Z.manifest.json",
+    "created_at": "20260520T081843Z",
+    "restore_command": "bash bootstrap_restore.sh"
+  }
+}
