@@ -1,0 +1,33 @@
+     1|agent_executable_handoff:
+     2|  protocol_source: AG-AWGP
+     3|  handoff_id: ""
+     4|  target_agent: GPT | Hermes | OpenASE | GBrain
+     5|  operating_intent: ""
+     6|  task_packet:
+     7|    raw_intent_summary: ""
+     8|    professional_term: ""
+     9|    stage_position: ""
+    10|    execution_decision: EXECUTION_ALLOWED | PREFLIGHT_ONLY | PATCH_REQUIRED | BLOCKED
+    11|  input_contract:
+    12|    required_inputs: []
+    13|    available_inputs: []
+    14|    missing_inputs: []
+    15|  output_contract:
+    16|    expected_outputs: []
+    17|    downstream_consumer: []
+    18|    acceptance_evidence: []
+    19|  forbidden_scope:
+    20|    - direct_execution_from_raw_intent
+    21|    - GBrain_runtime_truth
+    22|    - OpenASE_strategy_judgment
+    23|    - Hermes_bypass_operational_brief
+    24|    - live_trading
+    25|    - swap
+    26|    - private_key
+    27|    - signing
+    28|    - broadcast
+    29|  audit_requirement:
+    30|    evidence_return_required: true
+    31|    boundary_check_required: true
+    32|  next_allowed_action: ""
+    33|

@@ -1,0 +1,13 @@
+     1|openase_workflow_routing:
+     2|  workflow_name: AG_AWGP_DOCUMENT_INTAKE_WORKFLOW
+     3|  input: raw_document_or_user_intent
+     4|  first_node: professional_framing
+     5|  second_node: operational_brief
+     6|  third_node: intake_gate
+     7|  route_by_decision:
+     8|    EXECUTION_ALLOWED: bounded_execution_ticket
+     9|    PREFLIGHT_ONLY: readonly_discovery_ticket
+    10|    PATCH_REQUIRED: patch_ticket
+    11|    BLOCKED: blocked_report
+    12|  forbidden: [strategy_judgment, structure_judgment, runner_approval, promotion_override]
+    13|

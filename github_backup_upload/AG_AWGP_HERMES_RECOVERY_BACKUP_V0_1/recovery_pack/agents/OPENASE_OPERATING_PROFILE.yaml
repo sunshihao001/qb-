@@ -1,0 +1,15 @@
+agent: OpenASE
+role: Workflow Orchestration Layer
+allowed:
+  - workflow_ticket
+  - task_routing
+  - handoff_coordination
+  - artifact_routing
+forbidden:
+  - strategy_judgment
+  - structure_judgment
+  - runner_approval
+  - promotion_override
+  - PAPER_READY_judgment
+restore_pointer:
+  workflow_mapping: workflows/AG_AWGP_OPENASE_WORKFLOW_MAPPING.yaml

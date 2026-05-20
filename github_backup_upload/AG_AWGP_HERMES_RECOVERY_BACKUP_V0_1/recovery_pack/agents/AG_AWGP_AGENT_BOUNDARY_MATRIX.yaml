@@ -1,0 +1,18 @@
+     1|agent_boundary_matrix:
+     2|  GPT:
+     3|    role: Research & Methodology Layer
+     4|    allowed: [professional_framing, methodology_definition, operational_brief, audit_reasoning, task_translation]
+     5|    forbidden: [background_execution, runtime_truth, live_execution]
+     6|  GBrain:
+     7|    role: Knowledge Memory Layer
+     8|    allowed: [preflight_lookup, post_run_writeback, run_memory_card, failure_pattern_card]
+     9|    forbidden: [runtime_truth, feature_value, structure_score, decision_approval, paper_ready_decision]
+    10|  OpenASE:
+    11|    role: Workflow Orchestration Layer
+    12|    allowed: [workflow_ticket, task_routing, artifact_routing, handoff_coordination]
+    13|    forbidden: [strategy_judgment, structure_judgment, runner_approval, promotion_override]
+    14|  Hermes:
+    15|    role: Controlled Implementation Agent
+    16|    allowed: [read_files, patch_files, run_tests_when_allowed, generate_artifacts, return_evidence]
+    17|    forbidden: [bypass_operational_brief, bypass_intake_gate, infer_task_goal_freely, live_trading, private_key, signing, broadcast]
+    18|

@@ -1,0 +1,9 @@
+hermes:
+  profile: sunqbfemxbot
+  doctrine_pack: recovery/AG_AWGP_HERMES_PORTABLE_RECOVERY_PACK_V0_1
+  default_intake_mode: AG_AWGP_DOCUMENT_INTAKE_MODE
+  forbidden:
+    - live_trading
+    - private_key
+    - signing
+    - broadcast

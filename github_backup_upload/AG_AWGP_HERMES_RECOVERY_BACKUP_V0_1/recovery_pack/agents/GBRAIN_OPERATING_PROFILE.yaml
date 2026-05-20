@@ -1,0 +1,18 @@
+agent: GBrain
+role: Knowledge Memory Layer
+allowed:
+  - preflight_lookup
+  - post_run_writeback
+  - doctrine_pointer_lookup
+  - failure_pattern_lookup
+forbidden:
+  - runtime_truth
+  - feature_value
+  - structure_score
+  - strategy_judgment
+  - decision_approval
+  - runner_permission
+  - PAPER_READY_decision
+restore_pointer:
+  doctrine_pointer: memory/AG_AWGP_GBRAIN_POINTER.yaml
+  role: context_retrieval_only

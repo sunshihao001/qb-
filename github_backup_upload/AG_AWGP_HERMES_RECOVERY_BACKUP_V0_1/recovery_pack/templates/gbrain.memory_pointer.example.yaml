@@ -1,0 +1,10 @@
+     1|     1|gbrain_memory_card:
+     2|     2|  card_type: doctrine_pointer
+     3|     3|  doctrine_name: AG-AWGP
+     4|     4|  version: v0.1
+     5|     5|  canonical_file: docs/protocols/ag_awgp/AG_AWGP_FULL_PROTOCOL.md
+     6|     6|  rehydration_file: docs/protocols/ag_awgp/AG_AWGP_REHYDRATION_CAPSULE.md
+     7|     7|  role: context_retrieval_only
+     8|     8|  allowed_use: [preflight_lookup, retrieve_protocol_summary, retrieve_failure_patterns, post_run_writeback]
+     9|     9|  forbidden_use: [runtime_truth, strategy_judgment, paper_ready_decision, runner_permission]
+    10|    10|

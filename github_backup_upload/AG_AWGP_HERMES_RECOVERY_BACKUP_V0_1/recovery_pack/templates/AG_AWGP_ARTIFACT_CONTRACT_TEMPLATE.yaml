@@ -1,0 +1,19 @@
+     1|artifact_contract:
+     2|  artifact_id: ""
+     3|  artifact_type: raw_evidence | canonical_object | source_to_canonical_mapping | feature_artifact | structure_signal | strategy_contract | decision_ticket | validation_report | attribution_report | upgrade_candidate | methodology_alignment | workflow_ticket | handoff_packet
+     4|  version: "v0.1"
+     5|  upstream_source: []
+     6|  downstream_consumer: []
+     7|  schema_or_fields: []
+     8|  lineage: []
+     9|  allowed_storage_path: []
+    10|  forbidden_fields:
+    11|    - private_key
+    12|    - signing_payload
+    13|    - broadcast_payload
+    14|    - live_trade_action
+    15|    - memory_runtime_truth
+    16|    - workflow_strategy_judgment
+    17|  validation_status: DRAFT | READY | PASS | PASS_WITH_GAPS | PATCH_REQUIRED | BLOCKED
+    18|  acceptance_evidence: []
+    19|

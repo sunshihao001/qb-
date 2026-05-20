@@ -1,0 +1,21 @@
+     1|workflow_name: AG_AWGP_DOCUMENT_INTAKE_WORKFLOW
+     2|input: raw_document_or_user_intent
+     3|nodes:
+     4|  - raw_intent_document_capture
+     5|  - professional_framing
+     6|  - operational_brief
+     7|  - intake_gate
+     8|  - artifact_classification
+     9|  - boundary_check
+    10|  - agent_handoff
+    11|route_by_decision:
+    12|  EXECUTION_ALLOWED: bounded_execution_ticket
+    13|  PREFLIGHT_ONLY: readonly_discovery_ticket
+    14|  PATCH_REQUIRED: patch_ticket
+    15|  BLOCKED: blocked_report
+    16|forbidden:
+    17|  - direct_execution_from_raw_intent
+    18|  - GBrain_runtime_truth
+    19|  - OpenASE_strategy_judgment
+    20|  - live_swap_private_key_signing_broadcast
+    21|

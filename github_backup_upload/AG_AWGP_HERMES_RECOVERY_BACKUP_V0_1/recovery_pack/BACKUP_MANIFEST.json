@@ -1,0 +1,77 @@
+{
+  "backup_id": "AG_AWGP_HERMES_PORTABLE_RECOVERY_PACK_V0_1",
+  "version": "v0.1",
+  "created_at": "20260520T075123Z",
+  "source_machine": "current-hermes-vps",
+  "project_root": "/root/sikk-quant-runner",
+  "pack_path": "recovery/AG_AWGP_HERMES_PORTABLE_RECOVERY_PACK_V0_1",
+  "restore_target": "sikk-quant-runner project root",
+  "included_categories": {
+    "Source Repository Backup": [
+      "code",
+      "docs",
+      "protocols",
+      "templates",
+      "restore scripts",
+      "verification scripts",
+      "lightweight manifests"
+    ],
+    "Doctrine Snapshot": [
+      "AG-AWGP full protocol",
+      "rehydration capsule",
+      "trigger prompt",
+      "document intake mode"
+    ],
+    "Agent Operating Profile": [
+      "GPT",
+      "Hermes",
+      "GBrain",
+      "OpenASE profiles and boundaries"
+    ],
+    "Workflow Definition": [
+      "OpenASE routing templates",
+      "AG-AWGP document intake workflow",
+      "SIKK operating backbone workflow"
+    ],
+    "Artifact Snapshot": [
+      "indexes only in GitHub; large/raw artifacts external snapshot only"
+    ],
+    "Memory Pointer": [
+      "GBrain doctrine pointer and memory card templates"
+    ],
+    "Restore Runbook": [
+      "RESTORE_RUNBOOK.md",
+      "restore_snapshot.sh"
+    ],
+    "Verification Test": [
+      "verify_restore.sh",
+      "regression cases",
+      "acceptance checklist"
+    ]
+  },
+  "excluded_paths": [
+    ".env",
+    ".env.* except .env.example",
+    "*.key",
+    "*.pem",
+    "*.secret",
+    "secrets/",
+    "private/",
+    "wallets/",
+    "cookies/",
+    "browser_sessions/",
+    "node_modules/",
+    "venv/",
+    ".venv/",
+    "__pycache__/",
+    "*.log",
+    "tmp/",
+    "cache/"
+  ],
+  "secret_policy": "No private key, API token, wallet secret, signing material, live trading credential, or real .env values are included. Examples only.",
+  "restore_script": "scripts/restore_snapshot.sh",
+  "verify_script": "scripts/verify_restore.sh",
+  "known_gaps": [
+    "External large artifact snapshots are not bundled in GitHub pack; use object storage/release assets with separate checksums if needed."
+  ]
+}

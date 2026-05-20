@@ -1,0 +1,17 @@
+     1|intake_gate:
+     2|  protocol_source: AG-AWGP
+     3|  decision: EXECUTION_ALLOWED | PREFLIGHT_ONLY | PATCH_REQUIRED | BLOCKED
+     4|  checks:
+     5|    professional_framing_complete: PASS | FAIL
+     6|    upstream_inputs_available: PASS | PARTIAL | FAIL
+     7|    downstream_consumer_defined: PASS | FAIL
+     8|    artifact_contract_present: PASS | PATCH_REQUIRED | NOT_APPLICABLE
+     9|    strategy_contract_gate: PASS | PATCH_REQUIRED | BLOCKED | NOT_REQUIRED
+    10|    decision_ticket_gate: PASS | PATCH_REQUIRED | BLOCKED | NOT_REQUIRED
+    11|    validation_boundary: PASS | PATCH_REQUIRED | BLOCKED | NOT_APPLICABLE
+    12|    agent_boundary: PASS | PATCH_REQUIRED | BLOCKED
+    13|    forbidden_scope_scan: PASS | BLOCKED
+    14|  allowed_next_action: ""
+    15|  blocked_or_patch_reason: ""
+    16|  acceptance_evidence_required: []
+    17|

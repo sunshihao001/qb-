@@ -1,0 +1,12 @@
+workflow_name: GMGN_SOURCE_TO_CANONICAL_MAPPING_WORKFLOW
+mode: PREFLIGHT_ONLY_THEN_PATCH_ONLY
+purpose: inspect GMGN source-to-SIKK canonical mapping artifacts without structure judgment
+allowed:
+  - readonly_mapping_inspection
+  - coverage_report
+  - missing_field_report
+forbidden:
+  - structure_judgment
+  - strategy_behavior
+  - runner_execution
+  - live_swap_signing_broadcast

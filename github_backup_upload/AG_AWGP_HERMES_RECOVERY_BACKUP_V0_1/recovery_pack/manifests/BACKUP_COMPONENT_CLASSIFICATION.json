@@ -1,0 +1,43 @@
+{
+  "Source Repository Backup": [
+    "code",
+    "docs",
+    "protocols",
+    "templates",
+    "restore scripts",
+    "verification scripts",
+    "lightweight manifests"
+  ],
+  "Doctrine Snapshot": [
+    "AG-AWGP full protocol",
+    "rehydration capsule",
+    "trigger prompt",
+    "document intake mode"
+  ],
+  "Agent Operating Profile": [
+    "GPT",
+    "Hermes",
+    "GBrain",
+    "OpenASE profiles and boundaries"
+  ],
+  "Workflow Definition": [
+    "OpenASE routing templates",
+    "AG-AWGP document intake workflow",
+    "SIKK operating backbone workflow"
+  ],
+  "Artifact Snapshot": [
+    "indexes only in GitHub; large/raw artifacts external snapshot only"
+  ],
+  "Memory Pointer": [
+    "GBrain doctrine pointer, run memory card template, failure pattern pointer"
+  ],
+  "Restore Runbook": [
+    "RESTORE_RUNBOOK.md",
+    "restore_snapshot.sh"
+  ],
+  "Verification Test": [
+    "verify_restore.sh",
+    "regression cases",
+    "acceptance checklist"
+  ]
+}

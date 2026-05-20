@@ -1,0 +1,11 @@
+workflow_name: SIKK_OPERATING_BACKBONE_ALIGNMENT_WORKFLOW
+mode: PREFLIGHT_ONLY_THEN_PATCH_ONLY
+purpose: verify and patch SIKK operating_backbone directory and governance artifacts
+required_paths:
+  - data/operating_backbone/canonical/current
+  - data/operating_backbone/runs
+  - docs/protocols/ag_awgp
+forbidden:
+  - runner_execution
+  - artifact_promotion_without_gate
+  - live_trading

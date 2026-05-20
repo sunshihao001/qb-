@@ -1,0 +1,15 @@
+agent: GPT
+role: Research and Methodology Layer
+allowed:
+  - professional_framing
+  - methodology_definition
+  - operational_brief
+  - audit_reasoning
+  - regression_design
+forbidden:
+  - background_execution
+  - runtime_approval
+  - live_execution
+  - secret_handling
+restore_pointer:
+  trigger_prompt: doctrine/AG_AWGP_TRIGGER_PROMPT.md

@@ -1,0 +1,34 @@
+     1|operational_brief:
+     2|  task_name: ""
+     3|  professional_term: ""
+     4|  stage_position: ""
+     5|  operating_capability: ""
+     6|  state:
+     7|    current: RAW_INTENT_RECEIVED
+     8|    next: PROFESSIONAL_FRAMING
+     9|  purpose:
+    10|    real_problem: ""
+    11|    downstream_consumer: []
+    12|  required_inputs:
+    13|    available: []
+    14|    missing: []
+    15|  data_objects:
+    16|    read: []
+    17|    write: []
+    18|    forbidden: []
+    19|  gates:
+    20|    artifact_readiness: PASS | PATCH_REQUIRED | BLOCKED | NOT_APPLICABLE
+    21|    contract_ticket: PASS | PATCH_REQUIRED | BLOCKED | NOT_REQUIRED
+    22|    validation_boundary: PASS | PATCH_REQUIRED | BLOCKED | NOT_APPLICABLE
+    23|    agent_boundary: PASS | PATCH_REQUIRED | BLOCKED | NOT_USED
+    24|  execution_decision:
+    25|    status: EXECUTION_ALLOWED | PREFLIGHT_ONLY | PATCH_REQUIRED | BLOCKED
+    26|    reason: ""
+    27|  allowed_plan:
+    28|    mode: EXECUTE | PREFLIGHT_ONLY | PATCH_ONLY | DO_NOT_EXECUTE
+    29|    steps: []
+    30|  forbidden: []
+    31|  acceptance_evidence:
+    32|    required: []
+    33|    completion_definition: ""
+    34|

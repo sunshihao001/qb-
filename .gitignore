@@ -1,0 +1,28 @@
+
+
+
+
+# AG-AWGP / Hermes recovery secret exclusion policy
+# Do not commit real secrets or live execution credentials.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.secret
+secrets/
+private/
+wallets/
+*.wallet
+id_rsa*
+*.p12
+*.pfx
+cookies/
+browser_sessions/
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.log
+tmp/
+cache/
