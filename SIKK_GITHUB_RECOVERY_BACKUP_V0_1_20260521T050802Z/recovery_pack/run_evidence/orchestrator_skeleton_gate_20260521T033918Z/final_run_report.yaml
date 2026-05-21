@@ -1,0 +1,32 @@
+{
+  "run_id": "orchestrator_skeleton_gate_20260521T033918Z",
+  "status": "PASS",
+  "validated_at_utc": "2026-05-21T03:39:19.719782+00:00",
+  "summary": "Orchestrator Skeleton Gate implemented. Run Isolation and Skill Registry are now connected into a minimal pre-runtime control chain with PASS/PATCH_REQUIRED/BLOCKED outcomes.",
+  "acceptance": {
+    "orchestrator_skeleton_exists": true,
+    "baseline_contract_exists": true,
+    "tests_cover_pass_patch_required_blocked": true,
+    "tests_passed": true,
+    "verification_result": "10 passed",
+    "control_layer_only": true,
+    "gmgn_called": false,
+    "feature_generated": false,
+    "structure_signal_generated": false,
+    "decision_ticket_generated": false,
+    "paper_validation_executed": false,
+    "promotion_performed": false,
+    "live_swap_signing_broadcast": false
+  },
+  "verification_command": "PYTHONPATH=/root/sikk-quant-runner python -m pytest tests/test_control_layer_skeleton.py tests/test_orchestrator_skeleton_gate.py -q",
+  "outputs": [
+    "sikk_core/orchestrator_skeleton.py",
+    "tests/test_orchestrator_skeleton_gate.py",
+    "docs/capability_roadmap/skill_orchestrated_backbone_v0_1/first_batch_control_mapping_baseline/control_layer/ORCHESTRATOR_SKELETON_GATE.json"
+  ],
+  "next_allowed_action": "Invocation Envelope Contract hardening or control-layer regression pack; still no GMGN/feature/structure/paper execution.",
+  "forbidden_actions_executed": false,
+  "gaps": [
+    "YAML files are JSON-compatible YAML-lite in current skeleton to avoid adding PyYAML dependency."
+  ]
+}

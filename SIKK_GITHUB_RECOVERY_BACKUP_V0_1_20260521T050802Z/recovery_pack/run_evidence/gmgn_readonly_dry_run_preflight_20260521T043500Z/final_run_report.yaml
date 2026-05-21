@@ -1,0 +1,34 @@
+{
+  "run_id": "gmgn_readonly_dry_run_preflight_20260521T043500Z",
+  "run_name": "GMGN_READONLY_DRY_RUN_PREFLIGHT",
+  "status": "PASS",
+  "validated_at_utc": "2026-05-21T04:37:12.533493+00:00",
+  "outputs": [
+    "run_manifest.yaml",
+    "audit_log.jsonl",
+    "control_layer/invocation_envelope.json",
+    "control_layer/orchestrator_gate_result.json",
+    "gate_result.json",
+    "final_run_report.yaml"
+  ],
+  "acceptance": {
+    "gate_result_status_pass": true,
+    "storage_policy_check_pass": true,
+    "registry_check_pass": true,
+    "invocation_allowed": true,
+    "gmgn_called": false,
+    "runtime_action_executed": false,
+    "raw_evidence_acquired": false,
+    "canonical_promoted": false,
+    "feature_generated": false,
+    "structure_signal_generated": false,
+    "decision_ticket_generated": false,
+    "paper_validation_executed": false,
+    "live_swap_signing_broadcast": false
+  },
+  "gaps": [
+    "This is dry-run preflight only; no real GMGN data acquisition was attempted."
+  ],
+  "forbidden_actions_executed": false,
+  "promotion_performed": false
+}

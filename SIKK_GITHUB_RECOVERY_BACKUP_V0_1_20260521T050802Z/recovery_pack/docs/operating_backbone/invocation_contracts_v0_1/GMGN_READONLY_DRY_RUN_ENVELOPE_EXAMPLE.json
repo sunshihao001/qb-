@@ -1,0 +1,59 @@
+{
+  "artifact_type": "sikk_invocation_envelope",
+  "version": "0.1",
+  "example_id": "GMGN_READONLY_DRY_RUN_ENVELOPE_EXAMPLE_V0_1",
+  "purpose": "Example envelope for future GMGN read-only raw evidence dry-run. This is not a GMGN call and contains no real data.",
+  "run_id": "gmgn_readonly_dry_run_<utc_timestamp>",
+  "skill_id": "skill.gmgn_readonly_data_source",
+  "expected_backbone_node": "OBN-01",
+  "allowed_scope": [
+    "future_obn_01_read_only_raw_evidence_run"
+  ],
+  "forbidden_scope": [
+    "swap",
+    "quote_for_execution",
+    "signing",
+    "broadcast",
+    "feature_generation",
+    "structure_signal_generation",
+    "decision_ticket_generation",
+    "paper_backtest_live",
+    "live",
+    "private_key"
+  ],
+  "input_artifacts": [
+    "approved_run_context",
+    "source_query_spec"
+  ],
+  "output_artifacts": [
+    "raw_request_evidence",
+    "raw_response_evidence",
+    "raw_error_evidence",
+    "raw_snapshot_manifest"
+  ],
+  "downstream_consumers": [
+    "source_to_canonical_mapping"
+  ],
+  "invocation_context": "future_obn_01_read_only_raw_evidence_run",
+  "artifact_class": "raw_evidence",
+  "target_paths": [
+    "evidence/request/gmgn_request.json",
+    "evidence/response/gmgn_response.json",
+    "evidence/error/gmgn_error.json",
+    "evidence/raw/gmgn_snapshot_manifest.json"
+  ],
+  "read_paths": [
+    "input/source_query_spec.json",
+    "input/approved_run_context.json"
+  ],
+  "promotion_requested": false,
+  "canonical_write_requested": false,
+  "metadata": {
+    "dry_run_only": true,
+    "real_data_acquisition_allowed": false,
+    "requires_orchestrator_gate_pass_before_any_future_call": true,
+    "source_to_canonical_mapping_required_before_feature_use": true
+  },
+  "execution_requested": false,
+  "runtime_action_allowed": false
+}

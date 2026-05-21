@@ -1,0 +1,17 @@
+{
+  "artifact_type": "sikk_state_snapshot_cadence",
+  "version": "0.1",
+  "update_policy": {
+    "milestone_update": "after every PASS/PASS_WITH_GAPS backbone/control-plane run",
+    "new_directory_each_update": true,
+    "directory_pattern": "SIKK_PORTABLE_RECOVERY_PACK_V0_1_<UTCSTAMP>",
+    "daily_light_snapshot": "optional: current pointer + approved contracts only",
+    "weekly_full_nonsecret_snapshot": "optional: full non-secret operating_backbone artifact snapshot",
+    "before_github_upload": "mandatory verify_restore + secret_scan + checksum + git push dry-run"
+  },
+  "forbidden": [
+    "overwrite previous recovery directories",
+    "include secrets",
+    "push without explicit approval"
+  ]
+}

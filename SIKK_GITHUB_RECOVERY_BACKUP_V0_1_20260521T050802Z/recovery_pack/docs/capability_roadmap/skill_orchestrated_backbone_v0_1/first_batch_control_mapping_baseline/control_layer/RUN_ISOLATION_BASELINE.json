@@ -1,0 +1,15 @@
+{
+  "artifact_id": "CONTROL_LAYER_RUN_ISOLATION_BASELINE_V0_1",
+  "artifact_type": "run_isolation_baseline",
+  "version": "0.1",
+  "purpose": "All operational artifacts must be written first under data/operating_backbone/runs/<run_id>/ with manifest, audit log, and final report.",
+  "required_files": ["run_manifest.yaml", "audit_log.jsonl", "final_run_report.yaml"],
+  "default_permissions": {
+    "canonical_write_allowed": false,
+    "promotion_allowed": false,
+    "runtime_validation_allowed": false
+  },
+  "allowed_scope": ["control_layer_initialization", "skill_registry_validation", "artifact_contract_validation"],
+  "forbidden_scope": ["gmgn_runtime_call", "feature_generation", "structure_signal_generation", "decision_ticket_generation", "replay_backtest_paper_only", "live", "swap", "private_key", "signing", "broadcast"],
+  "acceptance_evidence": ["isolated run directory exists", "manifest/audit/final report exist", "forbidden runtime actions not executed"]
+}

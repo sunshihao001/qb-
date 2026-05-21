@@ -1,0 +1,56 @@
+{
+  "artifact_type": "sikk_orchestrator_gate_result",
+  "version": "0.1",
+  "created_at_utc": "2026-05-21T04:37:12.533021+00:00",
+  "run_id": "gmgn_readonly_dry_run_preflight_20260521T043500Z",
+  "skill_id": "skill.gmgn_readonly_data_source",
+  "expected_backbone_node": "OBN-01",
+  "status": "PASS",
+  "reason": "registered_and_control_scope_valid",
+  "registry_check": {
+    "status": "PASS",
+    "skill_count": 3,
+    "errors": []
+  },
+  "invocation_check": {
+    "allowed": true,
+    "reason": "registered_and_node_matched",
+    "skill_id": "skill.gmgn_readonly_data_source"
+  },
+  "envelope_check": {
+    "status": "PASS",
+    "missing_fields": [],
+    "empty_required_fields": [],
+    "hard_forbidden_hits": [],
+    "pre_runtime_forbidden_allowed_scope_hits": [],
+    "errors": []
+  },
+  "storage_policy_check": {
+    "status": "PASS",
+    "artifact_class": "raw_evidence",
+    "class_registered": true,
+    "missing_contracts": [],
+    "bad_target_paths": [],
+    "bad_consumers": [],
+    "forbidden_output_hits": [],
+    "forbidden_read_patterns": [],
+    "patch_reasons": [],
+    "block_reasons": [],
+    "warnings": [],
+    "read_policy_ref": "ARTIFACT_INDEX_POLICY_V0_1"
+  },
+  "run_missing": [],
+  "allowed_forbidden_hits": [],
+  "hard_forbidden_hits": [],
+  "patch_reasons": [],
+  "block_reasons": [],
+  "runtime_action_executed": false,
+  "gmgn_called": false,
+  "feature_generated": false,
+  "structure_signal_generated": false,
+  "decision_ticket_generated": false,
+  "paper_validation_executed": false,
+  "canonical_promoted": false,
+  "storage_policy_enforced": true,
+  "next_allowed_action": "write_handoff_or_patch_missing_contracts"
+}

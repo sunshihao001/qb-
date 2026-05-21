@@ -1,0 +1,27 @@
+{
+  "artifact_id": "INVOCATION_CONTRACTS_ACCEPTANCE_CHECKLIST_V0_1",
+  "version": "0.1",
+  "checklist": [
+    "INVOCATION_ENVELOPE_CONTRACT.json exists",
+    "ORCHESTRATOR_GATE_RESULT_CONTRACT.json exists",
+    "STORAGE_POLICY_GATE_RESULT_CONTRACT.json exists",
+    "GMGN_READONLY_DRY_RUN_ENVELOPE_EXAMPLE.json exists",
+    "ACCEPTANCE_CHECKLIST.json exists",
+    "invocation envelope contract includes storage fields",
+    "orchestrator result requires non-runtime flags false",
+    "storage policy result covers class/path/consumer/read/promotion checks",
+    "GMGN example is dry-run only and does not request execution",
+    "tests pass"
+  ],
+  "forbidden_actions": [
+    "GMGN call",
+    "raw evidence acquisition",
+    "canonical/current promotion",
+    "feature_generation",
+    "structure_signal_generation",
+    "decision_ticket_generation",
+    "paper/backtest/replay",
+    "live/swap/private_key/signing/broadcast"
+  ],
+  "completion_status": "baseline_ready_after_tests_pass"
+}

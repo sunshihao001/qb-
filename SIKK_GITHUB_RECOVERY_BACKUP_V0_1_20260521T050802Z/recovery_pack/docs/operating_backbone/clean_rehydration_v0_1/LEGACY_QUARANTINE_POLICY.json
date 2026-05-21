@@ -1,0 +1,45 @@
+{
+  "artifact_type": "sikk_legacy_quarantine_policy",
+  "version": "0.1",
+  "purpose": "Defines how old or ambiguous artifacts are classified before they can affect current operation.",
+  "classification_rules": [
+    {
+      "condition": "missing run_manifest or audit_log",
+      "status": "UNKNOWN_LINEAGE",
+      "default_action": "quarantine"
+    },
+    {
+      "condition": "not referenced by CURRENT_STATE_POINTER",
+      "status": "APPROVED_HISTORICAL_OR_DEPRECATED",
+      "default_action": "do_not_consume_as_current"
+    },
+    {
+      "condition": "old decision_ticket not tied to current strategy_contract",
+      "status": "DEPRECATED",
+      "default_action": "manual_review_only"
+    },
+    {
+      "condition": "old raw evidence without source-to-canonical mapping",
+      "status": "CANDIDATE",
+      "default_action": "mapping_required_before_feature_use"
+    },
+    {
+      "condition": "artifact contains live/swap/signing/broadcast/private_key scope",
+      "status": "BLOCKED",
+      "default_action": "quarantine_and_block"
+    }
+  ],
+  "allowed_uses_of_legacy_data": [
+    "audit",
+    "attribution reference",
+    "migration candidate review",
+    "manual historical comparison"
+  ],
+  "forbidden_uses_of_legacy_data": [
+    "current truth",
+    "runtime input",
+    "feature input without mapping",
+    "decision_ticket approval",
+    "paper readiness evidence without current gate"
+  ]
+}

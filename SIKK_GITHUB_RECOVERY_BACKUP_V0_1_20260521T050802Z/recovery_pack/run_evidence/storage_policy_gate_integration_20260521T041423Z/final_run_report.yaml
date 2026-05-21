@@ -1,0 +1,45 @@
+{
+  "run_id": "storage_policy_gate_integration_20260521T041423Z",
+  "run_class": "control_plane",
+  "status": "PASS",
+  "validated_at_utc": "2026-05-21T04:14:24.855816+00:00",
+  "summary": "Storage Policy Gate Integration completed. Orchestrator Skeleton Gate now enforces storage topology policy over artifact_class, target_paths, read_paths, downstream_consumers, forbidden outputs, and promotion/canonical write requests before any future GMGN/raw/feature/structure/paper invocation.",
+  "acceptance": {
+    "storage_policy_loader_added": true,
+    "storage_policy_gate_added": true,
+    "invocation_envelope_extended": true,
+    "artifact_class_gate_tested": true,
+    "target_path_gate_tested": true,
+    "consumer_gate_tested": true,
+    "forbidden_output_gate_tested": true,
+    "promotion_canonical_write_gate_tested": true,
+    "read_policy_gate_tested": true,
+    "tests_passed": true,
+    "verification_result": "25 passed",
+    "gmgn_called": false,
+    "raw_evidence_acquired": false,
+    "canonical_promoted": false,
+    "feature_generated": false,
+    "structure_signal_generated": false,
+    "decision_ticket_generated": false,
+    "paper_validation_executed": false,
+    "live_swap_signing_broadcast": false
+  },
+  "verification_command": "PYTHONPATH=/root/sikk-quant-runner python -m pytest tests/test_storage_policy_gate_integration.py tests/test_storage_topology_contract.py tests/test_orchestrator_skeleton_gate.py tests/test_control_layer_skeleton.py -q",
+  "outputs": [
+    "sikk_core/orchestrator_skeleton.py",
+    "tests/test_storage_policy_gate_integration.py",
+    "tests/test_orchestrator_skeleton_gate.py",
+    "docs/operating_backbone/storage_topology_v0_1/STORAGE_TOPOLOGY_CONTRACT.json",
+    "docs/operating_backbone/storage_topology_v0_1/ARTIFACT_CLASSIFICATION_MATRIX.json",
+    "docs/operating_backbone/storage_topology_v0_1/RUN_DIRECTORY_CONTRACT.json",
+    "docs/operating_backbone/storage_topology_v0_1/CANONICAL_PROMOTION_POLICY.json",
+    "docs/operating_backbone/storage_topology_v0_1/ARTIFACT_INDEX_POLICY.json",
+    "docs/operating_backbone/storage_topology_v0_1/CONTAMINATION_PREVENTION_RULES.json"
+  ],
+  "next_allowed_action": "Harden formal Invocation Envelope Contract / Gate Result Contract, then GMGN read-only dry-run envelope can be tested without real data acquisition.",
+  "forbidden_actions_executed": false,
+  "gaps": [
+    "Policy enforcement is preflight-level; actual future data reader/writer modules must call this gate before touching artifacts."
+  ]
+}

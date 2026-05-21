@@ -1,0 +1,26 @@
+{
+  "run_id": "gmgn_readonly_dry_run_preflight_20260521T043500Z",
+  "run_name": "GMGN_READONLY_DRY_RUN_PREFLIGHT",
+  "expected_backbone_node": "OBN-01",
+  "run_dir": "/root/sikk-quant-runner/data/operating_backbone/runs/gmgn_readonly_dry_run_preflight_20260521T043500Z",
+  "allowed_scope": [
+    "future_obn_01_read_only_raw_evidence_run"
+  ],
+  "forbidden_scope": [
+    "gmgn_runtime_call",
+    "feature_generation",
+    "structure_signal_generation",
+    "decision_ticket_generation",
+    "replay_backtest_paper_only",
+    "live",
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast"
+  ],
+  "canonical_write_allowed": false,
+  "promotion_allowed": false,
+  "runtime_validation_allowed": false,
+  "created_at_utc": "2026-05-21T04:37:12.532349+00:00",
+  "status": "RUN_ISOLATED_EXECUTION"
+}

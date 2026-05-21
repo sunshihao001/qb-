@@ -1,0 +1,41 @@
+{
+  "run_id": "invocation_contracts_v0_1_20260521T042359Z",
+  "run_class": "control_plane",
+  "status": "PASS",
+  "validated_at_utc": "2026-05-21T04:24:00.468275+00:00",
+  "summary": "Invocation Contracts v0.1 created and verified. The pack formalizes invocation envelope, orchestrator gate result, storage policy gate result, and a safe GMGN read-only dry-run envelope example.",
+  "acceptance": {
+    "requested_files_exist": true,
+    "tests_exist": true,
+    "invocation_envelope_contract_created": true,
+    "orchestrator_gate_result_contract_created": true,
+    "storage_policy_gate_result_contract_created": true,
+    "gmgn_readonly_dry_run_example_created": true,
+    "acceptance_checklist_created": true,
+    "gmgn_example_gate_passes_without_calling_gmgn": true,
+    "tests_passed": true,
+    "verification_result": "31 passed",
+    "gmgn_called": false,
+    "raw_evidence_acquired": false,
+    "canonical_promoted": false,
+    "feature_generated": false,
+    "structure_signal_generated": false,
+    "decision_ticket_generated": false,
+    "paper_validation_executed": false,
+    "live_swap_signing_broadcast": false
+  },
+  "verification_command": "PYTHONPATH=/root/sikk-quant-runner python -m pytest tests/test_invocation_contracts.py tests/test_storage_policy_gate_integration.py tests/test_storage_topology_contract.py tests/test_orchestrator_skeleton_gate.py tests/test_control_layer_skeleton.py -q",
+  "outputs": [
+    "docs/operating_backbone/invocation_contracts_v0_1/INVOCATION_ENVELOPE_CONTRACT.json",
+    "docs/operating_backbone/invocation_contracts_v0_1/ORCHESTRATOR_GATE_RESULT_CONTRACT.json",
+    "docs/operating_backbone/invocation_contracts_v0_1/STORAGE_POLICY_GATE_RESULT_CONTRACT.json",
+    "docs/operating_backbone/invocation_contracts_v0_1/GMGN_READONLY_DRY_RUN_ENVELOPE_EXAMPLE.json",
+    "docs/operating_backbone/invocation_contracts_v0_1/ACCEPTANCE_CHECKLIST.json",
+    "tests/test_invocation_contracts.py"
+  ],
+  "next_allowed_action": "Use GMGN_READONLY_DRY_RUN_ENVELOPE_EXAMPLE as fixture for future GMGN read-only dry-run preflight; still no real GMGN call until explicitly allowed by next run gate.",
+  "forbidden_actions_executed": false,
+  "gaps": [
+    "Contracts are JSON contract documents, not full JSON Schema draft validators yet. If needed, next step can add machine JSON Schema validation."
+  ]
+}

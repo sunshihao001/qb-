@@ -1,0 +1,68 @@
+{
+  "artifact_id": "CONTROL_LAYER_ORCHESTRATOR_SKELETON_GATE_V0_1",
+  "artifact_type": "orchestrator_skeleton_gate_baseline",
+  "version": "0.1",
+  "purpose": "Connect Run Isolation and Skill Registry into a minimal pre-runtime invocation gate. This baseline does not execute any target skill.",
+  "owned_capability": "control_plane_orchestration_gate",
+  "backbone_position": "OBN-00 control plane before OBN-01",
+  "input_contract": [
+    "run_id",
+    "skill_id",
+    "expected_backbone_node",
+    "allowed_scope",
+    "forbidden_scope",
+    "input_artifacts",
+    "output_artifacts",
+    "downstream_consumers",
+    "invocation_context"
+  ],
+  "output_contract": [
+    "invocation_envelope.json",
+    "orchestrator_gate_result.json"
+  ],
+  "gate_statuses": ["PASS", "PATCH_REQUIRED", "BLOCKED"],
+  "pass_conditions": [
+    "run_manifest.yaml exists",
+    "audit_log.jsonl exists",
+    "skill is registered",
+    "registered backbone_node matches expected_backbone_node",
+    "input_artifacts are explicit",
+    "output_artifacts are explicit",
+    "downstream_consumers are explicit",
+    "allowed_scope does not conflict with skill forbidden_scope",
+    "no hard forbidden runtime tokens appear"
+  ],
+  "patch_required_conditions": [
+    "missing input_artifacts",
+    "missing output_artifacts",
+    "missing downstream_consumers",
+    "run_manifest or audit_log missing",
+    "skill registry contract incomplete",
+    "allowed_scope requests pre-runtime forbidden actions such as GMGN runtime call or feature generation"
+  ],
+  "blocked_conditions": [
+    "skill is not registered",
+    "backbone_node mismatch",
+    "live/swap/private_key/signing/broadcast/PAPER_READY scope detected",
+    "request attempts to bypass strategy_contract or decision_ticket for validation-like behavior"
+  ],
+  "forbidden_actions": [
+    "GMGN runtime call",
+    "feature generation",
+    "structure_signal generation",
+    "decision_ticket generation",
+    "replay/backtest/paper-only execution",
+    "PAPER_READY claim",
+    "canonical/current promotion",
+    "live trading",
+    "swap",
+    "private key use",
+    "signing",
+    "broadcast"
+  ],
+  "acceptance_evidence": [
+    "unit tests cover PASS/PATCH_REQUIRED/BLOCKED",
+    "isolated run writes run_manifest.yaml, audit_log.jsonl, final_run_report.yaml",
+    "gate result confirms no runtime action executed"
+  ]
+}

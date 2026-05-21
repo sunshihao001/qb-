@@ -1,0 +1,19 @@
+{
+  "artifact_id": "STORAGE_TOPOLOGY_ACCEPTANCE_CHECKLIST_V0_1",
+  "version": "0.1",
+  "checklist": [
+    "README exists",
+    "VERSION exists",
+    "storage topology contract exists",
+    "artifact classification matrix exists",
+    "run directory contract exists",
+    "canonical promotion policy exists",
+    "artifact index policy exists",
+    "contamination prevention rules exist",
+    "tests verify all core contamination rules",
+    "no GMGN call",
+    "no feature/structure/paper execution",
+    "no canonical/current promotion"
+  ],
+  "completion_status": "baseline_ready_after_tests_pass"
+}

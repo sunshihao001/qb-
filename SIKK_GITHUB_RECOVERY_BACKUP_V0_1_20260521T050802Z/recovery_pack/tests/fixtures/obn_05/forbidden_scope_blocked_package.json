@@ -1,0 +1,28 @@
+{
+  "upstream_authorization": {
+    "obn_00_intake_gate_status": "EXECUTION_ALLOWED",
+    "obn_01_run_context_status": "PASS",
+    "obn_02_feature_contract_status": "L3_EXECUTION_READY",
+    "obn_04_mapping_to_feature_gate_status": "PASS"
+  },
+  "run_context": {
+    "run_id": "obn_05_forbidden_scope_case",
+    "attempt_id": "attempt_001",
+    "trace_id": "trace_obn05_from_obn04_fixture",
+    "artifact_storage_root": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_05_forbidden_scope_case",
+    "canonical_write_allowed": false
+  },
+  "source_execution_mode": "fixture_first",
+  "feature_truth_level": "fixture_only",
+  "obn04_refs": {
+    "source_to_canonical_mapping": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_04_fixture_first_chain_validation/outputs/first_invocation_chain/mapping/source_to_canonical_mapping.json",
+    "mapping_gap_report": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_04_fixture_first_chain_validation/outputs/first_invocation_chain/mapping/mapping_gap_report.json",
+    "unmapped_field_report": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_04_fixture_first_chain_validation/outputs/first_invocation_chain/mapping/unmapped_field_report.json",
+    "next_feature_input_candidate": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_04_fixture_first_chain_validation/outputs/first_invocation_chain/mapping/next_feature_input_candidate.json",
+    "mapping_to_feature_gate_result": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_04_fixture_first_chain_validation/gates/mapping_to_feature_gate_result.json"
+  },
+  "feature_rules_ref": "/root/sikk-quant-runner/configs/templates/obn_05_feature_rules.baseline.json",
+  "action_attempts": [
+    "generate_decision_ticket"
+  ]
+}

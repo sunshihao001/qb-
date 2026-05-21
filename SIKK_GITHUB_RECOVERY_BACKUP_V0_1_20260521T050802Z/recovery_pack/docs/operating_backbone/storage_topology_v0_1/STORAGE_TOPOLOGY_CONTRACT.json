@@ -1,0 +1,30 @@
+{
+  "artifact_id": "STORAGE_TOPOLOGY_CONTRACT_V0_1",
+  "artifact_type": "storage_topology_contract",
+  "version": "0.1",
+  "professional_term": "Artifact Storage Topology & Contamination Prevention Contract",
+  "root": "data/operating_backbone",
+  "principles": [
+    "code/contracts/run evidence are separate",
+    "new operational artifacts first write to runs/<run_id>",
+    "canonical/current receives only promotion-gated approved pointers or artifacts",
+    "PATCH_REQUIRED/BLOCKED artifacts stay in runs or quarantine",
+    "downstream consumers read manifest/index/gate-approved paths, never glob latest files",
+    "raw/canonical/feature/structure/strategy/ticket/validation/attribution layers must not mix"
+  ],
+  "topology": {
+    "runs/<run_id>": "isolated run evidence and candidates",
+    "canonical/current": "approved current artifacts and pointers only",
+    "canonical/versions/<version_id>": "immutable promoted versions",
+    "staging/promotion_candidates": "review queue before canonical promotion",
+    "quarantine/{blocked,unsafe_scope,schema_invalid,lineage_missing,consumer_missing}": "unsafe or invalid artifacts",
+    "archive/{superseded_runs,deprecated_artifacts}": "non-current retained history",
+    "indexes": "run/artifact/promotion/latest pointer indexes"
+  },
+  "forbidden_paths": {
+    "raw_evidence": "canonical/current unless promotion gate passed and stored as approved raw evidence pointer/object",
+    "control_plane_run": "feature/structure/validation directories",
+    "blocked_or_patch_required": "canonical/current",
+    "live_swap_signing_broadcast": "all paths"
+  }
+}

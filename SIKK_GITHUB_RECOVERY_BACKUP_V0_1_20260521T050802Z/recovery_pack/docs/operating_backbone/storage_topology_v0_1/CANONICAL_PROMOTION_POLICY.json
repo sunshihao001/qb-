@@ -1,0 +1,38 @@
+{
+  "artifact_id": "CANONICAL_PROMOTION_POLICY_V0_1",
+  "version": "0.1",
+  "canonical_current_rule": "canonical/current may be written only by promotion gate, never by ordinary operational runs.",
+  "minimum_promotion_requirements": [
+    "run status PASS or PASS_WITH_GAPS",
+    "artifact has class/id/version/schema_or_schema_ref",
+    "source lineage exists",
+    "downstream consumer exists",
+    "forbidden scope check passed",
+    "promotion_manifest exists",
+    "rollback pointer or previous version recorded"
+  ],
+  "promotion_denied_if": [
+    "status PATCH_REQUIRED or BLOCKED",
+    "lineage missing",
+    "consumer missing",
+    "schema invalid",
+    "hard forbidden scope detected",
+    "artifact mixes raw/canonical/feature/structure/strategy/paper layers",
+    "paper result claims live readiness"
+  ],
+  "canonical_current_allowed_content": [
+    "approved artifact objects",
+    "approved pointer files",
+    "approved indexes",
+    "version references"
+  ],
+  "canonical_current_forbidden_content": [
+    "scratch files",
+    "raw unreviewed responses",
+    "blocked artifacts",
+    "runtime logs",
+    "private keys",
+    "signed transactions",
+    "swap/broadcast payloads"
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "execution_identity": {
+    "task_name": "OBN_00_MISSING_FIELD_PATCH_REQUIRED_CASE",
+    "task_type": "dry_run",
+    "requested_by": "user",
+    "executor": "Hermes",
+    "reviewer": "GPT",
+    "run_id": "obn_00_valid_example_20260520T000000Z",
+    "created_at": "2026-05-20T00:00:00Z",
+    "execution_mode": "fixture_first"
+  },
+  "project_authority": {
+    "project_root": "/root/sikk-quant-runner",
+    "root_authorized": true,
+    "allowed_read_paths": [
+      "/root/sikk-quant-runner"
+    ],
+    "allowed_write_paths": [
+      "/root/sikk-quant-runner/data/operating_backbone/runs/obn_00_valid_example_20260520T000000Z/"
+    ],
+    "denied_paths": [
+      "/root/sikk-quant-runner/data/operating_backbone/canonical/",
+      "/root/.ssh/",
+      "/root/.config/private_keys/"
+    ],
+    "path_resolution_policy": {
+      "memory_is_context_not_runtime_truth": true,
+      "require_explicit_current_authorization": true
+    }
+  },
+  "artifact_contract": {
+    "artifact_storage_path": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_00_valid_example_20260520T000000Z/obn_00/",
+    "allowed_artifacts": [
+      "execution_envelope.json",
+      "intake_gate_result.json",
+      "patch_request.json",
+      "obn_00_acceptance_report.json"
+    ],
+    "forbidden_artifacts": [
+      "raw_snapshot.json",
+      "feature_snapshot.json",
+      "source_to_canonical_mapping.json",
+      "structure_signal.json",
+      "decision_ticket.json",
+      "paper_position.json",
+      "live_order.json",
+      "unsigned_tx.json",
+      "signed_tx.json",
+      "swap_payload.json"
+    ],
+    "downstream_consumer": [
+      "OBN-01_RUN_ISOLATION_AND_RUN_CONTEXT"
+    ],
+    "overwrite_policy": {
+      "runs_path": "allow_new_run_id_only",
+      "canonical_path": "forbidden_without_promotion_gate",
+      "latest_path": "discouraged_unless_pointer_only"
+    },
+    "promotion_policy": {
+      "PASS": "promotion_candidate_after_review",
+      "PASS_WITH_GAPS": "audit_label_only_no_runtime_transition",
+      "PATCH_REQUIRED": "no_promotion",
+      "BLOCKED": "quarantine"
+    }
+  },
+  "source_mode": {
+    "gmgn_mode": "no_call_at_OBN_00",
+    "real_api_allowed": false,
+    "fixture_allowed": false,
+    "existing_response_reuse_allowed": false,
+    "external_network_allowed": false,
+    "security_read_policy": {
+      "read_only_only": true,
+      "route_quote_forbidden": true,
+      "order_quote_forbidden": true,
+      "swap_forbidden": true
+    }
+  },
+  "skill_chain_authorization": {
+    "allowed_skills": [
+      "gmgn_readonly_data_source",
+      "source_to_canonical_mapper"
+    ],
+    "blocked_skills": [
+      "gmgn_swap",
+      "gmgn_cooking",
+      "paper_only_runner",
+      "live_execution",
+      "wallet_signer",
+      "transaction_broadcaster"
+    ],
+    "first_chain": [
+      "gmgn_readonly_data_source",
+      "source_to_canonical_mapper"
+    ],
+    "invocation_order_locked": true,
+    "call_permission_at_OBN_00": false
+  },
+  "action_boundary": {
+    "allowed_actions": [
+      "inspect_execution_envelope",
+      "validate_authorization_fields",
+      "generate_intake_gate_result",
+      "generate_patch_request",
+      "generate_obn_00_acceptance_report"
+    ],
+    "forbidden_actions": [
+      "call_gmgn",
+      "call_okx",
+      "create_raw_snapshot",
+      "create_feature_snapshot",
+      "create_structure_signal",
+      "create_decision_ticket",
+      "create_paper_position",
+      "live_trading",
+      "swap",
+      "gmgn_swap",
+      "gmgn_cooking",
+      "route_quote",
+      "order_quote",
+      "private_key_access",
+      "signing",
+      "broadcast",
+      "write_canonical",
+      "modify_strategy_contract_rules"
+    ]
+  },
+  "canonical_write_policy": {
+    "direct_canonical_write_allowed": false,
+    "write_to_runs_only": true,
+    "promotion_required": true,
+    "promotion_allowed_status": [
+      "PASS"
+    ],
+    "no_promotion_status": [
+      "PATCH_REQUIRED",
+      "PASS_WITH_GAPS"
+    ],
+    "quarantine_status": [
+      "BLOCKED"
+    ]
+  },
+  "acceptance_evidence": {
+    "required": [
+      "execution_envelope",
+      "project_authority_check",
+      "artifact_contract_check",
+      "source_mode_check",
+      "skill_chain_authorization_check",
+      "forbidden_scope_check",
+      "canonical_write_policy_check",
+      "intake_gate_result",
+      "patch_request_if_needed"
+    ]
+  },
+  "runtime_truth_policy": {
+    "memory_allowed_as_context": true,
+    "memory_allowed_as_authorization": false,
+    "project_root_must_be_explicit": true,
+    "paths_must_be_explicit": true,
+    "skill_chain_must_be_explicit": true
+  },
+  "execution_scope_lock": {
+    "current_node": "OBN-00",
+    "allowed_node_actions": [
+      "validate_execution_envelope",
+      "generate_intake_gate_result",
+      "generate_patch_request"
+    ],
+    "forbidden_node_actions": [
+      "create_run_context",
+      "call_skill",
+      "call_gmgn",
+      "generate_raw_snapshot",
+      "generate_mapping",
+      "generate_feature",
+      "generate_decision_ticket"
+    ]
+  },
+  "gate_transition_policy": {
+    "EXECUTION_ALLOWED": {
+      "allowed_next_node": "OBN-01_RUN_ISOLATION_AND_RUN_CONTEXT",
+      "denied_next_nodes": [
+        "GMGN_SKILL_CALL",
+        "MAPPING_SKILL_CALL",
+        "FEATURE_ENGINEERING",
+        "DECISION_GATE",
+        "PAPER_ONLY_RUN"
+      ]
+    },
+    "PATCH_REQUIRED": {
+      "allowed_next_node": "OBN-00_PATCH_COMPLETION",
+      "denied_next_nodes": [
+        "OBN-01_RUN_ISOLATION_AND_RUN_CONTEXT",
+        "ALL_RUNTIME_CALLS"
+      ]
+    },
+    "BLOCKED": {
+      "allowed_next_node": "SECURITY_REVIEW_OR_STOP",
+      "denied_next_nodes": [
+        "ALL_RUNTIME_CALLS",
+        "ALL_FILE_WRITES_EXCEPT_BLOCK_REPORT"
+      ]
+    }
+  },
+  "artifact_contract_consumer": {
+    "execution_envelope.json": {
+      "consumed_by": [
+        "OBN-01_RUN_ISOLATION_AND_RUN_CONTEXT",
+        "audit_layer"
+      ]
+    },
+    "intake_gate_result.json": {
+      "consumed_by": [
+        "OBN-01_RUN_ISOLATION_AND_RUN_CONTEXT",
+        "stage_gate"
+      ]
+    },
+    "patch_request.json": {
+      "consumed_by": [
+        "user",
+        "GPT_REVIEW",
+        "Hermes_PATCH_RUN"
+      ]
+    },
+    "obn_00_acceptance_report.json": {
+      "consumed_by": [
+        "GPT_POST_NODE_GATE_REVIEW"
+      ]
+    }
+  },
+  "minimum_required_evidence": {
+    "must_exist": [
+      "execution_envelope",
+      "intake_gate_result",
+      "forbidden_scope_check",
+      "allowed_path_check",
+      "artifact_contract_check",
+      "canonical_write_policy_check"
+    ],
+    "optional": [
+      "human_summary"
+    ],
+    "not_valid_as_evidence": [
+      "natural_language_claim_only",
+      "raw_document_statement",
+      "memory_recall_only"
+    ]
+  }
+}

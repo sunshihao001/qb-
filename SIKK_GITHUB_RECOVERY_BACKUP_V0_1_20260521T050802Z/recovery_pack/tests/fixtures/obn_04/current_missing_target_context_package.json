@@ -1,0 +1,18 @@
+{
+  "upstream_authorization": {
+    "obn_00_intake_gate_status": "EXECUTION_ALLOWED",
+    "obn_01_run_context_status": "PASS",
+    "obn_02_capability_contract_status": "PASS",
+    "obn_03_invocation_preparation_status": "PASS"
+  },
+  "run_context": {
+    "run_id": "obn_04_first_invocation_chain_pending_target_context",
+    "attempt_id": "attempt_001",
+    "trace_id": "trace_obn04_pending_target",
+    "artifact_storage_root": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_04_first_invocation_chain_pending_target_context",
+    "canonical_write_allowed": false
+  },
+  "target_context": {},
+  "source_execution_mode": null,
+  "source_execution_authorization": {}
+}

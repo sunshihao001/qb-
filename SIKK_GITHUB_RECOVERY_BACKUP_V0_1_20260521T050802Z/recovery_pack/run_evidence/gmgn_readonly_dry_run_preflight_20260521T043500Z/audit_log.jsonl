@@ -1,0 +1,6 @@
+{"ts": "2026-05-21T04:37:12.532541+00:00", "event": "run_context_created", "expected_backbone_node": "OBN-01"}
+{"ts": "2026-05-21T04:37:12.532590+00:00", "event": "operational_brief_recorded", "professional_term": "Read-only Data Source Invocation Preflight / Orchestrator Gate Dry-run", "execution_decision": "EXECUTION_ALLOWED", "boundary": "dry_run_preflight_only_no_gmgn_call"}
+{"ts": "2026-05-21T04:37:12.533055+00:00", "event": "orchestrator_gate_evaluated", "skill_id": "skill.gmgn_readonly_data_source", "status": "PASS"}
+{"ts": "2026-05-21T04:37:12.533286+00:00", "event": "orchestrator_gate_artifacts_written", "paths": ["/root/sikk-quant-runner/data/operating_backbone/runs/gmgn_readonly_dry_run_preflight_20260521T043500Z/control_layer/invocation_envelope.json", "/root/sikk-quant-runner/data/operating_backbone/runs/gmgn_readonly_dry_run_preflight_20260521T043500Z/control_layer/orchestrator_gate_result.json"]}
+{"ts": "2026-05-21T04:37:12.533391+00:00", "event": "gmgn_readonly_dry_run_preflight_completed", "gate_status": "PASS", "storage_policy_status": "PASS", "gmgn_called": false, "runtime_action_executed": false, "gate_alias": "/root/sikk-quant-runner/data/operating_backbone/runs/gmgn_readonly_dry_run_preflight_20260521T043500Z/gate_result.json"}
+{"ts": "2026-05-21T04:37:12.533608+00:00", "event": "final_report_written", "status": "PASS"}

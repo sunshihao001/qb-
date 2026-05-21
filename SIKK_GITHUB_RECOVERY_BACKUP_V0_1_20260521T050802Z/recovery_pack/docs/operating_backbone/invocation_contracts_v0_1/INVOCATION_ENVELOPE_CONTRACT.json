@@ -1,0 +1,131 @@
+{
+  "artifact_id": "INVOCATION_ENVELOPE_CONTRACT_V0_1",
+  "artifact_type": "contract_schema",
+  "version": "0.1",
+  "purpose": "Define the required pre-runtime invocation envelope for Orchestrator Skeleton Gate and Storage Policy Gate.",
+  "contract_owner": "OBN-00 control_plane",
+  "required_fields": [
+    "artifact_type",
+    "version",
+    "run_id",
+    "skill_id",
+    "expected_backbone_node",
+    "allowed_scope",
+    "forbidden_scope",
+    "input_artifacts",
+    "output_artifacts",
+    "downstream_consumers",
+    "invocation_context",
+    "artifact_class",
+    "target_paths",
+    "read_paths",
+    "promotion_requested",
+    "canonical_write_requested",
+    "execution_requested",
+    "runtime_action_allowed"
+  ],
+  "field_contract": {
+    "artifact_type": {
+      "type": "string",
+      "required_value": "sikk_invocation_envelope"
+    },
+    "version": {
+      "type": "string",
+      "required_value": "0.1"
+    },
+    "run_id": {
+      "type": "string",
+      "description": "isolated run id owning this invocation evidence"
+    },
+    "skill_id": {
+      "type": "string",
+      "description": "must exist in Skill Registry"
+    },
+    "expected_backbone_node": {
+      "type": "string",
+      "examples": [
+        "OBN-00",
+        "OBN-01"
+      ]
+    },
+    "allowed_scope": {
+      "type": "array[string]",
+      "description": "requested allowed behaviors; checked against skill and hard boundaries"
+    },
+    "forbidden_scope": {
+      "type": "array[string]",
+      "description": "guardrail list; forbidden terms here are not treated as requested behavior"
+    },
+    "input_artifacts": {
+      "type": "array[string]",
+      "min_items": 1
+    },
+    "output_artifacts": {
+      "type": "array[string]",
+      "min_items": 1
+    },
+    "downstream_consumers": {
+      "type": "array[string]",
+      "min_items": 1,
+      "description": "must be allowed for artifact_class"
+    },
+    "invocation_context": {
+      "type": "string"
+    },
+    "artifact_class": {
+      "type": "string",
+      "description": "must be registered in ARTIFACT_CLASSIFICATION_MATRIX"
+    },
+    "target_paths": {
+      "type": "array[string]",
+      "min_items": 1,
+      "description": "run-relative target paths; must match allowed_run_subpaths for artifact_class"
+    },
+    "read_paths": {
+      "type": "array[string]",
+      "description": "declared input read paths; cannot use forbidden glob/latest/blocked patterns"
+    },
+    "promotion_requested": {
+      "type": "boolean",
+      "required_value": false
+    },
+    "canonical_write_requested": {
+      "type": "boolean",
+      "required_value": false
+    },
+    "execution_requested": {
+      "type": "boolean",
+      "required_value": false
+    },
+    "runtime_action_allowed": {
+      "type": "boolean",
+      "required_value": false
+    },
+    "metadata": {
+      "type": "object",
+      "required": false
+    }
+  },
+  "status_semantics": {
+    "PASS": "Envelope is admissible for controlled handoff only; no skill execution implied.",
+    "PATCH_REQUIRED": "Missing or incomplete contract fields; repair before invocation.",
+    "BLOCKED": "Boundary, registry, storage, or policy violation; do not execute."
+  },
+  "forbidden": [
+    "GMGN call from contract creation",
+    "feature_generation",
+    "structure_signal_generation",
+    "decision_ticket_generation",
+    "replay_backtest_paper_only",
+    "PAPER_READY",
+    "live",
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast",
+    "promotion_requested true",
+    "canonical_write_requested true",
+    "execution_requested true",
+    "runtime_action_allowed true"
+  ]
+}

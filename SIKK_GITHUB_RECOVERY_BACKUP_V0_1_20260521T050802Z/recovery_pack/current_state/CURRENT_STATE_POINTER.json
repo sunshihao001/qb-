@@ -1,0 +1,69 @@
+{
+  "artifact_type": "sikk_current_state_pointer",
+  "version": "0.1",
+  "status": "APPROVED_CURRENT",
+  "approved_at_utc": "2026-05-21T04:53:34.479523+00:00",
+  "purpose": "Clean rehydration entrypoint for future SIKK sessions. This pointer is control-plane truth only, not market data truth.",
+  "backbone_version": {
+    "id": "OBN_CONTRACT_PACK_V0_1",
+    "path": "docs/operating_backbone/obn_contract_pack_v0_1/OBN_NODE_REGISTRY.yaml"
+  },
+  "clean_rehydration_protocol": {
+    "id": "CLEAN_REHYDRATION_V0_1",
+    "path": "docs/operating_backbone/clean_rehydration_v0_1/"
+  },
+  "contract_registry": {
+    "id": "INVOCATION_CONTRACTS_V0_1",
+    "path": "docs/operating_backbone/invocation_contracts_v0_1/"
+  },
+  "skill_registry": {
+    "id": "SKILL_REGISTRY_BASELINE_V0_1",
+    "path": "docs/capability_roadmap/skill_orchestrated_backbone_v0_1/first_batch_control_mapping_baseline/control_layer/SKILL_REGISTRY_BASELINE.json"
+  },
+  "storage_policy": {
+    "id": "STORAGE_TOPOLOGY_V0_1",
+    "path": "docs/operating_backbone/storage_topology_v0_1/"
+  },
+  "latest_approved_runs": [
+    {
+      "run_id": "gmgn_readonly_dry_run_preflight_20260521T043500Z",
+      "purpose": "GMGN read-only dry-run preflight gate; no real GMGN call",
+      "status": "PASS",
+      "path": "data/operating_backbone/runs/gmgn_readonly_dry_run_preflight_20260521T043500Z/final_run_report.yaml",
+      "allowed_use": "gate evidence only; not raw evidence and not acquisition result"
+    },
+    {
+      "run_id": "clean_rehydration_v0_1_20260521T044500Z",
+      "purpose": "Clean rehydration and contamination control protocol creation",
+      "status": "PASS",
+      "path": "data/operating_backbone/runs/clean_rehydration_v0_1_20260521T044500Z/final_run_report.yaml",
+      "allowed_use": "clean-start control evidence only"
+    }
+  ],
+  "default_start_sequence": [
+    "read_this_pointer",
+    "validate_referenced_paths",
+    "apply_read_allowlist_policy",
+    "run_contamination_checklist",
+    "produce_operational_brief",
+    "create_new_isolated_run"
+  ],
+  "forbidden_default_reads": [
+    "data/operating_backbone/runs/* by glob",
+    "data/operating_backbone/quarantine/*",
+    "data/operating_backbone/archive/*",
+    "latest file by mtime",
+    "old decision_ticket without current pointer reference",
+    "old feature_artifact without current pointer reference",
+    "old raw_evidence without source-to-canonical mapping authorization"
+  ],
+  "non_authorizations": [
+    "does_not_authorize_gmgn_call",
+    "does_not_authorize_raw_evidence_acquisition",
+    "does_not_authorize_feature_generation",
+    "does_not_authorize_structure_signal",
+    "does_not_authorize_decision_ticket",
+    "does_not_authorize_paper_validation",
+    "does_not_authorize_live_swap_signing_broadcast"
+  ]
+}

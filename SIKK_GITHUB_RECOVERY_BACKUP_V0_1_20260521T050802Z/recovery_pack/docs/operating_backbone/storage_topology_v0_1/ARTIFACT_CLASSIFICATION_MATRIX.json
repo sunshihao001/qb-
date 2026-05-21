@@ -1,0 +1,176 @@
+{
+  "artifact_id": "ARTIFACT_CLASSIFICATION_MATRIX_V0_1",
+  "version": "0.1",
+  "artifact_classes": [
+    {
+      "class": "control_plane",
+      "allowed_run_subpaths": [
+        "control/",
+        "gates/",
+        "handoff/",
+        "reports/",
+        "acceptance/"
+      ],
+      "allowed_consumers": [
+        "orchestrator_skeleton",
+        "skill_invocation_gate",
+        "governance_tests"
+      ],
+      "forbidden_outputs": [
+        "raw_evidence",
+        "feature_artifact",
+        "structure_signal",
+        "decision_ticket",
+        "validation_report",
+        "trade_action"
+      ]
+    },
+    {
+      "class": "raw_evidence",
+      "allowed_run_subpaths": [
+        "evidence/raw/",
+        "evidence/request/",
+        "evidence/response/",
+        "evidence/error/"
+      ],
+      "allowed_consumers": [
+        "source_to_canonical_mapping"
+      ],
+      "forbidden_outputs": [
+        "canonical_object",
+        "feature_artifact",
+        "structure_signal",
+        "strategy_behavior",
+        "trade_action"
+      ]
+    },
+    {
+      "class": "source_to_canonical_mapping",
+      "allowed_run_subpaths": [
+        "mapping/",
+        "canonical_candidate/"
+      ],
+      "allowed_consumers": [
+        "canonical_validation",
+        "feature_engineering"
+      ],
+      "forbidden_outputs": [
+        "feature_artifact",
+        "structure_signal",
+        "strategy_behavior"
+      ]
+    },
+    {
+      "class": "canonical_object",
+      "allowed_run_subpaths": [
+        "canonical_candidate/"
+      ],
+      "allowed_consumers": [
+        "feature_engineering",
+        "lineage_review"
+      ],
+      "forbidden_outputs": [
+        "structure_signal",
+        "strategy_behavior",
+        "trade_action"
+      ]
+    },
+    {
+      "class": "feature_artifact",
+      "allowed_run_subpaths": [
+        "features/"
+      ],
+      "allowed_consumers": [
+        "structure_signal_generation"
+      ],
+      "forbidden_outputs": [
+        "strategy_behavior",
+        "PAPER_READY",
+        "trade_action"
+      ]
+    },
+    {
+      "class": "structure_signal",
+      "allowed_run_subpaths": [
+        "structure_signal/"
+      ],
+      "allowed_consumers": [
+        "strategy_contract_candidate",
+        "decision_review"
+      ],
+      "forbidden_outputs": [
+        "trade_action",
+        "paper_position",
+        "automatic_strategy_rule"
+      ]
+    },
+    {
+      "class": "strategy_contract",
+      "allowed_run_subpaths": [
+        "strategy_contract_candidate/"
+      ],
+      "allowed_consumers": [
+        "decision_ticket_gate",
+        "validation_runner_after_ticket"
+      ],
+      "forbidden_outputs": [
+        "runner_permission_without_ticket",
+        "trade_action"
+      ]
+    },
+    {
+      "class": "decision_ticket",
+      "allowed_run_subpaths": [
+        "decision_gate/"
+      ],
+      "allowed_consumers": [
+        "replay_backtest_paper_only_validation"
+      ],
+      "forbidden_outputs": [
+        "live_permission",
+        "signing_permission"
+      ]
+    },
+    {
+      "class": "validation_report",
+      "allowed_run_subpaths": [
+        "validation/"
+      ],
+      "allowed_consumers": [
+        "attribution",
+        "promotion_review",
+        "upgrade_candidate_review"
+      ],
+      "forbidden_outputs": [
+        "automatic_PAPER_READY",
+        "live_readiness"
+      ]
+    },
+    {
+      "class": "attribution_report",
+      "allowed_run_subpaths": [
+        "attribution/"
+      ],
+      "allowed_consumers": [
+        "upgrade_candidate_review",
+        "human_review"
+      ],
+      "forbidden_outputs": [
+        "automatic_strategy_mutation"
+      ]
+    },
+    {
+      "class": "upgrade_candidate",
+      "allowed_run_subpaths": [
+        "upgrade_candidate/"
+      ],
+      "allowed_consumers": [
+        "manual_review",
+        "rebacktest_queue"
+      ],
+      "forbidden_outputs": [
+        "formal_strategy_modification_without_approval"
+      ]
+    }
+  ]
+}

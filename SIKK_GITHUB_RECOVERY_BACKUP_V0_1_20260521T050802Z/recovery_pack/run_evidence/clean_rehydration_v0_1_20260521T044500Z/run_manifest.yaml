@@ -1,0 +1,30 @@
+{
+  "run_id": "clean_rehydration_v0_1_20260521T044500Z",
+  "run_name": "Clean Rehydration & Contamination Control v0.1",
+  "run_class": "control_plane",
+  "expected_backbone_node": "OBN-00/Control Layer before OBN-01",
+  "status": "RUN_ISOLATED_EXECUTION",
+  "allowed_scope": [
+    "create_clean_rehydration_protocol",
+    "create_current_state_pointer",
+    "create_contamination_tests"
+  ],
+  "forbidden_scope": [
+    "gmgn_runtime_call",
+    "raw_evidence_acquisition",
+    "feature_generation",
+    "structure_signal_generation",
+    "decision_ticket_generation",
+    "replay_backtest_paper_only",
+    "live",
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast"
+  ],
+  "canonical_write_allowed": true,
+  "canonical_write_reason": "Only writes control-plane CURRENT_STATE_POINTER.json; no raw/canonical market data promotion.",
+  "promotion_allowed": false,
+  "runtime_validation_allowed": false,
+  "created_at_utc": "2026-05-21T04:53:34.478199+00:00"
+}

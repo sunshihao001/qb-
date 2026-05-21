@@ -1,0 +1,1126 @@
+{
+  "upstream_authorization": {
+    "obn_00_gate_status": "EXECUTION_ALLOWED",
+    "obn_01_run_context_status": "PASS"
+  },
+  "run_context_ref": "tests/fixtures/obn_01/valid_run_context_package.json",
+  "operating_backbone_sequence": [
+    "data_acquisition",
+    "source_to_canonical_mapping",
+    "feature_engineering",
+    "structure_signal",
+    "strategy_contract_engine",
+    "decision_gate",
+    "validation",
+    "failure_attribution",
+    "upgrade_candidate"
+  ],
+  "capability_contracts": [
+    {
+      "skill_name": "gmgn_readonly_data_source",
+      "professional_term": "Read-only Data Source Skill / Ingestion Adapter",
+      "backbone_node": "data_acquisition",
+      "maturity_level": {
+        "current": "L3_EXECUTION_READY",
+        "target_now": "L4_MINIMUM_CALLABLE_PREPARED",
+        "target_later": "L5_CANONICAL_PROMOTION_READY"
+      },
+      "allowed_role": [
+        "call_gmgn_read_only_if_authorized",
+        "return_raw_source_fields",
+        "preserve_request_response_error",
+        "report_json_path_value_type_sample_value",
+        "report_missing_reason",
+        "reject_forbidden_endpoint"
+      ],
+      "forbidden_role": [
+        "calculate_feature",
+        "generate_structure_signal",
+        "generate_decision_ticket",
+        "create_paper_position",
+        "call_swap",
+        "call_route_quote",
+        "call_order_quote",
+        "access_private_key",
+        "signing",
+        "broadcast"
+      ],
+      "input_contract": [
+        "run_context",
+        "target_token",
+        "chain",
+        "gmgn_mode",
+        "requested_readonly_capabilities",
+        "forbidden_scope"
+      ],
+      "output_contract": [
+        "source_field_discovery_result",
+        "request_response_error_evidence",
+        "raw_source_fields",
+        "missing_fields",
+        "forbidden_endpoint_report"
+      ],
+      "canonical_object_contract": {
+        "consumes": [
+          "TargetTokenContext",
+          "RunContext"
+        ],
+        "produces": [
+          "RawSourceField",
+          "SourceFieldDiscoveryResult",
+          "RawEvidenceReference"
+        ],
+        "modifies": [],
+        "forbidden_objects": [
+          "FeatureSnapshot",
+          "StructureSignal",
+          "DecisionTicket",
+          "PaperPosition"
+        ]
+      },
+      "data_lineage_requirement": {
+        "must_preserve": [
+          "run_id",
+          "trace_id",
+          "source_skill",
+          "entrypoint",
+          "request_path",
+          "response_path",
+          "error_path",
+          "json_path",
+          "source_status",
+          "raw_hash",
+          "missing_reason"
+        ]
+      },
+      "handoff_contract": {
+        "handoff_to": [
+          "source_to_canonical_mapper"
+        ],
+        "required_handoff_objects": [
+          "source_field_discovery_result",
+          "raw_source_fields",
+          "request_response_error_evidence",
+          "forbidden_endpoint_report"
+        ],
+        "handoff_blockers": [
+          "no_raw_source_fields",
+          "no_request_response_error_evidence",
+          "forbidden_scope_detected"
+        ]
+      },
+      "status_code_contract": {
+        "allowed_status": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "forbidden_status": [
+          "BUY",
+          "SELL",
+          "EXECUTE",
+          "LIVE_READY",
+          "SWAP_READY",
+          "PAPER_READY"
+        ]
+      },
+      "security_boundary": {
+        "no_live_trading": true,
+        "no_swap": true,
+        "no_private_key": true,
+        "no_signing": true,
+        "no_broadcast": true,
+        "no_route_quote": true,
+        "no_order_quote": true
+      },
+      "failure_attribution_hook": {
+        "failure_layer": [
+          "DATA_SOURCE",
+          "RAW_CAPTURE"
+        ],
+        "attribution_inputs": [
+          "request_response_error_evidence",
+          "missing_fields",
+          "forbidden_endpoint_report",
+          "source_status"
+        ]
+      },
+      "downstream_consumer": [
+        "source_to_canonical_mapper"
+      ],
+      "acceptance_criteria": {
+        "PASS": [
+          "raw_source_fields_returned",
+          "request_response_error_evidence_exists",
+          "forbidden_scope_not_touched"
+        ],
+        "PASS_WITH_GAPS": [
+          "partial_raw_source_fields_returned",
+          "missing_fields_have_reason"
+        ],
+        "PATCH_REQUIRED": [
+          "no_input_envelope",
+          "no_evidence",
+          "no_raw_source_field_output"
+        ],
+        "BLOCKED": [
+          "swap_or_signing_or_broadcast_attempted"
+        ]
+      }
+    },
+    {
+      "skill_name": "source_to_canonical_mapper",
+      "professional_term": "Source-to-Canonical Mapping Skill",
+      "backbone_node": "source_to_canonical_mapping",
+      "maturity_level": {
+        "current": "L3_EXECUTION_READY",
+        "target_now": "L4_MINIMUM_CALLABLE_PREPARED",
+        "target_later": "L5_CANONICAL_PROMOTION_READY"
+      },
+      "allowed_role": [
+        "map_source_field_to_canonical_field",
+        "assign_mapping_type",
+        "assign_transformation_owner",
+        "assign_downstream_consumer",
+        "report_missing_reason",
+        "preserve_source_lineage"
+      ],
+      "forbidden_role": [
+        "call_gmgn",
+        "call_okx",
+        "calculate_feature",
+        "calculate_top_holder_concentration",
+        "generate_structure_signal",
+        "generate_decision_ticket",
+        "decide_paper_ready",
+        "create_paper_position"
+      ],
+      "input_contract": [
+        "source_field_discovery_result",
+        "raw_source_fields",
+        "canonical_data_model_baseline",
+        "run_context"
+      ],
+      "output_contract": [
+        "source_to_canonical_mapping",
+        "unmapped_field_report",
+        "mapping_gap_report",
+        "next_feature_input_candidate"
+      ],
+      "canonical_object_contract": {
+        "consumes": [
+          "RawSourceField",
+          "SourceFieldDiscoveryResult",
+          "CanonicalDataModelBaseline"
+        ],
+        "produces": [
+          "SourceToCanonicalMapping",
+          "MappingGapReport",
+          "FeatureInputCandidate"
+        ],
+        "modifies": [],
+        "forbidden_objects": [
+          "FeatureSnapshot",
+          "StructureSignal",
+          "DecisionTicket",
+          "PaperPosition"
+        ]
+      },
+      "handoff_contract": {
+        "handoff_to": [
+          "feature_engineering"
+        ],
+        "required_handoff_objects": [
+          "source_to_canonical_mapping",
+          "feature_input_candidate",
+          "mapping_gap_report"
+        ],
+        "handoff_blockers": [
+          "no_canonical_mapping",
+          "transformation_owner_missing",
+          "downstream_consumer_missing",
+          "computed_feature_generated_inside_mapper"
+        ]
+      },
+      "status_code_contract": {
+        "allowed_status": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "forbidden_status": [
+          "BUY",
+          "SELL",
+          "EXECUTE",
+          "LIVE_READY",
+          "SWAP_READY",
+          "PAPER_READY"
+        ]
+      },
+      "security_boundary": {
+        "no_live_trading": true,
+        "no_swap": true,
+        "no_private_key": true,
+        "no_signing": true,
+        "no_broadcast": true,
+        "no_route_quote": true,
+        "no_order_quote": true
+      },
+      "failure_attribution_hook": {
+        "failure_layer": [
+          "MAPPING",
+          "CANONICAL_MODEL"
+        ],
+        "attribution_inputs": [
+          "unmapped_field_report",
+          "mapping_gap_report",
+          "source_field_discovery_result"
+        ]
+      },
+      "downstream_consumer": [
+        "feature_engineering",
+        "structure_signal",
+        "decision_gate",
+        "failure_attribution"
+      ],
+      "acceptance_criteria": {
+        "PASS": [
+          "every_source_field_has_mapping_or_missing_or_not_now",
+          "mapping_type_present",
+          "transformation_owner_present",
+          "downstream_consumer_present"
+        ],
+        "PASS_WITH_GAPS": [
+          "core_fields_mapped",
+          "missing_or_unmapped_fields_have_reason"
+        ],
+        "PATCH_REQUIRED": [
+          "fields_listed_without_canonical_mapping",
+          "transformation_owner_missing",
+          "downstream_consumer_missing"
+        ],
+        "BLOCKED": [
+          "tries_to_generate_feature_or_decision_or_paper"
+        ]
+      }
+    },
+    {
+      "skill_name": "feature_engineering",
+      "professional_term": "Feature Engineering from Canonical Mapping",
+      "backbone_node": "feature_engineering",
+      "maturity_level": {
+        "current": "L2_CONTRACT_ONLY",
+        "target_now": "L3_EXECUTION_READY",
+        "target_later": "L4_MINIMUM_CALLABLE"
+      },
+      "allowed_role": [
+        "generate_feature_snapshot_from_canonical_mapping",
+        "generate_feature_lineage",
+        "report_missing_feature_reason"
+      ],
+      "forbidden_role": [
+        "directly_read_gmgn_response_bypassing_mapping",
+        "generate_structure_signal",
+        "generate_decision_ticket",
+        "create_paper_position"
+      ],
+      "input_contract": [
+        "source_to_canonical_mapping",
+        "canonical_raw_fields",
+        "feature_rules"
+      ],
+      "output_contract": [
+        "feature_snapshot",
+        "feature_lineage",
+        "missing_feature_report"
+      ],
+      "canonical_object_contract": {
+        "consumes": [
+          "SourceToCanonicalMapping",
+          "FeatureInputCandidate",
+          "CanonicalRawField"
+        ],
+        "produces": [
+          "FeatureSnapshot",
+          "FeatureLineage",
+          "MissingFeatureReport"
+        ],
+        "modifies": [],
+        "forbidden_objects": [
+          "StructureSignal",
+          "DecisionTicket",
+          "PaperPosition"
+        ]
+      },
+      "data_lineage_requirement": {
+        "must_preserve": [
+          "run_id",
+          "source_to_canonical_mapping_id",
+          "canonical_field",
+          "source_field",
+          "transformation_formula",
+          "missing_reason",
+          "feature_quality_status"
+        ]
+      },
+      "handoff_contract": {
+        "handoff_to": [
+          "structure_signal",
+          "decision_gate"
+        ],
+        "required_handoff_objects": [
+          "feature_snapshot",
+          "feature_lineage",
+          "missing_feature_report"
+        ],
+        "handoff_blockers": [
+          "no_feature_lineage",
+          "feature_without_raw_source",
+          "fabricated_feature"
+        ]
+      },
+      "status_code_contract": {
+        "allowed_status": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "forbidden_status": [
+          "BUY",
+          "SELL",
+          "EXECUTE",
+          "LIVE_READY",
+          "SWAP_READY",
+          "PAPER_READY"
+        ]
+      },
+      "security_boundary": {
+        "no_live_trading": true,
+        "no_swap": true,
+        "no_private_key": true,
+        "no_signing": true,
+        "no_broadcast": true,
+        "no_route_quote": true,
+        "no_order_quote": true
+      },
+      "failure_attribution_hook": {
+        "failure_layer": [
+          "FEATURE_ENGINEERING"
+        ],
+        "attribution_inputs": [
+          "missing_feature_report",
+          "feature_lineage",
+          "feature_quality_status"
+        ]
+      },
+      "downstream_consumer": [
+        "structure_signal",
+        "decision_gate",
+        "validation_runners"
+      ],
+      "acceptance_criteria": {}
+    },
+    {
+      "skill_name": "structure_signal",
+      "professional_term": "Structure Signal Generation",
+      "backbone_node": "structure_signal",
+      "maturity_level": {
+        "current": "L2_CONTRACT_ONLY",
+        "target_now": "L3_EXECUTION_READY",
+        "target_later": "L4_MINIMUM_CALLABLE"
+      },
+      "allowed_role": [
+        "generate_market_structure_signal",
+        "generate_wallet_structure_signal",
+        "generate_chip_structure_signal",
+        "generate_security_gate_status",
+        "generate_counter_evidence",
+        "generate_structure_confidence"
+      ],
+      "forbidden_role": [
+        "output_buy_sell",
+        "create_paper_position",
+        "modify_strategy_contract",
+        "bypass_decision_gate"
+      ],
+      "input_contract": [
+        "feature_snapshot",
+        "feature_lineage",
+        "strategy_context"
+      ],
+      "output_contract": [
+        "structure_signal",
+        "counter_evidence",
+        "structure_confidence"
+      ],
+      "canonical_object_contract": {
+        "consumes": [
+          "FeatureSnapshot",
+          "FeatureLineage",
+          "StrategyContext"
+        ],
+        "produces": [
+          "StructureSignal",
+          "CounterEvidence",
+          "StructureConfidence"
+        ],
+        "modifies": [],
+        "forbidden_objects": [
+          "DecisionTicket",
+          "PaperPosition",
+          "StrategyContract"
+        ]
+      },
+      "data_lineage_requirement": {
+        "must_preserve": [
+          "run_id",
+          "feature_snapshot_id",
+          "feature_lineage_id",
+          "signal_source_features",
+          "counter_evidence_source",
+          "confidence_reason"
+        ]
+      },
+      "handoff_contract": {
+        "handoff_to": [
+          "decision_gate",
+          "failure_attribution"
+        ],
+        "required_handoff_objects": [
+          "structure_signal",
+          "counter_evidence",
+          "structure_confidence"
+        ],
+        "handoff_blockers": [
+          "no_feature_snapshot",
+          "no_feature_lineage",
+          "generated_buy_sell_signal"
+        ]
+      },
+      "status_code_contract": {
+        "allowed_status": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "forbidden_status": [
+          "BUY",
+          "SELL",
+          "EXECUTE",
+          "LIVE_READY",
+          "SWAP_READY",
+          "PAPER_READY"
+        ]
+      },
+      "security_boundary": {
+        "no_live_trading": true,
+        "no_swap": true,
+        "no_private_key": true,
+        "no_signing": true,
+        "no_broadcast": true,
+        "no_route_quote": true,
+        "no_order_quote": true
+      },
+      "failure_attribution_hook": {
+        "failure_layer": [
+          "STRUCTURE_SIGNAL"
+        ],
+        "attribution_inputs": [
+          "structure_signal",
+          "counter_evidence",
+          "structure_confidence"
+        ]
+      },
+      "downstream_consumer": [
+        "decision_gate",
+        "validation_runners",
+        "failure_attribution"
+      ],
+      "acceptance_criteria": {}
+    },
+    {
+      "skill_name": "strategy_contract_engine",
+      "professional_term": "Strategy Contract Engine / Policy Engine",
+      "backbone_node": "strategy_contract_engine",
+      "maturity_level": {
+        "current": "L2_CONTRACT_ONLY",
+        "target_now": "L3_EXECUTION_READY",
+        "target_later": "L4_MINIMUM_CALLABLE"
+      },
+      "allowed_role": [
+        "read_strategy_contract",
+        "validate_strategy_contract_schema",
+        "expose_rules_to_decision_and_validation"
+      ],
+      "forbidden_role": [
+        "auto_modify_strategy_contract",
+        "auto_upgrade_live_rules",
+        "create_trade_action"
+      ],
+      "input_contract": [
+        "strategy_contract_json",
+        "strategy_contract_schema"
+      ],
+      "output_contract": [
+        "contract_readiness_report",
+        "contract_rule_reference"
+      ],
+      "canonical_object_contract": {
+        "consumes": [
+          "StrategyContract",
+          "StrategyContractSchema"
+        ],
+        "produces": [
+          "ContractReadinessReport",
+          "ContractRuleReference"
+        ],
+        "modifies": [],
+        "forbidden_objects": [
+          "DecisionTicket",
+          "PaperPosition",
+          "LiveOrder"
+        ]
+      },
+      "data_lineage_requirement": {
+        "must_preserve": [
+          "contract_path",
+          "schema_path",
+          "contract_version",
+          "read_only_status",
+          "rule_reference_id"
+        ]
+      },
+      "handoff_contract": {
+        "handoff_to": [
+          "decision_gate",
+          "validation_runners"
+        ],
+        "required_handoff_objects": [
+          "contract_rule_reference",
+          "contract_readiness_report"
+        ],
+        "handoff_blockers": [
+          "no_strategy_contract",
+          "schema_missing_without_patch_reason",
+          "contract_auto_modified"
+        ]
+      },
+      "status_code_contract": {
+        "allowed_status": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "forbidden_status": [
+          "BUY",
+          "SELL",
+          "EXECUTE",
+          "LIVE_READY",
+          "SWAP_READY",
+          "PAPER_READY"
+        ]
+      },
+      "security_boundary": {
+        "no_live_trading": true,
+        "no_swap": true,
+        "no_private_key": true,
+        "no_signing": true,
+        "no_broadcast": true,
+        "no_route_quote": true,
+        "no_order_quote": true
+      },
+      "failure_attribution_hook": {
+        "failure_layer": [
+          "CONTRACT_RULE"
+        ],
+        "attribution_inputs": [
+          "contract_readiness_report",
+          "contract_rule_reference"
+        ]
+      },
+      "downstream_consumer": [
+        "decision_gate",
+        "replay_runner",
+        "backtest_runner",
+        "paper_only_runner"
+      ],
+      "acceptance_criteria": {}
+    },
+    {
+      "skill_name": "decision_gate",
+      "professional_term": "Decision Gate / Decision Ticket Builder",
+      "backbone_node": "decision_gate",
+      "maturity_level": {
+        "current": "L2_CONTRACT_ONLY",
+        "target_now": "L3_EXECUTION_READY",
+        "target_later": "L4_MINIMUM_CALLABLE"
+      },
+      "allowed_role": [
+        "generate_decision_ticket",
+        "assign_decision_state",
+        "explain_supporting_evidence",
+        "explain_counter_evidence",
+        "report_missing_required_data"
+      ],
+      "forbidden_role": [
+        "output_BUY",
+        "output_SELL",
+        "output_EXECUTE",
+        "output_LIVE_READY",
+        "output_SWAP_READY",
+        "create_paper_position"
+      ],
+      "input_contract": [
+        "feature_snapshot",
+        "structure_signal",
+        "strategy_contract_rules"
+      ],
+      "output_contract": [
+        "decision_ticket",
+        "decision_reason",
+        "next_required_action"
+      ],
+      "canonical_object_contract": {
+        "consumes": [
+          "FeatureSnapshot",
+          "StructureSignal",
+          "ContractRuleReference"
+        ],
+        "produces": [
+          "DecisionTicket",
+          "DecisionReason",
+          "NextRequiredAction"
+        ],
+        "modifies": [],
+        "forbidden_objects": [
+          "PaperPosition",
+          "LiveOrder",
+          "SwapPayload"
+        ]
+      },
+      "data_lineage_requirement": {
+        "must_preserve": [
+          "feature_snapshot_id",
+          "structure_signal_id",
+          "contract_rule_reference_id",
+          "supporting_evidence",
+          "counter_evidence",
+          "missing_required_data"
+        ]
+      },
+      "handoff_contract": {
+        "handoff_to": [
+          "validation_readiness_gate",
+          "failure_attribution"
+        ],
+        "required_handoff_objects": [
+          "decision_ticket",
+          "decision_reason",
+          "next_required_action"
+        ],
+        "handoff_blockers": [
+          "no_structure_signal",
+          "no_contract_reference",
+          "buy_sell_or_live_status_generated"
+        ]
+      },
+      "status_code_contract": {
+        "allowed_status": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "forbidden_status": [
+          "BUY",
+          "SELL",
+          "EXECUTE",
+          "LIVE_READY",
+          "SWAP_READY",
+          "PAPER_READY"
+        ]
+      },
+      "security_boundary": {
+        "no_live_trading": true,
+        "no_swap": true,
+        "no_private_key": true,
+        "no_signing": true,
+        "no_broadcast": true,
+        "no_route_quote": true,
+        "no_order_quote": true
+      },
+      "failure_attribution_hook": {
+        "failure_layer": [
+          "DECISION_GATE"
+        ],
+        "attribution_inputs": [
+          "decision_ticket",
+          "missing_required_data",
+          "decision_reason"
+        ]
+      },
+      "downstream_consumer": [
+        "validation_readiness_gate",
+        "failure_attribution"
+      ],
+      "acceptance_criteria": {}
+    },
+    {
+      "skill_name": "validation_runners",
+      "professional_term": "Validation Lifecycle",
+      "backbone_node": "validation",
+      "maturity_level": {
+        "current": "L1_CONCEPT_ONLY",
+        "target_now": "L2_CONTRACT_ONLY",
+        "target_later": "L4_MINIMUM_CALLABLE"
+      },
+      "allowed_role": [
+        "validate_strategy_contract",
+        "validate_decision_ticket",
+        "produce_validation_result"
+      ],
+      "forbidden_role": [
+        "live_trading",
+        "swap",
+        "signing",
+        "broadcast",
+        "use_different_strategy_contract"
+      ],
+      "input_contract": [
+        "decision_ticket",
+        "strategy_contract",
+        "validation_dataset_or_live_paper_feed"
+      ],
+      "output_contract": [
+        "validation_result",
+        "risk_event",
+        "performance_metrics"
+      ],
+      "canonical_object_contract": {
+        "consumes": [
+          "DecisionTicket",
+          "StrategyContract",
+          "ValidationDataset"
+        ],
+        "produces": [
+          "ValidationResult",
+          "RiskEvent",
+          "PerformanceMetrics"
+        ],
+        "modifies": [],
+        "forbidden_objects": [
+          "LiveOrder",
+          "SignedTransaction",
+          "SwapPayload"
+        ]
+      },
+      "data_lineage_requirement": {
+        "must_preserve": [
+          "decision_ticket_id",
+          "strategy_contract_version",
+          "validation_mode",
+          "dataset_reference",
+          "paper_only_boundary_status"
+        ]
+      },
+      "handoff_contract": {
+        "handoff_to": [
+          "failure_attribution"
+        ],
+        "required_handoff_objects": [
+          "validation_result",
+          "risk_event",
+          "performance_metrics"
+        ],
+        "handoff_blockers": [
+          "no_decision_ticket",
+          "no_strategy_contract",
+          "live_boundary_detected"
+        ]
+      },
+      "status_code_contract": {
+        "allowed_status": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "forbidden_status": [
+          "BUY",
+          "SELL",
+          "EXECUTE",
+          "LIVE_READY",
+          "SWAP_READY",
+          "PAPER_READY"
+        ]
+      },
+      "security_boundary": {
+        "no_live_trading": true,
+        "no_swap": true,
+        "no_private_key": true,
+        "no_signing": true,
+        "no_broadcast": true,
+        "no_route_quote": true,
+        "no_order_quote": true
+      },
+      "failure_attribution_hook": {
+        "failure_layer": [
+          "VALIDATION",
+          "PAPER_SIMULATION"
+        ],
+        "attribution_inputs": [
+          "validation_result",
+          "risk_event",
+          "performance_metrics"
+        ]
+      },
+      "downstream_consumer": [
+        "failure_attribution"
+      ],
+      "acceptance_criteria": {}
+    },
+    {
+      "skill_name": "failure_attribution",
+      "professional_term": "Failure Attribution",
+      "backbone_node": "attribution",
+      "maturity_level": {
+        "current": "L1_CONCEPT_ONLY",
+        "target_now": "L2_CONTRACT_ONLY",
+        "target_later": "L4_MINIMUM_CALLABLE"
+      },
+      "allowed_role": [
+        "classify_failure_layer",
+        "identify_root_cause",
+        "link_failure_to_data_feature_structure_contract_decision_or_simulation"
+      ],
+      "forbidden_role": [
+        "modify_strategy_contract",
+        "create_upgrade_without_evidence",
+        "approve_upgrade"
+      ],
+      "input_contract": [
+        "validation_result",
+        "decision_ticket",
+        "feature_lineage",
+        "structure_signal",
+        "strategy_contract_reference"
+      ],
+      "output_contract": [
+        "failure_attribution",
+        "root_cause_layer",
+        "evidence_path"
+      ],
+      "canonical_object_contract": {
+        "consumes": [
+          "ValidationResult",
+          "DecisionTicket",
+          "FeatureLineage",
+          "StructureSignal",
+          "ContractRuleReference"
+        ],
+        "produces": [
+          "FailureAttribution",
+          "RootCauseLayer",
+          "EvidencePath"
+        ],
+        "modifies": [],
+        "forbidden_objects": [
+          "StrategyContract",
+          "UpgradeCandidateApproval"
+        ]
+      },
+      "data_lineage_requirement": {
+        "must_preserve": [
+          "validation_result_id",
+          "decision_ticket_id",
+          "evidence_paths",
+          "root_cause_layer",
+          "attribution_confidence"
+        ]
+      },
+      "handoff_contract": {
+        "handoff_to": [
+          "upgrade_candidate"
+        ],
+        "required_handoff_objects": [
+          "failure_attribution",
+          "root_cause_layer",
+          "evidence_path"
+        ],
+        "handoff_blockers": [
+          "no_validation_result",
+          "no_evidence_path",
+          "generic_failure_without_layer"
+        ]
+      },
+      "status_code_contract": {
+        "allowed_status": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "forbidden_status": [
+          "BUY",
+          "SELL",
+          "EXECUTE",
+          "LIVE_READY",
+          "SWAP_READY",
+          "PAPER_READY"
+        ]
+      },
+      "security_boundary": {
+        "no_live_trading": true,
+        "no_swap": true,
+        "no_private_key": true,
+        "no_signing": true,
+        "no_broadcast": true,
+        "no_route_quote": true,
+        "no_order_quote": true
+      },
+      "failure_attribution_hook": {
+        "failure_layer": [
+          "ATTRIBUTION"
+        ],
+        "attribution_inputs": [
+          "failure_attribution",
+          "root_cause_layer",
+          "evidence_path"
+        ]
+      },
+      "downstream_consumer": [
+        "upgrade_candidate"
+      ],
+      "acceptance_criteria": {}
+    },
+    {
+      "skill_name": "upgrade_candidate",
+      "professional_term": "Upgrade Candidate Generation",
+      "backbone_node": "upgrade",
+      "maturity_level": {
+        "current": "L1_CONCEPT_ONLY",
+        "target_now": "L2_CONTRACT_ONLY",
+        "target_later": "L4_MINIMUM_CALLABLE"
+      },
+      "allowed_role": [
+        "propose_upgrade_candidate",
+        "require_rebacktest",
+        "require_shadow_validation",
+        "define_rollback_condition"
+      ],
+      "forbidden_role": [
+        "auto_modify_live_strategy",
+        "auto_promote_strategy",
+        "bypass_manual_approval"
+      ],
+      "input_contract": [
+        "failure_attribution",
+        "strategy_contract_reference",
+        "validation_result"
+      ],
+      "output_contract": [
+        "upgrade_candidate",
+        "affected_contract_section",
+        "required_rebacktest",
+        "shadow_validation_required",
+        "rollback_condition"
+      ],
+      "canonical_object_contract": {
+        "consumes": [
+          "FailureAttribution",
+          "StrategyContractReference",
+          "ValidationResult"
+        ],
+        "produces": [
+          "UpgradeCandidate",
+          "RebacktestRequirement",
+          "ShadowValidationRequirement",
+          "RollbackCondition"
+        ],
+        "modifies": [],
+        "forbidden_objects": [
+          "StrategyContract",
+          "LiveStrategyRule",
+          "ReleaseApproval"
+        ]
+      },
+      "data_lineage_requirement": {
+        "must_preserve": [
+          "failure_attribution_id",
+          "affected_contract_section",
+          "evidence_path",
+          "proposed_change_reason",
+          "required_validation"
+        ]
+      },
+      "handoff_contract": {
+        "handoff_to": [
+          "controlled_release_review"
+        ],
+        "required_handoff_objects": [
+          "upgrade_candidate",
+          "required_rebacktest",
+          "shadow_validation_required",
+          "rollback_condition"
+        ],
+        "handoff_blockers": [
+          "no_failure_attribution",
+          "no_required_rebacktest",
+          "auto_modifies_strategy"
+        ]
+      },
+      "status_code_contract": {
+        "allowed_status": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "forbidden_status": [
+          "BUY",
+          "SELL",
+          "EXECUTE",
+          "LIVE_READY",
+          "SWAP_READY",
+          "PAPER_READY"
+        ]
+      },
+      "security_boundary": {
+        "no_live_trading": true,
+        "no_swap": true,
+        "no_private_key": true,
+        "no_signing": true,
+        "no_broadcast": true,
+        "no_route_quote": true,
+        "no_order_quote": true
+      },
+      "failure_attribution_hook": {
+        "failure_layer": [
+          "UPGRADE"
+        ],
+        "attribution_inputs": [
+          "failure_attribution",
+          "validation_result",
+          "strategy_contract_reference"
+        ]
+      },
+      "downstream_consumer": [
+        "controlled_release_review"
+      ],
+      "acceptance_criteria": {}
+    }
+  ],
+  "first_chain_contract_readiness": {
+    "gmgn_readonly_data_source_readiness": "PASS",
+    "source_to_canonical_mapper_readiness": "PATCH_REQUIRED",
+    "handoff_between_first_chain": "READY",
+    "enter_obn_03_allowed": true,
+    "blockers": []
+  },
+  "action_attempts": []
+}

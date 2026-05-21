@@ -1,0 +1,22 @@
+{
+  "run_id": "sikk_portable_recovery_pack_v0_1_20260521t050713z",
+  "run_class": "control_plane_recovery",
+  "status": "RUN_ISOLATED_EXECUTION",
+  "pack_name": "SIKK_PORTABLE_RECOVERY_PACK_V0_1_20260521T050713Z",
+  "upload_name": "SIKK_GITHUB_RECOVERY_BACKUP_V0_1_20260521T050713Z",
+  "forbidden_scope": [
+    "gmgn_runtime_call",
+    "raw_evidence_acquisition",
+    "feature_generation",
+    "structure_signal_generation",
+    "decision_ticket_generation",
+    "paper_validation",
+    "live",
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast",
+    "git_push_without_approval"
+  ],
+  "created_at_utc": "2026-05-21T05:07:13.238257+00:00"
+}

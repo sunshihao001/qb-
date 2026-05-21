@@ -1,0 +1,32 @@
+{
+  "artifact_type": "sikk_read_allowlist_policy",
+  "version": "0.1",
+  "purpose": "Controls what a clean-start session may read by default.",
+  "default_allowed_reads": [
+    "data/operating_backbone/canonical/current/CURRENT_STATE_POINTER.json",
+    "docs/operating_backbone/clean_rehydration_v0_1/",
+    "docs/operating_backbone/invocation_contracts_v0_1/",
+    "docs/operating_backbone/storage_topology_v0_1/",
+    "docs/capability_roadmap/skill_orchestrated_backbone_v0_1/first_batch_control_mapping_baseline/control_layer/SKILL_REGISTRY_BASELINE.json"
+  ],
+  "conditional_reads": [
+    {
+      "path_pattern": "data/operating_backbone/runs/<run_id>/",
+      "allowed_only_if": "run_id is referenced by CURRENT_STATE_POINTER.latest_approved_runs or explicit task packet"
+    },
+    {
+      "path_pattern": "data/operating_backbone/staging/<candidate_id>/",
+      "allowed_only_if": "task is promotion review or contamination audit"
+    }
+  ],
+  "forbidden_default_reads": [
+    "data/operating_backbone/runs/* by glob",
+    "data/operating_backbone/quarantine/*",
+    "data/operating_backbone/archive/*",
+    "latest file by mtime",
+    "old decision_ticket without current pointer reference",
+    "old feature_artifact without current pointer reference",
+    "old raw_evidence without source-to-canonical mapping authorization"
+  ],
+  "default_decision_if_violation_detected": "PATCH_REQUIRED_OR_BLOCKED"
+}

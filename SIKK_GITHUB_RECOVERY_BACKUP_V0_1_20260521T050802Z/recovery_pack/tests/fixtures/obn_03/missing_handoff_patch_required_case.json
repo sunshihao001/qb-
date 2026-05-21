@@ -1,0 +1,372 @@
+{
+  "upstream_authorization": {
+    "obn_00_intake_gate_status": "EXECUTION_ALLOWED",
+    "obn_01_run_context_status": "PASS",
+    "obn_02_capability_contract_status": "PASS"
+  },
+  "workflow_run_plan": {
+    "run_id": "${run_id}",
+    "attempt_id": "${attempt_id}",
+    "trace_id": "${trace_id}",
+    "task_name": "FIRST_INVOCATION_CHAIN_RUN",
+    "operating_intent": "Run the first minimum callable chain: GMGN Read-only Data Source Skill → Source-to-Canonical Mapping Skill",
+    "capability_dag": {
+      "nodes": [
+        "gmgn_readonly_data_source",
+        "source_to_canonical_mapper"
+      ],
+      "edges": [
+        {
+          "from": "gmgn_readonly_data_source",
+          "to": "source_to_canonical_mapper",
+          "handoff_object": "source_field_discovery_result"
+        }
+      ]
+    },
+    "first_skill": "gmgn_readonly_data_source",
+    "expected_final_output": [
+      "source_to_canonical_mapping_or_mapping_gap_report",
+      "stage_gate_result",
+      "next_recommended_skill"
+    ],
+    "target_context_policy": {
+      "required_for_obn_03": false,
+      "required_for_obn_04": true,
+      "no_auto_fallback_to_recent_token": true,
+      "missing_target_context_before_obn_04": "PATCH_REQUIRED"
+    },
+    "forbidden_scope": [
+      "live_trading",
+      "swap",
+      "gmgn_swap",
+      "gmgn_cooking",
+      "route_quote",
+      "order_quote",
+      "private_key",
+      "signing",
+      "broadcast",
+      "paper_position",
+      "canonical_write"
+    ]
+  },
+  "data_source_skill_input_envelope_template": {
+    "skill_name": "gmgn_readonly_data_source",
+    "run_id": "${run_id}",
+    "attempt_id": "${attempt_id}",
+    "trace_id": "${trace_id}",
+    "input_objects": [
+      "run_context",
+      "target_context",
+      "source_mode",
+      "requested_readonly_capabilities",
+      "forbidden_scope"
+    ],
+    "target_context": {
+      "target_token": "${required_before_obn_04}",
+      "chain": "${required_before_obn_04}",
+      "acquisition_mode": "fixture_first_or_readonly_real"
+    },
+    "requested_readonly_capabilities": [
+      "gmgn_token_info_read",
+      "gmgn_market_or_pool_read",
+      "gmgn_kline_or_price_volume_read",
+      "gmgn_top_holders_read",
+      "gmgn_smart_holders_read",
+      "gmgn_trader_profit_read",
+      "gmgn_wallet_profile_read",
+      "gmgn_security_read_if_safe"
+    ],
+    "forbidden_actions": [
+      "swap",
+      "route_quote",
+      "order_quote",
+      "private_key",
+      "signing",
+      "broadcast"
+    ],
+    "expected_output": [
+      "source_field_discovery_result",
+      "raw_source_fields",
+      "request_response_error_evidence",
+      "missing_fields",
+      "forbidden_endpoint_report"
+    ]
+  },
+  "data_source_skill_result_envelope_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "OBN-03 Data Source Skill Result Envelope",
+    "type": "object",
+    "required": [
+      "skill_name",
+      "status",
+      "outputs",
+      "lineage",
+      "next_recommended_skill",
+      "blockers"
+    ],
+    "properties": {
+      "skill_name": {
+        "const": "gmgn_readonly_data_source"
+      },
+      "status": {
+        "enum": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ]
+      },
+      "outputs": {
+        "type": "object",
+        "required": [
+          "source_field_discovery_result",
+          "raw_source_fields",
+          "request_response_error_evidence",
+          "missing_fields",
+          "forbidden_endpoint_report"
+        ]
+      },
+      "lineage": {
+        "type": "object",
+        "required": [
+          "run_id",
+          "attempt_id",
+          "trace_id",
+          "source_skill",
+          "request_path",
+          "response_path",
+          "error_path",
+          "raw_hash"
+        ]
+      },
+      "next_recommended_skill": {
+        "type": "array",
+        "items": {
+          "const": "source_to_canonical_mapper"
+        }
+      },
+      "blockers": {
+        "type": "array",
+        "items": {
+          "enum": [
+            "no_target_token",
+            "no_raw_source_fields",
+            "no_request_response_error_evidence",
+            "forbidden_scope_detected"
+          ]
+        }
+      }
+    }
+  },
+  "data_source_to_mapping_stage_gate": {
+    "gate_name": "DATA_SOURCE_TO_MAPPING_GATE",
+    "PASS": {
+      "conditions": [
+        "data_source_status in [PASS, PASS_WITH_GAPS]",
+        "source_field_discovery_result exists",
+        "forbidden_scope_detected == false",
+        "request_response_error_evidence exists or fixture_evidence exists"
+      ]
+    },
+    "PATCH_REQUIRED": {
+      "conditions": [
+        "no_target_token",
+        "no_source_field_discovery_result",
+        "no_evidence",
+        "missing_fields_without_reason"
+      ]
+    },
+    "BLOCKED": {
+      "conditions": [
+        "swap_attempted",
+        "signing_attempted",
+        "broadcast_attempted",
+        "route_quote_attempted",
+        "order_quote_attempted"
+      ]
+    },
+    "allowed_next_skill_if_pass": [
+      "source_to_canonical_mapper"
+    ],
+    "denied_next_skills_if_not_pass": [
+      "source_to_canonical_mapper",
+      "feature_engineering",
+      "decision_gate",
+      "paper_only_runner"
+    ]
+  },
+  "mapping_skill_input_envelope_template": {
+    "skill_name": "source_to_canonical_mapper",
+    "run_id": "${run_id}",
+    "attempt_id": "${attempt_id}",
+    "trace_id": "${trace_id}",
+    "input_objects": [
+      "source_field_discovery_result",
+      "raw_source_fields",
+      "canonical_data_model_baseline",
+      "run_context",
+      "handoff_envelope"
+    ],
+    "allowed_mapping_types": [
+      "direct_raw",
+      "normalized",
+      "computed_by_S02",
+      "structure_input_for_S04",
+      "decision_evidence_for_S05",
+      "validation_input",
+      "attribution_input",
+      "missing",
+      "not_now"
+    ],
+    "expected_output": [
+      "source_to_canonical_mapping",
+      "unmapped_field_report",
+      "mapping_gap_report",
+      "next_feature_input_candidate"
+    ],
+    "forbidden_actions": [
+      "call_gmgn",
+      "call_okx",
+      "calculate_feature",
+      "generate_structure_signal",
+      "generate_decision_ticket",
+      "decide_paper_ready",
+      "create_paper_position"
+    ]
+  },
+  "mapping_skill_result_envelope_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "OBN-03 Mapping Skill Result Envelope",
+    "type": "object",
+    "required": [
+      "skill_name",
+      "status",
+      "outputs",
+      "lineage",
+      "next_recommended_skill"
+    ],
+    "properties": {
+      "skill_name": {
+        "const": "source_to_canonical_mapper"
+      },
+      "status": {
+        "enum": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ]
+      },
+      "outputs": {
+        "type": "object",
+        "required": [
+          "source_to_canonical_mapping",
+          "unmapped_field_report",
+          "mapping_gap_report",
+          "next_feature_input_candidate"
+        ],
+        "properties": {
+          "source_to_canonical_mapping": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "source_field",
+                "source_skill",
+                "source_json_path",
+                "upstream_response_path",
+                "canonical_object",
+                "canonical_field",
+                "mapping_type",
+                "transformation_owner",
+                "downstream_consumer",
+                "missing_reason"
+              ]
+            }
+          }
+        }
+      },
+      "lineage": {
+        "type": "object",
+        "required": [
+          "run_id",
+          "attempt_id",
+          "trace_id",
+          "upstream_skill_result",
+          "handoff_envelope_ref"
+        ]
+      },
+      "next_recommended_skill": {
+        "type": "array",
+        "items": {
+          "const": "feature_engineering"
+        }
+      }
+    }
+  },
+  "mapping_to_feature_stage_gate": {
+    "gate_name": "MAPPING_TO_FEATURE_GATE",
+    "PASS": {
+      "conditions": [
+        "mapping_status in [PASS, PASS_WITH_GAPS]",
+        "source_to_canonical_mapping exists",
+        "every_mapping_has_transformation_owner",
+        "every_mapping_has_downstream_consumer",
+        "no_feature_generated_inside_mapper",
+        "no_decision_ticket_generated_inside_mapper"
+      ]
+    },
+    "PATCH_REQUIRED": {
+      "conditions": [
+        "fields_listed_without_canonical_mapping",
+        "transformation_owner_missing",
+        "downstream_consumer_missing",
+        "no_mapping_gap_report"
+      ]
+    },
+    "BLOCKED": {
+      "conditions": [
+        "mapping_skill_calls_gmgn",
+        "mapping_skill_generates_feature",
+        "mapping_skill_generates_decision_ticket",
+        "mapping_skill_creates_paper_position"
+      ]
+    },
+    "allowed_next_skill_if_pass": [
+      "feature_engineering"
+    ],
+    "denied_next_skills_if_not_pass": [
+      "feature_engineering",
+      "structure_signal",
+      "decision_gate",
+      "paper_only_runner"
+    ]
+  },
+  "obn_03_readiness_report": {
+    "node_id": "OBN-03",
+    "node_name": "FIRST_INVOCATION_CHAIN_PREPARATION",
+    "readiness_status": "PATCH_REQUIRED",
+    "prepared_artifacts": [
+      "workflow_run_plan",
+      "data_source_skill_input_envelope_template",
+      "data_source_skill_result_envelope_schema",
+      "data_source_to_mapping_stage_gate",
+      "handoff_to_mapping_envelope_template",
+      "mapping_skill_input_envelope_template",
+      "mapping_skill_result_envelope_schema",
+      "mapping_to_feature_stage_gate"
+    ],
+    "first_chain_ready": {
+      "gmgn_readonly_data_source_ready": true,
+      "source_to_canonical_mapper_ready": true,
+      "handoff_ready": true,
+      "stage_gates_ready": true
+    },
+    "missing_items": [
+      "handoff_to_mapping_envelope_template"
+    ],
+    "forbidden_scope_detected": [],
+    "next_node_permission": "OBN-04_FIRST_INVOCATION_CHAIN_RUN"
+  },
+  "action_attempts": []
+}

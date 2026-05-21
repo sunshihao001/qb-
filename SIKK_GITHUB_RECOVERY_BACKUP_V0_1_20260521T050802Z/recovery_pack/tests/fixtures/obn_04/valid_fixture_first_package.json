@@ -1,0 +1,39 @@
+{
+  "upstream_authorization": {
+    "obn_00_intake_gate_status": "EXECUTION_ALLOWED",
+    "obn_01_run_context_status": "PASS",
+    "obn_02_capability_contract_status": "PASS",
+    "obn_03_invocation_preparation_status": "PASS"
+  },
+  "run_context": {
+    "run_id": "obn_04_fixture_valid_run",
+    "attempt_id": "attempt_001",
+    "trace_id": "trace_obn04_valid",
+    "artifact_storage_root": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_04_fixture_valid_run",
+    "canonical_write_allowed": false
+  },
+  "target_context": {
+    "target_token": "0x0000000000000000000000000000000000000000",
+    "chain": "solana_or_evm_fixture",
+    "acquisition_mode": "fixture_first",
+    "gmgn_mode": "fixture_first"
+  },
+  "source_execution_mode": "fixture_first",
+  "source_execution_authorization": {
+    "fixture_first": true,
+    "read_only_runtime": false,
+    "audit_existing_response": false
+  },
+  "fixture_raw_source_fields": {
+    "token_address": "0x0000000000000000000000000000000000000000",
+    "symbol": "FIX",
+    "name": "Fixture Token",
+    "chain": "solana_or_evm_fixture",
+    "price_usd": 0.123,
+    "liquidity_usd": 10000,
+    "volume_24h_usd": 2500,
+    "holder_count": 1234,
+    "top_holder_percent": 12.5,
+    "security_status": "NOT_AVAILABLE_READ_ONLY_BOUNDARY"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "upstream_authorization": {
+    "obn_00_intake_gate_status": "EXECUTION_ALLOWED",
+    "obn_01_run_context_status": "PASS",
+    "obn_06_structure_to_decision_gate_status": "PASS_WITH_GAPS",
+    "obn_07_decision_gate_preparation_status": "PASS"
+  },
+  "run_context": {
+    "run_id": "obn_08_decision_gate_run_missing_strategy_contract",
+    "attempt_id": "attempt_001",
+    "trace_id": "trace_obn08_missing_strategy_contract",
+    "artifact_storage_root": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_08_decision_gate_run_missing_strategy_contract",
+    "canonical_write_allowed": false
+  },
+  "refs": {
+    "structure_signal": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_06_non_destructive_signal_policy_patch/outputs/patched_structure_signal/structure_signal_with_non_destructive_policy_fields.json",
+    "counter_evidence_report": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_06_structure_signal_from_obn05_fixture/outputs/structure_signal/counter_evidence_report.json",
+    "structure_confidence_report": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_06_structure_signal_from_obn05_fixture/outputs/structure_signal/structure_confidence_report.json",
+    "structure_gap_report": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_06_structure_signal_from_obn05_fixture/outputs/structure_signal/structure_gap_report.json",
+    "decision_gate_input_contract": "/root/sikk-quant-runner/configs/policies/obn_07_decision_gate/decision_gate_input_contract.json",
+    "decision_ticket_schema": "/root/sikk-quant-runner/configs/policies/obn_07_decision_gate/decision_ticket_schema.json",
+    "evidence_to_decision_rulebook": "/root/sikk-quant-runner/configs/policies/obn_07_decision_gate/evidence_to_decision_rulebook.json",
+    "hard_blocker_consumption_policy": "/root/sikk-quant-runner/configs/policies/obn_07_decision_gate/hard_blocker_consumption_policy.json",
+    "soft_risk_consumption_policy": "/root/sikk-quant-runner/configs/policies/obn_07_decision_gate/soft_risk_consumption_policy.json",
+    "paper_ready_candidate_precondition_policy": "/root/sikk-quant-runner/configs/policies/obn_07_decision_gate/paper_ready_candidate_precondition_policy.json",
+    "decision_to_validation_handoff_contract": "/root/sikk-quant-runner/configs/policies/obn_07_decision_gate/decision_to_validation_handoff_contract.json"
+  },
+  "feature_lineage_ref": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_05_feature_engineering_from_obn04_fixture/outputs/feature_engineering/feature_lineage.json",
+  "strategy_contract_reference": {}
+}

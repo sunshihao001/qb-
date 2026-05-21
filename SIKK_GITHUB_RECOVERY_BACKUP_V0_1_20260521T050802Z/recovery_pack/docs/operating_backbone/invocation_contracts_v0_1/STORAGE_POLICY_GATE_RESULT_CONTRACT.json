@@ -1,0 +1,54 @@
+{
+  "artifact_id": "STORAGE_POLICY_GATE_RESULT_CONTRACT_V0_1",
+  "artifact_type": "contract_schema",
+  "version": "0.1",
+  "purpose": "Define storage policy preflight result for artifact class/path/consumer/read/promotion checks.",
+  "required_fields": [
+    "status",
+    "artifact_class",
+    "class_registered",
+    "missing_contracts",
+    "bad_target_paths",
+    "bad_consumers",
+    "forbidden_output_hits",
+    "forbidden_read_patterns",
+    "patch_reasons",
+    "block_reasons",
+    "warnings",
+    "read_policy_ref"
+  ],
+  "status_allowed_values": [
+    "PASS",
+    "PATCH_REQUIRED",
+    "BLOCKED"
+  ],
+  "pass_conditions": [
+    "artifact_class registered",
+    "target_paths allowed for artifact_class",
+    "downstream_consumers allowed for artifact_class",
+    "no forbidden outputs",
+    "no forbidden read patterns",
+    "promotion_requested false",
+    "canonical_write_requested false"
+  ],
+  "patch_required_conditions": [
+    "storage policy contract files missing",
+    "artifact_class missing",
+    "target_paths missing"
+  ],
+  "blocked_conditions": [
+    "artifact_class not registered",
+    "target path not allowed",
+    "consumer not allowed",
+    "forbidden output requested",
+    "promotion/canonical write requested without promotion gate",
+    "forbidden read pattern detected"
+  ],
+  "forbidden_read_patterns": [
+    "runs/* as truth",
+    "** glob over run outputs",
+    "latest file by mtime",
+    "blocked or PATCH_REQUIRED artifact as canonical input"
+  ],
+  "promotion_rule": "ordinary invocation gate must block promotion_requested or canonical_write_requested; canonical/current requires a separate promotion gate."
+}

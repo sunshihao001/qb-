@@ -1,0 +1,95 @@
+{
+  "run_id": "storage_policy_gate_integration_20260521T041423Z",
+  "run_class": "control_plane",
+  "task_name": "SIKK_STORAGE_POLICY_GATE_INTEGRATION_V0_1",
+  "professional_term": "Storage Policy Gate Integration / Artifact Read-Write Boundary Enforcement",
+  "expected_backbone_node": "OBN-00",
+  "created_at_utc": "2026-05-21T04:14:23.441325+00:00",
+  "status": "PASS",
+  "inputs": [
+    "Storage Topology Contract v0.1",
+    "Orchestrator Skeleton Gate",
+    "Skill Registry baseline"
+  ],
+  "outputs": [
+    "sikk_core/orchestrator_skeleton.py",
+    "tests/test_storage_policy_gate_integration.py",
+    "tests/test_orchestrator_skeleton_gate.py",
+    "docs/operating_backbone/storage_topology_v0_1/STORAGE_TOPOLOGY_CONTRACT.json",
+    "docs/operating_backbone/storage_topology_v0_1/ARTIFACT_CLASSIFICATION_MATRIX.json",
+    "docs/operating_backbone/storage_topology_v0_1/RUN_DIRECTORY_CONTRACT.json",
+    "docs/operating_backbone/storage_topology_v0_1/CANONICAL_PROMOTION_POLICY.json",
+    "docs/operating_backbone/storage_topology_v0_1/ARTIFACT_INDEX_POLICY.json",
+    "docs/operating_backbone/storage_topology_v0_1/CONTAMINATION_PREVENTION_RULES.json"
+  ],
+  "allowed_scope": [
+    "storage policy preflight enforcement",
+    "artifact class/path/consumer/read/promotion gate tests"
+  ],
+  "forbidden_scope": [
+    "GMGN call",
+    "raw evidence acquisition",
+    "canonical/current promotion",
+    "feature_generation",
+    "structure_signal_generation",
+    "decision_ticket_generation",
+    "replay_backtest_paper_only",
+    "PAPER_READY",
+    "live",
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast"
+  ],
+  "promotion_allowed": false,
+  "promotion_performed": false,
+  "canonical_write_allowed": false,
+  "runtime_validation_allowed": false,
+  "artifacts": [
+    {
+      "path": "sikk_core/orchestrator_skeleton.py",
+      "exists": true,
+      "sha256": "be59ef171532c741ebc3ea17531da09bbba6441c07b9e342949880fd5eb6dd91"
+    },
+    {
+      "path": "tests/test_storage_policy_gate_integration.py",
+      "exists": true,
+      "sha256": "1a4f86fb2b4052d351758a40570ca8b8692d0971cb3d2e15750625af405063bc"
+    },
+    {
+      "path": "tests/test_orchestrator_skeleton_gate.py",
+      "exists": true,
+      "sha256": "2d5396d48c19f180e46f6d25bc30bb2a73e0049473ac158e2adcbf832281e13c"
+    },
+    {
+      "path": "docs/operating_backbone/storage_topology_v0_1/STORAGE_TOPOLOGY_CONTRACT.json",
+      "exists": true,
+      "sha256": "d9c6cb31242e99b3ba91c78deb60a9bcbc1f96d78f78bff4b0023efa882c5b03"
+    },
+    {
+      "path": "docs/operating_backbone/storage_topology_v0_1/ARTIFACT_CLASSIFICATION_MATRIX.json",
+      "exists": true,
+      "sha256": "fb108825b5c0205385781cf1d4605b62dd4b458c53ece8cd1d8a5c1209f21b31"
+    },
+    {
+      "path": "docs/operating_backbone/storage_topology_v0_1/RUN_DIRECTORY_CONTRACT.json",
+      "exists": true,
+      "sha256": "63c172de2fb22a4dca456df22d485a024a55e4923f18b1fe2b27f84b072ba91a"
+    },
+    {
+      "path": "docs/operating_backbone/storage_topology_v0_1/CANONICAL_PROMOTION_POLICY.json",
+      "exists": true,
+      "sha256": "6472b47dd34cca3c223bcbac60b40a4225da4075bed4fb9c1c897ea35202e0ce"
+    },
+    {
+      "path": "docs/operating_backbone/storage_topology_v0_1/ARTIFACT_INDEX_POLICY.json",
+      "exists": true,
+      "sha256": "3243c37b7d812ec443f9189b6fb40d41f771abda7f8c0341e5965b3a5343c529"
+    },
+    {
+      "path": "docs/operating_backbone/storage_topology_v0_1/CONTAMINATION_PREVENTION_RULES.json",
+      "exists": true,
+      "sha256": "da0637e66e83c8e95f0b34f179097990b2f686fb3091fc2dc2324f81097fcf84"
+    }
+  ]
+}

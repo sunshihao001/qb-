@@ -1,0 +1,24 @@
+{
+  "artifact_type": "sikk_clean_rehydration_acceptance_checklist",
+  "version": "0.1",
+  "checklist": [
+    "CLEAN_START_PROTOCOL.md exists",
+    "CURRENT_STATE_POINTER_CONTRACT.json exists",
+    "READ_ALLOWLIST_POLICY.json exists and forbids runs/* glob, quarantine, archive, and mtime latest reads",
+    "LEGACY_QUARANTINE_POLICY.json exists and defines UNKNOWN_LINEAGE/DEPRECATED/QUARANTINED handling",
+    "CONTAMINATION_CHECKLIST.json exists and blocks old artifact consumption and GMGN acquisition without gates",
+    "ACCEPTANCE_CHECKLIST.json exists and covers all clean rehydration control pack files",
+    "data/operating_backbone/canonical/current/CURRENT_STATE_POINTER.json exists",
+    "CURRENT_STATE_POINTER references approved invocation contracts, skill registry, storage policy, clean rehydration docs, and explicit latest approved run",
+    "tests/test_clean_rehydration_protocol.py passes"
+  ],
+  "forbidden_actions": [
+    "GMGN call",
+    "raw evidence acquisition",
+    "feature_generation",
+    "structure_signal_generation",
+    "decision_ticket_generation",
+    "paper_validation",
+    "live/swap/private_key/signing/broadcast"
+  ]
+}

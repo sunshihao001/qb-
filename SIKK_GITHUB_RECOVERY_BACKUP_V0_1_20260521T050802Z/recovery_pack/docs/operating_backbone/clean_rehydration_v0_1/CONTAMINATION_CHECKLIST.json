@@ -1,0 +1,58 @@
+{
+  "artifact_type": "sikk_contamination_checklist",
+  "version": "0.1",
+  "checks": [
+    {
+      "id": "CLEAN-001",
+      "assertion": "CURRENT_STATE_POINTER.json exists before clean start",
+      "failure_status": "PATCH_REQUIRED"
+    },
+    {
+      "id": "CLEAN-002",
+      "assertion": "Approved contract registry path exists",
+      "failure_status": "PATCH_REQUIRED"
+    },
+    {
+      "id": "CLEAN-003",
+      "assertion": "Approved skill registry path exists",
+      "failure_status": "PATCH_REQUIRED"
+    },
+    {
+      "id": "CLEAN-004",
+      "assertion": "Approved storage policy path exists",
+      "failure_status": "PATCH_REQUIRED"
+    },
+    {
+      "id": "CLEAN-005",
+      "assertion": "No default read uses data/operating_backbone/runs/* glob",
+      "failure_status": "BLOCKED"
+    },
+    {
+      "id": "CLEAN-006",
+      "assertion": "No default read uses quarantine or archive as current truth",
+      "failure_status": "BLOCKED"
+    },
+    {
+      "id": "CLEAN-007",
+      "assertion": "No latest/current inference from mtime",
+      "failure_status": "BLOCKED"
+    },
+    {
+      "id": "CLEAN-008",
+      "assertion": "No old feature/decision/paper artifact is consumed unless pointer-authorized",
+      "failure_status": "BLOCKED"
+    },
+    {
+      "id": "CLEAN-009",
+      "assertion": "No GMGN acquisition starts before Operational Brief + Intake Gate + invocation envelope",
+      "failure_status": "BLOCKED"
+    },
+    {
+      "id": "CLEAN-010",
+      "assertion": "No live/swap/private_key/signing/broadcast scope appears",
+      "failure_status": "BLOCKED"
+    }
+  ],
+  "pass_condition": "All checks pass or recoverable missing pointer/contract gaps are explicitly marked PATCH_REQUIRED before execution.",
+  "forbidden_interpretation": "Passing this checklist does not authorize GMGN call, feature generation, decision ticket generation, paper validation, or live execution."
+}

@@ -1,0 +1,72 @@
+{
+  "artifact_id": "ORCHESTRATOR_GATE_RESULT_CONTRACT_V0_1",
+  "artifact_type": "contract_schema",
+  "version": "0.1",
+  "purpose": "Define Orchestrator Skeleton Gate result fields and pass/patch/block semantics.",
+  "required_fields": [
+    "artifact_type",
+    "version",
+    "created_at_utc",
+    "run_id",
+    "skill_id",
+    "expected_backbone_node",
+    "status",
+    "reason",
+    "registry_check",
+    "invocation_check",
+    "envelope_check",
+    "storage_policy_check",
+    "run_missing",
+    "allowed_forbidden_hits",
+    "hard_forbidden_hits",
+    "patch_reasons",
+    "block_reasons",
+    "runtime_action_executed",
+    "gmgn_called",
+    "feature_generated",
+    "structure_signal_generated",
+    "decision_ticket_generated",
+    "paper_validation_executed",
+    "canonical_promoted",
+    "storage_policy_enforced",
+    "next_allowed_action"
+  ],
+  "status_allowed_values": [
+    "PASS",
+    "PATCH_REQUIRED",
+    "BLOCKED"
+  ],
+  "pass_conditions": [
+    "skill registry validates",
+    "skill registered",
+    "backbone node matched",
+    "envelope complete",
+    "storage policy passes",
+    "run isolation manifest/audit present",
+    "no hard forbidden hits"
+  ],
+  "patch_required_conditions": [
+    "skill registry invalid",
+    "envelope incomplete",
+    "run isolation artifacts missing",
+    "allowed_scope conflicts with skill forbidden_scope",
+    "storage policy patch required"
+  ],
+  "blocked_conditions": [
+    "skill not registered",
+    "backbone node mismatch",
+    "hard forbidden scope detected",
+    "storage policy blocked",
+    "live/swap/private_key/signing/broadcast requested"
+  ],
+  "non_runtime_flags_required_false": [
+    "runtime_action_executed",
+    "gmgn_called",
+    "feature_generated",
+    "structure_signal_generated",
+    "decision_ticket_generated",
+    "paper_validation_executed",
+    "canonical_promoted"
+  ],
+  "forbidden_interpretation": "PASS is permission for controlled handoff only, not target skill execution and not runtime/trading authority."
+}

@@ -1,0 +1,48 @@
+{
+  "artifact_id": "ARTIFACT_INDEX_POLICY_V0_1",
+  "version": "0.1",
+  "indexes": {
+    "run_index.json": [
+      "run_id",
+      "run_class",
+      "status",
+      "created_at_utc",
+      "expected_backbone_node",
+      "manifest_path",
+      "final_report_path"
+    ],
+    "artifact_index.json": [
+      "artifact_id",
+      "artifact_class",
+      "version",
+      "run_id",
+      "path",
+      "schema_ref",
+      "lineage_ref",
+      "consumer",
+      "validation_status"
+    ],
+    "promotion_index.json": [
+      "artifact_id",
+      "source_run_id",
+      "promotion_status",
+      "canonical_path",
+      "promotion_manifest_path",
+      "approved_by",
+      "approved_at_utc"
+    ],
+    "latest_approved_pointers.json": [
+      "artifact_class",
+      "artifact_id",
+      "canonical_path",
+      "version",
+      "promotion_status"
+    ]
+  },
+  "read_policy": "Production-like downstream modules must resolve artifacts via artifact_index or latest_approved_pointers. Experimental runs may read their own run_manifest only.",
+  "forbidden_read_patterns": [
+    "data/operating_backbone/runs/*/outputs/**/*.json as truth",
+    "latest file by mtime as approved artifact",
+    "blocked/PATCH_REQUIRED artifacts as canonical input"
+  ]
+}

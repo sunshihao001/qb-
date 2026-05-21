@@ -1,0 +1,44 @@
+{
+  "artifact_id": "CONTROL_LAYER_SKILL_REGISTRY_BASELINE_V0_1",
+  "artifact_type": "skill_registry_baseline",
+  "version": "0.1",
+  "purpose": "Register first-batch skill contracts for invocation gating only; no runtime skill execution.",
+  "skills": [
+    {
+      "skill_id": "skill.run_isolation",
+      "skill_name": "Run Isolation",
+      "owned_capability": "control_plane_run_container",
+      "backbone_node": "OBN-00",
+      "input_artifacts": ["operational_brief", "allowed_scope", "forbidden_scope"],
+      "output_artifacts": ["run_manifest.yaml", "audit_log.jsonl", "final_run_report.yaml"],
+      "downstream_consumers": ["orchestrator_skeleton", "skill_invocation_gate"],
+      "forbidden_scope": ["gmgn_runtime_call", "feature_generation", "structure_signal_generation", "decision_ticket_generation", "paper_backtest_live"],
+      "maturity_status": "skeleton",
+      "allowed_invocation_context": ["control_layer_initialization", "artifact_validation"]
+    },
+    {
+      "skill_id": "skill.skill_registry",
+      "skill_name": "Skill Registry",
+      "owned_capability": "skill_contract_lookup_and_gate",
+      "backbone_node": "OBN-00",
+      "input_artifacts": ["skill_contract_record", "expected_backbone_node"],
+      "output_artifacts": ["registry_validation_report", "invocation_allowed_gate_result"],
+      "downstream_consumers": ["orchestrator_skeleton", "future_skill_invocation_protocol"],
+      "forbidden_scope": ["skill_execution", "gmgn_runtime_call", "feature_generation", "structure_signal_generation", "decision_ticket_generation", "paper_backtest_live"],
+      "maturity_status": "skeleton",
+      "allowed_invocation_context": ["contract_lookup", "preflight_gate"]
+    },
+    {
+      "skill_id": "skill.gmgn_readonly_data_source",
+      "skill_name": "GMGN Read-only Data Source",
+      "owned_capability": "raw_evidence_acquisition",
+      "backbone_node": "OBN-01",
+      "input_artifacts": ["approved_run_context", "source_query_spec"],
+      "output_artifacts": ["raw_request_evidence", "raw_response_evidence", "raw_error_evidence", "raw_snapshot_manifest"],
+      "downstream_consumers": ["source_to_canonical_mapping_skill"],
+      "forbidden_scope": ["swap", "quote_for_execution", "signing", "broadcast", "feature_generation", "structure_signal_generation", "decision_ticket_generation"],
+      "maturity_status": "registered_not_executed_in_this_run",
+      "allowed_invocation_context": ["future_obn_01_read_only_raw_evidence_run"]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "artifact_id": "CONTAMINATION_PREVENTION_RULES_V0_1",
+  "version": "0.1",
+  "hard_rules": [
+    {
+      "id": "CPR-001",
+      "rule": "raw evidence cannot be consumed by feature_engineering directly; it must pass source_to_canonical_mapping first."
+    },
+    {
+      "id": "CPR-002",
+      "rule": "feature_artifact cannot contain structure judgment labels such as smart_money, suspected_dev,庄家, or PAPER_READY."
+    },
+    {
+      "id": "CPR-003",
+      "rule": "structure_signal cannot become strategy behavior without strategy_contract."
+    },
+    {
+      "id": "CPR-004",
+      "rule": "replay/backtest/paper-only cannot run without valid strategy_contract and decision_ticket."
+    },
+    {
+      "id": "CPR-005",
+      "rule": "PATCH_REQUIRED or BLOCKED runs cannot be promoted to canonical/current."
+    },
+    {
+      "id": "CPR-006",
+      "rule": "control_plane runs cannot produce GMGN response, feature_artifact, structure_signal, decision_ticket, validation_report, or paper position artifacts."
+    },
+    {
+      "id": "CPR-007",
+      "rule": "downstream modules cannot glob runs/* as truth; they must use manifest/index/gate-approved pointers."
+    },
+    {
+      "id": "CPR-008",
+      "rule": "live/swap/private_key/signing/broadcast artifacts are forbidden in every path."
+    }
+  ],
+  "boundary_terms": {
+    "forbidden_when_requested": [
+      "live",
+      "swap",
+      "private_key",
+      "signing",
+      "broadcast"
+    ],
+    "allowed_as_guardrail_field": [
+      "forbidden_scope"
+    ]
+  }
+}

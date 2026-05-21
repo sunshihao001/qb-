@@ -1,0 +1,36 @@
+{
+  "run_id": "sikk_portable_recovery_pack_v0_1_20260521t050713z",
+  "run_class": "control_plane_recovery",
+  "status": "PATCH_REQUIRED",
+  "validated_at_utc": "2026-05-21T05:07:13.618780+00:00",
+  "summary": "Recovery pack created but verification failed.",
+  "outputs": [
+    "recovery/SIKK_PORTABLE_RECOVERY_PACK_V0_1_20260521T050713Z",
+    "github_backup_upload/SIKK_GITHUB_RECOVERY_BACKUP_V0_1_20260521T050713Z",
+    "recovery/SIKK_PORTABLE_RECOVERY_PACK_V0_1_20260521T050713Z/RESTORE_RUNBOOK.md",
+    "recovery/SIKK_PORTABLE_RECOVERY_PACK_V0_1_20260521T050713Z/scripts/restore_snapshot.sh",
+    "recovery/SIKK_PORTABLE_RECOVERY_PACK_V0_1_20260521T050713Z/scripts/verify_restore.sh"
+  ],
+  "acceptance": {
+    "versioned_recovery_pack_exists": true,
+    "versioned_upload_directory_exists": true,
+    "restore_script_exists": true,
+    "verify_script_exists": true,
+    "secret_scan_passed": false,
+    "verify_restore_passed": false,
+    "clean_room_restore_passed": false,
+    "new_directory_each_update": true,
+    "git_push_executed": false,
+    "gmgn_called": false,
+    "raw_evidence_acquired": false,
+    "feature_generated": false,
+    "structure_signal_generated": false,
+    "decision_ticket_generated": false,
+    "paper_validation_executed": false,
+    "live_swap_signing_broadcast": false
+  },
+  "forbidden_actions_executed": false,
+  "gaps": [
+    "See recovery_pack/verification/RESTORE_VERIFICATION_REPORT.json"
+  ]
+}

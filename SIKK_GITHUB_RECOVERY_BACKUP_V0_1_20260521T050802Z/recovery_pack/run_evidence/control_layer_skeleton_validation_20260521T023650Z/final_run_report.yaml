@@ -1,0 +1,35 @@
+{
+  "run_id": "control_layer_skeleton_validation_20260521T023650Z",
+  "status": "PASS",
+  "validated_at_utc": "2026-05-21T02:36:51.355192+00:00",
+  "summary": "Run Isolation + Skill Registry skeleton implemented and verified. Scope remained control-layer only.",
+  "acceptance": {
+    "control_layer_only": true,
+    "run_isolation_helper_exists": true,
+    "skill_registry_helper_exists": true,
+    "baseline_registry_exists": true,
+    "baseline_run_isolation_exists": true,
+    "tests_passed": true,
+    "gmgn_called": false,
+    "feature_generated": false,
+    "structure_signal_generated": false,
+    "decision_ticket_generated": false,
+    "runtime_validation_executed": false,
+    "promotion_performed": false
+  },
+  "verification_command": "PYTHONPATH=/root/sikk-quant-runner python -m pytest tests/test_control_layer_skeleton.py -q",
+  "verification_result": "5 passed",
+  "outputs": [
+    "sikk_core/__init__.py",
+    "sikk_core/run_isolation.py",
+    "sikk_core/skill_registry.py",
+    "tests/test_control_layer_skeleton.py",
+    "docs/capability_roadmap/skill_orchestrated_backbone_v0_1/first_batch_control_mapping_baseline/control_layer/SKILL_REGISTRY_BASELINE.json",
+    "docs/capability_roadmap/skill_orchestrated_backbone_v0_1/first_batch_control_mapping_baseline/control_layer/RUN_ISOLATION_BASELINE.json"
+  ],
+  "next_allowed_action": "Orchestrator Skeleton gating integration, still without GMGN/feature/structure execution.",
+  "forbidden_actions_executed": false,
+  "gaps": [
+    "Repository pytest import path requires PYTHONPATH=/root/sikk-quant-runner for this test invocation."
+  ]
+}

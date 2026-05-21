@@ -1,0 +1,63 @@
+{
+  "run_id": "orchestrator_skeleton_gate_20260521T033918Z",
+  "task_name": "SIKK_ORCHESTRATOR_SKELETON_GATE_V0_1",
+  "professional_term": "Control-plane Orchestrator Skeleton Gate / Skill Invocation Gate",
+  "stage_position": "OBN-00 control plane before OBN-01 data acquisition",
+  "created_at_utc": "2026-05-21T03:39:18.265559+00:00",
+  "state": "VALIDATION",
+  "allowed_scope": [
+    "control layer skeleton",
+    "run isolation + skill registry integration",
+    "orchestrator gate tests only"
+  ],
+  "forbidden_scope": [
+    "GMGN calls",
+    "feature_generation",
+    "structure_signal_generation",
+    "decision_ticket_generation",
+    "replay_backtest_paper_only",
+    "PAPER_READY",
+    "live",
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast",
+    "promotion_to_canonical_current"
+  ],
+  "artifacts": [
+    {
+      "path": "sikk_core/orchestrator_skeleton.py",
+      "exists": true,
+      "sha256": "7716cd2f94543e9e1451b3536a5948bb04fd7dfafe5759088ba288101be38f88"
+    },
+    {
+      "path": "tests/test_orchestrator_skeleton_gate.py",
+      "exists": true,
+      "sha256": "b6c6a14268505a9bffc36a48bbd07424c76815ee0da74715d4e13463917ca09b"
+    },
+    {
+      "path": "docs/capability_roadmap/skill_orchestrated_backbone_v0_1/first_batch_control_mapping_baseline/control_layer/ORCHESTRATOR_SKELETON_GATE.json",
+      "exists": true,
+      "sha256": "859646e219053b5049c9d7ff230c60a6b607dd107dde86ceecb3ad3da166c38e"
+    },
+    {
+      "path": "sikk_core/run_isolation.py",
+      "exists": true,
+      "sha256": "980d1283e38b7c687b0bfef6f2fb9879a517b63d6dde30c4fca5eff6c1305296"
+    },
+    {
+      "path": "sikk_core/skill_registry.py",
+      "exists": true,
+      "sha256": "7198bb17a6a59df77dc4f5b482d79149508d1dd03e6757d633d1c5c2be075d1f"
+    },
+    {
+      "path": "docs/capability_roadmap/skill_orchestrated_backbone_v0_1/first_batch_control_mapping_baseline/control_layer/SKILL_REGISTRY_BASELINE.json",
+      "exists": true,
+      "sha256": "00ed9c00d90494848f3cda403063680898bb01df11ddf0420e134f5af7e16d97"
+    }
+  ],
+  "promotion_allowed": false,
+  "promotion_performed": false,
+  "canonical_write_allowed": false,
+  "runtime_validation_allowed": false
+}

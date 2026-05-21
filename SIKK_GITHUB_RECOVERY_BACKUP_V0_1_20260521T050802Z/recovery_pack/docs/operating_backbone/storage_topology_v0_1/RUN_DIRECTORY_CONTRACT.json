@@ -1,0 +1,64 @@
+{
+  "artifact_id": "RUN_DIRECTORY_CONTRACT_V0_1",
+  "version": "0.1",
+  "run_required_files": [
+    "run_manifest.yaml",
+    "audit_log.jsonl",
+    "final_run_report.yaml"
+  ],
+  "required_manifest_fields": [
+    "run_id",
+    "run_class",
+    "expected_backbone_node",
+    "allowed_scope",
+    "forbidden_scope",
+    "status",
+    "inputs",
+    "outputs",
+    "promotion_allowed",
+    "canonical_write_allowed",
+    "runtime_validation_allowed"
+  ],
+  "run_classes": [
+    "control_plane",
+    "data_acquisition",
+    "mapping",
+    "canonical_validation",
+    "feature_engineering",
+    "structure_signal",
+    "strategy_contract",
+    "decision_gate",
+    "validation_runner",
+    "attribution",
+    "upgrade_candidate",
+    "recovery_backup"
+  ],
+  "standard_subdirs": [
+    "input/",
+    "control/",
+    "evidence/raw/",
+    "evidence/request/",
+    "evidence/response/",
+    "evidence/error/",
+    "mapping/",
+    "canonical_candidate/",
+    "features/",
+    "structure_signal/",
+    "strategy_contract_candidate/",
+    "decision_gate/",
+    "validation/",
+    "attribution/",
+    "upgrade_candidate/",
+    "gates/",
+    "handoff/",
+    "acceptance/",
+    "reports/"
+  ],
+  "read_rule": "Consumers must read only paths declared in run_manifest outputs or artifact_index, not arbitrary files under runs/*.",
+  "status_rule": {
+    "PASS": "eligible for promotion review",
+    "PASS_WITH_GAPS": "eligible for limited promotion review with gaps recorded",
+    "PATCH_REQUIRED": "not promotable",
+    "BLOCKED": "not promotable and may require quarantine"
+  }
+}

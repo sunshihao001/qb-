@@ -1,0 +1,312 @@
+{
+  "intake_gate_result": {
+    "status": "EXECUTION_ALLOWED",
+    "allowed_next_node": [
+      "OBN-01_RUN_ISOLATION_AND_RUN_CONTEXT"
+    ]
+  },
+  "execution_envelope": {
+    "execution_identity": {
+      "task_name": "SKILL_CAPABILITY_BASELINE_AND_FIRST_INVOCATION_CHAIN_RUN",
+      "execution_mode": "fixture_first"
+    }
+  },
+  "run_context": {
+    "run_id": "20260520_193000_skill_baseline_first_chain_no_token_context",
+    "task_name": "SKILL_CAPABILITY_BASELINE_AND_FIRST_INVOCATION_CHAIN_RUN",
+    "project_root": "/root/sikk-quant-runner",
+    "run_created_at": "2026-05-20T19:30:00Z",
+    "execution_mode": "fixture_first",
+    "current_backbone_node": "OBN-01_RUN_ISOLATION_AND_RUN_CONTEXT",
+    "expected_next_node": "OBN-02_CAPABILITY_CONTRACT_BASELINE",
+    "target_context": {
+      "target_context_missing": true,
+      "fallback_token_selected": false
+    },
+    "allowed_skills": [
+      "gmgn_readonly_data_source",
+      "source_to_canonical_mapper"
+    ],
+    "blocked_skills": [
+      "gmgn_swap",
+      "gmgn_cooking",
+      "paper_only_runner",
+      "live_execution",
+      "wallet_signer",
+      "transaction_broadcaster"
+    ],
+    "allowed_read_paths": [
+      "/root/sikk-quant-runner"
+    ],
+    "allowed_write_paths": [
+      "/root/sikk-quant-runner/data/operating_backbone/runs/20260520_193000_skill_baseline_first_chain_no_token_context/"
+    ],
+    "artifact_storage_root": "/root/sikk-quant-runner/data/operating_backbone/runs/20260520_193000_skill_baseline_first_chain_no_token_context/",
+    "canonical_write_allowed": true,
+    "promotion_required": true,
+    "trace_id": "trace_obn_01_fixture_001",
+    "run_identity": {
+      "run_id": "20260520_193000_skill_baseline_first_chain_no_token_context",
+      "attempt_id": "attempt_001",
+      "task_name": "SKILL_CAPABILITY_BASELINE_AND_FIRST_INVOCATION_CHAIN_RUN",
+      "trace_id": "trace_obn_01_fixture_001",
+      "created_at": "2026-05-20T19:30:00Z",
+      "execution_mode": "fixture_first"
+    },
+    "upstream_authorization": {
+      "execution_envelope_ref": "context/execution_envelope_copy.json",
+      "intake_gate_result_ref": "context/intake_gate_result_copy.json",
+      "intake_gate_status": "EXECUTION_ALLOWED"
+    },
+    "run_scope": {
+      "objective": "Prepare first invocation chain: GMGN data source -> Source-to-Canonical mapping",
+      "in_scope": [
+        "create_run_context",
+        "create_run_directory",
+        "create_artifact_boundary",
+        "create_quarantine_policy",
+        "prepare_capability_contracts",
+        "prepare_first_chain_envelopes"
+      ],
+      "out_of_scope": [
+        "call_gmgn",
+        "call_okx",
+        "generate_raw_snapshot",
+        "generate_feature_snapshot",
+        "generate_mapping",
+        "generate_decision_ticket",
+        "create_paper_position",
+        "write_canonical"
+      ],
+      "scope_lock": true
+    },
+    "target_context_policy": {
+      "target_token_required_for_current_node": false,
+      "target_token_required_for_data_source_node": true,
+      "if_target_token_missing_at_OBN_01": {
+        "action": "record_missing_only",
+        "fallback_allowed": false
+      },
+      "if_target_token_missing_at_data_source_node": {
+        "action": "PATCH_REQUIRED",
+        "fallback_allowed": "false_unless_explicitly_authorized"
+      },
+      "forbidden": [
+        "auto_select_latest_token_without_authorization",
+        "infer_token_from_memory"
+      ]
+    },
+    "skill_invocation_preconditions": {
+      "global": [
+        "OBN-00.intake_gate_status == EXECUTION_ALLOWED",
+        "OBN-01.run_context_status == PASS",
+        "OBN-02.capability_contract_status == PASS",
+        "artifact_boundary_ready == true",
+        "canonical_write_allowed == false"
+      ],
+      "first_chain": {
+        "gmgn_readonly_data_source": {
+          "allowed_after": [
+            "OBN-03_FIRST_INVOCATION_CHAIN_PREPARATION"
+          ],
+          "requires": [
+            "skill_input_envelope",
+            "target_token",
+            "source_mode",
+            "forbidden_scope_check"
+          ]
+        },
+        "source_to_canonical_mapper": {
+          "allowed_after": [
+            "gmgn_readonly_data_source.PASS_OR_PASS_WITH_GAPS"
+          ],
+          "requires": [
+            "source_field_discovery_result",
+            "canonical_model_baseline",
+            "handoff_envelope"
+          ]
+        }
+      }
+    },
+    "artifact_namespace": {
+      "context": "context/",
+      "manifests": "manifests/",
+      "authorization_evidence": "evidence/authorization_evidence/",
+      "invocation_evidence": "evidence/invocation_evidence/",
+      "gates": "gates/",
+      "handoff": "handoff/",
+      "logs": "logs/",
+      "outputs": "outputs/",
+      "staging": "staging/",
+      "quarantine": "quarantine/",
+      "acceptance": "acceptance/",
+      "namespace_rule": {
+        "business_outputs_forbidden_at_OBN_01": true,
+        "node_outputs_must_be_under_current_run_root": true
+      }
+    },
+    "lineage_root": {
+      "run_id": "20260520_193000_skill_baseline_first_chain_no_token_context",
+      "trace_id": "trace_obn_01_fixture_001",
+      "parent_run_id": null,
+      "derived_from": [
+        "OBN-00.execution_envelope",
+        "OBN-00.intake_gate_result"
+      ],
+      "lineage_policy": {
+        "every_downstream_artifact_must_include_run_id": true,
+        "every_downstream_artifact_must_include_trace_id": true,
+        "every_downstream_artifact_must_reference_upstream_artifact": true
+      }
+    },
+    "run_state_machine": {
+      "allowed_states": [
+        "CREATED",
+        "CONTEXT_READY",
+        "WAITING_FOR_GATE",
+        "EXECUTION_ALLOWED",
+        "RUNNING_SKILL_CHAIN",
+        "PASS",
+        "PASS_WITH_GAPS",
+        "PATCH_REQUIRED",
+        "BLOCKED",
+        "QUARANTINED",
+        "COMPLETED",
+        "ARCHIVED"
+      ],
+      "current_state": "CONTEXT_READY",
+      "allowed_transitions": {
+        "CREATED": [
+          "CONTEXT_READY",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "CONTEXT_READY": [
+          "WAITING_FOR_GATE",
+          "PATCH_REQUIRED"
+        ],
+        "WAITING_FOR_GATE": [
+          "EXECUTION_ALLOWED",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ],
+        "EXECUTION_ALLOWED": [
+          "RUNNING_SKILL_CHAIN"
+        ],
+        "RUNNING_SKILL_CHAIN": [
+          "PASS",
+          "PASS_WITH_GAPS",
+          "PATCH_REQUIRED",
+          "BLOCKED"
+        ]
+      }
+    },
+    "resume_replay_policy": {
+      "resume_allowed": true,
+      "resume_requires": [
+        "same_run_id",
+        "same_execution_envelope",
+        "no_forbidden_scope",
+        "previous_status in [PATCH_REQUIRED, PASS_WITH_GAPS]"
+      ],
+      "replay_allowed": true,
+      "replay_requires": [
+        "read_only_artifacts",
+        "no_canonical_write",
+        "explicit_replay_mode"
+      ],
+      "retry_policy": {
+        "max_retry": 1,
+        "retry_creates_new_attempt_id": true
+      }
+    },
+    "attempt_policy": {
+      "attempt_id": "attempt_001",
+      "attempt_increment_policy": "increment_on_retry",
+      "attempt_artifact_path": "/root/sikk-quant-runner/data/operating_backbone/runs/20260520_193000_skill_baseline_first_chain_no_token_context/attempts/attempt_001/"
+    },
+    "promotion_readiness_policy": {
+      "OBN_01_business_promotion_allowed": false,
+      "OBN_01_context_artifact_promotion_allowed": false,
+      "OBN_01_outputs_are_runtime_context_only": true,
+      "downstream_promotion_requires": [
+        "stage_gate_PASS",
+        "downstream_consumer_confirmed",
+        "no_forbidden_scope",
+        "canonical_write_policy_approved"
+      ]
+    }
+  },
+  "run_directory_manifest": {
+    "run_root": "/root/sikk-quant-runner/data/operating_backbone/runs/20260520_193000_skill_baseline_first_chain_no_token_context",
+    "node_directories": [
+      "context",
+      "manifests",
+      "evidence/invocation_evidence",
+      "evidence/authorization_evidence",
+      "handoff",
+      "gates",
+      "logs",
+      "outputs/capability_contracts",
+      "outputs/skill_inputs",
+      "outputs/skill_results",
+      "outputs/mapping",
+      "outputs/features",
+      "outputs/structure",
+      "outputs/decision",
+      "outputs/validation",
+      "outputs/attribution",
+      "outputs/upgrade",
+      "staging/pending_promotion",
+      "quarantine/blocked_or_invalid_outputs",
+      "acceptance"
+    ],
+    "quarantine_path": "/root/sikk-quant-runner/data/operating_backbone/runs/20260520_193000_skill_baseline_first_chain_no_token_context/quarantine/blocked_or_invalid_outputs",
+    "staging_path": "/root/sikk-quant-runner/data/operating_backbone/runs/20260520_193000_skill_baseline_first_chain_no_token_context/staging/pending_promotion",
+    "logs_path": "/root/sikk-quant-runner/data/operating_backbone/runs/20260520_193000_skill_baseline_first_chain_no_token_context/logs",
+    "evidence_path": "/root/sikk-quant-runner/data/operating_backbone/runs/20260520_193000_skill_baseline_first_chain_no_token_context/evidence"
+  },
+  "artifact_boundary": {
+    "allowed_artifact_types": [
+      "context/run_context.json",
+      "context/execution_envelope_copy.json",
+      "context/intake_gate_result_copy.json",
+      "manifests/run_directory_manifest.json",
+      "manifests/artifact_boundary.json",
+      "manifests/quarantine_policy.json",
+      "logs/run_log.jsonl",
+      "acceptance/obn_01_acceptance_report.json"
+    ],
+    "forbidden_artifact_types": [
+      "raw_snapshot.json",
+      "feature_snapshot.json",
+      "source_to_canonical_mapping.json",
+      "structure_signal.json",
+      "decision_ticket.json",
+      "paper_position.json",
+      "live_order.json",
+      "signed_tx.json",
+      "swap_payload.json"
+    ],
+    "canonical_write_policy": {
+      "direct_canonical_write_allowed": false,
+      "promotion_required": true
+    }
+  },
+  "quarantine_policy": {
+    "quarantine_triggers": [
+      "forbidden_scope_detected",
+      "attempted_canonical_write",
+      "attempted_skill_call_at_OBN_01",
+      "attempted_gmgn_or_okx_call_at_OBN_01",
+      "output_path_outside_allowed_write_paths",
+      "business_artifact_created_at_OBN_01"
+    ],
+    "quarantine_path": "quarantine/blocked_or_invalid_outputs",
+    "blocked_reason_required": true,
+    "forbidden_scope_handling": "move_or_record_to_quarantine_and_mark_BLOCKED"
+  },
+  "action_attempts": [
+    "call_gmgn"
+  ]
+}

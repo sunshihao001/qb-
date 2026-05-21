@@ -1,0 +1,37 @@
+{
+  "artifact_type": "sikk_current_state_pointer_contract",
+  "version": "0.1",
+  "purpose": "Defines the only approved default entrypoint for SIKK clean rehydration.",
+  "required_fields": [
+    "artifact_type",
+    "version",
+    "status",
+    "approved_at_utc",
+    "backbone_version",
+    "contract_registry",
+    "skill_registry",
+    "storage_policy",
+    "latest_approved_runs",
+    "forbidden_default_reads"
+  ],
+  "status_allowed_values": [
+    "APPROVED_CURRENT"
+  ],
+  "pointer_rules": [
+    "Pointer must reference approved contract/registry/policy paths explicitly.",
+    "Latest approved runs must be listed explicitly; never inferred by mtime or glob.",
+    "Pointer is control-plane state only and must not contain raw market data, features, structure signals, decision tickets, or paper results.",
+    "A missing pointer makes the next run PATCH_REQUIRED before any data acquisition."
+  ],
+  "forbidden_fields": [
+    "private_key",
+    "signature",
+    "signed_transaction",
+    "swap_payload",
+    "broadcast_payload",
+    "live_order",
+    "feature_values",
+    "structure_score",
+    "paper_position"
+  ]
+}

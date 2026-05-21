@@ -1,0 +1,24 @@
+{
+  "upstream_authorization": {
+    "obn_00_intake_gate_status": "EXECUTION_ALLOWED",
+    "obn_01_run_context_status": "PASS",
+    "obn_02_structure_contract_status": "L3_EXECUTION_READY",
+    "obn_05_feature_to_structure_gate_status": "PASS"
+  },
+  "run_context": {
+    "run_id": "obn_06_structure_signal_from_obn05_fixture",
+    "attempt_id": "attempt_001",
+    "trace_id": "trace_obn06_from_obn05_fixture",
+    "artifact_storage_root": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_06_structure_signal_from_obn05_fixture",
+    "canonical_write_allowed": false
+  },
+  "obn05_refs": {
+    "feature_snapshot": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_05_feature_engineering_from_obn04_fixture/outputs/feature_engineering/feature_snapshot.json",
+    "feature_lineage": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_05_feature_engineering_from_obn04_fixture/outputs/feature_engineering/feature_lineage.json",
+    "missing_feature_report": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_05_feature_engineering_from_obn04_fixture/outputs/feature_engineering/missing_feature_report.json",
+    "feature_quality_report": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_05_feature_engineering_from_obn04_fixture/outputs/feature_engineering/feature_quality_report.json",
+    "feature_to_structure_handoff": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_05_feature_engineering_from_obn04_fixture/handoff/feature_to_structure_handoff.json",
+    "feature_to_structure_gate_result": "/root/sikk-quant-runner/data/operating_backbone/runs/obn_05_feature_engineering_from_obn04_fixture/gates/feature_to_structure_gate_result.json"
+  },
+  "structure_rules_ref": "/root/sikk-quant-runner/configs/templates/obn_06_structure_signal_rules.baseline.json"
+}

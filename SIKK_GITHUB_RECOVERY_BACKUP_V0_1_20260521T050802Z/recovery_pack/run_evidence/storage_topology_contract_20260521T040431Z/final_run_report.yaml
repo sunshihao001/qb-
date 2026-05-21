@@ -1,0 +1,44 @@
+{
+  "run_id": "storage_topology_contract_20260521T040431Z",
+  "run_class": "control_plane",
+  "status": "PASS",
+  "validated_at_utc": "2026-05-21T04:04:33.191142+00:00",
+  "summary": "Storage Topology Contract v0.1 created and verified. It defines artifact classes, run directory contract, canonical promotion policy, artifact index policy, and contamination prevention rules before GMGN/raw evidence acquisition.",
+  "acceptance": {
+    "contract_pack_exists": true,
+    "tests_exist": true,
+    "tests_passed": true,
+    "verification_result": "17 passed",
+    "artifact_classes_defined": true,
+    "run_directory_contract_defined": true,
+    "canonical_promotion_policy_defined": true,
+    "artifact_index_policy_defined": true,
+    "contamination_rules_defined": true,
+    "gmgn_called": false,
+    "raw_evidence_acquired": false,
+    "canonical_promoted": false,
+    "feature_generated": false,
+    "structure_signal_generated": false,
+    "decision_ticket_generated": false,
+    "paper_validation_executed": false,
+    "live_swap_signing_broadcast": false
+  },
+  "verification_command": "PYTHONPATH=/root/sikk-quant-runner python -m pytest tests/test_storage_topology_contract.py tests/test_orchestrator_skeleton_gate.py tests/test_control_layer_skeleton.py -q",
+  "outputs": [
+    "docs/operating_backbone/storage_topology_v0_1/README.md",
+    "docs/operating_backbone/storage_topology_v0_1/VERSION.json",
+    "docs/operating_backbone/storage_topology_v0_1/STORAGE_TOPOLOGY_CONTRACT.json",
+    "docs/operating_backbone/storage_topology_v0_1/ARTIFACT_CLASSIFICATION_MATRIX.json",
+    "docs/operating_backbone/storage_topology_v0_1/RUN_DIRECTORY_CONTRACT.json",
+    "docs/operating_backbone/storage_topology_v0_1/CANONICAL_PROMOTION_POLICY.json",
+    "docs/operating_backbone/storage_topology_v0_1/ARTIFACT_INDEX_POLICY.json",
+    "docs/operating_backbone/storage_topology_v0_1/CONTAMINATION_PREVENTION_RULES.json",
+    "docs/operating_backbone/storage_topology_v0_1/ACCEPTANCE_CHECKLIST.json",
+    "tests/test_storage_topology_contract.py"
+  ],
+  "next_allowed_action": "Patch governance doctrine with storage topology rule, then harden invocation envelope/read policy before GMGN read-only execution.",
+  "forbidden_actions_executed": false,
+  "gaps": [
+    "Contracts are baseline v0.1; no runtime enforcement in data readers yet. Next step should convert read/promotion policy into gate checks."
+  ]
+}

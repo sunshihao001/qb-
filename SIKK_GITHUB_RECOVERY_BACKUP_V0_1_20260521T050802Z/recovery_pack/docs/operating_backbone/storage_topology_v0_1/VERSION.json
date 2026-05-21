@@ -1,0 +1,15 @@
+{
+  "artifact_id": "SIKK_STORAGE_TOPOLOGY_CONTRACT_PACK_V0_1",
+  "version": "0.1",
+  "status": "baseline_contract",
+  "created_for": "pre-GMGN raw evidence contamination prevention",
+  "paper_only_boundary": "highest runtime boundary; not live readiness",
+  "forbidden_scope": [
+    "live",
+    "swap",
+    "private_key",
+    "signing",
+    "broadcast",
+    "PAPER_READY_auto_claim"
+  ]
+}

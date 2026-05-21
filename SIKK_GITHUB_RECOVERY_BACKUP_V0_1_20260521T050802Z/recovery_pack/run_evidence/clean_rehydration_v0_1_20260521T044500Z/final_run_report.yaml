@@ -1,0 +1,38 @@
+{
+  "run_id": "clean_rehydration_v0_1_20260521T044500Z",
+  "run_class": "control_plane",
+  "status": "PASS",
+  "validated_at_utc": "2026-05-21T04:54:14.578910+00:00",
+  "summary": "Clean Rehydration & Contamination Control v0.1 pack created and verified. Current state pointer is now the default clean-start entrypoint.",
+  "outputs": [
+    "docs/operating_backbone/clean_rehydration_v0_1/CLEAN_START_PROTOCOL.md",
+    "docs/operating_backbone/clean_rehydration_v0_1/CURRENT_STATE_POINTER_CONTRACT.json",
+    "docs/operating_backbone/clean_rehydration_v0_1/READ_ALLOWLIST_POLICY.json",
+    "docs/operating_backbone/clean_rehydration_v0_1/LEGACY_QUARANTINE_POLICY.json",
+    "docs/operating_backbone/clean_rehydration_v0_1/CONTAMINATION_CHECKLIST.json",
+    "docs/operating_backbone/clean_rehydration_v0_1/ACCEPTANCE_CHECKLIST.json",
+    "data/operating_backbone/canonical/current/CURRENT_STATE_POINTER.json",
+    "tests/test_clean_rehydration_protocol.py"
+  ],
+  "acceptance": {
+    "clean_rehydration_pack_created": true,
+    "current_state_pointer_created": true,
+    "read_allowlist_forbids_runs_glob_quarantine_archive_mtime": true,
+    "legacy_quarantine_policy_created": true,
+    "contamination_checklist_created": true,
+    "tests_created": true,
+    "gmgn_called": false,
+    "raw_evidence_acquired": false,
+    "feature_generated": false,
+    "structure_signal_generated": false,
+    "decision_ticket_generated": false,
+    "paper_validation_executed": false,
+    "live_swap_signing_broadcast": false,
+    "tests_passed": true,
+    "verification_result": "38 passed"
+  },
+  "forbidden_actions_executed": false,
+  "promotion_performed": false,
+  "gaps": [],
+  "next_allowed_action": "Future SIKK sessions must start from CURRENT_STATE_POINTER.json, apply READ_ALLOWLIST_POLICY, run CONTAMINATION_CHECKLIST, then produce Operational Brief before any action."
+}
